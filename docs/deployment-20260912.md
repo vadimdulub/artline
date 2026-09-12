@@ -243,3 +243,31 @@ without replacing the catalogue or image bucket.
 References: [Cloud Run public access](https://docs.cloud.google.com/run/docs/authenticating/public),
 [Cloud SQL restore guidance](https://docs.cloud.google.com/sql/docs/postgres/import-export/import-export-dmp),
 [Cloud Build service accounts](https://docs.cloud.google.com/build/docs/securing-builds/configure-user-specified-service-accounts).
+
+
+## Research staging release and master push
+
+The reviewed application was rebuilt and redeployed as
+`20260912-research-staging-1` after pushing `master` to the personal GitHub remote.
+Terraform changed only the API and web image references: zero additions or deletions.
+Both revisions are ready and receive 100% traffic:
+
+- Web: `artline-web-00007-hw9`; build `05c86ad5-7b3a-4134-9bd5-8e188143a5cd`;
+  digest `sha256:7bc43b5ac6793a86b5e1bda6ff8b52e40b12242a1c3203d647467a4fdd6f02dc`.
+- API: `artline-api-00007-ztq`; build `5e847c91-ac90-48d7-a257-3044e55ca375`;
+  digest `sha256:7582a48dc599d8690fb832a229e59c942fa196352b5bde663f97c89bef5f9112`.
+
+Live checks passed at widths 1440, 1366, 390 and 320: anonymous catalogue paging
+and Kandinsky search, protected editorial operations, five-colour overview,
+period selection, viewport fit, search focus, accessibility scans and no browser
+page errors. Existing popular/all-painter catalogue data remains available.
+
+The [expanded CSV receipt](research/expanded-20260912-v4/README.md) records
+104,934 staged research entries in both databases. These have not been promoted
+into catalogue pages: source object IDs, primary-source links, work types and
+creator identities are still needed. No artwork image was downloaded from the CSV.
+The final regional-creator filter correction affects only the offline research
+command and staged evidence; it changes no deployed API or web runtime code.
+
+Separate uncommitted timeline edits appeared in the shared working directory
+while this task ran. They were preserved and were not included in this release.
