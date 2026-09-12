@@ -1,10 +1,12 @@
-// Local-only, checksum-approved evidence staging; no network or publication.
+// Checksum-approved evidence staging; local PostgreSQL or an explicitly selected
+// Cloud SQL Auth Proxy connection. No catalogue mutation or publication.
 package main
 
 import (
 	"context"
 	"encoding/json"
 	"flag"
+	"fmt"
 	"github.com/jackc/pgx/v5"
 	"github.com/vadimdulub/artline/apps/server/internal/config"
 	"github.com/vadimdulub/artline/apps/server/internal/database"
@@ -18,11 +20,15 @@ func main() {
 	path := flag.String("file", "", "Evidence JSON path")
 	sha := flag.String("sha", "", "Reviewed SHA256")
 	name := flag.String("name", "", "Snapshot label")
-	apply := flag.Bool("apply", false, "Commit local staging; otherwise rollback")
+	apply := flag.Bool("apply", false, "Commit evidence staging; otherwise rollback")
+	target := flag.String("target", "local", "local or cloud-sql-proxy (start the project-specific Auth Proxy separately)")
 	receipt := flag.String("report", "", "Exclusive new receipt path")
 	flag.Parse()
 	cfg, e := pgx.ParseConfig(config.Load().DatabaseURL)
 	if e != nil {
+		log.Fatal(e)
+	}
+	if e = validateTarget(*target, cfg); e != nil {
 		log.Fatal(e)
 	}
 	local := func(s string) bool {
@@ -71,4 +77,23 @@ func main() {
 		}
 	}
 	json.NewEncoder(os.Stdout).Encode(r)
+}
+
+func validateTarget(target string, cfg *pgx.ConnConfig) error {
+	if cfg.Database != "artline" {
+		return fmt.Errorf("expected database artline")
+	}
+	switch target {
+	case "local":
+		if cfg.Port == 55432 {
+			return fmt.Errorf("proxy port requires explicit -target cloud-sql-proxy")
+		}
+	case "cloud-sql-proxy":
+		if cfg.Host != "127.0.0.1" || cfg.Port != 55432 || cfg.User != "artline_app" || len(cfg.Fallbacks) != 0 {
+			return fmt.Errorf("expected dedicated Artline Auth Proxy at 127.0.0.1:55432 with artline_app and sslmode=disable")
+		}
+	default:
+		return fmt.Errorf("invalid target %q", target)
+	}
+	return nil
 }
