@@ -1,5 +1,7 @@
 # Expanded CSV review and database staging — 12 September 2026
 
+**Historical receipt, superseded by the [final v4 review](../expanded-20260912-v4/README.md).**
+
 The supplied CSV contains **285,090 rows**, including all **106,350 rows** from
 the original export and exactly **178,740 additional rows**. This upload stores
 research evidence; it does **not** create visible catalogue artists or artworks.

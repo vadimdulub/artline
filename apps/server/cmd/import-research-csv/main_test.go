@@ -14,12 +14,12 @@ func TestCreatorReview(t *testing.T) {
 			t.Errorf("%q: %s", n, got)
 		}
 	}
-	for _, n := range []string{"Japan", "British School", "Allori Alessandro (bottega)", "Master of Delft", "A;B", "George Smith Ltd", "Haven, Lambert van (Tilskrevet)", "Reni Guido (scuola)", "Figueroa Pedro - Atribuido"} {
+	for _, n := range []string{"Japan", "British School", "Allori Alessandro (bottega)", "Master of Delft", "A;B", "George Smith Ltd", "Haven, Lambert van (Tilskrevet)", "Reni Guido (scuola)", "Figueroa Pedro - Atribuido", "Pittore Lombardo (sec. Xvii)", "Various artists", "Ming Dynasty"} {
 		if got := creatorDecision(n); got != "deferred_creator_attribution" {
 			t.Errorf("%q: %s", n, got)
 		}
 	}
-	for _, n := range []string{"Henner Jean-Jacques (1829-1905)", "Mary Vaux Walcott, born Philadelphia, PA 1860-died St. Andrews, New Brunswick, Canada 1940", "Edward Hopper"} {
+	for _, n := range []string{"Henner Jean-Jacques (1829-1905)", "Mary Vaux Walcott, born Philadelphia, PA 1860-died St. Andrews, New Brunswick, Canada 1940", "Edward Hopper", "Painter: Philip Guston", "Artist Name"} {
 		if got := creatorDecision(n); got != "named_candidate" {
 			t.Errorf("%q: %s", n, got)
 		}

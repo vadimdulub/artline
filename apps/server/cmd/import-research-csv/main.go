@@ -27,6 +27,7 @@ var header = []string{"Painter", "artwork", "year", "museum", "country", "hasPic
 var unidentified = regexp.MustCompile(`(?i)unknown|anonym|an[oó]nim|inconnu|non registrato|not recorded|unident|ubekendt|tiedossa|sconosci|ignot[oa]|non ident|unbekannt|tuntematon|desconocido|desconhecido|onbekend|okänd|ukendt|неизвестн|άγνωστ|agnost`)
 var attribution = regexp.MustCompile(`(?i)workshop|atelier|bottega|school|scuola|école|ecole|ma[iî]tre|master of|maestro|ambito|cerchia|seguace|follower|circle of|d'après|after |attribu|atribuid|tilskrevet|maniera|imitat|monogram|pseudo |copia|kopi|copyist|copy after|manner of|;|\?|\|`)
 var collective = regexp.MustCompile(`(?i)\b(inc|ltd|company|factory|manufactur\w*|publisher|press|studio|workshops|brothers)\b`)
+var genericCreator = regexp.MustCompile(`(?i)^(pittore\s+(lombard\w*|cremon\w*|bergam\w*|nordico|olandese|fiamming\w*|pavese|veneto|giottesco|pisano|toscano|romano|veneziano|emiliano|napoletano|siciliano)|various artists|several artists|multiple artists|cultura |culture |meister )|\bdynast(y|ie|ies)\b`)
 var singleDate = regexp.MustCompile(`^(\d{3,4})$`)
 var closedDate = regexp.MustCompile(`^(\d{3,4})\s*[-–]\s*(\d{3,4})$`)
 var geography = regexp.MustCompile(`(?i)^(japan|china|india|france|italy|germany|england|spain|russia|iran|persia|tibet|nepal|korea|egypt|indonesia|mexico|peru|british|french|italian|japanese|chinese|indian|european|american|german|dutch|flemish|persian|tibetan|spanish|russian|byzantine)(\b.*)?$`)
@@ -96,7 +97,7 @@ func creatorDecision(name string) string {
 	if unidentified.MatchString(name) {
 		return "excluded_unidentified_creator"
 	}
-	if attribution.MatchString(name) || collective.MatchString(name) || geography.MatchString(name) {
+	if attribution.MatchString(name) || collective.MatchString(name) || geography.MatchString(name) || genericCreator.MatchString(name) {
 		return "deferred_creator_attribution"
 	}
 	if len(strings.Fields(name)) < 2 || len(name) > 500 {
