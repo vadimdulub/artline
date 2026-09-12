@@ -49,6 +49,8 @@ The deployed website uses Cloud SQL and serves images from the private
 explicit public research preview, showing review records without publishing
 them; editing still requires authentication. Deployment details and validation
 are recorded in [the GCP deployment receipt](docs/deployment-20260912.md).
+The Catalogue supports bounded, read-only browsing without an editor token.
+Archived records and editorial operations remain restricted to the editor.
 
 ## Local setup
 

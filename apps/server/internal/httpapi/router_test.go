@@ -11,7 +11,7 @@ func TestEditorEndpointsDenyAnonymousAndRawTokens(t *testing.T) {
 	for _, publicPreview := range []bool{false, true} {
 		handler := New(config.Config{EditorToken: "test-editor-secret", PublicResearchPreview: publicPreview}, nil)
 		for _, route := range []struct{ method, path string }{
-			{"GET", "/api/v1/catalogue/artists"}, {"GET", "/api/v1/coverage/summary"},
+			{"GET", "/api/v1/catalogue/artists/00000000-0000-0000-0000-000000000001"}, {"GET", "/api/v1/coverage/summary"},
 			{"POST", "/api/v1/catalogue/artists"}, {"PATCH", "/api/v1/catalogue/artists/invalid"},
 			{"DELETE", "/api/v1/catalogue/artists/invalid"}, {"POST", "/api/v1/catalogue/artists/invalid/restore"},
 			{"PATCH", "/api/v1/museums/the-met/must-see"},

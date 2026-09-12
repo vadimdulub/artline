@@ -134,18 +134,19 @@ func (r *Repository) entityCitations(ctx context.Context, entityType, id string)
 	return citations, rows.Err()
 }
 
-func (r *Repository) Catalogue(ctx context.Context, status, query string, limit, offset int, sort string) ([]CatalogueArtist, error) {
+func (r *Repository) Catalogue(ctx context.Context, status, query string, limit, offset int, sort string, includeArchived bool) ([]CatalogueArtist, error) {
 	const statement = `
 		SELECT id::text, slug, display_name, timeline_start_year, timeline_end_year,
 		       timeline_display, status, revision, updated_at
 		FROM artists
 		WHERE ($1 = '' OR status = $1)
+		  AND ($6 OR status <> 'archived')
 		  AND ($2 = '' OR normalized_name ILIKE '%' || lower($2) || '%')
 		ORDER BY CASE WHEN $5='updated' THEN updated_at END DESC,
           CASE WHEN $5='date' THEN timeline_start_year END,
           sort_name,id
 		LIMIT $3 OFFSET $4`
-	rows, err := r.db.Query(ctx, statement, status, query, limit, offset, sort)
+	rows, err := r.db.Query(ctx, statement, status, query, limit, offset, sort, includeArchived)
 	if err != nil {
 		return nil, fmt.Errorf("query catalogue: %w", err)
 	}

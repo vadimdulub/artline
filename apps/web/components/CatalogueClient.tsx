@@ -9,13 +9,14 @@ import type { ArtistDetail, CatalogueArtist, PublicationValidation } from "@/lib
 type Draft = { slug: string; display_name: string; sort_name: string; entity_type: string; timeline_start_year: number; timeline_end_year: number; timeline_display: string; timeline_basis: string; biography_md: string; status: string; expected_revision?: number };
 const blank: Draft = { slug: "", display_name: "", sort_name: "", entity_type: "person", timeline_start_year: 1800, timeline_end_year: 1900, timeline_display: "", timeline_basis: "life", biography_md: "", status: "draft" };
 
-export function CatalogueClient() {
+export function CatalogueClient({ preview = false }: { preview?: boolean }) {
   const [token, setToken] = useEditorToken();
   const [artists, setArtists] = useState<CatalogueArtist[]>([]);
   const [query, setQuery] = useState("");
   const parameters = new URLSearchParams(useQueryString());
   const rawStatus = parameters.get("status") ?? "";
-  const status = ["draft", "review", "published", "archived"].includes(rawStatus) ? rawStatus : "";
+  const statuses = token ? ["draft", "review", "published", "archived"] : preview ? ["draft", "review", "published"] : ["published"];
+  const status = statuses.includes(rawStatus) ? rawStatus : "";
   const setStatus = (value: string) => updateQuery({ status: value || null });
   const [form, setForm] = useState<Draft | null>(null), [editing, setEditing] = useState<string | null>(null);
   const [message, setMessage] = useState(""), [loadError, setLoadError] = useState("");
@@ -140,7 +141,7 @@ export function CatalogueClient() {
       <div className="form-actions"><button className="primary-button" disabled={!token || busy} type="submit">{busy ? "Saving…" : "Save painter"}</button><button type="button" disabled={busy} onClick={() => { if (!dirty || window.confirm("Discard the unsaved form?")) { setForm(null); setEditing(null); setMessage(""); } }}>Cancel</button></div>
       </fieldset>
     </form>}
-    <div className="catalogue-tools"><label><span>Search painters</span><input type="search" placeholder="Painter name" value={query} onChange={event => { setQuery(event.target.value); setPage(0); }} /></label><label><span>Status</span><select value={status} onChange={event => { setStatus(event.target.value); setPage(0); }}><option value="">All records</option>{["draft", "review", "published", "archived"].map(value => <option key={value} value={value}>{value === "review" ? "In review" : value[0].toUpperCase() + value.slice(1)}</option>)}</select></label><label><span>Sort by</span><select value={sort} onChange={event => { setSort(event.target.value); setPage(0); }}><option value="name">Name</option><option value="date">Date</option><option value="updated">Recently updated</option></select></label></div>
+    <div className="catalogue-tools"><label><span>Search painters</span><input type="search" placeholder="Painter name" value={query} onChange={event => { setQuery(event.target.value); setPage(0); }} /></label><label><span>Status</span><select value={status} onChange={event => { setStatus(event.target.value); setPage(0); }}><option value="">All records</option>{statuses.map(value => <option key={value} value={value}>{value === "review" ? "In review" : value[0].toUpperCase() + value.slice(1)}</option>)}</select></label><label><span>Sort by</span><select value={sort} onChange={event => { setSort(event.target.value); setPage(0); }}><option value="name">Name</option><option value="date">Date</option><option value="updated">Recently updated</option></select></label></div>
     {message && !form && <p className={`save-message${isError ? " is-error" : ""}`} role={isError ? "alert" : "status"}>{message}</p>}
     {loadError && <p className="save-message" role="alert">{loadError} <button onClick={() => setRefresh(value => value + 1)}>Try again</button></p>}
     {validation && <section ref={validationRef} tabIndex={-1} className={`validation-panel ${validation.report.ready ? "is-ready" : ""}`} aria-labelledby="validation-title"><div><span className="validation-kicker">Publication checks</span><h2 id="validation-title">{validation.artistName}</h2><p>{validation.report.ready ? "This record is ready for publication." : `${validation.report.issues.length} items need attention.`}</p></div>{validation.report.ready ? <button className="primary-button" disabled={!token || busy} onClick={() => void publish(validation.report.artist_id, validation.report.revision, true)}>Publish record</button> : <ol>{validation.report.issues.map((issue, i) => <li key={i}><code>{issue.path}</code>{issue.message}</li>)}</ol>}</section>}

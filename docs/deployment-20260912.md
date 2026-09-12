@@ -56,6 +56,57 @@ remain under `/tmp/artline-selection-tip/`.
 The production build and live browser checks passed. Terraform applied the two
 image-tag updates and the final plan reported no changes.
 
+## Follow-up: consistent header across pages
+
+Release `20260912-browse-redesign-1` makes the compact header the shared default,
+removing timeline-only sizing overrides. Its 60-pixel desktop height, logo,
+navigation and spacing apply to every route. The timeline uses the same height
+variable when calculating its available viewport space. Mobile layouts remain
+responsive and use identical header dimensions across pages at each width.
+
+Chrome checks compared all nine page types at 1440, 768, 390 and 320 pixels wide,
+including museum, painter and artwork detail pages. Header geometry matched
+across routes, with no horizontal page overflow or browser errors. Header
+accessibility checks passed at all four widths. Verification artifacts are in
+`/tmp/artline-shared-header/`.
+
+The release also corrects build ignore rules that excluded `app/coverage/`
+along with test coverage output, causing the production Coverage page to return
+404. Both Cloud Build upload and Docker context now exclude only `/coverage/`
+at the web project root, preserving the application route.
+
+## Follow-up: catalogue browsing and period overview
+
+The same release enables the Catalogue's promised read-only browsing. Go scopes
+anonymous reads to published records by default, or non-archived research
+records when public preview is enabled. Search, ordering and 50-record UI pages
+remain server-owned. Archived records, editor detail reads, coverage summaries
+and all mutations still require the editor token. The public Coverage page now
+explains its editor-access requirement instead of displaying an unavailable error.
+
+The all-painters view renders the server's bounded period counts as coloured,
+clickable bars, with readable counts and keyboard navigation. Colour identifies
+periods independently of movement classification. Phones use scrollable
+horizontal bars with larger targets. Selecting a period updates the existing
+date range; a Catalogue link offers paginated browsing of individual painters.
+The search field uses an inset focus line within its row.
+
+Backend read-scope and authorization tests, 31 web unit tests and lint passed.
+Browser checks covered period selection, five chart colours, responsive layout,
+accessibility, catalogue search and pagination, and contained search focus.
+A temporary API used a PostgreSQL connection with transactions read-only and
+migrations disabled; no fixtures, test database or catalogue mutations were used.
+Anonymous archive searches and editing requests were denied or excluded as
+appropriate. Artifacts are under `/tmp/artline-browse-fix/`.
+
+Cloud Build jobs `b1b31abc-3f98-41d8-9345-8d92325dc4c7` (web) and
+`21a117d4-bd7f-48b0-8a3b-400c3af4f9e4` (API) succeeded. Live checks passed for
+anonymous catalogue pagination/search, mutation and archive protection, coloured
+period navigation, search focus, and all nine page types at four viewport widths.
+The Coverage page returns 200. The popular-view reload/back/reset regression
+test also passed. Terraform changed only the application images; its final plan
+reported no changes.
+
 ## Live services
 
 - Web: https://artline-web-lpuqqlugnq-ew.a.run.app

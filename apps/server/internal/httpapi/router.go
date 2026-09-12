@@ -40,7 +40,7 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /api/v1/museums/{slug}/works", api.museumWorks)
 	mux.HandleFunc("GET /api/v1/museums/{slug}/works/{id}", api.museumArtwork)
 	mux.Handle("PATCH /api/v1/museums/{slug}/must-see", api.requireEditor(http.HandlerFunc(api.saveMustSee)))
-	mux.Handle("GET /api/v1/catalogue/artists", api.requireEditor(http.HandlerFunc(api.catalogueArtists)))
+	mux.HandleFunc("GET /api/v1/catalogue/artists", api.catalogueArtists)
 	mux.Handle("GET /api/v1/catalogue/artists/{id}", api.requireEditor(http.HandlerFunc(api.catalogueArtist)))
 	mux.Handle("POST /api/v1/catalogue/artists", api.requireEditor(http.HandlerFunc(api.createArtist)))
 	mux.Handle("PATCH /api/v1/catalogue/artists/{id}", api.requireEditor(http.HandlerFunc(api.updateArtist)))
@@ -193,6 +193,14 @@ func (api *API) catalogueArtists(w http.ResponseWriter, r *http.Request) {
 		writeError(w, http.StatusBadRequest, "INVALID_STATUS", "Unknown catalogue status.")
 		return
 	}
+	status, includeArchived, ok := api.catalogueReadScope(w, r, status)
+	if !ok {
+		return
+	}
+	if len(r.URL.Query().Get("q")) > 200 {
+		writeError(w, 400, "INVALID_QUERY", "Use at most 200 characters.")
+		return
+	}
 	limit, err := integerQuery(r, "limit", 100, 1, 200)
 	if err != nil {
 		writeError(w, http.StatusBadRequest, "INVALID_LIMIT", err.Error())
@@ -208,7 +216,7 @@ func (api *API) catalogueArtists(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_SORT", "Unknown sort field.")
 		return
 	}
-	artists, err := api.repo.Catalogue(r.Context(), status, strings.TrimSpace(r.URL.Query().Get("q")), limit+1, offset, sort)
+	artists, err := api.repo.Catalogue(r.Context(), status, strings.TrimSpace(r.URL.Query().Get("q")), limit+1, offset, sort, includeArchived)
 	if err != nil {
 		slog.Error("catalogue query failed", "error", err)
 		writeError(w, http.StatusInternalServerError, "CATALOGUE_QUERY_FAILED", "The catalogue could not be loaded.")
@@ -220,6 +228,24 @@ func (api *API) catalogueArtists(w http.ResponseWriter, r *http.Request) {
 		artists = artists[:limit]
 	}
 	writeJSON(w, http.StatusOK, map[string]any{"items": artists, "has_more": more})
+}
+
+func (api *API) catalogueReadScope(w http.ResponseWriter, r *http.Request, status string) (string, bool, bool) {
+	preview, ok := api.previewAllowed(w, r)
+	if !ok {
+		return "", false, false
+	}
+	if api.isEditor(r) {
+		return status, true, true
+	}
+	if status == "archived" || (!preview && status != "" && status != "published") {
+		writeError(w, http.StatusUnauthorized, "EDITOR_AUTH_REQUIRED", "Sign in to browse this record status.")
+		return "", false, false
+	}
+	if !preview {
+		status = "published"
+	}
+	return status, false, true
 }
 
 func (api *API) createArtist(w http.ResponseWriter, r *http.Request) {

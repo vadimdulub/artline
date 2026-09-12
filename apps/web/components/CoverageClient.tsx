@@ -13,6 +13,7 @@ export function CoverageClient() {
   const [retry, setRetry] = useState(0);
 
   useEffect(() => {
+    if (!token) return;
     const controller = new AbortController();
     apiRequest<CoverageSummary>("coverage/summary", { headers: editorHeaders(token), signal: controller.signal })
       .then(data => { setSummary(data); setError(""); })
@@ -20,6 +21,7 @@ export function CoverageClient() {
     return () => controller.abort();
   }, [token, retry]);
 
+  if (!token) return <><EditorAccess token={token} onChange={setToken} /><p className="coverage-note">Enter your editor token to view editorial coverage and review counts.</p></>;
   if (error) return <><EditorAccess token={token} onChange={setToken} /><div className="record-error"><h2>Coverage unavailable</h2><p>{error}</p><button onClick={() => setRetry(value => value + 1)}>Try again</button></div></>;
   if (!summary) return <p className="record-loading">Calculating catalogue coverage…</p>;
 

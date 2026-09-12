@@ -5,7 +5,7 @@
 .env*
 .next
 node_modules
-coverage
+/coverage/
 test-results
 playwright-report
 public/assets/**/*.jpg
