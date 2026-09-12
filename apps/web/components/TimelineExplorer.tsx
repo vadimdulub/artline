@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { DensityCanvas } from "./DensityCanvas";
 import { ArtistChronologyRecord } from "./ArtistChronologyRecord";
 import { MultiSelectFilter } from "./MultiSelectFilter";
+import { PopularPaintersHint } from "./PopularPaintersHint";
 import { usePainterChoices, workTypeOptions } from "./use-painter-choices";
 import { apiRequest, countryName, errorMessage } from "@/lib/api";
 import { normalizeRange, positionArtists, timelineTicks, presetRange } from "@/lib/timeline";
@@ -137,10 +138,9 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
           <MultiSelectFilter label="Regions" allLabel="All regions" options={facets.regions ?? []} values={regions} onChange={values => updateQuery({ region: values }, true)} unavailable={facetError} />
           <MultiSelectFilter label="Countries" allLabel="All countries" options={facets.countries} values={countries} onChange={values => updateQuery({ country: values }, true)} unavailable={facetError} />
           <MultiSelectFilter label="Work types" allLabel="All types" options={workTypeOptions} values={workTypes} onChange={values => updateQuery({ work_type: values }, true)} />
-          <label className="popular-filter"><input type="checkbox" checked={popularOnly} onChange={event => updateQuery({ popular: event.target.checked ? null : "false" }, true)} /><span>Only popular painters</span></label>
+          <div className="popular-filter-control"><label className="popular-filter"><input type="checkbox" checked={popularOnly} onChange={event => updateQuery({ popular: event.target.checked ? null : "false" }, true)} /><span>Only popular painters</span></label><PopularPaintersHint /></div>
         </div>
       </div>
-      <p className="filter-combination-help"><span>Match any value within a filter; match all filter groups together.{(selectedMovements.length > 0 || countries.length > 0 || regions.length > 0) && " Filters use recorded classifications; painters with missing data may be excluded."}</span><a href="/about#popular-painters">About the selection</a></p>
       {activeFilters.length > 0 && <div className="active-filters" aria-label="Active filters"><span>Filtered by</span>{activeFilters.map(filter => <button key={filter.key} type="button" aria-label={`Remove ${filter.label} filter`} onClick={() => { filter.remove(); searchInput.current?.focus(); }}>{filter.label}<span aria-hidden="true">×</span></button>)}<button className="clear-filters" type="button" onClick={() => { clearFilters(); searchInput.current?.focus(); }}>Clear filters</button></div>}
       <div className="timeline-dark">
         <div className="timeline-heading-row"><div><p className="range-caption">Visible range</p><h1 id="timeline-title" className="time-title"><span className="sr-only">Painting across time: </span>{start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{end}</h1></div><div className="timeline-counter" role="status">{loading ? "Finding painters…" : error ? "Connection interrupted" : `${data?.total ?? 0} ${data?.total === 1 ? "painter" : "painters"} in this view`}<small>{preview ? "Research preview · records may be incomplete" : "Published catalogue"}</small></div></div>

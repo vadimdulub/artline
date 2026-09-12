@@ -40,6 +40,22 @@ with no additions or removals; the final plan reported no changes. Web revision
 `artline-web-00003-2km` and API revision `artline-api-00003-jbh` receive 100% of
 traffic. Disposable verification artifacts are under `/tmp/artline-compact-header/`.
 
+## Follow-up: selection information icon
+
+Release `20260912-selection-tip-1` removes the filter explanation row and replaces
+the separate selection link with a small information icon beside “Only popular
+painters”. Its tooltip supports hover, keyboard focus and touch; Escape, blur
+and an outside tap dismiss it. Desktop controls now occupy 163 pixels, leaving
+the rest of the first viewport for the timeline.
+
+Chrome checks at 1440, 390 and 320 pixels wide verified tooltip positioning,
+accessibility, dismissal and that opening the tip does not toggle the checkbox.
+Lint passed. Web Cloud Build: `444b41f4-da22-4a1e-89a4-a869729f7bfe`. The API
+reuses the prior image under the shared release tag. Verification artifacts
+remain under `/tmp/artline-selection-tip/`.
+The production build and live browser checks passed. Terraform applied the two
+image-tag updates and the final plan reported no changes.
+
 ## Live services
 
 - Web: https://artline-web-lpuqqlugnq-ew.a.run.app
