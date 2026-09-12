@@ -1,0 +1,16 @@
+.gcloudignore
+.git
+.DS_Store
+*.tsbuildinfo
+.env*
+.next
+node_modules
+coverage
+test-results
+playwright-report
+public/assets/**/*.jpg
+public/assets/**/*.jpeg
+public/assets/**/*.png
+public/assets/**/*.webp
+public/assets/**/*.avif
+public/assets/**/*.gif

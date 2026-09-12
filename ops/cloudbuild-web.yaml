@@ -1,0 +1,13 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    env: ['DOCKER_BUILDKIT=1']
+    args:
+      - build
+      - --tag
+      - ${_IMAGE}
+      - .
+images: ['${_IMAGE}']
+timeout: 1200s
+serviceAccount: projects/$PROJECT_ID/serviceAccounts/artline-build@$PROJECT_ID.iam.gserviceaccount.com
+options:
+  logging: CLOUD_LOGGING_ONLY

@@ -1,0 +1,8 @@
+project_id   = "your-google-cloud-project"
+region       = "europe-west1"
+image_tag    = "2026-09-07"
+editor_token = "replace-with-a-long-random-value"
+
+
+# Explicitly opt in to read-only browsing of non-archived research records.
+public_research_preview = false

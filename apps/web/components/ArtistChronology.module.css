@@ -1,0 +1,39 @@
+.chronology { min-width: 0; }
+.chronology h2:focus { outline-offset: 5px; }
+.interval { margin: 0; font-size: .85rem; color: var(--muted); }
+.chartRow { display: flex; align-items: center; gap: 12px; margin: 8px 0 14px; }
+.chart { flex: 1; min-width: 0; }
+.chart svg { width: 100%; height: 48px; display: block; overflow: visible; }
+.axisLabels { display: flex; justify-content: space-between; color: #625d55; font-size: .8rem; padding: 0 2%; }
+.baseline { stroke: #aaa398; stroke-width: 1; }
+.lifeline { stroke: #625d55; stroke-width: 2; }
+.yearMark { stroke: #c85139; stroke-width: 4; }
+.missingMark { border: 0; background: transparent; color: #625d55; min-width: 64px; min-height: 64px; padding: 6px; display: flex; flex-direction: column; align-items: center; gap: 7px; font-size: .8rem; }
+.missingMark i { height: 30px; border-left: 2px dashed currentColor; }
+.missingMark:hover, .missingMark[aria-expanded=true] { color: #1b1916; background: #e8e3d9; }
+.missingHelp { border-left: 2px dashed #625d55; padding: 10px 14px; background: #e8e3d9; font-size: .9rem; line-height: 1.6; }
+.note { color: #625d55; font-size: .82rem; line-height: 1.6; max-width: 70ch; margin: 0 0 18px; }
+.controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 0 0 24px; }
+.controls label { flex: 1; min-width: 0; display: grid; gap: 6px; font-size: .85rem; }
+.controls select { min-height: 44px; max-width: 100%; padding: 8px 12px; border: 1px solid #b5aea3; background: #faf8f3; color: #1b1916; font: inherit; }
+.controls button, .pagination button, .empty button { min-height: 44px; padding: 8px 12px; border: 1px solid #b5aea3; background: transparent; color: #1b1916; font: inherit; }
+.yearGroup { position: relative; padding-left: 18px; border-left: 1px solid #b5aea3; margin-top: 26px; }
+.yearGroup h3 { font-family: Georgia, serif; font-size: 1.6rem; font-weight: 400; line-height: 1.3; margin: 0 0 14px; }
+.yearGroup h3::before { content: ""; position: absolute; width: 7px; height: 7px; background: #1b1916; left: -4px; top: 13px; border-radius: 50%; }
+.yearGroup h3 small { display: block; font: 400 .75rem/1.6 Avenir, sans-serif; color: #625d55; margin-top: 3px; }
+.pagination { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-top: 20px; font-size: .85rem; }
+.pagination span { color: #625d55; }
+.pagination>div { display:flex; flex-wrap:wrap; gap:8px; }
+.pagination button:disabled { opacity:.5; cursor:default; }
+.yearGroup :global(.work-row) { grid-template-columns:74px minmax(0,1fr); gap:12px; padding:9px; }
+.yearGroup :global(.work-row)>img,.yearGroup :global(.work-row)>:global(.work-placeholder) { width:74px; height:90px; }
+.yearGroup :global(.work-title) { font-size:19px; line-height:1.25; margin-block:4px; }
+.yearGroup :global(.work-location) { font-size:11px; }
+.yearGroup :global(.work-placeholder)>p { font-size:10px; }
+.empty { padding: 20px 0; }
+.empty p { color: #625d55; font-size: .9rem; line-height: 1.6; }
+.empty button + button { margin-left: 8px; }
+@media (max-width: 480px) {
+  .yearGroup { padding-left: 10px; }
+  .note { font-size: .8rem; }
+}

@@ -1,0 +1,7 @@
+terraform {
+  backend "gcs" {
+    bucket = "replace-with-your-existing-terraform-state-bucket"
+    prefix = "artline/prod"
+  }
+}
+
