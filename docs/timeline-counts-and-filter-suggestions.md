@@ -47,3 +47,32 @@ the synthetic painter plan is not evidence of artwork-scale search performance.
 
 Disposable plans and browser screenshots remain under `/tmp/artline-timeline-*`
 and `/tmp/artline-suggestions-*`.
+
+## Production request timeout correction — 13 September 2026
+
+The popular timeline's per-painter artwork counts joined the full artwork rows
+to check their status. On the expanded cloud catalogue, the individual-painter
+query exceeded a ten-second diagnostic deadline; actual HTTP requests sometimes
+continued beyond the web proxy's twelve-second deadline and returned 503.
+
+The server now selects at most 300 painter rows before requesting their artwork
+counts in one bound-ID query. Artwork links have a foreign key to artworks, so
+preview counts can exclude archived IDs through the status index without reading
+every linked artwork row. Published requests additionally require a published
+artwork. Distinct counts still handle multiple attribution roles correctly, and
+painters without linked artworks keep a zero count.
+
+Timeline queries cache parameter descriptions instead of reusable named
+statements, preserving planning with the current filter values. The HTTP handler
+also cancels timeline work after eight seconds, before the web proxy deadline.
+
+Read-only cloud measurements found 126.8 ms for the scoped count query, versus
+the former query exceeding ten seconds. Eight consecutive requests through the
+updated repository code and one read-only cloud database session returned the
+same 100 painters and counts in 0.25–0.78 seconds each. These are diagnostic
+observations, not latency guarantees. Local read-only tests compare the new
+counts with the former positive artwork join. Fixture-database tests remain
+opt-in; the real catalogues were not modified for these checks.
+
+This correction does not resolve the separately recorded museum-directory
+performance issue. Ten-million-artwork load testing remains outstanding.

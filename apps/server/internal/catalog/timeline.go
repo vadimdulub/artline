@@ -3,6 +3,8 @@ package catalog
 import (
 	"context"
 	"fmt"
+
+	"github.com/jackc/pgx/v5"
 )
 
 // One predicate serves counts, nodes, periods and filter suggestions.
@@ -60,10 +62,21 @@ const timelineSuggestionsQuery = `WITH matching AS MATERIALIZED (
 SELECT key,value,name,count FROM suggestions
 ORDER BY (count <= 300) DESC,CASE WHEN count <= 300 THEN -count ELSE count END,key,value LIMIT 3`
 
+// Artwork links have a foreign key to artworks. In preview, count their scoped
+// IDs and exclude archived works through the status index instead of fetching
+// every linked artwork's heap row. Published reads still require publication.
+const timelineArtworkCountsQuery = `SELECT aa.artist_id::text,count(DISTINCT aa.artwork_id)
+ FROM artwork_artists aa WHERE aa.artist_id=ANY($1::uuid[])
+ AND NOT EXISTS(SELECT 1 FROM artworks aw WHERE aw.id=aa.artwork_id AND aw.status='archived')
+ AND ($2<>'published' OR EXISTS(SELECT 1 FROM artworks aw WHERE aw.id=aa.artwork_id AND aw.status='published'))
+ GROUP BY aa.artist_id`
+
 func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (TimelineResponse, error) {
 	result := TimelineResponse{Mode: "individual", Items: []TimelineArtist{}, Bins: []TimelineBin{}, Periods: []TimelinePeriod{}, PopularOnly: filter.PopularOnly, SuggestedFilters: []TimelineSuggestedFilter{}}
 	result.Range.Start, result.Range.End = filter.StartYear, filter.EndYear
-	args := []any{filter.StartYear, filter.EndYear, filter.Status, filter.Query, filterChoices(filter.Countries, filter.Country), filterChoices(filter.Movements, filter.Movement), filter.Regions, filterChoices(filter.WorkTypes, filter.WorkType), filter.PopularOnly, filterChoices(filter.Painters, "")}
+	// Filter selectivity varies widely. Bind values without retaining a named
+	// statement that can switch to an unsuitable generic plan after repeated use.
+	args := []any{pgx.QueryExecModeCacheDescribe, filter.StartYear, filter.EndYear, filter.Status, filter.Query, filterChoices(filter.Countries, filter.Country), filterChoices(filter.Movements, filter.Movement), filter.Regions, filterChoices(filter.WorkTypes, filter.WorkType), filter.PopularOnly, filterChoices(filter.Painters, "")}
 	if err := r.db.QueryRow(ctx, "SELECT count(*)"+timelinePredicate, args...).Scan(&result.Total); err != nil {
 		return result, fmt.Errorf("count timeline: %w", err)
 	}
@@ -114,8 +127,7 @@ func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (Timel
 	}
 	query := `SELECT a.id::text,a.slug,a.display_name,a.timeline_start_year,a.timeline_end_year,a.timeline_display,a.status,
  coalesce(m.slug,'unclassified'),coalesce(m.name,'Unclassified'),coalesce(m.color_hex,'#8b8880'),
- ARRAY(SELECT DISTINCT trim(x.country_code::text) FROM artist_countries x WHERE x.artist_id=a.id ORDER BY 1),
- (SELECT count(DISTINCT x.artwork_id) FROM artwork_artists x JOIN artworks y ON y.id=x.artwork_id WHERE x.artist_id=a.id AND y.status<>'archived' AND ($3<>'published' OR y.status='published'))
+ ARRAY(SELECT DISTINCT trim(x.country_code::text) FROM artist_countries x WHERE x.artist_id=a.id ORDER BY 1)
  ` + timelinePredicate + ` ORDER BY a.timeline_start_year,a.sort_name,a.id LIMIT 300`
 	rows, err := r.db.Query(ctx, query, args...)
 	if err != nil {
@@ -124,10 +136,38 @@ func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (Timel
 	defer rows.Close()
 	for rows.Next() {
 		var item TimelineArtist
-		if err := rows.Scan(&item.ID, &item.Slug, &item.Name, &item.StartYear, &item.EndYear, &item.DateDisplay, &item.Status, &item.Movement.Slug, &item.Movement.Name, &item.Movement.Color, &item.Countries, &item.ArtworkCount); err != nil {
+		if err := rows.Scan(&item.ID, &item.Slug, &item.Name, &item.StartYear, &item.EndYear, &item.DateDisplay, &item.Status, &item.Movement.Slug, &item.Movement.Name, &item.Movement.Color, &item.Countries); err != nil {
 			return result, err
 		}
 		result.Items = append(result.Items, item)
 	}
-	return result, rows.Err()
+	if err := rows.Err(); err != nil {
+		return result, err
+	}
+	rows.Close()
+	if len(result.Items) == 0 {
+		return result, nil
+	}
+	ids := make([]string, 0, len(result.Items))
+	positions := make(map[string]int, len(result.Items))
+	for index, item := range result.Items {
+		ids = append(ids, item.ID)
+		positions[item.ID] = index
+	}
+	counts, err := r.db.Query(ctx, timelineArtworkCountsQuery, pgx.QueryExecModeCacheDescribe, ids, filter.Status)
+	if err != nil {
+		return result, fmt.Errorf("timeline artwork counts: %w", err)
+	}
+	defer counts.Close()
+	for counts.Next() {
+		var id string
+		var count int
+		if err := counts.Scan(&id, &count); err != nil {
+			return result, err
+		}
+		if index, ok := positions[id]; ok {
+			result.Items[index].ArtworkCount = count
+		}
+	}
+	return result, counts.Err()
 }

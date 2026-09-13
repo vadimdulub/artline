@@ -122,7 +122,9 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_POPULAR", err.Error())
 		return
 	}
-	response, err := api.repo.Timeline(r.Context(), catalog.TimelineFilter{
+	ctx, cancel := contextWithTimeout(r, 8*time.Second)
+	defer cancel()
+	response, err := api.repo.Timeline(ctx, catalog.TimelineFilter{
 		StartYear:   start,
 		EndYear:     end,
 		Query:       strings.TrimSpace(r.URL.Query().Get("q")),

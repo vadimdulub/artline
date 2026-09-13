@@ -5,10 +5,55 @@ import (
 	"os"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
+
+// Reuse one database session beyond PostgreSQL's initial custom-plan executions.
+// The request deadline also catches the large heap reads that made the live
+// popular timeline fail despite fast count-only and first-page smoke checks.
+func TestTimelineReadOnlyRepeatedRequests(t *testing.T) {
+	dsn := os.Getenv("ARTLINE_READONLY_DATABASE_URL")
+	if dsn == "" {
+		t.Skip("ARTLINE_READONLY_DATABASE_URL is not set")
+	}
+	ctx := context.Background()
+	pool, err := pgxpool.New(ctx, dsn)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer pool.Close()
+	tx, err := pool.BeginTx(ctx, pgx.TxOptions{AccessMode: pgx.ReadOnly, IsoLevel: pgx.RepeatableRead})
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer tx.Rollback(ctx)
+	repo := &Repository{db: tx}
+	var baseline TimelineResponse
+	for attempt := 0; attempt < 8; attempt++ {
+		requestCtx, cancel := context.WithTimeout(ctx, 8*time.Second)
+		start := time.Now()
+		view, err := repo.Timeline(requestCtx, TimelineFilter{StartYear: 1100, EndYear: 2000, PopularOnly: true})
+		cancel()
+		if err != nil {
+			t.Fatal(err)
+		}
+		if attempt == 0 {
+			baseline = view
+		}
+		if len(view.Items) > 300 || view.Total != baseline.Total || len(view.Items) != len(baseline.Items) {
+			t.Fatal("repeated timeline changed its bounded results")
+		}
+		for index, item := range view.Items {
+			if item.ID != baseline.Items[index].ID || item.ArtworkCount != baseline.Items[index].ArtworkCount {
+				t.Fatal("repeated timeline changed painter order or artwork counts")
+			}
+		}
+		t.Logf("request %d: %d painters in %s", attempt+1, view.Total, time.Since(start))
+	}
+}
 
 // Explicitly opt-in to existing catalogue reads. This does not use testdb,
 // create databases, insert fixtures, or run migrations.
@@ -43,6 +88,39 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 		}
 		if len(view.Items) > 300 || len(view.Periods) > 90 || len(view.SuggestedFilters) > 3 {
 			t.Fatal("unbounded timeline response")
+		}
+		if len(view.Items) > 0 {
+			ids := make([]string, 0, len(view.Items))
+			for _, item := range view.Items {
+				ids = append(ids, item.ID)
+			}
+			// Compare the optimized exclusion lookup with the original positive
+			// artwork join, including duplicate attribution roles and zero works.
+			rows, err := tx.Query(ctx, `SELECT aa.artist_id::text,count(DISTINCT aa.artwork_id)
+ FROM artwork_artists aa JOIN artworks aw ON aw.id=aa.artwork_id
+ WHERE aa.artist_id=ANY($1::uuid[]) AND aw.status<>'archived'
+ AND ($2<>'published' OR aw.status='published') GROUP BY aa.artist_id`, ids, filter.Status)
+			if err != nil {
+				t.Fatal(err)
+			}
+			expected := map[string]int{}
+			for rows.Next() {
+				var id string
+				var count int
+				if err := rows.Scan(&id, &count); err != nil {
+					t.Fatal(err)
+				}
+				expected[id] = count
+			}
+			if err := rows.Err(); err != nil {
+				t.Fatal(err)
+			}
+			rows.Close()
+			for _, item := range view.Items {
+				if item.ArtworkCount != expected[item.ID] {
+					t.Fatalf("%s: artwork count=%d expected=%d", item.Slug, item.ArtworkCount, expected[item.ID])
+				}
+			}
 		}
 		for _, period := range view.Periods {
 			if period.StartYear >= period.EndYear {
