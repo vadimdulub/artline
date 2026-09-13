@@ -65,3 +65,36 @@ be committed. Later research edits in the active workspace are outside this
 release snapshot.
 
 Live site: https://artline-web-lpuqqlugnq-ew.a.run.app
+
+## Follow-up: timeline SERVICE_UNAVAILABLE correction
+
+Application commit `bac160f` and release `20260913-bac160f` replace the expensive
+per-painter artwork joins with one count query scoped to the returned painter
+IDs. Preview counts exclude archived works via the status index; published
+counts still require publication. An eight-second timeline deadline prevents
+requests from continuing beyond the web proxy's twelve-second timeout.
+
+API Cloud Build `1f74df3a-7fd8-47c6-9666-86664bfcacf7` succeeded with digest
+`sha256:1da2149ab100755c459e08f01109bcafee898cc19313ccfa31b7eaa69abb6a85`.
+The web image was reused unchanged under the shared release tag. Live revisions
+are `artline-api-00009-gwj` and `artline-web-00009-wft`. Terraform again changed
+only two image references and its final full plan reported no changes.
+
+All Go package tests passed with fixture-database opt-ins unset. Read-only local
+tests verified count equivalence against the former artwork join. Eight repeated
+requests through the updated repository and a read-only cloud database session
+took 0.25–0.78 seconds and preserved painter order and counts.
+
+After deployment, the exact failing web-proxy URL
+`/api/backend/v1/timeline?start=1100&end=2000&popular=true` returned HTTP 200 with
+100 painters on all 20 consecutive requests. Measured response times were
+157–1,105 ms, averaging 256 ms. These are short diagnostic observations, not a
+concurrency or capacity guarantee. Evidence is under
+`/tmp/artline-timeout-20260913/`.
+
+All 11 live discovery and crowded-period browser regressions passed after the
+correction, including desktop/phone accessibility and artwork viewing. Both
+new revisions receive 100% of traffic; their error-log check was empty after
+verification.
+
+The museum-directory issue recorded above remains a separate open finding.
