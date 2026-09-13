@@ -1,0 +1,178 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107936#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107936"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4833--98719e83615f7d4f74a2a866ecc3749f"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/pNusU/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/pNusU/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107936">
+    <dcterms:created xml:lang="en">1634</dcterms:created>
+    <dcterms:created xml:lang="nl">1634</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-4833</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260215"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">Rembrandt travelled to Rotterdam to portray the brewing couple Haesje van Cleyburg and Dirck Pesser, who were part of the city&#8217;s Remonstrant elite. While at first glance her attire may seem modest, in reality it was quite lavish. The millstone collar around her neck was a very expensive accessory, requiring as much as fifteen metres of fabric.</dc:description>
+    <dc:description xml:lang="nl">Rembrandt reisde af naar Rotterdam en portretteerde daar het brouwersechtpaar Haesje van Cleyburg en Dirck Pesser. Ze behoorden tot de Remonstrantse elite van de stad. Op het eerste gezicht lijkt Van Cleyburg sober gekleed, maar ze is zeker deftig: de molensteenkraag was heel kostbaar. Er was veel stof voor nodig, soms wel vijftien meter.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066801"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066827"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21074990"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221173"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2211867"/>
+    <dc:title xml:lang="en">Portrait of Haesje Jacobsdr van Cleyburg</dc:title>
+    <dc:title xml:lang="en">Portret van Haesje Jacobsdr van Cleyburg</dc:title>
+    <dc:title xml:lang="nl">Portrait of Haesje Jacobsdr van Cleyburg</dc:title>
+    <dc:title xml:lang="nl">Portret van Haesje Jacobsdr van Cleyburg</dc:title>
+    <dcterms:alternative xml:lang="en">Portrait of Haesje Jacobsdr van Cleyburg (1583-1641). Wife of the Rotterdam Brewer Dirck Jansz Pesser (1586-1651)</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Portret van Haesje Jacobsdr van Cleyburg (1583-1641). Echtgenote van de Rotterdamse bierbrouwer Dirck Jansz Pesser (1586-1651)</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 68.6 cm x width 53.4 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 68,6 cm x breedte 53,4 cm</dcterms:extent>
+    <dcterms:isReferencedBy>A. Bredius, Rembrandt : schilderijen, Utrecht 1935, nr. 354</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>A. Bredius, Rembrandt : the complete edition of the paintings, revised by H. Gerson, London 1969, nr. 354</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>E. van de Wetering, Rembrandt : the painter at work, Amsterdam 2009, p. 171, afb. 214</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Gary Schwartz, Rembrandt, zijn leven, zijn schilderijen, Maarsen 1984, p. 154, 162, 194, afb. 145</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>H. Gerson, Rembrandt paintings, Amsterdam 1968, nr. 169</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>J.G. van Gelder, 'The Rembrandt-exhibition at Edinburgh', The Burlington Magazine 92 (1950), p. 328</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>K. Bauch, Rembrandt Gem&#228;lde, Berlin 1966, nr. 492</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Mauritshuis en Rijksdienst Beeldende Kunst, '"Een keuze" : een kleine en persoonlijke keuze van de gastconservator mr. drs. L.C. Brinkman uit de diverse aanwinsten die gedurende de laatste zeven jaar voor de Rijkscollectie zijn verworven',  Den Haag 1989, vouwblad nr. 14.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  Portrait of Haesje Jacobsdr van Cleyburg,  dated 163[4], Rijksmuseum, Amsterdam, inv. no. SK-A-4833, http://www.rembrandtdatabase.org/Rembrandt/painting/3043/portrait-of-haesje-jacobsdr-van-cleyburg, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>p. 170, 171, 173, 223, afb. 240</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>p. 196, fig. 55a</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>p. 205</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>p. 338 (afbeelding)</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>p. 390, afb. 372</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301303893"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3015254"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/220116"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">Commissioned by or for Haesje van Cleyburgh (1583-1641), Rotterdam; ? her daughter, Maria Dircksdr Pesser (?-1675), Rotterdam; ? her husband Reynier Dircksz van der Wolff (1608-79), Rotterdam; ? his daughter, Anna van der Wolff (?-1704), Rotterdam; ? her daughter, Anna van der Linden (1670-1729) and her husband, Wolfgang Abraham, Baron van Gersdorff (1662-1719), The Hague;{There is a wax seal with the Gersdorff coat-of-arms on the reverse.} &#8230;; collection Arthur Fitzgerald Kinnaird (1847-1923), 11th Lord Kinnaird, Rossie Priory, Scotland, by 1883, until the 1970s;{Von Bode 1883, pp. 405, 592, no. 260; Van Thiel 1989, p. 224.}&#8230;; from a foreign foundation, fl. 10,000,000, to the museum, as a gift from the Stichting Jublieumfonds Rijksmuseum to mark the centenary of the Rijksmuseum building, with support from the Vereniging Rembrandt, the Rijksmuseum-Stichting, the Prins Bernhard Fonds, the Algemene Loterij Nederland, and various Dutch businesses and individuals, 1985</dcterms:provenance>
+    <edm:currentLocation rdf:resource="https://id.rijksmuseum.nl/2301886"/>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">Purchased with the support of the Stichting Jubileumfonds Rijksmuseum, the State of the Netherlands,  the Vereniging Rembrandt, the Rijksmuseum-Stichting, the Grote Loterij Nederland, the Stichting Klaver Vier, the Stichting Teleslag, the business community and private collectors</mrel:spn>
+    <mrel:spn xml:lang="nl">Aankoop met steun van de Stichting Jubileumfonds Rijksmuseum, de Staat der Nederlanden, de Vereniging Rembrandt, de Rijksmuseum-Stichting, de Grote Loterij Nederland, de Stichting Klaver Vier, de Stichting Teleslag, het bedrijfsleven en particulieren</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21074990">
+    <skos:prefLabel xml:lang="nl">Haesje Jacobsdr van Cleyburg</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Cleyburg, Haesje Jacobsdr van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1583</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1641</rdaGr2:dateOfDeath>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2301886">
+    <skos:prefLabel>Rijksmuseum</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/pNusU/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/pNusU"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4833--98719e83615f7d4f74a2a866ecc3749f">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/220116">
+    <skos:prefLabel xml:lang="en">panel</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">paneel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221173">
+    <skos:prefLabel xml:lang="en">historical persons - BB - woman</skos:prefLabel>
+    <skos:altLabel>61BB2</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/61BB2"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2211867">
+    <skos:prefLabel xml:lang="en">neck-gear ~ clothing (with NAME)</skos:prefLabel>
+    <skos:altLabel>41D222(RUFF)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D222%28RUFF%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260215">
+    <skos:prefLabel xml:lang="en">Vereniging Rembrandt</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Vereniging Rembrandt</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/pNusU">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

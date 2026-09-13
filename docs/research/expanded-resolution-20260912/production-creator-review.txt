@@ -1,0 +1,21 @@
+BEGIN
+ pg_advisory_xact_lock 
+-----------------------
+ 
+(1 row)
+
+CREATE TABLE
+INSERT 0 20
+DO
+UPDATE 0
+       json_build_object       
+-------------------------------
+ {"new_artworks_archived" : 0}
+(1 row)
+
+          json_build_object          
+-------------------------------------
+ {"new_empty_painters_archived" : 0}
+(1 row)
+
+COMMIT

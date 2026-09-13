@@ -1,0 +1,157 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107931#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107931"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3981--f587116afd69080374247e6d5271fd1a"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/vBXKy/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/vBXKy/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107931">
+    <dcterms:created xml:lang="en">c. 1639</dcterms:created>
+    <dcterms:created xml:lang="nl">ca. 1639</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-3981</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">In Rembrandt&#8217;s time, peacocks were eaten by the well-to-do: the meat was incorporated into meat pies, among other dishes. Immediately after being killed, the birds were hung to bleed out, as Rembrandt shows us in this storeroom. He was doubtless captivated by the plumage&#8217;s splendid marks, the riot of colours: blue, green and yellow ochre.</dc:description>
+    <dc:description xml:lang="nl">In Rembrandts tijd waren pauwen voedsel voor de welgestelden; het vlees werd onder meer in pasteien verwerkt. Na de slacht moesten de dieren hangend uitbloeden, wat Rembrandt hier in deze voorraadkamer laat zien. Hij was zonder twijfel geboeid door de prachtige tekening op de verentooi, de weelde aan kleuren: blauw, groen en okergeel.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20071357"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221304"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221314"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221315"/>
+    <dc:title xml:lang="en">Still Life with Peacocks</dc:title>
+    <dc:title xml:lang="en">Stilleven met pauwen</dc:title>
+    <dc:title xml:lang="nl">Still Life with Peacocks</dc:title>
+    <dc:title xml:lang="nl">Stilleven met pauwen</dc:title>
+    <dcterms:extent xml:lang="en">height 145 cm x width 135.5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="en">height 170 cm x width 162.5 cm x thickness 5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">drager: hoogte 145 cm x breedte 135,5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">lijst: hoogte 170 cm x breedte 162,5 cm x dikte 5 cm</dcterms:extent>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  Still life with peacocks,  c. 1639, Rijksmuseum, Amsterdam, inv. no. A 3981, https://rkd.nl/en/explore/technical#search=simple&amp;query=still%20life%20with%20peacocks, accessed 2022 February 22.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120478"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120565"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301122606"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3012498"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301262165"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301306872"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30139074"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30164222"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/22010"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">&#8230;; ? estate inventory, Clara de Valaer (1584-1660), widow successfully of Eduart van Domselaer (1568-1624) and Hendrick van Domselaer (1580/81-1652), Amsterdam, 16 October 1660, as security (&#8216;een stuk synde twee pauwen ende een kint van Rembrant&#8217;);{Bredius 1908, p. 223; Strauss &lt;em&gt;et al.&lt;/em&gt; 1979, p. 461, doc. no. 1660/15 } ? estate inventory of her son, Tobias van Domselaer (1611-85), Amsterdam, September 1685 (&#8216;een groot schilderij met twee paeuwen van Rembrandt&#8217;); {Hofstede de Groot 1906, p. 419, doc. no. 359.} &#8230;; ? collection John Blackwood (?-1777), Soho Square, London;{The collector and dealer John Blackwood is known to have imported paintings from the Dutch Republic. His collection is mentioned in his 1777 will, but without specification of the individual works; London, The National Archives, Prerogative Court of Canterbury, inv. no. PROB 11/1036, 19 November 1777, Codicil p. 12.} ? his son, Colonel John Blackwood (?-1780), Cheshunt Nunnery, Hertfordshire;{According to his father&#8217;s 1777 will, he was to inherit the &#8216;pictures and bronzes and marble busts&#8217; in the &#8216;for room up two pair of stairs&#8217;.} ? his widow, Catherine Ann Blackwood (? - 1804), Cheshunt Nunnery, Hertfordshire; ? her nephew, William Ralph Cartwright (1771-1850), Aynhoe Park, Northampton;{The collection of paintings and bronzes owned by Catherine Ann Blackwood were bequeathed to her nephew; London, The National Archives, Prerogative Court of Canterbury, inv. no. PROB 11/1405, 29 March 1804. According to The Gentleman&#8217;s Magazine, XCV (1804), p. 431, the collection inherited by William Ralph Cartwright from his aunt Catherine Ann Blackwood had been formed by John Blackwood (?-1777).} first recorded in his collection in 1819;{Lent in that year to the British Institution&#8217;s annual exhibition; see British Institution 1824, p. 162, no. 33.} his son, Sir Thomas Cartwright (1795-1850), Aynhoe Park, Northampton; his son, William Cornwallis Cartwright (1825-1915), Aynhoe Park, Northampton; last recorded in his collection in 1915;{Hofstede de Groot VI, 1915, p. 403, no. 968.} from whom purchased by the dealer Frederik Muller, Amsterdam, c. 1915;{Schmidt-Degener 1918, p. 3.} from whom purchased by Jean Joseph Marie Chabot (1857-1944), Rotterdam, Montreux, Brussels and Wassenaar, 1918 (on loan to the museum, November 1923 to 27 July 1942, SK-C-1124-I);{Schmidt-Degener 1918, p. 3.} from whom, with two other paintings, fl. 800,000, to Dr. Erhard G&#246;pel, The Hague, for Adolf Hitler's F&#252;hrermuseum, Linz, 21 July 1942 (inv. no. 2418);{Schwarz 2004, p. 146, no. XXII/10.} war recuperation, SNK, 9 November 1945 (inv. no. NK 2346);{Schwarz 2004, p. 146, no. XXII/10; MCCP website, no. 4299.} on loan from the SNK to the museum, June 1948 - 1960 (SK-C-1396); transferred to the museum, 1960</dcterms:provenance>
+    <edm:type>IMAGE</edm:type>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/vBXKy/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/vBXKy"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3981--f587116afd69080374247e6d5271fd1a">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22010">
+    <skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">doek</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221304">
+    <skos:prefLabel xml:lang="en">girl (child between toddler and youth)</skos:prefLabel>
+    <skos:altLabel>31D11222</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/31D11222"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221314">
+    <skos:prefLabel xml:lang="en">spoils of the hunt, game, venison</skos:prefLabel>
+    <skos:altLabel>43C113</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/43C113"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221315">
+    <skos:prefLabel xml:lang="en">ornamental birds: peacock</skos:prefLabel>
+    <skos:altLabel>25F35(PEACOCK)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/25F35%28PEACOCK%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/vBXKy">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

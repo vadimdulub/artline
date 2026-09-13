@@ -1,0 +1,1 @@
+CREATE INDEX research_resolutions_identity_idx ON research_resolutions(research_record_id,source_kind,source_object_id);

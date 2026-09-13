@@ -1,0 +1,155 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200109348#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200109348"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-557--62c0c747f3b9945b95195581d59e2979"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/syPHr/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/syPHr/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200109348">
+    <dcterms:created xml:lang="en">1635</dcterms:created>
+    <dcterms:created xml:lang="nl">1635</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-C-557</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/26121"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2102576"/>
+    <dc:description xml:lang="en">Feyntje van Steenkiste hailed from a prosperous family active in the Haarlem textile industry, a connection shared by her husband Lucas de Clercq and his family. Their union strengthened the business ties between their respective families. Van Steenkiste&#8217;s wealth and Mennonite faith are evident in her clothing choices: elegant, yet sober. For example, in contrast to many of her more lavishly attired contemporaries, her wrists are adorned with just a hint of delicate white lace.</dc:description>
+    <dc:description xml:lang="nl">Feyntje van Steenkiste kwam uit een rijke familie die actief was in de Haarlemse textielindustrie, net als haar man Lucas de Clercq en diens familie. Door hun huwelijk werden de zakelijke banden tussen de families versterkt. Haar welvaart en doopsgezinde geloof zijn terug te zien in haar kleding. Chic, maar sober. Anders dan veel tijdgenoten draagt ze bijvoorbeeld maar een klein randje wit kant bij haar polsen.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200109349"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200623075"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066724"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21075379"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221932"/>
+    <dc:title xml:lang="en">Portrait of Feyntje van Steenkiste</dc:title>
+    <dc:title xml:lang="en">Portret van Feyntje van Steenkiste</dc:title>
+    <dc:title xml:lang="nl">Portrait of Feyntje van Steenkiste</dc:title>
+    <dc:title xml:lang="nl">Portret van Feyntje van Steenkiste</dc:title>
+    <dcterms:alternative xml:lang="en">Feyna van Steenkiste (1603/04-v 1645), Wife of Lucas de Clercq</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Feyna van Steenkiste (1603/04-v 1645). Echtgenote van Lucas de Clercq</dcterms:alternative>
+    <dcterms:extent xml:lang="en">outer size: depth 9.5 cm (support incl. frame)</dcterms:extent>
+    <dcterms:extent xml:lang="en">support: height 121.9 cm x width 91.5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">buitenmaat: diepte 9,5 cm (drager incl. SK-L-5139)</dcterms:extent>
+    <dcterms:extent xml:lang="nl">drager: hoogte 121,9 cm x breedte 91,5 cm</dcterms:extent>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301192554"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301206950"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301217337"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301250832"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301254154"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30150408"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3015253"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30175812"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/22010"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">&lt;p&gt;**For both the present painting (SK-C-557) and its pendant (SK-C-556)**&lt;/p&gt;&lt;p&gt;Commissioned by or for the sitters; by descent to Pieter de Clercq (1849-1934) and his sister Maria de Clercq-van Eeghen (1844-1907); by whom donated to the City of Amsterdam, 1891; on loan from the City of Amsterdam to the museum since May 1891&lt;/p&gt;</dcterms:provenance>
+    <edm:currentLocation rdf:resource="https://id.rijksmuseum.nl/2301886"/>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">On loan from the City of Amsterdam</mrel:spn>
+    <mrel:spn xml:lang="nl">Bruikleen van de Gemeente Amsterdam</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2102576">
+    <skos:prefLabel xml:lang="en">Frans Hals</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Frans Hals</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Hals, Frans</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Hals, Frans</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">ca. 1582 - ca. 1583</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1666-08-26</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230148"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/230134"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/100165669"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500027794"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q167654"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/35550"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21075379">
+    <skos:prefLabel xml:lang="nl">Feyntje van Steenkiste</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Steenkiste, Feyntje van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">ca. 1603 - ca. 1604</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1640-03</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230134"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/230134"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230134">
+    <skos:prefLabel xml:lang="en">Haarlem</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Haarlem</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230148">
+    <skos:prefLabel xml:lang="en">Antwerp</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Antwerpen (stad)</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2301886">
+    <skos:prefLabel>Rijksmuseum</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/syPHr/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/syPHr"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-557--62c0c747f3b9945b95195581d59e2979">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22010">
+    <skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">doek</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221932">
+    <skos:prefLabel xml:lang="en">historical persons - BB - woman (+ three-quarter length portrait)</skos:prefLabel>
+    <skos:altLabel>61BB2(+54)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/61BB2%28%2B54%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/26121">
+    <skos:prefLabel xml:lang="en">Dutch Paintings of the Seventeenth Century in the Rijksmuseum</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Dutch Paintings of the Seventeenth Century in the Rijksmuseum</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/syPHr">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

@@ -26,7 +26,8 @@ test("popular discovery is the default, opt-out survives reload/back, reset rest
   await settled(page);
   expect(await page.locator(".density-results li").count()).toBe(all.periods.length);
   expect(all.periods.length).toBeLessThanOrEqual(91);
-  expect(all.periods.reduce((n: number, p: { count: number }) => n + p.count, 0)).toBe(all.total);
+  // Overlapping lifetimes can appear in several periods; totals are unique painters.
+  expect(all.periods.every((p: { count: number }) => p.count > 0 && p.count <= all.total)).toBe(true);
   await page.goBack();
   await expect(toggle).toBeChecked();
   await settled(page);
@@ -69,7 +70,11 @@ test("Prado masterpieces connect Velázquez chronology to the museum and image v
   const prado = panel.getByRole("navigation", { name: "Collections for these artworks" }).getByRole("link", { name: "Museo Nacional del Prado", exact: true });
   await expect(prado).toHaveAttribute("href", /museo-del-prado\?artist=diego-velazquez-q297/);
   await panel.getByRole("combobox", { name: "Artwork year" }).selectOption("1656");
-  await expect(panel.locator(".work-row")).toHaveCount(1);
+  // The catalogue can gain more works from the same year.
+  const yearGroup = panel.getByRole("region", { name: "Artworks grouped at 1656", exact: true });
+  await expect(yearGroup).toBeVisible();
+  await expect(panel.getByRole("region", { name: /^Artworks grouped at / })).toHaveCount(1);
+  await expect(yearGroup.getByRole("button", { name: /1656 Las Meninas/ })).toBeVisible();
   await work.click();
   await panel.getByRole("button", { name: "View larger", exact: false }).click();
   await expect(page.locator(".image-dialog")).toBeVisible();

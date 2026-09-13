@@ -1,0 +1,197 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107942#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107942"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-597--6f7272f48fb3fbb02ceecf7aa897f1a7"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/FeurF/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/FeurF/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107942">
+    <dcterms:created xml:lang="en">1639</dcterms:created>
+    <dcterms:created xml:lang="nl">1639</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-C-597</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260213"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">The sitter is likely the 20-year-old Maria Trip. She hailed from an extremely wealthy family involved in the arms trade. Here, she displays her affluence in full regalia: she wears a collar of the finest lace, a brooch with matching earrings, and a fortune in pearls.&#13;
+The Chinese folding fan in her left hand was still a very rare and therefore precious accessory in 1639.</dc:description>
+    <dc:description xml:lang="nl">Waarschijnlijk is dit de twintigjarige Maria Trip. Zij was lid van een schatrijke familie, die handelde in wapens. Hier laat zij in vol ornaat haar rijkdom zien: ze draagt een kraag van de fijnst mogelijke kant, een broche met bijpassende oorbellen en een weelde aan parels.&lt;BR /&gt;De Chinese vouwwaaier in haar linkerhand was toen nog erg zeldzaam en dus kostbaar.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200560062"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066706"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21062787"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221173"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/22129"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221330"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2219674"/>
+    <dc:title xml:lang="en">Portrait of a Woman, Probably Maria Trip (1619-1683)</dc:title>
+    <dc:title xml:lang="en">Portret van een vrouw, waarschijnlijk Maria Trip</dc:title>
+    <dc:title xml:lang="nl">Portrait of a Woman, Probably Maria Trip (1619-1683)</dc:title>
+    <dc:title xml:lang="nl">Portret van een vrouw, waarschijnlijk Maria Trip</dc:title>
+    <dcterms:alternative xml:lang="en">Portrait of a woman, probably Maria Trip</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Portret van Maria Trip (1619-83). Zuster van Jacobus Trip en later echtgenote van Balthasar Coymans</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Portret van een vrouw, waarschijnlijk Maria Trip</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 107 cm x width 82 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 107 cm x breedte 82 cm</dcterms:extent>
+    <dcterms:isReferencedBy>J. van der Veen, Opdrachtgevers in Amsterdam en Den Haag, In de gunst van hoge heren, in: Kunstschrift 3 (2009), p. 37, afb. 39</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>R. Meijer, 'Portret van Maria Trip', Rijksmuseum Kunstkrant 32, nr. 6 (nov./dec. 2006), p. 12-13</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  Portrait of a woman probably Maria Trip,  c. 1639, Rijksmuseum, Amsterdam, inv. no. SK-C-597, http://www.rembrandtdatabase.org/Rembrandt/painting/3042/portrait-of-a-woman-probably-maria-trip, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301100494"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120478"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301154559"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3011873"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301206950"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301254025"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301283482"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301283486"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30139183"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30166353"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30180679"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/220116"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <edm:currentLocation rdf:resource="https://id.rijksmuseum.nl/2301886"/>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">On loan from the Familie Van Weede Stichting</mrel:spn>
+    <mrel:spn xml:lang="nl">Bruikleen van de Familie Van Weede Stichting</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21062787">
+    <skos:prefLabel xml:lang="nl">Maria Trip</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Trip, Maria</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1619</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1683</rdaGr2:dateOfDeath>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/305192152"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q24327971"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2301886">
+    <skos:prefLabel>Rijksmuseum</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/FeurF/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/FeurF"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-597--6f7272f48fb3fbb02ceecf7aa897f1a7">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/220116">
+    <skos:prefLabel xml:lang="en">panel</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">paneel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221173">
+    <skos:prefLabel xml:lang="en">historical persons - BB - woman</skos:prefLabel>
+    <skos:altLabel>61BB2</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/61BB2"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22129">
+    <skos:prefLabel xml:lang="en">fan</skos:prefLabel>
+    <skos:altLabel>41D262</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D262"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221330">
+    <skos:prefLabel xml:lang="en">lace</skos:prefLabel>
+    <skos:altLabel>41D2652</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D2652"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2219674">
+    <skos:prefLabel xml:lang="en">pearl; pearl necklace (+ women's clothes)</skos:prefLabel>
+    <skos:altLabel>41D26611(+82)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D26611%28%2B82%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260213">
+    <skos:prefLabel xml:lang="en">Top 100</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 100</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/FeurF">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

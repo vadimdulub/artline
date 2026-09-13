@@ -1,0 +1,161 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107941#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107941"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4691--80224695afc4014010c5487ea7eb9ef5"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/YfhED/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/YfhED/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107941">
+    <dcterms:created xml:lang="en">c. 1628</dcterms:created>
+    <dcterms:created xml:lang="nl">ca. 1628</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-4691</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260213"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260215"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">Even as an inexperienced young artist, Rembrandt did not shy away from experimenting. Here the light glances along his right cheek, while the rest of his face is veiled in shadow. It takes a while to realize that the artist is gazing intently out at us. Using the butt end of his brush, Rembrandt made scratches in the still wet paint to accentuate the curls of his tousled hair.</dc:description>
+    <dc:description xml:lang="nl">Onervaren als hij was, schuwde de jonge Rembrandt het experiment niet. Hier liet hij het licht langs zijn rechterwang schampen. De rest van het gezicht is in schaduwen gehuld. Het duurt even voordat je beseft dat de kunstenaar je scherp aankijkt. Met de achterkant van zijn penseel tekende Rembrandt in de nog natte verflaag, om zo de krullen in zijn wilde haardos te accentueren.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200270988"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221328"/>
+    <dc:title xml:lang="en">Self-portrait</dc:title>
+    <dc:title xml:lang="en">Zelfportret</dc:title>
+    <dc:title xml:lang="nl">Self-portrait</dc:title>
+    <dc:title xml:lang="nl">Zelfportret</dc:title>
+    <dcterms:alternative xml:lang="en">Self-Portrait at an Early Age</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Zelfportret op jeugdige leeftijd</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 22.6 cm x width 18.7 cm</dcterms:extent>
+    <dcterms:extent xml:lang="en">height 33.2 cm x width 29.3 cm x depth 5.9 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">lijst: hoogte 33,2 cm x breedte 29,3 cm x diepte 5,9 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">schilderij: hoogte 22,6 cm x breedte 18,7 cm</dcterms:extent>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  Self portrait,  c. 1628, Rijksmuseum, Amsterdam, inv. no. SK-A- 4691, http://www.rembrandtdatabase.org/Rembrandt/painting/2943/self-portrait, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301105745"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3011738"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301241048"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301283482"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301283486"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301303749"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3015254"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/220116"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">&#8230;; collection Dr Alexander Patterson (1835-1909), Glasgow; &#8230;; collection James E. Mackay, Glasgow; by descent to his granddaughter Mary A. Winter, Bearsden, Dumbartonshire;{For the provenance of the painting in Scotland see especially Lloyd Williams 1992, p. 19.} sale, Lady Sturley, Mrs S. Radcliffe &lt;em&gt;et al.&lt;/em&gt; [section 'other properties' (Mrs Mary A. Winter)], London (Sotheby's), 27 May 1959, no. 135, as 'after Rembrandt', &#163; 1,700, to the dealer D.H. Cevat, St Peter Port, Guernsey; from whom on loan to the museum, 1960-71 (SK-C-1457); from whom, fl. 1,800,000, to the museum, with support from the Vereniging Rembrandt, the Prins Bernhardfonds, the Commissie voor Fotoverkoop, and the Ministerie van Cultuur, Recreatie en Maatschappelijk Werk, 1977</dcterms:provenance>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">Purchased with the support of the Vereniging Rembrandt, the Stichting tot Bevordering van de Belangen van het Rijksmuseum and the ministerie van CRM</mrel:spn>
+    <mrel:spn xml:lang="nl">Aankoop met steun van de Vereniging Rembrandt, de Stichting tot Bevordering van de Belangen van het Rijksmuseum en het Ministerie van CRM</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/YfhED/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/YfhED"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4691--80224695afc4014010c5487ea7eb9ef5">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/220116">
+    <skos:prefLabel xml:lang="en">panel</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">paneel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221328">
+    <skos:prefLabel xml:lang="en">portrait, self-portrait of painter</skos:prefLabel>
+    <skos:altLabel>48C513</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/48C513"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260213">
+    <skos:prefLabel xml:lang="en">Top 100</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 100</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260215">
+    <skos:prefLabel xml:lang="en">Vereniging Rembrandt</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Vereniging Rembrandt</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/YfhED">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

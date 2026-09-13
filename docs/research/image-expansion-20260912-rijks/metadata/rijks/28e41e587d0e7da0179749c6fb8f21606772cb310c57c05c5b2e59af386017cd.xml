@@ -1,0 +1,191 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107944#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107944"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4057--74e5d98ac8bb3d68d3a00d6eeb2b22ff"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/ryBbQ/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/ryBbQ/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107944">
+    <dcterms:created xml:lang="en">1633</dcterms:created>
+    <dcterms:created xml:lang="nl">1633</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-4057</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">The young woman&#8217;s clothing is not in keeping with the fashions of Rembrandt&#8217;s day, but rather reflects styles of earlier centuries. The woman&#8217;s distinctive features &#8211; a domed forehead, slightly bulging eyes, and pronounced chin &#8211; are easily recognized in depictions of ancient goddesses and heroines that Rembrandt painted in the 1630s. Thus the painting is not strictly a portrait, but a &#8216;tronie&#8217;, or fantasy head.</dc:description>
+    <dc:description xml:lang="nl">De kleding van de jonge vrouw is niet volgens de mode van Rembrandts tijd, maar uit vroegere eeuwen. Het gezicht met het gewelfde voorhoofd, de enigszins uitpuilende ogen en de forse kin komt ook voor op voorstellingen die hij in de jaren dertig maakte van antieke godinnen en heldinnen. Het schilderij is geen portret, maar een &#8216;tronie&#8217;, een gefantaseerd gezicht.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066801"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066827"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200901542"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21058188"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221173"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2212732"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2219674"/>
+    <dc:title xml:lang="en">Jonge vrouw in gefantaseerde kleding</dc:title>
+    <dc:title xml:lang="en">Young Woman in Fantasy Costume</dc:title>
+    <dc:title xml:lang="nl">Jonge vrouw in gefantaseerde kleding</dc:title>
+    <dc:title xml:lang="nl">Young Woman in Fantasy Costume</dc:title>
+    <dcterms:alternative xml:lang="en">Portrait of a Woman, thought to be Rembrandt&#180;s Wife Saskia van Uylenburgh (1612-1642)</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Portret van een vrouw, vermoedelijk Rembrandts vrouw Saskia van Uylenburgh (1612-1642)</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 65 cm x width 48 cm</dcterms:extent>
+    <dcterms:extent xml:lang="en">height 86.8 cm x width 70.5 cm x depth 6.5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">buitenmaat: hoogte 86,8 cm x breedte 70,5 cm x diepte 6,5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 65 cm (ovaal) x breedte 48 cm</dcterms:extent>
+    <dcterms:isReferencedBy>G. Luijten, ''De veelheid en de eelheid' : een Rijksmuseum Schmidt-Degener', Nederlands Kunsthistorisch Jaarboek 35 (1984), p. 376, afb. 24.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  Young woman in fantasy costume,  dated 1633, Rijksmuseum, Amsterdam, inv. no. SK-A-4057, http://www.rembrandtdatabase.org/Rembrandt/painting/3067/young-woman-in-fantasy-costume, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Zie veiling Christie's London (85 Old Brompton Road) 'Old Masters &amp; British Paintings' (05-07-2013) lot nr. 65: After Rembrandt Harmensz. van Rijn, 'Portrait of a lady, possibly Saskia van Uylenburgh (1612-1642)'.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301105745"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120565"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301154394"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3011738"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301209469"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301248545"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301262165"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301306872"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3015254"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/220116"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">&#8230;; ? purchased by Thomas Bruce (1766-1841), 7th Earl of Elgin and 11th Earl of Kincardine, Broomhall, Fife, at an unknown date;{According to a letter dated 21 January 1933 from Edward James Bruce to Joseph Duveen quoted in Isaac de Bruijn's notes preserved at the Rijksmuseum.} ? by descent to his grandson, Victor Alexander Bruce (1849-1917), 9th Earl of Elgin, 13th Earl of Kincardine, Broomhall, Fife; first mentioned in his collection, 1893;{Hofstede de Groot 1893, p. 223.} his son, Edward James Bruce (1881-1968), 10th Earl of Elgin, 14th Earl of Kincardine, Broomhall, Fife; from whom, &#163; 7,000, to the dealer Joseph Duveen, Paris and New York, 1926;{Secrest 2004, p. 478.} from whom, $ 35,000, to Isaac de Bruijn (1872-1953), Spiez and Muri, near Bern, December 1932;{Isaac de Bruijn's notes preserved at the Rijksmuseum; Secrest 2004, p. 478, where it is mistakenly stated that Duveen bought the painting back and resold it to an unknown buyer.} donated by Isa&#228;c de Bruijn and his wife, Johanna Geertruida van der Leeuw (1877-1960), Spiez and Muri, near Bern, to the Vereeniging Rembrandt on the 50th anniversary of its founding, for placement in the Rijksmuseum, but kept in usufruct, 1933; transferred to the museum, 1961</dcterms:provenance>
+    <edm:currentLocation rdf:resource="https://id.rijksmuseum.nl/2301886"/>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">De Bruijn-van der Leeuw Bequest, Muri, Switzerland</mrel:spn>
+    <mrel:spn xml:lang="nl">Legaat van de heer en mevrouw De Bruijn-van der Leeuw, Muri, Zwitserland</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21058188">
+    <skos:prefLabel xml:lang="nl">Saskia van Uylenburgh</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Uylenburgh, Saskia van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1612-08-02</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1642-06-14</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230176"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/95965196"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500043384"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q109676"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230176">
+    <skos:prefLabel xml:lang="nl">Leeuwarden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2301886">
+    <skos:prefLabel>Rijksmuseum</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/ryBbQ/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/ryBbQ"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4057--74e5d98ac8bb3d68d3a00d6eeb2b22ff">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/220116">
+    <skos:prefLabel xml:lang="en">panel</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">paneel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221173">
+    <skos:prefLabel xml:lang="en">historical persons - BB - woman</skos:prefLabel>
+    <skos:altLabel>61BB2</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/61BB2"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2212732">
+    <skos:prefLabel xml:lang="en">neck-gear: collar (+ women's clothes)</skos:prefLabel>
+    <skos:altLabel>41D222(COLLAR)(+82)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D222%28COLLAR%29%28%2B82%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2219674">
+    <skos:prefLabel xml:lang="en">pearl; pearl necklace (+ women's clothes)</skos:prefLabel>
+    <skos:altLabel>41D26611(+82)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D26611%28%2B82%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/ryBbQ">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

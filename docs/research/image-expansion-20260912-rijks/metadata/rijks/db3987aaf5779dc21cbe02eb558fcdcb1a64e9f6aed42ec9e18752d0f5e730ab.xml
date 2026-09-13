@@ -1,0 +1,276 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107929#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107929"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/cWWQE/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/cWWQE/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107929">
+    <dcterms:created xml:lang="en">1662</dcterms:created>
+    <dcterms:created xml:lang="nl">1662</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-C-6</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260213"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">After suffering financial difficulties in the 1650s, Rembrandt moved to a rental house on the Rozengracht. The Amsterdam &#233;lite no longer knocked on his door as often as they had done before. He nevertheless remained popular: this important guild commissioned him to paint a group portrait. Rembrandt produced a lively scene by having the wardens look up from their work as if interrupted by our arrival.</dc:description>
+    <dc:description xml:lang="nl">Nadat Rembrandt in de jaren 50 in financi&#235;le problemen was geraakt, verhuisde hij naar een huurhuis aan de Rozengracht. De Amsterdamse elite klopte niet meer zo veelvuldig bij hem aan als voorheen. Toch bleef hij populair: dit belangrijke gilde vroeg hem voor hun portret. Rembrandt maakte er een levendige sc&#232;ne van, door te doen alsof ze &#8211; gestoord door onze binnenkomst &#8211; even opkijken van hun werk.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200166432"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200238918"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200316322"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200503511"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200591214"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200591217"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200829321"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200902620"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21058023"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21074854"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21074855"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21074856"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21074857"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/21074858"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221308"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221309"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221310"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2218319"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <dc:title xml:lang="en">De waardijns van het Amsterdamse lakenbereidersgilde, bekend als &#8216;De Staalmeesters&#8217;</dc:title>
+    <dc:title xml:lang="en">The Sampling Officials of the Amsterdam Drapers&#8217; Guild, Known as &#8216;The Syndics&#8217;</dc:title>
+    <dc:title xml:lang="nl">De waardijns van het Amsterdamse lakenbereidersgilde, bekend als &#8216;De Staalmeesters&#8217;</dc:title>
+    <dc:title xml:lang="nl">The Sampling Officials of the Amsterdam Drapers&#8217; Guild, Known as &#8216;The Syndics&#8217;</dc:title>
+    <dcterms:alternative xml:lang="en">The syndics: the sampling officials (wardens) of the Amsterdam drapers</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">De Staalmeesters: het college van staalmeesters (waardijns) van het Amsterdamse lakenbereidersgilde</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 191.5 cm x width 279 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 191,5 cm x breedte 279 cm</dcterms:extent>
+    <dcterms:isReferencedBy>B. Alsdorf, La fraternit&#233; des individus: les portraits de groupe de Degas, in: La revue de Mus&#233;e d'Orsay nr. 30 (automne 2010) 48, 14, p. 25, fig. 9</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>I.H. van Eeghen, "De Staalmeesters", Jaarboek Amstelodamum 1956, p. 65 - 80</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Inzoomer object op zaal, 2013 (Nederlands/English).</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>J.G. van Gelder, 'De Staalmeesters', Openbaar Kunstbezit (1964), p. 11a/b.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Marleen Dominicus-Van Soest, 'Rembrandt in nieuw licht', Rijksmuseum Kunstkrant 19 (1993) nr. 3.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>N. Middelkoop, 'Kruisbestuiving : Schutters- en regentenstukken in Haarlem en Amsterdam', Kunstschrift (2014) nr. 4, p. 34, afb. 34-35.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>R. Bergmans, Rembrandts kijk op De Staalmeesters, 2009-07- http://mathart.come2me.nl/1014134/REMBRANDT-Staalmeesters [artikel over het perspectief]</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  The sampling officials of the Amsterdam drapers guild,  dated 1662, Rijksmuseum, Amsterdam, inv. no. SK-C-6, http://www.rembrandtdatabase.org/Rembrandt/painting/3046/the-sampling-officials-of-the-amsterdam-drapers-guild, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Tim Zeedijk, &#8216;Why Carpets are Beautiful&#8217;, in Kneeling, 5 years of Making Carpets, Eindhoven (MU Artspace) 2014, afb. p. 10.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301105745"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301107690"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120261"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120321"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120421"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120478"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120592"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120610"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120738"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301125524"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301153836"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301154666"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301216127"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301241048"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301242195"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301262165"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301290027"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301306872"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30139183"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30157626"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30166353"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30177302"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/22010"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">Commissioned by the sitters for the hall of the Drapers&#8217; Guild (Staalhof), Staalstraat, Amsterdam; transferred to the 'Konstkamer' in the Town Hall, Amsterdam, 27 November 1771;{According to a label formerly on the reverse; see Van Eeghen 1957, p. 66.} on loan from the City of Amsterdam to the museum since 15 August 1808</dcterms:provenance>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">On loan from the City of Amsterdam</mrel:spn>
+    <mrel:spn xml:lang="nl">Bruikleen van de gemeente Amsterdam</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21058023">
+    <skos:prefLabel xml:lang="nl">Jacob van Loon</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Loon, Jacob van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1595</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1674</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2207825"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21074854">
+    <skos:prefLabel xml:lang="nl">Volckert Jansz</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Jansz, Volckert</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1605</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1681</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/2306156"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2207825"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21074855">
+    <skos:prefLabel xml:lang="nl">Willem van Doeyenburg</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Doeyenburg, Willem van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1616</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1687</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/2302"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2207825"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21074856">
+    <skos:prefLabel xml:lang="nl">Frans Hendricksz Bel</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Bel, Frans Hendricksz</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1629</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1701</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21074857">
+    <skos:prefLabel xml:lang="nl">Aernout van der Mye</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Mye, Aernout van der</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1625</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1681</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2207825"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/21074858">
+    <skos:prefLabel xml:lang="nl">Jochem de Neve</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Neve, Jochem de</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1629</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1681</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2302">
+    <skos:prefLabel xml:lang="en">Utrecht</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Utrecht (stad)</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <wgs84_pos:lat>4.916667</wgs84_pos:lat>
+    <wgs84_pos:long>52.35</wgs84_pos:long>
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/tgn/7006952"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q727"/>
+    <owl:sameAs rdf:resource="https://sws.geonames.org/2759794/"/>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2306156">
+    <skos:prefLabel xml:lang="en">Hoorn (North Holland)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Hoorn</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/cWWQE/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/cWWQE"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22010">
+    <skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">doek</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2207825">
+    <skos:prefLabel xml:lang="nl">lakenkoper</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221308">
+    <skos:prefLabel xml:lang="en">book - MM - book open</skos:prefLabel>
+    <skos:altLabel>49MM32</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/49MM32"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221309">
+    <skos:prefLabel xml:lang="en">table</skos:prefLabel>
+    <skos:altLabel>41A711</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41A711"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221310">
+    <skos:prefLabel xml:lang="en">officers trusted with control of quality</skos:prefLabel>
+    <skos:altLabel>47E241</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/47E241"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2218319">
+    <skos:prefLabel xml:lang="en">wool (material ~ textile industry)</skos:prefLabel>
+    <skos:altLabel>47H14</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/47H14"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260213">
+    <skos:prefLabel xml:lang="en">Top 100</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 100</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/cWWQE">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

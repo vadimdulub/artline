@@ -557,10 +557,14 @@ func (s europeanImport) work(w europeanWork, raw json.RawMessage, artist, inst, 
 			description = w.Description
 		}
 		idSlug := "europe-" + w.Institution + "-" + checksum([]byte(w.URL))[:12] + "-" + slug(w.Title)
+		locationText := idef.Name
+		if idef.City != "" && !strings.HasSuffix(normalize(idef.Name), " "+normalize(idef.City)) {
+			locationText += ", " + idef.City
+		}
 		err = s.tx.QueryRow(s.ctx, `INSERT INTO artworks(slug,title,alternate_title,normalized_title,date_display,creation_year_start,creation_year_end,date_precision,
  work_type,description_md,creation_place_unknown_reason,current_location_text,accession_number,location_checked_at,status,created_by,updated_by)
  VALUES($1,$2,NULLIF($3,''),$4,$5,$6,$7,$8,$14,$9,'Creation place not established by this research.',$10,NULLIF($11,''),$12,'review',$13,$13) RETURNING id::text`,
-			idSlug, w.Title, strings.Join(w.Aliases, "; "), normalize(w.Title), w.DateDisplay, date.First, date.Last, date.Precision, description, idef.Name+", "+idef.City, w.Accession, s.checked, europeanActor, workType).Scan(&id)
+			idSlug, w.Title, strings.Join(w.Aliases, "; "), normalize(w.Title), w.DateDisplay, date.First, date.Last, date.Precision, description, locationText, w.Accession, s.checked, europeanActor, workType).Scan(&id)
 		if err != nil {
 			return err
 		}

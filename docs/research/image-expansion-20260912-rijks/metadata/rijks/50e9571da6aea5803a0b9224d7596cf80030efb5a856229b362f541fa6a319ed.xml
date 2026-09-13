@@ -1,0 +1,228 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200108372#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200108372"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/RwfHG/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/RwfHG/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200108372">
+    <dcterms:created xml:lang="en">c. 1663</dcterms:created>
+    <dcterms:created xml:lang="nl">ca. 1663</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-C-251</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260213"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/2622361"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2101778"/>
+    <dc:description xml:lang="en">Enjoying a quiet, private moment, this young woman is absorbed in reading a letter in the morning light. She is still wearing her blue night jacket. All of the colours in the composition are secondary to its radiant lapis lazuli blue. Vermeer recorded the effects of light with extraordinary precision. Particularly innovative is his rendering of the woman&#8217;s skin with pale grey, and the shadows on the wall using light  blue.</dc:description>
+    <dc:description xml:lang="nl">Een stil priv&#233;moment &#8211; een jonge vrouw staat aandachtig een brief te lezen in het ochtendlicht. Ze is nog in haar blauwe nachtjakje. Alle kleuren zijn ondergeschikt aan dit stralende lapis lazuli-blauw. Vermeer registreerde exact de lichteffecten. Zo durfde hij het als eerste aan om de huid in zachtgrijs, en de schaduwen op de muur in lichtblauw te schilderen.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200305102"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066825"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20067012"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20067258"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221136"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221196"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221553"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221638"/>
+    <dc:title xml:lang="en">Brieflezende vrouw</dc:title>
+    <dc:title xml:lang="en">Woman Reading a Letter</dc:title>
+    <dc:title xml:lang="nl">Brieflezende vrouw</dc:title>
+    <dc:title xml:lang="nl">Woman Reading a Letter</dc:title>
+    <dcterms:alternative xml:lang="en">Woman Reading a Letter</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Brieflezende vrouw</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 46.5 cm x width 39 cm x depth 6.5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="en">height 70 cm x width 63 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">doekmaat: hoogte 46,5 cm x breedte 39 cm x diepte 6,5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">inclusief lijst: hoogte 70 cm x breedte 63 cm</dcterms:extent>
+    <dcterms:isReferencedBy>'Vermeer', bijlage Vrij Nederland, 24 februari 1996, nr. 8.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>A.B. de Vries, Openbaar Kunstbezit 9 (1965), nr. 39.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Daniel A. Fink, 'Vermeer's Use of the Camera Obscura : A Comparative Study', The Art Bulletin 53 (1971), p. 493-505.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>H. van Gelder, 'Haagsche Kunstverzamelingen voor 1900', Die Haghe (1942), p. 26, afb. 9.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>James A. Welu, 'Vermeer : his cartographic sources', The Art Bulletin 57 (1975), p. 532-533, 541, afb. 3.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>K. Clark, Connaissance des Arts (1974), p. 78.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>K. Zandvliet, 'In plaets van schilderijen', Vitrine (1996) mrt./apr., p. 16-17.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Karin Leonhard, 'Vermeer's Pregnant Women : On Human Generation an Pictorial Representation', Art History 25 (2002) nr. 3, p. 293-318.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>Liza Burmeister Kaaring, 'Tracking the Language of Stillness', SMK Artjournal : Statens  Museum for Kunst (2007), p. 108-115, p. 112, afb. 6.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>M.A. Castor, 'Augenblick und Zeitfluss : Bemerkungen zu einigen Konstanten in der Malerei Jan Vermeers', Pantheon 54 (1996), p. 91.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>R. Roos, 'Johannes Vermeer', Vernisage (1996) mrt., p. 12.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>W. Thor&#233;-B&#252;rger, Gazette des Beaux-Arts (1866)</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301103782"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301107690"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301111461"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120937"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301126913"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301142710"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144185"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144193"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144194"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144197"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144202"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144205"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144211"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144215"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144218"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144231"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144232"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301149303"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301153148"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301153563"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30116763"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301206140"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301210541"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301215976"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301215977"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301218758"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301239395"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301241701"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301250362"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301250364"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301262165"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30126660"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30138992"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30139155"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30140462"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30163698"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30166212"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30166465"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30166480"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30173808"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30173809"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30173813"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30175789"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30175790"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30175799"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30175800"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30177722"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30183274"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30187582"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30191336"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/22010"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">&#8230;; ? sale Pieter van der Lip (1655-1712), Amsterdam, 14 June 1712, no. 22, fl. 110;{Hoet and Terwesten 1752-1770, vol. 1 (1752), p. 147.} &#8230;; ? collection Mozes de Chaves (1718-1762), Amsterdam, 1759;{In Meijer 1947, p. 12 an inventory is included of the collection Mozes de Chaves: &#8216;Staat en Inventaris van den Boedel en Nalatenschap van Wijlen de Heer Mozes de Chaves&#8217; on which the painting is mentioned as follows: &#8216;Een blauwe Meisje door Vermeer van Delft&#8217;.} his sale, Amsterdam (H. de Winter and J. Yver), 30 November 1772 &lt;em&gt;sqq.&lt;/em&gt;, no. 23, as &#8216;Van der Neer (de Delfsche)&#8217;, fl. 40, to the dealer Fouquet;{Exh.cat. Dresden 2021, p. 230; Copy Cabinet des Estampes, Biblioth&#232;que Nationale, Paris.} &#8230;; sale Pieter Lyonet (1706-1789, The Hague), Amsterdam (P.B. Bunel &lt;em&gt;et al.&lt;/em&gt;), 11 April 1791 &lt;em&gt;sqq.&lt;/em&gt;, no. 181, fl. 43, to the dealer P. Fouquet;{Copy RKD.} &#8230;; anonymous sale, Amsterdam (P. van der Schley &lt;em&gt;et al.&lt;/em&gt;), 14 August 1793 &lt;em&gt;sqq.&lt;/em&gt;, no. 73, fl. 70;{Copy RKD; in Liedtke 2008 incorrectly as no. 739.} &#8230;; sale Herman ten Kate (1741-1800, The Hague), Amsterdam (P. van der Schley &lt;em&gt;et al.&lt;/em&gt;), 10 June 1801 &lt;em&gt;sqq.&lt;/em&gt;, no. 118, fl. 110, to Taijs;{Copy RKD.} &#8230;; sale Auguste-Louis-Cesar-Hyppolite-Theodore de L&#8217;Espinasse de Langeac (1759-1814), Paris (A. Paillet and H. Delaroche), 16 January 1809 &lt;em&gt;sqq.&lt;/em&gt;, no. 85, fr. 200, to Augustin Lapeyri&#232;re (1779-1831), Paris;{Copy Philadelphia Museum of Art.} his sale, Paris (M. Lacoste), 19 April 1825 &lt;em&gt;sqq.&lt;/em&gt;, no. 127, fr. 2,060 or fr. 1,060, to Berthaud;{Copy RKD1; copy Philadelphia Museum of Art.} &#8230;; the dealer John Smith, London, 1831;{Sebag-Montefiore and Armstrong-Totten 2013, p. 30, n.27.} by whom, &#163;73 10 s, to Adriaan van der Hoop (1778-1854), Amsterdam, 1839;{Ibid., p. 22.} by whom bequeathed to the Academie voor Schone Kunsten, Amsterdam; transferred to the City of Amsterdam, 1885; on loan to the museum since 1885</dcterms:provenance>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">On loan from the City of Amsterdam (A. van der Hoop Bequest)</mrel:spn>
+    <mrel:spn xml:lang="nl">Bruikleen van de gemeente Amsterdam (legaat A. van der Hoop)</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2101778">
+    <skos:prefLabel xml:lang="en">Johannes Vermeer</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Johannes Vermeer</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Vermeer, Johannes</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Jan Vermeer van Delft</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Jan Vermeer</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Johannes Reyniersz. Vermeer</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Johannes Vermeer van Delft</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Vermeer van Delft, Jan</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Vermeer van Delft, Johannes</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Vermeer, Jan</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Vermeer, Johannes Reyniersz.</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Vermeer, Johannes</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1632 - 1632-10-31</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1675-12 - 1675-12-15</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230132"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/230132"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://data.cerl.org/thesaurus/cnp01437165"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/51961439"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500032927"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q41264"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/80476"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230132">
+    <skos:prefLabel xml:lang="en">Delft</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Delft</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/RwfHG/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/RwfHG"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22010">
+    <skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">doek</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221136">
+    <skos:prefLabel xml:lang="en">reading</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">lezen</skos:prefLabel>
+    <skos:altLabel>49N</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/49N"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221196">
+    <skos:prefLabel xml:lang="en">maps, atlases</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">kaarten, atlassen</skos:prefLabel>
+    <skos:altLabel>25A</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/25A"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221553">
+    <skos:prefLabel xml:lang="en">letter, envelope</skos:prefLabel>
+    <skos:altLabel>46E221</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/46E221"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221638">
+    <skos:prefLabel xml:lang="en">chair</skos:prefLabel>
+    <skos:altLabel>41A721</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41A721"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260213">
+    <skos:prefLabel xml:lang="en">Top 100</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 100</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/RwfHG">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

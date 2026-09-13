@@ -1,0 +1,177 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107930#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107930"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3340--7aaadc1f26ec652044aa6e1150576fd6"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/VzuFK/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/VzuFK/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107930">
+    <dcterms:created xml:lang="en">1635</dcterms:created>
+    <dcterms:created xml:lang="nl">1635</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-3340</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">Rembrandt manipulated light in a highly personal way. Here, the man&#8217;s turban and the right side of his face are brilliantly illuminated, while the left side is in shadow. Character heads like this &#8211; they are not portraits &#8211; were extremely popular in the 17th century; early on, they were widely copied and imitated. They were known as &#8216;Turkish tronies&#8217;.</dc:description>
+    <dc:description xml:lang="nl">Op eigenzinnige wijze speelt Rembrandt met het licht. Als uit een schijnwerper valt het in alle hevigheid op de tulband en het rechterdeel van het gezicht. De linkerhelft is beschaduwd. Dergelijke karakterkoppen &#8211; geen portretten &#8211; waren in de 17de eeuw populair; al vroeg werden ze veelvuldig gekopieerd en nagevolgd. Ze werden &#8216;Turkse tronies&#8217; genoemd.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200415068"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066763"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221311"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221312"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/22171"/>
+    <dc:title xml:lang="en">Man in Oriental Dress</dc:title>
+    <dc:title xml:lang="en">Man in oosterse kleding</dc:title>
+    <dc:title xml:lang="nl">Man in Oriental Dress</dc:title>
+    <dc:title xml:lang="nl">Man in oosterse kleding</dc:title>
+    <dcterms:alternative xml:lang="en">An oriental</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Een oosterling</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 72 cm x width 54.5 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 72 cm (paneelmaat) x breedte 54,5 cm (paneelmaat)</dcterms:extent>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, attributed totoegeschreven aanRembrandt, or studio ofof atelier vanRembrandt,  Bust of a man in oriental dress,  dated 1635, Rijksmuseum, Amsterdam, inv. no. SK-A-3340, http://www.rembrandtdatabase.org/Rembrandt/painting/36699/bust-of-a-man-in-oriental-dress, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120343"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120484"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120486"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120493"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120564"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120787"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120788"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120975"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144234"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301153563"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301157053"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301157230"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301185785"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301185790"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301205341"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301242629"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3012474"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30124751"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30139131"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3015254"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30153898"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/220116"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">&#8230;; collection Ketelaar, Amsterdam [probably Huijbert Ketelaar (1711-73)];{Inscription, mezzotint, Pieter Louw (1725-1800); illustrated in Leiden 2006, p. 51.} &#8230;; first recorded in the collection of the Vane family, Raby Castle, Darlington, 1857;{F.M.L. 1857, p. 5.} by descent to Christopher William Vane (1888-1964), 1st Baron Barnard, Raby Castle, Darlington; his sale, London (J. &amp; B. Kemp), 30 March 1922, no. 48, 6,200 gns to the dealer De Bruin for Dominicus Antonius Josephus Kessler (1855-1939) and Mrs A.C.M.H. Kessler-H&#252;lsmann (1868-1947), Kapelle op den Bosch, near Mechelen;{Copy RKD.} donated, with 83 other objects, by Mrs A.C.M.H. Kessler-H&#252;lsmann to the museum, 1940</dcterms:provenance>
+    <edm:currentLocation rdf:resource="https://id.rijksmuseum.nl/2301886"/>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">Gift of Mr and Mrs Kessler-H&#252;lsmann, Kapelle op den Bosch</mrel:spn>
+    <mrel:spn xml:lang="nl">Schenking van de heer en mevrouw Kessler-H&#252;lsmann, Kapelle op den Bosch</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2301886">
+    <skos:prefLabel>Rijksmuseum</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/VzuFK/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/VzuFK"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3340--7aaadc1f26ec652044aa6e1150576fd6">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/220116">
+    <skos:prefLabel xml:lang="en">panel</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">paneel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221311">
+    <skos:prefLabel xml:lang="en">old man</skos:prefLabel>
+    <skos:altLabel>31D16</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/31D16"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221312">
+    <skos:prefLabel xml:lang="en">head-gear: turban</skos:prefLabel>
+    <skos:altLabel>41D221(TURBAN)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D221%28TURBAN%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22171">
+    <skos:prefLabel xml:lang="en">beard</skos:prefLabel>
+    <skos:altLabel>31A534</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/31A534"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/VzuFK">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

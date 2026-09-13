@@ -1,0 +1,12 @@
+BEGIN
+ pg_advisory_xact_lock 
+-----------------------
+ 
+(1 row)
+
+     json_build_object      
+----------------------------
+ {"formatted_artworks" : 0}
+(1 row)
+
+COMMIT

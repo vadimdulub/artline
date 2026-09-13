@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { normalizeRange, positionArtists, presetRange, timelineTicks } from "../timeline";
+import { isCurrentPeriod, normalizeRange, positionArtists, presetRange, timelineTicks } from "../timeline";
 import type { TimelineArtist } from "../types";
 
 const movement = { slug: "test", name: "Test", color: "#234e9a" };
@@ -50,6 +50,12 @@ describe("positionArtists", () => {
 });
 
 describe("bookmark and zoom ranges", () => {
+  it("recognizes periods that cannot narrow the view, including a single year at the boundary", () => {
+    expect(isCurrentPeriod({ start_year: 1900, end_year: 1909 }, 1900, 1909)).toBe(true);
+    expect(isCurrentPeriod({ start_year: 1900, end_year: 1909 }, 1900, 1949)).toBe(false);
+    expect(isCurrentPeriod({ start_year: 2000, end_year: 2000 }, 1999, 2000)).toBe(true);
+    expect(isCurrentPeriod({ start_year: 1100, end_year: 1100 }, 1100, 1101)).toBe(true);
+  });
   it("normalizes reversed and malformed bookmarks", () => {
     expect(normalizeRange("2000", "1100")).toEqual([1100, 2000]);
     expect(normalizeRange("wrong", null)).toEqual([1100, 2000]);

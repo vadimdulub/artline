@@ -1,0 +1,9 @@
+BEGIN
+ pg_advisory_xact_lock 
+-----------------------
+ 
+(1 row)
+
+ALTER TABLE
+INSERT 0 1
+COMMIT

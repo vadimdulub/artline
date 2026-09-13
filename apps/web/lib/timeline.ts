@@ -65,6 +65,10 @@ export function normalizeRange(rawStart: string | null, rawEnd: string | null): 
   if (a === b) { if (a === 2000) a--; else b++; }
   return [a, b];
 }
+export function isCurrentPeriod(period: { start_year: number; end_year: number }, start: number, end: number): boolean {
+  const [from, to] = normalizeRange(String(period.start_year), String(period.end_year));
+  return from === start && to === end;
+}
 export function presetRange(start: number, end: number, years: number): [number, number] {
   const span = Math.min(900, Math.max(1, years));
   const a = Math.max(1100, Math.min(2000 - span, Math.round((start + end - span) / 2)));

@@ -1,0 +1,176 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107952#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107952"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/wqcDn/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/wqcDn/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107952">
+    <dcterms:created xml:lang="en">1661</dcterms:created>
+    <dcterms:created xml:lang="nl">1661</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-4050</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260213"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/262557"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">Rembrandt is 55 years old in this self-portrait, and he still looks at himself candidly. Here he assumes the guise of a personage from the Bible, the Apostle Paul. The sword protruding from his cloak and the manuscript in his hands are the apostle&#8217;s customary attributes. By using his own face, Rembrandt encouraged the viewer to engage personally with the saint.</dc:description>
+    <dc:description xml:lang="nl">Hier is Rembrandt 55 jaar, en nog steeds beschouwt hij zichzelf met open blik. In dit schilderij neemt hij de gedaante aan van een Bijbels personage, de apostel Paulus. Het zwaard dat uit zijn mantel steekt en het manuscript in zijn handen zijn de gebruikelijke attributen van deze apostel. Door zijn eigen gezicht te gebruiken, moedigde hij de toeschouwer aan een persoonlijke band aan te gaan met de heilige.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200221570"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20066677"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221328"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221341"/>
+    <dc:title xml:lang="en">Self-portrait as the Apostle Paul</dc:title>
+    <dc:title xml:lang="en">Zelfportret als de apostel Paulus</dc:title>
+    <dc:title xml:lang="nl">Self-portrait as the Apostle Paul</dc:title>
+    <dc:title xml:lang="nl">Zelfportret als de apostel Paulus</dc:title>
+    <dcterms:extent xml:lang="en">height 91 cm x width 77 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 91 cm x breedte 77 cm</dcterms:extent>
+    <dcterms:isReferencedBy>G. Luijten, ''De veelheid en de eelheid' : een Rijksmuseum Schmidt-Degener', Nederlands Kunsthistorisch Jaarboek 35 (1984), p. 377, afb. 26.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>P.J.J. van Thiel, 'Zelfportret als de apostel Paulus', Openbaar Kunstbezit 13 (1969) nr. 2, p. 1a-b.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  Self portrait as the apostle Paul,  dated 1661, Rijksmuseum, Amsterdam, inv. no. SK-A-4050, http://www.rembrandtdatabase.org/Rembrandt/painting/2947/self-portrait-as-the-apostle-paul, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301100494"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120565"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120592"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301146195"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301154394"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301154666"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3011738"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301211623"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301218758"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301241009"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301241048"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301262165"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301283002"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301283477"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301290027"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301306872"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/22010"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">? Estate inventory, Eberhard Jabach (1618-95), Paris, 17 July 1696, no. 123 ('Portrait de Rimbrands, ayant un linge blanc autour de sa test, 1/2 figure grande comme le naturel, de luy-mesme. 100 liv[res]&#8217;);{The number &#8216;123&#8217; painted on the reverse of the stretcher in imitation of the original corresponds to the number in the 1696 posthumous inventory; for the inventory see Grouchy 1894, pp. 249&#8722;92, esp. p. 255.} &#8230;; ? collection Nicolas Vleughels (1668-1737), Rome; from his widow, Marie-Th&#233;r&#232;se Gosset (1703-56), 100 scudi, to Cardinal Neri Maria Corsini (1685-1770), Rome, before 1750;{According to the Inventario dei quadri comprati coi proprii denari avventizii dall&#8217;Emo Sig.s Cardinal Neri Maria Cosini, no. 15: &#8216;Dalla Vedova Wleughel. Il proprio Ritratto di Reimbrant s[cudi] 100&#8217;. The painting is no. 164 in the 1750 Inventario di tutti i quadri of Palazzo Corsini: &#8216;Il Ritratto di Reimbrant di sua mano, comprato sc[udi] 100. Comprato da Madama Wleughles&#8217;.} &#8230;; purchased from the Corsini collection, by the London art dealer William Buchanan (1777-1864), summer 1807;{According to a label transferred from the original stretcher to the present one: &#8216;From the Corsini Palace of Rome / brought to England by William Buchanan Esq. in Summer 1807&#8217;.} from whom, 500 guineas, to Charles Kinnaird (1780-1826), 8th Lord Kinnaird, Rossie Priory near Dundee, before 2 January 1809;{Buchanan 1824, vol. 2, p. 179, no. 4. The painting was first recorded in the Kinnaird collection in the inscription to a reproductive mezzotint by Charles Turner (1773-1857): &#8216;Rembrandt. A Portrait of himself. Bought from the collection of the Corsini family at Rome by Mr Buchanan. 3&#8217; by 2&#8217;6 1/8 Pubd. Jan. 2. 1809&#8217;.} from the Kinnaird collection, &#163; 47,500, to Isa&#228;c de Bruijn (1872-1953) and his wife, Johanna Gertruida van der Leeuw (1877-1960), Spiez and Muri, near Bern, 28 May 1936; from whom on loan to the museum, 1956-60; by whom bequeathed to the museum, December 1960</dcterms:provenance>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">De Bruijn-van der Leeuw Bequest, Muri, Switzerland</mrel:spn>
+    <mrel:spn xml:lang="nl">Legaat van de heer en mevrouw De Bruijn-van der Leeuw, Muri, Zwitserland</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/wqcDn/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/wqcDn"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22010">
+    <skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">doek</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221328">
+    <skos:prefLabel xml:lang="en">portrait, self-portrait of painter</skos:prefLabel>
+    <skos:altLabel>48C513</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/48C513"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221341">
+    <skos:prefLabel xml:lang="en">the apostle Paul of Tarsus; possible attributes: book, scroll, sword - portrait of male saint</skos:prefLabel>
+    <skos:altLabel>11H(PAUL)9</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/11H%28PAUL%299"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260213">
+    <skos:prefLabel xml:lang="en">Top 100</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 100</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/wqcDn">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

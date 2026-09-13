@@ -1,0 +1,145 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200108883#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200108883"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-1892--f66e7df764f1dd1ad1bae6533dc9faa8"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/VPrnZ/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/VPrnZ/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200108883">
+    <dcterms:created xml:lang="en">1884</dcterms:created>
+    <dcterms:created xml:lang="nl">1884</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-1892</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2102201"/>
+    <dc:description xml:lang="en">In Monet&#8217;s time La Corniche was a narrow mountain track; nowadays, it is the main road between Nice and Monaco. Here the sun is high, the lone walker&#8217;s shadow short. Monet&#8217;s colours glisten: red, green, blue &#8211; everything shimmers in the sunlight. The painting was given to the Rijksmuseum already in 1900, when Monet&#8217;s work was still entirely unknown in the Netherlands.</dc:description>
+    <dc:description xml:lang="nl">In Monets tijd was La Corniche nog een bergweggetje, nu is het de grote weg tussen Nice en Monaco. De zon staat hoog, de schaduw van de wandelaar is klein. Monet laat de kleuren schitteren: rood, groen, blauw &#8211; alles zindert in de zon. Het schilderij werd al in 1900 aan het Rijksmuseum geschonken, toen het werk van Monet in Nederland nog totaal onbekend was.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200415039"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/20067001"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221339"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221649"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2303327"/>
+    <dc:title xml:lang="en">La Corniche bij Monaco</dc:title>
+    <dc:title xml:lang="en">La Corniche near Monaco</dc:title>
+    <dc:title xml:lang="nl">La Corniche bij Monaco</dc:title>
+    <dc:title xml:lang="nl">La Corniche near Monaco</dc:title>
+    <dcterms:extent xml:lang="en">height 75 cm x width 94 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 75 cm x breedte 94 cm</dcterms:extent>
+    <dcterms:isReferencedBy>J.F. Heijbroek en E.L. Wouthuysen, Portret van een Kunsthandel : De firma Van Wisselingh en zijn compagnons 1838-heden, Zwolle-Amsterdam 1999, p. 274-275.</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301100936"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301101291"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301214410"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301214419"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301274270"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301329147"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30150540"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/22010"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <edm:currentLocation rdf:resource="https://id.rijksmuseum.nl/2301886"/>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">Gift of M.C., Baroness van Lynden-van Pallandt, The Hague</mrel:spn>
+    <mrel:spn xml:lang="nl">Schenking van M.C. barones van Lynden-van Pallandt, Den Haag</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2102201">
+    <skos:prefLabel xml:lang="en">Claude Monet</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Claude Monet</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Monet, Claude</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Monet, Claude</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1840-11-14</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1926-12-06</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230215"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/2304270"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/24605513"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500019484"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q296"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/56860"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2301886">
+    <skos:prefLabel>Rijksmuseum</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230215">
+    <skos:prefLabel xml:lang="en">Paris</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Parijs</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2303327">
+    <skos:prefLabel xml:lang="nl">Monaco</skos:prefLabel>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/tgn/7005758"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q235"/>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2304270">
+    <skos:prefLabel xml:lang="nl">Giverny</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/VPrnZ/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/VPrnZ"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-1892--f66e7df764f1dd1ad1bae6533dc9faa8">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22010">
+    <skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">doek</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221339">
+    <skos:prefLabel xml:lang="en">road, path</skos:prefLabel>
+    <skos:altLabel>46C11</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/46C11"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221649">
+    <skos:prefLabel xml:lang="en">coast</skos:prefLabel>
+    <skos:altLabel>25H13</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/25H13"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/VPrnZ">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

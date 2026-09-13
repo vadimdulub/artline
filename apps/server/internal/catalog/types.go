@@ -50,12 +50,20 @@ type TimelineResponse struct {
 		Start int `json:"start"`
 		End   int `json:"end"`
 	} `json:"range"`
-	Mode        string           `json:"mode"`
-	Items       []TimelineArtist `json:"items"`
-	Bins        []TimelineBin    `json:"bins"`
-	Total       int              `json:"total"`
-	Periods     []TimelinePeriod `json:"periods"`
-	PopularOnly bool             `json:"popular_only"`
+	Mode             string                    `json:"mode"`
+	Items            []TimelineArtist          `json:"items"`
+	Bins             []TimelineBin             `json:"bins"`
+	Total            int                       `json:"total"`
+	Periods          []TimelinePeriod          `json:"periods"`
+	PopularOnly      bool                      `json:"popular_only"`
+	SuggestedFilters []TimelineSuggestedFilter `json:"suggested_filters"`
+}
+
+type TimelineSuggestedFilter struct {
+	Key   string `json:"key"`
+	Value string `json:"value"`
+	Name  string `json:"name"`
+	Count int    `json:"count"`
 }
 
 type TimelinePeriod struct {

@@ -1,0 +1,16 @@
+FROM golang:1.24-alpine AS builder
+WORKDIR /src
+COPY go.mod go.sum ./
+RUN --mount=type=cache,target=/go/pkg/mod go mod download
+COPY . .
+RUN --mount=type=cache,target=/root/.cache/go-build \
+    --mount=type=cache,target=/go/pkg/mod \
+    CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/resolve-research ./cmd/resolve-research
+
+FROM gcr.io/distroless/static-debian12:nonroot
+WORKDIR /app
+COPY --from=builder /out/resolve-research /app/resolve-research
+COPY research /research
+USER nonroot:nonroot
+ENTRYPOINT ["/app/resolve-research"]
+CMD ["-dir", "/research", "-apply", "-promote"]

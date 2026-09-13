@@ -1,0 +1,162 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200109345#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200109345"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-1247--2b5ae58550308d1c8564f84fc702f8e4"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/OUbxD/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/OUbxD/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200109345">
+    <dcterms:created xml:lang="en">c. 1637</dcterms:created>
+    <dcterms:created xml:lang="nl">ca. 1637</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-1247</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260212"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260241"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/26121"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2102576"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200109344"/>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200415108"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/210159115"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221173"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/2211867"/>
+    <dc:title xml:lang="en">Portrait of Duijfje van Gerwen (1618-1658)</dc:title>
+    <dc:title xml:lang="en">Portret van Duijfje van Gerwen (1618-1658)</dc:title>
+    <dc:title xml:lang="nl">Portrait of Duijfje van Gerwen (1618-1658)</dc:title>
+    <dc:title xml:lang="nl">Portret van Duijfje van Gerwen (1618-1658)</dc:title>
+    <dcterms:alternative xml:lang="en">Portrait of a Woman, possibly Sara Wolphaerts van Diemen (1594-1667), second Wife of Nicolaes Hasselaer</dcterms:alternative>
+    <dcterms:alternative xml:lang="en">Portrait of a Woman</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Portret van een vrouw, mogelijk Sara Wolphaerts van Diemen (1594-1667). Tweede echtgenote van Nicolaes Hasselaer</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Portret van een vrouw</dcterms:alternative>
+    <dcterms:extent xml:lang="en">support: height 81.5 cm x width 68 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">drager: hoogte 81,5 cm x breedte 68 cm</dcterms:extent>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120564"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30112160"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301144234"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301185785"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301192481"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30150408"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3015253"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/30180679"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/22010"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">&lt;p&gt;**For both the present painting (SK-A-1247) and its pendant (SK-A-1246)**&lt;/p&gt;&lt;p&gt;&#8230;; collection Jan van de Poll (1721-1801), Amsterdam;{RANH, ARS, IS, inv. no. 168, no. 302 (14 April 1884).} his grandson Jan van de Poll (1777-1858), Amsterdam, 1802 (stored with other family portraits in his aunt&#8217;s house, Herengracht 479 in Amsterdam); his son Jan Stanislaus Robert van de Poll (1805-88), Arnhem (stored with 25 other family portraits in his sister-in-law&#8217;s house, Herengracht 450 in Amsterdam); by whom donated to the museum together with 34 other family portraits, as _&lt;em&gt;Portrait of Nicolaes Hasselaer&lt;/em&gt;_ and _&lt;em&gt;Portrait of a Woman&lt;/em&gt;_, November 1885{RANH, ARS, IS, inv. 164, no. 299 (30 December 1884); RANH, ARS, Kop, inv. 289, pp. 62-68, no. 154 (19 November 1885).}&lt;/p&gt;</dcterms:provenance>
+    <edm:currentLocation rdf:resource="https://id.rijksmuseum.nl/2301886"/>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">Gift of Jonkheer J.S.R. van de Poll, Arnhem</mrel:spn>
+    <mrel:spn xml:lang="nl">Schenking van jhr. J.S.R. van de Poll, Arnhem</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/210159115">
+    <skos:prefLabel xml:lang="nl">Duifje van Gerwen</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Gerwen, Duifje van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1618-02-10</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1658-12-11</rdaGr2:dateOfDeath>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2102576">
+    <skos:prefLabel xml:lang="en">Frans Hals</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Frans Hals</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Hals, Frans</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Hals, Frans</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">ca. 1582 - ca. 1583</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1666-08-26</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230148"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/230134"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/100165669"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500027794"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q167654"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/35550"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230134">
+    <skos:prefLabel xml:lang="en">Haarlem</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Haarlem</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230148">
+    <skos:prefLabel xml:lang="en">Antwerp</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Antwerpen (stad)</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/2301886">
+    <skos:prefLabel>Rijksmuseum</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/OUbxD/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/OUbxD"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-1247--2b5ae58550308d1c8564f84fc702f8e4">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22010">
+    <skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">doek</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221173">
+    <skos:prefLabel xml:lang="en">historical persons - BB - woman</skos:prefLabel>
+    <skos:altLabel>61BB2</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/61BB2"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2211867">
+    <skos:prefLabel xml:lang="en">neck-gear ~ clothing (with NAME)</skos:prefLabel>
+    <skos:altLabel>41D222(RUFF)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D222%28RUFF%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260212">
+    <skos:prefLabel xml:lang="en">RijksXL</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">RijksXL</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260241">
+    <skos:prefLabel xml:lang="en">biografic</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">biografisch</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/26121">
+    <skos:prefLabel xml:lang="en">Dutch Paintings of the Seventeenth Century in the Rijksmuseum</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Dutch Paintings of the Seventeenth Century in the Rijksmuseum</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/OUbxD">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

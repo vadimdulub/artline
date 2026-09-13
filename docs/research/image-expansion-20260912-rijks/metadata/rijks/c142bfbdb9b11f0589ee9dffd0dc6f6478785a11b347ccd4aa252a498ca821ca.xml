@@ -1,0 +1,184 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:mrel="http://id.loc.gov/vocabulary/relators/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:svcs="http://rdfs.org/sioc/services#">
+  <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/200107935#aggregation">
+    <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200107935"/>
+    <edm:dataProvider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4674--4105653475611e18aa52560284964200"/>
+    <edm:isShownBy rdf:resource="https://iiif.micr.io/hdvov/full/max/0/default.jpg"/>
+    <edm:object rdf:resource="https://iiif.micr.io/hdvov/full/max/0/default.jpg"/>
+    <edm:provider rdf:resource="https://id.rijksmuseum.nl/2109266"/>
+    <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </ore:Aggregation>
+  <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200107935">
+    <dcterms:created xml:lang="en">1626</dcterms:created>
+    <dcterms:created xml:lang="nl">1626</dcterms:created>
+    <dc:type rdf:resource="https://id.rijksmuseum.nl/2208"/>
+    <dc:identifier>SK-A-4674</dc:identifier>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260214"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260215"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260239"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/260251"/>
+    <dcterms:isPartOf rdf:resource="https://id.rijksmuseum.nl/261208"/>
+    <dc:creator rdf:resource="https://id.rijksmuseum.nl/2103429"/>
+    <dc:description xml:lang="en">The subject of this painting is a mystery: is it an exhortation to praise God through singing and string music, or a scene of seduction with the old woman as a procuress? In any case, in this early work Rembrandt used elements from his own surroundings: his mother modelled for the old woman, and Rembrandt&#8217;s own features can be recognized in the young man.</dc:description>
+    <dc:description xml:lang="nl">Dit schilderij is qua voorstelling een raadsel: is het een aansporing om God te loven met zang en snarenspel, of eerder een verleidingssc&#232;ne met de oude vrouw als koppelaarster? Hoe dan ook gebruikte Rembrandt in dit vroege werk elementen uit zijn eigen omgeving: voor de oude vrouw stond zijn moeder model, en in de jonge man zijn Rembrandts eigen trekken te herkennen.</dc:description>
+    <dc:relation rdf:resource="https://id.rijksmuseum.nl/200414970"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221312"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221319"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221320"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221321"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/221322"/>
+    <dc:subject rdf:resource="https://id.rijksmuseum.nl/22134"/>
+    <dc:title xml:lang="en">Musical Company</dc:title>
+    <dc:title xml:lang="en">Musicerend gezelschap</dc:title>
+    <dc:title xml:lang="nl">Musical Company</dc:title>
+    <dc:title xml:lang="nl">Musicerend gezelschap</dc:title>
+    <dcterms:alternative xml:lang="en">Musical Allegory</dcterms:alternative>
+    <dcterms:alternative xml:lang="nl">Allegorisch musicerend gezelschap</dcterms:alternative>
+    <dcterms:extent xml:lang="en">height 63.5 cm x width 48 cm</dcterms:extent>
+    <dcterms:extent xml:lang="nl">hoogte 63,5 cm x breedte 48 cm</dcterms:extent>
+    <dcterms:isReferencedBy>Ernst van de Wetering, De jonge Rembrandt aan het werk: Materiaalgebruik en schildertechniek van Rembrandt in het begin van zijn Leidse periode, uit: Oud Holland, 91, 1977, 1/2, pagina pp. 27-65 - afb. 7, 8(zie: http://www.jstor.org/stable/42710957)</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>H.L.M. Defour, Rembrandt van Rijn, De Doop van de Kamerling, uit: Oud Holland, 91, 1977, 1/2, pagina pp. 2-26 - p. 8(zie: http://www.jstor.org/stable/42710956)</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy>The Rembrandt Database,  Object information, Rembrandt,  Musical company,  dated 1626, Rijksmuseum, Amsterdam, inv. no. SK-A-4674, http://www.rembrandtdatabase.org/Rembrandt/painting/2938/musical-company, accessed 2016 February 01</dcterms:isReferencedBy>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120477"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120565"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120592"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301120988"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301132298"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301139231"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3011738"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301198383"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301206134"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301254025"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301262165"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/301303744"/>
+    <dcterms:isReferencedBy rdf:resource="https://id.rijksmuseum.nl/3015254"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/220116"/>
+    <dcterms:medium rdf:resource="https://id.rijksmuseum.nl/2209"/>
+    <dcterms:provenance xml:lang="en">...; ? sale, William Pole-Tylney-Long-Wellesley (1788-1857, Wanstead House, Essex), 4th Earl of Mornington, London (John Robins), 10 (20) June 1822 &lt;em&gt;sqq.&lt;/em&gt;, no. 205 ('A Musical Party, painted with his usual powerful effect of chiaro scuro'.), &#163; 9.9, to Chatfield; ...; ? private collection, Edinburgh, c. 1823-25;{According to a label on the reverse of the panel, the painting was cleaned by Chalmers &amp; son Picture Cleaner, located at nos. 118 and 153 High Street in Edinburgh. Chalmers &amp; son had these addresses from 1823-25; see http://www.nls.uk/catalogues/scottish-book-trade-index/carson-clark.} ...; sale, Frank Cripps &lt;em&gt;et al.&lt;/em&gt; [anonymous section], London (Christie's), 16 November 1936, no. 155, 2,205 gns, to the dealer Edward Speelman; ...; dealers Benjamin and Nathan Katz, Dieren, 1937, 1938;{Dealer cat. Katz 1937, p. 21, no. 70; Dealer cat. Katz 1938, p. 22, no. 86.} dealer The Schaeffer Galleries (Benjamin and Nathan Katz's American agent), New York, 1937, 1938;{Dealer cat. The Schaeffer Galleries 1937, unpag., no. 1; according to a printed invitation for the opening preserved at the GRI (Schaeffer Galleries records, 1925-1985, acc. no. 910148), the painting was exhibited by The Schaeffer Galleries, New York, at the Los Angeles Museum from 5 April to 1 May 1938. Also exhibited at the Tulsa Art Association, Tulsa Oklahoma, 1938; FLNY Photo Archive, acc. no. Rembrandt 320-23a.} purchased from the dealers Benjamin and Nathan Katz by the dealer Alois Miedl, 2 August 1940;{Muller/Schretlin 2002, p. 73.} from whom, fl. 85,000, to Maria Almas-Dietrich for Adolf Hitler&#8217;s F&#252;hrermuseum, Linz (inv. no. 1042);{Schwarz 2004, p. 102, no. II/37.} war recuperation, SNK, 4 December 1945;{Schwarz 2004, p. 102, no. II/37. The Munich Central Collecting Point number 1405 is recorded in black ink on the reverse of the panel.} unjustly returned to the dealers Benjamin and Nathan Katz, 1947;{Muller/Schretlin 2002, p. 73.} sale, Nathan Katz (Basel), Paris (Charpentier), 1 April 1951, no. 59, frs. 7,800,000, to Marcelle Bousaci; ...; from Art Gallery A.G., Zug, Switzerland, fl. 648,000, to the museum, as a gift from the Vereniging Rembrandt, the Prins Bernhard Fonds and the Commissie voor Fotoverkoop, 1976</dcterms:provenance>
+    <edm:type>IMAGE</edm:type>
+    <mrel:spn xml:lang="en">Purchased with the support of the Vereniging Rembrandt and the Stichting tot Bevordering van de Belangen van het Rijksmuseum</mrel:spn>
+    <mrel:spn xml:lang="nl">Aankoop met steun van de Vereniging Rembrandt en de Stichting tot Bevordering van de Belangen van het Rijksmuseum</mrel:spn>
+  </edm:ProvidedCHO>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2103429">
+    <skos:prefLabel xml:lang="en">Rembrandt van Rijn</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rembrandt van Rijn</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Rijn, Rembrandt van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt Harmensz. van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt van Rijn</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rembrandt</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt Harmensz. van</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Rijn, Rembrandt van</skos:altLabel>
+    <rdaGr2:dateOfBirth xml:lang="nl">1606-07-15</rdaGr2:dateOfBirth>
+    <rdaGr2:dateOfDeath xml:lang="nl">1669-10-08</rdaGr2:dateOfDeath>
+    <rdaGr2:placeOfBirth rdf:resource="https://id.rijksmuseum.nl/230105"/>
+    <rdaGr2:placeOfDeath rdf:resource="https://id.rijksmuseum.nl/23029985"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202217"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202348"/>
+    <rdaGr2:professionOrOccupation rdf:resource="https://id.rijksmuseum.nl/2202371"/>
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/64013650"/>
+    <owl:sameAs rdf:resource="http://vocab.getty.edu/ulan/500011051"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5598"/>
+    <owl:sameAs rdf:resource="https://rkd.nl/artists/66219"/>
+  </edm:Agent>
+  <edm:Agent rdf:about="https://id.rijksmuseum.nl/2109266">
+    <skos:prefLabel xml:lang="en">Rijksmuseum Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Rijksmuseum Amsterdam</skos:prefLabel>
+  </edm:Agent>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/230105">
+    <skos:prefLabel xml:lang="en">Leiden</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Leiden</skos:prefLabel>
+  </edm:Place>
+  <edm:Place rdf:about="https://id.rijksmuseum.nl/23029985">
+    <skos:prefLabel xml:lang="en">Amsterdam</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Amsterdam</skos:prefLabel>
+  </edm:Place>
+  <edm:WebResource rdf:about="https://iiif.micr.io/hdvov/full/max/0/default.jpg">
+    <svcs:has_service rdf:resource="https://iiif.micr.io/hdvov"/>
+  </edm:WebResource>
+  <edm:WebResource rdf:about="https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4674--4105653475611e18aa52560284964200">
+    <dc:format>text/html</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+    <dc:language>nl</dc:language>
+  </edm:WebResource>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/220116">
+    <skos:prefLabel xml:lang="en">panel</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">paneel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202217">
+    <skos:prefLabel xml:lang="en">painter</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilder</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202348">
+    <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">prentmaker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2202371">
+    <skos:prefLabel xml:lang="en">draftsman (artist)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">tekenaar</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2208">
+    <skos:prefLabel xml:lang="en">painting</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderij</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/2209">
+    <skos:prefLabel xml:lang="en">oil paint (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">olieverf</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221312">
+    <skos:prefLabel xml:lang="en">head-gear: turban</skos:prefLabel>
+    <skos:altLabel>41D221(TURBAN)</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/41D221%28TURBAN%29"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221319">
+    <skos:prefLabel xml:lang="en">old woman</skos:prefLabel>
+    <skos:altLabel>31D17</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/31D17"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221320">
+    <skos:prefLabel xml:lang="en">harp</skos:prefLabel>
+    <skos:altLabel>48C7322</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/48C7322"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221321">
+    <skos:prefLabel xml:lang="en">viola, violoncello; double bass</skos:prefLabel>
+    <skos:altLabel>48C7312</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/48C7312"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/221322">
+    <skos:prefLabel xml:lang="en">musician(s) accompanying singer(s)</skos:prefLabel>
+    <skos:altLabel>48C7542</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/48C7542"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/22134">
+    <skos:prefLabel xml:lang="en">book</skos:prefLabel>
+    <skos:altLabel>49M32</skos:altLabel>
+    <skos:exactMatch rdf:resource="https://iconclass.org/49M32"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260214">
+    <skos:prefLabel xml:lang="en">Top 1000</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Top 1000</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260215">
+    <skos:prefLabel xml:lang="en">Vereniging Rembrandt</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Vereniging Rembrandt</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260239">
+    <skos:prefLabel xml:lang="nl">Entire Public Domain Set</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/260251">
+    <skos:prefLabel xml:lang="en">All published objects</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Alle gepubliceerde objecten</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://id.rijksmuseum.nl/261208">
+    <skos:prefLabel xml:lang="en">paintings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">schilderijen</skos:prefLabel>
+    <skos:broader rdf:resource="https://linked.art/ns/terms/Set"/>
+  </skos:Concept>
+  <svcs:Service rdf:about="https://iiif.micr.io/hdvov">
+    <dcterms:conformsTo rdf:resource="http://iiif.io/api/image"/>
+  </svcs:Service>
+</rdf:RDF>

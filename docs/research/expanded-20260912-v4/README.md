@@ -1,5 +1,9 @@
 # Expanded CSV upload: final review and receipts
 
+This page records the historical initial staging operation, not current catalogue totals. Subsequent museum research and
+catalogue enrichment are documented in the
+[source-resolution receipt](../expanded-resolution-20260912/README.md).
+
 The supplied export contains **285,090 rows**: the existing **106,350** plus
 **178,740 additions**. The final import stores **104,934 distinct research
 entries**, preserving **108,074 supplied rows** and their original record numbers.
@@ -74,8 +78,9 @@ CSV quoting/newlines, repeated rows, incomplete baselines, overwrite protection
 and explicit Cloud SQL target selection. No test databases or catalogue fixtures
 were created. Real-data replay returned `replayed=true` without inserting duplicates.
 
-Provide the companion museum source/object and creator research to reconcile the
-staged candidates into catalogue records. Repeated generic titles must remain
+The subsequent source-resolution and incomplete-artwork phases supersede the
+initial staging-only outcome. See the linked follow-up receipts. Companion museum
+source/object and creator research can further reconcile these records. Repeated generic titles must remain
 unresolved until stable object identities are supplied. New catalogue records
 must retain review status, respect the artwork creation cutoff and preserve
 separate holdings/current-display evidence. No ten-million-artwork performance

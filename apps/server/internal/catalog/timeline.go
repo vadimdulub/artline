@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-// One predicate serves the count, nodes, and bins so filters cannot disagree.
+// One predicate serves counts, nodes, periods and filter suggestions.
 const timelinePredicate = `
  FROM artists a
  LEFT JOIN artist_movements am ON am.artist_id=a.id AND am.role='primary'
@@ -27,8 +27,41 @@ const timelinePredicate = `
  AND (cardinality($10::text[])=0 OR a.slug=ANY($10))
 `
 
+// Every period counts the same overlapping life/activity intervals as selecting
+// its dates. Neighbouring periods may contain the same painter. Merge a trailing
+// single year into its preceding period to match the UI's two-year minimum.
+const timelineDensityQuery = `WITH matching AS MATERIALIZED (
+ SELECT a.timeline_start_year,a.timeline_end_year,
+ coalesce(m.name,'Unclassified') AS movement,coalesce(m.color_hex,'#8b8880') AS color
+ ` + timelinePredicate + `
+), periods AS (
+ SELECT year AS start_year,CASE WHEN year+$11 >= $2 THEN $2 ELSE year+$11-1 END AS end_year
+ FROM generate_series($1::int,$2::int-1,$11::int) AS year
+)
+SELECT p.start_year,p.end_year,a.movement,a.color,count(*)
+FROM periods p JOIN matching a ON a.timeline_start_year <= p.end_year AND a.timeline_end_year >= p.start_year
+GROUP BY p.start_year,p.end_year,a.movement,a.color ORDER BY p.start_year,a.movement`
+
+// Only suggest an unused filter dimension: replacing an existing OR selection
+// could broaden the result, invalidating counts calculated from this scope.
+const timelineSuggestionsQuery = `WITH matching AS MATERIALIZED (
+ SELECT a.id ` + timelinePredicate + `
+), suggestions AS (
+ SELECT 'country' AS key,trim(c.code::text) AS value,c.name,count(DISTINCT a.id)::int AS count
+ FROM matching a JOIN artist_countries ac ON ac.artist_id=a.id JOIN countries c ON c.code=ac.country_code
+ WHERE cardinality($5::text[])=0
+ GROUP BY c.code,c.name HAVING count(DISTINCT a.id) < $11
+ UNION ALL
+ SELECT 'movement',m.slug,m.name,count(DISTINCT a.id)::int
+ FROM matching a JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id
+ WHERE cardinality($6::text[])=0 AND m.status<>'archived' AND ($3<>'published' OR m.status='published')
+ GROUP BY m.slug,m.name HAVING count(DISTINCT a.id) < $11
+)
+SELECT key,value,name,count FROM suggestions
+ORDER BY (count <= 300) DESC,CASE WHEN count <= 300 THEN -count ELSE count END,key,value LIMIT 3`
+
 func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (TimelineResponse, error) {
-	result := TimelineResponse{Mode: "individual", Items: []TimelineArtist{}, Bins: []TimelineBin{}, Periods: []TimelinePeriod{}, PopularOnly: filter.PopularOnly}
+	result := TimelineResponse{Mode: "individual", Items: []TimelineArtist{}, Bins: []TimelineBin{}, Periods: []TimelinePeriod{}, PopularOnly: filter.PopularOnly, SuggestedFilters: []TimelineSuggestedFilter{}}
 	result.Range.Start, result.Range.End = filter.StartYear, filter.EndYear
 	args := []any{filter.StartYear, filter.EndYear, filter.Status, filter.Query, filterChoices(filter.Countries, filter.Country), filterChoices(filter.Movements, filter.Movement), filter.Regions, filterChoices(filter.WorkTypes, filter.WorkType), filter.PopularOnly, filterChoices(filter.Painters, "")}
 	if err := r.db.QueryRow(ctx, "SELECT count(*)"+timelinePredicate, args...).Scan(&result.Total); err != nil {
@@ -43,19 +76,16 @@ func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (Timel
 		if filter.EndYear-filter.StartYear > 500 {
 			width = 50
 		}
-		query := `SELECT (floor((greatest($1, least($2, (a.timeline_start_year+a.timeline_end_year)/2))-$1)::numeric/$11)*$11+$1)::int AS bin_start,
-     coalesce(m.name,'Unclassified'),coalesce(m.color_hex,'#8b8880'),count(*)` + timelinePredicate + ` GROUP BY bin_start,m.name,m.color_hex ORDER BY bin_start,m.name`
-		rows, err := r.db.Query(ctx, query, append(args, width)...)
+		rows, err := r.db.Query(ctx, timelineDensityQuery, append(args, width)...)
 		if err != nil {
 			return result, fmt.Errorf("timeline density: %w", err)
 		}
 		defer rows.Close()
 		for rows.Next() {
 			var bin TimelineBin
-			if err := rows.Scan(&bin.StartYear, &bin.Movement, &bin.Color, &bin.Count); err != nil {
+			if err := rows.Scan(&bin.StartYear, &bin.EndYear, &bin.Movement, &bin.Color, &bin.Count); err != nil {
 				return result, err
 			}
-			bin.EndYear = min(filter.EndYear, bin.StartYear+width-1)
 			result.Bins = append(result.Bins, bin)
 			last := len(result.Periods) - 1
 			if last < 0 || result.Periods[last].StartYear != bin.StartYear {
@@ -64,7 +94,23 @@ func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (Timel
 				result.Periods[last].Count += bin.Count
 			}
 		}
-		return result, rows.Err()
+		if err := rows.Err(); err != nil {
+			return result, err
+		}
+		rows.Close()
+		suggestions, err := r.db.Query(ctx, timelineSuggestionsQuery, append(args, result.Total)...)
+		if err != nil {
+			return result, fmt.Errorf("timeline suggestions: %w", err)
+		}
+		defer suggestions.Close()
+		for suggestions.Next() {
+			var suggestion TimelineSuggestedFilter
+			if err := suggestions.Scan(&suggestion.Key, &suggestion.Value, &suggestion.Name, &suggestion.Count); err != nil {
+				return result, err
+			}
+			result.SuggestedFilters = append(result.SuggestedFilters, suggestion)
+		}
+		return result, suggestions.Err()
 	}
 	query := `SELECT a.id::text,a.slug,a.display_name,a.timeline_start_year,a.timeline_end_year,a.timeline_display,a.status,
  coalesce(m.slug,'unclassified'),coalesce(m.name,'Unclassified'),coalesce(m.color_hex,'#8b8880'),

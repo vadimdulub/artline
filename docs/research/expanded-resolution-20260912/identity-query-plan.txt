@@ -1,0 +1,13 @@
+BEGIN
+                                                                                        QUERY PLAN                                                                                         
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Index Scan using research_resolutions_identity_idx on research_resolutions  (cost=0.41..8.44 rows=1 width=12) (actual time=0.232..0.232 rows=1 loops=1)
+   Index Cond: ((research_record_id = 'fc38a4edadf9181f176d8695ffebee70c1d71b3d6bc62a71dd0dd1eee58569a5'::text) AND (source_kind = 'smk'::text) AND (source_object_id = 'KMSsp409'::text))
+   Buffers: shared hit=2 read=2
+ Planning:
+   Buffers: shared hit=189
+ Planning Time: 1.927 ms
+ Execution Time: 0.263 ms
+(7 rows)
+
+COMMIT

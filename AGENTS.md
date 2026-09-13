@@ -1,5 +1,13 @@
 # Artline implementation constraints
 
+- Explicit incomplete-data preference (12 September 2026): retain named-creator
+  artwork entries as actual database records in review even when additional
+  research finds no details. Preserve supplied provenance and unknown fields;
+  do not invent types, dates, artist biographies or accepted museum holdings.
+  Unresolved named creators may remain object-level labels until reconciled.
+  Anonymous/unknown creators and held attributions remain excluded from this
+  expanded CSV import. Missing metadata does not authorize publication.
+
 - Local collection workflow (11 September2026): audit the real local `artline`
   database using read-only queries. Do not create test databases or insert test
   fixtures into it. Do not point `ARTLINE_TEST_DATABASE_URL` at the real catalogue.

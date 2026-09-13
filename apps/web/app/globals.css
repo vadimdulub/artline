@@ -80,7 +80,7 @@ input::placeholder{color:#827b70} textarea{resize:vertical;min-height:140px}
 .year-inputs{display:flex;gap:14px;margin-left:auto}.year-inputs label{flex-direction:row;align-items:center;gap:8px}.year-inputs label>span{color:#aaa294}
 .year-inputs input{width:80px;min-height:32px;padding:6px 8px;border-color:#524b40;background:transparent;color:var(--paper);font-size:12px}
 .range-track{position:relative;height:44px;background:linear-gradient(#554e42,#554e42) center/100% 2px no-repeat;margin:0 12px}
-.range-window{position:absolute;height:100%;border:0;background:linear-gradient(var(--paper),var(--paper)) center/100% 2px no-repeat;touch-action:none;cursor:grab;padding:0;min-width:2px}
+.range-window{position:absolute;height:100%;border:0;background:linear-gradient(var(--paper),var(--paper)) center/100% 2px no-repeat;touch-action:none;cursor:grab;padding:0;min-width:24px}
 .range-window:active{cursor:grabbing}.range-window span{display:none}
 .range-track>input{position:absolute;top:0;left:-12px;width:calc(100% + 24px);height:100%;padding:0;margin:0;background:transparent;border:0;pointer-events:none;appearance:none}
 .range-track>input::-webkit-slider-thumb{appearance:none;pointer-events:auto;width:24px;height:24px;background:var(--paper);border:4px solid var(--dark);border-radius:50%;box-shadow:0 0 0 1px #afa799;cursor:ew-resize}
@@ -550,11 +550,15 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .period-column:hover .period-bar,.period-column:focus-visible .period-bar{opacity:1}
 .period-count{position:absolute;left:0;right:0;bottom:calc(var(--bar-height) + 9px);color:var(--period-color);font-size:11px;font-weight:500}
 .period-label{display:none}
+.period-action{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);border-radius:3px;padding:10px 14px;font-size:12px;white-space:normal;max-width:calc(100% - 24px)}
 .overview-footnote{font-size:11px;line-height:1.5;color:#b7aea0;margin:0;flex-shrink:0}
 .density-help{gap:20px;padding:8px 0 12px;flex-shrink:0;align-items:center}
 .density-help p{margin:0;line-height:1.6;max-width:80ch;font-size:11px}
 .density-help a{flex-shrink:0;border:1px solid #746b5d;border-radius:3px;padding:9px 14px;color:var(--paper);font-size:12px;text-decoration:none}
 .density-help a:hover{background:#ffffff08}
+.density-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;max-width:55%;flex-shrink:0}
+.density-actions button{min-height:44px}
+.density-actions button:hover{background:#ffffff08}
 @media(max-width:760px){
  .timeline-stage:has(.timeline-overview){padding-top:0}
  .timeline-stage:has(.timeline-overview)>.tick-row{display:none}
@@ -569,6 +573,10 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
  .period-count{position:static;order:3;width:42px;flex-shrink:0;text-align:right;font-size:11px}
  .period-track{position:relative;inset:auto;flex:1;height:12px;background:#ffffff05;border-radius:2px}
  .period-bar{position:static;display:block;width:var(--bar-width);height:12px;min-width:3px;border-radius:2px}
+ .period-column:has(.period-action){height:auto;min-height:80px;flex-wrap:wrap;padding-block:8px}
+ .period-action{position:static;transform:none;order:4;flex:0 0 calc(100% - 88px);margin-left:88px;padding:4px 0;background:transparent;font-size:11px;text-align:left}
+ .timeline-overview:has(.period-action){height:auto}
+ .density-actions{max-width:100%;justify-content:flex-start}
  .density-help{align-items:stretch;flex-direction:column;gap:10px}
  .density-help a{align-self:flex-start;min-height:44px;display:flex;align-items:center}
 }
