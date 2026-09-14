@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, expect, it } from "vitest";
-import { ArtistRecord } from "./ArtistRecord";
+import { ArtistRecord, SourceList } from "./ArtistRecord";
 import { permittedImagePath } from "./ArtworkViewer";
 import type { ArtistDetail, Artwork } from "../lib/types";
 
@@ -41,4 +41,25 @@ it("opens a linked artwork without adding it to the representative selection", (
   const { container } = render(<ArtistRecord artist={{ ...painter, artworks: [artwork] }} workId={linked.id} linkedWork={linked} onSelectWork={() => {}} />);
   expect(container.querySelectorAll(".work-card")).toHaveLength(1);
   expect(screen.getByRole("heading", { name: "Additional recorded work" })).toBeVisible();
+});
+it("renders structured geography evidence as readable research notes", () => {
+  render(<SourceList citations={[{
+    field_name: "geography",
+    source_name: "Country research",
+    source_url: "https://example.com/source",
+    evidence_note: JSON.stringify({
+      country_code: "RU",
+      country_evidence: {
+        basis: "Explicit painter cultural-affiliation wording.",
+        source_description: "Russian and French painter (1884–1967)",
+        historical_polity_statements: [{ id: "historical" }],
+        wikipedia_country_crosscheck: { source_excerpt: "She was a Russian painter." }
+      },
+      publication: "Review"
+    })
+  }]} />);
+  expect(screen.getByText("Country affiliation: Russia (RU).")).toBeVisible();
+  expect(screen.getByText("Evidence basis: Explicit painter cultural-affiliation wording.")).toBeVisible();
+  expect(screen.getByText("Biography cross-check: She was a Russian painter.")).toBeVisible();
+  expect(screen.queryByText(/historical_polity_statements/)).not.toBeInTheDocument();
 });

@@ -9,8 +9,41 @@ import remarkGfm from "remark-gfm";
 import { countryName, safeSourceURL } from "@/lib/api";
 import type { ArtistDetail, Artwork, Citation } from "@/lib/types";
 
+function asRecord(value: unknown): Record<string, unknown> | null {
+  return value && typeof value === "object" && !Array.isArray(value) ? value as Record<string, unknown> : null;
+}
+
+function readableEvidence(note: string) {
+  try {
+    const parsed = JSON.parse(note) as unknown;
+    const evidence = asRecord(parsed);
+    if (!evidence) return null;
+    const countryEvidence = asRecord(evidence.country_evidence);
+    const crosscheck = asRecord(countryEvidence?.wikipedia_country_crosscheck);
+    const lines: string[] = [];
+    const code = typeof evidence.country_code === "string" ? evidence.country_code : typeof countryEvidence?.country_code === "string" ? countryEvidence.country_code : null;
+    if (code) lines.push(`Country affiliation: ${countryName(code)} (${code}).`);
+    const basis = typeof countryEvidence?.basis === "string" ? countryEvidence.basis : typeof evidence.description === "string" ? evidence.description : null;
+    if (basis) lines.push(`Evidence basis: ${basis}`);
+    if (typeof countryEvidence?.source_description === "string") lines.push(`Source description: ${countryEvidence.source_description}`);
+    if (typeof crosscheck?.source_excerpt === "string") lines.push(`Biography cross-check: ${crosscheck.source_excerpt}`);
+    if (Array.isArray(countryEvidence?.historical_polity_statements) && countryEvidence.historical_polity_statements.length) lines.push(`Historical-polity statements: ${countryEvidence.historical_polity_statements.length} recorded for discovery context only.`);
+    if (evidence.publication_status === "review" || evidence.publication === "Review") lines.push("Publication state: review.");
+    if (!lines.length) return null;
+    return lines;
+  } catch {
+    return null;
+  }
+}
+
+function EvidenceNote({ note }: { note: string }) {
+  const lines = readableEvidence(note);
+  if (!lines) return <p>{note}</p>;
+  return <div className="structured-evidence">{lines.map((line, index) => <p key={index}>{line}</p>)}</div>;
+}
+
 export function SourceList({ citations }: { citations: Citation[] }) {
-  return <ul className="source-list">{citations.map((source, index) => <li key={index}><a href={safeSourceURL(source.source_url)} target="_blank" rel="noreferrer">{source.source_name}</a><span>{source.field_name.replaceAll("_", " ")}</span>{source.evidence_note && <p>{source.evidence_note}</p>}</li>)}</ul>;
+  return <ul className="source-list">{citations.map((source, index) => <li key={index}><a href={safeSourceURL(source.source_url)} target="_blank" rel="noreferrer">{source.source_name}</a><span>{source.field_name.replaceAll("_", " ")}</span>{source.evidence_note && <EvidenceNote note={source.evidence_note} />}</li>)}</ul>;
 }
 function WorkBrowserContent({ render, onSelectWork, selectedID }: { render: (choose: (id: string) => void, selectedID?: string) => ReactNode; onSelectWork: (id: string) => void; selectedID?: string }) {
   return render(onSelectWork, selectedID);
