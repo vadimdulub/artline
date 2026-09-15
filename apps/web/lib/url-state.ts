@@ -15,6 +15,9 @@ export function queryValues(params: URLSearchParams, key: string): string[] {
 export function popularPaintersOnly(params: URLSearchParams): boolean {
   return params.get("popular") !== "false";
 }
+export function womenArtistsOnly(params: URLSearchParams): boolean {
+  return params.get("women") === "true";
+}
 export function updateQuery(values: Record<string, string | string[] | null>, push = false) {
   const url = new URL(window.location.href);
   for (const [key, value] of Object.entries(values)) {

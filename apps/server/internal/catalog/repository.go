@@ -291,10 +291,10 @@ func (r *Repository) Coverage(ctx context.Context) (CoverageSummary, error) {
 }
 
 func (r *Repository) Facets(ctx context.Context, preview bool) (TimelineFacets, error) {
-	return r.DiscoveryFacets(ctx, preview, false)
+	return r.DiscoveryFacets(ctx, preview, false, false)
 }
 
-func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular bool) (TimelineFacets, error) {
+func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular, women bool) (TimelineFacets, error) {
 	facets := TimelineFacets{Movements: []FacetOption{}, Countries: []FacetOption{}, Regions: []FacetOption{}}
 	movementRows, err := r.db.Query(ctx, `
 		SELECT m.slug, m.name, m.color_hex, count(DISTINCT a.id)
@@ -303,8 +303,9 @@ func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular bool)
 		JOIN artists a ON a.id = am.artist_id AND a.status <> 'archived'
         WHERE ($1 OR (a.status='published' AND m.status='published')) AND m.status<>'archived'
         AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
+        AND (NOT $3 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
 		GROUP BY m.slug, m.name, m.color_hex, m.start_year
-		ORDER BY m.start_year NULLS LAST, m.name`, preview, popular)
+		ORDER BY m.start_year NULLS LAST, m.name`, preview, popular, women)
 	if err != nil {
 		return facets, fmt.Errorf("query movement facets: %w", err)
 	}
@@ -328,8 +329,9 @@ func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular bool)
 		JOIN artists a ON a.id = ac.artist_id AND a.status <> 'archived'
         WHERE ($1 OR a.status='published')
         AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
+        AND (NOT $3 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
 		GROUP BY c.code, c.name
-		ORDER BY c.name`, preview, popular)
+		ORDER BY c.name`, preview, popular, women)
 	if err != nil {
 		return facets, fmt.Errorf("query country facets: %w", err)
 	}
@@ -351,7 +353,8 @@ func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular bool)
 		JOIN artists a ON a.id=ac.artist_id AND a.status<>'archived'
 		WHERE ($1 OR a.status='published')
 		AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
-		GROUP BY c.region_code ORDER BY c.region_code`, preview, popular)
+        AND (NOT $3 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
+		GROUP BY c.region_code ORDER BY c.region_code`, preview, popular, women)
 	if err != nil {
 		return facets, fmt.Errorf("query region facets: %w", err)
 	}

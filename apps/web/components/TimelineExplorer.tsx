@@ -8,7 +8,7 @@ import { PopularPaintersHint } from "./PopularPaintersHint";
 import { usePainterChoices, workTypeOptions } from "./use-painter-choices";
 import { apiRequest, countryName, errorMessage } from "@/lib/api";
 import { isCurrentPeriod, normalizeRange, positionArtists, timelineTicks, presetRange } from "@/lib/timeline";
-import { popularPaintersOnly, queryValues, updateQuery, useQueryString } from "@/lib/url-state";
+import { popularPaintersOnly, womenArtistsOnly, queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import type { ArtistDetail, TimelineFacets, TimelineResponse } from "@/lib/types";
 
 export function TimelineExplorer({ preview }: { preview: boolean }) {
@@ -22,7 +22,8 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
   const regions = queryValues(params, "region");
   const workTypes = queryValues(params, "work_type");
   const popularOnly = popularPaintersOnly(params);
-  const painterChoices = usePainterChoices(painters, popularOnly);
+  const womenOnly = womenArtistsOnly(params);
+  const painterChoices = usePainterChoices(painters, popularOnly, "", "", womenOnly);
   const slug = params.get("artist") ?? "";
   const [facets, setFacets] = useState<TimelineFacets>({ countries: [], movements: [], regions: [] });
   const [facetError, setFacetError] = useState(false);
@@ -35,7 +36,7 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
   const drawerOpen = Boolean(slug);
   const dialog = useRef<HTMLDialogElement>(null);
   const drag = useRef<{ x: number; start: number; end: number; width: number } | null>(null);
-  const requestParams = new URLSearchParams({ start: String(start), end: String(end), popular: String(popularOnly) });
+  const requestParams = new URLSearchParams({ start: String(start), end: String(end), popular: String(popularOnly), women: String(womenOnly) });
   for (const [key, values] of Object.entries({ region: regions, country: countries, movement: selectedMovements, painter: painters, work_type: workTypes })) values.forEach(value => requestParams.append(key, value));
   if (query) requestParams.set("q", query);
   const requestKey = requestParams.toString();
@@ -55,9 +56,9 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
 
   useEffect(() => {
     const controller = new AbortController();
-    apiRequest<TimelineFacets>(`timeline/facets?popular=${popularOnly}`, { signal: controller.signal }).then(data => { setFacets(data); setFacetError(false); }).catch(() => { if (!controller.signal.aborted) setFacetError(true); });
+    apiRequest<TimelineFacets>(`timeline/facets?popular=${popularOnly}&women=${womenOnly}`, { signal: controller.signal }).then(data => { setFacets(data); setFacetError(false); }).catch(() => { if (!controller.signal.aborted) setFacetError(true); });
     return () => controller.abort();
-  }, [retry, popularOnly]);
+  }, [retry, popularOnly, womenOnly]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -128,8 +129,8 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
     const a = Math.max(1100, Math.min(2000 - span, start + delta));
     setRange(a, a + span);
   }
-  function reset() { updateQuery({ start: null, end: null, q: null, painter: null, country: null, movement: null, region: null, work_type: null, status: null, popular: null }, true); }
-  function clearFilters() { updateQuery({ q: null, painter: null, region: null, movement: null, country: null, work_type: null, status: null, popular: "false" }, true); }
+  function reset() { updateQuery({ start: null, end: null, q: null, painter: null, country: null, movement: null, region: null, work_type: null, status: null, women: null, popular: null }, true); }
+  function clearFilters() { updateQuery({ q: null, painter: null, region: null, movement: null, country: null, work_type: null, status: null, women: null, popular: "false" }, true); }
   function openArtist(artistSlug: string) { updateQuery({ artist: artistSlug, work: null, art_year: null, art_cursor: null }, true); }
   function closeArtist() { updateQuery({ artist: null, work: null, art_year: null, art_cursor: null }, true); }
   const movements = [...new Map((data?.items ?? []).map(item => [item.movement.slug, item.movement])).values()];
@@ -138,6 +139,7 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
   const activeFilters = [
     { key: "q", value: query, label: `Search: ${query}` },
   ].filter(item => item.value).map(item => ({ ...item, remove: () => updateQuery({ [item.key]: null }, true) }));
+  if (womenOnly) activeFilters.push({ key: "women", value: "true", label: "Women artists", remove: () => updateQuery({ women: null }, true) });
   for (const group of [{ key: "painter", values: painters, options: painterChoices.options }, { key: "movement", values: selectedMovements, options: facets.movements }, { key: "country", values: countries, options: facets.countries }, { key: "region", values: regions, options: facets.regions ?? [] }, { key: "work_type", values: workTypes, options: workTypeOptions }]) {
     for (const value of group.values) activeFilters.push({ key: `${group.key}-${value}`, value, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => updateQuery({ [group.key]: group.values.filter(item => item !== value) }, true) });
   }
@@ -154,6 +156,7 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
           <MultiSelectFilter label="Regions" allLabel="All regions" options={facets.regions ?? []} values={regions} onChange={values => updateQuery({ region: values }, true)} unavailable={facetError} />
           <MultiSelectFilter label="Countries" allLabel="All countries" options={facets.countries} values={countries} onChange={values => updateQuery({ country: values }, true)} unavailable={facetError} />
           <MultiSelectFilter label="Work types" allLabel="All types" options={workTypeOptions} values={workTypes} onChange={values => updateQuery({ work_type: values }, true)} />
+          <div className="popular-filter-control"><label className="popular-filter"><input type="checkbox" checked={womenOnly} onChange={event => updateQuery({ women: event.target.checked ? "true" : null }, true)} /><span>Women artists</span></label></div>
           <div className="popular-filter-control"><label className="popular-filter"><input type="checkbox" checked={popularOnly} onChange={event => updateQuery({ popular: event.target.checked ? null : "false" }, true)} /><span>Only popular painters</span></label><PopularPaintersHint /></div>
         </div>
       </div>
@@ -164,7 +167,7 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
           <div className="tick-row" aria-hidden="true">{ticks.map(year => <span key={year} style={{ left: `${((year - start) / Math.max(1, end - start)) * 100}%` }}><i />{year}</span>)}</div>
           {error ? <div className="state-panel"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={() => { setResult({ key: "" }); setRetry(value => value + 1); }}>Try again</button></div> :
             data?.mode === "density" ? <><TimelineOverview key={`${start}-${end}`} periods={data.periods} start={start} end={end} disabled={loading} suggestion={suggestions[0]} onSelect={selectPeriod} /><div className="density-help"><p id="density-guidance">{needsFilter ? "Many painters overlap these years. Try a suggested filter to narrow the view, or choose your own above." : "Choose a period to explore its painters, or try a suggested filter. Each count matches the view you will open."}</p><div className="density-actions">{suggestions.map(suggestion => <button key={`${suggestion.key}-${suggestion.value}`} type="button" disabled={loading} onClick={() => applySuggestion(suggestion)} aria-label={`Filter by ${suggestion.name}, ${suggestion.count} painters`}>{suggestion.name} · {suggestion.count}</button>)}{suggestions.length === 0 && <button type="button" disabled={loading} onClick={focusSearch}>Choose filters</button>}{!popularOnly && <button type="button" disabled={loading} onClick={() => updateQuery({ popular: null }, true)}>Show popular painters</button>}</div></div></> :
-            positioned.length ? <div className="timeline-lanes" key={`${start}-${end}-${popularOnly}`} role="region" aria-label="Painter timeline lanes" aria-describedby="timeline-scroll-help" tabIndex={0}><div className={loading ? "artist-field is-loading" : "artist-field"} style={{ height: `${laneCount * 54 + 12}px` }}>{positioned.map(artist => <button key={artist.id} className="artist-mark" disabled={loading} aria-pressed={artist.slug === slug} style={{ left: `${artist.left}%`, top: `${artist.lane * 54 + 8}px`, width: `${artist.width}%`, ["--movement-color" as string]: artist.movement.color, ["--label-offset" as string]: `${artist.labelOffset}px`, ["--label-width" as string]: `${artist.labelWidth}px` }} onClick={() => openArtist(artist.slug)} aria-label={`${artist.name}, ${artist.date_display}, ${artist.movement.name}, ${artist.countries.map(countryName).join(", ")}, ${artist.artwork_count} recorded works`} title={`${artist.movement.name} · ${artist.artwork_count} recorded works`}><span>{artist.name}</span><small>{artist.date_display}</small><i /></button>)}</div></div> :
+            positioned.length ? <div className="timeline-lanes" key={`${start}-${end}-${popularOnly}-${womenOnly}`} role="region" aria-label="Painter timeline lanes" aria-describedby="timeline-scroll-help" tabIndex={0}><div className={loading ? "artist-field is-loading" : "artist-field"} style={{ height: `${laneCount * 54 + 12}px` }}>{positioned.map(artist => <button key={artist.id} className="artist-mark" disabled={loading} aria-pressed={artist.slug === slug} style={{ left: `${artist.left}%`, top: `${artist.lane * 54 + 8}px`, width: `${artist.width}%`, ["--movement-color" as string]: artist.movement.color, ["--label-offset" as string]: `${artist.labelOffset}px`, ["--label-width" as string]: `${artist.labelWidth}px` }} onClick={() => openArtist(artist.slug)} aria-label={`${artist.name}, ${artist.date_display}, ${artist.movement.name}, ${artist.countries.map(countryName).join(", ")}, ${artist.artwork_count} recorded works`} title={`${artist.movement.name} · ${artist.artwork_count} recorded works`}><span>{artist.name}</span><small>{artist.date_display}</small><i /></button>)}</div></div> :
             <div className="state-panel"><h2>{loading ? "Opening the atlas…" : "No painters in this view"}</h2>{!loading && <><p>{activeFilters.length ? "No records match these filters in this date range." : start !== 1100 || end !== 2000 ? "No painter records overlap these years. Try a wider date range." : preview ? "Painter records will appear here as they are added." : "The first painter records are still being reviewed."}</p><div className="empty-view-actions">{activeFilters.length > 0 && <button onClick={() => { clearFilters(); searchInput.current?.focus(); }}>Remove filters</button>}{(start !== 1100 || end !== 2000) && <button onClick={() => setRange(1100, 2000)}>Show full date range</button>}</div></>}</div>}
         </div>
         {data?.mode === "individual" && positioned.length > 0 && <p className="timeline-scroll-help" id="timeline-scroll-help">Scroll within the chart for more painters, or narrow the years below. Lines show recorded life or activity intervals; artworks are dated separately.</p>}

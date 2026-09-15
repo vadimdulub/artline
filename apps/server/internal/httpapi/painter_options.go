@@ -13,7 +13,7 @@ func (api *API) painterOptions(w http.ResponseWriter, r *http.Request) {
 	}
 	q := r.URL.Query()
 	query, museum := strings.TrimSpace(q.Get("q")), q.Get("museum")
-	selected, err := parseChoices(q["selected"], museumSlugPattern.MatchString, false)
+	selected, err := parseChoices(q["selected"], validArtistSlug, false)
 	if err != nil || len(query) > 200 || (museum != "" && (len(museum) > 100 || !museumSlugPattern.MatchString(museum))) {
 		writeError(w, 400, "INVALID_FILTER", "Check the painter search and selected values.")
 		return
@@ -23,9 +23,14 @@ func (api *API) painterOptions(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_POPULAR", err.Error())
 		return
 	}
+	women, err := parseWomen(q["women"])
+	if err != nil {
+		writeError(w, 400, "INVALID_WOMEN", err.Error())
+		return
+	}
 	ctx, cancel := contextWithTimeout(r, 5*time.Second)
 	defer cancel()
-	result, err := api.repo.PainterOptions(ctx, query, museum, selected, preview, popular)
+	result, err := api.repo.PainterOptions(ctx, query, museum, selected, preview, popular, women)
 	if err != nil {
 		api.museumError(w, err)
 		return

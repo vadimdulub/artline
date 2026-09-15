@@ -101,7 +101,7 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 	}
 	q := r.URL.Query()
 	choices := map[string][]string{}
-	for key, valid := range map[string]func(string) bool{"country": countryPattern.MatchString, "movement": museumSlugPattern.MatchString, "painter": museumSlugPattern.MatchString, "work_type": validWorkType} {
+	for key, valid := range map[string]func(string) bool{"country": countryPattern.MatchString, "movement": museumSlugPattern.MatchString, "painter": validArtistSlug, "work_type": validWorkType} {
 		choices[key], err = parseChoices(q[key], valid, key == "country")
 		if err != nil {
 			writeError(w, 400, "INVALID_FILTER", err.Error())
@@ -122,6 +122,11 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_POPULAR", err.Error())
 		return
 	}
+	women, err := parseWomen(r.URL.Query()["women"])
+	if err != nil {
+		writeError(w, 400, "INVALID_WOMEN", err.Error())
+		return
+	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
 	response, err := api.repo.Timeline(ctx, catalog.TimelineFilter{
@@ -135,6 +140,7 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 		Regions:     regions,
 		WorkTypes:   choices["work_type"],
 		PopularOnly: popular,
+		WomenOnly:   women,
 	})
 	if err != nil {
 		slog.Error("timeline query failed", "error", err)
@@ -155,7 +161,12 @@ func (api *API) timelineFacets(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_POPULAR", err.Error())
 		return
 	}
-	facets, err := api.repo.DiscoveryFacets(r.Context(), preview, popular)
+	women, err := parseWomen(r.URL.Query()["women"])
+	if err != nil {
+		writeError(w, 400, "INVALID_WOMEN", err.Error())
+		return
+	}
+	facets, err := api.repo.DiscoveryFacets(r.Context(), preview, popular, women)
 	if err != nil {
 		slog.Error("timeline facet query failed", "error", err)
 		writeError(w, http.StatusInternalServerError, "FACET_QUERY_FAILED", "Timeline filters could not be loaded.")
@@ -170,7 +181,7 @@ func (api *API) artist(w http.ResponseWriter, r *http.Request) {
 	if !ok {
 		return
 	}
-	slug := catalog.NormalizeSlug(r.PathValue("slug"))
+	slug := artistLookupSlug(r.PathValue("slug"))
 	if slug == "" {
 		writeError(w, http.StatusBadRequest, "INVALID_SLUG", "Artist slug is required.")
 		return

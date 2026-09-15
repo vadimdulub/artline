@@ -12,6 +12,7 @@ type TimelineFilter struct {
 	Regions     []string
 	WorkType    string
 	PopularOnly bool
+	WomenOnly   bool
 	Countries   []string
 	Movements   []string
 	Painters    []string
@@ -56,6 +57,7 @@ type TimelineResponse struct {
 	Total            int                       `json:"total"`
 	Periods          []TimelinePeriod          `json:"periods"`
 	PopularOnly      bool                      `json:"popular_only"`
+	WomenOnly        bool                      `json:"women_only"`
 	SuggestedFilters []TimelineSuggestedFilter `json:"suggested_filters"`
 }
 

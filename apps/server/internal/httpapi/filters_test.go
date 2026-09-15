@@ -63,3 +63,28 @@ func TestParsePopular(t *testing.T) {
 		}
 	}
 }
+
+func TestLegacyArtistSlugs(t *testing.T) {
+	const slug = "niels-bjerre-smk-132_person"
+	if !validArtistSlug(slug) || artistLookupSlug(slug) != slug {
+		t.Fatal("source-derived artist identity was rejected or renamed")
+	}
+	if got := artistLookupSlug("  Hilma-af-Klint-- "); got != "hilma-af-klint" {
+		t.Fatalf("existing lookup normalization changed: %q", got)
+	}
+	for _, raw := range []string{"painter/other", "painter'--", "_painter", "painter__other", strings.Repeat("a", 101)} {
+		if validArtistSlug(raw) {
+			t.Errorf("accepted invalid artist slug %q", raw)
+		}
+	}
+	f, err := museumFilter(httptest.NewRequest("GET", "/api/v1/museums/x/works?artist="+slug, nil))
+	if err != nil || !reflect.DeepEqual(f.Artists, []string{slug}) {
+		t.Fatalf("legacy artist filter failed: %+v %v", f, err)
+	}
+	if _, err := parseChoices([]string{slug}, validArtistSlug, false); err != nil {
+		t.Fatalf("legacy painter selection rejected: %v", err)
+	}
+	if museumSlugPattern.MatchString(slug) {
+		t.Fatal("artist compatibility must not relax museum or movement slugs")
+	}
+}

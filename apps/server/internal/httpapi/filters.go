@@ -67,6 +67,16 @@ func parsePopular(values []string) (bool, error) {
 	}
 }
 
+func parseWomen(values []string) (bool, error) {
+	if len(values) == 0 {
+		return false, nil
+	}
+	if len(values) != 1 || (values[0] != "true" && values[0] != "false") {
+		return false, fmt.Errorf("Use women=true or women=false once.")
+	}
+	return values[0] == "true", nil
+}
+
 // Accept old single-region bookmarks, repeated parameters, and comma-separated
 // clients. Values are bounded and passed as a parameterized PostgreSQL array.
 func parseRegions(values []string) ([]string, error) {

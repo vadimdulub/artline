@@ -32,6 +32,7 @@ export type TimelineResponse = {
   bins: TimelineBin[];
   total: number;
   popular_only: boolean;
+  women_only?: boolean;
   periods: { start_year: number; end_year: number; count: number }[];
   suggested_filters?: { key: "country" | "movement"; value: string; name: string; count: number }[];
 };

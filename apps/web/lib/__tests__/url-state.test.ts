@@ -1,7 +1,23 @@
 import { afterEach, expect, it } from "vitest";
-import { popularPaintersOnly, queryValues, updateQuery } from "../url-state";
+import { popularPaintersOnly, womenArtistsOnly, queryValues, updateQuery } from "../url-state";
 
 afterEach(() => window.history.replaceState(null, "", "/"));
+
+it("keeps women and popularity filters independent while preserving the view", () => {
+  expect(womenArtistsOnly(new URLSearchParams())).toBe(false);
+  window.history.replaceState(null, "", "/?start=1800&end=1900&popular=false");
+  updateQuery({ women: "true" }, true);
+  let params = new URLSearchParams(window.location.search);
+  expect(womenArtistsOnly(params)).toBe(true);
+  expect(popularPaintersOnly(params)).toBe(false);
+  expect(params.get("start")).toBe("1800");
+  updateQuery({ popular: null });
+  params = new URLSearchParams(window.location.search);
+  expect(womenArtistsOnly(params)).toBe(true);
+  expect(popularPaintersOnly(params)).toBe(true);
+  updateQuery({ women: null });
+  expect(womenArtistsOnly(new URLSearchParams(window.location.search))).toBe(false);
+});
 
 it("defaults to popular painters and preserves an explicit opt-out", () => {
   expect(popularPaintersOnly(new URLSearchParams())).toBe(true);

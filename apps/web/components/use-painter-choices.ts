@@ -4,10 +4,10 @@ import { apiRequest } from "@/lib/api";
 import type { FilterOption } from "./MultiSelectFilter";
 
 type Choices = { items: FilterOption[]; selected: FilterOption[]; has_more: boolean };
-export function usePainterChoices(values: string[], popular = false, museum = "", token = "") {
+export function usePainterChoices(values: string[], popular = false, museum = "", token = "", women = false) {
   const [search, setSearch] = useState("");
   const [revision, setRevision] = useState(0);
-  const params = new URLSearchParams({ q: search, popular: String(popular) });
+  const params = new URLSearchParams({ q: search, popular: String(popular), women: String(women) });
   if (museum) params.set("museum", museum);
   values.forEach(value => params.append("selected", value));
   const key = params.toString();

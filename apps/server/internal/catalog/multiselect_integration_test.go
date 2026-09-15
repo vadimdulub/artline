@@ -74,15 +74,15 @@ func TestMultipleDiscoveryFilters(t *testing.T) {
 	if err != nil || museums.Total < 1 {
 		t.Fatalf("museum painter discovery: %+v %v", museums, err)
 	}
-	options, err := repo.PainterOptions(ctx, "Monet", "the-met", []string{"rembrandt"}, true, false)
+	options, err := repo.PainterOptions(ctx, "Monet", "the-met", []string{"rembrandt"}, true, false, false)
 	if err != nil || len(options.Items) != 1 || options.Items[0].Slug != "claude-monet" || len(options.Selected) != 1 || options.Selected[0].Slug != "rembrandt" {
 		t.Fatalf("bounded search/resolution: %+v %v", options, err)
 	}
-	options, err = repo.PainterOptions(ctx, "", "", []string{"rembrandt"}, false, false)
+	options, err = repo.PainterOptions(ctx, "", "", []string{"rembrandt"}, false, false, false)
 	if err != nil || len(options.Items) != 0 || len(options.Selected) != 0 {
 		t.Fatalf("options visibility: %+v %v", options, err)
 	}
-	options, err = repo.PainterOptions(ctx, "", "", nil, true, false)
+	options, err = repo.PainterOptions(ctx, "", "", nil, true, false, false)
 	if err != nil || len(options.Items) > 30 {
 		t.Fatalf("bounded results: %+v %v", options, err)
 	}
@@ -90,7 +90,7 @@ func TestMultipleDiscoveryFilters(t *testing.T) {
  SELECT 'option-fixture-'||n,'Option fixture '||n,'Option fixture '||n,'option fixture '||n,1800,1900,'1800-1900','life','review' FROM generate_series(1,60) n`); err != nil {
 		t.Fatal(err)
 	}
-	options, err = repo.PainterOptions(ctx, "Option fixture", "", []string{"claude-monet"}, true, false)
+	options, err = repo.PainterOptions(ctx, "Option fixture", "", []string{"claude-monet"}, true, false, false)
 	if err != nil || len(options.Items) != 30 || !options.HasMore || len(options.Selected) != 1 {
 		t.Fatalf("search cap: %+v %v", options, err)
 	}
@@ -107,7 +107,7 @@ func TestMultipleDiscoveryFilters(t *testing.T) {
 	if err != nil || p.Total != 0 {
 		t.Fatalf("private movement filter leak: %+v %v", p, err)
 	}
-	facets, err := repo.DiscoveryFacets(ctx, false, false)
+	facets, err := repo.DiscoveryFacets(ctx, false, false, false)
 	if err != nil || len(facets.Movements) != 0 {
 		t.Fatalf("private movement facet leak: %+v %v", facets, err)
 	}

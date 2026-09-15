@@ -48,7 +48,7 @@ func TestPopularDiscoveryIsIndependentOfImagesAndRespectsVisibility(t *testing.T
 	if err != nil || result.Total != 1 {
 		t.Fatalf("region: %+v %v", result, err)
 	}
-	facets, err := repo.DiscoveryFacets(ctx, true, true)
+	facets, err := repo.DiscoveryFacets(ctx, true, true, false)
 	if err != nil || len(facets.Countries) != 1 || facets.Countries[0].Slug != "JP" {
 		t.Fatalf("popular facets: %+v %v", facets, err)
 	}

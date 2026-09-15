@@ -24,7 +24,7 @@ func museumFilter(r *http.Request) (catalog.MuseumFilter, error) {
 		dest  *[]string
 		valid func(string) bool
 	}{
-		{"artist", &f.Artists, museumSlugPattern.MatchString}, {"movement", &f.Movements, museumSlugPattern.MatchString},
+		{"artist", &f.Artists, validArtistSlug}, {"movement", &f.Movements, museumSlugPattern.MatchString},
 		{"venue", &f.Venues, museumIDPattern.MatchString}, {"work_type", &f.WorkTypes, validWorkType},
 	} {
 		*spec.dest, err = parseChoices(q[spec.key], spec.valid, false)
@@ -53,10 +53,11 @@ func museumFilter(r *http.Request) (catalog.MuseumFilter, error) {
 	if len(f.Query) > 200 || len(f.Cursor) > 2048 || !allowed(f.Selection, "", "owner", "museum") || !allowed(f.Display, "", "on_view") || !allowed(f.Sort, "", "year", "title", "curated") {
 		return f, catalog.ErrMuseumFilter
 	}
-	for _, slug := range []string{f.Artist, f.Movement} {
-		if slug != "" && (len(slug) > 100 || !museumSlugPattern.MatchString(slug)) {
-			return f, catalog.ErrMuseumFilter
-		}
+	if f.Artist != "" && !validArtistSlug(f.Artist) {
+		return f, catalog.ErrMuseumFilter
+	}
+	if f.Movement != "" && (len(f.Movement) > 100 || !museumSlugPattern.MatchString(f.Movement)) {
+		return f, catalog.ErrMuseumFilter
 	}
 	if f.Venue != "" && !museumIDPattern.MatchString(f.Venue) {
 		return f, catalog.ErrMuseumFilter

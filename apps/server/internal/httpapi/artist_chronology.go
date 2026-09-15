@@ -4,11 +4,29 @@ import (
 	"errors"
 	"log/slog"
 	"net/http"
+	"regexp"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/vadimdulub/artline/apps/server/internal/catalog"
 )
+
+// Older museum imports retain underscores in stable source-derived artist slugs.
+// Accept those identities without renaming painters or breaking their URLs.
+var artistSlugPattern = regexp.MustCompile(`^[a-z0-9]+(?:[-_][a-z0-9]+)*$`)
+
+func validArtistSlug(slug string) bool {
+	return len(slug) <= 100 && artistSlugPattern.MatchString(slug)
+}
+
+func artistLookupSlug(raw string) string {
+	slug := strings.ToLower(strings.TrimSpace(raw))
+	if validArtistSlug(slug) {
+		return slug
+	}
+	return catalog.NormalizeSlug(raw)
+}
 
 func artistWorksFilter(r *http.Request) (catalog.ArtistWorksFilter, error) {
 	q := r.URL.Query()
@@ -50,7 +68,7 @@ func (api *API) artistWorks(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	slug := r.PathValue("slug")
-	if len(slug) > 100 || !museumSlugPattern.MatchString(slug) {
+	if !validArtistSlug(slug) {
 		api.artistChronologyError(w, catalog.ErrNotFound)
 		return
 	}
@@ -70,7 +88,7 @@ func (api *API) artistArtwork(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	slug, id := r.PathValue("slug"), r.PathValue("id")
-	if len(slug) > 100 || !museumSlugPattern.MatchString(slug) || !museumIDPattern.MatchString(id) {
+	if !validArtistSlug(slug) || !museumIDPattern.MatchString(id) {
 		api.artistChronologyError(w, catalog.ErrNotFound)
 		return
 	}

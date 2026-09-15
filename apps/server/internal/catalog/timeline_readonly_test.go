@@ -81,6 +81,8 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 		{StartYear: 1999, EndYear: 2000},
 		{StartYear: 1100, EndYear: 2000, Countries: []string{"FR", "IT"}},
 		{StartYear: 1100, EndYear: 2000, PopularOnly: true},
+		{StartYear: 1100, EndYear: 2000, WomenOnly: true},
+		{StartYear: 1100, EndYear: 2000, WomenOnly: true, PopularOnly: true},
 	} {
 		view, err := repo.Timeline(ctx, filter)
 		if err != nil {
@@ -88,6 +90,24 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 		}
 		if len(view.Items) > 300 || len(view.Periods) > 90 || len(view.SuggestedFilters) > 3 {
 			t.Fatal("unbounded timeline response")
+		}
+		if filter.WomenOnly {
+			var expected int
+			if err := tx.QueryRow(ctx, `SELECT count(*) FROM artists a
+ JOIN artist_gender_evidence g ON g.artist_id=a.id AND g.is_woman
+ WHERE a.status<>'archived' AND a.timeline_start_year <= $2 AND a.timeline_end_year >= $1
+ AND (NOT $3 OR EXISTS(SELECT 1 FROM artist_discovery_selection s WHERE s.artist_id=a.id AND s.is_popular))`, filter.StartYear, filter.EndYear, filter.PopularOnly).Scan(&expected); err != nil {
+				t.Fatal(err)
+			}
+			if view.Total != expected || !view.WomenOnly {
+				t.Fatalf("women count=%d, expected=%d", view.Total, expected)
+			}
+			for _, item := range view.Items {
+				var verified bool
+				if err := tx.QueryRow(ctx, `SELECT EXISTS(SELECT 1 FROM artist_gender_evidence WHERE artist_id=$1 AND is_woman)`, item.ID).Scan(&verified); err != nil || !verified {
+					t.Fatalf("unverified woman %s: %v", item.Slug, err)
+				}
+			}
 		}
 		if len(view.Items) > 0 {
 			ids := make([]string, 0, len(view.Items))
@@ -159,11 +179,11 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 		}
 		t.Logf("verified %d–%d: %d painters, %d periods, %d suggestions", filter.StartYear, filter.EndYear, view.Total, len(view.Periods), len(view.SuggestedFilters))
 	}
-	args := []any{1100, 2000, "", "", []string{}, []string{}, []string{}, []string{}, false, []string{}, 50}
+	args := []any{1100, 2000, "", "", []string{}, []string{}, []string{}, []string{}, false, []string{}, true, 50}
 	for name, query := range map[string]string{"density": timelineDensityQuery, "suggestions": timelineSuggestionsQuery} {
 		planArgs := append([]any(nil), args...)
 		if name == "suggestions" {
-			planArgs[10] = 20000
+			planArgs[11] = 20000
 		}
 		var plan string
 		if err := tx.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+query, planArgs...).Scan(&plan); err != nil {
@@ -177,7 +197,7 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 	synthetic := `WITH matching AS MATERIALIZED (
 	 SELECT 1050+(n*37)%900 AS timeline_start_year,1100+(n*37)%900 AS timeline_end_year,
 	 'Fixture movement'::text AS movement,'#888888'::text AS color FROM generate_series(1,20000) n
-	), periods AS (` + strings.ReplaceAll(periodSQL, "$11", "$3")
+	), periods AS (` + strings.ReplaceAll(periodSQL, "$12", "$3")
 	var plan string
 	if err := tx.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+synthetic, 1100, 2000, 50).Scan(&plan); err != nil {
 		t.Fatal(err)

@@ -27,6 +27,7 @@ const timelinePredicate = `
  AND (cardinality($8::text[])=0 OR EXISTS (SELECT 1 FROM artwork_artists x JOIN artworks y ON y.id=x.artwork_id WHERE x.artist_id=a.id AND y.work_type=ANY($8) AND y.status<>'archived' AND ($3<>'published' OR y.status='published')))
  AND (NOT $9 OR EXISTS (SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
  AND (cardinality($10::text[])=0 OR a.slug=ANY($10))
+ AND (NOT $11 OR EXISTS (SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
 `
 
 // Every period counts the same overlapping life/activity intervals as selecting
@@ -37,8 +38,8 @@ const timelineDensityQuery = `WITH matching AS MATERIALIZED (
  coalesce(m.name,'Unclassified') AS movement,coalesce(m.color_hex,'#8b8880') AS color
  ` + timelinePredicate + `
 ), periods AS (
- SELECT year AS start_year,CASE WHEN year+$11 >= $2 THEN $2 ELSE year+$11-1 END AS end_year
- FROM generate_series($1::int,$2::int-1,$11::int) AS year
+ SELECT year AS start_year,CASE WHEN year+$12 >= $2 THEN $2 ELSE year+$12-1 END AS end_year
+ FROM generate_series($1::int,$2::int-1,$12::int) AS year
 )
 SELECT p.start_year,p.end_year,a.movement,a.color,count(*)
 FROM periods p JOIN matching a ON a.timeline_start_year <= p.end_year AND a.timeline_end_year >= p.start_year
@@ -52,12 +53,12 @@ const timelineSuggestionsQuery = `WITH matching AS MATERIALIZED (
  SELECT 'country' AS key,trim(c.code::text) AS value,c.name,count(DISTINCT a.id)::int AS count
  FROM matching a JOIN artist_countries ac ON ac.artist_id=a.id JOIN countries c ON c.code=ac.country_code
  WHERE cardinality($5::text[])=0
- GROUP BY c.code,c.name HAVING count(DISTINCT a.id) < $11
+ GROUP BY c.code,c.name HAVING count(DISTINCT a.id) < $12
  UNION ALL
  SELECT 'movement',m.slug,m.name,count(DISTINCT a.id)::int
  FROM matching a JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id
  WHERE cardinality($6::text[])=0 AND m.status<>'archived' AND ($3<>'published' OR m.status='published')
- GROUP BY m.slug,m.name HAVING count(DISTINCT a.id) < $11
+ GROUP BY m.slug,m.name HAVING count(DISTINCT a.id) < $12
 )
 SELECT key,value,name,count FROM suggestions
 ORDER BY (count <= 300) DESC,CASE WHEN count <= 300 THEN -count ELSE count END,key,value LIMIT 3`
@@ -72,11 +73,11 @@ const timelineArtworkCountsQuery = `SELECT aa.artist_id::text,count(DISTINCT aa.
  GROUP BY aa.artist_id`
 
 func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (TimelineResponse, error) {
-	result := TimelineResponse{Mode: "individual", Items: []TimelineArtist{}, Bins: []TimelineBin{}, Periods: []TimelinePeriod{}, PopularOnly: filter.PopularOnly, SuggestedFilters: []TimelineSuggestedFilter{}}
+	result := TimelineResponse{Mode: "individual", Items: []TimelineArtist{}, Bins: []TimelineBin{}, Periods: []TimelinePeriod{}, PopularOnly: filter.PopularOnly, WomenOnly: filter.WomenOnly, SuggestedFilters: []TimelineSuggestedFilter{}}
 	result.Range.Start, result.Range.End = filter.StartYear, filter.EndYear
 	// Filter selectivity varies widely. Bind values without retaining a named
 	// statement that can switch to an unsuitable generic plan after repeated use.
-	args := []any{pgx.QueryExecModeCacheDescribe, filter.StartYear, filter.EndYear, filter.Status, filter.Query, filterChoices(filter.Countries, filter.Country), filterChoices(filter.Movements, filter.Movement), filter.Regions, filterChoices(filter.WorkTypes, filter.WorkType), filter.PopularOnly, filterChoices(filter.Painters, "")}
+	args := []any{pgx.QueryExecModeCacheDescribe, filter.StartYear, filter.EndYear, filter.Status, filter.Query, filterChoices(filter.Countries, filter.Country), filterChoices(filter.Movements, filter.Movement), filter.Regions, filterChoices(filter.WorkTypes, filter.WorkType), filter.PopularOnly, filterChoices(filter.Painters, ""), filter.WomenOnly}
 	if err := r.db.QueryRow(ctx, "SELECT count(*)"+timelinePredicate, args...).Scan(&result.Total); err != nil {
 		return result, fmt.Errorf("count timeline: %w", err)
 	}

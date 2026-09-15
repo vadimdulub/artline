@@ -69,9 +69,9 @@ func TestValidationBeforeDatabaseAccess(t *testing.T) {
 	}{
 		{"GET", "/api/v1/timeline?start=2000&end=1100", "", 400},
 		{"GET", "/api/v1/timeline?country=invalid", "", 400},
-		{"GET", "/api/v1/timeline?painter=monet&painter=bad_slug", "", 400},
-		{"GET", "/api/v1/painters/options?selected=bad_slug", "", 400},
-		{"GET", "/api/v1/museums/the-met/works?artist=monet&artist=bad_slug", "", 400},
+		{"GET", "/api/v1/timeline?painter=monet&painter=bad__slug", "", 400},
+		{"GET", "/api/v1/painters/options?selected=bad__slug", "", 400},
+		{"GET", "/api/v1/museums/the-met/works?artist=monet&artist=bad__slug", "", 400},
 		{"GET", "/api/v1/timeline?work_type=sculpture", "", 400},
 		{"GET", "/api/v1/timeline?popular=yes", "", 400},
 		{"GET", "/api/v1/timeline/facets?popular=true&popular=false", "", 400},
