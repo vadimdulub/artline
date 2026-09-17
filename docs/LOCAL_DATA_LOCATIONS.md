@@ -35,3 +35,10 @@ The local catalogue and 644 original application images remain in their existing
 locations. Cloud Storage contains copies in `gs://artline-508319-images/assets/`.
 This initial migration does not establish ongoing replication. See
 `docs/deployment-20260912.md` for deployment and migration validation.
+
+### Japanese painters deep expansion — 17 September 2026
+
+- Recovery directory: `/Users/vadimdulub/Library/Application Support/Artline/backups/japan-deep-20260917/`.
+- The validated local pre-import dump is `local-before.dump` (SHA-256 `87e0631a01dea092a5cfee744ea7b357639ab6a9ebf421d3f83b2c8465fc2663`). Cloud SQL backup `1789640581717` completed successfully before delivery.
+- Research, bounded discovery, authority evidence, visual review, per-record receipts, API smoke checks and public checksum verification: `docs/research/japan-deep-20260917/`.
+- Delivered identically to local and production: 19 new named artist profiles, 27 new review paintings, 27 CC0 images, and source enrichment for eight existing Met objects. No records were published and no current-display claims were added.
