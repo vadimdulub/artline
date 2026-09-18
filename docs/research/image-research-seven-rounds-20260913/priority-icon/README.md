@@ -29,8 +29,9 @@ with the full panel and its mounting retained.
 
 Four offline rejection checks on copies of the captured evidence verified that
 changed accession numbers, license labels, photographer identities and original
-checksums are rejected. `guard-tests.json` records those checks; no real-database
-test fixtures were used.
+checksums are rejected. Disposable test output is under
+`/tmp/artline-image-round-tests/priority-icon-guard-tests.json`; source and
+verification evidence remain here. No real-database test fixtures were used.
 
 Other focused searches covered Athens accession ΒΧΜ 01109 and Kremlin
 accessions Ж-1386 and Ж-267. They did not establish another exact reusable match.

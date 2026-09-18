@@ -55,6 +55,9 @@ snapshots and verifies every saved image, cloud object, media row and rights row
 
 The next round starts only after those checks pass. Museum HTTP 403/404 responses
 are recorded as unavailable research results without alternate access routes.
+A museum image read timeout gets at most one further bounded retry batch,
+recorded before execution; an unresolved timeout is then retained as unavailable.
+Cloud-upload/database failures cannot enter that source-timeout path.
 Unfinished processing and unexpected errors stop the coordinator for inspection.
 Every round retains candidates, metadata, selection evidence, image receipts,
 events, verification results and a final `round-complete.json`.

@@ -1,0 +1,30 @@
+{
+  "reviewed_at": "2026-09-15T19:40:08.151611+00:00",
+  "original_input_files_unchanged": true,
+  "database_writes": 0,
+  "image_uploads": 0,
+  "artworks_returned": 100,
+  "painters_returned": 88,
+  "new_candidates": 5,
+  "metadata_claims_not_exhaustively_reverified": true,
+  "source_checked_new_objects": 5,
+  "source_checked_country_additions": 4,
+  "original_image_candidates": 9,
+  "new_independently_found_image": 1,
+  "existing_image_review": {
+    "rights_conflict": 2,
+    "institutional_publication_review": 6,
+    "rate_limited_visual_check": 1
+  },
+  "reported_remaining_image_research_rows": 91,
+  "unvisited_painters": 80,
+  "verified_outcome_rows_missing_metadata_terms": 56,
+  "missing_reported_attachments": [
+    "remaining_artwork_tasks.csv",
+    "remaining_painter_tasks.csv",
+    "duplicate_check_audit.csv",
+    "source_access_log.csv",
+    "validation_report.json"
+  ],
+  "scope": "Structural checks for every supplied row, live identity checks in both DBs, selected primary-source checks for 9 image proposals/5 new objects/4 country additions. The 71 metadata-only existing-work proposals were not all independently reread field by field."
+}

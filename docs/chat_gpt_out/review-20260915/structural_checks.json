@@ -1,0 +1,44 @@
+[
+  {
+    "file": "completed_artwork_research.csv",
+    "rows": 100,
+    "headers_match": true,
+    "ids_unique": true,
+    "identity_set_matches_assignment": true,
+    "changed_context": [],
+    "columns_valid": true,
+    "outcomes": {
+      "verified_image": 9,
+      "verified_metadata_only": 71,
+      "needs_review": 11,
+      "blocked": 9
+    }
+  },
+  {
+    "file": "completed_painter_research.csv",
+    "rows": 88,
+    "headers_match": true,
+    "ids_unique": true,
+    "identity_set_matches_assignment": true,
+    "changed_context": [],
+    "columns_valid": true,
+    "outcomes": {
+      "": 80,
+      "needs_review": 4,
+      "verified_metadata_only": 4
+    }
+  },
+  {
+    "file": "new_artwork_candidates.csv",
+    "rows": 5,
+    "headers_match": true,
+    "ids_unique": true,
+    "identity_set_matches_assignment": null,
+    "changed_context": [],
+    "columns_valid": true,
+    "outcomes": {
+      "needs_review": 4,
+      "verified_metadata_only": 1
+    }
+  }
+]

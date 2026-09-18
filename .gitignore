@@ -26,6 +26,19 @@ docs/research/**/*.jsonl
 docs/research/**/*.csv
 docs/research/**/snapshots/
 docs/research/**/inventory*/
+docs/research/**/captures/
+docs/research/**/metadata/
+docs/research/austrian-museums-20260916/source-preflight/
+
+# Preserve raw research locally; version the human-readable research reports.
+docs/research/**/*
+!docs/research/**/
+!docs/research/**/*.md
+docs/research/**/snapshots/
+docs/research/**/inventory*/
+docs/research/**/captures/
+docs/research/**/metadata/
+docs/research/**/source-preflight/
 
 # Artwork reproductions are served from Cloud Storage in production.
 apps/web/public/assets/**/*.jpg

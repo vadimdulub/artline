@@ -221,11 +221,14 @@ See [the feature audit](docs/spec-audit.md) for every requirement, supporting
 code, test evidence, and remaining work. The original downloaded specification
 has not been modified.
 
-To exercise database-backed integration checks:
+Database-backed fixture tests require a separately provisioned disposable database.
+Never point `ARTLINE_TEST_DATABASE_URL` at the real local or production catalogue;
+do not create a test database during collection work. If an approved disposable
+database is already available:
 
 ```bash
 cd apps/server
-ARTLINE_TEST_DATABASE_URL='postgres://localhost/artline?sslmode=disable' go test ./internal/catalog
+ARTLINE_TEST_DATABASE_URL='<approved-disposable-database-url>' go test ./internal/catalog
 ```
 
 Publishing is fail-closed. Before a painter can move from review to published,

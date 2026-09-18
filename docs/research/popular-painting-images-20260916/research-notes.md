@@ -1,0 +1,1 @@
+The selected image round is complete in both databases and Google Storage. See [README.md](README.md) and [final-aggregate-report.json](final-aggregate-report.json) for final counts and audit scope. Earlier worker journals and source evidence are preserved.
