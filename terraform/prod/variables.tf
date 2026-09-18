@@ -33,6 +33,12 @@ variable "image_tag" {
   default     = "latest"
 }
 
+variable "api_image" {
+  description = "Optional API image URI or digest for API-only releases; null uses image_tag"
+  type        = string
+  default     = null
+}
+
 variable "editor_token" {
   description = "Long random bearer token for the first-owner editing flow"
   type        = string

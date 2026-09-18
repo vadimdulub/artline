@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"errors"
+	"flag"
 	"log/slog"
 	"net/http"
 	"os"
@@ -17,6 +18,8 @@ import (
 )
 
 func main() {
+	skipMigrations := flag.Bool("skip-migrations", false, "Use an existing schema without running migrations (for read-only local previews)")
+	flag.Parse()
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 	slog.SetDefault(logger)
 
@@ -34,9 +37,11 @@ func main() {
 		os.Exit(1)
 	}
 	defer pool.Close()
-	if err := migrate.Run(startupCtx, pool); err != nil {
-		logger.Error("migration failed", "error", err)
-		os.Exit(1)
+	if !*skipMigrations {
+		if err := migrate.Run(startupCtx, pool); err != nil {
+			logger.Error("migration failed", "error", err)
+			os.Exit(1)
+		}
 	}
 
 	server := &http.Server{

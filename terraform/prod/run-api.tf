@@ -17,7 +17,7 @@ resource "google_cloud_run_v2_service" "api" {
     }
 
     containers {
-      image = "${local.image_root}/api:${var.image_tag}"
+      image = var.api_image != null ? var.api_image : "${local.image_root}/api:${var.image_tag}"
 
       ports {
         container_port = 8080

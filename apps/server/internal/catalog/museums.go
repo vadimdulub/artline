@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 var ErrMuseumFilter = errors.New("invalid museum filter or cursor")
@@ -200,13 +201,7 @@ const museumCTE = `WITH visible_works AS NOT MATERIALIZED (
  AND NOT EXISTS(SELECT 1 FROM artwork_location_assertions conflict WHERE conflict.artwork_id=la.artwork_id
    AND conflict.claim_type='display' AND conflict.review_state='conflict' AND conflict.superseded_by IS NULL)
 ), museum_memberships AS MATERIALIZED (
- SELECT artwork_id,institution_id,bool_or(holding) AS holding,bool_or(on_view) AS on_view FROM (
- SELECT aw.id AS artwork_id,aw.current_institution_id AS institution_id,true AS holding,false AS on_view
- FROM visible_works aw WHERE aw.current_institution_id IS NOT NULL
- UNION ALL
- SELECT aw.id,d.institution_id,false,true FROM current_display d JOIN visible_works aw ON aw.id=d.artwork_id
- WHERE d.state='on_view'
- ) membership GROUP BY artwork_id,institution_id
+ ` + museumMembershipAggregate + `
 ), works AS NOT MATERIALIZED (
  SELECT aw.*,i.id AS holding_id,i.slug AS holding_slug,i.name AS holding_name,
  d.institution_id AS display_institution_id,d.venue_id AS display_venue_id,d.state AS display_state,
@@ -227,6 +222,33 @@ const museumCTE = `WITH visible_works AS NOT MATERIALIZED (
  WHERE cc.status<>'archived' AND ($1 OR cc.status='published')
  AND (cc.curator_kind='owner' OR EXISTS(SELECT 1 FROM sources s WHERE s.id=ci.source_id AND s.is_active))
 ) `
+
+const museumMembershipCandidates = `SELECT aw.id AS artwork_id,aw.current_institution_id AS institution_id,true AS holding,false AS on_view
+ FROM visible_works aw WHERE aw.current_institution_id IS NOT NULL
+ UNION ALL
+ SELECT aw.id,d.institution_id,false,true FROM current_display d JOIN visible_works aw ON aw.id=d.artwork_id
+ WHERE d.state='on_view'`
+
+const museumMembershipAggregate = `SELECT artwork_id,institution_id,bool_or(holding) AS holding,bool_or(on_view) AS on_view FROM (
+ ` + museumMembershipCandidates + `
+ ) membership GROUP BY artwork_id,institution_id`
+
+// Directory filters and facets only test membership existence (or DISTINCT
+// options). They do not need one aggregated row per artwork/institution. Keep
+// the same holding/display evidence branches inline so an institution predicate
+// reaches the indexed candidates instead of materializing the entire catalogue.
+// Museum cards still use the aggregated, institution-scoped CTE for exact counts.
+// Correlate creator visibility too, avoiding hashed scans of all artwork artists
+// merely to decide whether the first candidate for a museum is visible.
+var museumCorrelatedVisibility = strings.NewReplacer(
+	"a.status='published'))\n OR", "a.status='published') OFFSET 0)\n OR",
+	"WHERE aa.artwork_id=aw.id)))", "WHERE aa.artwork_id=aw.id OFFSET 0)))",
+)
+
+var museumDirectoryCTE = museumCorrelatedVisibility.Replace(strings.Replace(strings.Replace(museumCTE,
+	"museum_memberships AS MATERIALIZED (", "museum_memberships AS NOT MATERIALIZED (", 1),
+	museumMembershipAggregate, museumMembershipCandidates, 1))
+
 const museumMembership = `(w.holding_id=i.id OR (w.display_institution_id=i.id AND w.display_state='on_view'))`
 
 // Scope before any media/display/artist enrichment. UNION preserves incoming loans
@@ -238,6 +260,53 @@ var museumScopedCTE = `WITH museum_candidates AS MATERIALIZED (
  AND la.claim_type='display' AND la.review_state='accepted' AND la.superseded_by IS NULL
 ), ` + strings.Replace(strings.TrimPrefix(museumCTE, "WITH "),
 	"SELECT aw.* FROM artworks aw WHERE", "SELECT aw.* FROM museum_candidates scope JOIN artworks aw ON aw.id=scope.id WHERE", 1)
+
+// Directory cards already have a bounded institution page. Read each holding
+// through its institution index directly, avoiding a second artwork UUID lookup
+// for every row. Incoming loans remain a separate indexed branch; exclude the
+// holding branch's IDs so a work in both branches is counted only once.
+var museumDirectoryCardCTE = `WITH card_candidates AS NOT MATERIALIZED (
+ SELECT aw.* FROM artworks aw WHERE aw.current_institution_id=page.id
+ UNION ALL
+ SELECT aw.* FROM artworks aw WHERE aw.current_institution_id IS DISTINCT FROM page.id
+ AND aw.id IN(SELECT la.artwork_id FROM artwork_location_assertions la
+ WHERE la.institution_id=page.id AND la.claim_type='display' AND la.review_state='accepted' AND la.superseded_by IS NULL)
+), ` + museumCorrelatedVisibility.Replace(strings.NewReplacer(
+	"visible_works AS NOT MATERIALIZED (", "visible_works AS MATERIALIZED (",
+	"SELECT aw.* FROM artworks aw WHERE", "SELECT aw.id,aw.current_institution_id,aw.primary_media_id,aw.title,aw.creation_year_start FROM card_candidates aw WHERE",
+	"FROM visible_works aw LEFT JOIN institutions", "FROM visible_works visible JOIN artworks aw ON aw.id=visible.id LEFT JOIN institutions",
+).Replace(strings.TrimPrefix(museumCTE, "WITH ")))
+
+// Selective filters start from indexed artwork IDs, not from every museum's
+// holdings. Remaining predicates below still apply independently to each work,
+// including museum-specific selections and different creators on joint works.
+func museumDirectoryFilterCTE(f MuseumFilter) (string, string) {
+	candidates := ""
+	switch {
+	case f.Selection != "":
+		candidates = `SELECT DISTINCT artwork_id FROM selections WHERE curator_kind=$5`
+	case len(filterChoices(f.Artists, f.Artist)) > 0:
+		candidates = `SELECT DISTINCT aa.artwork_id FROM artwork_artists aa JOIN artists a ON a.id=aa.artist_id
+ WHERE a.slug=ANY($7::text[]) AND a.status<>'archived' AND ($1 OR a.status='published')`
+	case len(filterChoices(f.Movements, f.Movement)) > 0:
+		candidates = `SELECT DISTINCT aa.artwork_id FROM movements m JOIN artist_movements am ON am.movement_id=m.id
+ JOIN artists a ON a.id=am.artist_id JOIN artwork_artists aa ON aa.artist_id=a.id
+ WHERE m.slug=ANY($8::text[]) AND m.status<>'archived' AND a.status<>'archived' AND ($1 OR (a.status='published' AND m.status='published'))`
+	default:
+		return museumDirectoryCTE, "museum_memberships"
+	}
+	return museumDirectoryCTE + `, directory_filter_candidates AS MATERIALIZED (` + candidates + `),
+ directory_filtered_memberships AS MATERIALIZED (
+ SELECT member.* FROM directory_filter_candidates candidate CROSS JOIN LATERAL (
+ SELECT * FROM museum_memberships WHERE artwork_id=candidate.artwork_id OFFSET 0) member
+ ) /* directory filter end */ `, "directory_filtered_memberships"
+}
+
+// A detail request identifies one artwork. Resolve that UUID before applying
+// the shared artist, holding, incoming-loan, display and media visibility policy.
+// Building every candidate in a large museum first can exceed the HTTP deadline.
+var museumArtworkScopedCTE = strings.Replace(museumCTE,
+	"SELECT aw.* FROM artworks aw WHERE", "SELECT aw.* FROM artworks aw WHERE aw.id=$3::uuid AND", 1)
 
 const museumVisible = `i.status<>'archived' AND ($1 OR i.status='published')`
 const venueJSON = `(SELECT coalesce(jsonb_agg(jsonb_build_object('id',v.id,'slug',v.slug,'name',v.name,
@@ -264,6 +333,11 @@ const museumJSON = `jsonb_build_object('id',i.id,'slug',i.slug,'name',i.name,'ki
  ORDER BY (CASE WHEN media.verified_at IS NOT NULL AND media.rights_status IN ('public_domain','cc0','cc_by','cc_by_sa','licensed')
  AND nullif(trim(media.alt_text),'') IS NOT NULL THEN media.storage_path END IS NULL),aw.creation_year_start NULLS LAST,aw.title,aw.id LIMIT 1)))`
 
+// The bounded card CTE retains only the columns needed by counts and cover
+// selection. Reuse that narrow relation, then enrich just the chosen cover UUID.
+var museumDirectoryCardJSON = strings.Replace(museumJSON,
+	"museum_memberships member JOIN artworks aw", "museum_memberships member JOIN visible_works aw", 1)
+
 func (r *Repository) Museums(ctx context.Context, f MuseumFilter, preview bool) (MuseumPage, error) {
 	out := MuseumPage{Items: []Museum{}, Facets: emptyMuseumFacets()}
 	c, err := decodeMuseumCursor(f, "", preview)
@@ -271,6 +345,13 @@ func (r *Repository) Museums(ctx context.Context, f MuseumFilter, preview bool) 
 		return out, err
 	}
 	args := []any{preview, f.Query, f.Regions, f.Countries, f.Selection, f.Display, filterChoices(f.Artists, f.Artist), filterChoices(f.Movements, f.Movement), filterChoices(f.WorkTypes, f.WorkType)}
+	cte, memberships := museumDirectoryFilterCTE(f)
+	membershipOffset := " OFFSET 0"
+	if memberships == "directory_filtered_memberships" {
+		// This relation is already bounded by the selected artwork IDs. Let the
+		// planner hash it once instead of rescanning it for each institution.
+		membershipOffset = ""
+	}
 	where := ` FROM institutions i WHERE ` + museumVisible + `
  AND ($2='' OR i.name ILIKE '%'||$2||'%' OR EXISTS(SELECT 1 FROM institution_venues v JOIN places p ON p.id=v.place_id JOIN countries co ON co.code=p.country_code
  WHERE v.institution_id=i.id AND v.status<>'archived' AND ($1 OR v.status='published') AND (p.name ILIKE '%'||$2||'%' OR co.name ILIKE '%'||$2||'%')))
@@ -278,13 +359,13 @@ func (r *Repository) Museums(ctx context.Context, f MuseumFilter, preview bool) 
  SELECT 1 FROM institution_venues v JOIN places p ON p.id=v.place_id JOIN countries co ON co.code=p.country_code
  WHERE v.institution_id=i.id AND v.status<>'archived' AND ($1 OR v.status='published')
  AND (coalesce(cardinality($3::text[]),0)=0 OR co.region_code=ANY($3)) AND (coalesce(cardinality($4::text[]),0)=0 OR p.country_code::text=ANY($4))))
- AND EXISTS(SELECT 1 FROM museum_memberships member WHERE member.institution_id=i.id
+ AND EXISTS(SELECT 1 FROM ` + memberships + ` member WHERE member.institution_id=i.id
  AND ($5='' OR EXISTS(SELECT 1 FROM selections s WHERE s.institution_id=i.id AND s.artwork_id=member.artwork_id AND s.curator_kind=$5))
  AND ($6='' OR member.on_view)
  AND (cardinality($7::text[])=0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists a ON a.id=aa.artist_id WHERE aa.artwork_id=member.artwork_id AND a.slug=ANY($7) AND a.status<>'archived' AND ($1 OR a.status='published')))
  AND (cardinality($8::text[])=0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists a ON a.id=aa.artist_id JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id WHERE aa.artwork_id=member.artwork_id AND m.slug=ANY($8) AND a.status<>'archived' AND m.status<>'archived' AND ($1 OR (a.status='published' AND m.status='published'))))
- AND (cardinality($9::text[])=0 OR EXISTS(SELECT 1 FROM artworks aw WHERE aw.id=member.artwork_id AND aw.work_type=ANY($9))))`
-	if err = r.db.QueryRow(ctx, museumCTE+`SELECT count(*)`+where, museumQueryArgs(args...)...).Scan(&out.Total); err != nil {
+ AND (cardinality($9::text[])=0 OR EXISTS(SELECT 1 FROM artworks aw WHERE aw.id=member.artwork_id AND aw.work_type=ANY($9)))` + membershipOffset + `)`
+	if err = r.db.QueryRow(ctx, cte+`SELECT count(*)`+where, museumQueryArgs(args...)...).Scan(&out.Total); err != nil {
 		return out, err
 	}
 	args = append(args, c.Name, c.ID, f.Limit+1)
@@ -292,11 +373,11 @@ func (r *Repository) Museums(ctx context.Context, f MuseumFilter, preview bool) 
 	// candidates inside one SQL request; never scan the whole artwork table for
 	// each returned museum's counts and cover. The nested CTE retains exactly the
 	// same preview, incoming-loan, rights and display-evidence policy as details.
-	rows, err := r.db.Query(ctx, museumCTE+`, museum_page AS MATERIALIZED (
+	rows, err := r.db.Query(ctx, cte+`, museum_page AS MATERIALIZED (
  SELECT i.id,i.slug,i.normalized_name`+where+`
  AND ($10='' OR (i.normalized_name,i.id::text)>($10,$11)) ORDER BY i.normalized_name,i.id LIMIT $12)
  SELECT detail.data,page.normalized_name FROM museum_page page CROSS JOIN LATERAL (
- `+strings.ReplaceAll(museumScopedCTE, "$2", "page.slug")+` SELECT `+museumJSON+` AS data FROM institutions i WHERE i.id=page.id
+ `+museumDirectoryCardCTE+` SELECT `+museumDirectoryCardJSON+` AS data FROM institutions i WHERE i.id=page.id
  ) detail ORDER BY page.normalized_name,page.id`, museumQueryArgs(args...)...)
 	if err != nil {
 		return out, err
@@ -348,14 +429,14 @@ func emptyMuseumFacets() MuseumFacets {
 }
 func (r *Repository) museumFacets(ctx context.Context, slug string, preview bool) (MuseumFacets, error) {
 	out := emptyMuseumFacets()
-	cte := museumCTE
+	cte := museumDirectoryCTE
 	if slug != "" {
 		cte = museumScopedCTE
 	}
 	query := cte + `SELECT DISTINCT c.region_code,initcap(replace(c.region_code,'-',' ')),trim(c.code),c.name
  FROM institutions i JOIN institution_venues v ON v.institution_id=i.id JOIN places p ON p.id=v.place_id JOIN countries c ON c.code=p.country_code
  WHERE ` + museumVisible + ` AND v.status<>'archived' AND ($1 OR v.status='published') AND ($2='' OR i.slug=$2)
- AND EXISTS(SELECT 1 FROM museum_memberships member WHERE member.institution_id=i.id) ORDER BY c.region_code,c.name`
+ AND EXISTS(SELECT 1 FROM museum_memberships member WHERE member.institution_id=i.id OFFSET 0) ORDER BY c.region_code,c.name`
 	rows, err := r.db.Query(ctx, query, museumQueryArgs(preview, slug)...)
 	if err != nil {
 		return out, err
@@ -383,13 +464,12 @@ func (r *Repository) museumFacets(ctx context.Context, slug string, preview bool
 		return out, err
 	}
 	// Artist discovery is paged/searchable through PainterOptions; retain a small
-	// compatibility facet instead of shipping every painter in a large collection.
-	rows, err = r.db.Query(ctx, cte+`(SELECT DISTINCT 'artist',a.slug,a.display_name FROM institutions i JOIN museum_memberships member ON member.institution_id=i.id
- JOIN artwork_artists aa ON aa.artwork_id=member.artwork_id JOIN artists a ON a.id=aa.artist_id
- WHERE i.slug=$2 AND `+museumVisible+` AND a.status<>'archived' AND ($1 OR a.status='published') ORDER BY 3 LIMIT 30)
- UNION (SELECT DISTINCT 'movement',m.slug,m.name FROM institutions i JOIN museum_memberships member ON member.institution_id=i.id
- JOIN artwork_artists aa ON aa.artwork_id=member.artwork_id JOIN artists a ON a.id=aa.artist_id JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id
- WHERE ($2='' OR i.slug=$2) AND `+museumVisible+` AND a.status<>'archived' AND m.status<>'archived' AND ($1 OR (a.status='published' AND m.status='published')) ORDER BY 3 LIMIT 500) ORDER BY 1,3`, museumQueryArgs(preview, slug)...)
+	// compatibility facet on a single museum. The directory has no artist facet.
+	choices := museumDirectoryFacetChoicesSQL
+	if slug != "" {
+		choices = museumScopedFacetChoicesSQL
+	}
+	rows, err = r.db.Query(ctx, cte+choices, museumQueryArgs(preview, slug)...)
 	if err != nil {
 		return out, err
 	}
@@ -408,6 +488,25 @@ func (r *Repository) museumFacets(ctx context.Context, slug string, preview bool
 	}
 	return out, rows.Err()
 }
+
+const museumScopedFacetChoicesSQL = `(SELECT DISTINCT 'artist',a.slug,a.display_name FROM institutions i JOIN museum_memberships member ON member.institution_id=i.id
+ JOIN artwork_artists aa ON aa.artwork_id=member.artwork_id JOIN artists a ON a.id=aa.artist_id
+ WHERE i.slug=$2 AND ` + museumVisible + ` AND a.status<>'archived' AND ($1 OR a.status='published') ORDER BY 3 LIMIT 30)
+ UNION (SELECT DISTINCT 'movement',m.slug,m.name FROM institutions i JOIN museum_memberships member ON member.institution_id=i.id
+ JOIN artwork_artists aa ON aa.artwork_id=member.artwork_id JOIN artists a ON a.id=aa.artist_id JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id
+ WHERE ($2='' OR i.slug=$2) AND ` + museumVisible + ` AND a.status<>'archived' AND m.status<>'archived' AND ($1 OR (a.status='published' AND m.status='published')) ORDER BY 3 LIMIT 500) ORDER BY 1,3`
+
+// OFFSET 0 keeps the directory EXISTS predicates correlated: PostgreSQL must
+// look for the first indexed match for an institution/movement, not turn the
+// existence check into a hash semi-join over all artworks. No rows are skipped.
+const museumDirectoryFacetChoicesSQL = `SELECT 'movement',m.slug,m.name FROM movements m
+ WHERE m.status<>'archived' AND ($1 OR m.status='published') AND EXISTS(
+ SELECT 1 FROM artist_movements am JOIN artists a ON a.id=am.artist_id
+ JOIN artwork_artists aa ON aa.artist_id=a.id
+ WHERE am.movement_id=m.id AND a.status<>'archived' AND ($1 OR a.status='published')
+ AND EXISTS(SELECT 1 FROM museum_memberships member JOIN institutions i ON i.id=member.institution_id
+ WHERE member.artwork_id=aa.artwork_id AND ($2='' OR i.slug=$2) AND ` + museumVisible + `
+ OFFSET 0) OFFSET 0) ORDER BY 3 LIMIT 500`
 
 func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilter, preview bool) (MuseumWorksPage, error) {
 	out := MuseumWorksPage{Items: []MuseumWork{}, Facets: emptyMuseumFacets()}
@@ -479,12 +578,13 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 
 func (r *Repository) MuseumArtwork(ctx context.Context, slug, id string, preview bool) (MuseumArtwork, error) {
 	var out MuseumArtwork
+	var parsedID pgtype.UUID
+	if err := parsedID.Scan(id); err != nil || !parsedID.Valid {
+		return out, ErrNotFound
+	}
 	var data []byte
-	query := museumScopedCTE + `SELECT to_jsonb(w)||jsonb_build_object('selections',` + selectionJSON + `,
- 'attribution_role',coalesce(w.artists->0->>'role','unlinked'),'holding',CASE WHEN w.holding_id IS NOT NULL THEN
- jsonb_build_object('id',w.holding_id,'slug',w.holding_slug,'name',w.holding_name) END)
- FROM institutions i JOIN works w ON ` + museumMembership + ` WHERE i.slug=$2 AND w.id::text=$3 AND ` + museumVisible
-	err := r.db.QueryRow(ctx, query, preview, slug, id).Scan(&data)
+	query := museumArtworkSQL(museumArtworkScopedCTE)
+	err := r.db.QueryRow(ctx, query, museumQueryArgs(preview, slug, id)...).Scan(&data)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return out, ErrNotFound
 	}
@@ -496,6 +596,13 @@ func (r *Repository) MuseumArtwork(ctx context.Context, slug, id string, preview
 	}
 	out.Citations, err = r.entityCitations(ctx, "artwork", id)
 	return out, err
+}
+
+func museumArtworkSQL(cte string) string {
+	return cte + `SELECT to_jsonb(w)||jsonb_build_object('selections',` + selectionJSON + `,
+ 'attribution_role',coalesce(w.artists->0->>'role','unlinked'),'holding',CASE WHEN w.holding_id IS NOT NULL THEN
+ jsonb_build_object('id',w.holding_id,'slug',w.holding_slug,'name',w.holding_name) END)
+ FROM institutions i JOIN works w ON ` + museumMembership + ` WHERE i.slug=$2 AND w.id=$3::uuid AND ` + museumVisible
 }
 
 type MustSeeInput struct {
