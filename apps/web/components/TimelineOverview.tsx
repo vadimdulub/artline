@@ -29,7 +29,7 @@ export function TimelineOverview({ periods, start, end, disabled, suggestion, on
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const maximum = Math.max(1, ...periods.map(period => period.count));
   const span = Math.max(1, end - start + 1);
-  const selected = active === null ? null : periods[active];
+  const selected = periods.find(period => period.start_year === active);
   const label = (from: number, to: number) => formatPeriod ? formatPeriod(from, to) : `${from}–${to}`;
   const current = (period: typeof periods[number]) => noun === "painters" ? isCurrentPeriod(period, start, end) : period.start_year === period.end_year || period.start_year === start && period.end_year === end;
 
@@ -43,7 +43,7 @@ export function TimelineOverview({ periods, start, end, disabled, suggestion, on
         aria-describedby={guidanceId}
         title={current(period) ? suggestion ? `Apply the ${suggestion.name} filter and keep these years` : currentAction ?? "Choose another filter to narrow these years" : undefined}
         style={{ "--column-left": `${position ? position(period.start_year) : (period.start_year - start) / span * 100}%`, "--column-width": `${position ? Math.min(100, position(period.end_year === -1 ? 1 : period.end_year + 1)) - position(period.start_year) : (period.end_year - period.start_year + 1) / span * 100}%`, "--period-color": color ?? periodColor(period.start_year), "--bar-height": `${period.count / maximum * 82}%`, "--bar-width": `${period.count / maximum * 100}%`, "--bar-minimum": period.count ? "4px" : "0px" } as CSSProperties}
-        onPointerEnter={() => setActive(index)} onFocus={() => setActive(index)}
+        onPointerEnter={() => setActive(period.start_year)} onFocus={() => setActive(period.start_year)}
         onClick={() => onSelect(period.start_year, period.end_year)}
         onKeyDown={event => {
           const next = event.key === "ArrowRight" ? index + 1 : event.key === "ArrowLeft" ? index - 1 : event.key === "Home" ? 0 : event.key === "End" ? periods.length - 1 : null;

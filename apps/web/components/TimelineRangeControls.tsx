@@ -4,8 +4,9 @@ import { useEffect, useId, useRef, useState, type KeyboardEvent, type PointerEve
 
 type Drag = { kind: "start" | "end" | "window" | "overlap"; pointer: number; x: number; left: number; width: number; visualStart: number; visualEnd: number; start: number; end: number; from: number; to: number };
 
-export function TimelineRangeControls({ start, end, minimum, maximum, onChange, presets = [], endpoints, step = 1, omitYearZero = false, formatYear = String, inputPrefix = "", disabled = false, scale }: {
+export function TimelineRangeControls({ start, end, minimum, maximum, onChange, onPreview, presets = [], endpoints, step = 1, omitYearZero = false, formatYear = String, inputPrefix = "", disabled = false, scale }: {
   start: number; end: number; minimum: number; maximum: number; onChange: (start: number, end: number) => void;
+  onPreview?: (range: { start: number; end: number } | null) => void;
   presets?: { label: string; start: number; end: number; active: boolean }[]; endpoints: string[];
   step?: number; omitYearZero?: boolean; formatYear?: (year: number) => string; inputPrefix?: string; disabled?: boolean;
   scale?: { position: (year: number) => number; yearAt: (position: number) => number; markers?: { year: number; label: string }[] };
@@ -86,10 +87,12 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
       const left=Math.max(0,Math.min(100-width,d.visualStart+(x-d.x)/d.width*100));
       d.from=atPosition(left);d.to=Math.max(d.from+1,atPosition(left+width));
       setPreview({start:year(d.from),end:year(d.to),left,right:left+width});
+      onPreview?.({start:year(d.from),end:year(d.to)});
       return;
     } else if (d.kind === "start") d.from = Math.max(min, Math.min(d.end - 1, value));
     else d.to = Math.min(max, Math.max(d.start + 1, value));
     setPreview({ start: year(d.from), end: year(d.to) });
+    onPreview?.({ start: year(d.from), end: year(d.to) });
   }
   function beginDrag(event: PointerEvent<HTMLDivElement>) {
     if (disabled || event.button !== 0 || !event.isPrimary) return;
@@ -113,6 +116,7 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
     if (!d || d.pointer !== event.pointerId) return;
     drag.current = null;
     setPreview(null);
+    onPreview?.(null);
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
     if (commit && (d.kind === "start" || d.kind === "end")) {
       ignoreBlur.current = true;

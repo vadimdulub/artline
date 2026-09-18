@@ -514,6 +514,9 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
   .site-header .primary-nav{gap:2px}
   .site-header .primary-nav a{padding-inline:4px;font-size:12px}
 }
+.loading-indicator{display:inline-flex;align-items:center;gap:8px}
+.loading-spinner{display:inline-block;width:1em;height:1em;flex:none;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:loading-spin .8s linear infinite}
+@keyframes loading-spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* Keep the atlas controls and the complete timeline in one desktop viewport. */

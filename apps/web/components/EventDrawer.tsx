@@ -5,20 +5,21 @@ import { useEffect, useState } from "react";
 import { apiRequest, errorMessage, safeSourceURL } from "@/lib/api";
 import type { HistoricalEvent } from "@/lib/events";
 import { RecordDrawer } from "./RecordDrawer";
+import { LoadingIndicator } from "./LoadingIndicator";
 import styles from "./Books.module.css";
 
 export function EventDrawer({ id, close, fallbackFocusId = "events-timeline" }: { id: string; close: () => void; fallbackFocusId?: string }) {
-  const [result, setResult] = useState<{ id: string; data?: HistoricalEvent; error?: string }>();
+  const [result, setResult] = useState<{ id: string; attempt: number; data?: HistoricalEvent; error?: string }>();
   const [retry, setRetry] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
     apiRequest<HistoricalEvent>(`events/${encodeURIComponent(id)}`, { signal: controller.signal })
-      .then(data => { if (!controller.signal.aborted) setResult({ id, data }); })
-      .catch(error => { if (!controller.signal.aborted) setResult({ id, error: errorMessage(error) }); });
+      .then(data => { if (!controller.signal.aborted) setResult({ id, attempt: retry, data }); })
+      .catch(error => { if (!controller.signal.aborted) setResult({ id, attempt: retry, error: errorMessage(error) }); });
     return () => controller.abort();
   }, [id, retry]);
-  const event = result?.id === id ? result.data : undefined;
-  const error = result?.id === id ? result.error : undefined;
+  const event = result?.id === id && result.attempt === retry ? result.data : undefined;
+  const error = result?.id === id && result.attempt === retry ? result.error : undefined;
   const contextualRange = (min: number, max: number) => {
     if (!event || event.startYear === null || event.endYear === null || event.endYear < min || event.startYear > max) return null;
     let start = Math.max(min, event.startYear), end = Math.min(max, event.endYear);
@@ -49,6 +50,6 @@ export function EventDrawer({ id, close, fallbackFocusId = "events-timeline" }: 
       {(books || art) && <section className={styles.creators}><h3>Explore these years</h3>{books && <p><Link href={`/books?${books}`}>Books from this period</Link></p>}{art && <p><Link href={`/?${art.replace("top100=false", "popular=false")}`}>ArtWorks from this period</Link></p>}</section>}
       <section className={styles.creators}><h3>Sources</h3>{event.sources.map(source => <p key={source.url}><a href={safeSourceURL(source.url)} target="_blank" rel="noreferrer">{source.name} ↗</a></p>)}<p><a href={safeSourceURL(event.sourceUrl)} target="_blank" rel="noreferrer">Wikidata record ↗</a></p></section>
       <p className={styles.recordNote}>{event.selectionBasis}</p>
-    </div> : <div className={styles.drawerState} role={error ? "alert" : "status"}>{error ? <><h2>This event could not be loaded</h2><p>{error}</p><button onClick={() => setRetry(value => value + 1)}>Retry event</button></> : "Opening event…"}</div>}
+    </div> : <div className={styles.drawerState} role={error ? "alert" : "status"}>{error ? <><h2>This event could not be loaded</h2><p>{error}</p><button onClick={() => setRetry(value => value + 1)}>Retry event</button></> : <LoadingIndicator label="Opening event…" />}</div>}
   </RecordDrawer>;
 }

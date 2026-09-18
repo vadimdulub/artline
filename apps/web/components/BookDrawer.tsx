@@ -5,6 +5,7 @@ import { apiRequest, errorMessage } from "@/lib/api";
 import type { Book } from "@/lib/books";
 import { BookCover } from "./BookCover";
 import { RecordDrawer } from "./RecordDrawer";
+import { LoadingIndicator } from "./LoadingIndicator";
 import styles from "./Books.module.css";
 
 export function BookDrawer({ id, items, close, select, fallbackFocusId = "books-timeline" }: {
@@ -13,17 +14,17 @@ export function BookDrawer({ id, items, close, select, fallbackFocusId = "books-
   const cached = items.find(book => book.id === id);
   const index = items.findIndex(book => book.id === id);
   const [retry, setRetry] = useState(0);
-  const [result, setResult] = useState<{ id: string; book?: Book; error?: string }>();
+  const [result, setResult] = useState<{ id: string; attempt: number; book?: Book; error?: string }>();
   useEffect(() => {
     if (cached) return;
     const controller = new AbortController();
     apiRequest<Book>(`books/${encodeURIComponent(id)}`, { signal: controller.signal })
-      .then(book => { if (!controller.signal.aborted) setResult({ id, book }); })
-      .catch(error => { if (!controller.signal.aborted) setResult({ id, error: errorMessage(error) }); });
+      .then(book => { if (!controller.signal.aborted) setResult({ id, attempt: retry, book }); })
+      .catch(error => { if (!controller.signal.aborted) setResult({ id, attempt: retry, error: errorMessage(error) }); });
     return () => controller.abort();
   }, [id, cached, retry]);
-  const book = cached ?? (result?.id === id ? result.book : undefined);
-  const error = !cached && result?.id === id ? result.error : undefined;
+  const book = cached ?? (result?.id === id && result.attempt === retry ? result.book : undefined);
+  const error = !cached && result?.id === id && result.attempt === retry ? result.error : undefined;
   const creator = book?.creators?.length === 1 ? book.creators[0] : undefined;
   const lifespan = creator?.birth && creator?.death ? `${creator.birth}–${creator.death}` : creator?.birth ? `born ${creator.birth}` : "";
 
@@ -34,7 +35,7 @@ export function BookDrawer({ id, items, close, select, fallbackFocusId = "books-
       <button type="button" aria-label="Next book" disabled={index < 0 || index >= items.length - 1} onClick={() => select(items[index + 1].id)}>→</button>
     </nav>}>
     {error ? <div className={styles.drawerState} role="alert"><h2>Book unavailable</h2><p>{error}</p><button type="button" onClick={() => setRetry(value => value + 1)}>Retry book</button></div> :
-      !book ? <p className={styles.drawerState} role="status">Opening book record…</p> : <div className={styles.drawerContent}>
+      !book ? <p className={styles.drawerState} role="status"><LoadingIndicator label="Opening book record…" /></p> : <div className={styles.drawerContent}>
         <header className={styles.bookHeading}><p>{book.author}{lifespan && lifespan.length < 40 && <> · {lifespan}</>}</p><h2 id="book-record-title">{book.title}</h2><p>{book.years}</p></header>
         <div className={styles.drawerCover}><BookCover book={book} /></div>
         <section className={styles.bookAbout} aria-labelledby="book-description-title"><h3 id="book-description-title">About this book</h3><p>{book.description}</p></section>

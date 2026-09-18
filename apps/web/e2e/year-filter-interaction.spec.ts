@@ -1,9 +1,9 @@
 import { expect, test } from "@playwright/test";
 
 // Real Chrome interactions and real read-only catalogue responses. No mocks.
-for (const route of ["/books", "/", "/events"]) {
+for (const route of ["/books", "/", "/events", "/all"]) {
   test(`${route} accepts a new year pair without clamping to the previous range`, async ({ page }) => {
-    await page.goto(`${route}?start=1800&end=1900`);
+    await page.goto(`${route}?${route === "/all" ? "selection=true&type=book&" : ""}start=1800&end=1900`);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
     const fields = page.locator(".year-inputs input"), from = fields.first(), to = fields.last();
     await from.fill("1950"); await from.press("Tab");
@@ -25,7 +25,7 @@ for (const route of ["/books", "/", "/events"]) {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 950 });
       for (const side of ["start", "end"] as const) {
-        await page.goto(`${route}?start=1800&end=1801`);
+        await page.goto(`${route}?${route === "/all" ? "selection=true&type=book&" : ""}start=1800&end=1801`);
         await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
         await page.locator(".range-track").scrollIntoViewIfNeeded();
         const track = (await page.locator(".range-track").boundingBox())!;
@@ -52,7 +52,7 @@ for (const route of ["/books", "/", "/events"]) {
   });
 
   test(`${route} invalid dates stay editable and never change the catalogue`, async ({ page }) => {
-    await page.goto(`${route}?start=1800&end=1900`);
+    await page.goto(`${route}?${route === "/all" ? "selection=true&type=book&" : ""}start=1800&end=1900`);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
     const fields = page.locator(".year-inputs input"), from = fields.first(), to = fields.last();
     const original = page.url();
@@ -71,11 +71,12 @@ for (const route of ["/books", "/", "/events"]) {
     await from.fill("1850"); await from.press("Tab"); await to.press("Tab");
     await expect(page).toHaveURL(/start=1850&end=1900/);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
-    const api = route === "/" ? "/api/backend/v1/timeline?popular=true&start=1850&end=1900" : `/api/backend/v1${route}?top100=true&start=1850&end=1900`;
+    const api = route === "/all" ? "/api/backend/v1/atlas?selection=true&type=book&start=1850&end=1900" : route === "/" ? "/api/backend/v1/timeline?popular=true&start=1850&end=1900" : `/api/backend/v1${route}?top100=true&start=1850&end=1900`;
     const response = await page.request.get(api);
     expect(response.ok()).toBe(true);
     const data = await response.json();
-    await expect(page.locator(".timeline-counter")).toContainText(`${data.total} ${route === "/" ? "painters" : route.slice(1)} in this view`);
+    if (route === "/all") await expect(page.locator(".all-canvas-heading [role=status]")).toHaveText(`${data.total.toLocaleString("en-GB")} entries`);
+    else await expect(page.locator(".timeline-counter")).toContainText(`${data.total} ${route === "/" ? "painters" : route.slice(1)} in this view`);
   });
 }
 
@@ -96,8 +97,8 @@ test("touch dragging previews the year range and cancellation restores it", asyn
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   const touch = await context.newCDPSession(page);
-  for (const route of ["/books", "/", "/events"]) {
-    await page.goto(`http://localhost:3000${route}?start=1800&end=1801`);
+  for (const route of ["/books", "/", "/events", "/all"]) {
+    await page.goto(`http://localhost:3000${route}?${route === "/all" ? "selection=true&type=book&" : ""}start=1800&end=1801`);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
     await page.locator(".range-track").scrollIntoViewIfNeeded();
     for (const commit of [false, true]) {

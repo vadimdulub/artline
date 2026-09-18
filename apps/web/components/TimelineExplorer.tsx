@@ -1,5 +1,7 @@
 "use client";
+
 import { RecordDrawer } from "./RecordDrawer";
+import { LoadingIndicator } from "./LoadingIndicator";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { TimelineOverview } from "./TimelineOverview";
 import { TimelineFilterSuggestions } from "./TimelineFilterSuggestions";
@@ -134,7 +136,7 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
         <div className="timeline-heading-row">
           <div><p className="range-caption">Selected years</p><h1 id="timeline-title" className="time-title"><span className="sr-only">Painting across time: </span>{start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{end}</h1></div>
           <div className="timeline-heading-tools">
-            <div className="timeline-counter" role="status">{loading ? "Finding painters…" : error ? "Connection interrupted" : `${data?.total ?? 0} ${data?.total === 1 ? "painter" : "painters"} in this view`}</div>
+            <div className="timeline-counter" role="status">{loading ? <LoadingIndicator label="Finding painters…" /> : error ? "Connection interrupted" : `${data?.total ?? 0} ${data?.total === 1 ? "painter" : "painters"} in this view`}</div>
             {movements.length > 0 && <details className="movement-key"
               onKeyDown={event => { if (event.key === "Escape") { event.currentTarget.open = false; event.currentTarget.querySelector("summary")?.focus(); } }}
               onBlur={event => { if (event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false; }}>
@@ -163,6 +165,6 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
     </section>
     {slug && <RecordDrawer label="Painter details" closeLabel="Close painter details" recordKey={slug} close={closeArtist} fallbackFocusId="timeline-title"
       title={painterIndex >= 0 ? `Painter ${painterIndex + 1} of ${data?.total}` : "Painter record"}
-      navigation={<nav className="painter-navigation" aria-label="Browse painters"><button type="button" aria-label="Previous painter" disabled={loading || painterIndex <= 0} onClick={() => openArtist(data!.items[painterIndex - 1].slug)}>←</button><button type="button" aria-label="Next painter" disabled={loading || painterIndex < 0 || painterIndex >= (data?.items.length ?? 0) - 1} onClick={() => openArtist(data!.items[painterIndex + 1].slug)}>→</button></nav>}>{selected.slug !== slug ? <p className="record-loading">Opening painter record…</p> : selected.error ? <div className="record-error"><h2>Painter unavailable</h2><p>{selected.error}</p><button onClick={() => setRetry(value => value + 1)}>Try again</button></div> : selected.data && <ArtistChronologyRecord key={selected.data.id} artist={selected.data} workId={params.get("work")} onSelectWork={id => updateQuery({ work: id })} />}</RecordDrawer>}
+      navigation={<nav className="painter-navigation" aria-label="Browse painters"><button type="button" aria-label="Previous painter" disabled={loading || painterIndex <= 0} onClick={() => openArtist(data!.items[painterIndex - 1].slug)}>←</button><button type="button" aria-label="Next painter" disabled={loading || painterIndex < 0 || painterIndex >= (data?.items.length ?? 0) - 1} onClick={() => openArtist(data!.items[painterIndex + 1].slug)}>→</button></nav>}>{selected.slug !== slug ? <p className="record-loading" role="status"><LoadingIndicator label="Opening painter record…" /></p> : selected.error ? <div className="record-error"><h2>Painter unavailable</h2><p>{selected.error}</p><button onClick={() => setRetry(value => value + 1)}>Try again</button></div> : selected.data && <ArtistChronologyRecord key={selected.data.id} artist={selected.data} workId={params.get("work")} onSelectWork={id => updateQuery({ work: id })} />}</RecordDrawer>}
   </>;
 }

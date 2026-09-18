@@ -38,7 +38,11 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
     for (const chunk of chunks) { body.set(chunk, offset); offset += chunk.byteLength; }
   }
   try {
-    const response = await fetch(target, { method: request.method, headers, body: body as BodyInit | undefined, cache: "no-store", signal: AbortSignal.timeout(12000) });
+    // Superseded timeline reads should also stop upstream work. Keep writes on
+    // their existing timeout so closing a tab does not cancel an authorized edit.
+    const timeout = AbortSignal.timeout(12000);
+    const signal = request.method === "GET" ? AbortSignal.any([request.signal, timeout]) : timeout;
+    const response = await fetch(target, { method: request.method, headers, body: body as BodyInit | undefined, cache: "no-store", signal });
     return new Response(response.body, { status: response.status, headers: { "content-type": response.headers.get("content-type") ?? "application/json", "cache-control": "private, no-store" } });
   } catch {
     return Response.json({ error: { code: "SERVICE_UNAVAILABLE", message: "The catalogue is temporarily unavailable. Try again shortly." } }, { status: 503 });

@@ -15,6 +15,7 @@ import { EventDrawer } from "./EventDrawer";
 import { AllArtworkDrawer } from "./AllArtworkDrawer";
 import { AtlasContentPicker } from "./AtlasContentPicker";
 import { RecordDrawer } from "./RecordDrawer";
+import { LoadingIndicator } from "./LoadingIndicator";
 import "./AllAtlas.css";
 
 const allKinds:AtlasType[]=["artwork","book","event"];
@@ -32,7 +33,8 @@ export function AllAtlas(){
  const shell=useRef<HTMLElement>(null),stage=useRef<HTMLDivElement>(null),search=useRef<HTMLInputElement>(null);
  const [metadata,setMetadata]=useState<AtlasMetadata>(),[metaError,setMetaError]=useState(""),[retry,setRetry]=useState(0),[width,setWidth]=useState(1000),[periodOpen,setPeriodOpen]=useState(false);
  const [geography,setGeography]=useState<{countries:{slug:string;name:string}[];error?:string}>({countries:[]});
- const [result,setResult]=useState<{key:string;data?:AtlasResponse;error?:string}>();
+ const [result,setResult]=useState<{key:string;attempt:number;data?:AtlasResponse;error?:string}>();
+ const [rangePreview,setRangePreview]=useState<BookRange|null>(null);
  const presetID=params.get("preset")??"",windowKind=params.get("window")??"context",preset=metadata?.presets.find(p=>p.id===presetID);
  const layers=params.getAll("type").length?params.getAll("type"):presetID&&!params.has("selection")?allKinds:[];
  const populated=layers.length>0;
@@ -43,15 +45,19 @@ export function AllAtlas(){
  const request=new URLSearchParams({selection:"true",highlights:String(highlights)});
  for(const key of ["preset","window","start","end","q","region","country","continent",...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
  for(const kind of layers)request.append("type",kind);
- const requestKey=request.toString(),busy=populated&&result?.key!==requestKey;
- const data=populated?result?.data:undefined,error=populated&&result?.key===requestKey?result.error:undefined,range=data?.range??targetRange;
+ const requestKey=request.toString(),busy=populated&&(result?.key!==requestKey||result?.attempt!==retry);
+ const data=populated?result?.data:undefined,error=populated&&!busy?result?.error:undefined;
+ // Selection is interaction state. A slow response must never move the handles back.
+ // Invalid shared URLs still reach server validation, but cannot break the chart geometry.
+ const validRange=Number.isInteger(targetRange.start)&&Number.isInteger(targetRange.end)&&targetRange.start!==0&&targetRange.end!==0&&targetRange.start>=bounds.start&&targetRange.end<=bounds.end&&targetRange.start<targetRange.end;
+ const range=validRange?targetRange:fallback,displayRange=rangePreview??range;
  const selected=params.get("item")??"",selectedType=params.get("itemType"),panel=params.get("panel"),browseKind=params.get("browse") as AtlasType|null;
  useEffect(()=>{const c=new AbortController();apiRequest<AtlasMetadata>("atlas/presets",{signal:c.signal}).then(value=>{setMetadata(value);setMetaError("")}).catch(e=>{if(!c.signal.aborted)setMetaError(errorMessage(e))});return()=>c.abort()},[retry]);
  useEffect(()=>{const c=new AbortController();apiRequest<{countries:{slug:string;name:string}[]}>("atlas/geography",{signal:c.signal}).then(setGeography).catch(e=>{if(!c.signal.aborted)setGeography(previous=>({...previous,error:errorMessage(e)}))});return()=>c.abort()},[retry]);
- useEffect(()=>{if(!populated)return;const c=new AbortController();const timer=setTimeout(()=>apiRequest<AtlasResponse>(`atlas?${requestKey}`,{signal:c.signal}).then(data=>setResult({key:requestKey,data})).catch(e=>{if(!c.signal.aborted)setResult({key:requestKey,error:errorMessage(e)})}),140);return()=>{clearTimeout(timer);c.abort()}},[requestKey,populated,retry]);
+ useEffect(()=>{if(!populated)return;const c=new AbortController();const timer=setTimeout(()=>apiRequest<AtlasResponse>(`atlas?${requestKey}`,{signal:c.signal}).then(data=>{if(!c.signal.aborted)setResult({key:requestKey,attempt:retry,data})}).catch(e=>{if(!c.signal.aborted)setResult(previous=>({key:requestKey,attempt:retry,data:previous?.data,error:errorMessage(e)}))}),140);return()=>{clearTimeout(timer);c.abort()}},[requestKey,populated,retry]);
  useEffect(()=>{const header=document.querySelector('.site-header');if(!header)return;const observer=new ResizeObserver(()=>shell.current?.style.setProperty('--all-header-height',`${header.getBoundingClientRect().height}px`));observer.observe(header);return()=>observer.disconnect()},[]);
  useEffect(()=>{if(!stage.current)return;const observer=new ResizeObserver(entries=>setWidth(entries[0].contentRect.width));observer.observe(stage.current);return()=>observer.disconnect()},[populated]);
- function change(values:Record<string,string|string[]|null>,push=true){updateQuery({selection:"true",book_collection:null,pick_artwork:null,pick_book:null,pick_event:null,after_artwork:null,after_book:null,after_event:null,item:null,itemType:null,...values},push)}
+ function change(values:Record<string,string|string[]|null>,push=true){setRangePreview(null);updateQuery({selection:"true",type:layers,book_collection:null,pick_artwork:null,pick_book:null,pick_event:null,after_artwork:null,after_book:null,after_event:null,item:null,itemType:null,...values},push)}
  function reset(){change({...Object.fromEntries(allEntityKeys.map(key=>[key,null])),preset:null,window:null,start:null,end:null,q:null,type:null,country:null,continent:null,region:null,highlights:null,panel:null,browse:null,add:null});setPeriodOpen(false)}
  function selectPreset(id:string){if(!id)return;change({...Object.fromEntries(allEntityKeys.map(key=>[key,null])),preset:id,window:"context",start:null,end:null,type:allKinds,q:null,country:null,continent:null,region:null,highlights:null,panel:null,browse:null})}
  function setRange(start:number,end:number){change({preset:null,window:null,start:String(start),end:String(end)})}
@@ -60,7 +66,7 @@ export function AllAtlas(){
  function open(item:AtlasItem){updateQuery({item:item.id,itemType:item.type,panel:null,browse:null},true)}
  function close(){updateQuery({item:null,itemType:null},true)}
  function remove(kind:AtlasType){change({...entityUpdates(kind),type:layers.filter(t=>t!==kind)})}
- function addLayer(kind:AtlasType,filters:URLSearchParams,years:BookRange){change({...entityUpdates(kind,filters),type:[...new Set([...layers,kind])],q:null,region:null,start:String(years.start),end:String(years.end),panel:null,browse:null})}
+ function addLayer(kind:AtlasType,filters:URLSearchParams,years:BookRange){change({...entityUpdates(kind,filters),type:[...new Set([...layers,kind])],start:String(years.start),end:String(years.end),panel:null,browse:null})}
  function clearFilters(){change({q:null,country:null,continent:null,region:null,highlights:"false"})}
  const activeFilters=[
   ...(query?[{key:"q",label:`Search: ${query}`,remove:()=>change({q:null})}]:[]),
@@ -87,14 +93,14 @@ export function AllAtlas(){
   <div className={`timeline-dark${populated?"":" all-empty-canvas"}`}>
    {metaError&&<p role="alert">Periods could not be loaded. <button onClick={()=>setRetry(v=>v+1)}>Retry periods</button></p>}
    {populated?<>
-    <div className="all-canvas-heading"><h1 className="time-title" data-bce={range.start<0||range.end<0} id="all-timeline-title" tabIndex={-1}>{bookYearLabel(range.start)}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{bookYearLabel(range.end)}</h1><span role="status">{busy?"Loading…":error?"Couldn’t load":`${data?.total.toLocaleString("en-GB")??0} entries`}</span><button onClick={reset}>Clear</button></div>
-    <TimelineGrid stageRef={stage} busy={busy} selection={{left:bookTickPosition(range.start,bounds),right:bookTickPosition(range.end,bounds)}} ticks={ticks.map(t=>({key:t.year,label:t.label,position:bookTickPosition(t.year,bounds)}))}>
+    <div className="all-canvas-heading"><h1 className="time-title" data-bce={displayRange.start<0||displayRange.end<0} id="all-timeline-title" tabIndex={-1}>{bookYearLabel(displayRange.start)}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{bookYearLabel(displayRange.end)}</h1><span role="status">{busy?<LoadingIndicator/>:error?"Couldn’t load":`${data?.total.toLocaleString("en-GB")??0} entries`}</span><button onClick={reset}>Clear</button></div>
+    <TimelineGrid stageRef={stage} busy={busy} selection={{left:bookTickPosition(displayRange.start,bounds),right:bookTickPosition(displayRange.end,bounds)}} ticks={ticks.map(t=>({key:t.year,label:t.label,position:bookTickPosition(t.year,bounds)}))}>
      {band&&band.right>band.left&&<div className="all-period-band" aria-hidden="true" style={{left:`${band.left}%`,width:`${band.right-band.left}%`}}/>}
-     {error?<div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry</button> <button onClick={reset}>Reset view</button></div>:data?.lanes.map(lane=><Lane key={lane.key} lane={lane} range={range} bounds={bounds} width={width} busy={busy} selected={selected} select={open} narrow={narrow} browse={()=>browse(lane.key)} remove={()=>remove(lane.key)}/>)}
+     {error?<div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry</button> <button onClick={reset}>Reset view</button></div>:data?.lanes.filter(lane=>layers.includes(lane.key)).map(lane=><Lane key={lane.key} lane={lane} range={range} bounds={bounds} width={width} busy={busy} selected={selected} select={open} narrow={narrow} browse={()=>browse(lane.key)} remove={()=>remove(lane.key)}/>)}
     </TimelineGrid>
     <p className="sr-only" id="all-timeline-help">Select an entry for details. Select a busy period to narrow every lane, or Browse to see its entries.</p>
-    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} omitYearZero inputPrefix="All " formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds),yearAt:position=>bookYearAtPosition(position,bounds),markers:[1700,1900].map(year=>({year,label:String(year)}))}} disabled={Boolean(error)}/>
-   </>:<div className="all-start"><h1 id="all-timeline-title" tabIndex={-1}>Choose a starting point</h1><div className="all-suggestions">{suggestions.map(id=>metadata?.presets.find(p=>p.id===id)).filter(p=>p!==undefined).map(p=><button key={p.id} onClick={()=>selectPreset(p.id)}>{p.name}</button>)}</div><p>Or use Add to choose artwork, book and event layers.</p></div>}
+    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} onPreview={setRangePreview} omitYearZero inputPrefix="All " formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds),yearAt:position=>bookYearAtPosition(position,bounds),markers:[1700,1900].map(year=>({year,label:String(year)}))}}/>
+   </>:<div className="all-start"><h1 id="all-timeline-title" tabIndex={-1}>Choose a starting point</h1>{!metadata&&!metaError&&<p role="status"><LoadingIndicator label="Loading periods…"/></p>}<div className="all-suggestions">{suggestions.map(id=>metadata?.presets.find(p=>p.id===id)).filter(p=>p!==undefined).map(p=><button key={p.id} onClick={()=>selectPreset(p.id)}>{p.name}</button>)}</div><p>Or use Add to choose artwork, book and event layers.</p></div>}
   </div>
   {periodOpen&&preset&&<RecordDrawer label="Historical period details" closeLabel="Close period details" recordKey={preset.id} title="Historical period" close={()=>setPeriodOpen(false)} fallbackFocusId="all-timeline-title"><div className="atlas-picker">
    <h2>{preset.name}</h2><p>{preset.description}</p>

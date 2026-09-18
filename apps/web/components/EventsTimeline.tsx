@@ -1,5 +1,6 @@
 "use client";
 
+import { LoadingIndicator } from "./LoadingIndicator";
 import { useEffect, useRef, useState } from "react";
 import { bookTickPosition, bookYearAtPosition, bookYearLabel, compressedBefore1700, positionBooks, bookAxisTicks, type BookRange } from "@/lib/books";
 import type { EventsResponse, EventSuggestion } from "@/lib/events";
@@ -35,7 +36,7 @@ export function EventsTimeline({ data, metadata, range, loading, error, selected
   return <div className={`timeline-dark${earlyCompressed ? " books-compressed-scale" : ""}`}>
     <div className="timeline-heading-row">
       <div><p className="range-caption">Events · selected years</p><h1 id="events-timeline" className="time-title book-time-title" tabIndex={-1} aria-label="Events through time">{Math.abs(range.start)}{range.start < 0 && <small>BCE</small>}<span aria-hidden="true">—</span>{Math.abs(range.end)}{range.end < 0 && <small>BCE</small>}</h1></div>
-      <div className="timeline-counter" role="status">{loading ? "Finding events…" : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} events in this view`}<small><a href="#event-index">Event index ↓</a></small></div>
+      <div className="timeline-counter" role="status">{loading ? <LoadingIndicator label="Finding events…" /> : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} events in this view`}<small><a href="#event-index">Event index ↓</a></small></div>
     </div>
     <TimelineGrid stageRef={stage} busy={loading} selection={{ left: bookTickPosition(range.start, bounds), right: bookTickPosition(range.end, bounds) }} ticks={ticks.map(t => ({ key: t.year, label: t.label, position: bookTickPosition(t.year, bounds) }))}>
       {earlyCompressed && <div className="book-scale-break" style={{ left: `${bookTickPosition(1700, bounds)}%` }} aria-hidden="true" />}

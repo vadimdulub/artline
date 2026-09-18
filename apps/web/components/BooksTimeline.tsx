@@ -1,5 +1,6 @@
 "use client";
 
+import { LoadingIndicator } from "./LoadingIndicator";
 import { useEffect, useRef, useState } from "react";
 import { authorLifespanLabel, bookTickPosition, bookYearAtPosition, bookYearLabel, compressedBefore1700, positionBooks, bookAxisTicks, type BookSuggestion, type BookRange, type BooksResponse } from "@/lib/books";
 import { TimelineGrid, TimelineLanes, TimelineMark } from "./TimelineGrid";
@@ -51,7 +52,7 @@ export function BooksTimeline({ data, metadata, range, loading, error, selected,
       <div><p className="range-caption">{authorView ? "Authors · life periods" : "Books · selected years"}</p><h1 id="books-timeline" className="time-title book-time-title" tabIndex={-1} aria-label={authorView ? "Authors through time" : "Books through time"}>{Math.abs(range.start)}{range.start < 0 && <small>BCE</small>}<span aria-hidden="true">—</span>{Math.abs(range.end)}{range.end < 0 && <small>BCE</small>}</h1></div>
       <div className="books-view-controls">
         <AtlasCheckbox label="Show author lifespans" checked={authorView} onChange={onAuthorView} />
-        <div className="timeline-counter" role="status">{loading ? `Finding ${noun}…` : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} ${noun} in this view`}<small><a href="#shelf-title">{authorView ? "Author index" : "Book index"} ↓</a></small></div>
+        <div className="timeline-counter" role="status">{loading ? <LoadingIndicator label={`Finding ${noun}…`} /> : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} ${noun} in this view`}<small><a href="#shelf-title">{authorView ? "Author index" : "Book index"} ↓</a></small></div>
       </div>
     </div>
     <TimelineGrid stageRef={stage} busy={loading} selection={{ left: bookTickPosition(range.start, bounds), right: bookTickPosition(range.end, bounds) }} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: bookTickPosition(tick.year, bounds) }))}>

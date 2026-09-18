@@ -232,3 +232,41 @@ painter count, replacing the research-preview sentence. Its expandable key is
 anchored to the header, with a bounded panel and keyboard dismissal. The count
 remains derived from movements in the current response. Desktop, 390px and 320px
 checks cover placement, opening, Escape and selecting a movement.
+
+## Loading and range interaction
+
+All keeps the selected years in URL interaction state, independently of the last
+server response. Dragging previews the heading and selected band without issuing
+requests; releasing commits the range. Earlier/Later and keyboard changes apply
+immediately, including when another request is pending. The complete axis and
+entry coordinates stay fixed. Superseded requests are aborted and ignored; the
+read-only API proxy forwards cancellation upstream as well as its timeout.
+Bookmarked presets retain their implicit three layers when years or filters change.
+Existing bounded lane data stays dimmed during refresh, with stale entry actions
+disabled; removed layers disappear immediately. Year controls remain available
+after a connection error so a different interval can recover the view.
+
+The shared inline spinner accompanies status text on the timelines, All's period
+loading, Add/Browse and record drawers. Retry attempts have their own loading state;
+an old error does not hide the progress indicator. Reduced motion disables its
+animation. Add previews and retains the current years and global search/geography.
+
+Narrow density bins use proportional bar spacing. Counts and action text that do
+not fit are omitted from the bars; hover or keyboard focus describes the period
+above them, and Browse remains available. On short screens All can scroll within
+its viewport so expanded filters cannot make the year controls unreachable.
+
+Regression scenarios in `e2e/all-interaction.spec.ts` delay actual read-only API
+responses and simulate connection failures. They cover repeated year clicks,
+drag previews, out-of-order completion, retry, removal/reset during loading,
+global-filter preservation, crowded bars, short phones, BCE/empty/cutoff ranges,
+invalid shared URLs, Add during a refresh, and record loading/recovery. The shared
+year suite also exercises All's paired input drafts, overlapping handles and
+touch commit/cancellation. No catalogue fixtures or database changes are involved.
+
+Final verification: 60 headless Chrome scenarios and 43 unit tests passed, along
+with TypeScript, targeted ESLint and the production build. Desktop, 320px phone,
+short-screen and loading-state screenshots were visually reviewed. Browser
+artifacts are under `/tmp/artline-all-final/`; the run log is
+`/tmp/artline-all-final.log`. The proxy cancellation regression uses an isolated
+fetch stub, with no database connection.
