@@ -12,7 +12,7 @@ for (const width of [1440, 1366, 390, 320]) {
     await page.setViewportSize({ width, height });
     await page.goto("/");
     await settled(page);
-    await page.getByRole("checkbox", { name: "Only popular painters" }).uncheck();
+    await page.getByRole("checkbox", { name: "Top 100 painters" }).uncheck();
     await settled(page);
     for (const name of [/^Explore 1900–1949,/, /^Explore 1900–1909,/]) {
       const period = page.getByRole("button", { name });
@@ -52,7 +52,7 @@ for (const width of [1440, 1366, 390, 320]) {
     expect(after.searchParams.has("country") || after.searchParams.has("movement")).toBe(true);
     await expect(page.locator(".timeline-counter")).toContainText(`${expectedCount} painters in this view`);
     await expect(page.locator(".artist-mark")).toHaveCount(expectedCount);
-    await expect(page.getByRole("checkbox", { name: "Only popular painters" })).not.toBeChecked();
+    await expect(page.getByRole("checkbox", { name: "Top 100 painters" })).not.toBeChecked();
     await page.locator(".artist-mark").first().click();
     await expect(page.getByRole("dialog", { name: "Painter details", exact: true })).toBeVisible();
     await page.keyboard.press("Escape");
@@ -67,15 +67,15 @@ test("popular shortcut keeps the crowded period and survives reload", async ({ p
   await settled(page);
   await page.getByRole("button", { name: "Show popular painters", exact: true }).click();
   await settled(page);
-  await expect(page.getByRole("checkbox", { name: "Only popular painters" })).toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Top 100 painters" })).toBeChecked();
   expect(new URL(page.url()).searchParams.get("start")).toBe("1900");
   expect(new URL(page.url()).searchParams.get("end")).toBe("1909");
   await expect(page.locator(".artist-mark").first()).toBeVisible();
   await page.reload();
   await settled(page);
-  await expect(page.getByRole("checkbox", { name: "Only popular painters" })).toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Top 100 painters" })).toBeChecked();
   await page.goBack();
   await settled(page);
-  await expect(page.getByRole("checkbox", { name: "Only popular painters" })).not.toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Top 100 painters" })).not.toBeChecked();
   await expect(page.locator(".period-column")).toBeEnabled();
 });

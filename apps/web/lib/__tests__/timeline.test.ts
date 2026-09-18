@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isCurrentPeriod, normalizeRange, positionArtists, presetRange, timelineTicks } from "../timeline";
+import { artworkYearAtPosition, artworkYearPosition, isCurrentPeriod, normalizeRange, positionArtists, presetRange, timelineTicks, visibleArtworkTicks } from "../timeline";
 import type { TimelineArtist } from "../types";
 
 const movement = { slug: "test", name: "Test", color: "#234e9a" };
@@ -73,5 +73,33 @@ describe("bookmark and zoom ranges", () => {
 describe("timelineTicks", () => {
   it("includes century ticks for the full range", () => {
     expect(timelineTicks(1100, 2000)).toContain(1500);
+  });
+});
+
+describe("compressed ArtWorks years", () => {
+  it("preserves spacing when a window slides past 1400", () => {
+    const start = artworkYearAtPosition(artworkYearPosition(1300) + 12);
+    const end = artworkYearAtPosition(artworkYearPosition(1600) + 12);
+    const before = artworkYearPosition(1550, 1300, 1600) - artworkYearPosition(1500, 1300, 1600);
+    const after = artworkYearPosition(1550, start, end) - artworkYearPosition(1500, start, end);
+    expect(after).toBeCloseTo(before, 0);
+    expect(start).toBeGreaterThan(1400);
+  });
+  it("keeps the early centuries to 15% with an exact inverse for each year", () => {
+    expect(artworkYearPosition(1100)).toBe(0);
+    expect(artworkYearPosition(1400)).toBeCloseTo(15);
+    expect(artworkYearPosition(2000)).toBe(100);
+    for (let year = 1100; year <= 2000; year++) expect(artworkYearAtPosition(artworkYearPosition(year))).toBe(year);
+    expect(artworkYearPosition(1250, 1100, 1400)).toBeCloseTo(50);
+    expect(artworkYearPosition(1300, 1200, 1400)).toBeCloseTo(50);
+    expect(artworkYearPosition(1400, 1399, 1401)).toBeCloseTo(100 * 6 / 23);
+    expect(artworkYearPosition(1700, 1400, 2000)).toBeCloseTo(50);
+  });
+  it("keeps the scale boundary and year ticks readable across viewport sizes", () => {
+    for (const width of [284, 354, 1392]) {
+      const ticks = visibleArtworkTicks(1100, 2000, width);
+      expect(ticks).toContain(1400);
+      for (let i = 1; i < ticks.length; i++) expect((artworkYearPosition(ticks[i]) - artworkYearPosition(ticks[i - 1])) * width / 100).toBeGreaterThanOrEqual(42);
+    }
   });
 });

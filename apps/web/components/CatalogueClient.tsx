@@ -4,6 +4,8 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import { apiRequest, ApiError, editorHeaders, errorMessage } from "@/lib/api";
 import { useEditorToken, EditorAccess } from "./EditorAccess";
 import { EditorNav } from "./EditorNav";
+import { AtlasFilters, AtlasSelect, ActiveFilters } from "./AtlasFilters";
+import { AtlasPageHeader } from "./AtlasPageHeader";
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import type { ArtistDetail, CatalogueArtist, PublicationValidation } from "@/lib/types";
 type Draft = { slug: string; display_name: string; sort_name: string; entity_type: string; timeline_start_year: number; timeline_end_year: number; timeline_display: string; timeline_basis: string; biography_md: string; status: string; expected_revision?: number };
@@ -12,18 +14,32 @@ const blank: Draft = { slug: "", display_name: "", sort_name: "", entity_type: "
 export function CatalogueClient({ preview = false }: { preview?: boolean }) {
   const [token, setToken] = useEditorToken();
   const [artists, setArtists] = useState<CatalogueArtist[]>([]);
-  const [query, setQuery] = useState("");
   const parameters = new URLSearchParams(useQueryString());
+  const query = parameters.get("q") ?? "";
+  const searchRef = useRef<HTMLInputElement>(null);
+  const editorAccessRef = useRef<HTMLDetailsElement>(null);
+  const setQuery = (value: string) => updateQuery({ q: value || null, page: null }, false);
   const rawStatus = parameters.get("status") ?? "";
   const statuses = token ? ["draft", "review", "published", "archived"] : preview ? ["draft", "review", "published"] : ["published"];
   const status = statuses.includes(rawStatus) ? rawStatus : "";
-  const setStatus = (value: string) => updateQuery({ status: value || null });
+  const setStatus = (value: string) => updateQuery({ status: value || null, page: null }, true);
   const [form, setForm] = useState<Draft | null>(null), [editing, setEditing] = useState<string | null>(null);
   const [message, setMessage] = useState(""), [loadError, setLoadError] = useState("");
   const [busy, setBusy] = useState(false), [loading, setLoading] = useState(true), [refresh, setRefresh] = useState(0);
   const [validation, setValidation] = useState<{ artistName: string; report: PublicationValidation } | null>(null);
-  const [page, setPage] = useState(0), [hasMore, setHasMore] = useState(false);
-  const [sort, setSort] = useState("name");
+  const [hasMore, setHasMore] = useState(false);
+  const rawPage = Number(parameters.get("page") ?? "1");
+  const page = Number.isSafeInteger(rawPage) && rawPage >= 1 && rawPage <= 10000 ? rawPage - 1 : 0;
+  const setPage = (next: number) => updateQuery({ page: next ? String(next + 1) : null }, true);
+  const rawSort = parameters.get("sort") ?? "name";
+  const sort = ["name", "date", "updated"].includes(rawSort) ? rawSort : "name";
+  const setSort = (value: string) => updateQuery({ sort: value === "name" ? null : value, page: null }, true);
+  const clearFilters = () => updateQuery({ q: null, status: null, page: null }, true);
+  const resetView = () => updateQuery({ q: null, status: null, sort: null, page: null }, true);
+  const activeFilters = [
+    ...(query ? [{ key: "q", label: `Search: ${query}`, remove: () => setQuery("") }] : []),
+    ...(status ? [{ key: "status", label: status === "review" ? "In review" : status[0].toUpperCase() + status.slice(1), remove: () => setStatus("") }] : []),
+  ];
   const requestVersion = JSON.stringify([query, status, token, refresh, page, sort]);
   const [settledRequest, setSettledRequest] = useState("");
   const pending = loading || settledRequest !== requestVersion;
@@ -122,8 +138,8 @@ export function CatalogueClient({ preview = false }: { preview?: boolean }) {
   function change<K extends keyof Draft>(key: K, value: Draft[K]) { if (form) setForm({ ...form, [key]: value }); }
   return <main id="main-content" className="admin-page">
     <EditorNav />
-    <header className="admin-heading"><div><h1>Catalogue</h1><p>A working collection. Add, revise, and follow the evidence.</p></div><button className="primary-button" disabled={busy} onClick={() => { if (dirty && !window.confirm("Discard your unsaved changes?")) return; setEditing(null); setForm({ ...blank }); setBaseline(JSON.stringify(blank)); setMessage(""); }}>Add painter</button></header>
-    <EditorAccess token={token} onChange={setToken} />
+    <AtlasPageHeader title="Catalogue" description="A working collection. Add, revise, and follow the evidence."><button className="primary-button" disabled={busy} onClick={() => { if (dirty && !window.confirm("Discard your unsaved changes?")) return; setEditing(null); setForm({ ...blank }); setBaseline(JSON.stringify(blank)); setMessage(""); if (!token && editorAccessRef.current) editorAccessRef.current.open = true; }}>Add painter</button></AtlasPageHeader>
+    <details ref={editorAccessRef} className="catalogue-access"><summary>Editor access<span>{token ? "Enabled" : "Read-only preview"}</span></summary><EditorAccess token={token} onChange={setToken} /></details>
     {form && <form ref={formRef} className="artist-form" onSubmit={save} aria-label={editing ? "Edit painter" : "New painter"}>
       <fieldset disabled={busy} className="form-fields">
       <div className="form-heading"><h2>{editing ? "Edit painter" : "New painter"}</h2><span>{dirty ? "Unsaved changes" : "No unsaved changes"}</span></div>
@@ -141,12 +157,16 @@ export function CatalogueClient({ preview = false }: { preview?: boolean }) {
       <div className="form-actions"><button className="primary-button" disabled={!token || busy} type="submit">{busy ? "Saving…" : "Save painter"}</button><button type="button" disabled={busy} onClick={() => { if (!dirty || window.confirm("Discard the unsaved form?")) { setForm(null); setEditing(null); setMessage(""); } }}>Cancel</button></div>
       </fieldset>
     </form>}
-    <div className="catalogue-tools"><label><span>Search painters</span><input type="search" placeholder="Painter name" value={query} onChange={event => { setQuery(event.target.value); setPage(0); }} /></label><label><span>Status</span><select value={status} onChange={event => { setStatus(event.target.value); setPage(0); }}><option value="">All records</option>{statuses.map(value => <option key={value} value={value}>{value === "review" ? "In review" : value[0].toUpperCase() + value.slice(1)}</option>)}</select></label><label><span>Sort by</span><select value={sort} onChange={event => { setSort(event.target.value); setPage(0); }}><option value="name">Name</option><option value="date">Date</option><option value="updated">Recently updated</option></select></label></div>
+    <AtlasFilters searchRef={searchRef} query={query} onQuery={setQuery} onReset={resetView} searchLabel="Search painters" placeholder="Painter name" columns={2} activeCount={status ? 1 : 0}>
+      <AtlasSelect label="Status" value={status} onChange={setStatus} options={[{ value: "", label: "All records" }, ...statuses.map(value => ({ value, label: value === "review" ? "In review" : value[0].toUpperCase() + value.slice(1) }))]} />
+      <AtlasSelect label="Sort by" value={sort} onChange={setSort} options={[{ value: "name", label: "Name" }, { value: "date", label: "Date" }, { value: "updated", label: "Recently updated" }]} />
+    </AtlasFilters>
+    <ActiveFilters filters={activeFilters} onClear={clearFilters} searchRef={searchRef} />
     {message && !form && <p className={`save-message${isError ? " is-error" : ""}`} role={isError ? "alert" : "status"}>{message}</p>}
     {loadError && <p className="save-message" role="alert">{loadError} <button onClick={() => setRefresh(value => value + 1)}>Try again</button></p>}
     {validation && <section ref={validationRef} tabIndex={-1} className={`validation-panel ${validation.report.ready ? "is-ready" : ""}`} aria-labelledby="validation-title"><div><span className="validation-kicker">Publication checks</span><h2 id="validation-title">{validation.artistName}</h2><p>{validation.report.ready ? "This record is ready for publication." : `${validation.report.issues.length} items need attention.`}</p></div>{validation.report.ready ? <button className="primary-button" disabled={!token || busy} onClick={() => void publish(validation.report.artist_id, validation.report.revision, true)}>Publish record</button> : <ol>{validation.report.issues.map((issue, i) => <li key={i}><code>{issue.path}</code>{issue.message}</li>)}</ol>}</section>}
     <p className="table-scroll-hint" id="catalogue-scroll-help">Scroll the table sideways for dates and editing actions. With the table focused, use the arrow keys.</p>
     <div className="table-shell" tabIndex={0} role="region" aria-label="Painter catalogue" aria-describedby="catalogue-scroll-help" aria-busy={pending}><table><caption className="sr-only">Painter records and editorial actions</caption><thead><tr><th scope="col">Name</th><th scope="col">Dates</th><th scope="col">Status</th><th scope="col">Revision</th><th scope="col">Updated</th><th scope="col">Actions</th></tr></thead><tbody>{artists.map(artist => <tr key={artist.id}><td><Link href={`/artists/${artist.slug}`}>{artist.display_name}</Link><small>{artist.slug}</small></td><td>{artist.timeline_display}</td><td><span className={`table-status status-${artist.status}`}>{artist.status === "review" ? "In review" : artist.status[0].toUpperCase() + artist.status.slice(1)}</span></td><td>{artist.revision}</td><td>{new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(new Date(artist.updated_at))}</td><td><div className="row-actions">{artist.status === "archived" ? <button disabled={!token || busy || pending} onClick={() => void archive(artist, true)}>Restore</button> : <><button disabled={!token || busy || pending} onClick={() => void edit(artist)}>Edit</button><button disabled={!token || busy || pending} onClick={() => void edit(artist, true)}>Duplicate</button><button disabled={!token || busy || pending} onClick={() => void validate(artist)}>Check</button>{artist.status === "published" && <button disabled={!token || busy || pending} onClick={() => void publish(artist.id, artist.revision, false)}>Unpublish</button>}<button disabled={!token || busy || pending} onClick={() => void archive(artist)}>Archive</button></>}</div></td></tr>)}</tbody></table>{!artists.length && <div className="table-empty">{pending ? "Loading the catalogue…" : loadError ? "Catalogue unavailable" : "No painters match these filters."}</div>}</div>
-    <div className="catalogue-pagination"><button disabled={page === 0 || pending} onClick={() => setPage(value => value - 1)}>Previous page</button><span role="status">{pending ? "Updating catalogue…" : `Page ${page + 1} · ${artists.length} records`}</span><button disabled={!hasMore || pending} onClick={() => setPage(value => value + 1)}>Next page</button></div>
+    <div className="catalogue-pagination"><button disabled={page === 0 || pending} onClick={() => setPage(page - 1)}>Previous page</button><span role="status">{pending ? "Updating catalogue…" : `Page ${page + 1} · ${artists.length} records`}</span><button disabled={!hasMore || pending} onClick={() => setPage(page + 1)}>Next page</button></div>
   </main>;
 }

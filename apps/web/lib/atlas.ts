@@ -1,0 +1,10 @@
+import type { BookRange } from "./books";
+import type { Artwork } from "./types";
+export type AtlasType = "artwork" | "book" | "event";
+export type AtlasDefinition = { key: AtlasType; name: string; singular: string; dateLabel: string; cutoff: number; color: string };
+export type AtlasPreset = { id: string; name: string; group: string; description: string; period: BookRange; context: BookRange; sources: { name: string; url: string }[] };
+export type AtlasMetadata = { presets: AtlasPreset[]; types: AtlasDefinition[]; regions: { slug: string; name: string }[]; continents: { slug: string; name: string }[]; bounds: BookRange; defaultPreset: string };
+export type AtlasItem = { id: string; type: AtlasType; title: string; context: string; startYear: number; endYear: number; years: string; approximate: boolean };
+export type AtlasLane = AtlasDefinition & { total: number; mode: "individual" | "density"; items: AtlasItem[]; density: { start_year: number; end_year: number; count: number }[]; nextCursor: string };
+export type AtlasResponse = { range: BookRange; bounds: BookRange; lanes: AtlasLane[]; total: number; ticks: { year: number; label: string }[] };
+export type AtlasArtwork = Artwork & { creators: { id: string; slug: string; name: string; years: string; role: string }[] };

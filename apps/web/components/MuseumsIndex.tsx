@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import { countryName } from "@/lib/api";
 import type { MuseumPage } from "@/lib/types";
@@ -9,12 +9,15 @@ import { MultiSelectFilter } from "./MultiSelectFilter";
 import { usePainterChoices } from "./use-painter-choices";
 import { useEditorToken } from "./EditorAccess";
 import { useMuseumRequest } from "./museum-state";
-import { MuseumChips, MuseumError, setMuseumFilters } from "./MuseumFilters";
+import { MuseumError, setMuseumFilters } from "./MuseumFilters";
+import { AtlasFilters, AtlasSelect, ActiveFilters } from "./AtlasFilters";
+import { AtlasPageHeader } from "./AtlasPageHeader";
 import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
 export function MuseumsIndex({ preview }: { preview: boolean }) {
+  const search = useRef<HTMLInputElement>(null);
   const params = new URLSearchParams(useQueryString());
   const [token] = useEditorToken();
   const painters = queryValues(params, "artist"), movements = queryValues(params, "movement");
@@ -45,24 +48,23 @@ export function MuseumsIndex({ preview }: { preview: boolean }) {
     for (const value of group.values) filters.push({ key: `${group.key}-${value}`, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ [group.key]: group.values.filter(item => item !== value) }) });
   }
   return <main id="main-content" className={styles.page}>
-    <header className={styles.intro}><div><h1>Museums and collections</h1><p>Follow the paintings to the places that hold them.</p></div><p className={styles.preview}>{preview || token ? "Research preview · records are still in review" : "Published catalogue"}</p></header>
+    <AtlasPageHeader title="Museums and collections" description="Follow the paintings to the places that hold them."><p className={styles.preview}>{preview || token ? "Research preview · records are still in review" : "Published catalogue"}</p></AtlasPageHeader>
     <div className={styles.locationShortcuts} role="group" aria-label="Museum location shortcuts">
       <button aria-pressed={europeanScope} onClick={() => setMuseumFilters({region:europe, country:null})}>European museums</button>
       <button aria-pressed={!regions.length && !countries.length} onClick={() => setMuseumFilters({region:null, country:null})}>All locations</button>
       <span>Or combine individual regions and countries below.</span>
     </div>
-    <div className={styles.filters}>
-      <label className={styles.search}><span>Search collections</span><input type="search" placeholder="Museum, city or country" value={query} onChange={event => setMuseumFilters({ q: event.target.value })} /></label>
+    <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} placeholder="Museum, city or country" searchLabel="Search collections" columns={6} activeCount={filters.filter(f => f.key !== "q").length}>
       <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} helpText="Find collections with works by any selected painter. A collection does not need to hold all the selected painters." />
       <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />
       <MultiSelectFilter label="Regions" allLabel="All regions" options={facets?.regions ?? []} values={regions} onChange={values => setMuseumFilters({ region: values })} helpText="Choose any number. These are museum venue locations, not painters’ origins." />
       <MultiSelectFilter label="Countries" allLabel="All countries" options={facets?.countries ?? []} values={countries} onChange={values => setMuseumFilters({ country: values })} helpText="Match a venue in any selected country. Collections without a verified venue only appear with all locations." />
-      <label><span>Selection</span><select value={selection} onChange={event => setMuseumFilters({ selection: event.target.value })}><option value="">All catalogued works</option><option value="owner">My must-see works</option><option value="museum">Museum highlights</option></select></label>
-      <label><span>Display</span><select value={display} onChange={event => setMuseumFilters({ display: event.target.value })}><option value="">Any display status</option><option value="on_view">Confirmed on view</option></select></label>
-    </div>
-    <MuseumChips filters={filters} clear={clear} />
+      <AtlasSelect label="Selection" value={selection} onChange={value => setMuseumFilters({ selection: value })} options={[{ value: "", label: "All catalogued works" }, { value: "owner", label: "My must-see works" }, { value: "museum", label: "Museum highlights" }]} />
+      <AtlasSelect label="Display" value={display} onChange={value => setMuseumFilters({ display: value })} options={[{ value: "", label: "Any display status" }, { value: "on_view", label: "Confirmed on view" }]} />
+    </AtlasFilters>
+    <ActiveFilters filters={filters} onClear={clear} searchRef={search} />
     <div className={styles.resultsHeading}><h2 id="museum-results-title" tabIndex={-1}>Explore the collections</h2><p role="status">{loading ? "Finding collections…" : error ? "Connection interrupted" : `${data?.total ?? 0} ${data?.total === 1 ? "collection" : "collections"} in this view`}</p></div>
-    <p className={styles.note}>Filters match any selected value within a group, and combine across groups. Card counts describe the collection’s total Artline records, not just filtered matches. Confirmed display requires a report checked within 30 days.</p>
+    <p className={styles.note}>Collection totals include all Artline records. Confirmed on-view reports were checked within 30 days.</p>
     <section aria-label="Museum results" aria-busy={loading}>
       {error ? <MuseumError message={error} retry={() => setRetry(value => value + 1)} /> : loading ? <p className={styles.loading}>Opening the collections…</p> : data?.items.length ? <ul className={styles.museumGrid}>{data.items.map(museum => <li key={museum.id}>
         <Link className={styles.museumCard} href={`/museums/${museum.slug}${collectionQuery.size ? `?${collectionQuery}` : ""}`}>

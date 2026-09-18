@@ -9,9 +9,9 @@ test("women filter precedes popularity, combines independently and survives navi
   await page.goto("/");
   await settled(page);
   const women = page.getByRole("checkbox", { name: "Women artists", exact: true });
-  const popular = page.getByRole("checkbox", { name: "Only popular painters", exact: true });
+  const popular = page.getByRole("checkbox", { name: "Top 100 painters", exact: true });
   const labels = await page.locator(".popular-filter").allTextContents();
-  expect(labels).toEqual(["Women artists", "Only popular painters"]);
+  expect(labels).toEqual(["Women artists", "Top 100 painters"]);
   await expect(women).not.toBeChecked();
   await expect(popular).toBeChecked();
   await women.check();
@@ -53,7 +53,7 @@ test("women and popularity controls fit desktop and phone widths", async ({ page
     await page.goto("/?women=true");
     await settled(page);
     await expect(page.getByRole("checkbox", { name: "Women artists", exact: true })).toBeVisible();
-    await expect(page.getByRole("checkbox", { name: "Only popular painters", exact: true })).toBeVisible();
+    await expect(page.getByRole("checkbox", { name: "Top 100 painters", exact: true })).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
     await page.screenshot({ path: `/tmp/artline-women-${width}.png`, fullPage: true });
   }

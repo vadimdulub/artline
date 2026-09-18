@@ -9,7 +9,7 @@ async function settled(page: import("@playwright/test").Page) {
 test("popular discovery is the default, opt-out survives reload/back, reset restores it", async ({ page }) => {
   await page.goto("/");
   await settled(page);
-  const toggle = page.getByRole("checkbox", { name: "Only popular painters" });
+  const toggle = page.getByRole("checkbox", { name: "Top 100 painters" });
   await expect(toggle).toBeChecked();
   const popular = await (await page.request.get("/api/backend/v1/timeline")).json();
   const all = await (await page.request.get("/api/backend/v1/timeline?popular=false")).json();
@@ -52,7 +52,7 @@ test("popular scope combines with regions, search and genuine clear-all", async 
   await settled(page);
   expect(new URL(page.url()).searchParams.getAll("region")).toHaveLength(2);
   await page.getByRole("button", { name: "Clear filters", exact: true }).click();
-  await expect(page.getByRole("checkbox", { name: "Only popular painters" })).not.toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Top 100 painters" })).not.toBeChecked();
   await expect(page.getByRole("searchbox")).toHaveValue("");
   await settled(page);
 });
@@ -141,6 +141,6 @@ test("failed discovery requests recover without losing the popular preference", 
   fail = false;
   await page.getByRole("button", { name: "Try again", exact: true }).click();
   await settled(page);
-  await expect(page.getByRole("checkbox", { name: "Only popular painters" })).toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Top 100 painters" })).toBeChecked();
   await expect(page.locator(".artist-mark").first()).toBeVisible();
 });

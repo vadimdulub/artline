@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 
 test("Botticelli is discoverable by default and his uncertain dates lead to the Uffizi", async ({ page }) => {
   await page.goto("/?q=Botticelli");
-  await expect(page.getByRole("checkbox", { name: "Only popular painters" })).toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Top 100 painters" })).toBeChecked();
   await page.locator(".artist-mark").filter({ hasText: "Sandro Botticelli" }).click();
   const panel = page.getByRole("dialog", { name: "Painter details", exact: true });
   await expect(panel.getByRole("heading", { name: "Artworks by year", exact: true })).toBeVisible();

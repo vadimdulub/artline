@@ -1,5 +1,27 @@
 import type { TimelineArtist } from "./types";
 
+// Fixed compression keeps the same painter-year spacing while the view slides.
+export function compressedBefore1400(start: number, end: number): boolean { return start < 1400 && end > 1400; }
+const artistCoordinate=(year:number)=>year<=1400?1400+(year-1400)*6/17:year;
+const artistCoordinateYear=(value:number)=>Math.round(value<=1400?1400+(value-1400)*17/6:value);
+export function artworkYearPosition(year: number, start = 1100, end = 2000): number {
+ return (artistCoordinate(year)-artistCoordinate(start))/(artistCoordinate(end)-artistCoordinate(start))*100;
+}
+export function artworkYearAtPosition(percent: number, start = 1100, end = 2000): number {
+ return artistCoordinateYear(artistCoordinate(start)+Math.max(0,Math.min(100,percent))/100*(artistCoordinate(end)-artistCoordinate(start)));
+}
+
+export function visibleArtworkTicks(start: number, end: number, width: number): number[] {
+  const candidates = timelineTicks(start, end);
+  if (compressedBefore1400(start, end) && !candidates.includes(1400)) candidates.push(1400);
+  const chosen = [start, end];
+  for (const year of [1400, ...candidates]) {
+    if (year <= start || year >= end) continue;
+    if (chosen.every(other => Math.abs(artworkYearPosition(year, start, end) - artworkYearPosition(other, start, end)) * width / 100 >= 42)) chosen.push(year);
+  }
+  return chosen.sort((a, b) => a - b);
+}
+
 export type PositionedArtist = TimelineArtist & {
   lane: number;
   left: number;
@@ -14,7 +36,6 @@ export function positionArtists(
   rangeEnd: number,
   viewportWidth = 1200,
 ): PositionedArtist[] {
-  const span = Math.max(1, rangeEnd - rangeStart);
   const pixels = Math.max(1, viewportWidth);
   const lanes: Array<Array<[number, number]>> = [];
 
@@ -24,8 +45,8 @@ export function positionArtists(
     .map((artist) => {
       const visibleStart = Math.max(rangeStart, artist.start_year);
       const visibleEnd = Math.min(rangeEnd, artist.end_year);
-      const rawX = (visibleStart - rangeStart) / span * pixels;
-      const markWidth = Math.min(pixels, Math.max(8, (visibleEnd - visibleStart) / span * pixels));
+      const rawX = artworkYearPosition(visibleStart, rangeStart, rangeEnd) / 100 * pixels;
+      const markWidth = Math.min(pixels, Math.max(8, (artworkYearPosition(visibleEnd, rangeStart, rangeEnd) - artworkYearPosition(visibleStart, rangeStart, rangeEnd)) / 100 * pixels));
       const x = Math.min(rawX, pixels - markWidth);
       const right = x + markWidth;
       const labelWidth = Math.min(pixels, 220, Math.max(artist.name.length * 7.5, artist.date_display.length * 6.5) + 12);

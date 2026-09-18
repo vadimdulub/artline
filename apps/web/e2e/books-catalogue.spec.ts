@@ -1,0 +1,70 @@
+import { expect, test } from "@playwright/test";
+import type { BooksResponse } from "../lib/books";
+
+// Read-only checks against the local research preview, without mocked books or
+// database fixtures. Requires the actual 10,000-book import and the current API.
+test("real book catalogue is bounded and creator details open from the book index", async ({ page }, testInfo) => {
+  const firstResponse = await page.request.get("/api/backend/v1/books?limit=3");
+  expect(firstResponse.ok()).toBe(true);
+  const first = await firstResponse.json() as BooksResponse;
+  expect(first.total).toBe(8685);
+  expect(first.items).toHaveLength(3);
+  expect(first.mode).toBe("density");
+  const next = await (await page.request.get(`/api/backend/v1/books?limit=3&after=${encodeURIComponent(first.nextCursor)}`)).json() as BooksResponse;
+  expect(next.items).toHaveLength(3);
+  expect(new Set([...first.items, ...next.items].map(b => b.id)).size).toBe(6);
+  expect(first.items.every((b: { status: string; sourceUrl: string }) => b.status === "review" && b.sourceUrl.startsWith("https://www.wikidata.org/wiki/"))).toBe(true);
+  await page.goto("/books?top100=false");
+  await expect(page.getByRole("group", { name: "Explore books by period" })).toBeVisible();
+  await expect(page.locator('ul[aria-label="Book index"] > li')).toHaveCount(100);
+  await expect(page.locator(".timeline-counter")).toContainText("8,685 books");
+  await expect(page.locator("h1")).not.toContainText(/\bCE\b/);
+  await page.screenshot({ path: testInfo.outputPath("live-books-overview.png") });
+  const firstID = await page.locator('ul[aria-label="Book index"] > li').first().getAttribute("id");
+  await page.getByRole("button", { name: "Next books", exact: true }).click();
+  await expect(page.locator('ul[aria-label="Book index"] > li')).toHaveCount(100);
+  await expect(page.locator('ul[aria-label="Book index"] > li').first()).not.toHaveAttribute("id", firstID!);
+  await expect(page.getByRole("heading", { name: "Book index", exact: true })).toBeInViewport();
+  await expect(page.getByRole("heading", { name: "Book index", exact: true })).toBeFocused();
+  await page.getByLabel("Find a book or author").fill("Being and Nothingness");
+  await page.getByRole("button", { name: "Open Being and Nothingness by Jean-Paul Sartre", exact: true }).click();
+  const drawer = page.getByRole("dialog", { name: "Book details" });
+  await expect(drawer.getByRole("heading", { name: "About the creator", exact: true })).toBeVisible();
+  await expect(drawer).toContainText("Born 1905 · Died 1980");
+  await expect(drawer.getByRole("link", { name: "Book source" })).toHaveAttribute("href", "https://www.wikidata.org/wiki/Q119709");
+  await page.screenshot({ path: testInfo.outputPath("live-sartre-creator.png") });
+  await page.keyboard.press("Escape");
+  await expect(drawer).toHaveCount(0);
+  await page.goto("/books?collection=Undated");
+  await expect(page.locator(".timeline-counter")).toContainText("100 books");
+  await expect(page.locator('summary[aria-label^="Collections:"]')).toHaveCount(0);
+  expect(await page.locator('ul[aria-label="Book index"] > li').count()).toBeGreaterThan(0);
+});
+
+test("real author choices search remotely and BCE navigation retains the shared layout", async ({ page }, testInfo) => {
+  const options = await (await page.request.get("/api/backend/v1/books/authors")).json();
+  expect(options.items.length).toBeLessThanOrEqual(30);
+  expect(options.hasMore).toBe(true);
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto("/books");
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
+  await page.locator("summary").filter({ hasText: "Authors" }).click();
+  await page.getByLabel("Search authors").fill("Sartre");
+  await page.getByRole("checkbox", { name: "Jean-Paul Sartre", exact: true }).check();
+  await page.getByRole("button", { name: "Done", exact: true }).click();
+  await expect(page.locator(".book-mark").first()).toBeVisible();
+  expect(new URL(page.url()).searchParams.get("author")).toBe("Jean-Paul Sartre");
+  await page.getByRole("button", { name: "Reset view", exact: true }).click();
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
+  await expect(page.getByRole("checkbox", { name: "Top 100 books", exact: true })).toBeChecked();
+  await page.getByRole("checkbox", { name: "Top 100 books", exact: true }).uncheck();
+  await expect(page.getByRole("group", { name: "Explore books by period" })).toBeVisible();
+  await page.getByLabel("Book end year").fill("-1");
+  await page.getByLabel("Book end year").press("Enter");
+  await expect(page.getByLabel("Book end year")).toHaveValue("-1");
+  await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
+  const ancient = await (await page.request.get("/api/backend/v1/books?start=-5000&end=-1")).json() as BooksResponse;
+  expect(ancient.density.every(period => period.count > 0)).toBe(true);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
+  await page.screenshot({ path: testInfo.outputPath("live-books-bce-mobile.png") });
+});

@@ -9,6 +9,7 @@ export function MultiSelectFilter({ label, allLabel, options, values, onChange, 
   remote?: { search: string; onSearch: (value: string) => void; loading: boolean; hasMore: boolean }; retry?: () => void;
 }) {
   const details = useRef<HTMLDetailsElement>(null);
+  const pointerFocus = useRef(false);
   const helpID = useId();
   const [localSearch, setLocalSearch] = useState("");
   const search = remote?.search ?? localSearch;
@@ -18,13 +19,24 @@ export function MultiSelectFilter({ label, allLabel, options, values, onChange, 
   const description = values.length === 0 ? allLabel : values.length === 1 ? choices.find(option => option.slug === values[0])?.name ?? values[0] : `${values.length} selected`;
   function close() { if (details.current) { details.current.open = false; details.current.querySelector("summary")?.focus(); } }
   useEffect(() => {
-    function outside(event: PointerEvent) {
+    function pointerDown() { pointerFocus.current = true; }
+    function keyboard() { pointerFocus.current = false; }
+    function outside(event: MouseEvent) {
+      pointerFocus.current = false;
       if (event.target instanceof Node && details.current && !details.current.contains(event.target)) details.current.open = false;
     }
-    document.addEventListener("pointerdown", outside);
-    return () => document.removeEventListener("pointerdown", outside);
+    // Inline panels change document flow. Finish the click before collapsing
+    // them, so a neighbouring filter cannot move away between down and up.
+    document.addEventListener("pointerdown", pointerDown, true);
+    document.addEventListener("keydown", keyboard, true);
+    document.addEventListener("click", outside);
+    return () => {
+      document.removeEventListener("pointerdown", pointerDown, true);
+      document.removeEventListener("keydown", keyboard, true);
+      document.removeEventListener("click", outside);
+    };
   }, []);
-  return <details ref={details} className="multi-filter" onKeyDown={event => { if (event.key === "Escape") { event.preventDefault(); event.stopPropagation(); close(); } }} onBlur={event => { if (event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false; }}>
+  return <details ref={details} className="multi-filter" onKeyDown={event => { if (event.key === "Escape") { event.preventDefault(); event.stopPropagation(); close(); } }} onBlur={event => { if (!pointerFocus.current && event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false; }}>
     <summary aria-label={`${label}: ${description}`}><span>{label}</span><strong>{description}</strong><span aria-hidden="true" className="filter-chevron">⌄</span></summary>
     <div className="multi-filter-panel">
       <fieldset aria-describedby={helpID}><legend>{label}</legend><p id={helpID}>{helpText}</p>

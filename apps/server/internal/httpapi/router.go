@@ -14,22 +14,39 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/vadimdulub/artline/apps/server/internal/atlas"
+	"github.com/vadimdulub/artline/apps/server/internal/books"
 	"github.com/vadimdulub/artline/apps/server/internal/catalog"
 	"github.com/vadimdulub/artline/apps/server/internal/config"
+	"github.com/vadimdulub/artline/apps/server/internal/events"
 )
 
 type API struct {
-	config config.Config
-	db     *pgxpool.Pool
-	repo   *catalog.Repository
+	config    config.Config
+	db        *pgxpool.Pool
+	repo      *catalog.Repository
+	bookRepo  *books.Repository
+	eventRepo *events.Repository
+	atlasRepo *atlas.Repository
 }
 
 func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
-	api := &API{config: cfg, db: db, repo: catalog.NewRepository(db)}
+	api := &API{config: cfg, db: db, repo: catalog.NewRepository(db), bookRepo: books.NewRepository(db), eventRepo: events.NewRepository(db), atlasRepo: atlas.NewRepository(db)}
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health", api.health)
 	mux.HandleFunc("GET /ready", api.ready)
 	mux.HandleFunc("GET /api/v1/timeline", api.timeline)
+	mux.HandleFunc("GET /api/v1/books", api.books)
+	mux.HandleFunc("GET /api/v1/books/authors", api.bookAuthors)
+	mux.HandleFunc("GET /api/v1/books/facets", api.bookFacets)
+	mux.HandleFunc("GET /api/v1/books/{id}", api.book)
+	mux.HandleFunc("GET /api/v1/events", api.events)
+	mux.HandleFunc("GET /api/v1/events/facets", api.eventFacets)
+	mux.HandleFunc("GET /api/v1/events/{id}", api.event)
+	mux.HandleFunc("GET /api/v1/atlas", api.atlasTimeline)
+	mux.HandleFunc("GET /api/v1/atlas/presets", api.atlasPresets)
+	mux.HandleFunc("GET /api/v1/atlas/geography", api.atlasGeography)
+	mux.HandleFunc("GET /api/v1/atlas/artworks/{id}", api.atlasArtwork)
 	mux.HandleFunc("GET /api/v1/timeline/facets", api.timelineFacets)
 	mux.HandleFunc("GET /api/v1/painters/options", api.painterOptions)
 	mux.HandleFunc("GET /api/v1/artists/{slug}", api.artist)
