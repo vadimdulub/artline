@@ -37,6 +37,7 @@ for (const width of [1440, 390]) {
     await expect(page.locator(".all-explorer .timeline-stage")).toHaveAttribute("aria-busy", "false");
     await expect(page.getByRole("heading", { name: "We couldn’t load this view" })).toHaveCount(0);
     await expect(page.locator(".all-lane>header h2")).toHaveText(["Artworks", "Books", "Events"]);
+    await expect(page.locator(".tick-row>span").filter({ hasText: /^1400$/ })).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
     await page.screenshot({ path: info.outputPath(`atlas-${width}.png`) });
   });

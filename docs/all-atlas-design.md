@@ -190,6 +190,9 @@ reload and cancellation. Desktop and 320px screenshots were visually reviewed;
 ## Stable year navigation and geography
 
 Year navigation keeps the established compressed early periods on a fixed axis.
+All uses equal year spacing from 1400 through 2000, with earlier centuries
+compressed. Its ticks, entries, density bars, period shading and slider share
+that scale. Books and Events retain their existing 1700 breakpoint.
 Dragging the selected band translates both edges by the same screen distance;
 dragging an edge or editing the From/To pair changes the selected interval.
 Following the user’s explicit preference, the full chart remains fixed: date
@@ -270,3 +273,9 @@ short-screen and loading-state screenshots were visually reviewed. Browser
 artifacts are under `/tmp/artline-all-final/`; the run log is
 `/tmp/artline-all-final.log`. The proxy cancellation regression uses an isolated
 fetch stub, with no database connection.
+
+The subsequent All-axis spacing update passed 45 unit tests, ESLint, TypeScript
+and 36 read-only browser scenarios, including equal spacing from 1400, shared
+mark/bar/slider coordinates, unchanged Books/Events scales, and desktop/phone
+range interactions. Release validation artifacts are under
+`/tmp/artline-scale-release-local/`.

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bookTickPosition, bookYearAtPosition, compressedBefore1700, visibleBookTicks } from "../books";
+import { bookTickPosition, bookYearAtPosition, bookAxisTicks, compressedBefore1700, visibleBookTicks } from "../books";
 
 const full = { start: -5000, end: 2000 };
 
@@ -51,6 +51,35 @@ describe("Books timeline scale", () => {
       for (let i = 1; i < ticks.length; i++) {
         expect((bookTickPosition(ticks[i].year, full) - bookTickPosition(ticks[i - 1].year, full)) * width / 100).toBeGreaterThan(50);
       }
+    }
+  });
+});
+
+describe("All timeline scale", () => {
+  const bounds = { start: -12000, end: 2000 };
+  it("uses equal century intervals from 1400 and compresses the earlier centuries", () => {
+    const position = (year: number) => bookTickPosition(year, bounds, 1400);
+    const century = position(1500) - position(1400);
+    for (let year = 1500; year < 2000; year += 100) {
+      expect(position(year + 100) - position(year)).toBeCloseTo(century);
+    }
+    expect(position(1400) - position(1300)).toBeLessThan(century / 5);
+    expect(bookAxisTicks(bounds, 1392, 1400).filter(tick => tick.year >= 1400).map(tick => tick.year)).toEqual([1400,1500,1600,1700,1800,1900,2000]);
+    for (const width of [284,354]) {
+      const ticks = bookAxisTicks(bounds, width, 1400);
+      expect(ticks.map(tick => tick.label)).toEqual(expect.arrayContaining(["BCE","1400","2000"]));
+      for (let i = 1; i < ticks.length; i++) expect((position(ticks[i].year) - position(ticks[i-1].year)) * width / 100).toBeGreaterThan(50);
+    }
+  });
+
+  it("keeps slider years ordered and reversible across BCE and the 1400 boundary", () => {
+    let previous = -1;
+    for (let year = bounds.start; year <= bounds.end; year++) {
+      if (year === 0) continue;
+      const position = bookTickPosition(year, bounds, 1400);
+      expect(position).toBeGreaterThan(previous);
+      expect(bookYearAtPosition(position, bounds, 1400)).toBe(year);
+      previous = position;
     }
   });
 });

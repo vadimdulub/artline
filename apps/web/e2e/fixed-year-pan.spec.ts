@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 // Real headless Chrome and real, read-only catalogue responses.
-for (const [route, start, end] of [["/books",1500,1800],["/",1300,1600],["/events",1500,1800],["/all?type=book&selection=true",1500,1800]] as const) {
+for (const [route, start, end] of [["/books",1500,1800],["/",1300,1600],["/events",1500,1800],["/all?type=book&selection=true",1300,1600]] as const) {
   test(`${route} moves the selection while the full chart stays fixed`, async ({page}) => {
     await page.goto(`${route}${route.includes("?")?"&":"?"}start=${start}&end=${end}`);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy","false");

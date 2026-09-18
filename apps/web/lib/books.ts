@@ -64,56 +64,56 @@ const calendar = (year: number) => year < 0 ? year + 1 : year;
 const historicalYear = (value: number) => value <= 0 ? value - 1 : value;
 export function compressedBefore1700(range: BookRange): boolean { return range.start < 1700 && range.end > 1700; }
 
-// Fixed historical axis. Panning crops/translates it; it never reallocates the
-// early centuries to a new fraction of the viewport. 5000 BCE / 1 / 1700 / 2000
-// remain at 0 / 5 / 25 / 100 on the full Books axis.
-function bookCoordinate(year: number): number {
+// Fixed historical axis: 5000 BCE / 1 / linearFrom / 2000 anchor 0 / 5 / 25 / 100.
+// Books uses 1700; All uses 1400. Selecting years never rescales these anchors.
+function bookCoordinate(year: number, linearFrom: number): number {
  const y=calendar(year);
- return y<=1 ? (y+4999)/5000*5 : y<=1700 ? 5+(y-1)/1699*20 : 25+(y-1700)/300*75;
+ return y<=1 ? (y+4999)/5000*5 : y<=linearFrom ? 5+(y-1)/(linearFrom-1)*20 : 25+(y-linearFrom)/(2000-linearFrom)*75;
 }
-function bookCoordinateYear(value: number): number {
- const y=value<=5 ? value/5*5000-4999 : value<=25 ? 1+(value-5)/20*1699 : 1700+(value-25)/75*300;
+function bookCoordinateYear(value: number, linearFrom: number): number {
+ const y=value<=5 ? value/5*5000-4999 : value<=25 ? 1+(value-5)/20*(linearFrom-1) : linearFrom+(value-25)/75*(2000-linearFrom);
  return historicalYear(Math.round(y));
 }
-export function bookTickPosition(year: number, range: BookRange): number {
- return (bookCoordinate(year)-bookCoordinate(range.start))/(bookCoordinate(range.end)-bookCoordinate(range.start))*100;
+export function bookTickPosition(year: number, range: BookRange, linearFrom = 1700): number {
+ return (bookCoordinate(year,linearFrom)-bookCoordinate(range.start,linearFrom))/(bookCoordinate(range.end,linearFrom)-bookCoordinate(range.start,linearFrom))*100;
 }
-export function bookYearAtPosition(position: number, range: BookRange): number {
+export function bookYearAtPosition(position: number, range: BookRange, linearFrom = 1700): number {
  const fraction=Math.max(0,Math.min(100,position))/100;
- return bookCoordinateYear(bookCoordinate(range.start)+fraction*(bookCoordinate(range.end)-bookCoordinate(range.start)));
+ return bookCoordinateYear(bookCoordinate(range.start,linearFrom)+fraction*(bookCoordinate(range.end,linearFrom)-bookCoordinate(range.start,linearFrom)),linearFrom);
 }
 
 // Tick visibility follows pixel spacing, since equal calendar steps are no
 // longer equally spaced. Keep the change of scale and both ends legible.
-export function visibleBookTicks(ticks: BooksResponse["ticks"], range: BookRange, width: number) {
+export function visibleBookTicks(ticks: BooksResponse["ticks"], range: BookRange, width: number, linearFrom = 1700) {
   if (!ticks.length) return [];
+  const compressed = range.start < linearFrom && range.end > linearFrom;
   const candidates = [...ticks];
-  if (compressedBefore1700(range) && !candidates.some(tick => tick.year === 1700)) candidates.push({ year: 1700, label: "1700" });
+  if (compressed && !candidates.some(tick => tick.year === linearFrom)) candidates.push({ year: linearFrom, label: String(linearFrom) });
   candidates.sort((a, b) => a.year - b.year);
   const chosen = [candidates[0], candidates[candidates.length - 1]];
-  const boundary = candidates.find(tick => tick.year === 1700);
-  if (compressedBefore1700(range) && boundary) chosen.push(boundary);
+  const boundary = candidates.find(tick => tick.year === linearFrom);
+  if (compressed && boundary) chosen.push(boundary);
   for (const tick of candidates) {
-    if (chosen.every(other => Math.abs(bookTickPosition(tick.year, range) - bookTickPosition(other.year, range)) * width / 100 >= 70)) chosen.push(tick);
+    if (chosen.every(other => Math.abs(bookTickPosition(tick.year, range, linearFrom) - bookTickPosition(other.year, range, linearFrom)) * width / 100 >= 70)) chosen.push(tick);
   }
   return [...new Map(chosen.map(tick => [tick.year, tick])).values()].sort((a, b) => a.year - b.year);
 }
 
 // Axis labels are presentation only. Date selection still belongs to the API,
 // while the complete historical axis stays fixed across range changes.
-export function bookAxisTicks(bounds: BookRange, width: number) {
+export function bookAxisTicks(bounds: BookRange, width: number, linearFrom = 1700) {
   const ticks = [{ year: Math.round(bounds.start / 2), label: "BCE" }];
   for (let year = 100; year <= bounds.end; year += 100) ticks.push({ year, label: String(year) });
-  return visibleBookTicks(ticks, bounds, width);
+  return visibleBookTicks(ticks, bounds, width, linearFrom);
 }
 
 // Visual layout only; the API owns chronology, filtering and page order.
-export function positionBooks<T extends { startYear: number | null; endYear: number | null }>(books: T[], range: BookRange, width: number) {
+export function positionBooks<T extends { startYear: number | null; endYear: number | null }>(books: T[], range: BookRange, width: number, linearFrom = 1700) {
   const pixels = Math.max(1, width);
   const lanes: [number, number][][] = [];
   return books.filter((book): book is T & { startYear: number; endYear: number } => book.startYear !== null && book.endYear !== null).map(book => {
-    const x = bookTickPosition(Math.max(range.start, book.startYear), range) / 100 * pixels;
-    const end = bookTickPosition(Math.min(range.end, book.endYear), range) / 100 * pixels;
+    const x = bookTickPosition(Math.max(range.start, book.startYear), range, linearFrom) / 100 * pixels;
+    const end = bookTickPosition(Math.min(range.end, book.endYear), range, linearFrom) / 100 * pixels;
     const markWidth = Math.min(pixels, Math.max(8, end - x));
     const left = Math.min(x, pixels - markWidth);
     const labelWidth = Math.min(pixels, 246);
