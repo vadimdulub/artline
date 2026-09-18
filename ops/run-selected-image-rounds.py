@@ -5,9 +5,11 @@ import collections
 import importlib.util
 import json
 from pathlib import Path
+import re
 import subprocess
 import sys
 from types import SimpleNamespace
+from urllib.parse import urlsplit
 
 import psycopg
 from psycopg.rows import dict_row
@@ -58,6 +60,25 @@ def snapshot(dsn,candidates):
 original_record=core.image_record
 
 
+def source_timeout(provider,event):
+    hosts={'chicago':'www.artic.edu','met':'images.metmuseum.org',
+           'cleveland':'openaccess-cdn.clevelandart.org','nga':'api.nga.gov'}
+    error=event.get('error','')
+    return event.get('outcome')=='failed' and 'Read timed out' in error and ("host='"+hosts.get(provider,'invalid')+"'") in error
+
+
+def source_unavailable(provider,event):
+    if source_timeout(provider,event):return True
+    if event.get('outcome')!='failed':return False
+    match=re.match(r'^(?:403|404) Client Error: .*? for url: (https://\S+)',event.get('error',''))
+    if not match:return False
+    hosts={'chicago':{'www.artic.edu','api.artic.edu'},
+           'met':{'images.metmuseum.org','collectionapi.metmuseum.org'},
+           'cleveland':{'openaccess-cdn.clevelandart.org','openaccess-api.clevelandart.org'},
+           'nga':{'api.nga.gov'}}
+    return urlsplit(match[1]).hostname in hosts.get(provider,set())
+
+
 def reviewed_image_record(c,fetcher,nga,chicago):
     image=original_record(c,fetcher,nga,chicago)
     if image is None:return None
@@ -88,7 +109,8 @@ def main():
         if (run/'round-complete.json').exists():
             print('Already verified:',run.name,flush=True);continue
         if not (run/'candidates.json').exists():
-            previous={p.parent for p in (core.ROOT/'docs/research').glob('image-expansion*/**/candidates.json')}
+            previous={p.parent for pattern in ('image-expansion*/**/candidates.json','image-research*/**/candidates.json')
+              for p in (core.ROOT/'docs/research').glob(pattern)}
             previous.update(p.parent for p in args.root.glob('*/candidates.json'))
             previous.discard(run)
             core.select(SimpleNamespace(run=run,providers=provider,per_source=args.per_round,
@@ -99,17 +121,35 @@ def main():
         for target,target_dsn in targets:
             before=run/(target+'-before.json')
             if not before.exists():core.save_new(before,snapshot(target_dsn,candidates))
-        terminal={'complete','no_explicit_open_image','source_unavailable_review','metadata_needs_review'}
+        terminal={'complete','no_explicit_open_image','source_unavailable_review','source_paused_review','metadata_needs_review'}
         events=latest(run)
         pending=[c for c in candidates if events.get(c['artwork_id'],{}).get('outcome') not in terminal]
+        pending=[c for c in pending if not (source_timeout(provider,events.get(c['artwork_id'],{}))
+          and (run/'source-retries'/(c['artwork_id']+'.json')).exists())]
+        # A resumed timeout has already had its first bounded source attempts.
+        # Pin its one permitted retry before performing it, including on resume.
+        for c in pending:
+            if source_timeout(provider,events.get(c['artwork_id'],{})):
+                retry=run/'source-retries'/(c['artwork_id']+'.json')
+                if not retry.exists():core.save_new(retry,{'artwork_id':c['artwork_id'],'retry_batches':1,'prior_error':events[c['artwork_id']]['error']})
         print('Research round',number,provider,work_type,'selected',len(candidates),'pending',len(pending),flush=True)
         if pending:core.worker(provider,pending,SimpleNamespace(run=run),dsn)
         events=latest(run)
+        retries=[]
+        for c in candidates:
+            retry=run/'source-retries'/(c['artwork_id']+'.json')
+            if source_timeout(provider,events.get(c['artwork_id'],{})) and not retry.exists():
+                core.save_new(retry,{'artwork_id':c['artwork_id'],'retry_batches':1,'prior_error':events[c['artwork_id']]['error']})
+                retries.append(c)
+        if retries:
+            print('One bounded source timeout retry:',len(retries),flush=True)
+            core.worker(provider,retries,SimpleNamespace(run=run),dsn)
+            events=latest(run)
         for c in candidates:
             event=events.get(c['artwork_id'],{})
             if event.get('outcome')=='failed':
                 error=event.get('error','')
-                if '403 Client Error' in error or '404 Client Error' in error:
+                if source_unavailable(provider,event):
                     core.event(run,{'provider':provider,'artwork_id':c['artwork_id'],'external_id':c['external_id'],
                       'outcome':'source_unavailable_review','error':error,'note':'Museum endpoint refused or has no current resource; preserved for review, no alternate access route attempted.'})
                 elif error.startswith('Metadata needs review:'):

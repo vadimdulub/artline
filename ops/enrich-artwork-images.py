@@ -11,6 +11,7 @@ import collections
 import concurrent.futures
 import csv
 import hashlib
+import fcntl
 import io
 import json
 import os
@@ -21,6 +22,7 @@ import threading
 import time
 import uuid
 import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from urllib.parse import quote, urlparse
 
 import psycopg
@@ -64,6 +66,30 @@ HOSTS = {'raw.githubusercontent.com', 'api.github.com', 'api.nga.gov',
          'api.smk.dk', 'iip.smk.dk', 'data.rijksmuseum.nl', 'iiif.micr.io'}
 LOCK = threading.Lock()
 COUNTS = collections.Counter()
+# Visually reviewed source-data error: this resource is inscribed "Veduta di
+# Campo Vaccino" and is also the primary image of Met 366647. It does not depict
+# the Colosseum print catalogued as 409630. A different corrected museum image
+# can be considered independently; the artwork itself is retained.
+KNOWN_SOURCE_IMAGE_CONFLICTS = {
+    ('night-joconde', '00000060300', 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Don_Pedro_de_Tol%C3%A8de_baisant_l%E2%80%99%C3%A9p%C3%A9e_d%E2%80%99Henri_IV-Jean_Auguste_Dominque_Ingres-MBA_Lyon_2014.jpeg/960px-Don_Pedro_de_Tol%C3%A8de_baisant_l%E2%80%99%C3%A9p%C3%A9e_d%E2%80%99Henri_IV-Jean_Auguste_Dominque_Ingres-MBA_Lyon_2014.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'),
+    ('night-joconde', '06380000626', 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Beuckelaer_-_La_pourvoyeuse_de_legumes.jpg/960px-Beuckelaer_-_La_pourvoyeuse_de_legumes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'),
+    ('met', '702925', 'https://images.metmuseum.org/CRDImages/dp/web-large/DP853117.jpg'),
+    ('met', '690970', 'https://images.metmuseum.org/CRDImages/dp/web-large/DP853117.jpg'),
+    ('night-commons', 'Q20268024', 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/After_Khorkom.jpg/960px-After_Khorkom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'),
+    ('night-commons', 'Q112312795', 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Vienna_Kaiserliches_Hofmobiliendepot_Elisabeth_of_Austria_F_X_Winterhalter_24042013_10_B.jpg/960px-Vienna_Kaiserliches_Hofmobiliendepot_Elisabeth_of_Austria_F_X_Winterhalter_24042013_10_B.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'),
+    ('night-commons', 'Q110249833', 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Penry_Williams_%281802-1885%29_-_Sgwd_Gwladys%2C_Vale_of_Neath_-_NMW_A_526_-_National_Museum_Cardiff.jpg/960px-Penry_Williams_%281802-1885%29_-_Sgwd_Gwladys%2C_Vale_of_Neath_-_NMW_A_526_-_National_Museum_Cardiff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'),
+    ('night-commons', 'Q105099615', 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Claude_Monet_-_Glycines_W1903_-_Mus%C3%A9e_Marmottan-Monet.jpg/960px-Claude_Monet_-_Glycines_W1903_-_Mus%C3%A9e_Marmottan-Monet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'),
+    ('night-commons', 'Q63952039', 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Claude_Monet_-_Glycines_W1903_-_Mus%C3%A9e_Marmottan-Monet.jpg/960px-Claude_Monet_-_Glycines_W1903_-_Mus%C3%A9e_Marmottan-Monet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'),
+    ('met','409630','https://images.metmuseum.org/CRDImages/dp/web-large/DP260583.jpg'),
+    # The resource shows a frontal figure, while this accession is explicitly
+    # catalogued as a figure seen from behind. Commons donation identifiers
+    # conflict with the poses, so no automatic replacement is authorized.
+    ('met','392795','https://images.metmuseum.org/CRDImages/dp/web-large/DP812688.jpg'),
+}
+
+def validate_source_image_identity(image):
+    if (image.get('provider'),str(image.get('external_id')),image.get('source_image_url')) in KNOWN_SOURCE_IMAGE_CONFLICTS:
+        raise ValueError('Current source image depicts a different artwork; independently reviewed image required')
 
 
 class GcloudCredentials(Credentials):
@@ -97,25 +123,88 @@ def save_new(path, value):
             raise ValueError('Existing evidence differs: ' + str(path))
 
 
+def retry_delay(value, default=60):
+    try:return max(1,float(value))
+    except (TypeError,ValueError):
+        try:return max(1,parsedate_to_datetime(value).timestamp()-time.time())
+        except (TypeError,ValueError,OverflowError):return default
+
+def provider_rate_slot(host,cooldown=None):
+    folder=Path('/Users/vadimdulub/Library/Application Support/Artline/research-rate-limits')
+    folder.mkdir(parents=True,exist_ok=True)
+    path=folder/(hashlib.sha256(host.encode()).hexdigest()+'.lock')
+    while True:
+        with path.open('a+') as f:
+            fcntl.flock(f,fcntl.LOCK_EX);f.seek(0)
+            try:next_at=float(f.read() or 0)
+            except ValueError:next_at=0
+            now_at=time.time()
+            if cooldown is not None:
+                f.seek(0);f.truncate();f.write(str(max(next_at,now_at+cooldown)));f.flush();return
+            wait=next_at-now_at
+            if wait<=0:
+                # Met publishes an 80 requests/second API limit. Use at most
+                # four/second for metadata, retaining any server cooldown.
+                # Image servers and other providers retain their prior pace.
+                interval=0.25 if host=='collectionapi.metmuseum.org' else 1.1
+                f.seek(0);f.truncate();f.write(str(now_at+interval));f.flush();return
+        time.sleep(min(wait,60))
+
+
+def provider_cooldown_seconds(host):
+    """Observe a server cooldown without consuming a request slot or shortening it."""
+    folder = Path.home() / 'Library/Application Support/Artline/research-rate-limits'
+    path = folder / (hashlib.sha256(host.encode()).hexdigest() + '.lock')
+    if not path.exists():
+        return 0
+    with path.open('r') as f:
+        fcntl.flock(f, fcntl.LOCK_SH)
+        try:
+            return max(0, float(f.read() or 0) - time.time())
+        except ValueError:
+            return 0
+
+class SourceCooldown(RuntimeError):
+    def __init__(self, seconds):
+        self.seconds = max(1, int(seconds) + 1)
+        super().__init__('Source requested a temporary download pause')
+
+
 class Fetcher:
     def __init__(self, cache):
         self.cache = cache
         self.session = requests.Session()
-        self.session.headers.update({'User-Agent': 'Artline/1.0 (selected museum open-access study images)',
+        self.session.headers.update({'User-Agent': 'Artline/1.0 (+https://github.com/vadimdulub/artline; selected museum open-access study images)',
                                      'AIC-User-Agent': 'Artline selected public-domain reproductions'})
         self.last = 0
 
     def get(self, url, limit=8_000_000):
+        parsed=urlparse(url)
+        if parsed.hostname in ('commons.wikimedia.org','www.wikidata.org') and parsed.path=='/w/api.php':
+            folder=Path.home()/'Library/Application Support/Artline/research-rate-limits';folder.mkdir(parents=True,exist_ok=True)
+            # Serialize Action API requests across all local campaign workers.
+            # The existing rate slots, maxlag checks and Retry-After still apply.
+            with (folder/(sha(parsed.hostname.encode())+'.inflight.lock')).open('a') as gate:
+                fcntl.flock(gate,fcntl.LOCK_EX)
+                return self._get(url,limit)
+        return self._get(url,limit)
+
+    def _get(self, url, limit=8_000_000):
         if urlparse(url).scheme != 'https' or urlparse(url).hostname not in HOSTS:
             raise ValueError('Unapproved source host')
         for attempt in range(3):
+            provider_rate_slot(urlparse(url).hostname)
             time.sleep(max(0, 1.05 - (time.monotonic() - self.last)))
             self.last = time.monotonic()
             try:
                 response = self.session.get(url, timeout=(15, 45), stream=True, allow_redirects=False)
                 if response.status_code in (429, 502, 503, 504):
+                    pause=retry_delay(response.headers.get('Retry-After')) if response.status_code==429 else min(30,3*2**attempt)
+                    if response.status_code==429:provider_rate_slot(urlparse(url).hostname,cooldown=pause)
                     response.close()
-                    time.sleep(min(30, 3 * 2**attempt))
+                    if response.status_code==429 and pause>60 and getattr(self,'defer_long_cooldowns',False):
+                        raise SourceCooldown(pause)
+                    time.sleep(min(pause,60))
                     continue
                 response.raise_for_status()
                 if response.status_code != 200:
@@ -276,7 +365,7 @@ def image_record(c, fetcher, nga, chicago):
         else:
             # Current SMK records can expose only the museum's primary JPEG.
             url = raw.get('image_native') or raw.get('image_thumbnail') or ''
-            if not re.fullmatch(r'https://api\.smk\.dk/api/v1/thumbnail/[a-f0-9-]{36}\.jpg', url):
+            if not re.fullmatch(r'https://api\.smk\.dk/api/v1/thumbnail/[A-Za-z0-9_-]{1,100}\.(?:jpg|JPG)', url):
                 return None
         rights, label = 'public_domain', 'Public Domain Mark 1.0'
     elif provider == 'rijks':
@@ -397,6 +486,21 @@ def event(run, value):
         COUNTS[value['provider'] + ':' + value['outcome']] += 1
 
 
+def latest_events(run):
+    """Read the current checkpoint, including explicit retry events after failures."""
+    path = run / 'events.jsonl'
+    latest = {}
+    if path.exists():
+        for line in path.read_text().splitlines():
+            try:
+                value = json.loads(line)
+            except ValueError:
+                continue
+            if value.get('artwork_id'):
+                latest[value['artwork_id']] = value
+    return latest
+
+
 class AttachmentDB:
     """Reconnect lost sessions and safely repeat an idempotent attachment."""
     def __init__(self, dsn, target):
@@ -459,8 +563,17 @@ def worker(provider, candidates, args, remote_dsn):
                     if image is None:
                         event(args.run, {**c, 'outcome':'no_explicit_open_image'})
                         continue
+                    validate_source_image_identity(image)
                     # Pinned rights and identity evidence precede the image request.
                     save_new(selected_path, image)
+                    if prepare_only:
+                        cooldown = provider_cooldown_seconds(urlparse(image['source_image_url']).hostname)
+                        if cooldown > 60:
+                            event(args.run, {'provider':provider,'artwork_id':c['artwork_id'],'external_id':c['external_id'],
+                                  'outcome':'source_rate_limited','retry_after_seconds':int(cooldown) + 1,
+                                  'reason':'Respecting the source Retry-After; image URL and rights evidence are preserved for resume'})
+                            continue
+                    fetcher.defer_long_cooldowns = prepare_only
                     original, headers = fetcher.get(image['source_image_url'])
                     if image.get('commons_original_sha1') and hashlib.sha1(original).hexdigest() != image['commons_original_sha1']:
                         raise ValueError('Commons original file checksum mismatch')
@@ -474,6 +587,7 @@ def worker(provider, candidates, args, remote_dsn):
                                  transform='Full-frame proportional resize and JPEG compression; no crop or generated content',
                                  media_id=str(uuid.uuid5(uuid.NAMESPACE_URL, path)))
                     save_new(receipt_path, image)
+                validate_source_image_identity(image)
                 if prepare_only:
                     event(args.run, {'provider':provider,'artwork_id':c['artwork_id'],'external_id':c['external_id'],
                           'outcome':'prepared','path':image['path'],'sha256':image['sha256'],'bytes':image['bytes']})
@@ -496,6 +610,10 @@ def worker(provider, candidates, args, remote_dsn):
                       'outcome':'complete','local':local_result,'cloud':cloud_result,'path':image['path'],
                       'sha256':image['sha256'],'bytes':image['bytes'],'generation':blob.generation})
                 failures = 0
+            except SourceCooldown as error:
+                event(args.run, {'provider':provider,'artwork_id':c['artwork_id'],'external_id':c['external_id'],
+                                'outcome':'source_rate_limited','retry_after_seconds':error.seconds,
+                                'reason':'Source Retry-After retained; resume this selected image after the cooldown'})
             except Exception as error:
                 # Do not include DSNs, authorization headers or credentials in receipts.
                 event(args.run, {'provider':provider,'artwork_id':c['artwork_id'],'external_id':c['external_id'],

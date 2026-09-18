@@ -24,5 +24,18 @@ class CurrentMuseumDate(unittest.TestCase):
         with patch.object(m,'original_record',return_value=None):
             self.assertIsNone(m.reviewed_image_record({'provider':'chicago'},None,{},{}))
 
+    def test_only_known_museum_image_timeouts_are_retryable(self):
+        event={'outcome':'failed','error':"HTTPSConnectionPool(host='www.artic.edu', port=443): Read timed out. (read timeout=45)"}
+        self.assertTrue(m.source_timeout('chicago',event))
+        event['error']=event['error'].replace('www.artic.edu','storage.googleapis.com')
+        self.assertFalse(m.source_timeout('chicago',event))
+
+    def test_storage_failures_cannot_be_held_as_missing_source_images(self):
+        for host in ['storage.googleapis.com','www.artic.edu.example.com']:
+            event={'outcome':'failed','error':f'403 Client Error: Forbidden for url: https://{host}/image.jpg'}
+            self.assertFalse(m.source_unavailable('chicago',event))
+        event['error']='403 Client Error: Forbidden for url: https://www.artic.edu/iiif/2/image'
+        self.assertTrue(m.source_unavailable('chicago',event))
+
 
 if __name__=='__main__':unittest.main()

@@ -69,6 +69,16 @@ def main():
         elif provider == 'smk':
             ends = [int(d['end'][:4]) for d in raw.get('production_date', [])
                     if d.get('end') and d['end'][:4].isdigit()]
+        elif provider == 'night-fng':
+            obj = raw.get('object', {})
+            ends = [obj.get('yearTo') or obj.get('yearFrom')]
+        elif provider == 'night-commons':
+            ends = [receipt.get('creation_year_end')]
+        elif provider == 'night-nga-commons':
+            value = raw.get('nga_object', {}).get('endyear', '')
+            ends = [int(value)] if str(value).isdigit() else []
+        elif provider in ('night-rijks', 'night-saam'):
+            ends = [receipt.get('scope_evidence', {}).get('source_year_end')]
         known_ends = [y for y in ends if isinstance(y, int) and y != 0]
         if known_ends:
             fresh_dates_checked += 1
@@ -115,9 +125,12 @@ def main():
             for detail in details:
                 seen.add(detail['media_id'])
                 receipt = receipts[detail['media_id']]
+                # New receipts preserve museum/photographer credits separately
+                # from the artwork's attributed artist. Older receipts use artist.
+                expected = {**receipt, 'artist': receipt.get('creator_credit', receipt['artist'])}
                 mismatches = [field for field in ('path','sha256','bytes','width','height','rights_status',
                     'license_label','policy_url','page','artist','source_image_url','external_id')
-                    if detail[field] != receipt[field]]
+                    if detail[field] != expected[field]]
                 if detail['source_checksum'] != module.sha(module.encode(receipt['raw'])):
                     mismatches.append('source_checksum')
                 if detail['evidence_policy_url'] != receipt['policy_url']:

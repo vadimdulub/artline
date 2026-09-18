@@ -115,6 +115,11 @@ class ImageEnrichmentTests(unittest.TestCase):
                'rights': enrichment.POLICIES['smk'],
                'image_native': 'https://api.smk.dk/api/v1/thumbnail/12345678-1234-1234-1234-123456789abc.jpg'}
         self.assertEqual(enrichment.image_record(self.candidate('smk'), Metadata({'items': [raw]}), {}, {})['source_image_url'], raw['image_native'])
+        for name in ('KKS18655.jpg', 'KMS_123-4.JPG'):
+            url = 'https://api.smk.dk/api/v1/thumbnail/' + name
+            self.assertEqual(enrichment.image_record(self.candidate('smk'), Metadata({'items': [{**raw, 'image_native': url}]}), {}, {})['source_image_url'], url)
+        for name in ('../image.jpg', 'image.jpg?redirect=elsewhere', 'image.png'):
+            self.assertIsNone(enrichment.image_record(self.candidate('smk'), Metadata({'items': [{**raw, 'image_native': 'https://api.smk.dk/api/v1/thumbnail/' + name}]}), {}, {}))
         for override in ({'public_domain': False}, {'rights': ''}, {'image_native': 'https://unrelated.example/image.jpg'}, {'object_number': '124'}):
             self.assertIsNone(enrichment.image_record(self.candidate('smk'), Metadata({'items': [{**raw, **override}]}), {}, {}))
 
