@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/seo";
+export function generateMetadata() { return pageMetadata("About Artline & sources", "Learn how Artline connects art and history, documents museum holdings, reviews sources and distinguishes research records from published content.", "/about"); }
 export default function AboutPage() {
   return <main id="main-content" className="admin-page prose-page">
     <h1>A personal study atlas</h1>

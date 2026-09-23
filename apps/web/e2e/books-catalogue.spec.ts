@@ -2,12 +2,12 @@ import { expect, test } from "@playwright/test";
 import type { BooksResponse } from "../lib/books";
 
 // Read-only checks against the local research preview, without mocked books or
-// database fixtures. Requires the actual 10,000-book import and the current API.
+// database fixtures. Requires the actual book catalogue and the current API.
 test("real book catalogue is bounded and creator details open from the book index", async ({ page }, testInfo) => {
   const firstResponse = await page.request.get("/api/backend/v1/books?limit=3");
   expect(firstResponse.ok()).toBe(true);
   const first = await firstResponse.json() as BooksResponse;
-  expect(first.total).toBe(8685);
+  expect(first.total).toBeGreaterThanOrEqual(8685);
   expect(first.items).toHaveLength(3);
   expect(first.mode).toBe("density");
   const next = await (await page.request.get(`/api/backend/v1/books?limit=3&after=${encodeURIComponent(first.nextCursor)}`)).json() as BooksResponse;
@@ -17,7 +17,7 @@ test("real book catalogue is bounded and creator details open from the book inde
   await page.goto("/books?top100=false");
   await expect(page.getByRole("group", { name: "Explore books by period" })).toBeVisible();
   await expect(page.locator('ul[aria-label="Book index"] > li')).toHaveCount(100);
-  await expect(page.locator(".timeline-counter")).toContainText("8,685 books");
+  await expect(page.locator(".timeline-counter")).toContainText(`${first.total.toLocaleString("en-US")} books`);
   await expect(page.locator("h1")).not.toContainText(/\bCE\b/);
   await page.screenshot({ path: testInfo.outputPath("live-books-overview.png") });
   const firstID = await page.locator('ul[aria-label="Book index"] > li').first().getAttribute("id");
@@ -36,7 +36,8 @@ test("real book catalogue is bounded and creator details open from the book inde
   await page.keyboard.press("Escape");
   await expect(drawer).toHaveCount(0);
   await page.goto("/books?collection=Undated");
-  await expect(page.locator(".timeline-counter")).toContainText("100 books");
+  const highlights = await (await page.request.get("/api/backend/v1/books?top100=true")).json() as BooksResponse;
+  await expect(page.locator(".timeline-counter")).toContainText(`${highlights.total.toLocaleString("en-US")} books`);
   await expect(page.locator('summary[aria-label^="Collections:"]')).toHaveCount(0);
   expect(await page.locator('ul[aria-label="Book index"] > li').count()).toBeGreaterThan(0);
 });
@@ -56,8 +57,8 @@ test("real author choices search remotely and BCE navigation retains the shared 
   expect(new URL(page.url()).searchParams.get("author")).toBe("Jean-Paul Sartre");
   await page.getByRole("button", { name: "Reset view", exact: true }).click();
   await page.getByRole("button", { name: "Filters", exact: true }).click();
-  await expect(page.getByRole("checkbox", { name: "Top 100 books", exact: true })).toBeChecked();
-  await page.getByRole("checkbox", { name: "Top 100 books", exact: true }).uncheck();
+  await expect(page.getByRole("checkbox", { name: "Book highlights", exact: true })).toBeChecked();
+  await page.getByRole("checkbox", { name: "Book highlights", exact: true }).uncheck();
   await expect(page.getByRole("group", { name: "Explore books by period" })).toBeVisible();
   await page.getByLabel("Book end year").fill("-1");
   await page.getByLabel("Book end year").press("Enter");

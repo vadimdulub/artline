@@ -71,7 +71,7 @@ for (const route of ["/books", "/", "/events", "/all"]) {
     await from.fill("1850"); await from.press("Tab"); await to.press("Tab");
     await expect(page).toHaveURL(/start=1850&end=1900/);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
-    const api = route === "/all" ? "/api/backend/v1/atlas?selection=true&type=book&start=1850&end=1900" : route === "/" ? "/api/backend/v1/timeline?popular=true&start=1850&end=1900" : `/api/backend/v1${route}?top100=true&start=1850&end=1900`;
+    const api = route === "/all" ? "/api/backend/v1/atlas?selection=true&type=book&start=1850&end=1900&highlights=false" : route === "/" ? "/api/backend/v1/timeline?popular=true&start=1850&end=1900" : `/api/backend/v1${route}?top100=true&start=1850&end=1900`;
     const response = await page.request.get(api);
     expect(response.ok()).toBe(true);
     const data = await response.json();
@@ -93,12 +93,12 @@ test("Books rejects year zero and accepts a BCE-to-modern draft", async ({ page 
   await expect(page.locator(".time-title")).toContainText("BCE");
 });
 
-test("touch dragging previews the year range and cancellation restores it", async ({ browser }) => {
-  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+test("touch dragging previews the year range and cancellation restores it", async ({ browser, baseURL }) => {
+  const context = await browser.newContext({ baseURL, viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   const touch = await context.newCDPSession(page);
   for (const route of ["/books", "/", "/events", "/all"]) {
-    await page.goto(`http://localhost:3000${route}?${route === "/all" ? "selection=true&type=book&" : ""}start=1800&end=1801`);
+    await page.goto(`${route}?${route === "/all" ? "selection=true&type=book&" : ""}start=1800&end=1801`);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
     await page.locator(".range-track").scrollIntoViewIfNeeded();
     for (const commit of [false, true]) {

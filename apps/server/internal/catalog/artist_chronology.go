@@ -7,17 +7,21 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"strings"
 
 	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 var ErrChronologyFilter = errors.New("invalid artwork chronology filter")
 
 type ArtistWorksFilter struct {
-	Year    *int
-	Undated bool
-	Limit   int
-	Cursor  string
+	Year                  *int
+	Undated               bool
+	Limit                 int
+	Cursor                string
+	ImageOnly             bool
+	NeighborOf, Direction string
 }
 type ArtworkYear struct {
 	Year  int `json:"year"`
@@ -92,6 +96,12 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 	if f.Limit < 1 || f.Limit > 60 || len(f.Cursor) > 2048 || (f.Undated && f.Year != nil) || (f.Year != nil && (*f.Year < -10000 || *f.Year > 3000)) {
 		return out, ErrChronologyFilter
 	}
+	if f.NeighborOf != "" || f.Direction != "" {
+		var neighborID pgtype.UUID
+		if neighborID.Scan(f.NeighborOf) != nil || !neighborID.Valid || f.Cursor != "" || f.Limit != 1 || (f.Direction != "previous" && f.Direction != "next") {
+			return out, ErrChronologyFilter
+		}
+	}
 	id, err := r.chronologyArtistID(ctx, slug, preview)
 	if err != nil {
 		return out, err
@@ -99,7 +109,7 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 	if err = r.db.QueryRow(ctx, `SELECT timeline_start_year,timeline_end_year FROM artists WHERE id=$1`, id).Scan(&out.RangeStart, &out.RangeEnd); err != nil {
 		return out, err
 	}
-	scopeData, _ := json.Marshal([]any{id, f.Year, f.Undated, f.Limit, preview})
+	scopeData, _ := json.Marshal([]any{id, f.Year, f.Undated, f.Limit, preview, f.ImageOnly})
 	scope := fmt.Sprintf("%x", sha256.Sum256(scopeData))[:24]
 	var cursor artworkCursor
 	if f.Cursor != "" {
@@ -108,7 +118,11 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 			return out, ErrChronologyFilter
 		}
 	}
-	rows, err := r.db.Query(ctx, artistWorksCTE+`SELECT chronology_year,count(*) FROM painter_works GROUP BY chronology_year ORDER BY chronology_year NULLS LAST`, preview, id)
+	cte := artistWorksCTE
+	if f.ImageOnly {
+		cte = strings.Replace(cte, "WHERE aw.status<>'archived'", `WHERE EXISTS(SELECT 1 FROM media_assets image WHERE image.id=aw.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$') AND aw.status<>'archived'`, 1)
+	}
+	rows, err := r.db.Query(ctx, cte+`SELECT chronology_year,count(*) FROM painter_works GROUP BY chronology_year ORDER BY chronology_year NULLS LAST`, preview, id)
 	if err != nil {
 		return out, err
 	}
@@ -137,7 +151,32 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 	if err = rows.Err(); err != nil {
 		return out, err
 	}
-	rows, err = r.db.Query(ctx, artistWorksPageQuery, preview, id, f.Year, f.Undated, f.Cursor, cursor.Year, cursor.Title, cursor.ID, f.Limit+1, cursor.Order)
+	pageQuery := strings.Replace(artistWorksPageQuery, artistWorksCTE, cte, 1)
+	pageLimit := f.Limit + 1
+	if f.NeighborOf != "" {
+		// The anchor must match the active creator, date and image filters.
+		anchor, e := r.db.Query(ctx, cte+`SELECT chronology_year,coalesce(representative_order,2147483647),lower(title),id::text FROM painter_works WHERE id=$3 AND ($4::int IS NULL OR chronology_year=$4) AND (NOT $5 OR chronology_year IS NULL)`, preview, id, f.NeighborOf, f.Year, f.Undated)
+		if e != nil {
+			return out, e
+		}
+		found := anchor.Next()
+		if found {
+			e = anchor.Scan(&cursor.Year, &cursor.Order, &cursor.Title, &cursor.ID)
+		} else {
+			e = anchor.Err()
+		}
+		anchor.Close()
+		if e != nil || !found {
+			return out, e
+		}
+		f.Cursor = "neighbor"
+		pageLimit = 1
+		if f.Direction == "previous" {
+			pageQuery = strings.Replace(pageQuery, "id::text)>", "id::text)<", 1)
+			pageQuery = strings.Replace(pageQuery, "ORDER BY chronology_year NULLS LAST,coalesce(representative_order,2147483647),lower(title),id LIMIT", "ORDER BY chronology_year DESC NULLS FIRST,coalesce(representative_order,2147483647) DESC,lower(title) DESC,id DESC LIMIT", 1)
+		}
+	}
+	rows, err = r.db.Query(ctx, pageQuery, preview, id, f.Year, f.Undated, f.Cursor, cursor.Year, cursor.Title, cursor.ID, pageLimit, cursor.Order)
 	if err != nil {
 		return out, err
 	}
@@ -219,7 +258,7 @@ func (r *Repository) enrichChronologyPage(ctx context.Context, works []Artwork, 
 		byID[w.ID] = i
 	}
 	rows, err := r.db.Query(ctx, `SELECT aw.id::text,jsonb_build_object(
- 'media_url',CASE WHEN ma.verified_at IS NOT NULL AND ma.rights_status IN ('public_domain','cc0','cc_by','cc_by_sa','licensed') AND nullif(trim(ma.alt_text),'') IS NOT NULL THEN ma.storage_path END,
+ 'media_url',ma.storage_path,
  'alt_text',ma.alt_text,'rights_status',ma.rights_status,'attribution_text',ma.attribution_text,
  'source_page_url',ma.source_page_url,'license_label',ma.license_label,'license_url',ma.license_url)
  FROM artworks aw LEFT JOIN media_assets ma ON ma.id=aw.primary_media_id WHERE aw.id=ANY($1::uuid[])`, ids)

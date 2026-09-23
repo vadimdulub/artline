@@ -1,13 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 // Real headless Chrome and real, read-only catalogue responses.
-for (const [route, start, end] of [["/books",1500,1800],["/",1300,1600],["/events",1500,1800],["/all?type=book&selection=true",1300,1600]] as const) {
-  test(`${route} moves the selection while the full chart stays fixed`, async ({page}) => {
+for (const [route, start, end] of [["/books",1500,1800],["/",1300,1600],["/events",1500,1800]] as const) {
+  test(`${route} previews a fixed-width range and updates the chart on release`, async ({page}) => {
     await page.goto(`${route}${route.includes("?")?"&":"?"}start=${start}&end=${end}`);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy","false");
     const tickPositions=()=>page.locator(".tick-row > span").evaluateAll(nodes=>nodes.map(node=>({label:node.textContent,left:(node as HTMLElement).style.left})));
-    const marks=()=>page.locator(".timeline-mark").evaluateAll(nodes=>nodes.map(node=>({label:node.getAttribute("aria-label"),left:(node as HTMLElement).style.left,width:(node as HTMLElement).style.width})));
-    const initialTicks=await tickPositions(),initialMarks=await marks();
+    const initialTicks=await tickPositions();
     const band=page.getByRole("button",{name:"Move selected time range",exact:true});
     await band.scrollIntoViewIfNeeded();
     const before=(await band.boundingBox())!, track=(await page.locator(".range-track").boundingBox())!;
@@ -16,6 +15,7 @@ for (const [route, start, end] of [["/books",1500,1800],["/",1300,1600],["/event
     for(const delta of [.04,.08,.12]) {
       await page.mouse.move(x+track.width*delta,y,{steps:5});
       expect(page.url()).toBe(url);
+      expect(await tickPositions()).toEqual(initialTicks);
       const moved=(await band.boundingBox())!;
       expect(Math.abs(moved.width-before.width)).toBeLessThan(1);
       expect(Math.abs(moved.x-before.x-track.width*delta)).toBeLessThan(1);
@@ -24,14 +24,11 @@ for (const [route, start, end] of [["/books",1500,1800],["/",1300,1600],["/event
     await expect.poll(()=>page.url()).not.toBe(url);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy","false");
     expect(Math.abs((await band.boundingBox())!.width-before.width)).toBeLessThan(track.width*.003);
-    expect(await tickPositions()).toEqual(initialTicks);
-    const matching=(await marks()).filter(mark=>initialMarks.some(before=>before.label===mark.label));
-    expect(matching.length).toBeGreaterThan(0);
-    for(const mark of matching)expect(mark).toEqual(initialMarks.find(before=>before.label===mark.label));
-    const selection=page.locator(".timeline-selected-years");
-    await expect(selection).toHaveCount(1);
-    // Moving the selection changes filtered records, never the full-axis coordinates.
     const fields=page.locator(".year-inputs input");
+    const ticks = await tickPositions();
+    expect(ticks[0]).toEqual({ label: await fields.first().inputValue(), left: "0%" });
+    expect(ticks.at(-1)).toEqual({ label: await fields.last().inputValue(), left: "100%" });
+    await expect(page.locator(".timeline-selected-years")).toHaveCount(0);
     expect(Number(await fields.first().inputValue())).toBeGreaterThan(start);
     await band.focus(); await band.press("ArrowLeft");
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy","false");
@@ -72,7 +69,7 @@ test("All countries and continents persist and constrain Add counts",async({page
   await page.getByRole("button",{name:"+ Add",exact:true}).click();
   const add=page.getByRole("dialog",{name:"Add a layer"});
   await add.getByRole("button",{name:"Books",exact:true}).click();
-  const expected=await (await page.request.get("/api/backend/v1/atlas?type=book&start=1800&end=1950&continent=europe&country=france&book_top100=true&limit=1")).json();
+  const expected=await (await page.request.get("/api/backend/v1/atlas?selection=false&type=book&start=1800&end=1950&continent=europe&country=france&highlights=true&book_top100=true&limit=1")).json();
   await expect(add.locator(".atlas-layer-action [role=status]")).toHaveText(`${expected.total.toLocaleString("en-GB")} matching entries`);
   await add.getByRole("button",{name:"Update books layer",exact:true}).click();
   await expect(page).toHaveURL(/country=france/);

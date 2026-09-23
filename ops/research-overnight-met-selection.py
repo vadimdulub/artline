@@ -34,8 +34,18 @@ def verify(lead,o):
     if not o.get('accessionNumber') or o['accessionNumber']!=csv['Object Number']:raise ValueError('Current accession differs')
     if o.get('artistPrefix','').strip() or o.get('artistSuffix','').strip():raise ValueError('Qualified attribution requires separate support')
     if o.get('artistWikidata_URL','').rstrip('/').rsplit('/',1)[-1]!=artist['qid']:raise ValueError('Current artist authority differs')
-    makers=[c for c in o.get('constituents',[]) or [] if c.get('role') in ('Artist','Painter','Maker')]
+    # Exact museum creator roles are work-type specific. Publishing alone is
+    # not authorship, and an original designer is not automatically the maker
+    # of a reproductive print. Multiple direct makers remain held.
+    maker_roles={'Artist','Painter','Maker'}
+    if lead['work_type']=='drawing':maker_roles.update(('Draftsman','Draughtsman'))
+    if lead['work_type']=='print':maker_roles.update(('Etcher','Artist and publisher'))
+    makers=[c for c in o.get('constituents',[]) or [] if c.get('role') in maker_roles]
     if len(makers)!=1 or makers[0].get('constituentWikidata_URL','').rstrip('/').rsplit('/',1)[-1]!=artist['qid']:raise ValueError('Unique primary maker authority not confirmed')
+    for source_key,local_key in (('artistBeginDate','birth_year'),('artistEndDate','death_year')):
+        value=str(o.get(source_key) or '').strip()
+        if re.fullmatch(r'\d{4}',value) and artist.get(local_key) is not None and int(value)!=artist[local_key]:
+            raise ValueError('Current museum creator life date conflicts with catalogue authority')
     if re.search(r'\b(?:loan|lent)\b',o.get('creditLine',''),re.I):raise ValueError('Loan holding requires fresh individual evidence')
     if 'Metropolitan Museum of Art' not in o.get('repository',''):raise ValueError('Museum repository not confirmed')
     page=o.get('objectURL','');parts=urlparse(page)

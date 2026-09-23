@@ -30,8 +30,12 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 	}
 	defer db.Close()
 	repo := NewRepository(db)
-	var expectedTotal, expectedWomen int
-	if err = db.QueryRow(ctx, `SELECT count(*),count(*) FILTER(WHERE cardinality(d.woman_author_ids)>0) FROM book_records b LEFT JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum WHERE b.status<>'archived' AND (b.end_year<=2000 OR b.start_year IS NULL)`).Scan(&expectedTotal, &expectedWomen); err != nil {
+	var expectedTotal, expectedWomen, expectedHighlights, expectedWomenHighlights, expectedWomenEnglishFrench int
+	if err = db.QueryRow(ctx, `SELECT count(*),count(*) FILTER(WHERE cardinality(d.woman_author_ids)>0),
+ count(*) FILTER(WHERE d.top100),
+ count(*) FILTER(WHERE d.top100 AND cardinality(d.woman_author_ids)>0),
+ count(*) FILTER(WHERE d.top100 AND cardinality(d.woman_author_ids)>0 AND d.languages && ARRAY['Q1860','Q150'])
+ FROM book_records b LEFT JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum WHERE b.status<>'archived' AND (b.end_year<=2000 OR b.start_year IS NULL)`).Scan(&expectedTotal, &expectedWomen, &expectedHighlights, &expectedWomenHighlights, &expectedWomenEnglishFrench); err != nil {
 		t.Fatal(err)
 	}
 	var laterBook string
@@ -139,9 +143,9 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 			total  int
 		}{
 			{"women", Filter{Women: true}, expectedWomen},
-			{"top100", Filter{Top100: true}, 100},
-			{"women in top100", Filter{Women: true, Top100: true}, 19},
-			{"multiple languages are alternatives", Filter{Women: true, Top100: true, Languages: []string{"Q1860", "Q150"}}, 10},
+			{"expanded highlights", Filter{Top100: true}, expectedHighlights},
+			{"women in highlights", Filter{Women: true, Top100: true}, expectedWomenHighlights},
+			{"multiple languages are alternatives", Filter{Women: true, Top100: true, Languages: []string{"Q1860", "Q150"}}, expectedWomenEnglishFrench},
 			{"different facets intersect", Filter{Women: true, Top100: true, Languages: []string{"Q150"}, Countries: []string{"Q142"}, Regions: []string{"western-europe"}}, 1},
 			{"incompatible region within Top 100", Filter{Top100: true, Countries: []string{"Q142"}, Regions: []string{"eastern-asia"}}, 0},
 			{"unknown choice", Filter{Languages: []string{"missing-language"}}, 0},

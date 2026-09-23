@@ -5,7 +5,7 @@ import { researchPreviewEnabled, researchPreviewToken } from "./research-preview
 export { researchPreviewEnabled, researchPreviewToken } from "./research-preview";
 
 export const getArtist = cache(async (slug: string): Promise<ArtistDetail | null> => {
-  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return null;
+  if (slug.length > 100 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug)) return null;
   const token = researchPreviewToken();
   const url = new URL(`/api/v1/artists/${encodeURIComponent(slug)}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
   if (researchPreviewEnabled()) url.searchParams.set("preview", "1");
@@ -27,7 +27,7 @@ export const getMuseum = cache(async (slug: string): Promise<Museum | null> => {
 });
 
 export const getArtistArtwork = cache(async (slug: string, id: string): Promise<Artwork | null> => {
-  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || !/^[a-f0-9-]{36}$/i.test(id)) return null;
+  if (slug.length > 100 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug) || !/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(id)) return null;
   const token = researchPreviewToken();
   const url = new URL(`/api/v1/artists/${encodeURIComponent(slug)}/works/${id}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
   if (researchPreviewEnabled()) url.searchParams.set("preview", "1");

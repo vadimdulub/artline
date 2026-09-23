@@ -10,38 +10,57 @@ import (
 )
 
 type Creator struct {
-	ID             string  `json:"id"`
-	Name           string  `json:"name"`
-	Description    string  `json:"description"`
-	Birth          *string `json:"birth"`
-	Death          *string `json:"death"`
-	SourceURL      string  `json:"sourceUrl"`
-	SourceRevision *int64  `json:"sourceRevision"`
-	Kind           string  `json:"kind"`
-	Credit         string  `json:"credit"`
-}
-type Book struct {
 	ID             string    `json:"id"`
-	SourceID       string    `json:"sourceId"`
-	Title          string    `json:"title"`
-	Author         string    `json:"author"`
-	Years          string    `json:"years"`
-	Era            string    `json:"era"`
-	Theme          string    `json:"theme"`
+	Name           string    `json:"name"`
 	Description    string    `json:"description"`
-	CoverTone      string    `json:"coverTone"`
-	CoverInk       string    `json:"coverInk"`
-	CoverMark      string    `json:"coverMark"`
-	Cover          *Cover    `json:"cover,omitempty"`
-	StartYear      *int      `json:"startYear"`
-	EndYear        *int      `json:"endYear"`
-	Approximate    bool      `json:"approximate"`
-	Creators       []Creator `json:"creators"`
+	Birth          *string   `json:"birth"`
+	Death          *string   `json:"death"`
 	SourceURL      string    `json:"sourceUrl"`
 	SourceRevision *int64    `json:"sourceRevision"`
-	SelectionBasis string    `json:"selectionBasis"`
-	DateBasis      string    `json:"dateBasis"`
-	Status         string    `json:"status"`
+	Kind           string    `json:"kind"`
+	Credit         string    `json:"credit"`
+	Overview       *Overview `json:"overview,omitempty"`
+}
+
+// Overview is a retained, attributed excerpt. Identity and source review occur
+// during the explicit catalogue update; API reads never fetch Wikipedia.
+type Overview struct {
+	Paragraphs  []string `json:"paragraphs"`
+	SourceURL   string   `json:"sourceUrl"`
+	SourceTitle string   `json:"sourceTitle"`
+	Revision    int64    `json:"revision"`
+	Credit      string   `json:"credit"`
+	LicenseURL  string   `json:"licenseUrl"`
+}
+type DateSource struct {
+	Name string `json:"name"`
+	URL  string `json:"url"`
+}
+
+type Book struct {
+	ID             string       `json:"id"`
+	SourceID       string       `json:"sourceId"`
+	Title          string       `json:"title"`
+	Author         string       `json:"author"`
+	Years          string       `json:"years"`
+	Era            string       `json:"era"`
+	Theme          string       `json:"theme"`
+	Description    string       `json:"description"`
+	Overview       *Overview    `json:"overview,omitempty"`
+	CoverTone      string       `json:"coverTone"`
+	CoverInk       string       `json:"coverInk"`
+	CoverMark      string       `json:"coverMark"`
+	Cover          *Cover       `json:"cover,omitempty"`
+	StartYear      *int         `json:"startYear"`
+	EndYear        *int         `json:"endYear"`
+	Approximate    bool         `json:"approximate"`
+	Creators       []Creator    `json:"creators"`
+	SourceURL      string       `json:"sourceUrl"`
+	SourceRevision *int64       `json:"sourceRevision"`
+	SelectionBasis string       `json:"selectionBasis"`
+	DateBasis      string       `json:"dateBasis"`
+	DateSources    []DateSource `json:"dateSources,omitempty"`
+	Status         string       `json:"status"`
 }
 type Range struct {
 	Start int `json:"start"`
@@ -111,6 +130,15 @@ var Bounds = Range{-5000, 2000}
 var ErrNotFound = errors.New("book not found")
 var ErrUnavailable = errors.New("book catalogue unavailable")
 
+// Highlights are a small editorial selection. Keep their complete timeline in
+// one bounded response; larger catalogues retain the smaller page/diagram limit.
+func (f Filter) MaxPageSize() int {
+	if f.Top100 {
+		return 200
+	}
+	return 100
+}
+
 func (f Filter) Validate() error {
 	if f.View != "" && f.View != "books" && f.View != "authors" {
 		return fmt.Errorf("choose view=books or view=authors")
@@ -121,8 +149,8 @@ func (f Filter) Validate() error {
 	if len(f.Query) > 200 || len(f.After) > 512 {
 		return fmt.Errorf("book search or cursor is too long")
 	}
-	if f.Limit < 1 || f.Limit > 100 {
-		return fmt.Errorf("limit must be from 1 to 100")
+	if f.Limit < 1 || f.Limit > f.MaxPageSize() {
+		return fmt.Errorf("limit must be from 1 to %d", f.MaxPageSize())
 	}
 	for _, choices := range [][]string{f.Authors, f.Languages, f.Countries, f.Regions} {
 		if len(choices) > 32 {

@@ -60,10 +60,10 @@ export function MuseumDrawer({ museum, workID, token, revision, close, saved, re
     <div className="dialog-toolbar"><span>{busy ? "Saving selection…" : "Artwork record"}</span><button type="button" className="close-painter" disabled={busy} autoFocus aria-label="Close artwork details" onClick={dismiss}>×</button></div>
     <p role="status" className={styles.saveStatus}>{saveMessage}</p>
     {error ? <div className={styles.empty}><h2>Artwork unavailable</h2><p>{error}</p><button onClick={() => setRetry(value => value + 1)}>Try again</button></div> : !work ? <p className={styles.loading}>Opening artwork record…</p> : <div className={styles.drawerContent}>
-      <p className={styles.place}>{work.artists.length ? work.artists.map((artist, index) => <span key={`${artist.id}-${artist.role}`}>{index > 0 && ", "}<Link href={`/artists/${artist.slug}`}>{artist.name}</Link>{artist.role !== "primary" && ` (${artist.role.replaceAll("_", " ")})`}</span>) : work.unlinked_creator_label ?? "Creator not recorded"}</p>
+      <p className="artwork-creator">{work.artists.length ? work.artists.map((artist, index) => <span key={`${artist.id}-${artist.role}`}>{index > 0 && ", "}<Link href={`/artists/${artist.slug}`}>{artist.name}</Link>{artist.role !== "primary" && ` (${artist.role.replaceAll("_", " ")})`}</span>) : work.unlinked_creator_label ?? "Creator not recorded"}</p>
+      <ArtworkViewer key={work.id} work={work} creator={work.artists.length ? work.artists.map(artist => `${artist.name}${artist.role !== "primary" ? ` (${artist.role.replaceAll("_", " ")})` : ""}`).join(", ") : work.unlinked_creator_label} />
       <h2>{work.title}</h2><p className={styles.artworkDate}>{work.date_display}</p>
       <div className={styles.badges}>{work.selections.map(selection => <span key={selection.kind}>{selection.kind === "owner" ? "My must-see work" : "Museum highlight"}</span>)}</div>
-      <ArtworkViewer key={work.id} work={work} />
       <ShareWorkLink path={`/museums/${museum.slug}?work=${work.id}`} />
       <div className="artwork-details"><dl>
         <div><dt>Dating</dt><dd>{work.date_precision.replaceAll("_", " ")}</dd></div>

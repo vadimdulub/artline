@@ -15,6 +15,7 @@ spec = importlib.util.spec_from_file_location('met_research', ROOT/'ops/research
 research = importlib.util.module_from_spec(spec); spec.loader.exec_module(research)
 core = research.core
 SOURCE = 'overnight-met-selected-primary-20260915'
+BACKUP_ROOT = Path.home()/'Library/Application Support/Artline/backups/overnight-images-20260915'
 SCHEMES = ['met-object', 'european-met-the-met-object']
 
 def norm(value):
@@ -102,7 +103,7 @@ def build(run, reference, limit):
     for c in selected:
         for key in ('target_artist_id','already_present'):c.pop(key,None)
         c['target_ids']={'local':c['artwork_id']}
-    backup=Path.home()/'Library/Application Support/Artline/backups/overnight-images-20260915'/run.name
+    backup=BACKUP_ROOT/run.name
     core.save_new(backup/('local-selection-preimages-'+core.sha(core.encode(state))[:16]+'.json'),state)
     data={'at':core.now(),'records':selected,'held':held,'source_root':str(reference.relative_to(ROOT) if reference.is_absolute() else reference),
           'policy':'Fresh official Met records; museum ID, creator authority, dates, type, ownership and explicit CC0 eligibility verified. New records remain in review. Shared artwork Wikidata references are evidence only, never invented physical-object keys.'}
@@ -110,11 +111,11 @@ def build(run, reference, limit):
     print('Met plan',len(selected),'popular',sum(c['popular'] for c in selected),'types',dict(collections.Counter(c['work_type'] for c in selected)),'held',len(held),flush=True)
     return data
 
-def apply(run,target,limit):
+def apply(run,target,limit,emit_image_candidates=True):
     data=json.loads((run/'plan.json').read_text());assert core.sha((run/'plan.json').read_bytes())==json.loads((run/'plan-manifest.json').read_text())['sha256']
     records=data['records'][:limit] if limit else data['records'];dsn='postgres://localhost/artline' if target=='local' else core.cloud_dsn()
     if not records:raise SystemExit('No selected records')
-    out=[];backup=Path.home()/'Library/Application Support/Artline/backups/overnight-images-20260915'/run.name
+    out=[];backup=BACKUP_ROOT/run.name
     with psycopg.connect(dsn,autocommit=True,row_factory=dict_row) as db:
         state=snapshot(db,records);selected,held=conflicts(records,state)
         preflight=backup/(target+'-import-preflight.json')
@@ -153,7 +154,7 @@ def apply(run,target,limit):
         path=run/(target+'-metadata-verified'+('-canary' if limit else '')+'.json')
         if not path.exists():core.save_new(path,{'at':core.now(),'counts':verified,'records':out})
         print(target,'verified',verified,flush=True)
-    if target=='local' and not limit:
+    if target=='local' and not limit and emit_image_candidates:
         candidates=[];reference=ROOT/data['source_root']
         for c in records:
             image_candidate={k:c[k] for k in ('artwork_id','slug','title','date_display','creation_year_start','creation_year_end','work_type','scheme','external_id','artist','popular','provider','page','target_ids')}

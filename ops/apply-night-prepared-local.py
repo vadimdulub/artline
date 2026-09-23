@@ -18,6 +18,7 @@ ADAPTERS['popular-staedel']='popular-staedel-images.py'
 ADAPTERS['popular-native-photo']='popular-native-photo-images.py'
 ADAPTERS['popular-reims']='popular-reims-images.py'
 ADAPTERS['popular-reims-donation']='popular-reims-donations.py'
+ADAPTERS['popular-chicago-commons']='popular-chicago-commons.py'
 
 def reviewed_image_allowed(image,reviewed):
     if reviewed is None:return True

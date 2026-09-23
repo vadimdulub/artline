@@ -1,6 +1,6 @@
 import type { TimelineArtist } from "./types";
 
-// Fixed compression keeps the same painter-year spacing while the view slides.
+// Fixed compression anchors the overview and range slider as the selection moves.
 export function compressedBefore1400(start: number, end: number): boolean { return start < 1400 && end > 1400; }
 const artistCoordinate=(year:number)=>year<=1400?1400+(year-1400)*6/17:year;
 const artistCoordinateYear=(value:number)=>Math.round(value<=1400?1400+(value-1400)*17/6:value);
@@ -35,6 +35,7 @@ export function positionArtists(
   rangeStart: number,
   rangeEnd: number,
   viewportWidth = 1200,
+  position = (year: number) => artworkYearPosition(year, rangeStart, rangeEnd),
 ): PositionedArtist[] {
   const pixels = Math.max(1, viewportWidth);
   const lanes: Array<Array<[number, number]>> = [];
@@ -45,8 +46,8 @@ export function positionArtists(
     .map((artist) => {
       const visibleStart = Math.max(rangeStart, artist.start_year);
       const visibleEnd = Math.min(rangeEnd, artist.end_year);
-      const rawX = artworkYearPosition(visibleStart, rangeStart, rangeEnd) / 100 * pixels;
-      const markWidth = Math.min(pixels, Math.max(8, (artworkYearPosition(visibleEnd, rangeStart, rangeEnd) - artworkYearPosition(visibleStart, rangeStart, rangeEnd)) / 100 * pixels));
+      const rawX = position(visibleStart) / 100 * pixels;
+      const markWidth = Math.min(pixels, Math.max(8, (position(visibleEnd) - position(visibleStart)) / 100 * pixels));
       const x = Math.min(rawX, pixels - markWidth);
       const right = x + markWidth;
       const labelWidth = Math.min(pixels, 220, Math.max(artist.name.length * 7.5, artist.date_display.length * 6.5) + 12);

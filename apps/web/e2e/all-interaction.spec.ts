@@ -39,7 +39,7 @@ test('slow responses do not snap back the range or lose repeated year clicks', a
     await expect(page.getByLabel('All start year', { exact: true })).toHaveValue('1903');
     await expect(page.getByLabel('All end year', { exact: true })).toHaveValue('1943');
     await expect(page).toHaveURL(/start=1903/);
-    expect(await ticks(page)).toEqual(initialTicks);
+    expect(await ticks(page)).not.toEqual(initialTicks);
     await expect.poll(() => held.held.some(url => new URL(url).searchParams.get('start') === '1903')).toBe(true);
   } finally { held.release(); }
   await ready(page);
@@ -47,7 +47,7 @@ test('slow responses do not snap back the range or lose repeated year clicks', a
   await expect(page.locator('.all-canvas-heading .loading-spinner')).toHaveCount(0);
 });
 
-test('dragging commits immediately, keeps the axis fixed and survives a newer response', async ({ page }) => {
+test('dragging commits immediately, fits the selected years and survives a newer response', async ({ page }) => {
   await page.goto('/all?selection=true&type=book&start=1500&end=1800'); await ready(page);
   const initialTicks = await ticks(page), initialURL = page.url();
   const held = await holdResponses(page, url => url.searchParams.get('end') !== '1950');
@@ -74,7 +74,7 @@ test('dragging commits immediately, keeps the axis fixed and survives a newer re
   await ready(page);
   await expect(page.getByLabel('All start year', { exact: true })).toHaveValue('1900');
   await expect(page.getByLabel('All end year', { exact: true })).toHaveValue('1950');
-  expect(await ticks(page)).toEqual(initialTicks);
+  expect(await ticks(page)).not.toEqual(initialTicks);
   await page.goBack(); await ready(page);
   await expect(page.getByLabel('All start year', { exact: true })).not.toHaveValue('1900');
 });
@@ -118,7 +118,7 @@ test('updating a layer keeps the visible global search and region and matches it
   await page.getByRole('button', { name: '+ Add', exact: true }).click();
   const panel = page.getByRole('dialog', { name: 'Add a layer' });
   await panel.getByRole('button', { name: 'Books', exact: true }).click();
-  const expected = await (await page.request.get('/api/backend/v1/atlas?type=book&start=1800&end=1950&q=Madame&region=western-europe&book_top100=true&limit=1')).json();
+  const expected = await (await page.request.get('/api/backend/v1/atlas?type=book&start=1800&end=1950&q=Madame&region=western-europe&highlights=true&book_top100=true&limit=1')).json();
   expect(expected.total).toBeGreaterThan(0);
   await expect(panel.locator('.atlas-layer-action [role=status]')).toHaveText(`${expected.total.toLocaleString('en-GB')} matching entries`);
   await panel.getByRole('button', { name: 'Update books layer', exact: true }).click(); await ready(page);
@@ -137,14 +137,16 @@ for (const width of [1440, 390, 320]) test(`crowded periods have visible bars an
     const style = getComputedStyle(count), text = document.createRange();
     text.selectNodeContents(count);
     const rect = text.getBoundingClientRect();
-    return { bar: { width: bar.width, height: bar.height }, count: { left: rect.left, right: rect.right, visible: style.visibility !== 'hidden' && style.display !== 'none' }, total: Number(count.textContent) };
+    return { lane: node.closest('.all-lane')!.getAttribute('aria-labelledby'), bar: { width: bar.width, height: bar.height }, count: { left: rect.left, right: rect.right, visible: style.visibility !== 'hidden' && style.display !== 'none' }, total: Number(count.textContent) };
   }));
   for (const item of geometry.filter(item => item.total > 0)) {
     expect(item.bar.width).toBeGreaterThan(0); expect(item.bar.height).toBeGreaterThan(0);
   }
   if (width > 760) {
-    const visible = geometry.filter(item => item.count.visible);
-    for (let i = 1; i < visible.length; i++) expect(visible[i].count.left).toBeGreaterThanOrEqual(visible[i - 1].count.right);
+    for (const lane of new Set(geometry.map(item => item.lane))) {
+      const visible = geometry.filter(item => item.lane === lane && item.count.visible);
+      for (let i = 1; i < visible.length; i++) expect(visible[i].count.left).toBeGreaterThanOrEqual(visible[i - 1].count.right);
+    }
   }
   await columns.first().focus();
   await expect(page.locator('.all-lane .overview-caption p').first()).not.toContainText('Choose a period');
@@ -170,7 +172,7 @@ test('year fields remain reachable with filters open on a short phone screen', a
 });
 
 test('BCE keyboard movement, empty ancient years, cutoff and invalid shared ranges recover', async ({ page }) => {
-  await page.goto('/all?selection=true&type=artwork&type=book&type=event&start=-2&end=2'); await ready(page);
+  await page.goto('/all?selection=true&type=artwork&type=book&type=event&start=-2&end=2&highlights=true'); await ready(page);
   const handle = page.getByLabel('Timeline start handle', { exact: true });
   await handle.focus(); await handle.press('ArrowRight');
   await expect(page.getByLabel('All start year', { exact: true })).toHaveValue('-1');
@@ -218,7 +220,8 @@ for (const [kind, resource, retryLabel] of [
   await page.goto('/all?preset=first-world-war'); await ready(page);
   await page.getByRole('button', { name: `Browse ${kind}`, exact: true }).click();
   const browse = page.getByRole('dialog', { name: `Browse ${kind}`, exact: true });
-  await expect(browse.getByRole('button', { name: /^Read / }).first()).toBeVisible();
+  const action = browse.getByRole('button', { name: kind === 'artworks' ? /^View / : /^Read / }).first();
+  await expect(action).toBeVisible();
   let release!: () => void;
   const gate = new Promise<void>(resolve => { release = resolve; });
   let failReply!: () => void;
@@ -228,7 +231,7 @@ for (const [kind, resource, retryLabel] of [
     if (fail) { await failureGate; await route.fulfill({ status: 503, json: { error: { message: 'Connection interrupted' } } }); return; }
     const response = await route.fetch(); await gate; await route.fulfill({ response });
   });
-  await browse.getByRole('button', { name: /^Read / }).first().click();
+  await action.click();
   try { await expect(page.getByRole('dialog').locator('.loading-spinner')).toBeVisible(); }
   finally { failReply(); }
   const retry = page.getByRole('button', { name: retryLabel, exact: true });

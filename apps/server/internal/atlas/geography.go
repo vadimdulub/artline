@@ -17,6 +17,9 @@ var continentRegions = map[string][]string{
 }
 
 func (f Filter) validateGeography() error {
+	if f.CountryScope != "" && f.CountryScope != "all" && f.CountryScope != "artwork" {
+		return ErrFilter
+	}
 	if len(f.Countries) > 32 || len(f.Continents) > 7 {
 		return ErrFilter
 	}
@@ -60,10 +63,23 @@ func (r *Repository) Countries(ctx context.Context, preview bool) ([]Region, err
 	}
 	return out, rows.Err()
 }
+
+// Production geography is independent of attribution and present custody. Use
+// indexed artwork links for both branches, without inventing anonymous artists.
+// condition is internal SQL whose values have already been bound by the caller.
+func artworkGeographyMatch(condition string) string {
+	return `a.id IN (SELECT aa.artwork_id FROM artwork_artists aa
+ JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id
+ JOIN countries c ON c.code=ac.country_code
+ WHERE ar.status<>'archived' AND ($3 OR ar.status='published') AND (` + condition + `)
+ UNION SELECT ap.artwork_id FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id
+ JOIN countries c ON c.code=pl.country_code WHERE (` + condition + `))`
+}
+
 func geographyPredicate(kind string, f Filter, args *[]any) string {
 	clauses := []string{"true"}
 	bind := func(v any) string { p := fmt.Sprintf("$%d", len(*args)); *args = append(*args, v); return p }
-	if len(f.Countries) > 0 {
+	if len(f.Countries) > 0 && (f.CountryScope != "artwork" || kind == "artwork") {
 		names := slices.Clone(f.Countries)
 		for i, v := range names {
 			names[i] = strings.ToLower(strings.TrimSpace(v))
@@ -71,7 +87,7 @@ func geographyPredicate(kind string, f Filter, args *[]any) string {
 		p := bind(names)
 		switch kind {
 		case "artwork":
-			clauses = append(clauses, `EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id JOIN countries c ON c.code=ac.country_code WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published') AND lower(c.name)=ANY(`+p+`::text[]))`)
+			clauses = append(clauses, artworkGeographyMatch(`lower(c.name)=ANY(`+p+`::text[])`))
 		case "book":
 			clauses = append(clauses, `d.countries && ARRAY(SELECT key FROM book_discovery_terms WHERE kind='country' AND lower(name)=ANY(`+p+`::text[]))`)
 		case "event":
@@ -86,7 +102,7 @@ func geographyPredicate(kind string, f Filter, args *[]any) string {
 		p := bind(regions)
 		switch kind {
 		case "artwork":
-			clauses = append(clauses, `EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id JOIN countries c ON c.code=ac.country_code WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published') AND c.region_code=ANY(`+p+`::text[]))`)
+			clauses = append(clauses, artworkGeographyMatch(`c.region_code=ANY(`+p+`::text[])`))
 		case "book":
 			clauses = append(clauses, `d.regions && `+p+`::text[]`)
 		case "event":

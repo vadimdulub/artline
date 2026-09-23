@@ -58,11 +58,11 @@ test("a larger catalogue pages on the server and places undated records at the e
   await expect(panel.getByRole("combobox", { name:"Artwork year",exact:true })).toHaveValue("undated");
 });
 
-test("missing data is explicit at the interval's end, including on phones", async ({ page }) => {
+test("missing data is explicit at the interval's end, including on phones", async ({ page }, info) => {
   await fixture(page,0);
   for (const width of [1440,390,320]) {
     await page.setViewportSize({width,height:900});
-    await page.goto("/?artist=giotto");
+    await page.goto("/?artist=giotto&art_images=false");
     const panel=page.getByRole("dialog", { name:"Painter details",exact:true });
     const marker=panel.getByRole("button", {name:/No data.*missing-data/});
     await expect(marker).toBeVisible();
@@ -75,11 +75,11 @@ test("missing data is explicit at the interval's end, including on phones", asyn
     expect(await panel.evaluate(node=>node.scrollWidth)).toBeLessThanOrEqual((await panel.boundingBox())!.width);
     const scan=await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21aa","wcag22aa"]).analyze();
     expect(scan.violations).toEqual([]);
-    await page.screenshot({path:`../../docs/screenshots/chronology-empty-${width}.png`});
+    await page.screenshot({path:info.outputPath(`chronology-empty-${width}.png`)});
   }
 });
 
-test("chronology failures are not presented as missing data and recover", async ({ page }) => {
+test("chronology failures are not presented as missing data and recover", async ({ page }, info) => {
   await page.route(/\/api\/backend\/v1\/artists\/giotto\/works(?:\?|$)/,route=>route.fulfill({status:503,json:{error:{message:"Connection test failure"}}}));
   await page.goto("/?artist=giotto");
   const panel=page.getByRole("dialog",{name:"Painter details",exact:true});
@@ -89,8 +89,8 @@ test("chronology failures are not presented as missing data and recover", async 
   await fixture(page,40);
   await panel.getByRole("button",{name:"Retry chronology",exact:true}).click();
   await expect(panel.locator(".work-row")).toHaveCount(24);
-  await page.screenshot({path:"../../docs/screenshots/chronology-desktop.png"});
+  await page.screenshot({path:info.outputPath("chronology-desktop.png")});
   await page.setViewportSize({width:390,height:844});
   await panel.getByRole("heading",{name:"Artworks by year",exact:true}).scrollIntoViewIfNeeded();
-  await page.screenshot({path:"../../docs/screenshots/chronology-mobile.png"});
+  await page.screenshot({path:info.outputPath("chronology-mobile.png")});
 });

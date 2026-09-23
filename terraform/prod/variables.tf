@@ -60,3 +60,25 @@ variable "public_research_preview" {
   type        = bool
   default     = false
 }
+
+variable "site_url" {
+  description = "Canonical public HTTPS origin after domain purchase; empty retains the documented Cloud Run origin"
+  type        = string
+  default     = ""
+  validation {
+    condition     = var.site_url == "" || can(regex("^https://[a-zA-Z0-9.-]+/?$", var.site_url))
+    error_message = "Use an HTTPS origin without a path, query, fragment or credentials."
+  }
+}
+
+variable "google_site_verification" {
+  description = "Public Google Search Console HTML verification token, if using HTML verification"
+  type        = string
+  default     = ""
+}
+
+variable "bing_site_verification" {
+  description = "Public Bing Webmaster Tools HTML verification token, if using HTML verification"
+  type        = string
+  default     = ""
+}

@@ -31,6 +31,16 @@ func artistLookupSlug(raw string) string {
 func artistWorksFilter(r *http.Request) (catalog.ArtistWorksFilter, error) {
 	q := r.URL.Query()
 	f := catalog.ArtistWorksFilter{Cursor: q.Get("cursor"), Undated: q.Get("undated") == "1"}
+	for _, key := range []string{"year", "undated", "cursor", "limit", "image_only", "neighbor_of", "direction"} {
+		if len(q[key]) > 1 {
+			return f, catalog.ErrChronologyFilter
+		}
+	}
+	f.NeighborOf, f.Direction = q.Get("neighbor_of"), q.Get("direction")
+	if !allowed(q.Get("image_only"), "", "true", "false") {
+		return f, catalog.ErrChronologyFilter
+	}
+	f.ImageOnly = q.Get("image_only") == "true"
 	var err error
 	f.Limit, err = integerQuery(r, "limit", 24, 1, 60)
 	if err != nil || len(f.Cursor) > 2048 || !allowed(q.Get("undated"), "", "0", "1") {

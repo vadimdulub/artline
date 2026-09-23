@@ -10,7 +10,7 @@ import (
 // Names mirror the native catalogues. Prefixes keep the three layer scopes independent.
 var EntityFields = map[string][]string{
 	"book":    {"q", "author", "language", "country", "region", "women", "top100"},
-	"artwork": {"q", "painter", "movement", "country", "region", "work_type", "women", "popular"},
+	"artwork": {"q", "painter", "movement", "country", "region", "work_type", "women", "popular", "image_only"},
 	"event":   {"q", "topic", "kind", "country", "region", "top100"},
 }
 
@@ -23,7 +23,7 @@ func (f Filter) validateEntities() error {
 			if !slices.Contains(EntityFields[kind], key) || len(choices) == 0 || len(choices) > 32 {
 				return ErrFilter
 			}
-			if key == "q" || key == "women" || key == "popular" || key == "top100" {
+			if key == "q" || key == "women" || key == "popular" || key == "top100" || key == "image_only" {
 				if len(choices) != 1 {
 					return ErrFilter
 				}
@@ -35,7 +35,7 @@ func (f Filter) validateEntities() error {
 				if key == "q" && len(value) > 200 {
 					return ErrFilter
 				}
-				if (key == "women" || key == "popular" || key == "top100") && value != "true" && value != "false" {
+				if (key == "women" || key == "popular" || key == "top100" || key == "image_only") && value != "true" && value != "false" {
 					return ErrFilter
 				}
 			}
@@ -90,11 +90,27 @@ func entityPredicate(kind string, values url.Values, args *[]any) string {
 		}
 	case "artwork":
 		add("work_type", "a.work_type=ANY(%s::text[])")
+		// image_only is accepted for old/shared URLs. All applies its mandatory
+		// image predicate once in Repository.List, including when this is false.
+		// A geographic discovery filter also includes documented production
+		// places. Once a creator facet is selected, its predicates must still
+		// belong to that same creator (including country and region).
+		geographyOnly := len(values["painter"]) == 0 && len(values["movement"]) == 0 && values.Get("women") != "true" && values.Get("popular") != "true"
+		if geographyOnly {
+			if countries := values["country"]; len(countries) > 0 {
+				conditions = append(conditions, artworkGeographyMatch("c.code::text=ANY("+bind(countries)+"::text[])"))
+			}
+			if regions := values["region"]; len(regions) > 0 {
+				conditions = append(conditions, artworkGeographyMatch("c.region_code=ANY("+bind(regions)+"::text[])"))
+			}
+		}
 		outer := conditions
 		conditions = []string{}
 		add("painter", "ar.slug=ANY(%s::text[])")
-		add("country", "EXISTS(SELECT 1 FROM artist_countries ac WHERE ac.artist_id=ar.id AND ac.country_code::text=ANY(%s::text[]))")
-		add("region", "EXISTS(SELECT 1 FROM artist_countries ac JOIN countries c ON c.code=ac.country_code WHERE ac.artist_id=ar.id AND c.region_code=ANY(%s::text[]))")
+		if !geographyOnly {
+			add("country", "EXISTS(SELECT 1 FROM artist_countries ac WHERE ac.artist_id=ar.id AND ac.country_code::text=ANY(%s::text[]))")
+			add("region", "EXISTS(SELECT 1 FROM artist_countries ac JOIN countries c ON c.code=ac.country_code WHERE ac.artist_id=ar.id AND c.region_code=ANY(%s::text[]))")
+		}
 		add("movement", "EXISTS(SELECT 1 FROM artist_movements am JOIN movements m ON m.id=am.movement_id WHERE am.artist_id=ar.id AND m.status<>'archived' AND ($3 OR m.status='published') AND m.slug=ANY(%s::text[]))")
 		if values.Get("women") == "true" {
 			conditions = append(conditions, "EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=ar.id AND ge.is_woman)")

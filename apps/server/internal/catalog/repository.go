@@ -77,7 +77,7 @@ func (r *Repository) artistArtworks(ctx context.Context, artistID string, previe
 		       aw.creation_year_start, aw.creation_year_end, aw.date_precision, aw.work_type,
 		       aw.medium_text, aw.dimensions_text, aw.creation_place_display,
 		       aw.current_location_text,
-               CASE WHEN ma.verified_at IS NOT NULL AND ma.rights_status IN ('public_domain','cc0','cc_by','cc_by_sa','licensed') AND nullif(trim(ma.alt_text),'') IS NOT NULL THEN ma.storage_path END, ma.alt_text,
+               ma.storage_path, ma.alt_text,
 		       ma.rights_status, ma.attribution_text, aa.representative_order, aw.status,
                aw.revision,aa.attribution_role,ma.source_page_url,ma.license_label,ma.license_url,aw.location_checked_at,aw.accession_number,aw.creation_place_unknown_reason
 		FROM artwork_artists aa

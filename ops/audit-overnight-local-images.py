@@ -18,6 +18,7 @@ MODULES['popular-staedel']='popular-staedel-images.py'
 MODULES['popular-native-photo']='popular-native-photo-images.py'
 MODULES['popular-reims']='popular-reims-images.py'
 MODULES['popular-reims-donation']='popular-reims-donations.py'
+MODULES['popular-chicago-commons']='popular-chicago-commons.py'
 def allowed(uri):
     # Preserve the actual ported licence; it is not interchangeable with 2.0 generic.
     return uri in ('https://creativecommons.org/licenses/by/2.0/fr/', 'https://creativecommons.org/licenses/by-sa/2.0/fr/') or bool(re.fullmatch(r'https://creativecommons.org/(?:publicdomain/(?:mark|zero)/1\.0|licenses/(?:by|by-sa)/(?:1\.0|2\.0|2\.5|3\.0|4\.0))/',uri or ''))
@@ -42,7 +43,7 @@ def verify_blob(blob,expected):
 def validate_source(module,im):
     module.core.validate_source_image_identity(im)
     p=im['provider'];raw=im['raw']
-    if p in ('followup-nga','followup-nationalmuseum','followup-nationalmuseum-commons','austria-wien','austria-commons','popular-commons-depicts','popular-staedel','popular-native-photo','popular-reims','popular-reims-donation'):module.verify(im)
+    if p in ('followup-nga','followup-nationalmuseum','followup-nationalmuseum-commons','austria-wien','austria-commons','popular-commons-depicts','popular-staedel','popular-native-photo','popular-reims','popular-reims-donation','popular-chicago-commons'):module.verify(im)
     elif p in ('met','chicago','cleveland','smk'):module.fresh_scope(p,raw,im)
     elif p=='night-fng':module.source_match(im,raw['object'])
     elif p=='night-rijks':

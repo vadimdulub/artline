@@ -13,7 +13,7 @@ export function TimelineGrid({ stageRef, ticks, busy, children, selection }: {
 }
 
 export function TimelineLanes({ label, descriptionId, height, loading, children }: {
-  label: string; descriptionId: string; height: number; loading?: boolean; children: ReactNode;
+  label: string; descriptionId?: string; height: number; loading?: boolean; children: ReactNode;
 }) {
   return <div className="timeline-lanes" role="region" aria-label={label} aria-describedby={descriptionId} tabIndex={0}>
     <div className={loading ? "artist-field is-loading" : "artist-field"} style={{ height }}>{children}</div>

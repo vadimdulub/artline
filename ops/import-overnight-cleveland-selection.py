@@ -10,6 +10,7 @@ def module(name,file):
 museum=module('museum','overnight-cleveland-selected-images.py');guard=module('guard','import-overnight-met-selection.py');core=museum.core
 print_review=module('print_review','overnight-distinct-print-review.py')
 SOURCE='overnight-cleveland-selected-primary-20260915'
+BACKUP_ROOT=Path.home()/'Library/Application Support/Artline/backups/overnight-images-20260915'
 def snapshot(db,records):return print_review.augment(db,records,guard.snapshot(db,records,museum.SLUG,[museum.SCHEME,'cleveland-object']))
 def conflicts(records,state):return guard.conflicts(records,state,title_collision_review=print_review.allow)
 def candidate(lead):
@@ -29,9 +30,9 @@ def plan(run):
  for c in selected:
   for k in ['target_artist_id','already_present']:c.pop(k,None)
   c['institution_ids']={'local':state['institution_id']}
- backup=Path.home()/'Library/Application Support/Artline/backups/overnight-images-20260915'/run.name;core.save_new(backup/('local-selection-preimages-'+core.sha(core.encode(state))[:16]+'.json'),state);core.save_new(run/'plan.json',{'at':core.now(),'records':selected,'held':held,'policy':'Exact current Cleveland ownership and native object ID; independently matched existing artist with corroborating life date; source creation, classification and per-image CC0 verified. Review status preserved; no museum display claim.'});core.save_new(run/'plan-manifest.json',{'sha256':core.sha((run/'plan.json').read_bytes()),'count':len(selected)});print('Cleveland selected',len(selected),'popular',sum(c['popular'] for c in selected),'types',dict(collections.Counter(c['work_type'] for c in selected)),'held',len(held),flush=True)
+ backup=BACKUP_ROOT/run.name;core.save_new(backup/('local-selection-preimages-'+core.sha(core.encode(state))[:16]+'.json'),state);core.save_new(run/'plan.json',{'at':core.now(),'records':selected,'held':held,'policy':'Exact current Cleveland ownership and native object ID; independently matched existing artist with corroborating life date; source creation, classification and per-image CC0 verified. Review status preserved; no museum display claim.'});core.save_new(run/'plan-manifest.json',{'sha256':core.sha((run/'plan.json').read_bytes()),'count':len(selected)});print('Cleveland selected',len(selected),'popular',sum(c['popular'] for c in selected),'types',dict(collections.Counter(c['work_type'] for c in selected)),'held',len(held),flush=True)
 def apply(run,target):
- data=json.loads((run/'plan.json').read_text());assert core.sha((run/'plan.json').read_bytes())==json.loads((run/'plan-manifest.json').read_text())['sha256'];records=data['records'];assert records;dsn='postgres://localhost/artline' if target=='local' else core.cloud_dsn();backup=Path.home()/'Library/Application Support/Artline/backups/overnight-images-20260915'/run.name;out=[]
+ data=json.loads((run/'plan.json').read_text());assert core.sha((run/'plan.json').read_bytes())==json.loads((run/'plan-manifest.json').read_text())['sha256'];records=data['records'];assert records;dsn='postgres://localhost/artline' if target=='local' else core.cloud_dsn();backup=BACKUP_ROOT/run.name;out=[]
  with psycopg.connect(dsn,autocommit=True,row_factory=dict_row) as db:
   state=snapshot(db,records);selected,held=conflicts(records,state);iid=state['institution_id'];p=backup/(target+'-import-preflight.json')
   if not p.exists():core.save_new(p,{'at':core.now(),'state':state,'held':held})

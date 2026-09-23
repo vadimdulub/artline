@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A concise plan for monetizing Artline and promoting it to attract users.">
+  <title>Artline — Monetization &amp; promotion</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f7f3;
+      --white: #ffffff;
+      --ink: #20372d;
+      --muted: #56665c;
+      --green: #375b46;
+      --wash: #e5eddf;
+      --line: #cdd8ce;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--sans); }
+    a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
+    .page { width: min(1080px, calc(100% - 64px)); margin-inline: auto; }
+    .masthead { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding-block: 27px 22px; border-bottom: 1px solid var(--line); }
+    .brand { font: 30px/1 var(--serif); letter-spacing: -1px; }
+    .date { font-size: 13px; color: var(--muted); }
+    h1, h2, h3, p { margin: 0; }
+    .intro { padding-block: 42px 28px; }
+    h1 { max-width: 800px; font: 400 clamp(36px, 5.4vw, 62px)/1.08 var(--serif); letter-spacing: -2px; }
+    .intro p { max-width: 710px; margin-top: 16px; color: var(--muted); font-size: 17px; }
+    .recommendation { display: grid; grid-template-columns: 155px 1fr; gap: 24px; padding: 23px 28px; background: var(--wash); border-left: 4px solid var(--green); border-radius: 0 12px 12px 0; }
+    .recommendation strong { color: var(--green); }
+    .recommendation p { max-width: 710px; }
+    .strategy { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-top: 38px; }
+    h2 { font: 400 29px/1.2 var(--serif); letter-spacing: -.5px; margin-bottom: 22px; }
+    h3 { font-size: 17px; line-height: 1.35; font-weight: 600; }
+    .revenue-list { margin: 0; padding: 0; list-style: none; }
+    .revenue-list li { display: grid; grid-template-columns: 66px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--line); }
+    .stage { align-self: start; padding-top: 2px; color: var(--muted); font-size: 13px; }
+    .revenue-list p { margin-top: 7px; color: var(--muted); font-size: 15px; }
+    .promotion { align-self: start; background: var(--white); padding: 26px; border-radius: 14px; }
+    .promotion h2 { margin-bottom: 20px; }
+    .channels { list-style: none; margin: 0; padding: 0; }
+    .channels li + li { margin-top: 20px; }
+    .channels p { margin-top: 6px; color: var(--muted); font-size: 15px; }
+    .first-month { margin-top: 34px; padding: 25px 28px; background: var(--ink); color: var(--white); border-radius: 12px; }
+    .first-month h2 { margin-bottom: 12px; font-size: 26px; }
+    .first-month p { max-width: 880px; font-size: 15px; }
+    .first-month p + p { margin-top: 12px; color: #dbe7db; }
+    footer { padding-block: 23px 32px; font-size: 12px; color: var(--muted); }
+    footer p + p { margin-top: 7px; }
+    @media (max-width: 760px) {
+      .page { width: calc(100% - 40px); }
+      .strategy { grid-template-columns: 1fr; gap: 24px; }
+      .recommendation { grid-template-columns: 1fr; gap: 6px; padding: 20px; }
+      .intro { padding-top: 32px; }
+      h1 { letter-spacing: -1px; }
+      .first-month { padding: 24px; }
+    }
+    @media (max-width: 380px) {
+      .page { width: calc(100% - 28px); }
+      .masthead { gap: 12px; }
+      .date { font-size: 12px; }
+      .revenue-list li { grid-template-columns: 48px 1fr; gap: 12px; }
+      .promotion { padding: 21px; }
+    }
+    @media print {
+      body { background: white; font-size: 11px; }
+      .page { width: 100%; }
+      .masthead { padding-block: 0 12px; }
+      .intro { padding-block: 20px; }
+      h1 { font-size: 38px; }
+      h2 { font-size: 23px; margin-bottom: 12px; }
+      .intro p { font-size: 13px; }
+      .recommendation { padding: 14px; }
+      .strategy { grid-template-columns: 1fr 1fr; padding-top: 22px; gap: 30px; }
+      .revenue-list li { padding-block: 12px; }
+      .revenue-list p, .channels p, .first-month p { font-size: 11px; }
+      .promotion { padding: 16px; border: 1px solid var(--line); }
+      .first-month { margin-top: 20px; padding: 16px; color: var(--ink); background: white; border: 1px solid var(--line); }
+      .first-month p + p { color: var(--muted); }
+      footer { padding-block: 15px 0; font-size: 9px; }
+      section, aside, li { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <span class="brand">Artline</span>
+      <span class="date">Strategy brief · September 2026</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">Monetization &amp; promotion</h1>
+        <p>Your advantage: art, books and history connected in one timeline, with museum collections to explore. Start with curious learners and museum visitors.</p>
+      </section>
+
+      <aside class="recommendation" aria-label="Recommended direction">
+        <strong>Recommended start</strong>
+        <p>Attract visitors with visual history guides. Keep exploration free and earn from museum tickets and books. Test a paid study plan once people return regularly.</p>
+      </aside>
+
+      <div class="strategy">
+        <section aria-labelledby="revenue-title">
+          <h2 id="revenue-title">Ways to earn</h2>
+          <ol class="revenue-list">
+            <li>
+              <span class="stage">First</span>
+              <div>
+                <h3>Museum ticket referrals</h3>
+                <p>Add relevant ticket links to museum pages. Earn commission on referred bookings through a partner such as <a href="https://www.tiqets.com/en/partner-program/">Tiqets</a>. Start with five museums.</p>
+              </div>
+            </li>
+            <li>
+              <span class="stage">Next</span>
+              <div>
+                <h3>Book referrals</h3>
+                <p>Link book records and reading lists to purchasable editions. <a href="https://support.bookshop.org/en/support/solutions/articles/65000191390-can-you-explain-bookshop-org-s-affiliate-program-">Bookshop.org</a> pays for referred purchases. Match the retailer to your audience’s country.</p>
+              </div>
+            </li>
+            <li>
+              <span class="stage">Later</span>
+              <div>
+                <h3>Artline Plus</h3>
+                <p>Personal collections, museum wishlists and printable study guides. Test <strong>€5/month</strong> with frequent users. These are proposed features; visitor accounts and payments need building.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="promotion" aria-labelledby="promotion-title">
+          <h2 id="promotion-title">How to attract users</h2>
+          <ul class="channels">
+            <li>
+              <h3>Useful guides for Google Search</h3>
+              <p>Start with “Monet in Paris,” “Byzantine art in museums” and “Books of the Renaissance.” Add original context and sources, following <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Google’s content guidance</a>. Link each guide to its timeline.</p>
+            </li>
+            <li>
+              <h3>Visual stories on social media</h3>
+              <p>Test Instagram carousels and Pinterest posts: one artwork, one book and one event from the same era. Invite people to explore the full story in Artline.</p>
+            </li>
+            <li>
+              <h3>Teachers and history creators</h3>
+              <p>Offer a useful themed timeline to ten relevant teachers or creators. Ask for feedback and an optional share with their audience.</p>
+            </li>
+            <li>
+              <h3>A weekly discovery email</h3>
+              <p>Invite visitors to subscribe for three connected discoveries each week. Link back to the atlas to encourage another visit.</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="first-month" aria-labelledby="first-month-title">
+        <h2 id="first-month-title">The first 30 days</h2>
+        <p>Publish three guides, share six visual posts, contact ten potential collaborators and add an email signup. Apply to affiliate programs and test relevant referral links after approval.</p>
+        <p><strong>Measure:</strong> visits by channel, email signups, return visits and referral purchases. Put effort into the channel that brings returning users; consider paid promotion after that.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Proposed experiments, not a revenue forecast. The €5 price is a test. Partner approval, coverage and terms need confirmation. Disclose affiliate links and use images cleared for commercial reuse.</p>
+      <p>Keep review labels visible; museum holdings do not guarantee current display. Based on the local project’s timeline, museum, book and event features; sources checked 18 September 2026.</p>
+    </footer>
+  </div>
+</body>
+</html>

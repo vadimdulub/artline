@@ -111,7 +111,7 @@ test("timeline, filters, URL selection, keyboard dismissal and history", async (
   await expect(page.getByRole("dialog").getByRole("heading", { name: "Giotto di Bondone" })).toBeVisible();
   await page.getByRole("dialog").getByRole("button", { name: /The Arrest of Christ/ }).click();
   await expect(page.locator(".artwork-details h3")).toContainText("Kiss of Judas");
-  await page.getByRole("button", { name: "Next work", exact: true }).click();
+  await page.getByRole("button", { name: "Next artwork", exact: true }).click();
   await expect(page.locator(".artwork-details h3")).toContainText("Meeting at the Golden Gate");
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).toHaveCount(0);

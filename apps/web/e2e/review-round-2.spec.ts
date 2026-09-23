@@ -2,8 +2,9 @@ import { e2eEditorToken } from "./editor-token";
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-test("work selection moves keyboard focus into the visible record", async ({ page }) => {
+test("work selection moves keyboard focus into the visible record", async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
+  const works = await (await page.request.get("/api/backend/v1/artists/giotto/works?image_only=true")).json();
   await page.goto("/?artist=giotto");
   const drawer = page.locator(".painter-dialog");
   const card = drawer.locator(".work-row").nth(1);
@@ -11,17 +12,21 @@ test("work selection moves keyboard focus into the visible record", async ({ pag
   await card.press("Enter");
   const heading = drawer.locator("#artwork-record-title");
   await expect(heading).toBeFocused();
-  await expect(heading).toContainText("Kiss of Judas");
+  await expect(heading).toContainText("Giotto di Bondone");
+  await expect(drawer.locator(".artwork-details h3")).toHaveText(works.items[1].title);
   const toolbar = await drawer.locator(".dialog-toolbar").boundingBox();
   expect((await heading.boundingBox())!.y).toBeGreaterThan(toolbar!.y + toolbar!.height);
-  await drawer.getByRole("button", { name: "Next work", exact: true }).click();
-  await expect(heading).toBeFocused();
-  await expect(heading).toContainText("Golden Gate");
-  await page.screenshot({ path: "../../docs/screenshots/round2-work-focus-mobile.png" });
+  const next = drawer.getByRole("button", { name: "Next artwork", exact: true });
+  const before = (await next.boundingBox())!;
+  await next.click();
+  await expect(drawer.locator(".artwork-details h3")).toHaveText(works.items[2].title);
+  expect((await next.boundingBox())!.y).toBeCloseTo(before.y, 0);
+  await page.screenshot({ path: testInfo.outputPath("round2-work-focus-mobile.png") });
   await drawer.getByRole("button", { name: "← Artworks by year", exact: true }).click();
   await expect(drawer.locator(".work-row").nth(2)).toBeFocused();
   await page.goto("/artists/claude-monet");
-  await expect(page.locator(".artwork-image img")).toBeVisible();
+  await expect(page.locator(".selected-works .work-card img").first()).toBeVisible();
+  await expect(page.locator(".artwork-panel")).toHaveCount(0);
   await expect(page.getByRole("navigation", { name: "Browse selected works" })).toHaveCount(0);
 });
 
@@ -79,7 +84,7 @@ test("range controls normalize edits and give non-drag, filter-preserving recove
   await expect(page.getByRole("button", { name: "Move range 10 years later" })).toBeDisabled();
 });
 
-test("original artwork supports real zoom, scrolling, fit and nested modal focus", async ({ page }) => {
+test("original artwork supports real zoom, scrolling, fit and nested modal focus", async ({ page }, testInfo) => {
   await page.goto("/?artist=giotto");
   const opener = page.getByRole("button", { name: "View larger" });
   await opener.click();
@@ -100,7 +105,7 @@ test("original artwork supports real zoom, scrolling, fit and nested modal focus
   await stage.focus();
   await stage.press("ArrowDown");
   await expect.poll(() => stage.evaluate(node => node.scrollTop)).toBeGreaterThan(0);
-  await page.screenshot({ path: "../../docs/screenshots/round2-image-zoom-desktop.png" });
+  await page.screenshot({ path: testInfo.outputPath("round2-image-zoom-desktop.png") });
   await stage.press("0");
   await expect(viewer.locator("output")).toHaveText("Fit");
   await expect(viewer.getByRole("button", { name: "Zoom out", exact: true })).toBeDisabled();
@@ -112,42 +117,46 @@ test("original artwork supports real zoom, scrolling, fit and nested modal focus
   await expect(page.locator(".painter-dialog")).toBeVisible();
 });
 
-test("narrow and short screens retain readable controls and full-viewer access", async ({ page }) => {
+test("narrow and short screens retain readable controls and full-viewer access", async ({ page }, testInfo) => {
   for (const size of [{ width: 320, height: 740 }, { width: 390, height: 844 }, { width: 844, height: 390 }]) {
     await page.setViewportSize(size);
     await page.goto("/");
-    await expect(page.locator(".timeline-counter")).toContainText("11 painters");
+    await expect(page.locator(".timeline-counter")).toContainText(/\d+ painters/);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(size.width);
     if (size.width < 760) {
       expect(await page.getByRole("searchbox").evaluate(node => parseFloat(getComputedStyle(node).fontSize))).toBeGreaterThanOrEqual(16);
-      await page.screenshot({ path: `../../docs/screenshots/round2-timeline-${size.width}.png`, fullPage: true });
+      await page.screenshot({ path: testInfo.outputPath(`round2-timeline-${size.width}.png`), fullPage: true });
     }
-    await page.goto("/artists/katsushika-hokusai");
-    await page.getByRole("button", { name: "View larger" }).click();
+    await page.goto("/artists/katsushika-hokusai?art_images=true");
+    await page.locator(".selected-works .work-card").first().click();
     const viewer = page.locator(".image-dialog");
     await expect(viewer.getByRole("button", { name: "Zoom in", exact: true })).toBeEnabled();
     await expect(viewer.getByRole("button", { name: "Close enlarged image" })).toBeInViewport();
     expect(await viewer.evaluate(node => node.scrollWidth)).toBeLessThanOrEqual(size.width);
-    await page.screenshot({ path: `../../docs/screenshots/round2-image-fit-${size.width}.png` });
+    await page.screenshot({ path: testInfo.outputPath(`round2-image-fit-${size.width}.png`) });
   }
 });
 
 test("copy fallback selects the URL and original-image failures can be retried", async ({ page }) => {
   await page.addInitScript(() => Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText: async () => { throw new Error("Denied for test"); } } }));
-  await page.goto("/artists/giotto");
+  await page.goto("/artists/giotto?art_images=true");
+  const card = page.locator(".selected-works .work-card").first();
+  await card.click();
+  await page.getByText("Artwork details and sources", { exact: true }).click();
   await page.getByRole("button", { name: "Copy artwork link" }).click();
   const fallback = page.getByLabel("Copy this artwork link");
   await expect(fallback).toBeFocused();
   expect(await fallback.evaluate(node => { const input = node as HTMLInputElement; return input.selectionEnd! - input.selectionStart! === input.value.length; })).toBe(true);
+  await page.getByRole("button", { name: "Close enlarged image" }).click();
   await page.route("**/assets/artworks/**", route => route.abort());
-  await page.getByRole("button", { name: "View larger" }).click();
+  await card.click();
   await expect(page.getByRole("button", { name: "Retry image" })).toBeVisible();
   await page.unroute("**/assets/artworks/**");
   await page.getByRole("button", { name: "Retry image" }).click();
   await expect(page.getByRole("button", { name: "Zoom in", exact: true })).toBeEnabled();
 });
 
-test("catalogue refresh disables stale actions and table can scroll with keyboard", async ({ page }) => {
+test("catalogue refresh disables stale actions and table can scroll with keyboard", async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/catalogue");
   await page.getByLabel("Editor token", { exact: true }).fill(e2eEditorToken());
@@ -166,5 +175,5 @@ test("catalogue refresh disables stale actions and table can scroll with keyboar
   release();
   await expect(table).toHaveAttribute("aria-busy", "false");
   await expect(table.getByRole("button", { name: "Edit", exact: true })).toHaveCount(1);
-  await page.screenshot({ path: "../../docs/screenshots/round2-catalogue-mobile.png", fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath("round2-catalogue-mobile.png"), fullPage: true });
 });

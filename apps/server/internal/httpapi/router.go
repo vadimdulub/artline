@@ -46,10 +46,14 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /api/v1/atlas", api.atlasTimeline)
 	mux.HandleFunc("GET /api/v1/atlas/presets", api.atlasPresets)
 	mux.HandleFunc("GET /api/v1/atlas/geography", api.atlasGeography)
+	mux.HandleFunc("GET /api/v1/atlas/creators", api.atlasCreators)
 	mux.HandleFunc("GET /api/v1/atlas/artworks/{id}", api.atlasArtwork)
 	mux.HandleFunc("GET /api/v1/timeline/facets", api.timelineFacets)
 	mux.HandleFunc("GET /api/v1/painters/options", api.painterOptions)
 	mux.HandleFunc("GET /api/v1/artists/{slug}", api.artist)
+	mux.HandleFunc("GET /api/v1/seo/sitemaps", api.sitemapShards)
+	mux.HandleFunc("GET /api/v1/seo/sitemaps/{kind}/{prefix}", api.sitemapEntries)
+	mux.HandleFunc("GET /api/v1/seo/artists", api.publishedArtists)
 	mux.HandleFunc("GET /api/v1/artists/{slug}/works", api.artistWorks)
 	mux.HandleFunc("GET /api/v1/artists/{slug}/works/{id}", api.artistArtwork)
 	mux.HandleFunc("GET /api/v1/museums", api.museums)
@@ -68,7 +72,11 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.Handle("POST /api/v1/publish/artists/{id}", api.requireEditor(http.HandlerFunc(api.publishArtist)))
 	mux.Handle("POST /api/v1/unpublish/artists/{id}", api.requireEditor(http.HandlerFunc(api.unpublishArtist)))
 
-	return api.recoverPanic(api.requestLog(api.cors(mux)))
+	handler := api.recoverPanic(api.requestLog(api.cors(mux)))
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("X-Robots-Tag", "noindex")
+		handler.ServeHTTP(w, r)
+	})
 }
 
 func (api *API) health(w http.ResponseWriter, _ *http.Request) {

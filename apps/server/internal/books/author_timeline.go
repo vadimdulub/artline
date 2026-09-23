@@ -121,7 +121,7 @@ func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, er
 		last := result.Authors[len(result.Authors)-1]
 		result.NextCursor = encodeCursor(Book{ID: last.ID, StartYear: last.StartYear})
 	}
-	if result.Total-result.UndatedTotal <= 100 {
+	if result.Total-result.UndatedTotal <= f.MaxPageSize() {
 		return result, nil
 	}
 	result.Mode = "density"

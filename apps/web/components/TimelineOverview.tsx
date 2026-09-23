@@ -13,17 +13,18 @@ function periodColor(year: number) {
   return "#db8a78";
 }
 
-export function TimelineOverview({ periods, start, end, disabled, suggestion, onSelect, noun = "painters", formatPeriod, position, footnote, color, currentAction, guidanceId = "density-guidance" }: {
+export function TimelineOverview({ periods, start, end, disabled, suggestion, onSelect, noun = "painters", formatPeriod, position, footnote, color, currentAction, showCurrentAction = true, guidanceId = "density-guidance" }: {
   periods: TimelineResponse["periods"]; start: number; end: number; disabled: boolean;
   suggestion?: { name: string; count: number };
   onSelect: (start: number, end: number) => void;
   noun?: "painters" | "books" | "authors" | "events" | "artworks";
   formatPeriod?: (start: number, end: number) => string;
   position?: (year: number) => number;
-  footnote?: string;
-  guidanceId?: string;
+  footnote?: string | null;
+  guidanceId?: string | null;
   color?: string;
   currentAction?: string;
+  showCurrentAction?: boolean;
 }) {
   const [active, setActive] = useState<number | null>(null);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
@@ -40,8 +41,8 @@ export function TimelineOverview({ periods, start, end, disabled, suggestion, on
       {periods.map((period, index) => <button key={period.start_year} ref={node => { buttons.current[index] = node; }}
         type="button" className="period-column" disabled={disabled}
         aria-label={current(period) ? suggestion ? `Filter by ${suggestion.name}, ${suggestion.count} ${noun}` : `${currentAction ?? "Choose filters for"} ${label(period.start_year, period.end_year)}, ${period.count} ${noun}` : `Explore ${label(period.start_year, period.end_year)}, ${period.count.toLocaleString("en-GB")} ${noun}`}
-        aria-describedby={guidanceId}
-        title={current(period) ? suggestion ? `Apply the ${suggestion.name} filter and keep these years` : currentAction ?? "Choose another filter to narrow these years" : undefined}
+        aria-describedby={guidanceId ?? undefined}
+        title={showCurrentAction && current(period) ? suggestion ? `Apply the ${suggestion.name} filter and keep these years` : currentAction ?? "Choose another filter to narrow these years" : undefined}
         style={{ "--column-left": `${position ? position(period.start_year) : (period.start_year - start) / span * 100}%`, "--column-width": `${position ? Math.min(100, position(period.end_year === -1 ? 1 : period.end_year + 1)) - position(period.start_year) : (period.end_year - period.start_year + 1) / span * 100}%`, "--period-color": color ?? periodColor(period.start_year), "--bar-height": `${period.count / maximum * 82}%`, "--bar-width": `${period.count / maximum * 100}%`, "--bar-minimum": period.count ? "4px" : "0px" } as CSSProperties}
         onPointerEnter={() => setActive(period.start_year)} onFocus={() => setActive(period.start_year)}
         onClick={() => onSelect(period.start_year, period.end_year)}
@@ -52,9 +53,9 @@ export function TimelineOverview({ periods, start, end, disabled, suggestion, on
         <span className="period-label" aria-hidden="true">{label(period.start_year, period.end_year)}</span>
         <span className="period-count" aria-hidden="true">{period.count.toLocaleString("en-GB")}</span>
         <span className="period-track" aria-hidden="true"><span className="period-bar" /></span>
-        {current(period) && <span className="period-action" aria-hidden="true">{suggestion ? `Try ${suggestion.name} · ${suggestion.count} ${noun} →` : `${currentAction ?? "Choose filters"} →`}</span>}
+        {showCurrentAction && current(period) && <span className="period-action" aria-hidden="true">{suggestion ? `Try ${suggestion.name} · ${suggestion.count} ${noun} →` : `${currentAction ?? "Choose filters"} →`}</span>}
       </button>)}
     </div>
-    <p className="overview-footnote">{footnote ?? "Counts include painters whose life or activity overlaps each period. A painter can appear in more than one period."}</p>
+    {footnote !== null && <p className="overview-footnote">{footnote ?? "Counts include painters whose life or activity overlaps each period. A painter can appear in more than one period."}</p>}
   </div>;
 }

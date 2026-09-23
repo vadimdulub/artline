@@ -1,4 +1,5 @@
 import { MuseumsIndex } from "@/components/MuseumsIndex";
 import { researchPreviewEnabled } from "@/lib/server-api";
-export const metadata = { title: "Museums and collections · Artline" };
+import { explorerMetadata } from "@/lib/seo";
+export function generateMetadata() { return explorerMetadata("Museums & art collections", "Explore museums, documented art collections and selected artworks. Discover collection records, sources and official visiting information.", "/museums"); }
 export default function MuseumsPage() { return <MuseumsIndex preview={researchPreviewEnabled()} />; }

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { artworkYearAtPosition, artworkYearPosition, isCurrentPeriod, normalizeRange, positionArtists, presetRange, timelineTicks, visibleArtworkTicks } from "../timeline";
 import type { TimelineArtist } from "../types";
+import { atlasTimelineScale } from "../atlas-timeline";
 
 const movement = { slug: "test", name: "Test", color: "#234e9a" };
 
@@ -37,6 +38,20 @@ describe("positionArtists", () => {
     expect(result).toHaveLength(1);
     expect(result[0].left).toBe(0);
     expect(result[0].width).toBe(20);
+  });
+  it("uses the shared focus scale for painter intervals across 1400", () => {
+    const { position } = atlasTimelineScale({ start: 1300, end: 1500 }, { start: 1100, end: 2000 }, 284);
+    const marks = positionArtists([painter(1, 1250, 1550), painter(2, 1400, 1450), painter(3, 1500, 1500)], 1300, 1500, 284, position);
+    expect(marks[0].left).toBe(0);
+    expect(marks[0].width).toBe(100);
+    expect(marks[1].left).toBe(50);
+    expect(marks[1].width).toBe(25);
+    expect(marks[2].left + marks[2].width).toBeCloseTo(100);
+    for (const mark of marks) {
+      const left = mark.left / 100 * 284 + mark.labelOffset;
+      expect(left).toBeGreaterThanOrEqual(0);
+      expect(left + mark.labelWidth).toBeLessThanOrEqual(284);
+    }
   });
   it("keeps overlapping painters in separate lanes", () => {
     const items: TimelineArtist[] = [

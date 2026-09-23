@@ -10,16 +10,21 @@ are absent from the main tabs. “Painters” describes the lifespan timeline;
 All starts empty. Only preset metadata and bounded country choices are requested
 before the user acts; no collection response is fetched.
 The black surface fills the remaining viewport; there is no lower entry index
-or footer on this page. Six suggested periods offer starting points, while the
-selector retains all 30 historical lenses. Choosing a lens loads three layers
-with the context window and highlights enabled. Clear restores the empty canvas.
+or footer on this page. All 30 starting points are visible: twelve main periods
+sit in the center, with the other eighteen arranged on either side. On narrower
+screens the additional periods wrap below the main group. All 30 remain in
+the searchable period picker. Choosing a period on an empty canvas loads three
+layers with the context window. Search and geographic filters also start all
+three layers from an empty canvas. Changing a filter preserves the selected
+layers and their native filters. Clear restores the empty canvas.
 
     Painters / Books / Events / All
     Search                                  + Add | Reset view
     Historical period | Continents | Countries | Region | Highlights
     Filtered by …                                      Clear filters
     ┌ black canvas ────────────────────────────────────────┐
-    │ Choose a starting point / six suggested periods      │
+    │ 9 periods | Choose a starting point | 9 periods      │
+    │           | 12 main periods        |                │
     │ (after selection: common axis and selected lanes)    │
     │ (after selection: shared year controls)              │
     └─────────────────────────────────────────────────────┘
@@ -35,12 +40,22 @@ header height determines the remaining canvas height. Phone filters collapse
 behind the shared Filters toggle.
 
 Historical periods, continents, countries, region and Highlights are visible
-in the desktop filter bar. Clear filters removes global search/geography and
-unchecks Highlights, preserving layers and years. Reset view restores the empty
-canvas and default Highlights selection. The period’s info button opens its
-description, sources and Main period / Before and after switch in a side panel. Main-period shading
-remains on the timeline. These are chronological windows, not claims that one
-record influenced another. Dense lanes use period bars; selecting one narrows
+in the desktop filter bar. The period reuses the shared searchable picker with
+one radio selection and appears as a removable active filter. Removing it clears
+its year window while keeping layers and other filters. Clear filters removes
+global search/geography, the selected period and its years, and unchecks
+Highlights, preserving layers and any manually selected years. Reset view restores the empty
+canvas with Highlights checked. Highlights is enabled by default and can be switched off. Artworks always require an attached, renderable picture; this is not a main-screen option. The period’s info button opens its
+description, sources and Main period / Before and after switch in a side panel.
+All 30 periods have a reviewed focus. Twenty-two use recorded country/region
+associations and explicit related entries; eight retain worldwide cultural
+coverage. Eleven thematic presets restrict events to a reviewed sequence.
+Byzantium also matches reviewed object traditions independently of creator
+identity or present custody. Selected surrounding events carry a “Context” label.
+Explicitly selected core books/events count as highlights within their preset;
+global highlight membership is unchanged. Visibility, dates, pictures and user
+filters still apply. Changing years retains this focus; removing the period or
+Zoom out clears it. These associations do not assert influence. Dense lanes use period bars; selecting one narrows
 all layers. Browse opens a bounded side panel, keeping every entry reachable
 without placing another section below the canvas. Native details replace that
 panel and restore focus to its Browse button on close.
@@ -61,8 +76,10 @@ any historical data remain preserved.
 
 The picker always uses the timeline’s current years. Adding a layer preserves
 that range; date changes remain in the timeline controls.
-Browse retrieves at most 30 records per page; Add uses a minimal count preview. A whole layer uses its own native discovery filters, including its Top 100
-setting. Those filters override the lens highlight default for that type.
+Browse retrieves at most 30 records per page, with Previous/Next page controls; Add uses a minimal count preview. Record arrows seek individual previous/next entries in the current filtered layer, across page boundaries. Direct record links use that same sequence. Enlarged artwork images stay open when moving between records and reset image magnification. A whole layer uses its own native discovery filters, including its Top 100
+setting. Those filters override the lens highlight setting for that type.
+New Add drafts inherit Highlights. The Books label is “Book highlights” because the editorial list can grow beyond 100. Toggling global Highlights clears explicit book/event highlight overrides. The artwork popular-painter filter stays independent of artwork highlight membership.
+Artwork Browse actions say “View”; Books and Events retain “Read”.
 
 ## Server ownership and scope
 
@@ -82,8 +99,18 @@ and eligibility predicates still apply to every selected ID. UUID artwork IDs
 use an indexed array predicate before creator/media enrichment. Cursor scope
 includes the complete selection and filters, including page size.
 
+Each lane evaluates its matching ID/date relation once, sharing it between the
+total, density buckets and bounded detail page. When artwork countries or
+continents are selected, PostgreSQL first materializes the geographically scoped
+native columns, then applies eligibility. This prevents a broad country selection
+from checking holdings across the entire catalogue. Native painter/ID predicates
+remain inside that scope; creator/title detail enrichment is bounded to page IDs.
+
 A new preset is a record in `internal/atlas/presets.json` with an ID, name, group,
-description, main/context ranges and sources. A future content type adds a native
+description, main/context ranges, sources and reviewed focus. A focus declares
+regional or worldwide coverage, optional object traditions, core/context IDs,
+and whether its event sequence is explicitly selected. Cursor scope includes
+this configuration so a review invalidates older pagination cursors. A future content type adds a native
 Go provider/definition, its date and evidence rules, and a detail renderer; the
 common controls, picker, lanes and pagination can be reused. Evidence-backed
 relationships between entries would be a separate model from time overlap.
@@ -189,20 +216,37 @@ reload and cancellation. Desktop and 320px screenshots were visually reviewed;
 
 ## Stable year navigation and geography
 
-Year navigation keeps the established compressed early periods on a fixed axis.
-All uses equal year spacing from 1400 through 2000, with earlier centuries
-compressed. Its ticks, entries, density bars, period shading and slider share
-that scale. Books and Events retain their existing 1700 breakpoint.
-Dragging the selected band translates both edges by the same screen distance;
-dragging an edge or editing the From/To pair changes the selected interval.
-Following the user’s explicit preference, the full chart remains fixed: date
-selection never zooms or shifts the axis. Compression anchors, tick positions
-and each retained entry’s horizontal position stay at the full catalogue scale.
-A subtle band marks the selected years. Timeline containers retain their identity. Shared controls keep the existing
-paper/ink palette and type. Books ends at 2000, including aggregate discovery;
+All’s full-history overview and navigation slider compress earlier centuries,
+with equal year spacing from 1400 through 2000. Books and Events retain their
+existing fixed axes and 1700 breakpoint. Dragging the selected band translates
+both edges by the same screen distance; dragging an edge or editing the From/To
+pair changes the selected interval.
+
+The 20 September zoom request supersedes the previous fixed-axis behavior for
+All. Selecting a historical period, density interval, or custom pair of years
+fits that interval across the complete timeline width. Focused ticks, entries,
+and density bars use equal calendar-year spacing, including across 1400 and the
+BCE/CE boundary; there is no year zero. Tick spacing adapts to viewport width
+and always includes both selected endpoints. Periods retain their existing
+Before and after / Main period choice. The slider continues to show all years.
+
+Zoom out removes the period and custom years while retaining layers, search,
+geography, Highlights, and each layer’s native filters. The resulting overview
+uses the original compressed scale. Zoom out is disabled once all years are
+shown; Clear still returns to the empty canvas. Selection and zoom are derived
+from the URL, so reload and Back/Forward restore the same view. This fills the
+timeline width without entering a separate fullscreen mode. Shared controls keep
+the existing paper/ink palette and type. Books ends at 2000, including aggregate discovery;
 recorded creator life dates and underlying records remain intact. Collections is
 removed from book UI, request parsing and suggestions. All keeps geographic
 filters, adding countries and continents alongside its existing regions.
+
+All's year ruler uses short ticks. Full-height year guides and the overlapping
+selected-range/preset overlays are removed from the entry canvas. The existing
+dark background, paper text, Georgia dates, sans-serif labels and subtle lane
+separators remain. Only the actual entries carry date/duration lines; dashed
+entry lines still indicate approximate dates. Period context remains available
+in its details panel, and dragging still previews the heading and slider.
 
 
 Geography uses recorded country names (case-insensitive matching), with historical
@@ -241,13 +285,15 @@ checks cover placement, opening, Escape and selecting a movement.
 All keeps the selected years in URL interaction state, independently of the last
 server response. Dragging previews the heading and selected band without issuing
 requests; releasing commits the range. Earlier/Later and keyboard changes apply
-immediately, including when another request is pending. The complete axis and
-entry coordinates stay fixed. Superseded requests are aborted and ignored; the
-read-only API proxy forwards cancellation upstream as well as its timeout.
+immediately, including when another request is pending. The chart fits the
+committed interval; the axis stays steady during an uncommitted drag preview.
+Superseded requests are aborted and ignored; the read-only API proxy forwards cancellation upstream as well as its timeout.
 Bookmarked presets retain their implicit three layers when years or filters change.
-Existing bounded lane data stays dimmed during refresh, with stale entry actions
-disabled; removed layers disappear immediately. Year controls remain available
-after a connection error so a different interval can recover the view.
+Existing bounded lane data stays dimmed during same-range filter refreshes, with
+stale entry actions disabled. After a range change, lane headings remain while
+loading placeholders replace old marks and bars, so old dates are never drawn
+against the new axis; removed layers disappear immediately. Year controls remain
+available after a connection error so a different interval can recover the view.
 
 The shared inline spinner accompanies status text on the timelines, All's period
 loading, Add/Browse and record drawers. Retry attempts have their own loading state;
@@ -279,3 +325,124 @@ and 36 read-only browser scenarios, including equal spacing from 1400, shared
 mark/bar/slider coordinates, unchanged Books/Events scales, and desktop/phone
 range interactions. Release validation artifacts are under
 `/tmp/artline-scale-release-local/`.
+
+## All zoom verification — 20 September 2026
+
+Added 68 unit cases for focused coordinates, adaptive ticks, endpoint clipping,
+BCE/CE continuity, and the unchanged compressed overview at five widths. Added
+19 Chrome scenarios for WWII and Renaissance context/main periods, custom
+intervals, Zoom out, retained filters/layers, reload/history, responsive layout,
+keyboard operation, request cancellation, API errors, and full-range URLs.
+Updated the former fixed-axis All assertions to check fitted coordinates; the
+other tabs retain their fixed-axis regression checks. The touch test now honors
+the configured base URL instead of hard-coding port 3000.
+
+All 113 frontend unit tests, TypeScript, ESLint, the production Webpack build,
+and the Go atlas/httpapi unit suites passed. Browser checks used an isolated
+production build on port 3100 and the real local catalogue through an API with
+migrations skipped and `default_transaction_read_only=on`; no database or
+fixtures were created. Temporary screenshots and traces are under
+`/tmp/artline-all-zoom-*`. The existing port-3000 dev server hung during initial
+page loads. One initial broad Add-artworks request reached the API timeout;
+its focused rerun passed in 8.7 seconds. The API queries were not changed, and
+these checks do not establish ten-million-record query performance.
+
+Across the regression runs, all 85 distinct browser checks passed after the
+artwork timeout recheck and the touch test's base-URL fix. This includes the
+19 new zoom checks, chart/slider alignment, native layer filters, and the
+unchanged year controls on Painters, Books, and Events. Desktop and phone
+screenshots were visually reviewed; WCAG A/AA checks passed in the exercised
+period and filter states.
+
+## Filter discovery — 21 September 2026
+
+The starting surface shows all 30 periods, using the existing server-owned
+period records and sources. Twelve main choices, including Edo Japan, the
+classical world, the Silk Roads, Romanticism, the Russian Revolution and the
+Space Age, stay centered and prominent. The other eighteen remain visible
+without an expansion control. Desktop uses balanced side columns; narrow
+screens wrap the groups and allow vertical scrolling instead of shrinking
+touch targets or clipping period names.
+
+Applying search or geography to an empty canvas initializes Artworks, Books and
+Events. Shared filter URLs without an explicit selection do the same. Once a
+view is populated, edits update its counts and content while retaining native
+layer filters and intentional removals. Removing every layer writes an explicit
+empty selection, which survives reload/history; Add or another filter action
+can populate it again. Multiple countries match any selected country; different
+filter groups intersect. The subsequent picture/navigation revision below restores Highlights as the default, as explicitly requested by the user; switching it off includes other eligible matches. Explicit native settings remain respected until the shared Highlights switch is changed. All artwork results require pictures.
+
+Added 35 unit cases for filter initialization, explicit empty URLs, retained
+layers and Add defaults; the complete frontend suite passes 159 tests.
+TypeScript, targeted ESLint, the isolated production Webpack build and Go
+atlas/httpapi unit suites passed. Existing read-only native filter parity,
+geography/public visibility and legacy selected-entry audits also passed.
+
+The new read-only discovery audit passed eight cases against real records:
+Japan, Japan + France, Japan + France + Asia, Japanese search, France Highlights,
+Monet with geography and work type, an empty country, and the full catalogue.
+Repeatable-read transactions compare each lane's count with the prior eligibility
+query, verify bounded and ordered pages, and check unchanged density aggregates
+across pagination. No fixtures, database creation, migrations or writes are used.
+
+The original Japan + France plan evaluated eligibility before geography and
+checked holdings for 237,045 artwork candidates. Its captured artwork query took
+5,089 ms; earlier audit executions exceeded 10 seconds. The revised plan scopes
+60,121 candidates first, finds 53,169 eligible artworks and enriches 31 page IDs.
+Its captured warm execution took 709 ms. The complete three-lane read-only call
+took 3.15 seconds on the final audit; Japan took 605 ms, the Asia intersection
+288 ms and the full catalogue 1.50 seconds. The actual scoped Monet plan used
+indexed artist/artwork links, materialized 355 candidates, returned 283 eligible
+paintings and took 14 ms. Plans are in `/tmp/artline-filter-discovery-plans/`.
+
+These observations establish correctness and query scope on the existing local
+catalogue, not ten-million-artwork performance. Concurrent cold-cache tests,
+broad geographic materialization costs and any required backend projections
+with explicit visibility/invalidation semantics remain capacity-planning work.
+
+All 100 distinct headless Chrome scenarios passed across the final regression
+run and the layout recheck. The broad run passed 99 cases; one 390px assertion
+read the page height before the header ResizeObserver completed. Waiting for
+the measured height made all three empty-canvas layout/accessibility rechecks
+pass without changing the layout constraint. The 15 new discovery cases cover
+expanded presets, Japan at 1440/390/320px, multi-country intersections, live
+edits, shared URLs, reload/history, Add/native filter persistence, explicit
+empty selections and out-of-order responses. Existing tests cover fitted zoom,
+artwork View actions and the shared year controls. Desktop and phone screenshots
+were visually reviewed. Browser artifacts are under
+`/tmp/artline-filter-discovery-final/` and `/tmp/artline-filter-discovery-layout/`.
+The final isolated API recorded 309 atlas requests, with a 1.51-second 95th
+percentile and 2.34-second maximum; no atlas request timed out. This sequential
+browser run is not a concurrent-load benchmark.
+
+## All starting points visible — 21 September 2026
+
+The expansion control has been removed. The existing twelve main periods form
+the central group, using larger Georgia labels and stronger borders; the other
+eighteen use quieter sans-serif controls in balanced side columns. This keeps
+the established dark canvas, paper text and warm rules. All choices come from
+the same bounded preset response, with no extra catalogue read before selection.
+
+At widths below 1000px, the main group remains centered and the side groups wrap
+below it. Long labels wrap, every target is at least 44px high, and small screens
+scroll vertically without hiding choices or requiring horizontal scrolling.
+Keyboard order begins with the main choices, then the earlier and later groups.
+Selecting any period keeps the existing three-layer timeline behaviour.
+
+Layout checks cover 1920×1080, 1440×900, 1366×768, 1280×720, 1024×768,
+768×1024, 390×844 and 320×800. They check all 30 unique buttons, centering,
+desktop viewport fit, phone width, accessible names/contrast, touch targets and
+period selection. A keyboard scenario also checks clearing and reaching the
+final choice on a narrow phone. Desktop and phone screenshots were inspected.
+Development artifacts are under `/tmp/artline-starting-points-results/` and
+production-build artifacts under `/tmp/artline-starting-points-production/`.
+All nine development layout/keyboard cases and all 45 production browser cases
+passed. TypeScript, scoped ESLint and the optimized Next.js build also passed.
+The production run includes the existing All, discovery and historical-period
+regressions against the read-only local API; no database fixtures were inserted.
+
+## September 21 discovery and picture navigation
+
+The Painters tab puts “With pictures” inside each creator’s Artworks by year list. Go filters the creator-scoped totals, year groups, pages and neighbors together. Artwork dates and images are never substituted by the client. Both All and creator navigation request at most one item per direction using `neighbor_of`, `direction` and `limit=1`; out-of-scope anchors return no neighbor. Cursor scopes include image and historical-focus choices.
+
+Focused-period research, local sourced corrections, image delivery and the current test evidence are documented in `docs/research/revolution-discovery-20260921/README.md`. Query-plan checks use the existing catalogue and remain insufficient to establish performance at 10 million artworks.

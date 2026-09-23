@@ -14,9 +14,9 @@ export function AtlasCheckbox({ label, checked, onChange, children }: {
   return <div className="popular-filter-control"><label className="popular-filter"><input type="checkbox" checked={checked} onChange={event => onChange(event.target.checked)} /><span>{label}</span></label>{children}</div>;
 }
 
-export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, searchLabel, columns, activeCount = 0, actions, children }: {
+export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, searchLabel, columns, activeCount = 0, actions, resetLabel = "Reset view", children }: {
   searchRef: RefObject<HTMLInputElement | null>; query: string; onQuery: (value: string) => void;
-  onReset: () => void; placeholder: string; searchLabel?: string; columns?: number; activeCount?: number; actions?: ReactNode; children: ReactNode;
+  onReset: () => void; placeholder: string; searchLabel?: string; columns?: number; activeCount?: number; actions?: ReactNode; resetLabel?: string; children: ReactNode;
 }) {
   const [expanded, setExpanded] = useState(false);
   const panelID = useId();
@@ -39,7 +39,7 @@ export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, 
     return () => window.removeEventListener("keydown", shortcut);
   }, [searchRef]);
 
-  const resetButton = <button className="reset-button" onClick={() => { onReset(); setExpanded(false); searchRef.current?.focus(); }}>Reset view</button>;
+  const resetButton = <button className="reset-button" onClick={() => { onReset(); setExpanded(false); searchRef.current?.focus(); }}>{resetLabel}</button>;
   return <div className="atlas-filter-system">
     <label className="search-field"><span>Search</span><input ref={searchRef} aria-label={searchLabel} aria-keyshortcuts="/" type="search" maxLength={200} placeholder={placeholder} value={query} onChange={event => onQuery(event.target.value)} /><kbd aria-hidden="true">/</kbd></label>
     {actions ? <div className="atlas-search-actions">{actions}{resetButton}</div> : resetButton}

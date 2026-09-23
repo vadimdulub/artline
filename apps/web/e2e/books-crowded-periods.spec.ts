@@ -30,7 +30,7 @@ for (const width of [1440, 390, 320]) {
     expect(new URL(page.url()).searchParams.get("start")).toBe("1950");
     expect(new URL(page.url()).searchParams.get("end")).toBe("1959");
     if (width <= 760) await page.getByRole("button", { name: "Filters", exact: true }).click();
-    await expect(page.getByRole("checkbox", { name: "Top 100 books", exact: true })).not.toBeChecked();
+    await expect(page.getByRole("checkbox", { name: "Book highlights", exact: true })).not.toBeChecked();
     if (width <= 760) await page.getByRole("button", { name: "Close filters", exact: true }).click();
     await page.reload(); await settled(page, count);
     await page.goBack(); await settled(page);
@@ -67,9 +67,9 @@ test("Russian-language books drill through periods and authors without losing fi
   await page.reload(); await settled(page, 33);
   await page.getByRole("button", { name: "Remove Author: Leo Tolstoy filter", exact: true }).click();
   await settled(page, 206);
-  await page.getByRole("button", { name: "Show Top 100 books", exact: true }).click();
+  await page.getByRole("button", { name: "Show Book highlights", exact: true }).click();
   await settled(page);
-  await expect(page.getByRole("checkbox", { name: "Top 100 books", exact: true })).toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Book highlights", exact: true })).toBeChecked();
   expect(new URL(page.url()).searchParams.get("language")).toBe("Q7737");
   expect(new URL(page.url()).searchParams.get("start")).toBe("1850");
 });

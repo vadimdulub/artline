@@ -84,7 +84,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		return result, err
 	}
 	attachCovers(result.Items)
-	if result.Total-result.UndatedTotal > 100 {
+	if result.Total-result.UndatedTotal > f.MaxPageSize() {
 		result.Mode = "density"
 		result.SuggestedFilters, err = r.suggestions(ctx, args, result.Total)
 		if err != nil {

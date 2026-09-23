@@ -12,11 +12,22 @@ import (
 )
 
 func (api *API) atlasPresets(w http.ResponseWriter, r *http.Request) {
-	writeJSON(w, 200, map[string]any{"presets": atlas.Presets(), "types": atlas.Definitions, "regions": atlas.Regions, "continents": atlas.Continents, "bounds": atlas.Bounds, "defaultPreset": ""})
+	preview, ok := api.previewAllowed(w, r)
+	if !ok {
+		return
+	}
+	ctx, cancel := contextWithTimeout(r, 5*time.Second)
+	defer cancel()
+	presets, err := api.atlasRepo.IllustratedPresets(ctx, preview)
+	if err != nil {
+		api.atlasError(w, err)
+		return
+	}
+	writeJSON(w, 200, map[string]any{"presets": presets, "types": atlas.Definitions, "regions": atlas.Regions, "continents": atlas.Continents, "bounds": atlas.Bounds, "defaultPreset": ""})
 }
 func (api *API) atlasTimeline(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
-	for _, key := range []string{"start", "end", "preset", "window", "q", "highlights", "region", "limit", "after_artwork", "after_book", "after_event", "selection"} {
+	for _, key := range []string{"start", "end", "preset", "window", "q", "highlights", "region", "country_scope", "limit", "after_artwork", "after_book", "after_event", "selection", "neighbor_of", "direction"} {
 		if len(q[key]) > 1 {
 			writeError(w, 400, "INVALID_ATLAS_FILTER", "Use each atlas filter once.")
 			return
@@ -67,12 +78,14 @@ func (api *API) atlasTimeline(w http.ResponseWriter, r *http.Request) {
 	if !ok {
 		return
 	}
-	f := atlas.Filter{Range: atlas.Range{Start: start, End: end}, Query: q.Get("q"), Region: q.Get("region"), Countries: q["country"], Continents: q["continent"], Types: q["type"], Highlights: highlights != "false", Preview: preview, Limit: limit, After: map[string]string{}}
+	f := atlas.Filter{Range: atlas.Range{Start: start, End: end}, Query: q.Get("q"), Region: q.Get("region"), CountryScope: q.Get("country_scope"), Creators: q["creator"], Countries: q["country"], Continents: q["continent"], Types: q["type"], Highlights: highlights != "false", Preview: preview, Limit: limit, After: map[string]string{}}
+	f.PresetID = id
+	f.NeighborOf, f.Direction = q.Get("neighbor_of"), q.Get("direction")
 	if value := q.Get("selection"); value != "" && value != "true" && value != "false" {
 		writeError(w, 400, "INVALID_SELECTION", "Use selection=true or selection=false.")
 		return
 	}
-	f.Selection = q.Get("selection") == "true" || (q.Get("selection") == "" && len(q["type"]) == 0 && !q.Has("preset") && !q.Has("start") && !q.Has("q"))
+	f.Selection = q.Get("selection") == "true" || (q.Get("selection") == "" && len(q["type"]) == 0 && !q.Has("preset") && !q.Has("start") && !q.Has("q") && !q.Has("creator"))
 	f.Entities = map[string]url.Values{}
 	for kind, fields := range atlas.EntityFields {
 		values := url.Values{}
@@ -162,4 +175,23 @@ func (api *API) atlasGeography(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	writeJSON(w, 200, map[string]any{"countries": countries})
+}
+
+func (api *API) atlasCreators(w http.ResponseWriter, r *http.Request) {
+	preview, ok := api.previewAllowed(w, r)
+	if !ok {
+		return
+	}
+	if len(r.URL.Query()["q"]) > 1 {
+		api.atlasError(w, atlas.ErrFilter)
+		return
+	}
+	ctx, cancel := contextWithTimeout(r, 5*time.Second)
+	defer cancel()
+	out, err := api.atlasRepo.Creators(ctx, r.URL.Query().Get("q"), r.URL.Query()["selected"], preview)
+	if err != nil {
+		api.atlasError(w, err)
+		return
+	}
+	writeJSON(w, 200, out)
 }

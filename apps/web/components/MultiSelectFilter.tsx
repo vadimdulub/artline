@@ -3,9 +3,9 @@ import { useEffect, useId, useRef, useState } from "react";
 
 export type FilterOption = { slug: string; name: string };
 
-export function MultiSelectFilter({ label, allLabel, options, values, onChange, unavailable = false, helpText = "Match any selected value. Different filters combine.", remote, retry }: {
+export function MultiSelectFilter({ label, allLabel, options, values, onChange, single = false, unavailable = false, helpText = "Match any selected value. Different filters combine.", remote, retry }: {
   label: string; allLabel: string; options: FilterOption[]; values: string[];
-  onChange: (values: string[]) => void; unavailable?: boolean; helpText?: string;
+  onChange: (values: string[]) => void; single?: boolean; unavailable?: boolean; helpText?: string;
   remote?: { search: string; onSearch: (value: string) => void; loading: boolean; hasMore: boolean }; retry?: () => void;
 }) {
   const details = useRef<HTMLDetailsElement>(null);
@@ -42,8 +42,8 @@ export function MultiSelectFilter({ label, allLabel, options, values, onChange, 
       <fieldset aria-describedby={helpID}><legend>{label}</legend><p id={helpID}>{helpText}</p>
         <label className="filter-search"><span className="sr-only">Search {label.toLowerCase()}</span><input type="search" placeholder={`Find ${label.toLowerCase()}…`} maxLength={200} value={search} onChange={event => remote ? remote.onSearch(event.target.value) : setLocalSearch(event.target.value)} /></label>
         <p className="filter-search-status" role="status">{remote?.loading ? "Searching…" : remote?.hasMore ? "Showing 30 matches. Type a name to narrow the list." : `${visible.length} choices${values.length ? ` · ${values.length} selected` : ""}`}</p>
-        <div className="filter-checkboxes">{visible.map(option => <label key={option.slug}><input type="checkbox" checked={values.includes(option.slug)} disabled={values.length >= 32 && !values.includes(option.slug)} onChange={() => {
-          onChange(values.includes(option.slug) ? values.filter(value => value !== option.slug) : [...values, option.slug]);
+        <div className="filter-checkboxes">{visible.map(option => <label key={option.slug}><input type={single ? "radio" : "checkbox"} name={single ? helpID : undefined} checked={values.includes(option.slug)} disabled={!single && values.length >= 32 && !values.includes(option.slug)} onChange={() => {
+          onChange(single ? [option.slug] : values.includes(option.slug) ? values.filter(value => value !== option.slug) : [...values, option.slug]);
           // A bookmarked region absent from the facets disappears on removal.
           // Return focus before its checkbox is unmounted.
           if (!available.has(option.slug)) close();

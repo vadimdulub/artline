@@ -1,8 +1,9 @@
 "use client";
 import { lockBodyScroll } from "@/lib/modal-scroll";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Artwork } from "@/lib/types";
+import { RecordArrows, type RecordNavigation } from "./RecordNavigation";
 import { fitImage, imageZoomLevels } from "@/lib/image-view";
 
 function ZoomableArtwork({ work }: { work: Artwork }) {
@@ -16,6 +17,7 @@ function ZoomableArtwork({ work }: { work: Artwork }) {
   const zoom = imageZoomLevels[level];
   const fit = fitImage(natural.width, natural.height, viewport.width, viewport.height);
   const ready = fit.width > 0 && !failed;
+  const zoomed = ready && level > 0;
   useEffect(() => {
     if (!stage.current) return;
     const observer = new ResizeObserver(([entry]) => setViewport({ width: entry.contentRect.width, height: entry.contentRect.height }));
@@ -44,9 +46,9 @@ function ZoomableArtwork({ work }: { work: Artwork }) {
       <button type="button" className="fit-image" disabled={!ready || level === 0} onClick={() => changeZoom(0)}>Fit image</button>
     </div>
     <div ref={stage} className="image-dialog-stage" tabIndex={0} role="region" aria-label={`Image detail: ${work.title}`} aria-describedby="image-viewer-help">
-      {failed ? <div className="image-load-error" role="alert"><p>The full-size image couldn’t load.</p><button type="button" onClick={() => { setFailed(false); setAttempt(value => value + 1); }}>Retry image</button></div> : <div className="image-scroll-canvas" style={{ width: ready ? Math.max(viewport.width, fit.width * zoom) : "100%", height: ready ? Math.max(viewport.height, fit.height * zoom) : "100%" }}>
+      {failed ? <div className="image-load-error" role="alert"><p>The full-size image couldn’t load.</p><button type="button" onClick={() => { setFailed(false); setAttempt(value => value + 1); }}>Retry image</button></div> : <div className={`image-scroll-canvas${zoomed ? "" : " is-fit"}`} style={zoomed ? { width: Math.max(viewport.width, fit.width * zoom), height: Math.max(viewport.height, fit.height * zoom) } : undefined}>
         {/* Load the original local file only when opened, retaining detail at every zoom level. */}
-        <Image key={attempt} unoptimized src={work.media_url!} alt={work.alt_text ?? work.title} width={natural.width || 1600} height={natural.height || 1600} loading="eager" onLoad={event => setNatural({ width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight })} onError={() => setFailed(true)} style={{ width: ready ? fit.width * zoom : "100%", height: ready ? fit.height * zoom : "100%" }} />
+        <Image key={attempt} unoptimized src={work.media_url!} alt={work.alt_text ?? work.title} width={natural.width || 1600} height={natural.height || 1600} loading="eager" onLoad={event => setNatural({ width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight })} onError={() => setFailed(true)} style={zoomed ? { width: fit.width * zoom, height: fit.height * zoom } : undefined} />
       </div>}
     </div>
     <p className="image-viewer-help" id="image-viewer-help">{level === 0 ? "Zoom in for a closer look." : "Scroll to explore the enlarged image."} <span>Keyboard: + / − to zoom, 0 to fit; arrow keys scroll the focused image.</span></p>
@@ -60,27 +62,35 @@ export function permittedImagePath(path: string | null) {
 export function ArtworkImage({ work, large = false, number, onUnavailable }: { work: Pick<Artwork, "media_url" | "alt_text" | "title" | "rights_status">; large?: boolean; number?: number; onUnavailable?: () => void }) {
   const [failed, setFailed] = useState(false);
   const usable = permittedImagePath(work.media_url) && !failed;
-  if (usable) return <Image src={work.media_url!} alt={work.alt_text ?? ""} loading={large ? "eager" : "lazy"} width={large ? 1600 : 440} height={large ? 1600 : 520} sizes={large ? "(max-width: 760px) 90vw, 55vw" : number !== undefined ? "100px" : "(max-width: 620px) 45vw, 25vw"} onError={() => { setFailed(true); onUnavailable?.(); }} />;
+  if (usable) return <Image src={work.media_url!} alt={work.alt_text || work.title} loading={large ? "eager" : "lazy"} width={large ? 1600 : 440} height={large ? 1600 : 520} sizes={large ? "(max-width: 760px) 90vw, 55vw" : number !== undefined ? "100px" : "(max-width: 620px) 45vw, 25vw"} onError={() => { setFailed(true); onUnavailable?.(); }} />;
   if (number !== undefined && !large) return <div className="work-placeholder numbered-placeholder"><span aria-hidden="true">{String(number).padStart(2, "0")}</span><span className="sr-only">{failed ? "Image unavailable" : "Image not available"}</span></div>;
   return <div className={large ? "work-placeholder large-placeholder" : "work-placeholder"}><span aria-hidden="true">▧</span><p>{failed ? "Image unavailable" : "Image not available"}</p>{large && <small>{work.rights_status === "restricted" ? "Reproduction rights are restricted." : "You can still explore the artwork’s details and sources below."}</small>}</div>;
 }
 
-export function ArtworkViewer({ work }: { work: Artwork }) {
+export function ArtworkViewer({ work, navigation, creator }: { work: Artwork; navigation?: RecordNavigation; creator?: ReactNode }) {
   const [open, setOpen] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [failedID, setFailedID] = useState("");
+  return <>
+    <figure className="artwork-image"><ArtworkImage key={work.id} work={work} large onUnavailable={() => setFailedID(work.id)} />{permittedImagePath(work.media_url) && failedID !== work.id && <button type="button" className="enlarge-image" onClick={() => setOpen(true)}>View larger <span aria-hidden="true">⤢</span></button>}</figure>
+    {open && <ArtworkDialog work={work} creator={creator} navigation={navigation} close={() => setOpen(false)} />}
+  </>;
+}
+
+export function ArtworkDialog({ work, navigation, creator, close, details }: { work: Artwork; navigation?: RecordNavigation; creator?: ReactNode; close: () => void; details?: ReactNode }) {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const element = dialog.current;
-    if (!open || !element) return;
+    if (!element) return;
     const focused = document.activeElement as HTMLElement | null;
     const unlock = lockBodyScroll();
     element.showModal();
     return () => { element.close(); unlock(); focused?.focus({ preventScroll: true }); };
-  }, [open]);
-  return <>
-    <figure className="artwork-image"><ArtworkImage work={work} large onUnavailable={() => setFailed(true)} />{permittedImagePath(work.media_url) && !failed && <button type="button" className="enlarge-image" onClick={() => setOpen(true)}>View larger <span aria-hidden="true">⤢</span></button>}</figure>
-    {open && <dialog ref={dialog} className="image-dialog" aria-label={`Enlarged image: ${work.title}`} onCancel={event => { event.preventDefault(); event.stopPropagation(); setOpen(false); }}><header><div><h2>{work.title}</h2><p>{work.date_display}</p></div><button autoFocus type="button" aria-label="Close enlarged image" onClick={() => setOpen(false)}>×</button></header><ZoomableArtwork work={work} /><p className="image-dialog-credit">{work.attribution_text ?? work.license_label}</p></dialog>}
-  </>;
+  }, []);
+  return <dialog ref={dialog} className="image-dialog" aria-label={`Enlarged image: ${work.title}`} onCancel={event => { event.preventDefault(); event.stopPropagation(); close(); }}>
+      <header className="image-dialog-toolbar"><p className="image-dialog-artist">{creator ?? work.unlinked_creator_label ?? "Creator not recorded"}</p>{navigation && <RecordArrows navigation={navigation} noun="artwork" />}<button autoFocus type="button" aria-label="Close enlarged image" onClick={close}>×</button></header>
+      {permittedImagePath(work.media_url) ? <ZoomableArtwork key={work.id} work={work} /> : <div className="image-dialog-placeholder"><ArtworkImage key={work.id} work={work} large /></div>}
+      <footer className={`image-dialog-caption${details ? " has-artwork-details" : ""}`} tabIndex={0} aria-label="Artwork title and image credit"><h2 aria-live="polite">{work.title}</h2><p>{work.date_display}</p>{details && <><p>{[work.medium_text, work.current_location_text].filter(Boolean).join(" · ")}</p><details className="image-dialog-details"><summary>Artwork details and sources</summary><div className="artwork-details">{details}</div></details></>}<p className="image-dialog-credit">{work.attribution_text ?? work.license_label}</p></footer>
+    </dialog>;
 }
 
 export function ShareWorkLink({ path }: { path: string }) {

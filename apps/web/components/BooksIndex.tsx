@@ -101,7 +101,7 @@ export function BooksIndex() {
     ...(query ? [{ key: "q", label: `Search: ${query}`, remove: () => change({ q: null }) }] : []),
     ...authors.map(value => ({ key: `author-${value}`, label: `Author: ${value}`, remove: () => change({ author: authors.filter(item => item !== value) }) })),
     ...(womenOnly ? [{ key: "women", label: "Women authors", remove: () => change({ women: null }) }] : []),
-    ...(top100Only ? [{ key: "top100", label: "Top 100 books", remove: () => change({ top100: "false" }) }] : []),
+    ...(top100Only ? [{ key: "top100", label: "Book highlights", remove: () => change({ top100: "false" }) }] : []),
     ...[{ key: "language", values: languages }, { key: "country", values: countries }, { key: "region", values: regions }].flatMap(group => group.values.map(value => ({ key: `${group.key}-${value}`, label: facetResult.labels[value] ?? value.replaceAll("-", " "), remove: () => change({ [group.key]: group.values.filter(item => item !== value) }) }))),
   ];
 
@@ -115,7 +115,7 @@ export function BooksIndex() {
       <BooksTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={authorView ? selectedAuthor?.id ?? "" : selected}
         authorView={authorView} onAuthorView={checked => { setSelectedAuthor(null); change({ view: checked ? "authors" : null, book: null }); }}
         onSelect={id => { if (authorView) setSelectedAuthor(visibleAuthors.find(author => author.id === id) ?? null); else openBook(id); }} onRange={(start, end) => change({ start: String(start), end: String(end) }, false)}
-        onRetry={() => setRetry(value => value + 1)} onReset={reset}
+        onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset}
         onSuggestion={suggestion => change({ [suggestion.key]: suggestion.value })} onTop100={() => change({ top100: null })} />
     </section>
     <section className={styles.shelf} aria-labelledby="shelf-title" aria-busy={loading}>

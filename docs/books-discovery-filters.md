@@ -29,12 +29,17 @@ The historical coverage counts below describe the original research import.
   ID and editorial basis is in
   [top-100-editorial.json](research/historical-books-20260916/top-100-editorial.json).
   The selection is revisable and does not claim a universal canon.
-- **Languages:** exact source language/variety statements on the work,
-  [Wikidata P407](https://www.wikidata.org/wiki/Property:P407).
-  9,460 books have usable statements across 248 language/variety choices.
-  English, British English and American English are separate recorded values;
-  selecting several matches any of them. These are not claims about available
-  translations or the creator's native language.
+- **Languages:** recorded work-language/variety statements, with reviewed
+  original-composition corrections taking precedence over raw
+  [Wikidata P407](https://www.wikidata.org/wiki/Property:P407). The 22 September
+  [audit](research/book-languages-20260922/README.md) checked all 10,000 records
+  and applied 170 confirmed corrections to local and production; 98 formerly
+  empty fields were filled, leaving 442 without a confirmed language. Raw P407
+  and Wikipedia infoboxes can include translations, quoted passages or fictional
+  languages. Those are not automatically treated as original composition.
+  Unresolved cases remain recorded in the audit queue. English, British English
+  and American English remain separate source values; selecting several matches
+  any of them. Source precision and genuinely multilingual works are preserved.
 - **Countries:** recorded country of origin,
   [Wikidata P495](https://www.wikidata.org/wiki/Property:P495), including
   historical states. No birthplace or citizenship fallback is used. Coverage:
@@ -95,6 +100,8 @@ No base book/creator records, dates, descriptions or review statuses change.
 `ops/prepare-book-discovery.py prepare` reads the real local catalogue in a
 read-only transaction and builds projections from retained source responses.
 It requires Python with psycopg 3. It never downloads books or images.
+The retained 22 September correction manifest overrides raw language claims
+during preparation, so rebuilding does not silently restore known errors.
 `apply` is an explicit local-only action. It locks base tables while checking
 all source checksums, rejects conflicting existing projections, inserts missing
 rows transactionally and permits identical replay without changes. Source

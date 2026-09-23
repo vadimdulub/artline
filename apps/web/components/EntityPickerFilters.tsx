@@ -25,10 +25,10 @@ type Props = { params: URLSearchParams; change: FilterChange; reset: (defaults: 
 type Option = { slug: string; name: string };
 function Shell({ type, params, change, reset, options=[], error, retry, children }: Props & { type: AtlasType; options?: Option[]; error?: string; retry: () => void; children: ReactNode }) {
   const search = useRef<HTMLInputElement>(null);
-  const topLabel = type === "book" ? "Top 100 books" : type === "artwork" ? "Top 100 painters" : "Top 100 events";
-  const active = [...params].filter(([key,value]) => value && !["false"].includes(value) && (key !== "women" || value === "true")).map(([key,value]) => ({
-    key: `${key}-${value}`, label: key === "q" ? `Search: ${value}` : key === "women" ? type === "book" ? "Women authors" : "Women artists" : ["popular","top100"].includes(key) ? topLabel : options.find(o=>o.slug===value)?.name ?? value.replaceAll("-"," "),
-    remove: () => change({[key]: ["top100","popular"].includes(key) ? "false" : params.getAll(key).filter(v=>v!==value)}),
+  const topLabel = type === "book" ? "Book highlights" : type === "artwork" ? "Top 100 painters" : "Top 100 events";
+  const active = [...params].filter(([key,value]) => key !== "image_only" && value && !["false"].includes(value) && (key !== "women" || value === "true")).map(([key,value]) => ({
+    key: `${key}-${value}`, label: key === "q" ? `Search: ${value}` : key === "image_only" ? "With pictures" : key === "women" ? type === "book" ? "Women authors" : "Women artists" : ["popular","top100"].includes(key) ? topLabel : options.find(o=>o.slug===value)?.name ?? value.replaceAll("-"," "),
+    remove: () => change({[key]: ["top100","popular","image_only"].includes(key) ? "false" : params.getAll(key).filter(v=>v!==value)}),
   }));
   const placeholder = type === "book" ? "Book, author, or idea" : type === "event" ? "Event, place, or idea" : "Painter, place, movement, or work";
   return <div className="atlas-picker-filters">

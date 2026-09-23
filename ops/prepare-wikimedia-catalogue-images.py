@@ -11,6 +11,18 @@ r=importlib.util.module_from_spec(spec);spec.loader.exec_module(r)
 
 def plain(text):return BeautifulSoup(text,'html.parser').get_text(' ',strip=True)
 
+def licence_policy_url(licence,supplied):
+    if licence=='Public domain':return 'https://creativecommons.org/publicdomain/mark/1.0/'
+    parsed=urlparse(supplied)
+    if parsed.scheme not in ('http','https') or parsed.netloc!='creativecommons.org':
+        raise ValueError('Unresolved Creative Commons licence URL')
+    expected={'CC0':'/publicdomain/zero/1.0/','CC BY 2.0':'/licenses/by/2.0/','CC BY 3.0':'/licenses/by/3.0/','CC BY 4.0':'/licenses/by/4.0/','CC BY-SA 2.0':'/licenses/by-sa/2.0/','CC BY-SA 2.5':'/licenses/by-sa/2.5/','CC BY-SA 3.0':'/licenses/by-sa/3.0/','CC BY-SA 4.0':'/licenses/by-sa/4.0/'}
+    if licence not in expected or not (parsed.path.rstrip('/')+'/').startswith(expected[licence]):
+        raise ValueError('Creative Commons licence name and URL differ')
+    # Commons retains many valid legacy HTTP licence links. Their HTTPS
+    # equivalent changes transport only; the supplied link remains in evidence.
+    return parsed._replace(scheme='https').geturl()
+
 def rendered_object_qid(qid,html):
     # Restrict to the object-title field. A creator/depictee link elsewhere on
     # the page is not proof of the physical artwork identity.
@@ -46,7 +58,7 @@ def check_rights_chronology(record,licence,wikitext):
     if death+70>=year and re.search(r'\{\{\s*PD-(?:Art|old)',wikitext,re.I) and not re.search(r'PD-RusEmpire|PermissionTicket|PermissionOTRS',wikitext,re.I):
         raise ValueError('Generic life-based public-domain tag needs individual rights review against documented creator death')
 
-def main():
+def main(original_byte_limit=20_000_000,original_pixel_limit=40_000_000):
     records={};conflicts={}
     for path in sorted((r.RUN/'selected').glob('*.json')):
         for record in json.loads(path.read_text())['selected']:
@@ -85,13 +97,12 @@ def main():
                 filename=record['images'][0]
                 if re.search(r'\b(detail|detailled|collage|montage)\b',filename,re.I):raise ValueError('Detail or composite image requires manual review')
                 data,receipt=r.fetch('https://commons.wikimedia.org/w/api.php?'+urlencode({'action':'query','format':'json','titles':'File:'+filename,'prop':'imageinfo|revisions','iiprop':'url|extmetadata|sha1|size|mime','iiurlwidth':1280,'rvprop':'ids|content','rvslots':'main','maxlag':5}))
-                pages=list(data['query']['pages'].values());assert len(pages)==1 and 'imageinfo' in pages[0]
+                pages=list(data['query']['pages'].values());assert len(pages)==1 and 'imageinfo' in pages[0],'Source file page has no image information'
                 page=pages[0];info=page['imageinfo'][0];meta=info['extmetadata'];field=lambda k:meta.get(k,{}).get('value','')
                 licence=field('LicenseShortName');licences={'Public domain':'public_domain','CC0':'cc0','CC BY 3.0':'cc_by','CC BY 4.0':'cc_by','CC BY-SA 3.0':'cc_by_sa','CC BY-SA 4.0':'cc_by_sa','CC BY 2.0':'cc_by','CC BY-SA 2.0':'cc_by_sa','CC BY-SA 2.5':'cc_by_sa'}
                 assert licence in licences and not field('Restrictions'),'Unresolved per-file rights'
-                if licence=='Public domain':assert field('Copyrighted')=='False'
-                policy='https://creativecommons.org/publicdomain/mark/1.0/' if licence=='Public domain' else field('LicenseUrl')
-                assert policy.startswith('https://creativecommons.org/')
+                if licence=='Public domain':assert field('Copyrighted')=='False','Source public-domain label contradicts its copyright flag'
+                policy=licence_policy_url(licence,field('LicenseUrl'))
                 credit=image_credit(meta)
                 wikitext=page.get('revisions',[{}])[0].get('slots',{}).get('main',{}).get('*','')
                 check_rights_chronology(record,licence,wikitext)
@@ -102,16 +113,20 @@ def main():
                 title_match=r.norm(object_name) in {r.norm(t) for t in record['titles']}
                 accession_match=bool(record['accession'] and record['accession'] in wikitext)
                 assert identity_qid or title_match or accession_match,'File identity needs manual review'
-                original=info['size']<=20_000_000 and info['width']*info['height']<=40_000_000
-                url=info['url'] if original else info.get('thumburl')
-                assert url and urlparse(url).hostname in {'upload.wikimedia.org','thumb.wikimedia.org'}
-                rawpath=r.BACKUPS/'selected-originals'/(qid+('.original' if original else '.commons-thumbnail'))
+                original=info['size']<=original_byte_limit and info['width']*info['height']<=original_pixel_limit
                 download_path=r.RUN/'image-receipts'/(qid+'.json')
+                if download_path.exists():
+                    previous_download=json.loads(download_path.read_text())
+                    assert previous_download['kind'] in ('commons_original','commons_thumbnail'),'Unknown preserved download kind'
+                    original=previous_download['kind']=='commons_original'
+                url=info['url'] if original else info.get('thumburl')
+                assert url and urlparse(url).hostname in {'upload.wikimedia.org','thumb.wikimedia.org'},'No approved source media URL'
+                rawpath=r.BACKUPS/'selected-originals'/(qid+('.original' if original else '.commons-thumbnail'))
                 if rawpath.exists():
                     raw=rawpath.read_bytes();download=json.loads(download_path.read_text());assert r.core.sha(raw)==download['sha256']
                 else:
                     raw,headers=fetcher.get(url,20_000_000)
-                    if original:assert hashlib.sha1(raw).hexdigest()==info['sha1'] and len(raw)==info['size']
+                    if original:assert hashlib.sha1(raw).hexdigest()==info['sha1'] and len(raw)==info['size'],'Downloaded original differs from source hash or byte size'
                     download={'url':url,'sha256':r.core.sha(raw),'bytes':len(raw),'retrieved_at':r.core.now(),'kind':'commons_original' if original else 'commons_thumbnail','original_sha1':info['sha1'],'headers':headers}
                     r.core.save_new(rawpath,raw);r.core.save_new(download_path,download)
                 data,width,height,quality=r.core.compress(raw)
@@ -120,7 +135,7 @@ def main():
                 attribution=f"{record['creator_label']}. {record['title']}. Image credit: {credit}. Wikimedia Commons. {licence} ({policy}). Resized and JPEG-compressed; selected source frame preserved."
                 result['image']={'path':path,'sha256':checksum,'bytes':len(data),'width':width,'height':height,'quality':quality,'rights_status':licences[licence],'license_label':licence,'license_url':policy,'creator_credit':credit,'attribution_text':attribution,'source_page_url':info['descriptionurl'],'source_image_url':url,'commons_page':page,'commons_receipt':receipt,'download':download,'checked_at':r.core.now(),'identity_basis':{'wikidata_P18':filename,'commons_work_qid':identity_qid,'commons_title':title_match,'commons_accession':accession_match}}
                 result['image_outcome']='prepared'
-            except (AssertionError,ValueError,RuntimeError,r.requests.RequestException) as error:
+            except (AssertionError,ValueError,RuntimeError,OSError,r.requests.RequestException) as error:
                 result['image_outcome']='metadata_retained_image_deferred'
                 result['image_reason']=str(error)[:400]
         r.core.save_new(output,result)

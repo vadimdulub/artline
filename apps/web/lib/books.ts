@@ -1,3 +1,12 @@
+export type BookOverview = {
+  paragraphs: string[];
+  sourceUrl: string;
+  sourceTitle: string;
+  revision: number;
+  credit: string;
+  licenseUrl: string;
+};
+
 export type Book = {
   id: string;
   title: string;
@@ -6,6 +15,7 @@ export type Book = {
   era: string;
   theme: string;
   description: string;
+  overview?: BookOverview;
   coverTone: string;
   coverInk: string;
   coverMark: string;
@@ -13,9 +23,10 @@ export type Book = {
   startYear: number | null;
   endYear: number | null;
   approximate: boolean;
-  creators: { id: string; name: string; description: string; birth: string | null; death: string | null; sourceUrl: string; kind?: string; credit?: string }[];
+  creators: { id: string; name: string; description: string; overview?: BookOverview; birth: string | null; death: string | null; sourceUrl: string; kind?: string; credit?: string }[];
   sourceUrl: string;
   dateBasis: string;
+  dateSources?: {name:string;url:string}[];
   selectionBasis: string;
   status: string;
 };
@@ -65,7 +76,7 @@ const historicalYear = (value: number) => value <= 0 ? value - 1 : value;
 export function compressedBefore1700(range: BookRange): boolean { return range.start < 1700 && range.end > 1700; }
 
 // Fixed historical axis: 5000 BCE / 1 / linearFrom / 2000 anchor 0 / 5 / 25 / 100.
-// Books uses 1700; All uses 1400. Selecting years never rescales these anchors.
+// Books uses 1700; All's overview and navigation slider use 1400.
 function bookCoordinate(year: number, linearFrom: number): number {
  const y=calendar(year);
  return y<=1 ? (y+4999)/5000*5 : y<=linearFrom ? 5+(y-1)/(linearFrom-1)*20 : 25+(y-linearFrom)/(2000-linearFrom)*75;
@@ -99,8 +110,8 @@ export function visibleBookTicks(ticks: BooksResponse["ticks"], range: BookRange
   return [...new Map(chosen.map(tick => [tick.year, tick])).values()].sort((a, b) => a.year - b.year);
 }
 
-// Axis labels are presentation only. Date selection still belongs to the API,
-// while the complete historical axis stays fixed across range changes.
+// Overview labels are presentation only. The API selects records by date;
+// atlasTimelineScale fits the chart to a selected interval.
 export function bookAxisTicks(bounds: BookRange, width: number, linearFrom = 1700) {
   const ticks = [{ year: Math.round(bounds.start / 2), label: "BCE" }];
   for (let year = 100; year <= bounds.end; year += 100) ticks.push({ year, label: String(year) });
@@ -108,12 +119,12 @@ export function bookAxisTicks(bounds: BookRange, width: number, linearFrom = 170
 }
 
 // Visual layout only; the API owns chronology, filtering and page order.
-export function positionBooks<T extends { startYear: number | null; endYear: number | null }>(books: T[], range: BookRange, width: number, linearFrom = 1700) {
+export function positionBooks<T extends { startYear: number | null; endYear: number | null }>(books: T[], range: BookRange, width: number, linearFrom = 1700, position = (year: number) => bookTickPosition(year, range, linearFrom)) {
   const pixels = Math.max(1, width);
   const lanes: [number, number][][] = [];
   return books.filter((book): book is T & { startYear: number; endYear: number } => book.startYear !== null && book.endYear !== null).map(book => {
-    const x = bookTickPosition(Math.max(range.start, book.startYear), range, linearFrom) / 100 * pixels;
-    const end = bookTickPosition(Math.min(range.end, book.endYear), range, linearFrom) / 100 * pixels;
+    const x = position(Math.max(range.start, book.startYear)) / 100 * pixels;
+    const end = position(Math.min(range.end, book.endYear)) / 100 * pixels;
     const markWidth = Math.min(pixels, Math.max(8, end - x));
     const left = Math.min(x, pixels - markWidth);
     const labelWidth = Math.min(pixels, 246);

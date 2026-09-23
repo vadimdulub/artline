@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { apiRequest, errorMessage, safeSourceURL } from "@/lib/api";
 import type { HistoricalEvent } from "@/lib/events";
+import { RecordArrows, type RecordNavigation } from "./RecordNavigation";
 import { RecordDrawer } from "./RecordDrawer";
 import { LoadingIndicator } from "./LoadingIndicator";
 import styles from "./Books.module.css";
 
-export function EventDrawer({ id, close, fallbackFocusId = "events-timeline" }: { id: string; close: () => void; fallbackFocusId?: string }) {
+export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-timeline" }: { id: string; close: () => void; fallbackFocusId?: string; navigation?: RecordNavigation }) {
   const [result, setResult] = useState<{ id: string; attempt: number; data?: HistoricalEvent; error?: string }>();
   const [retry, setRetry] = useState(0);
   useEffect(() => {
@@ -27,8 +28,8 @@ export function EventDrawer({ id, close, fallbackFocusId = "events-timeline" }: 
     return new URLSearchParams({ start: String(start), end: String(end), top100: "false" }).toString();
   };
   const books = contextualRange(-5000, 2026), art = contextualRange(1100, 2000);
-  return <RecordDrawer label="Event details" closeLabel="Close event details" recordKey={id} title={event?.kind ?? "Event"} close={close} fallbackFocusId={fallbackFocusId}>
-    {event ? <div className={styles.drawerContent}>
+  return <RecordDrawer label="Event details" closeLabel="Close event details" recordKey={id} title={event?.kind ?? "Event"} navigation={navigation && <RecordArrows navigation={navigation} noun="event" />} close={close} fallbackFocusId={fallbackFocusId}>
+    {event ? <div className={`${styles.drawerContent} ${styles.eventContent}`}>
       <header className={styles.bookHeading}><p>{event.kind} · {event.topics.join(" · ")}</p><h2>{event.title}</h2><p>{event.years}</p></header>
       <section className={styles.bookAbout} aria-labelledby="event-about"><h3 id="event-about">About this {event.kind.toLowerCase()}</h3><p>{event.description || "A description has not yet been established for this record."}</p></section>
       {event.descriptionSource && <p className={styles.recordNote}>

@@ -78,7 +78,7 @@
 .drawerContent{padding:28px 32px 45px}
 .saveStatus{margin:0;padding:0 32px;font-size:14px;line-height:1.6;color:var(--moss)}
 .saveStatus:not(:empty){padding-block:16px;border-bottom:1px solid var(--line)}
-.drawerContent>h2{font:400 42px/1.1 var(--serif);letter-spacing:-.02em;margin:0 0 12px}
+.drawerContent>h2{font:400 32px/1.2 var(--serif);letter-spacing:-.02em;margin:0 0 12px}
 .artworkDate{font-size:17px;color:var(--muted)}
 .drawerContent :global(.artwork-image){margin:20px 0}
 .drawerContent :global(.artwork-image)>img{object-fit:contain;max-height:60vh;width:100%;height:auto}
@@ -111,7 +111,7 @@
  .workFilters{grid-template-columns:repeat(2,minmax(0,1fr))}.workFilters>.search{grid-column:1/-1;border-bottom:1px solid var(--line);border-right:0}.workFilters>label:last-child{grid-column:1/-1;border-top:1px solid var(--line)}
  .secondaryFilters{grid-template-columns:repeat(2,minmax(0,1fr))}.secondaryFilters .check{grid-column:1/-1}
  .worksGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.workImage{height:220px;padding:8px}.workCopy>strong{font-size:21px}
- .drawer{width:100%;max-width:100%}.drawerContent{padding:25px 20px 35px}.drawerContent>h2{font-size:34px}
+ .drawer{width:100%;max-width:100%}.drawerContent{padding:25px 20px 35px}.drawerContent>h2{font-size:24px}
  .drawerContent dl>div{grid-template-columns:90px minmax(0,1fr);gap:12px}
 }
 @media(max-width:380px){.collectionImage{height:230px}.museumCard{gap:12px}.collectionCopy h3{font-size:24px}.collectionCopy>p:not(.place):not(.displayNote){font-size:13px}.workImage{height:190px}.worksGrid{gap:12px}}

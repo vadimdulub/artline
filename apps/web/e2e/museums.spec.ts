@@ -37,7 +37,7 @@ test("museum regions and countries are physical locations and combine correctly"
   await expect(page.getByRole("heading", { name: "No collections match these filters" })).toBeVisible();
 });
 
-test("museum highlights open a right-hand artwork record, source links and nested viewer", async ({ page }) => {
+test("museum highlights open a right-hand artwork record, source links and nested viewer", async ({ page }, info) => {
   await page.goto("/museums/the-met?selection=museum&sort=curated&q=Self-Portrait&artist=rembrandt");
   await expectSourceCount(page,"/museums/the-met/works");
   const open = page.getByRole("button", { name: "Open Self-Portrait", exact: true });
@@ -45,14 +45,14 @@ test("museum highlights open a right-hand artwork record, source links and neste
   const drawer = page.getByRole("dialog", { name: "Museum artwork details", exact: true });
   await expect(drawer.getByRole("heading", { name: "Self-Portrait", exact: true })).toBeVisible();
   expect((await drawer.boundingBox())!.x).toBeGreaterThan(0);
-  await expect(drawer.getByText("Display not verified.", { exact: false })).toBeVisible();
+  await expect(drawer.getByText("Display not verified. A holding record does not mean this work is currently on view.", { exact: true })).toHaveCount(0);
   await expect(drawer.getByRole("link", { name: /Designation source/ })).toHaveAttribute("href", /objects\/437397$/);
   await drawer.getByRole("button", { name: "View larger", exact: false }).click();
   await expect(page.locator(".image-dialog")).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(drawer).toBeVisible();
   await expect(drawer.getByRole("button", { name: "View larger", exact: false })).toBeFocused();
-  await page.screenshot({ path: "../../docs/screenshots/museum-artwork-desktop.png" });
+  await page.screenshot({ path: info.outputPath("museum-artwork-desktop.png") });
   const savedURL = page.url();
   await page.keyboard.press("Escape");
   await expect(open).toBeFocused();

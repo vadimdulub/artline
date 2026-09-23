@@ -233,6 +233,7 @@ def main():
     terms = entities({t for qid in chosen for p in ['P136', 'P7937', 'P31'] for t in ids(all_entities[qid], p)}, 'terms')
     seed_books = {b['id']: b for b in json.loads((ROOT / 'apps/server/internal/books/selection.json').read_text())}
     slug_by_id = {v: k for k, v in seed_ids.items()}
+    reviewed_dates = {r['bookId']: r for r in json.loads((ROOT / 'ops/curated-book-reviews-20260921.json').read_text())['dates']}
     result = []
     for qid in chosen:
         e = all_entities[qid]
@@ -269,6 +270,9 @@ def main():
             book['dateBasis'] = 'Existing editorial composition/publication interval; retained for review'
         elif any(term.lower() in {'religious text', 'sacred text', 'scripture', 'sutra', 'sūtra', 'buddhist text'} for term in themes):
             book['era'] = 'Sacred and contemplative'
+        if review := reviewed_dates.get(book['id']):
+            assert book['title'] == review['title'], 'Reviewed book identity changed; reconcile before importing'
+            book.update(review['fields'])
         result.append(book)
     (OUT / 'books.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     (OUT / 'excluded.json').write_text(json.dumps(excluded, indent=2) + '\n')

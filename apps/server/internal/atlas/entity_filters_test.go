@@ -20,7 +20,7 @@ func TestEntityFiltersValidationAndCursor(t *testing.T) {
 	for kind, fields := range EntityFields {
 		for _, field := range fields {
 			value := "choice"
-			if field == "women" || field == "popular" || field == "top100" {
+			if field == "women" || field == "popular" || field == "top100" || field == "image_only" {
 				value = "true"
 			}
 			f := Filter{Range: Bounds, Limit: 30, Entities: map[string]url.Values{kind: {field: {value}}}}

@@ -40,7 +40,7 @@ it("opens a linked artwork without adding it to the representative selection", (
   const linked = { ...artwork, id: "outside-selection", title: "Additional recorded work", representative_order: null };
   const { container } = render(<ArtistRecord artist={{ ...painter, artworks: [artwork] }} workId={linked.id} linkedWork={linked} onSelectWork={() => {}} />);
   expect(container.querySelectorAll(".work-card")).toHaveLength(1);
-  expect(screen.getByRole("heading", { name: "Additional recorded work" })).toBeVisible();
+  expect(screen.getByRole("heading", { name: "Additional recorded work", level: 1 })).toBeVisible();
 });
 it("renders structured geography evidence as readable research notes", () => {
   render(<SourceList citations={[{

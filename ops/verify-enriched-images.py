@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--run', type=Path, required=True)
     parser.add_argument('--report', type=Path, required=True)
     parser.add_argument('--local-only', action='store_true', help='Audit local files and catalogue only; cloud verification remains outstanding')
+    parser.add_argument('--scoped-storage', action='store_true', help='Check only receipt object paths instead of listing the full storage prefix')
     args = parser.parse_args()
     latest = {}
     for line in (args.run / 'events.jsonl').read_text().splitlines():
@@ -77,7 +78,7 @@ def main():
         elif provider == 'night-nga-commons':
             value = raw.get('nga_object', {}).get('endyear', '')
             ends = [int(value)] if str(value).isdigit() else []
-        elif provider in ('night-rijks', 'night-saam'):
+        elif provider in ('night-rijks', 'night-saam', 'night-cleveland'):
             ends = [receipt.get('scope_evidence', {}).get('source_year_end')]
         known_ends = [y for y in ends if isinstance(y, int) and y != 0]
         if known_ends:
@@ -86,7 +87,11 @@ def main():
             errors.append({'artwork_id': event['artwork_id'], 'error': 'fresh museum creation date exceeds cutoff', 'end_dates': known_ends})
     if not args.local_only:
         client = storage.Client(project='artline-508319', credentials=module.GcloudCredentials())
-        objects = {b.name: b for b in client.list_blobs(module.BUCKET, prefix='assets/artworks/open-museums/')}
+        if args.scoped_storage:
+            bucket = client.bucket(module.BUCKET)
+            objects = {name: bucket.get_blob(name) for name in hashes}
+        else:
+            objects = {b.name: b for b in client.list_blobs(module.BUCKET, prefix='assets/artworks/open-museums/')}
         for name, (md5, size) in hashes.items():
             blob = objects.get(name)
             if not blob or blob.md5_hash != md5 or blob.size != size or blob.size > 100000:

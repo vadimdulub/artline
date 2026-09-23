@@ -20,11 +20,6 @@ func (api *API) books(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_END_YEAR", err.Error())
 		return
 	}
-	limit, err := integerQuery(r, "limit", 100, 1, 100)
-	if err != nil {
-		writeError(w, 400, "INVALID_LIMIT", err.Error())
-		return
-	}
 	preview, ok := api.previewAllowed(w, r)
 	if !ok {
 		return
@@ -34,7 +29,12 @@ func (api *API) books(w http.ResponseWriter, r *http.Request) {
 	if !ok {
 		return
 	}
-	filter := books.Filter{Range: books.Range{Start: start, End: end}, View: q.Get("view"), Query: q.Get("q"), Authors: q["author"], Languages: q["language"], Countries: q["country"], Regions: q["region"], Women: women, Top100: top100, After: q.Get("after"), Limit: limit, Preview: preview}
+	filter := books.Filter{Range: books.Range{Start: start, End: end}, View: q.Get("view"), Query: q.Get("q"), Authors: q["author"], Languages: q["language"], Countries: q["country"], Regions: q["region"], Women: women, Top100: top100, After: q.Get("after"), Preview: preview}
+	filter.Limit, err = integerQuery(r, "limit", filter.MaxPageSize(), 1, filter.MaxPageSize())
+	if err != nil {
+		writeError(w, 400, "INVALID_LIMIT", err.Error())
+		return
+	}
 	if err := filter.Validate(); err != nil {
 		writeError(w, 400, "INVALID_BOOK_FILTER", err.Error())
 		return

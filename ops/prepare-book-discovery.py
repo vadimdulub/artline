@@ -33,9 +33,15 @@ def digest(value):
 
 def prepare():
     books = json.loads((OUT / 'books.json').read_text())
+    language_plan = json.loads((ROOT / 'docs/research/book-languages-20260922/correction-plan.json').read_text())
+    reviewed_languages = {row['bookId']: row for row in language_plan['changes']}
     top = json.loads((OUT / 'top-100-editorial.json').read_text())
     selected = {x['bookId']: x for x in top['items']}
-    assert len(selected) == 100 and selected.keys() <= {b['id'] for b in books}
+    assert len(selected) == 100
+    expanded = json.loads((ROOT / 'ops/curated-book-reviews-20260921.json').read_text())
+    selected.update({x['bookId']: x for x in expanded['highlights']})
+    top['version'] = expanded['version']
+    assert len(selected) == 154 and selected.keys() <= {b['id'] for b in books}
     wanted = {b['sourceId'] for b in books} | {c['id'] for b in books for c in b['creators']}
     entities, sources = {}, {}
     for path in sorted((OUT / 'sources').glob('*.json.gz')):
@@ -76,6 +82,13 @@ def prepare():
         for iso, region in db.execute('SELECT trim(code),region_code FROM countries'):
             row = un_by_iso[iso]
             assert region == (row['Intermediate Region Name'] or row['Sub-region Name']).lower().replace(' ', '-')
+    for review in reviewed_languages.values():
+        for qid in review['after']:
+            if ('language', qid) not in term_rows:
+                capture = json.loads((ROOT / 'docs/research/book-languages-20260922/language-entities' / (qid + '.json')).read_text())
+                entity = capture['entity']
+                term_rows[('language', qid)] = {'kind': 'language', 'key': qid, 'name': r.name(entity) or qid,
+                    'evidence': {'sourceUrl': 'https://www.wikidata.org/wiki/' + qid, 'revision': entity.get('lastrevid'), 'source': capture['receipt']}}
     rows = []
     for b in books:
         entity = entities[b['sourceId']]
@@ -94,6 +107,11 @@ def prepare():
                'evidence': {'work': {'sourceId': b['sourceId'], 'source': sources[b['sourceId']], 'languageProperty': 'P407', 'countryProperty': 'P495'}, 'creators': gender_evidence,
                             'editorial': {'version': top['version'], 'basis': selected[b['id']]['basis']} if b['id'] in selected else None,
                             'regionBasis': 'Direct country ISO code to UN M49; historical or unmatched origins remain unclassified.'}}
+        if b['id'] in reviewed_languages:
+            review = reviewed_languages[b['id']]
+            assert review['qid'] == b['sourceId']
+            row['languages'] = review['after']
+            row['evidence']['languageReview'] = review['review']
         row['projectionChecksum'] = digest(row)
         rows.append(row)
     data = {'version': 'book-discovery-v1', 'terms': list(term_rows.values()), 'books': rows}
@@ -111,7 +129,7 @@ def apply():
     data = json.loads((OUT / 'discovery.json').read_text())
     rows = data['books']
     assert len(rows) == 10000 and len({x['bookId'] for x in rows}) == 10000
-    assert sum(x['top100'] for x in rows) == 100
+    assert sum(x['top100'] for x in rows) == 154
     for row in rows:
         assert digest({k: v for k, v in row.items() if k != 'projectionChecksum'}) == row['projectionChecksum']
     with psycopg.connect(DSN) as db, db.transaction():
@@ -133,7 +151,7 @@ def apply():
         with db.cursor().copy('COPY book_discovery(book_id,book_checksum,woman_author_ids,top100,languages,countries,regions,evidence,checked_at,projection_checksum) FROM STDIN') as copy:
             for row in new:
                 copy.write_row((row['bookId'], row['bookChecksum'], row['womanAuthorIds'], row['top100'], row['languages'], row['countries'], row['regions'], Jsonb(row['evidence']), row['checkedAt'], row['projectionChecksum']))
-        assert db.execute('SELECT count(*) FROM book_discovery WHERE top100').fetchone()[0] == 100
+        assert db.execute('SELECT count(*) FROM book_discovery WHERE top100').fetchone()[0] == 154
     print(f'Added {len(new)} discovery projections. Base records and publication status unchanged.')
 
 

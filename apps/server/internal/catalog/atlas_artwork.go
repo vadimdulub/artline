@@ -24,7 +24,7 @@ type AtlasArtwork struct {
 func (r *Repository) AtlasArtwork(ctx context.Context, id string, preview bool) (AtlasArtwork, error) {
 	out := AtlasArtwork{Creators: []AtlasCreator{}}
 	var raw []byte
-	err := r.db.QueryRow(ctx, `SELECT to_jsonb(a)||jsonb_build_object('media_url',CASE WHEN m.verified_at IS NOT NULL AND m.rights_status IN ('public_domain','cc0','cc_by','cc_by_sa','licensed') AND nullif(trim(m.alt_text),'') IS NOT NULL THEN m.storage_path END,'alt_text',m.alt_text,'rights_status',m.rights_status,'attribution_text',m.attribution_text,'source_page_url',m.source_page_url,'license_label',m.license_label,'license_url',m.license_url) FROM artworks a LEFT JOIN media_assets m ON m.id=a.primary_media_id WHERE a.id=$1 AND a.status<>'archived' AND ($2 OR a.status='published')`, id, preview).Scan(&raw)
+	err := r.db.QueryRow(ctx, `SELECT to_jsonb(a)||jsonb_build_object('media_url',m.storage_path,'alt_text',m.alt_text,'rights_status',m.rights_status,'attribution_text',m.attribution_text,'source_page_url',m.source_page_url,'license_label',m.license_label,'license_url',m.license_url) FROM artworks a LEFT JOIN media_assets m ON m.id=a.primary_media_id WHERE a.id=$1 AND a.status<>'archived' AND ($2 OR a.status='published')`, id, preview).Scan(&raw)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return out, ErrNotFound
 	}

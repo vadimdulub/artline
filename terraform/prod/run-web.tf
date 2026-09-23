@@ -38,6 +38,21 @@ resource "google_cloud_run_v2_service" "web" {
         value = tostring(var.public_research_preview)
       }
 
+      env {
+        name  = "ARTLINE_SITE_URL"
+        value = var.site_url
+      }
+
+      env {
+        name  = "ARTLINE_GOOGLE_SITE_VERIFICATION"
+        value = var.google_site_verification
+      }
+
+      env {
+        name  = "ARTLINE_BING_SITE_VERIFICATION"
+        value = var.bing_site_verification
+      }
+
       resources {
         cpu_idle = true
         limits = {

@@ -208,8 +208,7 @@ const museumCTE = `WITH visible_works AS NOT MATERIALIZED (
  CASE WHEN d.id IS NOT NULL THEN jsonb_build_object('id',d.institution_id,'slug',d.institution_slug,'name',d.institution_name,
  'venue_id',d.venue_id,'venue_name',d.venue_name,'state',d.state,'context',d.context,'gallery',d.gallery,
  'checked_at',d.checked_at,'source_url',d.source_url) END AS display,
- CASE WHEN ma.verified_at IS NOT NULL AND ma.rights_status IN ('public_domain','cc0','cc_by','cc_by_sa','licensed')
- AND nullif(trim(ma.alt_text),'') IS NOT NULL THEN ma.storage_path END AS media_url,
+ ma.storage_path AS media_url,
  ma.alt_text,ma.rights_status,ma.attribution_text,ma.source_page_url,ma.license_label,ma.license_url,
  (SELECT coalesce(jsonb_agg(jsonb_build_object('id',a.id,'slug',a.slug,'name',a.display_name,'role',aa.attribution_role)
  ORDER BY a.sort_name,aa.attribution_role),'[]'::jsonb) FROM artwork_artists aa JOIN artists a ON a.id=aa.artist_id
@@ -330,8 +329,7 @@ const museumJSON = `jsonb_build_object('id',i.id,'slug',i.slug,'name',i.name,'ki
  'cover',(SELECT ` + workCardJSON + ` FROM works w WHERE w.id=(
  SELECT aw.id FROM museum_memberships member JOIN artworks aw ON aw.id=member.artwork_id
  LEFT JOIN media_assets media ON media.id=aw.primary_media_id WHERE member.institution_id=i.id
- ORDER BY (CASE WHEN media.verified_at IS NOT NULL AND media.rights_status IN ('public_domain','cc0','cc_by','cc_by_sa','licensed')
- AND nullif(trim(media.alt_text),'') IS NOT NULL THEN media.storage_path END IS NULL),aw.creation_year_start NULLS LAST,aw.title,aw.id LIMIT 1)))`
+ ORDER BY (media.storage_path IS NULL),aw.creation_year_start NULLS LAST,aw.title,aw.id LIMIT 1)))`
 
 // The bounded card CTE retains only the columns needed by counts and cover
 // selection. Reuse that narrow relation, then enrich just the chosen cover UUID.

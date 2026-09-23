@@ -15,7 +15,7 @@ import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
-export function MuseumDetail({ slug, preview }: { slug: string; preview: boolean }) {
+export function MuseumDetail({ slug, preview, initialMuseum }: { slug: string; preview: boolean; initialMuseum?: Museum }) {
   const params = new URLSearchParams(useQueryString());
   const [token, setToken] = useEditorToken();
   const painters = queryValues(params, "artist"), movements = queryValues(params, "movement"), venues = queryValues(params, "venue"), workTypes = queryValues(params, "work_type");
@@ -23,7 +23,7 @@ export function MuseumDetail({ slug, preview }: { slug: string; preview: boolean
   const [revision, setRevision] = useState(0), [message, setMessage] = useState("");
   const editor = useRef<HTMLDetailsElement>(null);
   const museumRequest = useMuseumRequest<Museum>(`museums/${slug}`, token, revision);
-  const museum = museumRequest.data ?? (museumRequest.previousData?.slug === slug ? museumRequest.previousData : undefined);
+  const museum = museumRequest.data ?? (museumRequest.previousData?.slug === slug ? museumRequest.previousData : undefined) ?? (initialMuseum?.slug === slug ? initialMuseum : undefined);
   const request = new URLSearchParams();
   for (const key of ["q", "artist", "movement", "selection", "display", "venue", "work_type", "start", "end", "unknown_date", "image_only", "sort", "limit"]) params.getAll(key).forEach(value => request.append(key, value));
   const scope = `${slug}|${request}|${token}`;

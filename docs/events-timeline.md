@@ -21,8 +21,14 @@ large dark chart, left alignment, thin rules and right-hand record drawer.
 The brief asks for continuity with ArtWorks, so no new card system, palette,
 hero, illustrations or animation is introduced. Reuse AtlasFilters,
 MultiSelectFilter, ActiveFilters, TimelineGrid, TimelineMark, TimelineOverview,
-TimelineRangeControls and RecordDrawer. The compressed historical scale is the
-same presentation function used by Books. No year zero or CE suffix. Dates,
+TimelineRangeControls, TimelineZoomOut and RecordDrawer. The all-years overview
+uses the same compressed historical scale as Books. Selecting years, including
+through a density bar, stretches that interval across the full timeline width
+with equal year spacing. Marks and density bars use the same focused scale;
+overlapping spans are clipped visually while their recorded dates stay intact.
+Zoom out restores all years and clears pagination while retaining search,
+countries, regions, topics, types and the Top 100 setting. Range dragging previews
+the heading and controls, then refits the chart on release. No year zero or CE suffix. Dates,
 counts, visibility, sorting, overlap tests and page selection belong to Go/SQL.
 
 The API returns at most 100 records with keyset pagination. More than 100 dated
@@ -36,3 +42,10 @@ Research methodology, source responses, exclusions and exact counts belong in
 `research/historical-events-20260917/`. A source-linked corpus is not equivalent
 to independent primary-source verification of every event. Never fill missing
 dates, countries, participants or descriptions with invented metadata.
+
+Focus verification (23 September 2026): TypeScript, 75 shared scale/layout unit
+checks and 23 headless browser checks passed against read-only catalogue views.
+Coverage includes desktop/mobile accessibility, density drill-down, BCE and
+compression boundaries, filters, reload/history, late responses, invalid ranges,
+overlapping spans and mouse/touch dragging. Screenshots and test output are under
+`/tmp/artline-events-focus-20260923` and `/tmp/artline-events-drag-20260923`.

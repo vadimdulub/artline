@@ -53,10 +53,14 @@ func ValidType(kind string) bool {
 type Filter struct {
 	Range
 	Query                 string
+	PresetID              string
+	NeighborOf, Direction string
 	Types                 []string
 	Highlights, Preview   bool
 	Region                string
 	Countries, Continents []string
+	CountryScope          string
+	Creators              []string
 	Limit                 int
 	After                 map[string]string
 	Selection             bool
@@ -64,14 +68,18 @@ type Filter struct {
 	Entities              map[string]url.Values
 }
 type Item struct {
-	ID          string `json:"id"`
-	Type        string `json:"type"`
-	Title       string `json:"title"`
-	Context     string `json:"context"`
-	StartYear   int    `json:"startYear"`
-	EndYear     int    `json:"endYear"`
-	Years       string `json:"years"`
-	Approximate bool   `json:"approximate"`
+	ID           string `json:"id"`
+	Type         string `json:"type"`
+	Title        string `json:"title"`
+	Context      string `json:"context"`
+	StartYear    int    `json:"startYear"`
+	EndYear      int    `json:"endYear"`
+	Years        string `json:"years"`
+	Approximate  bool   `json:"approximate"`
+	Relation     string `json:"relation,omitempty"`
+	MediaURL     string `json:"media_url,omitempty"`
+	AltText      string `json:"alt_text,omitempty"`
+	RightsStatus string `json:"rights_status,omitempty"`
 }
 type Period struct {
 	Start int `json:"start_year"`
@@ -105,6 +113,22 @@ type Region struct {
 var Regions = []Region{{"northern-africa", "Northern Africa"}, {"western-africa", "Western Africa"}, {"eastern-africa", "Eastern Africa"}, {"middle-africa", "Middle Africa"}, {"southern-africa", "Southern Africa"}, {"northern-america", "Northern America"}, {"central-america", "Central America"}, {"caribbean", "Caribbean"}, {"south-america", "South America"}, {"central-asia", "Central Asia"}, {"eastern-asia", "Eastern Asia"}, {"southern-asia", "Southern Asia"}, {"south-eastern-asia", "South-eastern Asia"}, {"western-asia", "Western Asia"}, {"eastern-europe", "Eastern Europe"}, {"northern-europe", "Northern Europe"}, {"southern-europe", "Southern Europe"}, {"western-europe", "Western Europe"}, {"australia-and-new-zealand", "Australia and New Zealand"}}
 
 func (f Filter) Validate() error {
+	if f.PresetID != "" {
+		if _, ok := FindPreset(f.PresetID); !ok {
+			return ErrFilter
+		}
+	}
+	if f.NeighborOf != "" || f.Direction != "" {
+		if len(f.Types) != 1 || len(f.After) > 0 || f.Limit != 1 || (f.Direction != "previous" && f.Direction != "next") || !recordIDPattern.MatchString(f.NeighborOf) || len(f.NeighborOf) > 100 {
+			return ErrFilter
+		}
+		if f.Types[0] == "artwork" && !uuidPattern.MatchString(f.NeighborOf) {
+			return ErrFilter
+		}
+	}
+	if err := validateCreators(f.Creators); err != nil {
+		return err
+	}
 	if err := f.validateGeography(); err != nil {
 		return err
 	}
@@ -240,7 +264,7 @@ func scope(f Filter, kind string) string {
 		picks[kind] = slices.Clone(ids)
 		slices.Sort(picks[kind])
 	}
-	raw, _ := json.Marshal([]any{f.Range, strings.TrimSpace(f.Query), types, f.Highlights, f.Preview, f.Region, f.Limit, kind, f.Selection, picks, f.Entities, f.Countries, f.Continents})
+	raw, _ := json.Marshal([]any{f.Range, strings.TrimSpace(f.Query), types, f.Highlights, f.Preview, f.Region, f.Limit, kind, f.Selection, picks, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, f.PresetID, presetFocus(f.PresetID)})
 	return fmt.Sprintf("%x", sha256.Sum256(raw))[:24]
 }
 func decodeCursor(raw string, f Filter, kind string) (cursor, error) {
