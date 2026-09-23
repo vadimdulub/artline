@@ -47,10 +47,12 @@ const eventScope = ` FROM event_records e WHERE e.status<>'archived' AND ($3 OR 
 
 type provider struct{ keys, details string }
 
+const artworkKeys = `SELECT a.id::text AS id,coalesce(a.creation_year_start,a.creation_year_end) AS start_year,coalesce(a.creation_year_end,a.creation_year_start) AS end_year`
+
 // Native predicates are applied before any creator, image or source enrichment.
 // Only page keys reach the detail projection; aggregates use IDs/dates only.
 var providers = map[string]provider{
-	"artwork": {`SELECT a.id::text AS id,coalesce(a.creation_year_start,a.creation_year_end) AS start_year,coalesce(a.creation_year_end,a.creation_year_start) AS end_year` + artScope,
+	"artwork": {artworkKeys + artScope,
 		`SELECT p.id,p.start_year,p.end_year,a.title,
  coalesce((SELECT string_agg(names.name,', ' ORDER BY names.name) FROM (SELECT DISTINCT ar.display_name AS name FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published')) names),a.unlinked_creator_label,'Creator not recorded'),a.date_display,a.date_precision<>'exact'
  FROM page p JOIN artworks a ON a.id=p.id::uuid`},
@@ -134,7 +136,15 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			scope += ` AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=a.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`
 		}
 		prefix := ""
-		if definition.Key == "artwork" && (len(f.Creators) > 0 || focus != nil && !focus.Global || len(f.Countries) > 0 || len(f.Continents) > 0 || len(entity["country"]) > 0 || len(entity["region"]) > 0) {
+		if definition.Key == "artwork" && args[5] == true && len(f.Creators) == 0 && (len(entity) == 0 || len(entity) == 1 && entity.Has("image_only")) {
+			// Highlight windows start with the selected, eligible native records.
+			// Otherwise a broad geographic match can scan every image before
+			// narrowing to a small historical selection. Creator/facet lookups
+			// retain their indexed, filter-first path below.
+			prefix = `artwork_scope AS MATERIALIZED (
+ SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,a.title,a.unlinked_creator_label,a.primary_media_id,a.work_type,a.cultural_context` + artScope + `),`
+			p.keys = artworkKeys + ` FROM artwork_scope a WHERE ` + scope
+		} else if definition.Key == "artwork" && (len(f.Creators) > 0 || focus != nil && !focus.Global || len(f.Countries) > 0 || len(f.Continents) > 0 || len(entity["country"]) > 0 || len(entity["region"]) > 0) {
 			// With several countries the planner can otherwise check holdings and
 			// visibility across the whole catalogue before applying geography.
 			// Materialize only the filtered native columns; enrich page IDs below.

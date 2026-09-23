@@ -89,3 +89,24 @@ Disposable query plans and audit output stay under `/tmp/artline-starting-review
 These checks use the real local catalogue without writes, fixtures or a test
 database. They do not establish 10-million-artwork capacity; representative
 large-catalogue concurrency and cold-cache load tests remain outstanding.
+
+## Production query review — 24 September 2026
+
+The release preview exposed repeated 10-second API timeouts for the Second World
+War starting selection and the Renaissance view without additional countries.
+The previous query materialized geographic/image matches before applying native
+dates and highlight membership. On production, that could read the entire image
+table for a much smaller historical selection.
+
+Highlight windows now materialize selected, eligible native artwork records
+before applying geography and image checks. Creator and other artwork-facet
+queries retain their existing filter-first path. Visibility, eligibility,
+counts, density bins and bounded keyset pages use the same predicates.
+
+Read-only production query plans for the new order completed in approximately
+3.15 seconds for the Second World War selection (510 artworks) and 1.69 seconds
+for the Renaissance view (1,697 artworks). These are single-query measurements
+on the existing database, not concurrency or cold-cache guarantees. The complete
+Go unit suite and all 30 local starting-point audits passed after the change.
+Private production plans are preserved with the release backup under
+`~/Library/Application Support/Artline/backups/pending-release-20260923/query-plans/`.
