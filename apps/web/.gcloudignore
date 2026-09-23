@@ -9,6 +9,8 @@ node_modules
 test-results
 playwright-report
 e2e
+**/*.test.ts
+**/*.test.tsx
 public/assets/**/*.jpg
 public/assets/**/*.jpeg
 public/assets/**/*.png
