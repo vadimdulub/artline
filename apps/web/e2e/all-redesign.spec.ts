@@ -12,7 +12,7 @@ for (const width of [1440, 390, 320]) test(`illustrated starting points and dire
   await page.goto('/all');
   await expect(page.getByRole('heading', { name: 'Explore a moment in history' })).toBeVisible();
   await expect(page.getByRole('button', { name: '+ Add', exact: true })).toHaveCount(0);
-  await expect(page.locator('.all-start button')).toHaveCount(30);
+  await expect(page.locator('.all-start button')).toHaveCount(32);
   await expect(page.locator('.all-start-card img')).toHaveCount(4);
   await expect.poll(() => page.locator('.all-start-card img').evaluateAll(nodes => nodes.every(node => (node as HTMLImageElement).complete && (node as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await expect(page.locator('.all-start-card').first()).toContainText('Italy & Northern Europe');
@@ -21,7 +21,7 @@ for (const width of [1440, 390, 320]) test(`illustrated starting points and dire
   await page.screenshot({ path: info.outputPath(`starting-${width}.png`) });
   await page.getByRole('button', { name: 'The Renaissance', exact: true }).click();
   await ready(page);
-  await expect(page.locator('.all-artwork-card')).toHaveCount(60);
+  await expect(page.locator('.all-artwork-card')).toHaveCount(150);
   await expect(page.locator('.all-artwork-card').first()).toBeInViewport();
   await expect(page.locator('.all-artwork-card img').first()).toBeVisible();
   await expect(page.locator('.all-lane')).toHaveCount(3);
@@ -44,6 +44,7 @@ test('World War II starts with explicit removable countries and survives history
   await expect(page.locator('.all-view-context')).toContainText('Artwork focus: 6 countries');
   await expect(page.locator('.all-artwork-card').first()).toBeVisible();
   await page.reload(); await ready(page);
+  await page.locator('.all-view-context > summary').click();
   await page.getByRole('button', { name: 'Show all countries', exact: true }).click(); await ready(page);
   expect(new URL(page.url()).searchParams.getAll('country')).toEqual([]);
   await expect(page).toHaveURL(/preset=second-world-war/);
@@ -80,15 +81,14 @@ test('one creator filter combines painter and author identities and can be clear
 test('artwork pages stay bounded and Browse starts in the same filter scope', async ({ page }) => {
   await page.goto('/all?preset=renaissance'); await ready(page);
   const first = await page.locator('.all-artwork-card').first().getAttribute('aria-label');
-  await page.getByRole('button', { name: 'Next 60 artworks', exact: false }).click(); await ready(page);
-  await expect(page.locator('.all-artwork-card')).toHaveCount(60);
-  await expect(page.locator('.all-artwork-card').first()).not.toHaveAttribute('aria-label', first!);
+  await page.locator('.all-artwork-strip').evaluate(el => { el.scrollLeft = el.scrollWidth; });
+  await expect(page.locator('.all-artwork-card')).toHaveCount(300);
+  await expect(page.locator('.all-artwork-card').first()).toHaveAttribute('aria-label', first!);
   await page.reload(); await ready(page);
-  await page.getByRole('button', { name: 'Browse artworks', exact: true }).click();
+  await page.getByRole('button', { name: 'Artworks', exact: true }).click();
   const panel = page.getByRole('dialog', { name: 'Browse artworks', exact: true });
-  await expect(panel.locator('.atlas-picker-list li')).toHaveCount(30);
+  await expect(panel.locator('.atlas-picker-list li')).toHaveCount(31);
   await page.keyboard.press('Escape');
-  await page.getByRole('button', { name: 'Back to first artworks', exact: true }).click(); await ready(page);
   await expect(page.locator('.all-artwork-card').first()).toHaveAttribute('aria-label', first!);
   await page.getByRole('checkbox', { name: 'Books', exact: true }).uncheck(); await ready(page);
   await expect(page.locator('.all-lane')).toHaveCount(2);

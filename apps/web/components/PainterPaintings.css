@@ -1,15 +1,10 @@
-.painter-view-switch{display:flex;align-items:center;gap:5px;padding:10px 24px;background:var(--dark);border-bottom:1px solid #454037;color:var(--paper)}
-.painter-view-switch>span{font-size:11px;color:#b5ad9f;margin-right:10px}
-.painter-view-switch button{background:transparent;border:1px solid #5b5348;padding:7px 15px;min-height:36px;color:var(--paper);font-size:12px}
+.painter-view-switch{display:inline-flex;align-items:center;gap:2px;padding:2px;border:1px solid #5b5348;color:var(--paper);flex-shrink:0}
+.painter-view-switch button{background:transparent;border:1px solid transparent;padding:4px 10px;min-height:32px;color:var(--paper);font-size:12px;white-space:nowrap}
+.painter-view-switch button:hover{background:#302c26}
 .painter-view-switch button[aria-pressed=true]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 .painter-paintings .timeline-stage{height:auto;min-height:280px;padding-top:42px;overflow:visible}
-.painter-paintings .all-artwork-strip{grid-auto-columns:clamp(180px,20vw,290px)}
+.painter-paintings .all-artwork-strip{--artwork-card-width:clamp(180px,20vw,290px)}
 .painter-paintings .all-artwork-image{height:clamp(180px,20vw,290px)}
 .painter-paintings .tick-row i{height:6px;bottom:auto}
-.painting-view-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:flex-end}
-.painting-view-actions label{flex-direction:row;align-items:center;gap:8px}
-.painting-view-actions label>span,.painting-view-actions>span{font-size:12px;color:var(--paper)}
-.painting-view-actions input{height:18px;width:18px;min-height:18px;padding:0;margin:0;accent-color:#c1a579}
-.painting-view-guidance{font-size:12px;line-height:1.5;color:#b5ad9f;margin:0 0 16px}
 .painter-paintings .all-artwork-density[open] .timeline-overview{height:220px}
-@media(max-width:760px){.painter-view-switch{padding-inline:18px}.painting-view-actions{gap:12px;justify-content:flex-start}.painter-paintings .all-artwork-strip{grid-auto-columns:180px}.painter-paintings .all-artwork-image{height:190px}}
+@media(max-width:760px){.painter-paintings .all-artwork-strip{--artwork-card-width:180px}.painter-paintings .all-artwork-image{height:190px}}

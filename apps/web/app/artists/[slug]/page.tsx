@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const artist = await getArtist(slug);
   if (!artist) notFound();
-  return pageMetadata(artist.display_name, artistDescription(artist), `/artists/${artist.slug}`, { index: artist.status === "published" && !researchPreviewEnabled() });
+  return pageMetadata(artist.display_name, artistDescription(artist), `/artists/${artist.slug}`, { index: artist.status === "published" });
 }
 export default async function ArtistPage({ params, searchParams }: PageProps) {
   const { slug } = await params;
@@ -24,7 +24,7 @@ export default async function ArtistPage({ params, searchParams }: PageProps) {
     permanentRedirect(`/artists/${artist.slug}/works/${work.toLowerCase()}${filters.size ? `?${filters}` : ""}`);
   }
   if (artist.slug !== slug) permanentRedirect(`/artists/${artist.slug}`);
-  const essay = getPainterEssay(slug, researchPreviewEnabled());
-  const index = artist.status === "published" && !researchPreviewEnabled();
+  const essay = getPainterEssay(slug, artist.status !== "published" && researchPreviewEnabled());
+  const index = artist.status === "published";
   return <>{index && <><StructuredData data={{ "@context": "https://schema.org", "@type": "ProfilePage", url: absoluteURL(`/artists/${artist.slug}`), mainEntity: { "@type": artist.entity_type === "person" ? "Person" : "Thing", name: artist.display_name, alternateName: artist.aliases, description: artistDescription(artist) } }} /><StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Artists", path: "/artists" }, { name: artist.display_name, path: `/artists/${artist.slug}` }])} /></>}<ArtistProfile artist={artist} essay={essay?.content ?? null} /></>;
 }

@@ -61,3 +61,6 @@ terraform.tfstate.*
 .terraform/
 *.tfvars
 !*.tfvars.example
+
+# Reviewed starting-point decisions are source configuration evidence.
+!docs/research/all-starting-points-20260924/selections.json

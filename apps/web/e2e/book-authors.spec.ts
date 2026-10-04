@@ -14,9 +14,9 @@ async function settled(page: import("@playwright/test").Page, count: number, nou
 }
 
 test("author checkbox preserves filters, groups creators once and restores history", async ({ page }) => {
-  const books = await catalogue(page, "top100=true&limit=200");
-  const authors = await catalogue(page, "view=authors&top100=true&limit=200");
-  const women = await catalogue(page, "view=authors&top100=true&women=true&limit=200");
+  const books = await catalogue(page, "top100=true");
+  const authors = await catalogue(page, "view=authors&top100=true");
+  const women = await catalogue(page, "view=authors&top100=true&women=true");
   await page.goto("/books"); await settled(page, books.total, "books");
   const toggle = page.getByRole("checkbox", { name: "Show author lifespans", exact: true });
   await expect(toggle).not.toBeChecked();
@@ -75,17 +75,21 @@ test("BCE, incomplete and absent lifespans remain honest and accessible", async 
   await page.getByRole("button", { name: "Open author Margaret Atwood", exact: true }).click();
   await expect(page.getByRole("dialog", { name: "Book author details" })).toContainText("Not recorded");
   await page.keyboard.press("Escape");
-  const highlights = await catalogue(page, "view=authors&top100=true&limit=200");
+  const highlights = await catalogue(page, "view=authors&top100=true");
   await page.goto("/books?view=authors"); await settled(page, highlights.total);
   const response = await page.request.get("/api/backend/v1/books?view=authors&top100=true");
-  const data = await response.json();
+  let data = await response.json();
+  if (data.hasMore) {
+    data = await catalogue(page, `view=authors&top100=true&after=${encodeURIComponent(data.nextCursor)}`);
+    await page.getByRole("button", { name: "Next authors", exact: true }).click();
+  }
   const unplaced = data.authors.find((a: { startYear: number | null }) => a.startYear === null);
   await page.getByRole("button", { name: `Open author ${unplaced.name}`, exact: true }).click();
   await expect(page.getByRole("dialog", { name: "Book author details" })).toContainText(unplaced.lifespan);
 });
 
 test("author checkbox, marks and drawer fit desktop and phones", async ({ page }, testInfo) => {
-  const highlights = await catalogue(page, "view=authors&top100=true&limit=200");
+  const highlights = await catalogue(page, "view=authors&top100=true");
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 950 });
     await page.goto("/books?view=authors"); await settled(page, highlights.total);
@@ -106,14 +110,14 @@ test("author checkbox, marks and drawer fit desktop and phones", async ({ page }
 });
 
 test("author pages stay bounded and switching views clears their cursor", async ({ page }) => {
-  const authors = await catalogue(page, "view=authors&top100=false&limit=100");
-  const books = await catalogue(page, "top100=false&limit=100");
+  const authors = await catalogue(page, "view=authors&top100=false");
+  const books = await catalogue(page, "top100=false");
   await page.goto("/books?view=authors&top100=false"); await settled(page, authors.total);
   const index = page.getByRole("list", { name: "Author index", exact: true });
-  await expect(index.locator("li")).toHaveCount(100);
+  await expect(index.locator("li")).toHaveCount(150);
   const first = await index.locator("strong").allTextContents();
   await page.getByRole("button", { name: "Next authors", exact: true }).click(); await settled(page, authors.total);
-  await expect(index.locator("li")).toHaveCount(100);
+  await expect(index.locator("li")).toHaveCount(150);
   expect(await index.locator("strong").allTextContents()).not.toEqual(first);
   expect(new URL(page.url()).searchParams.has("after")).toBe(true);
   await page.getByRole("checkbox", { name: "Show author lifespans" }).uncheck(); await settled(page, books.total, "books");

@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 	"strings"
 
 	"github.com/jackc/pgx/v5"
@@ -43,8 +44,17 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		return r.authorTimeline(ctx, f)
 	}
 	args := []any{f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Authors, f.Women, f.Top100, f.Languages, f.Countries, f.Regions}
-	if err := r.db.QueryRow(ctx, `SELECT count(*),count(*) FILTER (WHERE b.start_year IS NULL)`+predicate, args...).Scan(&result.Total, &result.UndatedTotal); err != nil {
+	var firstYear, lastYear *int
+	if err := r.db.QueryRow(ctx, `SELECT count(*),count(*) FILTER (WHERE b.start_year IS NULL),min(b.start_year),max(b.end_year)`+predicate, args...).Scan(&result.Total, &result.UndatedTotal, &firstYear, &lastYear); err != nil {
 		return result, err
+	}
+	result.MatchedRange = timeline.FitExtent(firstYear, lastYear, f.Start, f.End)
+	individualLimit := timeline.IndividualLimit
+	if f.Top100 {
+		individualLimit = HighlightsLimit
+	}
+	if result.Total > individualLimit || (result.Total > 0 && result.UndatedTotal == result.Total) {
+		result.Mode = "density"
 	}
 	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM book_records b WHERE status <> 'archived' AND ($1 OR status='published') AND `+publicationScope+``, f.Preview).Scan(&result.SelectionTotal); err != nil {
 		return result, err
@@ -84,37 +94,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		return result, err
 	}
 	attachCovers(result.Items)
-	if result.Total-result.UndatedTotal > f.MaxPageSize() {
-		result.Mode = "density"
-		result.SuggestedFilters, err = r.suggestions(ctx, args, result.Total)
-		if err != nil {
-			return result, err
-		}
-		periods := densityPeriods(f.Range)
-		starts, ends := []int{}, []int{}
-		for _, period := range periods {
-			starts = append(starts, period.Start)
-			ends = append(ends, period.End)
-		}
-		rows, err := r.db.Query(ctx, `WITH matching AS MATERIALIZED (SELECT b.start_year,b.end_year`+predicate+`), periods AS (SELECT * FROM unnest($11::int[],$12::int[]) AS p(start_year,end_year))
-			SELECT p.start_year,p.end_year,count(m.start_year) FROM periods p JOIN matching m ON m.start_year<=p.end_year AND m.end_year>=p.start_year GROUP BY p.start_year,p.end_year ORDER BY p.start_year`, append(args, starts, ends)...)
-		if err != nil {
-			return result, err
-		}
-		for rows.Next() {
-			var period DensityPeriod
-			if err := rows.Scan(&period.Start, &period.End, &period.Count); err != nil {
-				rows.Close()
-				return result, err
-			}
-			result.Density = append(result.Density, period)
-		}
-		err = rows.Err()
-		rows.Close()
-		if err != nil {
-			return result, err
-		}
-	}
+	// Dense selections retain bounded keyset pages for the cover gallery.
 	return result, nil
 }
 
@@ -170,6 +150,7 @@ func (r *Repository) attachCreators(ctx context.Context, items []Book) error {
 		if err := json.Unmarshal(raw, &creator); err != nil {
 			return err
 		}
+		attachPortrait(&creator)
 		creator.Credit = credit
 		items[positions[id]].Creators = append(items[positions[id]].Creators, creator)
 	}

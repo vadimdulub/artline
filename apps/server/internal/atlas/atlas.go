@@ -12,6 +12,9 @@ import (
 	"regexp"
 	"slices"
 	"strings"
+
+	"github.com/vadimdulub/artline/apps/server/internal/books"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 )
 
 var ErrFilter = errors.New("invalid atlas filter")
@@ -68,18 +71,20 @@ type Filter struct {
 	Entities              map[string]url.Values
 }
 type Item struct {
-	ID           string `json:"id"`
-	Type         string `json:"type"`
-	Title        string `json:"title"`
-	Context      string `json:"context"`
-	StartYear    int    `json:"startYear"`
-	EndYear      int    `json:"endYear"`
-	Years        string `json:"years"`
-	Approximate  bool   `json:"approximate"`
-	Relation     string `json:"relation,omitempty"`
-	MediaURL     string `json:"media_url,omitempty"`
-	AltText      string `json:"alt_text,omitempty"`
-	RightsStatus string `json:"rights_status,omitempty"`
+	galleryPriority int
+	ID              string       `json:"id"`
+	Type            string       `json:"type"`
+	Title           string       `json:"title"`
+	Context         string       `json:"context"`
+	StartYear       int          `json:"startYear"`
+	EndYear         int          `json:"endYear"`
+	Years           string       `json:"years"`
+	Approximate     bool         `json:"approximate"`
+	Relation        string       `json:"relation,omitempty"`
+	MediaURL        string       `json:"media_url,omitempty"`
+	AltText         string       `json:"alt_text,omitempty"`
+	RightsStatus    string       `json:"rights_status,omitempty"`
+	Cover           *books.Cover `json:"cover,omitempty"`
 }
 type Period struct {
 	Start int `json:"start_year"`
@@ -99,11 +104,12 @@ type Tick struct {
 	Label string `json:"label"`
 }
 type Response struct {
-	Range  Range  `json:"range"`
-	Bounds Range  `json:"bounds"`
-	Lanes  []Lane `json:"lanes"`
-	Total  int    `json:"total"`
-	Ticks  []Tick `json:"ticks"`
+	MatchedRange *timeline.DateExtent `json:"matchedRange,omitempty"`
+	Range        Range                `json:"range"`
+	Bounds       Range                `json:"bounds"`
+	Lanes        []Lane               `json:"lanes"`
+	Total        int                  `json:"total"`
+	Ticks        []Tick               `json:"ticks"`
 }
 type Region struct {
 	Key  string `json:"slug"`
@@ -135,7 +141,7 @@ func (f Filter) Validate() error {
 	if err := f.validateEntities(); err != nil {
 		return err
 	}
-	if f.Start < Bounds.Start || f.End > Bounds.End || f.Start >= f.End || f.Start == 0 || f.End == 0 || len(f.Query) > 200 || f.Limit < 1 || f.Limit > 60 || len(f.Types) > 3 || len(f.After) > 3 {
+	if f.Start < Bounds.Start || f.End > Bounds.End || f.Start >= f.End || f.Start == 0 || f.End == 0 || len(f.Query) > 200 || f.Limit < 1 || f.Limit > timeline.IndividualLimit || len(f.Types) > 3 || len(f.After) > 3 {
 		return ErrFilter
 	}
 	totalPicks := 0
@@ -251,9 +257,10 @@ func Periods(r Range) []Period {
 }
 
 type cursor struct {
-	Year  int    `json:"y"`
-	ID    string `json:"i"`
-	Scope string `json:"s"`
+	Priority int    `json:"p,omitempty"`
+	Year     int    `json:"y"`
+	ID       string `json:"i"`
+	Scope    string `json:"s"`
 }
 
 func scope(f Filter, kind string) string {
@@ -264,7 +271,12 @@ func scope(f Filter, kind string) string {
 		picks[kind] = slices.Clone(ids)
 		slices.Sort(picks[kind])
 	}
-	raw, _ := json.Marshal([]any{f.Range, strings.TrimSpace(f.Query), types, f.Highlights, f.Preview, f.Region, f.Limit, kind, f.Selection, picks, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, f.PresetID, presetFocus(f.PresetID)})
+	values := []any{f.Range, strings.TrimSpace(f.Query), types, f.Highlights, f.Preview, f.Region, f.Limit, kind, f.Selection, picks, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, f.PresetID, presetFocus(f.PresetID)}
+	if kind == "artwork" {
+		// Chronological-only cursors cannot seek in the new gallery order.
+		values = append(values, "painted-first-v1")
+	}
+	raw, _ := json.Marshal(values)
 	return fmt.Sprintf("%x", sha256.Sum256(raw))[:24]
 }
 func decodeCursor(raw string, f Filter, kind string) (cursor, error) {
@@ -273,12 +285,12 @@ func decodeCursor(raw string, f Filter, kind string) (cursor, error) {
 		return c, nil
 	}
 	data, err := base64.RawURLEncoding.DecodeString(raw)
-	if err != nil || json.Unmarshal(data, &c) != nil || c.Scope != scope(f, kind) || c.Year < Bounds.Start || c.Year > Bounds.End || len(c.ID) < 1 || len(c.ID) > 100 {
+	if err != nil || json.Unmarshal(data, &c) != nil || c.Scope != scope(f, kind) || c.Year < Bounds.Start || c.Year > Bounds.End || len(c.ID) < 1 || len(c.ID) > 100 || c.Priority < 0 || c.Priority > 2 || kind != "artwork" && c.Priority != 0 {
 		return c, ErrFilter
 	}
 	return c, nil
 }
 func encodeCursor(item Item, f Filter, kind string) string {
-	data, _ := json.Marshal(cursor{item.StartYear, item.ID, scope(f, kind)})
+	data, _ := json.Marshal(cursor{Priority: item.galleryPriority, Year: item.StartYear, ID: item.ID, Scope: scope(f, kind)})
 	return base64.RawURLEncoding.EncodeToString(data)
 }

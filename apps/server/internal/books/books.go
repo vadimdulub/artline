@@ -7,9 +7,12 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 )
 
 type Creator struct {
+	Portrait       *Cover    `json:"portrait,omitempty"`
 	ID             string    `json:"id"`
 	Name           string    `json:"name"`
 	Description    string    `json:"description"`
@@ -105,21 +108,22 @@ type Facets struct {
 	Regions   []FilterOption `json:"regions"`
 }
 type Response struct {
-	Items            []Book            `json:"items"`
-	Total            int               `json:"total"`
-	SelectionTotal   int               `json:"selectionTotal"`
-	UndatedTotal     int               `json:"undatedTotal"`
-	HasMore          bool              `json:"hasMore"`
-	NextCursor       string            `json:"nextCursor"`
-	Range            Range             `json:"range"`
-	Bounds           Range             `json:"bounds"`
-	Periods          []Period          `json:"periods"`
-	Ticks            []Tick            `json:"ticks"`
-	Mode             string            `json:"mode"`
-	Density          []DensityPeriod   `json:"density"`
-	SuggestedFilters []SuggestedFilter `json:"suggested_filters"`
-	Authors          []TimelineAuthor  `json:"authors,omitempty"`
-	View             string            `json:"view,omitempty"`
+	MatchedRange     *timeline.DateExtent `json:"matchedRange,omitempty"`
+	Items            []Book               `json:"items"`
+	Total            int                  `json:"total"`
+	SelectionTotal   int                  `json:"selectionTotal"`
+	UndatedTotal     int                  `json:"undatedTotal"`
+	HasMore          bool                 `json:"hasMore"`
+	NextCursor       string               `json:"nextCursor"`
+	Range            Range                `json:"range"`
+	Bounds           Range                `json:"bounds"`
+	Periods          []Period             `json:"periods"`
+	Ticks            []Tick               `json:"ticks"`
+	Mode             string               `json:"mode"`
+	Density          []DensityPeriod      `json:"density"`
+	SuggestedFilters []SuggestedFilter    `json:"suggested_filters"`
+	Authors          []TimelineAuthor     `json:"authors,omitempty"`
+	View             string               `json:"view,omitempty"`
 }
 type AuthorOptions struct {
 	Items   []string `json:"items"`
@@ -130,13 +134,15 @@ var Bounds = Range{-5000, 2000}
 var ErrNotFound = errors.New("book not found")
 var ErrUnavailable = errors.New("book catalogue unavailable")
 
-// Highlights are a small editorial selection. Keep their complete timeline in
-// one bounded response; larger catalogues retain the smaller page/diagram limit.
+// The editorial selection has its own bounded capacity, independent of the
+// full catalogue. It fits the current highlights on one chronological view.
+const HighlightsLimit = 500
+
 func (f Filter) MaxPageSize() int {
 	if f.Top100 {
-		return 200
+		return HighlightsLimit
 	}
-	return 100
+	return timeline.IndividualLimit
 }
 
 func (f Filter) Validate() error {

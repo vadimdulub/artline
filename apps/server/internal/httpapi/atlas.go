@@ -4,6 +4,7 @@ import (
 	"errors"
 	"github.com/vadimdulub/artline/apps/server/internal/atlas"
 	"github.com/vadimdulub/artline/apps/server/internal/catalog"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 	"log/slog"
 	"net/http"
 	"net/url"
@@ -23,15 +24,35 @@ func (api *API) atlasPresets(w http.ResponseWriter, r *http.Request) {
 		api.atlasError(w, err)
 		return
 	}
-	writeJSON(w, 200, map[string]any{"presets": presets, "types": atlas.Definitions, "regions": atlas.Regions, "continents": atlas.Continents, "bounds": atlas.Bounds, "defaultPreset": ""})
+	writeJSON(w, 200, map[string]any{"presets": publicAtlasPresets(presets), "types": atlas.Definitions, "regions": atlas.Regions, "continents": atlas.Continents, "bounds": atlas.Bounds, "defaultPreset": ""})
+}
+
+// Relation IDs and identity evidence drive server queries, not menu rendering.
+// Copy before trimming so catalogue matching retains the complete source data.
+func publicAtlasPresets(presets []atlas.Preset) []atlas.Preset {
+	result := make([]atlas.Preset, len(presets))
+	for i, preset := range presets {
+		result[i] = preset
+		if preset.Focus != nil {
+			focus := *preset.Focus
+			focus.Related, focus.Context, focus.ArtworkIdentities = nil, nil, nil
+			focus.ArtworkTraditions = nil
+			result[i].Focus = &focus
+		}
+	}
+	return result
 }
 func (api *API) atlasTimeline(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
-	for _, key := range []string{"start", "end", "preset", "window", "q", "highlights", "region", "country_scope", "limit", "after_artwork", "after_book", "after_event", "selection", "neighbor_of", "direction"} {
+	for _, key := range []string{"start", "end", "preset", "preset_filters", "window", "q", "highlights", "region", "country_scope", "limit", "after_artwork", "after_book", "after_event", "selection", "neighbor_of", "direction"} {
 		if len(q[key]) > 1 {
 			writeError(w, 400, "INVALID_ATLAS_FILTER", "Use each atlas filter once.")
 			return
 		}
+	}
+	if value := q.Get("preset_filters"); value != "" && value != "custom" && value != "recommended" {
+		writeError(w, 400, "INVALID_ATLAS_FILTER", "Choose recommended or custom period filters.")
+		return
 	}
 	rangeValue := atlas.Bounds
 	id := q.Get("preset")
@@ -45,6 +66,7 @@ func (api *API) atlasTimeline(w http.ResponseWriter, r *http.Request) {
 		if q.Get("window") == "period" {
 			rangeValue = p.Period
 		}
+		atlas.ApplyStartingFilters(q, p)
 	}
 	if q.Get("window") != "" && q.Get("window") != "period" && q.Get("window") != "context" {
 		writeError(w, 400, "INVALID_WINDOW", "Choose the main period or before and after.")
@@ -64,7 +86,7 @@ func (api *API) atlasTimeline(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_RANGE", err.Error())
 		return
 	}
-	limit, err := integerQuery(r, "limit", 60, 1, 60)
+	limit, err := integerQuery(r, "limit", timeline.IndividualLimit, 1, timeline.IndividualLimit)
 	if err != nil {
 		writeError(w, 400, "INVALID_LIMIT", err.Error())
 		return
@@ -113,7 +135,10 @@ func (api *API) atlasTimeline(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_ATLAS_FILTER", "Choose valid types and ordered years from 12000 BCE to 2000; there is no year zero. A page link must match its filters.")
 		return
 	}
-	ctx, cancel := contextWithTimeout(r, 10*time.Second)
+	// Allow cold catalogue queries to complete alongside filter-choice reads on
+	// the small production instance. The web proxy leaves a further five seconds
+	// for transport; request cancellation still stops superseded database work.
+	ctx, cancel := contextWithTimeout(r, 20*time.Second)
 	defer cancel()
 	out, err := api.atlasRepo.List(ctx, f)
 	if err != nil {
@@ -167,7 +192,7 @@ func (api *API) atlasGeography(w http.ResponseWriter, r *http.Request) {
 	if !ok {
 		return
 	}
-	ctx, cancel := contextWithTimeout(r, 5*time.Second)
+	ctx, cancel := contextWithTimeout(r, 10*time.Second)
 	defer cancel()
 	countries, err := api.atlasRepo.Countries(ctx, preview)
 	if err != nil {
@@ -186,7 +211,7 @@ func (api *API) atlasCreators(w http.ResponseWriter, r *http.Request) {
 		api.atlasError(w, atlas.ErrFilter)
 		return
 	}
-	ctx, cancel := contextWithTimeout(r, 5*time.Second)
+	ctx, cancel := contextWithTimeout(r, 10*time.Second)
 	defer cancel()
 	out, err := api.atlasRepo.Creators(ctx, r.URL.Query().Get("q"), r.URL.Query()["selected"], preview)
 	if err != nil {

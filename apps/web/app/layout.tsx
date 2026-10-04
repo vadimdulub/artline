@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
-import { researchPreviewEnabled } from "@/lib/server-api";
+import { MemberSessionProvider } from "@/components/MemberSession";
 import { noIndex, siteDescription, siteURL } from "@/lib/seo";
 import "./globals.css";
 export const dynamic = "force-dynamic";
@@ -15,8 +15,10 @@ export function generateMetadata(): Metadata { return {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>
     <a className="skip-link" href="#main-content">Skip to content</a>
-    <SiteHeader preview={researchPreviewEnabled()} />
+    <MemberSessionProvider>
+    <SiteHeader localDevelopment={process.env.NODE_ENV === "development" && !process.env.K_SERVICE} />
     {children}
-    <footer className="site-footer"><p>Artline. Art, literature and history in context.</p><nav aria-label="More"><Link href="/artists">Artist directory</Link><Link href="/museums">Museums</Link><Link href="/coverage">Coverage</Link><Link href="/imports">Imports</Link><Link href="/about">About & sources</Link></nav></footer>
+    <footer className="site-footer"><p>Artline. Art, literature and history in context.</p><nav aria-label="More"><Link href="/art-history-timeline">Art history guide</Link><Link href="/artists">Artist directory</Link><Link href="/museums">Museums</Link><Link href="/coverage">Coverage</Link><Link href="/imports">Imports</Link><Link href="/about">About & sources</Link><Link href="/privacy">Privacy</Link></nav></footer>
+    </MemberSessionProvider>
   </body></html>;
 }

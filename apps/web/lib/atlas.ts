@@ -1,10 +1,10 @@
-import type { BookRange } from "./books";
+import type { Book, BookRange } from "./books";
 import type { Artwork } from "./types";
 export type AtlasType = "artwork" | "book" | "event";
 export type AtlasDefinition = { key: AtlasType; name: string; singular: string; dateLabel: string; cutoff: number; color: string };
-export type AtlasPreset = { id: string; name: string; group: string; startingScope: string; startingCountries?: string[]; cover?: AtlasItem; description: string; period: BookRange; context: BookRange; sources: { name: string; url: string }[]; focus?: { label: string; countries: string[]; regions?: string[]; global?: boolean; selectedEvents?: boolean } };
+export type AtlasPreset = { id: string; name: string; group: string; startingScope: string; startingCountries?: string[]; startingCreators?: string[]; startingHighlights: boolean; cover?: AtlasItem; description: string; period: BookRange; context: BookRange; sources: { name: string; url: string }[]; focus?: { label: string; countries: string[]; regions?: string[]; global?: boolean; selectedEvents?: boolean; selectedBooks?: boolean } };
 export type AtlasMetadata = { presets: AtlasPreset[]; types: AtlasDefinition[]; regions: { slug: string; name: string }[]; continents: { slug: string; name: string }[]; bounds: BookRange; defaultPreset: string };
-export type AtlasItem = { id: string; type: AtlasType; title: string; context: string; startYear: number; endYear: number; years: string; approximate: boolean; relation?: "context"; media_url?: string; alt_text?: string; rights_status?: string };
+export type AtlasItem = { id: string; type: AtlasType; title: string; context: string; startYear: number; endYear: number; years: string; approximate: boolean; relation?: "context"; media_url?: string; alt_text?: string; rights_status?: string; cover?: Book["cover"] };
 export type AtlasLane = AtlasDefinition & { total: number; mode: "individual" | "density"; items: AtlasItem[]; density: { start_year: number; end_year: number; count: number }[]; nextCursor: string };
-export type AtlasResponse = { range: BookRange; bounds: BookRange; lanes: AtlasLane[]; total: number; ticks: { year: number; label: string }[] };
+export type AtlasResponse = { matchedRange?: { start: number; end: number } | null; range: BookRange; bounds: BookRange; lanes: AtlasLane[]; total: number; ticks: { year: number; label: string }[] };
 export type AtlasArtwork = Artwork & { creators: { id: string; slug: string; name: string; years: string; role: string }[] };

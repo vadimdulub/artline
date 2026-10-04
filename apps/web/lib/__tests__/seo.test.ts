@@ -25,6 +25,31 @@ describe("search metadata", () => {
     expect(explorerMetadata("Atlas", "Description", "/").robots).toMatchObject({ index: true });
   });
 
+  it("provides a brand sharing image without overriding a permitted artwork image", () => {
+    vi.stubEnv("ARTLINE_SITE_URL", "https://artline.example");
+    expect(pageMetadata("Guide", "Description", "/art-history-timeline").openGraph).toMatchObject({
+      images: [{ url: "https://artline.example/share-image", width: 1200, height: 630 }],
+    });
+    expect(pageMetadata("Work", "Description", "/artists/a/works/1", { image: "/assets/artworks/work.jpg" }).openGraph).toMatchObject({
+      images: [{ url: "https://artline.example/assets/artworks/work.jpg" }],
+    });
+  });
+
+  it("describes image permissions only from recorded evidence", () => {
+    vi.stubEnv("ARTLINE_SITE_URL", "https://artline.example");
+    const artist = { slug: "artist", display_name: "An Artist", entity_type: "person" } as ArtistDetail;
+    const work = { id: "work", title: "A painting", date_display: "Date unknown", attribution_role: "primary", media_url: "/assets/artworks/work.jpg", rights_status: "cc_by", license_url: "https://creativecommons.org/licenses/by/4.0/", attribution_text: "Photograph: Example Museum", alt_text: "A landscape with a river" } as Artwork;
+    const image = artworkStructuredData(work, artist).image;
+    expect(image).toMatchObject({ "@type": "ImageObject", contentUrl: "https://artline.example/assets/artworks/work.jpg", license: work.license_url, creditText: work.attribution_text, caption: work.alt_text });
+    expect(image).not.toHaveProperty("creator");
+    expect(image).not.toHaveProperty("copyrightNotice");
+    expect(image).not.toHaveProperty("acquireLicensePage");
+    const unknown = artworkStructuredData({ ...work, license_url: "javascript:alert(1)", attribution_text: null }, artist).image;
+    expect(unknown?.license).toBeUndefined();
+    expect(unknown?.creditText).toBeUndefined();
+    expect(artworkStructuredData({ ...work, rights_status: "restricted" }, artist).image).toBeUndefined();
+  });
+
   it("escapes script-breaking content without changing the structured value", () => {
     const data = { name: '</script><script>alert("x")</script>' };
     const serialized = serializeJSONLD(data);

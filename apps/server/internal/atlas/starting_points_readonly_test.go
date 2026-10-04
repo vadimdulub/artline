@@ -21,7 +21,10 @@ func TestStartingPointConfiguration(t *testing.T) {
 			if strings.TrimSpace(p.StartingScope) == "" {
 				t.Fatal("missing visible scope")
 			}
-			f := Filter{PresetID: p.ID, Range: p.Context, Limit: 60, Countries: p.StartingCountries}
+			if p.CoverArtworkID == "" || p.Focus.ArtworkIdentities[p.CoverArtworkID] == "" {
+				t.Fatal("every starting point needs a cover and its portable artwork identity")
+			}
+			f := Filter{PresetID: p.ID, Range: p.Context, Limit: 150, Countries: p.StartingCountries, Creators: p.StartingCreators}
 			if err := f.Validate(); err != nil {
 				t.Fatal(err)
 			}
@@ -34,6 +37,9 @@ func TestStartingPointConfiguration(t *testing.T) {
 			}
 			if len(p.Focus.ArtworkTraditions) > 0 && len(p.StartingCountries) > 0 {
 				t.Fatal("hard country defaults exclude unlinked object traditions")
+			}
+			if !p.Focus.SelectedBooks || !p.Focus.SelectedEvents {
+				t.Fatal("themed books and events need an explicit reviewed selection")
 			}
 		})
 	}
@@ -58,6 +64,15 @@ func TestStartingPointsReadOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer db.Close()
+	covers, err := (&Repository{db: db}).IllustratedPresets(ctx, true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, p := range covers {
+		if p.Cover == nil || p.Cover.MediaURL == "" || p.Cover.EndYear > 1970 {
+			t.Fatalf("%s: missing or ineligible starting-point cover", p.ID)
+		}
+	}
 	summaries := []map[string]any{}
 	for _, p := range Presets() {
 		t.Run(p.ID, func(t *testing.T) {
@@ -66,8 +81,9 @@ func TestStartingPointsReadOnly(t *testing.T) {
 				t.Fatal(err)
 			}
 			defer tx.Rollback(ctx)
-			repo := &Repository{db: tx}
-			f := Filter{PresetID: p.ID, Range: p.Context, Limit: 60, Preview: true, Highlights: true, Selection: true, Types: []string{"artwork", "book", "event"}, Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
+			recorder := &discoveryPlanDB{atlasDB: tx}
+			repo := &Repository{db: recorder}
+			f := Filter{PresetID: p.ID, Range: p.Context, Limit: 150, Preview: true, Highlights: p.StartingHighlights, Creators: p.StartingCreators, Selection: true, Types: []string{"artwork", "book", "event"}, Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
 			broad, err := repo.List(ctx, f)
 			if err != nil {
 				t.Fatal(err)
@@ -76,20 +92,49 @@ func TestStartingPointsReadOnly(t *testing.T) {
 			f.CountryScope = "artwork"
 			focused := broad
 			if len(f.Countries) > 0 {
+				recorder.statements = nil
 				focused, err = repo.List(ctx, f)
 				if err != nil {
 					t.Fatal(err)
 				}
 			}
+			if dir := os.Getenv("ARTLINE_ATLAS_AUDIT_DIR"); dir != "" && slices.Contains([]string{"civil-rights", "french-revolution", "science", "renaissance", "silk-roads", "islamic-learning", "byzantium"}, p.ID) {
+				if err := os.MkdirAll(dir, 0700); err != nil {
+					t.Fatal(err)
+				}
+				for i, statement := range slices.Clone(recorder.statements) {
+					var plan []byte
+					if err := tx.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+statement.query, statement.args...).Scan(&plan); err != nil {
+						t.Fatal(err)
+					}
+					if err := os.WriteFile(filepath.Join(dir, p.ID+"-"+Definitions[i].Key+"-plan.json"), plan, 0600); err != nil {
+						t.Fatal(err)
+					}
+				}
+			}
+			for _, creator := range p.StartingCreators {
+				role, key, _ := strings.Cut(creator, ":")
+				var exists bool
+				query := `SELECT EXISTS(SELECT 1 FROM artists WHERE slug=$1 AND status<>'archived')`
+				if role == "author" {
+					query = `SELECT EXISTS(SELECT 1 FROM book_creators WHERE id=$1)`
+				}
+				if err := tx.QueryRow(ctx, query, key).Scan(&exists); err != nil || !exists {
+					t.Fatalf("missing reviewed creator %s: %v", creator, err)
+				}
+			}
 			before, after := []int{}, []int{}
 			lost := map[string][]string{}
 			for i, lane := range focused.Lanes {
+				if lane.Key == "artwork" && lane.Total < 100 {
+					t.Errorf("every starting category needs at least 100 relevant illustrated artworks; got %d", lane.Total)
+				}
 				before = append(before, broad.Lanes[i].Total)
 				after = append(after, lane.Total)
 				if lane.Key != "artwork" && lane.Total != broad.Lanes[i].Total {
 					t.Fatal("country starting focus removed book/event context")
 				}
-				if lane.Total > broad.Lanes[i].Total || len(lane.Items) > 60 {
+				if lane.Total > broad.Lanes[i].Total || len(lane.Items) > 150 {
 					t.Fatal("scope grew or page unbounded")
 				}
 				if broad.Lanes[i].Total > 0 && lane.Total == 0 {
@@ -99,11 +144,23 @@ func TestStartingPointsReadOnly(t *testing.T) {
 					if item.StartYear > f.End || item.EndYear < f.Start {
 						t.Fatal("out of range")
 					}
+					if p.ID == "civil-rights" && strings.Contains(item.Context, "Thomas Weeks Barrett") {
+						t.Fatal("unrelated contemporary returned")
+					}
+					if lane.Key == "book" && p.Focus.SelectedBooks && !slices.Contains(p.Focus.Related["book"], item.ID) && !slices.Contains(p.Focus.Context["book"], item.ID) {
+						t.Fatal("book outside reviewed selection")
+					}
+					if lane.Key == "event" && !slices.Contains(p.Focus.Related["event"], item.ID) && !slices.Contains(p.Focus.Context["event"], item.ID) {
+						t.Fatal("event outside reviewed sequence")
+					}
+					if lane.Key == "artwork" && item.EndYear > 1970 {
+						t.Fatal("artwork cutoff bypassed")
+					}
 					if lane.Key == "artwork" && item.MediaURL == "" {
 						t.Fatal("image missing")
 					}
 				}
-				if lane.Key != "artwork" && broad.Lanes[i].Total <= 60 {
+				if lane.Key != "artwork" && broad.Lanes[i].Total <= 150 {
 					for _, item := range broad.Lanes[i].Items {
 						if slices.Contains(p.Focus.Related[lane.Key], item.ID) && !slices.ContainsFunc(lane.Items, func(other Item) bool { return other.ID == item.ID }) {
 							lost[lane.Key] = append(lost[lane.Key], item.ID)
@@ -114,7 +171,7 @@ func TestStartingPointsReadOnly(t *testing.T) {
 			if len(lost) > 0 {
 				t.Errorf("country defaults lost reviewed core records: %v", lost)
 			}
-			summaries = append(summaries, map[string]any{"id": p.ID, "scope": p.StartingScope, "countries": p.StartingCountries, "full": before, "starting": after, "missing_core": lost})
+			summaries = append(summaries, map[string]any{"id": p.ID, "scope": p.StartingScope, "countries": p.StartingCountries, "creators": p.StartingCreators, "highlights": p.StartingHighlights, "full": before, "starting": after, "missing_core": lost})
 			t.Logf("full=%v starting=%v missing-core=%v", before, after, lost)
 		})
 	}

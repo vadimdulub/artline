@@ -4,6 +4,7 @@ vi.mock("../seo-api", () => ({ discoveryRequest: vi.fn() }));
 import { discoveryRequest } from "../seo-api";
 import { GET as index } from "../../app/sitemap.xml/route";
 import { GET as shard } from "../../app/[sitemapFile]/route";
+import { generateMetadata as guideMetadata } from "../../app/art-history-timeline/page";
 
 beforeEach(() => {
   vi.stubEnv("ARTLINE_SITE_URL", "https://artline.example");
@@ -19,12 +20,20 @@ it("links bounded public sitemaps from the root index", async () => {
   expect(response.status).toBe(200);
   expect(await response.text()).toContain("https://artline.example/sitemap-artworks-def.xml");
 });
-it("does not expose review-profile sitemaps in preview mode", async () => {
+it("advertises only published artists and works while research preview remains open", async () => {
   vi.stubEnv("ARTLINE_PUBLIC_RESEARCH_PREVIEW", "true");
-  expect(await (await index()).text()).not.toContain("sitemap-artworks");
-  expect(await (await request("sitemap-pages.xml")).text()).not.toContain("<loc>https://artline.example/</loc>");
-  expect((await request("sitemap-artists-abc.xml")).status).toBe(404);
-  expect(discoveryRequest).not.toHaveBeenCalled();
+  vi.mocked(discoveryRequest).mockResolvedValueOnce({ items: ["artists-abc", "artworks-def", "museums-123"] });
+  const root = await (await index()).text();
+  expect(root).toContain("sitemap-artists-abc.xml");
+  expect(root).toContain("sitemap-artworks-def.xml");
+  expect(root).not.toContain("sitemap-museums");
+  const pages = await (await request("sitemap-pages.xml")).text();
+  expect(pages).not.toContain("<loc>https://artline.example/</loc>");
+  expect(pages).toContain("<loc>https://artline.example/art-history-timeline</loc>");
+  expect(guideMetadata().robots).toMatchObject({ index: true });
+  vi.mocked(discoveryRequest).mockResolvedValueOnce({ items: [{ path: "/artists/giotto", name: "Giotto" }] });
+  expect(await (await request("sitemap-artists-abc.xml")).text()).toContain("/artists/giotto");
+  expect((await request("sitemap-museums-123.xml")).status).toBe(404);
 });
 it("reports outages as retryable failures rather than empty successful sitemaps", async () => {
   vi.mocked(discoveryRequest).mockRejectedValue(new Error("offline"));

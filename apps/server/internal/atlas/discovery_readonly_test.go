@@ -110,7 +110,7 @@ func TestDiscoveryFiltersReadOnly(t *testing.T) {
 				countQuery := `SELECT count(*) FROM (` + providers[lane.Key].keys + ` AND (` + entity + `) AND (` + geo + `)) eligible`
 				if lane.Key == "artwork" && (len(f.Countries) > 0 || len(f.Continents) > 0) {
 					countQuery = `WITH geographic_artworks AS MATERIALIZED (
- SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,a.title,a.unlinked_creator_label
+ SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,a.title,a.unlinked_creator_label,a.work_type
  FROM artworks a WHERE (` + entity + `) AND (` + geo + `))
  SELECT count(*) FROM (` + strings.Replace(providers[lane.Key].keys, " FROM artworks a WHERE", " FROM geographic_artworks a WHERE", 1) + `) eligible`
 				}
@@ -164,7 +164,7 @@ func TestDiscoveryFiltersReadOnly(t *testing.T) {
 					}
 					last := previous.Items[len(previous.Items)-1]
 					for _, item := range lane.Items {
-						if item.StartYear < last.StartYear || item.StartYear == last.StartYear && item.ID <= last.ID {
+						if compareGalleryItems(item, last) <= 0 {
 							t.Fatal("page is duplicated or out of order")
 						}
 						last = item

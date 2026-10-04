@@ -25,7 +25,7 @@ export type TimelineBin = {
   count: number;
 };
 
-export type TimelineResponse = {
+export type TimelineResponse = { matchedRange?: { start: number; end: number } | null;
   range: { start: number; end: number };
   mode: "individual" | "density";
   items: TimelineArtist[];
@@ -151,7 +151,7 @@ export type MuseumWork = Pick<Artwork, "id" | "slug" | "title" | "date_display" 
 };
 export type MuseumArtwork = Artwork & Pick<MuseumWork, "artists" | "selections">;
 export type Museum = MuseumRef & {
-  kind: "museum" | "historic_site" | "foundation"; description: string; website_url: string | null; status: string;
+  kind: "museum" | "historic_site" | "foundation" | "archive"; description: string; website_url: string | null; status: string;
   venues: MuseumVenue[]; work_count: number; holding_count: number; on_view_count: number;
   highlight_count: number; must_see_count: number; owner_revision: number; cover: MuseumWork | null;
 };

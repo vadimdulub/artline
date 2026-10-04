@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/url"
+	"regexp"
 	"strings"
 )
 
@@ -44,7 +45,9 @@ func readCoverSelection(raw []byte) map[string]coverSelection {
 	result := make(map[string]coverSelection, len(rows))
 	for _, row := range rows {
 		image, err := url.Parse(row.ImageURL)
-		if err != nil || image.Scheme != "https" || (image.Host != "upload.wikimedia.org" && image.Host != "thumb.wikimedia.org") || image.User != nil || row.BookID == "" || row.SourceID == "" || row.Credit == "" || row.Label == "" || row.License == "" || row.CheckedAt == "" || !strings.HasPrefix(row.SourceURL, "https://commons.wikimedia.org/wiki/File:") || !strings.HasPrefix(row.LicenseURL, "https://creativecommons.org/") {
+		local := selectedImagePath(row.ImageURL, "books", row.BookID)
+		remote := err == nil && image.Scheme == "https" && (image.Host == "upload.wikimedia.org" || image.Host == "thumb.wikimedia.org") && image.User == nil
+		if (!local && !remote) || row.BookID == "" || row.SourceID == "" || row.Credit == "" || row.Label == "" || row.License == "" || row.CheckedAt == "" || !strings.HasPrefix(row.SourceURL, "https://commons.wikimedia.org/wiki/File:") || !strings.HasPrefix(row.LicenseURL, "https://creativecommons.org/") {
 			panic(fmt.Sprintf("incomplete or unsafe book cover selection: %s", row.BookID))
 		}
 		if _, exists := result[row.BookID]; exists {
@@ -55,13 +58,26 @@ func readCoverSelection(raw []byte) map[string]coverSelection {
 	return result
 }
 
+func selectedImagePath(path, category, id string) bool {
+	if !regexp.MustCompile(`^[A-Za-z0-9-]+$`).MatchString(id) {
+		return false
+	}
+	return regexp.MustCompile(`^/images/` + regexp.QuoteMeta(category) + `/selected-[0-9]{8}/` + regexp.QuoteMeta(id) + `\.jpg$`).MatchString(path)
+}
+
 func attachCovers(items []Book) {
 	for i := range items {
 		// Never accept raw imported cover metadata without selection review.
-		items[i].Cover = nil
-		if selected, ok := selectedCovers[items[i].ID]; ok && selected.SourceID == items[i].SourceID {
-			cover := selected.Cover
-			items[i].Cover = &cover
-		}
+		items[i].Cover = SelectedCover(items[i].ID, items[i].SourceID)
 	}
+}
+
+// SelectedCover returns a copy of a reviewed reproduction for an already
+// visible book. Both identifiers must match the immutable selection manifest.
+func SelectedCover(id, sourceID string) *Cover {
+	if selected, ok := selectedCovers[id]; ok && selected.SourceID == sourceID {
+		cover := selected.Cover
+		return &cover
+	}
+	return nil
 }

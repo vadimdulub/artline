@@ -23,6 +23,18 @@ func TestMultipleChoices(t *testing.T) {
 	}
 }
 
+func TestDecorativeArtFilters(t *testing.T) {
+	for _, kind := range []string{"ceramic", "metalwork", "sculpture", "calligraphy"} {
+		f, err := museumFilter(httptest.NewRequest("GET", "/api/v1/museums/x/works?work_type="+kind, nil))
+		if err != nil || !reflect.DeepEqual(f.WorkTypes, []string{kind}) {
+			t.Fatalf("museum cannot browse %s: %+v %v", kind, f, err)
+		}
+	}
+	if _, err := museumFilter(httptest.NewRequest("GET", "/api/v1/museums/x/works?work_type=imaginary", nil)); err == nil {
+		t.Fatal("unsupported object type accepted")
+	}
+}
+
 func TestParseRegions(t *testing.T) {
 	for _, tc := range []struct {
 		name        string

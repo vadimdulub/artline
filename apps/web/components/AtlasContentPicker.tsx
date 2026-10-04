@@ -1,4 +1,5 @@
 "use client";
+import { discoveryChanges } from "@/lib/discovery";
 import { useEffect, useState } from "react";
 import { apiRequest, errorMessage } from "@/lib/api";
 import type { AtlasItem, AtlasMetadata, AtlasResponse, AtlasType } from "@/lib/atlas";
@@ -17,7 +18,7 @@ export function AtlasContentPicker({ metadata, range, layers, initialType="artwo
  const [drafts,setDrafts]=useState(()=>Object.fromEntries(metadata.types.map(kind=>[kind.key,readEntityFilters(kind.key,new URLSearchParams(filterQuery)).toString()])));
  const paging=useCursorPaging(`${filterQuery}|${type}|${query}`,cursor,value=>setCursor(value??""));
  const filters=new URLSearchParams(drafts[type]);
- function changeFilters(values:Record<string,string|string[]|null>){const next=new URLSearchParams(drafts[type]);for(const [key,value] of Object.entries(values)){next.delete(key);if(value!==null)for(const v of Array.isArray(value)?value:[value])next.append(key,v)}setDrafts(previous=>({...previous,[type]:next.toString()}));setCursor("")}
+ function changeFilters(values:Record<string,string|string[]|null>){const next=new URLSearchParams(drafts[type]);for(const [key,value] of Object.entries(discoveryChanges(values,type==="artwork"?"popular":"top100"))){next.delete(key);if(value!==null && !["start","end","fit"].includes(key))for(const v of Array.isArray(value)?value:[value])next.append(key,v)}setDrafts(previous=>({...previous,[type]:next.toString()}));setCursor("")}
  function resetFilters(defaults:boolean){setDrafts(previous=>({...previous,[type]:new URLSearchParams({[type==="artwork"?"popular":"top100"]:String(type!=="artwork"&&defaults),...(type==="artwork"?{image_only:"true"}:{})}).toString()}));setCursor("")}
  const [result,setResult]=useState<{key:string;attempt:number;data?:AtlasResponse;error?:string}>();
  const search=new URLSearchParams(browse?filterQuery:undefined);
@@ -26,7 +27,7 @@ export function AtlasContentPicker({ metadata, range, layers, initialType="artwo
  // Add needs the matching total; only Browse renders a page of records.
  for(const kind of ["artwork","book","event"])search.delete(`after_${kind}`);
  search.delete("type");search.append("type",type);
- search.set("limit",browse?"30":"1");if(query)search.set("q",query);if(cursor)search.set(`after_${type}`,cursor);
+ search.set("limit",browse?"30":"1");if(query){search.set("q",query);search.set("highlights","false");search.set("artwork_popular","false");search.set("book_top100","false");search.set("event_top100","false");}if(cursor)search.set(`after_${type}`,cursor);
  if(!browse)for(const [field,value] of filters)search.append(`${type}_${field}`,value);
  const key=search.toString(),busy=result?.key!==key||result?.attempt!==retry,data=!busy?result?.data:undefined,error=!busy?result?.error:undefined;
  const lane=data?.lanes.find(lane=>lane.key===type),definition=metadata.types.find(item=>item.key===type)!;

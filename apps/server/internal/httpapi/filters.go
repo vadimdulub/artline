@@ -47,7 +47,7 @@ func parseChoices(values []string, valid func(string) bool, upper bool) ([]strin
 var countryPattern = regexp.MustCompile(`^[A-Z]{2}$`)
 
 func validWorkType(value string) bool {
-	return allowed(value, "painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print")
+	return allowed(value, "painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print", "ceramic", "metalwork", "sculpture", "calligraphy")
 }
 
 func parsePopular(values []string) (bool, error) {

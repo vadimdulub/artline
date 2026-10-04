@@ -3,8 +3,10 @@ package catalog
 import (
 	"context"
 	"fmt"
+	"strconv"
 
 	"github.com/jackc/pgx/v5"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 )
 
 // One predicate serves counts, nodes, periods and filter suggestions.
@@ -47,7 +49,7 @@ GROUP BY p.start_year,p.end_year,a.movement,a.color ORDER BY p.start_year,a.move
 
 // Only suggest an unused filter dimension: replacing an existing OR selection
 // could broaden the result, invalidating counts calculated from this scope.
-const timelineSuggestionsQuery = `WITH matching AS MATERIALIZED (
+var timelineSuggestionsQuery = `WITH matching AS MATERIALIZED (
  SELECT a.id ` + timelinePredicate + `
 ), suggestions AS (
  SELECT 'country' AS key,trim(c.code::text) AS value,c.name,count(DISTINCT a.id)::int AS count
@@ -61,7 +63,7 @@ const timelineSuggestionsQuery = `WITH matching AS MATERIALIZED (
  GROUP BY m.slug,m.name HAVING count(DISTINCT a.id) < $12
 )
 SELECT key,value,name,count FROM suggestions
-ORDER BY (count <= 300) DESC,CASE WHEN count <= 300 THEN -count ELSE count END,key,value LIMIT 3`
+ORDER BY (count <= ` + strconv.Itoa(timeline.IndividualLimit) + `) DESC,CASE WHEN count <= ` + strconv.Itoa(timeline.IndividualLimit) + ` THEN -count ELSE count END,key,value LIMIT 3`
 
 // Artwork links have a foreign key to artworks. In preview, count their scoped
 // IDs and exclude archived works through the status index instead of fetching
@@ -78,10 +80,12 @@ func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (Timel
 	// Filter selectivity varies widely. Bind values without retaining a named
 	// statement that can switch to an unsuitable generic plan after repeated use.
 	args := []any{pgx.QueryExecModeCacheDescribe, filter.StartYear, filter.EndYear, filter.Status, filter.Query, filterChoices(filter.Countries, filter.Country), filterChoices(filter.Movements, filter.Movement), filter.Regions, filterChoices(filter.WorkTypes, filter.WorkType), filter.PopularOnly, filterChoices(filter.Painters, ""), filter.WomenOnly}
-	if err := r.db.QueryRow(ctx, "SELECT count(*)"+timelinePredicate, args...).Scan(&result.Total); err != nil {
+	var firstYear, lastYear *int
+	if err := r.db.QueryRow(ctx, "SELECT count(*),min(a.timeline_start_year),max(a.timeline_end_year)"+timelinePredicate, args...).Scan(&result.Total, &firstYear, &lastYear); err != nil {
 		return result, fmt.Errorf("count timeline: %w", err)
 	}
-	if result.Total > 300 {
+	result.MatchedRange = timeline.FitExtent(firstYear, lastYear, filter.StartYear, filter.EndYear)
+	if result.Total > timeline.IndividualLimit {
 		result.Mode = "density"
 		width := 10
 		if filter.EndYear-filter.StartYear > 200 {
@@ -129,7 +133,7 @@ func (r *Repository) Timeline(ctx context.Context, filter TimelineFilter) (Timel
 	query := `SELECT a.id::text,a.slug,a.display_name,a.timeline_start_year,a.timeline_end_year,a.timeline_display,a.status,
  coalesce(m.slug,'unclassified'),coalesce(m.name,'Unclassified'),coalesce(m.color_hex,'#8b8880'),
  ARRAY(SELECT DISTINCT trim(x.country_code::text) FROM artist_countries x WHERE x.artist_id=a.id ORDER BY 1)
- ` + timelinePredicate + ` ORDER BY a.timeline_start_year,a.sort_name,a.id LIMIT 300`
+ ` + timelinePredicate + ` ORDER BY a.timeline_start_year,a.sort_name,a.id LIMIT ` + strconv.Itoa(timeline.IndividualLimit)
 	rows, err := r.db.Query(ctx, query, args...)
 	if err != nil {
 		return result, fmt.Errorf("timeline nodes: %w", err)

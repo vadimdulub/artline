@@ -28,4 +28,4 @@ export function usePainterChoices(values: string[], popular = false, museum = ""
   return { options, unavailable: result.key === key && !!result.error, retry: () => setRevision(value => value + 1), remote: { search, onSearch: setSearch, loading: result.key !== key, hasMore: data?.has_more ?? false } };
 }
 
-export const workTypeOptions = ["painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print"].map(slug => ({ slug, name: slug.replaceAll("_", " ") }));
+export const workTypeOptions = ["painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print", "ceramic", "metalwork", "sculpture", "calligraphy"].map(slug => ({ slug, name: slug.replaceAll("_", " ") }));

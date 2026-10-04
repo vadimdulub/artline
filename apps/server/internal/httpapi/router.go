@@ -1,6 +1,7 @@
 package httpapi
 
 import (
+	"context"
 	"crypto/subtle"
 	"encoding/json"
 	"errors"
@@ -19,6 +20,7 @@ import (
 	"github.com/vadimdulub/artline/apps/server/internal/catalog"
 	"github.com/vadimdulub/artline/apps/server/internal/config"
 	"github.com/vadimdulub/artline/apps/server/internal/events"
+	"github.com/vadimdulub/artline/apps/server/internal/member"
 )
 
 type API struct {
@@ -33,6 +35,11 @@ type API struct {
 func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	api := &API{config: cfg, db: db, repo: catalog.NewRepository(db), bookRepo: books.NewRepository(db), eventRepo: events.NewRepository(db), atlasRepo: atlas.NewRepository(db)}
 	mux := http.NewServeMux()
+	memberOrigin := cfg.AuthOrigin
+	if cfg.LocalDebug {
+		memberOrigin = cfg.FrontendOrigin
+	}
+	member.New(member.Config{ClientID: cfg.GoogleClientID, ClientSecret: cfg.GoogleClientSecret, CookieKey: cfg.AuthCookieKey, Origin: memberOrigin, LocalDebug: cfg.LocalDebug}, member.PostgresStore{DB: db}).Register(mux)
 	mux.HandleFunc("GET /health", api.health)
 	mux.HandleFunc("GET /ready", api.ready)
 	mux.HandleFunc("GET /api/v1/timeline", api.timeline)
@@ -72,7 +79,16 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.Handle("POST /api/v1/publish/artists/{id}", api.requireEditor(http.HandlerFunc(api.publishArtist)))
 	mux.Handle("POST /api/v1/unpublish/artists/{id}", api.requireEditor(http.HandlerFunc(api.unpublishArtist)))
 
-	handler := api.recoverPanic(api.requestLog(api.cors(mux)))
+	var catalogue http.Handler = mux
+	if db != nil {
+		cache := newCatalogueCache(func(ctx context.Context) (string, error) {
+			var snapshot string
+			err := db.QueryRow(ctx, "SELECT pg_current_snapshot()::text").Scan(&snapshot)
+			return snapshot, err
+		})
+		catalogue = api.cacheCatalogue(cache, mux)
+	}
+	handler := api.recoverPanic(api.requestLog(api.cors(catalogue)))
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("X-Robots-Tag", "noindex")
 		handler.ServeHTTP(w, r)
@@ -537,6 +553,10 @@ func (api *API) isEditor(r *http.Request) bool {
 }
 func (api *API) previewAllowed(w http.ResponseWriter, r *http.Request) (bool, bool) {
 	w.Header().Set("Cache-Control", "private, no-store")
+	// Explicit published-only reads stay narrow even while research preview is public.
+	if r.URL.Query().Get("preview") == "0" {
+		return false, true
+	}
 	publicPreview := api.config.PublicResearchPreview && (r.Method == http.MethodGet || r.Method == http.MethodHead)
 	preview := publicPreview || r.URL.Query().Get("preview") == "1"
 	if preview && !publicPreview && !api.isEditor(r) {

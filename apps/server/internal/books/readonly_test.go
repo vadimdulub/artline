@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 )
 
 // Explicit opt-in. Every connection is forced read-only; no fixtures,
@@ -50,7 +51,7 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if first.Total != expectedTotal || first.SelectionTotal != expectedTotal || len(first.Items) != 100 || !first.HasMore || first.Mode != "density" {
+	if first.Total != expectedTotal || first.SelectionTotal != expectedTotal || len(first.Items) != 100 || !first.HasMore || first.Mode != "density" || len(first.Density) != 0 {
 		t.Fatalf("unexpected catalogue totals: total=%d selected=%d page=%d mode=%s", first.Total, first.SelectionTotal, len(first.Items), first.Mode)
 	}
 	seen := map[string]bool{}
@@ -106,13 +107,19 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 	if public.Total != 0 {
 		t.Fatal("research books were published")
 	}
-	ancient, err := repo.List(ctx, Filter{Range: Range{Bounds.Start, -1}, Limit: 100, Preview: true})
-	if err != nil {
-		t.Fatal(err)
-	}
-	for _, period := range ancient.Density {
-		if period.Count == 0 {
-			t.Fatal("empty BCE periods obscure the mobile overview")
+	for _, limit := range []int{100, timeline.IndividualLimit} {
+		ancient, err := repo.List(ctx, Filter{Range: Range{Bounds.Start, -1}, Limit: limit, Preview: true})
+		if err != nil {
+			t.Fatal(err)
+		}
+		wantMode := "individual"
+		if ancient.Mode != wantMode || len(ancient.Items) != min(limit, ancient.Total) || ancient.HasMore != (ancient.Total > limit) {
+			t.Fatalf("BCE timeline/page mismatch: limit=%d total=%d items=%d mode=%s more=%v", limit, ancient.Total, len(ancient.Items), ancient.Mode, ancient.HasMore)
+		}
+		for _, period := range ancient.Density {
+			if period.Count == 0 {
+				t.Fatal("empty BCE periods obscure the mobile overview")
+			}
 		}
 	}
 	if _, err := repo.ByID(ctx, "odyssey", false); err != ErrNotFound {

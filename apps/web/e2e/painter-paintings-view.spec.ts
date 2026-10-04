@@ -8,16 +8,21 @@ async function ready(page: Page) {
 }
 for (const width of [1440, 390]) test(`Painters switches to the All artwork gallery at ${width}`, async ({ page, request }, info) => {
   await page.setViewportSize({ width, height: 1000 });
-  await page.goto('/?painter=claude-monet&popular=false&start=1800&end=1950');
+  // Old links must not silently keep the removed highlights filter active.
+  await page.goto('/?painter=claude-monet&popular=false&start=1800&end=1950' + (width === 390 ? '&painting_highlights=true' : ''));
   await page.getByRole('button', { name: 'Paintings', exact: true }).click(); await ready(page);
   await expect(page.getByRole('button', { name: 'Paintings', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  expect((await page.locator('.painter-view-switch').boundingBox())!.height).toBeLessThan(40);
+  await expect(page.locator('.painting-view-guidance')).toHaveCount(0);
+  await expect(page.getByRole('checkbox', { name: 'Artwork highlights', exact: true })).toHaveCount(0);
+  await expect(page.getByText(/ordered by creation date/)).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Reset view', exact: true })).toBeVisible();
   await expect(page.locator('.all-artwork-card').first()).toBeVisible();
   await expect(page.locator('.all-artwork-card').first()).toContainText('Claude Monet');
-  const response = await request.get('/api/backend/v1/atlas?type=artwork&start=1800&end=1950&artwork_painter=claude-monet&artwork_popular=false&highlights=true');
+  const response = await request.get('/api/backend/v1/atlas?type=artwork&start=1800&end=1950&artwork_painter=claude-monet&artwork_popular=false&highlights=false&artwork_image_only=true');
   expect(response.ok()).toBe(true);
   const all = await response.json() as AtlasResponse;
-  await expect(page.locator('.painting-view-actions [role=status]')).toHaveText(`${all.total.toLocaleString('en-GB')} artworks`);
+  await expect(page.locator('.painter-paintings .timeline-counter')).toHaveText(`${all.total.toLocaleString('en-GB')} artworks`);
   await expect(page.locator('.all-artwork-card strong')).toHaveText(all.lanes[0].items.map(item => item.title));
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
   expect((await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()).violations).toEqual([]);
@@ -37,18 +42,19 @@ for (const width of [1440, 390]) test(`Painters switches to the All artwork gall
 });
 
 test('painting pagination resets on filter changes and observes creation cutoff', async ({ page }) => {
-  await page.goto('/?view=paintings&painter=claude-monet&popular=false&start=1800&end=1950&painting_highlights=false'); await ready(page);
+  await page.goto('/?view=paintings&painter=claude-monet&popular=false&start=1800&end=1950'); await ready(page);
   const first = await page.locator('.all-artwork-card').first().getAttribute('aria-label');
-  await page.getByRole('button', { name: 'Next 60 artworks', exact: false }).click(); await ready(page);
-  await expect(page.locator('.all-artwork-card').first()).not.toHaveAttribute('aria-label', first!);
+  await page.locator('.all-artwork-strip').evaluate(el => { el.scrollLeft = el.scrollWidth; });
+  await expect(page.locator('.all-artwork-card')).toHaveCount(213);
+  await expect(page.locator('.all-artwork-card').first()).toHaveAttribute('aria-label', first!);
   await page.getByRole('checkbox', { name: 'Top 100 painters', exact: true }).check(); await ready(page);
   expect(new URL(page.url()).searchParams.has('painting_after')).toBe(false);
   await expect(page.locator('.all-artwork-card').first()).toHaveAttribute('aria-label', first!);
-  await page.getByRole('button', { name: 'Next 60 artworks', exact: false }).click(); await ready(page);
+  await page.locator('.all-artwork-strip').evaluate(el => { el.scrollLeft = el.scrollWidth; });
+  await expect(page.locator('.all-artwork-card')).toHaveCount(213);
   await page.getByRole('searchbox').first().fill('Water Lilies'); await ready(page);
   expect(new URL(page.url()).searchParams.has('painting_after')).toBe(false);
   await expect(page.locator('.all-artwork-card').first()).toContainText('Water Lilies');
-  await page.getByRole('checkbox', { name: 'Artwork highlights', exact: true }).uncheck(); await ready(page);
   await page.getByLabel('Start year', { exact: true }).fill('1971');
   await page.getByLabel('End year', { exact: true }).fill('2000');
   await page.getByLabel('End year', { exact: true }).press('Enter'); await ready(page);

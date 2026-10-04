@@ -45,7 +45,7 @@ func main() {
 	}
 
 	server := &http.Server{
-		Addr:              ":" + cfg.Port,
+		Addr:              cfg.ListenAddress(),
 		Handler:           httpapi.New(cfg, pool),
 		ReadHeaderTimeout: 5 * time.Second,
 		ReadTimeout:       15 * time.Second,

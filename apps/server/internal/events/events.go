@@ -6,6 +6,8 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 )
 
 type Range struct {
@@ -23,6 +25,7 @@ type Event struct {
 	SourceURL         string             `json:"sourceUrl"`
 	Title             string             `json:"title"`
 	Description       string             `json:"description"`
+	Image             *Image             `json:"image,omitempty"`
 	DescriptionSource *DescriptionSource `json:"descriptionSource,omitempty"`
 	Significance      string             `json:"significance"`
 	SearchTerms       string             `json:"searchTerms"`
@@ -77,18 +80,19 @@ type Suggestion struct {
 	Count int    `json:"count"`
 }
 type Response struct {
-	Items          []Event         `json:"items"`
-	Total          int             `json:"total"`
-	SelectionTotal int             `json:"selectionTotal"`
-	UndatedTotal   int             `json:"undatedTotal"`
-	HasMore        bool            `json:"hasMore"`
-	NextCursor     string          `json:"nextCursor"`
-	Range          Range           `json:"range"`
-	Bounds         Range           `json:"bounds"`
-	Ticks          []Tick          `json:"ticks"`
-	Mode           string          `json:"mode"`
-	Density        []DensityPeriod `json:"density"`
-	Suggestions    []Suggestion    `json:"suggested_filters"`
+	MatchedRange   *timeline.DateExtent `json:"matchedRange,omitempty"`
+	Items          []Event              `json:"items"`
+	Total          int                  `json:"total"`
+	SelectionTotal int                  `json:"selectionTotal"`
+	UndatedTotal   int                  `json:"undatedTotal"`
+	HasMore        bool                 `json:"hasMore"`
+	NextCursor     string               `json:"nextCursor"`
+	Range          Range                `json:"range"`
+	Bounds         Range                `json:"bounds"`
+	Ticks          []Tick               `json:"ticks"`
+	Mode           string               `json:"mode"`
+	Density        []DensityPeriod      `json:"density"`
+	Suggestions    []Suggestion         `json:"suggested_filters"`
 }
 
 var Bounds = Range{-12000, 2000}
@@ -102,8 +106,8 @@ func (f Filter) Validate() error {
 	if len(f.Query) > 200 || len(f.After) > 512 {
 		return fmt.Errorf("event search or cursor is too long")
 	}
-	if f.Limit < 1 || f.Limit > 100 {
-		return fmt.Errorf("limit must be from 1 to 100")
+	if f.Limit < 1 || f.Limit > timeline.IndividualLimit {
+		return fmt.Errorf("limit must be from 1 to %d", timeline.IndividualLimit)
 	}
 	for _, choices := range [][]string{f.Topics, f.Countries, f.Regions, f.Kinds} {
 		if len(choices) > 32 {

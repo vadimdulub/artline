@@ -62,7 +62,7 @@ func entityPredicate(kind string, values url.Values, args *[]any) string {
 		case "event":
 			conditions = append(conditions, "strpos(e.search_text,lower("+p+"))>0")
 		case "artwork":
-			conditions = append(conditions, "(strpos(lower(a.title),lower("+p+"))>0 OR strpos(lower(coalesce(a.unlinked_creator_label,'')),lower("+p+"))>0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published') AND (strpos(lower(ar.display_name),lower("+p+"))>0 OR strpos(lower(ar.sort_name),lower("+p+"))>0 OR EXISTS(SELECT 1 FROM artist_aliases x WHERE x.artist_id=ar.id AND strpos(lower(x.alias),lower("+p+"))>0) OR EXISTS(SELECT 1 FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE x.artist_id=ar.id AND m.status<>'archived' AND ($3 OR m.status='published') AND strpos(lower(m.name),lower("+p+"))>0) OR EXISTS(SELECT 1 FROM artist_countries x JOIN countries c ON c.code=x.country_code WHERE x.artist_id=ar.id AND strpos(lower(c.name),lower("+p+"))>0) OR EXISTS(SELECT 1 FROM artist_places x JOIN places pl ON pl.id=x.place_id WHERE x.artist_id=ar.id AND strpos(lower(pl.name),lower("+p+"))>0))))")
+			conditions = append(conditions, artworkSearchPredicate(p))
 		}
 	}
 	switch kind {
@@ -124,4 +124,21 @@ func entityPredicate(kind string, values url.Values, args *[]any) string {
 		conditions = outer
 	}
 	return strings.Join(conditions, " AND ")
+}
+
+// Search narrow title/label and creator-ID projections before native eligibility.
+// UNION lets the existing covering and creator-link indexes avoid fetching the
+// wide artwork heap for every illustrated record. All values remain bound.
+func artworkSearchPredicate(parameter string) string {
+	return strings.ReplaceAll(`a.id IN (
+ SELECT search.id FROM artworks search WHERE search.status<>'archived'
+ AND (strpos(lower(search.title),lower($query))>0 OR strpos(lower(coalesce(search.unlinked_creator_label,'')),lower($query))>0)
+ UNION SELECT aa.artwork_id FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id
+ WHERE ar.status<>'archived' AND ($3 OR ar.status='published') AND (
+ strpos(lower(ar.display_name),lower($query))>0 OR strpos(lower(ar.sort_name),lower($query))>0
+ OR ar.id IN(SELECT x.artist_id FROM artist_aliases x WHERE strpos(lower(x.alias),lower($query))>0)
+ OR ar.id IN(SELECT x.artist_id FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE m.status<>'archived' AND ($3 OR m.status='published') AND strpos(lower(m.name),lower($query))>0)
+ OR ar.id IN(SELECT x.artist_id FROM artist_countries x JOIN countries c ON c.code=x.country_code WHERE strpos(lower(c.name),lower($query))>0)
+ OR ar.id IN(SELECT x.artist_id FROM artist_places x JOIN places pl ON pl.id=x.place_id WHERE strpos(lower(pl.name),lower($query))>0)
+ ))`, "$query", parameter)
 }

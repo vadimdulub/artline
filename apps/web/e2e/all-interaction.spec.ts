@@ -103,7 +103,7 @@ test('removing a layer and resetting while loading cannot restore old entries', 
   try {
     await page.getByRole('button', { name: 'Move range 1 year later', exact: true }).click();
     await expect.poll(() => held.held.length).toBeGreaterThan(0);
-    await page.getByRole('button', { name: 'Remove books from timeline', exact: true }).click();
+    await page.getByRole('checkbox', { name: 'Books', exact: true }).uncheck();
     await expect(page.locator('#all-lane-book')).toHaveCount(0, { timeout: 700 });
     await page.getByRole('button', { name: 'Clear', exact: true }).click();
     await expect(page.getByRole('heading', { name: 'Choose a starting point' })).toBeVisible();

@@ -53,7 +53,7 @@ test("All has fixed pictures, switchable default highlights, and previous/next b
   await page.getByRole("checkbox", { name: "Highlights", exact: true }).uncheck();
   await expect(page).toHaveURL(/highlights=false/);
   await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false", { timeout: 15000 });
-  await page.getByRole("button", { name: "Browse artworks", exact: true }).click();
+  await page.getByRole("button", { name: "Artworks", exact: true }).click();
   const browse = page.getByRole("dialog", { name: "Browse artworks", exact: true });
   const titles = browse.locator(".atlas-picker-list strong");
   await expect(titles).toHaveCount(30);

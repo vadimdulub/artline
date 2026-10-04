@@ -14,5 +14,5 @@ export default async function MuseumPage({ params }: { params: Promise<{ slug: s
   const museum = await getMuseum(slug);
   if (!museum) notFound();
   const index = museum.status === "published" && !researchPreviewEnabled();
-  return <>{index && <><StructuredData data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: museum.name, description: museum.description || undefined, url: absoluteURL(`/museums/${museum.slug}`) }} /><StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Museums", path: "/museums" }, { name: museum.name, path: `/museums/${museum.slug}` }])} /></>}<MuseumDetail slug={slug} preview={researchPreviewEnabled()} initialMuseum={museum} /></>;
+  return <>{index && <><StructuredData data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: museum.name, description: museum.description || undefined, url: absoluteURL(`/museums/${museum.slug}`) }} /><StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Museums", path: "/museums" }, { name: museum.name, path: `/museums/${museum.slug}` }])} /></>}<MuseumDetail slug={slug} initialMuseum={museum} /></>;
 }

@@ -1,6 +1,9 @@
 package atlas
 
-import "context"
+import (
+	"context"
+	"strings"
+)
 
 // This enrichment only receives an already validated, bounded page of eligible IDs.
 func (r *Repository) attachImages(ctx context.Context, items []Item) error {
@@ -39,13 +42,37 @@ func (r *Repository) IllustratedPresets(ctx context.Context, preview bool) ([]Pr
 		return presets, nil
 	}
 	ids := []string{}
+	coverFocus := &PresetFocus{Related: map[string][]string{}, ArtworkIdentities: map[string]string{}}
 	for _, p := range presets {
 		if p.CoverArtworkID != "" {
 			ids = append(ids, p.CoverArtworkID)
+			if p.Focus != nil && p.Focus.ArtworkIdentities[p.CoverArtworkID] != "" {
+				coverFocus.ArtworkIdentities[p.CoverArtworkID] = p.Focus.ArtworkIdentities[p.CoverArtworkID]
+			}
+		}
+	}
+	// Resolve this bounded cover set once: independent imports can use different
+	// UUIDs for the same reviewed artwork in local and production catalogues.
+	if len(coverFocus.ArtworkIdentities) > 0 {
+		coverFocus.Related["artwork"] = ids
+		resolved, err := r.resolveArtworkIdentities(ctx, coverFocus)
+		if err != nil {
+			return nil, err
+		}
+		ids = resolved.Related["artwork"]
+		j := 0
+		for i := range presets {
+			if presets[i].CoverArtworkID != "" {
+				presets[i].CoverArtworkID = ids[j]
+				j++
+			}
 		}
 	}
 	// Scope the small explicit ID set before eligibility and creator enrichment.
-	rows, err := r.db.Query(ctx, `SELECT a.id::text,a.title,coalesce(a.date_display,''),coalesce(a.creation_year_start,a.creation_year_end),coalesce(a.creation_year_end,a.creation_year_start),a.date_precision<>'exact'`+artScope+` AND a.id=ANY($7::uuid[])`, Bounds.Start, Bounds.End, preview, "", false, "", ids)
+	rows, err := r.db.Query(ctx, `WITH cover_artworks AS MATERIALIZED (
+ SELECT a.id,a.title,a.date_display,a.creation_year_start,a.creation_year_end,a.date_precision,a.status,a.unlinked_creator_label
+ FROM artworks a WHERE a.id=ANY($7::uuid[]))
+ SELECT a.id::text,a.title,coalesce(a.date_display,''),coalesce(a.creation_year_start,a.creation_year_end),coalesce(a.creation_year_end,a.creation_year_start),a.date_precision<>'exact'`+strings.Replace(artScope, "FROM artworks a", "FROM cover_artworks a", 1), Bounds.Start, Bounds.End, preview, "", false, "", ids)
 	if err != nil {
 		return nil, err
 	}

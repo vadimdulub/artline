@@ -45,9 +45,11 @@ func (r *Repository) Countries(ctx context.Context, preview bool) ([]Region, err
 	}
 	rows, err := r.db.Query(ctx, `WITH names AS (
  SELECT name FROM countries
- UNION SELECT t.name FROM book_discovery_terms t WHERE t.kind='country' AND EXISTS(
-  SELECT 1 FROM book_records b JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum
-  WHERE b.status<>'archived' AND ($1 OR b.status='published') AND (b.end_year<=2000 OR b.start_year IS NULL) AND t.key=ANY(d.countries))
+ UNION SELECT t.name FROM book_discovery_terms t JOIN (
+  SELECT DISTINCT unnest(d.countries) AS key FROM book_records b
+  JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum
+  WHERE b.status<>'archived' AND ($1 OR b.status='published') AND (b.end_year<=2000 OR b.start_year IS NULL)
+ ) visible ON visible.key=t.key WHERE t.kind='country'
  UNION SELECT unnest(countries) FROM event_records WHERE status<>'archived' AND ($1 OR status='published')
  ) SELECT lower(trim(name)),min(trim(name)) FROM names WHERE trim(name)<>'' GROUP BY lower(trim(name)) ORDER BY min(trim(name)) LIMIT 1000`, preview)
 	if err != nil {
@@ -67,13 +69,17 @@ func (r *Repository) Countries(ctx context.Context, preview bool) ([]Region, err
 // Production geography is independent of attribution and present custody. Use
 // indexed artwork links for both branches, without inventing anonymous artists.
 // condition is internal SQL whose values have already been bound by the caller.
+// Keep the set as a subquery: when a materialized highlight scope is estimated
+// as one row, pulling this UNION into a join can re-scan its deduplicated result
+// thousands of times. IS TRUE preserves WHERE membership semantics and lets the
+// uncorrelated set be hashed once instead.
 func artworkGeographyMatch(condition string) string {
-	return `a.id IN (SELECT aa.artwork_id FROM artwork_artists aa
+	return `(a.id IN (SELECT aa.artwork_id FROM artwork_artists aa
  JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id
  JOIN countries c ON c.code=ac.country_code
  WHERE ar.status<>'archived' AND ($3 OR ar.status='published') AND (` + condition + `)
  UNION SELECT ap.artwork_id FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id
- JOIN countries c ON c.code=pl.country_code WHERE (` + condition + `))`
+ JOIN countries c ON c.code=pl.country_code WHERE (` + condition + `))) IS TRUE`
 }
 
 func geographyPredicate(kind string, f Filter, args *[]any) string {

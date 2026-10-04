@@ -10,8 +10,8 @@ import (
 
 func TestPresetsAndYearPartitions(t *testing.T) {
 	presets := Presets()
-	if len(presets) != 30 {
-		t.Fatalf("want 30 historical lenses, got %d", len(presets))
+	if len(presets) != 32 {
+		t.Fatalf("want 32 historical lenses, got %d", len(presets))
 	}
 	seen := map[string]bool{}
 	ranges := []Range{Bounds, {-500, -1}, {-1, 1}, {1, 2}, {1699, 1801}, {1910, 1930}, {1914, 1918}, {1999, 2000}}

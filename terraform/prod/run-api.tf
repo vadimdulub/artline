@@ -1,4 +1,10 @@
 resource "google_cloud_run_v2_service" "api" {
+  lifecycle {
+    precondition {
+      condition     = !var.enable_google_signin || (var.google_oauth_client_id != "" && var.site_url != "")
+      error_message = "Google sign-in requires google_oauth_client_id and the canonical HTTPS site_url."
+    }
+  }
   name                 = "artline-api"
   location             = var.region
   deletion_protection  = true
@@ -53,6 +59,33 @@ resource "google_cloud_run_v2_service" "api" {
         value = tostring(var.public_research_preview)
       }
 
+      dynamic "env" {
+        for_each = var.enable_google_signin ? {
+          ARTLINE_GOOGLE_CLIENT_ID = var.google_oauth_client_id
+          ARTLINE_AUTH_ORIGIN      = trimsuffix(var.site_url, "/")
+        } : {}
+        content {
+          name  = env.key
+          value = env.value
+        }
+      }
+
+      dynamic "env" {
+        for_each = var.enable_google_signin ? {
+          ARTLINE_GOOGLE_CLIENT_SECRET = { secret = "artline-google-client-secret", version = var.google_oauth_secret_version }
+          ARTLINE_AUTH_COOKIE_KEY      = { secret = "artline-auth-cookie-key", version = var.auth_cookie_key_version }
+        } : {}
+        content {
+          name = env.key
+          value_source {
+            secret_key_ref {
+              secret  = env.value.secret
+              version = env.value.version
+            }
+          }
+        }
+      }
+
       resources {
         cpu_idle = true
         limits = {
@@ -80,6 +113,7 @@ resource "google_cloud_run_v2_service" "api" {
     google_project_iam_member.runtime_cloudsql,
     google_secret_manager_secret_iam_member.database_url,
     google_secret_manager_secret_iam_member.editor_token,
+    google_secret_manager_secret_iam_member.member_auth,
     google_sql_database.artline,
     google_sql_user.artline,
   ]

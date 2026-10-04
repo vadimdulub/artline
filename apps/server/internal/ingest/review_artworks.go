@@ -101,7 +101,7 @@ func validateReviewArtwork(p ReviewArtwork) error {
 		return errors.New("invalid source evidence")
 	}
 	switch p.WorkType {
-	case "unknown", "painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print":
+	case "unknown", "painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print", "ceramic", "metalwork", "sculpture", "calligraphy":
 	default:
 		return errors.New("invalid artwork type")
 	}

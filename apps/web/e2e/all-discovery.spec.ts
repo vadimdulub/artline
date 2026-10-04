@@ -30,7 +30,7 @@ async function compare(page: Page) {
   await expect(page.locator('.all-lane > header h2')).toHaveText(data.lanes.map(lane => lane.name));
   for (const lane of data.lanes) {
     await expect(page.locator(`.all-lane:has(#all-lane-${lane.key}) > header > span`)).toHaveText(lane.total.toLocaleString('en-GB'));
-    expect(lane.items.length).toBeLessThanOrEqual(60);
+    expect(lane.items.length).toBeLessThanOrEqual(150);
   }
   await expect(page.locator('.all-canvas-heading [role=status]')).toHaveText(`${data.total.toLocaleString('en-GB')} entries`);
   return data;
@@ -41,7 +41,7 @@ for (const [width,height] of [[1920,1080],[1440,900],[1366,768],[1280,720],[1024
   await page.goto('/all');
   const starts=page.locator('.all-start');
   const main=page.getByRole('group',{name:'Main starting points',exact:true});
-  await expect(starts.getByRole('button')).toHaveCount(30);
+  await expect(starts.getByRole('button')).toHaveCount(32);
   await expect(main.getByRole('button')).toHaveCount(12);
   await expect(page.getByText('More starting points',{exact:true})).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Edo Japan', exact: true })).toBeVisible();
@@ -86,7 +86,7 @@ test('starting points support keyboard selection, clearing and the last mobile c
   await ready(page);
   await expect(page).toHaveURL(/preset=first-world-war/);
   await page.getByRole('button',{name:'Clear',exact:true}).click();
-  await expect(page.locator('.all-start button')).toHaveCount(30);
+  await expect(page.locator('.all-start button')).toHaveCount(32);
   const last=page.getByRole('button',{name:'The digital turn',exact:true});
   await last.focus();
   await expect(last).toBeInViewport();
@@ -161,7 +161,7 @@ async function layerChoice(dialog: Locator, label: string, name: string) {
 
 test('Add restores a removed layer and keeps both global and native filters on later edits', async ({ page }) => {
   await page.goto('/all?country=japan'); const initial = await compare(page);
-  await page.getByRole('button', { name: 'Remove books from timeline', exact: true }).click(); await compare(page);
+  await page.getByRole('checkbox', { name: 'Books', exact: true }).uncheck(); await compare(page);
   await page.getByRole('button', { name: '+ Add', exact: true }).click();
   const dialog = page.getByRole('dialog', { name: 'Add a layer' });
   await dialog.getByRole('button', { name: 'Books', exact: true }).click();
@@ -183,11 +183,11 @@ test('Add restores a removed layer and keeps both global and native filters on l
 
 test('removed layers stay removed until Add or a new filter starts the empty view', async ({ page }) => {
   await page.goto('/all?country=japan'); await ready(page);
-  await page.getByRole('button', { name: 'Remove books from timeline', exact: true }).click(); await ready(page);
+  await page.getByRole('checkbox', { name: 'Books', exact: true }).uncheck(); await ready(page);
   await choose(page, 'Countries', ['France']); await compare(page);
   await expect(page.locator('.all-lane > header h2')).toHaveText(['Artworks','Events']);
-  await page.getByRole('button', { name: 'Remove artworks from timeline', exact: true }).click();
-  await page.getByRole('button', { name: 'Remove events from timeline', exact: true }).click();
+  await page.getByRole('checkbox', { name: 'Artworks', exact: true }).uncheck();
+  await page.getByRole('checkbox', { name: 'Events', exact: true }).uncheck();
   await expect(page.getByRole('heading', { name: 'Choose a starting point' })).toBeVisible();
   await page.reload(); await expect(page.getByRole('heading', { name: 'Choose a starting point' })).toBeVisible();
   await choose(page, 'Continents', ['Asia']); await compare(page);

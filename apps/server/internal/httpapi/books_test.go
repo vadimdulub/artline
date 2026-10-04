@@ -13,8 +13,8 @@ func TestBooksRequireAuthorizedPreviewAndValidBounds(t *testing.T) {
 		status int
 	}{
 		{"/api/v1/books?preview=1", 401}, {"/api/v1/books/odyssey?preview=1", 401}, {"/api/v1/books/authors?preview=1", 401},
-		{"/api/v1/books?start=0", 400}, {"/api/v1/books?limit=101", 400}, {"/api/v1/books?after=invalid", 400},
-		{"/api/v1/books?top100=true&limit=200", 503}, {"/api/v1/books?top100=true&limit=201", 400}, {"/api/v1/books?top100=false&limit=200", 400},
+		{"/api/v1/books?start=0", 400}, {"/api/v1/books?limit=150", 503}, {"/api/v1/books?limit=151", 400}, {"/api/v1/books?after=invalid", 400},
+		{"/api/v1/books?top100=true&limit=500", 503}, {"/api/v1/books?top100=true&limit=501", 400}, {"/api/v1/books?top100=false&limit=200", 400},
 		{"/api/v1/books?view=wrong", 400}, {"/api/v1/books?view=authors&preview=1", 401}, {"/api/v1/books?view=authors", 503},
 		{"/api/v1/books?women=yes", 400}, {"/api/v1/books?top100=1", 400}, {"/api/v1/books?top100=true&top100=false", 400}, {"/api/v1/books?language=", 400},
 		{"/api/v1/books/facets?preview=1", 401}, {"/api/v1/books/facets?top100=no", 400}, {"/api/v1/books/authors?women=1", 400},

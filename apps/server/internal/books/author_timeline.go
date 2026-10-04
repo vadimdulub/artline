@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 	"strings"
 )
 
@@ -55,17 +56,6 @@ const authorTimelineScope = `WITH eligible_books AS MATERIALIZED (
  SELECT * FROM classified WHERE (start_year <= $2 AND end_year >= $1) OR (start_year IS NULL AND $1=-5000 AND $2=2000)
 ) `
 
-const authorSuggestionsQuery = authorTimelineScope + `, memberships AS (
- SELECT a.id,'language' AS key,unnest(b.languages) AS value FROM matching a JOIN links l ON l.author_id=a.id JOIN eligible_books b ON b.id=l.book_id WHERE coalesce(cardinality($8::text[]),0)=0
- UNION ALL SELECT a.id,'country',unnest(b.countries) FROM matching a JOIN links l ON l.author_id=a.id JOIN eligible_books b ON b.id=l.book_id WHERE coalesce(cardinality($9::text[]),0)=0
- UNION ALL SELECT a.id,'region',unnest(b.regions) FROM matching a JOIN links l ON l.author_id=a.id JOIN eligible_books b ON b.id=l.book_id WHERE coalesce(cardinality($10::text[]),0)=0
- UNION ALL SELECT id,'author',name FROM matching WHERE coalesce(cardinality($5::text[]),0)=0
-), counts AS (
- SELECT key,value,count(DISTINCT id)::int AS count FROM memberships WHERE value<>'' GROUP BY key,value HAVING count(DISTINCT id)<$11
-)
-SELECT c.key,c.value,coalesce(t.name,c.value),c.count FROM counts c LEFT JOIN book_discovery_terms t ON t.kind=c.key AND t.key=c.value
-ORDER BY (c.count<=100) DESC,CASE WHEN c.count<=100 THEN -c.count ELSE c.count END,c.key,c.value LIMIT 3`
-
 func authorLifeLabel(c Creator) string {
 	if c.Kind == "collective" {
 		return "Collective authorship · no single lifespan"
@@ -86,8 +76,17 @@ func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, er
 	result := metadata(f.Range)
 	result.View, result.Authors = "authors", []TimelineAuthor{}
 	args := []any{f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Authors, f.Women, f.Top100, f.Languages, f.Countries, f.Regions}
-	if err := r.db.QueryRow(ctx, authorTimelineScope+`SELECT count(*),count(*) FILTER (WHERE start_year IS NULL),(SELECT count(*) FROM classified) FROM matching`, args...).Scan(&result.Total, &result.UndatedTotal, &result.SelectionTotal); err != nil {
+	var firstYear, lastYear *int
+	if err := r.db.QueryRow(ctx, authorTimelineScope+`SELECT count(*),count(*) FILTER (WHERE start_year IS NULL),(SELECT count(*) FROM classified),min(start_year),max(end_year) FROM matching`, args...).Scan(&result.Total, &result.UndatedTotal, &result.SelectionTotal, &firstYear, &lastYear); err != nil {
 		return result, fmt.Errorf("count authors: %w", err)
+	}
+	result.MatchedRange = timeline.FitExtent(firstYear, lastYear, f.Start, f.End)
+	individualLimit := timeline.IndividualLimit
+	if f.Top100 {
+		individualLimit = HighlightsLimit
+	}
+	if result.Total > individualLimit || (result.Total > 0 && result.UndatedTotal == result.Total) {
+		result.Mode = "density"
 	}
 	c, _ := decodeCursor(f.After)
 	rows, err := r.db.Query(ctx, authorTimelineScope+`SELECT c.record,a.start_year,a.end_year,coalesce(a.approximate,true),a.book_count,a.credits
@@ -107,6 +106,7 @@ func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, er
 			rows.Close()
 			return result, err
 		}
+		attachPortrait(&a.Creator)
 		a.Lifespan = authorLifeLabel(a.Creator)
 		result.Authors = append(result.Authors, a)
 	}
@@ -121,44 +121,5 @@ func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, er
 		last := result.Authors[len(result.Authors)-1]
 		result.NextCursor = encodeCursor(Book{ID: last.ID, StartYear: last.StartYear})
 	}
-	if result.Total-result.UndatedTotal <= f.MaxPageSize() {
-		return result, nil
-	}
-	result.Mode = "density"
-	starts, ends := []int{}, []int{}
-	for _, p := range densityPeriods(f.Range) {
-		starts = append(starts, p.Start)
-		ends = append(ends, p.End)
-	}
-	rows, err = r.db.Query(ctx, authorTimelineScope+`SELECT p.start_year,p.end_year,count(*) FROM unnest($11::int[],$12::int[]) p(start_year,end_year)
- JOIN matching a ON a.start_year<=p.end_year AND a.end_year>=p.start_year GROUP BY p.start_year,p.end_year ORDER BY p.start_year`, append(args, starts, ends)...)
-	if err != nil {
-		return result, err
-	}
-	for rows.Next() {
-		var p DensityPeriod
-		if err = rows.Scan(&p.Start, &p.End, &p.Count); err != nil {
-			rows.Close()
-			return result, err
-		}
-		result.Density = append(result.Density, p)
-	}
-	err = rows.Err()
-	rows.Close()
-	if err != nil {
-		return result, err
-	}
-	rows, err = r.db.Query(ctx, authorSuggestionsQuery, append(args, result.Total)...)
-	if err != nil {
-		return result, err
-	}
-	defer rows.Close()
-	for rows.Next() {
-		var s SuggestedFilter
-		if err = rows.Scan(&s.Key, &s.Value, &s.Name, &s.Count); err != nil {
-			return result, err
-		}
-		result.SuggestedFilters = append(result.SuggestedFilters, s)
-	}
-	return result, rows.Err()
+	return result, nil
 }

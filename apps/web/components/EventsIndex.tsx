@@ -1,4 +1,8 @@
 "use client";
+import { ExplorerFrame } from "./ExplorerFrame";
+import { useFitYears } from "./use-fit-years";
+import { timelineRequestKey } from "@/lib/timeline-request";
+import { discoveryChanges } from "@/lib/discovery";
 
 import { useEffect, useRef, useState } from "react";
 import { apiRequest, errorMessage } from "@/lib/api";
@@ -19,13 +23,14 @@ export function EventsIndex() {
   const top100 = params.get("top100") === "true";
   const query = params.get("q") ?? "";
   const selected = params.get("event") ?? "";
-  const requestKey = new URLSearchParams([...params].filter(([key]) => ["q", "topic", "kind", "region", "country", "start", "end", "after", "top100"].includes(key))).toString();
+  const requestKey = timelineRequestKey(new URLSearchParams([...params].filter(([key]) => ["q", "topic", "kind", "region", "country", "start", "end", "after", "top100"].includes(key))), { start: -12000, end: 2000 });
   const [result, setResult] = useState<{ key: string; data?: EventsResponse; error?: string }>();
   const [facets, setFacets] = useState<{ data?: EventsFacets; error?: string }>();
   const [retry, setRetry] = useState(0);
   const search = useRef<HTMLInputElement>(null);
   const current = result?.key === requestKey;
   const data = current && !result?.error ? result?.data : undefined;
+  useFitYears(params.get("fit") === "true", !!data && current, data?.matchedRange, data?.undatedTotal);
   const error = current ? result?.error : undefined;
   const loading = !current;
   useEffect(() => {
@@ -39,12 +44,12 @@ export function EventsIndex() {
   }, [requestKey, retry]);
   useEffect(() => {
     const controller = new AbortController();
-    apiRequest<EventsFacets>(`events/facets?top100=${top100}`, { signal: controller.signal })
+    apiRequest<EventsFacets>("events/facets?top100=false", { signal: controller.signal })
       .then(data => { if (!controller.signal.aborted) setFacets({ data }); })
       .catch(error => { if (!controller.signal.aborted) setFacets(previous => ({ ...previous, error: errorMessage(error) })); });
     return () => controller.abort();
-  }, [top100, retry]);
-  function change(values: Record<string, string | string[] | null>, push = true) { updateQuery({ ...values, after: null }, push); }
+  }, [retry]);
+  function change(values: Record<string, string | string[] | null>, push = true) { updateQuery({ fit: null, ...discoveryChanges(values, "top100"), after: null }, push); }
   function reset() { change({ ...cleared, top100: null, start: null, end: null, event: null }); search.current?.focus(); }
   function page(after: string | null) { updateQuery({ after }, true); const heading = document.getElementById("event-index"); heading?.scrollIntoView({ block: "start" }); heading?.focus({ preventScroll: true }); }
   const choices = eventDimensions.map(d => ({ ...d, values: [...new Set(params.getAll(d.key))] }));
@@ -57,21 +62,22 @@ export function EventsIndex() {
   const year = (key: string, fallback: number) => { const raw = params.get(key); return raw && Number.isFinite(Number(raw)) ? Number(raw) : fallback; };
   const range = { start: year("start", bounds.start), end: year("end", bounds.end) };
   return <div className={styles.page}>
-    <section className="explorer books-explorer" aria-labelledby="events-timeline">
+    <ExplorerFrame className="explorer books-explorer" aria-labelledby="events-timeline">
       {facets?.error && <p className="save-message" role="status">Some filter choices could not be loaded. <button onClick={() => setRetry(value => value + 1)}>Retry filters</button></p>}
       <AtlasFilters searchRef={search} query={query} onQuery={value => change({ q: value }, false)} onReset={reset} searchLabel="Find an event" placeholder="Event, place, or idea" columns={4} activeCount={active.filter(f => f.key !== "q").length}>
         <EventFilterFields params={params} change={change} facets={facets?.data} unavailable={Boolean(facets?.error)} />
       </AtlasFilters>
       <ActiveFilters filters={active} onClear={() => change(cleared)} searchRef={search} />
       <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
+        onPeriod={(start, end) => change({ start: String(start), end: String(end), top100: "false", fit: "true" })}
         onRange={(start, end) => change({ start: String(start), end: String(end) }, false)} onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset}
         onSuggestion={s => change({ [s.key]: s.value })} onTop100={() => change({ top100: null })} />
-    </section>
+    </ExplorerFrame>
     <section className={styles.shelf} aria-labelledby="event-index" aria-busy={loading}>
       <div className={styles.shelfHeader}><div><h2 id="event-index" tabIndex={-1}>Event index</h2><p>Explore the events, empires, and movements that connect art, literature, belief, science, and everyday life. World history through 2000.</p></div><p className={styles.count} role="status">{data ? `${data.total.toLocaleString("en-GB")} of ${data.selectionTotal.toLocaleString("en-GB")} events` : ""}</p></div>
       <ul className={styles.bookIndex} aria-label="Event index">{data?.items.map(event => <li key={event.id} data-selected={selected === event.id}><button type="button" aria-label={`Open ${event.title}`} aria-haspopup="dialog" onClick={() => updateQuery({ event: event.id }, true)}><strong>{event.title}</strong><span>{event.kind} · {event.topics.join(" · ")}</span><time>{event.years}</time></button></li>)}</ul>
       {data && (data.hasMore || params.has("after")) && <nav className={styles.pagination} aria-label="Event pages">{params.has("after") && <button onClick={() => page(null)}>First page</button>}<span>{data.items.length} events on this page</span>{data.hasMore && <button onClick={() => page(data.nextCursor)}>Next events</button>}</nav>}
-      <p className={styles.footerNote}>The Top 100 offers starting points for exploration. The wider source-linked collection is under review; documentation coverage is not a definitive measure of historical importance. Uncertain dates and missing details remain visible.</p>
+      <p className={styles.footerNote}>The Top 100 offers starting points for exploration. The wider collection links to its sources; documentation coverage is not a definitive measure of historical importance. Uncertain dates and missing details remain visible.</p>
     </section>
     {selected && <EventDrawer id={selected} close={() => updateQuery({ event: null })} />}
   </div>;

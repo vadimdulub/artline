@@ -1,7 +1,16 @@
 # Artline production infrastructure
 
 Production project: `artline-508319`; region: `europe-west1`.
-No domain is required: the web service uses its HTTPS `run.app` URL.
+Public domain: https://artlines.org; www redirects to the HTTPS apex.
+The Cloud Run HTTPS `run.app` URL remains available.
+
+The optional `enable_custom_domain` configuration prepares HTTPS for
+`artlines.org` and `www.artlines.org`. Optional `enable_google_signin` wires
+member credentials from Secret Manager into the API. Both default to disabled;
+production tfvars enables both the domain and Google sign-in as of 30 September 2026.
+See [the setup and rollout guide](../../docs/google-auth-domain-setup.md) for
+DNS, OAuth console values and costs, and [the activation record](../../docs/google-signin-activation.md)
+for the live OAuth client, verified API revision and rollback details.
 
 ## Resources
 
@@ -9,7 +18,8 @@ No domain is required: the web service uses its HTTPS `run.app` URL.
   disk autoresize and deletion protection. The initial `db-f1-micro` tier is a
   starting configuration, not evidence of capacity for 10 million artworks.
 - Separate Cloud Run API and web services, scaling from zero to three instances.
-- Secret Manager stores the database URL and editor token. Only the API runtime
+- Secret Manager stores the database URL, editor token, Google OAuth client secret
+  and member cookie-signing key. Only the API runtime
   can read these secrets and connect to Cloud SQL.
 - All artwork images are stored in the private, versioned
   `artline-508319-images` bucket. The web runtime has object-reader access.
@@ -50,7 +60,9 @@ To build a new release, choose a fresh image tag, then:
 sh ops/build_and_push.sh artline-508319 europe-west1 <unique-image-tag>
 ```
 
-Set that tag in `terraform.tfvars`, review the full saved plan, and apply it.
+Set that tag in `terraform.tfvars`, and update or clear any `api_image` and
+`web_image` overrides: a pinned image takes precedence over `image_tag` for its
+service. Review the full saved plan, and apply it.
 Build configurations use a dedicated service account and Cloud Logging. Both
 images must exist before Cloud Run can create their revisions.
 

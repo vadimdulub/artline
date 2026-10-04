@@ -163,7 +163,7 @@ func TestAtlasArtworkPlansReadOnly(t *testing.T) {
 		name, sql string
 		args      []any
 	}{
-		{"bounded-artwork-page", `WITH matching AS NOT MATERIALIZED (` + p.keys + `), page AS MATERIALIZED(SELECT * FROM matching WHERE (start_year,id)>($7,$8) ORDER BY start_year,id LIMIT $9) ` + p.details + ` ORDER BY p.start_year,p.id`, []any{pgx.QueryExecModeCacheDescribe, 1910, 1930, true, "", true, "", Bounds.Start - 1, "", 61}},
+		{"bounded-artwork-page", `WITH matching AS NOT MATERIALIZED (` + p.keys + `), page AS MATERIALIZED(SELECT * FROM matching WHERE (gallery_priority,start_year,id)>(0,$7,$8) ORDER BY gallery_priority,start_year,id LIMIT $9) ` + p.details + ` ORDER BY p.gallery_priority,p.start_year,p.id`, []any{pgx.QueryExecModeCacheDescribe, 1910, 1930, true, "", true, "", Bounds.Start - 1, "", 61}},
 		{"single-artwork-eligibility", `SELECT EXISTS(SELECT 1` + artScope + ` AND a.id=$7::uuid)`, []any{pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, true, "", false, "", id}},
 		{"single-artwork-detail", `SELECT to_jsonb(a),m.storage_path FROM artworks a LEFT JOIN media_assets m ON m.id=a.primary_media_id WHERE a.id=$1 AND a.status<>'archived'`, []any{id}},
 	} {

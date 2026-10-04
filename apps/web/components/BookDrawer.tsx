@@ -59,7 +59,7 @@ export function BookDrawer({ id, items, close, select, navigation, fallbackFocus
         </dl></div>
         <p className={styles.recordNote}>{book.dateBasis || "Dates may refer to composition or publication."} Approximate dates retain their original labels.</p>
         {book.dateSources?.map(source => <p key={source.url} className={styles.recordNote}><a href={safeSourceURL(source.url)} target="_blank" rel="noreferrer">Dating source: {source.name} ↗</a></p>)}
-        {book.sourceUrl && <p className={styles.recordNote}><a href={book.sourceUrl} target="_blank" rel="noreferrer">Book source ↗</a> · {book.status === "review" ? "Research record · awaiting review" : "Source record"}</p>}
+        {book.sourceUrl && <p className={styles.recordNote}><a href={book.sourceUrl} target="_blank" rel="noreferrer">Book source ↗</a></p>}
       </div>}
   </RecordDrawer>;
 }

@@ -274,7 +274,7 @@ func validateResolved(f ResolvedFact) error {
 	}
 	if f.WorkType != "" {
 		switch f.WorkType {
-		case "painting", "drawing", "watercolor", "print", "fresco", "manuscript_illumination":
+		case "painting", "drawing", "watercolor", "print", "fresco", "manuscript_illumination", "ceramic", "metalwork", "sculpture", "calligraphy":
 		default:
 			return errors.New("invalid work type")
 		}

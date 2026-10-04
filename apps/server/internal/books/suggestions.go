@@ -1,12 +1,17 @@
 package books
 
-import "context"
+import (
+	"context"
+	"strconv"
+
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
+)
 
 // Count within precisely the same visibility, year and filter scope as List.
 // Only unused dimensions are offered: replacing an existing OR selection could
 // broaden the result and would invalidate these counts. Author membership uses
 // the same label-or-linked-name rule as the list predicate.
-const suggestionsQuery = `WITH matching AS MATERIALIZED (
+var suggestionsQuery = `WITH matching AS MATERIALIZED (
  SELECT b.id,b.author_label,d.languages,d.countries,d.regions ` + predicate + `
 ), memberships AS (
  SELECT id,'language' AS key,unnest(languages) AS value FROM matching WHERE coalesce(cardinality($8::text[]),0)=0
@@ -22,7 +27,7 @@ const suggestionsQuery = `WITH matching AS MATERIALIZED (
 )
 SELECT c.key,c.value,coalesce(t.name,c.value),c.count FROM counts c
 LEFT JOIN book_discovery_terms t ON t.kind=c.key AND t.key=c.value
-ORDER BY (c.count<=100) DESC,CASE WHEN c.count<=100 THEN -c.count ELSE c.count END,c.key,c.value LIMIT 3`
+ORDER BY (c.count<=` + strconv.Itoa(timeline.IndividualLimit) + `) DESC,CASE WHEN c.count<=` + strconv.Itoa(timeline.IndividualLimit) + ` THEN -c.count ELSE c.count END,c.key,c.value LIMIT 3`
 
 func (r *Repository) suggestions(ctx context.Context, args []any, total int) ([]SuggestedFilter, error) {
 	result := []SuggestedFilter{}

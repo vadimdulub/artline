@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { safeSourceURL } from "./api";
 import { researchPreviewEnabled } from "./research-preview";
 import type { ArtistDetail, Artwork } from "./types";
 
@@ -7,7 +8,7 @@ export const siteDescription = "Explore painters, artworks, museums, books and h
 
 // Runtime configuration: never derive canonical URLs from an untrusted Host header.
 export function siteURL(): URL {
-  const value = process.env.ARTLINE_SITE_URL || "https://artline-web-lpuqqlugnq-ew.a.run.app";
+  const value = process.env.ARTLINE_SITE_URL || "https://artlines.org";
   const url = new URL(value);
   if (!["https:", "http:"].includes(url.protocol) || url.username || url.password || url.pathname !== "/" || url.search || url.hash) {
     throw new Error("ARTLINE_SITE_URL must be an HTTP(S) origin without a path, credentials, query or fragment.");
@@ -20,13 +21,15 @@ export const noIndex: Metadata["robots"] = { index: false, follow: true };
 export const allowIndex: Metadata["robots"] = { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } };
 
 export function pageMetadata(title: string, description: string, path: string, options: { index?: boolean; image?: string | null } = {}): Metadata {
-  const image = options.image ? [{ url: absoluteURL(options.image), alt: title }] : undefined;
+  const image = options.image
+    ? [{ url: absoluteURL(options.image), alt: title }]
+    : [{ url: absoluteURL("/share-image"), alt: "Artline — Art, literature and history in context", width: 1200, height: 630, type: "image/png" }];
   return {
     title, description,
     alternates: { canonical: absoluteURL(path) },
     robots: options.index === false ? noIndex : allowIndex,
     openGraph: { type: "website", locale: "en_US", siteName, title: `${title} — ${siteName}`, description, url: absoluteURL(path), images: image },
-    twitter: { card: image ? "summary_large_image" : "summary", title: `${title} — ${siteName}`, description, images: image },
+    twitter: { card: "summary_large_image", title: `${title} — ${siteName}`, description, images: image },
   };
 }
 
@@ -63,6 +66,7 @@ export function breadcrumbs(items: { name: string; path: string }[]) {
 
 export function artworkStructuredData(work: Artwork, artist: ArtistDetail) {
   const url = absoluteURL(`/artists/${artist.slug}/works/${work.id}`);
+  const image = shareImage(work);
   return {
     "@context": "https://schema.org", "@type": "VisualArtwork", "@id": url, url, name: work.title,
     alternateName: work.alternate_title || undefined, description: artworkDescription(work, artist),
@@ -70,6 +74,14 @@ export function artworkStructuredData(work: Artwork, artist: ArtistDetail) {
     creator: work.attribution_role === "primary" ? { "@type": artist.entity_type === "person" ? "Person" : "Thing", name: artist.display_name, url: absoluteURL(`/artists/${artist.slug}`) } : undefined,
     artMedium: work.medium_text || undefined,
     // Source date labels remain text on the page; uncertain dates are not ISO dates.
-    image: shareImage(work) ? absoluteURL(shareImage(work)!) : undefined,
+    image: image ? {
+      "@type": "ImageObject", contentUrl: absoluteURL(image),
+      name: work.title,
+      caption: work.alt_text || work.title,
+      license: safeSourceURL(work.license_url),
+      creditText: work.attribution_text || undefined,
+      // Artwork authorship does not establish the photographer or rights owner.
+      // Preserve missing image credits and license URLs rather than inventing them.
+    } : undefined,
   };
 }

@@ -1,5 +1,10 @@
 # Artline implementation constraints
 
+- Local debug preference (1 October 2026): all member and paid-feature previews
+  must be available without Google login or a paid subscription. Use the API's
+  local-debug access mode; keep its production and loopback safeguards intact.
+  Do not create catalogue or member database fixtures to preview these features.
+
 - Explicit incomplete-data preference (12 September 2026): retain named-creator
   artwork entries as actual database records in review even when additional
   research finds no details. Preserve supplied provenance and unknown fields;

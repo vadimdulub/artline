@@ -23,7 +23,7 @@ export type Book = {
   startYear: number | null;
   endYear: number | null;
   approximate: boolean;
-  creators: { id: string; name: string; description: string; overview?: BookOverview; birth: string | null; death: string | null; sourceUrl: string; kind?: string; credit?: string }[];
+  creators: { id: string; name: string; description: string; overview?: BookOverview; portrait?: Book["cover"]; birth: string | null; death: string | null; sourceUrl: string; kind?: string; credit?: string }[];
   sourceUrl: string;
   dateBasis: string;
   dateSources?: {name:string;url:string}[];
@@ -38,7 +38,7 @@ export type BookSuggestion = { key: "language" | "country" | "region" | "author"
 export type TimelineAuthor = Book["creators"][number] & {
   startYear: number | null; endYear: number | null; lifespan: string; approximate: boolean; bookCount: number; credits: string[];
 };
-export type BooksResponse = {
+export type BooksResponse = { matchedRange?: { start: number; end: number } | null;
   items: Book[];
   total: number;
   selectionTotal: number;

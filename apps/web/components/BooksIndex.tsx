@@ -1,7 +1,11 @@
 "use client";
+import { ExplorerFrame } from "./ExplorerFrame";
+import { useFitYears } from "./use-fit-years";
+import { timelineRequestKey } from "@/lib/timeline-request";
+import { discoveryChanges } from "@/lib/discovery";
 
 import { useEffect, useRef, useState } from "react";
-import { type TimelineAuthor, type BooksResponse, type BooksFacets, bookYearLabel, authorLifespanLabel } from "@/lib/books";
+import { type Book, type TimelineAuthor, type BooksResponse, type BooksFacets } from "@/lib/books";
 import { apiRequest, errorMessage } from "@/lib/api";
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import { BooksTimeline } from "./BooksTimeline";
@@ -23,9 +27,11 @@ export function BooksIndex() {
   const [selectedAuthor, setSelectedAuthor] = useState<TimelineAuthor | null>(null);
   const womenOnly = params.get("women") === "true";
   const top100Only = params.get("top100") === "true";
-  const selectionKey = new URLSearchParams([...params].filter(([key]) => ["women", "top100"].includes(key))).toString();
+  const selectionKey = `top100=false&${new URLSearchParams([...params].filter(([key]) => key === "women"))}`;
   const query = params.get("q") || "";
-  const requestKey = new URLSearchParams([...params].filter(([key]) => ["q", "author", "start", "end", "after", "women", "top100", "language", "country", "region", "view"].includes(key))).toString();
+  const requestParams = new URLSearchParams([...params].filter(([key]) => ["fit", "q", "author", "start", "end", "after", "women", "top100", "language", "country", "region", "view"].includes(key)));
+  requestParams.set("limit", top100Only ? "500" : "150");
+  const requestKey = timelineRequestKey(requestParams, { start: -5000, end: 2000 });
   const [result, setResult] = useState<{ key: string; data?: BooksResponse; error?: string }>();
   const [retry, setRetry] = useState(0);
   const [authorSearch, setAuthorSearch] = useState("");
@@ -37,11 +43,11 @@ export function BooksIndex() {
   const current = result?.key === requestKey;
   const data = current && !result?.error ? result?.data : undefined;
   const loading = !current;
+  useFitYears(params.get("fit") === "true", !!data && current, data?.matchedRange, data?.undatedTotal);
   const error = current ? result?.error : undefined;
   const visibleBooks = data?.items ?? [];
   const selected = params.get("book") ?? "";
-  const visibleAuthors = data?.authors ?? [];
-  const noun = authorView ? "authors" : "books";
+  const [drawerBooks, setDrawerBooks] = useState<{ key: string; items: Book[] }>();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -74,7 +80,7 @@ export function BooksIndex() {
   const clearChoices = { collection: null, author: null, q: null, language: null, country: null, region: null, women: null, top100: "false" };
 
   function change(values: Record<string, string | string[] | null>, push = true) {
-    updateQuery({ collection: null, ...values, after: null }, push);
+    updateQuery({ collection: null, fit: null, ...discoveryChanges(values, "top100"), after: null }, push);
   }
 
   function reset() {
@@ -83,14 +89,7 @@ export function BooksIndex() {
     search.current?.focus();
   }
 
-  function openBook(id: string) { updateQuery({ book: id }, true); }
   function closeBook() { updateQuery({ book: null }); }
-  function changePage(after: string | null) {
-    updateQuery({ after }, true);
-    const heading = document.getElementById("shelf-title");
-    heading?.scrollIntoView({ block: "start" });
-    heading?.focus({ preventScroll: true });
-  }
 
   const bounds = result?.data?.bounds ?? { start: -5000, end: 2000 };
   const readYear = (key: string, fallback: number) => {
@@ -105,8 +104,8 @@ export function BooksIndex() {
     ...[{ key: "language", values: languages }, { key: "country", values: countries }, { key: "region", values: regions }].flatMap(group => group.values.map(value => ({ key: `${group.key}-${value}`, label: facetResult.labels[value] ?? value.replaceAll("-", " "), remove: () => change({ [group.key]: group.values.filter(item => item !== value) }) }))),
   ];
 
-  return <div className={styles.page}>
-    <section className="explorer books-explorer" aria-labelledby="books-timeline">
+  return <div className={`${styles.page} books-page`}>
+    <ExplorerFrame className="explorer books-explorer" aria-labelledby="books-timeline">
       {facetResult.error && <p className="save-message" role="status">Some filter choices could not be loaded. <button onClick={() => setRetry(value => value + 1)}>Retry filters</button></p>}
       <AtlasFilters searchRef={search} query={query} onQuery={value => change({ q: value }, false)} onReset={reset} searchLabel="Find a book or author" placeholder="Book, author, or idea" columns={4} activeCount={activeFilters.filter(f => f.key !== "q").length}>
         <BookFilterFields params={params} change={change} facets={facetResult.data} unavailable={Boolean(facetResult.error)} authorChoices={{options:(authorResult?.query===authorKey?authorResult.items:[]).map(name=>({slug:name,name})),remote:{search:authorSearch,onSearch:setAuthorSearch,loading:authorResult?.query!==authorKey,hasMore:Boolean(authorResult?.hasMore)},retry:()=>setAuthorRetry(v=>v+1),unavailable:Boolean(authorResult?.error)}} />
@@ -114,35 +113,10 @@ export function BooksIndex() {
       <ActiveFilters filters={activeFilters} onClear={() => change(clearChoices)} searchRef={search} />
       <BooksTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={authorView ? selectedAuthor?.id ?? "" : selected}
         authorView={authorView} onAuthorView={checked => { setSelectedAuthor(null); change({ view: checked ? "authors" : null, book: null }); }}
-        onSelect={id => { if (authorView) setSelectedAuthor(visibleAuthors.find(author => author.id === id) ?? null); else openBook(id); }} onRange={(start, end) => change({ start: String(start), end: String(end) }, false)}
-        onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset}
-        onSuggestion={suggestion => change({ [suggestion.key]: suggestion.value })} onTop100={() => change({ top100: null })} />
-    </section>
-    <section className={styles.shelf} aria-labelledby="shelf-title" aria-busy={loading}>
-      <div className={styles.shelfHeader}>
-        <div><h2 id="shelf-title" tabIndex={-1}>{authorView ? "Author index" : "Book index"}</h2><p>Explore the stories, beliefs, and questions that connect literature, philosophy, religion, and art across time.</p><p>{data ? `${bookYearLabel(data.range.start)} – ${bookYearLabel(data.range.end)}` : ""}</p></div>
-        <p className={styles.count} role="status">{data ? `${data.total.toLocaleString("en-GB")} of ${data.selectionTotal.toLocaleString("en-GB")} ${noun}` : ""}</p>
-      </div>
-      <ul className={styles.bookIndex} aria-label={authorView ? "Author index" : "Book index"}>
-        {authorView && visibleAuthors.map(author => <li key={author.id} data-selected={selectedAuthor?.id === author.id}>
-          <button type="button" aria-label={`Open author ${author.name}`} aria-haspopup="dialog" onClick={() => setSelectedAuthor(author)}>
-            <strong>{author.name}</strong><span>{author.bookCount} {author.bookCount === 1 ? "book" : "books"} in this selection</span><time>{authorLifespanLabel(author)}</time>
-          </button>
-        </li>)}
-        {!authorView && visibleBooks.map(book => <li key={book.id} id={`book-${book.id}`} data-selected={selected === book.id}>
-          <button type="button" aria-label={`Open ${book.title} by ${book.author}`} aria-haspopup="dialog" onClick={() => openBook(book.id)}>
-            <strong>{book.title}</strong><span>{book.author}</span><time>{book.years}</time>
-          </button>
-        </li>)}
-      </ul>
-      {data && (data.hasMore || params.has("after")) && <nav className={styles.pagination} aria-label={authorView ? "Author pages" : "Book pages"}>
-        {params.has("after") && <button onClick={() => changePage(null)}>First page</button>}
-        <span>{authorView ? visibleAuthors.length : visibleBooks.length} {noun} on this page</span>
-        {data.hasMore && <button onClick={() => changePage(data.nextCursor)}>Next {noun}</button>}
-      </nav>}
-      <p className={styles.footerNote}>Explore widely documented works alongside our original editorial selection. Source-linked records are being reviewed; encyclopedia coverage is one indication of recognition, not a definitive ranking of importance. Unknown dates remain unplaced on the timeline.</p>
-    </section>
+        query={requestKey} onAuthor={setSelectedAuthor} onBook={(book, items) => { setDrawerBooks({ key: requestKey, items }); updateQuery({ book: book.id }, true); }} onRange={(start, end) => change({ start: String(start), end: String(end) }, false)}
+        onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset} />
+    </ExplorerFrame>
     {authorView && selectedAuthor && <BookAuthorDrawer author={selectedAuthor} close={() => setSelectedAuthor(null)} onBooks={() => { change({ view: null, author: selectedAuthor.name, start: null, end: null, book: null }); setSelectedAuthor(null); }} />}
-    {selected && <BookDrawer id={selected} items={visibleBooks} close={closeBook} select={id => updateQuery({ book: id })} />}
+    {selected && <BookDrawer id={selected} items={drawerBooks?.key === requestKey ? drawerBooks.items : visibleBooks} close={closeBook} select={id => updateQuery({ book: id })} />}
   </div>;
 }

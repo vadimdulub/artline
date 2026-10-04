@@ -15,7 +15,7 @@ import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
-export function MuseumDetail({ slug, preview, initialMuseum }: { slug: string; preview: boolean; initialMuseum?: Museum }) {
+export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMuseum?: Museum }) {
   const params = new URLSearchParams(useQueryString());
   const [token, setToken] = useEditorToken();
   const painters = queryValues(params, "artist"), movements = queryValues(params, "movement"), venues = queryValues(params, "venue"), workTypes = queryValues(params, "work_type");
@@ -44,12 +44,12 @@ export function MuseumDetail({ slug, preview, initialMuseum }: { slug: string; p
     for (const value of group.values) filters.push({ key: `${group.key}-${value}`, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ [group.key]: group.values.filter(item => item !== value) }) });
   }
   const clear = () => setMuseumFilters(Object.fromEntries([...Object.keys(filterLabels), "artist", "movement", "venue", "work_type", "sort"].map(key => [key, null])));
-  function saved() { setMessage("Your must-see selection was saved in review."); setRevision(value => value + 1); }
+  function saved() { setMessage("Your must-see selection was saved."); setRevision(value => value + 1); }
   function editAccess() { updateQuery({ work: null }); if (editor.current) { editor.current.open = true; setTimeout(() => { editor.current?.scrollIntoView({ block: "center" }); editor.current?.querySelector("input")?.focus(); }, 0); } }
   return <main id="main-content" className={`${styles.page} ${styles.collectionPage}`}>
     <Link className={styles.back} href="/museums">All museums and collections</Link>
     {museumRequest.error ? <MuseumError message={museumRequest.error} retry={() => setRevision(value => value + 1)} /> : !museum ? <p className={styles.loading}>Opening collection…</p> : <>
-      <header className={styles.museumIntro}><div><p className={styles.place}>{museum.venues.length ? [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") : "Holding collection · no verified public venue"}</p><h1>{museum.name}</h1><p className={styles.preview}>{preview || token ? "Research preview · records are still in review" : "Published catalogue"}</p>{museum.description && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museum.description}</p></details>}</div>
+      <header className={styles.museumIntro}><div><p className={styles.place}>{museum.venues.length ? [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") : "Holding collection · no verified public venue"}</p><h1>{museum.name}</h1>{museum.description && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museum.description}</p></details>}</div>
         <details className={styles.visit}><summary>{museum.venues.length ? "Visiting information" : "Exhibition information"}</summary>{museum.venues.length ? <ul>{museum.venues.map(venue => <li key={venue.id}><a href={safeSourceURL(venue.visit_url)} target="_blank" rel="noreferrer">{venue.name} <span aria-hidden="true">↗</span></a></li>)}</ul> : <p>No permanent public venue is verified here. <a href={safeSourceURL(museum.website_url)} target="_blank" rel="noreferrer">Check the collection’s website</a>.</p>}<p>Use the official site for access, opening hours and exhibition changes. A collection record does not guarantee display.</p></details>
       </header>
       <div className={styles.selectionTabs} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], ["owner", "My must-see works"], ["museum", "Museum highlights"]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => setMuseumFilters({ selection: value, sort: value ? "curated" : "year" })}>{label}<span>{formatCount(value === "owner" ? museum.must_see_count : value === "museum" ? museum.highlight_count : museum.work_count)}</span></button>)}</div>

@@ -38,7 +38,7 @@ function Shell({ type, params, change, reset, options=[], error, retry, children
   </div>;
 }
 function Books(props: Props) {
-  const selection = `women=${props.params.get("women")==="true"}&top100=${props.params.get("top100")!=="false"}`;
+  const selection = `women=${props.params.get("women")==="true"}&top100=false`;
   const facets = useChoices<BooksFacets>(`books/facets?${selection}`);
   const [search,setSearch] = useState("");
   const authors = useChoices<{items:string[];hasMore:boolean}>(`books/authors?${selection}&q=${encodeURIComponent(search)}`);
@@ -47,15 +47,15 @@ function Books(props: Props) {
   </Shell>;
 }
 function Artworks(props: Props) {
-  const popular=props.params.get("popular")!=="false",women=props.params.get("women")==="true";
-  const facets=useChoices<TimelineFacets>(`timeline/facets?popular=${popular}&women=${women}`);
-  const painters=usePainterChoices(props.params.getAll("painter"),popular,"","",women);
+  const women=props.params.get("women")==="true";
+  const facets=useChoices<TimelineFacets>(`timeline/facets?popular=false&women=${women}`);
+  const painters=usePainterChoices(props.params.getAll("painter"),false,"","",women);
   return <Shell {...props} type="artwork" options={[...painters.options,...workTypeOptions,...(facets.data?.countries??[]),...(facets.data?.regions??[]),...(facets.data?.movements??[])]} error={facets.error} retry={facets.retry}>
     <ArtworkFilterFields {...props} facets={facets.data??{countries:[],movements:[],regions:[]}} painterChoices={painters} unavailable={Boolean(facets.error)}/>
   </Shell>;
 }
 function Events(props: Props) {
-  const facets=useChoices<EventsFacets>(`events/facets?top100=${props.params.get("top100")!=="false"}`);
+  const facets=useChoices<EventsFacets>("events/facets?top100=false");
   return <Shell {...props} type="event" error={facets.error} retry={facets.retry}><EventFilterFields {...props} facets={facets.data} unavailable={Boolean(facets.error)}/></Shell>;
 }
 export function EntityPickerFilters({type,...props}:Props & {type:AtlasType}) {

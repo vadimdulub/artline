@@ -62,7 +62,7 @@ func museumFilter(r *http.Request) (catalog.MuseumFilter, error) {
 	if f.Venue != "" && !museumIDPattern.MatchString(f.Venue) {
 		return f, catalog.ErrMuseumFilter
 	}
-	if !allowed(f.WorkType, "", "painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print") {
+	if f.WorkType != "" && !validWorkType(f.WorkType) {
 		return f, catalog.ErrMuseumFilter
 	}
 	for _, name := range []string{"unknown_date", "image_only"} {

@@ -1,4 +1,13 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+
+async function grip(page: Page, side: "start" | "end") {
+  return page.getByLabel(`Timeline ${side} handle`).evaluate((input: HTMLInputElement) => {
+    const track = input.parentElement!.getBoundingClientRect();
+    const box = input.getBoundingClientRect();
+    const fraction = (Number(input.value) - Number(input.min)) / (Number(input.max) - Number(input.min));
+    return { x: track.x + track.width * fraction + parseFloat(getComputedStyle(input).getPropertyValue("--handle-offset") || "0"), y: box.y + box.height / 2 };
+  });
+}
 
 // Real Chrome interactions and real read-only catalogue responses. No mocks.
 for (const route of ["/books", "/", "/events", "/all"]) {
@@ -21,7 +30,7 @@ for (const route of ["/books", "/", "/events", "/all"]) {
     await expect(to).toHaveValue("2000");
   });
 
-  test(`${route} both overlapping handles can expand a narrow range`, async ({ page }) => {
+  test(`${route} close handles stay distinct and expand independently`, async ({ page }) => {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 950 });
       for (const side of ["start", "end"] as const) {
@@ -29,12 +38,15 @@ for (const route of ["/books", "/", "/events", "/all"]) {
         await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
         await page.locator(".range-track").scrollIntoViewIfNeeded();
         const track = (await page.locator(".range-track").boundingBox())!;
-        const handle = page.getByLabel(`Timeline ${side} handle`);
-        const position = Number(await handle.inputValue()) / 100000;
+        const handle = await grip(page, side), other = await grip(page, side === "start" ? "end" : "start");
+        expect(Math.abs(handle.x - other.x)).toBeGreaterThanOrEqual(31.9);
+        expect(handle.y).toBe(other.y);
+        expect(handle.x).toBeGreaterThanOrEqual(track.x - 1);
+        expect(handle.x).toBeLessThanOrEqual(track.x + track.width + 1);
         const before = page.url();
-        await page.mouse.move(track.x + track.width * position, track.y + track.height / 2);
+        await page.mouse.move(handle.x, handle.y);
         await page.mouse.down();
-        await page.mouse.move(track.x + track.width * (position + (side === "start" ? -.1 : .1)), track.y + track.height / 2, { steps: 15 });
+        await page.mouse.move(handle.x + track.width * (side === "start" ? -.1 : .1), handle.y, { steps: 15 });
         // Only preview during the drag; avoid moving the mobile chart underneath it.
         expect(page.url()).toBe(before);
         await page.mouse.up();
@@ -71,7 +83,7 @@ for (const route of ["/books", "/", "/events", "/all"]) {
     await from.fill("1850"); await from.press("Tab"); await to.press("Tab");
     await expect(page).toHaveURL(/start=1850&end=1900/);
     await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
-    const api = route === "/all" ? "/api/backend/v1/atlas?selection=true&type=book&start=1850&end=1900&highlights=false" : route === "/" ? "/api/backend/v1/timeline?popular=true&start=1850&end=1900" : `/api/backend/v1${route}?top100=true&start=1850&end=1900`;
+    const api = route === "/all" ? "/api/backend/v1/atlas?selection=true&type=book&start=1850&end=1900&highlights=true" : route === "/" ? "/api/backend/v1/timeline?popular=true&start=1850&end=1900" : `/api/backend/v1${route}?top100=true&start=1850&end=1900`;
     const response = await page.request.get(api);
     expect(response.ok()).toBe(true);
     const data = await response.json();
@@ -103,9 +115,8 @@ test("touch dragging previews the year range and cancellation restores it", asyn
     await page.locator(".range-track").scrollIntoViewIfNeeded();
     for (const commit of [false, true]) {
       const box = (await page.locator(".range-track").boundingBox())!;
-      const position = Number(await page.getByLabel("Timeline start handle").inputValue()) / 100000;
       const original = page.url();
-      const y = box.y + box.height / 2, x = box.x + box.width * position;
+      const { x, y } = await grip(page, "start");
       await touch.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ x, y }] });
       await touch.send("Input.dispatchTouchEvent", { type: "touchMove", touchPoints: [{ x: x - box.width * .1, y }] });
       await expect.poll(async () => Number(await page.locator(".year-inputs input").first().inputValue())).toBeLessThan(1790);

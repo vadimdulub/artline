@@ -50,7 +50,7 @@ test("compact dark timeline contains working focus controls", async ({ page }) =
   await page.goto("/");
   await expect(page.getByRole("status")).toContainText("11 painters");
   const panel = page.locator(".timeline-dark");
-  await expect(panel.getByRole("heading", { name: "Focus the timeline" })).toBeVisible();
+  await expect(panel.getByRole("heading", { name: "Timeline years" })).toHaveCount(1);
   await expect(panel.getByLabel("Timeline start handle")).toBeVisible();
   await expect(panel.getByLabel("Timeline end handle")).toBeVisible();
   const bounds = await panel.boundingBox();
@@ -58,7 +58,9 @@ test("compact dark timeline contains working focus controls", async ({ page }) =
   expect(bounds!.width).toBe(1440);
   expect(bounds!.y + bounds!.height).toBeLessThan(900);
   await page.screenshot({ path: "../../docs/screenshots/timeline-compact.png" });
-  await panel.getByRole("button", { name: "Century", exact: true }).click();
+  await panel.getByLabel("Start year", { exact: true }).fill("1500");
+  await panel.getByLabel("End year", { exact: true }).fill("1600");
+  await panel.getByLabel("End year", { exact: true }).press("Enter");
   await panel.getByLabel("Timeline start handle").focus();
   await page.keyboard.press("ArrowRight");
   await expect(panel.getByLabel("Start year", { exact: true })).toHaveValue("1501");
@@ -80,7 +82,7 @@ test("compact dark timeline contains working focus controls", async ({ page }) =
   expect(to - from).toBe(98);
   await page.getByRole("button", { name: "Reset view", exact: true }).click();
   await page.setViewportSize({ width: 390, height: 844 });
-  await expect(panel.getByRole("heading", { name: "Focus the timeline" })).toBeVisible();
+  await expect(panel.getByRole("heading", { name: "Timeline years" })).toHaveCount(1);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   for (const width of [320, 768, 1024]) {
     await page.setViewportSize({ width, height: 900 });
@@ -98,7 +100,9 @@ test("timeline, filters, URL selection, keyboard dismissal and history", async (
   await expect(page.getByRole("link", { name: "Skip to content" })).toHaveCSS("clip-path", "none");
   await page.keyboard.press("Tab");
   await page.screenshot({ path: "../../docs/screenshots/timeline-desktop.png", fullPage: true });
-  await page.getByRole("button", { name: "Century", exact: true }).click();
+  await page.getByLabel("Start year", { exact: true }).fill("1500");
+  await page.getByLabel("End year", { exact: true }).fill("1600");
+  await page.getByLabel("End year", { exact: true }).press("Enter");
   await expect(page.getByLabel("Start year", { exact: true })).toHaveValue("1500");
   await expect(page.getByLabel("End year", { exact: true })).toHaveValue("1600");
   await page.getByRole("button", { name: "Reset view", exact: true }).click();

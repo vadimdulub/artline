@@ -35,13 +35,13 @@ func TestReadOnlyHighlightsTimeline(t *testing.T) {
 		t.Fatal(err)
 	}
 	wantMode := "individual"
-	if highlights.Total-highlights.UndatedTotal > f.MaxPageSize() {
+	if highlights.Total > HighlightsLimit || (highlights.Total > 0 && highlights.UndatedTotal == highlights.Total) {
 		wantMode = "density"
 	}
 	if highlights.Total <= 100 || len(highlights.Items) != min(highlights.Total, f.Limit) || highlights.Mode != wantMode || highlights.HasMore != (highlights.Total > f.Limit) {
 		t.Fatalf("highlights must respect the bounded timeline: total=%d items=%d mode=%s more=%v", highlights.Total, len(highlights.Items), highlights.Mode, highlights.HasMore)
 	}
-	// The editorial selection can grow past 200. Traverse bounded keyset pages
+	// The editorial selection can grow. Traverse bounded keyset pages
 	// at both supported sizes, verifying complete, identical order and visibility.
 	var complete []Book
 	for _, limit := range []int{f.MaxPageSize(), 100} {
@@ -86,12 +86,16 @@ func TestReadOnlyHighlightsTimeline(t *testing.T) {
 	}
 	f.After, f.View, f.Limit = "", "authors", f.MaxPageSize()
 	authors, err := repo.List(ctx, f)
-	if err != nil || len(authors.Authors) != min(authors.Total, f.Limit) || authors.HasMore != (authors.Total > f.Limit) {
+	wantMode = "individual"
+	if authors.Total > HighlightsLimit || (authors.Total > 0 && authors.UndatedTotal == authors.Total) {
+		wantMode = "density"
+	}
+	if err != nil || authors.Mode != wantMode || len(authors.Authors) != min(authors.Total, f.Limit) || authors.HasMore != (authors.Total > f.Limit) {
 		t.Fatalf("highlight author page incomplete: total=%d items=%d err=%v", authors.Total, len(authors.Authors), err)
 	}
 	f.View, f.Top100, f.Limit = "", false, 100
 	catalogue, err := repo.List(ctx, f)
-	if err != nil || catalogue.Mode != "density" || len(catalogue.Items) != 100 || !catalogue.HasMore {
+	if err != nil || catalogue.Mode != "density" || len(catalogue.Density) != 0 || len(catalogue.Items) != 100 || !catalogue.HasMore {
 		t.Fatalf("full catalogue lost its bounded overview: items=%d mode=%s err=%v", len(catalogue.Items), catalogue.Mode, err)
 	}
 	t.Logf("Bounded highlights: %d books, %d authors; full catalogue: %d books in pages of 100", highlights.Total, authors.Total, catalogue.Total)

@@ -10,7 +10,7 @@ import (
 )
 
 // Audit the real collection in enforced read-only sessions, with no fixtures.
-func TestReadOnlySuggestions(t *testing.T) {
+func TestReadOnlyTimelinePages(t *testing.T) {
 	dsn := os.Getenv("ARTLINE_BOOKS_READONLY_DATABASE_URL")
 	if dsn == "" {
 		t.Skip("read-only catalogue audit not requested")
@@ -45,51 +45,36 @@ func TestReadOnlySuggestions(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		if len(view.SuggestedFilters) > 3 || len(view.Items) > 100 {
-			t.Fatal("unbounded response")
+		if view.Mode != "individual" || len(view.Density) != 0 || len(view.SuggestedFilters) != 0 || len(view.Items) > filter.Limit {
+			t.Fatal("Books must return a bounded page of marks without an aggregate chart")
 		}
-		for _, suggestion := range view.SuggestedFilters {
-			child := filter
-			var choices *[]string
-			switch suggestion.Key {
-			case "language":
-				choices = &child.Languages
-			case "country":
-				choices = &child.Countries
-			case "region":
-				choices = &child.Regions
-			case "author":
-				choices = &child.Authors
-			default:
-				t.Fatalf("unsupported suggestion: %+v", suggestion)
-			}
-			if len(*choices) > 0 {
-				t.Fatalf("suggestion replaces an active filter: %+v", suggestion)
-			}
-			*choices = []string{suggestion.Value}
-			opened, err := repo.List(ctx, child)
+		if view.Total > filter.Limit && (!view.HasMore || view.NextCursor == "") {
+			t.Fatal("crowded timeline is missing its next page")
+		}
+		if view.HasMore {
+			filter.After = view.NextCursor
+			next, err := repo.List(ctx, filter)
 			if err != nil {
 				t.Fatal(err)
 			}
-			if opened.Total != suggestion.Count || opened.Total <= 0 || opened.Total >= view.Total {
-				t.Fatalf("suggestion count=%d opened=%d parent=%d: %+v", suggestion.Count, opened.Total, view.Total, suggestion)
+			ids := map[string]bool{}
+			for _, b := range view.Items {
+				ids[b.ID] = true
+			}
+			for _, b := range next.Items {
+				if ids[b.ID] {
+					t.Fatal("overlapping pages")
+				}
+			}
+			if next.Mode != "individual" || len(next.Items) > filter.Limit || next.Total != view.Total {
+				t.Fatal("next page changed scope")
 			}
 		}
-		if view.Mode == "density" && len(view.SuggestedFilters) == 0 {
-			t.Fatalf("no way to narrow crowded view: %+v", filter)
-		}
-		t.Logf("range=%+v languages=%v countries=%v: %d books, %d suggestions", filter.Range, filter.Languages, filter.Countries, view.Total, len(view.SuggestedFilters))
+		t.Logf("range=%+v languages=%v countries=%v: %d books, %d on page", filter.Range, filter.Languages, filter.Countries, view.Total, len(view.Items))
 	}
+
 	public, err := repo.List(ctx, Filter{Range: Bounds, Limit: 100})
 	if err != nil || len(public.SuggestedFilters) > 0 {
 		t.Fatalf("unpublished suggestions exposed: %v", err)
-	}
-	for _, languages := range [][]string{nil, {"Q7737"}} {
-		var plan string
-		args := []any{Bounds.Start, Bounds.End, true, "", []string{}, false, false, languages, []string{}, []string{}, 10000}
-		if err := db.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+suggestionsQuery, args...).Scan(&plan); err != nil {
-			t.Fatal(err)
-		}
-		t.Logf("suggestions plan, languages=%v: %s", languages, plan)
 	}
 }

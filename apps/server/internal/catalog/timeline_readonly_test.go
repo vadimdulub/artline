@@ -43,7 +43,7 @@ func TestTimelineReadOnlyRepeatedRequests(t *testing.T) {
 		if attempt == 0 {
 			baseline = view
 		}
-		if len(view.Items) > 300 || view.Total != baseline.Total || len(view.Items) != len(baseline.Items) {
+		if len(view.Items) > 150 || view.Total != baseline.Total || len(view.Items) != len(baseline.Items) {
 			t.Fatal("repeated timeline changed its bounded results")
 		}
 		for index, item := range view.Items {
@@ -88,7 +88,7 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		if len(view.Items) > 300 || len(view.Periods) > 90 || len(view.SuggestedFilters) > 3 {
+		if len(view.Items) > 150 || len(view.Periods) > 90 || len(view.SuggestedFilters) > 3 {
 			t.Fatal("unbounded timeline response")
 		}
 		if filter.WomenOnly {

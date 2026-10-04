@@ -25,7 +25,7 @@ function MustSeeEditor({ museum, work, token, saved, reload, dirty, busy }: { mu
     } catch (error) { setError(errorMessage(error)); } finally { setSaving(false); busy(false); }
   }
   return <form className={styles.mustSeeEditor} onSubmit={event => { event.preventDefault(); void save(); }}>
-    <h3>My must-see selection</h3><p>Your selection is separate from the museum’s highlights. Changes remain in review.</p>
+    <h3>My must-see selection</h3><p>Your selection is separate from the museum’s highlights.</p>
     <fieldset disabled={saving}><legend className="sr-only">Edit must-see selection</legend>
       <label className={styles.check}><input type="checkbox" checked={selected} onChange={event => { setSelected(event.target.checked); dirty(true); }} /><span>Include in my must-see works</span></label>
       {selected && <><label><span>Why I want to see it</span><textarea value={reason} maxLength={2000} onChange={event => { setReason(event.target.value); dirty(true); }} /></label><label><span>Order in my selection</span><input type="number" min={1} max={100000} step={1} required value={position} onChange={event => { setPosition(event.target.value); dirty(true); }} /></label></>}
@@ -70,11 +70,11 @@ export function MuseumDrawer({ museum, workID, token, revision, close, saved, re
         {work.object_form && <div><dt>Object form</dt><dd>{work.object_form}</dd></div>}
         {work.cultural_context && <div><dt>Tradition / school</dt><dd>{work.cultural_context}</dd></div>}
         <div><dt>Made in</dt><dd>{work.creation_place_display ?? "Not established"}{!work.creation_place_display && <small className="metadata-note">{work.creation_place_unknown_reason}</small>}</dd></div>
-        <div><dt>Held at</dt><dd>{work.holding ? <Link href={`/museums/${work.holding.slug}`}>{work.holding.name}</Link> : work.current_location_text ?? "Location under review"}</dd></div>
+        <div><dt>Held at</dt><dd>{work.holding ? <Link href={`/museums/${work.holding.slug}`}>{work.holding.name}</Link> : work.current_location_text ?? "Location not recorded"}</dd></div>
         <div><dt>Medium</dt><dd>{work.medium_text ?? work.work_type.replaceAll("_", " ")}</dd></div>
         <div><dt>Dimensions</dt><dd>{work.dimensions_text ?? "Not recorded"}</dd></div>
         {work.accession_number && <div><dt>Collection no.</dt><dd>{work.accession_number}</dd></div>}
-        <div><dt>Image rights</dt><dd>{work.license_label ?? work.rights_status ?? "Not reviewed"}{safeSourceURL(work.license_url) && <a className="license-link" href={safeSourceURL(work.license_url)} target="_blank" rel="noreferrer">License details</a>}</dd></div>
+        <div><dt>Image rights</dt><dd>{work.license_label ?? work.rights_status ?? "Not recorded"}{safeSourceURL(work.license_url) && <a className="license-link" href={safeSourceURL(work.license_url)} target="_blank" rel="noreferrer">License details</a>}</dd></div>
       </dl></div>
       <p className="image-credit">{work.attribution_text}</p>
       <ArtworkLocation work={work} />
@@ -82,7 +82,7 @@ export function MuseumDrawer({ museum, workID, token, revision, close, saved, re
       {work.location_checked_at && <p className={styles.note}>Holding record checked {checkedDate(work.location_checked_at)}. This is not a current display check.</p>}
       {work.selections.map(selection => <section key={selection.kind} className={styles.selectionNote}><h3>{selection.kind === "owner" ? "My must-see note" : "Why this is a museum highlight"}</h3><p>{selection.reason || "Selected for my personal list."}</p>{selection.source_url && <a href={safeSourceURL(selection.source_url)} target="_blank" rel="noreferrer">Designation source{selection.checked_at ? ` · checked ${checkedDate(selection.checked_at)}` : ""}</a>}</section>)}
       <details className="sources-section"><summary>Artwork sources</summary><SourceList citations={work.citations} />{safeSourceURL(work.source_page_url) && <a href={safeSourceURL(work.source_page_url)} target="_blank" rel="noreferrer">Image source</a>}</details>
-      {token ? <MustSeeEditor key={`${work.id}-${revision}-${retry}`} museum={museum} work={work} token={token} dirty={setDirty} busy={setBusy} saved={() => { setSaveMessage("Your must-see selection was saved in review."); saved(); }} reload={() => { setSaveMessage("Unsaved changes discarded. Requesting the saved selection…"); reload(); }} /> : <div className={styles.selectionNote}><h3>Make this atlas yours</h3><p>Add this artwork to your personal must-see selection with editor access.</p><button onClick={editAccess}>Edit my must-see list</button></div>}
+      {token ? <MustSeeEditor key={`${work.id}-${revision}-${retry}`} museum={museum} work={work} token={token} dirty={setDirty} busy={setBusy} saved={() => { setSaveMessage("Your must-see selection was saved."); saved(); }} reload={() => { setSaveMessage("Unsaved changes discarded. Requesting the saved selection…"); reload(); }} /> : <div className={styles.selectionNote}><h3>Make this atlas yours</h3><p>Add this artwork to your personal must-see selection with editor access.</p><button onClick={editAccess}>Edit my must-see list</button></div>}
     </div>}
   </dialog>;
 }

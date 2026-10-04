@@ -1,6 +1,7 @@
 package catalog
 
 import "time"
+import "github.com/vadimdulub/artline/apps/server/internal/timeline"
 
 type TimelineFilter struct {
 	StartYear   int
@@ -47,7 +48,8 @@ type TimelineBin struct {
 }
 
 type TimelineResponse struct {
-	Range struct {
+	MatchedRange *timeline.DateExtent `json:"matchedRange,omitempty"`
+	Range        struct {
 		Start int `json:"start"`
 		End   int `json:"end"`
 	} `json:"range"`

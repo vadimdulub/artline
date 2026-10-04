@@ -81,6 +81,24 @@ make web
 Open <http://localhost:3000>. The web application proxies `/api/backend/*` to
 the Go API at `http://localhost:8080`.
 
+Local development automatically unlocks member features without Google sign-in
+or a subscription when both the database and frontend use loopback addresses.
+The API binds to `127.0.0.1` in this mode and returns an in-memory local identity;
+it creates no Google account, member row or session cookie. `/account` shows
+“Everything is open.” Cloud Run and production containers cannot enable this
+mode. Set `ARTLINE_LOCAL_DEBUG=false` only when deliberately testing real OAuth
+locally; all four Google authentication settings are then required together.
+
+Review the sixteen interactive membership concepts at
+<http://localhost:3000/membership-preview> with `make web` running. This page is
+available only in development. The concepts include collections, notes, saved
+views, custom timelines, comparisons, study sessions, museum plans and exports.
+The second set adds presentations, shared study rooms, personal discovery,
+topic watchlists, offline packs, citations, detail annotations and colour boards.
+Shortlists and review feedback persist in that browser; sample feature data is
+temporary. Billing and production paid-feature workflows are not implemented.
+See [the membership proposal](docs/paid-membership-features.md).
+
 Set `ARTLINE_EDITOR_TOKEN` in `apps/server/.env`. For local catalogue changes, enter that value from
 `apps/server/.env` in the Catalogue editor-token field. Replace that local
 value whenever the project is shared; production receives a separate token
@@ -152,6 +170,13 @@ Uncheck it to browse all records. `popular=false` persists in URLs; Reset view
 restores the default and Clear filters removes it. The ninth migration stores
 discovery selections independently from image coverage and publication status.
 Counts, chart bins and filter choices use the backend selection predicate.
+
+Books and author lifespans always show individual dated marks, with the title
+and year on each book label. Large selections use bounded keyset pages instead
+of a histogram; the chart and index share the same page. Default record pages
+contain at most **150 entries**. Painters and Events retain the server-owned
+150-object density cutoff; All uses cover galleries for crowded book lanes.
+Undated records remain in the index without invented timeline positions.
 
 The local catalogue now has a sourced 1,000-painter candidate cohort, with bounded
 museum highlights and explicitly labelled personal selections of museum holdings. This is not a definitive artistic ranking

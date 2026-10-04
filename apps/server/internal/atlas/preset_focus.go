@@ -19,14 +19,15 @@ func focusPredicate(kind string, focus *PresetFocus, args *[]any) string {
 		return "true"
 	}
 	clauses := []string{"false"}
+	selected := kind == "event" && focus.SelectedEvents || kind == "book" && focus.SelectedBooks
 	bind := func(value any) string { p := fmt.Sprintf("$%d", len(*args)); *args = append(*args, value); return p }
-	if focus.Global {
+	if focus.Global && !selected {
 		clauses = append(clauses, "true")
 	}
-	if len(focus.Countries) > 0 && !(kind == "event" && focus.SelectedEvents) {
+	if len(focus.Countries) > 0 && !selected {
 		clauses = append(clauses, geographyPredicate(kind, Filter{Countries: focus.Countries}, args))
 	}
-	if len(focus.Regions) > 0 && !(kind == "event" && focus.SelectedEvents) {
+	if len(focus.Regions) > 0 && !selected {
 		p := bind(focus.Regions)
 		switch kind {
 		case "artwork":
@@ -43,9 +44,6 @@ func focusPredicate(kind string, focus *PresetFocus, args *[]any) string {
 		clauses = append(clauses, `a.cultural_context=ANY(`+bind(focus.ArtworkTraditions)+`::text[])`)
 	}
 	geographic := "(" + strings.Join(clauses, " OR ") + ")"
-	if kind == "event" && focus.SelectedEvents {
-		geographic = "false"
-	}
 	ids := append(slices.Clone(focus.Related[kind]), focus.Context[kind]...)
 	if len(ids) == 0 {
 		return geographic

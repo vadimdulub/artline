@@ -136,13 +136,32 @@ func TestReadOnlyAuthorTimeline(t *testing.T) {
 		}
 	}
 	public, err := repo.List(ctx, Filter{Range: Bounds, View: "authors", Limit: 100})
-	if err != nil || public.Total != 0 || len(public.Authors) > 0 {
-		t.Fatal("unpublished authors exposed")
+	if err != nil {
+		t.Fatal(err)
 	}
+	// The real catalogue may now contain published books. Audit each returned
+	// creator against published links instead of assuming an empty public set.
+	var eligiblePublished int
+	if err = db.QueryRow(ctx, `SELECT count(DISTINCT l.creator_id) FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE b.status='published' AND (b.end_year<=2000 OR b.start_year IS NULL)`).Scan(&eligiblePublished); err != nil {
+		t.Fatal(err)
+	}
+	if public.Total > eligiblePublished {
+		t.Fatal("author total exceeds published creator identities")
+	}
+	for _, author := range public.Authors {
+		var publishedBooks int
+		if err = db.QueryRow(ctx, `SELECT count(DISTINCT b.id) FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE l.creator_id=$1 AND b.status='published' AND (b.end_year<=2000 OR b.start_year IS NULL)`, author.ID).Scan(&publishedBooks); err != nil {
+			t.Fatal(err)
+		}
+		if publishedBooks == 0 || author.BookCount != publishedBooks {
+			t.Fatalf("unpublished creator/book link exposed: %s", author.ID)
+		}
+	}
+	t.Logf("verified %d visible authors against %d published creator identities", public.Total, eligiblePublished)
 	for _, languages := range [][]string{nil, {"Q7737"}} {
 		args := []any{Bounds.Start, Bounds.End, true, "", []string{}, false, false, languages, []string{}, []string{}}
 		var plan string
-		if err := db.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+authorTimelineScope+"SELECT count(*) FROM matching", args...).Scan(&plan); err != nil {
+		if err := db.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+authorTimelineScope+"SELECT count(*),min(start_year),max(end_year) FROM matching", args...).Scan(&plan); err != nil {
 			t.Fatal(err)
 		}
 		t.Logf("author timeline plan languages=%v: %s", languages, plan)

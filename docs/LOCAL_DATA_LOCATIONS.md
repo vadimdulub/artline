@@ -1,5 +1,89 @@
 # Local Artline data
 
+## All-category artwork coverage — 25–26 September 2026
+
+The [preset review](research/preset-clarity-review-20260925/README.md) now finds
+illustrated artworks in all 30 default categories. This pass added 26 selected
+local review records and images across three bounded operations:
+
+- `arab-world-images-20260925`: 12 objects from Egypt, Syria and Iraq;
+  validated pre-import dump 641,447,127 bytes.
+- `preset-artwork-gaps-20260925`: 12 Met objects for early cities, classical
+  antiquity, Buddhism and the Sahel; dump 641,509,275 bytes.
+- `digital-art-roots-20260925`: two public-domain paintings with documented
+  influence on computer art; dump 641,546,594 bytes.
+
+Each recovery dump, pinned plan and operation snapshot is under
+`/Users/vadimdulub/Library/Application Support/Artline/backups/<operation>/`.
+Original reproductions and receipts use the matching `source-images/<operation>/`
+directory. Full-frame served JPEGs are under
+`apps/web/public/assets/artworks/imported/<operation>/`, each at most 100,000 bytes.
+Research evidence remains in the matching `docs/research/<operation>/` folder;
+disposable browser proof images are in `/tmp`. All 26 records remain in review.
+No publication or production upload was performed.
+
+## Further Islamic-world images — 25 September 2026
+
+The [second selected set](research/islamic-world-more-20260925/README.md) added
+20 local review artworks and images, bringing the Islamic-world preview to 32.
+This includes new origin coverage for Samarkand/Uzbekistan and Afghanistan.
+The first 12 artworks remain unchanged; no records were published or uploaded
+to production.
+
+Recovery dump (641,318,685 bytes), exact preimages, pinned plans, operation
+snapshots and visual review evidence are under
+`/Users/vadimdulub/Library/Application Support/Artline/backups/islamic-world-more-20260925/`.
+Original downloaded reproductions and receipts are in the matching
+`source-images/islamic-world-more-20260925/` directory. Served full-frame JPEGs
+are under `apps/web/public/assets/artworks/imported/islamic-world-more-20260925/`;
+the largest new derivative is 99,664 bytes. Research evidence is preserved in
+the linked research directory; browser proof images remain in `/tmp`.
+
+## Islamic-world images — 25 September 2026
+
+The [selected Islamic-world import](research/islamic-world-images-20260925/README.md)
+added 12 local review artworks and 12 visually reviewed CC0 museum images: tiles,
+ceramics, calligraphy, illustrated manuscripts, metalwork and carved architecture.
+All remain in review; no production publication or upload was performed.
+
+The validated 641,247,621-byte recovery dump, pinned selection and locked preimages
+are under `/Users/vadimdulub/Library/Application Support/Artline/backups/islamic-world-images-20260925/`.
+Downloaded originals and receipts are under the matching
+`source-images/islamic-world-images-20260925/` directory. Full-frame application
+JPEGs are in `apps/web/public/assets/artworks/imported/islamic-world-images-20260925/`;
+the largest is 99,096 bytes. Source captures and application/verification receipts
+remain in the research directory. Disposable browser proofs are in `/tmp`.
+
+## Japanese artwork expansion — 24 September 2026
+
+The [Japan expansion](research/japan-expansion-20260924/README.md) added 36 local
+review artworks (29 paintings and seven prints), 23 named creator profiles and
+36 visually reviewed CC0 museum images. Seven existing creator profiles gained
+sourced Japanese cultural-affiliation links; existing profile fields and
+artworks were preserved. The artworks were subsequently published locally and in production on 25 September; see the publication record below.
+
+The validated 640,969,822-byte pre-import dump, exact locked preimages, operation
+scripts and visual review sheets are under
+`/Users/vadimdulub/Library/Application Support/Artline/backups/japan-expansion-20260924/`.
+Downloaded source reproductions and receipts are in the matching
+`source-images/japan-expansion-20260924/` directory. Application JPEGs are under
+`apps/web/public/assets/artworks/imported/japan-expansion-20260924/`; the largest
+is 98,871 bytes. Source captures, selection, identity decisions and verification
+receipts remain in the research directory. The initial 24 September operation was local only.
+
+## Japanese artwork publication — 25 September 2026
+
+The [publication operation](research/japan-publication-20260925/README.md)
+published the 36 Japanese artworks in the local and production catalogues and
+uploaded their CC0 derivatives. Recovery data is under
+`/Users/vadimdulub/Library/Application Support/Artline/backups/japan-publication-20260925/`:
+a validated 641,238,814-byte local dump, the pinned plan and exact preimages.
+Cloud SQL backup `1790320988908` completed before the production write.
+All 36 public API records and served image checksums passed verification.
+The [Edo museum scan](research/edo-japanese-museums-20260925/README.md)
+retains 35 official page captures and a candidate list; no images or records
+from that separate scan were imported.
+
 ## Russian icon image research — 21 September 2026
 
 The [Russian icon image delivery](research/russian-icon-images-20260921/README.md)
@@ -363,3 +447,26 @@ receipts are under
 `/Users/vadimdulub/Library/Application Support/Artline/backups/book-context-20260922/`.
 Retained research responses and decisions remain in the two research directories.
 Disposable browser screenshots and test outputs remain under `/tmp/`.
+
+## Historical-period images — 26 September 2026
+
+The [all-period review](research/period-images-20260926/README.md) adds 70 selected
+Cleveland/NGA works and [two Pippin paintings](research/pippin-images-20260926/README.md)
+to the local review catalogue. Originals and validated PostgreSQL recovery dumps
+are respectively under `source-images/` and `backups/` within
+`/Users/vadimdulub/Library/Application Support/Artline/`, in the campaign folders
+`period-images-20260926/` and `pippin-images-20260926/`.
+Source captures, pinned plans and verification receipts remain in the research
+folders. Disposable browser screenshots and query-plan outputs are under `/tmp/`.
+
+
+## Complete catalogue production release — 27 September 2026
+
+The [release evidence](research/production-release-20260927/README.md) records the
+full local catalogue comparison, selected image delivery, production transfer,
+and application release. Private recovery/configuration/source archives are at
+`/Users/vadimdulub/Library/Application Support/Artline/backups/production-release-20260927/`.
+Cloud SQL backup `1790509197914` preserves the immediately preceding Women’s rights
+publication. Disposable build sources, browser screenshots, and test logs are
+under `/tmp/artline-release-20260927/`; catalogue research receipts remain in the
+release evidence directory.

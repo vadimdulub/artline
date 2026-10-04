@@ -1,6 +1,6 @@
 import { absoluteURL } from "./seo";
 
-export const publicPages = ["/about", "/artists"];
+export const publicPages = ["/about", "/artists", "/art-history-timeline"];
 export const explorerPages = ["/", "/museums", "/books", "/events", "/all"];
 export function escapeXML(value: string): string { return value.replace(/[<>&"']/g, character => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;", "'": "&apos;" })[character]!); }
 export function sitemapXML(paths: string[], index = false): string {

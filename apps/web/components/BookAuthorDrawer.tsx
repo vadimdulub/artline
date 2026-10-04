@@ -2,6 +2,7 @@
 
 import { authorLifespanLabel, type TimelineAuthor } from "@/lib/books";
 import { RecordDrawer } from "./RecordDrawer";
+import { LibraryImage } from "./BooksGallery";
 import { BookOverview } from "./BookOverview";
 import styles from "./Books.module.css";
 
@@ -9,6 +10,7 @@ export function BookAuthorDrawer({ author, close, onBooks }: { author: TimelineA
   return <RecordDrawer label="Book author details" closeLabel="Close author details" recordKey={author.id} title="Book author" close={close} fallbackFocusId="books-timeline">
     <div className={styles.drawerContent}>
       <header className={styles.bookHeading}><p>Author</p><h2>{author.name}</h2><p>{authorLifespanLabel(author)}</p></header>
+      {author.portrait && <figure className="author-portrait"><LibraryImage image={author.portrait} name={author.name} portrait /><figcaption>{author.portrait.credit} · <a href={author.portrait.sourceUrl} target="_blank" rel="noreferrer">Image source ↗</a> · <a href={author.portrait.licenseUrl} target="_blank" rel="noreferrer">{author.portrait.license}</a></figcaption></figure>}
       <section className={styles.bookAbout} aria-labelledby="author-about"><h3 id="author-about">About the author</h3>{author.overview ? <BookOverview overview={author.overview} /> : <p>{author.description || "A biography has not yet been established for this creator."}</p>}</section>
       <div className={`artwork-details ${styles.bookFacts}`}><dl>
         <div><dt>Born</dt><dd>{author.birth || "Not recorded"}</dd></div>

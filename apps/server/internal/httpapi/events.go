@@ -3,6 +3,7 @@ package httpapi
 import (
 	"errors"
 	"github.com/vadimdulub/artline/apps/server/internal/events"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 	"log/slog"
 	"net/http"
 	"time"
@@ -27,7 +28,7 @@ func (api *API) events(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_END_YEAR", err.Error())
 		return
 	}
-	limit, err := integerQuery(r, "limit", 100, 1, 100)
+	limit, err := integerQuery(r, "limit", timeline.IndividualLimit, 1, timeline.IndividualLimit)
 	if err != nil {
 		writeError(w, 400, "INVALID_LIMIT", err.Error())
 		return

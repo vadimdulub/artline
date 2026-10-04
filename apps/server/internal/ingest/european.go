@@ -494,7 +494,7 @@ func (s europeanImport) work(w europeanWork, raw json.RawMessage, artist, inst, 
 		workType = "painting"
 	}
 	switch workType {
-	case "painting", "drawing", "watercolor", "print", "fresco", "manuscript_illumination":
+	case "painting", "drawing", "watercolor", "print", "fresco", "manuscript_illumination", "ceramic", "metalwork", "sculpture", "calligraphy":
 	default:
 		return errors.New("unsupported artwork type")
 	}

@@ -6,6 +6,34 @@ const start = (page: Page) => page.getByLabel('All start year', { exact: true })
 const end = (page: Page) => page.getByLabel('All end year', { exact: true });
 const tickState = (page: Page) => page.locator('.all-explorer .tick-row > span').evaluateAll(nodes => nodes.map(node => ({ label: node.textContent, left: (node as HTMLElement).style.left })));
 const label = (year: number) => year < 0 ? `${Math.abs(year)} BCE` : String(year);
+
+for (const width of [1440, 390, 320]) test(`artwork pictures grow with date zoom and artwork focus at ${width}px`, async ({ page }) => {
+  test.setTimeout(60000);
+  await page.setViewportSize({ width, height: 1000 });
+  await page.goto('/all?selection=true&type=artwork&type=book&type=event&start=1400&end=2000&highlights=true');
+  await ready(page);
+  const image = page.locator('.all-artwork-image').first();
+  await expect(image).toBeVisible();
+  const broadHeight = (await image.boundingBox())!.height;
+  await start(page).fill('1800'); await end(page).fill('1900'); await end(page).press('Enter');
+  await ready(page);
+  const centuryHeight = (await image.boundingBox())!.height;
+  expect(centuryHeight).toBeGreaterThan(broadHeight + 40);
+  await page.getByRole('button', { name: 'Show only artworks', exact: true }).click();
+  await ready(page);
+  const focusedHeight = (await image.boundingBox())!.height;
+  expect(focusedHeight).toBeGreaterThan(centuryHeight + 30);
+  await end(page).fill('1810'); await end(page).press('Enter'); await ready(page);
+  expect((await image.boundingBox())!.height).toBeGreaterThan(focusedHeight);
+  expect((await page.locator('.all-artwork-card').first().boundingBox())!.width).toBeLessThanOrEqual(width - 36);
+  await page.getByRole('button', { name: 'Scroll artworks right', exact: true }).click();
+  await expect.poll(() => page.locator('.all-artwork-strip').evaluate(el => el.scrollLeft)).toBeGreaterThan(0);
+  await page.getByRole('button', { name: 'Show all types', exact: true }).click(); await ready(page);
+  await zoomOut(page).click(); await ready(page);
+  expect((await image.boundingBox())!.height).toBeCloseTo(broadHeight, 0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+});
+
 async function ready(page: Page) {
   await expect(page.locator('.all-explorer .timeline-stage')).toHaveAttribute('aria-busy', 'false', { timeout: 20000 });
   await expect(page.locator('.all-explorer').getByRole('alert')).toHaveCount(0);

@@ -59,10 +59,10 @@ export function permittedImagePath(path: string | null) {
   return Boolean(path && /^\/assets\/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$/.test(path) && !path.includes(".."));
 }
 
-export function ArtworkImage({ work, large = false, number, onUnavailable }: { work: Pick<Artwork, "media_url" | "alt_text" | "title" | "rights_status">; large?: boolean; number?: number; onUnavailable?: () => void }) {
+export function ArtworkImage({ work, large = false, number, onUnavailable, sizes }: { work: Pick<Artwork, "media_url" | "alt_text" | "title" | "rights_status">; large?: boolean; number?: number; onUnavailable?: () => void; sizes?: string }) {
   const [failed, setFailed] = useState(false);
   const usable = permittedImagePath(work.media_url) && !failed;
-  if (usable) return <Image src={work.media_url!} alt={work.alt_text || work.title} loading={large ? "eager" : "lazy"} width={large ? 1600 : 440} height={large ? 1600 : 520} sizes={large ? "(max-width: 760px) 90vw, 55vw" : number !== undefined ? "100px" : "(max-width: 620px) 45vw, 25vw"} onError={() => { setFailed(true); onUnavailable?.(); }} />;
+  if (usable) return <Image src={work.media_url!} alt={work.alt_text || work.title} loading={large ? "eager" : "lazy"} width={large ? 1600 : 440} height={large ? 1600 : 520} sizes={sizes ?? (large ? "(max-width: 760px) 90vw, 55vw" : number !== undefined ? "100px" : "(max-width: 620px) 45vw, 25vw")} onError={() => { setFailed(true); onUnavailable?.(); }} />;
   if (number !== undefined && !large) return <div className="work-placeholder numbered-placeholder"><span aria-hidden="true">{String(number).padStart(2, "0")}</span><span className="sr-only">{failed ? "Image unavailable" : "Image not available"}</span></div>;
   return <div className={large ? "work-placeholder large-placeholder" : "work-placeholder"}><span aria-hidden="true">▧</span><p>{failed ? "Image unavailable" : "Image not available"}</p>{large && <small>{work.rights_status === "restricted" ? "Reproduction rights are restricted." : "You can still explore the artwork’s details and sources below."}</small>}</div>;
 }

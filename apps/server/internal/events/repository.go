@@ -6,6 +6,7 @@ import (
 	"errors"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/vadimdulub/artline/apps/server/internal/timeline"
 	"strings"
 )
 
@@ -31,9 +32,11 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		return out, ErrUnavailable
 	}
 	args := []any{f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Top100, f.Topics, f.Countries, f.Regions, f.Kinds}
-	if err := r.db.QueryRow(ctx, `SELECT count(*),count(*) FILTER(WHERE e.start_year IS NULL)`+predicate, args...).Scan(&out.Total, &out.UndatedTotal); err != nil {
+	var firstYear, lastYear *int
+	if err := r.db.QueryRow(ctx, `SELECT count(*),count(*) FILTER(WHERE e.start_year IS NULL),min(e.start_year),max(e.end_year)`+predicate, args...).Scan(&out.Total, &out.UndatedTotal, &firstYear, &lastYear); err != nil {
 		return out, err
 	}
+	out.MatchedRange = timeline.FitExtent(firstYear, lastYear, f.Start, f.End)
 	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM event_records WHERE status<>'archived' AND ($1 OR status='published')`, f.Preview).Scan(&out.SelectionTotal); err != nil {
 		return out, err
 	}
@@ -55,6 +58,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			return out, err
 		}
 		e.Status = status
+		attachImage(&e)
 		out.Items = append(out.Items, e)
 	}
 	err = rows.Err()
@@ -67,7 +71,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		out.Items = out.Items[:f.Limit]
 		out.NextCursor = encodeCursor(out.Items[len(out.Items)-1])
 	}
-	if out.Total-out.UndatedTotal > 100 {
+	if out.Total-out.UndatedTotal > timeline.IndividualLimit {
 		out.Mode = "density"
 		starts, ends := []int{}, []int{}
 		for _, p := range densityPeriods(f.Range) {
@@ -138,6 +142,7 @@ func (r *Repository) ByID(ctx context.Context, id string, preview bool) (Event, 
 	}
 	err = json.Unmarshal(raw, &e)
 	e.Status = status
+	attachImage(&e)
 	return e, err
 }
 func (r *Repository) Facets(ctx context.Context, preview, top100 bool) (Facets, error) {

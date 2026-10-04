@@ -22,8 +22,8 @@ func TestEveryPresetHasReviewedFocus(t *testing.T) {
 			if f == nil || f.Label == "" {
 				t.Fatal("missing reviewed focus")
 			}
-			if !f.Global && len(f.Countries)+len(f.Regions) == 0 {
-				t.Fatal("missing regional scope")
+			if !f.Global && len(f.Countries)+len(f.Regions)+len(f.Related["artwork"])+len(f.Context["artwork"]) == 0 {
+				t.Fatal("missing regional or explicitly selected artwork scope")
 			}
 			if f.Global && len(f.Countries)+len(f.Regions) > 0 {
 				t.Fatal("ambiguous global scope")
@@ -44,10 +44,22 @@ func TestEveryPresetHasReviewedFocus(t *testing.T) {
 				}
 			}
 			for _, kind := range []string{"artwork", "book", "event"} {
-				if len(f.Context[kind]) > 3 {
+				if kind != "artwork" && len(f.Context[kind]) > 3 {
 					t.Fatal("too many contextual entries")
 				}
 				ids := append(slices.Clone(f.Related[kind]), f.Context[kind]...)
+				if kind == "artwork" {
+					// Editorial selections can span a full gallery; the separate
+					// public Picks filter keeps its 60-ID interaction bound.
+					seen := map[string]bool{}
+					for _, id := range ids {
+						if !regexp.MustCompile(`^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`).MatchString(id) || seen[id] {
+							t.Fatalf("invalid or duplicate artwork selection: %s", id)
+						}
+						seen[id] = true
+					}
+					continue
+				}
 				if len(ids) > 0 {
 					filter := Filter{Range: p.Context, Limit: 60, Selection: true, Picks: map[string][]string{kind: ids}}
 					if err := filter.Validate(); err != nil {

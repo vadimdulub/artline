@@ -10,18 +10,20 @@ type Source struct {
 	URL  string `json:"url"`
 }
 type Preset struct {
-	StartingScope     string       `json:"startingScope"`
-	StartingCountries []string     `json:"startingCountries,omitempty"`
-	CoverArtworkID    string       `json:"coverArtworkID,omitempty"`
-	Cover             *Item        `json:"cover,omitempty"`
-	ID                string       `json:"id"`
-	Name              string       `json:"name"`
-	Group             string       `json:"group"`
-	Description       string       `json:"description"`
-	Period            Range        `json:"period"`
-	Context           Range        `json:"context"`
-	Sources           []Source     `json:"sources"`
-	Focus             *PresetFocus `json:"focus,omitempty"`
+	StartingScope      string       `json:"startingScope"`
+	StartingCountries  []string     `json:"startingCountries,omitempty"`
+	StartingCreators   []string     `json:"startingCreators,omitempty"`
+	StartingHighlights bool         `json:"startingHighlights"`
+	CoverArtworkID     string       `json:"coverArtworkID,omitempty"`
+	Cover              *Item        `json:"cover,omitempty"`
+	ID                 string       `json:"id"`
+	Name               string       `json:"name"`
+	Group              string       `json:"group"`
+	Description        string       `json:"description"`
+	Period             Range        `json:"period"`
+	Context            Range        `json:"context"`
+	Sources            []Source     `json:"sources"`
+	Focus              *PresetFocus `json:"focus,omitempty"`
 }
 
 // Explicit subject/context links supplement recorded origin. They do not
@@ -33,8 +35,10 @@ type PresetFocus struct {
 	Global            bool                `json:"global,omitempty"`
 	ArtworkTraditions []string            `json:"artworkTraditions,omitempty"`
 	SelectedEvents    bool                `json:"selectedEvents,omitempty"`
+	SelectedBooks     bool                `json:"selectedBooks,omitempty"`
 	Related           map[string][]string `json:"related,omitempty"`
 	Context           map[string][]string `json:"context,omitempty"`
+	ArtworkIdentities map[string]string   `json:"artworkIdentities,omitempty"`
 }
 
 //go:embed presets.json

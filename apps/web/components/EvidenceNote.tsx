@@ -22,7 +22,6 @@ function readableEvidence(evidence: Record<string, unknown>) {
   add("Source description", countryEvidence?.source_description);
   add("Biography cross-check", crosscheck?.source_excerpt);
   if (Array.isArray(countryEvidence?.historical_polity_statements) && countryEvidence.historical_polity_statements.length) lines.push(`Historical-polity statements: ${countryEvidence.historical_polity_statements.length} recorded for discovery context only.`);
-  if (evidence.publication_status === "review" || evidence.publication === "Review") lines.push("Publication state: review.");
 
   // Display explicit source facts, never the full ingestion receipt or local paths.
   const rights = asRecord(evidence.rights) ?? evidence;

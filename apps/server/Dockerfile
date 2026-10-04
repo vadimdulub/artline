@@ -13,7 +13,7 @@ FROM gcr.io/distroless/static-debian12:nonroot
 WORKDIR /app
 COPY --from=builder /out/artline-api /app/artline-api
 ENV PORT=8080
+ENV ARTLINE_ENV=production
 EXPOSE 8080
 USER nonroot:nonroot
 ENTRYPOINT ["/app/artline-api"]
-

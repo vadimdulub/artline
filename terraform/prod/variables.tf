@@ -39,6 +39,12 @@ variable "api_image" {
   default     = null
 }
 
+variable "web_image" {
+  description = "Optional web image URI or digest for configuration-only or web-only releases; null uses image_tag"
+  type        = string
+  default     = null
+}
+
 variable "editor_token" {
   description = "Long random bearer token for the first-owner editing flow"
   type        = string

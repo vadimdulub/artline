@@ -16,7 +16,7 @@ import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
-export function MuseumsIndex({ preview }: { preview: boolean }) {
+export function MuseumsIndex() {
   const search = useRef<HTMLInputElement>(null);
   const params = new URLSearchParams(useQueryString());
   const [token] = useEditorToken();
@@ -48,7 +48,7 @@ export function MuseumsIndex({ preview }: { preview: boolean }) {
     for (const value of group.values) filters.push({ key: `${group.key}-${value}`, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ [group.key]: group.values.filter(item => item !== value) }) });
   }
   return <main id="main-content" className={styles.page}>
-    <AtlasPageHeader title="Museums and collections" description="Follow the paintings to the places that hold them."><p className={styles.preview}>{preview || token ? "Research preview · records are still in review" : "Published catalogue"}</p></AtlasPageHeader>
+    <AtlasPageHeader title="Museums and collections" description="Follow the paintings to the places that hold them." />
     <div className={styles.locationShortcuts} role="group" aria-label="Museum location shortcuts">
       <button aria-pressed={europeanScope} onClick={() => setMuseumFilters({region:europe, country:null})}>European museums</button>
       <button aria-pressed={!regions.length && !countries.length} onClick={() => setMuseumFilters({region:null, country:null})}>All locations</button>
@@ -73,7 +73,7 @@ export function MuseumsIndex({ preview }: { preview: boolean }) {
           <div className={styles.cardCounts}><span>{formatCount(museum.work_count)} {museum.work_count === 1 ? "work" : "works"} in Artline</span>{museum.highlight_count > 0 && <span>{formatCount(museum.highlight_count)} museum highlights</span>}{museum.must_see_count > 0 && <span>{formatCount(museum.must_see_count)} must-see picks</span>}</div>
           <p className={styles.displayNote}>{museum.on_view_count ? `${museum.on_view_count} recently confirmed on view` : "No confirmed display information"}</p><span className={styles.exploreLink}>Explore collection <span aria-hidden="true">↗</span></span></div>
         </Link>
-      </li>)}</ul> : <div className={styles.empty}><h2>{filters.length ? "No collections match these filters" : "The museum catalogue is taking shape"}</h2><p>{selection === "owner" ? "Your must-see selection is empty for this view. Open a collection and use editor access to add your own picks." : display ? "No matching works have current, verified display information. This does not mean they are not on view." : "Research records appear in local preview. Public records appear after editorial review."}</p>{filters.length > 0 && <button onClick={clear}>Remove filters</button>}</div>}
+      </li>)}</ul> : <div className={styles.empty}><h2>{filters.length ? "No collections match these filters" : "The museum catalogue is taking shape"}</h2><p>{selection === "owner" ? "Your must-see selection is empty for this view. Open a collection and use editor access to add your own picks." : display ? "No matching works have current, verified display information. This does not mean they are not on view." : "No collections are available in this view yet."}</p>{filters.length > 0 && <button onClick={clear}>Remove filters</button>}</div>}
     </section>
     {data && <CursorPager paging={paging} next={data.next_cursor} busy={loading} total={data.total} shown={data.items.length} label="Museum pages" noun="collections" />}
   </main>;

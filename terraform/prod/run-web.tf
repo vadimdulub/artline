@@ -17,7 +17,7 @@ resource "google_cloud_run_v2_service" "web" {
     }
 
     containers {
-      image = "${local.image_root}/web:${var.image_tag}"
+      image = var.web_image != null ? var.web_image : "${local.image_root}/web:${var.image_tag}"
 
       ports {
         container_port = 8080

@@ -16,7 +16,7 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
   const previewToken = researchPreviewToken();
   if (request.method === "GET" && previewToken && !authorization) {
     headers.set("authorization", `Bearer ${previewToken}`);
-    target.searchParams.set("preview", "1");
+    if (target.searchParams.get("preview") !== "0") target.searchParams.set("preview", "1");
   }
   let body: Uint8Array | undefined;
   if (request.body) {
@@ -40,10 +40,15 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
   try {
     // Superseded timeline reads should also stop upstream work. Keep writes on
     // their existing timeout so closing a tab does not cancel an authorized edit.
-    const timeout = AbortSignal.timeout(12000);
+    // Atlas reads have a 20-second server budget for cold catalogue queries.
+    // Leave transport headroom while preserving the existing write deadline.
+    const timeout = AbortSignal.timeout(request.method === "GET" && path[1] === "atlas" ? 25000 : 12000);
     const signal = request.method === "GET" ? AbortSignal.any([request.signal, timeout]) : timeout;
     const response = await fetch(target, { method: request.method, headers, body: body as BodyInit | undefined, cache: "no-store", signal });
-    return new Response(response.body, { status: response.status, headers: { "content-type": response.headers.get("content-type") ?? "application/json", "cache-control": "private, no-store" } });
+    const responseHeaders = new Headers({ "content-type": response.headers.get("content-type") ?? "application/json", "cache-control": "private, no-store" });
+    const cacheStatus = response.headers.get("x-artline-cache");
+    if (cacheStatus) responseHeaders.set("x-artline-cache", cacheStatus);
+    return new Response(response.body, { status: response.status, headers: responseHeaders });
   } catch {
     return Response.json({ error: { code: "SERVICE_UNAVAILABLE", message: "The catalogue is temporarily unavailable. Try again shortly." } }, { status: 503 });
   }
