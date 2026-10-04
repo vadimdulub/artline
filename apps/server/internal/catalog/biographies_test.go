@@ -21,6 +21,7 @@ func TestReferenceBiographiesHaveIdentityAndAttribution(t *testing.T) {
 		t.Fatalf("expected the 1,000-artist cohort; got %d", len(entries))
 	}
 	ranks := map[int]bool{}
+	identities := map[string]bool{}
 	for slug, entry := range entries {
 		if entry.Rank < 1 || entry.Rank > 1000 || ranks[entry.Rank] {
 			t.Errorf("invalid cohort rank: %s", slug)
@@ -39,5 +40,18 @@ func TestReferenceBiographiesHaveIdentityAndAttribution(t *testing.T) {
 		if referenceBiography(entry.ArtistID, slug) == nil || referenceBiography("different-artist", slug) != nil {
 			t.Error("artist identity guard failed", slug)
 		}
+		for _, id := range append([]string{entry.ArtistID}, entry.AdditionalArtistIDs...) {
+			if len(id) != 36 || identities[id] || referenceBiography(id, slug) == nil || referenceBiography(id, "wrong-slug") != nil {
+				t.Error("additional artist identity guard failed", slug, id)
+			}
+			identities[id] = true
+		}
+	}
+}
+
+func TestDomenichinoReviewedProductionIdentity(t *testing.T) {
+	biography := referenceBiography("e43108bb-3d3b-4aae-a7aa-f1321ecf5a29", "le-dominiquin-round2-033f8b250c97")
+	if biography == nil || biography.SourceURL != "https://en.wikipedia.org/wiki/Domenichino" {
+		t.Fatal("reviewed production identity must resolve to Domenichino")
 	}
 }

@@ -3,6 +3,7 @@ package catalog
 import (
 	_ "embed"
 	"encoding/json"
+	"slices"
 )
 
 // Source-attributed reference material supplements (never overwrites) database
@@ -18,8 +19,9 @@ type ReferenceBiography struct {
 }
 type biographyEntry struct {
 	ReferenceBiography
-	ArtistID string `json:"artist_id"`
-	QID      string `json:"qid"`
+	ArtistID            string   `json:"artist_id"`
+	AdditionalArtistIDs []string `json:"additional_artist_ids,omitempty"`
+	QID                 string   `json:"qid"`
 }
 
 //go:embed biographies.json
@@ -34,7 +36,7 @@ var referenceBiographies = func() map[string]biographyEntry {
 
 func referenceBiography(id, slug string) *ReferenceBiography {
 	entry, ok := referenceBiographies[slug]
-	if !ok || entry.ArtistID != id {
+	if !ok || (entry.ArtistID != id && !slices.Contains(entry.AdditionalArtistIDs, id)) {
 		return nil
 	}
 	biography := entry.ReferenceBiography

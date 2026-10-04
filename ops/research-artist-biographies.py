@@ -53,6 +53,7 @@ def main():
     parser.add_argument('--roster', type=Path, required=True)
     parser.add_argument('--evidence', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--identity-bindings', type=Path, help='Reviewed additional database IDs for the same canonical authority and slug')
     args = parser.parse_args()
     roster = json.loads(args.roster.read_text())
     assert len({a['slug'] for a in roster}) == len(roster)
@@ -119,6 +120,14 @@ def main():
             'source_url':page['fullurl'], 'revision_url':f"https://en.wikipedia.org/w/index.php?oldid={revisions[0]['revid']}",
             'revision_id':revisions[0]['revid'], 'revised_at':revisions[0]['timestamp'], 'license_url':LICENSE,
             'attribution':'Wikipedia contributors', 'changes':'Opening excerpt; plain-text formatting, section headings and a trailing partial sentence omitted where applicable. No factual rewriting.'}
+    if args.identity_bindings:
+        for binding in json.loads(args.identity_bindings.read_text()):
+            entry = entries[binding['slug']]
+            assert entry['artist_id'] == binding['artist_id'] and entry['qid'] == binding['qid']
+            assert binding['evidence_url'].startswith('https://') and binding['evidence_note']
+            from uuid import UUID
+            assert all(str(UUID(value)) == value for value in binding['additional_artist_ids'])
+            entry.update({key: binding[key] for key in ['additional_artist_ids', 'evidence_url', 'evidence_note']})
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(entries, ensure_ascii=False, indent=2, sort_keys=True)+'\n')
     report = {'requested':len(roster), 'matched':len(entries), 'unresolved':unresolved,

@@ -98,3 +98,10 @@ combined filters, source attribution, 320/390/1440px layouts, accessibility, sha
 artwork pages without JavaScript, Account navigation, sticky headers and Full view.
 The existing public-record unit tests still pass; two added tests cover explicit
 full-catalogue access and rejection of that flag when preview is not configured.
+
+Candidate validation found one local/production UUID difference for Domenichino.
+The production catalogue’s Louvre consolidation citation and NGA authority both
+identify Q320118 and the same canonical slug. One explicit additional UUID binding
+is retained with evidence in `ops/artist-biography-identity-bindings.json`; the
+reader still requires the exact slug and an enumerated database ID. Rebuilding the
+source bundle can preserve it with the capture script’s `--identity-bindings` flag.
