@@ -51,6 +51,16 @@
 .controls{display:grid;grid-template-columns:minmax(0,2fr) auto;gap:12px}
 .controls>label:not(.search){grid-column:1/-1}
 .controls input{min-height:44px}
+.controls[hidden]{display:none}
+.filterToggle{min-height:44px;padding:8px 14px;border:1px solid #b5aea3;background:transparent;color:var(--ink);font:13px var(--sans)}
+.filterToggle[aria-expanded=true]{background:var(--stone)}
+.thumbnailGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}
+.yearGroup .thumbnailGrid :global(.work-row){display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:0;border:0;background:transparent;min-width:0}
+.yearGroup .thumbnailGrid :global(.work-row)>img,.yearGroup .thumbnailGrid :global(.work-row)>:global(.work-placeholder){width:100%;height:auto;min-height:0;aspect-ratio:4/3;object-fit:contain;background:var(--stone)}
+.yearGroup .thumbnailGrid :global(.work-row-copy){display:flex;flex-direction:column;min-width:0;padding:0}
+.yearGroup .thumbnailGrid :global(.work-title){font-size:18px;line-height:1.3;margin:4px 0}
+.yearGroup .thumbnailGrid :global(.work-location){font-size:11px;line-height:1.5}
+.yearGroup .thumbnailGrid :global(.work-row.is-selected){box-shadow:none;outline:2px solid var(--ultramarine);outline-offset:5px}
 .matchingCount{font-size:13px;color:var(--muted);margin:0 0 20px}
 .holding{display:block;font:12px/1.5 var(--sans);color:var(--muted);margin-top:8px}
 @media(min-width:1100px){:global(.artist-gallery-record) .controls{grid-template-columns:minmax(180px,1.3fr) auto minmax(150px,.8fr) minmax(150px,.8fr) minmax(200px,1.1fr)}:global(.artist-gallery-record) .controls>label:not(.search){grid-column:auto}}

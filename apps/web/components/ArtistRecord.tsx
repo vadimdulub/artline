@@ -81,12 +81,29 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
       </section></ArtistContext>
 
       </section>;
+  const artworkRecord = !gallery && (!embedded || work || workMessage) ? <aside ref={artworkPanel} className={`artwork-panel${embedded ? " painter-preview" : ""}`} aria-label={embedded ? "Artwork preview" : undefined} aria-labelledby={embedded ? undefined : "artwork-record-title"}>
+      {!embedded && <div className="artwork-panel-heading"><h2 className="artwork-creator" ref={artworkHeading} tabIndex={-1} id="artwork-record-title"><span className="sr-only">Artwork record: </span>{creator}</h2>{work && <RecordArrows navigation={workNavigation} noun="artwork" />}</div>}
+      {work ? <div className="artwork-details">
+        <ArtworkViewer work={work} creator={creator} navigation={workNavigation} />
+        {embedded ? <>
+          <div className="painter-preview-caption"><div><h3 ref={artworkHeading} tabIndex={-1} aria-live="polite">{work.title}</h3><p className="artwork-date">{work.date_display}</p></div><RecordArrows navigation={workNavigation} noun="artwork" /></div>
+          {work.current_location_text && <p className="painter-preview-holding">Held at {work.current_location_text}</p>}
+          <div className="painter-preview-actions"><button type="button" onClick={returnToWorks}>Browse artworks</button><details className="preview-work-details" key={work.id}><summary>Artwork details</summary><div>{work.alternate_title && <p>{work.alternate_title}</p>}<PainterArtworkDetails artist={artist} work={work} /><ShareWorkLink path={`/artists/${artist.slug}/works/${work.id}${catalogueSuffix}`} /></div></details></div>
+        </> : <>
+          <h3 aria-live="polite">{work.title}</h3>{work.alternate_title && <p>{work.alternate_title}</p>}<p className="artwork-date">{work.date_display}</p>
+          <div className="artwork-panel-actions"><ShareWorkLink key={work.id} path={`/artists/${artist.slug}/works/${work.id}${catalogueSuffix}`} /></div>
+          {selectedIndex>=0 && <p className="image-credit">{selectedIndex + 1} / {works.length}{workBrowser ? " on this page" : ""}</p>}
+          <PainterArtworkDetails artist={artist} work={work} />
+        </>}
+      </div> : workMessage ?? <div className="artwork-waiting"><span aria-hidden="true">▧</span><h3>A closer look</h3><p>Select an artwork to explore its date, origin, collection, and sources.</p></div>}
+    </aside> : null;
   return <div className={`artist-record${gallery ? " artist-gallery-record" : ""}`}>
     <div className="artist-main">
       <header className="artist-heading">
         {!embedded && headingWork ? <><h1 style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)", lineHeight: 1.12 }}>{headingWork.title}</h1><p><Link href={`/artists/${artist.slug}${catalogueSuffix}`}>{artist.display_name}</Link> · {headingWork.date_display}</p></> : <h1>{artist.display_name}</h1>}<p className="artist-dates">{!embedded && headingWork ? `${artist.display_name}: ${artist.timeline_display}` : artist.timeline_display}</p>
         {embedded && <Link className="text-link full-painter-link" href={`/artists/${artist.slug}${catalogueSuffix}`}>Open full painter record <span aria-hidden="true">↗</span></Link>}
       </header>
+      {embedded && artworkRecord}
       {!embedded && <nav className="artist-section-links" aria-label="Artist sections"><a href={`#works-${artist.id}`}>Artworks{artist.artwork_count !== undefined && ` (${artist.artwork_count.toLocaleString("en-GB")})`}</a><a href={`#biography-${artist.id}`}>Biography</a><a href={`#collections-${artist.id}`}>Museums</a><a href={`#sources-${artist.id}`}>Sources</a></nav>}
       {!embedded && background}
       <section ref={selectedWorks} className="selected-works" aria-labelledby={`works-${artist.id}`}>
@@ -102,16 +119,7 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
       {essay && <details className="essay-section"><summary>Read the painter essay</summary><article className="essay"><ReactMarkdown remarkPlugins={[remarkGfm]}>{essay}</ReactMarkdown></article></details>}
       <details className="sources-section" id={`sources-${artist.id}`}><summary>Sources & research notes <span>{artist.citations.length}</span></summary><SourceList citations={artist.citations} /></details>
     </div>
-    {!gallery && (!embedded || work || workMessage) && <aside ref={artworkPanel} className="artwork-panel" aria-labelledby="artwork-record-title">
-      <div className="artwork-panel-heading"><h2 className="artwork-creator" ref={artworkHeading} tabIndex={-1} id="artwork-record-title"><span className="sr-only">Artwork record: </span>{creator}</h2>{work && <RecordArrows navigation={workNavigation} noun="artwork" />}</div>
-      {work ? <div className="artwork-details">
-        <ArtworkViewer work={work} creator={creator} navigation={workNavigation} />
-        <h3 aria-live="polite">{work.title}</h3>{work.alternate_title && <p>{work.alternate_title}</p>}<p className="artwork-date">{work.date_display}</p>
-        <div className="artwork-panel-actions">{embedded && <button type="button" onClick={returnToWorks}>{workBrowser ? "← Artworks by year" : "← Selected works"}</button>}<ShareWorkLink key={work.id} path={`/artists/${artist.slug}/works/${work.id}${catalogueSuffix}`} /></div>
-        {selectedIndex>=0 && <p className="image-credit">{selectedIndex + 1} / {works.length}{workBrowser ? " on this page" : ""}</p>}
-        <PainterArtworkDetails artist={artist} work={work} />
-      </div> : workMessage ?? <div className="artwork-waiting"><span aria-hidden="true">▧</span><h3>A closer look</h3><p>Select an artwork to explore its date, origin, collection, and sources.</p></div>}
-    </aside>}
+    {!embedded && artworkRecord}
     {gallery && workMessage && <div className="gallery-work-message">{workMessage}</div>}
     {gallery && viewerOpen && work && <ArtworkDialog work={work} creator={creator} navigation={workNavigation} close={() => setViewer({ id: workId, open: false })} details={<><PainterArtworkDetails artist={artist} work={work} /><ShareWorkLink path={`/artists/${artist.slug}/works/${work.id}${catalogueSuffix}`} /></>} />}
     {gallery && pageWork && <noscript><article className="artwork-details standalone-artwork"><ArtworkImage work={pageWork} large /><h3>{pageWork.title}</h3><p>{pageWork.date_display}</p><PainterArtworkDetails artist={artist} work={pageWork} /></article></noscript>}

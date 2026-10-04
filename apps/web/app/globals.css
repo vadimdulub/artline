@@ -778,4 +778,21 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .biography .biography-credit a{color:var(--ultramarine)}
 .artist-collections li{min-width:0}.artist-collections li a{overflow-wrap:anywhere}
 @media(max-width:760px){.artist-collections ul{grid-template-columns:minmax(0,1fr)}}
+
+/* The painter drawer opens as an image viewer, with catalogue controls below. */
+.painter-dialog .painter-preview{padding:0;margin:4px 0 26px;border:0;background:transparent}
+.painter-preview .artwork-image{background:var(--stone)}
+.painter-dialog .painter-preview .artwork-image>img,.painter-dialog .painter-preview .large-placeholder{width:100%;height:min(42svh,420px);max-height:none;aspect-ratio:auto;object-fit:contain}
+.painter-preview-caption{display:flex;align-items:start;justify-content:space-between;gap:14px;margin:16px 0 0}
+.painter-preview-caption>div:first-child{min-width:0}
+.painter-preview-caption>.record-navigation{flex:0 0 94px}
+.painter-preview .painter-preview-caption h3{font:400 23px/1.25 var(--serif);margin:0 0 7px;overflow-wrap:anywhere}
+.painter-preview-caption .artwork-date{margin:0;font:13px/1.5 var(--sans);color:var(--muted)}
+.painter-preview-holding{margin:8px 0 0;font:12px/1.5 var(--sans);color:var(--muted)}
+.painter-preview-actions{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:start;margin-top:10px}
+.painter-preview-actions>button,.preview-work-details>summary{min-height:44px;padding:10px 0;border:0;background:transparent;font:13px/1.7 var(--sans);color:var(--ultramarine)}
+.preview-work-details[open]{flex-basis:100%}
+.preview-work-details>div{padding:12px 0 0;border-top:1px solid var(--line)}
+.painter-dialog .painter-preview .artwork-image{margin:0}
+.painter-dialog .painter-preview .artwork-date{margin-bottom:0}
 .record-toolbar{flex-wrap:wrap;gap:12px}.record-toolbar .full-catalogue-link{padding:10px 16px;min-height:44px;background:var(--ink);color:var(--paper);text-decoration:none}

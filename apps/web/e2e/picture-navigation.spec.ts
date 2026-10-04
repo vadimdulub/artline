@@ -15,6 +15,7 @@ for (const width of [1440, 390, 320]) {
     expect(next.items).toHaveLength(1);
     await page.goto("/?artist=claude-monet&art_images=true");
     const drawer = page.getByRole("dialog", { name: "Painter details", exact: true });
+    await drawer.getByRole("button", { name: "Artwork filters", exact: true }).click();
     await expect(drawer.getByRole("checkbox", { name: "With pictures" })).toBeChecked();
     await expect(drawer.locator(".work-row")).toHaveCount(24);
     expect(await page.locator(".explorer .filters").getByRole("checkbox", { name: "With pictures" }).count()).toBe(0);

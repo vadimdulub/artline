@@ -105,3 +105,20 @@ identify Q320118 and the same canonical slug. One explicit additional UUID bindi
 is retained with evidence in `ops/artist-biography-identity-bindings.json`; the
 reader still requires the exact slug and an enumerated database ID. Rebuilding the
 source bundle can preserve it with the capture script’s `--identity-bindings` flag.
+
+## Painter pop-up: pictures before controls
+
+Keep the established paper #f2efe8, stone #e8e3d9, ink #1b1916,
+charcoal #12110f, muted #625d55 and dark red #8f3a29. Georgia names and
+artwork titles remain paired with the existing Avenir/system metadata type.
+The drawer is a compact viewing space: artist name, large selected image,
+caption and previous/next arrows, then a two-column thumbnail collection.
+A single Filters button reveals search, year, type, museum and picture controls.
+Artwork details, biography and sources stay available through disclosures.
+
+The opening view uses the existing server-side picture filter; Show all records
+remains available, and the full artist page keeps its research controls and
+complete recorded view. Pages stay bounded, and previous/next navigation remains
+scoped to the active filters. The artwork is the visual focus; no new decoration,
+fonts or palette are introduced. This follows the owner's explicit request for
+pictures first while retaining the established biography treatment.
