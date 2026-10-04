@@ -28,7 +28,7 @@ export default async function ArtistsPage({ searchParams }: Props) {
   const count = (value: number) => value.toLocaleString("en-GB");
   return <main id="main-content" className={styles.page}>
     <header className={styles.heading}><div><h1>Artists</h1><p>Explore a life, study a body of work, follow it into the world’s collections.</p></div><Link href="/">Explore the timeline</Link></header>
-    <form action="/artists" className={styles.filters} role="search" aria-label="Find artists">
+    <form key={query.toString()} action="/artists" className={styles.filters} role="search" aria-label="Find artists">
       <label className={styles.search}><span>Artist name</span><input type="search" name="q" defaultValue={query.get("q") ?? ""} maxLength={200} placeholder="Name or alternative spelling" /></label>
       <label><span>Country</span><select name="country" defaultValue={query.get("country") ?? ""}><option value="">All countries</option>{page.facets.countries.map(option => <option value={option.slug} key={option.slug}>{option.name}</option>)}</select></label>
       <label><span>Movement</span><select name="movement" defaultValue={query.get("movement") ?? ""}><option value="">All movements</option>{page.facets.movements.map(option => <option value={option.slug} key={option.slug}>{option.name}</option>)}</select></label>

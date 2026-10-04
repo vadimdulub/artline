@@ -116,12 +116,15 @@ test("header stays at the top and the menu closes across desktop and mobile", as
   const header = page.locator(".site-header");
   const account = header.getByRole("button", { name: "Account", exact: true });
   const drawer = page.getByRole("dialog", { name: "Explore Artlines", exact: true });
-  for (const width of [1440, 768, 390, 320]) {
+  for (const width of [1440, 800, 768, 761, 760, 621, 620, 390, 320]) {
     await page.setViewportSize({ width, height: 600 });
     await page.evaluate(() => window.scrollTo(0, 500));
     expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
     await expect.poll(async () => (await header.boundingBox())?.y).toBe(0);
     await expect(account).toBeInViewport();
+    const logo = (await header.locator(".wordmark-logo").boundingBox())!;
+    const navigation = (await header.locator(".primary-nav").boundingBox())!;
+    expect(logo.x < navigation.x + navigation.width && logo.x + logo.width > navigation.x && logo.y < navigation.y + navigation.height && logo.y + logo.height > navigation.y).toBe(false);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
     await page.screenshot({ path: info.outputPath(`sticky-header-${width}.png`) });
   }

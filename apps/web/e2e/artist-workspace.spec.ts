@@ -16,6 +16,8 @@ test("artist directory filters the real catalogue and keeps pages bounded", asyn
   await page.getByRole("button", { name: "Find artists", exact: true }).click();
   await expect(page.getByRole("heading", { name: "No artists match these filters" })).toBeVisible();
   await page.getByRole("link", { name: "Show all artists", exact: true }).click();
+  await expect(page.getByRole("combobox", { name: "Country", exact: true })).toHaveValue("");
+  await expect(page.getByRole("searchbox", { name: "Artist name" })).toHaveValue("");
   const first = await page.locator("main li h3").allTextContents();
   await page.getByRole("link", { name: "Next artists", exact: true }).click();
   await expect(page).toHaveURL(/cursor=/);
@@ -37,7 +39,9 @@ for (const width of [1440, 390, 320]) {
     await page.goto("/artists/rembrandt?catalogue=all");
     await expect(page.getByRole("heading", { name: artist.display_name, exact: true })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Biography", exact: true })).toBeVisible();
+    if ((artist.biography_md?.trim().length ?? 0) >= 400) await page.locator(".reference-biography summary").click();
     await expect(page.getByRole("link", { name: "Wikipedia contributors", exact: true })).toBeVisible();
+    if ((artist.biography_md?.trim().length ?? 0) >= 400) await page.locator(".reference-biography summary").click();
     const works = page.locator(".selected-works");
     await expect(works.locator(".work-card")).toHaveCount(24);
     await expect(works.getByRole("status")).toHaveText(`${artist.artwork_count!.toLocaleString("en-GB")} recorded works`);
