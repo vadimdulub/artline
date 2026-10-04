@@ -33,6 +33,8 @@ test("artist directory filters the real catalogue and keeps pages bounded", asyn
 for (const width of [1440, 390, 320]) {
   test(`one artist workspace exposes full works, biography and museums at ${width}px`, async ({ page }, info) => {
     test.setTimeout(60000);
+    const museumPageRequests: string[] = [];
+    page.on("request", request => { if (new URL(request.url()).pathname.startsWith("/museums/")) museumPageRequests.push(request.url()); });
     await page.setViewportSize({ width, height: 1000 });
     const artist = await (await page.request.get("/api/backend/v1/artists/rembrandt")).json() as ArtistDetail;
     expect(artist.artwork_count).toBeGreaterThan(1000);
@@ -66,6 +68,7 @@ for (const width of [1440, 390, 320]) {
     await page.keyboard.press("Escape");
     await expect(viewer).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+    expect(museumPageRequests).toEqual([]);
     if (width === 390) expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);
   });
 }
