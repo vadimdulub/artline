@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
-import { lockBodyScroll } from "@/lib/modal-scroll";
 
 const groups = [
   { label: "Collection", links: [{ href: "/artists", label: "Artists", icon: "artists" }, { href: "/museums", label: "Museums", icon: "museum" }] },
@@ -23,47 +21,20 @@ export function NavigationIcon({ kind }: { kind: string }) {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[kind]}</svg>;
 }
 
-function NavigationLinks({ close }: { close?: () => void }) {
+function NavigationLinks() {
   const pathname = usePathname();
   const current = (href: string) => pathname === href || pathname.startsWith(`${href}/`) ? "page" : undefined;
   return <nav aria-label="Member navigation">
-    {groups.map(group => <div className="member-nav-group" key={group.label}><p>{group.label}</p>{group.links.map(link => <Link key={link.href} href={link.href} prefetch={false} aria-current={current(link.href)} onClick={close}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}</div>)}
-    <div className="member-nav-account"><Link href="/account" aria-current={current("/account")} onClick={close}><NavigationIcon kind="user" /><span>Your account</span></Link></div>
+    {groups.map(group => <div className="member-nav-group" key={group.label}><p>{group.label}</p>{group.links.map(link => <Link key={link.href} href={link.href} prefetch={false} aria-current={current(link.href)}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}</div>)}
+    <div className="member-nav-account"><Link href="/account" aria-current={current("/account")}><NavigationIcon kind="user" /><span>Your account</span></Link></div>
   </nav>;
 }
 
-export function MemberNavigation({ open, close }: { open: boolean; close: () => void }) {
-  const dialog = useRef<HTMLDialogElement>(null);
-  useEffect(() => {
-    if (!open || !dialog.current) return;
-    const element = dialog.current;
-    const desktop = window.matchMedia("(min-width: 1101px)");
-    const resize = () => close();
-    desktop.addEventListener("change", resize);
-    if (desktop.matches) return () => desktop.removeEventListener("change", resize);
-    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const unlock = lockBodyScroll();
-    element.showModal();
-    return () => {
-      desktop.removeEventListener("change", resize);
-      element.close(); unlock();
-      if (previousFocus?.isConnected && previousFocus.getClientRects().length) previousFocus.focus({ preventScroll: true });
-      else document.querySelector<HTMLButtonElement>(".account-menu-toggle")?.focus({ preventScroll: true });
-    };
-  }, [open, close]);
-
-  return <>
-    <aside id="member-sidebar" className="member-sidebar" data-collapsed={!open} aria-label="Collection navigation" onKeyDown={event => {
-      if (event.key === "Escape") { close(); document.querySelector<HTMLButtonElement>(".account-menu-toggle")?.focus({ preventScroll: true }); }
-    }}><NavigationLinks close={close} /></aside>
-    <dialog ref={dialog} id="member-navigation-drawer" className="member-navigation-drawer" aria-labelledby="member-navigation-title"
-      onCancel={event => { event.preventDefault(); close(); }} onClick={event => {
-        if (event.target !== event.currentTarget) return;
-        const rect = event.currentTarget.getBoundingClientRect();
-        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close();
-      }}>
-      <div className="member-navigation-heading"><h2 id="member-navigation-title">Explore Artlines</h2><button type="button" aria-label="Close navigation" onClick={close} autoFocus>×</button></div>
-      <NavigationLinks close={close} />
-    </dialog>
-  </>;
+export function MemberNavigation({ open, close, show }: { open: boolean; close: () => void; show: () => void }) {
+  return <aside id="member-sidebar" className="member-sidebar" data-collapsed={!open} aria-label="Account navigation" onKeyDown={event => {
+    if (event.key === "Escape" && open) { close(); document.querySelector<HTMLAnchorElement>(".account-menu-link")?.focus({ preventScroll: true }); }
+  }}>
+    <button type="button" className="member-panel-toggle" aria-label={open ? "Hide account panel" : "Show account panel"} title={open ? "Hide account panel" : "Show account panel"} aria-expanded={open} aria-controls="member-navigation-links" onClick={open ? close : show}><NavigationIcon kind="menu" /><span>Account</span><span aria-hidden="true">{open ? "‹" : "›"}</span></button>
+    <div id="member-navigation-links" hidden={!open}><NavigationLinks /></div>
+  </aside>;
 }

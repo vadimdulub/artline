@@ -22,9 +22,8 @@ export default function AboutPage() {
     <p>Open a collection to browse its artworks, filter by painter, movement or creation date, and open the full record in the right-hand panel. Counts describe works catalogued in Artline, not the museum’s entire collection. Official visiting links provide current access and exhibition information.</p>
     <p>“Museum highlights” are selections supported by the museum’s own records. “My must-see works” is your separate personal list: enter your editor token, open an artwork, and save a note and its order in your selection. Your selections are saved separately from the artwork records.</p>
     <p>“Confirmed on view” requires separate, dated display evidence. A holding record or highlight designation is not enough. Display reports older than 30 days, or past their stated end date, are excluded from this filter. Check the official museum record before a visit; even a recent report cannot guarantee future availability.</p>
-    <h2>A catalogue in progress</h2>
+    <h2>About the catalogue</h2>
     <p>Explore the available artworks, books and events with links to their sources. Uncertain dates keep their original labels, and missing information stays marked as unknown.</p>
-    <p>The catalogue is read-only until an editor token is provided. Changes must pass server checks; incomplete records cannot be published. Selected museum data is imported through a local, reviewed workflow; the web import scheduler is not yet available.</p>
     <h2>Images and sources</h2>
     <p>Artwork records link to museum sources and the source of each image. The current selection uses locally stored reproductions with recorded public-domain notices or open-access terms. Artwork copyright and image permissions are tracked separately. Where no permitted reproduction is available, details remain readable without an image.</p>
     <p>“Held at” describes the collection, not a promise that an artwork is on display. The location-check date is recorded with each sourced work. A place depicted in a painting is not automatically treated as the place where it was made.</p>

@@ -47,9 +47,9 @@ export function BookDrawer({ id, items, close, select, navigation, fallbackFocus
             <h4>{creator.name}</h4>
             {creator.credit && creator.credit !== "Author" && <p className={styles.lifespan}>{creator.credit}</p>}
             <p className={styles.lifespan}>{creator.kind === "collective" ? "Collective authorship · no single lifespan" : creator.kind === "unknown" && !creator.birth && !creator.death ? "Lifespan not established in the source record" : <>{creator.birth ? `Born ${creator.birth}` : "Birth date unknown"} · {creator.death ? `Died ${creator.death}` : "Death date not recorded"}</>}</p>
-            {creator.overview ? <BookOverview overview={creator.overview} /> : <p>{creator.description || "A biography has not yet been established for this creator."}</p>}
+            {creator.overview ? <BookOverview overview={creator.overview} /> : creator.description ? <p>{creator.description}</p> : null}
             <a href={creator.sourceUrl} target="_blank" rel="noreferrer">Creator source ↗</a>
-          </article>) : <><h4>{book.author}</h4><p>Creator biographies and lifespan dates have not been established for this record.</p></>}
+          </article>) : <h4>{book.author}</h4>}
         </section>
         <div className={`artwork-details ${styles.bookFacts}`}><dl>
           <div><dt>Author</dt><dd>{book.author}</dd></div>

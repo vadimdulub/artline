@@ -27,7 +27,7 @@ export function MemberAccount({ signInError }: { signInError: boolean }) {
     <h1>A place for your curiosity.</h1>
     <p>Sign in to Artline with your Google account.</p>
     {signInError && <p role="alert">Google sign-in wasn’t completed. Please try again.</p>}
-    {session.enabled ? <form action="/api/auth/google/start" method="post"><button className="google-signin" type="submit"><Image src="/google-signin.png" alt="Sign in with Google" width={180} height={40} unoptimized /></button></form> : <p role="status">Google sign-in is coming soon. You can explore the atlas without an account.</p>}
+    {session.enabled ? <form action="/api/auth/google/start" method="post"><button className="google-signin" type="submit"><Image src="/google-signin.png" alt="Sign in with Google" width={180} height={40} unoptimized /></button></form> : <p role="status">Google sign-in is unavailable. You can explore the atlas without an account.</p>}
     <p className="account-note">Artline uses your name and email to create your account. <Link href="/privacy">Privacy</Link> · <Link href="/all">Continue exploring</Link></p>
   </>;
 }

@@ -796,3 +796,15 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .painter-dialog .painter-preview .artwork-image{margin:0}
 .painter-dialog .painter-preview .artwork-date{margin-bottom:0}
 .record-toolbar{flex-wrap:wrap;gap:12px}.record-toolbar .full-catalogue-link{padding:10px 16px;min-height:44px;background:var(--ink);color:var(--paper);text-decoration:none}
+
+/* Biography reading: source paragraphs, a clear lead and a comfortable measure. */
+.biography .biography-copy{max-width:68ch;font:400 19px/1.8 var(--serif);overflow-wrap:break-word}
+.biography .biography-copy>p{margin:0 0 1.25em}
+.biography .biography-copy>p:first-child{font-size:1.12em;line-height:1.65}
+.biography .biography-copy :is(h2,h3,h4){margin:1.5em 0 .6em;font-family:var(--serif);font-weight:400;line-height:1.3}
+.biography .biography-copy :is(ul,ol){padding-left:1.3em;margin:0 0 1.25em}
+.biography .biography-copy li+li{margin-top:.5em}
+.biography .biography-copy blockquote{margin:1.25em 0;padding-left:1em;border-left:2px solid var(--line)}
+.biography .biography-copy a{text-underline-offset:3px}
+.biography .biography-toggle{font:13px var(--sans);min-height:44px;margin:0 0 6px}
+@media(max-width:620px){.biography .biography-copy{font-size:18px;line-height:1.75}}

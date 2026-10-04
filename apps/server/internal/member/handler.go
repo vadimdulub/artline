@@ -89,12 +89,16 @@ func (h *Handler) wrap(next http.HandlerFunc) http.HandlerFunc {
 					User        User `json:"user"`
 				}{false, true, true, User{ID: "local-debug", Name: "Local explorer", Email: ""}})
 			} else {
-				http.Redirect(w, r, h.config.Origin+"/account", http.StatusSeeOther)
+				destination := "/artists"
+				if r.URL.Path == "/api/v1/auth/logout" {
+					destination = "/account"
+				}
+				http.Redirect(w, r, h.config.Origin+destination, http.StatusSeeOther)
 			}
 			return // No Google call, cookie, or database account/session writes.
 		}
 		if !h.enabled() && r.URL.Path != "/api/v1/auth/session" {
-			http.Error(w, "Google sign-in is not available yet.", http.StatusServiceUnavailable)
+			http.Error(w, "Google sign-in is unavailable.", http.StatusServiceUnavailable)
 			return
 		}
 		ctx, cancel := context.WithTimeout(r.Context(), 10*time.Second)
@@ -172,7 +176,7 @@ func (h *Handler) callback(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	h.cookie(w, "session", token, 30*24*60*60)
-	http.Redirect(w, r, h.config.Origin+"/account", http.StatusSeeOther)
+	http.Redirect(w, r, h.config.Origin+"/artists", http.StatusSeeOther)
 }
 func (h *Handler) failed(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, h.config.Origin+"/account?error=google_signin", http.StatusSeeOther)

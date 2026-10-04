@@ -122,3 +122,22 @@ complete recorded view. Pages stay bounded, and previous/next navigation remains
 scoped to the active filters. The artwork is the visual focus; no new decoration,
 fonts or palette are introduced. This follows the owner's explicit request for
 pictures first while retaining the established biography treatment.
+
+## Account navigation and biography reading
+
+Retain the existing six palette colours and Georgia/Avenir typography. Account
+opens Artists, and successful sign-in lands there. A quiet outlined account avatar
+returns to that entry point. The left menu stays open across Artists, Museums and
+account resources, with one explicit hide/show control. On phones the menu becomes
+a 64px rail with labelled icons; it does not cover content or lock scrolling.
+Painters, Books, Events and All have no account panel.
+
+Biographies use a left-aligned lead paragraph, readable 68-character measure,
+comfortable serif line spacing and visible paragraph breaks. Source line breaks
+are paragraph boundaries (the excerpts use single newlines). Long paragraphs are
+split only at sentence boundaries; existing Markdown emphasis, links and lists
+remain intact. Full pages open the whole biography; painter previews offer a short
+opening and a disclosure. Empty optional biography/influence/holding sections and
+editorial workflow boilerplate are omitted. Facts, uncertainty and attribution
+remain unchanged. The design review keeps the artworks as the principal visual
+content and adds no decorative cards, invented biographical headings or facts.

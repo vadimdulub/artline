@@ -105,7 +105,7 @@ func TestLoginSessionLogout(t *testing.T) {
 	previous := &http.Cookie{Name: "__Host-artline_session", Value: strings.Repeat("p", 43)}
 	store.sessions[hashToken(previous.Value)] = User{ID: "old"}
 	w := request(mux, "GET", "/api/v1/auth/google/callback?state="+state+"&code=valid", "", flow, previous)
-	if w.Code != 303 || w.Header().Get("Location") != "https://artlines.org/account" || store.logins != 1 {
+	if w.Code != 303 || w.Header().Get("Location") != "https://artlines.org/artists" || store.logins != 1 {
 		t.Fatalf("callback: %d %s", w.Code, w.Header())
 	}
 	var session *http.Cookie
@@ -249,8 +249,14 @@ func TestLocalDebugNeedsNoGoogleCookiesOrDatabase(t *testing.T) {
 			if json.Unmarshal(w.Body.Bytes(), &session) != nil || w.Code != 200 || !session.LocalDebug || !session.AllFeatures || session.User.ID != "local-debug" {
 				t.Fatal("local features were not available without sign-in")
 			}
-		} else if w.Code != 303 || w.Header().Get("Location") != "http://localhost:3000/account" {
-			t.Fatal("local mode attempted an external login")
+		} else {
+			destination := "/artists"
+			if path == "logout" {
+				destination = "/account"
+			}
+			if w.Code != 303 || w.Header().Get("Location") != "http://localhost:3000"+destination {
+				t.Fatal("incorrect local account destination")
+			}
 		}
 	}
 	r := httptest.NewRequest("GET", "/api/v1/auth/session", nil)

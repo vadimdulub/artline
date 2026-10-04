@@ -41,7 +41,7 @@ export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-t
           {event.image.credit} · <a href={safeSourceURL(event.image.licenseUrl)} target="_blank" rel="noreferrer">{event.image.license}</a>
         </figcaption>
       </figure>}
-      <section className={styles.bookAbout} aria-labelledby="event-about"><h3 id="event-about">About this {event.kind.toLowerCase()}</h3><p>{event.description || "A description has not yet been established for this record."}</p></section>
+      {event.description && <section className={styles.bookAbout} aria-labelledby="event-about"><h3 id="event-about">About this {event.kind.toLowerCase()}</h3><p>{event.description}</p></section>}
       {event.descriptionSource && <p className={styles.recordNote}>
         {event.descriptionSource.kind === "wikipedia" ? "From " : "Source: "}<a href={safeSourceURL(event.descriptionSource.url)} target="_blank" rel="noreferrer">{event.descriptionSource.name}</a>
         {event.descriptionSource.kind === "wikipedia" && (event.descriptionSource.language && event.descriptionSource.language !== "en" ? " contributors · English summary" : " contributors · Shortened excerpt")}

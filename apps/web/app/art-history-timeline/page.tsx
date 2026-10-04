@@ -32,6 +32,6 @@ export default function ArtHistoryTimelinePage() {
 
     <h2>Use the sources to go further</h2>
     <p>Artwork records bring together recorded titles, dates, media, locations and source links. Where an image is available, inspect its details and recorded permissions. Missing information remains unknown; an image’s availability does not establish permission for every reuse.</p>
-    <p>Artline is a catalogue in progress. Learn <Link href="/about">how the atlas selects content and documents sources</Link>, then use the timelines to develop your own comparisons and reading paths.</p>
+    <p>Learn <Link href="/about">how the atlas selects content and documents sources</Link>, then use the timelines to develop your own comparisons and reading paths.</p>
   </main>;
 }

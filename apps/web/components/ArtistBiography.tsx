@@ -3,6 +3,7 @@ import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { safeSourceURL } from "@/lib/api";
+import { cleanEditorialBiography, referenceParagraphs, remarkBiographyParagraphs } from "@/lib/biography";
 import type { ArtistDetail, ReferenceBiography } from "@/lib/types";
 
 function Credit({ source }: { source: ReferenceBiography }) {
@@ -10,19 +11,20 @@ function Credit({ source }: { source: ReferenceBiography }) {
 }
 export function ArtistBiography({ artist, embedded }: { artist: ArtistDetail; embedded: boolean }) {
   const source = artist.reference_biography;
-  // Keep substantial existing editorial biographies. The reference source supplies
-  // fuller reading where the catalogue has only a short authority description.
-  const useReference = Boolean(source && (artist.biography_md?.trim().length ?? 0) < 400);
-  const text = (useReference ? source?.text : artist.biography_md) ?? "";
-  const [expanded, setExpanded] = useState(!embedded && !useReference);
-  const short = text.split(/(?<=[.!?])\s+/).slice(0, 2).join(" ");
-  const shown = expanded ? text : short;
-  return <div className="biography" id={`biography-${artist.id}`}>
-    <h2>Biography</h2>
-    {text ? <>{useReference ? shown.split(/\n\n+/).map((paragraph, index) => <p key={index}>{paragraph}</p>) : <ReactMarkdown remarkPlugins={[remarkGfm]}>{shown}</ReactMarkdown>}
-      {short !== text && <button className="biography-toggle" aria-expanded={expanded} onClick={() => setExpanded(value => !value)}>{expanded ? "Show less" : "Read full biography"}</button>}
-      {useReference && source && <Credit source={source} />}
-      {!useReference && source && <details className="reference-biography"><summary>Reference biography</summary>{source.text.split(/\n\n+/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}<Credit source={source} /></details>}
-    </> : <p className="research-note">A sourced biography is not available yet.</p>}
-  </div>;
+  const editorial = cleanEditorialBiography(artist.biography_md ?? "");
+  // Substantial editorial biographies stay primary; source excerpts fill short records.
+  const useReference = Boolean(source && editorial.length < 400);
+  const text = (useReference ? source?.text : editorial) ?? "";
+  const [expanded, setExpanded] = useState(!embedded);
+  const paragraphs = referenceParagraphs(text);
+  const short = useReference ? paragraphs[0] : text.split(/\n\s*\n/)[0];
+  const canExpand = useReference ? paragraphs.length > 1 : short !== text.trim();
+  if (!text.trim()) return null;
+  return <section className="biography" id={`biography-${artist.id}`} aria-labelledby={`biography-title-${artist.id}`}>
+    <h2 id={`biography-title-${artist.id}`}>Biography</h2>
+    <div className="biography-copy">{useReference ? (expanded ? paragraphs : paragraphs.slice(0, 1)).map((paragraph, index) => <p key={index}>{paragraph}</p>) : <ReactMarkdown remarkPlugins={[remarkGfm, remarkBiographyParagraphs]}>{expanded ? text : short}</ReactMarkdown>}</div>
+    {canExpand && <button className="biography-toggle" aria-expanded={expanded} onClick={() => setExpanded(value => !value)}>{expanded ? "Show less" : "Read full biography"}</button>}
+    {useReference && source && <Credit source={source} />}
+    {!useReference && source && <details className="reference-biography"><summary>Reference biography</summary><div className="biography-copy">{referenceParagraphs(source.text).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div><Credit source={source} /></details>}
+  </section>;
 }

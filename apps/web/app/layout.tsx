@@ -16,7 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return <html lang="en"><body>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <MemberSessionProvider>
-    <SiteHeader localDevelopment={process.env.NODE_ENV === "development" && !process.env.K_SERVICE} />
+    <SiteHeader />
     {children}
     <footer className="site-footer"><p>Artline. Art, literature and history in context.</p><nav aria-label="More"><Link href="/art-history-timeline">Art history guide</Link><Link href="/artists">Artist directory</Link><Link href="/museums">Museums</Link><Link href="/coverage">Coverage</Link><Link href="/imports">Imports</Link><Link href="/about">About & sources</Link><Link href="/privacy">Privacy</Link></nav></footer>
     </MemberSessionProvider>
