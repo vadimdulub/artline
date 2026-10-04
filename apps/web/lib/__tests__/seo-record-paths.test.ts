@@ -54,3 +54,24 @@ it("surfaces an outage instead of silently switching to review visibility", asyn
   await expect(getArtist("giotto")).rejects.toThrow("temporarily unavailable");
   expect(fetch).toHaveBeenCalledOnce();
 });
+it("opens the full catalogue only through an explicit configured workspace", async () => {
+  vi.stubEnv("ARTLINE_PUBLIC_RESEARCH_PREVIEW", "true");
+  const fetch = vi.fn().mockImplementation(async (url: URL) => {
+    expect(url.searchParams.get("preview")).toBe("1");
+    return { status: 200, ok: true, json: async () => ({ slug: "giotto", status: "published" }) };
+  });
+  vi.stubGlobal("fetch", fetch);
+  await getArtistArtwork("giotto", "11111111-1111-4111-8111-111111111111", true);
+  expect(fetch).toHaveBeenCalledTimes(2);
+});
+it("does not enable research access from the workspace flag alone", async () => {
+  vi.stubEnv("ARTLINE_PUBLIC_RESEARCH_PREVIEW", "false");
+  vi.stubEnv("ARTLINE_RESEARCH_PREVIEW_TOKEN", "");
+  const fetch = vi.fn().mockImplementation(async (url: URL) => {
+    expect(url.searchParams.get("preview")).toBe("0");
+    return { status: 200, ok: true, json: async () => ({ slug: "giotto", status: "published" }) };
+  });
+  vi.stubGlobal("fetch", fetch);
+  await getArtistArtwork("giotto", "11111111-1111-4111-8111-111111111111", true);
+  expect(fetch).toHaveBeenCalledTimes(2);
+});

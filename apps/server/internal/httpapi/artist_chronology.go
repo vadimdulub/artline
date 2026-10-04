@@ -30,11 +30,14 @@ func artistLookupSlug(raw string) string {
 
 func artistWorksFilter(r *http.Request) (catalog.ArtistWorksFilter, error) {
 	q := r.URL.Query()
-	f := catalog.ArtistWorksFilter{Cursor: q.Get("cursor"), Undated: q.Get("undated") == "1"}
-	for _, key := range []string{"year", "undated", "cursor", "limit", "image_only", "neighbor_of", "direction"} {
+	f := catalog.ArtistWorksFilter{Query: strings.TrimSpace(q.Get("q")), Museum: q.Get("museum"), WorkType: q.Get("work_type"), Cursor: q.Get("cursor"), Undated: q.Get("undated") == "1"}
+	for _, key := range []string{"year", "undated", "cursor", "limit", "image_only", "neighbor_of", "direction", "q", "museum", "work_type"} {
 		if len(q[key]) > 1 {
 			return f, catalog.ErrChronologyFilter
 		}
+	}
+	if len(f.Query) > 200 || (f.Museum != "" && !validArtistSlug(f.Museum)) || len(f.WorkType) > 64 || (f.WorkType != "" && !regexp.MustCompile(`^[a-z][a-z_]*$`).MatchString(f.WorkType)) {
+		return f, catalog.ErrChronologyFilter
 	}
 	f.NeighborOf, f.Direction = q.Get("neighbor_of"), q.Get("direction")
 	if !allowed(q.Get("image_only"), "", "true", "false") {

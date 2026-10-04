@@ -29,11 +29,11 @@ func TestArtistChronologyQueryPlan(t *testing.T) {
 	}
 	defer tx.Rollback(ctx)
 	_, err = tx.Exec(ctx, `CREATE TEMP TABLE artworks (
- id uuid PRIMARY KEY,title text,creation_year_start int,creation_year_end int,date_precision text,status text
+ id uuid PRIMARY KEY,title text,creation_year_start int,creation_year_end int,date_precision text,status text,alternate_title text,accession_number text,current_institution_id uuid,work_type text
  ) ON COMMIT DROP;
  CREATE TEMP TABLE artwork_artists(artwork_id uuid,artist_id uuid,attribution_role text,representative_order int) ON COMMIT DROP;
  CREATE INDEX chronology_plan_artist_work_idx ON artwork_artists(artist_id,artwork_id) INCLUDE(attribution_role,representative_order);
- INSERT INTO artworks SELECT md5('plan-work-'||n)::uuid,repeat('fixture ',16)||n,1800+n%100,1800+n%100,'exact','published' FROM generate_series(1,100000) n;
+ INSERT INTO artworks(id,title,creation_year_start,creation_year_end,date_precision,status) SELECT md5('plan-work-'||n)::uuid,repeat('fixture ',16)||n,1800+n%100,1800+n%100,'exact','published' FROM generate_series(1,100000) n;
  INSERT INTO artwork_artists SELECT md5('plan-work-'||n)::uuid,md5('plan-artist-'||((n-1)/500))::uuid,'primary',NULL FROM generate_series(1,100000) n;
  ANALYZE artworks; ANALYZE artwork_artists;`)
 	if err != nil {
@@ -50,7 +50,7 @@ func TestArtistChronologyQueryPlan(t *testing.T) {
 		var data []byte
 		args := []any{false, id}
 		if name == "first-page" {
-			args = append(args, nil, false, "", nil, "", "", 25, 0)
+			args = append(args, "", "", "", nil, false, "", nil, "", "", 25, 0)
 		}
 		if err = tx.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) `+query, args...).Scan(&data); err != nil {
 			t.Fatal(err)

@@ -1,9 +1,5 @@
 .site-brand{display:flex;align-items:center;gap:12px;min-width:0}
-.member-menu-toggle{display:grid;place-items:center;flex-shrink:0;width:36px;height:36px;padding:7px;border:1px solid #595348;border-radius:4px;background:transparent;color:var(--paper)}
-.member-menu-toggle:hover,.site-header .account-link:hover{background:#29251f;border-color:#aaa497}
-.member-menu-toggle svg,.account-link svg{width:20px;height:20px}
-.site-header .account-link[aria-current=page]{color:var(--paper);border-color:var(--paper)}
-.member-menu-mobile,.member-sidebar{display:none}
+.member-sidebar{display:none}
 .member-sidebar,.member-navigation-drawer{background:var(--paper);color:var(--ink)}
 .member-sidebar nav,.member-navigation-drawer nav{display:flex;flex-direction:column;gap:24px;padding:24px 12px}
 .member-nav-group>p{margin:0 12px 8px;color:var(--muted);font-size:11px}
@@ -24,14 +20,5 @@ body:has(.explorer[data-full-view=true])>.member-sidebar{visibility:hidden}
  body:has(>.member-sidebar[data-collapsed=false]){padding-left:208px}
  body:has(>.member-sidebar[data-collapsed=false])>.site-header{margin-left:-208px}
 }
-@media(max-width:1100px){.member-menu-desktop{display:none}.member-menu-mobile{display:grid}}
-@media(max-width:760px){
- .site-header[data-member=true]{grid-template-columns:minmax(0,1fr) auto}
- .site-header[data-member=true]>.site-brand{grid-column:1;grid-row:1;justify-self:start}
- .site-header[data-member=true]>.primary-nav{grid-column:1/-1;grid-row:2;justify-self:stretch;justify-content:center}
- .site-header[data-member=true]>.header-aside{display:flex;grid-column:2;grid-row:1}
- .site-header[data-member=true]>.header-aside>:not(.account-link){display:none}
- .site-header .account-link,.member-menu-toggle{width:44px;height:44px}
-}
 @media(max-width:620px){.site-header>.site-brand{justify-self:center}}
-@media print{.member-sidebar,.member-navigation-drawer,.member-menu-toggle{display:none!important}body:has(>.member-sidebar[data-collapsed=false]){padding-left:0}body:has(>.member-sidebar[data-collapsed=false])>.site-header{margin-left:0}}
+@media print{.site-header{position:static}.member-sidebar,.member-navigation-drawer,.account-menu-toggle{display:none!important}body:has(>.member-sidebar[data-collapsed=false]){padding-left:0}body:has(>.member-sidebar[data-collapsed=false])>.site-header{margin-left:0}}

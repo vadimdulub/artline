@@ -78,7 +78,14 @@ export type Citation = { field_name: string; source_name: string; source_url: st
 export type ArtistWorksPage = { items: Artwork[]; years: { year: number; count: number }[]; total: number; undated_count: number; matching_total: number; next_cursor: string; range_start: number; range_end: number; groups: { year: number | null; start_index: number; count: number; has_uncertain_dates: boolean }[] };
 export type Influence = { id: string; name: string; slug: string | null; direction: "incoming" | "outgoing"; relationship_type: string; evidence_level: string; evidence_note: string; citations: Citation[] };
 
+export type ReferenceBiography = { text: string; source_url: string; revision_url: string; license_url: string; attribution: string; changes: string };
+export type ArtistBrowsePage = { items: TimelineArtist[]; total: number; next_cursor: string; facets: TimelineFacets };
 export type ArtistDetail = {
+  artwork_count?: number;
+  collections?: (MuseumRef & { work_count: number })[];
+  collection_count?: number;
+  work_types?: { slug: string; name: string; count: number }[];
+  reference_biography?: ReferenceBiography;
   id: string;
   slug: string;
   display_name: string;

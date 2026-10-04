@@ -167,7 +167,7 @@
 .resultsLoading{min-height:580px;position:relative;color:var(--muted);font-size:13px}
 .skeletonGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px 20px}
 .skeletonGrid>span{height:290px;background:linear-gradient(var(--stone) 0 230px,transparent 230px 245px,var(--line) 245px 252px,transparent 252px);opacity:.5}
-@media(min-width:1000px){.resultsToolbar{position:sticky;top:0}}
+@media(min-width:1000px){.resultsToolbar{position:sticky;top:var(--site-header-height)}}
 @media(min-width:1500px){.collectionPage .worksGrid:not(.worksList){grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:1000px){
  .collectionPage .workFilters{grid-template-columns:minmax(180px,1.3fr) repeat(2,minmax(0,1fr))}

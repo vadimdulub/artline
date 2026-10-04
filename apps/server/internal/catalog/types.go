@@ -132,24 +132,29 @@ type Citation struct {
 }
 
 type ArtistDetail struct {
-	ID              string          `json:"id"`
-	Slug            string          `json:"slug"`
-	DisplayName     string          `json:"display_name"`
-	SortName        string          `json:"sort_name"`
-	TimelineStart   int             `json:"timeline_start_year"`
-	TimelineEnd     int             `json:"timeline_end_year"`
-	TimelineDisplay string          `json:"timeline_display"`
-	TimelineBasis   string          `json:"timeline_basis"`
-	BiographyMD     *string         `json:"biography_md"`
-	Status          string          `json:"status"`
-	Revision        int             `json:"revision"`
-	EntityType      string          `json:"entity_type"`
-	Aliases         []string        `json:"aliases"`
-	Influences      []Influence     `json:"influences"`
-	Movement        MovementSummary `json:"movement"`
-	Countries       []string        `json:"countries"`
-	Artworks        []Artwork       `json:"artworks"`
-	Citations       []Citation      `json:"citations"`
+	WorkTypes          []FacetOption       `json:"work_types"`
+	ArtworkCount       int                 `json:"artwork_count"`
+	Collections        []ArtistCollection  `json:"collections"`
+	CollectionCount    int                 `json:"collection_count"`
+	ReferenceBiography *ReferenceBiography `json:"reference_biography,omitempty"`
+	ID                 string              `json:"id"`
+	Slug               string              `json:"slug"`
+	DisplayName        string              `json:"display_name"`
+	SortName           string              `json:"sort_name"`
+	TimelineStart      int                 `json:"timeline_start_year"`
+	TimelineEnd        int                 `json:"timeline_end_year"`
+	TimelineDisplay    string              `json:"timeline_display"`
+	TimelineBasis      string              `json:"timeline_basis"`
+	BiographyMD        *string             `json:"biography_md"`
+	Status             string              `json:"status"`
+	Revision           int                 `json:"revision"`
+	EntityType         string              `json:"entity_type"`
+	Aliases            []string            `json:"aliases"`
+	Influences         []Influence         `json:"influences"`
+	Movement           MovementSummary     `json:"movement"`
+	Countries          []string            `json:"countries"`
+	Artworks           []Artwork           `json:"artworks"`
+	Citations          []Citation          `json:"citations"`
 }
 
 type CatalogueArtist struct {

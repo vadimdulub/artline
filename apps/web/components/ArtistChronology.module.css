@@ -48,3 +48,10 @@
 @media (max-width: 480px) {
   .yearGroup { padding-left: 10px; }
 }
+.controls{display:grid;grid-template-columns:minmax(0,2fr) auto;gap:12px}
+.controls>label:not(.search){grid-column:1/-1}
+.controls input{min-height:44px}
+.matchingCount{font-size:13px;color:var(--muted);margin:0 0 20px}
+.holding{display:block;font:12px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+@media(min-width:1100px){:global(.artist-gallery-record) .controls{grid-template-columns:minmax(180px,1.3fr) auto minmax(150px,.8fr) minmax(150px,.8fr) minmax(200px,1.1fr)}:global(.artist-gallery-record) .controls>label:not(.search){grid-column:auto}}
+@media(max-width:620px){.controls input,.controls select{font-size:16px}}

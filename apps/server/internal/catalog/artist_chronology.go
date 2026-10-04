@@ -16,12 +16,13 @@ import (
 var ErrChronologyFilter = errors.New("invalid artwork chronology filter")
 
 type ArtistWorksFilter struct {
-	Year                  *int
-	Undated               bool
-	Limit                 int
-	Cursor                string
-	ImageOnly             bool
-	NeighborOf, Direction string
+	Query, Museum, WorkType string
+	Year                    *int
+	Undated                 bool
+	Limit                   int
+	Cursor                  string
+	ImageOnly               bool
+	NeighborOf, Direction   string
 }
 type ArtworkYear struct {
 	Year  int `json:"year"`
@@ -67,15 +68,23 @@ const artistWorksCTE = `WITH artist_links AS MATERIALIZED (
  WHERE aw.status<>'archived' AND ($1 OR aw.status='published')
 ) `
 
+// Search and collection filters are applied inside the already painter-scoped
+// set, before summaries, pagination and record navigation.
+var artistWorksFilteredCTE = strings.Replace(artistWorksCTE, "WHERE aw.status<>'archived'", `WHERE
+ ($3='' OR aw.title ILIKE '%'||$3||'%' OR aw.alternate_title ILIKE '%'||$3||'%' OR aw.accession_number ILIKE '%'||$3||'%')
+ AND ($4='' OR EXISTS(SELECT 1 FROM institutions i WHERE i.id=aw.current_institution_id AND i.slug=$4 AND i.status<>'archived' AND ($1 OR i.status='published') AND `+artistHoldingEvidence+`))
+ AND ($5='' OR aw.work_type=$5)
+ AND aw.status<>'archived'`, 1)
+
 // Rank narrow keys first. Full rows/JSON are fetched only after LIMIT, including
 // one extra key to detect the next page. No deep OFFSET or full-catalogue sort.
-const artistWorksPageQuery = artistWorksCTE + `, page_keys AS MATERIALIZED (
+var artistWorksPageQuery = artistWorksFilteredCTE + `, page_keys AS MATERIALIZED (
  SELECT id,chronology_year,lower(title) AS sort_title,coalesce(representative_order,2147483647) AS sort_order,
  attribution_role,representative_order FROM painter_works
- WHERE ($3::int IS NULL OR chronology_year=$3) AND (NOT $4 OR chronology_year IS NULL)
- AND ($5='' OR (chronology_year IS NULL,coalesce(chronology_year,0),coalesce(representative_order,2147483647),lower(title),id::text)>
- ($6::int IS NULL,coalesce($6::int,0),$10,$7,$8))
- ORDER BY chronology_year NULLS LAST,coalesce(representative_order,2147483647),lower(title),id LIMIT $9
+ WHERE ($6::int IS NULL OR chronology_year=$6) AND (NOT $7 OR chronology_year IS NULL)
+ AND ($8='' OR (chronology_year IS NULL,coalesce(chronology_year,0),coalesce(representative_order,2147483647),lower(title),id::text)>
+ ($9::int IS NULL,coalesce($9::int,0),$13,$10,$11))
+ ORDER BY chronology_year NULLS LAST,coalesce(representative_order,2147483647),lower(title),id LIMIT $12
  ) SELECT (to_jsonb(aw)-'description_md')||jsonb_build_object('attribution_role',p.attribution_role,'representative_order',p.representative_order),
  p.chronology_year,p.sort_title,p.sort_order FROM page_keys p JOIN artworks aw ON aw.id=p.id
  ORDER BY p.chronology_year NULLS LAST,p.sort_order,p.sort_title,p.id`
@@ -93,7 +102,7 @@ func (r *Repository) chronologyArtistID(ctx context.Context, slug string, previe
 
 func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorksFilter, preview bool) (ArtistWorksPage, error) {
 	out := ArtistWorksPage{Items: []Artwork{}, Years: []ArtworkYear{}, Groups: []ArtworkYearGroup{}}
-	if f.Limit < 1 || f.Limit > 60 || len(f.Cursor) > 2048 || (f.Undated && f.Year != nil) || (f.Year != nil && (*f.Year < -10000 || *f.Year > 3000)) {
+	if len(f.Query) > 200 || len(f.Museum) > 100 || len(f.WorkType) > 64 || f.Limit < 1 || f.Limit > 60 || len(f.Cursor) > 2048 || (f.Undated && f.Year != nil) || (f.Year != nil && (*f.Year < -10000 || *f.Year > 3000)) {
 		return out, ErrChronologyFilter
 	}
 	if f.NeighborOf != "" || f.Direction != "" {
@@ -109,7 +118,7 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 	if err = r.db.QueryRow(ctx, `SELECT timeline_start_year,timeline_end_year FROM artists WHERE id=$1`, id).Scan(&out.RangeStart, &out.RangeEnd); err != nil {
 		return out, err
 	}
-	scopeData, _ := json.Marshal([]any{id, f.Year, f.Undated, f.Limit, preview, f.ImageOnly})
+	scopeData, _ := json.Marshal([]any{id, f.Year, f.Undated, f.Limit, preview, f.ImageOnly, f.Query, f.Museum, f.WorkType})
 	scope := fmt.Sprintf("%x", sha256.Sum256(scopeData))[:24]
 	var cursor artworkCursor
 	if f.Cursor != "" {
@@ -118,11 +127,11 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 			return out, ErrChronologyFilter
 		}
 	}
-	cte := artistWorksCTE
+	cte := artistWorksFilteredCTE
 	if f.ImageOnly {
-		cte = strings.Replace(cte, "WHERE aw.status<>'archived'", `WHERE EXISTS(SELECT 1 FROM media_assets image WHERE image.id=aw.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$') AND aw.status<>'archived'`, 1)
+		cte = strings.Replace(cte, "AND aw.status<>'archived'", `AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=aw.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$') AND aw.status<>'archived'`, 1)
 	}
-	rows, err := r.db.Query(ctx, cte+`SELECT chronology_year,count(*) FROM painter_works GROUP BY chronology_year ORDER BY chronology_year NULLS LAST`, preview, id)
+	rows, err := r.db.Query(ctx, cte+`SELECT chronology_year,count(*) FROM painter_works GROUP BY chronology_year ORDER BY chronology_year NULLS LAST`, museumQueryArgs(preview, id, f.Query, f.Museum, f.WorkType)...)
 	if err != nil {
 		return out, err
 	}
@@ -151,11 +160,11 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 	if err = rows.Err(); err != nil {
 		return out, err
 	}
-	pageQuery := strings.Replace(artistWorksPageQuery, artistWorksCTE, cte, 1)
+	pageQuery := strings.Replace(artistWorksPageQuery, artistWorksFilteredCTE, cte, 1)
 	pageLimit := f.Limit + 1
 	if f.NeighborOf != "" {
 		// The anchor must match the active creator, date and image filters.
-		anchor, e := r.db.Query(ctx, cte+`SELECT chronology_year,coalesce(representative_order,2147483647),lower(title),id::text FROM painter_works WHERE id=$3 AND ($4::int IS NULL OR chronology_year=$4) AND (NOT $5 OR chronology_year IS NULL)`, preview, id, f.NeighborOf, f.Year, f.Undated)
+		anchor, e := r.db.Query(ctx, cte+`SELECT chronology_year,coalesce(representative_order,2147483647),lower(title),id::text FROM painter_works WHERE id=$6 AND ($7::int IS NULL OR chronology_year=$7) AND (NOT $8 OR chronology_year IS NULL)`, museumQueryArgs(preview, id, f.Query, f.Museum, f.WorkType, f.NeighborOf, f.Year, f.Undated)...)
 		if e != nil {
 			return out, e
 		}
@@ -176,7 +185,7 @@ func (r *Repository) ArtistWorks(ctx context.Context, slug string, f ArtistWorks
 			pageQuery = strings.Replace(pageQuery, "ORDER BY chronology_year NULLS LAST,coalesce(representative_order,2147483647),lower(title),id LIMIT", "ORDER BY chronology_year DESC NULLS FIRST,coalesce(representative_order,2147483647) DESC,lower(title) DESC,id DESC LIMIT", 1)
 		}
 	}
-	rows, err = r.db.Query(ctx, pageQuery, preview, id, f.Year, f.Undated, f.Cursor, cursor.Year, cursor.Title, cursor.ID, pageLimit, cursor.Order)
+	rows, err = r.db.Query(ctx, pageQuery, museumQueryArgs(preview, id, f.Query, f.Museum, f.WorkType, f.Year, f.Undated, f.Cursor, cursor.Year, cursor.Title, cursor.ID, pageLimit, cursor.Order)...)
 	if err != nil {
 		return out, err
 	}

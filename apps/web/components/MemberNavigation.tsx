@@ -32,35 +32,38 @@ function NavigationLinks({ close }: { close?: () => void }) {
   </nav>;
 }
 
-export function MemberNavigation({ collapsed, drawerOpen, closeDrawer }: { collapsed: boolean; drawerOpen: boolean; closeDrawer: () => void }) {
+export function MemberNavigation({ open, close }: { open: boolean; close: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
-    if (!drawerOpen || !dialog.current) return;
+    if (!open || !dialog.current) return;
     const element = dialog.current;
+    const desktop = window.matchMedia("(min-width: 1101px)");
+    const resize = () => close();
+    desktop.addEventListener("change", resize);
+    if (desktop.matches) return () => desktop.removeEventListener("change", resize);
     const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const unlock = lockBodyScroll();
     element.showModal();
-    const desktop = window.matchMedia("(min-width: 1101px)");
-    const resize = () => { if (desktop.matches) closeDrawer(); };
-    desktop.addEventListener("change", resize);
     return () => {
       desktop.removeEventListener("change", resize);
       element.close(); unlock();
       if (previousFocus?.isConnected && previousFocus.getClientRects().length) previousFocus.focus({ preventScroll: true });
-      else document.querySelector<HTMLButtonElement>(".member-menu-desktop")?.focus({ preventScroll: true });
+      else document.querySelector<HTMLButtonElement>(".account-menu-toggle")?.focus({ preventScroll: true });
     };
-  }, [drawerOpen, closeDrawer]);
+  }, [open, close]);
 
   return <>
-    <aside id="member-sidebar" className="member-sidebar" data-collapsed={collapsed} aria-label="Collection navigation"><NavigationLinks /></aside>
+    <aside id="member-sidebar" className="member-sidebar" data-collapsed={!open} aria-label="Collection navigation" onKeyDown={event => {
+      if (event.key === "Escape") { close(); document.querySelector<HTMLButtonElement>(".account-menu-toggle")?.focus({ preventScroll: true }); }
+    }}><NavigationLinks close={close} /></aside>
     <dialog ref={dialog} id="member-navigation-drawer" className="member-navigation-drawer" aria-labelledby="member-navigation-title"
-      onCancel={event => { event.preventDefault(); closeDrawer(); }} onClick={event => {
+      onCancel={event => { event.preventDefault(); close(); }} onClick={event => {
         if (event.target !== event.currentTarget) return;
         const rect = event.currentTarget.getBoundingClientRect();
-        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeDrawer();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close();
       }}>
-      <div className="member-navigation-heading"><h2 id="member-navigation-title">Explore Artlines</h2><button type="button" aria-label="Close navigation" onClick={closeDrawer} autoFocus>×</button></div>
-      <NavigationLinks close={closeDrawer} />
+      <div className="member-navigation-heading"><h2 id="member-navigation-title">Explore Artlines</h2><button type="button" aria-label="Close navigation" onClick={close} autoFocus>×</button></div>
+      <NavigationLinks close={close} />
     </dialog>
   </>;
 }

@@ -68,6 +68,10 @@ func (r *Repository) ArtistBySlug(ctx context.Context, slug string, preview bool
 	if err != nil {
 		return artist, err
 	}
+	if err = r.artistCollectionSummary(ctx, &artist, preview); err != nil {
+		return artist, err
+	}
+	artist.ReferenceBiography = referenceBiography(artist.ID, artist.Slug)
 	return artist, nil
 }
 
