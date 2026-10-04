@@ -21,7 +21,6 @@ export function SiteHeader({ localDevelopment = false }: { localDevelopment?: bo
     </div>
     <nav className="primary-nav" aria-label="Primary navigation" onClick={event => { if ((event.target as Element).closest("a")) closeMenu(); }}>
       <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>Painters</Link>
-      <Link href="/artists" aria-current={pathname.startsWith("/artists") ? "page" : undefined}>Artists</Link>
       <Link href="/books" aria-current={pathname.startsWith("/books") ? "page" : undefined}>Books</Link>
       <Link href="/events" aria-current={pathname.startsWith("/events") ? "page" : undefined}>Events</Link>
       <Link href="/all" aria-current={pathname === "/all" ? "page" : undefined}>All</Link>
