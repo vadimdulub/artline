@@ -34,7 +34,7 @@ export function MemberNavigation({ open, close, show }: { open: boolean; close: 
   return <aside id="member-sidebar" className="member-sidebar" data-collapsed={!open} aria-label="Account navigation" onKeyDown={event => {
     if (event.key === "Escape" && open) { close(); document.querySelector<HTMLAnchorElement>(".account-menu-link")?.focus({ preventScroll: true }); }
   }}>
-    <button type="button" className="member-panel-toggle" aria-label={open ? "Hide account panel" : "Show account panel"} title={open ? "Hide account panel" : "Show account panel"} aria-expanded={open} aria-controls="member-navigation-links" onClick={open ? close : show}><NavigationIcon kind="menu" /><span>Account</span><span aria-hidden="true">{open ? "‹" : "›"}</span></button>
     <div id="member-navigation-links" hidden={!open}><NavigationLinks /></div>
+    <button type="button" className="member-panel-toggle" aria-label={open ? "Hide account panel" : "Show account panel"} title={open ? "Hide account panel" : "Show account panel"} aria-expanded={open} aria-controls="member-navigation-links" onClick={open ? close : show}><span>Hide panel</span><span aria-hidden="true">{open ? "‹" : "›"}</span></button>
   </aside>;
 }
