@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-10-09T07:46:54.167114+00:00",
+  "site": "https://artlines.org",
+  "sourceCommit": "b48c888ce1e77b689a64c68d73640585eb5b88be",
+  "archiveSHA256": "04cefe5c906aaf255fbebcba886d0aeb2c11d9bb7801ac46303380768078b06d",
+  "buildID": "07740c97-7c75-4720-a119-ee636a00042c",
+  "sourceProvenanceVerified": true,
+  "apiRevision": "artline-api-performance-1009-0730",
+  "apiImage": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:5842161a3ff832fed137a1cd0f31973e6712d1130d3f9ec92dd0bf4292ba43b5",
+  "trafficPercent": 100,
+  "webRevision": "artline-web-unified-catalogue-1008-1955",
+  "webRuntimeUnchanged": true,
+  "backupID": "1791528316434",
+  "migrations": [
+    "0040_record_cache_dependencies.sql",
+    "0041_artwork_search_documents.sql",
+    "0042_artist_summary_read_indexes.sql"
+  ],
+  "projectionRows": 414699,
+  "activeArtworks": 414213,
+  "projectionMismatches": 0,
+  "goSuite": "passed",
+  "raceTests": "passed",
+  "candidateAPIChecks": 40,
+  "candidateAPIChecksPassed": true,
+  "liveAPIChecksCompleted": 36,
+  "liveAPIPassCompleted": false,
+  "liveAPIStopReason": "('/api/v1/museums?limit=2', 500, '{\"error\":{\"code\":\"MUSEUM_REQUEST_FAILED\",\"message\":\"The museum catalogue could not be loaded. Please try again.\"}}\\n')",
+  "browserArtistChecksPassed": [
+    "desktop gallery, filters, redirects, metadata and images",
+    "mobile layout"
+  ],
+  "browserFollowup": {
+    "passed": true,
+    "checks": [
+      "anonymous review artwork API",
+      "review artwork server rendering without JavaScript, clean canonical URL and indexable metadata",
+      "/robots.txt",
+      "/sitemap.xml",
+      "/sitemap-pages.xml",
+      "/sitemap-artworks-000.xml",
+      "anonymous session unchanged"
+    ]
+  },
+  "knownLimitations": [
+    "Intermittent cold artist/museum timeouts and one web-proxy artwork 503 remain; successful follow-ups are not an availability guarantee.",
+    "Cold portrait title search exceeded eight seconds; exact count took 9.74 seconds in a subsequent plan.",
+    "Book-author view timed out on both the previous serving revision and candidate.",
+    "No representative 10-million-row or sustained concurrency test."
+  ],
+  "measurements": {
+    "productionArtistJSONBytesBefore": 391368,
+    "productionArtistJSONBytesAfter": 54307,
+    "museumFacetMSBefore": 4770.971,
+    "museumFacetMSAfter": 1591.942,
+    "artistSummaryMSBefore": 11487.825,
+    "artistSummaryMSAfter": 1941.203
+  },
+  "runtimeRollbackRevision": "artline-api-unified-catalogue-1008-1955"
+}
