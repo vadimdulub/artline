@@ -78,7 +78,7 @@
     "Museum cold reads and broad title counts remain follow-up work."
   ],
   "databaseMutations": false,
-  "deployed": false,
+  "deployed": true,
   "finalLocalHTMLBytes": 38311,
   "validation": {
     "isolatedWebUnitTests": 269,
@@ -94,5 +94,6 @@
     "readOnlyAPISubchecks": 43,
     "browserChecks": 3,
     "databaseFixturesCreated": false
-  }
+  },
+  "deploymentRecord": "deployment-20261009-performance-round2.json"
 }

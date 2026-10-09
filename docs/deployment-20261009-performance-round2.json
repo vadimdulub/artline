@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-09",
+  "site": "https://artlines.org",
+  "sourceCommit": "5f749385a12398ca0f1d3d51990ece4408ed67d8",
+  "services": {
+    "api": {
+      "build": "968e41c2-58eb-4514-91d7-7430adaeeaaf",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:de30d9b20d2c6b2eec8d565cb84aafbb5c863ed48a472a7479700d7f13e7d4a7",
+      "revision": "artline-api-performance2-1009-0850",
+      "publicTrafficPercent": 100,
+      "updatedAt": "2026-10-09T11:32:43.513900Z",
+      "previousRevision": "artline-api-performance-1009-0730",
+      "runtimeConfigurationPreserved": true
+    },
+    "web": {
+      "build": "bab0ed5c-a739-4a9a-bed0-22748b5fb42c",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:3f709fc706882aa0443656c690da4eb0f8b6eb4d34853f4e013e40093243d69e",
+      "revision": "artline-web-performance2-1009-0850",
+      "publicTrafficPercent": 100,
+      "updatedAt": "2026-10-09T11:34:06.952293Z",
+      "previousRevision": "artline-web-unified-catalogue-1008-1955",
+      "runtimeConfigurationPreserved": true
+    }
+  },
+  "databaseMutations": false,
+  "terraformApply": false,
+  "iamChanges": false,
+  "unrelatedWorkingTreeChangesDeployed": false,
+  "candidateAPIChecksAllPassed": false,
+  "apiPromotionQualified": true,
+  "unresolvedIssues": [
+    "Load-sensitive author/painter read deadlines observed on old and candidate services.",
+    "One transient candidate readiness failure; later core checks passed.",
+    "Cold museum reads, broad counts and sustained scale testing remain outstanding."
+  ],
+  "productionReadOnly": {
+    "passed": true,
+    "artworkChecksPassed": true,
+    "base": "https://artlines.org",
+    "checks": [
+      {
+        "check": "no-JavaScript artwork",
+        "path": "/artists/leonardo-da-vinci/works/1aae4f1a-3b50-4424-adfb-f59a734dfc36",
+        "title": "Ginevra de\u2019 Benci (obverse)",
+        "status": 200,
+        "seconds": 0.643
+      },
+      {
+        "check": "no-JavaScript artwork",
+        "path": "/artists/rembrandt/works/0003a120-8e92-4f42-b69d-dea092af1376",
+        "title": "Jan Uytenbogaert, Preacher of the Remonstrants",
+        "status": 200,
+        "seconds": 0.196
+      },
+      {
+        "check": "missing artwork",
+        "status": 404
+      },
+      {
+        "check": "legacy URL redirect",
+        "status": 308
+      },
+      {
+        "check": "anonymous production session",
+        "status": 200
+      },
+      {
+        "check": "author timeline through web proxy",
+        "status": 200,
+        "total": 3436,
+        "knownDatabaseTimeout": false
+      }
+    ]
+  },
+  "productionAuthors": {
+    "passed": true,
+    "checks": [
+      {
+        "path": "books?view=authors&limit=30",
+        "status": 200,
+        "seconds": 0.564,
+        "total": 3436,
+        "returned": 30
+      },
+      {
+        "path": "books?view=authors&limit=30&top100=true",
+        "status": 200,
+        "seconds": 0.291,
+        "total": 202,
+        "returned": 30
+      },
+      {
+        "path": "books?view=authors&limit=30&women=true",
+        "status": 200,
+        "seconds": 0.244,
+        "total": 418,
+        "returned": 30,
+        "identicalToOldAPI": true
+      },
+      {
+        "path": "books?view=authors&limit=30&q=no-match-perf-20261009",
+        "status": 200,
+        "seconds": 0.15,
+        "total": 0,
+        "returned": 0,
+        "identicalToOldAPI": true
+      },
+      {
+        "path": "books?view=authors&limit=30&after=<cursor>",
+        "status": 200,
+        "seconds": 0.476,
+        "cursorWithoutDuplicates": true
+      }
+    ],
+    "limitations": "Sequential spot checks; earlier load-sensitive failures remain recorded."
+  },
+  "browser": {
+    "candidateTestsPassed": 2,
+    "publicDomainTestsPassed": 2,
+    "widths": [
+      1440,
+      390
+    ],
+    "screenshotsInspected": true,
+    "driver": "standalone Playwright; in-app browser bootstrap unavailable"
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/performance-round2-deploy-20261009"
+}

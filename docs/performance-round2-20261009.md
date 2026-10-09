@@ -1,7 +1,9 @@
 # Second performance round — 9 October 2026
 
-Implemented and verified locally on top of `e17e22c`. This round has no database
-migration, source-data changes or infrastructure changes. It is not deployed.
+Implemented and verified on top of `e17e22c`, then deployed on 9 October 2026.
+This round has no database migration, source-data changes or infrastructure
+configuration changes. See the [deployment record](deployment-20261009-performance-round2.md)
+for release identifiers, live checks and unresolved load-sensitive timeouts.
 
 ## Measurement and changes
 
