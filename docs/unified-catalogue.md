@@ -79,8 +79,8 @@ Validation completed on 8 October 2026:
   The temporary API enforced PostgreSQL read-only mode and skipped migrations.
 
 Representative local query checks are not proof of performance at ten million
-artworks. Load testing at that scale and measuring the new indexes after an
-authorized migration remain release work.
+artworks. Load testing at that scale remains future performance work. The
+indexes were subsequently applied during the production release below.
 
 ## Production verification
 
@@ -92,4 +92,6 @@ Live responses included 405,287 active artworks and 1,399 Rembrandt works.
 Build source checksums and image digests were verified. Unrelated live changes,
 public assets, member authentication, secrets, ingress and scaling were preserved.
 The only runtime configuration removals were obsolete catalogue credentials
-and preview switches. No Terraform apply or Git commit was made.
+and preview switches. No Terraform apply or Git commit was made during deployment.
+The verified production sources were subsequently committed and pushed as
+`fc89398`; see [the 9 October performance audit](performance-20261009.md).

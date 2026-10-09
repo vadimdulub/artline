@@ -1,0 +1,689 @@
+{
+  "date": "2026-10-09",
+  "application_commit": "fc89398",
+  "production_revisions": {
+    "api": "artline-api-unified-catalogue-1008-1955",
+    "web": "artline-web-unified-catalogue-1008-1955"
+  },
+  "scope": {
+    "production_artworks": 414213,
+    "local_artworks": 309234,
+    "read_only": true,
+    "load_test": false,
+    "new_deployment": false
+  },
+  "logs": {
+    "sample_size": 4000,
+    "first_timestamp": "2026-10-09T05:47:17.659133Z",
+    "last_timestamp": "2026-10-09T06:05:18.641595Z",
+    "query_limit_reached": true,
+    "web_requests": 2272,
+    "claudebot_user_agent_requests": 2116,
+    "user_agent_identity_verified": false,
+    "status_counts": {
+      "artline-web": {
+        "200": 2123,
+        "500": 145,
+        "404": 1,
+        "304": 3
+      },
+      "artline-api": {
+        "200": 1570,
+        "500": 69,
+        "429": 26,
+        "503": 63
+      }
+    },
+    "pre_audit_errors": {
+      "artline-web": 48,
+      "artline-api": 14
+    }
+  },
+  "http_samples": [
+    {
+      "route": "timeline",
+      "sample": 1,
+      "status": 200,
+      "ttfb_ms": 425.8,
+      "total_ms": 450.9,
+      "connect_ms": 251.8,
+      "wire_bytes": 30433,
+      "decoded_bytes": 30433,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "timeline",
+      "sample": 2,
+      "status": 200,
+      "ttfb_ms": 469.5,
+      "total_ms": 490.5,
+      "connect_ms": 141.2,
+      "wire_bytes": 30433,
+      "decoded_bytes": 30433,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "timeline",
+      "sample": 3,
+      "status": 200,
+      "ttfb_ms": 243.5,
+      "total_ms": 259.7,
+      "connect_ms": 90.3,
+      "wire_bytes": 30433,
+      "decoded_bytes": 30433,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "timeline_rembrandt",
+      "sample": 1,
+      "status": 200,
+      "ttfb_ms": 1650.8,
+      "total_ms": 1651.2,
+      "connect_ms": 93.8,
+      "wire_bytes": 484,
+      "decoded_bytes": 484,
+      "cache": "MISS",
+      "encoding": null,
+      "cache_control": "no-store"
+    },
+    {
+      "route": "timeline_rembrandt",
+      "sample": 2,
+      "status": 200,
+      "ttfb_ms": 4471.6,
+      "total_ms": 4473.7,
+      "connect_ms": 88.7,
+      "wire_bytes": 484,
+      "decoded_bytes": 484,
+      "cache": "BYPASS",
+      "encoding": null,
+      "cache_control": "no-store"
+    },
+    {
+      "route": "timeline_rembrandt",
+      "sample": 3,
+      "status": 200,
+      "ttfb_ms": 186.6,
+      "total_ms": 188.2,
+      "connect_ms": 96.0,
+      "wire_bytes": 484,
+      "decoded_bytes": 484,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artworks",
+      "sample": 1,
+      "status": 200,
+      "ttfb_ms": 1966.0,
+      "total_ms": 1968.9,
+      "connect_ms": 95.8,
+      "wire_bytes": 5971,
+      "decoded_bytes": 5971,
+      "cache": "MISS",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artworks",
+      "sample": 2,
+      "status": 200,
+      "ttfb_ms": 219.2,
+      "total_ms": 221.5,
+      "connect_ms": 93.0,
+      "wire_bytes": 5971,
+      "decoded_bytes": 5971,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artworks",
+      "sample": 3,
+      "status": 200,
+      "ttfb_ms": 243.6,
+      "total_ms": 244.0,
+      "connect_ms": 91.6,
+      "wire_bytes": 5971,
+      "decoded_bytes": 5971,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artwork_search",
+      "sample": 1,
+      "status": 500,
+      "ttfb_ms": 8193.7,
+      "total_ms": 8194.5,
+      "connect_ms": 91.9,
+      "wire_bytes": 112,
+      "decoded_bytes": 112,
+      "cache": "MISS",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artwork_search",
+      "sample": 2,
+      "status": 500,
+      "ttfb_ms": 8482.2,
+      "total_ms": 8484.4,
+      "connect_ms": 181.1,
+      "wire_bytes": 112,
+      "decoded_bytes": 112,
+      "cache": "MISS",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artwork_search",
+      "sample": 3,
+      "status": 500,
+      "ttfb_ms": 8220.7,
+      "total_ms": 8223.4,
+      "connect_ms": 97.0,
+      "wire_bytes": 112,
+      "decoded_bytes": 112,
+      "cache": "MISS",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artist_directory",
+      "sample": 1,
+      "status": 200,
+      "ttfb_ms": 4929.8,
+      "total_ms": 4947.6,
+      "connect_ms": 92.8,
+      "wire_bytes": 27078,
+      "decoded_bytes": 27078,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artist_directory",
+      "sample": 2,
+      "status": 200,
+      "ttfb_ms": 3967.5,
+      "total_ms": 4067.4,
+      "connect_ms": 91.0,
+      "wire_bytes": 27078,
+      "decoded_bytes": 27078,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artist_directory",
+      "sample": 3,
+      "status": 200,
+      "ttfb_ms": 3697.6,
+      "total_ms": 3713.7,
+      "connect_ms": 109.8,
+      "wire_bytes": 27078,
+      "decoded_bytes": 27078,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "painter_options",
+      "sample": 1,
+      "status": 200,
+      "ttfb_ms": 1082.9,
+      "total_ms": 1084.2,
+      "connect_ms": 90.1,
+      "wire_bytes": 102,
+      "decoded_bytes": 102,
+      "cache": "MISS",
+      "encoding": null,
+      "cache_control": "no-store"
+    },
+    {
+      "route": "painter_options",
+      "sample": 2,
+      "status": 200,
+      "ttfb_ms": 461.5,
+      "total_ms": 463.3,
+      "connect_ms": 174.1,
+      "wire_bytes": 102,
+      "decoded_bytes": 102,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "painter_options",
+      "sample": 3,
+      "status": 200,
+      "ttfb_ms": 449.7,
+      "total_ms": 450.3,
+      "connect_ms": 97.7,
+      "wire_bytes": 102,
+      "decoded_bytes": 102,
+      "cache": "HIT",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artist_detail",
+      "sample": 1,
+      "status": 200,
+      "ttfb_ms": 6781.3,
+      "total_ms": 6985.2,
+      "connect_ms": 158.9,
+      "wire_bytes": 391344,
+      "decoded_bytes": 391344,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "no-store"
+    },
+    {
+      "route": "artist_detail",
+      "sample": 2,
+      "status": 503,
+      "ttfb_ms": 32031.0,
+      "total_ms": 32031.4,
+      "connect_ms": 135.3,
+      "wire_bytes": 19,
+      "decoded_bytes": 19,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": null
+    },
+    {
+      "route": "artist_detail",
+      "sample": 3,
+      "status": 0,
+      "ttfb_ms": 0.0,
+      "total_ms": 35005.8,
+      "connect_ms": 86.5,
+      "wire_bytes": 0,
+      "decoded_bytes": 0,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": null,
+      "curl_error": "curl: (28) Operation timed out after 35005 milliseconds with 0 bytes received"
+    },
+    {
+      "route": "artist_works",
+      "sample": 1,
+      "status": 500,
+      "ttfb_ms": 8256.5,
+      "total_ms": 8259.2,
+      "connect_ms": 172.1,
+      "wire_bytes": 106,
+      "decoded_bytes": 106,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artist_works",
+      "sample": 2,
+      "status": 500,
+      "ttfb_ms": 8214.1,
+      "total_ms": 8215.1,
+      "connect_ms": 127.3,
+      "wire_bytes": 106,
+      "decoded_bytes": 106,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "artist_works",
+      "sample": 3,
+      "status": 500,
+      "ttfb_ms": 12940.0,
+      "total_ms": 12940.9,
+      "connect_ms": 96.1,
+      "wire_bytes": 106,
+      "decoded_bytes": 106,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "museum_directory",
+      "sample": 1,
+      "status": 500,
+      "ttfb_ms": 8172.8,
+      "total_ms": 8174.5,
+      "connect_ms": 87.3,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "museum_directory",
+      "sample": 2,
+      "status": 500,
+      "ttfb_ms": 8249.1,
+      "total_ms": 8249.6,
+      "connect_ms": 163.2,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "museum_directory",
+      "sample": 3,
+      "status": 500,
+      "ttfb_ms": 8409.6,
+      "total_ms": 8411.1,
+      "connect_ms": 111.0,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "met_detail",
+      "sample": 1,
+      "status": 500,
+      "ttfb_ms": 8182.2,
+      "total_ms": 8184.0,
+      "connect_ms": 93.8,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "met_detail",
+      "sample": 2,
+      "status": 429,
+      "ttfb_ms": 10747.2,
+      "total_ms": 10747.9,
+      "connect_ms": 159.6,
+      "wire_bytes": 14,
+      "decoded_bytes": 14,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": null
+    },
+    {
+      "route": "met_detail",
+      "sample": 3,
+      "status": 429,
+      "ttfb_ms": 10274.1,
+      "total_ms": 10274.5,
+      "connect_ms": 135.2,
+      "wire_bytes": 14,
+      "decoded_bytes": 14,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": null
+    },
+    {
+      "route": "met_works",
+      "sample": 1,
+      "status": 500,
+      "ttfb_ms": 14229.1,
+      "total_ms": 14229.6,
+      "connect_ms": 160.1,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "met_works",
+      "sample": 2,
+      "status": 500,
+      "ttfb_ms": 8270.1,
+      "total_ms": 8270.5,
+      "connect_ms": 181.4,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "met_works",
+      "sample": 3,
+      "status": 500,
+      "ttfb_ms": 8192.3,
+      "total_ms": 8192.8,
+      "connect_ms": 115.7,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "nga_detail",
+      "sample": 1,
+      "status": 500,
+      "ttfb_ms": 8342.0,
+      "total_ms": 8342.5,
+      "connect_ms": 88.0,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "nga_detail",
+      "sample": 2,
+      "status": 500,
+      "ttfb_ms": 8185.3,
+      "total_ms": 8185.9,
+      "connect_ms": 95.9,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "nga_detail",
+      "sample": 3,
+      "status": 500,
+      "ttfb_ms": 8476.3,
+      "total_ms": 8476.7,
+      "connect_ms": 92.3,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "louvre_detail",
+      "sample": 1,
+      "status": 500,
+      "ttfb_ms": 8201.7,
+      "total_ms": 8202.0,
+      "connect_ms": 94.6,
+      "wire_bytes": 115,
+      "decoded_bytes": 115,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "route": "louvre_detail",
+      "sample": 2,
+      "status": 429,
+      "ttfb_ms": 257.5,
+      "total_ms": 257.8,
+      "connect_ms": 94.6,
+      "wire_bytes": 14,
+      "decoded_bytes": 14,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": null
+    },
+    {
+      "route": "louvre_detail",
+      "sample": 3,
+      "status": 429,
+      "ttfb_ms": 10961.3,
+      "total_ms": 10963.1,
+      "connect_ms": 94.1,
+      "wire_bytes": 14,
+      "decoded_bytes": 14,
+      "cache": "unmarked",
+      "encoding": null,
+      "cache_control": null
+    }
+  ],
+  "local_traces": {
+    "artist_directory": {
+      "query_count": 6,
+      "elapsed_ms": 156.832,
+      "json_bytes": 26951,
+      "field_bytes": {
+        "facets": 19683,
+        "items": 7086,
+        "next_cursor": 133,
+        "total": 5
+      }
+    },
+    "artist": {
+      "query_count": 11,
+      "elapsed_ms": 273.857,
+      "json_bytes": 216466,
+      "field_bytes": {
+        "aliases": 3082,
+        "artwork_count": 4,
+        "artworks": 18463,
+        "biography_md": 4,
+        "citations": 6440,
+        "collection_count": 2,
+        "collections": 3123,
+        "countries": 6,
+        "display_name": 20,
+        "entity_type": 8,
+        "id": 38,
+        "influences": 2,
+        "key_artwork": 182742,
+        "movement": 53,
+        "reference_biography": 1864,
+        "revision": 1,
+        "slug": 11,
+        "sort_name": 20,
+        "status": 8,
+        "timeline_basis": 6,
+        "timeline_display": 13,
+        "timeline_end_year": 4,
+        "timeline_start_year": 4,
+        "work_types": 190
+      }
+    },
+    "museum_works": {
+      "query_count": 6,
+      "elapsed_ms": 905.833,
+      "json_bytes": 28450,
+      "field_bytes": {
+        "facets": 11064,
+        "image_count": 5,
+        "items": 17133,
+        "next_cursor": 184,
+        "total": 5
+      }
+    },
+    "artist_works": {
+      "query_count": 7,
+      "elapsed_ms": 27.285,
+      "json_bytes": 76891,
+      "field_bytes": {
+        "groups": 339,
+        "items": 75045,
+        "matching_total": 4,
+        "next_cursor": 209,
+        "range_end": 4,
+        "range_start": 4,
+        "total": 4,
+        "undated_count": 1,
+        "years": 1165
+      }
+    },
+    "museum": {
+      "query_count": 2,
+      "elapsed_ms": 147.688,
+      "json_bytes": 1470,
+      "field_bytes": {
+        "city": 4,
+        "country": 4,
+        "cover": 620,
+        "description": 96,
+        "highlight_count": 3,
+        "holding_count": 5,
+        "id": 38,
+        "kind": 8,
+        "name": 32,
+        "on_view_count": 1,
+        "slug": 9,
+        "status": 8,
+        "venues": 433,
+        "website_url": 28,
+        "work_count": 5
+      }
+    }
+  },
+  "memory_components": {
+    "Cache": {
+      "min_percent": 5.611149153386454,
+      "max_percent": 20.591851344621514,
+      "mean_percent": 11.942665759376288
+    },
+    "Free": {
+      "min_percent": 37.982445219123505,
+      "max_percent": 61.187282121513945,
+      "mean_percent": 45.621957214246464
+    },
+    "Usage": {
+      "min_percent": 32.274028884462155,
+      "max_percent": 48.33322958167331,
+      "mean_percent": 42.43462572125292
+    }
+  },
+  "cloudsql.googleapis.com/database/cpu/utilization": {
+    "min_fraction": 0.1339510736807521,
+    "max_fraction": 0.3321488377545999,
+    "mean_fraction": 0.21985637520633278
+  },
+  "cloudsql.googleapis.com/database/memory/utilization": {
+    "min_fraction": 1,
+    "max_fraction": 1,
+    "mean_fraction": 1
+  },
+  "local_key_artwork_payload": {
+    "total_bytes": 182742,
+    "citation_bytes": 180670
+  },
+  "museum_facets_warm_plan": {
+    "execution_ms": 283.903,
+    "indexed_museum_artworks": 25893,
+    "global_artwork_sequential_scan": false
+  },
+  "title_search_local_comparison": {
+    "original_ms": 11.638,
+    "candidate_ms": 10.67,
+    "identical_page": true,
+    "both_use_trigram_index": true,
+    "production_speedup_measured": false
+  }
+}
