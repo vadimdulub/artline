@@ -27,6 +27,13 @@ access rules are unchanged.
   image eligibility without denormalizing a cross-table boolean. This avoids
   stale image flags during concurrent source updates. Counts use the same
   filter as pages. Unmigrated read-only local catalogues retain a fallback.
+- Candidate verification exposed additional random reads in artist collection
+  summaries: one production plan took 11.49 seconds and read 2,248 disk blocks.
+  Migration 0042 adds covering indexes for active artwork summary fields and
+  accepted holding evidence, plus a small partial index for unresolved holding
+  conflicts. The query and its evidence/date predicates remain unchanged.
+  Production installation uses concurrent index builds so source writes can
+  continue; the migration file also supports ordinary transactional setup.
 
 The initial production candidate using the wide artwork table still spent
 21.24 seconds selecting title candidates, with 2,259 disk block reads. This is
