@@ -1,8 +1,9 @@
 "use client";
 
+import { displayMetadata } from "@/lib/display-metadata";
 import { useEffect, useState } from "react";
 import { apiRequest, errorMessage, safeSourceURL } from "@/lib/api";
-import type { Book } from "@/lib/books";
+import type { Book, BookDetails } from "@/lib/books";
 import { RecordArrows, type RecordNavigation } from "./RecordNavigation";
 import { BookCover } from "./BookCover";
 import { BookOverview } from "./BookOverview";
@@ -13,14 +14,15 @@ import styles from "./Books.module.css";
 export function BookDrawer({ id, items, close, select, navigation, fallbackFocusId = "books-timeline" }: {
   id: string; items: Book[]; close: () => void; select: (id: string) => void; fallbackFocusId?: string; navigation?: RecordNavigation;
 }) {
-  const cached = items.find(book => book.id === id);
+  const entry = items.find(book => book.id === id);
+  const cached = entry && !entry.summary ? entry : undefined;
   const index = items.findIndex(book => book.id === id);
   const [retry, setRetry] = useState(0);
-  const [result, setResult] = useState<{ id: string; attempt: number; book?: Book; error?: string }>();
+  const [result, setResult] = useState<{ id: string; attempt: number; book?: BookDetails; error?: string }>();
   useEffect(() => {
     if (cached) return;
     const controller = new AbortController();
-    apiRequest<Book>(`books/${encodeURIComponent(id)}`, { signal: controller.signal })
+    apiRequest<BookDetails>(`books/${encodeURIComponent(id)}`, { signal: controller.signal })
       .then(book => { if (!controller.signal.aborted) setResult({ id, attempt: retry, book }); })
       .catch(error => { if (!controller.signal.aborted) setResult({ id, attempt: retry, error: errorMessage(error) }); });
     return () => controller.abort();
@@ -38,26 +40,26 @@ export function BookDrawer({ id, items, close, select, navigation, fallbackFocus
     </nav>}>
     {error ? <div className={styles.drawerState} role="alert"><h2>Book unavailable</h2><p>{error}</p><button type="button" onClick={() => setRetry(value => value + 1)}>Retry book</button></div> :
       !book ? <p className={styles.drawerState} role="status"><LoadingIndicator label="Opening book record…" /></p> : <div className={styles.drawerContent}>
-        <header className={styles.bookHeading}><p>{book.author}{lifespan && lifespan.length < 40 && <> · {lifespan}</>}</p><h2 id="book-record-title">{book.title}</h2><p>{book.years}</p></header>
+        <header className={styles.bookHeading}><p>{displayMetadata(book.author)}{lifespan && lifespan.length < 40 && <> · {lifespan}</>}</p><h2 id="book-record-title">{book.title}</h2>{displayMetadata(book.years) && <p>{book.years}</p>}</header>
         <div className={styles.drawerCover}><BookCover book={book} /></div>
-        <section className={styles.bookAbout} aria-labelledby="book-description-title"><h3 id="book-description-title">About this book</h3>{book.overview ? <BookOverview overview={book.overview} /> : <p>{book.description}</p>}</section>
-        <section className={styles.creators} aria-labelledby="book-creators-title">
+        {(book.overview || displayMetadata(book.description)) && <section className={styles.bookAbout} aria-labelledby="book-description-title"><h3 id="book-description-title">About this book</h3>{book.overview ? <BookOverview overview={book.overview} /> : <p>{book.description}</p>}</section>}
+        {(book.creators?.length || displayMetadata(book.author)) ? <section className={styles.creators} aria-labelledby="book-creators-title">
           <h3 id="book-creators-title">{book.creators?.length === 1 ? "About the creator" : "About the creators"}</h3>
           {book.creators?.length ? book.creators.map(creator => <article key={creator.id}>
             <h4>{creator.name}</h4>
             {creator.credit && creator.credit !== "Author" && <p className={styles.lifespan}>{creator.credit}</p>}
-            <p className={styles.lifespan}>{creator.kind === "collective" ? "Collective authorship · no single lifespan" : creator.kind === "unknown" && !creator.birth && !creator.death ? "Lifespan not established in the source record" : <>{creator.birth ? `Born ${creator.birth}` : "Birth date unknown"} · {creator.death ? `Died ${creator.death}` : "Death date not recorded"}</>}</p>
-            {creator.overview ? <BookOverview overview={creator.overview} /> : creator.description ? <p>{creator.description}</p> : null}
+            {(creator.birth || creator.death) && <p className={styles.lifespan}>{[displayMetadata(creator.birth) && `Born ${creator.birth}`, displayMetadata(creator.death) && `Died ${creator.death}`].filter(Boolean).join(" · ")}</p>}
+            {creator.overview ? <BookOverview overview={creator.overview} /> : displayMetadata(creator.description) ? <p>{creator.description}</p> : null}
             <a href={creator.sourceUrl} target="_blank" rel="noreferrer">Creator source ↗</a>
-          </article>) : <h4>{book.author}</h4>}
-        </section>
+          </article>) : <h4>{displayMetadata(book.author)}</h4>}
+        </section> : null}
         <div className={`artwork-details ${styles.bookFacts}`}><dl>
-          <div><dt>Author</dt><dd>{book.author}</dd></div>
-          <div><dt>Dates</dt><dd>{book.years}</dd></div>
-          <div><dt>Collection</dt><dd>{book.era}</dd></div>
-          <div><dt>Ideas and themes</dt><dd>{book.theme}</dd></div>
+          {displayMetadata(book.author) && <div><dt>Author</dt><dd>{book.author}</dd></div>}
+          {displayMetadata(book.years) && <div><dt>Dates</dt><dd>{book.years}</dd></div>}
+          {displayMetadata(book.era) && <div><dt>Collection</dt><dd>{book.era}</dd></div>}
+          {displayMetadata(book.theme) && <div><dt>Ideas and themes</dt><dd>{book.theme}</dd></div>}
         </dl></div>
-        <p className={styles.recordNote}>{book.dateBasis || "Dates may refer to composition or publication."} Approximate dates retain their original labels.</p>
+        {displayMetadata(book.dateBasis) && <p className={styles.recordNote}>{book.dateBasis}</p>}
         {book.dateSources?.map(source => <p key={source.url} className={styles.recordNote}><a href={safeSourceURL(source.url)} target="_blank" rel="noreferrer">Dating source: {source.name} ↗</a></p>)}
         {book.sourceUrl && <p className={styles.recordNote}><a href={book.sourceUrl} target="_blank" rel="noreferrer">Book source ↗</a></p>}
       </div>}

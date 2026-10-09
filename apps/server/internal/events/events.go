@@ -51,7 +51,7 @@ type Filter struct {
 	Range
 	Query, After                      string
 	Topics, Countries, Regions, Kinds []string
-	Top100, Preview                   bool
+	Top100                            bool
 	Limit                             int
 }
 type Tick struct {

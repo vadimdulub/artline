@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { displayMetadata } from "@/lib/display-metadata";
 import { useEffect, useState } from "react";
 import { apiRequest, errorMessage, safeSourceURL } from "@/lib/api";
 import type { HistoricalEvent } from "@/lib/events";
@@ -31,7 +32,7 @@ export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-t
   const books = contextualRange(-5000, 2026), art = contextualRange(1100, 2000);
   return <RecordDrawer label="Event details" closeLabel="Close event details" recordKey={id} title={event?.kind ?? "Event"} navigation={navigation && <RecordArrows navigation={navigation} noun="event" />} close={close} fallbackFocusId={fallbackFocusId}>
     {event ? <div className={`${styles.drawerContent} ${styles.eventContent}`}>
-      <header className={styles.bookHeading}><p>{event.kind} · {event.topics.join(" · ")}</p><h2>{event.title}</h2><p>{event.years}</p></header>
+      <header className={styles.bookHeading}><p>{event.kind} · {event.topics.join(" · ")}</p><h2>{event.title}</h2>{displayMetadata(event.years) && <p>{event.years}</p>}</header>
       {event.image && <figure className={styles.eventIllustration}>
         {failedImage !== event.image.imageUrl &&
           // eslint-disable-next-line @next/next/no-img-element
@@ -50,11 +51,11 @@ export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-t
       </p>}
       {event.significance && <section className={styles.creators}><h3>Why it matters</h3><p>{event.significance}</p></section>}
       <div className={`artwork-details ${styles.bookFacts}`}><dl>
-        <div><dt>Dates</dt><dd>{event.years}</dd></div>
-        <div><dt>Recorded countries and states</dt><dd>{event.countries.length ? event.countries.join(", ") : "Not recorded"}</dd></div>
-        <div><dt>Regions</dt><dd>{event.regions.length ? event.regions.join(", ") : "Not recorded"}</dd></div>
+        {displayMetadata(event.years) && <div><dt>Dates</dt><dd>{event.years}</dd></div>}
+        {event.countries.length > 0 && <div><dt>Countries and states</dt><dd>{event.countries.join(", ")}</dd></div>}
+        {event.regions.length > 0 && <div><dt>Regions</dt><dd>{event.regions.join(", ")}</dd></div>}
       </dl></div>
-      <p className={styles.recordNote}>{event.dateBasis}</p>
+      {displayMetadata(event.dateBasis) && <p className={styles.recordNote}>{event.dateBasis}</p>}
       {event.geographyBasis && <p className={styles.recordNote}>{event.geographyBasis}</p>}
       {event.locations.length > 0 && <section className={styles.creators}><h3>Recorded places</h3><p>{event.locations.map((place, i) => <span key={place.url}>{i > 0 && ", "}<a href={safeSourceURL(place.url)} target="_blank" rel="noreferrer">{place.name}</a></span>)}</p></section>}
       {event.people.length > 0 && <section className={styles.creators}><h3>People and participants</h3><p>{event.people.map((person, i) => <span key={person.url}>{i > 0 && ", "}<a href={safeSourceURL(person.url)} target="_blank" rel="noreferrer">{person.name}</a></span>)}</p></section>}

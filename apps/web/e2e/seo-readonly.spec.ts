@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
 
-// Run against the real local research preview with a read-only API connection.
+// Run against the real local catalogue with a read-only API connection.
 // No database fixtures, publication changes or editor credentials are used.
 test.use({ javaScriptEnabled: false });
 
-test("crawler discovery, canonical domain and preview exclusions", async ({ request, page }) => {
+test("crawler discovery, canonical domain and internal-route exclusions", async ({ request, page }) => {
   const origin = process.env.ARTLINE_SEO_EXPECTED_ORIGIN;
   test.skip(!origin, "Set ARTLINE_SEO_EXPECTED_ORIGIN to the configured canonical origin.");
   const robots = await request.get("/robots.txt");
@@ -33,7 +33,7 @@ test("artist links and complete artwork content work without JavaScript", async 
   await page.goto(path);
   await expect(page).toHaveTitle(/Ginevra.*Leonardo.*Artline/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Ginevra de’ Benci (obverse)");
-  await expect(page.locator('head meta[name="robots"]')).toHaveAttribute("content", "noindex, follow");
+  await expect(page.locator('head meta[name="robots"]')).toHaveAttribute("content", "index, follow");
   const fallback = page.locator(".standalone-artwork");
   await expect(fallback).toBeVisible();
   await expect(page.locator(".image-dialog")).not.toBeVisible();
@@ -51,7 +51,7 @@ test("museum identity is rendered before client requests", async ({ page }) => {
   await page.goto("/museums/national-gallery-london");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("National Gallery");
   await expect(page.locator('head meta[name="description"]')).toHaveAttribute("content", /National Gallery/);
-  await expect(page.locator('head meta[name="robots"]')).toHaveAttribute("content", "noindex, follow");
+  await expect(page.locator('head meta[name="robots"]')).toHaveAttribute("content", "index, follow");
 });
 
 test("browsing the full painter collection preserves page identity and canonical artwork links", async ({ browser }) => {

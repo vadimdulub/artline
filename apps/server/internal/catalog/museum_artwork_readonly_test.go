@@ -44,12 +44,12 @@ func TestMuseumArtworkReadOnlyScopedPlan(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		oldQuery := strings.Replace(museumArtworkSQL(museumScopedCTE), "w.id=$3::uuid", "w.id::text=$3", 1)
+		oldQuery := strings.Replace(museumArtworkSQL(museumScopedCTE), "w.id=$2::uuid", "w.id::text=$2", 1)
 		var previous, current []byte
-		if err := tx.QueryRow(ctx, oldQuery, true, slug, id).Scan(&previous); err != nil {
+		if err := tx.QueryRow(ctx, oldQuery, slug, id).Scan(&previous); err != nil {
 			t.Fatal(err)
 		}
-		if err := tx.QueryRow(ctx, museumArtworkSQL(museumArtworkScopedCTE), museumQueryArgs(true, slug, id)...).Scan(&current); err != nil {
+		if err := tx.QueryRow(ctx, museumArtworkSQL(museumArtworkScopedCTE), museumQueryArgs(slug, id)...).Scan(&current); err != nil {
 			t.Fatal(err)
 		}
 		var before, after any
@@ -57,7 +57,7 @@ func TestMuseumArtworkReadOnlyScopedPlan(t *testing.T) {
 			t.Fatalf("detail metadata or visibility differs for %s", slug)
 		}
 		var rawPlan []byte
-		if err := tx.QueryRow(ctx, `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+museumArtworkSQL(museumArtworkScopedCTE), museumQueryArgs(true, slug, id)...).Scan(&rawPlan); err != nil {
+		if err := tx.QueryRow(ctx, `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+museumArtworkSQL(museumArtworkScopedCTE), museumQueryArgs(slug, id)...).Scan(&rawPlan); err != nil {
 			t.Fatal(err)
 		}
 		var plan []map[string]any
@@ -88,13 +88,13 @@ func TestMuseumArtworkReadOnlyScopedPlan(t *testing.T) {
 		repo := &Repository{db: tx}
 		for n := 0; n < 8; n++ {
 			requestCtx, cancel := context.WithTimeout(ctx, 8*time.Second)
-			work, err := repo.MuseumArtwork(requestCtx, slug, id, true)
+			work, err := repo.MuseumArtwork(requestCtx, slug, id)
 			cancel()
 			if err != nil || work.ID != id {
 				t.Fatalf("repeated detail request %d failed: %v", n, err)
 			}
 		}
-		if _, err := repo.MuseumArtwork(ctx, "not-a-holding-museum", id, true); !errors.Is(err, ErrNotFound) {
+		if _, err := repo.MuseumArtwork(ctx, "not-a-holding-museum", id); !errors.Is(err, ErrNotFound) {
 			t.Error("an unrelated museum exposed the artwork")
 		}
 		t.Logf("%s: equivalent detail JSON, single-artwork index plan %.3fms, eight repeated requests passed; not a 10-million-row benchmark", slug, plan[0]["Execution Time"])

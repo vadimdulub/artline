@@ -28,7 +28,7 @@ func TestReadOnlyHighlightsTimeline(t *testing.T) {
 	}
 	defer db.Close()
 	repo := NewRepository(db)
-	f := Filter{Range: Bounds, Top100: true, Preview: true}
+	f := Filter{Range: Bounds, Top100: true}
 	f.Limit = f.MaxPageSize()
 	highlights, err := repo.List(ctx, f)
 	if err != nil {

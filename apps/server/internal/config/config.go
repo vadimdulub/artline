@@ -9,29 +9,27 @@ import (
 )
 
 type Config struct {
-	Port                  string
-	DatabaseURL           string
-	FrontendOrigin        string
-	EditorToken           string
-	PublicResearchPreview bool
-	GoogleClientID        string
-	GoogleClientSecret    string
-	AuthCookieKey         string
-	AuthOrigin            string
-	LocalDebug            bool
+	Port           string
+	DatabaseURL    string
+	FrontendOrigin string
+
+	GoogleClientID     string
+	GoogleClientSecret string
+	AuthCookieKey      string
+	AuthOrigin         string
+	LocalDebug         bool
 }
 
 func Load() Config {
 	cfg := Config{
-		Port:                  valueOrDefault("PORT", "8080"),
-		DatabaseURL:           valueOrDefault("DATABASE_URL", "postgres://localhost/artline?sslmode=disable"),
-		FrontendOrigin:        valueOrDefault("FRONTEND_ORIGIN", "http://localhost:3000"),
-		EditorToken:           strings.TrimSpace(os.Getenv("ARTLINE_EDITOR_TOKEN")),
-		PublicResearchPreview: strings.TrimSpace(os.Getenv("ARTLINE_PUBLIC_RESEARCH_PREVIEW")) == "true",
-		GoogleClientID:        strings.TrimSpace(os.Getenv("ARTLINE_GOOGLE_CLIENT_ID")),
-		GoogleClientSecret:    strings.TrimSpace(os.Getenv("ARTLINE_GOOGLE_CLIENT_SECRET")),
-		AuthCookieKey:         strings.TrimSpace(os.Getenv("ARTLINE_AUTH_COOKIE_KEY")),
-		AuthOrigin:            strings.TrimSuffix(strings.TrimSpace(os.Getenv("ARTLINE_AUTH_ORIGIN")), "/"),
+		Port:           valueOrDefault("PORT", "8080"),
+		DatabaseURL:    valueOrDefault("DATABASE_URL", "postgres://localhost/artline?sslmode=disable"),
+		FrontendOrigin: valueOrDefault("FRONTEND_ORIGIN", "http://localhost:3000"),
+
+		GoogleClientID:     strings.TrimSpace(os.Getenv("ARTLINE_GOOGLE_CLIENT_ID")),
+		GoogleClientSecret: strings.TrimSpace(os.Getenv("ARTLINE_GOOGLE_CLIENT_SECRET")),
+		AuthCookieKey:      strings.TrimSpace(os.Getenv("ARTLINE_AUTH_COOKIE_KEY")),
+		AuthOrigin:         strings.TrimSuffix(strings.TrimSpace(os.Getenv("ARTLINE_AUTH_ORIGIN")), "/"),
 	}
 	// Native local development is fully unlocked. Cloud/container runtimes must
 	// never infer member access from a hostname or a request header.

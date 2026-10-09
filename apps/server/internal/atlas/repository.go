@@ -27,25 +27,25 @@ func NewRepository(db *pgxpool.Pool) *Repository {
 
 // Both selections remain distinguishable in their native detail records.
 const selectedArt = `SELECT ci.artwork_id FROM curated_collection_items ci JOIN curated_collections cc ON cc.id=ci.collection_id
- WHERE cc.status<>'archived' AND ($3 OR cc.status='published')
+ WHERE cc.status<>'archived'
  AND (cc.curator_kind='owner' OR (ci.source_url IS NOT NULL AND EXISTS(SELECT 1 FROM sources s WHERE s.id=ci.source_id AND s.is_active)))`
-const acceptedArtHolding = `EXISTS(SELECT 1 FROM artwork_location_assertions h JOIN sources s ON s.id=h.source_id AND s.is_active JOIN institutions i ON i.id=h.institution_id AND i.status<>'archived' AND ($3 OR i.status='published') WHERE h.artwork_id=a.id AND h.claim_type='holding' AND h.review_state='accepted' AND h.superseded_by IS NULL)`
-const artScope = ` FROM artworks a WHERE a.status<>'archived' AND ($3 OR a.status='published')
+const acceptedArtHolding = `EXISTS(SELECT 1 FROM artwork_location_assertions h JOIN sources s ON s.id=h.source_id AND s.is_active JOIN institutions i ON i.id=h.institution_id AND i.status<>'archived'  WHERE h.artwork_id=a.id AND h.claim_type='holding' AND h.review_state='accepted' AND h.superseded_by IS NULL)`
+const artScope = ` FROM artworks a WHERE a.status<>'archived'
  AND a.date_precision IN ('exact','circa','range','circa_range','decade','century')
  AND artline_creation_scope(a.creation_year_start,a.creation_year_end,a.date_precision)='eligible'
  AND coalesce(a.creation_year_start,a.creation_year_end)<>0 AND coalesce(a.creation_year_end,a.creation_year_start)<>0
  AND coalesce(a.creation_year_start,a.creation_year_end)<=$2 AND coalesce(a.creation_year_end,a.creation_year_start)>=$1
- AND (a.id IN (` + selectedArt + `) OR (NOT $5 AND ` + acceptedArtHolding + `))
- AND (NOT EXISTS(SELECT 1 FROM artwork_artists aa WHERE aa.artwork_id=a.id) OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published')))
- AND ($4='' OR strpos(lower(a.title),lower($4))>0 OR strpos(lower(coalesce(a.unlinked_creator_label,'')),lower($4))>0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published') AND strpos(lower(ar.display_name),lower($4))>0))
- AND ($6='' OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id JOIN countries c ON c.code=ac.country_code WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published') AND c.region_code=$6)
- OR EXISTS(SELECT 1 FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id JOIN countries c ON c.code=pl.country_code WHERE ap.artwork_id=a.id AND c.region_code=$6))`
+ AND (a.id IN (` + selectedArt + `) OR (NOT $4 AND ` + acceptedArtHolding + `))
+ AND (NOT EXISTS(SELECT 1 FROM artwork_artists aa WHERE aa.artwork_id=a.id) OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' ))
+ AND ($3='' OR strpos(lower(a.title),lower($3))>0 OR strpos(lower(coalesce(a.unlinked_creator_label,'')),lower($3))>0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived'  AND strpos(lower(ar.display_name),lower($3))>0))
+ AND ($5='' OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id JOIN countries c ON c.code=ac.country_code WHERE aa.artwork_id=a.id AND ar.status<>'archived'  AND c.region_code=$5)
+ OR EXISTS(SELECT 1 FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id JOIN countries c ON c.code=pl.country_code WHERE ap.artwork_id=a.id AND c.region_code=$5))`
 const bookScope = ` FROM book_records b LEFT JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum
- WHERE b.status<>'archived' AND ($3 OR b.status='published') AND b.start_year<=$2 AND b.end_year>=$1 AND b.end_year<=2000
- AND ($4='' OR strpos(b.search_text,lower($4))>0) AND (NOT $5 OR d.top100) AND ($6='' OR $6=ANY(d.regions))`
-const eventScope = ` FROM event_records e WHERE e.status<>'archived' AND ($3 OR e.status='published') AND e.start_year<=$2 AND e.end_year>=$1
- AND ($4='' OR strpos(e.search_text,lower($4))>0) AND (NOT $5 OR e.top100)
- AND ($6='' OR EXISTS(SELECT 1 FROM unnest(e.regions) region WHERE replace(lower(region),' ','-')=$6))`
+ WHERE b.status<>'archived'  AND b.start_year<=$2 AND b.end_year>=$1 AND b.end_year<=2000
+ AND ($3='' OR strpos(b.search_text,lower($3))>0) AND (NOT $4 OR d.top100) AND ($5='' OR $5=ANY(d.regions))`
+const eventScope = ` FROM event_records e WHERE e.status<>'archived'  AND e.start_year<=$2 AND e.end_year>=$1
+ AND ($3='' OR strpos(e.search_text,lower($3))>0) AND (NOT $4 OR e.top100)
+ AND ($5='' OR EXISTS(SELECT 1 FROM unnest(e.regions) region WHERE replace(lower(region),' ','-')=$5))`
 
 type provider struct{ keys, details string }
 
@@ -64,7 +64,7 @@ const artworkKeys = `SELECT a.id::text AS id,coalesce(a.creation_year_start,a.cr
 var providers = map[string]provider{
 	"artwork": {artworkKeys + artScope,
 		`SELECT p.id,p.start_year,p.end_year,a.title,
- coalesce((SELECT string_agg(names.name,', ' ORDER BY names.name) FROM (SELECT DISTINCT ar.display_name AS name FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published')) names),a.unlinked_creator_label,'Creator not recorded'),a.date_display,a.date_precision<>'exact',p.gallery_priority
+ coalesce((SELECT string_agg(names.name,', ' ORDER BY names.name) FROM (SELECT DISTINCT ar.display_name AS name FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' ) names),a.unlinked_creator_label,'Creator not recorded'),a.date_display,a.date_precision<>'exact',p.gallery_priority
  FROM page p JOIN artworks a ON a.id=p.id::uuid`},
 	"book":  {`SELECT b.id,b.start_year,b.end_year,0 AS gallery_priority` + bookScope, `SELECT p.id,p.start_year,p.end_year,b.title,b.author_label,b.record->>'years',coalesce((b.record->>'approximate')::boolean,false),p.gallery_priority FROM page p JOIN book_records b ON b.id=p.id`},
 	"event": {`SELECT e.id,e.start_year,e.end_year,0 AS gallery_priority` + eventScope, `SELECT p.id,p.start_year,p.end_year,e.title,e.kind,e.record->>'years',coalesce((e.record->>'approximate')::boolean,false),p.gallery_priority FROM page p JOIN event_records e ON e.id=p.id`},
@@ -89,7 +89,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			return out, err
 		}
 	}
-	args := []any{pgx.QueryExecModeCacheDescribe, f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Highlights, f.Region}
+	args := []any{pgx.QueryExecModeCacheDescribe, f.Start, f.End, strings.TrimSpace(f.Query), f.Highlights, f.Region}
 	for _, definition := range Definitions {
 		if (f.Selection && !slices.Contains(f.Types, definition.Key) && len(f.Picks[definition.Key]) == 0) || (!f.Selection && len(f.Types) > 0 && !slices.Contains(f.Types, definition.Key)) {
 			continue
@@ -108,7 +108,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		// Book/event editorial selections can override the shared default.
 		// A popular painter filter is independent of artwork highlight membership.
 		if entity.Has("top100") {
-			args[5] = false
+			args[4] = false
 		}
 		clause := entityPredicate(definition.Key, entity, &args)
 		highlight := "a.id IN (" + selectedArt + ")"
@@ -122,29 +122,29 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			clause = strings.ReplaceAll(clause, column, highlight)
 		}
 		var selection string
-		key := "b.id=ANY($7::text[])"
+		key := "b.id=ANY($6::text[])"
 		if definition.Key == "event" {
-			key = "e.id=ANY($7::text[])"
+			key = "e.id=ANY($6::text[])"
 		}
 		if definition.Key == "artwork" {
-			key = "a.id=ANY($7::text[]::uuid[])"
+			key = "a.id=ANY($6::text[]::uuid[])"
 		}
 		if picked != nil {
 			// An explicitly chosen ID is not subject to the layer's discovery filters.
-			args[5] = false
+			args[4] = false
 			selection = key
 		} else {
 			if ids := f.Picks[definition.Key]; f.Selection && len(ids) > 0 {
-				args[7] = ids
-				if args[5] == true {
+				args[6] = ids
+				if args[4] == true {
 					clause = "(" + clause + ") AND (" + highlight + ")"
-					args[5] = false
+					args[4] = false
 				}
 				selection = "(" + clause + ") OR " + key
 			} else {
 				// Keep the creator predicate conjunctive so PostgreSQL can start
 				// with the selected painter's indexed artwork links.
-				selection = "$7::text[] IS NULL AND (" + clause + ")"
+				selection = "$6::text[] IS NULL AND (" + clause + ")"
 			}
 		}
 		creatorScope := creatorPredicate(definition.Key, f.Creators, &args)
@@ -156,7 +156,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		}
 		prefix := ""
 		useNativeScope := true
-		if definition.Key == "artwork" && args[5] == true && len(f.Creators) == 0 && onlyIllustratedDefaults(entity) {
+		if definition.Key == "artwork" && args[4] == true && len(f.Creators) == 0 && onlyIllustratedDefaults(entity) {
 			// Highlight windows start with the selected, eligible native records.
 			// Otherwise a broad geographic match can scan every image before
 			// narrowing to a small historical selection. Creator/facet lookups
@@ -196,9 +196,9 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
  (h.artwork_id IS NOT NULL) AS has_holding
  FROM artworks a JOIN media_assets image ON image.id=a.primary_media_id
  LEFT JOIN (artwork_location_assertions h JOIN sources s ON s.id=h.source_id AND s.is_active
- JOIN institutions i ON i.id=h.institution_id AND i.status<>'archived' AND ($3 OR i.status='published'))
+ JOIN institutions i ON i.id=h.institution_id AND i.status<>'archived' )
  ON h.artwork_id=a.id AND h.claim_type='holding' AND h.review_state='accepted' AND h.superseded_by IS NULL
- WHERE a.primary_media_id IS NOT NULL AND a.status<>'archived' AND ($3 OR a.status='published')
+ WHERE a.primary_media_id IS NOT NULL AND a.status<>'archived'
  AND coalesce(a.creation_year_start,a.creation_year_end)<=$2 AND coalesce(a.creation_year_end,a.creation_year_start)>=$1
  AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'),`
 			p.keys = strings.Replace(p.keys, " FROM artworks a WHERE", " FROM artwork_scope a WHERE", 1)
@@ -209,7 +209,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		}
 		if definition.Key == "artwork" && useNativeScope {
 			nativeSelection := selection
-			if args[5] == true {
+			if args[4] == true {
 				nativeSelection = "(" + selection + ") AND (" + highlight + ")"
 			}
 			prefix = nativeArtworkScope(f, nativeSelection, creatorScope) + boundedArtworkGeography(strings.ReplaceAll(prefix, "FROM artworks a", "FROM artwork_native_scope a"))
@@ -305,8 +305,8 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 	}
 	return out, nil
 }
-func (r *Repository) ArtworkVisible(ctx context.Context, id string, preview bool) (bool, error) {
+func (r *Repository) ArtworkVisible(ctx context.Context, id string) (bool, error) {
 	var exists bool
-	err := r.db.QueryRow(ctx, `SELECT EXISTS(SELECT 1`+artScope+` AND a.id=$7::uuid)`, pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, preview, "", false, "", id).Scan(&exists)
+	err := r.db.QueryRow(ctx, `SELECT EXISTS(SELECT 1`+artScope+` AND a.id=$6::uuid)`, pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, "", false, "", id).Scan(&exists)
 	return exists, err
 }

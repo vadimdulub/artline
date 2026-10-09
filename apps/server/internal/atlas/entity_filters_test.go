@@ -79,7 +79,7 @@ func TestEntityFiltersReadOnly(t *testing.T) {
 	}
 	for _, tc := range cases {
 		t.Run(tc.kind+tc.values.Encode(), func(t *testing.T) {
-			f := Filter{Range: Bounds, Limit: 30, Preview: true, Highlights: true, Selection: true, Types: []string{tc.kind}, Entities: map[string]url.Values{tc.kind: tc.values}}
+			f := Filter{Range: Bounds, Limit: 30, Highlights: true, Selection: true, Types: []string{tc.kind}, Entities: map[string]url.Values{tc.kind: tc.values}}
 			out, err := repo.List(ctx, f)
 			if err != nil {
 				t.Fatal(err)
@@ -90,7 +90,7 @@ func TestEntityFiltersReadOnly(t *testing.T) {
 			switch tc.kind {
 			case "book":
 				v := tc.values
-				n, err := books.NewRepository(db).List(ctx, books.Filter{Range: books.Bounds, Limit: 100, Preview: true, Query: v.Get("q"), Authors: v["author"], Languages: v["language"], Countries: v["country"], Regions: v["region"], Women: v.Get("women") == "true", Top100: v.Get("top100") == "true"})
+				n, err := books.NewRepository(db).List(ctx, books.Filter{Range: books.Bounds, Limit: 100, Query: v.Get("q"), Authors: v["author"], Languages: v["language"], Countries: v["country"], Regions: v["region"], Women: v.Get("women") == "true", Top100: v.Get("top100") == "true"})
 				if err != nil {
 					t.Fatal(err)
 				}
@@ -99,7 +99,7 @@ func TestEntityFiltersReadOnly(t *testing.T) {
 				}
 			case "event":
 				v := tc.values
-				n, err := events.NewRepository(db).List(ctx, events.Filter{Range: events.Bounds, Limit: 100, Preview: true, Query: v.Get("q"), Topics: v["topic"], Kinds: v["kind"], Countries: v["country"], Regions: v["region"], Top100: v.Get("top100") == "true"})
+				n, err := events.NewRepository(db).List(ctx, events.Filter{Range: events.Bounds, Limit: 100, Query: v.Get("q"), Topics: v["topic"], Kinds: v["kind"], Countries: v["country"], Regions: v["region"], Top100: v.Get("top100") == "true"})
 				if err != nil {
 					t.Fatal(err)
 				}
@@ -151,7 +151,7 @@ func TestEntityFiltersReadOnly(t *testing.T) {
 	if err = db.QueryRow(ctx, `SELECT b.id FROM book_records b JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum WHERE b.start_year IS NOT NULL AND b.end_year<=2000 AND b.status<>'archived' AND NOT ('Q7737'=ANY(d.languages)) ORDER BY b.id LIMIT 1`).Scan(&pick); err != nil {
 		t.Fatal(err)
 	}
-	f := Filter{Range: Bounds, Limit: 30, Preview: true, Selection: true, Types: []string{"book"}, Entities: map[string]url.Values{"book": {"language": {"Q7737"}, "top100": {"false"}}}}
+	f := Filter{Range: Bounds, Limit: 30, Selection: true, Types: []string{"book"}, Entities: map[string]url.Values{"book": {"language": {"Q7737"}, "top100": {"false"}}}}
 	before, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)
@@ -165,10 +165,10 @@ func TestEntityFiltersReadOnly(t *testing.T) {
 		t.Fatal("explicit pick lost outside filtered layer")
 	}
 	// Keep representative query-plan evidence outside Documents.
-	args := []any{pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, true, "", false, "", []string(nil)}
+	args := []any{pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, "", false, "", []string(nil)}
 	clause := entityPredicate("artwork", url.Values{"painter": {"claude-monet"}, "popular": {"false"}}, &args)
 	var plan json.RawMessage
-	if err = db.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT a.id`+artScope+` AND $7::text[] IS NULL AND (`+clause+`)`, args...).Scan(&plan); err != nil {
+	if err = db.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT a.id`+artScope+` AND $6::text[] IS NULL AND (`+clause+`)`, args...).Scan(&plan); err != nil {
 		t.Fatal(err)
 	}
 	dir := "/tmp/artline-entity-filter-audit"
@@ -179,7 +179,7 @@ func TestEntityFiltersReadOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	geo := geographyPredicate("artwork", Filter{Countries: []string{"france"}, Continents: []string{"europe"}}, &args)
-	if err = db.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT a.id`+artScope+` AND $7::text[] IS NULL AND (`+clause+`) AND (`+geo+`)`, args...).Scan(&plan); err != nil {
+	if err = db.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT a.id`+artScope+` AND $6::text[] IS NULL AND (`+clause+`) AND (`+geo+`)`, args...).Scan(&plan); err != nil {
 		t.Fatal(err)
 	}
 	if !strings.Contains(string(plan), "artwork_artists_artist_work_idx") || !strings.Contains(string(plan), "artworks_pkey") {

@@ -1,4 +1,3 @@
-import { e2eEditorToken } from "./editor-token";
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
@@ -156,13 +155,11 @@ test("copy fallback selects the URL and original-image failures can be retried",
   await expect(page.getByRole("button", { name: "Zoom in", exact: true })).toBeEnabled();
 });
 
-test("catalogue refresh disables stale actions and table can scroll with keyboard", async ({ page }, testInfo) => {
+test("catalogue refresh reports loading and table can scroll with keyboard", async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/catalogue");
-  await page.getByLabel("Editor token", { exact: true }).fill(e2eEditorToken());
   const table = page.getByRole("region", { name: "Painter catalogue", exact: true });
   await expect(table).toHaveAttribute("aria-busy", "false");
-  await expect(table.getByRole("button", { name: "Edit", exact: true }).first()).toBeEnabled();
   await table.focus();
   await table.press("ArrowRight");
   await expect.poll(() => table.evaluate(node => node.scrollLeft)).toBeGreaterThan(0);
@@ -171,9 +168,8 @@ test("catalogue refresh disables stale actions and table can scroll with keyboar
   await page.route("**/api/backend/v1/catalogue/artists?**", async route => { await gate; await route.continue(); });
   await page.getByRole("searchbox", { name: "Search painters" }).fill("Giotto");
   await expect(table).toHaveAttribute("aria-busy", "true");
-  await expect(table.getByRole("button", { name: "Edit", exact: true }).first()).toBeDisabled();
   release();
   await expect(table).toHaveAttribute("aria-busy", "false");
-  await expect(table.getByRole("button", { name: "Edit", exact: true })).toHaveCount(1);
+  await expect(table.getByRole("link", { name: "Giotto di Bondone" })).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath("round2-catalogue-mobile.png"), fullPage: true });
 });

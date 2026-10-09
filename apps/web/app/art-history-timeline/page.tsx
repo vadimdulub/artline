@@ -6,7 +6,7 @@ export function generateMetadata() {
   return pageMetadata("Art history timeline: explore artists, artworks & ideas", "Learn to explore art history through overlapping artists’ lives, artwork dates, museum collections, books and events with Artline’s interactive timelines.", "/art-history-timeline");
 }
 
-// This guide describes the tools, without embedding unpublished catalogue data.
+// This guide describes the tools, without embedding catalogue records.
 export default function ArtHistoryTimelinePage() {
   return <main id="main-content" className="admin-page prose-page">
     <StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Art history timeline", path: "/art-history-timeline" }])} />

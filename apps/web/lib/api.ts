@@ -9,10 +9,6 @@ export async function apiRequest<T>(path: string, options: RequestInit = {}): Pr
   return body as T;
 }
 
-export function editorHeaders(token: string): HeadersInit {
-  return { "content-type": "application/json", ...(token ? { authorization: `Bearer ${token}` } : {}) };
-}
-
 export function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : "The request failed. Please try again.";
 }

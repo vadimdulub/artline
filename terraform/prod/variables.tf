@@ -61,12 +61,6 @@ variable "deploy_nonce" {
   default     = ""
 }
 
-variable "public_research_preview" {
-  description = "Show non-archived research records publicly without publishing them; editor operations remain authenticated"
-  type        = bool
-  default     = false
-}
-
 variable "site_url" {
   description = "Canonical public HTTPS origin after domain purchase; empty retains the documented Cloud Run origin"
   type        = string

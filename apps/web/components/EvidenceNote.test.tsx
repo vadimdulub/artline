@@ -6,7 +6,7 @@ import { SourceList } from "./ArtistRecord";
 afterEach(cleanup);
 
 it("renders image rights receipts as readable facts and working source links", () => {
-  const { container } = render(<SourceList citations={[{
+  const citations = [{
     field_name: "image_rights_and_identity", source_name: "The Metropolitan Museum of Art",
     source_url: "https://www.metmuseum.org/art/collection/search/465941",
     evidence_note: JSON.stringify({
@@ -19,7 +19,8 @@ it("renders image rights receipts as readable facts and working source links", (
       selection: { path: "docs/research/selection.json" },
       transformation: "Full composition; proportional resize, EXIF orientation and JPEG compression; no cropping"
     })
-  }]} />);
+  }];
+  const { container } = render(<><SourceList citations={citations} /><EvidenceNote note={citations[0].evidence_note} /></>);
   expect(screen.getByText("Artwork: Devotional Icon")).toBeVisible();
   expect(screen.getByText("Image rights: CC0 1.0")).toBeVisible();
   expect(screen.getByText("Credit: The Metropolitan Museum of Art; Gift of Percy Stickney Grant, 1918")).toBeVisible();

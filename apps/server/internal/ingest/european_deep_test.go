@@ -181,7 +181,7 @@ func TestEuropeanDeepEnrichmentReplayAndMuseumAPI(t *testing.T) {
 		t.Fatal("v1 replay changed expanded catalogue")
 	}
 	repo := catalog.NewRepository(pool)
-	museum, e := repo.Museum(ctx, "national-gallery-ireland", true)
+	museum, e := repo.Museum(ctx, "national-gallery-ireland")
 	if e != nil || museum.WorkCount != 7 || museum.HighlightCount != 6 || museum.OnViewCount != 0 {
 		t.Fatalf("Ireland API %+v %v", museum, e)
 	}

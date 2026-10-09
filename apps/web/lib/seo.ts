@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { safeSourceURL } from "./api";
-import { researchPreviewEnabled } from "./research-preview";
 import type { ArtistDetail, Artwork } from "./types";
 
 export const siteName = "Artline";
@@ -34,7 +33,7 @@ export function pageMetadata(title: string, description: string, path: string, o
 }
 
 export function explorerMetadata(title: string, description: string, path: string): Metadata {
-  return pageMetadata(title, description, path, { index: !researchPreviewEnabled() });
+  return pageMetadata(title, description, path);
 }
 
 export function plainDescription(text: string | null | undefined, fallback: string): string {

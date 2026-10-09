@@ -16,15 +16,16 @@ test("the reviewed early-book selection is highlighted with sourced dates", asyn
     expect(book, chosen.qid).toBeDefined();
     expect(book!.startYear).toBeGreaterThanOrEqual(1);
     expect(book!.endYear).toBeLessThanOrEqual(1600);
-    expect(book!.status).toBe("review");
-    expect(book!.sourceUrl).toBe(`https://www.wikidata.org/wiki/${chosen.qid}`);
+    expect(!book!.summary && book!.status).toBe("review");
+    expect(!book!.summary && book!.sourceUrl).toBe(`https://www.wikidata.org/wiki/${chosen.qid}`);
   }
   expect(books.get("wd-q7317855")!.years).toContain("14th");
   expect(books.get("wd-q7317855")!.endYear).toBe(1500);
   expect(books.get("wd-q781898")!.startYear).toBe(1572);
   expect(books.get("wd-q19569020")!.author).toBe("Domentijan");
   const publicDetail = await request.get("http://127.0.0.1:8080/api/v1/books/wd-q1216330");
-  expect(publicDetail.status()).toBe(404);
+  expect(publicDetail.status()).toBe(200);
+  expect((await publicDetail.json()).status).toBe("review");
 });
 
 for (const width of [1440, 390]) {

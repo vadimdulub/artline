@@ -44,7 +44,7 @@ func TestWomensRightsReadOnly(t *testing.T) {
 	}
 	recorder := &discoveryPlanDB{atlasDB: tx}
 	repo := &Repository{db: recorder}
-	f := Filter{PresetID: p.ID, Range: p.Context, Limit: 150, Preview: true, Selection: true, Types: []string{"artwork", "book", "event"}}
+	f := Filter{PresetID: p.ID, Range: p.Context, Limit: 150, Selection: true, Types: []string{"artwork", "book", "event"}}
 	all, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)

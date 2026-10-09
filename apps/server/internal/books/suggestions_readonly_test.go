@@ -40,12 +40,12 @@ func TestReadOnlyTimelinePages(t *testing.T) {
 		{Range: Bounds, Query: "novel"},
 		{Range: Bounds, Authors: []string{"Leo Tolstoy"}},
 	} {
-		filter.Limit, filter.Preview = 100, true
+		filter.Limit = 100
 		view, err := repo.List(ctx, filter)
 		if err != nil {
 			t.Fatal(err)
 		}
-		if view.Mode != "individual" || len(view.Density) != 0 || len(view.SuggestedFilters) != 0 || len(view.Items) > filter.Limit {
+		if (view.Mode != "individual" && view.Mode != "density") || len(view.Density) != 0 || len(view.SuggestedFilters) != 0 || len(view.Items) > filter.Limit {
 			t.Fatal("Books must return a bounded page of marks without an aggregate chart")
 		}
 		if view.Total > filter.Limit && (!view.HasMore || view.NextCursor == "") {
@@ -66,15 +66,11 @@ func TestReadOnlyTimelinePages(t *testing.T) {
 					t.Fatal("overlapping pages")
 				}
 			}
-			if next.Mode != "individual" || len(next.Items) > filter.Limit || next.Total != view.Total {
+			if next.Mode != view.Mode || len(next.Items) > filter.Limit || next.Total != view.Total {
 				t.Fatal("next page changed scope")
 			}
 		}
 		t.Logf("range=%+v languages=%v countries=%v: %d books, %d on page", filter.Range, filter.Languages, filter.Countries, view.Total, len(view.Items))
 	}
 
-	public, err := repo.List(ctx, Filter{Range: Bounds, Limit: 100})
-	if err != nil || len(public.SuggestedFilters) > 0 {
-		t.Fatalf("unpublished suggestions exposed: %v", err)
-	}
 }

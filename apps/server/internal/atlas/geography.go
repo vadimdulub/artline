@@ -38,7 +38,7 @@ func (f Filter) validateGeography() error {
 
 // Country names retain historical states separately. Shared keys match recorded
 // labels case-insensitively; no modern-country attribution is inferred.
-func (r *Repository) Countries(ctx context.Context, preview bool) ([]Region, error) {
+func (r *Repository) Countries(ctx context.Context) ([]Region, error) {
 	out := []Region{}
 	if r.db == nil {
 		return out, fmt.Errorf("atlas unavailable")
@@ -48,10 +48,10 @@ func (r *Repository) Countries(ctx context.Context, preview bool) ([]Region, err
  UNION SELECT t.name FROM book_discovery_terms t JOIN (
   SELECT DISTINCT unnest(d.countries) AS key FROM book_records b
   JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum
-  WHERE b.status<>'archived' AND ($1 OR b.status='published') AND (b.end_year<=2000 OR b.start_year IS NULL)
+  WHERE b.status<>'archived'  AND (b.end_year<=2000 OR b.start_year IS NULL)
  ) visible ON visible.key=t.key WHERE t.kind='country'
- UNION SELECT unnest(countries) FROM event_records WHERE status<>'archived' AND ($1 OR status='published')
- ) SELECT lower(trim(name)),min(trim(name)) FROM names WHERE trim(name)<>'' GROUP BY lower(trim(name)) ORDER BY min(trim(name)) LIMIT 1000`, preview)
+ UNION SELECT unnest(countries) FROM event_records WHERE status<>'archived'
+ ) SELECT lower(trim(name)),min(trim(name)) FROM names WHERE trim(name)<>'' GROUP BY lower(trim(name)) ORDER BY min(trim(name)) LIMIT 1000`)
 	if err != nil {
 		return out, err
 	}
@@ -77,7 +77,7 @@ func artworkGeographyMatch(condition string) string {
 	return `(a.id IN (SELECT aa.artwork_id FROM artwork_artists aa
  JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id
  JOIN countries c ON c.code=ac.country_code
- WHERE ar.status<>'archived' AND ($3 OR ar.status='published') AND (` + condition + `)
+ WHERE ar.status<>'archived'  AND (` + condition + `)
  UNION SELECT ap.artwork_id FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id
  JOIN countries c ON c.code=pl.country_code WHERE (` + condition + `))) IS TRUE`
 }

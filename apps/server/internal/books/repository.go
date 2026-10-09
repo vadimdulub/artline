@@ -20,15 +20,15 @@ const discoveryJoin = ` LEFT JOIN book_discovery d ON d.book_id=b.id AND d.book_
 // Preserve records outside the display cutoff; visibility uses recorded publication bounds.
 const publicationScope = `(b.end_year <= 2000 OR b.start_year IS NULL)`
 
-const scopePredicate = ` FROM book_records b ` + discoveryJoin + ` WHERE b.status <> 'archived' AND ($3 OR b.status='published') AND ` + publicationScope + `
- AND ($4='' OR strpos(b.search_text,lower($4))>0)
- AND (coalesce(cardinality($5::text[]),0)=0 OR b.author_label=ANY($5) OR EXISTS (
- SELECT 1 FROM book_creator_links l JOIN book_creators c ON c.id=l.creator_id WHERE l.book_id=b.id AND c.name=ANY($5)))
- AND (NOT $6 OR cardinality(d.woman_author_ids)>0)
- AND (NOT $7 OR d.top100)
- AND (coalesce(cardinality($8::text[]),0)=0 OR d.languages && $8)
- AND (coalesce(cardinality($9::text[]),0)=0 OR d.countries && $9)
- AND (coalesce(cardinality($10::text[]),0)=0 OR d.regions && $10)`
+const scopePredicate = ` FROM book_records b ` + discoveryJoin + ` WHERE b.status <> 'archived'  AND ` + publicationScope + `
+ AND ($3='' OR strpos(b.search_text,lower($3))>0)
+ AND (coalesce(cardinality($4::text[]),0)=0 OR b.author_label=ANY($4) OR EXISTS (
+ SELECT 1 FROM book_creator_links l JOIN book_creators c ON c.id=l.creator_id WHERE l.book_id=b.id AND c.name=ANY($4)))
+ AND (NOT $5 OR cardinality(d.woman_author_ids)>0)
+ AND (NOT $6 OR d.top100)
+ AND (coalesce(cardinality($7::text[]),0)=0 OR d.languages && $7)
+ AND (coalesce(cardinality($8::text[]),0)=0 OR d.countries && $8)
+ AND (coalesce(cardinality($9::text[]),0)=0 OR d.regions && $9)`
 
 const predicate = scopePredicate + ` AND ((b.start_year <= $2 AND b.end_year >= $1) OR (b.start_year IS NULL AND $1=-5000 AND $2=2000))`
 
@@ -43,7 +43,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 	if f.View == "authors" {
 		return r.authorTimeline(ctx, f)
 	}
-	args := []any{f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Authors, f.Women, f.Top100, f.Languages, f.Countries, f.Regions}
+	args := []any{f.Start, f.End, strings.TrimSpace(f.Query), f.Authors, f.Women, f.Top100, f.Languages, f.Countries, f.Regions}
 	var firstYear, lastYear *int
 	if err := r.db.QueryRow(ctx, `SELECT count(*),count(*) FILTER (WHERE b.start_year IS NULL),min(b.start_year),max(b.end_year)`+predicate, args...).Scan(&result.Total, &result.UndatedTotal, &firstYear, &lastYear); err != nil {
 		return result, err
@@ -56,11 +56,17 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 	if result.Total > individualLimit || (result.Total > 0 && result.UndatedTotal == result.Total) {
 		result.Mode = "density"
 	}
-	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM book_records b WHERE status <> 'archived' AND ($1 OR status='published') AND `+publicationScope+``, f.Preview).Scan(&result.SelectionTotal); err != nil {
+	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM book_records b WHERE status <> 'archived'  AND `+publicationScope+``).Scan(&result.SelectionTotal); err != nil {
 		return result, err
 	}
 	c, _ := decodeCursor(f.After)
-	rows, err := r.db.Query(ctx, `SELECT b.record,b.status`+predicate+` AND (coalesce(b.start_year,2147483647),b.id)>($11,$12) ORDER BY coalesce(b.start_year,2147483647),b.id LIMIT $13`, append(args, c.Year, c.ID, f.Limit+1)...)
+	record := "b.record"
+	if f.Summary {
+		record = `jsonb_build_object('id',b.record->'id','sourceId',b.record->'sourceId',
+ 'title',b.record->'title','author',b.record->'author','years',b.record->'years',
+ 'startYear',b.record->'startYear','endYear',b.record->'endYear','approximate',b.record->'approximate')`
+	}
+	rows, err := r.db.Query(ctx, `SELECT `+record+`,b.status`+predicate+` AND (coalesce(b.start_year,2147483647),b.id)>($10,$11) ORDER BY coalesce(b.start_year,2147483647),b.id LIMIT $12`, append(args, c.Year, c.ID, f.Limit+1)...)
 	if err != nil {
 		return result, err
 	}
@@ -77,6 +83,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			return result, err
 		}
 		book.Status = status
+		book.Summary = f.Summary
 		book.Creators = []Creator{}
 		result.Items = append(result.Items, book)
 	}
@@ -90,22 +97,24 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		result.Items = result.Items[:f.Limit]
 		result.NextCursor = encodeCursor(result.Items[len(result.Items)-1])
 	}
-	if err := r.attachCreators(ctx, result.Items); err != nil {
-		return result, err
+	if !f.Summary {
+		if err := r.attachCreators(ctx, result.Items); err != nil {
+			return result, err
+		}
 	}
 	attachCovers(result.Items)
 	// Dense selections retain bounded keyset pages for the cover gallery.
 	return result, nil
 }
 
-func (r *Repository) ByID(ctx context.Context, id string, preview bool) (Book, error) {
+func (r *Repository) ByID(ctx context.Context, id string) (Book, error) {
 	var book Book
 	var raw []byte
 	var status string
 	if r.db == nil {
 		return book, ErrUnavailable
 	}
-	err := r.db.QueryRow(ctx, `SELECT record,status FROM book_records b WHERE id=$1 AND status<>'archived' AND ($2 OR status='published') AND `+publicationScope+``, id, preview).Scan(&raw, &status)
+	err := r.db.QueryRow(ctx, `SELECT record,status FROM book_records b WHERE id=$1 AND status<>'archived'  AND `+publicationScope+``, id).Scan(&raw, &status)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return book, ErrNotFound
 	}
@@ -157,13 +166,13 @@ func (r *Repository) attachCreators(ctx context.Context, items []Book) error {
 	return rows.Err()
 }
 
-func (r *Repository) Authors(ctx context.Context, query string, preview, women, top100 bool) (AuthorOptions, error) {
+func (r *Repository) Authors(ctx context.Context, query string, women, top100 bool) (AuthorOptions, error) {
 	result := AuthorOptions{Items: []string{}}
 	if r.db == nil {
 		return result, ErrUnavailable
 	}
 	rows, err := r.db.Query(ctx, `SELECT DISTINCT c.name FROM book_creators c WHERE strpos(lower(c.name),lower($1))>0
- AND EXISTS(SELECT 1 FROM book_creator_links l JOIN book_records b ON b.id=l.book_id `+discoveryJoin+` WHERE l.creator_id=c.id AND b.status<>'archived' AND ($2 OR b.status='published') AND `+publicationScope+` AND (NOT $3 OR cardinality(d.woman_author_ids)>0) AND (NOT $4 OR d.top100)) ORDER BY c.name LIMIT 31`, strings.TrimSpace(query), preview, women, top100)
+ AND EXISTS(SELECT 1 FROM book_creator_links l JOIN book_records b ON b.id=l.book_id `+discoveryJoin+` WHERE l.creator_id=c.id AND b.status<>'archived'  AND `+publicationScope+` AND (NOT $2 OR cardinality(d.woman_author_ids)>0) AND (NOT $3 OR d.top100)) ORDER BY c.name LIMIT 31`, strings.TrimSpace(query), women, top100)
 	if err != nil {
 		return result, err
 	}
@@ -184,20 +193,20 @@ func (r *Repository) Authors(ctx context.Context, query string, preview, women, 
 
 // Small controlled vocabularies, scoped by visibility and the two discovery
 // selections, just like ArtWorks facets. No collection records are sent here.
-func (r *Repository) Facets(ctx context.Context, preview, women, top100 bool) (Facets, error) {
+func (r *Repository) Facets(ctx context.Context, women, top100 bool) (Facets, error) {
 	result := Facets{Languages: []FilterOption{}, Countries: []FilterOption{}, Regions: []FilterOption{}}
 	if r.db == nil {
 		return result, ErrUnavailable
 	}
 	rows, err := r.db.Query(ctx, `WITH matching AS MATERIALIZED (
  SELECT d.languages,d.countries,d.regions FROM book_records b `+discoveryJoin+`
- WHERE b.status<>'archived' AND ($1 OR b.status='published') AND `+publicationScope+`
- AND (NOT $2 OR cardinality(d.woman_author_ids)>0) AND (NOT $3 OR d.top100)
+ WHERE b.status<>'archived'  AND `+publicationScope+`
+ AND (NOT $1 OR cardinality(d.woman_author_ids)>0) AND (NOT $2 OR d.top100)
  ), keys AS (
  SELECT 'language' AS kind,unnest(languages) AS key FROM matching
  UNION SELECT 'country',unnest(countries) FROM matching
  UNION SELECT 'region',unnest(regions) FROM matching)
- SELECT t.kind,t.key,t.name FROM keys k JOIN book_discovery_terms t USING(kind,key) ORDER BY t.kind,t.name,t.key LIMIT 1000`, preview, women, top100)
+ SELECT t.kind,t.key,t.name FROM keys k JOIN book_discovery_terms t USING(kind,key) ORDER BY t.kind,t.name,t.key LIMIT 1000`, women, top100)
 	if err != nil {
 		return result, err
 	}

@@ -459,10 +459,8 @@ func (s europeanImport) institution(inst europeanInstitution, raw json.RawMessag
 	if _, err = s.tx.Exec(s.ctx, `INSERT INTO source_connector_config(source_id,metadata_policy,image_policy) VALUES($1,'reviewed_offline_evidence','manual_review') ON CONFLICT DO NOTHING`, sid); err != nil {
 		return "", "", err
 	}
-	for _, kind := range []string{"owner", "museum"} {
-		if _, err = s.tx.Exec(s.ctx, `INSERT INTO curated_collections(institution_id,curator_kind,title,status) VALUES($1,$2,$3,'review') ON CONFLICT DO NOTHING`, id, kind, map[string]string{"owner": "My must-see works", "museum": "Museum-designated highlights"}[kind]); err != nil {
-			return "", "", err
-		}
+	if _, err = s.tx.Exec(s.ctx, `INSERT INTO curated_collections(institution_id,curator_kind,title,status) VALUES($1,'museum','Museum-designated highlights','review') ON CONFLICT DO NOTHING`, id); err != nil {
+		return "", "", err
 	}
 	policyURL := inst.RightsURL
 	if policyURL == "" {

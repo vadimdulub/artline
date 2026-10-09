@@ -83,7 +83,7 @@ func (s europeanImport) details(w europeanWork, id, inst, sid, recordID, note st
 		if !europeanAllowedURL(s.batch.Definitions, w.Institution, w.MuseumHighlightURL) {
 			return false, errors.New("unapproved museum designation source")
 		}
-		// Parent collection stays in review. Never add to owner's must-see list.
+		// Parent collection stays in review.
 		t, e := s.tx.Exec(s.ctx, `INSERT INTO curated_collection_items(collection_id,artwork_id,position,reason,source_id,source_url,checked_at)
  SELECT c.id,$1,coalesce((SELECT max(position) FROM curated_collection_items WHERE collection_id=c.id),0)+1,
  'Selected in the museum-authored highlights/masterpieces page; not an independent ranking or current-display claim.',$3,$4,$5

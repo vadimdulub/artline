@@ -41,6 +41,7 @@ type DateSource struct {
 }
 
 type Book struct {
+	Summary        bool         `json:"-"`
 	ID             string       `json:"id"`
 	SourceID       string       `json:"sourceId"`
 	Title          string       `json:"title"`
@@ -65,6 +66,27 @@ type Book struct {
 	DateSources    []DateSource `json:"dateSources,omitempty"`
 	Status         string       `json:"status"`
 }
+
+// Summary pages never serialize biographies or full source records. Older
+// clients keep the existing response unless they explicitly request summaries.
+func (b Book) MarshalJSON() ([]byte, error) {
+	if b.Summary {
+		return json.Marshal(struct {
+			Summary     bool   `json:"summary"`
+			ID          string `json:"id"`
+			Title       string `json:"title"`
+			Author      string `json:"author"`
+			Years       string `json:"years"`
+			StartYear   *int   `json:"startYear"`
+			EndYear     *int   `json:"endYear"`
+			Approximate bool   `json:"approximate"`
+			Cover       *Cover `json:"cover,omitempty"`
+		}{true, b.ID, b.Title, b.Author, b.Years, b.StartYear, b.EndYear, b.Approximate, b.Cover})
+	}
+	type fullBook Book
+	return json.Marshal(fullBook(b))
+}
+
 type Range struct {
 	Start int `json:"start"`
 	End   int `json:"end"`
@@ -89,8 +111,9 @@ type Filter struct {
 	Languages, Countries, Regions []string
 	Women, Top100                 bool
 	Limit                         int
-	Preview                       bool
-	View                          string
+
+	Summary bool
+	View    string
 }
 type FilterOption struct {
 	Slug string `json:"slug"`

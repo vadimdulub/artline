@@ -11,8 +11,7 @@ func TestMuseumDirectoryKeepsEvidencePolicy(t *testing.T) {
 		"la.checked_at<now()-interval '30 days'",
 		"conflict.review_state='conflict'",
 		"JOIN sources s ON s.id=la.source_id AND s.is_active",
-		"aw.unlinked_creator_label IS NOT NULL",
-		"a.status<>'archived' AND ($1 OR a.status='published')",
+		"aw.status<>'archived'",
 		"WHERE d.state='on_view'",
 	} {
 		if !strings.Contains(museumDirectoryCTE, policy) {
@@ -23,8 +22,8 @@ func TestMuseumDirectoryKeepsEvidencePolicy(t *testing.T) {
 		!strings.Contains(museumDirectoryCTE, "museum_memberships AS NOT MATERIALIZED (") {
 		t.Fatal("directory existence checks must not aggregate global membership")
 	}
-	if strings.Count(museumDirectoryCTE, " OFFSET 0") != 2 {
-		t.Fatal("creator visibility checks must remain correlated with the candidate artwork")
+	if strings.Contains(museumDirectoryCTE, "status='published'") {
+		t.Fatal("directory must include every active status")
 	}
 	if !strings.Contains(museumScopedCTE, museumMembershipAggregate) {
 		t.Fatal("museum cards must retain deduplicated holdings/display counts")
@@ -56,10 +55,10 @@ func TestMuseumDirectorySelectiveCandidates(t *testing.T) {
 		source string
 	}{
 		{MuseumFilter{Selection: "museum"}, "FROM selections"},
-		{MuseumFilter{Artist: "rembrandt"}, "a.slug=ANY($7::text[])"},
-		{MuseumFilter{Artists: []string{"rembrandt"}}, "a.slug=ANY($7::text[])"},
-		{MuseumFilter{Movement: "baroque"}, "m.slug=ANY($8::text[])"},
-		{MuseumFilter{Movements: []string{"baroque"}}, "m.slug=ANY($8::text[])"},
+		{MuseumFilter{Artist: "rembrandt"}, "a.slug=ANY($6::text[])"},
+		{MuseumFilter{Artists: []string{"rembrandt"}}, "a.slug=ANY($6::text[])"},
+		{MuseumFilter{Movement: "baroque"}, "m.slug=ANY($7::text[])"},
+		{MuseumFilter{Movements: []string{"baroque"}}, "m.slug=ANY($7::text[])"},
 	} {
 		cte, relation := museumDirectoryFilterCTE(tc.filter)
 		if relation != "directory_filtered_memberships" || !strings.Contains(cte, tc.source) ||

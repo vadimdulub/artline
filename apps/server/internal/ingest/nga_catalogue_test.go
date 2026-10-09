@@ -106,7 +106,7 @@ func TestNGACatalogueRollbackReplayAndMuseum(t *testing.T) {
 	if e != nil || !good {
 		t.Fatal("editor changes lost", e)
 	}
-	museum, e := catalog.NewRepository(pool).Museum(ctx, "national-gallery-of-art", true)
+	museum, e := catalog.NewRepository(pool).Museum(ctx, "national-gallery-of-art")
 	if e != nil || museum.WorkCount != 1510 || museum.OnViewCount != 0 {
 		t.Fatal("museum count", museum.WorkCount, e)
 	}

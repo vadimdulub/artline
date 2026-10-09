@@ -43,10 +43,10 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 	if err = db.QueryRow(ctx, `SELECT id FROM book_records WHERE status<>'archived' AND end_year>2000 ORDER BY id LIMIT 1`).Scan(&laterBook); err != nil {
 		t.Fatal(err)
 	}
-	if _, err = repo.ByID(ctx, laterBook, true); err != ErrNotFound {
+	if _, err = repo.ByID(ctx, laterBook); err != ErrNotFound {
 		t.Fatalf("post-cutoff detail exposed: %s %v", laterBook, err)
 	}
-	f := Filter{Range: Bounds, Limit: 100, Preview: true}
+	f := Filter{Range: Bounds, Limit: 100}
 	first, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)
@@ -74,8 +74,8 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 			if b.EndYear != nil && *b.EndYear > 2000 {
 				t.Fatalf("post-cutoff book exposed: %s", b.ID)
 			}
-			if b.Status != "review" || b.SourceURL == "" {
-				t.Fatalf("lost review/source state: %s", b.ID)
+			if b.Status == "archived" || b.Status == "" || b.SourceURL == "" {
+				t.Fatalf("lost active record/source state: %s", b.ID)
 			}
 			seen[b.ID] = true
 			previous = c
@@ -92,7 +92,7 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 		if period.Count == 0 {
 			continue
 		}
-		page, err := repo.List(ctx, Filter{Range: Range{period.Start, period.End}, Limit: 1, Preview: true})
+		page, err := repo.List(ctx, Filter{Range: Range{period.Start, period.End}, Limit: 1})
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -100,15 +100,8 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 			t.Fatalf("period count differs from drilled view: %+v => %d", period, page.Total)
 		}
 	}
-	public, err := repo.List(ctx, Filter{Range: Bounds, Limit: 100})
-	if err != nil {
-		t.Fatal(err)
-	}
-	if public.Total != 0 {
-		t.Fatal("research books were published")
-	}
 	for _, limit := range []int{100, timeline.IndividualLimit} {
-		ancient, err := repo.List(ctx, Filter{Range: Range{Bounds.Start, -1}, Limit: limit, Preview: true})
+		ancient, err := repo.List(ctx, Filter{Range: Range{Bounds.Start, -1}, Limit: limit})
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -122,24 +115,24 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 			}
 		}
 	}
-	if _, err := repo.ByID(ctx, "odyssey", false); err != ErrNotFound {
-		t.Fatal("unpublished detail exposed")
+	if _, err := repo.ByID(ctx, "odyssey"); err != nil {
+		t.Fatal("active book detail missing")
 	}
-	b, err := repo.ByID(ctx, "being-nothingness", true)
+	b, err := repo.ByID(ctx, "being-nothingness")
 	if err != nil {
 		t.Fatal(err)
 	}
 	if len(b.Creators) != 1 || b.Creators[0].Birth == nil || b.Creators[0].Death == nil || !strings.Contains(*b.Creators[0].Birth, "1905") || !strings.Contains(*b.Creators[0].Death, "1980") {
 		t.Fatalf("Sartre creator dates missing: %+v", b.Creators)
 	}
-	options, err := repo.Authors(ctx, "", true, false, false)
+	options, err := repo.Authors(ctx, "", false, false)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if len(options.Items) > 30 || !options.HasMore {
 		t.Fatal("unbounded author choices")
 	}
-	options, err = repo.Authors(ctx, "Sartre", true, false, false)
+	options, err = repo.Authors(ctx, "Sartre", false, false)
 	if err != nil || len(options.Items) == 0 {
 		t.Fatalf("author search: %+v, %v", options, err)
 	}
@@ -161,7 +154,7 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 				filter := tc.filter
 				filter.Range = Bounds
 				filter.Limit = 100
-				filter.Preview = true
+
 				page, err := repo.List(ctx, filter)
 				if err != nil {
 					t.Fatal(err)
@@ -182,11 +175,11 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 				}
 			})
 		}
-		facets, err := repo.Facets(ctx, false, false, false)
-		if err != nil || len(facets.Languages)+len(facets.Countries)+len(facets.Regions) != 0 {
-			t.Fatalf("unpublished facets exposed: %+v, %v", facets, err)
+		facets, err := repo.Facets(ctx, false, false)
+		if err != nil || len(facets.Languages) == 0 || len(facets.Countries) == 0 || len(facets.Regions) == 0 {
+			t.Fatalf("active book facets missing: %+v, %v", facets, err)
 		}
-		facets, err = repo.Facets(ctx, true, true, true)
+		facets, err = repo.Facets(ctx, true, true)
 		if err != nil || len(facets.Languages) == 0 || len(facets.Countries) == 0 || len(facets.Regions) == 0 {
 			t.Fatalf("missing scoped facets: %+v, %v", facets, err)
 		}
@@ -194,13 +187,13 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 			query string
 			count int
 		}{{"Sartre", 0}, {"Jane Austen", 1}} {
-			options, err := repo.Authors(ctx, tc.query, true, true, true)
+			options, err := repo.Authors(ctx, tc.query, true, true)
 			if err != nil || len(options.Items) != tc.count {
 				t.Fatalf("scoped author %s: %+v, %v", tc.query, options, err)
 			}
 		}
 		// Every page in a filtered collection retains membership and keyset order.
-		filter := Filter{Range: Bounds, Women: true, Limit: 100, Preview: true}
+		filter := Filter{Range: Bounds, Women: true, Limit: 100}
 		seen := map[string]bool{}
 		for {
 			page, err := repo.List(ctx, filter)
@@ -222,5 +215,5 @@ func TestReadOnlyBookCatalogue(t *testing.T) {
 			t.Fatalf("filtered pagination lost books: %d", len(seen))
 		}
 	})
-	t.Logf("Verified %d distinct review books, %d pages, %d periods, %d undated books, creator dates and publication gating", len(seen), pages, len(first.Density), first.UndatedTotal)
+	t.Logf("Verified %d distinct active books, %d pages, %d periods, %d undated books, creator dates and active record visibility", len(seen), pages, len(first.Density), first.UndatedTotal)
 }

@@ -37,7 +37,7 @@
 .empty{padding:40px 24px;border:1px solid var(--line);background:var(--white);margin:20px 0;max-width:760px}
 .empty h2,.empty h3{font:400 28px var(--serif)}
 .empty p{font-size:15px;line-height:1.7;max-width:65ch}
-.empty button,.pagination button,.selectionNote button,.mustSeeEditor button{min-height:44px;padding:10px 16px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:3px;font-size:14px;margin:4px 10px 4px 0}
+.empty button,.pagination button,.selectionNote button{min-height:44px;padding:10px 16px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:3px;font-size:14px;margin:4px 10px 4px 0}
 .loading{padding:36px 0;min-height:200px;color:var(--muted)}
 .pagination{display:flex;gap:12px;margin-top:28px}
 .back{display:inline-block;font-size:13px;margin-bottom:25px;min-height:32px}
@@ -56,7 +56,7 @@
 .selectionTabs button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .workFilters{grid-template-columns:minmax(200px,1.4fr) repeat(3,minmax(150px,1fr))}
 .more{border-bottom:1px solid var(--line);padding:0 16px}
-.more>summary,.editor>summary{min-height:48px;cursor:pointer;padding:14px 0;font-size:14px}
+.more>summary{min-height:48px;cursor:pointer;padding:14px 0;font-size:14px}
 .secondaryFilters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding-bottom:16px}
 .check{display:flex;flex-direction:row;align-items:center;gap:10px;min-height:44px}
 .check input{width:20px;height:20px;min-height:20px;padding:0;flex-shrink:0;accent-color:var(--ink)}
@@ -72,12 +72,8 @@
 .workCard:hover strong,.workCard:focus-visible strong{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
 .badges{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
 .badges>span{padding:4px 8px;font-size:11px;line-height:1.4;border:1px solid #b7aa94;color:var(--ink);border-radius:2px}
-.editor{margin-top:35px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.editor>p{font-size:14px;line-height:1.65}
 .drawer{width:min(720px,65vw)}
 .drawerContent{padding:28px 32px 45px}
-.saveStatus{margin:0;padding:0 32px;font-size:14px;line-height:1.6;color:var(--moss)}
-.saveStatus:not(:empty){padding-block:16px;border-bottom:1px solid var(--line)}
 .drawerContent>h2{font:400 32px/1.2 var(--serif);letter-spacing:-.02em;margin:0 0 12px}
 .artworkDate{font-size:17px;color:var(--muted)}
 .drawerContent :global(.artwork-image){margin:20px 0}
@@ -86,14 +82,10 @@
 .drawerContent dl>div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:14px 0;border-top:1px solid var(--line)}
 .drawerContent dt{color:var(--muted);font-size:13px}
 .drawerContent dd{margin:0;font-size:15px;line-height:1.6;overflow-wrap:anywhere}
-.selectionNote,.mustSeeEditor{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}
-.selectionNote h3,.mustSeeEditor h3{font:400 26px var(--serif)}
-.selectionNote p,.mustSeeEditor p{font-size:14px;line-height:1.7}
+.selectionNote{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}
+.selectionNote h3{font:400 26px var(--serif)}
+.selectionNote p{font-size:14px;line-height:1.7}
 .selectionNote a{font-size:13px;overflow-wrap:anywhere}
-.mustSeeEditor fieldset{border:0;padding:0;margin:0;display:grid;gap:15px;min-width:0}
-.mustSeeEditor input[type=number]{width:130px}
-.mustSeeEditor textarea{min-height:110px}
-.mustSeeEditor button{justify-self:start}
 @media(max-width:1100px){
  .filters{grid-template-columns:repeat(3,minmax(0,1fr))}
  .museumCard{grid-template-columns:120px minmax(0,1fr);gap:16px}.collectionImage{height:250px}
@@ -102,8 +94,7 @@
 @media(max-width:760px){
  .page{padding:25px 0 40px}.intro,.museumIntro{display:block}.intro .preview{margin-top:15px}
  .filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filters>label{border-top:1px solid var(--line)}
- .page :global(.multi-filter) :global(.multi-filter-panel){position:fixed;inset:18px 18px auto;width:auto;max-width:none;max-height:calc(100dvh - 36px)}
- .filters input,.filters select,.workFilters input,.workFilters select,.secondaryFilters input,.secondaryFilters select,.mustSeeEditor input,.mustSeeEditor textarea{font-size:16px}
+ .filters input,.filters select,.workFilters input,.workFilters select,.secondaryFilters input,.secondaryFilters select{font-size:16px}
  .museumGrid{grid-template-columns:1fr}.collectionImage{height:260px}.museumCard{grid-template-columns:minmax(100px,.7fr) minmax(0,1.3fr)}
  .resultsHeading{align-items:start;flex-wrap:wrap}.resultsHeading h2{font-size:27px}
  .visit{margin-top:25px}.visit ul{display:flex;flex-wrap:wrap;gap:5px 20px}
@@ -138,14 +129,16 @@
 .resultsToolbar{padding:14px 0;background:var(--paper);border-bottom:1px solid var(--line);margin-top:12px;flex-wrap:wrap;row-gap:12px;z-index:5}
 .resultsToolbar h2{font-size:25px;scroll-margin-top:100px}
 .resultsToolbar p{margin-top:4px}
-.resultControls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-left:auto}
-.resultControls select{min-width:0;min-height:44px;width:auto;max-width:100%;font-size:13px}
-.viewToggle{display:flex;border:1px solid #b5aea3;border-radius:4px;padding:2px;gap:2px;background:var(--white)}
-.viewToggle button{border:0;min-height:38px;min-width:48px;padding:8px 12px;background:transparent;color:var(--muted);border-radius:2px;font-size:13px}
-.viewToggle button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.resultControls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto}
+.resultControls>label{min-width:0}
+.resultControls select{min-width:0;min-height:44px;width:auto;max-width:100%;font-size:14px}
+.viewToggle{display:flex;border:1px solid var(--line);border-radius:8px;padding:3px;gap:2px;background:var(--stone)}
+.viewToggle button{border:0;min-height:36px;min-width:52px;padding:7px 13px;background:transparent;color:var(--muted);border-radius:5px;font-size:14px;line-height:22px}
+.viewToggle button:hover{color:var(--ink)}
+.viewToggle button[aria-pressed=true]{background:var(--white);color:var(--ink);box-shadow:0 1px 3px #1b19161a}
 .cursorPager{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;margin-top:20px;color:var(--muted)}
 .cursorPager>div{display:flex;gap:8px;flex-wrap:wrap}
-.cursorPager button{min-height:44px;padding:8px 13px;border:1px solid #b5aea3;background:var(--white);color:var(--ink);border-radius:3px;font:inherit}
+.cursorPager button{min-height:44px;padding:10px 14px;border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:7px;font:inherit}
 .cursorPager button:disabled{opacity:.5;cursor:default}
 .cursorPager button:not(:disabled):hover{background:var(--stone)}
 .resultsToolbar .cursorPager{margin:0}
@@ -182,7 +175,9 @@
  .collectionPage .visit{margin-top:14px;max-width:100%}
  .collectionPage .workFilters{grid-template-columns:repeat(2,minmax(0,1fr))}
  .collectionPage .workFilters>.search{grid-column:1/-1}
- .resultControls{gap:8px;width:100%}.resultControls select{font-size:16px;max-width:180px}
+ .resultControls{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:8px;width:100%}
+ .resultControls .viewToggle{grid-column:1/-1;justify-self:start}
+ .resultControls select{font-size:16px;width:100%;max-width:none}
  .resultsToolbar .cursorPager{width:100%}.resultsToolbar .cursorPager>div{width:100%;justify-content:space-between}
  .resultsToolbar h2{font-size:24px}
  .collectionPage .worksGrid:not(.worksList){grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}
@@ -192,10 +187,6 @@
  .cursorPager{align-items:start;flex-direction:column}
 }
 @media(max-width:380px){.collectionPage .workImage{height:155px}.collectionPage .worksList .workCard{grid-template-columns:65px minmax(0,1fr);gap:12px}.collectionPage .worksList .workImage{height:90px}}
-.locationShortcuts { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 20px; }
-.locationShortcuts button { min-height:44px; padding:8px 16px; border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer; font:inherit; }
-.locationShortcuts button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
-.locationShortcuts span { color:var(--muted); font-size:13px; margin-left:6px; }
 .aboutMuseum { margin-top:8px; font-size:13px; }
 .aboutMuseum summary { min-height:32px; display:flex; align-items:center; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
 .aboutMuseum summary::after { content:"+"; padding-left:8px; }
@@ -212,3 +203,6 @@
 }
 .collectionCopy { min-width:0; }
 .collectionCopy h3 { max-width:100%; overflow-wrap:anywhere; }
+
+/* Collections without an image use the full card width. */
+.collectionCopy:only-child { grid-column: 1 / -1; }

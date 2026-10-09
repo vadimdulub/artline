@@ -119,7 +119,7 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 			rows, err := tx.Query(ctx, `SELECT aa.artist_id::text,count(DISTINCT aa.artwork_id)
  FROM artwork_artists aa JOIN artworks aw ON aw.id=aa.artwork_id
  WHERE aa.artist_id=ANY($1::uuid[]) AND aw.status<>'archived'
- AND ($2<>'published' OR aw.status='published') GROUP BY aa.artist_id`, ids, filter.Status)
+ GROUP BY aa.artist_id`, ids)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -179,11 +179,11 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 		}
 		t.Logf("verified %d–%d: %d painters, %d periods, %d suggestions", filter.StartYear, filter.EndYear, view.Total, len(view.Periods), len(view.SuggestedFilters))
 	}
-	args := []any{1100, 2000, "", "", []string{}, []string{}, []string{}, []string{}, false, []string{}, true, 50}
+	args := []any{1100, 2000, "", []string{}, []string{}, []string{}, []string{}, false, []string{}, true, 50}
 	for name, query := range map[string]string{"density": timelineDensityQuery, "suggestions": timelineSuggestionsQuery} {
 		planArgs := append([]any(nil), args...)
 		if name == "suggestions" {
-			planArgs[11] = 20000
+			planArgs[10] = 20000
 		}
 		var plan string
 		if err := tx.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+query, planArgs...).Scan(&plan); err != nil {
@@ -197,7 +197,7 @@ func TestTimelineReadOnlyCountsAndSuggestions(t *testing.T) {
 	synthetic := `WITH matching AS MATERIALIZED (
 	 SELECT 1050+(n*37)%900 AS timeline_start_year,1100+(n*37)%900 AS timeline_end_year,
 	 'Fixture movement'::text AS movement,'#888888'::text AS color FROM generate_series(1,20000) n
-	), periods AS (` + strings.ReplaceAll(periodSQL, "$12", "$3")
+	), periods AS (` + strings.ReplaceAll(periodSQL, "$11", "$3")
 	var plan string
 	if err := tx.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+synthetic, 1100, 2000, 50).Scan(&plan); err != nil {
 		t.Fatal(err)

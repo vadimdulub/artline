@@ -66,11 +66,11 @@ func TestPersonalCollectionReadOnly(t *testing.T) {
 		if w.status != "review" || !w.candidate || !w.noHolding || !w.noClaim || w.end > 1955 {
 			t.Fatalf("personal selection changed editorial/holding semantics: %+v", w)
 		}
-		visible, err := repo.ArtworkVisible(ctx, w.id, true)
+		visible, err := repo.ArtworkVisible(ctx, w.id)
 		if err != nil || !visible {
 			t.Fatalf("personal artwork unavailable in atlas: %s %v %v", w.id, visible, err)
 		}
-		out, err := repo.List(ctx, Filter{Range: Range{Start: w.start, End: max(w.end, w.start+1)}, Preview: true,
+		out, err := repo.List(ctx, Filter{Range: Range{Start: w.start, End: max(w.end, w.start+1)},
 			Highlights: true, Selection: true, Limit: 10, Picks: map[string][]string{"artwork": {w.id}}})
 		if err != nil || out.Total != 1 || len(out.Lanes) != 1 || len(out.Lanes[0].Items) != 1 || out.Lanes[0].Items[0].ID != w.id {
 			t.Fatalf("personal selection missing from bounded atlas page: %s total=%d err=%v", w.id, out.Total, err)

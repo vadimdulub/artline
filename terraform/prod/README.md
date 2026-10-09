@@ -78,21 +78,12 @@ The local database and local pictures are retained. This is a point-in-time
 migration, not ongoing replication. Later local edits or new pictures require
 an explicit subsequent migration; do not rerun the initial restore.
 
-Review records remain in review. `public_research_preview = true` is enabled
-for this deployment, allowing anonymous browsing of non-archived research records
-in the timeline, painter pages and museums. The Go API owns this visibility
-decision; the web service renders the research labels. Public preview does not
-grant editor privileges or give the web runtime an editor secret. Set the
-Terraform flag to `false` to restore published-only browsing. Open `/catalogue`
-and provide the editor token for editorial operations.
-To retrieve the token privately on your own terminal:
-
-```sh
-gcloud secrets versions access latest --secret=artline-editor-token --project=artline-508319
-```
-
-Do not paste the token into tickets, logs, or source files. Editing still requires
-API bearer authentication; deploying never publishes review records.
+Catalogue browsing now includes every non-archived record. Historical status
+values remain audit data and no longer restrict reads. The
+`public_research_preview` option and its runtime environment settings have been
+removed; member authentication and local-debug safeguards are unchanged. The
+web service does not forward an editor credential to catalogue reads.
+See [the unified catalogue change](../../docs/unified-catalogue.md).
 
 Migration receipts and validation are recorded in `docs/deployment-20260912.md`.
 

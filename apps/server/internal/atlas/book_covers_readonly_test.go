@@ -31,7 +31,7 @@ func TestBookGalleryCoversReadOnly(t *testing.T) {
 	}
 	defer db.Close()
 	repo := NewRepository(db)
-	f := Filter{Range: Bounds, Limit: timeline.IndividualLimit, Preview: true, Types: []string{"book"}, Selection: true}
+	f := Filter{Range: Bounds, Limit: timeline.IndividualLimit, Types: []string{"book"}, Selection: true}
 	seen, covers := map[string]bool{}, 0
 	for page := 0; page < 2; page++ {
 		out, err := repo.List(ctx, f)

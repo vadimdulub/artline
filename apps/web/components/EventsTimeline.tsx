@@ -1,4 +1,5 @@
 "use client";
+import { displayMetadata } from "@/lib/display-metadata";
 
 import { useEffect, useRef, useState } from "react";
 import { bookTickPosition, bookYearAtPosition, bookYearLabel, compressedBefore1700, positionBooks, bookAxisTicks, type BookRange } from "@/lib/books";
@@ -59,10 +60,10 @@ export function EventsTimeline({ data, metadata, range, loading, error, selected
             <button type="button" disabled={loading} onClick={onTop100}>Show Top 100 events</button>
           </TimelineFilterSuggestions></> :
         positioned.length ? <TimelineLanes label="Events timeline" height={height}>
-          {positioned.map(event => <TimelineMark key={event.id} className="book-author-mark" name={event.title} date={event.years}
-            label={`${event.title}, ${event.years}. Open event details`} color={event.kind === "Period" ? "#76b8b5" : event.kind === "Movement" ? "#b4bb80" : "#ad8d5e"} hasPopup="dialog"
+          {positioned.map(event => <TimelineMark key={event.id} className="book-author-mark" name={event.title} date={displayMetadata(event.years) ?? ""}
+            label={`${[event.title, displayMetadata(event.years)].filter(Boolean).join(", ")}. Open event details`} color={event.kind === "Period" ? "#76b8b5" : event.kind === "Movement" ? "#b4bb80" : "#ad8d5e"} hasPopup="dialog"
             selected={selected === event.id} approximate={event.approximate} left={event.left} width={event.width} top={event.lane * 64 + 8} labelOffset={event.labelOffset} labelWidth={event.labelWidth} onSelect={() => onSelect(event.id)} />)}
-        </TimelineLanes> : <div className="state-panel"><h2>{loading ? "Opening the events timeline…" : data?.total ? "Dates are not established for these events" : "No events match this view"}</h2>{!loading && <><p>{data?.total ? "Read these records in the index below." : "Try another event, topic, or place, or reset your filters."}</p><button onClick={onReset}>Reset view</button></>}</div>}
+        </TimelineLanes> : <div className="state-panel"><h2>{loading ? "Opening the events timeline…" : data?.total ? "Explore these events below" : "No events match this view"}</h2>{!loading && <><p>{data?.total ? "Read these records in the index below." : "Try another event, topic, or place, or reset your filters."}</p><button onClick={onReset}>Reset view</button></>}</div>}
     </TimelineGrid>
     <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={onRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel} inputPrefix="Event "
       scale={{ position: year => bookTickPosition(year, bounds), yearAt: position => bookYearAtPosition(position, bounds), markers }} endpoints={[bookYearLabel(bounds.start), bookYearLabel(bounds.end)]} disabled={Boolean(error)} />

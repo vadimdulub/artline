@@ -31,30 +31,30 @@ type artistDirectoryCursor struct {
 const artistDirectoryPredicate = ` FROM artists a
  LEFT JOIN (SELECT artist_id,min(rank) AS rank FROM painter_import_cohort GROUP BY artist_id) popularity ON popularity.artist_id=a.id
  LEFT JOIN artist_movements am ON am.artist_id=a.id AND am.role='primary'
- LEFT JOIN movements m ON m.id=am.movement_id AND m.status<>'archived' AND ($1 OR m.status='published')
- WHERE a.status<>'archived' AND ($1 OR a.status='published')
- AND ($2='' OR a.display_name ILIKE '%'||$2||'%' OR a.sort_name ILIKE '%'||$2||'%'
-   OR EXISTS(SELECT 1 FROM artist_aliases x WHERE x.artist_id=a.id AND x.alias ILIKE '%'||$2||'%'))
- AND ($3='' OR EXISTS(SELECT 1 FROM artist_countries x WHERE x.artist_id=a.id AND trim(x.country_code::text)=$3))
- AND ($4='' OR EXISTS(SELECT 1 FROM artist_movements x JOIN movements y ON y.id=x.movement_id WHERE x.artist_id=a.id AND y.slug=$4 AND y.status<>'archived' AND ($1 OR y.status='published')))
- AND (NOT $5 OR popularity.rank<=1000)
- AND (NOT $6 OR EXISTS(SELECT 1 FROM artist_gender_evidence x WHERE x.artist_id=a.id AND x.is_woman))`
-const artistDirectoryOrder = `CASE WHEN $7='popular' THEN coalesce(popularity.rank,2147483647) ELSE 0 END`
+ LEFT JOIN movements m ON m.id=am.movement_id AND m.status<>'archived'
+ WHERE a.status<>'archived'
+ AND ($1='' OR a.display_name ILIKE '%'||$1||'%' OR a.sort_name ILIKE '%'||$1||'%'
+   OR EXISTS(SELECT 1 FROM artist_aliases x WHERE x.artist_id=a.id AND x.alias ILIKE '%'||$1||'%'))
+ AND ($2='' OR EXISTS(SELECT 1 FROM artist_countries x WHERE x.artist_id=a.id AND trim(x.country_code::text)=$2))
+ AND ($3='' OR EXISTS(SELECT 1 FROM artist_movements x JOIN movements y ON y.id=x.movement_id WHERE x.artist_id=a.id AND y.slug=$3 AND y.status<>'archived' ))
+ AND (NOT $4 OR popularity.rank<=1000)
+ AND (NOT $5 OR EXISTS(SELECT 1 FROM artist_gender_evidence x WHERE x.artist_id=a.id AND x.is_woman))`
+const artistDirectoryOrder = `CASE WHEN $6='popular' THEN coalesce(popularity.rank,2147483647) ELSE 0 END`
 const artistDirectoryPageQuery = `SELECT a.id::text,a.slug,a.display_name,a.timeline_start_year,a.timeline_end_year,a.timeline_display,a.status,
  coalesce(m.slug,'unclassified'),coalesce(m.name,'Unclassified'),coalesce(m.color_hex,'#717776'),
  ARRAY(SELECT DISTINCT trim(x.country_code::text) FROM artist_countries x WHERE x.artist_id=a.id ORDER BY 1),
  ` + artistDirectoryOrder + `,lower(a.sort_name)` + artistDirectoryPredicate + `
- AND (NOT $11 OR (` + artistDirectoryOrder + `,lower(a.sort_name),a.id::text)>($8,$9,$10))
- ORDER BY ` + artistDirectoryOrder + `,lower(a.sort_name),a.id LIMIT $12`
+ AND (NOT $10 OR (` + artistDirectoryOrder + `,lower(a.sort_name),a.id::text)>($7,$8,$9))
+ ORDER BY ` + artistDirectoryOrder + `,lower(a.sort_name),a.id LIMIT $11`
 
-func (r *Repository) BrowseArtists(ctx context.Context, f ArtistDirectoryFilter, preview bool) (ArtistBrowsePage, error) {
+func (r *Repository) BrowseArtists(ctx context.Context, f ArtistDirectoryFilter) (ArtistBrowsePage, error) {
 	out := ArtistBrowsePage{Items: []TimelineArtist{}}
 	if len(f.Query) > 200 || len(f.Country) > 2 || len(f.Movement) > 100 || f.Limit < 1 || f.Limit > 60 || len(f.Cursor) > 2048 || (f.Sort != "popular" && f.Sort != "name") {
 		return out, ErrChronologyFilter
 	}
 	scopeFilter := f
 	scopeFilter.Cursor = ""
-	scopeData, _ := json.Marshal([]any{scopeFilter, preview})
+	scopeData, _ := json.Marshal([]any{scopeFilter})
 	scope := fmt.Sprintf("%x", sha256.Sum256(scopeData))[:24]
 	cursor := artistDirectoryCursor{}
 	if f.Cursor != "" {
@@ -63,7 +63,7 @@ func (r *Repository) BrowseArtists(ctx context.Context, f ArtistDirectoryFilter,
 			return out, ErrChronologyFilter
 		}
 	}
-	args := []any{preview, f.Query, f.Country, f.Movement, f.Popular, f.Women}
+	args := []any{f.Query, f.Country, f.Movement, f.Popular, f.Women}
 	if err := r.db.QueryRow(ctx, "SELECT count(*)"+artistDirectoryPredicate, museumQueryArgs(args...)...).Scan(&out.Total); err != nil {
 		return out, err
 	}
@@ -102,11 +102,7 @@ func (r *Repository) BrowseArtists(ctx context.Context, f ArtistDirectoryFilter,
 			ids[i] = item.ID
 			positions[item.ID] = i
 		}
-		visibility := "published"
-		if preview {
-			visibility = ""
-		}
-		counts, e := r.db.Query(ctx, timelineArtworkCountsQuery, museumQueryArgs(ids, visibility)...)
+		counts, e := r.db.Query(ctx, timelineArtworkCountsQuery, museumQueryArgs(ids)...)
 		if e != nil {
 			return out, e
 		}
@@ -126,7 +122,7 @@ func (r *Repository) BrowseArtists(ctx context.Context, f ArtistDirectoryFilter,
 			return out, err
 		}
 	}
-	out.Facets, err = r.DiscoveryFacets(ctx, preview, false, false)
+	out.Facets, err = r.DiscoveryFacets(ctx, false, false)
 	return out, err
 }
 
@@ -145,20 +141,20 @@ const artistHoldingEvidence = `EXISTS(SELECT 1 FROM artwork_location_assertions 
  AND NOT EXISTS(SELECT 1 FROM artwork_location_assertions conflict WHERE conflict.artwork_id=aw.id
  AND conflict.claim_type='holding' AND conflict.review_state='conflict' AND conflict.superseded_by IS NULL))`
 
-func (r *Repository) artistCollectionSummary(ctx context.Context, artist *ArtistDetail, preview bool) error {
+func (r *Repository) artistCollectionSummary(ctx context.Context, artist *ArtistDetail) error {
 	const query = `WITH linked AS MATERIALIZED (
- SELECT DISTINCT artwork_id FROM artwork_artists WHERE artist_id=$2
+ SELECT DISTINCT artwork_id FROM artwork_artists WHERE artist_id=$1
  ), scoped AS MATERIALIZED (
  SELECT aw.id,aw.current_institution_id,aw.work_type FROM linked l JOIN artworks aw ON aw.id=l.artwork_id
- WHERE aw.status<>'archived' AND ($1 OR aw.status='published')
+ WHERE aw.status<>'archived'
  ), collections AS MATERIALIZED (
  SELECT i.id,i.slug,i.name,count(*) AS work_count FROM scoped aw JOIN institutions i ON i.id=aw.current_institution_id
- WHERE i.status<>'archived' AND ($1 OR i.status='published') AND ` + artistHoldingEvidence + `
+ WHERE i.status<>'archived'  AND ` + artistHoldingEvidence + `
  GROUP BY i.id,i.slug,i.name
  ) SELECT (SELECT count(*) FROM scoped),(SELECT count(*) FROM collections),
  coalesce((SELECT jsonb_agg(c ORDER BY c.work_count DESC,c.name,c.id) FROM (SELECT * FROM collections ORDER BY work_count DESC,name,id LIMIT 100)c),'[]'::jsonb), coalesce((SELECT jsonb_agg(t ORDER BY t.name) FROM (SELECT work_type AS slug,initcap(replace(work_type,'_',' ')) AS name,count(*) AS count FROM scoped GROUP BY work_type LIMIT 100)t),'[]'::jsonb)`
 	var data, types []byte
-	if err := r.db.QueryRow(ctx, query, museumQueryArgs(preview, artist.ID)...).Scan(&artist.ArtworkCount, &artist.CollectionCount, &data, &types); err != nil {
+	if err := r.db.QueryRow(ctx, query, museumQueryArgs(artist.ID)...).Scan(&artist.ArtworkCount, &artist.CollectionCount, &data, &types); err != nil {
 		return err
 	}
 	if err := json.Unmarshal(types, &artist.WorkTypes); err != nil {

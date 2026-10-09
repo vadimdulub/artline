@@ -29,12 +29,12 @@ func TestReadOnlyHistoricalEvents(t *testing.T) {
 	defer db.Close()
 	repo := NewRepository(db)
 	var count, top, published, badDates int
-	err = db.QueryRow(ctx, `SELECT count(*),count(*) FILTER(WHERE top100),count(*) FILTER(WHERE status='published'),count(*) FILTER(WHERE end_year>2000 OR start_year=0 OR end_year=0) FROM event_records`).Scan(&count, &top, &published, &badDates)
-	if err != nil || count != 10000 || top != 100 || published != 0 || badDates != 0 {
+	err = db.QueryRow(ctx, `SELECT count(*),count(*) FILTER(WHERE top100),count(*) FILTER(WHERE status='published'),count(*) FILTER(WHERE end_year>2000 OR start_year=0 OR end_year=0) FROM event_records WHERE status<>'archived'`).Scan(&count, &top, &published, &badDates)
+	if err != nil || count == 0 || top != 100 || badDates != 0 {
 		t.Fatalf("invalid import: %d events, %d top, %d published, %d invalid dates: %v", count, top, published, badDates, err)
 	}
 	for _, f := range []Filter{{Range: Bounds, Top100: true}, {Range: Bounds}, {Range: Range{1700, 1800}}, {Range: Range{1939, 1945}}, {Range: Bounds, Topics: []string{"Religion and ideas"}}, {Range: Bounds, Countries: []string{"France"}}, {Range: Bounds, Query: "Byzantine"}, {Range: Range{-12000, -1}}} {
-		f.Preview = true
+
 		f.Limit = 100
 		view, err := repo.List(ctx, f)
 		if err != nil {
@@ -79,7 +79,7 @@ func TestReadOnlyHistoricalEvents(t *testing.T) {
 		t.Logf("filter %+v: %d events, %s, %d periods", f, view.Total, view.Mode, len(view.Density))
 	}
 	// Walk every bounded keyset page and prove no gaps or duplicates.
-	f := Filter{Range: Bounds, Preview: true, Limit: 100}
+	f := Filter{Range: Bounds, Limit: 100}
 	seen := map[string]bool{}
 	for {
 		view, err := repo.List(ctx, f)
@@ -100,18 +100,18 @@ func TestReadOnlyHistoricalEvents(t *testing.T) {
 		}
 		f.After = view.NextCursor
 	}
-	if len(seen) != 10000 {
+	if len(seen) != count {
 		t.Fatalf("keyset walked %d records", len(seen))
 	}
 	public, err := repo.List(ctx, Filter{Range: Bounds, Limit: 100})
-	if err != nil || public.Total != 0 {
-		t.Fatal("review records leaked publicly", err)
+	if err != nil || public.Total != count {
+		t.Fatal("active event records missing", err)
 	}
-	if _, err = repo.ByID(ctx, "event-q6534", false); err != ErrNotFound {
-		t.Fatal("review detail leaked publicly", err)
+	if _, err = repo.ByID(ctx, "event-q6534"); err != nil {
+		t.Fatal("active event detail missing", err)
 	}
 	for _, qid := range []string{"event-q6534", "event-q361", "event-q362", "event-q12544", "event-q18578423", "event-q12562"} {
-		e, err := repo.ByID(ctx, qid, true)
+		e, err := repo.ByID(ctx, qid)
 		if err != nil || !e.Top100 || e.StartYear == nil {
 			t.Fatalf("missing required event %s %v", qid, err)
 		}

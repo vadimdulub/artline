@@ -2,14 +2,13 @@ package catalog
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"github.com/vadimdulub/artline/apps/server/internal/testdb"
 	"os"
 	"testing"
 )
 
-func TestTimelineDensityAndRevisionIntegrity(t *testing.T) {
+func TestTimelineDensityIntegrity(t *testing.T) {
 	url := os.Getenv("ARTLINE_TEST_DATABASE_URL")
 	if url == "" {
 		t.Skip("ARTLINE_TEST_DATABASE_URL is not set")
@@ -34,7 +33,7 @@ func TestTimelineDensityAndRevisionIntegrity(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	dense, err := repo.Timeline(ctx, TimelineFilter{StartYear: 1890, EndYear: 1900, Status: "draft", Query: "Density fixture"})
+	dense, err := repo.Timeline(ctx, TimelineFilter{StartYear: 1890, EndYear: 1900, Query: "Density fixture"})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -61,7 +60,7 @@ func TestTimelineDensityAndRevisionIntegrity(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	filtered, err := repo.Timeline(ctx, TimelineFilter{StartYear: 1890, EndYear: 1900, Status: "draft", Query: "Density fixture", Regions: []string{"northern-europe", "eastern-asia"}})
+	filtered, err := repo.Timeline(ctx, TimelineFilter{StartYear: 1890, EndYear: 1900, Query: "Density fixture", Regions: []string{"northern-europe", "eastern-asia"}})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -73,46 +72,4 @@ func TestTimelineDensityAndRevisionIntegrity(t *testing.T) {
 		t.Fatalf("multi-region density duplicates or loses painters: total=%d bins=%d", filtered.Total, count)
 	}
 
-	input := ArtistInput{Slug: "artline-test-revisions", DisplayName: "Revision fixture", SortName: "Fixture", EntityType: "person", TimelineStartYear: 1095, TimelineEndYear: 1120, TimelineDisplay: "1095–1120", TimelineBasis: "life", Status: "draft"}
-	created, err := repo.CreateArtist(ctx, input)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if _, err := repo.ArtistBySlug(ctx, input.Slug, false); !errors.Is(err, ErrNotFound) {
-		t.Fatalf("draft leaked into public read: %v", err)
-	}
-	input.ExpectedRevision = created.Revision
-	input.Slug = "artline-test-revisions-renamed"
-	updated, err := repo.UpdateArtist(ctx, created.ID, input)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if _, err := repo.UpdateArtist(ctx, created.ID, input); !errors.Is(err, ErrRevisionConflict) {
-		t.Fatalf("stale update accepted: %v", err)
-	}
-	redirected, err := repo.ArtistBySlug(ctx, "artline-test-revisions", true)
-	if err != nil || redirected.Slug != input.Slug {
-		t.Fatalf("old slug not preserved: %v", err)
-	}
-	if _, err := repo.SetArchived(ctx, created.ID, true, created.Revision); !errors.Is(err, ErrRevisionConflict) {
-		t.Fatalf("stale archive accepted: %v", err)
-	}
-	archived, err := repo.SetArchived(ctx, created.ID, true, updated.Revision)
-	if err != nil {
-		t.Fatal(err)
-	}
-	restored, err := repo.SetArchived(ctx, created.ID, false, archived.Revision)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if restored.Status != "draft" {
-		t.Fatalf("restored status %s", restored.Status)
-	}
-	if _, err := repo.SetPublished(ctx, created.ID, restored.Revision, true); err == nil {
-		t.Fatal("incomplete artist was published")
-	}
-	var audits int
-	if err := tx.QueryRow(ctx, "SELECT count(*) FROM audit_log WHERE entity_id=$1", created.ID).Scan(&audits); err != nil || audits < 4 {
-		t.Fatalf("audit history missing: %d %v", audits, err)
-	}
 }

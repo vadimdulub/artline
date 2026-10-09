@@ -42,7 +42,7 @@ func TestAllPresetReviewsReadOnly(t *testing.T) {
 			defer tx.Rollback(ctx)
 			recorder := &discoveryPlanDB{atlasDB: tx}
 			repo := &Repository{db: recorder}
-			f := Filter{PresetID: p.ID, Range: p.Context, Highlights: true, Preview: true, Limit: 60}
+			f := Filter{PresetID: p.ID, Range: p.Context, Highlights: true, Limit: 60}
 			data, err := repo.List(ctx, f)
 			if err != nil {
 				t.Fatal(err)
@@ -96,7 +96,7 @@ func TestAllPresetReviewsReadOnly(t *testing.T) {
 			}{
 				{"highlights-off", func(f *Filter) { f.Highlights = false }},
 				{"main-period", func(f *Filter) { f.Range = p.Period }},
-				{"public", func(f *Filter) { f.Preview = false }},
+
 				{"country-intersection", func(f *Filter) { f.Countries = []string{"not-a-recorded-country"} }},
 			}
 			for _, v := range variants {

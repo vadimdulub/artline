@@ -21,7 +21,7 @@ func TestRepositoryReadsSeededCatalogue(t *testing.T) {
 	repository := NewRepository(pool)
 
 	for _, slug := range []string{"giotto", "jan-van-eyck", "leonardo-da-vinci", "artemisia-gentileschi", "rembrandt", "katsushika-hokusai", "claude-monet", "p-s-kroyer", "anna-ancher", "hilma-af-klint", "edvard-munch"} {
-		record, err := repository.ArtistBySlug(context.Background(), slug, true)
+		record, err := repository.ArtistBySlug(context.Background(), slug)
 		if err != nil {
 			t.Fatalf("%s: %v", slug, err)
 		}
@@ -41,7 +41,7 @@ func TestRepositoryReadsSeededCatalogue(t *testing.T) {
 		}
 	}
 
-	timeline, err := repository.Timeline(context.Background(), TimelineFilter{StartYear: 1100, EndYear: 2000, Status: "review"})
+	timeline, err := repository.Timeline(context.Background(), TimelineFilter{StartYear: 1100, EndYear: 2000})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -49,7 +49,7 @@ func TestRepositoryReadsSeededCatalogue(t *testing.T) {
 		t.Fatal("expected a non-empty initial review timeline")
 	}
 
-	facets, err := repository.Facets(context.Background(), true)
+	facets, err := repository.Facets(context.Background())
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -67,7 +67,7 @@ func TestRepositoryReadsSeededCatalogue(t *testing.T) {
 		{[]string{"northern-europe", "eastern-asia"}, "JP", 1},
 		{[]string{"unrepresented-region"}, "", 0},
 	} {
-		result, err := repository.Timeline(context.Background(), TimelineFilter{StartYear: 1100, EndYear: 2000, Status: "review", Regions: tc.regions, Country: tc.country})
+		result, err := repository.Timeline(context.Background(), TimelineFilter{StartYear: 1100, EndYear: 2000, Regions: tc.regions, Country: tc.country})
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -75,9 +75,9 @@ func TestRepositoryReadsSeededCatalogue(t *testing.T) {
 			t.Fatalf("regions=%v country=%s got %d/%d want %d", tc.regions, tc.country, result.Total, len(result.Items), tc.want)
 		}
 	}
-	public, err := repository.Timeline(context.Background(), TimelineFilter{StartYear: 1100, EndYear: 2000, Status: "published", Regions: []string{"northern-europe", "eastern-asia"}})
-	if err != nil || public.Total != 0 {
-		t.Fatalf("multi-region query exposed review records: %v, %v", public, err)
+	public, err := repository.Timeline(context.Background(), TimelineFilter{StartYear: 1100, EndYear: 2000, Regions: []string{"northern-europe", "eastern-asia"}})
+	if err != nil || public.Total != 5 {
+		t.Fatalf("multi-region query omitted active records: %v, %v", public, err)
 	}
 
 	validation, err := repository.ValidateArtistForPublication(context.Background(), timeline.Items[0].ID)

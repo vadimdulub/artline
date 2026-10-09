@@ -32,10 +32,6 @@ func artistDirectoryFilter(r *http.Request) (catalog.ArtistDirectoryFilter, erro
 	return f, nil
 }
 func (api *API) artistDirectory(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	f, err := artistDirectoryFilter(r)
 	if err != nil {
 		writeError(w, 400, "INVALID_ARTIST_FILTER", "Check the artist filters or return to the first page.")
@@ -43,7 +39,7 @@ func (api *API) artistDirectory(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	page, err := api.repo.BrowseArtists(ctx, f, preview)
+	page, err := api.repo.BrowseArtists(ctx, f)
 	if err == catalog.ErrChronologyFilter {
 		writeError(w, 400, "INVALID_ARTIST_CURSOR", "These filters need a new first page.")
 		return

@@ -222,7 +222,7 @@ func (s Store) Institution(ctx context.Context, key, sourceID string) (string, e
 	if err != nil {
 		return "", err
 	}
-	_, err = tx.Exec(ctx, `INSERT INTO curated_collections(institution_id,curator_kind,title) VALUES($1,'museum','Museum highlights'),($1,'owner','My must-see works') ON CONFLICT(institution_id,curator_kind) DO NOTHING`, id)
+	_, err = tx.Exec(ctx, `INSERT INTO curated_collections(institution_id,curator_kind,title) VALUES($1,'museum','Museum highlights') ON CONFLICT(institution_id,curator_kind) DO NOTHING`, id)
 	if err != nil {
 		return "", err
 	}

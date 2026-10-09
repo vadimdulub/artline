@@ -6,7 +6,7 @@ import (
 )
 
 // Constant query count: location and citations are batched for the selected page.
-func (r *Repository) enrichArtworks(ctx context.Context, works []Artwork, preview bool) error {
+func (r *Repository) enrichArtworks(ctx context.Context, works []Artwork) error {
 	if len(works) == 0 {
 		return nil
 	}
@@ -19,7 +19,7 @@ func (r *Repository) enrichArtworks(ctx context.Context, works []Artwork, previe
 	}
 	// Restrict by returned UUIDs before joining evidence. A shared global works
 	// CTE can materialize millions of rows just to enrich one 24-work page.
-	rows, err := r.db.Query(ctx, artworkEvidenceQuery, preview, ids)
+	rows, err := r.db.Query(ctx, artworkEvidenceQuery, ids)
 	if err != nil {
 		return err
 	}
@@ -65,7 +65,7 @@ const artworkEvidenceQuery = `SELECT aw.id::text,jsonb_build_object(
  'holding',CASE WHEN i.id IS NOT NULL THEN jsonb_build_object('id',i.id,'slug',i.slug,'name',i.name) END,
  'display',d.evidence)
  FROM artworks aw
- LEFT JOIN institutions i ON i.id=aw.current_institution_id AND i.status<>'archived' AND ($1 OR i.status='published')
+ LEFT JOIN institutions i ON i.id=aw.current_institution_id AND i.status<>'archived'
  LEFT JOIN LATERAL (
  SELECT jsonb_build_object('id',di.id,'slug',di.slug,'name',di.name,'venue_id',v.id,'venue_name',coalesce(v.name,di.name),
  'state',CASE WHEN la.checked_at<now()-interval '30 days' OR la.effective_to<now() THEN 'stale' ELSE la.display_state END,
@@ -74,9 +74,9 @@ const artworkEvidenceQuery = `SELECT aw.id::text,jsonb_build_object(
  LEFT JOIN institution_venues v ON v.id=la.venue_id JOIN sources s ON s.id=la.source_id AND s.is_active
  WHERE la.artwork_id=aw.id AND la.claim_type='display' AND la.review_state='accepted' AND la.superseded_by IS NULL
  AND la.checked_at<=now() AND (la.effective_from IS NULL OR la.effective_from<=now())
- AND di.status<>'archived' AND ($1 OR di.status='published')
- AND (v.id IS NULL OR (v.status<>'archived' AND ($1 OR v.status='published')))
+ AND di.status<>'archived'
+ AND (v.id IS NULL OR (v.status<>'archived' ))
  AND NOT EXISTS(SELECT 1 FROM artwork_location_assertions conflict WHERE conflict.artwork_id=aw.id
  AND conflict.claim_type='display' AND conflict.review_state='conflict' AND conflict.superseded_by IS NULL)
  ) d ON true
- WHERE aw.id=ANY($2::uuid[]) AND aw.status<>'archived' AND ($1 OR aw.status='published')`
+ WHERE aw.id=ANY($1::uuid[]) AND aw.status<>'archived' `

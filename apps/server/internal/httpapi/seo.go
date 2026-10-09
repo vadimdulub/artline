@@ -7,8 +7,7 @@ import (
 	"github.com/vadimdulub/artline/apps/server/internal/catalog"
 )
 
-// Discovery always uses published records, irrespective of public preview or
-// editor credentials. These endpoints never call previewAllowed.
+// Discovery uses the same active catalogue as browsing, without status gates.
 func (api *API) sitemapShards(w http.ResponseWriter, r *http.Request) {
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
@@ -38,7 +37,7 @@ func (api *API) sitemapEntries(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, 200, map[string]any{"items": items})
 }
 
-func (api *API) publishedArtists(w http.ResponseWriter, r *http.Request) {
+func (api *API) discoveryArtists(w http.ResponseWriter, r *http.Request) {
 	after := r.URL.Query().Get("after")
 	if len(after) > 200 || (after != "" && !validArtistSlug(after)) {
 		writeError(w, 400, "INVALID_CURSOR", "Invalid artist cursor.")
@@ -46,7 +45,7 @@ func (api *API) publishedArtists(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	page, err := api.repo.PublishedArtistDirectory(ctx, after)
+	page, err := api.repo.ActiveArtistDirectory(ctx, after)
 	if err != nil {
 		writeError(w, 503, "DIRECTORY_UNAVAILABLE", "The artist directory is temporarily unavailable.")
 		return

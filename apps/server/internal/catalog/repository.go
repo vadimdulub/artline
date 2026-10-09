@@ -11,11 +11,6 @@ import (
 )
 
 var ErrNotFound = errors.New("record not found")
-var ErrRevisionConflict = errors.New("revision conflict")
-
-type PublicationError struct{ Report PublicationValidation }
-
-func (e *PublicationError) Error() string { return "publication validation failed" }
 
 type Repository struct {
 	db interface {
@@ -29,7 +24,7 @@ func NewRepository(db *pgxpool.Pool) *Repository {
 	return &Repository{db: db}
 }
 
-func (r *Repository) ArtistBySlug(ctx context.Context, slug string, preview bool) (ArtistDetail, error) {
+func (r *Repository) ArtistBySlug(ctx context.Context, slug string) (ArtistDetail, error) {
 	var artist ArtistDetail
 	const query = `
 		SELECT a.id::text, a.slug, a.display_name, a.sort_name, a.timeline_start_year,
@@ -41,8 +36,8 @@ func (r *Repository) ArtistBySlug(ctx context.Context, slug string, preview bool
 		FROM artists a
 		LEFT JOIN artist_movements am ON am.artist_id = a.id AND am.role = 'primary'
 		LEFT JOIN movements m ON m.id = am.movement_id AND m.status <> 'archived'
-		WHERE (a.slug = $1 OR a.id=(SELECT entity_id FROM slug_redirects WHERE entity_type='artist' AND old_slug=$1)) AND a.status <> 'archived' AND ($2 OR a.status='published')`
-	err := r.db.QueryRow(ctx, query, slug, preview).Scan(
+		WHERE (a.slug = $1 OR a.id=(SELECT entity_id FROM slug_redirects WHERE entity_type='artist' AND old_slug=$1)) AND a.status <> 'archived' `
+	err := r.db.QueryRow(ctx, query, slug).Scan(
 		&artist.ID, &artist.Slug, &artist.DisplayName, &artist.SortName,
 		&artist.TimelineStart, &artist.TimelineEnd, &artist.TimelineDisplay,
 		&artist.TimelineBasis, &artist.BiographyMD, &artist.Status, &artist.Revision, &artist.EntityType,
@@ -54,11 +49,15 @@ func (r *Repository) ArtistBySlug(ctx context.Context, slug string, preview bool
 	if err != nil {
 		return artist, fmt.Errorf("query artist: %w", err)
 	}
-	artworks, err := r.artistArtworks(ctx, artist.ID, preview)
+	artworks, err := r.artistArtworks(ctx, artist.ID)
 	if err != nil {
 		return artist, err
 	}
 	artist.Artworks = artworks
+	artist.KeyArtwork, err = r.artistKeyArtwork(ctx, artist.ID)
+	if err != nil {
+		return artist, err
+	}
 	citations, err := r.artistCitations(ctx, artist.ID)
 	if err != nil {
 		return artist, err
@@ -68,14 +67,14 @@ func (r *Repository) ArtistBySlug(ctx context.Context, slug string, preview bool
 	if err != nil {
 		return artist, err
 	}
-	if err = r.artistCollectionSummary(ctx, &artist, preview); err != nil {
+	if err = r.artistCollectionSummary(ctx, &artist); err != nil {
 		return artist, err
 	}
 	artist.ReferenceBiography = referenceBiography(artist.ID, artist.Slug)
 	return artist, nil
 }
 
-func (r *Repository) artistArtworks(ctx context.Context, artistID string, preview bool) ([]Artwork, error) {
+func (r *Repository) artistArtworks(ctx context.Context, artistID string) ([]Artwork, error) {
 	const query = `
 		SELECT aw.id::text, aw.slug, aw.title, aw.alternate_title, aw.date_display,
 		       aw.creation_year_start, aw.creation_year_end, aw.date_precision, aw.work_type,
@@ -87,9 +86,9 @@ func (r *Repository) artistArtworks(ctx context.Context, artistID string, previe
 		FROM artwork_artists aa
 		JOIN artworks aw ON aw.id = aa.artwork_id
 		LEFT JOIN media_assets ma ON ma.id = aw.primary_media_id
-		WHERE aa.artist_id = $1 AND aw.status <> 'archived' AND ($2 OR aw.status='published') AND aa.representative_order IS NOT NULL
+		WHERE aa.artist_id = $1 AND aw.status <> 'archived'  AND aa.representative_order IS NOT NULL
 		ORDER BY aa.representative_order NULLS LAST, aw.creation_year_start NULLS LAST, aw.title LIMIT 10`
-	rows, err := r.db.Query(ctx, query, artistID, preview)
+	rows, err := r.db.Query(ctx, query, artistID)
 	if err != nil {
 		return nil, fmt.Errorf("query artist artworks: %w", err)
 	}
@@ -111,7 +110,7 @@ func (r *Repository) artistArtworks(ctx context.Context, artistID string, previe
 	if err := rows.Err(); err != nil {
 		return nil, err
 	}
-	return artworks, r.enrichArtworks(ctx, artworks, preview)
+	return artworks, r.enrichArtworks(ctx, artworks)
 }
 
 func (r *Repository) artistCitations(ctx context.Context, artistID string) ([]Citation, error) {
@@ -138,19 +137,18 @@ func (r *Repository) entityCitations(ctx context.Context, entityType, id string)
 	return citations, rows.Err()
 }
 
-func (r *Repository) Catalogue(ctx context.Context, status, query string, limit, offset int, sort string, includeArchived bool) ([]CatalogueArtist, error) {
+func (r *Repository) Catalogue(ctx context.Context, query string, limit, offset int, sort string) ([]CatalogueArtist, error) {
 	const statement = `
 		SELECT id::text, slug, display_name, timeline_start_year, timeline_end_year,
 		       timeline_display, status, revision, updated_at
 		FROM artists
-		WHERE ($1 = '' OR status = $1)
-		  AND ($6 OR status <> 'archived')
-		  AND ($2 = '' OR normalized_name ILIKE '%' || lower($2) || '%')
-		ORDER BY CASE WHEN $5='updated' THEN updated_at END DESC,
-          CASE WHEN $5='date' THEN timeline_start_year END,
+		WHERE status <> 'archived'
+		  AND ($1 = '' OR normalized_name ILIKE '%' || lower($1) || '%')
+		ORDER BY CASE WHEN $4='updated' THEN updated_at END DESC,
+          CASE WHEN $4='date' THEN timeline_start_year END,
           sort_name,id
-		LIMIT $3 OFFSET $4`
-	rows, err := r.db.Query(ctx, statement, status, query, limit, offset, sort, includeArchived)
+		LIMIT $2 OFFSET $3`
+	rows, err := r.db.Query(ctx, statement, query, limit, offset, sort)
 	if err != nil {
 		return nil, fmt.Errorf("query catalogue: %w", err)
 	}
@@ -168,148 +166,22 @@ func (r *Repository) Catalogue(ctx context.Context, status, query string, limit,
 	return artists, rows.Err()
 }
 
-func (r *Repository) CreateArtist(ctx context.Context, input ArtistInput) (CatalogueArtist, error) {
-	var artist CatalogueArtist
-	const statement = `
-		INSERT INTO artists (
-			slug, display_name, sort_name, normalized_name, entity_type,
-			timeline_start_year, timeline_end_year, timeline_display, timeline_basis,
-			biography_md, status
-		) VALUES ($1, $2, $3, lower($2), $4, $5, $6, $7, $8, $9, $10)
-		RETURNING id::text, slug, display_name, timeline_start_year, timeline_end_year,
-		          timeline_display, status, revision, updated_at`
-	err := r.db.QueryRow(ctx, statement, input.Slug, input.DisplayName, input.SortName,
-		input.EntityType, input.TimelineStartYear, input.TimelineEndYear,
-		input.TimelineDisplay, input.TimelineBasis, input.BiographyMD, input.Status).Scan(
-		&artist.ID, &artist.Slug, &artist.DisplayName, &artist.TimelineStart,
-		&artist.TimelineEnd, &artist.TimelineDisplay, &artist.Status, &artist.Revision,
-		&artist.UpdatedAt,
-	)
-	if err != nil {
-		return artist, fmt.Errorf("create artist: %w", err)
-	}
-	return artist, nil
+func (r *Repository) Facets(ctx context.Context) (TimelineFacets, error) {
+	return r.DiscoveryFacets(ctx, false, false)
 }
 
-func (r *Repository) UpdateArtist(ctx context.Context, id string, input ArtistInput) (CatalogueArtist, error) {
-	var artist CatalogueArtist
-	const statement = `
-		UPDATE artists
-		SET slug = $2, display_name = $3, sort_name = $4, normalized_name = lower($3),
-		    entity_type = $5, timeline_start_year = $6, timeline_end_year = $7,
-		    timeline_display = $8, timeline_basis = $9, biography_md = $10,
-		    status = $11, published_at=NULL, revision = revision + 1, updated_at = now()
-		WHERE id = $1 AND revision = $12 AND status <> 'archived'
-		RETURNING id::text, slug, display_name, timeline_start_year, timeline_end_year,
-		          timeline_display, status, revision, updated_at`
-	err := r.db.QueryRow(ctx, statement, id, input.Slug, input.DisplayName, input.SortName,
-		input.EntityType, input.TimelineStartYear, input.TimelineEndYear,
-		input.TimelineDisplay, input.TimelineBasis, input.BiographyMD, input.Status,
-		input.ExpectedRevision).Scan(
-		&artist.ID, &artist.Slug, &artist.DisplayName, &artist.TimelineStart,
-		&artist.TimelineEnd, &artist.TimelineDisplay, &artist.Status, &artist.Revision,
-		&artist.UpdatedAt,
-	)
-	if errors.Is(err, pgx.ErrNoRows) {
-		var exists bool
-		if checkErr := r.db.QueryRow(ctx, `SELECT EXISTS(SELECT 1 FROM artists WHERE id = $1)`, id).Scan(&exists); checkErr != nil {
-			return artist, fmt.Errorf("check artist after update: %w", checkErr)
-		}
-		if exists {
-			return artist, ErrRevisionConflict
-		}
-		return artist, ErrNotFound
-	}
-	if err != nil {
-		return artist, fmt.Errorf("update artist: %w", err)
-	}
-	return artist, nil
-}
-
-func (r *Repository) SetArchived(ctx context.Context, id string, archived bool, expectedRevision int) (CatalogueArtist, error) {
-	status := "draft"
-	if archived {
-		status = "archived"
-	}
-	var artist CatalogueArtist
-	const statement = `
-		UPDATE artists SET status = $2, published_at=NULL, revision = revision + 1, updated_at = now()
-		WHERE id = $1 AND revision=$3 AND (($2='archived' AND status<>'archived') OR ($2='draft' AND status='archived'))
-		RETURNING id::text, slug, display_name, timeline_start_year, timeline_end_year,
-		          timeline_display, status, revision, updated_at`
-	err := r.db.QueryRow(ctx, statement, id, status, expectedRevision).Scan(
-		&artist.ID, &artist.Slug, &artist.DisplayName, &artist.TimelineStart,
-		&artist.TimelineEnd, &artist.TimelineDisplay, &artist.Status, &artist.Revision,
-		&artist.UpdatedAt,
-	)
-	if errors.Is(err, pgx.ErrNoRows) {
-		var exists bool
-		if err := r.db.QueryRow(ctx, "SELECT EXISTS(SELECT 1 FROM artists WHERE id=$1)", id).Scan(&exists); err != nil {
-			return artist, err
-		}
-		if exists {
-			return artist, ErrRevisionConflict
-		}
-		return artist, ErrNotFound
-	}
-	if err != nil {
-		return artist, fmt.Errorf("set artist archive state: %w", err)
-	}
-	return artist, nil
-}
-
-func (r *Repository) Coverage(ctx context.Context) (CoverageSummary, error) {
-	summary := CoverageSummary{ByStatus: map[string]int{}}
-	rows, err := r.db.Query(ctx, `SELECT status, count(*) FROM artists GROUP BY status`)
-	if err != nil {
-		return summary, fmt.Errorf("query coverage by status: %w", err)
-	}
-	for rows.Next() {
-		var status string
-		var count int
-		if err := rows.Scan(&status, &count); err != nil {
-			rows.Close()
-			return summary, fmt.Errorf("scan coverage status: %w", err)
-		}
-		summary.ByStatus[status] = count
-		summary.TotalArtists += count
-	}
-	rows.Close()
-	if err := rows.Err(); err != nil {
-		return summary, err
-	}
-	const qualityQuery = `
-		SELECT
-		  count(DISTINCT a.id) FILTER (WHERE trim(c.code::text) IN ('DK', 'SE', 'NO', 'FI', 'IS')),
-		  count(DISTINCT a.id) FILTER (WHERE c.region_code LIKE '%asia'),
-		  count(DISTINCT a.id) FILTER (WHERE (SELECT count(*) FROM artwork_artists aa JOIN artworks aw ON aw.id = aa.artwork_id WHERE aa.artist_id = a.id AND aw.status = 'published' AND aa.representative_order IS NOT NULL) < 5),
-		  count(DISTINCT a.id) FILTER (WHERE a.biography_md IS NULL OR length(trim(a.biography_md)) = 0)
-		FROM artists a
-		LEFT JOIN artist_countries ac ON ac.artist_id = a.id
-		LEFT JOIN countries c ON c.code = ac.country_code
-		WHERE a.status <> 'archived'`
-	if err := r.db.QueryRow(ctx, qualityQuery).Scan(&summary.NordicArtists, &summary.AsianArtists, &summary.MissingWorks, &summary.MissingBio); err != nil {
-		return summary, fmt.Errorf("query coverage quality: %w", err)
-	}
-	return summary, nil
-}
-
-func (r *Repository) Facets(ctx context.Context, preview bool) (TimelineFacets, error) {
-	return r.DiscoveryFacets(ctx, preview, false, false)
-}
-
-func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular, women bool) (TimelineFacets, error) {
+func (r *Repository) DiscoveryFacets(ctx context.Context, popular, women bool) (TimelineFacets, error) {
 	facets := TimelineFacets{Movements: []FacetOption{}, Countries: []FacetOption{}, Regions: []FacetOption{}}
 	movementRows, err := r.db.Query(ctx, `
 		SELECT m.slug, m.name, m.color_hex, count(DISTINCT a.id)
 		FROM movements m
 		JOIN artist_movements am ON am.movement_id = m.id
 		JOIN artists a ON a.id = am.artist_id AND a.status <> 'archived'
-        WHERE ($1 OR (a.status='published' AND m.status='published')) AND m.status<>'archived'
-        AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
-        AND (NOT $3 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
+        WHERE TRUE AND m.status<>'archived'
+        AND (NOT $1 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
+        AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
 		GROUP BY m.slug, m.name, m.color_hex, m.start_year
-		ORDER BY m.start_year NULLS LAST, m.name`, preview, popular, women)
+		ORDER BY m.start_year NULLS LAST, m.name`, popular, women)
 	if err != nil {
 		return facets, fmt.Errorf("query movement facets: %w", err)
 	}
@@ -331,11 +203,11 @@ func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular, wome
 		FROM countries c
 		JOIN artist_countries ac ON ac.country_code = c.code
 		JOIN artists a ON a.id = ac.artist_id AND a.status <> 'archived'
-        WHERE ($1 OR a.status='published')
-        AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
-        AND (NOT $3 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
+        WHERE TRUE
+        AND (NOT $1 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
+        AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
 		GROUP BY c.code, c.name
-		ORDER BY c.name`, preview, popular, women)
+		ORDER BY c.name`, popular, women)
 	if err != nil {
 		return facets, fmt.Errorf("query country facets: %w", err)
 	}
@@ -355,10 +227,10 @@ func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular, wome
 		SELECT c.region_code, initcap(replace(c.region_code,'-',' ')), count(DISTINCT a.id)
 		FROM countries c JOIN artist_countries ac ON ac.country_code=c.code
 		JOIN artists a ON a.id=ac.artist_id AND a.status<>'archived'
-		WHERE ($1 OR a.status='published')
-		AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
-        AND (NOT $3 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
-		GROUP BY c.region_code ORDER BY c.region_code`, preview, popular, women)
+		WHERE TRUE
+		AND (NOT $1 OR EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=a.id AND ds.is_popular))
+        AND (NOT $2 OR EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=a.id AND ge.is_woman))
+		GROUP BY c.region_code ORDER BY c.region_code`, popular, women)
 	if err != nil {
 		return facets, fmt.Errorf("query region facets: %w", err)
 	}
@@ -373,6 +245,7 @@ func (r *Repository) DiscoveryFacets(ctx context.Context, preview, popular, wome
 	return facets, regionRows.Err()
 }
 
+// ValidateArtistForPublication is an offline legacy audit, never a catalogue visibility gate.
 func (r *Repository) ValidateArtistForPublication(ctx context.Context, id string) (PublicationValidation, error) {
 	report := PublicationValidation{ArtistID: id, Issues: []ValidationIssue{}}
 	var biography *string
@@ -487,67 +360,6 @@ func (r *Repository) ValidateArtistForPublication(ctx context.Context, id string
 	}
 	report.Ready = len(report.Issues) == 0
 	return report, nil
-}
-
-func (r *Repository) SetPublished(ctx context.Context, id string, expectedRevision int, published bool) (CatalogueArtist, error) {
-	tx, err := r.db.Begin(ctx)
-	if err != nil {
-		return CatalogueArtist{}, err
-	}
-	defer tx.Rollback(ctx)
-	// Publication is infrequent. Lock the small catalogue while validating dependencies
-	// so a concurrent archive/edit cannot invalidate the gate before commit.
-	if _, err = tx.Exec(ctx, "LOCK TABLE artists,artworks,artwork_artists,artist_countries,artist_movements,citations,influence_claims,media_assets,sources,external_identifiers,artwork_location_assertions,institutions,curated_collections,curated_collection_items IN SHARE ROW EXCLUSIVE MODE"); err != nil {
-		return CatalogueArtist{}, err
-	}
-	if published {
-		report, err := (&Repository{db: tx}).ValidateArtistForPublication(ctx, id)
-		if err != nil {
-			return CatalogueArtist{}, err
-		}
-		if report.Revision != expectedRevision {
-			return CatalogueArtist{}, ErrRevisionConflict
-		}
-		if !report.Ready {
-			return CatalogueArtist{}, &PublicationError{Report: report}
-		}
-	}
-	status := "review"
-	if published {
-		status = "published"
-	}
-	var artist CatalogueArtist
-	const statement = `
-		UPDATE artists
-		SET status = $2,
-		    published_at = CASE WHEN $2 = 'published' THEN now() ELSE NULL END,
-		    revision = revision + 1,
-		    updated_at = now()
-		WHERE id = $1 AND revision = $3 AND status <> 'archived'
-		RETURNING id::text, slug, display_name, timeline_start_year, timeline_end_year,
-		          timeline_display, status, revision, updated_at`
-	err = tx.QueryRow(ctx, statement, id, status, expectedRevision).Scan(
-		&artist.ID, &artist.Slug, &artist.DisplayName, &artist.TimelineStart,
-		&artist.TimelineEnd, &artist.TimelineDisplay, &artist.Status, &artist.Revision,
-		&artist.UpdatedAt,
-	)
-	if errors.Is(err, pgx.ErrNoRows) {
-		var exists bool
-		if checkErr := tx.QueryRow(ctx, `SELECT EXISTS(SELECT 1 FROM artists WHERE id = $1 AND status<>'archived')`, id).Scan(&exists); checkErr != nil {
-			return artist, fmt.Errorf("check artist after publication update: %w", checkErr)
-		}
-		if exists {
-			return artist, ErrRevisionConflict
-		}
-		return artist, ErrNotFound
-	}
-	if err != nil {
-		return artist, fmt.Errorf("set artist publication status: %w", err)
-	}
-	if err := tx.Commit(ctx); err != nil {
-		return artist, err
-	}
-	return artist, nil
 }
 
 func NormalizeSlug(value string) string {

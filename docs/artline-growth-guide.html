@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical Artline growth guide: Google indexing, original art articles, image discovery, promotion and a first-month checklist.">
+  <title>Artline growth guide</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f9f6;
+      --white: #fff;
+      --ink: #20372d;
+      --muted: #55645a;
+      --green: #375b46;
+      --wash: #e6eedf;
+      --line: #cfdbd0;
+      --amber: #79511f;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.65 var(--sans); }
+    a { color: var(--green); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 { font-family: var(--serif); font-weight: 400; }
+    h1 { font-size: clamp(42px, 6vw, 76px); line-height: 1.04; letter-spacing: -.045em; max-width: 730px; }
+    h2 { font-size: clamp(29px, 3vw, 37px); line-height: 1.2; letter-spacing: -.025em; margin-bottom: 16px; }
+    h3 { font-size: 18px; line-height: 1.4; font-weight: 600; }
+    p { max-width: 72ch; }
+    p + p { margin-top: 12px; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    .page { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
+    .skip { position: absolute; top: -80px; left: 16px; background: var(--white); padding: 12px; z-index: 10; }
+    .skip:focus { top: 12px; }
+    .masthead { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 28px; border-bottom: 1px solid var(--line); }
+    .brand { font: 32px/1 var(--serif); letter-spacing: -1px; }
+    .masthead-tools { display: flex; align-items: center; gap: 22px; }
+    .date, .note { font-size: 13px; color: var(--muted); }
+    .button { background: var(--white); color: var(--ink); border: 1px solid var(--line); border-radius: 7px; padding: 9px 16px; font-size: 14px; }
+    .button:hover { background: var(--wash); }
+    [hidden] { display: none !important; }
+    .hero { display: grid; grid-template-columns: 1.55fr 1fr; gap: 60px; align-items: center; padding-block: 62px 54px; }
+    .hero p { font-size: 19px; color: var(--muted); margin-top: 24px; max-width: 52ch; }
+    .path { list-style: none; margin: 0; padding: 4px 0 4px 28px; border-left: 2px solid var(--line); }
+    .path li { position: relative; padding: 15px 0; }
+    .path li::before { content: ""; position: absolute; left: -35px; top: 27px; width: 12px; height: 12px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 6px var(--paper); }
+    .path strong { font: 26px/1.2 var(--serif); }
+    .path span { display: block; color: var(--muted); font-size: 14px; margin-top: 5px; }
+    .priority { display: grid; grid-template-columns: 180px 1fr; gap: 26px; padding: 26px 30px; border-radius: 10px; background: var(--wash); }
+    .priority strong { font-size: 18px; }
+    .layout { display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: 65px; margin-top: 54px; }
+    .sidebar { position: sticky; top: 24px; align-self: start; padding-bottom: 24px; }
+    .sidebar nav { display: flex; flex-direction: column; gap: 3px; }
+    .sidebar nav a { display: block; padding: 9px 0; font-size: 14px; text-decoration: none; }
+    .sidebar nav a:hover { text-decoration: underline; }
+    .tracker { margin-top: 26px; padding-top: 24px; border-top: 1px solid var(--line); }
+    .tracker label { display: block; font-size: 13px; }
+    progress { width: 100%; height: 7px; border: 0; border-radius: 8px; background: var(--line); accent-color: var(--green); margin: 12px 0 8px; }
+    progress::-webkit-progress-bar { background: var(--line); border-radius: 8px; }
+    progress::-webkit-progress-value { background: var(--green); border-radius: 8px; }
+    progress::-moz-progress-bar { background: var(--green); border-radius: 8px; }
+    .tracker .button { margin-top: 14px; }
+    .content > section { margin-bottom: 52px; }
+    .lead { color: var(--muted); font-size: 17px; }
+    .table-wrap { margin-top: 24px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--white); }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+    caption { text-align: left; padding: 18px 20px; background: var(--wash); font-weight: 600; }
+    th, td { padding: 13px 20px; vertical-align: top; border-bottom: 1px solid var(--line); }
+    thead th { font-size: 12px; color: var(--muted); font-weight: 600; }
+    tbody th { font-weight: 500; }
+    tbody tr:last-child > * { border-bottom: 0; }
+    .blocked { color: var(--amber); }
+    .allowed { color: var(--green); }
+    code { font-size: .88em; background: var(--wash); padding: 2px 5px; border-radius: 3px; }
+    .table-note { margin-top: 12px; }
+    .actions { margin: 22px 0 0; padding-left: 22px; }
+    .actions li { padding-left: 5px; margin-bottom: 11px; }
+    .source { font-size: 13px; margin-top: 17px; }
+    .ideas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin-top: 25px; }
+    .idea { padding: 22px 0; border-top: 1px solid var(--line); }
+    .idea p { margin-top: 9px; font-size: 14px; color: var(--muted); }
+    .recipe { padding: 25px 28px; margin-top: 14px; background: var(--white); border-radius: 10px; border: 1px solid var(--line); }
+    .recipe ol { margin: 14px 0 0; padding-left: 23px; }
+    .recipe li { margin-top: 9px; padding-left: 4px; }
+    .tips { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 32px; margin-top: 24px; }
+    .tips p { margin-top: 8px; color: var(--muted); font-size: 15px; }
+    .weekly { padding: 25px 28px; background: var(--wash); border-radius: 10px; margin-top: 23px; }
+    .weekly p { margin-top: 8px; }
+    .plan { margin-top: 25px; }
+    .week { border: 0; border-top: 1px solid var(--line); margin: 0; padding: 21px 0 18px; min-width: 0; }
+    .week legend { padding-right: 16px; font-size: 17px; font-weight: 600; }
+    .task { display: flex; gap: 13px; align-items: flex-start; padding: 10px 0; cursor: pointer; }
+    .task input { flex: 0 0 auto; width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--green); cursor: pointer; }
+    .task input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--green); }
+    .metrics { margin: 25px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 25px 32px; }
+    .metrics dt { font-weight: 600; }
+    .metrics dd { margin: 7px 0 0; font-size: 15px; color: var(--muted); }
+    .reading { padding-left: 20px; }
+    .reading li { margin-bottom: 9px; }
+    footer { padding-block: 25px 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 160px minmax(0, 1fr); gap: 35px; }
+      .hero { gap: 35px; }
+      .priority { grid-template-columns: 145px 1fr; }
+    }
+    @media (max-width: 720px) {
+      .page { width: calc(100% - 36px); }
+      .masthead { padding-block: 22px; }
+      .masthead-tools { flex-direction: column; align-items: flex-end; gap: 8px; }
+      .hero { grid-template-columns: 1fr; gap: 25px; padding-block: 36px; }
+      .hero p { font-size: 17px; }
+      .path { display: flex; gap: 18px; padding: 20px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+      .path li { flex: 1; padding: 0; }
+      .path li::before { display: none; }
+      .path strong { font-size: 23px; }
+      .path span { font-size: 13px; }
+      .priority { grid-template-columns: 1fr; gap: 8px; padding: 22px; }
+      .layout { display: block; margin-top: 30px; }
+      .sidebar { position: static; }
+      .sidebar nav { flex-direction: row; flex-wrap: wrap; gap: 0 20px; }
+      .tracker { margin-top: 12px; padding-top: 14px; }
+      .tracker progress { max-width: 250px; display: block; }
+      .tracker .button { margin-top: 9px; }
+      .content > section { margin-bottom: 40px; }
+      .ideas, .tips, .metrics { grid-template-columns: 1fr; }
+      th, td { padding: 12px; }
+      caption { padding: 16px 12px; }
+      .recipe, .weekly { padding: 22px; }
+    }
+    @media print {
+      @page { margin: 16mm; }
+      body { background: white; font-size: 10pt; color: #20372d; }
+      .page { width: 100%; }
+      .skip, .sidebar, button { display: none !important; }
+      .masthead { padding-block: 0 10px; }
+      .hero { padding-block: 22px; gap: 30px; }
+      h1 { font-size: 34pt; }
+      h2 { font-size: 22pt; }
+      h3 { font-size: 12pt; }
+      .hero p, .lead { font-size: 11pt; }
+      .priority { padding: 16px; border: 1px solid var(--line); }
+      .layout { display: block; margin-top: 28px; }
+      .content > section { margin-bottom: 28px; }
+      table, .tips p, .metrics dd, .idea p, .note, .source { font-size: 9pt; }
+      .ideas, .tips, .metrics { grid-template-columns: 1fr 1fr; }
+      .table-wrap, .recipe, .weekly, .week, .idea, .tips > div, .metrics > div { break-inside: avoid; }
+      h2, h3 { break-after: avoid; }
+      a { color: inherit; }
+      .reading a::after { content: " (" attr(href) ")"; font-size: 8pt; overflow-wrap: anywhere; }
+      footer { font-size: 9pt; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the guide</a>
+  <div class="page">
+    <header class="masthead">
+      <span class="brand">Artline</span>
+      <div class="masthead-tools">
+        <span class="date">Growth guide / <time datetime="2026-10-08">8 October 2026</time></span>
+        <button class="button" id="print-guide" type="button" hidden>Print / Save as PDF</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="hero">
+        <div>
+          <h1>Help people discover<br>your world of art.</h1>
+          <p>A practical plan to make Artline easier to find, publish articles worth reading, and give curious visitors a reason to return.</p>
+        </div>
+        <ol class="path" aria-label="The reader journey">
+          <li><strong>Find</strong><span>Discover a useful guide in search.</span></li>
+          <li><strong>Explore</strong><span>Follow its artworks, artists and connections.</span></li>
+          <li><strong>Return</strong><span>Come back for the next story.</span></li>
+        </ol>
+      </div>
+
+      <aside class="priority" aria-label="First priority">
+        <strong>Start with discovery</strong>
+        <p>The live homepage, artist directory and museum directory currently tell Google not to index them. Create indexable public entrances to approved content, while keeping research material in its existing review workflow.</p>
+      </aside>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Guide navigation and progress">
+          <nav aria-label="Contents">
+            <a href="#google">Google &amp; indexing</a>
+            <a href="#articles">Articles to write</a>
+            <a href="#artwork-pages">Artwork pages</a>
+            <a href="#promotion">Share &amp; bring readers back</a>
+            <a href="#month">Your first month</a>
+            <a href="#measurement">What to measure</a>
+            <a href="#sources">Source reading</a>
+          </nav>
+          <div class="tracker" id="tracker" hidden>
+            <label for="progress">Your first-month checklist</label>
+            <progress id="progress" max="8" value="0">0 of 8 complete</progress>
+            <p class="note" id="progress-text" role="status" aria-live="polite">0 of 8 complete</p>
+            <p class="note" id="storage-note">Progress is saved in this browser.</p>
+            <button class="button" id="reset-plan" type="button" disabled>Reset checklist</button>
+          </div>
+        </aside>
+
+        <div class="content">
+          <section id="google" aria-labelledby="google-title">
+            <h2 id="google-title">Can Google index everything?</h2>
+            <p class="lead">Google can discover public pages and images. It does not automatically read everything in your database, and it does not guarantee that every eligible page will be indexed.</p>
+            <p>Give important content its own accessible URL, useful text and ordinary links from related pages. A sitemap helps Google discover those URLs; indexing and prominent rankings are separate outcomes.</p>
+            <div class="table-wrap">
+              <table>
+                <caption>Live spot check: 8 October 2026</caption>
+                <thead><tr><th scope="col">Page</th><th scope="col">Instruction to Google</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row"><a href="https://artlines.org/">Homepage</a></th><td class="blocked">Do not index</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/artists">Artist directory</a></th><td class="blocked">Do not index</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/museums">Museum directory</a></th><td class="blocked">Do not index</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/art-history-timeline">Art-history timeline guide</a></th><td class="allowed">Indexing allowed</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/artists/leonardo-da-vinci">Leonardo</a> and <a href="https://artlines.org/artists/katsushika-hokusai">Hokusai</a> profiles</th><td class="allowed">Indexing allowed</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note table-note">These are the pages’ indexing instructions, not confirmation that Google has indexed them. This was a sample check; page settings may change after this date.</p>
+            <ol class="actions">
+              <li><strong>Create public entry pages.</strong> Introduce Artline on the homepage and link to approved artists, artworks and useful guides. Keep research previews separate.</li>
+              <li><strong>Align links and sitemaps.</strong> Link to the public version of a record and include eligible canonical URLs in the sitemap. Preserve publication checks; removing every <code>noindex</code> tag is not a publication workflow.</li>
+              <li><strong>Check the existing Search Console account.</strong> Inspect representative URLs, their selected canonical, indexing exclusions and sitemap processing. The October 3 setup record noted a child-sitemap fetch issue that needs a follow-up check.</li>
+            </ol>
+            <p class="source">Google: <a href="https://developers.google.com/search/docs/fundamentals/how-search-works">how Search works</a>, <a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing">what noindex means</a> and <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview">how sitemaps help</a>.</p>
+          </section>
+
+          <section id="articles" aria-labelledby="articles-title">
+            <h2 id="articles-title">Yes, write articles.</h2>
+            <p class="lead">Start with one carefully sourced guide each week, published on Artline under a section such as <code>/guides/</code>.</p>
+            <p>Your Greek, Byzantine, Russian-icon and Cypriot research gives you material for a focused editorial programme. These ideas are starting hypotheses, not measured keyword demand.</p>
+            <div class="ideas">
+              <article class="idea"><h3>Byzantine and post-Byzantine art: an illustrated introduction</h3><p>Explain the terms with selected examples, a simple chronology and links to approved artwork records.</p></article>
+              <article class="idea"><h3>Greek painters: a timeline through selected artworks</h3><p>Connect creators and works across periods. Let readers continue exploring those connections in Artline.</p></article>
+              <article class="idea"><h3>Understanding Russian icons: symbols and examples</h3><p>Explain a few well-supported visual details, with sources and explicit attribution where a creator is unknown.</p></article>
+              <article class="idea"><h3>Exploring art collections in Cyprus</h3><p>Introduce documented collection highlights. Distinguish holdings from current display; verify visiting information before publication.</p></article>
+            </div>
+            <div class="recipe">
+              <h3>A useful article structure</h3>
+              <ol>
+                <li><strong>Answer one question.</strong> Use a clear title and give the reader an answer near the beginning.</li>
+                <li><strong>Show and explain.</strong> Choose a few relevant images and explain what to notice in each one.</li>
+                <li><strong>Add something original.</strong> Make a comparison, connect a timeline or explain your documented research.</li>
+                <li><strong>Make the evidence visible.</strong> Include sources, actual image credits, an honest byline and meaningful update dates.</li>
+                <li><strong>Offer a next step.</strong> Link to related approved artworks, artists and another relevant guide.</li>
+              </ol>
+            </div>
+            <p class="source">Google recommends useful, original content with clear sourcing. There is no preferred word count: <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">people-first content guidance</a>.</p>
+          </section>
+
+          <section id="artwork-pages" aria-labelledby="artworks-title">
+            <h2 id="artworks-title">Make every visit worthwhile.</h2>
+            <p class="lead">An artwork page should help a reader understand the work and decide what to explore next.</p>
+            <div class="tips">
+              <div><h3>Give the work context</h3><p>Show its title, creator or qualified attribution, known date, documented museum connection and sources. Keep unknown facts explicit.</p></div>
+              <div><h3>Help images be understood</h3><p>Use descriptive alternative text, informative captions and nearby relevant text. Preserve the image’s actual source, credit and rights evidence.</p></div>
+              <div><h3>Connect related material</h3><p>Offer relevant links to the artist, other works and an explanatory guide. Readers should have an obvious next step.</p></div>
+              <div><h3>Make exploration comfortable</h3><p>Check mobile readability, image loading, keyboard navigation and page responsiveness. Keep the main explanation easy to reach.</p></div>
+            </div>
+            <p class="source">Google: <a href="https://developers.google.com/search/docs/appearance/google-images">image discovery and accessibility guidance</a>.</p>
+          </section>
+
+          <section id="promotion" aria-labelledby="promotion-title">
+            <h2 id="promotion-title">Give the guide a life beyond search.</h2>
+            <p class="lead">Choose one social channel you can maintain and a few relevant communities where your work is useful.</p>
+            <ul class="actions">
+              <li><strong>Share a small, complete story.</strong> Use an approved image and one interesting observation, then link to the full guide.</li>
+              <li><strong>Create something educators can use.</strong> A comparison of two works or a short timeline exercise gives people a practical reason to reference Artline.</li>
+              <li><strong>Invite readers back.</strong> Consider an optional weekly email with one artwork and one story. Make subscribing and unsubscribing straightforward.</li>
+              <li><strong>Participate where the topic belongs.</strong> Share relevant resources in art and museum communities, following their rules.</li>
+            </ul>
+            <aside class="weekly"><h3>A manageable weekly rhythm</h3><p>Research one question. Publish one illustrated guide. Share one useful excerpt. Review what people read and explore next.</p></aside>
+          </section>
+
+          <section id="month" aria-labelledby="month-title">
+            <h2 id="month-title">Your first month</h2>
+            <p class="lead">Aim for discoverable public entrances, four useful articles and a regular measurement habit. Check off tasks as you complete them.</p>
+            <noscript><p class="note">The checklist works without JavaScript. Enable JavaScript to save progress in this browser, or use your browser’s Print command to keep a paper copy.</p></noscript>
+            <div class="plan">
+              <fieldset class="week"><legend>Week 1: establish the foundation</legend>
+                <label class="task"><input type="checkbox" data-task="public-pages"><span>Prepare indexable public entry pages and links to approved content.</span></label>
+                <label class="task"><input type="checkbox" data-task="baseline"><span>Check Search Console, record a baseline and publish the first guide.</span></label>
+              </fieldset>
+              <fieldset class="week"><legend>Week 2: connect the content</legend>
+                <label class="task"><input type="checkbox" data-task="second-guide"><span>Publish the second guide with links to relevant approved records.</span></label>
+                <label class="task"><input type="checkbox" data-task="page-quality"><span>Review linked artwork pages for useful captions, sources and mobile readability.</span></label>
+              </fieldset>
+              <fieldset class="week"><legend>Week 3: reach interested readers</legend>
+                <label class="task"><input type="checkbox" data-task="third-guide"><span>Publish the third guide and share an illustrated excerpt on your chosen channel.</span></label>
+                <label class="task"><input type="checkbox" data-task="feedback"><span>Ask a few interested readers or educators what helped and what was missing.</span></label>
+              </fieldset>
+              <fieldset class="week"><legend>Week 4: learn and improve</legend>
+                <label class="task"><input type="checkbox" data-task="fourth-guide"><span>Publish the fourth guide and improve an earlier page using reader feedback.</span></label>
+                <label class="task"><input type="checkbox" data-task="review"><span>Compare search results with the baseline and choose next month’s topics.</span></label>
+              </fieldset>
+            </div>
+          </section>
+
+          <section id="measurement" aria-labelledby="measurement-title">
+            <h2 id="measurement-title">Measure discovery and curiosity.</h2>
+            <p class="lead">Use Search Console for search performance. Use suitable site analytics, if introduced, for what visitors do after arriving.</p>
+            <dl class="metrics">
+              <div><dt>Indexed eligible pages</dt><dd>Are approved pages appearing in Google’s index? Investigate exclusions and errors.</dd></div>
+              <div><dt>Search impressions and clicks</dt><dd>Which questions and pages bring readers? Separate searches for “Artline” from other queries.</dd></div>
+              <div><dt>Image-search traffic</dt><dd>Check the Image search type in Search Console to see which illustrated pages get attention.</dd></div>
+              <div><dt>Exploration and return visits</dt><dd>Are readers opening another artwork, returning later or choosing to subscribe?</dd></div>
+            </dl>
+            <p style="margin-top: 24px">Review weekly, then make broader decisions over several weeks and months. A new site may have little data at first. This plan is a working strategy, not a traffic or ranking forecast.</p>
+            <p class="source">Google: <a href="https://developers.google.com/search/docs/monitor-debug/search-console-start">using Search Console to monitor your site</a>.</p>
+          </section>
+
+          <section id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">Keep these references handy.</h2>
+            <ul class="reading">
+              <li><a href="https://developers.google.com/search/docs/fundamentals/how-search-works">How Google Search works</a></li>
+              <li><a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing">Blocking indexing with noindex</a></li>
+              <li><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview">What a sitemap does</a></li>
+              <li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Creating helpful, reliable content</a></li>
+              <li><a href="https://developers.google.com/search/docs/appearance/google-images">Google Images best practices</a></li>
+              <li><a href="https://developers.google.com/search/docs/monitor-debug/search-console-start">Getting useful information from Search Console</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Prepared for Artline on 8 October 2026. The site findings are a dated spot check; recommendations are editorial judgments. Article publication and catalogue publication remain separate review steps.</p>
+    </footer>
+  </div>
+  <script>
+    (() => {
+      const key = 'artline-growth-guide-20261008-v1';
+      const tasks = Array.from(document.querySelectorAll('[data-task]'));
+      const progress = document.getElementById('progress');
+      const progressText = document.getElementById('progress-text');
+      const storageNote = document.getElementById('storage-note');
+      const reset = document.getElementById('reset-plan');
+      const print = document.getElementById('print-guide');
+      let canSave = true;
+
+      try {
+        const saved = JSON.parse(localStorage.getItem(key) || '{}');
+        if (saved && typeof saved === 'object' && !Array.isArray(saved)) {
+          tasks.forEach(task => { task.checked = saved[task.dataset.task] === true; });
+        }
+        localStorage.setItem(key, JSON.stringify(Object.fromEntries(tasks.map(task => [task.dataset.task, task.checked]))));
+      } catch (_) {
+        canSave = false;
+      }
+
+      function update(save) {
+        const count = tasks.filter(task => task.checked).length;
+        progress.max = tasks.length;
+        progress.value = count;
+        progress.textContent = `${count} of ${tasks.length} complete`;
+        progressText.textContent = `${count} of ${tasks.length} complete`;
+        reset.disabled = count === 0;
+        if (save && canSave) {
+          try {
+            localStorage.setItem(key, JSON.stringify(Object.fromEntries(tasks.map(task => [task.dataset.task, task.checked]))));
+          } catch (_) { canSave = false; }
+        }
+        storageNote.textContent = canSave ? 'Progress is saved in this browser.' : 'Progress lasts for this visit. Browser storage is unavailable.';
+      }
+
+      tasks.forEach(task => task.addEventListener('change', () => update(true)));
+      reset.addEventListener('click', () => {
+        tasks.forEach(task => { task.checked = false; });
+        update(true);
+      });
+      print.addEventListener('click', () => window.print());
+      print.hidden = false;
+      document.getElementById('tracker').hidden = false;
+      update(false);
+    })();
+  </script>
+</body>
+</html>

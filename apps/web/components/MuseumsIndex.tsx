@@ -1,13 +1,13 @@
 "use client";
+import { museumDescription } from "@/lib/display-metadata";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import { countryName } from "@/lib/api";
 import type { MuseumPage } from "@/lib/types";
-import { ArtworkImage } from "./ArtworkViewer";
+import { ArtworkImage, permittedImagePath } from "./ArtworkViewer";
 import { MultiSelectFilter } from "./MultiSelectFilter";
 import { usePainterChoices } from "./use-painter-choices";
-import { useEditorToken } from "./EditorAccess";
 import { useMuseumRequest } from "./museum-state";
 import { MuseumError, setMuseumFilters } from "./MuseumFilters";
 import { AtlasFilters, AtlasSelect, ActiveFilters } from "./AtlasFilters";
@@ -19,47 +19,40 @@ import styles from "./Museums.module.css";
 export function MuseumsIndex() {
   const search = useRef<HTMLInputElement>(null);
   const params = new URLSearchParams(useQueryString());
-  const [token] = useEditorToken();
+  if (params.has("selection") && params.get("selection") !== "museum") { params.delete("selection"); params.delete("cursor"); }
   const painters = queryValues(params, "artist"), movements = queryValues(params, "movement");
-  const painterChoices = usePainterChoices(painters, false, "", token);
+  const painterChoices = usePainterChoices(painters);
   const [retry, setRetry] = useState(0);
   const request = new URLSearchParams();
   for (const key of ["q", "region", "country", "artist", "movement", "selection", "display"]) params.getAll(key).forEach(value => request.append(key, value));
-  const paging = useCursorPaging(`${request}|${token}`, params.get("cursor") ?? "", cursor => {
+  const paging = useCursorPaging(request.toString(), params.get("cursor") ?? "", cursor => {
     updateQuery({cursor}, true);
     document.getElementById("museum-results-title")?.focus();
   });
   if (params.get("cursor")) request.set("cursor", params.get("cursor")!);
   const collectionQuery = new URLSearchParams();
   for (const key of ["artist", "movement", "selection", "display"]) params.getAll(key).forEach(value => collectionQuery.append(key, value));
-  const { data, previousData, error, loading } = useMuseumRequest<MuseumPage>(`museums?${request}`, token, retry);
+  const { data, previousData, error, loading } = useMuseumRequest<MuseumPage>(`museums?${request}`, retry);
   const facets = data?.facets ?? previousData?.facets;
   const regions = queryValues(params, "region"), countries = queryValues(params, "country").map(value => value.toUpperCase());
   const selection = params.get("selection") ?? "", display = params.get("display") ?? "", query = params.get("q") ?? "";
-  const europe = ["northern-europe", "western-europe", "southern-europe", "eastern-europe"];
-  const europeanScope = regions.length === europe.length && europe.every(region => regions.includes(region));
   const clear = () => setMuseumFilters({ q: null, region: null, country: null, artist: null, movement: null, selection: null, display: null });
   const filters = [
     ...regions.map(value => ({ key: `region-${value}`, label: facets?.regions.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ region: regions.filter(item => item !== value) }) })),
     ...countries.map(value => ({ key: `country-${value}`, label: countryName(value), remove: () => setMuseumFilters({ country: countries.filter(item => item !== value) }) })),
-    ...[{ key: "q", value: query, label: `Search: ${query}` }, { key: "selection", value: selection, label: selection === "owner" ? "My must-see works" : "Museum highlights" }, { key: "display", value: display, label: "Confirmed on view" }].filter(item => item.value).map(item => ({ ...item, remove: () => setMuseumFilters({ [item.key]: null }) })),
+    ...[{ key: "q", value: query, label: `Search: ${query}` }, { key: "selection", value: selection, label: "Museum highlights" }, { key: "display", value: display, label: "Confirmed on view" }].filter(item => item.value).map(item => ({ ...item, remove: () => setMuseumFilters({ [item.key]: null }) })),
   ];
   for (const group of [{ key: "artist", values: painters, options: painterChoices.options }, { key: "movement", values: movements, options: facets?.movements ?? [] }]) {
     for (const value of group.values) filters.push({ key: `${group.key}-${value}`, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ [group.key]: group.values.filter(item => item !== value) }) });
   }
   return <main id="main-content" className={styles.page}>
-    <AtlasPageHeader title="Museums and collections" description="Follow the paintings to the places that hold them." />
-    <div className={styles.locationShortcuts} role="group" aria-label="Museum location shortcuts">
-      <button aria-pressed={europeanScope} onClick={() => setMuseumFilters({region:europe, country:null})}>European museums</button>
-      <button aria-pressed={!regions.length && !countries.length} onClick={() => setMuseumFilters({region:null, country:null})}>All locations</button>
-      <span>Or combine individual regions and countries below.</span>
-    </div>
+    <AtlasPageHeader title="Museums and collections" />
     <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} placeholder="Museum, city or country" searchLabel="Search collections" columns={6} activeCount={filters.filter(f => f.key !== "q").length}>
       <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} helpText="Find collections with works by any selected painter. A collection does not need to hold all the selected painters." />
       <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />
-      <MultiSelectFilter label="Regions" allLabel="All regions" options={facets?.regions ?? []} values={regions} onChange={values => setMuseumFilters({ region: values })} helpText="Choose any number. These are museum venue locations, not painters’ origins." />
-      <MultiSelectFilter label="Countries" allLabel="All countries" options={facets?.countries ?? []} values={countries} onChange={values => setMuseumFilters({ country: values })} helpText="Match a venue in any selected country. Collections without a verified venue only appear with all locations." />
-      <AtlasSelect label="Selection" value={selection} onChange={value => setMuseumFilters({ selection: value })} options={[{ value: "", label: "All catalogued works" }, { value: "owner", label: "My must-see works" }, { value: "museum", label: "Museum highlights" }]} />
+      <MultiSelectFilter label="Regions" allLabel="All regions" options={facets?.regions ?? []} values={regions} onChange={values => setMuseumFilters({ region: values })} helpText="Choose any number. These are recorded museum or venue locations." />
+      <MultiSelectFilter label="Countries" allLabel="All countries" options={facets?.countries ?? []} values={countries} onChange={values => setMuseumFilters({ country: values })} helpText="Match a recorded museum or venue location in any selected country." />
+      <AtlasSelect label="Selection" value={selection} onChange={value => setMuseumFilters({ selection: value })} options={[{ value: "", label: "All catalogued works" }, { value: "museum", label: "Museum highlights" }]} />
       <AtlasSelect label="Display" value={display} onChange={value => setMuseumFilters({ display: value })} options={[{ value: "", label: "Any display status" }, { value: "on_view", label: "Confirmed on view" }]} />
     </AtlasFilters>
     <ActiveFilters filters={filters} onClear={clear} searchRef={search} />
@@ -68,12 +61,12 @@ export function MuseumsIndex() {
     <section aria-label="Museum results" aria-busy={loading}>
       {error ? <MuseumError message={error} retry={() => setRetry(value => value + 1)} /> : loading ? <p className={styles.loading}>Opening the collections…</p> : data?.items.length ? <ul className={styles.museumGrid}>{data.items.map(museum => <li key={museum.id}>
         <Link className={styles.museumCard} href={`/museums/${museum.slug}${collectionQuery.size ? `?${collectionQuery}` : ""}`}>
-          <div className={styles.collectionImage}>{museum.cover ? <ArtworkImage work={museum.cover} /> : <span>No reproduction available</span>}</div>
-          <div className={styles.collectionCopy}><p className={styles.place}>{museum.venues.length ? [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") : "Collection · no verified visiting venue"}</p><h3>{museum.name}</h3><p>{museum.description}</p>
-          <div className={styles.cardCounts}><span>{formatCount(museum.work_count)} {museum.work_count === 1 ? "work" : "works"} in Artline</span>{museum.highlight_count > 0 && <span>{formatCount(museum.highlight_count)} museum highlights</span>}{museum.must_see_count > 0 && <span>{formatCount(museum.must_see_count)} must-see picks</span>}</div>
-          <p className={styles.displayNote}>{museum.on_view_count ? `${museum.on_view_count} recently confirmed on view` : "No confirmed display information"}</p><span className={styles.exploreLink}>Explore collection <span aria-hidden="true">↗</span></span></div>
+          {museum.cover && permittedImagePath(museum.cover.media_url) && <div className={styles.collectionImage}><ArtworkImage work={museum.cover} /></div>}
+          <div className={styles.collectionCopy}>{(museum.venues.length > 0 || museum.country) && <p className={styles.place}>{ museum.venues.length ? [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") : [museum.city, countryName(museum.country!)].filter(Boolean).join(", ") }</p>}<h3>{museum.name}</h3>{museumDescription(museum.description) && <p>{museumDescription(museum.description)}</p>}
+          <div className={styles.cardCounts}><span>{formatCount(museum.work_count)} {museum.work_count === 1 ? "work" : "works"} in Artline</span>{museum.highlight_count > 0 && <span>{formatCount(museum.highlight_count)} museum highlights</span>}</div>
+          {museum.on_view_count > 0 && <p className={styles.displayNote}>{museum.on_view_count} recently confirmed on view</p>}<span className={styles.exploreLink}>Explore collection <span aria-hidden="true">↗</span></span></div>
         </Link>
-      </li>)}</ul> : <div className={styles.empty}><h2>{filters.length ? "No collections match these filters" : "The museum catalogue is taking shape"}</h2><p>{selection === "owner" ? "Your must-see selection is empty for this view. Open a collection and use editor access to add your own picks." : display ? "No matching works have current, verified display information. This does not mean they are not on view." : "No collections are available in this view yet."}</p>{filters.length > 0 && <button onClick={clear}>Remove filters</button>}</div>}
+      </li>)}</ul> : <div className={styles.empty}><h2>{filters.length ? "No collections match these filters" : "The museum catalogue is taking shape"}</h2><p>{display ? "No matching works have current, verified display information. This does not mean they are not on view." : "No collections are available in this view yet."}</p>{filters.length > 0 && <button onClick={clear}>Remove filters</button>}</div>}
     </section>
     {data && <CursorPager paging={paging} next={data.next_cursor} busy={loading} total={data.total} shown={data.items.length} label="Museum pages" noun="collections" />}
   </main>;

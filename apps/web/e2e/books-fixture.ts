@@ -1,10 +1,10 @@
 import type { Page } from "@playwright/test";
 import seed from "../../server/internal/books/selection.json";
-import type { Book, BooksResponse } from "../lib/books";
+import type { BookDetails, BooksResponse } from "../lib/books";
 
 // Browser-only interaction fixtures; never inserted into a database. The live
 // 10k catalogue is checked separately by books-catalogue.spec.ts.
-export const booksFixture: Book[] = seed.map(book => ({ ...book, years: book.years.replaceAll(" CE", ""), status: "review", sourceUrl: "", selectionBasis: "UI fixture", dateBasis: "UI fixture", creators: [{ id: book.author, name: book.author, description: "Creator biography for the UI fixture.", birth: book.author === "Jean-Paul Sartre" ? "1905" : null, death: book.author === "Jean-Paul Sartre" ? "1980" : null, sourceUrl: "https://www.wikidata.org/" }] })).sort((a, b) => a.startYear! - b.startYear! || a.id.localeCompare(b.id));
+export const booksFixture: BookDetails[] = seed.map(book => ({ ...book, years: book.years.replaceAll(" CE", ""), status: "review", sourceUrl: "", selectionBasis: "UI fixture", dateBasis: "UI fixture", creators: [{ id: book.author, name: book.author, description: "Creator biography for the UI fixture.", birth: book.author === "Jean-Paul Sartre" ? "1905" : null, death: book.author === "Jean-Paul Sartre" ? "1980" : null, sourceUrl: "https://www.wikidata.org/" }] })).sort((a, b) => a.startYear! - b.startYear! || a.id.localeCompare(b.id));
 
 export async function mockBooks(page: Page) {
   await page.route("**/api/backend/v1/books**", route => {

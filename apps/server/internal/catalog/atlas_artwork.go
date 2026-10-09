@@ -21,10 +21,10 @@ type AtlasArtwork struct {
 
 // The caller applies atlas eligibility. This method independently checks native
 // visibility and enriches one UUID, never the global museum artwork relation.
-func (r *Repository) AtlasArtwork(ctx context.Context, id string, preview bool) (AtlasArtwork, error) {
+func (r *Repository) AtlasArtwork(ctx context.Context, id string) (AtlasArtwork, error) {
 	out := AtlasArtwork{Creators: []AtlasCreator{}}
 	var raw []byte
-	err := r.db.QueryRow(ctx, `SELECT to_jsonb(a)||jsonb_build_object('media_url',m.storage_path,'alt_text',m.alt_text,'rights_status',m.rights_status,'attribution_text',m.attribution_text,'source_page_url',m.source_page_url,'license_label',m.license_label,'license_url',m.license_url) FROM artworks a LEFT JOIN media_assets m ON m.id=a.primary_media_id WHERE a.id=$1 AND a.status<>'archived' AND ($2 OR a.status='published')`, id, preview).Scan(&raw)
+	err := r.db.QueryRow(ctx, `SELECT to_jsonb(a)||jsonb_build_object('media_url',m.storage_path,'alt_text',m.alt_text,'rights_status',m.rights_status,'attribution_text',m.attribution_text,'source_page_url',m.source_page_url,'license_label',m.license_label,'license_url',m.license_url) FROM artworks a LEFT JOIN media_assets m ON m.id=a.primary_media_id WHERE a.id=$1 AND a.status<>'archived' `, id).Scan(&raw)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return out, ErrNotFound
 	}
@@ -35,11 +35,11 @@ func (r *Repository) AtlasArtwork(ctx context.Context, id string, preview bool) 
 		return out, err
 	}
 	works := []Artwork{out.Artwork}
-	if err = r.enrichArtworks(ctx, works, preview); err != nil {
+	if err = r.enrichArtworks(ctx, works); err != nil {
 		return out, err
 	}
 	out.Artwork = works[0]
-	rows, err := r.db.Query(ctx, `SELECT ar.id::text,ar.slug,ar.display_name,ar.timeline_display,aa.attribution_role FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=$1 AND ar.status<>'archived' AND ($2 OR ar.status='published') ORDER BY ar.sort_name,ar.id,aa.attribution_role`, id, preview)
+	rows, err := r.db.Query(ctx, `SELECT ar.id::text,ar.slug,ar.display_name,ar.timeline_display,aa.attribution_role FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=$1 AND ar.status<>'archived'  ORDER BY ar.sort_name,ar.id,aa.attribution_role`, id)
 	if err != nil {
 		return out, err
 	}

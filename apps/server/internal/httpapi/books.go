@@ -21,16 +21,19 @@ func (api *API) books(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_END_YEAR", err.Error())
 		return
 	}
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
+	q := r.URL.Query()
+	summaryValues := q["summary"]
+	if len(summaryValues) > 1 || (len(summaryValues) == 1 && summaryValues[0] != "true" && summaryValues[0] != "false") {
+		writeError(w, 400, "INVALID_SUMMARY", "Use summary=true or summary=false once.")
 		return
 	}
-	q := r.URL.Query()
+	summary := q.Get("summary") == "true"
 	women, top100, ok := bookDiscoverySelection(w, r)
 	if !ok {
 		return
 	}
-	filter := books.Filter{Range: books.Range{Start: start, End: end}, View: q.Get("view"), Query: q.Get("q"), Authors: q["author"], Languages: q["language"], Countries: q["country"], Regions: q["region"], Women: women, Top100: top100, After: q.Get("after"), Preview: preview}
+	filter := books.Filter{Range: books.Range{Start: start, End: end}, View: q.Get("view"), Query: q.Get("q"), Authors: q["author"], Languages: q["language"], Countries: q["country"], Regions: q["region"], Women: women, Top100: top100, After: q.Get("after")}
+	filter.Summary = summary
 	filter.Limit, err = integerQuery(r, "limit", timeline.IndividualLimit, 1, filter.MaxPageSize())
 	if err != nil {
 		writeError(w, 400, "INVALID_LIMIT", err.Error())
@@ -50,13 +53,9 @@ func (api *API) books(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, 200, result)
 }
 func (api *API) book(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	ctx, cancel := contextWithTimeout(r, 5*time.Second)
 	defer cancel()
-	result, err := api.bookRepo.ByID(ctx, r.PathValue("id"), preview)
+	result, err := api.bookRepo.ByID(ctx, r.PathValue("id"))
 	if err != nil {
 		api.bookError(w, err)
 		return
@@ -69,17 +68,13 @@ func (api *API) bookAuthors(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_QUERY", "Use at most 200 characters.")
 		return
 	}
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	women, top100, ok := bookDiscoverySelection(w, r)
 	if !ok {
 		return
 	}
 	ctx, cancel := contextWithTimeout(r, 5*time.Second)
 	defer cancel()
-	result, err := api.bookRepo.Authors(ctx, query, preview, women, top100)
+	result, err := api.bookRepo.Authors(ctx, query, women, top100)
 	if err != nil {
 		api.bookError(w, err)
 		return
@@ -102,17 +97,13 @@ func bookDiscoverySelection(w http.ResponseWriter, r *http.Request) (bool, bool,
 }
 
 func (api *API) bookFacets(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	women, top100, ok := bookDiscoverySelection(w, r)
 	if !ok {
 		return
 	}
 	ctx, cancel := contextWithTimeout(r, 5*time.Second)
 	defer cancel()
-	result, err := api.bookRepo.Facets(ctx, preview, women, top100)
+	result, err := api.bookRepo.Facets(ctx, women, top100)
 	if err != nil {
 		api.bookError(w, err)
 		return

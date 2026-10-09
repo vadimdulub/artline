@@ -63,7 +63,7 @@ func TestPresetsAndYearPartitions(t *testing.T) {
 	}
 }
 func TestCursorCannotCrossFiltersOrTypes(t *testing.T) {
-	f := Filter{Range: Range{1910, 1930}, Limit: 60, Preview: true, Highlights: true, Types: []string{"event", "book"}}
+	f := Filter{Range: Range{1910, 1930}, Limit: 60, Highlights: true, Types: []string{"event", "book"}}
 	raw := encodeCursor(Item{ID: "book-one", StartYear: 1914}, f, "book")
 	if _, err := decodeCursor(raw, f, "book"); err != nil {
 		t.Fatal(err)
@@ -73,7 +73,7 @@ func TestCursorCannotCrossFiltersOrTypes(t *testing.T) {
 	if _, err := decodeCursor(raw, swapped, "book"); err != nil {
 		t.Fatal("type order changed scope")
 	}
-	for _, change := range []func(*Filter){func(v *Filter) { v.End = 1931 }, func(v *Filter) { v.Query = "war" }, func(v *Filter) { v.Preview = false }, func(v *Filter) { v.Highlights = false }, func(v *Filter) { v.Region = "eastern-europe" }, func(v *Filter) { v.Limit = 2 }, func(v *Filter) { v.Types = []string{"book"} }} {
+	for _, change := range []func(*Filter){func(v *Filter) { v.End = 1931 }, func(v *Filter) { v.Query = "war" }, func(v *Filter) { v.Highlights = false }, func(v *Filter) { v.Region = "eastern-europe" }, func(v *Filter) { v.Limit = 2 }, func(v *Filter) { v.Types = []string{"book"} }} {
 		next := f
 		change(&next)
 		if _, err := decodeCursor(raw, next, "book"); !errors.Is(err, ErrFilter) {

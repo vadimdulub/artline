@@ -9,7 +9,6 @@ type TimelineFilter struct {
 	Query       string
 	Country     string
 	Movement    string
-	Status      string
 	Regions     []string
 	WorkType    string
 	PopularOnly bool
@@ -132,6 +131,7 @@ type Citation struct {
 }
 
 type ArtistDetail struct {
+	KeyArtwork         *Artwork            `json:"key_artwork"`
 	WorkTypes          []FacetOption       `json:"work_types"`
 	ArtworkCount       int                 `json:"artwork_count"`
 	Collections        []ArtistCollection  `json:"collections"`
@@ -167,29 +167,6 @@ type CatalogueArtist struct {
 	Status          string    `json:"status"`
 	Revision        int       `json:"revision"`
 	UpdatedAt       time.Time `json:"updated_at"`
-}
-
-type ArtistInput struct {
-	Slug              string  `json:"slug"`
-	DisplayName       string  `json:"display_name"`
-	SortName          string  `json:"sort_name"`
-	EntityType        string  `json:"entity_type"`
-	TimelineStartYear int     `json:"timeline_start_year"`
-	TimelineEndYear   int     `json:"timeline_end_year"`
-	TimelineDisplay   string  `json:"timeline_display"`
-	TimelineBasis     string  `json:"timeline_basis"`
-	BiographyMD       *string `json:"biography_md"`
-	Status            string  `json:"status"`
-	ExpectedRevision  int     `json:"expected_revision"`
-}
-
-type CoverageSummary struct {
-	ByStatus      map[string]int `json:"by_status"`
-	NordicArtists int            `json:"nordic_artists"`
-	AsianArtists  int            `json:"asian_artists"`
-	MissingWorks  int            `json:"missing_representative_works"`
-	MissingBio    int            `json:"missing_biography"`
-	TotalArtists  int            `json:"total_artists"`
 }
 
 type FacetOption struct {

@@ -29,7 +29,7 @@ func TestMatchedExtentReadOnly(t *testing.T) {
 	}
 	defer db.Close()
 	repo := NewRepository(db)
-	f := Filter{Range: Bounds, Authors: []string{"Leo Tolstoy"}, Preview: true, Limit: 1}
+	f := Filter{Range: Bounds, Authors: []string{"Leo Tolstoy"}, Limit: 1}
 	first, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)
@@ -38,7 +38,7 @@ func TestMatchedExtentReadOnly(t *testing.T) {
 		t.Fatal("expected more than one matching book")
 	}
 	var earliest, latest *int
-	err = db.QueryRow(ctx, `SELECT min(b.start_year),max(b.end_year)`+predicate, f.Start, f.End, f.Preview, "", f.Authors, false, false, []string{}, []string{}, []string{}).Scan(&earliest, &latest)
+	err = db.QueryRow(ctx, `SELECT min(b.start_year),max(b.end_year)`+predicate, f.Start, f.End, "", f.Authors, false, false, []string{}, []string{}, []string{}).Scan(&earliest, &latest)
 	if err != nil {
 		t.Fatal(err)
 	}

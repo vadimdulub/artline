@@ -1,9 +1,14 @@
 import {test,expect} from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-test("European shortcut preserves multiple painters and index pages are reversible", async ({page}) => {
+test("Museum region filters preserve multiple painters and index pages are reversible", async ({page}) => {
   await page.goto("/museums?artist=claude-monet&artist=camille-pissarro-q134741");
-  await page.getByRole("button",{name:"European museums",exact:true}).click();
+  const regions = page.locator(".multi-filter").filter({ has: page.locator("summary", { hasText: "Regions" }) });
+  await regions.locator("summary").click();
+  for (const region of ["Eastern Europe", "Northern Europe", "Southern Europe", "Western Europe"]) {
+    await regions.getByRole("checkbox", { name: region, exact: true }).check();
+  }
+  await regions.getByRole("button", { name: "Done", exact: true }).click();
   const params=new URL(page.url()).searchParams;
   expect(params.getAll("region").sort()).toEqual(["eastern-europe","northern-europe","southern-europe","western-europe"]);
   expect(params.getAll("artist")).toHaveLength(2);
@@ -12,7 +17,6 @@ test("European shortcut preserves multiple painters and index pages are reversib
   const data=await response.json();
   expect(data.total).toBeGreaterThan(0);
   expect(data.items.every((museum:{venues:{region:string}[]})=>museum.venues.some(venue=>params.getAll("region").includes(venue.region)))).toBe(true);
-  await expect(page.getByRole("button",{name:"European museums",exact:true})).toHaveAttribute("aria-pressed","true");
   await page.goto("/museums");
   const results=page.getByRole("region",{name:"Museum results"});
   await expect(results.getByRole("link").first()).toBeVisible();

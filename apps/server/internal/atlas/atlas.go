@@ -59,7 +59,7 @@ type Filter struct {
 	PresetID              string
 	NeighborOf, Direction string
 	Types                 []string
-	Highlights, Preview   bool
+	Highlights            bool
 	Region                string
 	Countries, Continents []string
 	CountryScope          string
@@ -271,7 +271,7 @@ func scope(f Filter, kind string) string {
 		picks[kind] = slices.Clone(ids)
 		slices.Sort(picks[kind])
 	}
-	values := []any{f.Range, strings.TrimSpace(f.Query), types, f.Highlights, f.Preview, f.Region, f.Limit, kind, f.Selection, picks, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, f.PresetID, presetFocus(f.PresetID)}
+	values := []any{f.Range, strings.TrimSpace(f.Query), types, f.Highlights, f.Region, f.Limit, kind, f.Selection, picks, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, f.PresetID, presetFocus(f.PresetID)}
 	if kind == "artwork" {
 		// Chronological-only cursors cannot seek in the new gallery order.
 		values = append(values, "painted-first-v1")

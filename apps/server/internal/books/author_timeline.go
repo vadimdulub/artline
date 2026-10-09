@@ -29,8 +29,8 @@ const authorTimelineScope = `WITH eligible_books AS MATERIALIZED (
 ), links AS MATERIALIZED (
  SELECT b.id AS book_id,c.id AS author_id,l.credit
  FROM eligible_books b JOIN book_creator_links l ON l.book_id=b.id JOIN book_creators c ON c.id=l.creator_id
- WHERE (NOT $6 OR c.id=ANY(b.woman_author_ids))
- AND (coalesce(cardinality($5::text[]),0)=0 OR c.name=ANY($5))
+ WHERE (NOT $5 OR c.id=ANY(b.woman_author_ids))
+ AND (coalesce(cardinality($4::text[]),0)=0 OR c.name=ANY($4))
 ), author_ids AS (
  SELECT author_id,count(DISTINCT book_id)::int AS book_count,array_agg(DISTINCT credit ORDER BY credit) AS credits FROM links GROUP BY author_id
 ), dates AS (
@@ -75,7 +75,7 @@ func authorLifeLabel(c Creator) string {
 func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, error) {
 	result := metadata(f.Range)
 	result.View, result.Authors = "authors", []TimelineAuthor{}
-	args := []any{f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Authors, f.Women, f.Top100, f.Languages, f.Countries, f.Regions}
+	args := []any{f.Start, f.End, strings.TrimSpace(f.Query), f.Authors, f.Women, f.Top100, f.Languages, f.Countries, f.Regions}
 	var firstYear, lastYear *int
 	if err := r.db.QueryRow(ctx, authorTimelineScope+`SELECT count(*),count(*) FILTER (WHERE start_year IS NULL),(SELECT count(*) FROM classified),min(start_year),max(end_year) FROM matching`, args...).Scan(&result.Total, &result.UndatedTotal, &result.SelectionTotal, &firstYear, &lastYear); err != nil {
 		return result, fmt.Errorf("count authors: %w", err)
@@ -90,7 +90,7 @@ func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, er
 	}
 	c, _ := decodeCursor(f.After)
 	rows, err := r.db.Query(ctx, authorTimelineScope+`SELECT c.record,a.start_year,a.end_year,coalesce(a.approximate,true),a.book_count,a.credits
- FROM (SELECT * FROM matching WHERE (coalesce(start_year,2147483647),id)>($11,$12) ORDER BY coalesce(start_year,2147483647),id LIMIT $13) a
+ FROM (SELECT * FROM matching WHERE (coalesce(start_year,2147483647),id)>($10,$11) ORDER BY coalesce(start_year,2147483647),id LIMIT $12) a
  JOIN book_creators c ON c.id=a.id ORDER BY coalesce(a.start_year,2147483647),a.id`, append(args, c.Year, c.ID, f.Limit+1)...)
 	if err != nil {
 		return result, err

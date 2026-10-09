@@ -18,7 +18,7 @@ test("large collection supports compact layout and reversible bounded pages", as
   await expect(results.getByRole("button").first()).toHaveAttribute("aria-label", first!);
   await page.getByRole("combobox", { name: "Artworks per page" }).selectOption("48");
   await expect(results.getByRole("button")).toHaveCount(48);
-  await page.getByRole("checkbox", { name: "With an available image" }).check();
+  await page.getByRole("checkbox", { name: "With pictures" }).check();
   await expect(results.locator(".work-placeholder")).toHaveCount(0);
   await expect(results.getByRole("button").first()).toBeVisible();
   await results.getByRole("button").first().click();

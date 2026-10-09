@@ -7,15 +7,24 @@ import { useMemberSession } from "./MemberSession";
 import { MemberNavigation, NavigationIcon } from "./MemberNavigation";
 import "./SiteNavigation.css";
 
-const accountRoutes = ["/artists", "/museums", "/account", "/art-history-timeline", "/coverage", "/about", "/membership-preview"];
+const accountRoutes = ["/artists", "/museums", "/account", "/art-history-timeline", "/about", "/membership-preview"];
+const panelPreferenceKey = "artline:account-panel-collapsed";
 export function SiteHeader() {
   const pathname = usePathname();
   const { session } = useMemberSession();
   const user = session?.user;
   const accountArea = accountRoutes.some(route => pathname === route || pathname.startsWith(`${route}/`));
-  const [collapsed, setCollapsed] = useState(false);
+  // The session guard keeps this browser preference out of the server-rendered UI.
+  const [collapsed, setCollapsed] = useState(() => {
+    try { return typeof window !== "undefined" && localStorage.getItem(panelPreferenceKey) === "1"; }
+    catch { return false; }
+  });
   const closeMenu = useCallback(() => setCollapsed(true), []);
   const header = useRef<HTMLElement>(null);
+  useEffect(() => {
+    try { localStorage.setItem(panelPreferenceKey, collapsed ? "1" : "0"); }
+    catch { /* Navigation still works when browser storage is unavailable. */ }
+  }, [collapsed]);
   useEffect(() => {
     if (!header.current) return;
     const observer = new ResizeObserver(([entry]) => {
@@ -35,8 +44,8 @@ export function SiteHeader() {
       <Link href="/books" aria-current={pathname.startsWith("/books") ? "page" : undefined}>Books</Link>
       <Link href="/events" aria-current={pathname.startsWith("/events") ? "page" : undefined}>Events</Link>
       <Link href="/all" aria-current={pathname === "/all" ? "page" : undefined}>All</Link>
-      <Link href={accountHref} prefetch={false} className="account-menu-link" aria-current={accountArea ? "page" : undefined} onClick={() => setCollapsed(false)}>Account</Link>
+      <Link href={accountHref} prefetch={false} className="account-menu-link" aria-current={accountArea ? "page" : undefined}>Account</Link>
     </nav>
-    <div className="header-aside">{user ? <Link href="/artists" prefetch={false} className="account-avatar" aria-label="Your account" title={user.name ? `Your account — ${user.name}` : "Your account"} onClick={() => setCollapsed(false)}><NavigationIcon kind="user" /></Link> : <Link href="/about" className="help-link" aria-label="About this atlas">?</Link>}</div>
+    <div className="header-aside">{user ? <Link href="/artists" prefetch={false} className="account-avatar" aria-label="Your account" title={user.name ? `Your account — ${user.name}` : "Your account"}><NavigationIcon kind="user" /></Link> : <Link href="/about" className="help-link" aria-label="About this atlas">?</Link>}</div>
   </header>{user && accountArea && <MemberNavigation open={!collapsed} close={closeMenu} show={() => setCollapsed(false)} />}</>;
 }

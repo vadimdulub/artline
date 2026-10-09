@@ -26,7 +26,7 @@ import { atlasTimelineScale } from "@/lib/atlas-timeline";
 import { popularPaintersOnly, womenArtistsOnly, queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import type { ArtistDetail, TimelineFacets, TimelineResponse } from "@/lib/types";
 
-export function TimelineExplorer({ preview }: { preview: boolean }) {
+export function TimelineExplorer() {
   const search = useQueryString();
   const params = useMemo(() => new URLSearchParams(search), [search]);
   const paintings = params.get("view") === "paintings";
@@ -42,7 +42,7 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
   const workTypes = queryValues(params, "work_type");
   const popularOnly = popularPaintersOnly(params);
   const womenOnly = womenArtistsOnly(params);
-  const painterChoices = usePainterChoices(painters, false, "", "", womenOnly);
+  const painterChoices = usePainterChoices(painters, false, "", womenOnly);
   const slug = params.get("artist") ?? "";
   const [facets, setFacets] = useState<TimelineFacets>({ countries: [], movements: [], regions: [] });
   const [facetError, setFacetError] = useState(false);
@@ -179,7 +179,7 @@ export function TimelineExplorer({ preview }: { preview: boolean }) {
           {error ? <div className="state-panel"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={() => { setResult({ key: "" }); setRetry(value => value + 1); }}>Try again</button></div> :
             data?.mode === "density" ? <><TimelineOverview key={`${start}-${end}`} periods={data.periods} start={start} end={end} position={position} disabled={loading} suggestion={suggestions[0]} onSelect={selectPeriod} /><TimelineFilterSuggestions suggestions={suggestions} noun="painters" needsFilter={Boolean(needsFilter)} disabled={loading} guidanceId="density-guidance" onApply={applySuggestion} onChooseFilters={focusSearch}>{!popularOnly && <button type="button" disabled={loading} onClick={() => change({ popular: null }, true)}>Show popular painters</button>}</TimelineFilterSuggestions></> :
             positioned.length ? <TimelineLanes key={`${popularOnly}-${womenOnly}`} label="Painter timeline lanes" loading={loading} height={laneCount * 54 + 12}>{positioned.map(artist => <TimelineMark key={artist.id} className="artist-mark" disabled={loading} selected={artist.slug === slug} left={artist.left} top={artist.lane * 54 + 8} width={artist.width} labelOffset={artist.labelOffset} labelWidth={artist.labelWidth} color={artist.movement.color} onSelect={() => openArtist(artist.slug)} label={`${artist.name}, ${artist.date_display}, ${artist.movement.name}, ${artist.countries.map(countryName).join(", ")}, ${artist.artwork_count} recorded works`} title={`${artist.movement.name} · ${artist.artwork_count} recorded works`} name={artist.name} date={artist.date_display} />)}</TimelineLanes> :
-            <div className="state-panel"><h2>{loading ? "Opening the atlas…" : "No painters in this view"}</h2>{!loading && <><p>{activeFilters.length ? "No records match these filters in this date range." : start !== 1100 || end !== 2000 ? "No painter records overlap these years. Try a wider date range." : preview ? "Choose another date range or adjust the painter filters." : "Choose another date range or adjust the painter filters."}</p><div className="empty-view-actions">{activeFilters.length > 0 && <button onClick={() => { clearFilters(); searchInput.current?.focus(); }}>Remove filters</button>}{(start !== 1100 || end !== 2000) && <button onClick={() => setRange(1100, 2000)}>Show full date range</button>}</div></>}</div>}
+            <div className="state-panel"><h2>{loading ? "Opening the atlas…" : "No painters in this view"}</h2>{!loading && <><p>{activeFilters.length ? "No records match these filters in this date range." : start !== 1100 || end !== 2000 ? "No painter records overlap these years. Try a wider date range." : "Choose another date range or adjust the painter filters."}</p><div className="empty-view-actions">{activeFilters.length > 0 && <button onClick={() => { clearFilters(); searchInput.current?.focus(); }}>Remove filters</button>}{(start !== 1100 || end !== 2000) && <button onClick={() => setRange(1100, 2000)}>Show full date range</button>}</div></>}</div>}
         </TimelineGrid>
       <TimelineRangeControls start={start} end={end} minimum={1100} maximum={2000} onChange={setRange} onPreview={setRangePreview}
         scale={{ position: year => artworkYearPosition(year), yearAt: percent => artworkYearAtPosition(percent), markers: rangeMarkers }}

@@ -40,17 +40,13 @@ the populated database or image collection. See
 [local data locations](docs/LOCAL_DATA_LOCATIONS.md) for retained evidence and
 backups.
 
-Editor browser tests read `ARTLINE_E2E_EDITOR_TOKEN` from the test process
-environment. Supply a token for a disposable test environment when running
-tests that edit records; do not run those tests against the real catalogue.
-
 The deployed website uses Cloud SQL and serves images from the private
-`artline-508319-images` bucket through its `/assets/...` route. It runs an
-explicit public research preview, showing review records without publishing
-them; editing still requires authentication. Deployment details and validation
-are recorded in [the GCP deployment receipt](docs/deployment-20260912.md).
-The Catalogue supports bounded, read-only browsing without an editor token.
-Archived records and editorial operations remain restricted to the editor.
+`artline-508319-images` bucket through its `/assets/...` route. The historical
+deployment used a research-preview switch; the current code replaces it with
+one active catalogue. Deployment details and validation are recorded in
+[the GCP deployment receipt](docs/deployment-20260912.md).
+The Catalogue supports bounded, read-only browsing. Archived records are excluded.
+Browser editing, publication actions, and personal museum lists are removed.
 
 ## Local setup
 
@@ -99,15 +95,12 @@ Shortlists and review feedback persist in that browser; sample feature data is
 temporary. Billing and production paid-feature workflows are not implemented.
 See [the membership proposal](docs/paid-membership-features.md).
 
-Set `ARTLINE_EDITOR_TOKEN` in `apps/server/.env`. For local catalogue changes, enter that value from
-`apps/server/.env` in the Catalogue editor-token field. Replace that local
-value whenever the project is shared; production receives a separate token
-from Secret Manager.
-
-To see unpublished records locally, set `ARTLINE_RESEARCH_PREVIEW_TOKEN` in
-`apps/web/.env.local` to the same value. This read-preview option is honored
-only by `next dev`; the production build ignores it. It is not sent to browser
-JavaScript. Catalogue and must-see selection mutations still require the editor-token field.
+Catalogue browsing includes all active records without research-preview settings
+or a publication-status filter. Old `catalogue=all` links redirect to the same
+normal record URL; legacy API `preview` and `status` parameters are ignored.
+Historical statuses remain in the database as audit data. Archives stay excluded,
+and factual uncertainty, image/source evidence and member access remain intact.
+See [the unified catalogue change](docs/unified-catalogue.md).
 
 The original seed migrations create 11 review painters, 15 review artworks,
 15 local images, and audit/slug-history triggers. The eighth migration adds
@@ -115,8 +108,7 @@ ingestion evidence and policy/search indexes. The owner-requested local import
 is separate from the seed: see [curated import results](docs/curated-ingestion-results.md).
 In the original seed every painter has at least one illustrated work; Giotto has five. The
 original prototype's 28 painters and 140 artworks were not supplied. Records
-remain in review. Published-only reads exclude them; the deployed public
-research preview explicitly includes review records.
+retain their historical review status, which no longer limits browsing.
 
 ## Painter chronology and scale
 
@@ -138,12 +130,11 @@ has **not** been load-tested at 10 million rows. See
 [chronology implementation and scale notes](docs/painter-artwork-chronology.md).
 The scale constraints are also recorded in `AGENTS.md` for subsequent work.
 
-## Museums and must-see works
+## Museums and collections
 
 Open <http://localhost:3000/museums>. The original seed contains seven museums
 and holding collections and eight physical venues. The curated import additionally
 represents Cleveland, Chicago and the Prado, with sourced museum highlights and holding links.
-Personal must-see lists remain distinct from institution designations.
 
 Museum regions and countries support multiple choices. Each collection offers
 artwork search, painter/movement/date/venue filters, selection ordering, pagination,
@@ -151,11 +142,8 @@ and full artwork details in the right-hand panel. Museum counts cover only Artli
 records. A holding collection is not a promise of current display: no on-view
 assertions have been seeded. The Confirmed on view filter therefore starts empty.
 
-To curate your own list, expand **Edit my must-see list** on a museum page and
-enter `ARTLINE_EDITOR_TOKEN`. Open an artwork, choose **Include in my must-see
-works**, optionally add a reason, set its order, and save. Saved changes remain
-in review. Revision checks reject conflicting edits without silently overwriting
-the saved list. This is a single-owner editorial tool, not per-visitor accounts.
+Catalogue pages are for browsing. Personal must-see lists and browser-based
+editor tools are currently removed; museum highlights remain source-backed.
 
 See [the museum implementation notes](docs/museum-implementation.md) for schema,
 evidence, tests and limitations. The 111-source registry is not bulk-imported;
@@ -306,8 +294,7 @@ test records live inside a transaction that is rolled back.
 
 From `apps/web`, run `npm run lint`, `npm test`, and `npm run build`.
 `npm run test:e2e` uses installed Chrome and the running local API and
-development frontend. It expects the review seed and the configured local
-development editor token. Screenshots are saved to `docs/screenshots`.
+development frontend. Older scenarios expect the review seed. Screenshots are saved to `docs/screenshots`.
 The suite includes Axe accessibility scans (including WCAG 2.2 AA rules), responsive overflow checks from
 320px to 1440px, drawer/image-viewer focus and history, error recovery, and all
 15 local artwork records. It does not constitute a complete WCAG certification.

@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import type { ArtistWorksPage } from "../lib/types";
+import type { ArtistDetail, ArtistWorksPage } from "../lib/types";
 
 for (const width of [1440, 390, 320]) {
   test(`painter preview puts a large picture before collapsed filters at ${width}px`, async ({ page }, info) => {
@@ -9,6 +9,13 @@ for (const width of [1440, 390, 320]) {
     const response = await page.request.get("/api/backend/v1/artists/claude-monet/works?image_only=true");
     expect(response.ok()).toBe(true);
     const pictures = await response.json() as ArtistWorksPage;
+    const artistResponse = await page.request.get("/api/backend/v1/artists/claude-monet");
+    expect(artistResponse.ok()).toBe(true);
+    const artist = await artistResponse.json() as ArtistDetail;
+    const openingWork = artist.key_artwork ?? pictures.items[0];
+    const neighborResponse = await page.request.get(`/api/backend/v1/artists/claude-monet/works?image_only=true&neighbor_of=${openingWork.id}&direction=next&limit=1`);
+    expect(neighborResponse.ok()).toBe(true);
+    const neighbor = await neighborResponse.json() as ArtistWorksPage;
     await page.goto("/?q=Monet");
     await page.locator(".artist-mark").filter({ hasText: "Claude Monet" }).click();
     const drawer = page.getByRole("dialog", { name: "Painter details", exact: true });
@@ -19,7 +26,7 @@ for (const width of [1440, 390, 320]) {
     const pictureBox = (await image.boundingBox())!;
     expect(pictureBox.height).toBeGreaterThanOrEqual(250);
     expect(pictureBox.y + pictureBox.height).toBeLessThanOrEqual(900);
-    await expect(preview.locator("h3")).toHaveText(pictures.items[0].title);
+    await expect(preview.locator("h3")).toHaveText(openingWork.title);
     await expect(drawer.getByRole("button", { name: "Artwork filters", exact: true })).toHaveAttribute("aria-expanded", "false");
     await expect(drawer.getByRole("searchbox", { name: "Search artworks", exact: true })).toHaveCount(0);
     await expect(drawer.locator(".work-card")).toHaveCount(24);
@@ -27,9 +34,9 @@ for (const width of [1440, 390, 320]) {
     await page.screenshot({ path: info.outputPath(`picture-first-${width}.png`) });
 
     await preview.getByRole("button", { name: "Next artwork", exact: true }).click();
-    await expect(preview.locator("h3")).toHaveText(pictures.items[1].title);
+    await expect(preview.locator("h3")).toHaveText(neighbor.items[0].title);
     await preview.getByRole("button", { name: "Previous artwork", exact: true }).click();
-    await expect(preview.locator("h3")).toHaveText(pictures.items[0].title);
+    await expect(preview.locator("h3")).toHaveText(openingWork.title);
     await preview.getByRole("button", { name: /View larger/ }).click();
     const enlarged = page.getByRole("dialog", { name: /Enlarged image:/ });
     await expect(enlarged).toBeVisible();
@@ -46,8 +53,8 @@ for (const width of [1440, 390, 320]) {
     const filters = drawer.getByRole("button", { name: "Artwork filters", exact: true });
     await filters.click();
     await expect(drawer.getByRole("checkbox", { name: "With pictures" })).toBeChecked();
+    await page.screenshot({ path: info.outputPath(`quick-filters-${width}.png`) });
     await drawer.getByRole("searchbox", { name: "Search artworks", exact: true }).fill("ArtlineNonexistentCatalogueTitle");
-    await drawer.getByRole("button", { name: "Search works", exact: true }).click();
     await expect(drawer.getByRole("heading", { name: "No matching artworks" })).toBeVisible();
     await expect(preview).toHaveCount(0);
     await drawer.getByRole("button", { name: "Clear artwork filters", exact: true }).first().click();

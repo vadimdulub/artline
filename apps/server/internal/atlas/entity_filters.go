@@ -111,7 +111,7 @@ func entityPredicate(kind string, values url.Values, args *[]any) string {
 			add("country", "EXISTS(SELECT 1 FROM artist_countries ac WHERE ac.artist_id=ar.id AND ac.country_code::text=ANY(%s::text[]))")
 			add("region", "EXISTS(SELECT 1 FROM artist_countries ac JOIN countries c ON c.code=ac.country_code WHERE ac.artist_id=ar.id AND c.region_code=ANY(%s::text[]))")
 		}
-		add("movement", "EXISTS(SELECT 1 FROM artist_movements am JOIN movements m ON m.id=am.movement_id WHERE am.artist_id=ar.id AND m.status<>'archived' AND ($3 OR m.status='published') AND m.slug=ANY(%s::text[]))")
+		add("movement", "EXISTS(SELECT 1 FROM artist_movements am JOIN movements m ON m.id=am.movement_id WHERE am.artist_id=ar.id AND m.status<>'archived' AND m.slug=ANY(%s::text[]))")
 		if values.Get("women") == "true" {
 			conditions = append(conditions, "EXISTS(SELECT 1 FROM artist_gender_evidence ge WHERE ge.artist_id=ar.id AND ge.is_woman)")
 		}
@@ -119,7 +119,7 @@ func entityPredicate(kind string, values url.Values, args *[]any) string {
 			conditions = append(conditions, "EXISTS(SELECT 1 FROM artist_discovery_selection ds WHERE ds.artist_id=ar.id AND ds.is_popular)")
 		}
 		if len(conditions) > 0 {
-			outer = append(outer, "EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published') AND "+strings.Join(conditions, " AND ")+")")
+			outer = append(outer, "EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND "+strings.Join(conditions, " AND ")+")")
 		}
 		conditions = outer
 	}
@@ -134,10 +134,10 @@ func artworkSearchPredicate(parameter string) string {
  SELECT search.id FROM artworks search WHERE search.status<>'archived'
  AND (strpos(lower(search.title),lower($query))>0 OR strpos(lower(coalesce(search.unlinked_creator_label,'')),lower($query))>0)
  UNION SELECT aa.artwork_id FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id
- WHERE ar.status<>'archived' AND ($3 OR ar.status='published') AND (
+ WHERE ar.status<>'archived' AND (
  strpos(lower(ar.display_name),lower($query))>0 OR strpos(lower(ar.sort_name),lower($query))>0
  OR ar.id IN(SELECT x.artist_id FROM artist_aliases x WHERE strpos(lower(x.alias),lower($query))>0)
- OR ar.id IN(SELECT x.artist_id FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE m.status<>'archived' AND ($3 OR m.status='published') AND strpos(lower(m.name),lower($query))>0)
+ OR ar.id IN(SELECT x.artist_id FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE m.status<>'archived' AND strpos(lower(m.name),lower($query))>0)
  OR ar.id IN(SELECT x.artist_id FROM artist_countries x JOIN countries c ON c.code=x.country_code WHERE strpos(lower(c.name),lower($query))>0)
  OR ar.id IN(SELECT x.artist_id FROM artist_places x JOIN places pl ON pl.id=x.place_id WHERE strpos(lower(pl.name),lower($query))>0)
  ))`, "$query", parameter)

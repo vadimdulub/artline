@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <MemberSessionProvider>
     <SiteHeader />
     {children}
-    <footer className="site-footer"><p>Artline. Art, literature and history in context.</p><nav aria-label="More"><Link href="/art-history-timeline">Art history guide</Link><Link href="/artists">Artist directory</Link><Link href="/museums">Museums</Link><Link href="/coverage">Coverage</Link><Link href="/imports">Imports</Link><Link href="/about">About & sources</Link><Link href="/privacy">Privacy</Link></nav></footer>
+    <footer className="site-footer"><p>Artline. Art, literature and history in context.</p><nav aria-label="More"><Link href="/art-history-timeline">Art history guide</Link><Link href="/artists">Artist directory</Link><Link href="/museums">Museums</Link><Link href="/about">About & sources</Link><Link href="/privacy">Privacy</Link></nav></footer>
     </MemberSessionProvider>
   </body></html>;
 }

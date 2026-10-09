@@ -43,7 +43,7 @@ func creatorPredicate(kind string, values []string, args *[]any) string {
 	if kind == "book" {
 		return `b.id IN (SELECT l.book_id FROM book_creator_links l WHERE l.creator_id=ANY(` + p + `))`
 	}
-	return `a.id IN (SELECT aa.artwork_id FROM artists ar JOIN artwork_artists aa ON aa.artist_id=ar.id WHERE ar.slug=ANY(` + p + `) AND ar.status<>'archived' AND ($3 OR ar.status='published'))`
+	return `a.id IN (SELECT aa.artwork_id FROM artists ar JOIN artwork_artists aa ON aa.artist_id=ar.id WHERE ar.slug=ANY(` + p + `) AND ar.status<>'archived' )`
 }
 
 type CreatorChoices struct {
@@ -53,7 +53,7 @@ type CreatorChoices struct {
 }
 
 // Search is bounded independently of selected labels. No collection is sent to the browser.
-func (r *Repository) Creators(ctx context.Context, query string, selected []string, preview bool) (CreatorChoices, error) {
+func (r *Repository) Creators(ctx context.Context, query string, selected []string) (CreatorChoices, error) {
 	out := CreatorChoices{Items: []Region{}, Selected: []Region{}}
 	if len(query) > 200 {
 		return out, ErrFilter
@@ -66,11 +66,11 @@ func (r *Repository) Creators(ctx context.Context, query string, selected []stri
 	}
 	const candidates = `WITH candidates AS (
  SELECT 'painter:'||ar.slug AS slug,ar.display_name||' · Painter' AS name,lower(ar.display_name) AS sort_name FROM artists ar
- WHERE ar.status<>'archived' AND ($1 OR ar.status='published')
+ WHERE ar.status<>'archived'
  UNION ALL SELECT 'author:'||c.id,c.name||' · Author',lower(c.name) FROM book_creators c
- WHERE EXISTS(SELECT 1 FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE l.creator_id=c.id AND b.status<>'archived' AND ($1 OR b.status='published') AND b.end_year<=2000)) `
-	rows, err := r.db.Query(ctx, candidates+`SELECT slug,name,false AS selected FROM (SELECT * FROM candidates WHERE $2='' OR strpos(sort_name,lower($2))>0 ORDER BY sort_name,slug LIMIT 31) found
- UNION ALL SELECT slug,name,true FROM candidates WHERE slug=ANY($3::text[])`, preview, strings.TrimSpace(query), selected)
+ WHERE EXISTS(SELECT 1 FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE l.creator_id=c.id AND b.status<>'archived'  AND b.end_year<=2000)) `
+	rows, err := r.db.Query(ctx, candidates+`SELECT slug,name,false AS selected FROM (SELECT * FROM candidates WHERE $1='' OR strpos(sort_name,lower($1))>0 ORDER BY sort_name,slug LIMIT 31) found
+ UNION ALL SELECT slug,name,true FROM candidates WHERE slug=ANY($2::text[])`, strings.TrimSpace(query), selected)
 	if err != nil {
 		return out, err
 	}

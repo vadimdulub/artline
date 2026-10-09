@@ -17,9 +17,9 @@ describe("search metadata", () => {
     }
   });
 
-  it("keeps research previews out of search while leaving approved release pages indexable", () => {
+  it("keeps public catalogue pages indexable regardless of obsolete preview settings", () => {
     vi.stubEnv("ARTLINE_PUBLIC_RESEARCH_PREVIEW", "true");
-    expect(explorerMetadata("Atlas", "Description", "/").robots).toMatchObject({ index: false, follow: true });
+    expect(explorerMetadata("Atlas", "Description", "/").robots).toMatchObject({ index: true, follow: true });
     vi.stubEnv("ARTLINE_PUBLIC_RESEARCH_PREVIEW", "false");
     vi.stubEnv("ARTLINE_RESEARCH_PREVIEW_TOKEN", "");
     expect(explorerMetadata("Atlas", "Description", "/").robots).toMatchObject({ index: true });

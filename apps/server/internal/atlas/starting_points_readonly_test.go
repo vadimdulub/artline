@@ -64,7 +64,7 @@ func TestStartingPointsReadOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer db.Close()
-	covers, err := (&Repository{db: db}).IllustratedPresets(ctx, true)
+	covers, err := (&Repository{db: db}).IllustratedPresets(ctx)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -83,7 +83,7 @@ func TestStartingPointsReadOnly(t *testing.T) {
 			defer tx.Rollback(ctx)
 			recorder := &discoveryPlanDB{atlasDB: tx}
 			repo := &Repository{db: recorder}
-			f := Filter{PresetID: p.ID, Range: p.Context, Limit: 150, Preview: true, Highlights: p.StartingHighlights, Creators: p.StartingCreators, Selection: true, Types: []string{"artwork", "book", "event"}, Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
+			f := Filter{PresetID: p.ID, Range: p.Context, Limit: 150, Highlights: p.StartingHighlights, Creators: p.StartingCreators, Selection: true, Types: []string{"artwork", "book", "event"}, Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
 			broad, err := repo.List(ctx, f)
 			if err != nil {
 				t.Fatal(err)
@@ -222,7 +222,7 @@ func TestPainterPaintingsReadOnly(t *testing.T) {
 	defer db.Close()
 	recorder := &discoveryPlanDB{atlasDB: db}
 	repo := &Repository{db: recorder}
-	f := Filter{Range: Range{1800, 1950}, Types: []string{"artwork"}, Selection: true, Limit: 60, Preview: true, Highlights: false, Entities: map[string]url.Values{"artwork": {"painter": {"claude-monet"}, "popular": {"false"}, "women": {"false"}, "image_only": {"true"}}}}
+	f := Filter{Range: Range{1800, 1950}, Types: []string{"artwork"}, Selection: true, Limit: 60, Highlights: false, Entities: map[string]url.Values{"artwork": {"painter": {"claude-monet"}, "popular": {"false"}, "women": {"false"}, "image_only": {"true"}}}}
 	data, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)

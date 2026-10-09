@@ -32,7 +32,7 @@ func TestUnlinkedCreatorsMuseumVisibility(t *testing.T) {
 		t.Fatal(err)
 	}
 	f := MuseumFilter{Limit: 1, Query: "Byzantine"}
-	page, err := r.MuseumWorks(ctx, "the-met", f, true)
+	page, err := r.MuseumWorks(ctx, "the-met", f)
 	if err != nil || page.Total != 1 || len(page.Items) != 1 || len(page.Items[0].Artists) != 0 || page.Items[0].UnlinkedCreatorLabel == nil || page.Items[0].ObjectForm == nil {
 		t.Fatalf("unlinked cards: %+v %v", page, err)
 	}
@@ -41,54 +41,61 @@ func TestUnlinkedCreatorsMuseumVisibility(t *testing.T) {
 	}
 	aliasQuery := f
 	aliasQuery.Query = "Alternate icon title"
-	aliasPage, err := r.MuseumWorks(ctx, "the-met", aliasQuery, true)
+	aliasPage, err := r.MuseumWorks(ctx, "the-met", aliasQuery)
 	if err != nil || aliasPage.Total != 1 {
 		t.Fatalf("alternate title not searchable: %+v %v", aliasPage, err)
 	}
-	museum, err := r.Museum(ctx, "the-met", true)
+	museum, err := r.Museum(ctx, "the-met")
 	if err != nil || museum.WorkCount != 4 {
 		t.Fatalf("missing anonymous museum count: %+v %v", museum, err)
 	}
-	d, err := r.MuseumArtwork(ctx, "the-met", id, true)
+	d, err := r.MuseumArtwork(ctx, "the-met", id)
 	if err != nil || d.CulturalContext == nil || d.CreationYearStart == nil || *d.CreationYearStart != 1301 {
 		t.Fatalf("detail: %+v %v", d, err)
 	}
 	f.Artists = []string{"claude-monet"}
-	page, err = r.MuseumWorks(ctx, "the-met", f, true)
+	page, err = r.MuseumWorks(ctx, "the-met", f)
 	if err != nil || page.Total != 0 {
 		t.Fatalf("unlinked became Monet: %+v %v", page, err)
 	}
-	if _, err = r.MuseumArtwork(ctx, "the-met", id, false); !errors.Is(err, ErrNotFound) {
-		t.Fatalf("review leaked: %v", err)
+	if _, err = r.MuseumArtwork(ctx, "the-met", id); err != nil {
+		t.Fatalf("review work missing: %v", err)
 	}
 	// Publish only within the disposable fixture transaction, never the owner catalogue.
 	if _, err = tx.Exec(ctx, `UPDATE institutions SET status='published' WHERE slug='the-met'; UPDATE artworks SET status='published' WHERE slug='unlinked-test'`); err != nil {
 		t.Fatal(err)
 	}
-	if _, err = r.MuseumArtwork(ctx, "the-met", id, false); err != nil {
+	if _, err = r.MuseumArtwork(ctx, "the-met", id); err != nil {
 		t.Fatal(err)
 	}
-	// An explicit label must never become a loophole around hidden linked creators.
+	// A review creator does not hide its artwork.
 	if tag, e := tx.Exec(ctx, `INSERT INTO artwork_artists(artwork_id,artist_id,attribution_role) SELECT $1,id,'primary' FROM artists WHERE slug='claude-monet'`, id); e != nil || tag.RowsAffected() != 1 {
 		t.Fatal("missing fixture artist", e)
 	}
-	if _, err = r.MuseumArtwork(ctx, "the-met", id, false); !errors.Is(err, ErrNotFound) {
-		t.Fatalf("hidden artist bypass: %v", err)
+	if _, err = r.MuseumArtwork(ctx, "the-met", id); err != nil {
+		t.Fatalf("review creator hid artwork: %v", err)
 	}
 	if _, err = tx.Exec(ctx, `UPDATE artists SET status='archived' WHERE slug='claude-monet'`); err != nil {
 		t.Fatal(err)
 	}
-	if _, err = r.MuseumArtwork(ctx, "the-met", id, true); !errors.Is(err, ErrNotFound) {
-		t.Fatalf("archived artist bypass: %v", err)
+	if _, err = r.MuseumArtwork(ctx, "the-met", id); err != nil {
+		t.Fatalf("active work with archived creator missing: %v", err)
 	}
-	// Plain missing links without a reviewed creator label remain hidden.
+	// Anonymous active works remain browsable without an invented creator.
 	if _, err = tx.Exec(ctx, `DELETE FROM artwork_artists WHERE artwork_id=$1`, id); err != nil {
 		t.Fatal(err)
 	}
 	if _, err = tx.Exec(ctx, `UPDATE artworks SET unlinked_creator_label=NULL WHERE id=$1`, id); err != nil {
 		t.Fatal(err)
 	}
-	if _, err = r.MuseumArtwork(ctx, "the-met", id, true); !errors.Is(err, ErrNotFound) {
-		t.Fatalf("unreviewed missing creator visible: %v", err)
+	if _, err = r.MuseumArtwork(ctx, "the-met", id); err != nil {
+		t.Fatalf("anonymous work missing: %v", err)
 	}
+	if _, err = tx.Exec(ctx, `UPDATE artworks SET status='archived' WHERE id=$1`, id); err != nil {
+		t.Fatal(err)
+	}
+	if _, err = r.MuseumArtwork(ctx, "the-met", id); !errors.Is(err, ErrNotFound) {
+		t.Fatalf("archived work visible: %v", err)
+	}
+
 }

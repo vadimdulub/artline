@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { researchPreviewToken } from "@/lib/server-api";
+import { acceptsGzip } from "@/lib/response-compression";
 export const dynamic = "force-dynamic";
 async function proxy(request: NextRequest, context: { params: Promise<{ path: string[] }> }) {
   const { path } = await context.params;
@@ -9,51 +9,24 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
   const target = new URL(`/api/${path.map(encodeURIComponent).join("/")}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
   target.search = request.nextUrl.search;
   const headers = new Headers();
-  const contentType = request.headers.get("content-type");
-  const authorization = request.headers.get("authorization");
-  if (contentType) headers.set("content-type", contentType);
-  if (authorization) headers.set("authorization", authorization);
-  const previewToken = researchPreviewToken();
-  if (request.method === "GET" && previewToken && !authorization) {
-    headers.set("authorization", `Bearer ${previewToken}`);
-    if (target.searchParams.get("preview") !== "0") target.searchParams.set("preview", "1");
-  }
-  let body: Uint8Array | undefined;
-  if (request.body) {
-    const reader = request.body.getReader();
-    const chunks: Uint8Array[] = [];
-    let length = 0;
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      length += value.byteLength;
-      if (length > 1024 * 1024) {
-        await reader.cancel();
-        return Response.json({ error: { code: "BODY_TOO_LARGE", message: "The request exceeds 1 MB." } }, { status: 413 });
-      }
-      chunks.push(value);
-    }
-    body = new Uint8Array(length);
-    let offset = 0;
-    for (const chunk of chunks) { body.set(chunk, offset); offset += chunk.byteLength; }
-  }
+  // Old bookmarks use the same catalogue; no preview credentials are forwarded.
+  target.searchParams.delete("preview");
+  target.searchParams.delete("status");
   try {
-    // Superseded timeline reads should also stop upstream work. Keep writes on
-    // their existing timeout so closing a tab does not cancel an authorized edit.
-    // Atlas reads have a 20-second server budget for cold catalogue queries.
-    // Leave transport headroom while preserving the existing write deadline.
-    const timeout = AbortSignal.timeout(request.method === "GET" && path[1] === "atlas" ? 25000 : 12000);
-    const signal = request.method === "GET" ? AbortSignal.any([request.signal, timeout]) : timeout;
-    const response = await fetch(target, { method: request.method, headers, body: body as BodyInit | undefined, cache: "no-store", signal });
+    // Cancel superseded reads, leaving headroom for the atlas query budget.
+    const timeout = AbortSignal.timeout(path[1] === "atlas" ? 25000 : 12000);
+    const signal = AbortSignal.any([request.signal, timeout]);
+    const response = await fetch(target, { headers, cache: "no-store", signal });
     const responseHeaders = new Headers({ "content-type": response.headers.get("content-type") ?? "application/json", "cache-control": "private, no-store" });
     const cacheStatus = response.headers.get("x-artline-cache");
     if (cacheStatus) responseHeaders.set("x-artline-cache", cacheStatus);
-    return new Response(response.body, { status: response.status, headers: responseHeaders });
+    responseHeaders.set("vary", "Accept-Encoding");
+    const compress = request.method === "GET" && response.ok && response.body &&
+      responseHeaders.get("content-type")?.includes("application/json") && acceptsGzip(request.headers.get("accept-encoding"));
+    if (compress) responseHeaders.set("content-encoding", "gzip");
+    return new Response(compress ? response.body!.pipeThrough(new CompressionStream("gzip")) : response.body, { status: response.status, headers: responseHeaders });
   } catch {
     return Response.json({ error: { code: "SERVICE_UNAVAILABLE", message: "The catalogue is temporarily unavailable. Try again shortly." } }, { status: 503 });
   }
 }
 export const GET = proxy;
-export const POST = proxy;
-export const PATCH = proxy;
-export const DELETE = proxy;

@@ -41,8 +41,8 @@ func TestMuseumDirectoryReadOnly(t *testing.T) {
 	if os.Getenv("ARTLINE_DIRECTORY_AUDIT_CASE") == "unfiltered" {
 		filter = MuseumFilter{Limit: 24}
 	}
-	if os.Getenv("ARTLINE_DIRECTORY_AUDIT_CASE") == "owner" {
-		filter = MuseumFilter{Limit: 5, Selection: "owner"}
+	if os.Getenv("ARTLINE_DIRECTORY_AUDIT_CASE") == "museum" {
+		filter = MuseumFilter{Limit: 5, Selection: "museum"}
 	}
 	if os.Getenv("ARTLINE_DIRECTORY_AUDIT_CASE") == "maximum" {
 		filter = MuseumFilter{Limit: 60}
@@ -53,7 +53,7 @@ func TestMuseumDirectoryReadOnly(t *testing.T) {
 	if os.Getenv("ARTLINE_DIRECTORY_AUDIT_CASE") == "selection-artist" {
 		filter = MuseumFilter{Limit: 5, Selection: "museum", Artist: "rembrandt"}
 	}
-	page, err := repo.Museums(ctx, filter, true)
+	page, err := repo.Museums(ctx, filter)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -86,7 +86,7 @@ func TestMuseumDirectoryReadOnly(t *testing.T) {
 		{"no-match", MuseumFilter{Limit: 5, Query: "no-such-museum-audit-20260917"}},
 		{"region", MuseumFilter{Limit: 5, Regions: []string{"western-europe"}}},
 		{"highlights", MuseumFilter{Limit: 5, Selection: "museum"}},
-		{"owner", MuseumFilter{Limit: 5, Selection: "owner"}},
+		{"museum", MuseumFilter{Limit: 5, Selection: "museum"}},
 		{"on-view", MuseumFilter{Limit: 5, Display: "on_view"}},
 		{"artist", MuseumFilter{Limit: 5, Artist: "rembrandt"}},
 		{"movement", MuseumFilter{Limit: 5, Movement: "impressionism"}},
@@ -95,17 +95,17 @@ func TestMuseumDirectoryReadOnly(t *testing.T) {
 		{"selection-artist", MuseumFilter{Limit: 5, Selection: "museum", Artist: "rembrandt"}},
 	}
 	var summary []map[string]any
-	for _, preview := range []bool{true, false} {
+	{
 		for _, tc := range cases {
-			t.Run(fmt.Sprintf("%s/preview-%t", tc.name, preview), func(t *testing.T) {
+			t.Run(tc.name, func(t *testing.T) {
 				start := time.Now()
-				before, err := legacy.Museums(ctx, tc.filter, preview)
+				before, err := legacy.Museums(ctx, tc.filter)
 				if err != nil {
 					t.Fatal(err)
 				}
 				oldDuration := time.Since(start)
 				start = time.Now()
-				after, err := current.Museums(ctx, tc.filter, preview)
+				after, err := current.Museums(ctx, tc.filter)
 				if err != nil {
 					t.Fatal(err)
 				}
@@ -116,11 +116,11 @@ func TestMuseumDirectoryReadOnly(t *testing.T) {
 				if after.NextCursor != "" {
 					next := tc.filter
 					next.Cursor = after.NextCursor
-					oldNext, err := legacy.Museums(ctx, next, preview)
+					oldNext, err := legacy.Museums(ctx, next)
 					if err != nil {
 						t.Fatal(err)
 					}
-					newNext, err := current.Museums(ctx, next, preview)
+					newNext, err := current.Museums(ctx, next)
 					if err != nil {
 						t.Fatal(err)
 					}
@@ -129,7 +129,7 @@ func TestMuseumDirectoryReadOnly(t *testing.T) {
 					}
 				}
 				t.Logf("total=%d legacy=%s indexed=%s complete response and next page equivalent", after.Total, oldDuration, newDuration)
-				summary = append(summary, map[string]any{"case": tc.name, "preview": preview, "total": after.Total,
+				summary = append(summary, map[string]any{"case": tc.name, "total": after.Total,
 					"legacy_ms": float64(oldDuration.Microseconds()) / 1000, "indexed_ms": float64(newDuration.Microseconds()) / 1000,
 					"equivalent": true, "next_page_checked": after.NextCursor != ""})
 			})
@@ -137,7 +137,7 @@ func TestMuseumDirectoryReadOnly(t *testing.T) {
 	}
 	for n := 0; n < 8; n++ {
 		requestCtx, requestCancel := context.WithTimeout(ctx, 8*time.Second)
-		_, err := current.Museums(requestCtx, cases[n%5].filter, true)
+		_, err := current.Museums(requestCtx, cases[n%5].filter)
 		requestCancel()
 		if err != nil {
 			t.Fatal(err)
@@ -213,7 +213,7 @@ func legacyDirectorySQL(sql string) string {
 		sql = sql[:start] + sql[end:]
 		sql = strings.ReplaceAll(sql, "directory_filtered_memberships", "museum_memberships")
 	}
-	sql = strings.Replace(sql, museumDirectoryCardCTE, strings.ReplaceAll(museumScopedCTE, "$2", "page.slug"), 1)
+	sql = strings.Replace(sql, museumDirectoryCardCTE, strings.ReplaceAll(museumScopedCTE, "$1", "page.slug"), 1)
 	sql = strings.Replace(sql, museumDirectoryCardJSON, museumJSON, 1)
 	sql = strings.Replace(sql, museumDirectoryFacetChoicesSQL, museumScopedFacetChoicesSQL, 1)
 	return strings.ReplaceAll(sql, " OFFSET 0", "")

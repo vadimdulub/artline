@@ -56,7 +56,7 @@ func TestGeographyReadOnly(t *testing.T) {
 	}
 	defer db.Close()
 	r := NewRepository(db)
-	choices, err := r.Countries(ctx, true)
+	choices, err := r.Countries(ctx)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -70,7 +70,7 @@ func TestGeographyReadOnly(t *testing.T) {
 		t.Fatalf("country choices missing or unbounded: %d", len(choices))
 	}
 	for kind, country := range map[string]string{"book": "Q142", "event": "France", "artwork": "FR"} {
-		f := Filter{Range: Bounds, Limit: 30, Preview: true, Types: []string{kind}, Countries: []string{"france"}}
+		f := Filter{Range: Bounds, Limit: 30, Types: []string{kind}, Countries: []string{"france"}}
 		global, err := r.List(ctx, f)
 		if err != nil {
 			t.Fatal(err)
@@ -110,11 +110,7 @@ func TestGeographyReadOnly(t *testing.T) {
 		if err != nil || intersection.Total > global.Total || intersection.Total > continent.Total {
 			t.Fatalf("%s invalid intersection: %d %v", kind, intersection.Total, err)
 		}
-		f.Preview = false
-		public, err := r.List(ctx, f)
-		if err != nil || public.Total != 0 {
-			t.Fatalf("review data exposed: %s %v", kind, err)
-		}
+
 		t.Logf("%s: France=%d Europe=%d intersection=%d", kind, global.Total, continent.Total, intersection.Total)
 	}
 }

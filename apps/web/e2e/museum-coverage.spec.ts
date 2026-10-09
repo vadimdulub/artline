@@ -19,19 +19,18 @@ test("Botticelli is discoverable by default and his uncertain dates lead to the 
   await expect(page.getByRole("button", { name: "Open The Birth of Venus", exact: true })).toBeVisible();
 });
 
-test("museum highlights remain distinct from personal picks and show permission evidence", async ({ page }) => {
+test("museum highlights and all works show permission evidence", async ({ page }) => {
   await page.goto("/museums/uffizi");
   await expect(page.getByRole("button", { name: "Open The Birth of Venus", exact: true })).toBeVisible();
   const selection = page.getByRole("group", { name: "Artwork selection" });
   await selection.getByRole("button", { name: /Museum highlights/ }).click();
   await expect(page.getByRole("button", { name: "Open Santa Trinita Maestà", exact: true })).toBeVisible();
   await expect(page.getByRole("button", { name: "Open The Birth of Venus", exact: true })).toHaveCount(0);
-  await selection.getByRole("button", { name: /My must-see works/ }).click();
+  await selection.getByRole("button", { name: /All catalogued works/ }).click();
   const open = page.getByRole("button", { name: "Open The Birth of Venus", exact: true });
   await expect(open).toBeVisible();
   await open.click();
   const panel = page.getByRole("dialog", { name: "Museum artwork details", exact: true });
-  await expect(panel.getByText("My must-see work", { exact: true })).toBeVisible();
   await expect(panel.getByText("Museum highlight", { exact: true })).toHaveCount(0);
   await expect(panel.getByRole("button", { name: /View larger/ })).toHaveCount(0);
   await panel.getByText("Artwork sources", { exact: true }).click();

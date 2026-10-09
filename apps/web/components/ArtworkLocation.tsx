@@ -6,7 +6,7 @@ export function checkedDate(value: string) {
   return new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(value));
 }
 export function ArtworkLocation({ work }: { work: Artwork }) {
-  const display = work.display;
+  const display = work.display?.state === "unknown" ? undefined : work.display;
   if (!work.holding && !display) return null;
   return <section className="artwork-location" aria-label="Collection and display">
     {work.holding && <p>Collection: <Link href={`/museums/${work.holding.slug}`}>{work.holding.name}</Link></p>}

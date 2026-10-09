@@ -1,4 +1,5 @@
 "use client";
+import { displayMetadata } from "@/lib/display-metadata";
 
 import { useEffect, useRef, useState } from "react";
 import { authorLifespanLabel, bookAxisTicks, bookTickPosition, bookYearAtPosition, bookYearLabel, positionBooks, type Book, type TimelineAuthor, type BookRange, type BooksResponse } from "@/lib/books";
@@ -58,16 +59,16 @@ export function BooksTimeline({ data, metadata, range, loading, error, selected,
       {error ? <div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={onRetry}>Retry</button> <button onClick={onReset}>Reset view</button></div> :
         data?.total ? gallery ? <BooksGallery key={query} data={data} query={query} authorView={authorView} selected={selected} strip={strip} onBook={onBook} onAuthor={onAuthor} /> :
         <><TimelineLanes label={authorView ? "Authors timeline" : "Books timeline"} height={height}>
-          {books.map(book => <TimelineMark key={book.id} className="book-mark" name={book.title} context={book.author} date={book.years}
-            label={`${book.title}, ${book.author}, ${book.years}. Open book details`} color="#c4aa81" hasPopup="dialog"
+          {books.map(book => <TimelineMark key={book.id} className="book-mark" name={book.title} context={displayMetadata(book.author)} date={displayMetadata(book.years) ?? ""}
+            label={`${[book.title, displayMetadata(book.author), displayMetadata(book.years)].filter(Boolean).join(", ")}. Open book details`} color="#c4aa81" hasPopup="dialog"
             selected={selected === book.id} approximate={book.approximate} left={book.left} width={book.width} top={book.lane * 72 + 6} labelOffset={book.labelOffset} labelWidth={book.labelWidth} onSelect={() => onBook(book, data.items)} />)}
           {authors.map(author => <TimelineMark key={author.id} className="book-author-mark" name={author.name} context={`${author.bookCount.toLocaleString("en-GB")} ${author.bookCount === 1 ? "book" : "books"}`} date={authorLifespanLabel(author)}
             label={`${author.name}, ${authorLifespanLabel(author)}. Open author details`} color="#c4aa81" hasPopup="dialog"
             selected={selected === author.id} approximate={author.approximate} left={author.left} width={author.width} top={author.lane * 72 + 6} labelOffset={author.labelOffset} labelWidth={author.labelWidth} onSelect={() => onAuthor(author)} />)}
         </TimelineLanes>
         {(undatedBooks.length > 0 || undatedAuthors.length > 0) && <ul className="books-undated" aria-label={`${authorView ? "Authors" : "Books"} without established dates`}>
-          {undatedBooks.map(book => <li key={book.id}><button type="button" aria-haspopup="dialog" onClick={() => onBook(book, data.items)}>{book.title} <small>Dates not established</small></button></li>)}
-          {undatedAuthors.map(author => <li key={author.id}><button type="button" aria-haspopup="dialog" onClick={() => onAuthor(author)}>{author.name} <small>Lifespan not established</small></button></li>)}
+          {undatedBooks.map(book => <li key={book.id}><button type="button" aria-haspopup="dialog" onClick={() => onBook(book, data.items)}>{book.title}</button></li>)}
+          {undatedAuthors.map(author => <li key={author.id}><button type="button" aria-haspopup="dialog" onClick={() => onAuthor(author)}>{author.name}</button></li>)}
         </ul>}</> :
         <div className="state-panel"><h2>{loading ? `Opening ${noun}…` : `No ${noun} match this view`}</h2>{!loading && <><p>Try another title, author, or idea, or clear your filters.</p><button onClick={onReset}>Clear filters</button></>}</div>}
     </TimelineGrid>

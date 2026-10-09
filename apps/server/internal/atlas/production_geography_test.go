@@ -82,20 +82,16 @@ func TestCyprusProductionGeographyReadOnly(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			f := tc.f
 			f.Range = Range{1190, 1200}
-			f.Limit, f.Preview, f.Selection = 30, true, true
+			f.Limit, f.Selection = 30, true
 			f.Picks = map[string][]string{"artwork": {frescoID}}
 			out, err := repo.List(ctx, f)
 			if err != nil || out.Total != tc.want {
 				t.Fatalf("total=%d want=%d err=%v", out.Total, tc.want, err)
 			}
-			f.Preview = false
-			public, err := repo.List(ctx, f)
-			if err != nil || public.Total != 0 {
-				t.Fatalf("review fresco exposed: %+v %v", public, err)
-			}
+
 		})
 	}
-	f := Filter{Range: Range{1190, 1200}, Limit: 60, Preview: true, Types: []string{"artwork"}, Countries: []string{"cyprus"}}
+	f := Filter{Range: Range{1190, 1200}, Limit: 60, Types: []string{"artwork"}, Countries: []string{"cyprus"}}
 	global, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)
@@ -122,7 +118,7 @@ func TestCyprusProductionGeographyReadOnly(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	f = Filter{Range: Range{1960, 1970}, Limit: 30, Preview: true, Selection: true, Countries: []string{"cyprus"}, Picks: map[string][]string{"artwork": {xeniID}}}
+	f = Filter{Range: Range{1960, 1970}, Limit: 30, Selection: true, Countries: []string{"cyprus"}, Picks: map[string][]string{"artwork": {xeniID}}}
 	out, err := repo.List(ctx, f)
 	if err != nil || out.Total != 0 {
 		t.Fatalf("Xeni exhibition wrongly treated as Cypriot origin: %d %v", out.Total, err)

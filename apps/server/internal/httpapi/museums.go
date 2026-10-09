@@ -50,7 +50,7 @@ func museumFilter(r *http.Request) (catalog.MuseumFilter, error) {
 	if err != nil {
 		return f, err
 	}
-	if len(f.Query) > 200 || len(f.Cursor) > 2048 || !allowed(f.Selection, "", "owner", "museum") || !allowed(f.Display, "", "on_view") || !allowed(f.Sort, "", "year", "title", "curated") {
+	if len(f.Query) > 200 || len(f.Cursor) > 2048 || !allowed(f.Selection, "", "museum") || !allowed(f.Display, "", "on_view") || !allowed(f.Sort, "", "images", "year", "title", "curated") {
 		return f, catalog.ErrMuseumFilter
 	}
 	if f.Artist != "" && !validArtistSlug(f.Artist) {
@@ -99,18 +99,12 @@ func (api *API) museumError(w http.ResponseWriter, err error) {
 		writeError(w, 404, "MUSEUM_RECORD_NOT_FOUND", "This museum or artwork is not available in the catalogue.")
 	case errors.Is(err, catalog.ErrMuseumFilter):
 		writeError(w, 400, "INVALID_MUSEUM_FILTER", "Check your filters or return to the first page.")
-	case errors.Is(err, catalog.ErrRevisionConflict):
-		writeError(w, 409, "REVISION_CONFLICT", "This selection changed after you opened it. Reload the saved selection before trying again.")
 	default:
 		slog.Error("museum request failed", "error", err)
 		writeError(w, 500, "MUSEUM_REQUEST_FAILED", "The museum catalogue could not be loaded. Please try again.")
 	}
 }
 func (api *API) museums(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	f, err := museumFilter(r)
 	if err != nil {
 		api.museumError(w, catalog.ErrMuseumFilter)
@@ -118,7 +112,7 @@ func (api *API) museums(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	result, err := api.repo.Museums(ctx, f, preview)
+	result, err := api.repo.Museums(ctx, f)
 	if err != nil {
 		api.museumError(w, err)
 		return
@@ -126,10 +120,6 @@ func (api *API) museums(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, 200, result)
 }
 func (api *API) museum(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	slug := r.PathValue("slug")
 	if len(slug) > 100 || !museumSlugPattern.MatchString(slug) {
 		api.museumError(w, catalog.ErrNotFound)
@@ -137,7 +127,7 @@ func (api *API) museum(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	result, err := api.repo.Museum(ctx, slug, preview)
+	result, err := api.repo.Museum(ctx, slug)
 	if err != nil {
 		api.museumError(w, err)
 		return
@@ -145,10 +135,6 @@ func (api *API) museum(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, 200, result)
 }
 func (api *API) museumWorks(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	f, err := museumFilter(r)
 	if err != nil {
 		api.museumError(w, catalog.ErrMuseumFilter)
@@ -161,7 +147,7 @@ func (api *API) museumWorks(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	result, err := api.repo.MuseumWorks(ctx, slug, f, preview)
+	result, err := api.repo.MuseumWorks(ctx, slug, f)
 	if err != nil {
 		api.museumError(w, err)
 		return
@@ -169,39 +155,16 @@ func (api *API) museumWorks(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, 200, result)
 }
 func (api *API) museumArtwork(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	if !museumIDPattern.MatchString(r.PathValue("id")) {
 		api.museumError(w, catalog.ErrNotFound)
 		return
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	result, err := api.repo.MuseumArtwork(ctx, r.PathValue("slug"), r.PathValue("id"), preview)
+	result, err := api.repo.MuseumArtwork(ctx, r.PathValue("slug"), r.PathValue("id"))
 	if err != nil {
 		api.museumError(w, err)
 		return
 	}
 	writeJSON(w, 200, result)
-}
-func (api *API) saveMustSee(w http.ResponseWriter, r *http.Request) {
-	var input catalog.MustSeeInput
-	if !decodeJSON(w, r, &input) {
-		return
-	}
-	input.Reason = strings.TrimSpace(input.Reason)
-	if !museumIDPattern.MatchString(input.ArtworkID) || input.ExpectedRevision < 1 || len([]rune(input.Reason)) > 2000 || (input.Selected && (input.Position < 1 || input.Position > 100000)) {
-		writeError(w, 422, "INVALID_SELECTION", "A valid artwork, selection revision and order from 1 to 100000 are required; notes must be at most 2000 characters.")
-		return
-	}
-	ctx, cancel := contextWithTimeout(r, 8*time.Second)
-	defer cancel()
-	revision, err := api.repo.SaveMustSee(ctx, r.PathValue("slug"), input)
-	if err != nil {
-		api.museumError(w, err)
-		return
-	}
-	writeJSON(w, 200, map[string]int{"revision": revision})
 }

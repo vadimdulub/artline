@@ -1,4 +1,5 @@
 "use client";
+import { displayMetadata } from "@/lib/display-metadata";
 import { useRef, type CSSProperties, type RefObject } from "react";
 import type { AtlasItem, AtlasLane } from "@/lib/atlas";
 import { ArtworkImage } from "./ArtworkViewer";
@@ -18,7 +19,7 @@ export function AllArtworkGallery({ lane, query, busy, selected, select, stripRe
     <div className={`all-gallery-caption${inlineControls ? "" : " all-gallery-status"}`}><div role="status">{window.loading ? <LoadingIndicator label="Loading artworks…" /> : window.failed ? <><span>Couldn’t load more artworks.</span> <button className="all-gallery-retry" onClick={window.retry}>Try again</button></> : <span className="sr-only">{window.complete ? "All artworks loaded" : "More artworks load as you scroll"}</span>}</div>{inlineControls && <GalleryScrollButtons strip={strip} disabled={busy} />}</div>
     <ul ref={strip} className="all-artwork-strip" aria-label="Artworks in this view" aria-busy={window.loading || busy} tabIndex={0}>
       {window.before > 0 && spacer(window.before)}
-      {window.items.map((item, index) => <li key={item.id} aria-posinset={window.before + index + 1} aria-setsize={lane.total}><button className="all-artwork-card all-gallery-card" data-artwork-id={item.id} title={item.title} aria-label={`${item.title}, ${item.context}${showDetails ? `, ${item.years}` : ""}. Open artwork details`} aria-haspopup="dialog" aria-current={selected === item.id ? "true" : undefined} disabled={busy} onClick={() => select(item)}><span className="all-artwork-image"><ArtworkImage work={{ ...item, media_url: item.media_url ?? null, alt_text: item.alt_text ?? null, rights_status: item.rights_status ?? null }} /></span><strong>{item.title}</strong><span title={item.context}>{item.context}</span>{showDetails && <><time>{item.years}</time>{item.relation === "context" && <small>Historical context</small>}</>}</button></li>)}
+      {window.items.map((item, index) => <li key={item.id} aria-posinset={window.before + index + 1} aria-setsize={lane.total}><button className="all-artwork-card all-gallery-card" data-artwork-id={item.id} title={item.title} aria-label={`${[item.title, displayMetadata(item.context), showDetails && displayMetadata(item.years)].filter(Boolean).join(", ")}. Open artwork details`} aria-haspopup="dialog" aria-current={selected === item.id ? "true" : undefined} disabled={busy} onClick={() => select(item)}><span className="all-artwork-image"><ArtworkImage work={{ ...item, media_url: item.media_url ?? null, alt_text: item.alt_text ?? null, rights_status: item.rights_status ?? null }} /></span><strong>{item.title}</strong>{displayMetadata(item.context) && <span title={item.context}>{item.context}</span>}{showDetails && <>{displayMetadata(item.years) && <time>{item.years}</time>}{item.relation === "context" && <small>Historical context</small>}</>}</button></li>)}
       {window.after > 0 && spacer(window.after)}
     </ul>
   </div>;

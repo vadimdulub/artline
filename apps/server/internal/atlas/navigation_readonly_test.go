@@ -48,7 +48,7 @@ func TestNavigationReadOnly(t *testing.T) {
 	repo := NewRepository(db)
 	for _, kind := range []string{"book", "event", "artwork"} {
 		t.Run(kind, func(t *testing.T) {
-			f := Filter{Range: Range{1780, 1950}, Limit: 24, Preview: true, Types: []string{kind}, Highlights: true}
+			f := Filter{Range: Range{1780, 1950}, Limit: 24, Types: []string{kind}, Highlights: true}
 			first, err := repo.List(ctx, f)
 			if err != nil {
 				t.Fatal(err)

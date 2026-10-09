@@ -45,7 +45,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
  SELECT a.id::text,coalesce(a.creation_year_start,a.creation_year_end) AS start_year,a.work_type,coalesce(a.object_form,'') AS object_form,
  row_number() OVER(PARTITION BY a.work_type,a.object_form ORDER BY a.creation_year_start DESC,a.id) AS ordinal`+artScope+`
  AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=a.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'))
- SELECT id,start_year,work_type,object_form FROM candidates WHERE ordinal<=2`, Bounds.Start, Bounds.End, true, "", false, "")
+ SELECT id,start_year,work_type,object_form FROM candidates WHERE ordinal<=2`, Bounds.Start, Bounds.End, "", false, "")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -86,7 +86,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 	slices.SortFunc(expected, compareGalleryItems)
 	recorder := &discoveryPlanDB{atlasDB: tx}
 	repo := &Repository{db: recorder}
-	f := Filter{Range: Bounds, Limit: 3, Preview: true, Selection: true, Picks: map[string][]string{"artwork": ids}}
+	f := Filter{Range: Bounds, Limit: 3, Selection: true, Picks: map[string][]string{"artwork": ids}}
 	var got []Item
 	for page := 0; page <= len(ids)/f.Limit; page++ {
 		out, err := repo.List(ctx, f)
@@ -134,10 +134,10 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 		name   string
 		filter Filter
 	}{
-		{"all", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 30, Preview: true}},
-		{"all-highlights", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 30, Preview: true, Highlights: true}},
-		{"painter", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 60, Preview: true, Entities: map[string]url.Values{"artwork": {"painter": {"rembrandt"}}}}},
-		{"prints", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 30, Preview: true, Entities: map[string]url.Values{"artwork": {"painter": {"rembrandt"}, "work_type": {"print"}}}}},
+		{"all", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 30}},
+		{"all-highlights", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 30, Highlights: true}},
+		{"painter", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 60, Entities: map[string]url.Values{"artwork": {"painter": {"rembrandt"}}}}},
+		{"prints", Filter{Range: Bounds, Types: []string{"artwork"}, Limit: 30, Entities: map[string]url.Values{"artwork": {"painter": {"rembrandt"}, "work_type": {"print"}}}}},
 	} {
 		t.Run(tc.name, func(t *testing.T) {
 			recorder.statements = nil

@@ -81,6 +81,7 @@ export type Influence = { id: string; name: string; slug: string | null; directi
 export type ReferenceBiography = { text: string; source_url: string; revision_url: string; license_url: string; attribution: string; changes: string };
 export type ArtistBrowsePage = { items: TimelineArtist[]; total: number; next_cursor: string; facets: TimelineFacets };
 export type ArtistDetail = {
+  key_artwork?: Artwork | null;
   artwork_count?: number;
   collections?: (MuseumRef & { work_count: number })[];
   collection_count?: number;
@@ -123,26 +124,6 @@ export type CatalogueArtist = {
   updated_at: string;
 };
 
-export type PublicationValidation = {
-  artist_id: string;
-  ready: boolean;
-  revision: number;
-  issues: Array<{
-    path: string;
-    code: string;
-    message: string;
-  }>;
-};
-
-export type CoverageSummary = {
-  by_status: Record<string, number>;
-  nordic_artists: number;
-  asian_artists: number;
-  missing_representative_works: number;
-  missing_biography: number;
-  total_artists: number;
-};
-
 export type TimelineFacets = {
   regions: { slug: string; name: string; count: number }[];
   movements: Array<{ slug: string; name: string; color?: string; count: number }>;
@@ -152,16 +133,17 @@ export type TimelineFacets = {
 export type MuseumRef = { id: string; slug: string; name: string };
 export type MuseumVenue = MuseumRef & { city: string; country: string; region: string; visit_url: string };
 export type DisplayEvidence = MuseumRef & { venue_id: string; venue_name: string; state: "on_view" | "not_on_view" | "unknown" | "stale"; context: string | null; gallery: string | null; checked_at: string; source_url: string };
-export type MuseumSelection = { kind: "owner" | "museum"; position: number; reason: string; source_url: string | null; checked_at: string | null };
+export type MuseumSelection = { kind: "museum"; position: number; reason: string; source_url: string | null; checked_at: string | null };
 export type MuseumWork = Pick<Artwork, "id" | "slug" | "title" | "date_display" | "media_url" | "alt_text" | "rights_status" | "unlinked_creator_label" | "cultural_context" | "object_form"> & {
   artists: (MuseumRef & { role: string })[]; selections: MuseumSelection[]; display: DisplayEvidence | null;
 };
 export type MuseumArtwork = Artwork & Pick<MuseumWork, "artists" | "selections">;
 export type Museum = MuseumRef & {
+  city?: string | null; country?: string | null;
   kind: "museum" | "historic_site" | "foundation" | "archive"; description: string; website_url: string | null; status: string;
   venues: MuseumVenue[]; work_count: number; holding_count: number; on_view_count: number;
-  highlight_count: number; must_see_count: number; owner_revision: number; cover: MuseumWork | null;
+  highlight_count: number; cover: MuseumWork | null;
 };
 export type MuseumFacets = { regions: { slug: string; name: string }[]; countries: { slug: string; name: string }[]; artists: { slug: string; name: string }[]; movements: { slug: string; name: string }[] };
 export type MuseumPage = { items: Museum[]; total: number; next_cursor: string; facets: MuseumFacets };
-export type MuseumWorksPage = { items: MuseumWork[]; total: number; next_cursor: string; facets: MuseumFacets };
+export type MuseumWorksPage = { items: MuseumWork[]; total: number; image_count?: number; next_cursor: string; facets: MuseumFacets };

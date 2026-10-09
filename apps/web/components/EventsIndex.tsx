@@ -1,4 +1,5 @@
 "use client";
+import { displayMetadata } from "@/lib/display-metadata";
 import { ExplorerFrame } from "./ExplorerFrame";
 import { useFitYears } from "./use-fit-years";
 import { timelineRequestKey } from "@/lib/timeline-request";
@@ -75,9 +76,9 @@ export function EventsIndex() {
     </ExplorerFrame>
     <section className={styles.shelf} aria-labelledby="event-index" aria-busy={loading}>
       <div className={styles.shelfHeader}><div><h2 id="event-index" tabIndex={-1}>Event index</h2><p>Explore the events, empires, and movements that connect art, literature, belief, science, and everyday life. World history through 2000.</p></div><p className={styles.count} role="status">{data ? `${data.total.toLocaleString("en-GB")} of ${data.selectionTotal.toLocaleString("en-GB")} events` : ""}</p></div>
-      <ul className={styles.bookIndex} aria-label="Event index">{data?.items.map(event => <li key={event.id} data-selected={selected === event.id}><button type="button" aria-label={`Open ${event.title}`} aria-haspopup="dialog" onClick={() => updateQuery({ event: event.id }, true)}><strong>{event.title}</strong><span>{event.kind} · {event.topics.join(" · ")}</span><time>{event.years}</time></button></li>)}</ul>
+      <ul className={styles.bookIndex} aria-label="Event index">{data?.items.map(event => <li key={event.id} data-selected={selected === event.id}><button type="button" aria-label={`Open ${event.title}`} aria-haspopup="dialog" onClick={() => updateQuery({ event: event.id }, true)}><strong>{event.title}</strong><span>{event.kind} · {event.topics.join(" · ")}</span>{displayMetadata(event.years) && <time>{event.years}</time>}</button></li>)}</ul>
       {data && (data.hasMore || params.has("after")) && <nav className={styles.pagination} aria-label="Event pages">{params.has("after") && <button onClick={() => page(null)}>First page</button>}<span>{data.items.length} events on this page</span>{data.hasMore && <button onClick={() => page(data.nextCursor)}>Next events</button>}</nav>}
-      <p className={styles.footerNote}>The Top 100 offers starting points for exploration. The wider collection links to its sources; documentation coverage is not a definitive measure of historical importance. Uncertain dates and missing details remain visible.</p>
+      <p className={styles.footerNote}>The Top 100 offers starting points for exploration. The wider collection links to its sources; documentation coverage is not a definitive measure of historical importance.</p>
     </section>
     {selected && <EventDrawer id={selected} close={() => updateQuery({ event: null })} />}
   </div>;

@@ -2,14 +2,11 @@ package httpapi
 
 import (
 	"context"
-	"crypto/subtle"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io"
 	"log/slog"
 	"net/http"
-	"regexp"
 	"strconv"
 	"strings"
 	"time"
@@ -58,33 +55,24 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /api/v1/timeline/facets", api.timelineFacets)
 	mux.HandleFunc("GET /api/v1/painters/options", api.painterOptions)
 	mux.HandleFunc("GET /api/v1/artists", api.artistDirectory)
+	mux.HandleFunc("GET /api/v1/artworks", api.artworkDirectory)
 	mux.HandleFunc("GET /api/v1/artists/{slug}", api.artist)
 	mux.HandleFunc("GET /api/v1/seo/sitemaps", api.sitemapShards)
 	mux.HandleFunc("GET /api/v1/seo/sitemaps/{kind}/{prefix}", api.sitemapEntries)
-	mux.HandleFunc("GET /api/v1/seo/artists", api.publishedArtists)
+	mux.HandleFunc("GET /api/v1/seo/artists", api.discoveryArtists)
 	mux.HandleFunc("GET /api/v1/artists/{slug}/works", api.artistWorks)
 	mux.HandleFunc("GET /api/v1/artists/{slug}/works/{id}", api.artistArtwork)
 	mux.HandleFunc("GET /api/v1/museums", api.museums)
 	mux.HandleFunc("GET /api/v1/museums/{slug}", api.museum)
 	mux.HandleFunc("GET /api/v1/museums/{slug}/works", api.museumWorks)
 	mux.HandleFunc("GET /api/v1/museums/{slug}/works/{id}", api.museumArtwork)
-	mux.Handle("PATCH /api/v1/museums/{slug}/must-see", api.requireEditor(http.HandlerFunc(api.saveMustSee)))
 	mux.HandleFunc("GET /api/v1/catalogue/artists", api.catalogueArtists)
-	mux.Handle("GET /api/v1/catalogue/artists/{id}", api.requireEditor(http.HandlerFunc(api.catalogueArtist)))
-	mux.Handle("POST /api/v1/catalogue/artists", api.requireEditor(http.HandlerFunc(api.createArtist)))
-	mux.Handle("PATCH /api/v1/catalogue/artists/{id}", api.requireEditor(http.HandlerFunc(api.updateArtist)))
-	mux.Handle("DELETE /api/v1/catalogue/artists/{id}", api.requireEditor(http.HandlerFunc(api.archiveArtist)))
-	mux.Handle("POST /api/v1/catalogue/artists/{id}/restore", api.requireEditor(http.HandlerFunc(api.restoreArtist)))
-	mux.Handle("GET /api/v1/coverage/summary", api.requireEditor(http.HandlerFunc(api.coverage)))
-	mux.Handle("POST /api/v1/publish/validate", api.requireEditor(http.HandlerFunc(api.validatePublication)))
-	mux.Handle("POST /api/v1/publish/artists/{id}", api.requireEditor(http.HandlerFunc(api.publishArtist)))
-	mux.Handle("POST /api/v1/unpublish/artists/{id}", api.requireEditor(http.HandlerFunc(api.unpublishArtist)))
 
 	var catalogue http.Handler = mux
 	if db != nil {
 		cache := newCatalogueCache(func(ctx context.Context) (string, error) {
 			var snapshot string
-			err := db.QueryRow(ctx, "SELECT pg_current_snapshot()::text").Scan(&snapshot)
+			err := db.QueryRow(ctx, "SELECT sum(revision)::text FROM public.catalogue_cache_revisions HAVING count(*)=64").Scan(&snapshot)
 			return snapshot, err
 		})
 		catalogue = api.cacheCatalogue(cache, mux)
@@ -92,6 +80,7 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	handler := api.recoverPanic(api.requestLog(api.cors(catalogue)))
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("X-Robots-Tag", "noindex")
+		w.Header().Set("Cache-Control", "private, no-store")
 		handler.ServeHTTP(w, r)
 	})
 }
@@ -124,22 +113,6 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 	if start > end {
 		writeError(w, http.StatusBadRequest, "INVALID_RANGE", "Start year must be before or equal to end year.")
 		return
-	}
-	status := strings.TrimSpace(r.URL.Query().Get("status"))
-	if !allowed(status, "", "draft", "review", "published") {
-		writeError(w, http.StatusBadRequest, "INVALID_STATUS", "Status must be draft, review, or published.")
-		return
-	}
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
-	if !preview {
-		if status != "" && status != "published" {
-			writeError(w, 401, "EDITOR_AUTH_REQUIRED", "Sign in to preview research records.")
-			return
-		}
-		status = "published"
 	}
 	q := r.URL.Query()
 	choices := map[string][]string{}
@@ -178,7 +151,6 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 		Countries:   choices["country"],
 		Movements:   choices["movement"],
 		Painters:    choices["painter"],
-		Status:      status,
 		Regions:     regions,
 		WorkTypes:   choices["work_type"],
 		PopularOnly: popular,
@@ -194,10 +166,6 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 }
 
 func (api *API) timelineFacets(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	popular, err := parsePopular(r.URL.Query()["popular"])
 	if err != nil {
 		writeError(w, 400, "INVALID_POPULAR", err.Error())
@@ -208,7 +176,7 @@ func (api *API) timelineFacets(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_WOMEN", err.Error())
 		return
 	}
-	facets, err := api.repo.DiscoveryFacets(r.Context(), preview, popular, women)
+	facets, err := api.repo.DiscoveryFacets(r.Context(), popular, women)
 	if err != nil {
 		slog.Error("timeline facet query failed", "error", err)
 		writeError(w, http.StatusInternalServerError, "FACET_QUERY_FAILED", "Timeline filters could not be loaded.")
@@ -219,16 +187,12 @@ func (api *API) timelineFacets(w http.ResponseWriter, r *http.Request) {
 }
 
 func (api *API) artist(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	slug := artistLookupSlug(r.PathValue("slug"))
 	if slug == "" {
 		writeError(w, http.StatusBadRequest, "INVALID_SLUG", "Artist slug is required.")
 		return
 	}
-	artist, err := api.repo.ArtistBySlug(r.Context(), slug, preview)
+	artist, err := api.repo.ArtistBySlug(r.Context(), slug)
 	if errors.Is(err, catalog.ErrNotFound) {
 		writeError(w, http.StatusNotFound, "ARTIST_NOT_FOUND", "This painter is not in the catalogue.")
 		return
@@ -243,15 +207,6 @@ func (api *API) artist(w http.ResponseWriter, r *http.Request) {
 }
 
 func (api *API) catalogueArtists(w http.ResponseWriter, r *http.Request) {
-	status := strings.TrimSpace(r.URL.Query().Get("status"))
-	if !allowed(status, "", "draft", "review", "published", "archived") {
-		writeError(w, http.StatusBadRequest, "INVALID_STATUS", "Unknown catalogue status.")
-		return
-	}
-	status, includeArchived, ok := api.catalogueReadScope(w, r, status)
-	if !ok {
-		return
-	}
 	if len(r.URL.Query().Get("q")) > 200 {
 		writeError(w, 400, "INVALID_QUERY", "Use at most 200 characters.")
 		return
@@ -271,7 +226,7 @@ func (api *API) catalogueArtists(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_SORT", "Unknown sort field.")
 		return
 	}
-	artists, err := api.repo.Catalogue(r.Context(), status, strings.TrimSpace(r.URL.Query().Get("q")), limit+1, offset, sort, includeArchived)
+	artists, err := api.repo.Catalogue(r.Context(), strings.TrimSpace(r.URL.Query().Get("q")), limit+1, offset, sort)
 	if err != nil {
 		slog.Error("catalogue query failed", "error", err)
 		writeError(w, http.StatusInternalServerError, "CATALOGUE_QUERY_FAILED", "The catalogue could not be loaded.")
@@ -285,301 +240,6 @@ func (api *API) catalogueArtists(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"items": artists, "has_more": more})
 }
 
-func (api *API) catalogueReadScope(w http.ResponseWriter, r *http.Request, status string) (string, bool, bool) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return "", false, false
-	}
-	if api.isEditor(r) {
-		return status, true, true
-	}
-	if status == "archived" || (!preview && status != "" && status != "published") {
-		writeError(w, http.StatusUnauthorized, "EDITOR_AUTH_REQUIRED", "Sign in to browse this record status.")
-		return "", false, false
-	}
-	if !preview {
-		status = "published"
-	}
-	return status, false, true
-}
-
-func (api *API) createArtist(w http.ResponseWriter, r *http.Request) {
-	input, ok := decodeArtistInput(w, r, false)
-	if !ok {
-		return
-	}
-	artist, err := api.repo.CreateArtist(r.Context(), input)
-	if err != nil {
-		slog.Error("create artist failed", "error", err)
-		writeError(w, http.StatusConflict, "ARTIST_CREATE_FAILED", "The painter could not be created. Check that the slug is unique.")
-		return
-	}
-	writeJSON(w, http.StatusCreated, artist)
-}
-
-func (api *API) updateArtist(w http.ResponseWriter, r *http.Request) {
-	input, ok := decodeArtistInput(w, r, true)
-	if !ok {
-		return
-	}
-	artist, err := api.repo.UpdateArtist(r.Context(), r.PathValue("id"), input)
-	if errors.Is(err, catalog.ErrRevisionConflict) {
-		writeError(w, http.StatusConflict, "REVISION_CONFLICT", "This painter changed after you opened it. Reload before saving.")
-		return
-	}
-	if errors.Is(err, catalog.ErrNotFound) {
-		writeError(w, http.StatusNotFound, "ARTIST_NOT_FOUND", "This painter is not in the catalogue.")
-		return
-	}
-	if err != nil {
-		slog.Error("update artist failed", "error", err)
-		writeError(w, http.StatusBadRequest, "ARTIST_UPDATE_FAILED", "The painter could not be updated.")
-		return
-	}
-	writeJSON(w, http.StatusOK, artist)
-}
-
-func (api *API) archiveArtist(w http.ResponseWriter, r *http.Request) {
-	api.setArtistArchived(w, r, true)
-}
-
-func (api *API) restoreArtist(w http.ResponseWriter, r *http.Request) {
-	api.setArtistArchived(w, r, false)
-}
-
-func (api *API) setArtistArchived(w http.ResponseWriter, r *http.Request, archived bool) {
-	var request revisionRequest
-	if !decodeJSON(w, r, &request) {
-		return
-	}
-	if request.ExpectedRevision < 1 {
-		writeError(w, 422, "EXPECTED_REVISION_REQUIRED", "Reload the record before changing its archive state.")
-		return
-	}
-	artist, err := api.repo.SetArchived(r.Context(), r.PathValue("id"), archived, request.ExpectedRevision)
-	if errors.Is(err, catalog.ErrRevisionConflict) {
-		writeError(w, 409, "REVISION_CONFLICT", "This record changed. Reload before archiving or restoring it.")
-		return
-	}
-	if errors.Is(err, catalog.ErrNotFound) {
-		writeError(w, http.StatusNotFound, "ARTIST_NOT_FOUND", "This painter is not in the catalogue.")
-		return
-	}
-	if err != nil {
-		slog.Error("archive state update failed", "error", err)
-		writeError(w, http.StatusInternalServerError, "ARCHIVE_UPDATE_FAILED", "The archive state could not be changed.")
-		return
-	}
-	writeJSON(w, http.StatusOK, artist)
-}
-
-func (api *API) coverage(w http.ResponseWriter, r *http.Request) {
-	summary, err := api.repo.Coverage(r.Context())
-	if err != nil {
-		slog.Error("coverage query failed", "error", err)
-		writeError(w, http.StatusInternalServerError, "COVERAGE_QUERY_FAILED", "Coverage could not be calculated.")
-		return
-	}
-	w.Header().Set("Cache-Control", "no-store")
-	writeJSON(w, http.StatusOK, summary)
-}
-
-type validationRequest struct {
-	ArtistID string `json:"artist_id"`
-}
-
-type revisionRequest struct {
-	ExpectedRevision int `json:"expected_revision"`
-}
-
-func (api *API) validatePublication(w http.ResponseWriter, r *http.Request) {
-	var request validationRequest
-	if !decodeJSON(w, r, &request) {
-		return
-	}
-	if !regexp.MustCompile(`^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$`).MatchString(request.ArtistID) {
-		writeError(w, http.StatusUnprocessableEntity, "ARTIST_ID_REQUIRED", "artist_id must be a valid record identifier.")
-		return
-	}
-	report, err := api.repo.ValidateArtistForPublication(r.Context(), request.ArtistID)
-	if errors.Is(err, catalog.ErrNotFound) {
-		writeError(w, http.StatusNotFound, "ARTIST_NOT_FOUND", "This painter is not in the catalogue.")
-		return
-	}
-	if err != nil {
-		slog.Error("publication validation failed", "error", err)
-		writeError(w, http.StatusInternalServerError, "PUBLICATION_VALIDATION_FAILED", "Publication checks could not be completed.")
-		return
-	}
-	writeJSON(w, http.StatusOK, report)
-}
-
-func (api *API) publishArtist(w http.ResponseWriter, r *http.Request) {
-	var request revisionRequest
-	if !decodeJSON(w, r, &request) {
-		return
-	}
-	report, err := api.repo.ValidateArtistForPublication(r.Context(), r.PathValue("id"))
-	if errors.Is(err, catalog.ErrNotFound) {
-		writeError(w, http.StatusNotFound, "ARTIST_NOT_FOUND", "This painter is not in the catalogue.")
-		return
-	}
-	if err != nil {
-		writeError(w, http.StatusInternalServerError, "PUBLICATION_VALIDATION_FAILED", "Publication checks could not be completed.")
-		return
-	}
-	if !report.Ready {
-		writeJSON(w, http.StatusUnprocessableEntity, report)
-		return
-	}
-	artist, err := api.repo.SetPublished(r.Context(), r.PathValue("id"), request.ExpectedRevision, true)
-	api.writePublicationResult(w, artist, err)
-}
-
-func (api *API) unpublishArtist(w http.ResponseWriter, r *http.Request) {
-	var request revisionRequest
-	if !decodeJSON(w, r, &request) {
-		return
-	}
-	artist, err := api.repo.SetPublished(r.Context(), r.PathValue("id"), request.ExpectedRevision, false)
-	api.writePublicationResult(w, artist, err)
-}
-
-func (api *API) writePublicationResult(w http.ResponseWriter, artist catalog.CatalogueArtist, err error) {
-	var invalid *catalog.PublicationError
-	if errors.As(err, &invalid) {
-		writeJSON(w, 422, invalid.Report)
-		return
-	}
-	if errors.Is(err, catalog.ErrRevisionConflict) {
-		writeError(w, http.StatusConflict, "REVISION_CONFLICT", "This painter changed after you opened it. Reload before changing publication state.")
-		return
-	}
-	if errors.Is(err, catalog.ErrNotFound) {
-		writeError(w, http.StatusNotFound, "ARTIST_NOT_FOUND", "This painter is not in the catalogue.")
-		return
-	}
-	if err != nil {
-		slog.Error("publication state update failed", "error", err)
-		writeError(w, http.StatusInternalServerError, "PUBLICATION_UPDATE_FAILED", "Publication state could not be changed.")
-		return
-	}
-	writeJSON(w, http.StatusOK, artist)
-}
-
-func decodeArtistInput(w http.ResponseWriter, r *http.Request, update bool) (catalog.ArtistInput, bool) {
-	var input catalog.ArtistInput
-	if !decodeJSON(w, r, &input) {
-		return input, false
-	}
-	input.Slug = catalog.NormalizeSlug(input.Slug)
-	input.DisplayName = strings.TrimSpace(input.DisplayName)
-	input.SortName = strings.TrimSpace(input.SortName)
-	input.EntityType = strings.TrimSpace(input.EntityType)
-	input.TimelineDisplay = strings.TrimSpace(input.TimelineDisplay)
-	input.TimelineBasis = strings.TrimSpace(input.TimelineBasis)
-	input.Status = strings.TrimSpace(input.Status)
-	if input.SortName == "" {
-		input.SortName = input.DisplayName
-	}
-	if input.EntityType == "" {
-		input.EntityType = "person"
-	}
-	if input.TimelineBasis == "" {
-		input.TimelineBasis = "life"
-	}
-	if input.Status == "" {
-		input.Status = "draft"
-	}
-	if !regexp.MustCompile(`^[a-z0-9]+(-[a-z0-9]+)*$`).MatchString(input.Slug) || len(input.Slug) > 100 || input.DisplayName == "" || len(input.DisplayName) > 200 || input.TimelineDisplay == "" {
-		writeError(w, http.StatusUnprocessableEntity, "REQUIRED_FIELDS", "Slug, display name, and timeline display are required.")
-		return input, false
-	}
-	if input.TimelineStartYear < 1 || input.TimelineEndYear > 2100 || input.TimelineStartYear > 2000 || input.TimelineEndYear < 1100 || input.TimelineStartYear > input.TimelineEndYear {
-		writeError(w, http.StatusUnprocessableEntity, "INVALID_TIMELINE_RANGE", "Life or activity dates must be ordered and overlap 1100–2000. Do not truncate dates to fit the timeline.")
-		return input, false
-	}
-	if !allowed(input.EntityType, "person", "anonymous_master", "workshop", "collective") || !allowed(input.TimelineBasis, "life", "activity", "mixed", "estimated") {
-		writeError(w, http.StatusUnprocessableEntity, "INVALID_CLASSIFICATION", "Entity type or timeline basis is invalid.")
-		return input, false
-	}
-	if !allowed(input.Status, "draft", "review") {
-		writeError(w, http.StatusUnprocessableEntity, "PUBLISH_REQUIRES_VALIDATION", "Create and edit routes may only save draft or review records.")
-		return input, false
-	}
-	if update && input.ExpectedRevision < 1 {
-		writeError(w, http.StatusUnprocessableEntity, "EXPECTED_REVISION_REQUIRED", "expected_revision is required when updating a painter.")
-		return input, false
-	}
-	return input, true
-}
-
-func decodeJSON(w http.ResponseWriter, r *http.Request, destination any) bool {
-	r.Body = http.MaxBytesReader(w, r.Body, 1<<20)
-	decoder := json.NewDecoder(r.Body)
-	decoder.DisallowUnknownFields()
-	if err := decoder.Decode(destination); err != nil {
-		writeError(w, http.StatusBadRequest, "INVALID_JSON", "Request body must be valid JSON with known fields.")
-		return false
-	}
-	if decoder.Decode(&struct{}{}) != io.EOF {
-		writeError(w, 400, "INVALID_JSON", "Send exactly one JSON object.")
-		return false
-	}
-	return true
-}
-
-func (api *API) requireEditor(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if api.config.EditorToken == "" {
-			writeError(w, http.StatusServiceUnavailable, "EDITOR_AUTH_NOT_CONFIGURED", "Editor writes are disabled until ARTLINE_EDITOR_TOKEN is configured.")
-			return
-		}
-		if !api.isEditor(r) {
-			writeError(w, http.StatusUnauthorized, "EDITOR_AUTH_REQUIRED", "A valid editor token is required.")
-			return
-		}
-		if id := r.PathValue("id"); id != "" && !regexp.MustCompile(`^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$`).MatchString(id) {
-			writeError(w, 400, "INVALID_ID", "Invalid record identifier.")
-			return
-		}
-		w.Header().Set("Cache-Control", "private, no-store")
-		next.ServeHTTP(w, r)
-	})
-}
-
-func (api *API) isEditor(r *http.Request) bool {
-	prefix, provided, ok := strings.Cut(r.Header.Get("Authorization"), " ")
-	return ok && prefix == "Bearer" && api.config.EditorToken != "" && subtle.ConstantTimeCompare([]byte(provided), []byte(api.config.EditorToken)) == 1
-}
-func (api *API) previewAllowed(w http.ResponseWriter, r *http.Request) (bool, bool) {
-	w.Header().Set("Cache-Control", "private, no-store")
-	// Explicit published-only reads stay narrow even while research preview is public.
-	if r.URL.Query().Get("preview") == "0" {
-		return false, true
-	}
-	publicPreview := api.config.PublicResearchPreview && (r.Method == http.MethodGet || r.Method == http.MethodHead)
-	preview := publicPreview || r.URL.Query().Get("preview") == "1"
-	if preview && !publicPreview && !api.isEditor(r) {
-		writeError(w, 401, "EDITOR_AUTH_REQUIRED", "Sign in to preview research records.")
-		return false, false
-	}
-	return preview, true
-}
-func (api *API) catalogueArtist(w http.ResponseWriter, r *http.Request) {
-	var slug string
-	if err := api.db.QueryRow(r.Context(), "SELECT slug FROM artists WHERE id=$1", r.PathValue("id")).Scan(&slug); err != nil {
-		writeError(w, 404, "ARTIST_NOT_FOUND", "Painter not found.")
-		return
-	}
-	artist, err := api.repo.ArtistBySlug(r.Context(), slug, true)
-	if err != nil {
-		writeError(w, 404, "ARTIST_NOT_FOUND", "Painter not found or archived.")
-		return
-	}
-	writeJSON(w, 200, artist)
-}
-
 func (api *API) cors(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		origin := r.Header.Get("Origin")
@@ -587,7 +247,7 @@ func (api *API) cors(next http.Handler) http.Handler {
 			w.Header().Set("Access-Control-Allow-Origin", origin)
 			w.Header().Set("Vary", "Origin")
 			w.Header().Set("Access-Control-Allow-Headers", "Authorization, Content-Type")
-			w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS")
+			w.Header().Set("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS")
 		}
 		if r.Method == http.MethodOptions {
 			w.WriteHeader(http.StatusNoContent)

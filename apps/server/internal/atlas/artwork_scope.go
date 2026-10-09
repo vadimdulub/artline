@@ -43,7 +43,7 @@ func nativeArtworkScope(f Filter, selection, creators string) string {
  SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,
  a.primary_media_id,a.work_type,a.cultural_context,` + titles + `
  FROM artworks a WHERE ` + illustratedNativeEligibility + `
- AND ($3 OR a.status='published')
+
  AND coalesce(a.creation_year_start,a.creation_year_end)<=$2
  AND coalesce(a.creation_year_end,a.creation_year_start)>=$1
  AND (` + selection + `) AND (` + creators + `)),`

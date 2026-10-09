@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-func TestSEOPublishedDiscoveryReadOnly(t *testing.T) {
+func TestSEOActiveDiscoveryReadOnly(t *testing.T) {
 	dsn := os.Getenv("ARTLINE_READONLY_DATABASE_URL")
 	if dsn == "" {
 		t.Skip("ARTLINE_READONLY_DATABASE_URL not set")
@@ -36,7 +36,7 @@ func TestSEOPublishedDiscoveryReadOnly(t *testing.T) {
 			t.Fatalf("bad shard %s", shard)
 		}
 	}
-	page, err := repo.PublishedArtistDirectory(ctx, "")
+	page, err := repo.ActiveArtistDirectory(ctx, "")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -48,8 +48,8 @@ func TestSEOPublishedDiscoveryReadOnly(t *testing.T) {
 		if err := tx.QueryRow(ctx, `SELECT status FROM artists WHERE slug=$1`, strings.TrimPrefix(entry.Path, "/artists/")).Scan(&status); err != nil {
 			t.Fatal(err)
 		}
-		if status != "published" {
-			t.Fatal("unpublished artist exposed")
+		if status == "archived" {
+			t.Fatal("archived artist exposed")
 		}
 	}
 	// Inline SQL VALUES exercise mixed publication states without inserting any
@@ -57,13 +57,17 @@ func TestSEOPublishedDiscoveryReadOnly(t *testing.T) {
 	fixture := `WITH artworks(id,title,status) AS (VALUES
  ('00000000-0000-0000-0000-000000000001'::uuid,'Published work','published'),
  ('00000000-0000-0000-0000-000000000002'::uuid,'Review work','review'),
- ('00000000-0000-0000-0000-000000000003'::uuid,'Private creator','published')),
- artists(id,slug,status) AS (VALUES (1,'a-published','published'),(2,'b-review','review'),(3,'c-published','published')),
+ ('00000000-0000-0000-0000-000000000003'::uuid,'Review creator','published'),
+ ('00000000-0000-0000-0000-000000000004'::uuid,'Archived work','archived'),
+ ('00000000-0000-0000-0000-000000000005'::uuid,'Archived creator','review')),
+ artists(id,slug,status) AS (VALUES (1,'a-published','published'),(2,'b-review','review'),(3,'c-published','published'),(4,'d-archived','archived')),
  artwork_artists(artwork_id,artist_id,attribution_role) AS (VALUES
  ('00000000-0000-0000-0000-000000000001'::uuid,1,'primary'),
  ('00000000-0000-0000-0000-000000000001'::uuid,3,'attributed_to'),
  ('00000000-0000-0000-0000-000000000002'::uuid,1,'primary'),
- ('00000000-0000-0000-0000-000000000003'::uuid,2,'primary')), selected`
+ ('00000000-0000-0000-0000-000000000003'::uuid,2,'primary'),
+ ('00000000-0000-0000-0000-000000000004'::uuid,1,'primary'),
+ ('00000000-0000-0000-0000-000000000005'::uuid,4,'primary')), selected`
 	query := strings.Replace(sitemapArtworkSQL, "WITH selected", fixture, 1)
 	rows, err := tx.Query(ctx, query, strings.Repeat("0", 32), strings.Repeat("f", 32), SitemapLimit)
 	if err != nil {
@@ -81,7 +85,7 @@ func TestSEOPublishedDiscoveryReadOnly(t *testing.T) {
 	if err := rows.Err(); err != nil {
 		t.Fatal(err)
 	}
-	if len(entries) != 1 || entries[0].Path != "/artists/a-published/works/00000000-0000-0000-0000-000000000001" {
-		t.Fatalf("publication/attribution filtering failed: %+v", entries)
+	if len(entries) != 3 || entries[0].Path != "/artists/a-published/works/00000000-0000-0000-0000-000000000001" {
+		t.Fatalf("active-status/attribution filtering failed: %+v", entries)
 	}
 }

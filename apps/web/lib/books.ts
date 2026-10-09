@@ -7,7 +7,8 @@ export type BookOverview = {
   licenseUrl: string;
 };
 
-export type Book = {
+export type BookDetails = {
+  summary?: false;
   id: string;
   title: string;
   author: string;
@@ -35,7 +36,9 @@ export type BookRange = { start: number; end: number };
 export type BookFilterOption = { slug: string; name: string };
 export type BooksFacets = { languages: BookFilterOption[]; countries: BookFilterOption[]; regions: BookFilterOption[] };
 export type BookSuggestion = { key: "language" | "country" | "region" | "author"; value: string; name: string; count: number };
-export type TimelineAuthor = Book["creators"][number] & {
+export type BookSummary = Pick<BookDetails, "id" | "title" | "author" | "years" | "startYear" | "endYear" | "approximate" | "cover"> & { summary: true };
+export type Book = BookDetails | BookSummary;
+export type TimelineAuthor = BookDetails["creators"][number] & {
   startYear: number | null; endYear: number | null; lifespan: string; approximate: boolean; bookCount: number; credits: string[];
 };
 export type BooksResponse = { matchedRange?: { start: number; end: number } | null;
@@ -66,7 +69,7 @@ export function authorLifespanLabel(author: TimelineAuthor): string {
   if (author.birth && author.death && author.startYear !== null && author.endYear !== null) {
     return `${author.approximate ? "c. " : ""}${bookYearLabel(author.startYear)}–${bookYearLabel(author.endYear)}`;
   }
-  return author.lifespan;
+  return [author.birth && `Born ${author.birth}`, author.death && `Died ${author.death}`].filter(Boolean).join(" · ");
 }
 
 export function compressedBCE(range: BookRange): boolean { return range.start < 1 && range.end > 1; }

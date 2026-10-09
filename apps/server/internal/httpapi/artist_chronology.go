@@ -71,10 +71,6 @@ func (api *API) artistChronologyError(w http.ResponseWriter, err error) {
 	}
 }
 func (api *API) artistWorks(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	f, err := artistWorksFilter(r)
 	if err != nil {
 		api.artistChronologyError(w, err)
@@ -87,7 +83,7 @@ func (api *API) artistWorks(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	page, err := api.repo.ArtistWorks(ctx, slug, f, preview)
+	page, err := api.repo.ArtistWorks(ctx, slug, f)
 	if err != nil {
 		api.artistChronologyError(w, err)
 		return
@@ -96,10 +92,6 @@ func (api *API) artistWorks(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, 200, page)
 }
 func (api *API) artistArtwork(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	slug, id := r.PathValue("slug"), r.PathValue("id")
 	if !validArtistSlug(slug) || !museumIDPattern.MatchString(id) {
 		api.artistChronologyError(w, catalog.ErrNotFound)
@@ -107,7 +99,7 @@ func (api *API) artistArtwork(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	work, err := api.repo.ArtistArtwork(ctx, slug, id, preview)
+	work, err := api.repo.ArtistArtwork(ctx, slug, id)
 	if err != nil {
 		api.artistChronologyError(w, err)
 		return

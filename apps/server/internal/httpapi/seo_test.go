@@ -7,7 +7,7 @@ import (
 )
 
 func TestSEORejectsInvalidRangesBeforeDatabaseAccess(t *testing.T) {
-	handler := New(config.Config{PublicResearchPreview: true}, nil)
+	handler := New(config.Config{}, nil)
 	for _, path := range []string{"/api/v1/seo/sitemaps/unknown/abc", "/api/v1/seo/sitemaps/artworks/ffff", "/api/v1/seo/sitemaps/artworks/XYZ", "/api/v1/seo/artists?after=invalid!"} {
 		r := httptest.NewRequest("GET", path, nil)
 		w := httptest.NewRecorder()

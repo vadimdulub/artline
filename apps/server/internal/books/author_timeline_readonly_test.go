@@ -36,7 +36,7 @@ func TestReadOnlyAuthorTimeline(t *testing.T) {
 		{Range: Bounds, Women: true, Top100: true},
 		{Range: Range{1900, 1910}, Authors: []string{"Jean-Paul Sartre"}},
 	} {
-		filter.View, filter.Limit, filter.Preview = "authors", 100, true
+		filter.View, filter.Limit = "authors", 100
 		view, err := repo.List(ctx, filter)
 		if err != nil {
 			t.Fatal(err)
@@ -120,7 +120,7 @@ func TestReadOnlyAuthorTimeline(t *testing.T) {
 		t.Logf("%+v languages=%v women=%v top100=%v: %d authors, %d unplaced, %d periods", filter.Range, filter.Languages, filter.Women, filter.Top100, view.Total, view.UndatedTotal, len(view.Density))
 	}
 	for _, name := range []string{"Homer", "Margaret Atwood"} {
-		view, err := repo.List(ctx, Filter{Range: Bounds, View: "authors", Authors: []string{name}, Limit: 100, Preview: true})
+		view, err := repo.List(ctx, Filter{Range: Bounds, View: "authors", Authors: []string{name}, Limit: 100})
 		if err != nil || len(view.Authors) != 1 {
 			t.Fatalf("%s: %v", name, err)
 		}
@@ -139,27 +139,26 @@ func TestReadOnlyAuthorTimeline(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	// The real catalogue may now contain published books. Audit each returned
-	// creator against published links instead of assuming an empty public set.
-	var eligiblePublished int
-	if err = db.QueryRow(ctx, `SELECT count(DISTINCT l.creator_id) FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE b.status='published' AND (b.end_year<=2000 OR b.start_year IS NULL)`).Scan(&eligiblePublished); err != nil {
+	// Audit each returned creator against all eligible active book links.
+	var eligibleActive int
+	if err = db.QueryRow(ctx, `SELECT count(DISTINCT l.creator_id) FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE b.status<>'archived' AND (b.end_year<=2000 OR b.start_year IS NULL)`).Scan(&eligibleActive); err != nil {
 		t.Fatal(err)
 	}
-	if public.Total > eligiblePublished {
-		t.Fatal("author total exceeds published creator identities")
+	if public.Total > eligibleActive {
+		t.Fatal("author total exceeds active creator identities")
 	}
 	for _, author := range public.Authors {
-		var publishedBooks int
-		if err = db.QueryRow(ctx, `SELECT count(DISTINCT b.id) FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE l.creator_id=$1 AND b.status='published' AND (b.end_year<=2000 OR b.start_year IS NULL)`, author.ID).Scan(&publishedBooks); err != nil {
+		var activeBooks int
+		if err = db.QueryRow(ctx, `SELECT count(DISTINCT b.id) FROM book_creator_links l JOIN book_records b ON b.id=l.book_id WHERE l.creator_id=$1 AND b.status<>'archived' AND (b.end_year<=2000 OR b.start_year IS NULL)`, author.ID).Scan(&activeBooks); err != nil {
 			t.Fatal(err)
 		}
-		if publishedBooks == 0 || author.BookCount != publishedBooks {
-			t.Fatalf("unpublished creator/book link exposed: %s", author.ID)
+		if activeBooks == 0 || author.BookCount != activeBooks {
+			t.Fatalf("creator/book link count mismatch: %s", author.ID)
 		}
 	}
-	t.Logf("verified %d visible authors against %d published creator identities", public.Total, eligiblePublished)
+	t.Logf("verified %d visible authors against %d active creator identities", public.Total, eligibleActive)
 	for _, languages := range [][]string{nil, {"Q7737"}} {
-		args := []any{Bounds.Start, Bounds.End, true, "", []string{}, false, false, languages, []string{}, []string{}}
+		args := []any{Bounds.Start, Bounds.End, "", []string{}, false, false, languages, []string{}, []string{}}
 		var plan string
 		if err := db.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+authorTimelineScope+"SELECT count(*),min(start_year),max(end_year) FROM matching", args...).Scan(&plan); err != nil {
 			t.Fatal(err)

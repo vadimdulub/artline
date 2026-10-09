@@ -1,4 +1,3 @@
-import { e2eEditorToken } from "./editor-token";
 import { test, expect } from "@playwright/test";
 test("painter drawer is right-aligned, scrolls independently, and adapts to phones", async ({ page }) => {
   await page.goto("/");
@@ -21,7 +20,7 @@ test("painter drawer is right-aligned, scrolls independently, and adapts to phon
   expect(await drawer.evaluate(element => element.contains(document.activeElement))).toBe(true);
   await drawer.getByRole("button", { name: /The Arrest of Christ/ }).click();
   await expect(drawer.locator(".artwork-details h3")).toContainText("Kiss of Judas");
-  await expect(drawer.getByRole("heading", { name: "Artwork record" })).toBeInViewport();
+  await expect(drawer.locator(".artwork-creator").first()).toBeInViewport();
   await expect.poll(async () => (await drawer.locator(".artwork-panel").boundingBox())!.y).toBeCloseTo(80, 0);
   await expect(drawer.getByRole("button", { name: "Close painter details" })).toBeInViewport();
   expect(await page.evaluate(() => window.scrollY)).toBe(0);
@@ -152,19 +151,12 @@ test("bookmark normalization, empty state and recovery", async ({ page }) => {
   await expect(page.getByRole("status")).toContainText("11 painters");
   await expect(page.getByRole("heading", { name: "No painters in this view" })).toHaveCount(0);
 });
-test("catalogue loads, preserves rejected edits, and shows publication issues", async ({ page }) => {
+
+
+test("catalogue remains browsable without editing controls", async ({ page }) => {
   await page.goto("/catalogue");
   await expect(page.getByRole("link", { name: "Giotto di Bondone" })).toBeVisible();
-  await page.getByLabel("Editor token", { exact: true }).fill(e2eEditorToken());
-  const row = page.getByRole("row").filter({ has: page.getByRole("link", { name: "Giotto di Bondone" }) });
-  await row.getByRole("button", { name: "Check", exact: true }).click();
-  await expect(page.locator(".validation-panel")).toContainText("influences");
-  await expect(page.getByRole("button", { name: "Publish record" })).toHaveCount(0);
-  await row.getByRole("button", { name: "Edit", exact: true }).click();
-  await expect(page.getByLabel("Display name", { exact: true })).toHaveValue("Giotto di Bondone");
-  await page.getByLabel("Start year", { exact: true }).fill("1990");
-  await page.getByRole("button", { name: "Save painter" }).click();
-  await expect(page.getByRole("form").getByRole("alert")).toContainText("Life or activity dates");
-  await expect(page.getByLabel("Start year", { exact: true })).toHaveValue("1990");
-  await page.screenshot({ path: "../../docs/screenshots/catalogue-desktop.png", fullPage: true });
+  await expect(page.getByRole("region", { name: "Painter catalogue" }).getByRole("button")).toHaveCount(0);
+  await expect(page.getByRole("textbox", { name: "Editor token", exact: true })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Add painter", exact: true })).toHaveCount(0);
 });

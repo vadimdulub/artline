@@ -31,6 +31,7 @@ export function BooksIndex() {
   const query = params.get("q") || "";
   const requestParams = new URLSearchParams([...params].filter(([key]) => ["fit", "q", "author", "start", "end", "after", "women", "top100", "language", "country", "region", "view"].includes(key)));
   requestParams.set("limit", top100Only ? "500" : "150");
+  if (!authorView) requestParams.set("summary", "true");
   const requestKey = timelineRequestKey(requestParams, { start: -5000, end: 2000 });
   const [result, setResult] = useState<{ key: string; data?: BooksResponse; error?: string }>();
   const [retry, setRetry] = useState(0);

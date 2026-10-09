@@ -34,11 +34,6 @@ resource "google_cloud_run_v2_service" "web" {
       }
 
       env {
-        name  = "ARTLINE_PUBLIC_RESEARCH_PREVIEW"
-        value = tostring(var.public_research_preview)
-      }
-
-      env {
         name  = "ARTLINE_SITE_URL"
         value = var.site_url
       }

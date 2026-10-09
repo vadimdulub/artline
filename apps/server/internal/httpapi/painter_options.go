@@ -7,10 +7,6 @@ import (
 )
 
 func (api *API) painterOptions(w http.ResponseWriter, r *http.Request) {
-	preview, ok := api.previewAllowed(w, r)
-	if !ok {
-		return
-	}
 	q := r.URL.Query()
 	query, museum := strings.TrimSpace(q.Get("q")), q.Get("museum")
 	selected, err := parseChoices(q["selected"], validArtistSlug, false)
@@ -30,7 +26,7 @@ func (api *API) painterOptions(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 5*time.Second)
 	defer cancel()
-	result, err := api.repo.PainterOptions(ctx, query, museum, selected, preview, popular, women)
+	result, err := api.repo.PainterOptions(ctx, query, museum, selected, popular, women)
 	if err != nil {
 		api.museumError(w, err)
 		return

@@ -1,4 +1,3 @@
-import { e2eEditorToken } from "./editor-token";
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
@@ -85,38 +84,9 @@ test("museum detail filters use artwork dates and never infer on-view from holdi
   await expect(page.locator("summary", { hasText: "Visiting information" })).toHaveCount(0);
 });
 
-test("must-see editor protects unsaved notes and keeps rejected changes", async ({ page }) => {
-  await page.goto("/museums/the-met?q=Self-Portrait&artist=rembrandt");
-  await page.getByText("Edit my must-see list", { exact: true }).click();
-  await page.getByLabel("Editor token", { exact: true }).fill(e2eEditorToken());
-  await page.getByRole("button", { name: "Open Self-Portrait", exact: true }).click();
-  const drawer = page.getByRole("dialog", { name: "Museum artwork details", exact: true });
-  await drawer.getByRole("checkbox", { name: "Include in my must-see works", exact: true }).check();
-  await drawer.getByLabel("Why I want to see it", { exact: true }).fill("Compare the paint surface with the reproduction.");
-  page.once("dialog", dialog => dialog.dismiss());
-  await drawer.getByRole("button", { name: "Close artwork details", exact: true }).click();
-  await expect(drawer).toBeVisible();
-  await page.route("**/museums/the-met/must-see", route => route.fulfill({ status: 409, contentType: "application/json", body: JSON.stringify({ error: { message: "Selection changed. Reload before saving." } }) }));
-  await drawer.getByRole("button", { name: "Save my selection", exact: true }).click();
-  await expect(drawer.getByRole("alert")).toContainText("Selection changed");
-  await expect(drawer.getByRole("textbox", { name: "Why I want to see it", exact: true })).toHaveValue("Compare the paint surface with the reproduction.");
-  page.once("dialog", dialog => dialog.accept());
-  await drawer.getByRole("button", { name: "Close artwork details", exact: true }).click();
-  await expect(drawer).toHaveCount(0);
-});
 
-test("an invalid editor token can be cleared without leaving the museum", async ({ page }) => {
-  await page.goto("/museums/the-met?q=Self-Portrait&artist=rembrandt");
-  await expect(page.getByRole("button", { name: "Open Self-Portrait", exact: true })).toBeVisible();
-  await page.getByText("Edit my must-see list", { exact: true }).click();
-  await page.getByLabel("Editor token", { exact: true }).fill("invalid-test-token");
-  const error = page.getByRole("main").getByRole("alert");
-  await expect(error).toContainText("We couldn’t load this view");
-  await expect(page.getByLabel("Editor token", { exact: true })).toHaveValue("invalid-test-token");
-  await page.getByRole("button", { name: "Clear editor token", exact: true }).click();
-  await expect(page.getByRole("button", { name: "Open Self-Portrait", exact: true })).toBeVisible();
-  await expect(error).toHaveCount(0);
-});
+
+
 
 test("museum screens and artwork drawer fit phones and pass accessibility checks", async ({ page }) => {
   for (const width of [1440, 390, 320]) {

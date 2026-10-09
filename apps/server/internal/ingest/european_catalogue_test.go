@@ -140,11 +140,11 @@ func TestEuropeanCatalogueRollbackReplayAndAPI(t *testing.T) {
 		t.Fatal("earlier snapshot replay changed catalogue")
 	}
 	repo := catalog.NewRepository(pool)
-	museum, e := repo.Museum(ctx, "national-gallery-london", true)
+	museum, e := repo.Museum(ctx, "national-gallery-london")
 	if e != nil || museum.WorkCount != 143 || museum.OnViewCount != 0 {
 		t.Fatalf("NG API %+v %v", museum, e)
 	}
-	museum, e = repo.Museum(ctx, "musee-de-grenoble", true)
+	museum, e = repo.Museum(ctx, "musee-de-grenoble")
 	if e != nil || museum.WorkCount != 1 || museum.OnViewCount != 0 {
 		t.Fatalf("Grenoble API %+v %v", museum, e)
 	}

@@ -73,7 +73,7 @@ func TestDiscoveryFiltersReadOnly(t *testing.T) {
 			recorder := &discoveryPlanDB{atlasDB: tx}
 			repo := &Repository{db: recorder}
 			f := tc.filter
-			f.Range, f.Preview, f.Limit = Bounds, true, 30
+			f.Range, f.Limit = Bounds, 30
 			started := time.Now()
 			data, err := repo.List(ctx, f)
 			if err != nil {
@@ -100,7 +100,7 @@ func TestDiscoveryFiltersReadOnly(t *testing.T) {
 				}
 				// Independently count eligible IDs. Bound geographic discovery before
 				// eligibility checks, including when production-place links are used.
-				args := []any{pgx.QueryExecModeCacheDescribe, f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Highlights, f.Region}
+				args := []any{pgx.QueryExecModeCacheDescribe, f.Start, f.End, strings.TrimSpace(f.Query), f.Highlights, f.Region}
 				entity := entityPredicate(lane.Key, f.Entities[lane.Key], &args)
 				if lane.Key == "artwork" {
 					entity += ` AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=a.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`

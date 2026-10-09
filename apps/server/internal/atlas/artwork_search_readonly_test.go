@@ -19,8 +19,8 @@ import (
 type legacyArtworkSearchDB struct{ atlasDB }
 
 func legacyArtworkSearch(query string) string {
-	legacy := strings.ReplaceAll(`(strpos(lower(a.title),lower($query))>0 OR strpos(lower(coalesce(a.unlinked_creator_label,'')),lower($query))>0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND ($3 OR ar.status='published') AND (strpos(lower(ar.display_name),lower($query))>0 OR strpos(lower(ar.sort_name),lower($query))>0 OR EXISTS(SELECT 1 FROM artist_aliases x WHERE x.artist_id=ar.id AND strpos(lower(x.alias),lower($query))>0) OR EXISTS(SELECT 1 FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE x.artist_id=ar.id AND m.status<>'archived' AND ($3 OR m.status='published') AND strpos(lower(m.name),lower($query))>0) OR EXISTS(SELECT 1 FROM artist_countries x JOIN countries c ON c.code=x.country_code WHERE x.artist_id=ar.id AND strpos(lower(c.name),lower($query))>0) OR EXISTS(SELECT 1 FROM artist_places x JOIN places pl ON pl.id=x.place_id WHERE x.artist_id=ar.id AND strpos(lower(pl.name),lower($query))>0))))`, "$query", "$8")
-	query = strings.ReplaceAll(query, artworkSearchPredicate("$8"), legacy)
+	legacy := strings.ReplaceAll(`(strpos(lower(a.title),lower($query))>0 OR strpos(lower(coalesce(a.unlinked_creator_label,'')),lower($query))>0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND (strpos(lower(ar.display_name),lower($query))>0 OR strpos(lower(ar.sort_name),lower($query))>0 OR EXISTS(SELECT 1 FROM artist_aliases x WHERE x.artist_id=ar.id AND strpos(lower(x.alias),lower($query))>0) OR EXISTS(SELECT 1 FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE x.artist_id=ar.id AND m.status<>'archived' AND strpos(lower(m.name),lower($query))>0) OR EXISTS(SELECT 1 FROM artist_countries x JOIN countries c ON c.code=x.country_code WHERE x.artist_id=ar.id AND strpos(lower(c.name),lower($query))>0) OR EXISTS(SELECT 1 FROM artist_places x JOIN places pl ON pl.id=x.place_id WHERE x.artist_id=ar.id AND strpos(lower(pl.name),lower($query))>0))))`, "$query", "$7")
+	query = strings.ReplaceAll(query, artworkSearchPredicate("$7"), legacy)
 	return strings.ReplaceAll(query, "NULL::text AS title,NULL::text AS unlinked_creator_label", "a.title,a.unlinked_creator_label")
 }
 
@@ -46,16 +46,16 @@ func TestArtworkSearchReadOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer pool.Close()
-	for _, preview := range []bool{true, false} {
+	{
 		for _, term := range []string{"Rossetti", "Monet", "impressionism", "France", "Paris", "Madonna", "no-such-artwork-query"} {
-			t.Run(term+map[bool]string{true: "-review", false: "-public"}[preview], func(t *testing.T) {
+			t.Run(term, func(t *testing.T) {
 				tx, err := pool.BeginTx(ctx, pgx.TxOptions{IsoLevel: pgx.RepeatableRead, AccessMode: pgx.ReadOnly})
 				if err != nil {
 					t.Fatal(err)
 				}
 				defer tx.Rollback(ctx)
 				recorder := &discoveryPlanDB{atlasDB: tx}
-				f := Filter{Range: Range{1100, 2000}, Limit: 30, Preview: preview, Selection: true, Types: []string{"artwork"}, Entities: map[string]url.Values{"artwork": {"q": {term}, "popular": {"false"}, "women": {"false"}, "image_only": {"true"}}}}
+				f := Filter{Range: Range{1100, 2000}, Limit: 30, Selection: true, Types: []string{"artwork"}, Entities: map[string]url.Values{"artwork": {"q": {term}, "popular": {"false"}, "women": {"false"}, "image_only": {"true"}}}}
 				started := time.Now()
 				actual, err := (&Repository{db: recorder}).List(ctx, f)
 				if err != nil {
@@ -72,7 +72,7 @@ func TestArtworkSearchReadOnly(t *testing.T) {
 					t.Fatal("search changed counts, dates, ordering, visibility, or cursor")
 				}
 				t.Logf("matches=%d new=%s legacy=%s", actual.Total, elapsed, time.Since(started)-elapsed)
-				if term == "Rossetti" && preview && os.Getenv("ARTLINE_ATLAS_AUDIT_DIR") != "" {
+				if term == "Rossetti" && os.Getenv("ARTLINE_ATLAS_AUDIT_DIR") != "" {
 					statement := recorder.statements[0]
 					dir := os.Getenv("ARTLINE_ATLAS_AUDIT_DIR")
 					if err := os.MkdirAll(dir, 0700); err != nil {

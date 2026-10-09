@@ -40,23 +40,8 @@ resource "google_cloud_run_v2_service" "api" {
       }
 
       env {
-        name = "ARTLINE_EDITOR_TOKEN"
-        value_source {
-          secret_key_ref {
-            secret  = google_secret_manager_secret.editor_token.id
-            version = google_secret_manager_secret_version.editor_token.version
-          }
-        }
-      }
-
-      env {
         name  = "FRONTEND_ORIGIN"
         value = "https://artline.invalid"
-      }
-
-      env {
-        name  = "ARTLINE_PUBLIC_RESEARCH_PREVIEW"
-        value = tostring(var.public_research_preview)
       }
 
       dynamic "env" {

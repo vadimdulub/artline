@@ -49,7 +49,7 @@ function Books(props: Props) {
 function Artworks(props: Props) {
   const women=props.params.get("women")==="true";
   const facets=useChoices<TimelineFacets>(`timeline/facets?popular=false&women=${women}`);
-  const painters=usePainterChoices(props.params.getAll("painter"),false,"","",women);
+  const painters=usePainterChoices(props.params.getAll("painter"),false,"",women);
   return <Shell {...props} type="artwork" options={[...painters.options,...workTypeOptions,...(facets.data?.countries??[]),...(facets.data?.regions??[]),...(facets.data?.movements??[])]} error={facets.error} retry={facets.retry}>
     <ArtworkFilterFields {...props} facets={facets.data??{countries:[],movements:[],regions:[]}} painterChoices={painters} unavailable={Boolean(facets.error)}/>
   </Shell>;

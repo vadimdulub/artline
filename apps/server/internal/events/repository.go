@@ -14,13 +14,13 @@ type Repository struct{ db *pgxpool.Pool }
 
 func NewRepository(db *pgxpool.Pool) *Repository { return &Repository{db} }
 
-const predicate = ` FROM event_records e WHERE e.status<>'archived' AND ($3 OR e.status='published')
- AND ($4='' OR strpos(e.search_text,lower($4))>0)
- AND (NOT $5 OR e.top100)
- AND (coalesce(cardinality($6::text[]),0)=0 OR e.topics && $6)
- AND (coalesce(cardinality($7::text[]),0)=0 OR e.countries && $7)
- AND (coalesce(cardinality($8::text[]),0)=0 OR e.regions && $8)
- AND (coalesce(cardinality($9::text[]),0)=0 OR e.kind=ANY($9))
+const predicate = ` FROM event_records e WHERE e.status<>'archived'
+ AND ($3='' OR strpos(e.search_text,lower($3))>0)
+ AND (NOT $4 OR e.top100)
+ AND (coalesce(cardinality($5::text[]),0)=0 OR e.topics && $5)
+ AND (coalesce(cardinality($6::text[]),0)=0 OR e.countries && $6)
+ AND (coalesce(cardinality($7::text[]),0)=0 OR e.regions && $7)
+ AND (coalesce(cardinality($8::text[]),0)=0 OR e.kind=ANY($8))
  AND ((e.start_year<=$2 AND e.end_year>=$1) OR (e.start_year IS NULL AND $1=-12000 AND $2=2000))`
 
 func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
@@ -31,17 +31,17 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 	if r.db == nil {
 		return out, ErrUnavailable
 	}
-	args := []any{f.Start, f.End, f.Preview, strings.TrimSpace(f.Query), f.Top100, f.Topics, f.Countries, f.Regions, f.Kinds}
+	args := []any{f.Start, f.End, strings.TrimSpace(f.Query), f.Top100, f.Topics, f.Countries, f.Regions, f.Kinds}
 	var firstYear, lastYear *int
 	if err := r.db.QueryRow(ctx, `SELECT count(*),count(*) FILTER(WHERE e.start_year IS NULL),min(e.start_year),max(e.end_year)`+predicate, args...).Scan(&out.Total, &out.UndatedTotal, &firstYear, &lastYear); err != nil {
 		return out, err
 	}
 	out.MatchedRange = timeline.FitExtent(firstYear, lastYear, f.Start, f.End)
-	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM event_records WHERE status<>'archived' AND ($1 OR status='published')`, f.Preview).Scan(&out.SelectionTotal); err != nil {
+	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM event_records WHERE status<>'archived' `).Scan(&out.SelectionTotal); err != nil {
 		return out, err
 	}
 	c, _ := decodeCursor(f.After)
-	rows, err := r.db.Query(ctx, `SELECT e.record,e.status`+predicate+` AND (coalesce(e.start_year,2147483647),e.id)>($10,$11) ORDER BY coalesce(e.start_year,2147483647),e.id LIMIT $12`, append(args, c.Year, c.ID, f.Limit+1)...)
+	rows, err := r.db.Query(ctx, `SELECT e.record,e.status`+predicate+` AND (coalesce(e.start_year,2147483647),e.id)>($9,$10) ORDER BY coalesce(e.start_year,2147483647),e.id LIMIT $11`, append(args, c.Year, c.ID, f.Limit+1)...)
 	if err != nil {
 		return out, err
 	}
@@ -78,7 +78,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			starts = append(starts, p.Start)
 			ends = append(ends, p.End)
 		}
-		rows, err = r.db.Query(ctx, `WITH matching AS MATERIALIZED(SELECT e.start_year,e.end_year`+predicate+`), periods AS(SELECT * FROM unnest($10::int[],$11::int[]) AS p(start_year,end_year)) SELECT p.start_year,p.end_year,count(m.start_year) FROM periods p JOIN matching m ON m.start_year<=p.end_year AND m.end_year>=p.start_year GROUP BY p.start_year,p.end_year ORDER BY p.start_year`, append(args, starts, ends)...)
+		rows, err = r.db.Query(ctx, `WITH matching AS MATERIALIZED(SELECT e.start_year,e.end_year`+predicate+`), periods AS(SELECT * FROM unnest($9::int[],$10::int[]) AS p(start_year,end_year)) SELECT p.start_year,p.end_year,count(m.start_year) FROM periods p JOIN matching m ON m.start_year<=p.end_year AND m.end_year>=p.start_year GROUP BY p.start_year,p.end_year ORDER BY p.start_year`, append(args, starts, ends)...)
 		if err != nil {
 			return out, err
 		}
@@ -110,7 +110,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			}
 			var s Suggestion
 			s.Key = d.key
-			err = r.db.QueryRow(ctx, `SELECT choice,count(*) FROM(SELECT DISTINCT e.id,`+expr+` AS choice`+predicate+`) choices GROUP BY choice HAVING count(*)<$10 ORDER BY (count(*)<=100) DESC,count(*) DESC,choice LIMIT 1`, append(args, out.Total)...).Scan(&s.Value, &s.Count)
+			err = r.db.QueryRow(ctx, `SELECT choice,count(*) FROM(SELECT DISTINCT e.id,`+expr+` AS choice`+predicate+`) choices GROUP BY choice HAVING count(*)<$9 ORDER BY (count(*)<=100) DESC,count(*) DESC,choice LIMIT 1`, append(args, out.Total)...).Scan(&s.Value, &s.Count)
 			if errors.Is(err, pgx.ErrNoRows) {
 				continue
 			}
@@ -126,14 +126,14 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 	}
 	return out, nil
 }
-func (r *Repository) ByID(ctx context.Context, id string, preview bool) (Event, error) {
+func (r *Repository) ByID(ctx context.Context, id string) (Event, error) {
 	var e Event
 	var raw []byte
 	var status string
 	if r.db == nil {
 		return e, ErrUnavailable
 	}
-	err := r.db.QueryRow(ctx, `SELECT record,status FROM event_records WHERE id=$1 AND status<>'archived' AND ($2 OR status='published')`, id, preview).Scan(&raw, &status)
+	err := r.db.QueryRow(ctx, `SELECT record,status FROM event_records WHERE id=$1 AND status<>'archived' `, id).Scan(&raw, &status)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return e, ErrNotFound
 	}
@@ -145,7 +145,7 @@ func (r *Repository) ByID(ctx context.Context, id string, preview bool) (Event, 
 	attachImage(&e)
 	return e, err
 }
-func (r *Repository) Facets(ctx context.Context, preview, top100 bool) (Facets, error) {
+func (r *Repository) Facets(ctx context.Context, top100 bool) (Facets, error) {
 	out := Facets{Topics: []Option{}, Countries: []Option{}, Regions: []Option{}, Kinds: []Option{}}
 	if r.db == nil {
 		return out, ErrUnavailable
@@ -159,7 +159,7 @@ func (r *Repository) Facets(ctx context.Context, preview, top100 bool) (Facets, 
 		if !d.array {
 			expr = d.column
 		}
-		rows, err := r.db.Query(ctx, `SELECT DISTINCT `+expr+` AS choice FROM event_records WHERE status<>'archived' AND ($1 OR status='published') AND (NOT $2 OR top100) ORDER BY choice LIMIT 1000`, preview, top100)
+		rows, err := r.db.Query(ctx, `SELECT DISTINCT `+expr+` AS choice FROM event_records WHERE status<>'archived'  AND (NOT $1 OR top100) ORDER BY choice LIMIT 1000`, top100)
 		if err != nil {
 			return out, err
 		}

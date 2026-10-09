@@ -1,4 +1,5 @@
 "use client";
+import { displayMetadata } from "@/lib/display-metadata";
 
 import { useState, type CSSProperties, type RefObject } from "react";
 import { authorLifespanLabel, type Book, type BooksResponse, type TimelineAuthor } from "@/lib/books";
@@ -18,9 +19,8 @@ export function LibraryImage({ image, name, portrait = false }: { image?: Book["
       // Only selected, attributed reproductions are supplied by the API.
       // eslint-disable-next-line @next/next/no-img-element
       <img src={image.imageUrl} alt={image.label} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(image.imageUrl)} /> :
-      <span className="library-image-placeholder" role="img" aria-label={`${portrait ? "Portrait" : "Cover"} unavailable`}>
+      <span className="library-image-placeholder" aria-hidden="true">
         {portrait ? <span className="library-initials" aria-hidden="true">{name.split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join("")}</span> : <svg viewBox="0 0 48 60" fill="none" aria-hidden="true"><path d="M10 5h30v46H10a5 5 0 0 0 0 10M10 5a5 5 0 0 0-5 5v46a5 5 0 0 0 5 5h30M12 5v46M19 19h14M19 25h10" /></svg>}
-        <small>{portrait ? "Portrait unavailable" : "Cover unavailable"}</small>
       </span>}
   </span>;
 }
@@ -41,12 +41,12 @@ export function BooksGallery({ data, query, authorView, selected, strip, onBook,
         const title = author ? entry.name : entry.title;
         const dates = author ? authorLifespanLabel(entry) : entry.years;
         return <li key={entry.id} aria-posinset={window.before + index + 1} aria-setsize={data.total}>
-          <button type="button" className="library-card all-gallery-card" data-entry-id={entry.id} aria-label={`${title}, ${dates}. Open ${author ? "author" : "book"} details`} aria-haspopup="dialog" aria-current={selected === entry.id ? "true" : undefined}
+          <button type="button" className="library-card all-gallery-card" data-entry-id={entry.id} aria-label={`${title}${displayMetadata(dates) ? `, ${dates}` : ""}. Open ${author ? "author" : "book"} details`} aria-haspopup="dialog" aria-current={selected === entry.id ? "true" : undefined}
             onClick={() => author ? onAuthor(entry) : onBook(entry, window.items.filter((item): item is Book => !isAuthor(item)))}>
             <LibraryImage image={author ? entry.portrait : entry.cover} name={title} portrait={author} />
             <strong>{title}</strong>
-            <span>{author ? `${entry.bookCount.toLocaleString("en-GB")} ${entry.bookCount === 1 ? "book" : "books"}` : entry.author}</span>
-            <time>{dates || "Dates not established"}</time>
+            <span>{author ? `${entry.bookCount.toLocaleString("en-GB")} ${entry.bookCount === 1 ? "book" : "books"}` : displayMetadata(entry.author)}</span>
+            {displayMetadata(dates) && <time>{dates}</time>}
           </button>
         </li>;
       })}

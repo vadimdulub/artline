@@ -48,13 +48,8 @@ func TestPopularDiscoveryIsIndependentOfImagesAndRespectsVisibility(t *testing.T
 	if err != nil || result.Total != 1 {
 		t.Fatalf("region: %+v %v", result, err)
 	}
-	facets, err := repo.DiscoveryFacets(ctx, true, true, false)
+	facets, err := repo.DiscoveryFacets(ctx, true, false)
 	if err != nil || len(facets.Countries) != 1 || facets.Countries[0].Slug != "JP" {
 		t.Fatalf("popular facets: %+v %v", facets, err)
-	}
-	filter.Status = "published"
-	result, err = repo.Timeline(ctx, filter)
-	if err != nil || result.Total != 0 {
-		t.Fatalf("publication leak: %+v %v", result, err)
 	}
 }

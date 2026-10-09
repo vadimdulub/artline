@@ -202,25 +202,25 @@ func TestEuropeanTransactionReplayAndAPIs(t *testing.T) {
 		t.Fatal("overwrote editorial title", err)
 	}
 	repo := catalog.NewRepository(pool)
-	monet, err := repo.ArtistWorks(ctx, "claude-monet", catalog.ArtistWorksFilter{Limit: 60}, true)
+	monet, err := repo.ArtistWorks(ctx, "claude-monet", catalog.ArtistWorksFilter{Limit: 60})
 	if err != nil || monet.UndatedCount != 1 || monet.Total < 22 {
 		t.Fatalf("Monet chronology %+v %v", monet, err)
 	}
-	p, err := repo.ArtistBySlug(ctx, "pissarro", true)
+	p, err := repo.ArtistBySlug(ctx, "pissarro")
 	if err != nil || p.Movement.Slug != "impressionism" || len(p.Countries) != 1 || p.Countries[0] != "FR" {
 		t.Fatalf("Pissarro filters %+v %v", p, err)
 	}
-	m, err := repo.Museum(ctx, "national-gallery-london", true)
+	m, err := repo.Museum(ctx, "national-gallery-london")
 	if err != nil || m.WorkCount != 8 || m.OnViewCount != 0 || m.HighlightCount != 0 || len(m.Venues) != 1 {
 		t.Fatalf("museum %+v %v", m, err)
 	}
-	filtered, err := repo.Museums(ctx, catalog.MuseumFilter{Limit: 60, Artists: []string{"claude-monet", "pissarro"}, Countries: []string{"FR", "GB"}}, true)
+	filtered, err := repo.Museums(ctx, catalog.MuseumFilter{Limit: 60, Artists: []string{"claude-monet", "pissarro"}, Countries: []string{"FR", "GB"}})
 	if err != nil || filtered.Total != 8 {
 		t.Fatalf("multi-select geography count=%d err=%v", filtered.Total, err)
 	}
-	public, err := repo.Museums(ctx, catalog.MuseumFilter{Limit: 60}, false)
-	if err != nil || public.Total != 0 {
-		t.Fatal("public review leak", err)
+	public, err := repo.Museums(ctx, catalog.MuseumFilter{Limit: 60})
+	if err != nil || public.Total < filtered.Total {
+		t.Fatal("imported active museums missing", err)
 	}
 	if _, err = pool.Exec(ctx, `DELETE FROM artist_movements WHERE artist_id=(SELECT id FROM artists WHERE slug='pissarro')`); err != nil {
 		t.Fatal(err)

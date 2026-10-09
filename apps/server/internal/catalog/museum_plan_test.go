@@ -39,7 +39,7 @@ func TestMuseumScopedQueryPlan(t *testing.T) {
 		t.Fatal(err)
 	}
 	var b []byte
-	if err = tx.QueryRow(ctx, `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+museumScopedCTE+`SELECT id,title FROM works ORDER BY creation_year_start,title,id LIMIT 25`, true, "the-met").Scan(&b); err != nil {
+	if err = tx.QueryRow(ctx, `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+museumScopedCTE+`SELECT id,title FROM works ORDER BY creation_year_start,title,id LIMIT 25`, "the-met").Scan(&b); err != nil {
 		t.Fatal(err)
 	}
 	var data []map[string]any

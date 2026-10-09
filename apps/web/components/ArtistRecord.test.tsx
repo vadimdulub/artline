@@ -29,8 +29,10 @@ it.each([1, 2, 5])("sizes the canonical work grid for %i actual works", count =>
   expect(container.querySelectorAll(".work-card")).toHaveLength(count);
   expect((container.querySelector(".works-strip") as HTMLElement).style.getPropertyValue("--work-columns")).toBe(String(count));
   expect(screen.getByText("Approximate date range")).toBeVisible();
-  expect(screen.getByText("No place of execution is given in the source.")).toBeVisible();
-  expect(screen.getByText("Not recorded in this catalogue")).toBeVisible();
+  expect(screen.getByText("Oil on canvas")).toBeVisible();
+  expect(screen.queryByText("Made in")).not.toBeInTheDocument();
+  expect(screen.queryByText("Dimensions")).not.toBeInTheDocument();
+  expect(screen.queryByText(/Not recorded|No place of execution|In review/i)).not.toBeInTheDocument();
 });
 it("rejects remote and path-traversal image paths", () => {
   expect(permittedImagePath("/assets/artworks/giotto-kiss-of-judas.jpg")).toBe(true);
@@ -42,7 +44,27 @@ it("opens a linked artwork without adding it to the representative selection", (
   expect(container.querySelectorAll(".work-card")).toHaveLength(1);
   expect(screen.getByRole("heading", { name: "Additional recorded work", level: 1 })).toBeVisible();
 });
-it("renders structured geography evidence as readable research notes", () => {
+it("opens an embedded painter on its key work even outside the first chronology page", () => {
+  const key = { ...artwork, id: "key", title: "Key painting" };
+  const { container } = render(<ArtistRecord artist={painter} embedded artworks={[artwork]} defaultWork={key} onSelectWork={() => {}} />);
+  expect(screen.getByRole("heading", { name: "Key painting" })).toBeVisible();
+  expect(screen.getByRole("heading", { name: "Painter", level: 1 })).toBeVisible();
+  expect(container.querySelectorAll(".work-card")).toHaveLength(1);
+});
+it("shows a key work inline on the full painter page without opening a dialog", () => {
+  const key = { ...artwork, id: "key", title: "Key painting" };
+  render(<ArtistRecord artist={painter} gallery defaultWork={key} onSelectWork={() => {}} />);
+  expect(screen.getByRole("region", { name: "Key artwork" })).toBeVisible();
+  expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "Painter", level: 1 })).toBeVisible();
+});
+it("keeps an explicit artwork link ahead of the painter's key work", () => {
+  const key = { ...artwork, id: "key", title: "Key painting" };
+  render(<ArtistRecord artist={painter} embedded defaultWork={key} workId={artwork.id} linkedWork={artwork} onSelectWork={() => {}} />);
+  expect(screen.getByRole("heading", { name: "Study" })).toBeVisible();
+  expect(screen.queryByRole("heading", { name: "Key painting" })).not.toBeInTheDocument();
+});
+it("links public sources without exposing internal research notes", () => {
   render(<SourceList citations={[{
     field_name: "geography",
     source_name: "Country research",
@@ -58,8 +80,7 @@ it("renders structured geography evidence as readable research notes", () => {
       publication: "Review"
     })
   }]} />);
-  expect(screen.getByText("Country affiliation: Russia (RU).")).toBeVisible();
-  expect(screen.getByText("Evidence basis: Explicit painter cultural-affiliation wording.")).toBeVisible();
-  expect(screen.getByText("Biography cross-check: She was a Russian painter.")).toBeVisible();
+  expect(screen.getByRole("link", { name: "Country research" })).toHaveAttribute("href", "https://example.com/source");
+  expect(screen.queryByText(/Review|country_evidence/)).not.toBeInTheDocument();
   expect(screen.queryByText(/historical_polity_statements/)).not.toBeInTheDocument();
 });

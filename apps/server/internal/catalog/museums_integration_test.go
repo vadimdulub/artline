@@ -28,16 +28,12 @@ func TestMuseumsAndMustSee(t *testing.T) {
 	repo := &Repository{db: tx}
 	// Writes are contained by this outer transaction, including nested savepoints.
 	f := MuseumFilter{Limit: 24}
-	page, err := repo.Museums(ctx, f, true)
+	page, err := repo.Museums(ctx, f)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if page.Total != 7 || len(page.Items) != 7 {
 		t.Fatalf("museum seed: %+v", page)
-	}
-	public, err := repo.Museums(ctx, f, false)
-	if err != nil || public.Total != 0 || len(public.Facets.Countries) != 0 {
-		t.Fatalf("public leak: %+v %v", public, err)
 	}
 	for _, tc := range []struct {
 		regions, countries []string
@@ -50,30 +46,30 @@ func TestMuseumsAndMustSee(t *testing.T) {
 		q := f
 		q.Regions = tc.regions
 		q.Countries = tc.countries
-		p, e := repo.Museums(ctx, q, true)
+		p, e := repo.Museums(ctx, q)
 		if e != nil || p.Total != tc.want {
 			t.Fatalf("region/country: %+v %v", p, e)
 		}
 	}
 	q := f
 	q.Selection = "museum"
-	p, err := repo.Museums(ctx, q, true)
+	p, err := repo.Museums(ctx, q)
 	if err != nil || p.Total != 1 {
 		t.Fatalf("highlight filter %+v %v", p, err)
 	}
 	q.Display = "on_view"
-	p, err = repo.Museums(ctx, q, true)
+	p, err = repo.Museums(ctx, q)
 	if err != nil || p.Total != 0 {
 		t.Fatalf("holding became display %+v %v", p, err)
 	}
-	met, err := repo.Museum(ctx, "the-met", true)
+	met, err := repo.Museum(ctx, "the-met")
 	if err != nil {
 		t.Fatal(err)
 	}
 	if met.WorkCount != 3 || met.HighlightCount != 2 || met.OnViewCount != 0 || len(met.Venues) != 2 {
 		t.Fatalf("met: %+v", met)
 	}
-	works, err := repo.MuseumWorks(ctx, "the-met", f, true)
+	works, err := repo.MuseumWorks(ctx, "the-met", f)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -84,7 +80,7 @@ func TestMuseumsAndMustSee(t *testing.T) {
 	q.Selection = "museum"
 	q.Sort = "curated"
 	q.Limit = 1
-	first, err := repo.MuseumWorks(ctx, "the-met", q, true)
+	first, err := repo.MuseumWorks(ctx, "the-met", q)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -92,7 +88,7 @@ func TestMuseumsAndMustSee(t *testing.T) {
 		t.Fatalf("first page: %+v", first)
 	}
 	q.Cursor = first.NextCursor
-	second, err := repo.MuseumWorks(ctx, "the-met", q, true)
+	second, err := repo.MuseumWorks(ctx, "the-met", q)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -100,69 +96,36 @@ func TestMuseumsAndMustSee(t *testing.T) {
 		t.Fatalf("second: %+v", second)
 	}
 	q.Query = "changed"
-	if _, err = repo.MuseumWorks(ctx, "the-met", q, true); !errors.Is(err, ErrMuseumFilter) {
+	if _, err = repo.MuseumWorks(ctx, "the-met", q); !errors.Is(err, ErrMuseumFilter) {
 		t.Fatalf("cursor not bound: %v", err)
 	}
-	detail, err := repo.MuseumArtwork(ctx, "the-met", first.Items[0].ID, true)
+	detail, err := repo.MuseumArtwork(ctx, "the-met", first.Items[0].ID)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if detail.Holding == nil || detail.Holding.Slug != "the-met" || detail.Display != nil || len(detail.Citations) == 0 {
 		t.Fatalf("detail: %+v", detail)
 	}
-	input := MustSeeInput{ArtworkID: detail.ID, Selected: true, Position: 1, Reason: "Study the painted light", ExpectedRevision: met.OwnerRevision}
-	revision, err := repo.SaveMustSee(ctx, "the-met", input)
+	// Historical publication changes must not change catalogue coverage.
+	before, err := repo.Museum(ctx, "the-met")
 	if err != nil {
 		t.Fatal(err)
 	}
-	if revision != met.OwnerRevision+1 {
-		t.Fatal("revision not incremented")
-	}
-	if _, err = repo.SaveMustSee(ctx, "the-met", input); !errors.Is(err, ErrRevisionConflict) {
-		t.Fatalf("stale selection accepted: %v", err)
-	}
-	q = f
-	q.Selection = "owner"
-	p, err = repo.Museums(ctx, q, true)
-	if err != nil || p.Total != 1 {
-		t.Fatalf("must-see: %+v %v", p, err)
-	}
-	detail, err = repo.MuseumArtwork(ctx, "the-met", detail.ID, true)
-	if err != nil || len(detail.Selections) != 2 {
-		t.Fatalf("selection detail: %+v %v", detail, err)
-	}
-	input.ExpectedRevision = revision
-	input.Selected = false
-	if _, err = repo.SaveMustSee(ctx, "the-met", input); err != nil {
-		t.Fatal(err)
-	}
-	// Nested visibility gates: publishing an institution or artwork alone must
-	// not expose an unpublished artist, highlight membership or venue.
 	if _, err = tx.Exec(ctx, `UPDATE institutions SET status='published' WHERE slug='the-met';
-      UPDATE artworks SET status='published' WHERE slug='rembrandt-self-portrait-1660'`); err != nil {
+ UPDATE artworks SET status='published' WHERE slug='rembrandt-self-portrait-1660';
+ UPDATE artists SET status='published' WHERE slug='rembrandt';
+ UPDATE curated_collections SET status='published' WHERE institution_id=(SELECT id FROM institutions WHERE slug='the-met') AND curator_kind='museum'`); err != nil {
 		t.Fatal(err)
 	}
-	public, err = repo.Museums(ctx, f, false)
-	if err != nil || public.Total != 0 {
-		t.Fatalf("private painter leaked: %+v %v", public, err)
+	after, err := repo.Museum(ctx, "the-met")
+	if err != nil || after.WorkCount != before.WorkCount || after.HighlightCount != before.HighlightCount || len(after.Venues) != len(before.Venues) {
+		t.Fatalf("historical status changed coverage: %+v %+v %v", before, after, err)
 	}
-	if _, err = tx.Exec(ctx, `UPDATE artists SET status='published' WHERE slug='rembrandt'`); err != nil {
-		t.Fatal(err)
+	page, err = repo.Museums(ctx, f)
+	if err != nil || page.Total != 7 {
+		t.Fatalf("active museums missing: %+v %v", page, err)
 	}
-	public, err = repo.Museums(ctx, f, false)
-	if err != nil || public.Total != 1 {
-		t.Fatalf("public gating: %+v %v", public, err)
-	}
-	if public.Items[0].WorkCount != 1 || public.Items[0].HighlightCount != 0 || len(public.Items[0].Venues) != 0 || public.Items[0].OwnerRevision != 0 {
-		t.Fatalf("nested private data leaked: %+v", public.Items[0])
-	}
-	if _, err = tx.Exec(ctx, `UPDATE curated_collections SET status='published' WHERE institution_id=(SELECT id FROM institutions WHERE slug='the-met') AND curator_kind='museum'`); err != nil {
-		t.Fatal(err)
-	}
-	public, err = repo.Museums(ctx, f, false)
-	if err != nil || public.Items[0].HighlightCount != 1 {
-		t.Fatalf("highlight visibility: %+v %v", public, err)
-	}
+
 }
 
 func TestMuseumDisplayAndIndependentWorkSelection(t *testing.T) {
@@ -191,33 +154,33 @@ func TestMuseumDisplayAndIndependentWorkSelection(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	nga, err := repo.Museum(ctx, "national-gallery-of-art", true)
+	nga, err := repo.Museum(ctx, "national-gallery-of-art")
 	if err != nil {
 		t.Fatal(err)
 	}
 	if nga.WorkCount != 3 || nga.HoldingCount != 2 || nga.OnViewCount != 1 {
 		t.Fatalf("loan totals: %+v", nga)
 	}
-	met, err := repo.Museum(ctx, "the-met", true)
+	met, err := repo.Museum(ctx, "the-met")
 	if err != nil || met.HoldingCount != 3 || met.OnViewCount != 0 {
 		t.Fatalf("loan ownership: %+v %v", met, err)
 	}
 	f := MuseumFilter{Limit: 24, Display: "on_view"}
-	works, err := repo.MuseumWorks(ctx, "national-gallery-of-art", f, true)
+	works, err := repo.MuseumWorks(ctx, "national-gallery-of-art", f)
 	if err != nil || works.Total != 1 {
 		t.Fatalf("loan filter: %+v %v", works, err)
 	}
 	if _, err = tx.Exec(ctx, `UPDATE artwork_location_assertions SET checked_at=now()-interval '31 days' WHERE id=$1`, id); err != nil {
 		t.Fatal(err)
 	}
-	works, err = repo.MuseumWorks(ctx, "national-gallery-of-art", f, true)
+	works, err = repo.MuseumWorks(ctx, "national-gallery-of-art", f)
 	if err != nil || works.Total != 0 {
 		t.Fatalf("stale display confirmed %+v %v", works, err)
 	}
 	if _, err = tx.Exec(ctx, `UPDATE artwork_location_assertions SET checked_at=now(),review_state='conflict' WHERE id=$1`, id); err != nil {
 		t.Fatal(err)
 	}
-	works, err = repo.MuseumWorks(ctx, "national-gallery-of-art", f, true)
+	works, err = repo.MuseumWorks(ctx, "national-gallery-of-art", f)
 	if err != nil || works.Total != 0 {
 		t.Fatalf("conflict confirmed %+v %v", works, err)
 	}
@@ -229,7 +192,7 @@ func TestMuseumDisplayAndIndependentWorkSelection(t *testing.T) {
 	if err = tx.QueryRow(ctx, `SELECT id::text FROM artworks WHERE slug='rembrandt-self-portrait-1660'`).Scan(&workID); err != nil {
 		t.Fatal(err)
 	}
-	detail, err := repo.MuseumArtwork(ctx, "the-met", workID, true)
+	detail, err := repo.MuseumArtwork(ctx, "the-met", workID)
 	if err != nil || detail.Display == nil || detail.Display.State != "not_on_view" {
 		t.Fatalf("explicit non-display lost: %+v %v", detail, err)
 	}
@@ -244,7 +207,7 @@ func TestMuseumDisplayAndIndependentWorkSelection(t *testing.T) {
  venue_id=CASE WHEN $2='on_view' THEN (SELECT id FROM institution_venues WHERE slug='nga-west-building') ELSE NULL END WHERE id=$1`, id, tc.state, tc.review, tc.age); err != nil {
 			t.Fatal(err)
 		}
-		work, e := repo.ArtistArtwork(ctx, "rembrandt", workID, true)
+		work, e := repo.ArtistArtwork(ctx, "rembrandt", workID)
 		if e != nil {
 			t.Fatal(e)
 		}
@@ -259,7 +222,7 @@ func TestMuseumDisplayAndIndependentWorkSelection(t *testing.T) {
 	if _, err = tx.Exec(ctx, `UPDATE artwork_artists SET representative_order=NULL WHERE artwork_id=(SELECT id FROM artworks WHERE slug='rembrandt-self-portrait-1660')`); err != nil {
 		t.Fatal(err)
 	}
-	works, err = repo.MuseumWorks(ctx, "the-met", MuseumFilter{Limit: 24}, true)
+	works, err = repo.MuseumWorks(ctx, "the-met", MuseumFilter{Limit: 24})
 	if err != nil || works.Total != 3 {
 		t.Fatalf("representative cap: %+v %v", works, err)
 	}

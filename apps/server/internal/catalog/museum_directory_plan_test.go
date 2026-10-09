@@ -25,7 +25,7 @@ func TestMuseumDirectoryLivePlan(t *testing.T) {
 	defer pool.Close()
 	for _, variant := range []struct{ name, cte string }{{"materialized", strings.Replace(museumCTE, "visible_works AS NOT MATERIALIZED (", "visible_works AS (", 1)}, {"inline", strings.Replace(museumCTE, "visible_works AS (", "visible_works AS NOT MATERIALIZED (", 1)}} {
 		var b []byte
-		e = pool.QueryRow(context.Background(), `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+variant.cte+`SELECT `+museumJSON+` FROM institutions i WHERE `+museumVisible+` ORDER BY i.normalized_name,i.id LIMIT 25`, true).Scan(&b)
+		e = pool.QueryRow(context.Background(), `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+variant.cte+`SELECT `+museumJSON+` FROM institutions i WHERE `+museumVisible+` ORDER BY i.normalized_name,i.id LIMIT 25`).Scan(&b)
 		if e != nil {
 			t.Fatal(e)
 		}
@@ -53,8 +53,8 @@ func TestMuseumDirectoryLivePlan(t *testing.T) {
 	}
 	var b []byte
 	query := `WITH museum_page AS MATERIALIZED(SELECT i.id,i.slug,i.normalized_name FROM institutions i WHERE ` + museumVisible + ` ORDER BY i.normalized_name,i.id LIMIT 25)
- SELECT detail.data FROM museum_page page CROSS JOIN LATERAL (` + strings.ReplaceAll(museumScopedCTE, "$2", "page.slug") + ` SELECT ` + museumJSON + ` AS data FROM institutions i WHERE i.id=page.id) detail`
-	if e = pool.QueryRow(context.Background(), `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+query, true).Scan(&b); e != nil {
+ SELECT detail.data FROM museum_page page CROSS JOIN LATERAL (` + strings.ReplaceAll(museumScopedCTE, "$1", "page.slug") + ` SELECT ` + museumJSON + ` AS data FROM institutions i WHERE i.id=page.id) detail`
+	if e = pool.QueryRow(context.Background(), `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+query).Scan(&b); e != nil {
 		t.Fatal(e)
 	}
 	var p []map[string]any
@@ -124,7 +124,7 @@ func TestMuseumDirectoryLiveTimings(t *testing.T) {
 	r := &Repository{db: &museumTimedDB{Pool: pool, t: t}}
 	for _, regions := range [][]string{nil, {"northern-europe", "northern-america"}} {
 		t.Logf("regions=%v", regions)
-		page, e := r.Museums(ctx, MuseumFilter{Limit: 24, Regions: regions}, true)
+		page, e := r.Museums(ctx, MuseumFilter{Limit: 24, Regions: regions})
 		if e != nil {
 			t.Fatal(e)
 		}
@@ -144,7 +144,7 @@ func TestMuseumLargeCardLivePlan(t *testing.T) {
 	}
 	defer pool.Close()
 	var b []byte
-	if e = pool.QueryRow(ctx, `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+museumScopedCTE+`SELECT `+museumJSON+` FROM institutions i WHERE i.slug=$2 AND `+museumVisible, true, "the-met").Scan(&b); e != nil {
+	if e = pool.QueryRow(ctx, `EXPLAIN(ANALYZE,BUFFERS,FORMAT JSON) `+museumScopedCTE+`SELECT `+museumJSON+` FROM institutions i WHERE i.slug=$1 AND `+museumVisible, "the-met").Scan(&b); e != nil {
 		t.Fatal(e)
 	}
 	var p []map[string]any

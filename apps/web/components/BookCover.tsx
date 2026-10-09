@@ -1,10 +1,11 @@
 "use client";
+import { displayMetadata } from "@/lib/display-metadata";
 
 import { useState } from "react";
-import type { Book } from "@/lib/books";
+import type { BookDetails } from "@/lib/books";
 import styles from "./Books.module.css";
 
-export function BookCover({ book }: { book: Book }) {
+export function BookCover({ book }: { book: BookDetails }) {
   const [failedImage, setFailedImage] = useState("");
   const cover = book.cover;
   if (cover && failedImage !== cover.imageUrl) return <figure className={styles.editionCover}>
@@ -18,6 +19,6 @@ export function BookCover({ book }: { book: Book }) {
     <span className={styles.coverEra}>{book.era}</span>
     <span className={styles.coverTitle}>{book.title}</span>
     <span className={styles.coverMark}>{book.coverMark}</span>
-    <span className={styles.coverAuthor}>{book.author}</span>
+    {displayMetadata(book.author) && <span className={styles.coverAuthor}>{book.author}</span>}
   </span><p className={styles.coverNote}>Original Artline text cover · not a historical edition</p></>;
 }

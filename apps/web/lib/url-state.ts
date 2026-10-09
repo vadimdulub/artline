@@ -6,8 +6,8 @@ function subscribe(callback: () => void) {
   window.addEventListener(changed, callback);
   return () => { window.removeEventListener("popstate", callback); window.removeEventListener(changed, callback); };
 }
-export function useQueryString() {
-  return useSyncExternalStore(subscribe, () => window.location.search, () => "");
+export function useQueryString(initialSearch = "") {
+  return useSyncExternalStore(subscribe, () => window.location.search, () => initialSearch);
 }
 export function queryValues(params: URLSearchParams, key: string): string[] {
   return [...new Set(params.getAll(key).flatMap(value => value.split(",")).map(value => value.trim().toLowerCase()).filter(Boolean))].sort();

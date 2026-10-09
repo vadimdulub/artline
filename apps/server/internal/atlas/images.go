@@ -36,7 +36,7 @@ func (r *Repository) attachImages(ctx context.Context, items []Item) error {
 	return rows.Err()
 }
 
-func (r *Repository) IllustratedPresets(ctx context.Context, preview bool) ([]Preset, error) {
+func (r *Repository) IllustratedPresets(ctx context.Context) ([]Preset, error) {
 	presets := Presets()
 	if r.db == nil {
 		return presets, nil
@@ -71,8 +71,8 @@ func (r *Repository) IllustratedPresets(ctx context.Context, preview bool) ([]Pr
 	// Scope the small explicit ID set before eligibility and creator enrichment.
 	rows, err := r.db.Query(ctx, `WITH cover_artworks AS MATERIALIZED (
  SELECT a.id,a.title,a.date_display,a.creation_year_start,a.creation_year_end,a.date_precision,a.status,a.unlinked_creator_label
- FROM artworks a WHERE a.id=ANY($7::uuid[]))
- SELECT a.id::text,a.title,coalesce(a.date_display,''),coalesce(a.creation_year_start,a.creation_year_end),coalesce(a.creation_year_end,a.creation_year_start),a.date_precision<>'exact'`+strings.Replace(artScope, "FROM artworks a", "FROM cover_artworks a", 1), Bounds.Start, Bounds.End, preview, "", false, "", ids)
+ FROM artworks a WHERE a.id=ANY($6::uuid[]))
+ SELECT a.id::text,a.title,coalesce(a.date_display,''),coalesce(a.creation_year_start,a.creation_year_end),coalesce(a.creation_year_end,a.creation_year_start),a.date_precision<>'exact'`+strings.Replace(artScope, "FROM artworks a", "FROM cover_artworks a", 1), Bounds.Start, Bounds.End, "", false, "", ids)
 	if err != nil {
 		return nil, err
 	}

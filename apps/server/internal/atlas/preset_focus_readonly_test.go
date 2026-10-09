@@ -40,7 +40,7 @@ func TestPresetFocusReadOnly(t *testing.T) {
 			p, _ := FindPreset(id)
 			recorder := &discoveryPlanDB{atlasDB: tx}
 			repo := &Repository{db: recorder}
-			f := Filter{PresetID: id, Range: p.Context, Highlights: true, Preview: true, Limit: 60}
+			f := Filter{PresetID: id, Range: p.Context, Highlights: true, Limit: 60}
 			data, err := repo.List(ctx, f)
 			if err != nil {
 				t.Fatal(err)
@@ -88,11 +88,7 @@ func TestPresetFocusReadOnly(t *testing.T) {
 					if err != nil || out.Total != 1 {
 						t.Fatalf("selected illustrated work missing: %s, %v", artwork, err)
 					}
-					selected.Preview = false
-					out, err = repo.List(ctx, selected)
-					if err != nil || out.Total != 0 {
-						t.Fatalf("review record exposed publicly: %s, %v", artwork, err)
-					}
+
 				}
 			}
 			for _, change := range []func(*Filter){func(f *Filter) { f.Countries = []string{"not-a-recorded-country"} }, func(f *Filter) { f.Query = "no-such-revolution-record-zzzz" }} {

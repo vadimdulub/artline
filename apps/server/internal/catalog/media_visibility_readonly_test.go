@@ -71,12 +71,12 @@ func TestAttachedMediaVisibilityReadOnly(t *testing.T) {
 					t.Errorf("%s changed the rights label or lost the source link", name)
 				}
 			}
-			work, err := repo.ArtistArtwork(ctx, s.artist, s.id, true)
+			work, err := repo.ArtistArtwork(ctx, s.artist, s.id)
 			check("artist detail", work, err)
-			atlas, err := repo.AtlasArtwork(ctx, s.id, true)
+			atlas, err := repo.AtlasArtwork(ctx, s.id)
 			check("atlas detail", atlas.Artwork, err)
 			if s.museum != nil {
-				museum, err := repo.MuseumArtwork(ctx, *s.museum, s.id, true)
+				museum, err := repo.MuseumArtwork(ctx, *s.museum, s.id)
 				check("museum detail", museum.Artwork, err)
 			}
 		})

@@ -1,4 +1,3 @@
-import { e2eEditorToken } from "./editor-token";
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
@@ -106,11 +105,10 @@ test("all seeded painters have a real, accessible local artwork record", async (
 
 test("major pages and the painter panel pass automated accessibility checks", async ({ page }) => {
   test.setTimeout(90000);
-  for (const path of ["/", "/artists/giotto", "/catalogue", "/coverage", "/imports", "/about"]) {
+  for (const path of ["/", "/artists/giotto", "/catalogue", "/imports", "/about"]) {
     await page.goto(path);
     if (path === "/") await expect(page.locator(".timeline-counter")).toContainText("11 painters");
     if (path === "/catalogue") await expect(page.getByRole("link", { name: "Giotto di Bondone" })).toBeVisible();
-    if (path === "/coverage") await expect(page.locator(".coverage-grid a")).toHaveCount(4);
     const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
     expect(results.violations.map(v => ({ id: v.id, nodes: v.nodes.map(n => ({ target: n.target, summary: n.failureSummary })) })), path).toEqual([]);
     for (const width of [320, 390, 768, 1024, 1440]) {
@@ -141,23 +139,4 @@ test("failed images and timeline requests recover without stale interactions", a
   await page.unroute("**/api/backend/v1/timeline?**");
   await page.getByRole("button", { name: "Try again", exact: true }).click();
   await expect(page.locator(".timeline-counter")).toContainText("1 painter");
-});
-
-test("unsaved editor changes are protected and status navigation is shared", async ({ page }) => {
-  await page.goto("/catalogue");
-  await expect(page.getByRole("heading", { name: "Read-only preview" })).toBeVisible();
-  await page.getByLabel("Editor token", { exact: true }).fill(e2eEditorToken());
-  const row = page.getByRole("row").filter({ has: page.getByRole("link", { name: "Giotto di Bondone" }) });
-  await row.getByRole("button", { name: "Edit", exact: true }).click();
-  await expect(page.getByLabel("Display name", { exact: true })).toBeFocused();
-  await page.getByLabel("Display name", { exact: true }).fill("Unsaved local test");
-  await expect(page.locator(".form-heading")).toContainText("Unsaved changes");
-  page.once("dialog", dialog => dialog.dismiss());
-  await page.getByRole("link", { name: "Coverage", exact: true }).first().click();
-  await expect(page.getByLabel("Display name", { exact: true })).toHaveValue("Unsaved local test");
-  page.once("dialog", dialog => dialog.accept());
-  await page.getByRole("button", { name: "Cancel", exact: true }).click();
-  await page.getByRole("link", { name: "Coverage", exact: true }).first().click();
-  await page.locator(".coverage-grid a").filter({ hasText: "In review" }).click();
-  await expect(page.getByRole("combobox", { name: "Status", exact: true })).toHaveValue("review");
 });

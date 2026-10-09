@@ -8,7 +8,7 @@ import (
 )
 
 func TestAtlasValidationAndEditorBoundary(t *testing.T) {
-	handler := New(config.Config{EditorToken: "test-editor"}, nil)
+	handler := New(config.Config{}, nil)
 	for _, tc := range []struct {
 		method, url, body, token string
 		status                   int
@@ -19,7 +19,7 @@ func TestAtlasValidationAndEditorBoundary(t *testing.T) {
 		{"GET", "/api/v1/atlas?selection=true&pick_artwork=invalid", "", "", 400},
 		{"GET", "/api/v1/atlas?selection=true&pick_book=bad%27id", "", "", 400},
 		{"POST", "/api/v1/atlas/drafts", "{}", "test-editor", 404},
-		{"GET", "/api/v1/atlas?preview=1", "", "", 401},
+		{"GET", "/api/v1/atlas?preview=1", "", "", 200},
 		{"GET", "/api/v1/atlas?start=1900", "", "", 400},
 		{"GET", "/api/v1/atlas?start=0&end=2000", "", "", 400},
 		{"GET", "/api/v1/atlas?start=2020&end=2000", "", "", 400},

@@ -58,11 +58,11 @@ func TestAllRedesignReadOnly(t *testing.T) {
 	defer tx.Rollback(ctx)
 	recorder := &discoveryPlanDB{atlasDB: tx}
 	repo := &Repository{db: recorder}
-	painters, err := repo.Creators(ctx, "Monet", nil, true)
+	painters, err := repo.Creators(ctx, "Monet", nil)
 	if err != nil {
 		t.Fatal(err)
 	}
-	authors, err := repo.Creators(ctx, "Tolstoy", nil, true)
+	authors, err := repo.Creators(ctx, "Tolstoy", nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -70,15 +70,15 @@ func TestAllRedesignReadOnly(t *testing.T) {
 		t.Fatal("existing creators missing")
 	}
 	selected := []string{painters.Items[0].Key, authors.Items[0].Key}
-	labels, err := repo.Creators(ctx, "not-an-existing-creator", selected, true)
+	labels, err := repo.Creators(ctx, "not-an-existing-creator", selected)
 	if err != nil || len(labels.Selected) != 2 || len(labels.Items) != 0 {
 		t.Fatalf("selected labels: %+v %v", labels, err)
 	}
-	choices, err := repo.Creators(ctx, "", nil, true)
+	choices, err := repo.Creators(ctx, "", nil)
 	if err != nil || len(choices.Items) != 30 || !choices.HasMore {
 		t.Fatal("options must be bounded", err)
 	}
-	f := Filter{Range: Bounds, Preview: true, Limit: 30, Creators: selected}
+	f := Filter{Range: Bounds, Limit: 30, Creators: selected}
 	data, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)
@@ -118,7 +118,7 @@ func TestAllRedesignReadOnly(t *testing.T) {
 		}
 	}
 	preset, _ := FindPreset("renaissance")
-	f = Filter{Range: preset.Context, PresetID: preset.ID, Preview: true, Highlights: true, Limit: 60, Selection: true, Types: []string{"artwork", "book", "event"}, Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
+	f = Filter{Range: preset.Context, PresetID: preset.ID, Highlights: true, Limit: 60, Selection: true, Types: []string{"artwork", "book", "event"}, Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
 	first, err := repo.List(ctx, f)
 	if err != nil {
 		t.Fatal(err)
@@ -143,8 +143,8 @@ func TestAllRedesignReadOnly(t *testing.T) {
 			t.Fatal("duplicate or missing image")
 		}
 	}
-	for _, preview := range []bool{true, false} {
-		presets, err := repo.IllustratedPresets(ctx, preview)
+	{
+		presets, err := repo.IllustratedPresets(ctx)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -152,13 +152,13 @@ func TestAllRedesignReadOnly(t *testing.T) {
 		for _, preset := range presets {
 			if preset.Cover != nil {
 				covers++
-				visible, err := repo.ArtworkVisible(ctx, preset.Cover.ID, preview)
+				visible, err := repo.ArtworkVisible(ctx, preset.Cover.ID)
 				if err != nil || !visible || preset.Cover.MediaURL == "" || preset.Cover.Type != "artwork" || preset.Cover.StartYear == 0 || preset.Cover.EndYear == 0 {
 					t.Fatal("ineligible preset cover", err)
 				}
 			}
 		}
-		if preview && covers != 4 {
+		if covers != 4 {
 			t.Fatalf("expected four existing covers; got %d", covers)
 		}
 	}

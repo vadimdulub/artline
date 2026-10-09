@@ -48,7 +48,7 @@ func TestArtistChronologyQueryPlan(t *testing.T) {
 		"first-page":  artistWorksPageQuery,
 	} {
 		var data []byte
-		args := []any{false, id}
+		args := []any{id}
 		if name == "first-page" {
 			args = append(args, "", "", "", nil, false, "", nil, "", "", 25, 0)
 		}

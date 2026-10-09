@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type ReactNode, type RefObject } from "react";
 import { useExplorerView } from "./ExplorerFrame";
+import { AtlasSearchField } from "./AtlasSearchField";
 
 export function AtlasSelect({ label, value, onChange, options }: {
   label: string; value: string; onChange: (value: string) => void; options: { value: string; label: string }[];
@@ -15,11 +16,11 @@ export function AtlasCheckbox({ label, checked, onChange, children }: {
   return <div className="popular-filter-control"><label className="popular-filter"><input type="checkbox" checked={checked} onChange={event => onChange(event.target.checked)} /><span>{label}</span></label>{children}</div>;
 }
 
-export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, searchLabel, columns, activeCount = 0, actions, resetLabel = "Reset view", children }: {
+export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, searchLabel, columns, activeCount = 0, initialExpanded = false, actions, resetLabel = "Reset view", children }: {
   searchRef: RefObject<HTMLInputElement | null>; query: string; onQuery: (value: string) => void;
-  onReset: () => void; placeholder: string; searchLabel?: string; columns?: number; activeCount?: number; actions?: ReactNode; resetLabel?: string; children: ReactNode;
+  onReset: () => void; placeholder: string; searchLabel?: string; columns?: number; activeCount?: number; initialExpanded?: boolean; actions?: ReactNode; resetLabel?: string; children: ReactNode;
 }) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(initialExpanded);
   const view = useExplorerView();
   const fullView = view?.fullView ?? false;
   const panelID = useId();
@@ -35,7 +36,8 @@ export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, 
   useEffect(() => {
     let focusFrame = 0;
     function shortcut(event: KeyboardEvent) {
-      if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey || document.querySelector("dialog[open]")) return;
+      if (event.defaultPrevented || event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey || document.querySelector("dialog[open]")) return;
+      if (!fullView && !searchRef.current?.getClientRects().length) return;
       if (event.target instanceof Element && event.target.closest("input,textarea,select,[contenteditable]")) return;
       event.preventDefault();
       if (fullView) setExpanded(true);
@@ -45,9 +47,9 @@ export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, 
     return () => { window.removeEventListener("keydown", shortcut); cancelAnimationFrame(focusFrame); };
   }, [searchRef, fullView]);
 
-  const resetButton = <button className="reset-button" onClick={() => { onReset(); if (fullView) close(); else { setExpanded(false); searchRef.current?.focus(); } }}>{resetLabel}</button>;
+  const resetButton = <button type="button" className="reset-button" onClick={() => { onReset(); if (fullView) close(); else { setExpanded(false); searchRef.current?.focus(); } }}>{resetLabel}</button>;
   return <div className="atlas-filter-system" data-expanded={expanded} data-view-controls={Boolean(view)} onKeyDown={event => { if (event.key === "Escape" && expanded && toggle.current?.getClientRects().length) { event.preventDefault(); event.stopPropagation(); close(); } }}>
-    <label className="search-field"><span>Search</span><input ref={searchRef} aria-label={searchLabel} aria-keyshortcuts="/" type="search" maxLength={200} placeholder={placeholder} value={query} onChange={event => onQuery(event.target.value)} /><kbd aria-hidden="true">/</kbd></label>
+    <AtlasSearchField className="search-field" inputRef={searchRef} label={searchLabel ?? "Search"} placeholder={placeholder} value={query} onChange={onQuery} shortcut />
     {actions ? <div className="atlas-search-actions">{actions}{resetButton}</div> : resetButton}
     <div className="atlas-view-tools">
       <button ref={toggle} type="button" className="atlas-filter-toggle" aria-label="Filters" aria-expanded={expanded} aria-controls={panelID} onClick={() => setExpanded(value => !value)}><span>Filters{activeCount > 0 && <span className="atlas-filter-count">{activeCount}</span>}</span><span>{expanded ? "Hide" : "Show"}<span aria-hidden="true">{expanded ? "−" : "+"}</span></span></button>

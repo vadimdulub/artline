@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useId, useRef, useState } from "react";
+import { AtlasSearchField } from "./AtlasSearchField";
 
 export type FilterOption = { slug: string; name: string; group?: string; detail?: string; description?: string; searchText?: string };
 
@@ -37,12 +38,12 @@ export function MultiSelectFilter({ label, allLabel, options, values, onChange, 
       document.removeEventListener("click", outside);
     };
   }, []);
-  return <details ref={details} className="multi-filter" onKeyDown={event => { if (event.key === "Escape" && event.currentTarget.open) { event.preventDefault(); event.stopPropagation(); close(); } }} onBlur={event => { if (!pointerFocus.current && event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false; }}>
-    <summary aria-label={`${label}: ${description}`}><span>{label}</span><strong>{description}</strong><span aria-hidden="true" className="filter-chevron">⌄</span></summary>
+  return <details ref={details} className="multi-filter" data-active={values.length > 0} onKeyDown={event => { if (event.key === "Escape" && event.currentTarget.open) { event.preventDefault(); event.stopPropagation(); close(); } }} onBlur={event => { if (!pointerFocus.current && event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false; }}>
+    <summary aria-label={`${label}: ${description}`}><span>{label}</span><strong>{description}</strong><svg aria-hidden="true" className="filter-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m5 7.5 5 5 5-5" /></svg></summary>
     <div className="multi-filter-panel">
       <fieldset aria-describedby={helpID}><legend>{label}</legend><p id={helpID}>{helpText}</p>
-        <label className="filter-search"><span className="sr-only">Search {label.toLowerCase()}</span><input type="search" placeholder={`Find ${label.toLowerCase()}…`} maxLength={200} value={search} onChange={event => remote ? remote.onSearch(event.target.value) : setLocalSearch(event.target.value)} /></label>
-        <p className="filter-search-status" role="status">{remote?.loading ? "Searching…" : remote?.hasMore ? "Showing 30 matches. Type a name to narrow the list." : `${visible.length} choices${values.length ? ` · ${values.length} selected` : ""}`}</p>
+        <AtlasSearchField className="filter-search" label={`Search ${label.toLowerCase()}`} placeholder={`Find ${label.toLowerCase()}…`} value={search} onChange={value => remote ? remote.onSearch(value) : setLocalSearch(value)} />
+        <p className="filter-search-status" role="status">{remote?.loading ? "Searching…" : remote?.hasMore ? "Showing 30 matches. Type a name to narrow the list." : `${visible.length} ${visible.length === 1 ? "choice" : "choices"}${values.length ? ` · ${values.length} selected` : ""}`}</p>
         <div className="filter-checkboxes">{groups.map(group => <div key={group} className="filter-option-group" role={group ? "group" : undefined} aria-label={group || undefined}>{group && <h3>{group}</h3>}{visible.filter(option => (option.group ?? "") === group).map(option => <label key={option.slug}><input type={single ? "radio" : "checkbox"} name={single ? helpID : undefined} aria-label={option.name} aria-describedby={option.description || option.detail ? `${helpID}-${option.slug}` : undefined} checked={values.includes(option.slug)} disabled={!single && values.length >= 32 && !values.includes(option.slug)} onChange={() => {
           onChange(single ? [option.slug] : values.includes(option.slug) ? values.filter(value => value !== option.slug) : [...values, option.slug]);
           // A bookmarked region absent from the facets disappears on removal.

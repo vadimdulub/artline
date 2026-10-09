@@ -85,7 +85,7 @@ func TestReadOnlyEventDescriptions(t *testing.T) {
 	if seen != 10000 || counts["wikipedia"] < 9000 {
 		t.Fatalf("unexpected coverage %d %+v", seen, counts)
 	}
-	e, err := NewRepository(db).ByID(ctx, "event-q361", true)
+	e, err := NewRepository(db).ByID(ctx, "event-q361")
 	if err != nil || e.DescriptionSource == nil || e.DescriptionSource.Kind != "wikipedia" {
 		t.Fatal("attribution missing from detail projection", err)
 	}

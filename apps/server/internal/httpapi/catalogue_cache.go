@@ -25,7 +25,7 @@ type catalogueCacheEntry struct {
 // routes retain their existing behavior and all browser responses stay private.
 func cacheableCataloguePath(path string) bool {
 	switch path {
-	case "/api/v1/timeline", "/api/v1/timeline/facets", "/api/v1/painters/options",
+	case "/api/v1/artworks", "/api/v1/timeline", "/api/v1/timeline/facets", "/api/v1/painters/options",
 		"/api/v1/books", "/api/v1/books/authors", "/api/v1/books/facets",
 		"/api/v1/events", "/api/v1/events/facets", "/api/v1/atlas",
 		"/api/v1/atlas/presets", "/api/v1/atlas/geography", "/api/v1/atlas/creators":
@@ -119,14 +119,9 @@ func (w *catalogueCapture) Write(body []byte) (int, error) {
 
 func (api *API) cacheCatalogue(cache *catalogueCache, next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "private, no-store")
 		if r.Method != http.MethodGet || !cacheableCataloguePath(r.URL.Path) || len(r.URL.RawQuery) > 8192 {
 			next.ServeHTTP(w, r)
-			return
-		}
-		// Recheck access before every lookup; published and research responses
-		// cannot share an entry, even when their filters otherwise match.
-		preview, allowed := api.previewAllowed(w, r)
-		if !allowed {
 			return
 		}
 		ctx, cancel := context.WithTimeout(r.Context(), time.Second)
@@ -137,12 +132,14 @@ func (api *API) cacheCatalogue(cache *catalogueCache, next http.Handler) http.Ha
 			next.ServeHTTP(w, r)
 			return
 		}
-		// A fresh PostgreSQL visibility snapshot invalidates results after any
-		// committed write, including SQL imports and edits on other instances.
-		// This is a read-only metadata query, not a scan of catalogue tables.
+		// Transactional catalogue triggers invalidate imports and edits on every
+		// instance. Cluster maintenance and member sessions leave this revision
+		// unchanged. The one-minute TTL also bounds time-derived display states.
 		query := r.URL.Query()
-		query.Del("fit") // Client interaction state; no handler filters by it.
-		key := sha256.Sum256([]byte(fmt.Sprintf("%t\n%s\n%s\n%s", preview, snapshot, r.URL.Path, query.Encode())))
+		query.Del("fit")     // Client interaction state; no handler filters by it.
+		query.Del("preview") // Legacy visibility parameters no longer change reads.
+		query.Del("status")
+		key := sha256.Sum256([]byte(fmt.Sprintf("%s\n%s\n%s", snapshot, r.URL.Path, query.Encode())))
 		for {
 			body, pending, owner := cache.acquire(key)
 			if body != nil {

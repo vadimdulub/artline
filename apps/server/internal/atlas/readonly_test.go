@@ -42,12 +42,12 @@ func TestAtlasReadOnly(t *testing.T) {
 		name string
 		f    Filter
 	}{
-		{"wwi-highlights", Filter{Range: Range{1910, 1930}, Limit: 60, Highlights: true, Preview: true}},
-		{"wwi-all", Filter{Range: Range{1910, 1930}, Limit: 60, Preview: true}},
-		{"full-all", Filter{Range: Bounds, Limit: 60, Preview: true}},
-		{"eastern-europe", Filter{Range: Range{1800, 1950}, Region: "eastern-europe", Limit: 60, Preview: true}},
-		{"creator-search", Filter{Range: Range{1800, 1950}, Query: "Tolstoy", Limit: 60, Preview: true}},
-		{"recent", Filter{Range: Range{1999, 2000}, Limit: 60, Preview: true}},
+		{"wwi-highlights", Filter{Range: Range{1910, 1930}, Limit: 60, Highlights: true}},
+		{"wwi-all", Filter{Range: Range{1910, 1930}, Limit: 60}},
+		{"full-all", Filter{Range: Bounds, Limit: 60}},
+		{"eastern-europe", Filter{Range: Range{1800, 1950}, Region: "eastern-europe", Limit: 60}},
+		{"creator-search", Filter{Range: Range{1800, 1950}, Query: "Tolstoy", Limit: 60}},
+		{"recent", Filter{Range: Range{1999, 2000}, Limit: 60}},
 		{"public", Filter{Range: Bounds, Limit: 60}},
 	} {
 		t.Run(tc.name, func(t *testing.T) {
@@ -92,7 +92,7 @@ func TestAtlasReadOnly(t *testing.T) {
 					}
 				}
 				if lane.Key == "artwork" && len(lane.Items) > 0 {
-					visible, err := repo.ArtworkVisible(ctx, lane.Items[0].ID, tc.f.Preview)
+					visible, err := repo.ArtworkVisible(ctx, lane.Items[0].ID)
 					if err != nil || !visible {
 						t.Fatal("returned artwork not available", err)
 					}
@@ -110,7 +110,7 @@ func TestAtlasReadOnly(t *testing.T) {
 			}
 			for kind, p := range providers {
 				var plan []byte
-				args := []any{pgx.QueryExecModeCacheDescribe, tc.f.Start, tc.f.End, tc.f.Preview, strings.TrimSpace(tc.f.Query), tc.f.Highlights, tc.f.Region}
+				args := []any{pgx.QueryExecModeCacheDescribe, tc.f.Start, tc.f.End, strings.TrimSpace(tc.f.Query), tc.f.Highlights, tc.f.Region}
 				if err = db.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT count(*) FROM (`+p.keys+`) matching`, args...).Scan(&plan); err != nil {
 					t.Fatal(err)
 				}
@@ -149,7 +149,7 @@ func TestAtlasArtworkPlansReadOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer pool.Close()
-	f := Filter{Range: Range{1910, 1930}, Highlights: true, Preview: true, Limit: 60, Types: []string{"artwork"}}
+	f := Filter{Range: Range{1910, 1930}, Highlights: true, Limit: 60, Types: []string{"artwork"}}
 	out, err := NewRepository(pool).List(ctx, f)
 	if err != nil {
 		t.Fatal(err)
@@ -163,8 +163,8 @@ func TestAtlasArtworkPlansReadOnly(t *testing.T) {
 		name, sql string
 		args      []any
 	}{
-		{"bounded-artwork-page", `WITH matching AS NOT MATERIALIZED (` + p.keys + `), page AS MATERIALIZED(SELECT * FROM matching WHERE (gallery_priority,start_year,id)>(0,$7,$8) ORDER BY gallery_priority,start_year,id LIMIT $9) ` + p.details + ` ORDER BY p.gallery_priority,p.start_year,p.id`, []any{pgx.QueryExecModeCacheDescribe, 1910, 1930, true, "", true, "", Bounds.Start - 1, "", 61}},
-		{"single-artwork-eligibility", `SELECT EXISTS(SELECT 1` + artScope + ` AND a.id=$7::uuid)`, []any{pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, true, "", false, "", id}},
+		{"bounded-artwork-page", `WITH matching AS NOT MATERIALIZED (` + p.keys + `), page AS MATERIALIZED(SELECT * FROM matching WHERE (gallery_priority,start_year,id)>(0,$6,$7) ORDER BY gallery_priority,start_year,id LIMIT $8) ` + p.details + ` ORDER BY p.gallery_priority,p.start_year,p.id`, []any{pgx.QueryExecModeCacheDescribe, 1910, 1930, "", true, "", Bounds.Start - 1, "", 61}},
+		{"single-artwork-eligibility", `SELECT EXISTS(SELECT 1` + artScope + ` AND a.id=$6::uuid)`, []any{pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, "", false, "", id}},
 		{"single-artwork-detail", `SELECT to_jsonb(a),m.storage_path FROM artworks a LEFT JOIN media_assets m ON m.id=a.primary_media_id WHERE a.id=$1 AND a.status<>'archived'`, []any{id}},
 	} {
 		var raw []byte
@@ -207,11 +207,11 @@ func TestAtlasPickedEntriesReadOnly(t *testing.T) {
 	}
 	defer pool.Close()
 	repo := NewRepository(pool)
-	initial, err := repo.List(ctx, Filter{Range: Range{1910, 1930}, Limit: 60, Highlights: true, Preview: true})
+	initial, err := repo.List(ctx, Filter{Range: Range{1910, 1930}, Limit: 60, Highlights: true})
 	if err != nil {
 		t.Fatal(err)
 	}
-	f := Filter{Range: Bounds, Limit: 60, Preview: true, Selection: true, Picks: map[string][]string{}}
+	f := Filter{Range: Bounds, Limit: 60, Selection: true, Picks: map[string][]string{}}
 	for _, lane := range initial.Lanes {
 		if len(lane.Items) > 0 {
 			f.Picks[lane.Key] = []string{lane.Items[0].ID}
@@ -242,14 +242,7 @@ func TestAtlasPickedEntriesReadOnly(t *testing.T) {
 			t.Fatal("layer changed other types")
 		}
 	}
-	f.Preview = false
-	public, err := repo.List(ctx, f)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if public.Total != 0 {
-		t.Fatal("current all-review records leaked to public selection")
-	}
+
 	f.Types = nil
 	f.Picks = nil
 	empty, err := repo.List(ctx, f)
@@ -260,7 +253,7 @@ func TestAtlasPickedEntriesReadOnly(t *testing.T) {
 		var plan []byte
 		p := providers["artwork"]
 		id := initial.Lanes[0].Items[0].ID
-		err = pool.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT count(*) FROM (`+p.keys+` AND a.id=ANY($7::text[]::uuid[])) matching`, pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, true, "", false, "", []string{id}).Scan(&plan)
+		err = pool.QueryRow(ctx, `EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT count(*) FROM (`+p.keys+` AND a.id=ANY($6::text[]::uuid[])) matching`, pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, "", false, "", []string{id}).Scan(&plan)
 		if err != nil {
 			t.Fatal(err)
 		}

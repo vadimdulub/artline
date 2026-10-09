@@ -11,10 +11,10 @@ func (r *Repository) artistInfluences(ctx context.Context, id string) ([]Influen
  i.relationship_type,i.evidence_level,i.evidence_note
  FROM influence_claims i LEFT JOIN artists s ON s.id=i.source_artist_id
  JOIN artists t ON t.id=i.target_artist_id
- WHERE (i.source_artist_id=$1 OR i.target_artist_id=$1) AND i.status='published'
- AND t.status='published' AND (s.id IS NULL OR s.status='published')
+ WHERE (i.source_artist_id=$1 OR i.target_artist_id=$1) AND i.status<>'archived'
+ AND t.status<>'archived' AND (s.id IS NULL OR s.status<>'archived')
  AND EXISTS(SELECT 1 FROM citations c JOIN sources src ON src.id=c.source_id WHERE c.entity_type='influence' AND c.entity_id=i.id AND src.is_active)
- ORDER BY i.created_at LIMIT 40`, id)
+ ORDER BY CASE WHEN i.target_artist_id=$1 THEN 0 ELSE 1 END, i.created_at, i.id LIMIT 40`, id)
 	if err != nil {
 		return nil, err
 	}

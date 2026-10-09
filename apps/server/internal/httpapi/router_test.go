@@ -7,9 +7,9 @@ import (
 	"testing"
 )
 
-func TestEditorEndpointsDenyAnonymousAndRawTokens(t *testing.T) {
-	for _, publicPreview := range []bool{false, true} {
-		handler := New(config.Config{EditorToken: "test-editor-secret", PublicResearchPreview: publicPreview}, nil)
+func TestRemovedEditorEndpointsAreUnavailable(t *testing.T) {
+	{
+		handler := New(config.Config{}, nil)
 		for _, route := range []struct{ method, path string }{
 			{"GET", "/api/v1/catalogue/artists/00000000-0000-0000-0000-000000000001"}, {"GET", "/api/v1/coverage/summary"},
 			{"POST", "/api/v1/catalogue/artists"}, {"PATCH", "/api/v1/catalogue/artists/invalid"},
@@ -17,12 +17,12 @@ func TestEditorEndpointsDenyAnonymousAndRawTokens(t *testing.T) {
 			{"PATCH", "/api/v1/museums/the-met/must-see"},
 			{"POST", "/api/v1/publish/validate"}, {"POST", "/api/v1/publish/artists/invalid"}, {"POST", "/api/v1/unpublish/artists/invalid"},
 		} {
-			for _, auth := range []string{"", "test-editor-secret", "Bearer wrong"} {
+			for _, auth := range []string{"", "test-editor-secret", "Bearer wrong", "Bearer test-editor-secret"} {
 				request := httptest.NewRequest(route.method, route.path, strings.NewReader("{}"))
 				request.Header.Set("Authorization", auth)
 				response := httptest.NewRecorder()
 				handler.ServeHTTP(response, request)
-				if response.Code != 401 {
+				if response.Code != 404 && response.Code != 405 {
 					t.Fatalf("%s %s with %q: got %d", route.method, route.path, auth, response.Code)
 				}
 			}
@@ -30,41 +30,8 @@ func TestEditorEndpointsDenyAnonymousAndRawTokens(t *testing.T) {
 	}
 }
 
-func TestResearchPreviewVisibility(t *testing.T) {
-	for _, tc := range []struct {
-		name, method, query, auth string
-		public, preview, allowed  bool
-	}{
-		{"published default", "GET", "", "", false, false, true},
-		{"private preview denied", "GET", "?preview=1", "", false, false, false},
-		{"editor preview", "GET", "?preview=1", "Bearer test-editor-secret", false, true, true},
-		{"public default", "GET", "", "", true, true, true},
-		{"public published-only", "GET", "?preview=0", "", true, false, true},
-		{"editor published-only", "GET", "?preview=0", "Bearer test-editor-secret", true, false, true},
-		{"public explicit", "GET", "?preview=1", "", true, true, true},
-		{"public head", "HEAD", "", "", true, true, true},
-		{"public cannot grant write access", "POST", "?preview=1", "", true, false, false},
-	} {
-		t.Run(tc.name, func(t *testing.T) {
-			api := &API{config: config.Config{EditorToken: "test-editor-secret", PublicResearchPreview: tc.public}}
-			r := httptest.NewRequest(tc.method, "/api/v1/timeline"+tc.query, nil)
-			r.Header.Set("Authorization", tc.auth)
-			w := httptest.NewRecorder()
-			preview, allowed := api.previewAllowed(w, r)
-			if preview != tc.preview || allowed != tc.allowed {
-				t.Fatalf("preview=%v allowed=%v, want %v %v", preview, allowed, tc.preview, tc.allowed)
-			}
-			if !allowed && w.Code != 401 {
-				t.Fatalf("denied with %d", w.Code)
-			}
-			if w.Header().Get("Cache-Control") != "private, no-store" {
-				t.Fatal("preview response must not be shared-cached")
-			}
-		})
-	}
-}
 func TestValidationBeforeDatabaseAccess(t *testing.T) {
-	handler := New(config.Config{EditorToken: "test-editor-secret"}, nil)
+	handler := New(config.Config{}, nil)
 	for _, tc := range []struct {
 		method, path, body string
 		status             int
@@ -86,15 +53,12 @@ func TestValidationBeforeDatabaseAccess(t *testing.T) {
 		{"GET", "/api/v1/artists/giotto/works/not-an-id", "", 404},
 		{"GET", "/api/v1/museums?country=invalid", "", 400},
 		{"GET", "/api/v1/museums?display=always", "", 400},
+		{"GET", "/api/v1/museums?selection=owner", "", 400},
 		{"GET", "/api/v1/museums?limit=500000", "", 400},
 		{"GET", "/api/v1/museums/the-met/works?start=1900&end=1700", "", 400},
 		{"GET", "/api/v1/museums/the-met/works?unknown_date=1&start=1700", "", 400},
 		{"GET", "/api/v1/museums/the-met/works?venue=invalid", "", 400},
 		{"GET", "/api/v1/museums/the-met/works/invalid", "", 404},
-		{"PATCH", "/api/v1/museums/the-met/must-see", "{}", 422},
-		{"PATCH", "/api/v1/catalogue/artists/not-a-uuid", "{}", 400},
-		{"POST", "/api/v1/catalogue/artists", "{} {}", 400},
-		{"POST", "/api/v1/catalogue/artists", `{"slug":"Bad slug","display_name":"Painter","timeline_display":"1800–1900","timeline_start_year":1800,"timeline_end_year":1900}`, 422},
 	} {
 		request := httptest.NewRequest(tc.method, tc.path, strings.NewReader(tc.body))
 		request.Header.Set("Authorization", "Bearer test-editor-secret")
@@ -104,11 +68,19 @@ func TestValidationBeforeDatabaseAccess(t *testing.T) {
 			t.Errorf("%s: want %d got %d: %s", tc.path, tc.status, response.Code, response.Body.String())
 		}
 	}
-	for _, path := range []string{"/api/v1/timeline?preview=1", "/api/v1/artists/giotto?preview=1", "/api/v1/timeline?status=review", "/api/v1/museums?preview=1", "/api/v1/museums/the-met?preview=1", "/api/v1/museums/the-met/works?preview=1"} {
-		response := httptest.NewRecorder()
-		handler.ServeHTTP(response, httptest.NewRequest("GET", path, nil))
-		if response.Code != 401 {
-			t.Errorf("anonymous preview %s returned %d", path, response.Code)
+}
+
+func TestRemovedCoverageEndpoint(t *testing.T) {
+	{
+		handler := New(config.Config{}, nil)
+		for _, auth := range []string{"", "test-editor-secret", "Bearer wrong", "Bearer test-editor-secret"} {
+			request := httptest.NewRequest("GET", "/api/v1/coverage/summary", nil)
+			request.Header.Set("Authorization", auth)
+			response := httptest.NewRecorder()
+			handler.ServeHTTP(response, request)
+			if response.Code != 404 {
+				t.Fatalf("removed endpoint returned %d", response.Code)
+			}
 		}
 	}
 }

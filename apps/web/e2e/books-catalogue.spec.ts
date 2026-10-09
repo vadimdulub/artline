@@ -13,7 +13,7 @@ test("real book catalogue is bounded and creator details open from the book inde
   const next = await (await page.request.get(`/api/backend/v1/books?limit=3&after=${encodeURIComponent(first.nextCursor)}`)).json() as BooksResponse;
   expect(next.items).toHaveLength(3);
   expect(new Set([...first.items, ...next.items].map(b => b.id)).size).toBe(6);
-  expect(first.items.every((b: { status: string; sourceUrl: string }) => b.status === "review" && b.sourceUrl.startsWith("https://www.wikidata.org/wiki/"))).toBe(true);
+  expect(first.items.every(b => !b.summary && b.status === "review" && b.sourceUrl.startsWith("https://www.wikidata.org/wiki/"))).toBe(true);
   await page.goto("/books?top100=false");
   await expect(page.getByRole("region", { name: "Books timeline" })).toBeVisible();
   await expect(page.locator('ul[aria-label="Book index"] > li')).toHaveCount(150);

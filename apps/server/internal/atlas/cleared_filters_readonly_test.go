@@ -43,7 +43,7 @@ func TestClearedPresetFiltersReadOnly(t *testing.T) {
 			p, _ := FindPreset(id)
 			recorder := &discoveryPlanDB{atlasDB: tx}
 			repo := &Repository{db: recorder}
-			f := Filter{PresetID: id, Range: p.Context, Preview: true, Limit: 30, Selection: true, Types: []string{"artwork", "book", "event"}, Highlights: p.StartingHighlights, Creators: p.StartingCreators, Countries: p.StartingCountries, CountryScope: "artwork", Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
+			f := Filter{PresetID: id, Range: p.Context, Limit: 30, Selection: true, Types: []string{"artwork", "book", "event"}, Highlights: p.StartingHighlights, Creators: p.StartingCreators, Countries: p.StartingCountries, CountryScope: "artwork", Entities: map[string]url.Values{"artwork": {"image_only": {"true"}}}}
 			narrow, err := repo.List(ctx, f)
 			if err != nil {
 				t.Fatal(err)
@@ -126,7 +126,7 @@ func TestClearedPresetFiltersReadOnly(t *testing.T) {
 		p, _ := FindPreset("empire")
 		recorder := &discoveryPlanDB{atlasDB: db}
 		repo := &Repository{db: recorder}
-		f := Filter{PresetID: p.ID, Range: p.Context, Preview: true, Limit: 30,
+		f := Filter{PresetID: p.ID, Range: p.Context, Limit: 30,
 			Types: []string{"artwork"}, Highlights: p.StartingHighlights,
 			Countries: p.StartingCountries, CountryScope: "artwork"}
 		data, err := repo.List(ctx, f)
@@ -167,7 +167,7 @@ func TestClearedPresetFiltersReadOnly(t *testing.T) {
 	repo := NewRepository(db)
 	var previous int
 	for i := 0; i < 8; i++ {
-		presets, err := repo.IllustratedPresets(ctx, true)
+		presets, err := repo.IllustratedPresets(ctx)
 		if err != nil {
 			t.Fatal(err)
 		}

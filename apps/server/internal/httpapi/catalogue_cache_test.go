@@ -15,7 +15,6 @@ import (
 	"time"
 
 	"github.com/vadimdulub/artline/apps/server/internal/atlas"
-	"github.com/vadimdulub/artline/apps/server/internal/config"
 )
 
 func cacheRequest(handler http.Handler, path, auth string) *httptest.ResponseRecorder {
@@ -26,43 +25,26 @@ func cacheRequest(handler http.Handler, path, auth string) *httptest.ResponseRec
 	return w
 }
 
-func TestCatalogueCacheVisibilityAndInvalidation(t *testing.T) {
+func TestCatalogueCacheUnifiedVisibilityAndInvalidation(t *testing.T) {
 	snapshot := "1:2:"
 	cache := newCatalogueCache(func(context.Context) (string, error) { return snapshot, nil })
-	api := &API{config: config.Config{EditorToken: "secret"}}
+	api := &API{}
 	reads := 0
 	handler := api.cacheCatalogue(cache, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		reads++
-		preview, _ := api.previewAllowed(w, r)
-		writeJSON(w, 200, map[string]any{"preview": preview, "read": reads})
+		writeJSON(w, 200, map[string]any{"read": reads})
 	}))
 	first := cacheRequest(handler, "/api/v1/atlas?start=1300&end=1650&fit=true", "")
-	hit := cacheRequest(handler, "/api/v1/atlas?end=1650&start=1300", "")
-	if first.Body.String() != hit.Body.String() || reads != 1 || hit.Header().Get("X-Artline-Cache") != "HIT" || hit.Header().Get("Cache-Control") != "private, no-store" {
-		t.Fatal("equivalent queries should share a private cached response")
-	}
-	preview := cacheRequest(handler, "/api/v1/atlas?preview=1", "Bearer secret")
-	if !strings.Contains(preview.Body.String(), `"preview":true`) {
-		t.Fatal("editor preview missing")
-	}
-	denied := cacheRequest(handler, "/api/v1/atlas?preview=1", "")
-	if denied.Code != 401 || reads != 2 {
-		t.Fatal("cached preview bypassed authorization")
-	}
-	// Identical URL, different server visibility policy: never reuse public data.
-	api.config.PublicResearchPreview = true
-	publicPreview := cacheRequest(handler, "/api/v1/atlas?end=1650&start=1300", "")
-	if !strings.Contains(publicPreview.Body.String(), `"preview":true`) || reads != 3 {
-		t.Fatal("visibility scopes shared an entry")
-	}
-	published := cacheRequest(handler, "/api/v1/atlas?preview=0", "")
-	if !strings.Contains(published.Body.String(), `"preview":false`) {
-		t.Fatal("published-only ignored")
+	for _, legacy := range []string{"", "&preview=0", "&preview=1", "&status=published", "&status=review"} {
+		hit := cacheRequest(handler, "/api/v1/atlas?end=1650&start=1300"+legacy, "Bearer obsolete-token")
+		if first.Body.String() != hit.Body.String() || reads != 1 || hit.Header().Get("X-Artline-Cache") != "HIT" || hit.Header().Get("Cache-Control") != "private, no-store" {
+			t.Fatalf("legacy parameter %q changed the unified catalogue response", legacy)
+		}
 	}
 	snapshot = "2:3:"
 	cacheRequest(handler, "/api/v1/atlas?end=1650&start=1300", "")
-	if reads != 5 {
-		t.Fatal("new PostgreSQL snapshot must invalidate old results")
+	if reads != 2 {
+		t.Fatal("catalogue revision must invalidate old results")
 	}
 }
 

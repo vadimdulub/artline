@@ -7,4 +7,9 @@
 .painter-paintings .all-artwork-image{height:clamp(180px,20vw,290px)}
 .painter-paintings .tick-row i{height:6px;bottom:auto}
 .painter-paintings .all-artwork-density[open] .timeline-overview{height:220px}
+/* Keep the gallery and its expandable year overview above the range controls. */
+@media(min-width:761px){
+ .explorer:has(>.painter-paintings){height:auto;min-height:max(560px,calc(100svh - var(--site-header-height)))}
+ .explorer>.painter-paintings,.painter-paintings .timeline-stage{flex:1 0 auto}
+}
 @media(max-width:760px){.painter-paintings .all-artwork-strip{--artwork-card-width:180px}.painter-paintings .all-artwork-image{height:190px}}
