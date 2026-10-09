@@ -1,0 +1,98 @@
+{
+  "productionWindow": {
+    "start": "2026-10-09T07:53:14.960261Z",
+    "end": "2026-10-09T08:12:44.169401Z",
+    "requests": 2067,
+    "serverErrors": 26,
+    "webArtistPages": {
+      "painter": {
+        "requests": 680,
+        "errors": 0
+      },
+      "artwork": {
+        "requests": 105,
+        "errors": 8
+      }
+    }
+  },
+  "repositorySamples": {
+    "booksAll": {
+      "beforeMS": 982.644333,
+      "afterMS": 448.736083,
+      "identical": true
+    },
+    "artistRembrandt": {
+      "beforeMS": 2681.67,
+      "afterMS": 225.79,
+      "beforeQueries": 12,
+      "afterQueries": 1,
+      "beforeBytes": 54307,
+      "afterBytes": 123
+    },
+    "artistGiotto": {
+      "beforeMS": 1153.91,
+      "afterMS": 74.43,
+      "beforeQueries": 12,
+      "afterQueries": 1,
+      "beforeBytes": 32305,
+      "afterBytes": 119
+    }
+  },
+  "bookHTTP": {
+    "requests": [
+      {
+        "target": "production-before",
+        "status": 200,
+        "bytes": 41126,
+        "cache": "MISS",
+        "seconds": 1.92
+      },
+      {
+        "target": "local-after",
+        "status": 200,
+        "bytes": 41126,
+        "cache": "MISS",
+        "seconds": 1.488
+      }
+    ],
+    "identical": true
+  },
+  "html": [
+    {
+      "target": "production-before",
+      "status": 200,
+      "htmlBytes": 98351,
+      "seconds": 0.455
+    },
+    {
+      "target": "local-after",
+      "status": 200,
+      "htmlBytes": 38301,
+      "seconds": 0.989
+    }
+  ],
+  "limitations": [
+    "Individual sequential samples; warm database and network effects are uncontrolled.",
+    "Production-before and local-after HTTP timing is not directly comparable.",
+    "No concurrent load, cache eviction or 10-million-row capacity test.",
+    "Museum cold reads and broad title counts remain follow-up work."
+  ],
+  "databaseMutations": false,
+  "deployed": false,
+  "finalLocalHTMLBytes": 38311,
+  "validation": {
+    "isolatedWebUnitTests": 269,
+    "integratedWorkingTreeWebUnitTests": 284,
+    "webLint": "passed",
+    "productionBuild": "passed on Node 22",
+    "allGoPackages": "passed in isolated and integrated working trees",
+    "racePackages": [
+      "catalog",
+      "books",
+      "httpapi"
+    ],
+    "readOnlyAPISubchecks": 43,
+    "browserChecks": 3,
+    "databaseFixturesCreated": false
+  }
+}

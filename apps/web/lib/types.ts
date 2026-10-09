@@ -147,3 +147,6 @@ export type Museum = MuseumRef & {
 export type MuseumFacets = { regions: { slug: string; name: string }[]; countries: { slug: string; name: string }[]; artists: { slug: string; name: string }[]; movements: { slug: string; name: string }[] };
 export type MuseumPage = { items: Museum[]; total: number; next_cursor: string; facets: MuseumFacets };
 export type MuseumWorksPage = { items: MuseumWork[]; total: number; image_count?: number; next_cursor: string; facets: MuseumFacets };
+
+// Bounded creator identity for a standalone artwork; no collection summaries.
+export type ArtistIdentity = Pick<ArtistDetail, "id" | "slug" | "display_name" | "entity_type">;

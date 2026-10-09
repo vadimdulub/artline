@@ -45,7 +45,7 @@ export function artistDescription(artist: ArtistDetail): string {
   return plainDescription(artist.biography_md, `Explore ${artist.display_name}: ${artist.timeline_display}. Discover artworks, sources and connections in Artline’s art history atlas.`);
 }
 
-export function artworkDescription(work: Artwork, artist: ArtistDetail): string {
+export function artworkDescription(work: Artwork, artist: Pick<ArtistDetail, "display_name">): string {
   const attribution = work.attribution_role === "primary" ? `by ${artist.display_name}` : `${work.attribution_role.replaceAll("_", " ")} ${artist.display_name}`;
   return plainDescription(work.description_md, `${work.title}, ${attribution}. ${work.date_display}. ${work.medium_text ? `${work.medium_text}. ` : ""}Explore the artwork’s recorded details and sources.`);
 }
@@ -63,7 +63,7 @@ export function breadcrumbs(items: { name: string; path: string }[]) {
   return { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name, item: absoluteURL(item.path) })) };
 }
 
-export function artworkStructuredData(work: Artwork, artist: ArtistDetail) {
+export function artworkStructuredData(work: Artwork, artist: Pick<ArtistDetail, "slug" | "display_name" | "entity_type">) {
   const url = absoluteURL(`/artists/${artist.slug}/works/${work.id}`);
   const image = shareImage(work);
   return {

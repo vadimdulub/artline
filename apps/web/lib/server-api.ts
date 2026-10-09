@@ -1,10 +1,19 @@
 import "server-only";
 import { cache } from "react";
-import type { ArtistDetail, ArtistBrowsePage, Artwork, Museum } from "./types";
+import type { ArtistDetail, ArtistIdentity, ArtistBrowsePage, Artwork, Museum } from "./types";
 
 export const getArtist = cache(async (slug: string): Promise<ArtistDetail | null> => {
   if (slug.length > 100 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug)) return null;
   const url = new URL(`/api/v1/artists/${encodeURIComponent(slug)}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
+  const response = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(8000) });
+  if (response.status === 404) return null;
+  if (!response.ok) throw new Error("The catalogue is temporarily unavailable.");
+  return response.json();
+});
+
+export const getArtistIdentity = cache(async (slug: string): Promise<ArtistIdentity | null> => {
+  if (slug.length > 100 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug)) return null;
+  const url = new URL(`/api/v1/artists/${encodeURIComponent(slug)}/identity`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
   const response = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(8000) });
   if (response.status === 404) return null;
   if (!response.ok) throw new Error("The catalogue is temporarily unavailable.");
@@ -22,9 +31,7 @@ export const getMuseum = cache(async (slug: string): Promise<Museum | null> => {
 
 export const getArtistArtwork = cache(async (slug: string, id: string): Promise<Artwork | null> => {
   if (slug.length > 100 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug) || !/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(id)) return null;
-  const artist = await getArtist(slug);
-  if (!artist) return null;
-  const url = new URL(`/api/v1/artists/${encodeURIComponent(artist.slug)}/works/${id}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
+  const url = new URL(`/api/v1/artists/${encodeURIComponent(slug)}/works/${id}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
   const response = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(8000) });
   if (response.status === 404) return null;
   if (!response.ok) throw new Error("The artwork is temporarily unavailable.");

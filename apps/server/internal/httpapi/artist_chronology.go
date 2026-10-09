@@ -107,3 +107,20 @@ func (api *API) artistArtwork(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Cache-Control", "private, no-store")
 	writeJSON(w, 200, work)
 }
+
+func (api *API) artistIdentity(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	if !validArtistSlug(slug) {
+		api.artistChronologyError(w, catalog.ErrNotFound)
+		return
+	}
+	ctx, cancel := contextWithTimeout(r, 8*time.Second)
+	defer cancel()
+	artist, err := api.repo.ArtistIdentity(ctx, slug)
+	if err != nil {
+		api.artistChronologyError(w, err)
+		return
+	}
+	w.Header().Set("Cache-Control", "private, no-store")
+	writeJSON(w, 200, artist)
+}

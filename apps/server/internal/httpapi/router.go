@@ -57,6 +57,7 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /api/v1/artists", api.artistDirectory)
 	mux.HandleFunc("GET /api/v1/artworks", api.artworkDirectory)
 	mux.HandleFunc("GET /api/v1/artists/{slug}", api.artist)
+	mux.HandleFunc("GET /api/v1/artists/{slug}/identity", api.artistIdentity)
 	mux.HandleFunc("GET /api/v1/seo/sitemaps", api.sitemapShards)
 	mux.HandleFunc("GET /api/v1/seo/sitemaps/{kind}/{prefix}", api.sitemapEntries)
 	mux.HandleFunc("GET /api/v1/seo/artists", api.discoveryArtists)

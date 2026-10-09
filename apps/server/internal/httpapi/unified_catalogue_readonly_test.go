@@ -73,7 +73,7 @@ func TestUnifiedCatalogueReadOnly(t *testing.T) {
 	for _, path := range []string{
 		"artists?limit=2", "artworks?limit=2", "artworks?q=Madonna&limit=2", "artists?q=Monet&limit=2", "artworks?undated=true&limit=2",
 		"timeline?painter=" + artist, "timeline/facets", "painters/options?q=" + artist,
-		"artists/" + artist, "artists/" + artist + "/works?limit=2", "artists/" + artist + "/works/" + work,
+		"artists/" + artist, "artists/" + artist + "/identity", "artists/" + artist + "/works?limit=2", "artists/" + artist + "/works/" + work,
 		"museums?limit=2", "museums/" + museum, "museums/" + museum + "/works?limit=2",
 		"books?limit=2", "books?view=authors&limit=2", "books/authors?q=Homer", "books/facets", "books/" + book,
 		"events?limit=2", "events/facets", "events/" + event,

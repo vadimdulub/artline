@@ -36,6 +36,9 @@ func cacheableCataloguePath(path string) bool {
 	parts := strings.Split(strings.TrimPrefix(path, "/api/v1/"), "/")
 	if strings.HasPrefix(path, "/api/v1/") {
 		if len(parts) >= 2 && (parts[0] == "artists" || parts[0] == "museums") && validArtistSlug(parts[1]) {
+			if len(parts) == 3 && parts[0] == "artists" && parts[2] == "identity" {
+				return true
+			}
 			if len(parts) == 2 || (len(parts) == 3 && parts[2] == "works") || (len(parts) == 4 && parts[2] == "works" && museumIDPattern.MatchString(parts[3])) {
 				return true
 			}

@@ -1,0 +1,11 @@
+.record { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); background: var(--stone); }
+.image { padding: clamp(24px, 4vw, 64px); }
+.details { padding: clamp(24px, 4vw, 64px); border-left: 1px solid var(--line); }
+.details h1 { margin: 24px 0 16px; font: 400 clamp(30px, 3vw, 48px)/1.15 var(--serif); overflow-wrap: anywhere; }
+.record:has(.image:empty) { grid-template-columns: minmax(0, 1fr); }
+.record:has(.image:empty) .image { display: none; }
+.record:has(.image:empty) .details { border-left: 0; max-width: 850px; }
+@media (max-width: 760px) {
+  .record { grid-template-columns: minmax(0, 1fr); }
+  .details { border-left: 0; border-top: 1px solid var(--line); }
+}

@@ -72,13 +72,34 @@ func authorLifeLabel(c Creator) string {
 	return "Lifespan not established"
 }
 
+// Select counts and the bounded page from the same classified set. Parsing all
+// creator date labels twice made the author view pay twice for the same scope.
+const authorTimelineQuery = authorTimelineScope + `, author_page AS MATERIALIZED (
+ SELECT * FROM matching WHERE (coalesce(start_year,2147483647),id)>($10,$11)
+ ORDER BY coalesce(start_year,2147483647),id LIMIT $12
+) SELECT count(*),count(*) FILTER (WHERE start_year IS NULL),
+ (SELECT count(*) FROM classified),min(start_year),max(end_year),
+ coalesce((SELECT jsonb_agg(c.record || jsonb_build_object(
+ 'startYear',a.start_year,'endYear',a.end_year,'approximate',coalesce(a.approximate,true),
+ 'bookCount',a.book_count,'credits',a.credits) ORDER BY coalesce(a.start_year,2147483647),a.id)
+ FROM author_page a JOIN book_creators c ON c.id=a.id),'[]'::jsonb) FROM matching`
+
 func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, error) {
 	result := metadata(f.Range)
 	result.View, result.Authors = "authors", []TimelineAuthor{}
 	args := []any{f.Start, f.End, strings.TrimSpace(f.Query), f.Authors, f.Women, f.Top100, f.Languages, f.Countries, f.Regions}
 	var firstYear, lastYear *int
-	if err := r.db.QueryRow(ctx, authorTimelineScope+`SELECT count(*),count(*) FILTER (WHERE start_year IS NULL),(SELECT count(*) FROM classified),min(start_year),max(end_year) FROM matching`, args...).Scan(&result.Total, &result.UndatedTotal, &result.SelectionTotal, &firstYear, &lastYear); err != nil {
-		return result, fmt.Errorf("count authors: %w", err)
+	c, _ := decodeCursor(f.After)
+	var raw []byte
+	if err := r.db.QueryRow(ctx, authorTimelineQuery, append(args, c.Year, c.ID, f.Limit+1)...).Scan(&result.Total, &result.UndatedTotal, &result.SelectionTotal, &firstYear, &lastYear, &raw); err != nil {
+		return result, fmt.Errorf("read authors: %w", err)
+	}
+	if err := json.Unmarshal(raw, &result.Authors); err != nil {
+		return result, fmt.Errorf("decode authors: %w", err)
+	}
+	for i := range result.Authors {
+		attachPortrait(&result.Authors[i].Creator)
+		result.Authors[i].Lifespan = authorLifeLabel(result.Authors[i].Creator)
 	}
 	result.MatchedRange = timeline.FitExtent(firstYear, lastYear, f.Start, f.End)
 	individualLimit := timeline.IndividualLimit
@@ -87,33 +108,6 @@ func (r *Repository) authorTimeline(ctx context.Context, f Filter) (Response, er
 	}
 	if result.Total > individualLimit || (result.Total > 0 && result.UndatedTotal == result.Total) {
 		result.Mode = "density"
-	}
-	c, _ := decodeCursor(f.After)
-	rows, err := r.db.Query(ctx, authorTimelineScope+`SELECT c.record,a.start_year,a.end_year,coalesce(a.approximate,true),a.book_count,a.credits
- FROM (SELECT * FROM matching WHERE (coalesce(start_year,2147483647),id)>($10,$11) ORDER BY coalesce(start_year,2147483647),id LIMIT $12) a
- JOIN book_creators c ON c.id=a.id ORDER BY coalesce(a.start_year,2147483647),a.id`, append(args, c.Year, c.ID, f.Limit+1)...)
-	if err != nil {
-		return result, err
-	}
-	for rows.Next() {
-		var a TimelineAuthor
-		var raw []byte
-		if err = rows.Scan(&raw, &a.StartYear, &a.EndYear, &a.Approximate, &a.BookCount, &a.Credits); err != nil {
-			rows.Close()
-			return result, err
-		}
-		if err = json.Unmarshal(raw, &a.Creator); err != nil {
-			rows.Close()
-			return result, err
-		}
-		attachPortrait(&a.Creator)
-		a.Lifespan = authorLifeLabel(a.Creator)
-		result.Authors = append(result.Authors, a)
-	}
-	err = rows.Err()
-	rows.Close()
-	if err != nil {
-		return result, err
 	}
 	if len(result.Authors) > f.Limit {
 		result.Authors = result.Authors[:f.Limit]

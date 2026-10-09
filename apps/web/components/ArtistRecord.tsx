@@ -1,38 +1,24 @@
 "use client";
 import Link from "next/link";
+import { PainterArtworkDetails, SourceList } from "./PainterArtworkDetails";
+export { SourceList } from "./PainterArtworkDetails";
 import { artworkDate, displayMetadata } from "@/lib/display-metadata";
 import { ArtworkDialog, ArtworkImage, ArtworkViewer, ShareWorkLink } from "./ArtworkViewer";
 import { RecordArrows, type RecordNavigation } from "./RecordNavigation";
-import { ArtworkLocation } from "./ArtworkLocation";
-import { ArtworkDescription } from "./ArtworkDescription";
 import { ArtistBiography } from "./ArtistBiography";
 import { updateQuery } from "@/lib/url-state";
 import { cleanEditorialBiography } from "@/lib/biography";
-import { ArtworkFacts } from "./ArtworkFacts";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { countryName, safeSourceURL } from "@/lib/api";
-import type { ArtistDetail, Artwork, Citation } from "@/lib/types";
+import { countryName } from "@/lib/api";
+import type { ArtistDetail, Artwork } from "@/lib/types";
 
-export function SourceList({ citations }: { citations: Citation[] }) {
-  return <ul className="source-list">{citations.map((source, index) => <li key={index}><a href={safeSourceURL(source.source_url)} target="_blank" rel="noreferrer">{source.source_name}</a></li>)}</ul>;
-}
 function WorkBrowserContent({ render, onSelectWork, selectedID }: { render: (choose: (id: string) => void, selectedID?: string) => ReactNode; onSelectWork: (id: string) => void; selectedID?: string }) {
   return render(onSelectWork, selectedID);
 }
 function ArtistContext({ collapsed, children }: { collapsed: boolean; children: ReactNode }) {
   return collapsed ? <details className="chronology-biography"><summary>About the painter</summary>{children}</details> : children;
-}
-function PainterArtworkDetails({ artist, work }: { artist: ArtistDetail; work: Artwork }) {
-  return <>
-        <ArtworkFacts work={work} attribution />
-        {work.attribution_text && <p className="image-credit">{work.attribution_text}</p>}
-        <ArtworkLocation work={work} />
-        <ArtworkDescription key={work.id} work={work} detailPath={`artists/${artist.slug}/works/${work.id}`} />
-        {work.location_checked_at && <p className="image-credit">Location checked {new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(work.location_checked_at))}. This does not indicate whether the work is on display.</p>}
-        {(work.citations.length > 0 || safeSourceURL(work.source_page_url)) && <details><summary>Artwork sources</summary><SourceList citations={work.citations} />{safeSourceURL(work.source_page_url) && <a href={safeSourceURL(work.source_page_url)} target="_blank" rel="noreferrer">Image source</a>}</details>}
-  </>;
 }
 export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = false, artworks, linkedWork, defaultWork, workBrowser, workMessage, navigation, pageWork, gallery = false }: { artist: ArtistDetail; essay?: string | null; workId?: string | null; onSelectWork: (id: string) => void; embedded?: boolean; artworks?: Artwork[]; linkedWork?: Artwork; defaultWork?: Artwork; workBrowser?: (choose: (id: string) => void, selectedID?: string) => ReactNode; workMessage?: ReactNode; navigation?: RecordNavigation; pageWork?: Artwork | null; gallery?: boolean; }) {
   const works = artworks ?? artist.artworks;

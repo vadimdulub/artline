@@ -1,6 +1,6 @@
 import { afterEach, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
-import { getArtist, getArtistArtwork } from "../server-api";
+import { getArtist, getArtistIdentity, getArtistArtwork } from "../server-api";
 afterEach(() => { vi.unstubAllGlobals(); vi.unstubAllEnvs(); });
 
 it("resolves stable imported artist slugs accepted by Go", async () => {
@@ -30,7 +30,16 @@ it.each(["draft", "review", "published"])("reads %s records without preview conf
   });
   vi.stubGlobal("fetch", fetch);
   expect(await getArtistArtwork("giotto", work.id)).toEqual(work);
-  expect(fetch).toHaveBeenCalledTimes(2);
+  expect(fetch).toHaveBeenCalledOnce();
+  expect(String(fetch.mock.calls[0][0])).toContain(`/artists/giotto/works/${work.id}`);
+});
+it("loads canonical creator identity independently of the full artist summary", async () => {
+  const identity = { id: "artist-id", slug: "giotto", display_name: "Giotto", entity_type: "person" };
+  const fetch = vi.fn().mockResolvedValue({ status: 200, ok: true, json: async () => identity });
+  vi.stubGlobal("fetch", fetch);
+  expect(await getArtistIdentity("old-giotto")).toEqual(identity);
+  expect(fetch).toHaveBeenCalledOnce();
+  expect(String(fetch.mock.calls[0][0])).toContain("/artists/old-giotto/identity");
 });
 it("returns a missing record without a second visibility lookup", async () => {
   const fetch = vi.fn().mockResolvedValue({ status: 404 });

@@ -123,12 +123,12 @@ func TestCatalogueAdmissionQueueTimeoutReleasesSlot(t *testing.T) {
 }
 
 func TestPublicRecordCacheAllowlist(t *testing.T) {
-	for _, path := range []string{"/api/v1/artists", "/api/v1/museums", "/api/v1/artists/source_name", "/api/v1/artists/rembrandt/works", "/api/v1/museums/the-met/works/00000000-0000-0000-0000-000000000001", "/api/v1/seo/sitemaps/artworks/abc"} {
+	for _, path := range []string{"/api/v1/artists", "/api/v1/museums", "/api/v1/artists/source_name", "/api/v1/artists/rembrandt/works", "/api/v1/artists/rembrandt/identity", "/api/v1/museums/the-met/works/00000000-0000-0000-0000-000000000001", "/api/v1/seo/sitemaps/artworks/abc"} {
 		if !cacheableCataloguePath(path) {
 			t.Error("public route omitted", path)
 		}
 	}
-	for _, path := range []string{"/api/v1/auth/session", "/api/v1/member/account", "/api/v1/artists/a/private", "/api/v1/museums/a/works/invalid", "/api/v1/seo/sitemaps/artworks/nope"} {
+	for _, path := range []string{"/api/v1/auth/session", "/api/v1/member/account", "/api/v1/artists/a/private", "/api/v1/museums/a/identity", "/api/v1/museums/a/works/invalid", "/api/v1/seo/sitemaps/artworks/nope"} {
 		if cacheableCataloguePath(path) {
 			t.Error("unsafe route allowed", path)
 		}
