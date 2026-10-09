@@ -11,7 +11,7 @@ resource "google_sql_database_instance" "artline" {
     tier                        = var.database_tier
     availability_type           = "ZONAL"
     disk_type                   = "PD_SSD"
-    disk_size                   = 10
+    disk_size                   = 15
     disk_autoresize             = true
 
     backup_configuration {

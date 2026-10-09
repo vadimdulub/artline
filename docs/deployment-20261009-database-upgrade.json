@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-09",
+  "project": "artline-508319",
+  "instance": "artline-postgres",
+  "region": "europe-west1",
+  "databaseVersion": "POSTGRES_17",
+  "status": "deployed",
+  "before": {
+    "tier": "db-f1-micro",
+    "diskGiB": 15,
+    "sharedBuffers": "128MB"
+  },
+  "after": {
+    "tier": "db-custom-1-3840",
+    "vCPU": 1,
+    "memoryGiB": 3.75,
+    "diskGiB": 15,
+    "diskType": "PD_SSD",
+    "sharedBuffers": "1222MB",
+    "state": "RUNNABLE"
+  },
+  "operation": {
+    "name": "4783717f-6f68-42d4-b4ca-545a00000024",
+    "status": "DONE",
+    "startTime": "2026-10-09T14:58:47.916Z",
+    "endTime": "2026-10-09T15:03:34.572Z"
+  },
+  "backup": {
+    "id": "1791557803510",
+    "operation": "acbd4414-d196-4792-a082-f70b00000024",
+    "status": "DONE",
+    "completedAt": "2026-10-09T14:58:14.803Z"
+  },
+  "configuration": {
+    "onlyCloudSQLTierPatched": true,
+    "editionUnchanged": "ENTERPRISE",
+    "availabilityUnchanged": "ZONAL",
+    "storageAutoGrowPreserved": true,
+    "backupAndPointInTimeRecoveryPreserved": true,
+    "backupRetentionCount": 7,
+    "transactionLogRetentionDays": 7,
+    "maxConnections": 100,
+    "connectionEndpointPreserved": true,
+    "cloudRunServicesAndTrafficUnchanged": true,
+    "noCatalogueWritesPerformed": true,
+    "noLocalDatabaseAccessPerformed": true,
+    "otherJobsNotCancelled": true,
+    "activeWritesOrOpenTransactionsAtPreResizeCheck": false,
+    "terraformApplyPerformed": false,
+    "terraformDefaultAndIgnoredProductionPinUpdated": true,
+    "terraformDiskSizeAlignedWithExistingAllocation": true
+  },
+  "cost": {
+    "currency": "USD",
+    "monthlyHours": 730,
+    "compute": 49.31,
+    "existing15GiBSSD": 2.55,
+    "baseTotal": 51.86,
+    "backupPerGiBMonth": 0.08,
+    "excludes": [
+      "backups",
+      "app usage",
+      "images and egress",
+      "tax",
+      "other services"
+    ],
+    "source": "https://cloud.google.com/sql/pricing"
+  },
+  "verification": {
+    "passed": true,
+    "checkedAt": "2026-10-09T15:01:58.966704+00:00",
+    "checks": [
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/health",
+        "status": 200,
+        "seconds": 0.204,
+        "bytes": 16
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/ready",
+        "status": 200,
+        "seconds": 0.185,
+        "bytes": 19
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/artists/rembrandt/identity",
+        "status": 200,
+        "seconds": 0.26,
+        "bytes": 124
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/artists/rembrandt/works/0003a120-8e92-4f42-b69d-dea092af1376",
+        "status": 200,
+        "seconds": 0.208,
+        "bytes": 2455
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/artists/mesteren-fra-citta-di-castello-research-d78d2979b4d6/identity",
+        "status": 404,
+        "seconds": 0.24,
+        "bytes": 110
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/artists/rembrandt/works?limit=2",
+        "status": 200,
+        "seconds": 0.733,
+        "bytes": 5013
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/museums/musee-du-louvre",
+        "status": 200,
+        "seconds": 0.82,
+        "bytes": 1237
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/books?view=authors&limit=30",
+        "status": 200,
+        "seconds": 1.072,
+        "bytes": 41126
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/books?view=authors&limit=30&after=eyJ5ZWFyIjotNTUxLCJpZCI6IlE0NjA0In0",
+        "status": 200,
+        "seconds": 0.682,
+        "bytes": 38022
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/api/v1/books?view=authors&limit=2&women=true",
+        "status": 200,
+        "seconds": 0.344,
+        "bytes": 4142
+      },
+      {
+        "base": "https://artlines.org",
+        "path": "/api/auth/session",
+        "status": 200,
+        "seconds": 0.218,
+        "bytes": 29
+      },
+      {
+        "base": "https://artlines.org",
+        "path": "/artists/leonardo-da-vinci/works/1aae4f1a-3b50-4424-adfb-f59a734dfc36",
+        "status": 200,
+        "seconds": 0.21,
+        "bytes": 38528
+      },
+      {
+        "base": "https://artlines.org",
+        "path": "/artists/rembrandt/works/0003a120-8e92-4f42-b69d-dea092af1376",
+        "status": 200,
+        "seconds": 0.26,
+        "bytes": 33063
+      },
+      {
+        "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+        "path": "/ready",
+        "status": 200,
+        "seconds": 0.176,
+        "bytes": 19
+      }
+    ],
+    "authorTotal": 3436,
+    "reviewArtworkVisible": true,
+    "archivedIdentityExcluded": true,
+    "cursorNoDuplicates": true,
+    "limitations": "Read-only sequential spot checks, not a controlled performance benchmark or sustained load test."
+  },
+  "terraformValidation": {
+    "fmt": "passed",
+    "validate": "passed, zero errors or warnings"
+  },
+  "readinessInterruption": {
+    "failedProbes": 4,
+    "lastSuccessBefore": {
+      "at": "2026-10-09T15:00:43.592741+00:00",
+      "status": 200,
+      "seconds": 0.243
+    },
+    "firstSuccessAfter": {
+      "at": "2026-10-09T15:01:19.687224+00:00",
+      "status": 200,
+      "seconds": 0.244
+    },
+    "qualification": "Five-second sampling plus request duration; these observations bound the interruption, not an exact user-visible outage duration."
+  },
+  "limitations": [
+    "Sequential functional spot checks do not prove sustained load capacity or resolve every expensive query.",
+    "No database restore, import, schema migration or full application test suite was required for this infrastructure-only change."
+  ],
+  "privateEvidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/database-upgrade-20261009"
+}

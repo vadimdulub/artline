@@ -15,8 +15,10 @@ for the live OAuth client, verified API revision and rollback details.
 ## Resources
 
 - Cloud SQL PostgreSQL 17 Enterprise, with daily backups, point-in-time recovery,
-  disk autoresize and deletion protection. The initial `db-f1-micro` tier is a
-  starting configuration, not evidence of capacity for 10 million artworks.
+  disk autoresize and deletion protection. The approved production tier is
+  `db-custom-1-3840` (1 dedicated vCPU, 3.75 GiB RAM), with the existing 15 GiB
+  SSD allocation. This is a starting configuration for the current workload,
+  not evidence of capacity for 10 million artworks.
 - Separate Cloud Run API and web services, scaling from zero to three instances.
 - Secret Manager stores the database URL, editor token, Google OAuth client secret
   and member cookie-signing key. Only the API runtime
@@ -37,6 +39,14 @@ used. Cloud Run uses `invoker_iam_disabled = true`, Google's supported public
 access setting for domain-restricted projects. Image storage enforces public
 access prevention; Cloud Run serves image bytes using its runtime identity.
 No organisation policies were changed.
+
+The 9 October 2026 database resize changes CPU/RAM only and preserves the
+Enterprise edition, zone, storage, backup/PITR configuration, connection endpoint
+and Cloud Run services. See the [upgrade receipt](../../docs/deployment-20261009-database-upgrade.json)
+for its backup, operation and verification results. The database and existing
+15 GiB SSD are approximately $51.86/month at 730 hours using Belgium on-demand
+rates, before backups, app usage, image delivery and tax. See
+[Cloud SQL pricing](https://cloud.google.com/sql/pricing).
 
 ## Operate from this repository
 

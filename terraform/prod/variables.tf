@@ -24,7 +24,7 @@ variable "database_user" {
 variable "database_tier" {
   description = "Cloud SQL machine tier"
   type        = string
-  default     = "db-f1-micro"
+  default     = "db-custom-1-3840"
 }
 
 variable "image_tag" {
