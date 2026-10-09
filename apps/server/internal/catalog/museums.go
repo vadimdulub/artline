@@ -473,6 +473,18 @@ func emptyMuseumFacets() MuseumFacets {
 	return MuseumFacets{Regions: []FacetOption{}, Countries: []FacetOption{}, Artists: []FacetOption{}, Movements: []FacetOption{}}
 }
 func (r *Repository) museumFacets(ctx context.Context, slug string) (MuseumFacets, error) {
+	key := facetCacheKey(ctx, "museum:"+slug)
+	var out MuseumFacets
+	if r.facets.get(key, &out) {
+		return out, nil
+	}
+	out, err := r.museumFacetsUncached(ctx, slug)
+	if err == nil {
+		r.facets.put(key, out)
+	}
+	return out, err
+}
+func (r *Repository) museumFacetsUncached(ctx context.Context, slug string) (MuseumFacets, error) {
 	out := emptyMuseumFacets()
 	cte := museumDirectoryCTE
 	if slug != "" {
@@ -541,12 +553,19 @@ func (r *Repository) museumFacets(ctx context.Context, slug string) (MuseumFacet
 	return out, rows.Err()
 }
 
-const museumScopedFacetChoicesSQL = `(SELECT DISTINCT 'artist',a.slug,a.display_name FROM institutions i JOIN museum_memberships member ON member.institution_id=i.id
- JOIN artwork_artists aa ON aa.artwork_id=member.artwork_id JOIN artists a ON a.id=aa.artist_id
- WHERE i.slug=$1 AND ` + museumVisible + ` AND a.status<>'archived'  ORDER BY 3 LIMIT 30)
- UNION (SELECT DISTINCT 'movement',m.slug,m.name FROM institutions i JOIN museum_memberships member ON member.institution_id=i.id
- JOIN artwork_artists aa ON aa.artwork_id=member.artwork_id JOIN artists a ON a.id=aa.artist_id JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id
- WHERE ($1='' OR i.slug=$1) AND ` + museumVisible + ` AND a.status<>'archived' AND m.status<>'archived'  ORDER BY 3 LIMIT 500) ORDER BY 1,3`
+const museumScopedFacetChoicesSQL = `, facet_artists AS MATERIALIZED (
+ SELECT DISTINCT aa.artist_id FROM institutions i
+ JOIN museum_memberships member ON member.institution_id=i.id
+ JOIN artwork_artists aa ON aa.artwork_id=member.artwork_id
+ WHERE i.slug=$1 AND ` + museumVisible + `
+), active_facet_artists AS MATERIALIZED (
+ SELECT a.id,a.slug,a.display_name FROM facet_artists fa JOIN artists a ON a.id=fa.artist_id
+ WHERE a.status<>'archived'
+)
+(SELECT 'artist',a.slug,a.display_name FROM active_facet_artists a ORDER BY 3 LIMIT 30)
+UNION (SELECT DISTINCT 'movement',m.slug,m.name FROM active_facet_artists a
+ JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id
+ WHERE m.status<>'archived' ORDER BY 3 LIMIT 500) ORDER BY 1,3`
 
 // OFFSET 0 keeps the directory EXISTS predicates correlated: PostgreSQL must
 // look for the first indexed match for an institution/movement, not turn the

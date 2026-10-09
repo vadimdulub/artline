@@ -41,10 +41,10 @@ func (r *Repository) enrichArtworks(ctx context.Context, works []Artwork) error 
 		return err
 	}
 	rows, err = r.db.Query(ctx, `SELECT entity_id::text,field_name,name,source_url,evidence_note FROM (
- SELECT c.entity_id,c.field_name,s.name,c.source_url,coalesce(c.evidence_note,'') AS evidence_note,
+ SELECT c.entity_id,c.field_name,s.name,c.source_url,CASE WHEN $2 THEN '' ELSE coalesce(c.evidence_note,'') END AS evidence_note,
  row_number() OVER(PARTITION BY c.entity_id ORDER BY c.field_name,s.priority,c.id) AS n
  FROM citations c JOIN sources s ON s.id=c.source_id AND s.is_active
- WHERE c.entity_type='artwork' AND c.entity_id=ANY($1::uuid[])) evidence WHERE n<=100 ORDER BY entity_id,n`, ids)
+ WHERE c.entity_type='artwork' AND c.entity_id=ANY($1::uuid[])) evidence WHERE n<=100 ORDER BY entity_id,n`, ids, publicRead(ctx))
 	if err != nil {
 		return err
 	}

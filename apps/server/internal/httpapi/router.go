@@ -68,20 +68,20 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /api/v1/museums/{slug}/works/{id}", api.museumArtwork)
 	mux.HandleFunc("GET /api/v1/catalogue/artists", api.catalogueArtists)
 
-	var catalogue http.Handler = mux
+	var catalogue http.Handler = catalogueAdmission(mux, 4, 16, 500*time.Millisecond)
 	if db != nil {
 		cache := newCatalogueCache(func(ctx context.Context) (string, error) {
 			var snapshot string
 			err := db.QueryRow(ctx, "SELECT sum(revision)::text FROM public.catalogue_cache_revisions HAVING count(*)=64").Scan(&snapshot)
 			return snapshot, err
 		})
-		catalogue = api.cacheCatalogue(cache, mux)
+		catalogue = api.cacheCatalogue(cache, catalogue)
 	}
-	handler := api.recoverPanic(api.requestLog(api.cors(catalogue)))
+	handler := api.recoverPanic(api.requestLog(api.cors(catalogueReadBudget(catalogue))))
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("X-Robots-Tag", "noindex")
 		w.Header().Set("Cache-Control", "private, no-store")
-		handler.ServeHTTP(w, r)
+		handler.ServeHTTP(w, r.WithContext(catalog.WithPublicRead(r.Context())))
 	})
 }
 
@@ -192,7 +192,9 @@ func (api *API) artist(w http.ResponseWriter, r *http.Request) {
 		writeError(w, http.StatusBadRequest, "INVALID_SLUG", "Artist slug is required.")
 		return
 	}
-	artist, err := api.repo.ArtistBySlug(r.Context(), slug)
+	ctx, cancel := contextWithTimeout(r, 8*time.Second)
+	defer cancel()
+	artist, err := api.repo.ArtistBySlug(ctx, slug)
 	if errors.Is(err, catalog.ErrNotFound) {
 		writeError(w, http.StatusNotFound, "ARTIST_NOT_FOUND", "This painter is not in the catalogue.")
 		return

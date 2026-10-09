@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -13,7 +14,8 @@ import (
 var ErrNotFound = errors.New("record not found")
 
 type Repository struct {
-	db interface {
+	facets *facetCache
+	db     interface {
 		Query(context.Context, string, ...any) (pgx.Rows, error)
 		QueryRow(context.Context, string, ...any) pgx.Row
 		Begin(context.Context) (pgx.Tx, error)
@@ -21,7 +23,7 @@ type Repository struct {
 }
 
 func NewRepository(db *pgxpool.Pool) *Repository {
-	return &Repository{db: db}
+	return &Repository{db: db, facets: &facetCache{entries: map[string]facetCacheEntry{}, now: time.Now}}
 }
 
 func (r *Repository) ArtistBySlug(ctx context.Context, slug string) (ArtistDetail, error) {
@@ -118,10 +120,10 @@ func (r *Repository) artistCitations(ctx context.Context, artistID string) ([]Ci
 }
 
 func (r *Repository) entityCitations(ctx context.Context, entityType, id string) ([]Citation, error) {
-	const query = `SELECT c.field_name, s.name, c.source_url, COALESCE(c.evidence_note, '')
+	const query = `SELECT c.field_name, s.name, c.source_url, CASE WHEN $3 THEN '' ELSE COALESCE(c.evidence_note, '') END
 		FROM citations c JOIN sources s ON s.id = c.source_id
 		WHERE c.entity_type = $2 AND c.entity_id = $1 AND s.is_active ORDER BY c.field_name, s.priority LIMIT 100`
-	rows, err := r.db.Query(ctx, query, id, entityType)
+	rows, err := r.db.Query(ctx, query, id, entityType, publicRead(ctx))
 	if err != nil {
 		return nil, fmt.Errorf("query artist citations: %w", err)
 	}
@@ -171,6 +173,18 @@ func (r *Repository) Facets(ctx context.Context) (TimelineFacets, error) {
 }
 
 func (r *Repository) DiscoveryFacets(ctx context.Context, popular, women bool) (TimelineFacets, error) {
+	key := facetCacheKey(ctx, fmt.Sprintf("artists:%t:%t", popular, women))
+	var out TimelineFacets
+	if r.facets.get(key, &out) {
+		return out, nil
+	}
+	out, err := r.discoveryFacetsUncached(ctx, popular, women)
+	if err == nil {
+		r.facets.put(key, out)
+	}
+	return out, err
+}
+func (r *Repository) discoveryFacetsUncached(ctx context.Context, popular, women bool) (TimelineFacets, error) {
 	facets := TimelineFacets{Movements: []FacetOption{}, Countries: []FacetOption{}, Regions: []FacetOption{}}
 	movementRows, err := r.db.Query(ctx, `
 		SELECT m.slug, m.name, m.color_hex, count(DISTINCT a.id)

@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"regexp"
+	"strings"
 )
 
 type ArtworkDirectoryFilter struct {
@@ -31,6 +32,8 @@ type ArtworkDirectoryPage struct {
 	NextCursor string                 `json:"next_cursor"`
 }
 type artworkDirectoryCursor struct{ Title, ID, Scope string }
+
+var artworkSearchTrigram = regexp.MustCompile(`[\pL\pN]{3}`)
 
 var artworkDirectoryUUID = regexp.MustCompile(`^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$`)
 
@@ -57,6 +60,26 @@ const artworkDirectoryPageSQL = `WITH page AS MATERIALIZED (
  LEFT JOIN institutions i ON i.id=aw.current_institution_id AND i.status<>'archived'
  ORDER BY p.normalized_title,p.id`
 
+// For title searches, select trigram candidates before ordering. Otherwise the
+// planner can walk most of the alphabetic index to find the first matching page.
+// Keep ordinary browsing on its bounded ordered index (no global materialization).
+var artworkDirectorySearchPageSQL = strings.Replace(artworkDirectoryPageSQL,
+	`WITH page AS MATERIALIZED (
+ SELECT aw.id,aw.normalized_title`+artworkDirectoryWhere,
+	`WITH matching AS MATERIALIZED (SELECT aw.id,aw.normalized_title`+artworkDirectoryWhere+`),
+ page AS MATERIALIZED (SELECT aw.id,aw.normalized_title FROM matching aw WHERE TRUE`, 1)
+
+const artworkSearchDocumentWhere = ` FROM artwork_search_documents aw WHERE aw.status<>'archived'
+ AND ($1='' OR aw.title ILIKE '%'||$1||'%') AND (NOT $2 OR aw.undated) AND (NOT $3 OR (aw.primary_media_id IS NOT NULL AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=aw.primary_media_id
+ AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')))`
+
+// Only the narrow projection participates in search filtering/counts. Full rows
+// and creator/media/museum enrichment are joined after the bounded keyset page.
+var artworkDocumentPageSQL = strings.Replace(artworkDirectoryPageSQL,
+	artworkDirectoryWhere, artworkSearchDocumentWhere, 1)
+var artworkDocumentSearchPageSQL = strings.Replace(artworkDirectorySearchPageSQL,
+	artworkDirectoryWhere, artworkSearchDocumentWhere, 1)
+
 func (r *Repository) BrowseArtworks(ctx context.Context, f ArtworkDirectoryFilter) (ArtworkDirectoryPage, error) {
 	out := ArtworkDirectoryPage{Items: []ArtworkDirectoryItem{}}
 	if len(f.Query) > 200 || len(f.Cursor) > 4096 || f.Limit < 1 || f.Limit > 60 {
@@ -74,6 +97,12 @@ func (r *Repository) BrowseArtworks(ctx context.Context, f ArtworkDirectoryFilte
 		}
 	}
 	args := []any{f.Query, f.Undated, f.ImageOnly}
+	var searchTable *string
+	if f.Query != "" {
+		if err := r.db.QueryRow(ctx, "SELECT to_regclass('artwork_search_documents')::text").Scan(&searchTable); err != nil {
+			return out, err
+		}
+	}
 	// Catalogue-wide totals are updated in the same transaction as artwork edits.
 	// Keep read-only local catalogues usable before this additive migration.
 	var totalsTable *string
@@ -87,11 +116,26 @@ func (r *Repository) BrowseArtworks(ctx context.Context, f ArtworkDirectoryFilte
 		 WHERE status<>'archived' AND (NOT $1 OR undated)`, museumQueryArgs(f.Undated)...).Scan(&out.Total); err != nil {
 			return out, err
 		}
-	} else if err := r.db.QueryRow(ctx, "SELECT count(*)"+artworkDirectoryWhere, museumQueryArgs(args...)...).Scan(&out.Total); err != nil {
-		return out, err
+	} else {
+		where := artworkDirectoryWhere
+		if searchTable != nil {
+			where = artworkSearchDocumentWhere
+		}
+		if err := r.db.QueryRow(ctx, "SELECT count(*)"+where, museumQueryArgs(args...)...).Scan(&out.Total); err != nil {
+			return out, err
+		}
 	}
 	args = append(args, f.Cursor != "", c.Title, c.ID, f.Limit+1)
-	rows, err := r.db.Query(ctx, artworkDirectoryPageSQL, museumQueryArgs(args...)...)
+	query := artworkDirectoryPageSQL
+	if searchTable != nil {
+		query = artworkDocumentPageSQL
+		if artworkSearchTrigram.MatchString(f.Query) {
+			query = artworkDocumentSearchPageSQL
+		}
+	} else if artworkSearchTrigram.MatchString(f.Query) {
+		query = artworkDirectorySearchPageSQL
+	}
+	rows, err := r.db.Query(ctx, query, museumQueryArgs(args...)...)
 	if err != nil {
 		return out, err
 	}

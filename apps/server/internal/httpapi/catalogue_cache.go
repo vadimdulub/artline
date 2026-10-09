@@ -10,6 +10,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/vadimdulub/artline/apps/server/internal/catalog"
 )
 
 const catalogueCacheBytes = 16 << 20
@@ -21,15 +23,26 @@ type catalogueCacheEntry struct {
 	expires time.Time
 }
 
-// Only bounded discovery reads are cached. Details, SEO, member and editor
-// routes retain their existing behavior and all browser responses stay private.
+// Cache only bounded public catalogue reads. Member/auth paths are excluded;
+// browser responses remain private and every lookup checks the current revision.
 func cacheableCataloguePath(path string) bool {
 	switch path {
-	case "/api/v1/artworks", "/api/v1/timeline", "/api/v1/timeline/facets", "/api/v1/painters/options",
+	case "/api/v1/artists", "/api/v1/museums", "/api/v1/seo/artists", "/api/v1/seo/sitemaps", "/api/v1/artworks", "/api/v1/timeline", "/api/v1/timeline/facets", "/api/v1/painters/options",
 		"/api/v1/books", "/api/v1/books/authors", "/api/v1/books/facets",
 		"/api/v1/events", "/api/v1/events/facets", "/api/v1/atlas",
 		"/api/v1/atlas/presets", "/api/v1/atlas/geography", "/api/v1/atlas/creators":
 		return true
+	}
+	parts := strings.Split(strings.TrimPrefix(path, "/api/v1/"), "/")
+	if strings.HasPrefix(path, "/api/v1/") {
+		if len(parts) >= 2 && (parts[0] == "artists" || parts[0] == "museums") && validArtistSlug(parts[1]) {
+			if len(parts) == 2 || (len(parts) == 3 && parts[2] == "works") || (len(parts) == 4 && parts[2] == "works" && museumIDPattern.MatchString(parts[3])) {
+				return true
+			}
+		}
+		if len(parts) == 4 && parts[0] == "seo" && parts[1] == "sitemaps" && catalog.ValidSitemapShard(parts[2], parts[3]) {
+			return true
+		}
 	}
 	return false
 }
@@ -135,6 +148,7 @@ func (api *API) cacheCatalogue(cache *catalogueCache, next http.Handler) http.Ha
 		// Transactional catalogue triggers invalidate imports and edits on every
 		// instance. Cluster maintenance and member sessions leave this revision
 		// unchanged. The one-minute TTL also bounds time-derived display states.
+		r = r.WithContext(catalog.WithCatalogueRevision(r.Context(), snapshot))
 		query := r.URL.Query()
 		query.Del("fit")     // Client interaction state; no handler filters by it.
 		query.Del("preview") // Legacy visibility parameters no longer change reads.
@@ -153,6 +167,7 @@ func (api *API) cacheCatalogue(cache *catalogueCache, next http.Handler) http.Ha
 				case <-pending:
 					continue
 				case <-r.Context().Done():
+					catalogueBusy(w)
 					return
 				}
 			}

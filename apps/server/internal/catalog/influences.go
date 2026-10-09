@@ -30,11 +30,38 @@ func (r *Repository) artistInfluences(ctx context.Context, id string) ([]Influen
 	if err := rows.Err(); err != nil {
 		return nil, err
 	}
+	if len(result) == 0 {
+		return result, nil
+	}
+	ids := make([]string, len(result))
+	positions := make(map[string]int, len(result))
 	for i := range result {
-		result[i].Citations, err = r.entityCitations(ctx, "influence", result[i].ID)
-		if err != nil {
+		ids[i] = result[i].ID
+		positions[result[i].ID] = i
+		result[i].Citations = []Citation{}
+	}
+	// Scope every citation lookup to the at-most-40 returned claims in one query.
+	rows, err = r.db.Query(ctx, `SELECT selected.id::text,e.field_name,e.name,e.source_url,e.evidence_note
+ FROM unnest($1::uuid[]) WITH ORDINALITY selected(id,n)
+ CROSS JOIN LATERAL (
+  SELECT c.field_name,s.name,c.source_url,s.priority,
+  CASE WHEN $2 THEN '' ELSE coalesce(c.evidence_note,'') END AS evidence_note
+  FROM citations c JOIN sources s ON s.id=c.source_id AND s.is_active
+  WHERE c.entity_type='influence' AND c.entity_id=selected.id
+  ORDER BY c.field_name,s.priority LIMIT 100
+ ) e ORDER BY selected.n,e.field_name,e.priority`, ids, publicRead(ctx))
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var id string
+		var c Citation
+		if err = rows.Scan(&id, &c.FieldName, &c.SourceName, &c.SourceURL, &c.EvidenceNote); err != nil {
 			return nil, err
 		}
+		i := positions[id]
+		result[i].Citations = append(result[i].Citations, c)
 	}
-	return result, nil
+	return result, rows.Err()
 }
