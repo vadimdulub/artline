@@ -11,7 +11,7 @@
 .mobile-navigation nav a:hover{background:var(--stone)}
 .mobile-navigation nav a[aria-current]{background:var(--ink);color:var(--paper)}
 .mobile-navigation nav svg{width:22px;height:22px;flex-shrink:0}
-.mobile-navigation nav a[href="/account"],.mobile-navigation nav a[href="/art-history-timeline"]{border-top:1px solid var(--line);margin-top:8px;border-top-left-radius:0;border-top-right-radius:0}
+.mobile-navigation nav a[href="/account"]{border-top:1px solid var(--line);margin-top:8px;border-top-left-radius:0;border-top-right-radius:0}
 
 @media(max-width:760px){
   :root{--site-header-height:108px;--page-gutter:16px;--page:calc(100% - 32px)}
@@ -20,9 +20,7 @@
   .site-header[data-member]>.site-brand{grid-column:1;grid-row:1}
   .site-header .wordmark{min-height:44px;display:flex;align-items:center}
   .site-header .wordmark-logo{width:124px;height:auto}
-  .site-header .wordmark small,.site-header[data-member] .header-aside,.site-header[data-member] .primary-nav a.account-menu-link{display:none}
-  body>.site-header[data-member] .primary-nav{grid-column:1/-1;grid-row:2;gap:4px;padding:3px;min-width:0}
-  body>.site-header[data-member] .primary-nav a{min-height:44px;min-width:0;padding:8px 10px;font-size:14px}
+  .site-header .wordmark small,.site-header[data-member] .header-aside{display:none}
   .site-header .mobile-menu-toggle{grid-column:2;grid-row:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 10px;border:0;background:transparent;color:var(--paper);font-size:14px}
   .mobile-menu-toggle svg{width:22px;height:22px}
   body>.member-sidebar{display:none}

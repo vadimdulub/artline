@@ -9,7 +9,8 @@ export function generateMetadata() {
 // This guide describes the tools, without embedding catalogue records.
 export default function ArtHistoryTimelinePage() {
   return <main id="main-content" className="admin-page prose-page">
-    <StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Art history timeline", path: "/art-history-timeline" }])} />
+    <StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Guides", path: "/guides" }, { name: "Art history timeline", path: "/art-history-timeline" }])} />
+    <nav aria-label="Breadcrumb"><Link href="/guides">Guides</Link></nav>
     <h1>Explore art history through time</h1>
     <p>An art history timeline helps you ask what was happening at the same time: which artists’ lives overlapped, when a work was made, and which books or historical events belong beside it. Artline brings these routes together so you can move from a broad period to an individual record and its sources.</p>
     <p><Link href="/">Open the interactive art history timeline</Link>, or start with the <Link href="/artists">artist directory</Link>.</p>

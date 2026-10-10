@@ -8,7 +8,7 @@ test("Account opens account settings and keeps the panel across collection navig
   page.on("request", req => { if (req.url().endsWith("/api/auth/session")) sessionRequests++; });
   await page.goto("/");
   const header = page.locator(".site-header");
-  const account = header.getByRole("link", { name: "Account", exact: true });
+  const account = header.getByRole("link", { name: "Your account", exact: true });
   const panel = page.getByRole("complementary", { name: "Account navigation" });
   await expect(header.getByRole("link", { name: "Your account", exact: true })).toBeVisible();
   await expect(header).not.toContainText("A personal study atlas");
@@ -43,11 +43,11 @@ test("the account panel is absent from every public explorer tab", async ({ page
   const panel = page.getByRole("complementary", { name: "Account navigation" });
   await expect(panel).toBeVisible();
   await panel.getByRole("button", { name: "Collapse account panel" }).click();
-  for (const name of ["Painters", "Books", "Events", "All"]) {
+  for (const name of ["Painters", "Books", "Events", "All", "Guides"]) {
     await header.getByRole("link", { name, exact: true }).click();
     await expect(panel).toHaveCount(0);
     await expect(page.locator("body")).toHaveCSS("padding-left", "0px");
-    await header.getByRole("link", { name: "Account", exact: true }).click();
+    await header.getByRole("link", { name: "Your account", exact: true }).click();
     await expect(page).toHaveURL(/\/account$/);
     await expect(panel.getByRole("navigation")).toBeVisible();
     await expect(panel).toHaveAttribute("data-collapsed", "true");
@@ -110,7 +110,7 @@ for (const width of [1440, 1024, 768]) {
     await page.keyboard.press("Escape");
     await expect(panel).toHaveAttribute("data-collapsed", "true");
     await expect(panel.getByRole("navigation")).toBeVisible();
-    await expect(header.getByRole("link", { name: "Account", exact: true })).toBeFocused();
+    await expect(header.getByRole("link", { name: "Your account", exact: true })).toBeFocused();
   });
 }
 
@@ -122,10 +122,10 @@ test("signed-out and expired sessions have no account panel", async ({ page }) =
   await page.evaluate(() => window.dispatchEvent(new Event("focus")));
   await expect(page.locator(".member-sidebar")).toHaveCount(0);
   const header = page.locator(".site-header");
-  await expect(header.getByRole("link", { name: "Account", exact: true })).toHaveAttribute("href", "/account");
-  await expect(header.getByRole("link", { name: "About this atlas" })).toBeVisible();
+  await expect(header.getByRole("link", { name: "Your account", exact: true })).toHaveAttribute("href", "/account");
+  await expect(header.getByRole("link", { name: "Guides", exact: true })).toBeVisible();
   await expect(page.locator("body")).toHaveCSS("padding-left", "0px");
-  await header.getByRole("link", { name: "Account", exact: true }).click();
+  await header.getByRole("link", { name: "Your account", exact: true }).click();
   await expect(page.getByRole("button", { name: "Sign in with Google" })).toBeVisible();
 });
 

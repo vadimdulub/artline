@@ -15,7 +15,7 @@ test("women artists filter is available in production", async ({ page }) => {
   await expect(page.getByRole("checkbox", { name: "Top 100 painters", exact: true })).not.toBeChecked();
   await expect(page.locator(".timeline-counter")).toContainText("535 painters");
   await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link"))
-    .toHaveText(["Painters", "Books", "Events", "All"]);
+    .toHaveText(["Painters", "Books", "Events", "All", "Guides"]);
 });
 
 test("book catalogue and sourced event description are delivered", async ({ page }) => {

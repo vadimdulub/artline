@@ -5,6 +5,7 @@ import { discoveryRequest } from "../seo-api";
 import { GET as index } from "../../app/sitemap.xml/route";
 import { GET as shard } from "../../app/[sitemapFile]/route";
 import { generateMetadata as guideMetadata } from "../../app/art-history-timeline/page";
+import { generateMetadata as guidesMetadata } from "../../app/guides/page";
 
 beforeEach(() => {
   vi.stubEnv("ARTLINE_SITE_URL", "https://artline.example");
@@ -30,7 +31,10 @@ it("advertises public pages and artworks while omitting member pages", async () 
   const pages = await (await request("sitemap-pages.xml")).text();
   expect(pages).toContain("<loc>https://artline.example/</loc>");
   expect(pages).toContain("<loc>https://artline.example/art-history-timeline</loc>");
+  expect(pages).toContain("<loc>https://artline.example/guides</loc>");
   expect(guideMetadata().robots).toMatchObject({ index: true });
+  expect(guidesMetadata().alternates).toMatchObject({ canonical: "https://artline.example/guides" });
+  expect(guidesMetadata().robots).toMatchObject({ index: true });
   expect(pages).not.toContain("/museums");
   vi.mocked(discoveryRequest).mockResolvedValueOnce({ items: [{ path: "/artists/giotto", name: "Giotto" }] });
   expect(await (await request("sitemap-artists-abc.xml")).text()).toContain("/artists/giotto");

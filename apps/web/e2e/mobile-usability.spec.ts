@@ -10,7 +10,7 @@ for (const width of [320, 390, 430]) {
     const header = page.locator(".site-header");
     await expect(page.locator("body")).toHaveCSS("padding-left", "0px");
     await expect(page.locator(".member-sidebar")).toBeHidden();
-    await expect(header.getByRole("link", { name: "Account", exact: true })).toBeHidden();
+    await expect(header.getByRole("link", { name: "Your account", exact: true })).toBeHidden();
     expect((await header.boundingBox())!.height).toBeLessThanOrEqual(112);
     for (const link of await header.locator(".primary-nav a:visible").all()) {
       expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
@@ -75,6 +75,8 @@ test("phone filters stay attached to their labels and clearing does not open the
   await countries.getByRole("button", { name: "Done", exact: true }).click();
   await page.getByRole("button", { name: "Close filters", exact: true }).click();
   await expect(filters).toBeFocused();
+  // Active filter chips are inside the expandable phone controls.
+  await filters.click();
   await page.getByRole("button", { name: "Remove France filter", exact: true }).click();
   await expect(page).not.toHaveURL(/country=FR/);
   await expect(page.getByRole("searchbox").first()).not.toBeFocused();
@@ -92,5 +94,5 @@ test("menu releases its scroll lock when rotating into the desktop layout", asyn
   await page.setViewportSize({ width: 1024, height: 768 });
   await expect(page.getByRole("dialog", { name: "Explore Artline" })).toBeHidden();
   await expect(page.locator("body")).not.toHaveCSS("overflow", "hidden");
-  await expect(page.locator(".site-header").getByRole("link", { name: "Account", exact: true })).toBeVisible();
+  await expect(page.locator(".site-header").getByRole("link", { name: "Your account", exact: true })).toBeVisible();
 });

@@ -9,7 +9,7 @@ for (const width of [1440, 390, 320]) {
       await page.goto(route);
       const controls = page.locator(".atlas-filter-system");
       await expect(controls).toBeVisible();
-      await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link")).toHaveText(["Painters", "Books", "Events", "All"]);
+      await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link")).toHaveText(["Painters", "Books", "Events", "All", ...(width > 760 ? ["Guides"] : [])]);
       expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
       const search = controls.getByRole("searchbox");
       await page.keyboard.press("/"); await expect(search).toBeFocused();

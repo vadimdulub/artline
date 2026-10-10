@@ -7,11 +7,11 @@ import { NavigationIcon } from "./MemberNavigation";
 import { lockBodyScroll } from "@/lib/modal-scroll";
 
 const links = [
+  { href: "/guides", label: "Guides", icon: "guide" },
   { href: "/artists", label: "Artists", icon: "artists" },
   { href: "/artworks", label: "Artworks", icon: "artworks" },
   { href: "/museums", label: "Museums", icon: "museum" },
   { href: "/account", label: "Your account", icon: "user" },
-  { href: "/art-history-timeline", label: "Art history guide", icon: "guide" },
   { href: "/about", label: "About & sources", icon: "about" },
 ];
 
@@ -53,7 +53,7 @@ export function MobileNavigation() {
         // A member link may open sign-in above this menu. Keep its return focus target.
         if (!event.defaultPrevented && event.target instanceof Element && event.target.closest("a")) setOpen(false);
       }}>
-        {links.map(link => <Link key={link.href} href={link.href} prefetch={false} aria-current={pathname === link.href || pathname.startsWith(`${link.href}/`) ? "page" : undefined}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}
+        {links.map(link => <Link key={link.href} href={link.href} prefetch={false} aria-current={pathname === link.href || pathname.startsWith(`${link.href}/`) || (link.href === "/guides" && pathname === "/art-history-timeline") ? "page" : undefined}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}
       </nav>
     </dialog>}
   </>;

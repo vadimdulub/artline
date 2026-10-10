@@ -5,7 +5,7 @@ async function start(page:Page){await page.goto('/all');await page.getByRole('bu
 for(const width of [1440,390,320])test(`empty canvas, navigation and accessibility at ${width}`,async({page},info)=>{
  await page.setViewportSize({width,height:900});const requests:string[]=[];page.on('request',r=>{if(r.url().includes('/api/backend/v1/atlas?'))requests.push(r.url())});await page.goto('/all');
  await expect(page.getByRole('button',{name:'The First World War',exact:true})).toBeVisible();expect(requests).toEqual([]);
- await expect(page.getByRole('navigation',{name:'Primary navigation'}).getByRole('link')).toHaveText(['Painters','Books','Events','All']);
+ await expect(page.getByRole('navigation',{name:'Primary navigation'}).getByRole('link')).toHaveText(['Painters','Books','Events','All',...(width>760?['Guides']:[])]);
  await expect(page.locator('.all-lane')).toHaveCount(0);await expect(page.getByRole('heading',{name:'Explore the entries'})).toHaveCount(0);await expect(page.getByRole('button',{name:'Add to atlas',exact:true})).toHaveCount(0);await expect(page.locator('.site-footer')).toBeHidden();
  await expect(page.locator('.all-period-filter input[type=radio]')).toHaveCount(32);
  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollHeight)).toBeLessThanOrEqual(900);expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
