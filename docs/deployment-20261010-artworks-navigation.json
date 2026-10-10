@@ -1,0 +1,77 @@
+{
+  "verifiedAt": "2026-10-10T18:12:03.658189+00:00",
+  "site": "https://artlines.org",
+  "change": "Add Artworks immediately after Artists and before Museums in desktop member navigation and the mobile menu.",
+  "behavior": [
+    "Artworks links to the existing public /artworks catalogue.",
+    "Member account panel remains present on /artworks and highlights the active link, including collapsed and reloaded state.",
+    "Mobile collection links remain grouped together; separators now select destinations rather than item positions.",
+    "Museums still prompts signed-out visitors to sign in and retains the destination."
+  ],
+  "sourceCommit": "58704ee731adc9a3a2593154fdbcb5ca7480829d",
+  "implementationCommits": [
+    "8b442eef4c37140f6584390cf130f0b0ec615bf4",
+    "58704ee731adc9a3a2593154fdbcb5ca7480829d"
+  ],
+  "files": [
+    "apps/web/components/MemberNavigation.tsx",
+    "apps/web/components/MobileNavigation.tsx",
+    "apps/web/components/SiteHeader.tsx",
+    "apps/web/app/mobile.css"
+  ],
+  "scope": "Navigation-only release on the previously deployed committed source. Concurrent pending bookmark and other workspace edits were preserved and excluded.",
+  "build": {
+    "id": "4f1ef255-dd38-42a2-9530-bca8a4744ea8",
+    "status": "SUCCESS",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:16c94410c20a1b127c521ec81a49c1c988dd5c6937db03d32195c8a33cd8c595",
+    "sourceBaseCommit": "e211d9050df6fe4872bd9fbd55f3812a68dbec20",
+    "overlayFiles": [
+      "apps/web/app/globals.css",
+      "apps/web/app/mobile.css",
+      "apps/web/components/AtlasFilters.tsx",
+      "apps/web/components/EventsTimeline.tsx",
+      "apps/web/components/MemberNavigation.tsx",
+      "apps/web/components/MobileNavigation.tsx",
+      "apps/web/components/SiteHeader.tsx",
+      "apps/web/components/TimelineExplorer.tsx",
+      "apps/web/e2e/compact-filters.spec.ts"
+    ],
+    "sourceNote": "Reused the generation-pinned source archive from the preceding release, with every changed web file overlaid from the committed Git source. Nine overlay files were byte-verified.",
+    "replacedBuild": "f66947f7-53ec-4f63-9b72-9a3c4769c4c6 was cancelled before deployment to include the separator correction."
+  },
+  "deployment": {
+    "project": "artline-508319",
+    "region": "europe-west1",
+    "revision": "artline-web-artworks-nav-1010-58704ee",
+    "trafficPercent": 100,
+    "runtimeSettingsUnchanged": true,
+    "apiUnchanged": true,
+    "databaseChanges": false,
+    "terraformApply": false,
+    "localWebImagePinUpdated": true,
+    "rollbackRevision": "artline-web-compact-1010-dfe45be"
+  },
+  "validation": {
+    "scopedESLint": "passed",
+    "productionBuild": "passed",
+    "localBrowserChecks": 5,
+    "mobileChecksAfterSeparatorCorrection": 2,
+    "candidateBrowserChecks": 3,
+    "candidateHTTPChecks": 7,
+    "productionBrowserChecks": 3,
+    "productionHTTPChecks": 7,
+    "widthsPx": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "localMemberTests": "Used existing loopback-only local-debug API; no database fixtures or writes.",
+    "productionChecks": "Actual signed-out session with no auth-response interception. Public catalogue returned a bounded 24-item page; museum and bookmark login restrictions verified.",
+    "limitations": [
+      "Real Google login was not performed. Signed-in navigation was exercised locally with the API debug session.",
+      "Local artwork images were not part of this navigation verification."
+    ]
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/release-artworks-nav-20261010"
+}
