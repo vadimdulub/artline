@@ -4,6 +4,16 @@ import { useEffect, useId, useRef, useState, type ReactNode, type RefObject } fr
 import { useExplorerView } from "./ExplorerFrame";
 import { AtlasSearchField } from "./AtlasSearchField";
 
+export function focusAtlasSearch(input: HTMLInputElement | null) {
+  if (!input) return;
+  const toggle = input.closest(".atlas-filter-system")?.querySelector<HTMLButtonElement>(".atlas-filter-toggle");
+  if (toggle?.getClientRects().length && toggle.getAttribute("aria-expanded") === "false") toggle.click();
+  requestAnimationFrame(() => {
+    input.scrollIntoView({ block: "center" });
+    input.focus({ preventScroll: true });
+  });
+}
+
 export function AtlasSelect({ label, value, onChange, options }: {
   label: string; value: string; onChange: (value: string) => void; options: { value: string; label: string }[];
 }) {
@@ -23,6 +33,7 @@ export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, 
   const [expanded, setExpanded] = useState(initialExpanded);
   const view = useExplorerView();
   const fullView = view?.fullView ?? false;
+  const filterCount = activeCount + Number(Boolean(query.trim()));
   const panelID = useId();
   const toggle = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLDivElement>(null);
@@ -37,10 +48,11 @@ export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, 
     let focusFrame = 0;
     function shortcut(event: KeyboardEvent) {
       if (event.defaultPrevented || event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey || document.querySelector("dialog[open]")) return;
-      if (!fullView && !searchRef.current?.getClientRects().length) return;
+      const compact = fullView || window.matchMedia("(max-width: 760px)").matches;
+      if (compact ? !toggle.current?.getClientRects().length : !searchRef.current?.getClientRects().length) return;
       if (event.target instanceof Element && event.target.closest("input,textarea,select,[contenteditable]")) return;
       event.preventDefault();
-      if (fullView) setExpanded(true);
+      if (compact) setExpanded(true);
       focusFrame = requestAnimationFrame(() => searchRef.current?.focus());
     }
     window.addEventListener("keydown", shortcut);
@@ -52,7 +64,7 @@ export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, 
     <AtlasSearchField className="search-field" inputRef={searchRef} label={searchLabel ?? "Search"} placeholder={placeholder} value={query} onChange={onQuery} shortcut />
     {actions ? <div className="atlas-search-actions">{actions}{resetButton}</div> : resetButton}
     <div className="atlas-view-tools">
-      <button ref={toggle} type="button" className="atlas-filter-toggle" aria-label="Filters" aria-expanded={expanded} aria-controls={panelID} onClick={() => setExpanded(value => !value)}><span>Filters{activeCount > 0 && <span className="atlas-filter-count">{activeCount}</span>}</span><span>{expanded ? "Hide" : "Show"}<span aria-hidden="true">{expanded ? "−" : "+"}</span></span></button>
+      <button ref={toggle} type="button" className="atlas-filter-toggle" aria-label="Filters" aria-expanded={expanded} aria-controls={panelID} onClick={() => setExpanded(value => !value)}><span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14M7 3v4m6 1v4m-7 1v4" /></svg>Filters{filterCount > 0 && <span className="atlas-filter-count">{filterCount}</span>}</span><span>{expanded ? "Hide" : "Show"}<span aria-hidden="true">{expanded ? "−" : "+"}</span></span></button>
       {view && <button type="button" className="atlas-full-view" aria-pressed={fullView} title={fullView ? "Restore the header and filters (Esc)" : "Hide the header and filters for more space"} onClick={() => { setExpanded(false); view.setFullView(!fullView); }}>
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={fullView ? "M3 7h4V3m6 0v4h4M3 13h4v4m6 0v-4h4" : "M7 3H3v4m10-4h4v4M3 13v4h4m6 0h4v-4"}/></svg>
         {fullView ? "Exit full view" : "Full view"}

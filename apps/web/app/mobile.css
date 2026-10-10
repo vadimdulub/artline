@@ -29,17 +29,19 @@
   html body:has(>.member-sidebar[data-collapsed]){padding-left:0}
   html body:has(>.member-sidebar[data-collapsed])>.site-header[data-member]{margin-left:0}
 
-  /* Search gets the full line; secondary tools share one 48px row. */
+  /* One toolbar keeps search and filter controls out of the content's way. */
   .atlas-filter-system[data-view-controls]{grid-template-columns:minmax(0,1fr) auto}
-  .atlas-filter-system[data-view-controls]>.search-field{grid-column:1/-1;grid-row:1;padding:0 16px;border-radius:0}
-  .atlas-filter-system[data-view-controls]>.search-field>input{min-height:52px}
-  .atlas-filter-system[data-view-controls]>.atlas-view-tools{grid-column:1;grid-row:2;min-width:0}
-  .atlas-filter-system[data-view-controls]>.reset-button{grid-column:2;grid-row:2;min-height:48px;border-bottom:0;padding:8px 12px}
-  .atlas-filter-system .atlas-filter-toggle{min-height:48px;padding:8px 16px;font-size:14px}
-  .atlas-filter-system .atlas-filter-toggle>span:last-child{display:none}
-  .atlas-filter-system .atlas-full-view{min-height:48px;padding:8px 12px}
+  .atlas-filter-system[data-view-controls]>.search-field{grid-column:1/-1;grid-row:2;padding:0 16px;border-radius:0}
+  .atlas-filter-system[data-view-controls]>.search-field>input{min-height:44px}
+  .atlas-filter-system[data-view-controls]>.atlas-view-tools{grid-column:1/-1;grid-row:1;min-width:0}
+  .atlas-filter-system[data-view-controls]>.reset-button{grid-column:1/-1;grid-row:3;min-height:44px;border-bottom:0;padding:8px 16px;text-align:right}
+  .atlas-filter-system .atlas-filter-toggle{min-height:44px;padding:8px 16px;font-size:14px}
+  .atlas-filter-system[data-expanded=false] .atlas-filter-toggle>span:last-child{display:none}
+  .atlas-filter-system .atlas-full-view{min-height:44px;padding:8px 12px}
   .atlas-filter-system .atlas-search-actions{grid-column:1/-1;grid-row:3;justify-content:flex-end;border-top:1px solid var(--line)}
-  .atlas-filter-system:has(>.atlas-search-actions)>.atlas-view-tools{grid-column:1/-1}
+  .atlas-filter-system[data-expanded=false]>:not(.atlas-view-tools){display:none}
+  .atlas-filter-system[data-expanded=false]~.active-filters{display:none}
+  .atlas-filter-system>.atlas-filter-row{grid-row:4}
   .atlas-search>.search-clear{width:44px}
 
   /* Inline choices stay attached to their labels and move with the keyboard. */
@@ -85,5 +87,5 @@
   .explorer[data-full-view=true]>.atlas-filter-system>.search-field{grid-row:2}
   .explorer[data-full-view=true]>.atlas-filter-system>.reset-button{grid-column:1/-1;grid-row:3;border-top:1px solid var(--line)}
   .explorer[data-full-view=true]>.atlas-filter-system>.atlas-search-actions{grid-row:3}
-  .explorer[data-full-view=true]{padding-top:calc(48px + env(safe-area-inset-top))}
+  .explorer[data-full-view=true]{padding-top:calc(44px + env(safe-area-inset-top))}
 }

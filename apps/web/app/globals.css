@@ -717,12 +717,25 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .atlas-select:hover{background:var(--white)}
 .atlas-select select:focus-visible{outline-offset:2px}
 @media(min-width:761px){
-  .explorer>.atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary{min-height:52px;padding-block:4px;row-gap:2px}
-  .explorer>.atlas-filter-system .atlas-select{min-height:52px;padding-block:4px;gap:2px}
-  .explorer>.atlas-filter-system .popular-filter-control{padding-block:4px}
-  .explorer>.active-filters{padding-block:4px}
+  .atlas-filter-system>.search-field{min-height:38px;padding-inline:14px}
+  .atlas-filter-system>.search-field>input{min-height:38px;padding-block:4px;font-size:14px}
+  .atlas-filter-system>.search-field>.search-clear{min-height:36px}
+  .atlas-filter-system>.reset-button,.atlas-filter-system .atlas-search-actions>.reset-button{min-height:38px;padding:6px 14px;font-size:12px}
+  .atlas-filter-system .atlas-full-view{min-height:38px;padding:6px 14px;font-size:12px}
+  .atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary{min-height:40px;padding:4px 12px;row-gap:0}
+  .atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>span:first-child,.atlas-filter-system .atlas-select>span{font-size:11px;line-height:13px}
+  .atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>strong{font-size:13px;line-height:18px}
+  .atlas-filter-system .atlas-select{min-height:40px;padding:4px 12px;gap:0}
+  .atlas-filter-system .atlas-select select{min-height:18px;font-size:13px;line-height:18px}
+  .atlas-filter-system .popular-filter-control{min-height:40px;padding:4px 12px}
+  .atlas-filter-system .popular-filter{min-height:30px}
+  .atlas-filter-system .popular-filter>span{font-size:12px}
+  .atlas-filter-system .popular-filter input{width:16px;height:16px}
+  .active-filters{gap:4px 6px;padding:3px 14px}
+  .active-filters button{min-height:26px;padding:3px 9px;font-size:12px;line-height:18px}
 }
 .atlas-filter-toggle,.atlas-filter-close{display:none}
+.atlas-filter-toggle>span>svg{width:16px;height:16px;flex-shrink:0}
 @media(max-width:760px){
   :root{--page-gutter:18px}
   .atlas-page-heading{align-items:flex-start;flex-direction:column;gap:16px;margin-bottom:24px}

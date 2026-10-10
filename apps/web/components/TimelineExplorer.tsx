@@ -11,7 +11,7 @@ import { LoadingIndicator } from "./LoadingIndicator";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { TimelineOverview } from "./TimelineOverview";
 import { TimelineFilterSuggestions } from "./TimelineFilterSuggestions";
-import { AtlasFilters, ActiveFilters } from "./AtlasFilters";
+import { AtlasFilters, ActiveFilters, focusAtlasSearch } from "./AtlasFilters";
 import { TimelineGrid, TimelineLanes, TimelineMark } from "./TimelineGrid";
 import { TimelineRangeControls } from "./TimelineRangeControls";
 import { TimelineZoomOut } from "./TimelineZoomOut";
@@ -130,8 +130,7 @@ export function TimelineExplorer() {
     change({ start: String(from), end: String(to) });
   }
   function focusSearch() {
-    searchInput.current?.scrollIntoView({ block: "center" });
-    searchInput.current?.focus({ preventScroll: true });
+    focusAtlasSearch(searchInput.current);
   }
   function selectPeriod(a: number, b: number) {
     if (isCurrentPeriod({ start_year: a, end_year: b }, start, end)) {

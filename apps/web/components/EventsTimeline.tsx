@@ -1,4 +1,5 @@
 "use client";
+import { focusAtlasSearch } from "./AtlasFilters";
 import { displayMetadata } from "@/lib/display-metadata";
 
 import { useEffect, useRef, useState } from "react";
@@ -30,7 +31,7 @@ export function EventsTimeline({ data, metadata, range, loading, error, selected
   const suggestions = (data?.suggested_filters ?? []).map(suggestion => ({ ...suggestion, name: `${filterNames[suggestion.key]}: ${suggestion.name}` }));
   const currentPeriod = (start: number, end: number) => start === end || start === range.start && end === range.end;
   const needsFilter = Boolean(data?.density.length && data.density.every(p => currentPeriod(p.start_year, p.end_year)));
-  const focusFilters = () => document.querySelector<HTMLInputElement>('input[aria-label="Find an event"]')?.focus();
+  const focusFilters = () => focusAtlasSearch(stage.current?.closest(".explorer")?.querySelector<HTMLInputElement>('.atlas-filter-system input[type="search"]') ?? null);
   const bounds = metadata?.bounds ?? { start: -12000, end: 2000 };
   // Keep invalid shared URLs out of chart geometry while the server reports them.
   const validRange = Number.isInteger(range.start) && Number.isInteger(range.end) && range.start !== 0 && range.end !== 0 && range.start >= bounds.start && range.end <= bounds.end && range.start < range.end;
