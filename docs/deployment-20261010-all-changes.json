@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-10",
+  "site": "https://artlines.org",
+  "sourceCommit": "099e008ae609edc26578e0fa7fa366935cc8c706",
+  "sourcePushedTo": "origin/master",
+  "services": {
+    "api": {
+      "build": "3bd747ae-70ef-4b18-b02b-f9edfbcd0204",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:f868d1767affb590be1fbf9781b331bd96278bcd51a93620b59ff22fb9c2e75a",
+      "revision": "artline-api-all-1010-099e008",
+      "publicTrafficPercent": 100,
+      "previousRevision": "artline-api-performance2-1009-0850",
+      "runtimeConfigurationPreserved": true
+    },
+    "web": {
+      "build": "a57991de-bae7-4f77-ae39-fee2b36d5922",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:964f2f02e859470f16d401b98dcd1cba74075924534142b9ecb1f9eb9ad401fd",
+      "revision": "artline-web-all-1010-099e008",
+      "publicTrafficPercent": 100,
+      "previousRevision": "artline-web-performance2-1009-0850",
+      "runtimeConfigurationPreserved": true
+    }
+  },
+  "databaseBackup": {
+    "id": "1791631546053",
+    "status": "SUCCESSFUL"
+  },
+  "migration": "0043_member_bookmarks.sql",
+  "apiStartupMigrationCheckPassed": true,
+  "catalogueImportsPerformed": false,
+  "databaseFixturesCreated": false,
+  "realLocalDatabaseModified": false,
+  "terraformApply": false,
+  "iamChanges": false,
+  "laterConcurrentEditsExcluded": true,
+  "verification": {
+    "webUnitTestsPassed": 315,
+    "webLint": "passed",
+    "goMemberAndHTTPRaceTests": "passed",
+    "goSuiteWithoutFiveArchiveDependentTests": "passed",
+    "candidateAPIChecksPassed": 11,
+    "candidateWebHTTPChecksPassed": 6,
+    "candidateControlledBrowserTestsPassed": 5,
+    "candidateRealDataBrowserTestsPassed": 5,
+    "publicDomainBrowserTestsPassed": 5,
+    "publicDomainHTTPChecksPassed": 10,
+    "mobileScreenshotsInspected": true
+  },
+  "limitations": [
+    "Five legacy ingestion tests require absent archived research JSON inputs.",
+    "Signed-in Google OAuth and production bookmark writes were not exercised.",
+    "Functional spot checks do not establish sustained-load capacity."
+  ],
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/release-all-20261010"
+}
