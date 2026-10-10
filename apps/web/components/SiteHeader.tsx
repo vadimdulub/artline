@@ -8,7 +8,7 @@ import { MemberNavigation, NavigationIcon } from "./MemberNavigation";
 import { MobileNavigation } from "./MobileNavigation";
 import "./SiteNavigation.css";
 
-const accountRoutes = ["/bookmarks", "/artists", "/museums", "/account", "/art-history-timeline", "/about", "/membership-preview"];
+const accountRoutes = ["/bookmarks", "/artists", "/artworks", "/museums", "/account", "/art-history-timeline", "/about", "/membership-preview"];
 const panelPreferenceKey = "artline:account-panel-collapsed";
 export function SiteHeader() {
   const pathname = usePathname();

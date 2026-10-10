@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const groups = [
   { label: "Your collection", links: [{ href: "/bookmarks", label: "Bookmarks", icon: "star" }] },
-  { label: "Explore", links: [{ href: "/artists", label: "Artists", icon: "artists" }, { href: "/museums", label: "Museums", icon: "museum" }] },
+  { label: "Explore", links: [{ href: "/artists", label: "Artists", icon: "artists" }, { href: "/artworks", label: "Artworks", icon: "artworks" }, { href: "/museums", label: "Museums", icon: "museum" }] },
   { label: "Resources", links: [{ href: "/art-history-timeline", label: "Art history guide", icon: "guide" }, { href: "/about", label: "About & sources", icon: "about" }] },
 ];
 
@@ -16,6 +16,7 @@ export function NavigationIcon({ kind }: { kind: string }) {
     menu: <><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M9 4v16" /></>,
     chevron: <path d="m14 6-6 6 6 6" />,
     artists: <><rect x="4" y="3" width="16" height="18" rx="1" /><circle cx="12" cy="9" r="2.5" /><path d="M7 18a5 5 0 0 1 10 0" /></>,
+    artworks: <><rect x="3" y="3" width="18" height="18" rx="1" /><circle cx="8" cy="8" r="1.5" /><path d="m3 17 5-5 4 4 4-6 5 7" /></>,
     museum: <><path d="m3 8 9-5 9 5ZM3 21h18M5 10v8m7-8v8m7-8v8" /></>,
     guide: <><path d="M12 5v16M3 4h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z" /></>,
     about: <><circle cx="12" cy="12" r="9" /><path d="M12 11v6m0-10v1" /></>,

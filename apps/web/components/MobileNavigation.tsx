@@ -8,6 +8,7 @@ import { lockBodyScroll } from "@/lib/modal-scroll";
 
 const links = [
   { href: "/artists", label: "Artists", icon: "artists" },
+  { href: "/artworks", label: "Artworks", icon: "artworks" },
   { href: "/museums", label: "Museums", icon: "museum" },
   { href: "/bookmarks", label: "Bookmarks", icon: "star" },
   { href: "/account", label: "Your account", icon: "user" },
