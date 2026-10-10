@@ -15,9 +15,11 @@ Signed-out saves retain the selected record and destination through sign-in.
 ## Storage and release
 
 Migration `0044_member_book_event_bookmarks.sql` adds member/book and member/event
-foreign keys, idempotent primary keys and paging indexes. Apply it through the
-normal release process before serving this API in persistent member mode. It has
-not been applied to the real local database; no deployment was performed.
+foreign keys, idempotent primary keys and paging indexes. It was applied in
+production after a successful Cloud SQL backup, before switching traffic to the
+new API and web revisions. It has not been applied to the real local database.
+See the [deployment receipt](deployment-20261010-bookmark-stars.json) for pinned
+images, build IDs, verification and rollback revisions.
 
 The local API runs with `-skip-migrations`, read-only PostgreSQL connections and
 loopback-only local-debug access. Local saves live only in memory. Book visibility

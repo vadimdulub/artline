@@ -1,0 +1,87 @@
+{
+  "verifiedAt": "2026-10-10T19:20:17.463145+00:00",
+  "site": "https://artlines.org",
+  "change": "Align compact icon-only bookmark stars, move collection access into Account, and support private book/event saves with sign-in prompts.",
+  "sourceCommit": "6fe925bac08f6dafe68d1049bbc94fa6efaa90b4",
+  "source": "Clean git archive of the committed apps/server, apps/web and Cloud Build configurations; concurrent workspace changes excluded.",
+  "behavior": [
+    "16px stars with 44px tap targets; stars align beside detail titles and with the first line of artist names.",
+    "Account contains bookmark access; standalone header, mobile-menu and footer bookmark shortcuts removed.",
+    "Artist, artwork, book and event saving uses stars and preserves the selected record and return destination through sign-in.",
+    "Artist and artwork browsing stays public; museums and persistent private bookmarks require login.",
+    "Local-debug bookmarks remain ephemeral; no member, session or catalogue fixtures written to the real local database."
+  ],
+  "deployment": {
+    "project": "artline-508319",
+    "region": "europe-west1",
+    "services": {
+      "api": {
+        "buildId": "82441c5f-ef6b-4302-9e02-5f2916358b7d",
+        "buildStatus": "SUCCESS",
+        "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:f9f7c9141015f911aa195435f7209920aa69204bc6a51daaf8624a71f6460dc2",
+        "revision": "artline-api-stars-1010-6fe925ba",
+        "trafficPercent": 100,
+        "rollbackRevision": "artline-api-images-1010-e211d90",
+        "runtimeSettingsPreserved": true
+      },
+      "web": {
+        "buildId": "da093234-d010-4692-abbe-536d66b3ea7b",
+        "buildStatus": "SUCCESS",
+        "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:7d17fa99090ec8a03dad46f1b27c689b22b2f7024893e24c46dc069499359367",
+        "revision": "artline-web-stars-1010-6fe925ba",
+        "trafficPercent": 100,
+        "rollbackRevision": "artline-web-artworks-nav-1010-58704ee",
+        "runtimeSettingsPreserved": true
+      }
+    },
+    "terraformApply": false,
+    "localImagePinsUpdated": true
+  },
+  "database": {
+    "instance": "artline-postgres",
+    "backupId": "1791659466647",
+    "backupStatus": "SUCCESSFUL",
+    "backupOperation": "01c59d84-7a03-476d-b23e-e22d00000024",
+    "migration": "0044_member_book_event_bookmarks.sql",
+    "appliedOnCandidateStartup": true,
+    "additiveTables": [
+      "member_book_bookmarks",
+      "member_event_bookmarks"
+    ],
+    "indexesVerified": 6,
+    "foreignKeysVerified": 4,
+    "readOnlyMixedCursorChecks": 3,
+    "catalogueDataChanges": false,
+    "realLocalDatabaseChanges": false,
+    "rollback": "Route API and web traffic back to their recorded previous revisions. Leave the additive bookmark tables and migration in place to preserve any member saves."
+  },
+  "validation": {
+    "webUnitTests": 321,
+    "webESLint": "passed",
+    "productionBuild": "passed",
+    "goRacePackages": [
+      "./internal/member",
+      "./internal/events",
+      "./internal/httpapi",
+      "./internal/books"
+    ],
+    "targetedLocalBrowserChecks": 10,
+    "alignmentCenterDifferencePx": "< 0.01 at 390px and 1440px",
+    "candidateAPIHTTPChecks": 11,
+    "candidateWebHTTPChecks": 11,
+    "candidateBrowserChecks": 8,
+    "productionAPIHTTPChecks": 11,
+    "productionWebHTTPChecks": 11,
+    "productionBrowserChecks": 8,
+    "browserWidthsPx": [
+      390,
+      1440
+    ],
+    "productionChecks": "Actual signed-out sessions; no auth-response mocks, Google login or bookmark writes. Verified small icon-only stars, tap targets, alignment, login prompts, return routes, restored focus and no horizontal overflow.",
+    "limitations": [
+      "Real Google OAuth and authenticated production writes were not performed; local debug flows and backend tests cover saved states.",
+      "Production-sized member distributions and 10-million-artwork capacity still require dedicated load testing."
+    ]
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/release-bookmark-stars-20261010"
+}
