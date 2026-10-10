@@ -49,11 +49,10 @@ export function MobileNavigation() {
       }
     }}>
       <header><h2 id="mobile-navigation-title">Explore Artline</h2><button type="button" onClick={() => setOpen(false)} autoFocus aria-label="Close menu">×</button></header>
-      <nav aria-label="Explore Artline" onClick={event => {
-        // A member link may open sign-in above this menu. Keep its return focus target.
-        if (!event.defaultPrevented && event.target instanceof Element && event.target.closest("a")) setOpen(false);
-      }}>
-        {links.map(link => <Link key={link.href} href={link.href} prefetch={false} aria-current={pathname === link.href || pathname.startsWith(`${link.href}/`) || (link.href === "/guides" && pathname === "/art-history-timeline") ? "page" : undefined}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}
+      <nav aria-label="Explore Artline">
+        {/* Close on navigation, including the current page. A member sign-in
+            intercept cancels navigation and keeps the menu's focus target. */}
+        {links.map(link => <Link key={link.href} href={link.href} prefetch={false} onNavigate={() => setOpen(false)} aria-current={pathname === link.href || pathname.startsWith(`${link.href}/`) || (link.href === "/guides" && pathname === "/art-history-timeline") ? "page" : undefined}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}
       </nav>
     </dialog>}
   </>;

@@ -56,6 +56,15 @@ test("mobile visitors reach Guides and Account from the menu", async ({ page }, 
   await menuButton.click();
   await expect(menu.getByRole("link", { name: "Guides", exact: true })).toHaveAttribute("aria-current", "page");
   expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);
+  await menu.getByRole("link", { name: "Museums", exact: true }).click();
+  await expect(page.getByRole("dialog", { name: "Sign in to Artline" })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(menu.getByRole("link", { name: "Museums", exact: true })).toBeFocused();
+  await menu.getByRole("link", { name: "Guides", exact: true }).click();
+  await expect(menu).toBeHidden();
+  await expect(menuButton).toBeFocused();
+  await expect(page.locator("body")).not.toHaveCSS("overflow", "hidden");
+  await menuButton.click();
   await menu.getByRole("link", { name: "Your account", exact: true }).click();
   await expect(page).toHaveURL(/\/account$/);
   await expect(page.getByRole("button", { name: "Sign in with Google", exact: true })).toBeVisible();
