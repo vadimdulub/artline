@@ -1,0 +1,166 @@
+{
+  "verifiedAt": "2026-10-10T17:55:01.375694+00:00",
+  "site": "https://artlines.org",
+  "project": "artline-508319",
+  "region": "europe-west1",
+  "scope": [
+    "Initial pending changes committed in e211d905, including reviewed book/event image manifests and selected JPEGs, research evidence, and mobile refinements.",
+    "Compact desktop controls and collapsed mobile filters committed in dfe45be7.",
+    "Newer concurrent workspace edits were preserved and excluded from this committed release."
+  ],
+  "api": {
+    "sourceCommit": "e211d9050df6fe4872bd9fbd55f3812a68dbec20",
+    "buildId": "06d02dc0-26b3-46b8-bd52-9ab2b63b81fb",
+    "buildStatus": "SUCCESS",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:7b8e1b9a0870f65d3121e1ce7b51a76479dc5d516f997dc65b88912730f3784c",
+    "revision": "artline-api-images-1010-e211d90",
+    "traffic": [
+      {
+        "revision": "artline-api-images-1010-e211d90",
+        "percent": 100
+      }
+    ]
+  },
+  "web": {
+    "sourceCommit": "dfe45be7abe1342fdda972cefd9805fab6311782",
+    "buildId": "5ad8b5c2-74f0-452d-9c6c-928df7284b7c",
+    "buildStatus": "SUCCESS",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:2541f8c5a55fbc2dde57799fa7fbbef052925c79a78a6ad5d6c475cb360eec73",
+    "revision": "artline-web-compact-1010-dfe45be",
+    "traffic": [
+      {
+        "revision": "artline-web-compact-1010-dfe45be",
+        "percent": 100
+      }
+    ]
+  },
+  "webBuildSource": {
+    "baseCommit": "e211d9050df6fe4872bd9fbd55f3812a68dbec20",
+    "baseArchive": "gs://artline-508319-build-source/source/1791653254.502112-e4e7ae4f7cbc498290ce5bc04ede86bc.tgz#1791653627926270",
+    "overlayCommit": "dfe45be7abe1342fdda972cefd9805fab6311782",
+    "overlayFiles": [
+      "apps/web/app/globals.css",
+      "apps/web/app/mobile.css",
+      "apps/web/components/AtlasFilters.tsx",
+      "apps/web/components/EventsTimeline.tsx",
+      "apps/web/components/TimelineExplorer.tsx"
+    ],
+    "note": "Overlay bytes were checked against the committed files; the sixth compact-UI commit file is its browser test."
+  },
+  "compactControls": {
+    "desktopFilterBarHeightPx": 80,
+    "mobileCollapsedBarHeightPx": 45,
+    "mobile": "Search, filter choices, reset and chips stay hidden until Filters is opened; active count, Full view and keyboard/focus behavior retained.",
+    "routes": [
+      "/",
+      "/books",
+      "/events",
+      "/all"
+    ],
+    "browserWidthsPx": [
+      320,
+      390,
+      1440
+    ]
+  },
+  "images": {
+    "books": {
+      "selections": 7967,
+      "localImagesDecoded": 7166,
+      "remoteImages": 801
+    },
+    "events": {
+      "selections": 3922,
+      "localImagesDecoded": 3922,
+      "remoteImages": 0
+    }
+  },
+  "database": {
+    "appliedMigrations": 45,
+    "pendingMigrations": [],
+    "bookmarkTables": [
+      "member_artist_bookmarks",
+      "member_artwork_bookmarks"
+    ],
+    "bookmarkIndexes": 6,
+    "verificationReadOnly": true,
+    "databaseWritesThisRelease": false,
+    "note": "Bookmark migration was already applied. No schema change was required; book/event selections are shipped application manifests/assets."
+  },
+  "validation": {
+    "webUnitTests": 315,
+    "webLint": "passed",
+    "goRacePackages": [
+      "internal/books",
+      "internal/events",
+      "internal/member",
+      "internal/httpapi"
+    ],
+    "goSuite": "Passed with five known archive-dependent tests excluded, using existing research evidence fixtures; no test database configured.",
+    "excludedGoTests": [
+      "TestContinuationPinsAndRollbackReplay",
+      "TestEuropeanCatalogueEvidenceAndCutoff",
+      "TestEuropeanDeepSnapshot",
+      "TestNGACatalogueEvidence",
+      "TestRussiaItalyEvidenceRollbackReplay"
+    ],
+    "offlineOpsTests": 208,
+    "pythonScriptsASTChecked": 182,
+    "localJPEGsDecoded": 11088,
+    "missingOrUnselectedLocalAssets": 0,
+    "candidate": {
+      "httpChecks": 31,
+      "compactBrowserChecks": 10,
+      "otherBrowserChecks": 9
+    },
+    "production": {
+      "httpChecks": 31,
+      "compactBrowserChecks": 6,
+      "imageBrowserChecks": 4
+    },
+    "browserChecks": "Filters, keyboard/focus restoration, full view, URL/history, public artist/artwork pages, signed-out bookmark/museum access, and selected image rendering/source links.",
+    "candidateAPIRouting": "Image browser checks routed backend GET requests to the zero-traffic API candidate before promotion. Production checks used the public proxy without interception.",
+    "harnessCorrections": "Event source link assertion now uses its actual image label; browser teardown removes outstanding request handlers. Four candidate image checks then passed.",
+    "limitations": [
+      "No real Google login or authenticated production bookmark writes performed.",
+      "No representative catalogue load test.",
+      "Five archive-dependent Go tests were not run."
+    ]
+  },
+  "operations": {
+    "promotionOrder": [
+      "web",
+      "api"
+    ],
+    "runtimeSettingsUnchanged": true,
+    "localTerraformImagePinsUpdated": true,
+    "terraformApply": false,
+    "rollbackRevisions": {
+      "web": "artline-web-all-1010-099e008",
+      "api": "artline-api-all-1010-099e008"
+    },
+    "rollbackOrder": [
+      "api",
+      "web"
+    ],
+    "databaseRollbackRequired": false
+  },
+  "evidence": {
+    "directory": "/Users/vadimdulub/Library/Application Support/Artline/backups/release-images-20261010",
+    "recoveryNote": "An external cleanup removed the initial local release-log directory during the build. Source remained in Git; Cloud Build/Run receipts and asset validation were recovered. Initial test and read-only database results were retained from the completed tool output, not reconstructed as original raw logs.",
+    "currentArtifacts": [
+      "api-build-final.json",
+      "web-build-final.json",
+      "api-live.json",
+      "web-live.json",
+      "candidate-http.json",
+      "production-http.json",
+      "candidate-compact-browser.log",
+      "production-compact-browser.log",
+      "image-browser-candidate.log",
+      "image-browser-candidate-images.log",
+      "production-image-browser.log",
+      "runtime-config-comparison.json"
+    ]
+  }
+}
