@@ -1,0 +1,95 @@
+{
+  "verifiedAt": "2026-10-10T19:46:21.906527+00:00",
+  "site": "https://artlines.org/guides",
+  "change": "Use Open navigation with active underlines, a divider before Guides, and a separate account icon.",
+  "sourceCommit": "416c9f92123e65cee784086f8d4a6a376c6ddf38",
+  "source": "Generation-pinned clean Git archive of 56ffc7bc, with the one changed runtime file overlaid from 416c9f92 and SHA-256 verified during Cloud Build. The other changed file is an excluded browser test.",
+  "baseSourceCommit": "56ffc7bce3cab182018add1d34c1809e6e9455ea",
+  "overlayFiles": [
+    "apps/web/components/MobileNavigation.tsx"
+  ],
+  "overlaySHA256": "0860a7152dcd05973bc7797c82cc85f618effc1569770c187abeeef3c4a53be1",
+  "behavior": [
+    "Painters, Books, Events and All remain in one desktop row with Guides. Active links use an underline instead of a filled pill.",
+    "The separate account icon is available to both signed-in and signed-out visitors.",
+    "The phone header retains four exploration links; Guides and Your account are available in Menu.",
+    "The public /guides index links to the existing art-history timeline guide. The existing URL is retained and highlights Guides.",
+    "Guides has canonical metadata, breadcrumbs and a sitemap entry.",
+    "Artist/artwork access, museum sign-in, return destinations and bookmark policy are preserved."
+  ],
+  "build": {
+    "id": "6b0f5cf4-f338-4ba4-a333-0e9818003546",
+    "status": "SUCCESS",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:ceedfdeeee3b4afac27974f1ca0ae2f4e5dd35c5678d5f36d311db4b8f277700"
+  },
+  "deployment": {
+    "project": "artline-508319",
+    "region": "europe-west1",
+    "revision": "artline-web-open-nav-1010-416c9f92",
+    "trafficPercent": 100,
+    "runtimeSettingsPreserved": true,
+    "apiUnchanged": true,
+    "databaseChanges": false,
+    "terraformApply": false,
+    "localWebImagePinUpdated": true,
+    "rollbackRevision": "artline-web-stars-1010-6fe925ba"
+  },
+  "validation": {
+    "webUnitTests": 321,
+    "webESLint": "passed",
+    "localProductionBuild": "passed",
+    "localBrowserChecks": 16,
+    "localBrowserNote": "Updated the existing mobile-filter test to reopen the collapsed controls before removing a chip; the focused rerun passed.",
+    "cloudProductionBuild": "passed",
+    "candidateChecks": [
+      "Real signed-out production session",
+      "/ navigation, active underline and 60px header",
+      "/books navigation, active underline and 60px header",
+      "/events navigation, active underline and 60px header",
+      "/all navigation, active underline and 60px header",
+      "/guides navigation, active underline and 60px header",
+      "Public Guides index and existing article round trip",
+      "Guides canonical and sitemap",
+      "Signed-out desktop Account access",
+      "390px mobile Guides, Account, museum sign-in and focus",
+      "320px mobile Guides, Account, museum sign-in and focus"
+    ],
+    "productionChecks": [
+      "Real signed-out production session",
+      "/ navigation, active underline and 60px header",
+      "/books navigation, active underline and 60px header",
+      "/events navigation, active underline and 60px header",
+      "/all navigation, active underline and 60px header",
+      "/guides navigation, active underline and 60px header",
+      "Public Guides index and existing article round trip",
+      "Guides canonical and sitemap",
+      "Signed-out desktop Account access",
+      "390px mobile Guides, Account, museum sign-in and focus",
+      "320px mobile Guides, Account, museum sign-in and focus"
+    ],
+    "browserWidthsPx": [
+      1440,
+      1024,
+      900,
+      768,
+      390,
+      320
+    ],
+    "accessibility": "Desktop and mobile Axe WCAG 2/2.1 AA scans passed",
+    "apiWrites": [],
+    "pageErrors": [],
+    "limitations": [
+      "No real Google sign-in or authenticated production writes were performed. Signed-in navigation was checked locally with the loopback-only debug session.",
+      "These are functional and responsive checks, not production-scale load tests."
+    ]
+  },
+  "candidateCorrection": {
+    "initialBuild": "15567a37-a78a-4fbb-b12b-e5e710a9085d",
+    "initialRevision": "artline-web-open-nav-1010-56ffc7bc",
+    "initialPublicTraffic": 0,
+    "issue": "Choosing the current Guides page left the mobile menu open.",
+    "resolution": "Use the Link navigation callback to close the menu, while retaining nested museum sign-in focus. All eight Guides/mobile browser regressions passed after the correction.",
+    "fixCommit": "416c9f92123e65cee784086f8d4a6a376c6ddf38"
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/release-open-navigation-20261010"
+}
