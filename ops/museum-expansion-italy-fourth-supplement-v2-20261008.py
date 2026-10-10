@@ -1,0 +1,24 @@
+"""Complete source-note former-maker/sitter/place aliases; comparison only."""
+import importlib.util,json
+from pathlib import Path
+z=importlib.util.spec_from_file_location('base',Path(__file__).with_name('museum-expansion-italy-fourth-supplement-20261008.py'));base=importlib.util.module_from_spec(z);z.loader.exec_module(base)
+i=base.i;m=base.m;RUN=base.RUN;ref=base.ref;checked=base.checked;RELATEDMAP=base.RELATEDMAP
+WORKING=RUN/'source-editorial-working-002.json'
+for key,vs in m.load(WORKING)['extra_creator_terms'].items():base.EXTRA[int(key)]=sorted(set(base.EXTRA.get(int(key),[]))|set(vs))
+TITLE_ADDITIONS={5:['Saint Dominic'],63:['Allegory of the Visual Arts'],103:['Saint Francis Receiving the Stigmata'],135:['Mountain Landscape'],137:['Piazza di Ovieto'],143:['Portrait of the Daughters of Tito Catone Perlotto'],240:['Woman with a Basket of Eggs'],267:['Man Reading'],298:['Portrait of a Man'],299:['Dominican Friar'],303:['Woman at her Toilet','La bella toeletta'],475:['Visitation'],478:['Virgin and Child with Saint Stephen and Saint Jerome'],482:['Christ Giving the Keys to Saint Peter'],483:['Saint Peter Healing the Lame Man'],484:['Allegory of the Liberty of Lucca'],499:['Visitation'],503:['Saint Nicholas of Tolentino Extinguishing a Fire'],504:['Saint Nicholas of Tolentino and the Souls in Purgatory'],508:['Saint Nicholas of Tolentino and the Souls in Purgatory'],510:['Holy Family'],512:['Vision of Saint Jerome'],514:['Allegory of the Republic of Lucca'],520:['Excavations at Massaciuccoli'],524:['Saint Ignatius','Saint Augustine'],545:['ritratto di Abate Capparoni','Portrait of Abbot Capparoni'],546:['ritratto di Abate Minutoli','Portrait of Abbot Minutoli'],547:['ritratto di Abate Buzzaccarini','Portrait of Abbot Buzzaccarini'],548:['ritratto di vescovo di Manfredonia','Portrait of the Bishop of Manfredonia'],551:['ritratto di Abate Buzzini','Portrait of Abbot Buzzini'],552:['ritratto di Abate Boccella','Portrait of Abbot Boccella'],557:['Beato Arcangelo da Bologna','Blessed Archangel of Bologna'],581:['Portrait of Pietro Testa','Self Portrait'],584:['Allegorical Triumph of Innocent X'],594:['Portrait of Charles of Bourbon','Charles de Bourbon'],596:['Entry of Charles Louis of Bourbon into Lucca'],597:['Portrait of Lorenzo Nottolini','ritratto di Lorenzo Nottolini'],598:['Prospetto della facciata della chiesa di San Francesco di Lucca'],599:['Monument to Lazzaro Papi'],600:['Piazza e chiesa cattedrale di Lucca','Piazza San Martino'],601:['Chiesa e piazza San Michele'],602:['Veduta della Piazza di Santa Maria Forisportam in Lucca'],603:['Piazza San Pietro Somaldi'],604:['Veduta della piazza di San Francesco in Lucca'],605:['Plan of Lucca'],606:['Plan of Lucca'],607:['Amphitheatre for Horse Racing in Lucca'],608:['Portrait of Carlo Ludovico of Bourbon'],609:['View of the Garden at Villa Mansi'],610:['Grande Peschiera e Viale del Bosco Villa Mansi'],611:['Peschiera nel Centro del Bosco Villa Mansi'],612:['Country House of Luigi Mansi'],613:['Retrocasa Villa Mansi'],615:['Angel Playing a Lute'],617:['Plan of Lucca'],618:['Portrait of Maria Luisa Carlotta of Bourbon','Louise Herzogin zu Sachsen']}
+original_rows=base.rows
+def rows():
+ rs=original_rows()
+ for r in rs:r['facts']['titles']=sorted(set(r['facts']['titles'])|set(TITLE_ADDITIONS.get(r['number'],[])))
+ return rs
+base.rows=rows
+queries=base.queries;comparisons=base.comparisons
+
+def main():
+ dest=RUN/'selected-identity-004.json.gz';assert not dest.exists();rs=rows();params=i.params_for(rs)
+ with m.connect() as db,db.transaction():
+  db.execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ');assert db.execute('SHOW transaction_read_only').fetchone()['transaction_read_only']=='on';state=queries(db,params)
+  citations=[v['row'] for v in db.execute("SELECT to_jsonb(c) row FROM citations c WHERE entity_type='artwork' AND entity_id=ANY(%s::uuid[]) ORDER BY entity_id,id",(state['artwork_ids'],))]
+ comps=comparisons(rs,state);m.save(dest,dict(at=m.now(),rows=rs,params=params,state=state,comparisons=comps,within_batch=i.within_batch(rs),script_reference=ref(Path(__file__).resolve()),base_script_reference=ref(Path(base.__file__).resolve()),dependencies=[ref(WORKING),ref(RUN/'selected-identity-003.json.gz')],read_only=True,policy='Supplemental search-only historical makers and named sitter/place translations after source-note reading. All institution scopes and inventory safeguards retained. No artwork metadata, creator authority, holdings or publication changed.'))
+ m.save(RUN/'selected-citations-004.json.gz',dict(at=m.now(),identity_reference=ref(dest),citations=citations,read_only=True));print(json.dumps(dict(selected=len(rs),scope=len(state['artwork_ids']),related_scope=len(state['related_collection_scope']['artwork_ids']),hits=sum(len(v['hits']) for v in comps),source_hits=sum(len(v['source_hits']) for v in comps))))
+if __name__=='__main__':main()

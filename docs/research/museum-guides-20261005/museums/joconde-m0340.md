@@ -1,0 +1,27 @@
+# musée municipal — Pontarlier
+
+[All museums and collections](../README.md)
+
+12 accepted holding links · 1 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 10 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://pop.culture.gouv.fr/notice/museo/M0340)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-2c09f455-92f1-4c94-8ae1-ad654903d3aa"></a>Autoportrait Marius Laithier (titre factice) | LAITHIER Marius (peintre) | 1913 vers | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340001522) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340001522) · checked 2026-10-04 | review |
+| <a id="artwork-01ebb3b5-e89c-4967-8ca4-cad6541de9c2"></a>Autoportrait ou l'homme au chien (titre d'usage) | Gustave Courbet | 1842 | Image research pending · [record](https://pop.culture.gouv.fr/notice/joconde/M0340000028) | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340000028) · checked 2026-09-09 | review |
+| <a id="artwork-190831cc-769e-493f-965b-6feb82e04cba"></a>Dionysos endormi (titre inscrit) | COURTOIS Gustave (peintre) | 1906 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340000210) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340000210) · checked 2026-10-04 | review |
+| <a id="artwork-845ee479-9bad-4ec7-8421-3d07e74984bf"></a>Esquisse pour le cirque (titre factice) | Bichet Pierre (1922-2008) | Unverified date: 1948 achevée en | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340008583) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340008583) · checked 2026-10-05 | review |
+| <a id="artwork-1d7b37c0-f3fa-488b-9990-d0bdbe78cc21"></a>Etude de nu (titre inscrit) | Bichet Pierre (1922-2008) | Unverified date: 1946,achevée en | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340008584) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340008584) · checked 2026-10-05 | review |
+| <a id="artwork-dd4ba00a-bab9-4c57-b837-6b55e826d97d"></a>Hivernale aux Granges Berrard (titre inscrit) | Bichet Pierre (1922-2008) | Unverified date: 1970 achevée en | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340008579) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340008579) · checked 2026-10-05 | review |
+| <a id="artwork-7341ccd1-e3d4-4ea0-b027-73cd0f7289a8"></a>Jean Claude Eléonor LE MICHAUD Chevalier D'ARCON (titre inscrit) | WYRSCH Johann Melchior (peintre) | 2e moitié 18e siècle | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340000200) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340000200) · checked 2026-10-04 | review |
+| <a id="artwork-78eb2cf7-b816-4160-ad05-9e41fb414826"></a>L'adoration des bergers (titre inscrit) | Bichet Pierre (1922-2008) | Unverified date: 1949 achevée en | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340008582) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340008582) · checked 2026-10-05 | review |
+| <a id="artwork-1c5eba6f-4cf6-4a58-a02f-851650aa4840"></a>La corvée de neige (titre inscrit) | Bichet Pierre (1922-2008) | Unverified date: 1959 achevée en | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340008580) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340008580) · checked 2026-10-05 | review |
+| <a id="artwork-9b63f95e-2402-4180-8529-90969ef25b37"></a>Le Conventionnel Michaud (titre inscrit) | LANEUVILLE Jean-Louis (peintre) | 1792 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340000171) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340000171) · checked 2026-10-04 | review |
+| <a id="artwork-1e3d7c53-767f-4f15-bb97-d5d53c6ea994"></a>Portrait de François Nicolas Eugène DROZ des Villars (titre factice) | COMBETTE Joseph Marcellin (peintre) | Unverified date: 1787 (?),1797 (?) | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/M0340001511) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/M0340001511) · checked 2026-10-04 | review |
+| <a id="artwork-7e74fcff-c521-5c31-a578-a99a1d7fc9d7"></a>Self portrait | Gustave Courbet | 1842 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24533136-7add3fac0ce75116.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_Self-Portrait_%28Courbet_with_Black_Dog%29_-_WGA05478.jpg) | [Holding source](https://www.wikidata.org/wiki/Q24533136) · checked 2026-09-13 | review |

@@ -1,0 +1,28 @@
+# The Phillips Collection
+
+[All museums and collections](../README.md)
+
+13 accepted holding links · 7 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://www.phillipscollection.org/)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-faa95dba-2efa-55e6-8d13-47c50fa06c07"></a>Across the Delaware | Robert Spencer | c. 1916 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23939632-b5df1840a0aa2dc5.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Robert_Spencer_-_Across_the_Delaware_-_Google_Art_Project.jpg) | [Holding source](https://www.wikidata.org/wiki/Q23939632) · checked 2026-09-14 | review |
+| <a id="artwork-ebf85fc9-a7fb-59a2-85f0-3bb6e0b624b0"></a>Band Concert Night | Jerome Myers | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q23941326) | [Holding source](https://www.wikidata.org/wiki/Q23941326) · checked 2026-09-14 | review |
+| <a id="artwork-49b8bb89-5695-5c76-9b2a-1acc77e26ece"></a>Carcassonne | Walter Griffin | 1911 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23946161-ebc4aea496fc2c8d.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Walter_Griffin_-_Carcassonne_-_Google_Art_Project.jpg) | [Holding source](https://www.wikidata.org/wiki/Q23946161) · checked 2026-09-14 | review |
+| <a id="artwork-9e368bc2-5f67-5a9b-a9fd-854f7267e951"></a>Evening on the Pier | Jerome Myers | 1921 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23941327-eaad1f8715cf468c.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Jerome_Myers_-_Evening_on_the_Pier_-_Google_Art_Project.jpg) | [Holding source](https://www.wikidata.org/wiki/Q23941327) · checked 2026-09-14 | review |
+| <a id="artwork-f6693653-4705-5baa-aa01-a76b0178cbc2"></a>June | Bryson Burroughs | 1918 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23943643-e9110d4444957b30.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Bryson_Burroughs_-_June_-_Google_Art_Project.jpg) | [Holding source](https://www.wikidata.org/wiki/Q23943643) · checked 2026-09-14 | review |
+| <a id="artwork-bea3463a-afc1-50d0-929c-120aec263f28"></a>Mountebanks and Thieves | Robert Spencer | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q23944633) | [Holding source](https://www.wikidata.org/wiki/Q23944633) · checked 2026-09-14 | review |
+| <a id="artwork-3908bd80-08ea-5a23-ad9e-e42a2fe6eb3e"></a>Pansies | Bernice Cross | 1936 | Image research pending · [record](https://www.wikidata.org/wiki/Q23944002) | [Holding source](https://www.wikidata.org/wiki/Q23944002) · checked 2026-09-14 | review |
+| <a id="artwork-bc70b139-1b57-5b3f-a696-43885103062a"></a>The Auction | Robert Spencer | c. 1918 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23941928-0e77f34e51b1aa0e.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Robert_Spencer_-_The_Auction_-_Google_Art_Project.jpg) | [Holding source](https://www.wikidata.org/wiki/Q23941928) · checked 2026-09-14 | review |
+| <a id="artwork-7c92440e-74bf-5097-80cc-c579b7030ea6"></a>The Evangelist | Robert Spencer | c. 1918 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23941930-9713d3a4e7db133a.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Robert_Spencer_-_The_Evangelist_-_Google_Art_Project.jpg) | [Holding source](https://www.wikidata.org/wiki/Q23941930) · checked 2026-09-14 | review |
+| <a id="artwork-1e013c5b-5eec-5964-847c-0e70cf3d446d"></a>The Little Dove's Stove | Bernice Cross | 1940 | Image research pending · [record](https://www.wikidata.org/wiki/Q23943996) | [Holding source](https://www.wikidata.org/wiki/Q23943996) · checked 2026-09-14 | review |
+| <a id="artwork-839d1df1-0a85-5906-9602-be4986c73d19"></a>The Seed of Revolution | Robert Spencer | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q23944646) | [Holding source](https://www.wikidata.org/wiki/Q23944646) · checked 2026-09-14 | review |
+| <a id="artwork-4cb6e64a-9dd6-52a9-ba19-80f6b6cd58d5"></a>The Tambourine | Jerome Myers | 1905 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23939666-0fcfac68dbf62fb2.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Jerome_Myers_-_The_Tambourine_-_Google_Art_Project.jpg) | [Holding source](https://www.wikidata.org/wiki/Q23939666) · checked 2026-09-14 | review |
+| <a id="artwork-846ba7e9-4a8d-5b9a-a589-ccba9c563a2f"></a>Winter Light | Bernice Cross | 1951 | Image research pending · [record](https://www.wikidata.org/wiki/Q23944083) | [Holding source](https://www.wikidata.org/wiki/Q23944083) · checked 2026-09-14 | review |

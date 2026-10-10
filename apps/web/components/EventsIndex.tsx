@@ -7,7 +7,7 @@ import { discoveryChanges } from "@/lib/discovery";
 
 import { useEffect, useRef, useState } from "react";
 import { apiRequest, errorMessage } from "@/lib/api";
-import type { EventsFacets, EventsResponse } from "@/lib/events";
+import type { EventsFacets, EventsResponse, EventSuggestion } from "@/lib/events";
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import { AtlasFilters, ActiveFilters } from "./AtlasFilters";
 import { EventFilterFields, eventDimensions } from "./EntityFilterFields";
@@ -51,6 +51,10 @@ export function EventsIndex() {
     return () => controller.abort();
   }, [retry]);
   function change(values: Record<string, string | string[] | null>, push = true) { updateQuery({ fit: null, ...discoveryChanges(values, "top100"), after: null }, push); }
+  function applySuggestion(suggestion: EventSuggestion) {
+    // Suggestions refine the current interval without requesting a date fit.
+    updateQuery({ [suggestion.key]: suggestion.value, fit: null, after: null }, true);
+  }
   function reset() { change({ ...cleared, top100: null, start: null, end: null, event: null }); search.current?.focus(); }
   function page(after: string | null) { updateQuery({ after }, true); const heading = document.getElementById("event-index"); heading?.scrollIntoView({ block: "start" }); heading?.focus({ preventScroll: true }); }
   const choices = eventDimensions.map(d => ({ ...d, values: [...new Set(params.getAll(d.key))] }));
@@ -72,7 +76,7 @@ export function EventsIndex() {
       <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
         onPeriod={(start, end) => change({ start: String(start), end: String(end), top100: "false", fit: "true" })}
         onRange={(start, end) => change({ start: String(start), end: String(end) }, false)} onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset}
-        onSuggestion={s => change({ [s.key]: s.value })} onTop100={() => change({ top100: null })} />
+        onSuggestion={applySuggestion} onTop100={() => change({ top100: null })} />
     </ExplorerFrame>
     <section className={styles.shelf} aria-labelledby="event-index" aria-busy={loading}>
       <div className={styles.shelfHeader}><div><h2 id="event-index" tabIndex={-1}>Event index</h2><p>Explore the events, empires, and movements that connect art, literature, belief, science, and everyday life. World history through 2000.</p></div><p className={styles.count} role="status">{data ? `${data.total.toLocaleString("en-GB")} of ${data.selectionTotal.toLocaleString("en-GB")} events` : ""}</p></div>

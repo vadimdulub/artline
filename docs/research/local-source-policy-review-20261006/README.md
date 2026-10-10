@@ -1,0 +1,11 @@
+# Originating image-source review — 6 October 2026
+
+Current originating-source checks held three previously attached Commons copies from this recovery: Hubert Sattler's Großglockner view, August Kurtz's Portrait of a Woman and Egon Schiele's Stadtende. Their Commons underlying-work public-domain labels do not resolve the museum-supplied photograph use conditions. Only this operation's own three primary image links and media associations were withdrawn. Artwork records and metadata remain unchanged; all source bytes and evidence are preserved privately.
+
+The [Salzburg Museum terms](https://sammlung-online.salzburgmuseum.at/service/impressum) limit further reproduction/publication without consent. The [Joanneum image-use terms](https://www.museum-joanneum.at/presse/foto-und-drehanfragen-1) provide a limited museum-reporting permission and require consent for other uses. New Commons candidates from these same sources were also held before download.
+
+The [Albertina reproduction policy](https://www.albertina.at/forschung/reproduktion/) separately permits free use of downloads up to 1,200 pixels for public-domain two-dimensional works. The selected Hans Luther original is 850 × 1,021 pixels and retains its Commons public-domain evidence.
+
+The [Wien Museum Bertha Müller page](https://sammlung.wienmuseum.at/en/object/467916-bertha-mueller-die-schwester-des-kuenstlers/) identifies the photographs as CC BY 4.0 by Birgit und Peter Kainz. Its Commons candidate was held as a public-domain reproduction; a separate native-image operation retains the actual photograph licence and credit.
+
+All four primary policy/object captures and their hashes are in [captures.json](captures.json). The three-image correction is recorded in [the append-only correction receipt](../local-commons-recovery-20261005/source-policy-correction-002.json) and [updated verification](../local-commons-recovery-20261005/verification-after-source-review-002.json). The original five KHM holds remain in force. Recovery copies and locked preimages are under `/Users/vadimdulub/Library/Application Support/Artline/backups/local-commons-recovery-20261005/source-policy-correction-002/`; the affected derivatives have been removed from the app's public folder only after identical private copies were verified.

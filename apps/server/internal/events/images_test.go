@@ -51,3 +51,24 @@ func TestEventImageRejectsEscapedAssetPaths(t *testing.T) {
 		})
 	}
 }
+
+func TestEventImageLicenseMatchesAttributionTerms(t *testing.T) {
+	for _, tc := range []struct {
+		label, link string
+		want        bool
+	}{
+		{"Public domain", "https://creativecommons.org/publicdomain/mark/1.0/", true},
+		{"CC0", "https://creativecommons.org/publicdomain/zero/1.0/", true},
+		{"CC BY 4.0", "https://creativecommons.org/licenses/by/4.0/", true},
+		{"CC BY-SA 3.0", "https://creativecommons.org/licenses/by-sa/3.0/", true},
+		{"CC BY-SA 3.0 de", "https://creativecommons.org/licenses/by-sa/3.0/de/", true},
+		{"CC BY-SA 4.0", "https://creativecommons.org/licenses/by/4.0/", false},
+		{"CC BY-NC 4.0", "https://creativecommons.org/licenses/by-nc/4.0/", false},
+		{"CC BY 4.0", "https://creativecommons.org.invalid/licenses/by/4.0/", false},
+		{"CC BY 4.0", "https://creativecommons.org/licenses/by/4.0/?override=1", false},
+	} {
+		if got := reviewedImageLicense(tc.label, tc.link); got != tc.want {
+			t.Errorf("%s %s: got %v, want %v", tc.label, tc.link, got, tc.want)
+		}
+	}
+}

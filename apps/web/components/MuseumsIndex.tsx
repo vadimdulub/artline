@@ -1,6 +1,6 @@
 "use client";
 import { museumDescription } from "@/lib/display-metadata";
-import Link from "next/link";
+import Link from "@/components/MemberLink";
 import { useRef, useState } from "react";
 import { queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import { countryName } from "@/lib/api";

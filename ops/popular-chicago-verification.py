@@ -18,6 +18,18 @@ def norm(value):
     return ' '.join(re.findall(r'[^\W_]+', text))
 
 
+def same_date_wording(left, right):
+    """Compare date text while expanding only explicit abbreviated end years."""
+    def expand(value):
+        def end_year(match):
+            first=int(match[1]); modulus=10**len(match[2])
+            last=first//modulus*modulus+int(match[2])
+            if last<first:last+=modulus
+            return str(first)+'–'+str(last)
+        return norm(re.sub(r'\b(\d{4})\s*[–—/-]\s*(\d{1,2})\b(?!\d)', end_year, str(value or '')))
+    return expand(left)==expand(right)
+
+
 def verify_artist(artist, source):
     names = {norm(n) for n in [artist['display_name'], *artist.get('aliases', [])]}
     source_names = {norm(n) for n in [source['title'], *(source.get('alt_titles') or [])]}
@@ -52,7 +64,13 @@ def metadata(o, artist, source_artist):
         raise ValueError('Qualified source attribution requires editorial review')
     if re.search(r'\b(engraved|etched|lithographed|drawn) by\b', display, re.I):
         raise ValueError('Additional visual creator in source display needs role review')
-    if norm(source_artist['title']) not in norm(display):
+    # Object captions sometimes use an explicit alias from the very same
+    # native person record. Accept that complete leading name, while keeping
+    # the independently matched person ID, life dates and role checks above.
+    normalized_display = norm(display)
+    displayed_alias = any(name and (normalized_display == name or normalized_display.startswith(name+' '))
+                          for name in (norm(n) for n in source_artist.get('alt_titles') or []))
+    if norm(source_artist['title']) not in normalized_display and not displayed_alias:
         raise ValueError('Object artist display differs from native artist identity')
     typ = {'Painting':'painting', 'Drawing and Watercolor':'drawing', 'Print':'print'}.get(o.get('artwork_type_title'))
     if not typ:
@@ -87,8 +105,8 @@ def metadata(o, artist, source_artist):
     if o.get('fiscal_year_deaccession') is not None:
         raise ValueError('Museum record indicates deaccession; current holding needs review')
     if (not re.fullmatch(r'\d{4}\.[\w.\-]+', accession)
-            or not re.search(r'\b(gift|collection|funds?|purchase[ds]?|bequest|endowment|acquisition|exchange)\b', credit, re.I)
-            or re.search(r'\b(loan|lent|lender|private collection|promised|sold|deaccession\w*|returned)\b', credit, re.I)):
+            or not re.search(r'\b(gift|collections?|funds?|purchase[ds]?|bequest|endowments?|acquisition|exchange)\b', credit, re.I)
+            or re.search(r'\b(loans?|lent|lenders?|private collections?|promised|sold|deaccession\w*|returned)\b', credit, re.I)):
         raise ValueError('Accession and collection credit do not establish an accepted museum holding')
     approx = bool(re.search(r'\b(?:c\.|ca\.)\s*\d|\b(circa|about|early|mid|late|probably)\b', date, re.I))
     precision = ('circa' if lo==hi else 'circa_range') if approx else ('exact' if lo==hi else 'range')

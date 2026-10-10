@@ -23,8 +23,9 @@ type catalogueCacheEntry struct {
 	expires time.Time
 }
 
-// Cache only bounded public catalogue reads. Member/auth paths are excluded;
-// browser responses remain private and every lookup checks the current revision.
+// Cache bounded catalogue reads only after member access checks. Auth responses
+// are excluded; catalogue bodies contain no session-specific information. Browser
+// responses stay private and every lookup checks the current revision.
 func cacheableCataloguePath(path string) bool {
 	switch path {
 	case "/api/v1/artists", "/api/v1/museums", "/api/v1/seo/artists", "/api/v1/seo/sitemaps", "/api/v1/artworks", "/api/v1/timeline", "/api/v1/timeline/facets", "/api/v1/painters/options",

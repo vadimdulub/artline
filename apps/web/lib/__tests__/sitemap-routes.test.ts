@@ -20,21 +20,21 @@ it("links bounded public sitemaps from the root index", async () => {
   expect(response.status).toBe(200);
   expect(await response.text()).toContain("https://artline.example/sitemap-artworks-def.xml");
 });
-it("advertises all catalogue sections regardless of obsolete preview settings", async () => {
+it("advertises public pages and artworks while omitting member pages", async () => {
   vi.stubEnv("ARTLINE_PUBLIC_RESEARCH_PREVIEW", "true");
   vi.mocked(discoveryRequest).mockResolvedValueOnce({ items: ["artists-abc", "artworks-def", "museums-123"] });
   const root = await (await index()).text();
   expect(root).toContain("sitemap-artists-abc.xml");
   expect(root).toContain("sitemap-artworks-def.xml");
-  expect(root).toContain("sitemap-museums");
+  expect(root).not.toContain("sitemap-museums");
   const pages = await (await request("sitemap-pages.xml")).text();
   expect(pages).toContain("<loc>https://artline.example/</loc>");
   expect(pages).toContain("<loc>https://artline.example/art-history-timeline</loc>");
   expect(guideMetadata().robots).toMatchObject({ index: true });
+  expect(pages).not.toContain("/museums");
   vi.mocked(discoveryRequest).mockResolvedValueOnce({ items: [{ path: "/artists/giotto", name: "Giotto" }] });
   expect(await (await request("sitemap-artists-abc.xml")).text()).toContain("/artists/giotto");
-  vi.mocked(discoveryRequest).mockResolvedValueOnce({ items: [{ path: "/museums/a-museum", name: "A museum" }] });
-  expect(await (await request("sitemap-museums-123.xml")).text()).toContain("/museums/a-museum");
+  expect((await request("sitemap-museums-123.xml")).status).toBe(404);
 });
 it("reports outages as retryable failures rather than empty successful sitemaps", async () => {
   vi.mocked(discoveryRequest).mockRejectedValue(new Error("offline"));

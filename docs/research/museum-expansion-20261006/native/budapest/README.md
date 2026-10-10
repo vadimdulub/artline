@@ -1,0 +1,19 @@
+# Museum of Fine Arts, Budapest — 7 October 2026
+
+Added **103 artworks** to the local review catalogue. Budapest now has **111 linked records, 107 with eligible creation dates**, and 109 distinct nonempty normalized inventories. Two legacy records lack inventories. Every new artwork has its own inventory and remains in review.
+
+The [verified readback](minimum-100-verification.json) preserves all 12 pre-existing linked or pending artworks, 17 citations, 11 artist links, four media links, 12 identifiers and 16 location assertions. Existing dates were not rewritten. The [actual replay](replay-001.json) inserted zero rows. No images, artist profiles, artist links, publication or current-display claims were added.
+
+The museum's [Google Arts & Culture partner collection](https://artsandculture.google.com/partner/museum-of-fine-arts-budapest) supplied the metadata. The native English catalogue and some Hungarian routes were unavailable; original failures remain evidence. Partner-page links and the initial pages of twelve museum-specific facets produced 134 distinct object leads. No pagination or image downloading was performed. Original HTML bodies, request receipts and hashes are retained for the partner, indexes and selected object records.
+
+The [reviewed plan](budapest-gac-additions-001-plan.json.gz), SHA-256 `c4888600a25f5417c8de91e39a71fdb8f4aee1840f2d6237ce967ef363311e82`, contains 67 paintings, 18 drawings, 13 sculptures, four prints and one object whose normalized type remains unknown. Its source explicitly calls it an alabaster relief. Dates retain the source wording and precision; lifespan, acquisition and model dates were not substituted for object creation. Rights labels and native external links remain evidence only.
+
+The additions include Raphael's *Esterházy Madonna*, Bruegel's *Sermon of Saint John the Baptist*, two Rembrandt farmhouse drawings, Chagall's compositional study and Schiele's *Two Women Embracing*. Physical metadata distinguishes the Budapest Pissarro, Brueghel, Schiele and Sebastiano del Piombo versions from related objects elsewhere. Individually accessioned Coter panels, a Fra Angelico fragment and a detached Bohemian initial are counted as their documented surviving objects; no reconstructed parent works are added. Print impressions retain separate physical identities.
+
+Qualified creator labels, including “ascribed to,” “circle of,” “after” and “and workshop,” survive the partner site's abbreviated artist headings. Bohemian Artist and Bohemian Master remain object-level labels. The holding confidence is an editorial assessment of 0.90 based on explicit museum-published collection metadata. This does not establish present display, physical custody or legal title, and does not newly validate every legacy record.
+
+The [31-object follow-up queue](gac-followup-queue-001.json.gz) retains 18 identity/editorial holds and 13 source holds. It includes existing Gentileschi, Bellini, Kokoschka, Kauffmann and Tristán identities; four internal title/date discrepancies; alternative or open-ended dates; model-versus-cast dates; and a post-1970 work. Ancient anonymous objects remain priorities requiring explicit date, unknown-creator and fragment handling, not exclusion by tradition.
+
+Twenty-five Budapest offline tests and all **511 campaign tests** passed without database fixtures. The import verifies the loopback target, an unchanged preimage and current identity scope inside the locked transaction, then checks every inserted field and relationship. Backups are under the approved Library/Application Support/Artline location.
+
+This museum exceeds the minimum of 100 eligible works. It needs **93 more eligible works** to reach 200. Refresh identity comparisons before any follow-up because the saved comparisons predate these additions.

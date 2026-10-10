@@ -1,0 +1,7 @@
+# Art Gallery of Ontario — partial source pass
+
+One complete record was added in review: *The Three Robinson Sisters*, George Theodore Berthon, 1846, inventory 2007/33. The museum now has one linked record with eligible dates. Its two older pending MacDonald records and four citations remain unchanged.
+
+The [selected queue](selected-official-queue-001.json) contains 172 date-screened painting/drawing leads; 171 remain unapproved after this addition. Seventeen further leads have date holds, and 81 decorative/sculpture entries were outside this bounded painting/drawing selection. Those work types are not globally excluded. Two repeated indexes were deduplicated. Canadian, Modern, Indigenous and Thomson indexes supplied the leads; European and filtered routes failed. The three Indigenous painting highlights fall after 1970 and were not selected.
+
+Direct collection requests returned HTTP403. Eight selected object extracts were attempted: one complete, seven timeouts. Two canonical-URL retries also failed. The [partial capture receipt](partial-capture-001.json) records 164 unattempted selected objects. An ad-hoc “429” substring detector matched object ID34295; AGO did not actually return HTTP429. Original object HTTP bytes are unavailable, and this limitation remains explicit. No images were downloaded. Further work needs usable object evidence and fresh duplicate checks; indexed leads are not approved additions.

@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/MemberLink";
+import { BookmarkProvider } from "@/components/Bookmarks";
+import "@/components/Bookmarks.css";
 import { SiteHeader } from "@/components/SiteHeader";
+import { MemberAccessProvider } from "@/components/MemberLink";
+import "./account/account.css";
 import { MemberSessionProvider } from "@/components/MemberSession";
 import { noIndex, siteDescription, siteURL } from "@/lib/seo";
 import "./globals.css";
+import "./mobile.css";
 export const dynamic = "force-dynamic";
 export function generateMetadata(): Metadata { return {
   metadataBase: siteURL(),
@@ -15,10 +20,10 @@ export function generateMetadata(): Metadata { return {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>
     <a className="skip-link" href="#main-content">Skip to content</a>
-    <MemberSessionProvider>
+    <MemberSessionProvider><MemberAccessProvider><BookmarkProvider>
     <SiteHeader />
     {children}
-    <footer className="site-footer"><p>Artline. Art, literature and history in context.</p><nav aria-label="More"><Link href="/art-history-timeline">Art history guide</Link><Link href="/artists">Artist directory</Link><Link href="/museums">Museums</Link><Link href="/about">About & sources</Link><Link href="/privacy">Privacy</Link></nav></footer>
-    </MemberSessionProvider>
+    <footer className="site-footer"><p>Artline. Art, literature and history in context.</p><nav aria-label="More"><Link href="/art-history-timeline">Art history guide</Link><Link href="/artists">Artist directory</Link><Link href="/museums">Museums</Link><Link href="/bookmarks">Bookmarks</Link><Link href="/about">About & sources</Link><Link href="/privacy">Privacy</Link></nav></footer>
+    </BookmarkProvider></MemberAccessProvider></MemberSessionProvider>
   </body></html>;
 }

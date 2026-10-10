@@ -4,6 +4,7 @@ import (
 	_ "embed"
 	"encoding/json"
 	"fmt"
+	"net/url"
 	"regexp"
 	"strings"
 )
@@ -39,7 +40,7 @@ func readImageSelection(raw []byte) map[string]imageSelection {
 	result := make(map[string]imageSelection, len(rows))
 	for _, row := range rows {
 		path := regexp.MustCompile(`^/images/events/selected-[0-9]{8}/` + regexp.QuoteMeta(row.EventID) + `\.jpg$`)
-		if !regexp.MustCompile(`^[a-z0-9-]+$`).MatchString(row.EventID) || !regexp.MustCompile(`^Q[1-9][0-9]*$`).MatchString(row.SourceID) || !path.MatchString(row.ImageURL) || row.Label == "" || row.Credit == "" || row.CheckedAt == "" || row.License != "Public domain" || row.LicenseURL != "https://creativecommons.org/publicdomain/mark/1.0/" || !strings.HasPrefix(row.SourceURL, "https://commons.wikimedia.org/wiki/File:") {
+		if !regexp.MustCompile(`^[a-z0-9-]+$`).MatchString(row.EventID) || !regexp.MustCompile(`^(Q[1-9][0-9]*|artline-[a-z0-9-]+)$`).MatchString(row.SourceID) || !path.MatchString(row.ImageURL) || row.Label == "" || row.Credit == "" || row.CheckedAt == "" || !reviewedImageLicense(row.License, row.LicenseURL) || !strings.HasPrefix(row.SourceURL, "https://commons.wikimedia.org/wiki/File:") {
 			panic("incomplete or unsafe event illustration: " + row.EventID)
 		}
 		if _, exists := result[row.EventID]; exists {
@@ -48,6 +49,30 @@ func readImageSelection(raw []byte) map[string]imageSelection {
 		result[row.EventID] = row
 	}
 	return result
+}
+
+// Image permission is distinct from the event's historical status. Preserve the
+// selected file's actual license, including attribution and share-alike terms.
+func reviewedImageLicense(label, link string) bool {
+	if label == "Public domain" {
+		return link == "https://creativecommons.org/publicdomain/mark/1.0/"
+	}
+	if label == "CC0" {
+		return link == "https://creativecommons.org/publicdomain/zero/1.0/"
+	}
+	parts := regexp.MustCompile(`^CC (BY(?:-SA)?) ([1-4]\.0|2\.5)(?: ([a-z]{2,3}))?$`).FindStringSubmatch(label)
+	if parts == nil {
+		return false
+	}
+	u, err := url.Parse(link)
+	if err != nil || u.Scheme != "https" || u.Host != "creativecommons.org" || u.User != nil || u.RawQuery != "" || u.Fragment != "" {
+		return false
+	}
+	want := "/licenses/" + strings.ToLower(parts[1]) + "/" + parts[2] + "/"
+	if parts[3] != "" {
+		want += parts[3] + "/"
+	}
+	return u.Path == want
 }
 
 func attachImage(event *Event) {

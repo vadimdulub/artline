@@ -1,5 +1,6 @@
 "use client";
-import Link from "next/link";
+import { BookmarkButton } from "./Bookmarks";
+import Link from "@/components/MemberLink";
 import { PainterArtworkDetails, SourceList } from "./PainterArtworkDetails";
 export { SourceList } from "./PainterArtworkDetails";
 import { artworkDate, displayMetadata } from "@/lib/display-metadata";
@@ -73,6 +74,7 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
   const artworkRecord = !gallery && (!embedded || work || workMessage) ? <aside ref={artworkPanel} className={`artwork-panel${embedded ? " painter-preview" : ""}`} aria-label={embedded ? "Artwork preview" : undefined} aria-labelledby={embedded ? undefined : "artwork-record-title"}>
       {!embedded && <div className="artwork-panel-heading"><h2 className="artwork-creator" ref={artworkHeading} tabIndex={-1} id="artwork-record-title">{creator}</h2>{work && <RecordArrows navigation={workNavigation} noun="artwork" />}</div>}
       {work ? <div className="artwork-details">
+        <div className="bookmark-record-actions"><BookmarkButton kind="artwork" id={work.id} title={work.title} /></div>
         <ArtworkViewer work={work} creator={creator} navigation={workNavigation} />
         {embedded ? <>
           <div className="painter-preview-caption"><div><h3 ref={artworkHeading} tabIndex={-1} aria-live="polite">{work.title}</h3>{artworkDate(work) && <p className="artwork-date">{artworkDate(work)}</p>}</div><RecordArrows navigation={workNavigation} noun="artwork" /></div>
@@ -89,8 +91,9 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
   return <div className={`artist-record${gallery ? " artist-gallery-record" : ""}`}>
     <div className="artist-main">
       <header className="artist-heading">
+        <div className="bookmark-record-actions"><BookmarkButton kind="artist" id={artist.id} title={artist.display_name} /></div>
         {!embedded && headingWork ? <><h1 style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)", lineHeight: 1.12 }}>{headingWork.title}</h1><p><Link href={`/artists/${artist.slug}`}>{artist.display_name}</Link>{artworkDate(headingWork) && <> · {artworkDate(headingWork)}</>}</p></> : <h1>{artist.display_name}</h1>}<p className="artist-dates">{!embedded && headingWork ? `${artist.display_name}: ${artist.timeline_display}` : artist.timeline_display}</p>
-        {embedded && <Link className="text-link full-painter-link" href={`/artists/${artist.slug}`}>Open full painter record <span aria-hidden="true">↗</span></Link>}
+        {embedded && <Link className="text-link full-painter-link" href={`/artists/${artist.slug}`} prefetch={false}>Open full painter record <span aria-hidden="true">↗</span></Link>}
       </header>
       {embedded && artworkRecord}
       {gallery && !workId && defaultWork && <section className="painter-key-artwork" aria-label="Key artwork">

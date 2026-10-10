@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A practical Artline growth guide: Google indexing, original art articles, image discovery, promotion and a first-month checklist.">
-  <title>Artline growth guide</title>
+  <meta name="description" content="Artline launch plan: a review of the existing strategy, first-user experiments, a 30-day checklist, example messages and measurement.">
+  <title>Artline — launch &amp; first users</title>
   <style>
     :root {
       color-scheme: light;
@@ -154,189 +154,340 @@
       .reading a::after { content: " (" attr(href) ")"; font-size: 8pt; overflow-wrap: anywhere; }
       footer { font-size: 9pt; }
     }
+
+    .hero { grid-template-columns: 1.6fr 1fr; }
+    .hero h1 { max-width: 720px; }
+    .hero-links { display: flex; gap: 12px 22px; flex-wrap: wrap; margin-top: 24px; font-size: 15px; }
+    .sidebar nav { gap: 0; }
+    .sidebar nav a { padding: 6px 0; }
+    .sidebar { max-height: calc(100vh - 40px); overflow-y: auto; }
+    .decision { margin-top: 22px; padding: 21px 25px; border-left: 4px solid var(--green); background: var(--wash); }
+    .decision p + p { margin-top: 10px; }
+    .table-wrap { overflow-x: auto; }
+    table { min-width: 530px; }
+    .compact-table { min-width: 0; }
+    .table-wrap:focus-visible { outline-offset: 3px; }
+    .quote { font-family: var(--serif); font-size: 27px; line-height: 1.4; }
+    .copy { margin: 16px 0 0; padding: 22px 25px; border-left: 3px solid var(--line); background: var(--white); }
+    .copy p { font-size: 16px; }
+    .copy .quote { font-size: 27px; }
+    .tag { display: inline-block; font-size: 12px; color: var(--green); background: var(--wash); padding: 3px 8px; border-radius: 4px; margin-bottom: 10px; }
+    .task small { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .task input:checked + span small { text-decoration: none; }
+    .week p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+    .week { padding-top: 15px; }
+    .reading { padding-left: 22px; }
+    .reading small { display: block; color: var(--muted); }
+    .source-links { margin-top: 15px; font-size: 14px; }
+    .score-target { font-weight: 600; white-space: nowrap; }
+    .route { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0; }
+    .route > div { padding: 0 16px 0 0; border-right: 1px solid var(--line); }
+    .route > div:last-child { border: 0; }
+    .route strong { display: block; font-family: var(--serif); font-size: 24px; font-weight: 400; }
+    .route p { margin-top: 8px; font-size: 14px; color: var(--muted); }
+    .milestone { margin-top: 18px; }
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; }
+      .sidebar { max-height: none; overflow: visible; }
+      .route { grid-template-columns: 1fr; }
+      .route > div { padding: 0 0 15px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .quote, .copy .quote { font-size: 23px; }
+      .copy, .decision { padding: 18px; }
+      .hero h1 { font-size: clamp(39px, 10vw, 65px); }
+      .table-wrap { border-radius: 6px; }
+    }
+    @media print {
+      .hero-links { display: none; }
+      .table-wrap { overflow: visible; break-inside: auto; }
+      table { min-width: 0; font-size: 9pt; }
+      tr, .copy, .decision, .route { break-inside: avoid; }
+      thead { display: table-header-group; }
+      .week { break-inside: auto; }
+      .task { break-inside: avoid; }
+      .task small { font-size: 9pt; }
+      .task input:checked + span { text-decoration: none; }
+    }
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to the guide</a>
+  <a class="skip" href="#main">Skip to the plan</a>
   <div class="page">
     <header class="masthead">
       <span class="brand">Artline</span>
       <div class="masthead-tools">
-        <span class="date">Growth guide / <time datetime="2026-10-08">8 October 2026</time></span>
+        <span class="date">Launch plan / <time datetime="2026-10-10">10 October 2026</time></span>
         <button class="button" id="print-guide" type="button" hidden>Print / Save as PDF</button>
       </div>
     </header>
-
     <main id="main">
       <div class="hero">
         <div>
-          <h1>Help people discover<br>your world of art.</h1>
-          <p>A practical plan to make Artline easier to find, publish articles worth reading, and give curious visitors a reason to return.</p>
+          <h1>Give the first hundred<br>people a reason to stay.</h1>
+          <p>Launch Artline around one useful discovery: seeing artworks, artists and history together. Find the people who enjoy that connection, watch them explore, and build the next step from what they do.</p>
+          <div class="hero-links"><a href="#month">Open the 30-day checklist</a><a href="#review">See what changed in the strategy</a></div>
         </div>
-        <ol class="path" aria-label="The reader journey">
-          <li><strong>Find</strong><span>Discover a useful guide in search.</span></li>
-          <li><strong>Explore</strong><span>Follow its artworks, artists and connections.</span></li>
-          <li><strong>Return</strong><span>Come back for the next story.</span></li>
+        <ol class="path" aria-label="Launch sequence">
+          <li><strong>A clear invitation</strong><span>One audience, one question, one useful page.</span></li>
+          <li><strong>A small discovery</strong><span>Open a work, follow its artist, find a connection.</span></li>
+          <li><strong>A reason to return</strong><span>A second story shaped by real reader questions.</span></li>
         </ol>
       </div>
-
-      <aside class="priority" aria-label="First priority">
-        <strong>Start with discovery</strong>
-        <p>The live homepage, artist directory and museum directory currently tell Google not to index them. Create indexable public entrances to approved content, while keeping research material in its existing review workflow.</p>
+      <aside class="priority" aria-label="Recommended first action">
+        <strong>Do this first</strong>
+        <p>Use the existing <a href="https://artlines.org/art-history-timeline">art-history timeline guide</a> for five short reader sessions. Watch whether people can reach an artwork and explain one connection. Improve that journey before expanding promotion.</p>
       </aside>
-
       <div class="layout">
-        <aside class="sidebar" aria-label="Guide navigation and progress">
+        <aside class="sidebar" aria-label="Plan navigation and progress">
           <nav aria-label="Contents">
-            <a href="#google">Google &amp; indexing</a>
-            <a href="#articles">Articles to write</a>
-            <a href="#artwork-pages">Artwork pages</a>
-            <a href="#promotion">Share &amp; bring readers back</a>
-            <a href="#month">Your first month</a>
-            <a href="#measurement">What to measure</a>
-            <a href="#sources">Source reading</a>
+            <a href="#review">Review of the existing plans</a>
+            <a href="#audience">Audience &amp; promise</a>
+            <a href="#journey">First-visit experience</a>
+            <a href="#google">Live site &amp; search</a>
+            <a href="#articles">Two guides to launch with</a>
+            <a href="#promotion">Where first users come from</a>
+            <a href="#messages">Messages to adapt</a>
+            <a href="#month">30-day action checklist</a>
+            <a href="#measurement">Targets &amp; decisions</a>
+            <a href="#resources">Time, budget &amp; later work</a>
+            <a href="#sources">Evidence &amp; references</a>
           </nav>
           <div class="tracker" id="tracker" hidden>
-            <label for="progress">Your first-month checklist</label>
-            <progress id="progress" max="8" value="0">0 of 8 complete</progress>
-            <p class="note" id="progress-text" role="status" aria-live="polite">0 of 8 complete</p>
+            <label for="progress">Launch checklist</label>
+            <progress id="progress" max="16" value="0">0 of 16 complete</progress>
+            <p class="note" id="progress-text" role="status" aria-live="polite">0 of 16 complete</p>
             <p class="note" id="storage-note">Progress is saved in this browser.</p>
             <button class="button" id="reset-plan" type="button" disabled>Reset checklist</button>
           </div>
         </aside>
-
         <div class="content">
-          <section id="google" aria-labelledby="google-title">
-            <h2 id="google-title">Can Google index everything?</h2>
-            <p class="lead">Google can discover public pages and images. It does not automatically read everything in your database, and it does not guarantee that every eligible page will be indexed.</p>
-            <p>Give important content its own accessible URL, useful text and ordinary links from related pages. A sitemap helps Google discover those URLs; indexing and prominent rankings are separate outcomes.</p>
-            <div class="table-wrap">
-              <table>
-                <caption>Live spot check: 8 October 2026</caption>
-                <thead><tr><th scope="col">Page</th><th scope="col">Instruction to Google</th></tr></thead>
+          <section id="review" aria-labelledby="review-title">
+            <h2 id="review-title">Keep the idea. Make the launch specific.</h2>
+            <p class="lead">The September business plan and 8 October growth guide already have the right ingredients: visual stories, useful guides, educators and a return habit. They need an audience, a sequence and evidence that readers find value.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Review of previous recommendations">
+              <table><caption>What this revision changes</caption>
+                <thead><tr><th scope="col">Earlier recommendation</th><th scope="col">Assessment</th><th scope="col">Next decision</th></tr></thead>
                 <tbody>
-                  <tr><th scope="row"><a href="https://artlines.org/">Homepage</a></th><td class="blocked">Do not index</td></tr>
-                  <tr><th scope="row"><a href="https://artlines.org/artists">Artist directory</a></th><td class="blocked">Do not index</td></tr>
-                  <tr><th scope="row"><a href="https://artlines.org/museums">Museum directory</a></th><td class="blocked">Do not index</td></tr>
-                  <tr><th scope="row"><a href="https://artlines.org/art-history-timeline">Art-history timeline guide</a></th><td class="allowed">Indexing allowed</td></tr>
-                  <tr><th scope="row"><a href="https://artlines.org/artists/leonardo-da-vinci">Leonardo</a> and <a href="https://artlines.org/artists/katsushika-hokusai">Hokusai</a> profiles</th><td class="allowed">Indexing allowed</td></tr>
+                  <tr><th scope="row">Make the main entry pages indexable</th><td>Already true in the new live sample.</td><td>Verify Google processing and landing-page usefulness; retire the old noindex blocker.</td></tr>
+                  <tr><th scope="row">Keep research previews separate</th><td>Superseded by the unified catalogue.</td><td>Link to ordinary active records. Preserve uncertainty and sources; no status-based marketing gate.</td></tr>
+                  <tr><th scope="row">Write a guide every week</th><td>Useful direction, too much output before feedback.</td><td>Make two strong guides, then improve and redistribute them in weeks 3–4.</td></tr>
+                  <tr><th scope="row">Use search, Instagram, Pinterest and email</th><td>Too many channels for a small launch.</td><td>Start with personal feedback and relevant communities; test one visual channel.</td></tr>
+                  <tr><th scope="row">Add affiliates and test €5/month</th><td>Revenue hypotheses, with no demand evidence here.</td><td>Revisit after repeat use and interviews. Public discovery remains the immediate priority.</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="note table-note">These are the pages’ indexing instructions, not confirmation that Google has indexed them. This was a sample check; page settings may change after this date.</p>
+            <p class="source-links">Companion: <a href="artline-business-plan.html">revised business brief</a>. The original growth guide is expanded in this file. The <a href="unified-catalogue.md">8 October release record</a> supersedes older review/publication visibility instructions.</p>
+            <div class="decision"><p><strong>The question for month one:</strong> can a focused invitation bring interested people into Artline, help them discover something, and give some of them a reason to come back?</p><p>Targets below are proposed learning goals. No current traffic, conversion, keyword-volume or subscriber baseline was available for this review.</p></div>
+          </section>
+
+          <section id="audience" aria-labelledby="audience-title">
+            <h2 id="audience-title">Start with curious art-history learners.</h2>
+            <p class="lead">Choose people who already spend time learning about art and want help connecting works to a period, place or artist. Start in English; use Greek and Byzantine material as the first topic to test.</p>
+            <p>This is an editorial choice based on Artline’s existing research and priorities, not a claim that this is the largest market. Greek museum coverage provides material to select from; it does not establish complete coverage or ready-made visitor itineraries.</p>
+            <div class="copy"><p class="quote">“Explore art through time. Follow the artists, artworks, books and events that help you understand a period.”</p><p class="note">Proposed core message. Use one concrete example immediately below it.</p></div>
+            <div class="ideas">
+              <article class="idea"><h3>First readers</h3><p>Independent learners, art-history students and museum enthusiasts. Their task: “Help me understand what I’m looking at and what to explore next.” Invite them to one short visual exploration.</p></article>
+              <article class="idea"><h3>First collaborators</h3><p>Art-history teachers, small cultural newsletters and specialist creators. Their task: “Give my audience something useful to explore.” Offer a sourced comparison exercise before asking for a share.</p></article>
+              <article class="idea"><h3>Second audience to test</h3><p>People researching Greek or Cypriot collections before a visit. Lead with documented holdings and official museum links. Validate this separately from general learning intent.</p></article>
+              <article class="idea"><h3>The distinction to demonstrate</h3><p>Let people move from a work to its artist and historical context in one journey. Show the experience in a short screen recording. Avoid untested claims of superiority or completeness.</p></article>
+            </div>
+            <p class="note">Scope remains selected works created in or before 1970, with unknown and crossing dates explicit. Greek, Russian-icon, Byzantine and post-Byzantine topics remain first-class content priorities.</p>
+          </section>
+
+          <section id="journey" aria-labelledby="journey-title">
+            <h2 id="journey-title">Make the first five minutes rewarding.</h2>
+            <div class="route" aria-label="Suggested visitor journey">
+              <div><strong>Read one question</strong><p>A guide explains what to look for, using three to five selected works.</p></div>
+              <div><strong>Follow one connection</strong><p>Open an artwork, then its artist or museum. Sources and uncertain facts stay visible.</p></div>
+              <div><strong>Choose the next story</strong><p>A related guide gives the visit a natural continuation and a reason to return.</p></div>
+            </div>
             <ol class="actions">
-              <li><strong>Create public entry pages.</strong> Introduce Artline on the homepage and link to approved artists, artworks and useful guides. Keep research previews separate.</li>
-              <li><strong>Align links and sitemaps.</strong> Link to the public version of a record and include eligible canonical URLs in the sitemap. Preserve publication checks; removing every <code>noindex</code> tag is not a publication workflow.</li>
-              <li><strong>Check the existing Search Console account.</strong> Inspect representative URLs, their selected canonical, indexing exclusions and sitemap processing. The October 3 setup record noted a child-sitemap fetch issue that needs a follow-up check.</li>
+              <li><strong>Give each campaign one destination.</strong> Begin with the existing timeline guide. Move a topic campaign to its dedicated guide once published. Check the final URL anonymously on a phone.</li>
+              <li><strong>Give every selected work a useful caption.</strong> Include title, qualified creator, known date, a supported observation, source and actual image credit. Similar dates or appearances alone do not establish influence.</li>
+              <li><strong>Check the exact path a new reader takes.</strong> Open the guide, work and next record without a signed-in session. If any step has a member gate, make it clear and choose an accessible campaign path while preserving access controls.</li>
+              <li><strong>Use an honest return invitation.</strong> Link the second guide. Offer email only after signup, confirmation and unsubscribe actually work. Treat bookmarks, collections and paid concepts as feature-specific claims that need live verification.</li>
             </ol>
-            <p class="source">Google: <a href="https://developers.google.com/search/docs/fundamentals/how-search-works">how Search works</a>, <a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing">what noindex means</a> and <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview">how sitemaps help</a>.</p>
+            <div class="recipe"><h3>A 15-minute reader session</h3><p>Ask what the reader last tried to learn about art. Give them the guide and ask them to find a work that interests them, then something related. Stay quiet while they try. Ask: “What did you learn?”, “Where did you get stuck?” and “When would you use this again?” Record the obstacle and one change, with permission for any quote.</p></div>
+            <p class="note table-note">Campaign selection is editorial focus. All active catalogue records remain available under the unified catalogue, including anonymous, undated and unillustrated works. Empty museum records do not become marketing destinations.</p>
+          </section>
+
+          <section id="google" aria-labelledby="google-title">
+            <h2 id="google-title">Keep search working while you meet readers.</h2>
+            <p class="lead">The old entry-page blocker has been resolved. Direct, anonymous HTTP checks on 10 October returned 200 and <code>index, follow</code> on the five sampled pages below.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Live indexing spot check">
+              <table class="compact-table"><caption>Live sample / 10 October 2026</caption>
+                <thead><tr><th scope="col">Page checked</th><th scope="col">Observed result</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row"><a href="https://artlines.org/">Homepage</a></th><td>200; indexing allowed; canonical present</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/artists">Artist directory</a></th><td>200; indexing allowed; canonical present</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/museums">Museum directory</a></th><td>200; indexing allowed; canonical present</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/art-history-timeline">Timeline guide</a></th><td>200; indexing allowed; canonical present</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/artists/leonardo-da-vinci">Leonardo profile</a></th><td>200; indexing allowed; canonical present</td></tr>
+                  <tr><th scope="row"><a href="https://artlines.org/sitemap.xml">Sitemap index</a> and <a href="https://artlines.org/sitemap-pages.xml">page sitemap</a></th><td>200; XML returned</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note table-note">This checks delivery and page metadata, not Google’s index, rankings, complete catalogue access or every sitemap. The XML endpoints carry their own noindex header; that observation does not describe the listed HTML pages. Search Console was not opened during this review.</p>
+            <ol class="actions">
+              <li><strong>Recheck the existing Search Console property.</strong> The 3 October record reports a child-sitemap fetch warning. Today’s HTTP success does not prove Google has cleared it. Record the current status before investigating further.</li>
+              <li><strong>Inspect a bounded launch sample.</strong> Check the guide, a profile, one linked artwork and one museum for Google-selected canonical, crawl access and indexing outcome. Preserve intentional member and internal-page exclusions.</li>
+              <li><strong>Use ordinary internal links.</strong> Connect each guide with the exact artwork and artist records it discusses. A general <code>/guides/</code> section remains proposed; no such route was found in the inspected app tree.</li>
+              <li><strong>Keep the scale work in the backend.</strong> New discovery pages should use bounded API results and existing canonical routes. The 10-million-artwork capacity goal is not a marketing inventory claim or a reason to generate thin pages.</li>
+            </ol>
+            <p class="source">A sitemap helps discovery but does not guarantee crawling or indexing: <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview">Google’s sitemap guidance</a>. Track actual outcomes in <a href="https://developers.google.com/search/docs/monitor-debug/search-console-start">Search Console</a>.</p>
           </section>
 
           <section id="articles" aria-labelledby="articles-title">
-            <h2 id="articles-title">Yes, write articles.</h2>
-            <p class="lead">Start with one carefully sourced guide each week, published on Artline under a section such as <code>/guides/</code>.</p>
-            <p>Your Greek, Byzantine, Russian-icon and Cypriot research gives you material for a focused editorial programme. These ideas are starting hypotheses, not measured keyword demand.</p>
+            <h2 id="articles-title">Launch with two guides people can use.</h2>
+            <p class="lead">Keep the original topic ideas, but give the first two a clear job. These briefs are proposals; neither is claimed to be published or supported by measured keyword demand.</p>
+            <article class="recipe">
+              <span class="tag">Guide 1 / week 1–2</span>
+              <h3>How to look at a Byzantine icon: three things to notice</h3>
+              <p>For the curious beginner. Select three to five existing, source-backed works. Explain a few visible details with object-specific evidence and qualified interpretations. End with one comparison question.</p>
+              <ol><li>A direct answer and a short explanation of the terms.</li><li>Three illustrated observations with captions and sources.</li><li>A comparison linking two exact artwork records and their context.</li><li>One clear action: “Explore these works in Artline.”</li></ol>
+              <p class="note table-note"><strong>Ready when:</strong> each claim has evidence, each image matches the object, each destination opens, and a first-time reader can explain one thing they noticed. If the relevant works lack adequate evidence, use the existing timeline guide while researching.</p>
+            </article>
+            <article class="recipe">
+              <span class="tag">Guide 2 / week 2–3</span>
+              <h3>Greek art across time: five works, five starting points</h3>
+              <p>For someone who wants a manageable route into Greek art. Choose five eligible records with supported dates or clearly stated uncertainty. Explain their differences and show where the reader can continue.</p>
+              <ol><li>A compact chronology; unknown dates stay unplaced or qualified.</li><li>One paragraph per work: what to notice, why it belongs here, where the evidence comes from.</li><li>Artist, artwork and documented holding links where available.</li><li>A return link to the first guide and a question for the next one.</li></ol>
+              <p class="note table-note"><strong>Ready when:</strong> all five selections have documented relevance, working paths and honest captions. No “all Greek museums” or “see these today” claim.</p>
+            </article>
             <div class="ideas">
-              <article class="idea"><h3>Byzantine and post-Byzantine art: an illustrated introduction</h3><p>Explain the terms with selected examples, a simple chronology and links to approved artwork records.</p></article>
-              <article class="idea"><h3>Greek painters: a timeline through selected artworks</h3><p>Connect creators and works across periods. Let readers continue exploring those connections in Artline.</p></article>
-              <article class="idea"><h3>Understanding Russian icons: symbols and examples</h3><p>Explain a few well-supported visual details, with sources and explicit attribution where a creator is unknown.</p></article>
-              <article class="idea"><h3>Exploring art collections in Cyprus</h3><p>Introduce documented collection highlights. Distinguish holdings from current display; verify visiting information before publication.</p></article>
+              <article class="idea"><h3>Next: Russian icons</h3><p>Develop a sourced visual comparison from actual reader questions. Keep anonymous and workshop attributions intact.</p></article>
+              <article class="idea"><h3>Next: collections in Cyprus</h3><p>Introduce selected holdings with official collection links. Fresh museum information is required before adding visiting or current-display advice.</p></article>
             </div>
-            <div class="recipe">
-              <h3>A useful article structure</h3>
-              <ol>
-                <li><strong>Answer one question.</strong> Use a clear title and give the reader an answer near the beginning.</li>
-                <li><strong>Show and explain.</strong> Choose a few relevant images and explain what to notice in each one.</li>
-                <li><strong>Add something original.</strong> Make a comparison, connect a timeline or explain your documented research.</li>
-                <li><strong>Make the evidence visible.</strong> Include sources, actual image credits, an honest byline and meaningful update dates.</li>
-                <li><strong>Offer a next step.</strong> Link to related approved artworks, artists and another relevant guide.</li>
-              </ol>
-            </div>
-            <p class="source">Google recommends useful, original content with clear sourcing. There is no preferred word count: <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">people-first content guidance</a>.</p>
-          </section>
-
-          <section id="artwork-pages" aria-labelledby="artworks-title">
-            <h2 id="artworks-title">Make every visit worthwhile.</h2>
-            <p class="lead">An artwork page should help a reader understand the work and decide what to explore next.</p>
-            <div class="tips">
-              <div><h3>Give the work context</h3><p>Show its title, creator or qualified attribution, known date, documented museum connection and sources. Keep unknown facts explicit.</p></div>
-              <div><h3>Help images be understood</h3><p>Use descriptive alternative text, informative captions and nearby relevant text. Preserve the image’s actual source, credit and rights evidence.</p></div>
-              <div><h3>Connect related material</h3><p>Offer relevant links to the artist, other works and an explanatory guide. Readers should have an obvious next step.</p></div>
-              <div><h3>Make exploration comfortable</h3><p>Check mobile readability, image loading, keyboard navigation and page responsiveness. Keep the main explanation easy to reach.</p></div>
-            </div>
-            <p class="source">Google: <a href="https://developers.google.com/search/docs/appearance/google-images">image discovery and accessibility guidance</a>.</p>
+            <div class="weekly"><h3>Reuse the research</h3><p>Turn each guide into one five-panel visual story, a 30–45 second screen recording and one short discussion prompt. Each version should teach something on its own and link to the same relevant destination.</p></div>
+            <p class="source">Choose length to answer the question; original explanation, clear sourcing and useful comparisons matter more than a word target. See <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Google’s people-first content guidance</a>. Use informative alternative text and nearby captions for images: <a href="https://developers.google.com/search/docs/appearance/google-images">Google Images guidance</a>.</p>
           </section>
 
           <section id="promotion" aria-labelledby="promotion-title">
-            <h2 id="promotion-title">Give the guide a life beyond search.</h2>
-            <p class="lead">Choose one social channel you can maintain and a few relevant communities where your work is useful.</p>
-            <ul class="actions">
-              <li><strong>Share a small, complete story.</strong> Use an approved image and one interesting observation, then link to the full guide.</li>
-              <li><strong>Create something educators can use.</strong> A comparison of two works or a short timeline exercise gives people a practical reason to reference Artline.</li>
-              <li><strong>Invite readers back.</strong> Consider an optional weekly email with one artwork and one story. Make subscribing and unsubscribing straightforward.</li>
-              <li><strong>Participate where the topic belongs.</strong> Share relevant resources in art and museum communities, following their rules.</li>
-            </ul>
-            <aside class="weekly"><h3>A manageable weekly rhythm</h3><p>Research one question. Publish one illustrated guide. Share one useful excerpt. Review what people read and explore next.</p></aside>
+            <h2 id="promotion-title">Find readers close to the subject.</h2>
+            <p class="lead">Prioritize learning and a repeatable source of interested visitors. The following are small experiments, with founder time included in their cost.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Acquisition experiments">
+              <table><caption>Four routes, with different jobs</caption>
+                <thead><tr><th scope="col">Route</th><th scope="col">Small test</th><th scope="col">Decision signal</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Personal invitations<br><span class="note">Start now</span></th><td>Build a list of 20 relevant people: 8 educators, 6 specialist creators/newsletters, 6 learners or museum enthusiasts. Research fit manually; invite five at a time.</td><td>Aim for five reader sessions across the month. After ten relevant invitations and no substantive reply, revise the request and audience before sending more.</td></tr>
+                  <tr><th scope="row">Topic communities<br><span class="note">After the first guide</span></th><td>Find three groups or forums with active art-history discussion. Read each community’s current rules. Make two useful contributions, with Artline affiliation clear and a link only where welcome.</td><td>Look for specific questions and visitors who explore. No useful response after two permitted posts: change the topic or community; avoid repetition.</td></tr>
+                  <tr><th scope="row">One visual channel<br><span class="note">Default test: Instagram</span></th><td>Create four posts from the two guides and two short demos. Use the actual profile’s available link surface. If an existing Pinterest audience is stronger, substitute that channel.</td><td>Review qualified visits and exploration after four posts. Saves are supporting evidence; reach alone is insufficient. Pause if the effort produces no usable signal.</td></tr>
+                  <tr><th scope="row">Search<br><span class="note">Build steadily</span></th><td>Connect and maintain the two guides and their source-backed records. Review page and query performance weekly; separate branded from non-branded searches.</td><td>First check crawl and indexing outcomes. Reassess topic demand over 6–12 weeks; day-30 traffic is too early for a confident verdict.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note table-note">Twenty contacts and the publishing quantities are effort caps, not promised reach. Suggested places and channels are prospecting categories, not confirmed partnerships. Current community rules must be checked before posting; Reddit’s <a href="https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam">spam guidance</a> emphasizes authentic participation and community-specific rules.</p>
+            <div class="recipe"><h3>A collaborator offer that is easy to assess</h3><p>Prepare a one-page exercise: two works, a small timeline, three questions and source links. Offer it to one educator for a real class or reading group. Ask what they used and what confused learners. A share is optional; do not imply a museum or institution endorses Artline.</p><p class="note table-note">Track: person or organization, why they fit, relevant public contact route, resource offered, invitation date, reply, referral tag and outcome. One relevant follow-up is enough; stop on a decline.</p></div>
+            <p class="milestone"><strong>Broader launch later:</strong> consider a maker directory such as Product Hunt only once the first-visit journey works and a demo is ready. Audience fit is still a hypothesis. Use its <a href="https://www.producthunt.com/launch">current launch guide</a> when preparing that separate experiment.</p>
+          </section>
+
+          <section id="messages" aria-labelledby="messages-title">
+            <h2 id="messages-title">Lead with the thing people will discover.</h2>
+            <p class="lead">Drafts to adapt after checking the named guide and links. These messages have not been sent, and this document does not enroll anyone in email.</p>
+            <div class="recipe"><h3>Personal feedback invitation</h3><div class="copy"><p>Hi [name], I’m building Artline, a way to explore artworks alongside artists and historical context. Your [specific work or interest] made me think you might have a useful perspective.</p><p>Would you try this short exploration [verified link] and tell me where you get stuck? I’m especially interested in whether it helps you find a work you want to learn more about. A few lines of feedback or a 15-minute conversation would help.</p></div></div>
+            <div class="recipe"><h3>Visual story opening</h3><div class="copy"><p>What should you look at first in an icon?</p><p>Start with one visible detail. This guide uses three works to show what to notice, what the sources support, and which questions remain open. Explore the examples in Artline: [verified guide link].</p></div><p class="note table-note">Five panels: question; example 1; example 2; comparison; invitation. Keep source and image credits legible. Use an actual object observation once selections are final.</p></div>
+            <div class="recipe"><h3>Return invitation, if email is ready</h3><div class="copy"><p><strong>Signup text:</strong> One artwork, one connection, once a week. Get a short Artline exploration with links to the works and their sources.</p><p><strong>First email subject:</strong> Start with one work.</p><p>Thanks for joining. Here’s this week’s exploration: [verified guide link]. Which detail would you like to understand better? Reply with a question and help shape the next story.</p></div><p class="note table-note">Send only to opted-in readers after delivery and unsubscribe checks. If email is not ready, use the second guide as the return invitation. An email platform and delivery flow were not verified in this review.</p></div>
           </section>
 
           <section id="month" aria-labelledby="month-title">
-            <h2 id="month-title">Your first month</h2>
-            <p class="lead">Aim for discoverable public entrances, four useful articles and a regular measurement habit. Check off tasks as you complete them.</p>
-            <noscript><p class="note">The checklist works without JavaScript. Enable JavaScript to save progress in this browser, or use your browser’s Print command to keep a paper copy.</p></noscript>
+            <h2 id="month-title">The next 30 days, with a definition of done.</h2>
+            <p class="lead">Day 1 is the day you start. Assume one founder with 10 hours per week; estimates total 40 hours. “Founder” includes editorial and outreach work. A developer is needed only for a confirmed page or measurement gap.</p>
+            <noscript><p class="note">Use the checkboxes for this visit, or your browser’s Print command. JavaScript enables saved progress.</p></noscript>
             <div class="plan">
-              <fieldset class="week"><legend>Week 1: establish the foundation</legend>
-                <label class="task"><input type="checkbox" data-task="public-pages"><span>Prepare indexable public entry pages and links to approved content.</span></label>
-                <label class="task"><input type="checkbox" data-task="baseline"><span>Check Search Console, record a baseline and publish the first guide.</span></label>
+              <fieldset class="week"><legend>Week 1 / choose and test / 10 hours</legend>
+                <p>Outcome: one verified visitor journey, an initial baseline and a researched first guide.</p>
+                <label class="task"><input type="checkbox" data-task="launch-audience"><span>Write the audience and invitation in one paragraph.<small>Founder · 1h · Done: one learning task, one destination and a 20-person prospect list with a reason for each contact.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-path"><span>Audit the campaign path and measurement.<small>Founder + developer if needed · 3h · Done: anonymous mobile path checked, Search Console status recorded, analytics capability recorded. Use a manual reader log if instrumentation cannot fit.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-sessions"><span>Invite the first five people and run two reader sessions.<small>Founder · 2h · Done: invitations sent during launch execution, two sessions completed or pending appointments recorded, obstacles written down. No response is also evidence.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-guide-draft"><span>Draft Guide 1 from selected existing records.<small>Founder/editor · 4h · Done: three to five object links, caption evidence, image-source labels and one clear next step. Hold unsupported claims.</small></span></label>
               </fieldset>
-              <fieldset class="week"><legend>Week 2: connect the content</legend>
-                <label class="task"><input type="checkbox" data-task="second-guide"><span>Publish the second guide with links to relevant approved records.</span></label>
-                <label class="task"><input type="checkbox" data-task="page-quality"><span>Review linked artwork pages for useful captions, sources and mobile readability.</span></label>
+              <fieldset class="week"><legend>Week 2 / release one useful thing / 10 hours</legend>
+                <p>Outcome: the first guide is ready for readers, with an initial distribution test.</p>
+                <label class="task"><input type="checkbox" data-task="launch-guide-one"><span>Finish and publish Guide 1 when release is authorized.<small>Founder/editor + developer if needed · 3h · Done: published URL, canonical, mobile images, credits and record links checked. This planning file does not deploy a guide.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-assets-one"><span>Make two visual posts and one short demo.<small>Founder · 2h · Done: assets explain one observation, use the same guide destination and have distinct campaign tags.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-distribute-one"><span>Invite five more readers and contribute to one community.<small>Founder · 2h · Done: fit and rules checked, outcomes recorded, up to ten personal invitations total. Adapt the ask if the first batch struggled.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-guide-two-draft"><span>Outline Guide 2 and fix the biggest observed obstacle.<small>Founder/editor · 3h · Done: five candidate works with evidence, a reader question to answer, and one verified improvement to the existing journey.</small></span></label>
               </fieldset>
-              <fieldset class="week"><legend>Week 3: reach interested readers</legend>
-                <label class="task"><input type="checkbox" data-task="third-guide"><span>Publish the third guide and share an illustrated excerpt on your chosen channel.</span></label>
-                <label class="task"><input type="checkbox" data-task="feedback"><span>Ask a few interested readers or educators what helped and what was missing.</span></label>
+              <fieldset class="week"><legend>Week 3 / give readers a second discovery / 10 hours</legend>
+                <p>Outcome: two connected guides and feedback on the return experience.</p>
+                <label class="task"><input type="checkbox" data-task="launch-guide-two"><span>Complete and publish Guide 2 when release is authorized.<small>Founder/editor · 4h · Done: evidence and links checked, both guides connected, no unsupported completeness or display claim.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-assets-two"><span>Create two more visual posts and the second demo.<small>Founder · 2h · Done: four posts and two demos total, with destination and credit checks.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-collaborator"><span>Invite five more people and test the educator exercise.<small>Founder · 2h · Done: up to 15 invitations total, one tailored exercise offered, response recorded. Obtain permission before using a testimonial.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-return"><span>Complete three more reader sessions and offer a return path.<small>Founder · 2h · Done: aim for five sessions total; second-guide link tested. Use an optional email invitation only if the delivery flow works.</small></span></label>
               </fieldset>
-              <fieldset class="week"><legend>Week 4: learn and improve</legend>
-                <label class="task"><input type="checkbox" data-task="fourth-guide"><span>Publish the fourth guide and improve an earlier page using reader feedback.</span></label>
-                <label class="task"><input type="checkbox" data-task="review"><span>Compare search results with the baseline and choose next month’s topics.</span></label>
+              <fieldset class="week"><legend>Week 4 / repeat what helps / 10 hours</legend>
+                <p>Outcome: one documented decision about audience, journey and channel.</p>
+                <label class="task"><input type="checkbox" data-task="launch-improve"><span>Improve both guides from real questions.<small>Founder/editor · 3h · Done: changes tied to observed confusion, sources retained, mobile path rechecked. Fix the strongest obstacle before adding a third guide.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-final-distribution"><span>Complete the final five invitations and a second community contribution.<small>Founder · 2h · Done: up to 20 invitations and two permitted community contributions total, outcomes logged. Stop unproductive repetition.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-return-review"><span>Ask early readers what brought them back, or why they did not return.<small>Founder · 2h · Done: follow-up offered to consenting participants; actual reasons recorded separately from assumptions.</small></span></label>
+                <label class="task"><input type="checkbox" data-task="launch-month-review"><span>Review the scorecard and choose next month’s experiment.<small>Founder · 3h · Done: actual counts and denominators, hours by channel, top three obstacles, one continue/change/pause decision and its next action.</small></span></label>
               </fieldset>
             </div>
           </section>
 
           <section id="measurement" aria-labelledby="measurement-title">
-            <h2 id="measurement-title">Measure discovery and curiosity.</h2>
-            <p class="lead">Use Search Console for search performance. Use suitable site analytics, if introduced, for what visitors do after arriving.</p>
-            <dl class="metrics">
-              <div><dt>Indexed eligible pages</dt><dd>Are approved pages appearing in Google’s index? Investigate exclusions and errors.</dd></div>
-              <div><dt>Search impressions and clicks</dt><dd>Which questions and pages bring readers? Separate searches for “Artline” from other queries.</dd></div>
-              <div><dt>Image-search traffic</dt><dd>Check the Image search type in Search Console to see which illustrated pages get attention.</dd></div>
-              <div><dt>Exploration and return visits</dt><dd>Are readers opening another artwork, returning later or choosing to subscribe?</dd></div>
-            </dl>
-            <p style="margin-top: 24px">Review weekly, then make broader decisions over several weeks and months. A new site may have little data at first. This plan is a working strategy, not a traffic or ranking forecast.</p>
-            <p class="source">Google: <a href="https://developers.google.com/search/docs/monitor-debug/search-console-start">using Search Console to monitor your site</a>.</p>
+            <h2 id="measurement-title">Count discovery and return.</h2>
+            <p class="lead">Use 100 qualified first-time visitors as a learning target. A smaller group that actively explores can still teach more than a large launch-day spike. All figures here are proposed goals, not existing results or industry benchmarks.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Launch measurement scorecard">
+              <table><caption>Day-30 scorecard / baseline to be collected in week 1</caption>
+                <thead><tr><th scope="col">Measure</th><th scope="col">Working target</th><th scope="col">Definition</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Qualified first-time visitors</th><td class="score-target">100</td><td>Distinct measured visitors entering through the relevant launch campaigns or search topics. Exclude team tests and known bots. This is an observable proxy for interest.</td></tr>
+                  <tr><th scope="row">Meaningful explorers</th><td class="score-target">30 of 100</td><td>Among that cohort, people who open an artwork and a second, distinct catalogue record in the same session. Count people once; report count / qualified visitors.</td></tr>
+                  <tr><th scope="row">Readers who return</th><td class="score-target">6 of 20 eligible</td><td>Among activated visitors first seen by day 21, those with a later visit 2–7 days after activation. Aim for at least 20 eligible readers; report returns / eligible readers, with incomplete windows excluded.</td></tr>
+                  <tr><th scope="row">Reader conversations</th><td class="score-target">5</td><td>Completed sessions with intended users; capture their learning task, obstacle and reason to return. Invitations and appointments are separate counts.</td></tr>
+                  <tr><th scope="row">Voluntary recommendations</th><td class="score-target">3</td><td>Distinct people who voluntarily share the resource or recommend it to someone relevant; record referral visits separately. Do not require sharing for access.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note table-note">Distinct visitors are browser/device estimates unless a suitable identity method exists. Do not present them as verified people. If analytics cannot measure activation or cross-session return, mark those metrics “not measured” and use separately labelled interview observations. Never substitute session counts or email opens for people or return visits.</p>
+            <div class="recipe"><h3>Minimum measurement setup</h3><p>No dedicated analytics or newsletter integration was found in the inspected application paths; external tooling may exist. First confirm the actual setup. Proposed events: guide opened, artwork opened and related record opened, carrying page/record IDs and campaign source. Avoid personal data in URLs or event payloads.</p><p>Use consistent tags, for example <code>utm_source=instagram</code>, <code>utm_medium=organic_social</code>, <code>utm_campaign=first_readers</code>, <code>utm_content=icon_detail_1</code>. Apply them to external campaign links; do not overwrite acquisition with internal-link tags. Confirm the selected analytics actually records them.</p><p>For channel comparisons, assign each measured visitor to their first observed launch source and preserve that cohort for return analysis. Record unattributed traffic separately; never sum overlapping platform reach into unique visitors.</p></div>
+            <div class="ideas">
+              <article class="idea"><h3>People arrive but do not explore</h3><p>If fewer than 20 of the first 100 qualified visitors activate, run five focused usability checks and improve the promise, next link or page speed before increasing distribution.</p></article>
+              <article class="idea"><h3>People explore but do not return</h3><p>If fewer than four of at least 20 eligible activated readers return, test a clearer second story and ask why it was not useful enough to revisit.</p></article>
+              <article class="idea"><h3>One route shows repeat use</h3><p>Give it half of next month’s distribution time after it brings at least 20 qualified visitors and three observed returns. Compare hours per activated visitor and return counts, not likes.</p></article>
+              <article class="idea"><h3>The sample is still small</h3><p>Continue for two more weeks, improve recruitment and keep the audience fixed. Do not declare a channel successful or failed from a handful of clicks.</p></article>
+            </div>
+            <p class="note">These are practical decision rules for a small experiment, not statistical significance tests. Review every Friday: counts, denominators, source, hours, one reader observation and one change for the coming week.</p>
+          </section>
+
+          <section id="resources" aria-labelledby="resources-title">
+            <h2 id="resources-title">Protect time for conversations.</h2>
+            <p class="lead">Default to 40 founder hours and €0 in advertising during the first month. Reserve up to €100 for optional tools only if a clear gap appears; this is a planning ceiling, not an instruction to spend or a vendor quote.</p>
+            <div class="tips">
+              <div><h3>If only 5 hours a week are available</h3><p>Make one guide, ten personal invitations and two visual posts. Keep the five reader sessions and weekly review. Shift Guide 2 to month two; do not drop feedback to preserve publishing volume.</p></div>
+              <div><h3>If technical work is larger than expected</h3><p>Start reader sessions on the current timeline guide. Keep analytics and a guide template as bounded tasks. Defer the newsletter until there is a reliable signup-to-delivery flow.</p></div>
+              <div><h3>Days 31–60</h3><p>Repeat the strongest audience/topic combination, publish the next two guides from actual questions and try a second educator collaboration. Reassess search pages over a longer window.</p></div>
+              <div><h3>Days 61–90</h3><p>If repeat use holds, interview ten returning readers about collections, notes or exports. Prototype the most repeated need and test willingness to pay. The old €5/month idea remains unvalidated.</p></div>
+            </div>
+            <div class="decision"><p><strong>Keep later work conditional.</strong> Affiliate programs, multiple social channels, a Product Hunt launch and paid acquisition each need evidence of fit. A future small ad experiment should have a fixed spending cap and an activated-visitor target based on observed conversion.</p><p>Catalogue growth continues under the existing source policies. Marketing does not require a complete national museum directory, bulk imports or new placeholder artworks.</p></div>
           </section>
 
           <section id="sources" aria-labelledby="sources-title">
-            <h2 id="sources-title">Keep these references handy.</h2>
+            <h2 id="sources-title">What this plan is based on.</h2>
+            <p class="lead">Reviewed 10 October 2026. Product observations, external guidance and proposed experiments are kept distinct.</p>
             <ul class="reading">
-              <li><a href="https://developers.google.com/search/docs/fundamentals/how-search-works">How Google Search works</a></li>
-              <li><a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing">Blocking indexing with noindex</a></li>
-              <li><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview">What a sitemap does</a></li>
-              <li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Creating helpful, reliable content</a></li>
-              <li><a href="https://developers.google.com/search/docs/appearance/google-images">Google Images best practices</a></li>
-              <li><a href="https://developers.google.com/search/docs/monitor-debug/search-console-start">Getting useful information from Search Console</a></li>
+              <li><a href="artline-business-plan.html">Artline business brief</a><small>September strategy reviewed and aligned with this launch priority. Earlier revenue ideas remain hypotheses.</small></li>
+              <li><a href="unified-catalogue.md">Unified catalogue release record</a><small>Current active-record visibility policy; earlier status-based preview guidance is superseded.</small></li>
+              <li><a href="deployment-20261003-search-console.md">3 October Search Console record</a><small>Historical setup and child-sitemap warning. Account status and Google indexing need a fresh check.</small></li>
+              <li><a href="research/greek-museums-20261008/README.md">Greek museum research and delivery</a><small>Supports a focused editorial starting point; explicitly records incomplete object and institution coverage.</small></li>
+              <li><a href="paid-membership-features.md">Membership concepts</a><small>Proposal evidence, not confirmation that every illustrated feature is available to users.</small></li>
+              <li><a href="ARTLINE_IMAGE_USE.md">Artline image-use policy</a><small>WikiArt is an approved source under the user’s 6 October policy. Preserve actual rights labels and credits; approval is not a public-domain assertion. Keep object/version identity checks.</small></li>
+              <li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Google: helpful, reliable content</a><small>Original value, clear sourcing and a defined audience.</small></li>
+              <li><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview">Google: sitemaps</a> and <a href="https://developers.google.com/search/docs/monitor-debug/search-console-start">Search Console</a><small>Discovery support and measurement; no indexing or ranking guarantee.</small></li>
+              <li><a href="https://developers.google.com/search/docs/appearance/google-images">Google: image discovery</a><small>Accessible images, captions and contextual text.</small></li>
+              <li><a href="https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam">Reddit: spam and community participation</a><small>Check the actual community’s rules before a contribution.</small></li>
+              <li><a href="https://www.producthunt.com/launch">Product Hunt: launch guide</a><small>Reference for a later optional launch; no claim about Artline audience fit.</small></li>
             </ul>
+            <p class="note">Repository review covered the two existing HTML plans, catalogue release notes, membership proposals, the current timeline guide and application routes. Live checks were a bounded HTTP sample. No private analytics or Search Console account data was accessed; no claim of current user traction is made.</p>
           </section>
         </div>
       </div>
     </main>
-    <footer>
-      <p>Prepared for Artline on 8 October 2026. The site findings are a dated spot check; recommendations are editorial judgments. Article publication and catalogue publication remain separate review steps.</p>
-    </footer>
+    <footer><p>Artline launch plan / revised 10 October 2026. Working strategy for launch and first users. Checklist progress stays in this browser and does not update Artline. No campaigns, messages, subscriptions or deployments are triggered by this page.</p></footer>
   </div>
   <script>
     (() => {
-      const key = 'artline-growth-guide-20261008-v1';
+      const key = 'artline-growth-guide-20261010-launch-v2';
       const tasks = Array.from(document.querySelectorAll('[data-task]'));
       const progress = document.getElementById('progress');
       const progressText = document.getElementById('progress-text');

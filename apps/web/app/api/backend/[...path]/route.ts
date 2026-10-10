@@ -1,4 +1,5 @@
 import type { NextRequest } from "next/server";
+import { memberRequestHeaders } from "@/lib/session-cookies";
 import { acceptsGzip } from "@/lib/response-compression";
 export const dynamic = "force-dynamic";
 async function proxy(request: NextRequest, context: { params: Promise<{ path: string[] }> }) {
@@ -8,7 +9,7 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
   }
   const target = new URL(`/api/${path.map(encodeURIComponent).join("/")}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
   target.search = request.nextUrl.search;
-  const headers = new Headers();
+  const headers = memberRequestHeaders(request.cookies);
   // Old bookmarks use the same catalogue; no preview credentials are forwarded.
   target.searchParams.delete("preview");
   target.searchParams.delete("status");

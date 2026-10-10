@@ -1,0 +1,22 @@
+# Civiche Raccolte d'Arte di Palazzo Marliani Cicogna — Busto Arsizio (VA)
+
+[All museums and collections](../README.md)
+
+9 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: historic_site. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-4c97a848-9e1f-4dbb-b71e-a3ebf54aff83"></a>Allegoria della vita, La vita | Crespi, Enrico | Unverified date: post 1906-ante 1910 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118904) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118904) · checked 2026-10-05 | review |
+| <a id="artwork-b143f8de-c07d-42b8-bde9-87fec5ebafe7"></a>Annunciazione | Crespi Castoldi, Antonio Maria | Unverified date: post 1600-ante 1630 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118957) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118957) · checked 2026-10-05 | review |
+| <a id="artwork-f8819b5a-9d95-4cdd-b9bc-080c42929128"></a>Apparizione di Cristo risorto a santa Maria Maddalena, Noli me tangere | Nuvolone, Giuseppe | Unverified date: ca. 1697-ca. 1697 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118871) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118871) · checked 2026-10-05 | review |
+| <a id="artwork-99abf0e2-44ed-4209-a8af-df561d6de6e2"></a>Composizione di invenzione, Anatomia | Vaglieri, Tino | Unverified date: ca. 1961-ca. 1962 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118932) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118932) · checked 2026-10-05 | review |
+| <a id="artwork-7c74e0ea-8397-4d02-88dc-6780d7399d15"></a>Pietà | Bellotti, Biagio | post 1755-ante 1760 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118872) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118872) · checked 2026-10-05 | review |
+| <a id="artwork-cfef109f-5b5f-43f1-bb51-190c9f5b7cc4"></a>Ritratto del poeta Gaetano Crespi | Tallone Cesare | post 1900-ante 1901 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118905) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118905) · checked 2026-10-05 | review |
+| <a id="artwork-9101e4cf-e6ab-4ad7-a37c-01d80b32f2f2"></a>Ritratto di Giosuè Carducci | Crespi, Enrico | ca. 1884-ca. 1885 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118897) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118897) · checked 2026-10-05 | review |
+| <a id="artwork-57dbf25e-0f2b-40f8-ab44-fe26296fc902"></a>Ritratto di popolana | Giacomo Favretto | post 1880-ante 1884 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118892) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118892) · checked 2026-10-05 | review |
+| <a id="artwork-ea1ba8f8-51b8-4c2d-a707-9a724c5111b7"></a>Sacrificio di Lucrezia Romana | Bossi, Giuseppe | ca. 1800-ca. 1800 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118875) | [Holding source](https://catalogo.cultura.gov.it/detail/Lombardia/HistoricOrArtisticProperty/0302118875) · checked 2026-10-05 | review |

@@ -27,12 +27,39 @@ class Verification(unittest.TestCase):
     def test_later_printing_is_not_the_design_date(self):
         for text in ['1840, printed 1900','1840 (printed later)']:
             with self.subTest(text=text),self.assertRaises(ValueError):m.metadata({**self.obj,'date_display':text,'artwork_type_title':'Print'},self.artist,self.person)
+    def test_object_display_accepts_explicit_native_person_alias(self):
+        person={**self.person,'alt_titles':['Documented Alias']}
+        self.assertEqual(m.metadata({**self.obj,'artist_display':'Documented Alias, French, 1800–1880'},self.artist,person)['title'],'Synthetic work')
+    def test_native_alias_does_not_hide_different_identity_or_attribution(self):
+        person={**self.person,'alt_titles':['Documented Alias']}
+        for text in ['Undocumented Alias, French', 'Documented Aliasextra, French',
+                     'Another Artist after Documented Alias', 'Documented Alias, workshop of']:
+            with self.subTest(text=text),self.assertRaises(ValueError):
+                m.metadata({**self.obj,'artist_display':text},self.artist,person)
+        with self.assertRaises(ValueError):
+            m.metadata({**self.obj,'artist_display':'Documented Alias'},self.artist,{**person,'id':99})
     def test_abbreviated_textual_range_is_not_lost(self):
         actual=m.metadata({**self.obj,'date_display':'1840–42'},self.artist,self.person)
         self.assertEqual((actual['creation_year_start'],actual['creation_year_end'],actual['date_precision']),(1840,1842,'range'))
+    def test_date_wording_accepts_equivalent_explicit_end_years(self):
+        for left,right in [('1661–1662','1661–62'),('1899–1901','1899–01'),('c. 1840–1842','c. 1840–42')]:
+            with self.subTest(left=left,right=right):self.assertTrue(m.same_date_wording(left,right))
+    def test_date_wording_preserves_qualifiers_and_actual_interval(self):
+        for left,right in [('1661–1662','1661–63'),('c. 1661–1662','1661–62'),('1661–1662','after 1661–62'),('1661–1662','1661–62, printed 1800')]:
+            with self.subTest(left=left,right=right):self.assertFalse(m.same_date_wording(left,right))
     def test_loan_and_unknown_date_rejected(self):
         for patch in [dict(credit_line='On loan from private collection'),dict(fiscal_year_deaccession=2020),dict(date_display='n.d.'),dict(date_display='after 1840'),dict(date_start=1965,date_end=1980)]:
             with self.subTest(patch=patch),self.assertRaises(ValueError):m.metadata({**self.obj,**patch},self.artist,self.person)
+    def test_plural_museum_collection_credits(self):
+        for credit in ['The Wallace L. DeWolf and Joseph Brooks Fair Collections',
+                       'Everett D. Graff and Henry M. Huxley Endowments']:
+            with self.subTest(credit=credit):
+                self.assertEqual(m.metadata({**self.obj,'credit_line':credit},self.artist,self.person)['accession_number'],'1900.1')
+    def test_plural_credits_do_not_accept_private_holdings_or_loans(self):
+        for credit in ['Private collections, supported by Endowments',
+                       'Loans from the named Collections', 'Lenders from the named Collections']:
+            with self.subTest(credit=credit),self.assertRaises(ValueError):
+                m.metadata({**self.obj,'credit_line':credit},self.artist,self.person)
     def test_metadata_cc0_cannot_license_image(self):
         for credit in ['', 'Copyright Reserved', 'CC BY-NC 4.0']:
             with self.subTest(credit=credit),self.assertRaises(ValueError):m.image(self.obj,{**self.im,'credit_line':credit})

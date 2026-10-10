@@ -1,0 +1,9 @@
+# Further Russian Museum artist discovery — 7 October 2026
+
+A read-only audit of eight existing artist authorities found **641 eligible artwork records missing images**. Comparing their titles against checksum-pinned complete Russian WikiArt indexes yielded **16 exact-title metadata leads**: eight Nesterov, four Bilibin, three Makovsky and one Fedotov. The scoped query plan is retained; this is not a ten-million-row load test.
+
+The eight creators are Anna Ostroumova-Lebedeva, Mikhail Nesterov, Pavel Fedotov, Aleksandr Deyneka, Vladimir Makovsky, Ivan Bilibin, Fyodor Vasilyev and Alexey Venetsianov. All existing dates, creator identities and review states remain intact. Exact title matches are candidates only: paintings, drawings, reproductions and different versions still require individual visual comparison. This discovery downloaded no images and made no database writes.
+
+[Discovery and source pins](discovery.json) · [All scoped gaps](eligible-gaps.json) · [Query and plan](scoped-query-plan.json) · [Combined recovery](../local-image-recovery-20261006/README.md)
+
+The [sixteen-record version review](../local-wikiart-russian-further-versions-images-20261007/README.md) compared nineteen source originals against all sixteen native photographs. **All sixteen leads are reviewed: four attached, twelve unresolved and zero pending.** Three reproductions carry explicit framing or monochrome qualifications, and one unknown source date remains null under exact native period evidence. The [live outcome checkpoint](recovery-progress.json) verifies all sixteen record states. Discovery made no database changes; the separate image operation preserves all write receipts. Other non-exact-title gaps remain open. Procedures and selection evidence are archived at `/Users/vadimdulub/Library/Application Support/Artline/source-images/local-wikiart-russian-further-artists-20261007/procedures/`.

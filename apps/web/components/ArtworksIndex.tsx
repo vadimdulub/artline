@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { BookmarkButton } from "./Bookmarks";
+import Link from "@/components/MemberLink";
 import { artworkDate } from "@/lib/display-metadata";
 import { useRef, useState } from "react";
 import { updateQuery, useQueryString } from "@/lib/url-state";
@@ -40,11 +41,11 @@ export function ArtworksIndex() {
     </AtlasFilters>
     <div className={styles.resultsHeading}><h2 id="artwork-results-title" tabIndex={-1}>Explore the catalogue</h2><p role="status">{result.loading ? "Finding artworks…" : result.error ? "Connection interrupted" : `${formatCount(result.data?.total ?? 0)} artworks`}</p></div>
     <section aria-label="Artwork results" aria-busy={result.loading}>
-      {result.error ? <MuseumError message={result.error} retry={() => setRetry(value => value + 1)} /> : result.loading ? <p className={styles.loading}>Opening artworks…</p> : result.data?.items.length ? <ul className={styles.worksGrid}>{result.data.items.map(work => <li key={work.id}>
+      {result.error ? <MuseumError message={result.error} retry={() => setRetry(value => value + 1)} /> : result.loading ? <p className={styles.loading}>Opening artworks…</p> : result.data?.items.length ? <ul className={styles.worksGrid}>{result.data.items.map(work => <li key={work.id} className="bookmark-grid-item">
         <button className={`${styles.workCard} ${recordStyles.card}`} aria-label={`Open ${work.title}`} aria-haspopup="dialog" onClick={() => updateQuery({ work: work.id }, true)}>
           {work.media_url && <span className={styles.workImage}><ArtworkImage work={work} /></span>}
           <span className={styles.workCopy}>{work.creator && <span className={styles.place}>{work.creator}</span>}<strong>{work.title}</strong>{artworkDate(work) && <span>{artworkDate(work)}</span>}{work.museum && <span>{work.museum.name}</span>}</span>
-        </button>
+        </button><BookmarkButton kind="artwork" id={work.id} title={work.title} compact />
       </li>)}</ul> : <div className={styles.empty}><h3>No artworks match these filters</h3><button onClick={reset}>Show all artworks</button></div>}
     </section>
     {result.data && <CursorPager paging={paging} next={result.data.next_cursor} busy={result.loading} total={result.data.total} shown={result.data.items.length} label="Artwork pages" noun="artworks" />}

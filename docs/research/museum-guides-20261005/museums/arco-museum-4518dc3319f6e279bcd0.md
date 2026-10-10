@@ -1,0 +1,22 @@
+# Museo Diocesano di Arte Sacra — Venezia (VE)
+
+[All museums and collections](../README.md)
+
+9 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-242936ae-b323-44b9-90aa-fa87347b7443"></a>cena in Emmaus | Pittoni Giovanni Battista | Unverified date: ca 1723-ca 1723 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246835) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246835) · checked 2026-10-05 | review |
+| <a id="artwork-d515a3e6-2994-4e1f-a771-598d5efa0bff"></a>Cristo tentato da Satana | Lazzarini Gregorio | Unverified date: ca 1723-ca 1723 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246838) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246838) · checked 2026-10-05 | review |
+| <a id="artwork-d9c62cf8-3470-45fb-929e-9480405dc9cb"></a>predicazione di San Romualdo | Angeli Giuseppe | Unverified date: ca 1748-ca 1748 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246844) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246844) · checked 2026-10-05 | review |
+| <a id="artwork-b6e17288-ad5a-405e-a7dc-c9adbb4734b4"></a>riposo nella fuga in Egitto | Lazzarini Gregorio | Unverified date: 1723-1723 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246837) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246837) · checked 2026-10-05 | review |
+| <a id="artwork-3cc73d2e-1934-4d6c-a8b4-b80ae0928b9b"></a>San Michele Arcangelo combatte Satana/ Madonna con Bambino | Zanchi Antonio | Unverified date: ca 1673-ca 1673 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246829) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246829) · checked 2026-10-05 | review |
+| <a id="artwork-5590a0d5-8b71-40e2-80ae-76627d405ca5"></a>San Romualdo dinanzi a papa Sergio IV | Marieschi Jacopo Detto Jacopo Di Paolo | Unverified date: ca 1747-ca 1747 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246842) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246842) · checked 2026-10-05 | review |
+| <a id="artwork-8c9ae42f-be7f-400f-bff5-44414a54cdc2"></a>San Romualdo e l'Imperatore Enrico II | Marieschi Jacopo Detto Jacopo Di Paolo | Unverified date: ca 1747-ca 1747 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246843) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246843) · checked 2026-10-05 | review |
+| <a id="artwork-71b42705-dff3-4289-9bef-fd2f5aa4076a"></a>San Romualdo e l'Imperatore Ottone III | Marieschi Jacopo Detto Jacopo Di Paolo | Unverified date: ca 1747-ca 1747 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246841) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246841) · checked 2026-10-05 | review |
+| <a id="artwork-016c5c83-ca48-44fc-8253-4c0d70342aa3"></a>ultima cena | Pittoni Giovanni Battista | Unverified date: ca 1720-ca 1722 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246836) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500246836) · checked 2026-10-05 | review |

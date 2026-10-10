@@ -1,0 +1,23 @@
+# Galleria nazionale dell'Umbria — Perugia (PG)
+
+[All museums and collections](../README.md)
+
+10 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-0a9d44af-a23e-480a-a422-16703eabcc7e"></a>ascensione del Beato Angelo da Acri | Carattoli Giuseppe | Unverified date: 1825-1825 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000077044) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000077044) · checked 2026-10-05 | review |
+| <a id="artwork-988e373f-6ac6-4a51-a0bd-fbb058c59b6c"></a>Cristo benedicente | Boccanera Giacinto | Unverified date: 1729-1729 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220588) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220588) · checked 2026-10-05 | review |
+| <a id="artwork-4addefb9-60af-4715-a623-51f38784dc09"></a>Cristo risorto e Santi | Wicar Jean Detto Baptiste | Unverified date: post 1821-ante 1834 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000016658) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000016658) · checked 2026-10-05 | review |
+| <a id="artwork-2bc34d26-cede-4730-823e-6cfb298367ad"></a>Madonna in trono con Bambino e Santi | Garbi Domenico (attivo Perugia 1796-1812) | Unverified date: 1485-1496 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000016318-2) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000016318-2) · checked 2026-10-05 | review |
+| <a id="artwork-2c1b3fca-29d7-4ba8-8e59-6cba03668063"></a>panorama diagonale | Dorazio Piero | Unverified date: 1963-1963 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220586) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220586) · checked 2026-10-05 | review |
+| <a id="artwork-1f7ddb48-07fd-4576-83de-301fddcca736"></a>predica di sant'Antonio di Padova ai pesci | Boccanera Giacinto | Unverified date: 1726-1727 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220564) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220564) · checked 2026-10-05 | review |
+| <a id="artwork-242a07ce-6c0e-4490-b111-7c67170bdc6b"></a>ritratto d'uomo, Maro perugino | Busti Francesco | Unverified date: 1730-1731 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000017333) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000017333) · checked 2026-10-05 | review |
+| <a id="artwork-ddc97b32-3a39-4dc2-805c-b0e869ae7825"></a>San Bonaventura | Carlone Giovanni Andrea | Unverified date: 1669-1669 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000017321) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000017321) · checked 2026-10-05 | review |
+| <a id="artwork-c9508d24-4329-4d9b-8cae-808b8fee1154"></a>San Luigi Gonzaga | Gagliardi Bernardino | Unverified date: 1640-1660 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000017368) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000017368) · checked 2026-10-05 | review |
+| <a id="artwork-a496d323-43f9-4460-a7b7-3ebf69c9bf4a"></a>Tramonto Lunare, Tramonto Lunare | Dottori Gerardo | Unverified date: 1930-1930 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220566) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1000220566) · checked 2026-10-05 | review |

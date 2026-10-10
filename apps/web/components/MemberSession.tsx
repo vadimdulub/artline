@@ -20,10 +20,12 @@ export function MemberSessionProvider({ children }: { children: ReactNode }) {
         .catch(() => { if (!request.signal.aborted) setState({ session: null, failed: true }); });
     }
     function visible() { if (document.visibilityState === "visible") refresh(); }
+    function expired() { setState(current => ({ failed: false, session: current.session ? { ...current.session, user: null } : null })); }
     refresh();
+    window.addEventListener("artline:session-expired", expired);
     document.addEventListener("visibilitychange", visible);
     window.addEventListener("focus", refresh);
-    return () => { controller?.abort(); document.removeEventListener("visibilitychange", visible); window.removeEventListener("focus", refresh); };
+    return () => { controller?.abort(); window.removeEventListener("artline:session-expired", expired); document.removeEventListener("visibilitychange", visible); window.removeEventListener("focus", refresh); };
   }, []);
   return <MemberSession.Provider value={state}>{children}</MemberSession.Provider>;
 }

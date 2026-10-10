@@ -1,0 +1,9 @@
+# Detroit native continuation — partial capture
+
+The [checkpoint](capture-checkpoint-001.json) records the exact completed objects, source receipts, worker status and remaining selected queue at this snapshot. Later immutable captures may exist outside that snapshot. Do not start a second worker while session19735 is active. The source cadence is at most one direct request every25seconds; stop on a new source error and inspect its receipt before deciding what can continue.
+
+The first continuation waited more than30minutes after the retained HTTP429. Four object pages succeeded; object5 (Annunciatory Angel) then timed out without an HTTP response. That failure was preserved and not retried. After at least5minutes, the reviewed successor continued to other already-selected public URLs on the same host and transport. No verification challenge or rate limit was bypassed.
+
+Five Russian/Greek objects have since been [added in review](../detroit-priority/README.md). New Testament Trinity is held for its explicitly unknown location since1951. Qualified Fabriano attribution, a small Flemish triptych with former attributions, two companion Florentine panels, former Foppa attribution, and an apparent artist-lifespan creation range remain documented in the preliminary follow-up notes. Use the v2 facts parser for later objects; it also flags creation bounds that match differently formatted artist life dates. Later identity scopes must include historical creator names and Claude Lorrain alongside Claude Gellée.
+
+The pre-addition scope and preliminary identity001/002 files belong to the five-panel batch. Before adding further objects, take a fresh museum scope reflecting six linked artworks and rerun scoped duplicate checks; do not reuse the one-linked-record baseline as if it were current.

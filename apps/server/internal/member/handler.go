@@ -12,6 +12,8 @@ import (
 	"errors"
 	"net"
 	"net/http"
+	"net/url"
+	"regexp"
 	"strings"
 	"time"
 )
@@ -29,6 +31,36 @@ type Handler struct {
 type flow struct {
 	State, Nonce, Verifier string
 	Expires                int64
+	ReturnTo               string `json:",omitempty"`
+}
+
+var museumRecordPath = regexp.MustCompile(`^/museums(?:/([a-z0-9]+(?:[-_][a-z0-9]+)*))?$`)
+
+var painterRecordPath = regexp.MustCompile(`^/artists/([a-z0-9]+(?:[-_][a-z0-9]+)*)(?:/works/[a-fA-F0-9]{8}(?:-[a-fA-F0-9]{4}){3}-[a-fA-F0-9]{12})?$`)
+
+func memberReturnTo(value string) string {
+	if len(value) > 768 {
+		return ""
+	}
+	for _, c := range value {
+		if c < '!' || c > '~' || c == '\\' {
+			return ""
+		}
+	}
+	path, _, _ := strings.Cut(value, "?")
+	path, _, _ = strings.Cut(path, "#")
+	switch path {
+	case "/", "/artists", "/artworks", "/all", "/bookmarks":
+		return value
+	}
+	match := painterRecordPath.FindStringSubmatch(path)
+	if match == nil {
+		match = museumRecordPath.FindStringSubmatch(path)
+	}
+	if match == nil || len(match[1]) > 100 {
+		return ""
+	}
+	return value
 }
 
 func New(cfg Config, store Store) *Handler {
@@ -90,6 +122,9 @@ func (h *Handler) wrap(next http.HandlerFunc) http.HandlerFunc {
 				}{false, true, true, User{ID: "local-debug", Name: "Local explorer", Email: ""}})
 			} else {
 				destination := "/artists"
+				if target := memberReturnTo(r.URL.Query().Get("return_to")); target != "" {
+					destination = target
+				}
 				if r.URL.Path == "/api/v1/auth/logout" {
 					destination = "/account"
 				}
@@ -130,9 +165,15 @@ func (h *Handler) sign(payload string) string {
 	return base64.RawURLEncoding.EncodeToString(mac.Sum(nil))
 }
 func (h *Handler) start(w http.ResponseWriter, r *http.Request) {
-	f := flow{State: randomToken(), Nonce: randomToken(), Verifier: randomToken(), Expires: h.now().Add(10 * time.Minute).Unix()}
+	f := flow{State: randomToken(), Nonce: randomToken(), Verifier: randomToken(), Expires: h.now().Add(10 * time.Minute).Unix(), ReturnTo: memberReturnTo(r.URL.Query().Get("return_to"))}
 	raw, _ := json.Marshal(f)
 	payload := base64.RawURLEncoding.EncodeToString(raw)
+	if len(payload)+44 > 2048 {
+		// Unusually escaped query strings must not create an unreadable flow cookie.
+		f.ReturnTo = ""
+		raw, _ = json.Marshal(f)
+		payload = base64.RawURLEncoding.EncodeToString(raw)
+	}
 	h.cookie(w, "oauth", payload+"."+h.sign(payload), 600)
 	http.Redirect(w, r, h.google.AuthURL(f.State, f.Nonce, f.Verifier), http.StatusSeeOther)
 }
@@ -161,25 +202,37 @@ func (h *Handler) readFlow(r *http.Request) (flow, error) {
 func (h *Handler) callback(w http.ResponseWriter, r *http.Request) {
 	f, err := h.readFlow(r)
 	h.cookie(w, "oauth", "", -1)
-	if err != nil || r.URL.Query().Get("error") != "" || r.URL.Query().Get("code") == "" {
-		h.failed(w, r)
+	if err != nil {
+		h.failed(w, r, "")
+		return
+	}
+	if r.URL.Query().Get("error") != "" || r.URL.Query().Get("code") == "" {
+		h.failed(w, r, f.ReturnTo)
 		return
 	}
 	identity, err := h.google.Exchange(r.Context(), r.URL.Query().Get("code"), f.Verifier, f.Nonce)
 	if err != nil {
-		h.failed(w, r)
+		h.failed(w, r, f.ReturnTo)
 		return
 	}
 	token := randomToken()
 	if err = h.store.Login(r.Context(), identity, hashToken(token), h.sessionHash(r), h.now().Add(30*24*time.Hour)); err != nil {
-		h.failed(w, r)
+		h.failed(w, r, f.ReturnTo)
 		return
 	}
 	h.cookie(w, "session", token, 30*24*60*60)
-	http.Redirect(w, r, h.config.Origin+"/artists", http.StatusSeeOther)
+	destination := memberReturnTo(f.ReturnTo)
+	if destination == "" {
+		destination = "/artists"
+	}
+	http.Redirect(w, r, h.config.Origin+destination, http.StatusSeeOther)
 }
-func (h *Handler) failed(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, h.config.Origin+"/account?error=google_signin", http.StatusSeeOther)
+func (h *Handler) failed(w http.ResponseWriter, r *http.Request, returnTo string) {
+	query := url.Values{"error": {"google_signin"}}
+	if destination := memberReturnTo(returnTo); destination != "" {
+		query.Set("return_to", destination)
+	}
+	http.Redirect(w, r, h.config.Origin+"/account?"+query.Encode(), http.StatusSeeOther)
 }
 func (h *Handler) session(w http.ResponseWriter, r *http.Request) {
 	var user *User

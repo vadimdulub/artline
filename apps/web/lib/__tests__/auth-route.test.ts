@@ -31,6 +31,13 @@ describe("same-origin authentication transport", () => {
     expect(upstream.mock.calls[0][0].search).toBe("?state=abc&code=xyz");
   });
 
+  it("forwards the selected painter to the OAuth start endpoint", async () => {
+    upstream.mockResolvedValue(new Response(null, { status: 303, headers: { location: "https://accounts.google.com/auth" } }));
+    const query = new URLSearchParams({ return_to: "/artists/monet?catalogue=all&art_year=1900" });
+    await POST(new NextRequest(`https://artlines.org/api/auth/google/start?${query}`, { method: "POST", headers: { origin: "https://artlines.org" } }), context(["google", "start"]));
+    expect(upstream.mock.calls[0][0].searchParams.get("return_to")).toBe("/artists/monet?catalogue=all&art_year=1900");
+  });
+
   it("blocks unknown routes and wrong methods before contacting upstream", async () => {
     expect((await GET(new NextRequest("https://artlines.org/api/auth/logout"), context(["logout"]))).status).toBe(405);
     expect((await GET(new NextRequest("https://artlines.org/api/auth/unknown"), context(["unknown"]))).status).toBe(404);

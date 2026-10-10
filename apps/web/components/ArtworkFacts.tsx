@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/MemberLink";
 import { safeSourceURL } from "@/lib/api";
 import { artworkMedium, displayMetadata } from "@/lib/display-metadata";
 import type { Artwork } from "@/lib/types";

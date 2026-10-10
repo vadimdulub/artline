@@ -141,7 +141,9 @@ export function TimelineExplorer() {
     else change({ start: String(a), end: String(b), popular: "false", fit: "true" }, true);
   }
   function applySuggestion(suggestion: NonNullable<TimelineResponse["suggested_filters"]>[number]) {
-    change({ [suggestion.key]: suggestion.value }, true);
+    // Suggestions are counted within the current years and filters; do not refit.
+    setRangePreview(null);
+    updateQuery({ [suggestion.key]: suggestion.value, painting_after: null, painting: null, fit: null }, true);
   }
   function reset() { change({ start: null, end: null, q: null, painter: null, country: null, movement: null, region: null, work_type: null, status: null, women: null, popular: null, painting_highlights: null }, true); }
   function clearFilters() { change({ q: null, painter: null, region: null, movement: null, country: null, work_type: null, status: null, women: null, popular: "false" }, true); }

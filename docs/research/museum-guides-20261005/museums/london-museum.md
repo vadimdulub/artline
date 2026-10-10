@@ -1,0 +1,23 @@
+# London Museum
+
+[All museums and collections](../README.md)
+
+8 accepted holding links · 2 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://www.londonmuseum.org.uk/)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-fbe3baac-a376-5046-ba2f-17776c29efd3"></a>Sir Henry Irving (1838–1905) | Reginald G Eves | 1905–1910 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119155640-00402b5b391f597e.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Henry_Irving%2C_1905-10.jpg) | [Holding source](https://www.wikidata.org/wiki/Q119155640) · checked 2026-09-14 | review |
+| <a id="artwork-bf5fa4f5-d881-5dc6-975e-1bd2e1dc2036"></a>The Anti-Suffrage Society As Dressmaker | Suffrage Atelier | 1909–1912 | Image research pending · [record](https://www.londonmuseum.org.uk/collections/v/object-454041/the-anti-suffrage-society-as-dressmaker/) | [Holding source](https://www.londonmuseum.org.uk/collections/v/object-454041/the-anti-suffrage-society-as-dressmaker/) · checked 2026-09-26 | published |
+| <a id="artwork-76a339d0-adfa-5572-afb0-67acc14f6f7d"></a>The Anti-Suffrage Society As Prophet | Catharine Courtauld (design); Suffrage Atelier (publisher) | 1912–1913 | Image research pending · [record](https://www.londonmuseum.org.uk/collections/v/object-454039/the-anti-suffrage-society-as-prophet/) | [Holding source](https://www.londonmuseum.org.uk/collections/v/object-454039/the-anti-suffrage-society-as-prophet/) · checked 2026-09-26 | published |
+| <a id="artwork-8592cbfd-0af0-546a-b269-8c4d46f0dc7d"></a>The appeal of womanhood, we want the vote to stop the white slave traffic | Louise Jacobs (design); Suffrage Atelier | 1912 | Image research pending · [record](https://www.londonmuseum.org.uk/collections/v/object-479072/the-appeal-of-womanhood-we-want-the-vote-to-stop-the-white-slave-traffic/) | [Holding source](https://www.londonmuseum.org.uk/collections/v/object-479072/the-appeal-of-womanhood-we-want-the-vote-to-stop-the-white-slave-traffic/) · checked 2026-09-26 | published |
+| <a id="artwork-20f97c3c-6368-5242-9562-bb0c5269d0d4"></a>The Prehistoric Argument | Catharine Courtauld (design); Suffrage Atelier (publisher) | 1909–1913 | Image research pending · [record](https://www.londonmuseum.org.uk/collections/v/object-967741/the-prehistoric-argument/) | [Holding source](https://www.londonmuseum.org.uk/collections/v/object-967741/the-prehistoric-argument/) · checked 2026-09-26 | published |
+| <a id="artwork-34d787a9-dfcd-5b40-8e8b-ea274595e3f3"></a>The Unwelcome Guest | Suffrage Atelier | 1909–1913 | Image research pending · [record](https://www.londonmuseum.org.uk/collections/v/object-289091/the-unwelcome-guest/) | [Holding source](https://www.londonmuseum.org.uk/collections/v/object-289091/the-unwelcome-guest/) · checked 2026-09-26 | published |
+| <a id="artwork-cea517fe-b9d4-5485-9e8a-1cabad9a8bba"></a>The Yeoman of the Guard Searching the Crypt of the Houses of Parliament, London | Arthur Temple Felix Clay | 1894 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119146639-303740902a1daf29.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Arthur_Temple_Felix_Clay_%281842-1928%29_-_The_Yeoman_of_the_Guard_Searching_the_Crypt_of_the_Houses_of_Parliament%2C_London_-_27.147_-_London_Museum.jpg) | [Holding source](https://www.wikidata.org/wiki/Q119146639) · checked 2026-09-14 | review |
+| <a id="artwork-cfa791dd-6245-5a97-b68b-d3e489778c1b"></a>White slave traffic the only solution, woman Suffrage | Suffrage Atelier | 1912 | Image research pending · [record](https://www.londonmuseum.org.uk/collections/v/object-480187/white-slave-traffic-the-only-solution-woman-suffrage/) | [Holding source](https://www.londonmuseum.org.uk/collections/v/object-480187/white-slave-traffic-the-only-solution-woman-suffrage/) · checked 2026-09-26 | published |

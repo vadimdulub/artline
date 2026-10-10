@@ -7,7 +7,7 @@ export function generateMetadata() {
 export default function PrivacyPage() {
   return <main id="main-content" className="admin-page prose-page">
     <h1>Privacy</h1>
-    <p>Last updated: 28 September 2026.</p>
+    <p>Last updated: 10 October 2026.</p>
     <p>Artline is operated by Vadim Dulub. For privacy questions or requests about your information, contact <a href="mailto:vadim@alingva.com">vadim@alingva.com</a>.</p>
 
     <h2>Browsing and Google sign-in</h2>
@@ -17,6 +17,10 @@ export default function PrivacyPage() {
     <h2>Cookies and account records</h2>
     <p>Sign-in uses a short-lived cookie to complete the login process and a session cookie to keep you signed in for up to 30 days. Blocking these cookies prevents sign-in from working. Signing out ends that session; it does not delete your account.</p>
     <p>Account records include your Google account identifier, name, email address and account creation and update times. Session records contain a protected token reference and creation and expiry times. Expired sessions cannot be used to sign in, even if their records have not yet been removed.</p>
+
+    <h2>Your bookmarks</h2>
+    <p>When you bookmark an artist or artwork, Artline stores the record identifier and the time you saved it with your account. Your bookmarks are private to your account. You can remove them individually from the record or from your Bookmarks page; signing out keeps them available for your next visit.</p>
+    <p>If you use a star before signing in, this browser tab may temporarily remember that selected record so Artline can save it after login. A pending save is no longer used after 15 minutes, and closing the sign-in window cancels it.</p>
 
     <h2>Hosting and service information</h2>
     <p>Artline runs on Google Cloud, and Cloudflare provides its domain and DNS services. Hosting services may process technical information such as IP addresses, browser details, request times and errors to deliver, secure and troubleshoot the site. Artline uses account information to provide and protect your account, not for advertising, and does not sell Google account data.</p>

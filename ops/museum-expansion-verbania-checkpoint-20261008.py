@@ -1,0 +1,33 @@
+"""Freeze verified wave77, provenance and unfinished all-museum work."""
+import csv,hashlib,importlib.util,json
+from pathlib import Path
+z=importlib.util.spec_from_file_location('a',Path(__file__).with_name('museum-expansion-verbania-apply-20261008.py'));a=importlib.util.module_from_spec(z);z.loader.exec_module(a);m=a.m
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def main():
+ dest=a.RUN/'delivery-checkpoint-001.json';assert not dest.exists();previous=m.load(a.CHECKPOINT);assert sha(a.CHECKPOINT)=='60374c24e205784f261668cacfa13530bcb2ed49afc3e21d7e30a73261ce10e0';changes=m.load(a.RUN/'readme-supersessions-001.json')['changes'];changed={v['path']:v for v in changes};assert set(changed)=={str((m.RUN/'README.md').relative_to(m.ROOT))}
+ for c in changes:
+  assert sha(Path(c['backup_path']))==c['backup_sha256'];saved=m.load(Path(c['backup_path']));assert hashlib.sha256(saved['text'].encode()).hexdigest()==saved['sha256']==c['before_sha256'];assert sha(m.ROOT/c['path'])==c['after_sha256']
+ for dep in previous['artifacts']:
+  if dep['path'] in changed:assert dep['sha256']==changed[dep['path']]['before_sha256']
+  else:a.checked(dep)
+ plan,digest=a.validate_plan()
+ with m.connect() as db:verified=a.verify(db,plan,digest)
+ assert m.load(a.RUN/(a.KEY+'-applied.json'))['plan_sha256']==digest;report=m.load(m.RUN/'verification-after-wave-77.json');assert report['verified_new_artworks']==10259 and report['verified_existing_artworks_linked']==940 and report['institutions_with_new_records_or_reconciled_holdings']==215;assert report['verbania_museum_changes'][0]['existing_linked']==155
+ checks=m.load(a.RUN/'checks-001.json');assert checks['new_offline_tests_passed']==14 and checks['cumulative_verified_tests']==1484 and checks['replay_zero_writes'];audit=m.load(m.RUN/'after-wave-77.json');csvcounts={};campaignids=[]
+ for name,count in [('added-artworks-after-wave-77.csv',10259),('reconciled-artworks-after-wave-77.csv',940),('gac-date-enrichments-after-wave-77.csv',6),('museum-coverage-after-wave-77.csv',len(audit['institutions']))]:
+  with (m.RUN/name).open(newline='') as fp:rows=list(csv.DictReader(fp))
+  assert len(rows)==count;csvcounts[name]=count
+  if name.startswith(('added-artworks','reconciled-artworks')):campaignids.extend(v['artwork_id'] for v in rows)
+ assert len(campaignids)==len(set(campaignids))==11199
+ external=previous['external_artifacts']+list(checks['logs'].values())+[dict(path=v['backup_path'],sha256=v['backup_sha256']) for v in changes]+[dict(path=plan['backup_path'],sha256=plan['backup_sha256'])]
+ reviewed=m.BACKUP/(a.KEY+'-reviewed-plan-001.json.gz');assert m.load(reviewed)==plan;external.append(dict(path=str(reviewed),sha256=sha(reviewed)));proof=m.BACKUP/(a.KEY+'-transaction-identity-001.json.gz');x=m.load(proof);assert x['comparisons_equal'] and len(x['comparisons'])==161;external.append(dict(path=str(proof),sha256=sha(proof)))
+ log=Path('/Users/vadimdulub/Library/Logs/artline-verbania-delivery-20261008.log');assert '"documented_existing_links": 155' in log.read_text();external.append(dict(path=str(log),sha256=sha(log)));unique={}
+ for dep in external:
+  assert dep['path'] not in unique or unique[dep['path']]==dep;unique[dep['path']]=dep;assert sha(Path(dep['path']))==dep['sha256']
+ a.checked(previous['other_job_status_reference']);src=m.load(a.RUN/'source-context-001.json.gz');ctx=m.load(a.RUN/'comparison-source-context-001.json.gz');refs=src['body_references']+ctx['body_references'];assert len(src['body_references'])==58 and len(ctx['body_references'])==20 and len({v['path'] for v in refs})==75
+ sixth=a.s.start.RUN;sc=m.load(sixth/'source-capture-001.json');assert sc['requests_stopped'] and len(sc['batches'])==3 and len(m.load(sixth/'three-museum-discovery-001.json.gz')['rows'])==515
+ paths={m.ROOT/v['path'] for v in previous['artifacts']}|{a.CHECKPOINT,Path(__file__).resolve()};paths|={v for directory in [a.RUN,sixth] for v in directory.rglob('*') if v.is_file()};paths|={v for pattern in ['*verbania*20261008.py','*italy*sixth*20261008.py'] for v in (m.ROOT/'ops').glob(pattern)};paths|={v for v in m.RUN.glob('*after-wave-77*')};paths|={a.checked(v) for v in refs};artifacts=[a.reference(v) for v in sorted(paths)]
+ queue=m.load(a.RUN/'remaining-research-001.json.gz');assert len(queue['rows'])==6;nextq=m.load(a.RUN/'next-museum-pass-001.json');assert a.IID not in {v['institution_id'] for v in nextq['italian_museums']};assert len(nextq['existing_holding_review_targets'])==2
+ result=dict(at=m.now(),goal_complete=False,local_only=True,new_additions=0,new_existing_links=155,campaign_new_artworks=10259,campaign_existing_links=940,distinct_campaign_artwork_ids=11199,institutions_with_new_records_or_reconciled_holdings=215,verification=verified,museum_changes=report['verbania_museum_changes'],museums_below_100=report['after']['museums_below_100'],museums_below_200=report['after']['museums_below_200'],global_coverage_snapshot_at=report['global_coverage_snapshot_at'],external_registry_growth_reference=report['external_registry_growth_reference'],new_tests_passed=14,historical_tests_passed=1470,cumulative_verified_tests=1484,plan_sha256=digest,csv_counts_verified=csvcounts,artifacts=artifacts,external_artifacts=list(unique.values()),prior_checkpoint_reference=a.reference(a.CHECKPOINT),prior_artifacts_verified=len(previous['artifacts']),intentional_supersessions=changes,other_job_status_reference=previous['other_job_status_reference'],other_job_totals_separate=True,editorial_holds=6,review_reference=a.reference(a.REVIEW),remaining_research_reference=a.reference(a.RUN/'remaining-research-001.json.gz'),next_museum_pass_reference=a.reference(a.RUN/'next-museum-pass-001.json'),new_source_access_hold_reference=a.reference(sixth/'source-capture-001.json'),next_work='155 existing Verbania holdings verified,0 new artworks. Museo del Paesaggio155 linked/140 eligible,15 qualified/unknown dates preserved,6 pending holds. Campaign10259new+940links=11199 distinct protected records. Continue Laing/National Army exact existing-holding review using stored primary/Wikidata references before any write; wider goal active. Preserve all source access holds, including three ArCo connect timeouts and regional TLS/native403; do not restart failed capture. Italian515 source leads and previous352 notices preserved. No repeated global blocking condition: concrete155-link progress.')
+ m.save(dest,result);print(json.dumps(dict(checkpoint=str(dest.relative_to(m.ROOT)),sha256=sha(dest),artifacts=len(artifacts),external_artifacts=len(unique),new=0,existing_links=155,campaign_new=10259,campaign_links=940,below100=result['museums_below_100'])),flush=True)
+if __name__=='__main__':main()

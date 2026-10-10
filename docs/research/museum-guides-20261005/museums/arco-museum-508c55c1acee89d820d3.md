@@ -1,0 +1,23 @@
+# Museo dell'Accademia Etrusca — Cortona (AR)
+
+[All museums and collections](../README.md)
+
+10 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-108093f6-2ab0-4df1-9438-b3a7f3ffaa3d"></a>ritratto d'uomo | Zoffany Johann (notizie Sec. Xviii) | Unverified date: 1740-1760 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261051) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261051) · checked 2026-10-05 | review |
+| <a id="artwork-16ca9f03-608f-449b-aa8a-895153583103"></a>ritratto d'uomo | Nagel Giorgio Abramo (notizie Sec. Xviii) | Unverified date: 1740-1760 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261057) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261057) · checked 2026-10-05 | review |
+| <a id="artwork-29a9539b-7be8-497a-a059-70028ba57cd1"></a>ritratto d'uomo | Cavalleri Ferdinando | Unverified date: 1847-1847 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261060) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261060) · checked 2026-10-05 | review |
+| <a id="artwork-575d5ade-b843-4179-bf08-bb081c696d86"></a>ritratto d'uomo | Nagel Giorgio Abramo (notizie Sec. Xviii) | Unverified date: 1743-1743 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261058) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261058) · checked 2026-10-05 | review |
+| <a id="artwork-5c885165-1a1f-4865-8c75-0f231a4ddb8d"></a>ritratto d'uomo | Northcote James | Unverified date: 1740-1760 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261052) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261052) · checked 2026-10-05 | review |
+| <a id="artwork-718f8021-5bfe-4205-89aa-9257eae3ce31"></a>ritratto d'uomo | Cavalleri Ferdinando | Unverified date: 1852-1852 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261061) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261061) · checked 2026-10-05 | review |
+| <a id="artwork-8033b969-6957-43df-a63b-b3a948f7a05e"></a>ritratto d'uomo | Pignatti Giulio (notizie Sec. Xviii) | Unverified date: 1740-1760 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261017) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261017) · checked 2026-10-05 | review |
+| <a id="artwork-c0874c30-e08a-4d6c-9123-0554cbc9c124"></a>ritratto d'uomo | Valliani Giuseppe | Unverified date: 1790-1790 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261047) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261047) · checked 2026-10-05 | review |
+| <a id="artwork-c30ff1df-8808-440c-9dd4-6df1f3f01271"></a>ritratto d'uomo | Gherardini Tommaso | Unverified date: 1740-1760 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261028) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261028) · checked 2026-10-05 | review |
+| <a id="artwork-df7dea7a-d166-4f1f-86ee-11787dcc72b2"></a>ritratto d'uomo | Valliani Giuseppe | Unverified date: 1740-1760 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261042) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900261042) · checked 2026-10-05 | review |

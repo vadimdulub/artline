@@ -1,0 +1,53 @@
+"""Verified Rhodes target delivery and next-museum research continuity."""
+import collections,csv,importlib.util,json,io
+from pathlib import Path
+z=importlib.util.spec_from_file_location('a',Path(__file__).with_name('museum-expansion-rhodes-final-apply-20261009.py'));a=importlib.util.module_from_spec(z);z.loader.exec_module(a);m=a.m;RUN=a.RUN
+def table(name,rows):
+ fp=io.StringIO(newline='');w=csv.DictWriter(fp,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows);raw=fp.getvalue().encode();path=RUN/name
+ if path.exists():assert path.read_bytes()==raw,'Preserve existing delivery CSV: '+name
+ else:path.write_bytes(raw)
+def main():
+ p,digest=a.validate_plan();receipt=m.load(RUN/(a.KEY+'-applied.json'));checks=m.load(RUN/'checks-001.json');assert checks['offline_tests_passed']==18 and checks['atomic_verification_passed']and checks['replay_zero_writes'];assert receipt['plan_sha256']==digest
+ prior=m.load(a.CHECKPOINT);rr=prior['production_institution_register_reference'];register=m.load(a.checked(rr))['rows'];target=next(v for v in register if v['id']==a.IID);assert target['verified_production_works']==172
+ with a.i.prod.connect()as db,db.transaction():
+  db.execute('SET TRANSACTION READ ONLY');verified=a.verify(db,p,digest)
+ with m.connect()as db:
+  initial=m.load(RUN/'initial-scope-001.json.gz');assert a.snapshot(db,initial['scoped_ids'])==initial['snapshot']and a.counts(db)==initial['counts']
+ at=m.now();after=verified['current_counts'][a.IID];before=p['before_counts'][a.IID]
+ target.update(production_catalogue_count_to_200=216,production_date_eligible_count_to_200=209,production_catalogue_count_state='exact',production_date_eligible_count_state='exact',verified_production_works=after['linked'],verified_production_eligible_works=after['eligible'],production_catalogue_count_at=at,production_date_eligible_count_at=at)
+ m.save(RUN/'production-institution-register-001.json.gz',dict(at=at,rows=register,previous_register_reference=rr,read_only=True,updated_institutions=[a.IID],global_exact_counts_refreshed=False,global_thresholds_refreshed=False,policy='Only Rhodes refreshed to216catalogue/209dateeligible,clearing both200-work targets. Other observations retain timestamps; full every-museum objective remains active.'));table('production-institution-register-001.csv',register)
+ qr=prior['priority_museum_queue_reference'];queue=m.load(a.checked(qr));assert not any(v['id']==a.IID for v in queue['rows']);queue.update(at=at,previous_queue_reference=qr,policy='Rhodes now216catalogue/209dateeligible; both preferred targets cleared. Next priority Nikos Kazantzakis Museum. Preserve historical queue threshold removals and dated observations.');m.save(RUN/'priority-museum-queue-001.json',queue)
+ added=[]
+ for v in p['records']:
+  f=v['facts'];added.append(dict(artwork_id=v['artwork_id'],institution_id=a.IID,source_id=f['source_id'],title=f['title'],creator_label=f['creator_label'],date_display=f['date_display'],creation_year_start=f['first'],creation_year_end=f['last'],date_precision=f['date_precision'],work_type=f['work_type'],inventory=f['inventory'],source_url=f['source_url'],status='review'))
+ table('added-production-artworks-001.csv',added)
+ linked=[dict(artwork_id=v['artwork_id'],institution_id=v['institution_id'],source_url=v['facts']['source_url'],source_inventory=v['facts']['inventory'],native_creation_evidence=v['facts']['date_display'],catalogue_date='Unknown date preserved',basis=v['decision']['basis'])for v in p['holdings']];table('linked-existing-artworks-001.csv',linked)
+ decisions=a.r.build();ledger=[dict(number=v['number'],source_url=v['facts']['source_url'],inventory=v['facts']['inventory'],title=v['facts']['title'],state=v['state'],reason=v['basis'],existing_artwork_ids=v.get('existing_artwork_id')or';'.join(sorted({c['entity_id']for c in v['comparison']['source_hits']})))for v in decisions];table('all-source-decisions-001.csv',ledger)
+ total=prior['production_campaign_totals']['new_artworks']+43;assert total==820
+ report=dict(at=at,goal_complete=False,production_only=True,local_unchanged=True,plan_sha256=digest,added=43,existing_links=1,date_eligible_added=43,date_eligible_existing_links=0,editorial_holds=0,already_catalogued=0,unknown_date_deferred=41,after1970_excluded=15,reviewed_native_objects=100,cumulative_rhodes_reviewed_native_objects=380,source_collection_reported_objects=1502,remaining_metadata_not_fetched=1122,verification=verified,museum_before=dict(works=before['linked'],eligible_works=before['eligible']),museum_after=dict(works=after['linked'],eligible_works=after['eligible']),production_campaign_new_artworks=total,production_campaign_existing_links=1,production_campaign_museums=6,historical_local_totals_unchanged=prior['historical_local_campaign_totals'],cross_database_totals_combined=False,global_production_counts_refreshed=False,global_production_thresholds_refreshed=False,remaining_to_200_catalogue=0,remaining_to_200_dateeligible=0,source_access='Official Rhodes public portal accessible.12 selected reference images inspected; no attachments. One stale WikiArt Ydra image404 resolved by reading the image URL explicitly provided by its current public page. All previous provider holds persist. New main Kazantzakis archive page returned403 and was not retried; independent linked repository and SearchCulture collections accessible.',next_work='Begin NEW Kazantzakis run with fresh local/production read-only baseline and institution reconciliation. IID081a533b-4a9e-56df-89e0-407edf5c51be, inherited18catalogue/12eligible not yet refreshed. Bounded first30 leads each from DigKazantzakis144-item art/object collection and Kazantzakis2772-item Anemoyannis theatre archive saved in next-source-discovery-001.json.gz. Museum repository has separate art and theatre categories. Review individual physical drawings,illustrations,sculptures and designs; archive documents,performance records,duplicates and post1970 objects are not quota artworks. Anemoyannis referenced-person field is not creator attribution. Preserve full goal and historical provider holds.')
+ m.save(RUN/'delivery-001.json',report)
+ (RUN/'README.md').write_text(f'''# Rhodes — preferred target reached, 9 October 2026
+
+Added **43 production review artworks** and linked **one existing artwork** to the Municipal Art Gallery of Rhodes / Museum of Modern Greek Art. The museum now has **216 catalogue works**, including **209 with eligible creation dates**, up from172/166. Both200-work targets are reached. The real local catalogue remains unchanged at3linked works/1date eligible.
+
+- [43 added artworks](added-production-artworks-001.csv)
+- [Existing-work holding link](linked-existing-artworks-001.csv)
+- [All100 source decisions](all-source-decisions-001.csv)
+- [Dated museum register](production-institution-register-001.csv)
+- [Verification and next work](delivery-001.json)
+
+The [official museum collection](https://portal.mgamuseum.gr/) supplies individual identities,inventory numbers,creation statements and holdings. The existing [institution reconciliation](../rhodes-20261009/institution-reconciliation-001.json) remains applicable. A holding does not assert current display,venue,custody or legal ownership.
+
+The100 reviewed records yielded43 new works,one existing-work link,41 unknown-date research leads and15 explicit post1970 exclusions. Across the three Rhodes selections,380 of1502 reported native objects have individual metadata reviewed;1122 remain unexamined. Reaching the target does not imply complete museum coverage. All earlier date/version holds remain in their source ledgers.
+
+New works include Vasiliou painted manuscript sheets; Vitsoris,Vourloumis,Vyzantios,Galanis,Germenis,Gioldasis,Gaitis and Engonopoulos paintings; Giallinas watercolour; Chalepas pencil sheets; and Zepos drawings and paintings. One double-sided Chalepas sheet counts as one physical artwork. The literal qualified attribution “Σπυρίδων Βικάτος(;)” remains unresolved. Material discrepancies in Galanis and Zepos records are explicit; missing media remain unknown. Exact1970 is eligible. Exhibition dates,depicted events and biography errors do not date the physical works.
+
+Twelve selected reference images were inspected. [Boat with Sails](https://www.wikiart.org/en/periklis-vyzantios/boat-with-sails) is the same work as museum1071,so its existing record receives only the holding. Its existing unknown date remains unchanged; museum1962 is retained as citation evidence. Hydra1072 is visually different from [Ydra1959](https://www.wikiart.org/en/periklis-vyzantios/ydra-1959) and three other harbour compositions. Giallinas’s Pontikonisi differs from the National Gallery landscape. Three similar Zepos life drawings depict different models and poses. Images and observations are pinned in [visual assessment](visual-assessment-001.json); no images were attached or changed.
+
+Eighteen offline tests passed. Cloud SQL backup1791563475112 preceded the atomic write; readback verified all43 new records and the single existing-work link, and replay made zero writes. The289 protected existing records changed only by that reviewed holding/citation; all777 prior production additions were preserved. Existing metadata,dates,images and statuses were unchanged. Identity checks used995 bounded candidates,1828 citations and129 focused full-row comparators. Their query plans are recorded; this is not a10million-row load proof.
+
+The selected production phase now totals **{total} additions and one existing-work link across six museums**, separate from historical local work. Only Rhodes counts were refreshed. The full every-museum goal remains active.
+
+Next is Nikos Kazantzakis Museum. [Discovery evidence](next-source-discovery-001.json.gz) captures30 index leads from each of two public catalogues: [144 mixed art/object records](https://www.searchculture.gr/aggregator/portal/collections/DigKazantzakis?language=en) and [2772 theatre archive records](https://www.searchculture.gr/aggregator/portal/collections/Kazantzakis). These are source counts,not eligible-artwork counts. The [museum repository](https://repository.kazantzaki.gr/) exposes art and theatre categories. Review actual physical designs and drawings,distinguish performance dates and related-person fields,and preserve unknown creators. The main website archive page returned403 and remains on hold; it was not retried. No archive-wide metadata or image download was performed.
+''');print(json.dumps(dict(added=43,existing_links=1,counts=after,production_campaign=total,states=dict(collections.Counter(v['state']for v in ledger)),queue=len(queue['rows']))),flush=True)
+if __name__=='__main__':main()

@@ -1,0 +1,75 @@
+{
+  "at": "2026-10-08T13:55:15.693192+00:00",
+  "change": "Remove Artworks from primary navigation",
+  "files": [
+    "apps/web/components/SiteHeader.tsx"
+  ],
+  "build_id": "69048bd6-8e5d-4071-be5a-b20ee1509138",
+  "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:3a810923a035c572db032b818ca7e24bf02e7029155705867ae9ffa2b4d912cc",
+  "revision": "artline-web-remove-artworks-nav-1008",
+  "public_traffic": 100,
+  "validation": [
+    "Scoped ESLint passed",
+    "Production build passed",
+    "Candidate and live primary navigation verified",
+    "Artworks route remains available"
+  ],
+  "public_checks": {
+    "passed": true,
+    "at": 1791467699.6925619,
+    "checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "navigation": [
+          {
+            "label": "Painters",
+            "href": "/"
+          },
+          {
+            "label": "Books",
+            "href": "/books"
+          },
+          {
+            "label": "Events",
+            "href": "/events"
+          },
+          {
+            "label": "All",
+            "href": "/all"
+          },
+          {
+            "label": "Account",
+            "href": "/account"
+          }
+        ]
+      },
+      {
+        "path": "/artworks",
+        "status": 200,
+        "navigation": [
+          {
+            "label": "Painters",
+            "href": "/"
+          },
+          {
+            "label": "Books",
+            "href": "/books"
+          },
+          {
+            "label": "Events",
+            "href": "/events"
+          },
+          {
+            "label": "All",
+            "href": "/all"
+          },
+          {
+            "label": "Account",
+            "href": "/account"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+# Philadelphia Museum of Art
+
+[All museums and collections](../README.md)
+
+9 accepted holding links · 6 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://www.philamuseum.org/)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-6c416faf-0f7b-5661-bb38-4acc8a1d6de3"></a>Agee and Rose, D09 Pre-alteration | Patrick Henry Bruce | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q135316144) | [Holding source](https://www.wikidata.org/wiki/Q135316144) · checked 2026-09-14 | review |
+| <a id="artwork-6add6fef-f0f3-58d3-8980-e5e6e62f2674"></a>Disks of Newton | František Kupka | 1912 | Image research pending · [record](https://www.wikidata.org/wiki/Q20816563) | [Holding source](https://www.wikidata.org/wiki/Q20816563) · checked 2026-09-14 | review |
+| <a id="artwork-5ee7b64f-24b5-5f99-86f1-1f4dea68a272"></a>Hanging Game Birds (Pheasant) | John J. Eyers | 1872 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20812874-0416ac0668b3a612.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Hanging_Game_Birds_%28Pheasant%29.jpg) | [Holding source](https://www.wikidata.org/wiki/Q20812874) · checked 2026-09-14 | review |
+| <a id="artwork-4dac9f60-d326-5462-a6bc-125442cb6fd0"></a>Indian Encampment | Ralph Albert Blakelock | c. 1890 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q133928465-6d9a0160ee12a1cc.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Indian_Encampment_by_Ralph_A._Blakelock%2C_Philadelphia_Museum_of_Art.jpg) | [Holding source](https://www.wikidata.org/wiki/Q133928465) · checked 2026-09-14 | review |
+| <a id="artwork-cf822368-af1e-5f06-8417-00378f672428"></a>Madonna col Bambino tra san Girolamo e santa Caterina | Neroccio de' Landi | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q97173436) | [Holding source](https://www.wikidata.org/wiki/Q97173436) · checked 2026-09-13 | review |
+| <a id="artwork-e57c713f-3650-5f88-b07d-a984dd98d2a7"></a>Maid Scouring a Kettle | Pieter van den Bosch | c. 1649 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20808466-df2bac07b3d08aed.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Glass_plate_negative_of_Maid_Scouring_a_Kettle_-_DPLA_-_d8903cf84cd353bdc35c3a3185e0386e.jpg) | [Holding source](https://www.wikidata.org/wiki/Q20808466) · checked 2026-09-13 | review |
+| <a id="artwork-9c7f0b6b-80b6-525b-8348-072ad41d043a"></a>papa onorio III approva la regola francescana | Bartolomé de Castro | 1500 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/9c7f0b6b-80b6-525b-8348-072ad41d043a-6b7f46296873561b.jpg) · cc_by · [source / credit](https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_de_castro%2C_papa_onorio_III_approva_la_regola_francescana%2C_1500_ca..JPG) | [Holding source](https://www.wikidata.org/wiki/Q131541432) · checked 2026-09-13 | review |
+| <a id="artwork-9454b9ca-dc3d-52b4-a44d-30e1794e2647"></a>The Wasp and the Frolic | Thomas Birch | 1820 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20812755-f7e82f98af32ca50.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:The_Wasp_and_the_Frolic%2C_by_Thomas_Birch.JPG) | [Holding source](https://www.wikidata.org/wiki/Q20812755) · checked 2026-09-14 | review |
+| <a id="artwork-edfd2284-4ddd-5d39-a6b3-fee3d349266b"></a>Virgin and Child, with Saints George and Catherine of Alexandria, and a Putto | Domenico Campagnola | c. 1520 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/edfd2284-4ddd-5d39-a6b3-fee3d349266b-d021415343702462.jpg) · cc_by · [source / credit](https://commons.wikimedia.org/wiki/File:Domenico_campagnola%2C_madonna_col_bambino%2C_san_giorgio%2C_s._caterina_e_putto%2C_1520_ca..JPG) | [Holding source](https://www.wikidata.org/wiki/Q20808548) · checked 2026-09-13 | review |

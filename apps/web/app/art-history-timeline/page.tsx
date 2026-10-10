@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/MemberLink";
 import { StructuredData } from "@/components/StructuredData";
 import { breadcrumbs, pageMetadata } from "@/lib/seo";
 

@@ -1,3 +1,4 @@
+vi.mock("next/headers", () => ({ cookies: async () => ({ get: () => undefined }) }));
 import { afterEach, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
 import { getArtist, getArtistIdentity, getArtistArtwork } from "../server-api";

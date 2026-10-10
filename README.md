@@ -85,6 +85,28 @@ it creates no Google account, member row or session cookie. `/account` shows
 mode. Set `ARTLINE_LOCAL_DEBUG=false` only when deliberately testing real OAuth
 locally; all four Google authentication settings are then required together.
 
+Artist and individual artwork pages remain public, without a login prompt.
+Museum browsing and personal bookmarks require a free member account. Museum
+links and bookmark stars open a sign-in dialog for anonymous visitors; direct
+member URLs verify the session on the server before returning catalogue data.
+Google sign-in returns to the selected page and filters. A star clicked before
+login is saved after authentication (pending intent expires after 15 minutes).
+
+Bookmarks support artists and artworks throughout the directories, gallery views,
+and detail pages, with a private `/bookmarks` collection and type filters.
+Go validates sessions, ownership, same-origin writes and target records; pages
+use keyset cursors and star states are requested in batches of at most 100.
+Local debug uses an in-memory collection (up to 1,000 bookmarks) and read-only
+catalogue lookups. It creates no account, session, bookmark or catalogue rows.
+
+Deployment requires migration `0043_member_bookmarks.sql` before serving the
+bookmark API. The migration is prepared but has not been applied by this change.
+Bookmark read queries have been checked against existing records in a read-only
+transaction, using VALUES as the not-yet-created bookmark relations. Real
+bookmark writes and representative load/query-plan measurements for the new
+indexes remain untested; unit and browser mocks do not establish PostgreSQL
+performance at the capacity-planning scale.
+
 Review the sixteen interactive membership concepts at
 <http://localhost:3000/membership-preview> with `make web` running. This page is
 available only in development. The concepts include collections, notes, saved

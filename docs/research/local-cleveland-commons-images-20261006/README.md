@@ -1,0 +1,9 @@
+# Cleveland native and independent-photograph review — 6 October 2026
+
+Reviewed four existing image gaps: Thomas Moran's *The Dell*, Childe Hassam's *Fifth Avenue Nocturne*, Arthur B. Davies's *Gulf and Crest (Peaks of Hymette)* and Louis Michel Eilshemius's *Samoa*. Current native API captures match all four object IDs, titles and inventories, but supply no image files and label each record `Copyrighted`. No image bytes were downloaded or attached; all four catalogue records remain unchanged.
+
+For Hassam inventory 1952.538, two Commons files identify independent photographs: Tim Evanson's image has CC BY-SA 2.0 and a recorded Flickr licence review, while Sailko's photograph has CC BY 3.0. These permissions cover their photographs. The [current native artwork page](https://www.clevelandart.org/art/1952.538) explicitly claims that the artwork is under copyright. An older Commons museum-source TIFF carries CC0, creating a source conflict that remains unresolved here. The artwork's age alone was not used to dismiss the native claim. These are source-specific holds, not findings that every possible reproduction is unavailable.
+
+Search results for Eilshemius's Samoan scenes included similarly named works at the Metropolitan Museum of Art and the Phillips Collection. Their different inventories and institutions do not establish a match for Cleveland inventory 1932.2060; no substitute was attached.
+
+The [candidate snapshots](candidates.json), [individual findings](events.jsonl) and [unchanged-record report](report.json) preserve the decisions. Checksum-pinned native API responses are under `metadata/native-probes/`, the exact Hassam page and its receipt under `metadata/native-page/`, and Commons file revisions, licence fields and structured data under `metadata/commons/`. This directory contains research metadata only. No dates, creators, holdings, display claims, publication states or production records were changed.

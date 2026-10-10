@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/MemberLink";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useMemberSession } from "./MemberSession";
 import { MemberNavigation, NavigationIcon } from "./MemberNavigation";
+import { MobileNavigation } from "./MobileNavigation";
 import "./SiteNavigation.css";
 
-const accountRoutes = ["/artists", "/museums", "/account", "/art-history-timeline", "/about", "/membership-preview"];
+const accountRoutes = ["/bookmarks", "/artists", "/museums", "/account", "/art-history-timeline", "/about", "/membership-preview"];
 const panelPreferenceKey = "artline:account-panel-collapsed";
 export function SiteHeader() {
   const pathname = usePathname();
@@ -44,8 +45,9 @@ export function SiteHeader() {
       <Link href="/books" aria-current={pathname.startsWith("/books") ? "page" : undefined}>Books</Link>
       <Link href="/events" aria-current={pathname.startsWith("/events") ? "page" : undefined}>Events</Link>
       <Link href="/all" aria-current={pathname === "/all" ? "page" : undefined}>All</Link>
-      <Link href={accountHref} prefetch={false} className="account-menu-link" aria-current={accountArea ? "page" : undefined}>Account</Link>
+      <Link href={accountHref} prefetch={false} className="account-menu-link" aria-current={pathname === "/account" || (user && accountArea) ? "page" : undefined}>Account</Link>
     </nav>
-    <div className="header-aside">{user ? <Link href="/artists" prefetch={false} className="account-avatar" aria-label="Your account" title={user.name ? `Your account — ${user.name}` : "Your account"}><NavigationIcon kind="user" /></Link> : <Link href="/about" className="help-link" aria-label="About this atlas">?</Link>}</div>
+    <MobileNavigation key={pathname} />
+    <div className="header-aside"><Link href="/bookmarks" className="bookmarks-shortcut" aria-label="Your bookmarks" title="Your bookmarks"><NavigationIcon kind="star" /></Link>{user ? <Link href="/artists" prefetch={false} className="account-avatar" aria-label="Your account" title={user.name ? `Your account — ${user.name}` : "Your account"}><NavigationIcon kind="user" /></Link> : <Link href="/about" className="help-link" aria-label="About this atlas">?</Link>}</div>
   </header>{user && accountArea && <MemberNavigation open={!collapsed} close={closeMenu} show={() => setCollapsed(false)} />}</>;
 }

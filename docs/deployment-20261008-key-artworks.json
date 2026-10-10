@@ -1,0 +1,120 @@
+{
+  "at": "2026-10-08T14:50:57.435055+00:00",
+  "change": "Persist source-backed painter key artworks and show the saved selection when opening a painter",
+  "site": "https://artlines.org",
+  "database_targets": [
+    "Local real artline catalogue on this Mac (explicitly confirmed by user)",
+    "Production Cloud SQL catalogue"
+  ],
+  "migration": "0037_artist_key_artworks.sql",
+  "initial_release": {
+    "api": {
+      "revision": "artline-api-key-artworks-1008",
+      "build_id": "d5d63848-9ab1-4054-a127-e7c929c61ea2",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:8eea431c286c9e72302ff2dc98b46ebc28f2fcd5dd89b848c833a28cdd27947d",
+      "verified_traffic_percent": 100
+    },
+    "web": {
+      "revision": "artline-web-key-artworks-1008",
+      "build_id": "19c42cf1-ed77-4b50-8145-58f77324044c",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:cd8b597ecc391e3c11bab955cf1f583574a167ec12dc624c91766ab1ab974e25",
+      "verified_traffic_percent": 100
+    }
+  },
+  "currently_serving": {
+    "api": {
+      "revision": "artline-api-nonempty-museums-1008",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:c7cdca0e09d8d3bc8e1babd36123e5cace9f25f44724be723c3a162ee3ddc7a4"
+    },
+    "web": {
+      "revision": "artline-web-remove-artworks-nav-1008",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:3a810923a035c572db032b818ca7e24bf02e7029155705867ae9ffa2b4d912cc"
+    }
+  },
+  "subsequent_release_note": "Later concurrent releases superseded the feature revisions. Live browser, API, and image checksum checks verified the feature is preserved. Later traffic and source changes were retained.",
+  "coverage": {
+    "local": {
+      "active_painters": 23409,
+      "bases": [
+        {
+          "count": 16852,
+          "selection_basis": "editorial_representative"
+        },
+        {
+          "count": 7,
+          "selection_basis": "curated_representative"
+        },
+        {
+          "count": 170,
+          "selection_basis": "museum_highlight"
+        },
+        {
+          "count": 284,
+          "selection_basis": "notable_work"
+        }
+      ],
+      "eligible_choices": 17313,
+      "illustrated_choices": 10191,
+      "saved_choices": 17313,
+      "unresolved_painters": 6096
+    },
+    "production": {
+      "active_painters": 23450,
+      "bases": [
+        {
+          "count": 16885,
+          "selection_basis": "editorial_representative"
+        },
+        {
+          "count": 13,
+          "selection_basis": "curated_representative"
+        },
+        {
+          "count": 171,
+          "selection_basis": "museum_highlight"
+        },
+        {
+          "count": 284,
+          "selection_basis": "notable_work"
+        }
+      ],
+      "eligible_choices": 17353,
+      "illustrated_choices": 10216,
+      "saved_choices": 17353,
+      "unresolved_painters": 6097
+    }
+  },
+  "complete_per_painter_image_coverage": false,
+  "research_report": "docs/research/painter-key-artworks-20261008/README.md",
+  "verification": [
+    "Go catalog and HTTP API tests passed",
+    "Read-only integration and indexed query-plan checks passed on existing local data; no fixtures",
+    "Nine record-rendering tests and focused ESLint passed",
+    "Three painter-preview browser tests passed at 1440, 390 and 320 pixels",
+    "Candidate, live and local full painter page image loading, layout and enlargement checks passed",
+    "Repeated 13 live gap image checksum and API identity checks passed on later active releases",
+    "Seven metadata-only key API checks passed across local and production",
+    "All 243 selected uploaded JPEGs verified by checksum, size <=100000 bytes and image review",
+    "Both isolated production builds passed; runtime settings preserved during the feature rollout",
+    "Eight additional notable-work API checks passed across local and production",
+    "Latest nonempty-museums API release rechecked: saved key artwork responses preserved"
+  ],
+  "guardrails": {
+    "published_status_changes": 0,
+    "invented_creation_dates": 0,
+    "member_or_test_fixtures": 0,
+    "git_commit": false,
+    "terraform_apply": false,
+    "ten_million_artwork_load_test": false
+  },
+  "terraform_pins": "Synced to the currently serving later revisions after verifying they preserve the feature; no apply",
+  "backup_root": "/Users/vadimdulub/Library/Application Support/Artline/backups/key-artworks-20261008",
+  "rollback": "Preserve later unrelated deployments. Revert this feature on the latest source if necessary; do not blindly send traffic to a superseded baseline. Restore only this operation\u2019s selection/image preimages. Newly introduced review records and media should be retained or explicitly reviewed before removal.",
+  "source_limits": {
+    "unavailable_image_downloads": 169,
+    "wikidata_followup": "HTTP 429 after 250 source entities; subsequent automated requests stopped",
+    "remaining_notable_relationships_without_full_evidence": 143
+  }
+}

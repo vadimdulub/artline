@@ -1,5 +1,6 @@
 "use client";
 
+import { BookmarkButton } from "./Bookmarks";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { countryName } from "@/lib/api";
@@ -47,11 +48,11 @@ export function ArtistsIndex({ initialPage, initialQuery }: { initialPage: Artis
     <ActiveFilters filters={filters} onClear={clear} searchRef={search} />
     <div className={styles.resultsHeading}><h2 id="artist-results-title" tabIndex={-1} aria-live="polite">{loading ? "Finding artists…" : error ? "Connection interrupted" : `${formatCount(data?.total ?? 0)} ${data?.total === 1 ? "artist" : "artists"}`}</h2><p>{sort === "name" ? "Alphabetical by catalogue name" : "Popularity uses the Pantheon cohort; it is not a ranking of artistic quality."}</p></div>
     <section aria-label="Artist results" aria-busy={loading}>
-      {error ? <div className={styles.empty} role="alert"><h3>We couldn’t load this view</h3><p>{error}</p><button type="button" onClick={() => setRetry(value => value + 1)}>Try again</button></div> : loading ? <p className={styles.empty}>Finding artists…</p> : data?.items.length ? <ul className={styles.artists}>{data.items.map(artist => <li key={artist.id}><Link href={`/artists/${artist.slug}`} prefetch={false}>
+      {error ? <div className={styles.empty} role="alert"><h3>We couldn’t load this view</h3><p>{error}</p><button type="button" onClick={() => setRetry(value => value + 1)}>Try again</button></div> : loading ? <p className={styles.empty}>Finding artists…</p> : data?.items.length ? <ul className={styles.artists}>{data.items.map(artist => <li key={artist.id} className="bookmark-grid-item artist-bookmark-card"><Link href={`/artists/${artist.slug}`} prefetch={false}>
         <h3>{artist.name}</h3><p className={styles.dates}>{artist.date_display}</p>
         <p className={styles.context}>{artist.movement.name !== "Unclassified" && <span>{artist.movement.name}</span>}{artist.countries.length > 0 && <span>{artist.countries.map(countryName).join(", ")}</span>}</p>
         <span className={styles.works}>{formatCount(artist.artwork_count)} recorded {artist.artwork_count === 1 ? "work" : "works"}</span>
-      </Link></li>)}</ul> : <div className={styles.empty}><h3>No artists match these filters</h3><p>Try another spelling, or broaden the country and movement filters.</p><button type="button" onClick={clear}>Show all artists</button></div>}
+      </Link><BookmarkButton kind="artist" id={artist.id} title={artist.name} compact /></li>)}</ul> : <div className={styles.empty}><h3>No artists match these filters</h3><p>Try another spelling, or broaden the country and movement filters.</p><button type="button" onClick={clear}>Show all artists</button></div>}
     </section>
     {data && <nav className={styles.pagination} aria-label="Artist directory pages"><span>{data.items.length} shown on this page</span><div>{params.has("cursor") && <Link href={`/artists?${first}`} prefetch={false} onClick={event => { if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); go(null); } }}>First artists</Link>}{data.next_cursor && <Link href={`/artists?${next}`} prefetch={false} onClick={event => { if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); go(data.next_cursor); } }}>Next artists</Link>}</div></nav>}
   </main>;

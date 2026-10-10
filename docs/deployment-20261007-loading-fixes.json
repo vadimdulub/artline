@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-07T09:30:56.498888+00:00",
+  "site": "https://artlines.org",
+  "status": "deployed and verified",
+  "services": {
+    "api": {
+      "revision": "artline-api-loading-fixes-1007",
+      "trafficPercent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:b3eecb36fef08ae525484ec6a8283064c462a554de40cb40960626f207d593dc",
+      "cloudBuild": "acc10ef9-1098-4391-9049-f2b1f603871e",
+      "runtimeConfigurationPreserved": true
+    },
+    "web": {
+      "revision": "artline-web-loading-fixes-1007",
+      "trafficPercent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:96c2f2b4feaa07dd093925275d4ba9d38d520b384042a5604f1ec3cb8128b192",
+      "cloudBuild": "ba0ce2a7-7bca-49a3-bb2a-ad3881df8f1a",
+      "runtimeConfigurationPreserved": true
+    }
+  },
+  "databaseMigrations": [
+    "0035_catalogue_cache_revision.sql",
+    "0036_artwork_autovacuum.sql"
+  ],
+  "changes": [
+    "Cache keys use committed catalogue revisions rather than PostgreSQL cluster snapshots",
+    "Museum cover selection stops at the first eligible image",
+    "Museum pages reuse server-rendered overview data and preserve same-scope content on transient refresh failures",
+    "Books timeline receives summaries; full records are fetched on opening details",
+    "Catalogue GET responses support negotiated streaming gzip"
+  ],
+  "verification": {
+    "apiCandidate": true,
+    "webCandidatePages": 6,
+    "livePages": 6,
+    "desktopAndThrottledMobile": true,
+    "allObservedPageAPIs200": true,
+    "pageErrors": 0,
+    "productionAnonymousAccessSafeguards": true,
+    "loggedErrors": 0,
+    "sourceProvenanceVerified": true
+  },
+  "measuredLivePageReadyMs": [
+    {
+      "page": "paintings",
+      "mode": "desktop",
+      "ms": 5818
+    },
+    {
+      "page": "books",
+      "mode": "desktop",
+      "ms": 1100
+    },
+    {
+      "page": "met",
+      "mode": "desktop",
+      "ms": 2121
+    },
+    {
+      "page": "paintings",
+      "mode": "mobile",
+      "ms": 2855
+    },
+    {
+      "page": "books",
+      "mode": "mobile",
+      "ms": 1383
+    },
+    {
+      "page": "met",
+      "mode": "mobile",
+      "ms": 2810
+    }
+  ],
+  "booksWireBytes": 13333,
+  "catalogueRecordsChangedByRelease": false,
+  "terraformApplied": false,
+  "gitCommitCreated": false,
+  "remainingLimitations": [
+    "Cold Paintings requests still require several seconds of database work; cache TTL remains one minute and real catalogue edits invalidate it",
+    "Cache is per API instance, so newly started instances are cold",
+    "No concurrent capacity test or 10-million-row load test was performed",
+    "An initial uninstrumented candidate repeat missed the cache; the repeat instrumented with catalogue revisions passed across heartbeat changes. The exact cause of that first miss was not established."
+  ],
+  "rollbackRevisions": {
+    "api": "artline-api-museum-overview-1006",
+    "web": "artline-web-shared-controls-1006"
+  }
+}

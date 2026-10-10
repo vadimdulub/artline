@@ -1,5 +1,7 @@
 import "server-only";
 import { cache } from "react";
+import { cookies } from "next/headers";
+import { memberRequestHeaders } from "./session-cookies";
 import type { ArtistDetail, ArtistIdentity, ArtistBrowsePage, Artwork, Museum } from "./types";
 
 export const getArtist = cache(async (slug: string): Promise<ArtistDetail | null> => {
@@ -23,7 +25,7 @@ export const getArtistIdentity = cache(async (slug: string): Promise<ArtistIdent
 export const getMuseum = cache(async (slug: string): Promise<Museum | null> => {
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || slug.length > 100) return null;
   const url = new URL(`/api/v1/museums/${encodeURIComponent(slug)}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
-  const response = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(8000) });
+  const response = await fetch(url, { headers: memberRequestHeaders(await cookies()), cache: "no-store", redirect: "error", signal: AbortSignal.timeout(8000) });
   if (response.status === 404) return null;
   if (!response.ok) throw new Error("The museum catalogue is temporarily unavailable.");
   return response.json();

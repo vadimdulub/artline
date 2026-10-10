@@ -1,5 +1,11 @@
 # Museum foundation and browsing
 
+Update, 8 October 2026: personal must-see lists and browser editor access have
+been removed, including their UI, write APIs and supporting mutation code.
+Catalogue browsing and sourced museum highlights remain. Existing database
+records and migration history are retained. The notes below describe the original
+September milestone, including features that are now retired.
+
 Approved 8 September 2026 after the museum/filter plan. This milestone adds local
 schema, reviewed links for the existing 15 artworks, museum list/detail pages and
 editable owner must-see selections. No bulk ingestion, new artwork downloads,

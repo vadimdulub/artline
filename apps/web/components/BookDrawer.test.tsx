@@ -27,3 +27,10 @@ it("does not show a previous book while new summary details are loading", async 
   await act(async () => rerender(<BookDrawer id="next" items={[{ ...summary, id: "next" }]} close={() => {}} select={() => {}} />));
   await waitFor(() => expect(screen.queryByText(detail.description)).not.toBeInTheDocument());
 });
+
+it("keeps an incomplete book without empty about, creator or date sections", () => {
+ const unknown = { ...detail, author: "Creator not recorded", years: "Dates not established", description: "", dateBasis: "Not recorded", creators: [] };
+ render(<BookDrawer id="book" items={[unknown]} close={() => {}} select={() => {}} />);
+ expect(screen.getByRole("heading", { name: "Book title" })).toBeVisible();
+ for (const text of [/About this book/, /About the creator/, /not recorded/i, /not established/i, /^Dates$/]) expect(screen.queryByText(text)).not.toBeInTheDocument();
+});

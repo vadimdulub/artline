@@ -1,5 +1,13 @@
 # Artline implementation constraints
 
+- Member access and bookmarks (10 October 2026): the user clarified that artist
+  and individual artwork pages are public without a login prompt. Museum
+  browsing and saving artists/artworks to private bookmarks require login.
+  Prompt when a signed-out visitor uses a star or a museum link; retain the
+  selected destination through sign-in. Local-debug bookmarks are ephemeral
+  and must not write account, session, bookmark or catalogue fixtures to the
+  real local database. Publication status is unrelated to this access policy.
+
 - Unified catalogue (8 October 2026): the user explicitly removed the
   research/review browsing distinction: “Always show all that we have.” All
   active records are available through one catalogue, regardless of legacy

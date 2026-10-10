@@ -1,0 +1,40 @@
+"""Freeze wave61 and verify all inherited and new evidence pins."""
+import csv,hashlib,importlib.util,json
+from pathlib import Path
+s=importlib.util.spec_from_file_location('a',Path(__file__).with_name('museum-expansion-france-sixth-apply-20261008.py'));a=importlib.util.module_from_spec(s);s.loader.exec_module(a);m=a.m
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def main():
+ dest=a.RUN/'delivery-checkpoint-001.json';assert not dest.exists();prior=m.load(a.CHECKPOINT);assert sha(a.CHECKPOINT)=='432ad5f978e1dd6d8f802f158dfbb901cb9fa9626ae1c81cc39e5c35fa67e947'
+ changes=m.load(a.RUN/'readme-supersessions-001.json')['changes'];changed={v['path']:v for v in changes};assert len(changed)==1
+ for dep in prior['artifacts']:
+  if dep['path'] in changed:
+   c=changed[dep['path']];saved=m.load(Path(c['backup_path']));assert sha(Path(c['backup_path']))==c['backup_sha256'];assert hashlib.sha256(saved['text'].encode()).hexdigest()==saved['sha256']==dep['sha256']==c['before_sha256'];assert sha(m.ROOT/dep['path'])==c['after_sha256'];continue
+  a.prior.b.prior.old.h.checked_policy(dep) if dep['path']=='AGENTS.md' and dep['sha256']==a.prior.b.prior.old.h.OLD else a.checked(dep)
+ p,digest=a.validate_plan();applied=m.load(a.RUN/(a.KEY+'-applied.json'));assert applied['plan_sha256']==digest
+ with m.connect() as db:verified=a.verify(db,p,digest)
+ report=m.load(m.RUN/'verification-after-wave-61.json');assert report['verified_new_artworks']==6535 and report['verified_existing_artworks_linked']==785 and report['institutions_with_new_records_or_reconciled_holdings']==172 and not report['unrelated_coverage_changes_since_prior_report']
+ assert sum(v['eligible_before']<100<=v['eligible_after'] for v in report['france_sixth_museum_changes'])==3
+ assert (report['after']['museums_below_100'],report['after']['museums_below_200'])==(1174,1288)
+ csvcounts={}
+ for name,count in [('added-artworks-after-wave-61.csv',6535),('reconciled-artworks-after-wave-61.csv',785),('museum-coverage-after-wave-61.csv',1491),('gac-date-enrichments-after-wave-61.csv',6)]:
+  with (m.RUN/name).open(newline='') as fp:rows=list(csv.DictReader(fp))
+  assert len(rows)==count;csvcounts[name]=count
+ checks=m.load(a.RUN/'checks-001.json');assert checks['new_offline_tests_passed']==32 and checks['historical_tests_passed']==982 and checks['cumulative_verified_tests']==1014 and checks['replay_zero_writes']
+ wording=m.load(a.RUN/'report-wording-supersessions-001.json')['changes']
+ for c in wording:
+  saved=m.load(Path(c['backup_path']));assert sha(Path(c['backup_path']))==c['backup_sha256'];assert hashlib.sha256(saved['text'].encode()).hexdigest()==saved['sha256']==c['before_sha256'];assert sha(m.ROOT/c['path'])==c['after_sha256']
+ changes+=wording
+ external=prior['external_artifacts']+list(checks['logs'].values())+[m.load(a.RUN/'logs-finalized-001.json')['completed_delivery_log']]+[dict(path=v['backup_path'],sha256=v['backup_sha256']) for v in changes]+[dict(path=p['backup_path'],sha256=p['backup_sha256'])]
+ reviewed=m.BACKUP/(a.KEY+'-reviewed-plan.json.gz');assert m.load(reviewed)==p;external.append(dict(path=str(reviewed),sha256=sha(reviewed)))
+ grouped={}
+ for dep in external:
+  assert dep['path'] not in grouped or grouped[dep['path']]==dep;grouped[dep['path']]=dep
+ external=list(grouped.values())
+ for dep in external:assert sha(Path(dep['path']))==dep['sha256']
+ other=prior['other_job_status_reference'];a.checked(other)
+ paths={m.ROOT/v['path'] for v in prior['artifacts']}|{a.CHECKPOINT,Path(__file__).resolve()};paths|={v for v in a.RUN.rglob('*') if v.is_file()};paths|={v for v in (m.ROOT/'ops').glob('*france*sixth*20261008.py')};paths|={v for v in m.RUN.glob('*after-wave-61*')}
+ paths|={m.ROOT/v['source_reference']['path'] for v in m.load(a.RUN/'comparison-source-extracts-001.json')['rows']}
+ artifacts=[a.reference(v) for v in sorted(paths)];assert len({v['path'] for v in artifacts})==len(artifacts)
+ result=dict(at=m.now(),goal_complete=False,local_only=True,campaign_new_artworks=6535,campaign_existing_links=785,institutions_with_new_records_or_reconciled_holdings=172,source_pass_museums=350,source_pass_institutions=351,new_additions=228,new_existing_links=0,verification=verified,museum_changes=report['france_sixth_museum_changes'],museums_below_100=1174,museums_below_200=1288,new_tests_passed=32,historical_tests_passed=982,cumulative_verified_tests=1014,plan_sha256=digest,csv_counts_verified=csvcounts,artifacts=artifacts,external_artifacts=external,prior_checkpoint_reference=a.reference(a.CHECKPOINT),prior_artifacts_verified=len(prior['artifacts']),intentional_supersessions=changes,other_job_status_reference=other,other_job_totals_separate=True,next_work='Libourne124, Senlis125 and Amiens130 eligible works now exceed100. Beziers84 and Cambrai81 need further selected sources, and every preferred200 target remains unfinished. Preserve11 captured holds and7663 index-held/unselected leads. The current pass made228 verified additions, so no repeated blocking condition. Global goal remains active with1174 canonical museums below100 linked records. All workers completed. Baltimore access hold remains; no retry, alternate transport or host bypass.')
+ m.save(dest,result);print(json.dumps(dict(checkpoint=str(dest.relative_to(m.ROOT)),sha256=sha(dest),artifacts=len(artifacts),external_artifacts=len(external),new=228,campaign_new=6535,campaign_links=785,museums_below100=1174)),flush=True)
+if __name__=='__main__':main()

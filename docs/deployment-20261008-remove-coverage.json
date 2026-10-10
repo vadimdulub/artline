@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-08T16:00:34.060200+00:00",
+  "site": "https://artlines.org",
+  "change": "Remove the Coverage page, navigation entries, styles, summary types, API endpoint and database query",
+  "status": "deployed and verified",
+  "services": {
+    "api": {
+      "revision": "artline-api-remove-coverage-1008",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:abfd31a849c2172b7b498bec43ce90a9c55b6dc0c29ab7019f4b0c68641454b8",
+      "build_id": "244c7567-5726-4113-b40e-3e668ad34665",
+      "baseline_revision": "artline-api-nonempty-museums-1008",
+      "changed_source_files": [
+        "internal/catalog/repository.go",
+        "internal/catalog/types.go",
+        "internal/httpapi/router.go",
+        "internal/httpapi/router_test.go"
+      ],
+      "candidate_checks": 5,
+      "live_checks": 5
+    },
+    "web": {
+      "revision": "artline-web-remove-coverage-1008",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:8f101e60d14322287d55e755b037869230206e37bdcfc2c9b9615ab915a91b1a",
+      "build_id": "da340ec5-e0b3-4b55-b84a-f2f120181b7d",
+      "baseline_revision": "artline-web-remove-artworks-nav-1008",
+      "changed_source_files": [
+        "app/coverage/page.tsx",
+        "app/globals.css",
+        "components/CoverageClient.tsx",
+        "components/EditorNav.tsx",
+        "components/MemberNavigation.tsx",
+        "components/SiteHeader.tsx",
+        "lib/types.ts"
+      ],
+      "candidate_checks": 16,
+      "live_checks": 17
+    }
+  },
+  "verification": {
+    "isolated_api_catalog_tests": "passed",
+    "release_web_eslint": "passed",
+    "production_builds": "passed",
+    "source_archive_checksums_verified": true,
+    "coverage_page_http_status": 404,
+    "coverage_api_http_status": 404,
+    "member_navigation_bundle_contains_coverage_link": false,
+    "browser_ui_check": "unavailable: browser connection failed during setup",
+    "runtime_configuration_preserved": true
+  },
+  "data_changes": false,
+  "database_migrations_changed": false,
+  "unrelated_live_source_and_public_assets_preserved": true,
+  "terraform_image_pins_updated": true,
+  "terraform_applied": false,
+  "git_commit_created": false,
+  "evidence_directory": "/Users/vadimdulub/Library/Application Support/Artline/backups/remove-coverage-20261008"
+}

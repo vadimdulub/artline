@@ -1,0 +1,28 @@
+# musée d'Allard — Montbrison
+
+[All museums and collections](../README.md)
+
+13 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 11 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://pop.culture.gouv.fr/notice/museo/M1016)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-819a8eae-5e05-48b5-9846-51c93ad8a7ee"></a>Jeune garçon se réchauffant auprès du feu | Bréauté Albert (1853-1939) | Unverified date: 4e quart 19e siècle;1ère moitié 20e siècle | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160000964) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160000964) · checked 2026-10-04 | review |
+| <a id="artwork-34f54309-17b1-4215-b9e0-6b7f542edca0"></a>L'aquarium | Bréauté Albert (1853-1939) | Unverified date: 4e quart 19e siècle;1ère moitié 20e siècle | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160000966) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160000966) · checked 2026-10-04 | review |
+| <a id="artwork-a0b93cb0-8604-4aed-95ea-4ccb97093a69"></a>L'ouvrière | Bréauté Albert (1853-1939) | Unverified date: 1891 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160000963) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160000963) · checked 2026-10-04 | review |
+| <a id="artwork-ea2a9a62-f87f-4751-9f56-e2370cc15fce"></a>La Madeleine | De Vries Abraham (1590-16..) | Unverified date: 1ère moitié 17e siècle | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160001779) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160001779) · checked 2026-10-04 | review |
+| <a id="artwork-df345155-2cb1-472e-96a3-c18e718c14a1"></a>La modiste | Bréauté Albert (1853-1939) | Unverified date: 1890 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160000965) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160000965) · checked 2026-10-04 | review |
+| <a id="artwork-2078358e-c822-4926-99b9-7bbdf13621f3"></a>Le divan | Brianchon Maurice (1899-1979) | Unverified date: 1933 | Catalogue reports no image · [record](https://pop.culture.gouv.fr/notice/joconde/10160001601) | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160001601) · checked 2026-10-04 | review |
+| <a id="artwork-527fa76c-8fa0-4d0e-bf45-0e5599c5214d"></a>Le vieil arbre ou Madame Hessel au château des Clayes ; l'hiver Madame Hessel au château de Clayes ; l'hiver (autre titre) | Édouard Vuillard | Unverified date: 1932,1935 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160000953) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160000953) · checked 2026-10-04 | review |
+| <a id="artwork-7b5c27b1-d0de-4768-aae7-7ddf8b8627c2"></a>Place à Houmt-Souk | Sabouraud Émile (1900-1996) | Unverified date: 1937 | Catalogue reports no image · [record](https://pop.culture.gouv.fr/notice/joconde/10160000955) | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160000955) · checked 2026-10-04 | review |
+| <a id="artwork-f69f4004-670a-4f31-8035-ed76f6e9816f"></a>Portrait d'un homme en cuirasse | Hoey Jean de | Unverified date: 1ère moitié 17e siècle | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160001777) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160001777) · checked 2026-10-04 | review |
+| <a id="artwork-52c601e5-3b6f-4468-bb37-c6974da10c48"></a>Portrait de Jacques Julien Richard de Laprade | Lacuria Jean-Louis (1808-1868) | Unverified date: 1852 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160001100) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160001100) · checked 2026-10-04 | review |
+| <a id="artwork-cda11d56-c438-4f34-8ea4-c46117613cba"></a>Portrait de Victoire Chavassieu | Janmot Louis (1814-1892) | Unverified date: 1851 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160001098) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160001098) · checked 2026-10-04 | review |
+| <a id="artwork-a66693e7-69e0-4da3-86dd-e0a022d42ef4"></a>Portrait de Victor de Laprade | Janmot Louis (1814-1892) | Unverified date: 1860 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160001097) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160001097) · checked 2026-10-04 | review |
+| <a id="artwork-6abe651f-b3b8-4f1e-bb34-565c228ebcf7"></a>Profil de V. de Laprade en Saint Thomas | Janmot Louis (1814-1892) | Unverified date: 1845 | [Catalogue image page](https://pop.culture.gouv.fr/notice/joconde/10160001599) · catalogue reports image | [Holding source](https://pop.culture.gouv.fr/notice/joconde/10160001599) · checked 2026-10-04 | review |

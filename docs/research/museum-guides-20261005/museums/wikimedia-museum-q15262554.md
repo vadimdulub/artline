@@ -1,0 +1,21 @@
+# Northampton Museum and Art Gallery
+
+[All museums and collections](../README.md)
+
+6 accepted holding links · 6 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://www.northamptonmuseums.com/)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-17367e9e-c890-546c-a4dc-5251fcb679ef"></a>Battersea Reach, Early Morning, London | Walter Greaves | 1900 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119149254-0310399748f1fd86.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Walter_Greaves_%281846-1930%29_-_Battersea_Reach%2C_Early_Morning%2C_London_-_2002.78.10_-_Northampton_Museum_and_Art_Gallery.jpg) | [Holding source](https://www.wikidata.org/wiki/Q119149254) · checked 2026-09-14 | review |
+| <a id="artwork-c10281a6-8db6-5c8f-89f7-8336a626d192"></a>Christ Disputing with the Doctors in the Temple | Giovanni Antonio Fumiani | c. 1685 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/c10281a6-8db6-5c8f-89f7-8336a626d192-d04d851b00941f8c.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Giovanni_Antonio_Fumiani_%281643-1710%29_%28attributed_to%29_-_Christ_Disputing_with_the_Doctors_in_the_Temple_-_1968.235_-_Northampton_Museum_and_Art_Gallery.jpg) | [Holding source](https://www.wikidata.org/wiki/Q118986076) · checked 2026-09-13 | review |
+| <a id="artwork-ae2d613b-4713-5591-b9ce-67c1d26d0dcb"></a>Joseph Seduced by Potiphar's Wife | Celesti Andrea | 1685–1689 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/ae2d613b-4713-5591-b9ce-67c1d26d0dcb-7d50d132137fadab.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Andrea_Celesti_%281637-1712%29_%28attributed_to%29_-_Joseph_Seduced_by_Potiphar%27s_Wife_-_1985.21_-_Northampton_Museum_and_Art_Gallery.jpg) | [Holding source](https://www.wikidata.org/wiki/Q118986210) · checked 2026-09-13 | review |
+| <a id="artwork-66ff851c-9f21-5f94-8e9e-e7eeac565c3a"></a>Kew Bridge, London | Walter Greaves | 1900 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119149073-b252d47efc09222f.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Walter_Greaves_%281846-1930%29_-_Kew_Bridge%2C_London_-_2002.78.4_-_Northampton_Museum_and_Art_Gallery.jpg) | [Holding source](https://www.wikidata.org/wiki/Q119149073) · checked 2026-09-14 | review |
+| <a id="artwork-03697f30-1d41-5c1a-850e-0b065ed9e8fd"></a>The Shoemaker | Hendrik van Oort | 1800–1830 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/03697f30-1d41-5c1a-850e-0b065ed9e8fd-d80f41a060c4726a.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Hendrik_van_Oort_%281775-1847%29_-_The_Shoemaker_-_1987.191_-_Northampton_Museum_and_Art_Gallery.jpg) | [Holding source](https://www.wikidata.org/wiki/Q120061733) · checked 2026-09-13 | review |
+| <a id="artwork-c9e13df8-091d-5a98-adda-e1538140ef2a"></a>The Virgin and Child with Saint Stephen and Saint Lawrence | Girolamo da Santacroce | 1495–1510 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/c9e13df8-091d-5a98-adda-e1538140ef2a-4710659dcfc066a3.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Girolamo_da_Santacroce_%281480-1485-1556%29_-_The_Virgin_and_Child_with_Saint_Stephen_and_Saint_Lawrence_-_2000.167.1_-_Northampton_Museum_and_Art_Gallery.jpg) | [Holding source](https://www.wikidata.org/wiki/Q118676209) · checked 2026-09-13 | review |

@@ -1,0 +1,24 @@
+# Schloss Weimar
+
+[All museums and collections](../README.md)
+
+9 accepted holding links · 7 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://www.klassik-stiftung.de/stadtschloss-weimar/)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-c8e9cb07-6244-5508-86af-0273174d52ca"></a>Adolph Wilhelm Herzog von Sachsen-Eisenach (1632—1668) | Christian Richter | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q124305607) | [Holding source](https://www.wikidata.org/wiki/Q124305607) · checked 2026-09-14 | review |
+| <a id="artwork-54800551-52c6-5890-97eb-0ee16f0979f4"></a>Der Schnitter | Hans Olde | 1893 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111820935-64303cd08d3629fe.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Olde_Der_Schnitter%40Weimar_Schlossmuseum.JPG) | [Holding source](https://www.wikidata.org/wiki/Q111820935) · checked 2026-09-14 | review |
+| <a id="artwork-151e74d6-0c37-55c7-9779-de1f8aaaf2c2"></a>Die Familie des Künstlers im Garten | Theodor Hagen | 1906 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/151e74d6-0c37-55c7-9779-de1f8aaaf2c2-eb590b9ceb1a72de.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Hagen_Familie_des_K%C3%BCnstlers%40Weimar_Schlossmuseum.JPG) | [Holding source](https://www.wikidata.org/wiki/Q112960260) · checked 2026-09-14 | review |
+| <a id="artwork-7402336f-2bc0-5212-b6f0-475697361cf2"></a>Feld mit Getreidebündeln | Theodor Hagen | 1908 | [Artline picture](https://artlines.org/assets/artworks/open-museums/night-commons/7402336f-2bc0-5212-b6f0-475697361cf2-c91be205d36e648f.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Hagen_Feld_Getreideb%C3%BCndel%40Weimar_Schlossmuseum.JPG) | [Holding source](https://www.wikidata.org/wiki/Q112968840) · checked 2026-09-14 | review |
+| <a id="artwork-55655f73-dba2-5e37-ac0c-4e9e48fca690"></a>Herbstlicher Wald | Theodor Hagen | c. 1895 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q112968866-8b37204a122a52fb.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Hagen_Herbstlicher_Wald%40Weimar_Schlossmuseum.JPG) | [Holding source](https://www.wikidata.org/wiki/Q112968866) · checked 2026-09-14 | review |
+| <a id="artwork-8afbb6cc-07a4-5e3d-86ec-b8c69ff59c98"></a>Landschaft mit Pferdefuhrwerk und Bach | Karl Buchholz | 1882 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111578237-8264ddc78666ad6e.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Buchholz_Landschaft_Pferdefuhrwerk%40Weimar_Schlossmuseum.JPG) | [Holding source](https://www.wikidata.org/wiki/Q111578237) · checked 2026-09-14 | review |
+| <a id="artwork-0bbab478-b269-568e-b516-9d537abe6953"></a>Luise of Hesse-Darmstadt, grand duchess of Saxe-Weimar-Eisenach | Johann Friedrich August Tischbein | 1795 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q123512626-2fb3019215afaf1e.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Tischbein%2C_Louise_von_Sachsen-Weimar%40Weimar_Schlossmuseum.JPG) | [Holding source](https://www.wikidata.org/wiki/Q123512626) · checked 2026-09-14 | review |
+| <a id="artwork-17a5faf8-f0c8-5fb7-a08b-530a4db869f6"></a>Portrait of Princess Sophie of the Netherlands | Charles Verlat | 1870 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q123256875-be34a902c1d3aa8d.jpg) · cc_by_sa · [source / credit](https://commons.wikimedia.org/wiki/File:Gro%C3%9Fherzogin_Sophie_von_Sachsen_Weimar.jpg) | [Holding source](https://www.wikidata.org/wiki/Q123256875) · checked 2026-09-14 | review |
+| <a id="artwork-1b20fca5-3ca8-5a78-b76d-c480591f3c94"></a>Ufer am Niederrhein | Theodor Hagen | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q112968884) | [Holding source](https://www.wikidata.org/wiki/Q112968884) · checked 2026-09-14 | review |

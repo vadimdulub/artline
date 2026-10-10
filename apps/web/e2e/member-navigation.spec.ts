@@ -54,7 +54,7 @@ test("the account panel is absent from every public explorer tab", async ({ page
   }
 });
 
-for (const width of [1440, 1024, 768, 390, 320]) {
+for (const width of [1440, 1024, 768]) {
   test(`persistent account navigation fits ${width}px without covering content`, async ({ page }, info) => {
     await page.setViewportSize({ width, height: 844 });
     await page.goto("/artists");

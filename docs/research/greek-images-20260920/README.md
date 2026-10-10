@@ -87,3 +87,13 @@ Each update used a transaction, identity rechecks and exact recovery preimages. 
 Recovery snapshots, personal collection snapshots, visual review and operation script: `/Users/vadimdulub/Library/Application Support/Artline/backups/greek-images-20260920/`. Original reproductions: `/Users/vadimdulub/Library/Application Support/Artline/source-images/greek-images-20260920/`. Application derivatives: `apps/web/public/assets/artworks/imported/greek-images-20260920/`.
 
 [Completion summary](completion-summary.json) · [Delivered artworks](delivered-artworks.json) · [All painter coverage](painter-coverage.json) · [Remaining gaps](remaining-image-gaps.json) · [Review decisions](review-decisions.json) · [Visual approval](visual-review-approved.json) · [Local verification](verification-1790002119.json)
+
+## Local follow-up — 6 October 2026
+
+A separate [Papaloukas image review](../local-wikiart-papaloukas-images-20261006/README.md)
+attached WikiArt images to the existing local museum records for *Boy with Suspenders*
+and *Vase of Flowers (dark colors)*. The first record’s already illustrated duplicate
+is preserved and explicitly documented. The latter’s 1956 date meets the current
+through-1970 scope. Actual Fair Use labels remain restricted under the current
+WikiArt approval. These two later local attachments do not revise this report’s
+historical totals or its production results.

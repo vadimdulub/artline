@@ -1,5 +1,6 @@
 "use client";
 
+import { BookmarkButton } from "./Bookmarks";
 import Link from "next/link";
 import { artworkDate, displayMetadata } from "@/lib/display-metadata";
 import { useEffect, useState } from "react";
@@ -25,9 +26,10 @@ export function AllArtworkDrawer({ id, close, navigation, fallbackFocusId = "all
  const arrows=navigation?{...navigation,busy:navigation.busy||loading}:undefined;
  return <RecordDrawer label="Artwork details" closeLabel="Close artwork details" recordKey={id} title={loading?"Opening artwork…":"Artwork"} navigation={arrows&&<RecordArrows navigation={arrows} noun="artwork"/>} close={close} fallbackFocusId={fallbackFocusId}>
   {work?<div className={styles.drawerContent} aria-busy={loading}>{creator && <p className="artwork-creator">{creator}</p>}
+   <div className="bookmark-record-actions"><BookmarkButton kind="artwork" id={work.id} title={work.title} /></div>
    <ArtworkViewer work={work} creator={creator} navigation={arrows}/>
    <header className={`${styles.bookHeading} ${styles.artworkHeading}`}><h2 aria-live="polite">{work.title}</h2>{artworkDate(work) && <p>{artworkDate(work)}</p>}</header>
-   {work.creators.length>0&&<section className={styles.creators}><h3>Creators</h3>{work.creators.map(creator=><p key={`${creator.id}-${creator.role}`}><Link href={`/artists/${creator.slug}`}>{creator.name}</Link><br/>{creator.years}</p>)}</section>}
+   {work.creators.length>0&&<section className={styles.creators}><h3>Creators</h3>{work.creators.map(creator=><p key={`${creator.id}-${creator.role}`}><Link href={`/artists/${creator.slug}`}>{creator.name}</Link> <BookmarkButton kind="artist" id={creator.id} title={creator.name} compact /><br/>{creator.years}</p>)}</section>}
    <div className="artwork-details"><ArtworkFacts work={work}/></div>
    <ArtworkLocation work={work}/><ArtworkDescription work={work} detailPath={`atlas/artworks/${work.id}`}/>{work.citations.length>0&&<section className="sources-section"><h3>Sources</h3><SourceList citations={work.citations}/></section>}
   </div>:<div className={styles.drawerState} role={error?"alert":"status"}>{error?<><h2>Artwork unavailable</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry artwork</button></>:<LoadingIndicator label="Opening artwork…"/>}</div>}

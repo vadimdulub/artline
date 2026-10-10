@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-08T16:09:48.025247+00:00",
+  "site": "https://artlines.org",
+  "status": "deployed and verified",
+  "changes": [
+    "Remove artwork-record label and unfinished personal must-see features",
+    "Remove editor-token UI, catalogue editing and publication actions, and their write APIs",
+    "Polish the copy-artwork-link control with an icon, copied state, and accessible clipboard fallback"
+  ],
+  "preservedConcurrentRelease": "remove-coverage-20261008",
+  "services": {
+    "api": {
+      "revision": "artline-api-editor-removal-1008",
+      "trafficPercent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:8067e63175a1720d4e4b95c36ae157e493c6cbde911faff2d0ac012187f84be4",
+      "buildID": "b26eb654-951e-4435-b6e2-494afb08a6cb",
+      "baselineRevision": "artline-api-remove-coverage-1008",
+      "changedSourceFiles": [
+        "internal/catalog/integrity_integration_test.go",
+        "internal/catalog/museum_directory_readonly_test.go",
+        "internal/catalog/museums.go",
+        "internal/catalog/museums_integration_test.go",
+        "internal/catalog/repository.go",
+        "internal/catalog/types.go",
+        "internal/httpapi/catalogue_read_test.go",
+        "internal/httpapi/museums.go",
+        "internal/httpapi/router.go",
+        "internal/httpapi/router_test.go",
+        "internal/ingest/european.go",
+        "internal/ingest/european_details.go",
+        "internal/ingest/store.go"
+      ],
+      "candidateChecks": 19,
+      "liveChecks": 19,
+      "sourceArchiveSHA256": "5b089fb5c325e50658514ef9ca669669f1d22f2b6d84e41ec9a0828ab84533cf"
+    },
+    "web": {
+      "revision": "artline-web-editor-removal-1008",
+      "trafficPercent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:8ffce45cf7872ae1ca2e99696a181b251fe289480c83dcfc94f74bd3b48a438f",
+      "buildID": "c08ed247-4b1e-4bbe-beb6-48921114df96",
+      "baselineRevision": "artline-web-remove-coverage-1008",
+      "changedSourceFiles": [
+        "app/about/page.tsx",
+        "app/api/backend/[...path]/route.ts",
+        "app/catalogue/page.tsx",
+        "app/globals.css",
+        "app/imports/page.tsx",
+        "components/ArtistChronologyRecord.tsx",
+        "components/ArtistRecord.tsx",
+        "components/ArtistsIndex.tsx",
+        "components/ArtworkDescription.tsx",
+        "components/ArtworkViewer.tsx",
+        "components/ArtworksIndex.test.tsx",
+        "components/ArtworksIndex.tsx",
+        "components/CatalogueClient.tsx",
+        "components/EditorAccess.tsx",
+        "components/EditorNav.tsx",
+        "components/EntityPickerFilters.tsx",
+        "components/MuseumDetail.tsx",
+        "components/MuseumDrawer.tsx",
+        "components/Museums.module.css",
+        "components/MuseumsIndex.tsx",
+        "components/TimelineExplorer.tsx",
+        "components/museum-state.test.tsx",
+        "components/museum-state.ts",
+        "components/use-painter-choices.ts",
+        "lib/api.ts",
+        "lib/types.ts"
+      ],
+      "candidateChecks": 10,
+      "liveChecks": 10,
+      "sourceArchiveSHA256": "93508f0d09f7bc39e307e9de4e9bf8e6890aa905980ad6ab50291a1e31770cfd"
+    }
+  },
+  "verification": {
+    "isolatedReleaseTypeScript": "passed",
+    "isolatedAPICatalogTests": "passed",
+    "productionBuilds": "passed",
+    "runtimeConfigurationPreserved": true,
+    "databaseMigrationsUnchanged": true,
+    "publicAssetsPreserved": true,
+    "desktopAndMobileBrowserChecks": "passed",
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "browserErrors": [],
+    "clipboardAndFallback": "passed",
+    "retiredEndpoints": "404/405",
+    "catalogueSearch": "passed",
+    "candidateRetry": "The first candidate artwork-list request returned HTTP 500 before promotion. A repeat candidate check and all post-promotion API/browser checks passed.",
+    "postPromotionErrorLogs": 0
+  },
+  "databaseDataWrites": false,
+  "gitCommitCreated": false,
+  "terraformApplied": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/editor-removal-20261008",
+  "terraformImagePinsUpdated": true
+}

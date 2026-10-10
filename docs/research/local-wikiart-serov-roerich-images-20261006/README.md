@@ -1,0 +1,35 @@
+# Serov and Roerich: exact WikiArt image versions — 6 October 2026
+
+**Six verified WikiArt reproductions are saved locally and attached to existing artworks.** Eight Russian Museum records received individual review. Two separate paper studies remain unmatched and unchanged. Catalogue titles, dates, unknown fields, creator links, holdings and review status are preserved.
+
+| Artwork | Native accession | Outcome |
+| --- | --- | --- |
+| Roerich, Cabin, 1912 (?) | Р-57518 | Exact tempera/charcoal stage design; 93,753 bytes |
+| Roerich, Kiss the Earth, 1912 | Ж-1982 | Exact tempera design with bent tree and purple lake; 72,821 bytes |
+| Roerich, Giantess Krimgerd, 1915 | Р-50515 | Exact blue-green ink/watercolour study; 87,442 bytes |
+| Roerich, Ominous, 1901 | Ж-1958 | Exact oil painting with birds and open sea; 51,459 bytes |
+| Serov, The Rape of Europa, 1910 | Ж-4310 | Exact tempera/charcoal composition; 94,838 bytes |
+| Roerich, The Rite of Spring, 1945 | Ж-7093 | Exact group scene; 76,268 bytes |
+| Serov, The Rape of Europa, 1909–1910 | Р-13448 | Different lavender-sea paper study; no matching candidate |
+| Roerich, Kiss the Earth, 1912 | Р-57591 | Different small paper study; no matching candidate |
+
+The selection used existing local object identifiers and eligible museum-linked records. Eight current native object pages and linked creator biographies were checked against existing creator UUIDs, life dates and independent Wikidata-to-WikiArt crosswalks. Roerich’s two exact source biography punctuation variants remain explicit; no biography changes were made. One relocated native photograph path was verified directly from the current object page.
+
+Twenty distinct WikiArt pages supplied 28 object/version comparisons because both *Europa* and *Kiss the Earth* have separately catalogued museum versions. Four source alternatives were excluded before image download: an ink/pencil cabin design at the Bakhrushin Museum, a lithographic *Giantess*, a much larger private-collection *Europa*, and a Tretyakov *Ominous* on paper. Sixteen distinct candidate images and all eight exact native photographs were inspected at full size. The six application derivatives were also visually checked. Unused alternatives remain private, and neither unmatched record ever received an application derivative.
+
+The [approved Cabin image](https://www.wikiart.org/en/nicholas-roerich/cabin-1912-1) matches [native Р-57518](https://rusmuseumvrm.ru/data/collections/drawings/r-57518/index.php), including its two blue portholes, low bunk and dark left-hand figure. Its native uncertain date 1912 (?) and WikiArt’s 1912 remain separate evidence. The [Giantess study](https://www.wikiart.org/en/nicholas-roerich/giantess-krimgerd-1915) matches [Р-50515](https://rusmuseumvrm.ru/data/collections/drawings/r-50515/index.php), with the same boat, face-like boulder, thin rock contours and blue-green wash; the monochrome version and lithographic print differ.
+
+The [bent-tree Kiss the Earth](https://www.wikiart.org/en/nicholas-roerich/kiss-the-earth-1912-2) matches [Ж-1982](https://rusmuseumvrm.ru/data/collections/painting/19_20/zh-1982/index.php), while the smaller paper study remains unmatched across five source designs. The [open-sea Ominous](https://www.wikiart.org/en/nicholas-roerich/ominous-1901-2) matches [Ж-1958](https://rusmuseumvrm.ru/data/collections/painting/19_20/zh-1958/index.php); other sources show a town, different rocks or a single bird. Serov’s [approved Europa image](https://www.wikiart.org/en/valentin-serov/the-rape-of-europa-1910) matches [Ж-4310](https://rusmuseumvrm.ru/data/collections/painting/19_20/zh-4310/index.php), preserving its distinctive bull, white wake and leaping dolphin. It is visually distinct from paper study Р-13448.
+
+The [Rite of Spring group scene](https://www.wikiart.org/en/nicholas-roerich/the-rite-of-spring-1945-1) matches [Ж-7093](https://rusmuseumvrm.ru/data/collections/painting/19_20/zh-7093/index.php). The English source page lacks an Original Title field. Its exact image is labelled Весна Священная, 1945 in the checksum-verified Russian WikiArt index. The [individual title correspondence](rite-title-concordance.json) pins that index/body, current English object ID and image identity; direct visual comparison confirms the same ring of white-and-red figures, garland, mountain and seated audience. The absent page field remains absent in evidence, and no catalogue title or date was rewritten. The other 1945 candidate depicts a lone seated figure.
+
+All six sources actually carry WikiArt’s public-domain label. [User source approval](source-authorization.json) remains separate under the [current image policy](../../ARTLINE_IMAGE_USE.md#user-approved-wikiart-source-policy--6-october-2026). Native photographs are private identity references. Original WikiArt downloads were reused by checksum after inspection, with full download receipts. All application JPEGs retain the complete supplied compositions and source colour differences, with proportional compression and no additional crop; the largest is 94,838 bytes.
+
+Sixty-four pre-attachment checks passed: six positive source/version checks and 58 rejection controls, including the individual title correspondence. Thirteen earlier Russian/Bathing source-version records also passed regression checks after the shared configuration changes. All eight live catalogue records and creator authorities were unchanged immediately before the transaction. Locked preimages preceded the six local image attachments. Final read-only verification passed for local files, archived sources, complete rights/provenance evidence, creator authorities, holdings and catalogue fields. Both held studies remain unchanged. The combined recovery now has 915 verified attachments across 1,792 distinct reviewed artworks.
+
+Application files: `apps/web/public/assets/artworks/imported/local-wikiart-serov-roerich-images-20261006/`.
+Originals, private alternatives, museum references, contact sheet and procedures: `/Users/vadimdulub/Library/Application Support/Artline/source-images/local-wikiart-serov-roerich-images-20261006/`.
+Locked preimages: `/Users/vadimdulub/Library/Application Support/Artline/backups/local-wikiart-serov-roerich-images-20261006/`.
+No production, publication, catalogue creation or metadata changes. HTTP delivery was not reverified.
+
+[Metadata alternatives](alternative-metadata-review.json) · [Visual comparisons](alternative-visual-review.json) · [Source choices](metadata-identity-review.json) · [Approved versions](object-version-review.json) · [Title correspondence](rite-title-concordance.json) · [Identity checks](identity-guard-verification.json) · [Earlier-source regression](earlier-source-regression.json) · [Attachments](attached-images.csv) · [Apply receipt](apply-receipt.json) · [File/database verification](verification.json) · [Complete source verification](source-rights-verification.json) · [Combined recovery](../local-image-recovery-20261006/README.md)

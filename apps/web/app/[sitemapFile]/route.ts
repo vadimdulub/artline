@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 export async function GET(_request: Request, { params }: { params: Promise<{ sitemapFile: string }> }) {
   const { sitemapFile } = await params;
   if (sitemapFile === "sitemap-pages.xml") return sitemapResponse(sitemapXML([...publicPages, ...explorerPages]));
-  const match = /^sitemap-(artists|artworks|museums)-([0-9a-f]{3})\.xml$/.exec(sitemapFile);
+  const match = /^sitemap-(artists|artworks)-([0-9a-f]{3})\.xml$/.exec(sitemapFile);
   if (!match) return new Response("Not found", { status: 404 });
   try {
     const page = await discoveryRequest<{ items: SEOEntry[] }>(`sitemaps/${match[1]}/${match[2]}`);

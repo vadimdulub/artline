@@ -1,0 +1,19 @@
+# Walters images dated 1880–1915 — 6 October 2026
+
+Added **40 verified CC0 photographs to 40 existing local review artworks**. Each source was matched through the museum's inventory, object and creator identifiers, visually inspected, and saved as an uncropped proportional JPEG below 100,000 bytes. Six are archival monochrome reproductions; their limitation remains explicit in the image attribution and evidence. All artwork metadata, creator records, identifiers, holdings and review states were preserved.
+
+The native person authorities resolve the existing name variants Hermann-Paul / Paul Hermann and Chartran Théobald / Theobald Chartran. The pinned museum CSVs, reciprocal creator memberships and current native object captures support these matches; no artist records were rewritten.
+
+Three individual decisions need their retained qualifications:
+
+- Ban Jiaoshi's album 35.105 shows its closed patterned cover. Its database view label, accessible text and attribution say **“Album cover only; the eight paintings are not shown.”** Existing records for individual leaves remain separate. The cover is not presented as a view of the paintings inside.
+- Russian triptych 44.971 shows all three open painted panels and the decorated frame. The museum calls Grigori Grigoevich Pankratyev active 1874–1908. These are activity dates, not established birth/death years. The image evidence and attribution retain this distinction; the existing artist record and the artwork's 1899–1908 dates were preserved. A control confirmed that an independent recent death still requires underlying-work clearance.
+- The display URL for *Birds and Branches*, 35.105L, returned an empty body. The museum's download button for that exact licensed photograph returned a valid 2,950,411-byte JPEG. Its full composition was inspected separately, and the old empty response, exact download endpoint, hash and receipt remain archived. A control rejected another leaf's download URL.
+
+The [local apply receipt](apply-receipt.json), [file and database verification](verification.json), [source-rights verification](source-rights-verification.json) and [creator-authority comparison](creator-authority-verification.json) confirm all 40 attachments. The [visual decisions](visual-review.json), [scope and activity-date checks](view-and-activity-verification.json), [validator controls](validator-controls.json) and [exact-download control](download-endpoint-control.json) preserve the additional checks. The four initial negative controls and 39 positive source checks preceded preparation of the final leaf; the final source-rights verification covers all 40. No database fixtures were used.
+
+Application JPEGs use `apps/web/public/assets/artworks/imported/local-walters-authority-modern-images-20261006/`. Originals, failed responses and review sheets use `/Users/vadimdulub/Library/Application Support/Artline/source-images/local-walters-authority-modern-images-20261006/`. Locked preimages use the matching `backups/local-walters-authority-modern-images-20261006/` directory. Earlier selection versions remain under `history/`.
+
+The [attached-image list](attached-images.csv) records exact IDs, sources and paths. The [operation report](report.json) records 40 additions and no remaining unattached candidates in this bounded set; broader catalogue work remains open. Local HTTP delivery was not rechecked after earlier Next.js timeouts, so these attachments have complete file/database verification without a completed HTTP receipt. Production was unchanged.
+
+The [combined recovery report](../local-image-recovery-20261006/README.md) includes this operation. Its [native-source audit](../local-image-recovery-20261006/walters-source-audit-405.json) reparses all 285 active Walters source captures and verifies 89 unchanged creator authorities, including these additions.

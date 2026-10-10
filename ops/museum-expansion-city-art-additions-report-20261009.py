@@ -1,0 +1,36 @@
+"""Wave97 coverage and cumulative accounting; other database activity stays separate."""
+import collections,copy,csv,importlib.util,json
+from pathlib import Path
+z=importlib.util.spec_from_file_location('a',Path(__file__).with_name('museum-expansion-city-art-additions-apply-20261009.py'));a=importlib.util.module_from_spec(z);z.loader.exec_module(a);m=a.m
+def read(path):
+ with path.open(newline='') as fp:return list(csv.DictReader(fp))
+def write(path,rows):
+ assert rows and not path.exists()
+ with path.open('x',newline='') as fp:w=csv.DictWriter(fp,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+def main():
+ label='after-wave-99';assert not(m.RUN/('verification-'+label+'.json')).exists();p,digest=a.validate_plan();a.checked(p['baseline_reference'])
+ with m.connect() as db:verified=a.verify(db,p,digest)
+ live=m.load(m.RUN/(label+'.json'));summary=copy.deepcopy(m.load(m.RUN/'verification-after-wave-98.json'));coverage=read(m.RUN/'museum-coverage-after-wave-98.csv');by={v['id']:v for v in live['institutions']};oldids={v['id'] for v in coverage};assert oldids<=set(by);new=[v for v in live['institutions'] if v['id'] not in oldids];changes=[];external=[];newly=0
+ for v in new:
+  row={k:'' for k in coverage[0]};row.update(v);row.update(works_before=v['works'],eligible_before=v['eligible_works'],added_this_campaign=0,existing_artworks_linked_this_campaign=0,research_state='external_registry_addition_not_reviewed_by_this_campaign',native_source_probe_status='not_reviewed_by_this_campaign',coverage_baseline_label='first_observed_after_wave_99');coverage.append(row)
+ for row in coverage:
+  v=by[row['id']]
+  if row['id'] in a.IIDS:
+   iid=row['id'];old=p['before_counts'][iid];rs=[x for x in p['records'] if x['institution_id']==iid];hs=[x for x in p['holdings'] if x['institution_id']==iid];dated=sum(x['facts']['first'] is not None for x in rs+hs);assert (int(row['works']),int(row['eligible_works']))==(old['linked'],old['eligible']);assert(v['works'],v['eligible_works'])==(old['linked']+len(rs)+len(hs),old['eligible']+dated);assert v['illustrated_works']==int(row['illustrated_works'])+len(hs) and v['pending_associations']==int(row['pending_associations']);newly+=int(int(row['added_this_campaign'])+int(row['existing_artworks_linked_this_campaign'])==0);changes.append(dict(institution_id=iid,name=row['name'],new=len(rs),existing_linked=len(hs),linked_before=old['linked'],linked_after=v['works'],eligible_before=old['eligible'],eligible_after=v['eligible_works']));row.update(added_this_campaign=int(row['added_this_campaign'])+len(rs),existing_artworks_linked_this_campaign=int(row['existing_artworks_linked_this_campaign'])+len(hs),research_state=row['research_state']+'; native_curated_highlights_and_unknown_date_review',native_source_probe_status='native_public_collection_and_article_metadata_reviewed')
+  elif row['id'] in oldids:
+   delta={k:dict(before=int(row[k]),after=v[k]) for k in ['works','eligible_works','illustrated_works','pending_associations'] if int(row[k])!=v[k]}
+   if delta:external.append(dict(institution_id=row['id'],name=row['name'],changes=delta))
+  row.update(v)
+ growth=a.RUN/'coverage-registry-growth-001.json';m.save(growth,dict(at=m.now(),live_audit_reference=a.reference(m.RUN/(label+'.json')),previous_coverage_reference=a.reference(m.RUN/'museum-coverage-after-wave-98.csv'),added_institutions=new,existing_institution_changes=external,policy='Other jobs and registry changes accounted separately.'));write(m.RUN/('museum-coverage-'+label+'.csv'),coverage)
+ write(m.RUN/('gac-date-enrichments-'+label+'.csv'),read(m.RUN/'gac-date-enrichments-after-wave-98.csv'))
+ reconciled=read(m.RUN/'reconciled-artworks-after-wave-98.csv')
+ for v in p['holdings']:
+  d=v['decision'];reconciled.append(dict(artwork_id=v['artwork_id'],institution_id=v['institution_id'],source_url=v['facts']['source_url'],verified_existing_metadata_unchanged=True,confidence=d['confidence'],evidence_basis=d['basis'],source_limitation=d['limitation']))
+ assert len(reconciled)==len({v['artwork_id'] for v in reconciled})==3036;write(m.RUN/('reconciled-artworks-'+label+'.csv'),reconciled)
+ added=read(m.RUN/'added-artworks-after-wave-98.csv')
+ for v in p['records']:
+  f=v['facts'];museum=by[v['institution_id']];added.append(dict(artwork_id=v['artwork_id'],museum=museum['name'],museum_slug=museum['slug'],title=f['title'],creator_label=f['creator_label'],date_display=f['date_display'],creation_year_start=f['first'],creation_year_end=f['last'],accession=f['inventory'],source_url=f['source_url'],status='review'))
+ assert len(added)==len({v['artwork_id'] for v in added})==10889;write(m.RUN/('added-artworks-'+label+'.csv'),added);summary.update(at=m.now(),verified_new_artworks=10889,verified_existing_artworks_linked=3036,after=live['summary'],city_art_additions=verified,city_art_additions_museum_changes=changes,unrelated_coverage_changes_since_prior_report=external,newly_observed_institutions=new,external_registry_growth_reference=a.reference(growth),global_coverage_snapshot_at=live['summary']['at']);summary['by_source'][a.KEY]=dict(new_artworks=14,existing_artworks_linked=1,institutions_expanded=1,newly_expanded_institutions=newly,reviewed_candidates=21,source_fact_holds=0,editorial_holds=6,already_catalogued=0,unknown_date_additions=3,date_eligible_additions=11,date_eligible_existing_links=1,museum_changes=changes,plan_sha256=digest);summary['verification_components']+=[a.reference(m.RUN/'verification-after-wave-98.json'),a.reference(a.CHECKPOINT),a.reference(a.PLAN),a.reference(a.RUN/(a.KEY+'-applied.json'))];summary['institutions_with_new_records_or_reconciled_holdings']=sum(int(v['added_this_campaign'])+int(v['existing_artworks_linked_this_campaign'])>0 for v in coverage)
+ for threshold in [100,200]:summary['museums_crossing_'+str(threshold)]=[dict(name=v['name'],before=int(v['works_before']),after=int(v['works'])) for v in coverage if v['kind']=='museum' and v['status']!='archived' and not v['canonical_institution_id'] and int(v['works_before'])<threshold<=int(v['works'])]
+ assert sum(int(v['added_this_campaign']) for v in coverage)==sum(v['new_artworks'] for v in summary['by_source'].values())==10889;assert sum(int(v['existing_artworks_linked_this_campaign']) for v in coverage)==3036;summary['identity_reference_downloads_this_wave']=dict(selected_images=1,existing_images_visually_reviewed=10,successful_source_pdfs=3,historical_pdf_web_text=0,catalogue_image_attachments=0);summary['verification_method']='Wave99 adds14CityArtCentreworks inreview:11dated/3unknown,linksoneexisting1912Duncan. Museum103linked/41eligible.6holds.22offlinechecks,atomicreadbackandzero-write replay. Scopedexistingmetadataand13910priorcampaignrecords preserved. ThreePDFs,sixpagesrendered;tenexistingimagesandone300pxresearchthumbnailvisuallychecked. Noimageattachments/publication/displayclaims. NGS403holdrecorded. Allpriorqueuesremain;goalactive.';m.save(m.RUN/('verification-'+label+'.json'),summary);print(json.dumps(dict(campaign_new=10889,campaign_links=3036,changes=changes,after=live['summary'],institutions_expanded=summary['institutions_with_new_records_or_reconciled_holdings'],new_record_institutions=sum(int(v['added_this_campaign'])>0 for v in coverage),external_changes=len(external))),flush=True)
+if __name__=='__main__':main()

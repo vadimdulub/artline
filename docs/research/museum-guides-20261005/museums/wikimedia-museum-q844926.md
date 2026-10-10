@@ -1,0 +1,27 @@
+# Munch Museum
+
+[All museums and collections](../README.md)
+
+12 accepted holding links · 6 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+
+[Museum / collection website](https://www.munch.no/)
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-41e59d40-1bdf-5ab0-8ee2-d4be2f197856"></a>Aftenavisen kommer, Majorstuveien 8 | Amaldus Nielsen | 1900 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106867352-3d796d4e5ea69649.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Amaldus_Nielsen_-_Aftenavisen_kommer%2C_Majorstuveien_8_-_AN.M.00253_-_Munch_Museum_%28cropped-2%29.jpg) | [Holding source](https://www.wikidata.org/wiki/Q106867352) · checked 2026-09-14 | review |
+| <a id="artwork-20c43217-27cf-5f96-afc1-3b61499de51a"></a>Bush | Edvard Munch | 1930–1940 | Image research pending · [record](https://www.wikidata.org/wiki/Q123348053) | [Holding source](https://www.wikidata.org/wiki/Q123348053) · checked 2026-09-14 | review |
+| <a id="artwork-e8bce6f7-d735-5c25-8301-32a90c0c821f"></a>Else Mustad | Edvard Munch | 1918 | Image research pending · [record](https://www.wikidata.org/wiki/Q123182112) | [Holding source](https://www.wikidata.org/wiki/Q123182112) · checked 2026-09-14 | review |
+| <a id="artwork-2ae4f963-e419-5761-a2fb-c1625c7fcb7a"></a>Gobelin | Ludvig Karsten | 1911 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q126368444-19e2e73728cb9aa2.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Ludvig_Karsten_Gobelin_1911.jpg) | [Holding source](https://www.wikidata.org/wiki/Q126368444) · checked 2026-09-14 | review |
+| <a id="artwork-96ca4180-a5d2-5b67-8e69-b67ae28377f8"></a>Måneskinn, Kinn | Amaldus Nielsen | Creation date under review | Image research pending · [record](https://www.wikidata.org/wiki/Q106866455) | [Holding source](https://www.wikidata.org/wiki/Q106866455) · checked 2026-09-14 | review |
+| <a id="artwork-0777153f-1a32-5407-b568-4bb940420b92"></a>Mellom klipper. Møl, Ny-Hellesund | Amaldus Nielsen | 1899 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q108542795-0ba2a023aebed70e.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Amaldus_Nielsen_-_Mellom_klipper._M%C3%B8l%2C_Ny-Hellesund_-_AN.M.00251_-_Munch_Museum_%28cropped-2%29.jpg) | [Holding source](https://www.wikidata.org/wiki/Q108542795) · checked 2026-09-14 | review |
+| <a id="artwork-66df7fa3-6a6e-5811-ae46-12ed269c89a5"></a>Morgen, Majorstuveien 8 | Amaldus Nielsen | 1900 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106860260-4ebf68bcbdfe371b.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Amaldus_Nielsen_-_Morgen%2C_Majorstuveien_8_-_AN.M.00252_-_Munch_Museum_%28cropped-2%29.jpg) | [Holding source](https://www.wikidata.org/wiki/Q106860260) · checked 2026-09-14 | review |
+| <a id="artwork-1b945f31-4dd4-57b9-8131-687c38ce32e9"></a>Sludd. Fra ateliervinduet | Amaldus Nielsen | 1928 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106866408-133903989c775551.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Amaldus_Nielsen_-_Sludd._Fra_ateliervinduet_-_AN.M.00279_-_Munch_Museum_%28cropped-2%29.jpg) | [Holding source](https://www.wikidata.org/wiki/Q106866408) · checked 2026-09-14 | review |
+| <a id="artwork-8232325a-5063-5ea2-8ebe-b8db324ddc3d"></a>Under trærne, Hoven ved Mandal | Amaldus Nielsen | 1908 | [Artline picture](https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106867227-833a4335c93369d0.jpg) · public_domain · [source / credit](https://commons.wikimedia.org/wiki/File:Amaldus_Nielsen_-_Under_tr%C3%A6rne%2C_Hoven_ved_Mandal_-_AN.M.00268_-_Munch_Museum_%28cropped-2%29.jpg) | [Holding source](https://www.wikidata.org/wiki/Q106867227) · checked 2026-09-14 | review |
+| <a id="artwork-3c04d05c-2a56-5b3d-8377-b2e6e4c06780"></a>Workers in Snow: Fragment | Edvard Munch | 1931–1933 | Image research pending · [record](https://www.wikidata.org/wiki/Q123348282) | [Holding source](https://www.wikidata.org/wiki/Q123348282) · checked 2026-09-14 | review |
+| <a id="artwork-a4d5445f-3cc6-56a6-947b-52aeb24aeb6a"></a>Workers in Snow: Fragment | Edvard Munch | 1931–1933 | Image research pending · [record](https://www.wikidata.org/wiki/Q123348181) | [Holding source](https://www.wikidata.org/wiki/Q123348181) · checked 2026-09-14 | review |
+| <a id="artwork-a89a43c1-6f63-5a1c-a98f-207d90cad749"></a>Young Woman Under a Tree | Edvard Munch | 1910 | Image research pending · [record](https://www.wikidata.org/wiki/Q123247701) | [Holding source](https://www.wikidata.org/wiki/Q123247701) · checked 2026-09-14 | review |

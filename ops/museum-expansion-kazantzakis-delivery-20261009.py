@@ -1,0 +1,53 @@
+"""Verified Kazantzakis additions, dated register and remaining research."""
+import collections,csv,importlib.util,json,io
+from pathlib import Path
+z=importlib.util.spec_from_file_location('a',Path(__file__).with_name('museum-expansion-kazantzakis-apply-20261009.py'));a=importlib.util.module_from_spec(z);z.loader.exec_module(a);m=a.m;RUN=a.RUN
+def table(name,rows):
+ fp=io.StringIO(newline='');w=csv.DictWriter(fp,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows);raw=fp.getvalue().encode();path=RUN/name
+ if path.exists():assert path.read_bytes()==raw
+ else:path.write_bytes(raw)
+def main():
+ p,digest=a.validate_plan();receipt=m.load(RUN/(a.KEY+'-applied.json'));checks=m.load(RUN/'checks-001.json');assert checks['offline_tests_passed']==19 and checks['atomic_verification_passed']and checks['replay_zero_writes'];assert receipt['plan_sha256']==digest
+ prior=m.load(a.CHECKPOINT);rr=prior['production_institution_register_reference'];register=m.load(a.checked(rr))['rows'];target=next(v for v in register if v['id']==a.IID);assert target['verified_production_works']==18
+ with a.i.prod.connect()as db,db.transaction():
+  db.execute('SET TRANSACTION READ ONLY');verified=a.verify(db,p,digest)
+ with m.connect()as db:
+  initial=m.load(RUN/'initial-scope-001.json.gz');assert a.snapshot(db,initial['scoped_ids'])==initial['snapshot']and a.counts(db)==initial['counts']
+ at=m.now();after=verified['current_counts'][a.IID];before=p['before_counts'][a.IID]
+ target.update(production_catalogue_count_to_200=118,production_date_eligible_count_to_200=112,production_catalogue_count_state='exact',production_date_eligible_count_state='exact',verified_production_works=118,verified_production_eligible_works=112,production_catalogue_count_at=at,production_date_eligible_count_at=at)
+ m.save(RUN/'production-institution-register-001.json.gz',dict(at=at,rows=register,previous_register_reference=rr,read_only=True,updated_institutions=[a.IID],global_exact_counts_refreshed=False,global_thresholds_refreshed=False,policy='Only Kazantzakis refreshed to118 catalogue/112 date eligible. Both100-work minimums cleared; continue toward200. Other observations retain timestamps.'));table('production-institution-register-001.csv',register)
+ qr=prior['priority_museum_queue_reference'];queue=m.load(a.checked(qr));assert sum(v['id']==a.IID for v in queue['rows'])==1;queue['rows']=[v for v in queue['rows']if v['id']!=a.IID];queue.setdefault('removed_threshold_reached',[]).append(dict(id=a.IID,at=at,catalogue=118,date_eligible=112));queue.update(at=at,previous_queue_reference=qr,policy='Kazantzakis now118/112 and removed from this under100 priority queue. Continue its bounded source research toward200 before next museum. Historical removals and dated observations preserved.');m.save(RUN/'priority-museum-queue-001.json',queue)
+ added=[]
+ for v in p['records']:
+  f=v['facts'];added.append(dict(artwork_id=v['artwork_id'],institution_id=a.IID,source_id=f['source_id'],title=f['title'],creator_label=f['creator_label'],date_display=f['date_display'],creation_year_start=f['first'],creation_year_end=f['last'],date_precision=f['date_precision'],work_type=f['work_type'],inventory=f['inventory'],source_url=f['source_url'],status='review'))
+ table('added-production-artworks-001.csv',added);decisions=a.r.build();ledger=[dict(number=v['number'],source_url=v['facts']['source_url'],title=v['facts']['title'],state=v['state'],reason=v['basis'])for v in decisions];table('all-source-decisions-001.csv',ledger);total=prior['production_campaign_totals']['new_artworks']+100;assert total==920;next_source=m.load(RUN/'next-source-discovery-001.json.gz');assert next_source['counts']==dict(other_index_lead=41,already_reviewed=25,detail_review_next=54)
+ report=dict(at=at,goal_complete=False,production_only=True,local_unchanged=True,plan_sha256=digest,added=100,existing_links=0,date_eligible_added=100,physical_unit_holds=2,after1970_excluded=28,nonart_correspondence_excluded=4,reviewed_native_objects=134,theatre_objects_reviewed=120,theatre_collection_reported_objects=2772,art_category_index_records=57,new_art_objects_reviewed=14,verification=verified,museum_before=dict(works=before['linked'],eligible_works=before['eligible']),museum_after=dict(works=118,eligible_works=112),production_campaign_new_artworks=total,production_campaign_existing_links=1,production_campaign_museums=7,historical_local_totals_unchanged=prior['historical_local_campaign_totals'],cross_database_totals_combined=False,global_production_counts_refreshed=False,global_production_thresholds_refreshed=False,remaining_to_200_catalogue=82,remaining_to_200_dateeligible=88,reference_images_seen=101,reference_image_unavailable=1,source_access='SearchCulture museum-provider HTML object pages and the independent museum repository remain accessible. Main www.kazantzaki.gr archive page and anemoyannis.gr return403 and remain on hold. SearchCulture linked JSON view gives an HTML application error,not usable structured data. Thumbnail20 returned200 with empty body; no image invented or attached. All historical provider holds persist.',next_work='Begin NEW Kazantzakis continuation run. Reuse54 unreviewed art/date leads in next-source-discovery-001.json.gz from ascending-date index pages1–4. Fetch only selected individual details,then continue public YEAR_ASC page5 onward if needed toward200.120 index leads comprise54 new candidate leads,25 already-reviewed objects and41 other records. Index dates/types require object-level review. Preserve reverse/annotation holds source34231(number91) and34257(number92),all post1970 exclusions and correspondence exclusions. Do not turn unknown creator fields into certain Anemoyannis attributions. Preserve existing dates,metadata,images,status and the local read-only catalogue.')
+ m.save(RUN/'delivery-001.json',report)
+ (RUN/'README.md').write_text(f'''# Nikos Kazantzakis Museum — selected additions, 9 October 2026
+
+Added **100 production review artworks**, taking the museum from **18 to 118 catalogue works** and **12 to 112 date-eligible works**. Both 100-work minimums are reached. The preferred 200-work target remains open: 82 more catalogue works, or 88 more date-eligible works. The real local catalogue is unchanged, with no records linked to this institution.
+
+- [100 added artworks](added-production-artworks-001.csv)
+- [All 134 object decisions](all-source-decisions-001.csv)
+- [Dated museum register](production-institution-register-001.csv)
+- [Verification and remaining work](delivery-001.json)
+
+The [museum’s art collection](https://repository.kazantzaki.gr/) and its [Anemoyannis theatre archive catalogue](https://www.searchculture.gr/aggregator/portal/collections/Kazantzakis) identify holdings of the same Nikos Kazantzakis Museum Foundation. They are collection categories within the existing Myrtia institution. Holdings do not establish current display, venue, custody or legal ownership. See [institution reconciliation](institution-reconciliation-001.json).
+
+This selection reviewed 120 theatre objects and 14 dated art objects. It adds 86 theatre design sheets, nine Kirk Hughey cover-design sheets and five Odyssey illustration sheets labelled “Hans, Enri” by the source. Ninety-five works are drawings; the five illustrations retain an unknown physical type and medium. Materials, dimensions and accessions remain unknown where unstated. Only the explicitly described pencil medium was added to one design. The 28 post-1970 objects and four correspondence records were excluded.
+
+The original theatre creator fields say unknown, while EKT semantic enrichment names Giorgos Anemoyannis. Both statements are preserved separately, with the attribution unresolved. Dedicated object dates remain distinct from artist lifespans and depicted historical subjects. Several 1937–1938 design descriptions leave the specific production unidentified; that qualification and the catalogue date remain explicit. Native category pages repeat 2005 for several otherwise undated historical works; those dates were not used to rewrite any existing record.
+
+One hundred and one selected low-resolution references were inspected. One object’s thumbnail was unavailable; its distinct catalogue description supports an unillustrated entry. Multi-figure sheets, attached fabric samples, reverse studies and grids of cover proposals count as one physical artwork each. Unfinished drawings remain actual artworks. Two records remain held: **34231** is explicitly a reverse of an unidentified artwork, and **34257** displays only an inscription for a costume. Their complete physical supports must be reconciled before adding another record. See [visual observations](visual-assessment-001.json). The source NC/ND image labels are retained; no new production images were attached.
+
+Nineteen offline tests passed. Successful Cloud SQL backup **1791564596026** preceded the atomic write. Readback verified all 100 new artworks and accepted collection holdings; replay made zero writes. All 21 existing comparison records and 821 prior campaign records remained unchanged. The latter comprise 820 earlier additions and one previously linked existing work. No existing dates, images, artist links or statuses changed. The local database remained read-only.
+
+Identity checks found no prior exact source IDs. The three additional translated-title comparators belong to Larionov, Stepanova and Bernard Rosenthal and describe different works. Scoped query plans and timings are retained; these checks are not a ten-million-row load test.
+
+The selected production phase totals **{total} additions and one existing-work link across seven museums**, separate from historical local work. Only this museum’s counts were refreshed. The priority queue now contains 232 remaining entries; that queue is not a fresh global count of all museums below 100.
+
+[Next-source discovery](next-source-discovery-001.json.gz) contains **54 unreviewed art leads** from four public index pages sorted by ascending date. Their individual metadata still needs review. Continue from those leads, then page 5 onward if necessary, toward 200. The full museum-by-museum goal remains active.
+
+The main Kazantzakis website archive page and Anemoyannis homepage returned 403 and were not retried. Their independent, openly linked repository and SearchCulture object catalogues supplied this research. The SearchCulture JSON link returned an HTML application error; normal object HTML supplied the preserved literal fields. No exhaustive archive or image download was performed.
+''');print(json.dumps(dict(added=100,counts=after,production_campaign=total,queue=len(queue['rows']),next_candidate_leads=54)),flush=True)
+if __name__=='__main__':main()

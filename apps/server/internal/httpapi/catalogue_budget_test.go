@@ -128,7 +128,7 @@ func TestPublicRecordCacheAllowlist(t *testing.T) {
 			t.Error("public route omitted", path)
 		}
 	}
-	for _, path := range []string{"/api/v1/auth/session", "/api/v1/member/account", "/api/v1/artists/a/private", "/api/v1/museums/a/identity", "/api/v1/museums/a/works/invalid", "/api/v1/seo/sitemaps/artworks/nope"} {
+	for _, path := range []string{"/api/v1/auth/session", "/api/v1/member/account", "/api/v1/member/bookmarks", "/api/v1/member/bookmarks/state", "/api/v1/artists/a/private", "/api/v1/museums/a/identity", "/api/v1/museums/a/works/invalid", "/api/v1/seo/sitemaps/artworks/nope"} {
 		if cacheableCataloguePath(path) {
 			t.Error("unsafe route allowed", path)
 		}

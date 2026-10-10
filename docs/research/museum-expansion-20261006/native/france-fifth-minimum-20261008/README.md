@@ -1,0 +1,29 @@
+# Fifth French museum pass — 8 October 2026
+
+Added **147 real local artwork records**, all in review. LaM and Granet now exceed 100 eligible works. Saint-Nazaire, MAC VAL and the Musée de l’Armée still need additions to reach 100; the preferred 200 target remains unfinished for all five.
+
+| Museum | Added | Linked before → after | Eligible before → after |
+| --- | ---: | ---: | ---: |
+| musée Granet — Aix-en-Provence | 55 | 66 → 121 | 66 → 121 |
+| LaM, Lille Métropole musée d'art moderne, d'art contemporain et d'art brut — Villeneuve d'Ascq | 56 | 69 → 125 | 68 → 124 |
+| musée de l'armée — Paris | 1 | 68 → 69 | 68 → 69 |
+| musée Saint-Nazaire — Bourbon-Lancy | 24 | 70 → 94 | 69 → 93 |
+| musée d'art contemporain du Val-de-Marne — Vitry-sur-Seine | 11 | 81 → 92 | 80 → 91 |
+
+Types: 79 drawing, 38 painting, 15 print, 15 sculpture. The verified September Joconde snapshot contained 7,365 target rows and 6,914 new source identities. A bounded selection of 202 current object records was captured in six HTTP 200 batches. Individual review approved 147 and held 55. Another 6,712 source leads remain held at selection or unreviewed. The Musée de l’Armée source subset contains many deposits, military objects outside this artwork selection and unclear album components; only one new work was approved here. Quotas did not override those checks.
+
+The final identity scope covers 40,313 existing artworks and 86,842 citations. Source-note names and former attributions were added to comparisons, including Casier, Derriennic, McCarthy, Cuyp, Napoletano, Grimaldi, Ribera, Bourdon, Poussin, Valentin, Guercino/Barbieri and Beham. All 202 literal records and the final comparisons were recomputed. The original identity capture remains immutable. No artist authorities were created or existing attribution changed.
+
+LaM’s object records use the former museum name and often provide acquisition-to-museum labels without legal ownership. The successfully captured [official LaM history](https://www.musee-lam.fr/fr/lhistoire-du-lam), exact national museum code, current museum name, city, former location name and object acquisition labels support the same collection identity. Acceptance is restricted to that combination. Raw acquisition and location labels remain in every citation; temporary parser inputs never become stored source facts or an ownership claim. Works recorded on deposit elsewhere are excluded. Aloïse’s historical Grand-Hornu deposit has an explicit 2010 end date, which is preserved without a current-display assertion. An optional metropolitan archive context capture timed out; its failure remains recorded and it is not part of the acceptance gate.
+
+The Musée de l’Armée’s empty database city stays empty. Its exact city-qualified institution name, official object code and source Paris location establish the match. Baschet’s old Dépôt 4368 identifier remains literal; the current source explicitly records State ownership/dation to this museum. Unknown makers, structured media, measurements and lower date bounds remain unknown. Qualified, workshop and copyist labels stay literal. Before-date endpoints remain exclusive. Source metadata is preserved even where descriptions supply detail absent from structured fields.
+
+Object review separates small studies from full-size works, paper prints from painted prototypes and copies from originals. Recto/verso sheets and the two-part Henri IV bust each count once. Tal Coat’s two rooster drawings have opposing directions, different highlights and opposite signature positions. Three short historical inventory collisions are explicitly distinguished by their numbering series, subjects, dimensions and physical supports. Sahut’s secondary 1021/1027 numbering discrepancy remains preserved alongside primary inventory 2021.2.16.
+
+Holds include a previously recorded Dante et Virgile, generic abstract works without enough physical metadata, duplicate-looking sheets and flower canvases, uncertain book/print units, conflicting dates and former/current attribution questions. They remain research evidence rather than duplicate catalogue additions.
+
+The [review plan](france-fifth-additions-001-plan.json.gz), [individual decisions](editorial-reviewed-001.json.gz), [application receipt](france-fifth-additions-001-applied.json) and [wave60 verification](../../verification-after-wave-60.json) document the results. Readback verifies every new artwork, identifier, citation and accepted holding assertion while preserving 2887 scoped existing records and all 6,945 prior campaign objects with their associated metadata, images, creator links, holdings and publication states. The write was atomic and loopback-local. Replay wrote nothing. No images were attached and no works were published.
+
+Twenty-nine fresh offline tests passed; 953 historical checks remain pinned, for 982 cumulative verified checks. Historical tests were not all rerun. These checks do not establish ten-million-row performance. Backups and execution logs remain in Library. The [delivery checkpoint](delivery-checkpoint-001.json) preserves earlier evidence and the root README preimage. The campaign table’s stale total was corrected to the verified current total in this documented update.
+
+Campaign totals: **6,307 additions and 785 existing-record holding links across 172 expanded institutions**. Three of this pass’s museums are newly expanded in this campaign; source-pass totals remain 350 museums plus Barnes. The fresh audit has **1,177 canonical museums below 100 linked records** and **1,288 below 200**. Linked totals are separate from eligible dates and unique physical-object reconciliation. The goal remains active. The separate minimum-100 job remains terminal and unchanged, with separate totals. The Baltimore access hold remains in force.

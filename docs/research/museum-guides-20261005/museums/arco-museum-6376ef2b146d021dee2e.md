@@ -1,0 +1,22 @@
+# Museo Diocesano di Arte Sacra "S. Apollonia" — Venezia (VE)
+
+[All museums and collections](../README.md)
+
+9 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-def75860-af3a-4d90-bdb6-8c0b5b3c576a"></a>allegoria della congregazione della morte | Pellegrini Giovanni Antonio | Unverified date: 1701-1701 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361209) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361209) · checked 2026-10-05 | review |
+| <a id="artwork-a4625de7-adf5-447e-bd0a-d6bb84b69e28"></a>Cristo caccia i mercanti dal tempio | Giordano Luca | Unverified date: 1640-1660 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361215) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361215) · checked 2026-10-05 | review |
+| <a id="artwork-468bfb29-158c-4258-a19c-762fbdc58cce"></a>esequie di San Sabba | Negretti Jacopo Detto Palma Il Giovane | Unverified date: 1593-1593 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361191) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361191) · checked 2026-10-05 | review |
+| <a id="artwork-62f8b2bf-c125-4116-b52a-b5d8657d0344"></a>Madonna con Bambino tra Sant'Elena e Costantino | De Pitati Bonifacio Detto Bonifacio Veronese | Unverified date: 1500-1599 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361204) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361204) · checked 2026-10-05 | review |
+| <a id="artwork-6d13221b-6ed5-4936-9fcf-e09b6a9df4eb"></a>matrimonio della Vergine | Falange Enrico (ante 1620/) | Unverified date: 1640-1660 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361219) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361219) · checked 2026-10-05 | review |
+| <a id="artwork-e5026e5f-ed25-40eb-ad34-be256f09ea8c"></a>morte di San Sabba | Negretti Jacopo Detto Palma Il Giovane | Unverified date: 1593-1593 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361190) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361190) · checked 2026-10-05 | review |
+| <a id="artwork-e9fa8cc3-28d6-424f-9498-2919a760f337"></a>presentazione di Maria Vergine al tempio | Falange Enrico (ante 1620/) | Unverified date: 1640-1660 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361220) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361220) · checked 2026-10-05 | review |
+| <a id="artwork-7da1a9e3-f16f-429a-b13e-a56d46af1284"></a>Redentore tra i Santi Marco e Gallo | Robusti Jacopo Detto Tintoretto | Unverified date: 1540-1560 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361205) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361205) · checked 2026-10-05 | review |
+| <a id="artwork-0ed54ebd-ac8a-4840-83a4-5d31e7765a4c"></a>Sant'Antonino e San Spiridione | Negretti Jacopo Detto Palma Il Giovane | Unverified date: 1593-1593 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361199) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500361199) · checked 2026-10-05 | review |

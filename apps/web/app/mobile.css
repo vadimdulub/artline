@@ -1,0 +1,85 @@
+/* Phone layouts keep the catalogue full width and controls comfortable to tap.
+   Use the existing Artline palette and type; desktop layouts keep their density. */
+.mobile-menu-toggle{display:none}
+.mobile-navigation{width:min(420px,calc(100% - 24px));max-height:calc(100dvh - 32px);margin:auto;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);overscroll-behavior:contain}
+.mobile-navigation::backdrop{background:#080704aa}
+.mobile-navigation>header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.mobile-navigation h2{margin:0;font:400 28px/1.2 var(--serif)}
+.mobile-navigation>header button{width:44px;height:44px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-size:28px}
+.mobile-navigation nav{display:grid;gap:4px}
+.mobile-navigation nav a{display:flex;align-items:center;gap:16px;min-height:52px;padding:12px;border-radius:6px;text-decoration:none;font-size:16px}
+.mobile-navigation nav a:hover{background:var(--stone)}
+.mobile-navigation nav a[aria-current]{background:var(--ink);color:var(--paper)}
+.mobile-navigation nav svg{width:22px;height:22px;flex-shrink:0}
+.mobile-navigation nav a:nth-child(3),.mobile-navigation nav a:nth-child(5){border-top:1px solid var(--line);margin-top:8px;border-top-left-radius:0;border-top-right-radius:0}
+
+@media(max-width:760px){
+  :root{--site-header-height:108px;--page-gutter:16px;--page:calc(100% - 32px)}
+  html{scroll-padding-top:calc(var(--measured-header-height,108px) + 12px)}
+  body>.site-header[data-member]{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:4px max(12px,env(safe-area-inset-right)) 6px max(16px,env(safe-area-inset-left));min-height:0;height:auto}
+  .site-header[data-member]>.site-brand{grid-column:1;grid-row:1}
+  .site-header .wordmark{min-height:44px;display:flex;align-items:center}
+  .site-header .wordmark-logo{width:124px;height:auto}
+  .site-header .wordmark small,.site-header[data-member] .header-aside,.site-header[data-member] .primary-nav a.account-menu-link{display:none}
+  body>.site-header[data-member] .primary-nav{grid-column:1/-1;grid-row:2;gap:4px;padding:3px;min-width:0}
+  body>.site-header[data-member] .primary-nav a{min-height:44px;min-width:0;padding:8px 10px;font-size:14px}
+  .site-header .mobile-menu-toggle{grid-column:2;grid-row:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 10px;border:0;background:transparent;color:var(--paper);font-size:14px}
+  .mobile-menu-toggle svg{width:22px;height:22px}
+  body>.member-sidebar{display:none}
+  html body:has(>.member-sidebar[data-collapsed]){padding-left:0}
+  html body:has(>.member-sidebar[data-collapsed])>.site-header[data-member]{margin-left:0}
+
+  /* Search gets the full line; secondary tools share one 48px row. */
+  .atlas-filter-system[data-view-controls]{grid-template-columns:minmax(0,1fr) auto}
+  .atlas-filter-system[data-view-controls]>.search-field{grid-column:1/-1;grid-row:1;padding:0 16px;border-radius:0}
+  .atlas-filter-system[data-view-controls]>.search-field>input{min-height:52px}
+  .atlas-filter-system[data-view-controls]>.atlas-view-tools{grid-column:1;grid-row:2;min-width:0}
+  .atlas-filter-system[data-view-controls]>.reset-button{grid-column:2;grid-row:2;min-height:48px;border-bottom:0;padding:8px 12px}
+  .atlas-filter-system .atlas-filter-toggle{min-height:48px;padding:8px 16px;font-size:14px}
+  .atlas-filter-system .atlas-filter-toggle>span:last-child{display:none}
+  .atlas-filter-system .atlas-full-view{min-height:48px;padding:8px 12px}
+  .atlas-filter-system .atlas-search-actions{grid-column:1/-1;grid-row:3;justify-content:flex-end;border-top:1px solid var(--line)}
+  .atlas-filter-system:has(>.atlas-search-actions)>.atlas-view-tools{grid-column:1/-1}
+  .atlas-search>.search-clear{width:44px}
+
+  /* Inline choices stay attached to their labels and move with the keyboard. */
+  .atlas-filter-system .atlas-filter-row[data-expanded=true]{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .atlas-filter-system .atlas-filter-row>.multi-filter[open],
+  .atlas-filter-system .all-period-filter:has(.multi-filter[open]){grid-column:1/-1}
+  .atlas-filter-system .multi-filter[open]>summary{background:var(--stone)}
+  .atlas-filter-system .multi-filter,.atlas-filter-system .multi-filter>summary{height:auto}
+  .atlas-filter-system .multi-filter .multi-filter-panel{position:relative;inset:auto;width:100%;max-width:none;max-height:none;padding:16px;border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none}
+  .atlas-filter-system .multi-filter .filter-checkboxes{max-height:min(320px,40dvh);overscroll-behavior:contain}
+  .atlas-filter-system .multi-filter-actions{position:sticky;bottom:0;padding-block:12px 0;background:var(--white)}
+  .atlas-filter-system .multi-filter-actions button{min-height:44px;font-size:14px}
+  .atlas-filter-system .atlas-select select{min-height:44px;font-size:16px}
+  .atlas-filter-system .popular-filter{min-height:44px}
+  .atlas-filter-system .popular-filter>span{font-size:14px;line-height:1.4}
+  .atlas-filter-system .atlas-filter-close{min-height:48px;margin:12px 16px;padding:12px 16px;background:var(--ink);color:var(--paper);border-radius:4px;text-align:center;text-decoration:none;font-size:15px}
+  .active-filters{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;padding:4px 16px;scroll-padding-inline:16px;scrollbar-width:thin}
+  .active-filters>span{display:none}
+  .active-filters>button{flex-shrink:0;min-height:44px;max-width:85vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+  .timeline-dark{padding-inline:16px}
+  .timeline-lanes .timeline-mark>span{font-size:13px}
+  .timeline-lanes .timeline-mark>small{font-size:11px}
+  .timeline-heading-row.timeline-compact-heading .time-title{font-size:26px}
+  .timeline-compact-heading .timeline-index-link,.timeline-compact-heading .timeline-popover>summary{min-height:44px;font-size:13px}
+  .timeline-heading-controls .painter-view-switch{display:flex;width:100%}
+  .timeline-heading-controls .painter-view-switch button{flex:1;min-height:44px;font-size:14px}
+  .timeline-compact-heading .popular-filter{min-height:44px}
+  .timeline-compact-heading .popular-filter>span{font-size:14px}
+  .painter-paintings .all-artwork-strip{--artwork-card-width:min(68vw,260px)}
+  .painter-paintings .all-artwork-image{height:min(68vw,260px)}
+  .artist-section-links a,.biography-toggle,.artwork-details details>summary,.influence-column details>summary{min-height:44px}
+  .artist-section-links a{display:inline-flex;align-items:center}
+  .painter-dialog .dialog-toolbar{min-height:64px;padding:10px 16px;gap:8px}
+  .site-footer nav a{display:inline-flex;align-items:center;min-height:44px}
+
+  /* Full view owns its toolbar and never inherits the normal page's grid rows. */
+  .explorer[data-full-view=true]>.atlas-filter-system>.atlas-view-tools{grid-column:1/-1;grid-row:1}
+  .explorer[data-full-view=true]>.atlas-filter-system>.search-field{grid-row:2}
+  .explorer[data-full-view=true]>.atlas-filter-system>.reset-button{grid-column:1/-1;grid-row:3;border-top:1px solid var(--line)}
+  .explorer[data-full-view=true]>.atlas-filter-system>.atlas-search-actions{grid-row:3}
+  .explorer[data-full-view=true]{padding-top:calc(48px + env(safe-area-inset-top))}
+}

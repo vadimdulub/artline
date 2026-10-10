@@ -1,0 +1,22 @@
+# Collezione permanente Fondazione Pisa — Pisa (PI)
+
+[All museums and collections](../README.md)
+
+9 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: foundation. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-860f8c8e-fc98-4d20-aba8-87deea97555e"></a>ritratto d'uomo, Ritratto di Curzio Ceuli | Riminaldi Orazio | Unverified date: 1600-1649 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771127) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771127) · checked 2026-10-05 | review |
+| <a id="artwork-a4fb9427-6d3c-4331-9add-1ef951f6435b"></a>ritratto d'uomo, Ritratto di Francesco Roncioni | Gioli Luigi | Unverified date: 1880-1880 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771126) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771126) · checked 2026-10-05 | review |
+| <a id="artwork-f60c7965-fa58-47a2-8609-02d22ff766bf"></a>Ritratto della Famiglia Roncioni | Desmarais Jean-Baptiste | Unverified date: 1794-1794 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392751) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392751) · checked 2026-10-05 | review |
+| <a id="artwork-2ff505c6-03e7-4119-af75-cf9e39276340"></a>ritratto di donna, Ritratto di Isabella Roncioni | Benvenuti Pietro | Unverified date: 1800-1845 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771124) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771124) · checked 2026-10-05 | review |
+| <a id="artwork-5f35c0be-c89f-4e83-b233-67da8e784b1f"></a>Ritratto di Francesco Roncioni | Desmarais Jean-Baptiste | Unverified date: 1794-1794 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392759) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392759) · checked 2026-10-05 | review |
+| <a id="artwork-2fc29c52-4a8d-4d97-ba7d-c4af2473ca70"></a>Ritratto di Isabella Roncioni | Desmarais Jean-Baptiste | Unverified date: 1794-1794 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392756) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392756) · checked 2026-10-05 | review |
+| <a id="artwork-82708ac5-d8b4-4853-b6b2-1b53a3f675cd"></a>Ritratto di Maddalena Roncioni | Desmarais Jean-Baptiste | Unverified date: 1794-1794 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392758) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392758) · checked 2026-10-05 | review |
+| <a id="artwork-14c3a64f-ec47-40aa-a46b-d48b034ea62b"></a>Ritratto di Teresa Roncioni | Desmarais Jean-Baptiste | Unverified date: 1794-1794 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392757) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0901392757) · checked 2026-10-05 | review |
+| <a id="artwork-065eeaaf-c6a8-4733-aebc-cb86ab40560f"></a>Santo, San Luigi | Tempesti Giovanni Battista | Unverified date: 1750-1799 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771128) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0900771128) · checked 2026-10-05 | review |

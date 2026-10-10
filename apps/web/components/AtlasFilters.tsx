@@ -47,7 +47,7 @@ export function AtlasFilters({ searchRef, query, onQuery, onReset, placeholder, 
     return () => { window.removeEventListener("keydown", shortcut); cancelAnimationFrame(focusFrame); };
   }, [searchRef, fullView]);
 
-  const resetButton = <button type="button" className="reset-button" onClick={() => { onReset(); if (fullView) close(); else { setExpanded(false); searchRef.current?.focus(); } }}>{resetLabel}</button>;
+  const resetButton = <button type="button" className="reset-button" onClick={() => { onReset(); if (fullView || window.matchMedia("(max-width: 760px)").matches) close(); else { setExpanded(false); searchRef.current?.focus(); } }}>{resetLabel}</button>;
   return <div className="atlas-filter-system" data-expanded={expanded} data-view-controls={Boolean(view)} onKeyDown={event => { if (event.key === "Escape" && expanded && toggle.current?.getClientRects().length) { event.preventDefault(); event.stopPropagation(); close(); } }}>
     <AtlasSearchField className="search-field" inputRef={searchRef} label={searchLabel ?? "Search"} placeholder={placeholder} value={query} onChange={onQuery} shortcut />
     {actions ? <div className="atlas-search-actions">{actions}{resetButton}</div> : resetButton}
@@ -67,8 +67,18 @@ export function ActiveFilters({ filters, onClear, searchRef }: {
   onClear: () => void; searchRef: RefObject<HTMLInputElement | null>;
 }) {
   if (!filters.length) return null;
+  function focusAfterRemoval(button: HTMLButtonElement) {
+    if (!window.matchMedia("(max-width: 760px)").matches) { searchRef.current?.focus(); return; }
+    // Don't summon the phone keyboard when a visitor is simply removing a chip.
+    const group = button.parentElement;
+    const toggle = group?.previousElementSibling?.querySelector<HTMLButtonElement>(".atlas-filter-toggle");
+    requestAnimationFrame(() => {
+      const target = group?.isConnected ? group.querySelector<HTMLButtonElement>("button") : toggle;
+      target?.focus({ preventScroll: true });
+    });
+  }
   return <div className="active-filters" aria-label="Active filters"><span>Filtered by</span>
-    {filters.map(filter => <button key={filter.key} type="button" aria-label={`Remove ${filter.label} filter`} onClick={() => { filter.remove(); searchRef.current?.focus(); }}>{filter.label}<span aria-hidden="true">×</span></button>)}
-    <button className="clear-filters" type="button" onClick={() => { onClear(); searchRef.current?.focus(); }}>Clear filters</button>
+    {filters.map(filter => <button key={filter.key} type="button" aria-label={`Remove ${filter.label} filter`} onClick={event => { filter.remove(); focusAfterRemoval(event.currentTarget); }}>{filter.label}<span aria-hidden="true">×</span></button>)}
+    <button className="clear-filters" type="button" onClick={event => { onClear(); focusAfterRemoval(event.currentTarget); }}>Clear filters</button>
   </div>;
 }

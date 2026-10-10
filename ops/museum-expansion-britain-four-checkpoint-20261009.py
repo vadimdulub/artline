@@ -1,0 +1,37 @@
+"""Freeze verified wave81 and keep the wider goal active."""
+import csv,hashlib,importlib.util,json
+from pathlib import Path
+z=importlib.util.spec_from_file_location('a',Path(__file__).with_name('museum-expansion-britain-four-apply-v2-20261009.py'));a=importlib.util.module_from_spec(z);z.loader.exec_module(a);m=a.m
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def main():
+ dest=a.RUN/'delivery-checkpoint-001.json';assert not dest.exists();assert sha(a.CHECKPOINT)=='0b94a0b9f931b610f55905140ab5fa85e7909a90f9523ba75c7158e543463fa4';previous=m.load(a.CHECKPOINT);assert(len(previous['artifacts']),len(previous['external_artifacts']))==(27364,559)
+ changes=m.load(a.RUN/'readme-supersessions-001.json')['changes'];changed={v['path']:v for v in changes};assert set(changed)=={str((m.RUN/'README.md').relative_to(m.ROOT))}
+ for c in changes:
+  assert sha(Path(c['backup_path']))==c['backup_sha256'];x=m.load(Path(c['backup_path']));assert hashlib.sha256(x['text'].encode()).hexdigest()==x['sha256']==c['before_sha256'];assert sha(m.ROOT/c['path'])==c['after_sha256']
+ for dep in previous['artifacts']:
+  if dep['path'] in changed:assert dep['sha256']==changed[dep['path']]['before_sha256']
+  else:a.checked(dep)
+ plan,digest=a.validate_plan()
+ with m.connect() as db:verified=a.verify(db,plan,digest)
+ assert verified['current_counts']==dict(zip(a.IIDS,[dict(linked=127,eligible=105),dict(linked=116,eligible=95)]));assert verified['network_counts']==dict(linked=6,eligible=4) and verified['network_to_branch_refinements']==47 and verified['previously_unlinked']==171 and verified['prior_campaign_records_preserved']==11709;assert m.load(a.RUN/(a.KEY+'-applied.json'))['plan_sha256']==digest
+ report=m.load(m.RUN/'verification-after-wave-81.json');assert(report['verified_new_artworks'],report['verified_existing_artworks_linked'],report['institutions_with_new_records_or_reconciled_holdings'])==(10259,1668,222);mc=report['britain_four_museum_changes'];assert len(mc)==3
+ checks=m.load(a.RUN/'checks-001.json');assert(checks['new_offline_tests_passed'],checks['historical_tests_passed'],checks['cumulative_verified_tests'])==(22,1538,1560) and checks['replay_zero_writes'];audit=m.load(m.RUN/'after-wave-81.json');csvcounts={};ids=[]
+ for name,count in [('added-artworks-after-wave-81.csv',10259),('reconciled-artworks-after-wave-81.csv',1668),('gac-date-enrichments-after-wave-81.csv',6),('museum-coverage-after-wave-81.csv',len(audit['institutions']))]:
+  with(m.RUN/name).open(newline='') as fp:rows=list(csv.DictReader(fp))
+  assert len(rows)==count;csvcounts[name]=count
+  if name.startswith(('added-artworks','reconciled-artworks')):ids.extend(v['artwork_id'] for v in rows)
+ assert len(ids)==len(set(ids))==11927
+ draft=m.load(a.RUN/(a.KEY+'-plan-001.json.gz'));assert sha(Path(draft['backup_path']))==draft['backup_sha256']
+ external=previous['external_artifacts']+list(checks['logs'].values())+[dict(path=v['backup_path'],sha256=v['backup_sha256']) for v in changes]+[dict(path=plan['backup_path'],sha256=plan['backup_sha256']),dict(path=draft['backup_path'],sha256=draft['backup_sha256'])]
+ reviewed=m.BACKUP/(a.KEY+'-reviewed-plan-002.json.gz');assert m.load(reviewed)==plan;external.append(dict(path=str(reviewed),sha256=sha(reviewed)));proof=m.BACKUP/(a.KEY+'-transaction-identity-002.json.gz');x=m.load(proof);assert x['comparisons_equal'] and len(x['comparisons'])==239;external.append(dict(path=str(proof),sha256=sha(proof)))
+ log=Path('/Users/vadimdulub/Library/Logs/artline-britain-four-delivery-20261009.log');assert '"documented_existing_links": 218' in log.read_text();external.append(dict(path=str(log),sha256=sha(log)));unique={}
+ for dep in external:
+  assert dep['path'] not in unique or unique[dep['path']]==dep;unique[dep['path']]=dep;assert sha(Path(dep['path']))==dep['sha256']
+ refs=[]
+ for name in ['source-context-001.json.gz','comparison-source-context-001.json.gz','ulster-network-context-001.json.gz','additional-network-review-context-001.json.gz']:refs+=m.load(a.RUN/name)['body_references']
+ ds=m.load(a.REVIEW)['decisions'];assert len(ds)==239 and sum(v['state']=='approved_existing_holding' for v in ds)==218;assert len(m.load(a.RUN/'additional-network-review-context-001.json.gz')['rows'])==21
+ a.checked(previous['other_job_status_reference']);paths={m.ROOT/v['path'] for v in previous['artifacts']}|{a.CHECKPOINT,Path(__file__).resolve()};paths|={v for v in a.RUN.rglob('*') if v.is_file()};paths|={v for pattern in ['*britain-four*20261009.py','*britain_four*20261009.py'] for v in(m.ROOT/'ops').glob(pattern)};paths|={v for v in m.RUN.glob('*after-wave-81*')};paths|={a.checked(v) for v in refs};artifacts=[a.reference(v) for v in sorted(paths)]
+ assert len(m.load(a.RUN/'remaining-research-001.json.gz')['rows'])==21;nextq=m.load(a.RUN/'next-museum-pass-001.json');assert len(nextq['italian_museums'])==225 and len(nextq['existing_holding_review_targets'])==2
+ result=dict(at=m.now(),goal_complete=False,local_only=True,new_additions=0,new_existing_links=218,previously_unlinked=171,network_to_branch_refinements=47,campaign_new_artworks=10259,campaign_existing_links=1668,distinct_campaign_artwork_ids=11927,institutions_with_new_records_or_reconciled_holdings=222,verification=verified,museum_changes=mc,museums_below_100=report['after']['museums_below_100'],museums_below_200=report['after']['museums_below_200'],global_coverage_snapshot_at=report['global_coverage_snapshot_at'],external_registry_growth_reference=report['external_registry_growth_reference'],new_tests_passed=22,historical_tests_passed=1538,cumulative_verified_tests=1560,plan_sha256=digest,csv_counts_verified=csvcounts,artifacts=artifacts,external_artifacts=list(unique.values()),prior_checkpoint_reference=a.reference(a.CHECKPOINT),prior_artifacts_verified=len(previous['artifacts']),intentional_supersessions=changes,other_job_status_reference=previous['other_job_status_reference'],other_job_totals_separate=True,editorial_holds=21,unknown_dates_preserved=41,review_reference=a.reference(a.REVIEW),remaining_research_reference=a.reference(a.RUN/'remaining-research-001.json.gz'),next_museum_pass_reference=a.reference(a.RUN/'next-museum-pass-001.json'),new_source_access_hold_reference=previous['new_source_access_hold_reference'],native_probe_reference=a.reference(a.RUN/'native-probes-001.json'),runtime=previous['runtime'],raw_source_body_references_verified=len({v['path'] for v in refs}),next_work='218 verified existing-record links:171 previously unlinked,47 explicit NMNI-to-Ulster branch refinements. Brighton127linked/105eligible;Ulster116linked/95eligible;NMNI group6linked/4eligible.41 unknown dates preserved;21 attribution,version,branch or scope cases held.239 selected native searches yielded179 exact objects;no images.21 older network review assertions preserved unchanged. Campaign10259new+1668reconciled=11927 distinct records across222institutions. Continue Williamson and Perth;retain225 Italian museums,prior Milan29holds/11leads,all earlier queues and source access holds. Source workers terminal;concrete218-record progress,no repeated global blocker. All-museum100minimum/200preferred goal remains active.')
+ m.save(dest,result);print(json.dumps(dict(checkpoint=str(dest.relative_to(m.ROOT)),sha256=sha(dest),artifacts=len(artifacts),external_artifacts=len(unique),existing_links=218,campaign_new=10259,campaign_links=1668,below100=result['museums_below_100'])),flush=True)
+if __name__=='__main__':main()

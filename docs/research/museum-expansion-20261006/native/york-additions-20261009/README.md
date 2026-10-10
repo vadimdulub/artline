@@ -1,0 +1,13 @@
+# York Art Gallery additions — 9 October 2026
+
+Added **160 selected paintings in review** from the [York Museums Trust native collection](https://www.yorkmuseumstrust.org.uk/collections/). York now has **250 linked artworks and 228 with eligible pre-1971 dates**, up from 90 and 68. This completes the 200-work target for this museum in both measures.
+
+Reviewed 177 selected object pages after excluding 13 already-linked index items. **17 remain held**: 16 unresolved identity/version comparisons and one Blanche page with conflicting 1903/1913 production dates. Likely WikiArt matches for Baburen’s *Roman Charity* and Herman’s *Digging for Roots* were retained for version checks; no duplicate records or unsupported museum links were created. [All decisions and source evidence](editorial-reviewed-001.json.gz) remain available.
+
+Anonymous and qualified makers remain explicit. Multiple source creator labels remain unresolved rather than being interpreted as joint authorship. Two Etty copies after Lawrence now use neutral study titles because the source’s alternative sitter names conflict; the original names remain in citations. Source dates `1943-08` and `1933-08` retain their month information. One triptych, ten joined panels and paintings with reverse studies each count as one accessioned object. Two separately accessioned saint roundels count separately.
+
+**30 offline checks, atomic database readback and zero-write replay passed.** The transaction rechecked 26,380 candidate catalogue rows and 54,896 citations, protected 2,612 comparison/gallery records and all 13,658 earlier campaign records. Existing metadata, images, painter links and publication states were preserved. No images or current-display claims were added.
+
+Captured 191 successful York HTML responses: 177 objects, 13 bounded date-band searches and one repeating next-page response. Reused one earlier index page. Pagination repeated the first page, so it was stopped. A conservative index parser flagged valid month dates; object-level verification resolved those two dates. These are discovery limitations, not source refusals. A selected NGA page returned 403 and was not retried. The retained comparison archive contains 932 raw bodies; 579 citation bodies could not be reconstructed and are not claimed as fresh confirmation.
+
+Campaign totals: **10,783 new artworks + 3,035 reconciled existing artworks = 13,818 distinct records across 239 institutions**. **1,229 canonical museum entries remain below 100 linked works** and **1,385 below 200**. The full goal remains active. Next: Harris Museum (83 linked / 72 eligible) and The Box (75 / 30). [The continuing queue](next-museum-pass-001.json) preserves every prior institution, unresolved object and provider hold.

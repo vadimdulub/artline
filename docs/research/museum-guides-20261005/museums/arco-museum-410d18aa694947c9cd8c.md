@@ -1,0 +1,23 @@
+# Museo Nazionale — Reggio Calabria (RC)
+
+[All museums and collections](../README.md)
+
+10 accepted holding links · 0 existing Artline pictures · 0 direct museum picture links · 0 Commons candidates · 0 catalogue image pages.
+
+Institution type: museum. Institution editorial state: review.
+
+Snapshot: 2026-10-06T02:39:03Z. Holding evidence does not establish current display or physical presence. Artwork dates, creator attributions and editorial review states are preserved.
+
+External pictures are research links. Their availability does not establish permission to download, reuse or publish them. Commons candidates also require image-identity review. Full source receipts, image credits and recorded rights are preserved in the linked research manifest.
+| Artwork | Creator / attribution | Date as recorded | Picture link | Museum holding evidence | Editorial state |
+| --- | --- | --- | --- | --- | --- |
+| <a id="artwork-b4be3857-226a-4a05-ab27-14ffa556abea"></a>paesaggio | Lavagna Fieschi Ignazio | Unverified date: 1844-1844 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-7) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-7) · checked 2026-10-05 | review |
+| <a id="artwork-4adf0515-00d0-4b5e-9ba6-2ed1da6a5449"></a>paesaggio marino | Lavagna Fieschi Ignazio | Unverified date: 1800-1800 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-4) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-4) · checked 2026-10-05 | review |
+| <a id="artwork-4eb2cf86-4b31-4910-b057-fe6afa9e24b2"></a>paesaggio marino | Lavagna Fieschi Ignazio | Unverified date: 1800-1899 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-6) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-6) · checked 2026-10-05 | review |
+| <a id="artwork-c38590a1-e5fd-46d3-afe1-3ffb2ca31f49"></a>ritratto d'uomo, Lo scamiciato | Landenberg (notizie Sec. Xix) | Unverified date: 1800-1899 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022946) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022946) · checked 2026-10-05 | review |
+| <a id="artwork-2e5260d4-683c-4610-97bf-46d1e0ce5cbe"></a>ritratto di donna, Ritratto di Salazar MacNamara Calcutt Dora | Salazar Demetrio | Unverified date: 1800-1899 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022991) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022991) · checked 2026-10-05 | review |
+| <a id="artwork-ece425bf-014b-47c9-8e41-885109939012"></a>San Paolo | Cavaro Pietro (notizie Dal 1508/ Ante 1538) | Unverified date: 1500-1599 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022909) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022909) · checked 2026-10-05 | review |
+| <a id="artwork-0958a84f-4d57-45be-b30a-80ab642b489c"></a>San Pietro | Cavaro Pietro (notizie Dal 1508/ Ante 1538) | Unverified date: 1500-1599 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022908) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022908) · checked 2026-10-05 | review |
+| <a id="artwork-75ace70e-6188-4380-9ea0-86ef0380ccfd"></a>scena campestre | Lavagna Fieschi Ignazio | Unverified date: 1843-1843 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-1) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-1) · checked 2026-10-05 | review |
+| <a id="artwork-acb6f2b6-354e-4e33-93aa-306f100e3620"></a>scena campestre | Lavagna Fieschi Ignazio | Unverified date: 1800-1800 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-0) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-0) · checked 2026-10-05 | review |
+| <a id="artwork-bead0d43-5a68-4331-ad00-7b57cc8d0416"></a>scena campestre | Lavagna Fieschi Ignazio | Unverified date: 1800-1899 | Image research pending · [record](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-3) | [Holding source](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/1800022977A-3) · checked 2026-10-05 | review |

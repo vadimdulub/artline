@@ -1,0 +1,23 @@
+# Toledo Museum of Art — 7 October 2026
+
+Added **105 artworks (103 paintings and two drawings)** to the local review catalogue. Toledo now has **105 linked records, all with eligible creation dates and distinct nonempty inventories**. All additions remain in review.
+
+The [verified readback](minimum-100-verification.json) preserves all five pre-existing pending artworks, their ten citations, five artist links, two media links, five identifiers and seven location assertions. The [actual replay](replay-001.json) inserted zero rows. Existing dates, institution metadata, artist links, images, display claims and publication states were preserved.
+
+The source is the museum's [official painting catalogue](https://emuseum.toledomuseum.org/collections/57691/paintings/objects). The database identity matches the Toledo, Ohio museum's name, website and Q1743116 authority. Its misleading legacy `spain-research-museum-q1743116` slug was preserved; no Spanish holding or place was inferred.
+
+Twelve distinct bounded index pages produced **144 leads**. Repeated pages from broken session-bearing pagination were discarded, and failed routes remain captured. Web-tool extracts supplied 129 complete object pages; 15 object requests failed. Direct HTTP requests returned 403. Retained evidence therefore identifies web-tool extraction and crawl metadata explicitly, rather than claiming original HTTP bytes or fresh display evidence. No images were requested or downloaded.
+
+The [reviewed plan](toledo-native-additions-001-plan.json.gz), SHA-256 `17693d17c3d295e3c111190c441041909f916a8cb7df9607f1c2881d4f77ea66`, selects 105 of 118 source-eligible candidates. Creator/title/inventory/source comparisons cover 27,000 existing artwork records, 941 artist rows and 3,105 aliases. These comparisons are discovery and version evidence, not permission to invent artist links.
+
+The additions include Russian paintings by Popoff, Schmaroff, Zeydenberg, Koudriavtseff and Kahl; the Cretan *Old Testament Trinity*; *Dormition of the Virgin*, retaining “School of Andrey Rublyov”; and an anonymous Russian *Ikon: Madonna and Child*. Unnamed creators stay null. The covered icon retains both the museum's Paintings classification and its literal “metal and stones” medium. Nampo's *Chrysanthemums* retains a missing medium and the explicit Meiji 1868–1912 date range.
+
+Other additions include Rembrandt's *Young Man with a Plumed Hat*, Van Gogh's *Houses at Auvers*, Hopper's *Two on the Aisle*, El Greco's *Agony in the Garden* and Tissot's *London Visitors*. “Attributed to,” “After” and school qualifications remain literal object-level labels. A Holbein fragment is counted once as its surviving inventoried object, not as a reconstructed altarpiece. Four separately accessioned Mosler studies retain their shared frame measurements without asserting four different frames. The Puvis *Ludus Pro Patria* version is distinguished from the larger Walters canvas, the long Metropolitan canvas and the Amiens mural.
+
+Native Date wording remains separate from artist lifespans, depicted events, acquisitions and label approximations. “Probably mid-17th century” remains uncertain and uses full-century 1601–1700 search bounds. The Van Gorder and Schmaroff narrative/exhibition dates remain alongside their explicit circa Date fields, without silently rewriting either source. External-address/On Loan labels remain evidence of custody limitations; these additions establish a documented museum connection, not current presence, display or legal ownership. Holding confidence 0.90 is an editorial assessment, not a calibrated probability.
+
+The [39-lead follow-up queue](native-followup-queue-001.json.gz) contains 13 editorial holds, 11 source holds and 15 failed requests. It preserves an existing Mauve identity, ambiguous Boudin/Corot/Diaz/Derain/Fantin/Modigliani/Monaco/Steen/Utrillo versions, a grouped triptych with workshop wording, index/object differences and unresolved creation dates. The remaining catalogue still needs selected research; no exhaustive collection download was performed.
+
+All **32 Toledo offline checks and 543 campaign checks passed**, without database fixtures. The transaction checks the loopback database, acquires the curated-import lock, verifies unchanged preimages and identity scope, and checks every inserted field and relationship. Backups are under the approved Library/Application Support/Artline directory.
+
+Toledo has reached the 100-work minimum and needs **95 more eligible works** for 200. Refresh identity comparisons before any follow-up writes, because the saved scope predates these 105 additions.

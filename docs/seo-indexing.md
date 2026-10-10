@@ -1,5 +1,15 @@
 # Search indexing and public release
 
+## Unified catalogue — 8 October 2026
+
+The owner has removed review/publication visibility gates. The current code uses
+all active records for browsing and discovery; see [the change record](unified-catalogue.md).
+The historical release notes below describe earlier behaviour. This code change
+has not been deployed. As clarified on 10 October 2026, artist and artwork pages are public and
+indexable. Museum pages and personal bookmarks require login, remain noindex,
+and are omitted from the website sitemaps. This access policy does not restore
+any review/publication status gates.
+
 ## Reviewed collection launched — 3 October 2026
 
 The user approved the first ten artist profiles and their public launch. The

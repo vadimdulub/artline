@@ -1,0 +1,8 @@
+"""Resolve catalogue excerpt to its publisher's public product page."""
+import importlib.util,json
+from pathlib import Path
+from urllib.parse import urljoin
+z=importlib.util.spec_from_file_location('q',Path(__file__).with_name('museum-expansion-kazantzakis-source-20261009.py'));q=importlib.util.module_from_spec(z);z.loader.exec_module(q);m=q.m;RUN=m.RUN/'native/kilkis-review-20261010';q.RUN=RUN;q.CAP=RUN/'captures';q.CAP.mkdir(parents=True,exist_ok=True)
+u='https://universitystudiopress.gr/';soup,rc=q.capture('publisher-home-001',u);ls=[dict(title=a.get_text(' ',strip=True),url=urljoin(u,a['href']))for a in soup.select('a[href]')if 'Γλυπτά ρωμαϊκών χρόνων'in a.get_text(' ',strip=True)];urls=sorted({v['url']for v in ls});assert len(urls)==1,ls
+book,br=q.capture('publisher-book-001',urls[0]);links=[dict(title=a.get_text(' ',strip=True),url=urljoin(urls[0],a['href']))for a in book.select('a[href]')if '.pdf'in a['href'].lower()];body=book.get_text(' ',strip=True);assert '978-960-12-2678-1'in body;assert any('051223_de.pdf'in v['url']for v in links),links
+m.save(RUN/'publisher-reconciliation-001.json.gz',dict(at=m.now(),home_receipt=rc,observed_book_link=ls,book_receipt=br,text=body,pdf_links=links,script_reference=q.s.ref(Path(__file__).resolve()),decision='Publisher book page links the exact previously discovered PDF excerpt. ISBN978-960-12-2678-1,EleniPapagianni,UniversityStudioPress,2025. Publication provenance resolved; catalogue entries stillneed individual identity/holding/date review. Bookauthoris not artworkcreator.'));print(json.dumps(dict(book_url=urls[0],pdf_links=links,text=body[-13000:]),ensure_ascii=False),flush=True)

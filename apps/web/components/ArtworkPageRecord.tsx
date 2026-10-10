@@ -1,3 +1,4 @@
+import { BookmarkButton } from "./Bookmarks";
 import Link from "next/link";
 import { ArtworkViewer, ShareWorkLink } from "./ArtworkViewer";
 import { PainterArtworkDetails } from "./PainterArtworkDetails";
@@ -12,8 +13,9 @@ export function ArtworkPageRecord({ artist, work, browsePath }: { artist: Artist
     <article className={`standalone-artwork-page ${styles.record}`}>
       <div className={styles.image}><ArtworkViewer work={work} creator={creator} /></div>
       <div className={`artwork-details ${styles.details}`}>
-        <p className="artwork-creator">{creator}</p>
+        <p className="artwork-creator">{creator} <BookmarkButton kind="artist" id={artist.id} title={artist.display_name} compact /></p>
         <h1>{work.title}</h1>
+        <div className="bookmark-record-actions"><BookmarkButton kind="artwork" id={work.id} title={work.title} /></div>
         {work.alternate_title && <p>{work.alternate_title}</p>}
         {artworkDate(work) && <p className="artwork-date">{artworkDate(work)}</p>}
         <PainterArtworkDetails artist={artist} work={work} />

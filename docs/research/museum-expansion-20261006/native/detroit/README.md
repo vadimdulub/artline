@@ -1,0 +1,7 @@
+# Detroit Institute of Arts — partial source pass
+
+One complete highlight record was added in review: *Reading the Fate of the Christ Child*, Josefa de Óbidos, 1667, accession 2020.15. Official HTML and linked JSON agree on identity, 23 × 29 cm dimensions, oil-on-copper medium and the museum purchase credit. The museum now has one linked record with eligible dates; 17 older pending artworks and 34 citations remain unchanged.
+
+The [separate selected queue](selected-official-queue-001.json) contains 118 date-screened leads from four 30-row European Painting pages and explicit Russian/Greek filters. Native IDs deduplicate these to 126 indexed works: 118 selected, eight date holds. Source selection alone does not resolve qualified creators, artist-lifespan date errors, versions or possible group identities. None of these 118 queued details was captured in this pass; the added highlight was captured separately before the rate limit.
+
+The fifth general index request returned HTTP429, and direct requests stopped. The [partial receipt](partial-capture-001.json) retains the failed HTTP body and all successful captures. The inherited downloader did not retain Retry-After headers. Do not bypass the rate limit through another transport or blindly restart the queue. Any later native continuation must document its cooldown, retain the failed preimage, record fresh request timing and use a slower cadence that respects server guidance. No images were fetched, and source gallery labels were not promoted to current-display claims.

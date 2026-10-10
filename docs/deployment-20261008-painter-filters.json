@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-08T11:00:46.916218+00:00",
+  "site": "https://artlines.org",
+  "status": "deployed and verified",
+  "webRevision": "artline-web-painter-filters-1008",
+  "trafficPercent": 100,
+  "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:0deeb584e42328a18b7c881dbc7d8382fe349fe2e2797db2fd431c3aecd43ec0",
+  "cloudBuild": "871fa0a6-a77b-4d30-adb4-dcb818fa6087",
+  "baselineRevision": "artline-web-pickers-1008",
+  "baselineBuild": "338b3eee-2d96-4d07-ac75-a65e21af09d1",
+  "sourceArchiveSha256": "a06c87fde5b5f6b217f23795189162365d6b08183f5e0444a639f255b2bed083",
+  "changedSourceFiles": [
+    "components/ArtistChronologyRecord.tsx",
+    "components/ArtistChronology.module.css"
+  ],
+  "sourceFileCount": 278,
+  "preservedPublicAssetCount": 121,
+  "changes": [
+    "Painter drawer uses artwork search, year and picture controls with responsive wrapping",
+    "Work type and collection pickers remain on the full painter page",
+    "Full-view link preserves artwork filters and catalogue visibility scope",
+    "Advanced filters carried in an existing URL remain visible and removable"
+  ],
+  "verification": {
+    "productionBuildAndTypeScript": "passed",
+    "focusedLint": "passed",
+    "baselineAndReleaseSourceProvenanceVerified": true,
+    "candidateBeforePublicTraffic": "passed",
+    "liveChecks": "passed",
+    "widths": [
+      1440,
+      768,
+      390,
+      320
+    ],
+    "checks": [
+      "Compact controls fit and retain full year labels at 1440px",
+      "Compact controls fit and retain full year labels at 390px",
+      "Compact controls fit and retain full year labels at 320px",
+      "Search and clear restore bounded artwork results",
+      "Full view retains search, year and picture selections, and exposes advanced controls",
+      "Previously selected advanced filters remain visible and removable in the drawer"
+    ],
+    "compactControlsAccessibility": "WCAG 2 A/AA, 2.1 AA and 2.2 AA passed at 390px",
+    "successfulCandidateAndLiveRunsPageErrors": 0,
+    "successfulCandidateAndLiveRunsFailedResponses": 0,
+    "productionAnonymousAccessPreserved": true,
+    "desktopAndMobileScreenshotsReviewed": true,
+    "loggedErrors": 0,
+    "browser": "Standalone Playwright; in-app browser connection unavailable"
+  },
+  "runtimeConfigurationPreserved": true,
+  "apiDeployed": false,
+  "databaseChangedByRelease": false,
+  "gitCommitCreated": false,
+  "terraformApplied": false,
+  "localWebImagePinUpdated": true,
+  "rollbackRevision": "artline-web-pickers-1008",
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/painter-filters-20261008"
+}

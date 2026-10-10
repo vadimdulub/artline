@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-08T10:48:52.542908+00:00",
+  "site": "https://artlines.org",
+  "status": "deployed and picker checks verified",
+  "webRevision": "artline-web-pickers-1008",
+  "trafficPercent": 100,
+  "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:364a8dae4f0e3d00c92fca4f3d4af0ba44b7a0854e8a516384dddeae6ec84df3",
+  "cloudBuild": "338b3eee-2d96-4d07-ac75-a65e21af09d1",
+  "baselineRevision": "artline-web-loading-fixes-1007",
+  "baselineBuild": "ba0ce2a7-7bca-49a3-bb2a-ad3881df8f1a",
+  "sourceArchiveSha256": "deb6a4d5aabbe58f75f641f9a9aeaa2c1ea1f55d6a152e4c224e627667889171",
+  "changedSourceFiles": [
+    "app/globals.css",
+    "components/Museums.module.css"
+  ],
+  "sourceFileCount": 278,
+  "preservedPublicAssetCount": 121,
+  "changes": [
+    "Shared native dropdown spacing, inset chevrons, softer borders, hover and focus states",
+    "Consistent collection layout toggle and pagination styling",
+    "Responsive collection controls stack when labels need more room"
+  ],
+  "verification": {
+    "productionBuildAndTypeScript": "passed",
+    "baselineAndReleaseSourceProvenanceVerified": true,
+    "candidateBeforePublicTraffic": "passed",
+    "liveChecks": "passed",
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "routes": [
+      "/museums/the-met",
+      "/artists",
+      "/museums"
+    ],
+    "checks": [
+      "No horizontal overflow or clipped collection picker labels",
+      "Keyboard focus between sort and page-size controls",
+      "Change from creation-date order to images-first order",
+      "48-work bounded page result",
+      "Artist directory name ordering",
+      "WCAG 2 A/AA, 2.1 AA and 2.2 AA scan on collection results",
+      "Native select fallback in forced-colors mode",
+      "Production anonymous access preserved"
+    ],
+    "successfulCandidateAndLiveRunsPageErrors": 0,
+    "successfulCandidateAndLiveRunsFailedResponses": 0,
+    "desktopAndMobileScreenshotsReviewed": true,
+    "browser": "Standalone Playwright; in-app browser connection unavailable"
+  },
+  "runtimeConfigurationPreserved": true,
+  "apiDeployed": false,
+  "databaseChangedByRelease": false,
+  "gitCommitCreated": false,
+  "terraformApplied": false,
+  "localWebImagePinUpdated": true,
+  "remainingIssues": [
+    {
+      "path": "/api/backend/v1/museums/the-met/works?sort=title&limit=48",
+      "status": 500,
+      "evidence": "Reproduced on candidate and previous live release before promotion; still returns 500 in about 8.16 seconds after promotion. API logs report context deadline exceeded. CSS release does not change this API.",
+      "additionalObservation": "One pre-promotion candidate museum-page request also hit an existing API timeout; the subsequent complete candidate and live verification runs passed."
+    }
+  ],
+  "localBuildNote": "Unrelated local book E2E TypeScript errors were not part of the isolated production source; the normal release archive excludes E2E files.",
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/pickers-20261008"
+}

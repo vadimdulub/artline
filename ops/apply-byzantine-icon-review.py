@@ -241,7 +241,10 @@ def prepare():
         if item.get('source_sha1'):assert hashlib.sha1(raw).hexdigest()==item['source_sha1']
         original=ORIGINALS/(item['accession']+'-'+core.sha(raw)[:16]+'.jpg');core.save_new(original,raw)
         data,width,height,quality=core.compress(raw);digest=core.sha(data)
-        served='/assets/artworks/reviewed-icons-20260920/'+item['accession']+'-'+digest[:16]+'.jpg'
+        # Museum inventory punctuation belongs in metadata, not delivery filenames.
+        filename=re.sub(r'[^a-zA-Z0-9_-]+','-',item['accession']).strip('-')
+        assert filename, 'Accession must produce a safe image filename'
+        served='/assets/artworks/reviewed-icons-20260920/'+filename+'-'+digest[:16]+'.jpg'
         core.save_new(ROOT/'apps/web/public'/served.lstrip('/'),data)
         im={**item,'slug':slug,'artwork_id':next(c['id'] for c in plan_data['changes'] if c['slug']==slug),
             'target_ids':next(c['target_ids'] for c in plan_data['changes'] if c['slug']==slug),

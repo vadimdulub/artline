@@ -36,7 +36,14 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	if cfg.LocalDebug {
 		memberOrigin = cfg.FrontendOrigin
 	}
-	member.New(member.Config{ClientID: cfg.GoogleClientID, ClientSecret: cfg.GoogleClientSecret, CookieKey: cfg.AuthCookieKey, Origin: memberOrigin, LocalDebug: cfg.LocalDebug}, member.PostgresStore{DB: db}).Register(mux)
+	members := member.New(member.Config{ClientID: cfg.GoogleClientID, ClientSecret: cfg.GoogleClientSecret, CookieKey: cfg.AuthCookieKey, Origin: memberOrigin, LocalDebug: cfg.LocalDebug}, member.PostgresStore{DB: db})
+	members.Register(mux)
+	bookmarkSQL := member.PostgresBookmarks{DB: db}
+	var bookmarks member.BookmarkStore = bookmarkSQL
+	if cfg.LocalDebug {
+		bookmarks = member.NewLocalBookmarks(bookmarkSQL.Lookup)
+	}
+	members.RegisterBookmarks(mux, bookmarks)
 	mux.HandleFunc("GET /health", api.health)
 	mux.HandleFunc("GET /ready", api.ready)
 	mux.HandleFunc("GET /api/v1/timeline", api.timeline)
@@ -78,7 +85,7 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 		})
 		catalogue = api.cacheCatalogue(cache, catalogue)
 	}
-	handler := api.recoverPanic(api.requestLog(api.cors(catalogueReadBudget(catalogue))))
+	handler := api.recoverPanic(api.requestLog(api.cors(catalogueReadBudget(members.CatalogueAccess(catalogue)))))
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("X-Robots-Tag", "noindex")
 		w.Header().Set("Cache-Control", "private, no-store")

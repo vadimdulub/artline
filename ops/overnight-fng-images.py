@@ -21,10 +21,12 @@ LICENCE='https://creativecommons.org/publicdomain/zero/1.0/'
 ORG={'Kansallisgalleria / Ateneumin taidemuseo','Kansallisgalleria / Sinebrychoffin taidemuseo'}
 def norm(v):return ' '.join(re.findall(r'[^\W_]+',unicodedata.normalize('NFKD',str(v).casefold())))
 
-def source_match(c,o):
+def source_match(c,o,*,require_state_owner=True):
     if str(o['objectId'])!=c['external_id']:raise ValueError('FNG object mismatch')
     if o.get('responsibleOrganisation') not in ORG:raise ValueError('Holding organisation not verified')
-    if not (o.get('owner') or '').startswith('Suomen valtio'):raise ValueError('Loan or owner requires separate holding review')
+    # Holding-writing callers require state ownership. An image-only caller
+    # may retain a documented loan's owner without creating a holding claim.
+    if require_state_owner and not (o.get('owner') or '').startswith('Suomen valtio'):raise ValueError('Loan or owner requires separate holding review')
     if o.get('category',{}).get('categoryId')!='artwork' or o.get('children') or o.get('parents'):raise ValueError('Multipart work requires individual review')
     kind=c.get('work_type','painting')
     classifications={x.get('en','').casefold() for x in o.get('classifications',[])}

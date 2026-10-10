@@ -1,0 +1,19 @@
+"""Final selected two-museum identity preflight; no DB writes."""
+import importlib.util,json
+from pathlib import Path
+z=importlib.util.spec_from_file_location('base',Path(__file__).with_name('museum-expansion-italy-fourth-supplement-v2-20261008.py'));base=importlib.util.module_from_spec(z);z.loader.exec_module(base)
+i=base.i;f=i.f;m=base.m;RUN=base.RUN;ref=base.ref;checked=base.checked
+base.base.EXTRA[257]=['mieris'];base.base.EXTRA[322]=['fuseli','fuessli','fussli'];base.TITLE_ADDITIONS[257]=['Venus and Mars Surprised by Cupid'];base.TITLE_ADDITIONS[322]=['King Lear']
+UNCERTAIN={238:'Lawrence same-period male portrait version needs physical comparison.',243:'DeCaro game still-life identities need physical comparison.',248:'Lopez flower-vase identity needs comparison with sparse existing version.',249:'Gentileschi Magdalene versions need additional physical checks.',255:'BarlettaMaster/Machuca Virgin variants need comparison.',256:'Soens/Carracci Baptist copper versions need physical comparison.',269:'Dughet landscape same1640–45dates/sparseversions need reconciliation.',270:'Swanevelt mountain/pastoral landscapes need physical version comparison.',285:'FilippoNapoletano landscape versions need physical comparison.',298:'FormerGoya male-bust and sparse existingmaleportrait need comparison.',308:'PaganiAnnunciation1532existingwork needs physical version comparison.',309:'FiginoBorromeo existingportrait needs physical version comparison.',311:'Fabrecircle younggentleman/sparseportraits need comparison.',312:'Hackertcow landscape/sparseversions need comparison.',314:'Gerard woman portraits sameperiod need physical comparison.',328:'Porta/Giaquinto Madonna variants need physical comparison.'}
+working=m.load(RUN/'source-editorial-working-002.json');holds={int(k) for k in working['holds']};VICENZA=sorted(int(k) for k in m.load(RUN/'vicenza-editorial-working-001.json')['notes']);DEVANNA=[r['number'] for r in m.load(RUN/'native-candidates-002.json.gz')['rows'] if 236<=r['number']<=335 and r['state']=='candidate' and r['number'] not in holds|set(UNCERTAIN)];SELECTED=sorted(VICENZA+DEVANNA)
+def rows():return [r for r in base.rows() if r['number'] in SELECTED]
+queries=base.queries;comparisons=base.comparisons
+
+def main():
+ dest=RUN/'selected-identity-005.json.gz';assert not dest.exists();rs=rows();params=i.params_for(rs)
+ with m.connect() as db,db.transaction():
+  db.execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ');assert db.execute('SHOW transaction_read_only').fetchone()['transaction_read_only']=='on';state=queries(db,params)
+  citations=[v['row'] for v in db.execute("SELECT to_jsonb(c) row FROM citations c WHERE entity_type='artwork' AND entity_id=ANY(%s::uuid[]) ORDER BY entity_id,id",(state['artwork_ids'],))]
+ comps=comparisons(rs,state);m.save(dest,dict(at=m.now(),rows=rs,params=params,state=state,comparisons=comps,within_batch=i.within_batch(rs),script_reference=ref(Path(__file__).resolve()),base_script_reference=ref(Path(base.__file__).resolve()),dependencies=[ref(RUN/n) for n in ['source-editorial-working-002.json','vicenza-editorial-working-001.json','selected-identity-004.json.gz','comparison-source-context-001.json.gz']],read_only=True,policy='Final selected Vicenza andDevanna preflight. AdditionalMieris/Fuseli aliases andKingLear/VenusMars titles. Otherthree researchedmuseums remain pending identityreview, notabandoned orquotafilled.',deferred_versions=UNCERTAIN))
+ m.save(RUN/'selected-citations-005.json.gz',dict(at=m.now(),identity_reference=ref(dest),citations=citations,read_only=True));print(json.dumps(dict(selected=len(rs),vicenza=len(VICENZA),devanna=len(DEVANNA),scope=len(state['artwork_ids']),hits=sum(len(v['hits']) for v in comps),source_hits=sum(len(v['source_hits']) for v in comps))))
+if __name__=='__main__':main()

@@ -1,0 +1,26 @@
+# Royal West of England Academy and Ferens — 9 October 2026
+
+Applied **227 reviewed holding links for existing local artworks**. No new artwork records were created in this pass.
+
+| Museum | Accepted links | Linked before → after | Eligible dates before → after |
+| --- | ---: | ---: | ---: |
+| Royal West of England Academy | 138 | 1 → 139 | 1 → 15 |
+| Ferens Art Gallery | 89 | 3 → 92 | 3 → 79 |
+
+**137 accepted works retain unknown creation dates**: 124 at the Academy and 13 at Ferens. These count as linked review records, but do not establish pre-1971 eligibility. The Academy has passed 100 linked records; its eligible-date total remains only 15. Ferens still needs eight linked records to reach 100. Both remain unfinished toward 200, with date and physical-object scope tracked separately.
+
+The review covers all 248 selected pending associations from 119 saved Wikidata bodies, exact source IDs, museum-qualified inventories and creator identities. Fresh identity comparison covers 18,927 artworks and 39,711 citations. Six unlinked labels were checked against four exact creator authorities without adding painter links. Twenty-four saved comparison contexts for 13 artworks, plus hash-verified Tate and V&A primary records, support version and creator comparisons. Referenced Wikidata and Art UK claims are correlated secondary evidence; Art UK was not fetched through its existing access hold.
+
+The [current Ferens collection page](https://www.hullmuseums.co.uk/collections-ferens) links to its [legacy public catalogue](http://museumcollections.hullcc.gov.uk/) while a replacement is developed. **101 selected inventory searches produced 91 exact native object records**; ten produced no unique match. The form requires its `newsearch=new` radio option. Some object links first return an overview; the revised parser follows their observed Detailed Record links. The initial failed parser run and cached HTTP200 bodies are preserved. The published HTTP endpoint was accessible; HTTPS connection failure was not an access denial. No broad catalogue crawl or image download occurred.
+
+The Academy's [collection overview](https://www.rwa.org.uk/pages/our-collection/1000) and [collection Q&A](https://www.rwa.org.uk/pages/our-collection-q-a) were checked. Seventy-nine selected creator searches returned 16 official biographies. Those pages supply context, **not exact-object confirmation**, and no such confirmation is claimed. Academy holdings use the exact referenced secondary object records at 80% editorial confidence. Confidence is an editorial judgment, not a calibrated probability. The historical transfer of Sharples works to Bristol is not generalized to other Academy works.
+
+The [21 held cases](remaining-research-001.json.gz) include paired recto/verso records sharing one support, diptych/triptych components, unresolved versions, an I. Tudgay/John Lashbrook Tudgay identity question, the Charles Collins/Charles Allston Collins conflict, and attributed Carpenter and Churchyard works. Four Sartorius records repeat a creation year earlier than the supplied artist birth year; both claims remain evidence pending reconciliation. Claude Heath's exact native record dates Head Tilting Forwards II to **2002**, so it remains outside this pre-1971 expansion. The unknown catalogue date was not overwritten.
+
+Hustwick's three Loss of a Merchantman records are individually inventoried panels described by the museum as a series of **three separate paintings**, each with a different narrative scene. They are not an aggregate counted three times. Conversely, Jamieson's Snow in My Garden and Bridge over a River, and Lines's two sides under Academy 423, remain held pending representation reconciliation. Eaves's Strata Shadows verso has only one existing representation in the scoped identity pool; no additional recto record was invented.
+
+Native spelling, support and chronology conflicts remain in citations. Examples include Hughes's fruit date field 1865 versus description 1863, Spence circa1875 versus circa1871, Swift circa1850 versus1860, Appleby 1886 versus1888, and Binks 1822 versus1830. Exact inventories, named subjects and makers were checked. No catalogue date or medium was silently rewritten. Holdings do not establish ownership, present custody or fresh display; undated legacy display labels remain evidence only.
+
+The [plan](britain-six-existing-holdings-001-plan-001.json.gz) and [transaction receipt](britain-six-existing-holdings-001-applied.json) verify 227 new citations and accepted holding assertions, with 227 original pending assertions retained as superseded history. The transaction protects 2,655 scoped records and all 12,151 earlier campaign artworks. **29 offline tests and zero-write replay passed**. Metadata, dates, images, creator links, review status and institution records remain unchanged. No commit or deployment.
+
+Campaign totals: **10,259 new artworks and 2,119 reconciled existing records across 226 institutions**, or **12,378 distinct artwork records**. The latest audit has **1,237 museums below 100 linked records** and **1,389 below 200**. The [next queue](next-museum-pass-001.json) retains Ferens native additions, selects Salford and Guildhall pending holdings, and preserves the 225 Italian museums and every earlier research queue/source hold. The full goal remains active.

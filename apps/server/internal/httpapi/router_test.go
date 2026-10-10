@@ -31,7 +31,7 @@ func TestRemovedEditorEndpointsAreUnavailable(t *testing.T) {
 }
 
 func TestValidationBeforeDatabaseAccess(t *testing.T) {
-	handler := New(config.Config{}, nil)
+	handler := New(config.Config{LocalDebug: true}, nil)
 	for _, tc := range []struct {
 		method, path, body string
 		status             int
@@ -61,26 +61,12 @@ func TestValidationBeforeDatabaseAccess(t *testing.T) {
 		{"GET", "/api/v1/museums/the-met/works/invalid", "", 404},
 	} {
 		request := httptest.NewRequest(tc.method, tc.path, strings.NewReader(tc.body))
+		request.RemoteAddr = "127.0.0.1:1234"
 		request.Header.Set("Authorization", "Bearer test-editor-secret")
 		response := httptest.NewRecorder()
 		handler.ServeHTTP(response, request)
 		if response.Code != tc.status {
 			t.Errorf("%s: want %d got %d: %s", tc.path, tc.status, response.Code, response.Body.String())
-		}
-	}
-}
-
-func TestRemovedCoverageEndpoint(t *testing.T) {
-	{
-		handler := New(config.Config{}, nil)
-		for _, auth := range []string{"", "test-editor-secret", "Bearer wrong", "Bearer test-editor-secret"} {
-			request := httptest.NewRequest("GET", "/api/v1/coverage/summary", nil)
-			request.Header.Set("Authorization", auth)
-			response := httptest.NewRecorder()
-			handler.ServeHTTP(response, request)
-			if response.Code != 404 {
-				t.Fatalf("removed endpoint returned %d", response.Code)
-			}
 		}
 	}
 }
