@@ -1,0 +1,19 @@
+# First creator expansion: Ivan Tvorozhnikov
+
+Verified 2026-10-10T19:26:37Z. **25 new production artworks; 2 → 27 active works.**
+
+[Open the creator](https://artlines.org/artists/wikiart-artist-ivan-tvorozhnikov) · [Artwork ledger](new-artworks.csv) · [Verification](verification.json)
+
+The user requested one creator at a time, choosing a creator with 0–5 works and adding 10–100 supported artworks. A current read-only production check confirmed two active works for this existing creator before selection and again inside the insert transaction. This pass completes one creator. It does not claim all low-count creators have been expanded.
+
+The supplied 111-entry [source registry review](source-registry-review.json) and the project's approved WikiArt directory were inspected. This creator's additions use the separately user-approved [WikiArt profile](https://www.wikiart.org/en/ivan-tvorozhnikov), visible artwork list, English and Russian JSON indexes and **every selected individual object page**. Bodies, retrieval times and SHA-256 hashes are retained. The profile heading says 42 works, while its current list and JSON each supplied 41; no missing work was invented.
+
+Ten new objects have documented creation dates; **15 remain explicitly undated**, with null years, unknown precision and review/research-candidate state. Artist life dates were used for creator identity only. Two direct page intervals override shortened list dates: Seller of icons is 1887–1888, and Girl with a Book is 1890–1900. Both source representations remain in evidence. The Mirovich picture's 1764 historical subject date is retained in its title, while its actual creation date is 1884. Original Russian titles are retained where supplied. Twenty-three oil works are classified as paintings; mixed-media and unspecified types remain unknown.
+
+Two existing works were excluded and preserved. Four ambiguous title/version leads were withheld: two Portrait of a Woman entries and two church-beggar variants. Ten further source objects are outside this bounded selection and remain available for later research. Stable WikiArt object IDs, source URLs, English/Russian titles, image paths, all linked creator objects and matching raw creator labels were checked for duplication. No reproduction was downloaded or visually compared in this metadata pass; unresolved version collisions were withheld rather than treated as separate confirmed objects.
+
+All 25 additions remain in review and are personal owner study selections, separate from museum highlights. Source location labels for two objects remain citation evidence; no accepted holdings or current-display assertions were created. **No new images were attached.** Existing creator metadata and artwork records remain unchanged.
+
+Seven adversarial plan checks passed, covering the minimum size, initial count, date cutoff, inconsistent unknown dates, duplicate source IDs, wrong creator and missing uncertainty review. Preflight rechecked evidence hashes and current catalogue identities. A pinned plan was applied atomically with a deterministic audit marker, transaction preimages and verified postimages. Cloud SQL backup `1791660135397` succeeded before writes. Recovery artifacts are under `/Users/vadimdulub/Library/Application Support/Artline/backups/creator-one-by-one-20261010`. The audit marker makes a replay recoverable without duplicate inserts.
+
+Read-only postflight verified all 25 works, 25 citations, 50 external identifiers and 25 owner selections. The live public creator API returned every addition in one bounded page, with matching titles, dates and review status. Existing database triggers invalidate catalogue caches. The creator count query used an indexed artist lookup; the query plan is retained, but this bounded pass is not a ten-million-row load test. The real local database was never connected to. No fixtures, commit, migration or deployment were made.

@@ -1,5 +1,15 @@
 # Artline implementation constraints
 
+- Million-artwork goal (10 October 2026): the user explicitly requests continued
+  production expansion of painters, artworks and authentic images until the
+  catalogue reaches one million artworks. This authorizes source-backed bulk
+  catalogue ingestion toward that goal. Continue metadata selection, duplicate
+  and version reconciliation, source/date/attribution checks, review status,
+  selected image preparation and verification; do not inflate totals with
+  placeholders or duplicate objects. Existing date scope and image policies
+  still apply. The real local database remains read-only. This is an actual
+  catalogue goal; the separate ten-million-row figure remains capacity headroom.
+
 - Member access and bookmarks (10 October 2026): the user clarified that artist
   and individual artwork pages are public without a login prompt. Museum
   browsing and saving artists/artworks to private bookmarks require login.
