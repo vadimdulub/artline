@@ -67,10 +67,14 @@
   .timeline-compact-heading .timeline-index-link,.timeline-compact-heading .timeline-popover>summary{min-height:44px;font-size:13px}
   .timeline-heading-controls .painter-view-switch{display:flex;width:100%}
   .timeline-heading-controls .painter-view-switch button{flex:1;min-height:44px;font-size:14px}
+  .timeline-heading-controls .books-view-switch{display:inline-flex;flex:1}
+  .timeline-heading-controls .books-view-switch button{flex:1;min-height:44px;padding-inline:16px;font-size:14px}
+  .books-undated button,.timeline-popover-panel .timeline-legend button{min-height:44px}
+  .timeline-dark .all-artwork-density>summary{min-height:44px}
   .timeline-compact-heading .popular-filter{min-height:44px}
   .timeline-compact-heading .popular-filter>span{font-size:14px}
-  .painter-paintings .all-artwork-strip{--artwork-card-width:min(68vw,260px)}
-  .painter-paintings .all-artwork-image{height:min(68vw,260px)}
+  .explorer>.painter-paintings .all-artwork-strip{--artwork-card-width:min(68vw,260px)}
+  .explorer>.painter-paintings .all-artwork-image{height:min(68vw,260px)}
   .artist-section-links a,.biography-toggle,.artwork-details details>summary,.influence-column details>summary{min-height:44px}
   .artist-section-links a{display:inline-flex;align-items:center}
   .painter-dialog .dialog-toolbar{min-height:64px;padding:10px 16px;gap:8px}

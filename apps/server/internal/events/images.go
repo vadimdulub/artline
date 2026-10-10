@@ -39,7 +39,7 @@ func readImageSelection(raw []byte) map[string]imageSelection {
 	}
 	result := make(map[string]imageSelection, len(rows))
 	for _, row := range rows {
-		path := regexp.MustCompile(`^/images/events/selected-[0-9]{8}/` + regexp.QuoteMeta(row.EventID) + `\.jpg$`)
+		path := regexp.MustCompile(`^/images/events/selected-[0-9]{8}(?:-[a-z0-9-]+)?/` + regexp.QuoteMeta(row.EventID) + `\.jpg$`)
 		if !regexp.MustCompile(`^[a-z0-9-]+$`).MatchString(row.EventID) || !regexp.MustCompile(`^(Q[1-9][0-9]*|artline-[a-z0-9-]+)$`).MatchString(row.SourceID) || !path.MatchString(row.ImageURL) || row.Label == "" || row.Credit == "" || row.CheckedAt == "" || !reviewedImageLicense(row.License, row.LicenseURL) || !strings.HasPrefix(row.SourceURL, "https://commons.wikimedia.org/wiki/File:") {
 			panic("incomplete or unsafe event illustration: " + row.EventID)
 		}

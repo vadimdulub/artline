@@ -11,6 +11,8 @@ for w in rows:
  if w.get('verified_artist_id') and w.get('year_end') and w['year_end']<=1955 and w['date_decision'].startswith('within_cutoff') and not w.get('image_license_url') and 'print' not in w['source_type'].lower():groups[w['verified_artist_id']].append(w)
 with m.connect() as db:
  profiles={x['entity_id']:x['canonical_url'] for x in db.execute("SELECT entity_id::text,canonical_url FROM external_identifiers WHERE entity_type='artist' AND scheme='wikiart-artist' AND entity_id=ANY(%s::uuid[])",(list(groups),))}
+for a in m.load(folder/'artists-plan.json.gz')['matches']:
+ if a.get('country_evidence'):profiles.setdefault(a['artist_id'],a['country_evidence']['url'])
 out={};held=[]
 for n,(aid,works) in enumerate(groups.items(),1):
  u=profiles.get(aid)
@@ -38,7 +40,7 @@ for n,(aid,works) in enumerate(groups.items(),1):
    if m.norm(md['title']) not in titles or (lo,hi)!=(w['year_start'],w['year_end']) or md['artistUrl'].rstrip('/')!=u.split('wikiart.org')[-1].rstrip('/'):continue
    location_node=sp2.find(string=re.compile(r'^\s*Location:\s*$'))
    location=location_node.parent.parent.get_text(' ',strip=True) if location_node else None
-   expected={'McMichael Canadian Art Collection':['mcmichael'],'National Gallery of Canada':['national gallery of canada'],'Montreal Museum of Fine Arts':['montreal museum','beaux-arts de montr'],'Kunsthaus Zürich':['kunsthaus zurich','kunsthaus zürich'],'Kunstmuseum Basel':['kunstmuseum basel'],'Cantonal Museum of Fine Arts':['cantonal','lausanne'],'Kunstmuseum Winterthur, Winterthur, Switzerland':['winterthur']}.get(w['museum'],[])
+   expected={'Royal Museum of Fine Arts Antwerp':['antwerp','antwerpen'],'Museum of Fine Arts Ghent (MSK)':['ghent','gent'],'Groeningemuseum — Musea Brugge':['groeninge','bruges','brugge'],'Mu.ZEE, Art Museum by the Sea':['mu.zee','ostend'],'Royal Museums of Fine Arts of Belgium, Brussels, Belgium':['brussels','beaux-arts de belgique'],'La Boverie — Museum of Fine Arts of Liège':['liege','liège','boverie'],'Latvian National Museum of Art, Riga, Latvia':['latvian','riga'],'Art Museum Riga Bourse':['riga','latvian'],'Romans Suta and Aleksandra Beļcova Museum':['suta','belcova','beļcova'],'National Museum of Modern Art, Zagreb':['modern gallery','zagreb'],'Museum of Modern Art Dubrovnik':['dubrovnik'],'Museum of Fine Arts, Split':['split'],'Museum of Fine Arts, Osijek':['osijek']}.get(w['museum'],[])
    if location and expected and not any(t in location.lower() for t in expected):held.append(dict(key=w['provider']+'/'+w['source_id'],reason='WikiArt explicit holding differs',location=location,url=rc2['final_url']));continue
    img=sp2.select_one('img[itemprop=image]');copyright=sp2.select_one('.copyright-wrapper .copyright')
    if not img:continue

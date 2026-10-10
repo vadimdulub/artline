@@ -12,6 +12,7 @@ import hashlib
 import html
 import importlib.util
 import json
+import os
 from pathlib import Path
 import re
 import time
@@ -56,7 +57,9 @@ def save(path, value, immutable=True):
     if path.exists() and immutable:
         assert path.read_bytes() == raw, ('existing immutable evidence', str(path))
     else:
-        path.write_bytes(raw)
+        temporary = path.with_name(path.name + f'.{os.getpid()}.tmp')
+        temporary.write_bytes(raw)
+        temporary.replace(path)
 
 
 def load(path):
@@ -65,7 +68,18 @@ def load(path):
 
 
 def plain(value):
-    return ' '.join(html.unescape(re.sub('<[^>]*>', ' ', str(value))).split())
+    value = re.sub(r'<(?:style|script)\b[^>]*>.*?</(?:style|script)\s*>', ' ', str(value), flags=re.I | re.S)
+    return ' '.join(html.unescape(re.sub('<[^>]*>', ' ', value)).split())
+
+
+def artist_credit(value):
+    if 'messagebox' in str(value) or '<style' in str(value):
+        from bs4 import BeautifulSoup
+        parsed = BeautifulSoup(str(value), 'html.parser')
+        for element in parsed.select('style, script, .messagebox, .licensetpl_wrapper, .licensetpl'):
+            element.decompose()
+        return plain(str(parsed))
+    return plain(value)
 
 
 def image_core():
@@ -185,17 +199,25 @@ def capture(params, host='commons.wikimedia.org'):
     hold = RUN / 'access-holds' / (host + '.json')
     if hold.exists():
         raise RuntimeError('Provider held: ' + host)
-    image_core().provider_rate_slot(host)
-    response = SESSION.get(url, timeout=(15, 65))
-    if response.status_code in [401, 403, 429]:
-        save(hold, {'url': url, 'status': response.status_code, 'at': now(), 'retryAfter': response.headers.get('Retry-After')})
-        if response.status_code == 429:
-            image_core().provider_rate_slot(host, cooldown=image_core().retry_delay(response.headers.get('Retry-After')))
-    response.raise_for_status()
-    assert len(response.content) < 20_000_000
-    data = response.json()
-    if data.get('error'):
-        raise RuntimeError(str(data['error']))
+    for attempt in range(5):
+        image_core().provider_rate_slot(host)
+        response = SESSION.get(url, timeout=(15, 65))
+        if response.status_code in [401, 403, 429]:
+            save(hold, {'url': url, 'status': response.status_code, 'at': now(), 'retryAfter': response.headers.get('Retry-After')})
+            if response.status_code == 429:
+                image_core().provider_rate_slot(host, cooldown=image_core().retry_delay(response.headers.get('Retry-After')))
+        response.raise_for_status()
+        assert len(response.content) < 20_000_000
+        data = response.json()
+        error = data.get('error')
+        if error and error.get('code') == 'maxlag' and attempt < 4:
+            delay = max(30, min(60, image_core().retry_delay(response.headers.get('Retry-After'))))
+            print('Provider database lag; respectful retry', host, attempt + 1, 'in', delay, 'seconds', flush=True)
+            time.sleep(delay)
+            continue
+        if error:
+            raise RuntimeError(str(error))
+        break
     raw = gzip.compress(response.content, mtime=0)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(raw)
@@ -226,8 +248,8 @@ def metadata():
     if path.exists():
         pages.update(load(path))
     missing = sorted(needed - pages.keys())
-    for offset in range(0, len(missing), 12):
-        batch = missing[offset:offset + 12]
+    for offset in range(0, len(missing), 20):
+        batch = missing[offset:offset + 20]
         try:
             data, proof = capture({'action': 'query', 'titles': '|'.join('File:' + f for f in batch), 'redirects': 1,
                 'prop': 'imageinfo', 'iiprop': 'url|size|mime|extmetadata|sha1', 'iiextmetadatalanguage': 'en', 'iiurlwidth': 640})
@@ -299,7 +321,7 @@ def articles():
 
 def all_candidates():
     result = load(RUN / 'candidates.json.gz')
-    for extra in ['article-candidates.json.gz', 'manual-candidates.json.gz', 'author-candidates.json.gz']:
+    for extra in ['article-candidates.json.gz', 'manual-candidates.json.gz', 'author-candidates.json.gz', 'next-article-candidates.json.gz', 'custom-event-candidates.json.gz']:
         if (RUN / extra).exists():
             result += load(RUN / extra)
     return result
@@ -352,20 +374,40 @@ def source_review(row, entry):
     if not meta:
         return None, 'source-metadata-unavailable'
     cats, origin = val('Categories'), val('Credit')
-    if val('Restrictions') or re.search(r'disputed copyright|copyright violations?|deletion requests?|missing permission|no permission|possibly unfree|fair use|de minimis|freedom of panorama|unfree|permission pending|license review needed|license review failed', cats, re.I):
+    if re.search(r'child sexual abuse|erotic activities involving children|sexual exploitation of children', cats, re.I):
+        return None, 'excluded-sexual-content-involving-minors'
+    if re.search(r'AI-generated|AI generated|generated by (?:an? )?(?:AI|neural network)|created by (?:an? )?neural network|Stable Diffusion|Midjourney', cats + ' ' + val('ImageDescription'), re.I):
+        return None, 'synthetic-image-needs-explicit-context-review'
+    if val('Restrictions') or re.search(r'disputed copyright|copyright violations?|copyright claims|deletion requests?|missing permission|no permission|possibly unfree|fair use|de minimis|freedom of panorama|unfree|permission pending|license review needed|license review failed', cats, re.I):
         return None, 'rights-warning-or-restriction'
-    if not origin or origin.lower() in ['unknown', 'unknown source']:
+    if not origin or re.fullmatch(r'(?:unknown(?: source)?\s*)+', origin, re.I):
         return None, 'reproduction-origin-not-established'
     origin_raw = str(meta.get('Credit', {}).get('value', ''))
+    if not re.search(r'href\s*=', origin_raw, re.I) and re.fullmatch(r'(?:public domain|internet|google)[.\s]*', origin, re.I):
+        return None, 'reproduction-origin-not-established'
     if re.search(r'gallica|bnf\.fr|Biblioth[eè]que nationale de France', origin_raw, re.I):
         return None, 'bnf-commercial-reuse-needs-clearance'
-    if re.search(r'Biblioteca (?:Nazionale|Medicea|Angelica|Casanatense|Braidense)|beniculturali\.it|cultura\.gov\.it|museogalileo|gutenberg\.beic\.it', origin_raw, re.I):
+    custodian_evidence = origin_raw + ' ' + val('ImageDescription') + ' ' + cats
+    if re.search(r'Biblioteca (?:Nazionale|Medicea|Angelica|Casanatense|Braidense)|Library Medicea Laurentiana|Laurentian(?: Medici)? Library|Museo (?:archeologico nazionale|Nazionale del Risorgimento|del Risorgimento \(Milan\))|Palazzo Vecchio|Palazzo Pubblico \(Siena\)|Musei Capitolini|Palazzo Altemps|beniculturali\.it|cultura\.gov\.it|museogalileo|gutenberg\.beic\.it', custodian_evidence, re.I):
         return None, 'italian-custodian-permission-needs-review'
     if re.search(r'non[ -]?commercial|personal use only|study only', origin, re.I):
         return None, 'source-use-needs-review'
     license_name, license_url = val('LicenseShortName'), val('LicenseUrl')
+    agency_evidence = origin + ' ' + val('Artist') + ' ' + val('ImageDescription')
+    if license_name != 'Public domain' and not re.search(r'VRTS permission confirmed|OTRS permission', cats, re.I) and re.search(r'Getty Images|Agence France.Presse|\bReuters\b|\bEPA[ -]+(?:ELTA|EFE|PHOTO)', agency_evidence, re.I):
+        return None, 'agency-image-permission-not-established'
     if license_name == 'Public domain':
         license_url = 'https://creativecommons.org/publicdomain/mark/1.0/'
+        us_formality = re.search(r'PD[ -]US[^|]*(?:no notice|defective notice|not renewed|only)', cats, re.I)
+        other_term = re.search(r'PD[ -]old(?! missing)|PD-anon-expired|PD-(?:South-Africa|SouthAfrica|UK|Canada|Australia|Russia|Germany|France)|PD US Government', cats, re.I)
+        if us_formality and not other_term:
+            return None, 'public-domain-only-us-needs-territorial-review'
+        if re.search(r'PD Italy \(20 years after creation\)', cats) and not re.search(r'PD-1996|PD-old-(?:[7-9]\d|\d{3}|auto)|Author died more than (?:70|100) years', cats, re.I):
+            return None, 'italian-20-year-photo-term-needs-territorial-review'
+        if re.search(r'PD-old-[0-6]\d(?:-|\b)', cats) and not re.search(r'PD-old-(?:[7-9]\d|\d{3})(?:-|\b)', cats):
+            return None, 'creator-term-under-70-years-needs-territorial-review'
+        if re.search(r'author died less than (?:50|70) years ago', cats, re.I):
+            return None, 'creator-term-under-70-years-needs-territorial-review'
     elif license_name == 'CC0':
         license_url = 'https://creativecommons.org/publicdomain/zero/1.0/'
     elif not re.fullmatch(r'CC BY(?:-SA)? (?:[1-4]\.0|2\.5)(?: [a-z]{2,3})?', license_name):
@@ -373,7 +415,7 @@ def source_review(row, entry):
     license_url = license_url.replace('http://', 'https://', 1)
     if not license_url.startswith('https://creativecommons.org/'):
         return None, 'missing-license-link'
-    credit = val('Attribution') or val('Artist')
+    credit = val('Attribution') or artist_credit(meta.get('Artist', {}).get('value', ''))
     if not credit or re.fullmatch(r'(?:unknown(?: author| illustrator)?\s*)+', credit, re.I):
         if license_name == 'Public domain' and val('AttributionRequired').lower() == 'false':
             credit = 'Creator not identified in the source'
@@ -381,7 +423,7 @@ def source_review(row, entry):
             return None, 'credit-needs-review'
     if row['category'] == 'books' and row.get('property') != 'author-portrait':
         text_design = re.search(r'PD[ -](?:text(?:logo)?|ineligible)(?:[ |(]|$)', cats, re.I)
-        old_design = re.search(r'PD[ -]Old(?:[ |(]|$)|PD-old-(?:[7-9]\d|\d{3}|auto)|Author died more than 100 years|PD-anon-expired', cats, re.I)
+        old_design = re.search(r'PD[ -]Old(?! missing)(?:[ |(]|$)|PD-old-(?:[7-9]\d|\d{3}|auto)|Author died more than (?:70|100) years|PD-anon-expired', cats, re.I)
         date_years = [int(y) for y in re.findall(r'(?<!\d)(1\d{3}|20\d{2})(?!\d)', val('DateTimeOriginal').split('date QS:', 1)[0])]
         old_publication = bool(date_years and max(date_years) <= 1930)
         expired = bool(re.search(r'PD-old-(?:[7-9]\d|\d{3}|auto)-expired|PD-anon-expired|PD US expired', cats))
@@ -472,7 +514,7 @@ def propose():
             else:
                 label = 'Associated image'
         else:
-            label = 'Map' if re.search(r'\bmap|\bcarte|\bkart|地図|地圖|карта', text, re.I) else 'Associated image'
+            label = 'Map' if re.search(r'\b(?:maps?|cartes?|karten?)\b|地図|地圖|\bкарта\b', text, re.I) else 'Associated image'
             if label != 'Map' and re.search(r'photograph|photo\b|фотограф', text, re.I):
                 label = 'Photograph'
         source_title = re.sub(r'\.(?:jpe?g|png|gif|svg|tiff?|pdf|djvu|webp)$', '', best['file'], flags=re.I).replace('_', ' ')

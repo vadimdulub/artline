@@ -26,7 +26,7 @@ def configure():
 
 def refs():
     found=defaultdict(lambda:defaultdict(list))
-    patterns={'smk':r'/artwork/image/([^/?#]+)','fng':r'/object/(\d+)','mia':r'/art/(\d+)','moma':r'/collection/works/(\d+)','walters':r'/(?:art|object)/([\d.]+[A-Z]?)','cleveland':r'/art/([\d.]+[a-zA-Z]?)'}
+    patterns={'smk':r'/artwork/image/([^?#]+)','fng':r'/object/(\d+)','mia':r'/art/(\d+)','moma':r'/collection/works/(\d+)','walters':r'/(?:art|object)/([\d.]+[A-Z]?)','cleveland':r'/art/([\d.]+[a-zA-Z]?)'}
     ledger=[]
     for r in m.resources():
         p=r['provider_id'];parts=urlsplit(r['url']);match=re.search(patterns.get(p,r'(?!)'),unquote(parts.path))
@@ -149,7 +149,7 @@ def fng(targets):
 
 
 def run(providers):
-    configure();rr,ledger=refs();m.save(RUN/'native-resource-resolution-v2.json.gz',ledger)
+    configure();rr,ledger=refs();m.save(RUN/'native-resource-resolution-v3.json.gz',ledger)
     print('Selected native objects',dict((k,len(v)) for k,v in rr.items()),flush=True)
     with ThreadPoolExecutor(max_workers=4) as pool:
         fs={pool.submit(smk if p=='smk' else fng if p=='fng' else lambda rows,p=p:individual(p,rows),rr[p]):p for p in providers}

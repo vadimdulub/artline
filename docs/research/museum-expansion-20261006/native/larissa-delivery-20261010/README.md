@@ -1,0 +1,21 @@
+# Larissa — selected collection delivery, 10 October 2026
+
+Added **184 production review artworks**, linked **three existing artworks** to documented Larissa holdings, and attached **205 authentic images**. The Municipal Art Gallery of Larissa – G. I. Katsigras Museum now has **205 catalogue artworks**, up from 18; **193** have numeric creation dates within the cutoff, up from 15. **194** artworks have primary images. The real local catalogue remains unchanged.
+
+- [187 added or linked works](delivered-production-artworks-001.csv)
+- [Verification checks](checks-001.json)
+- [Public delivery verification](public-delivery-001.json)
+- [Source and identity review](editorial-reviewed-001.json.gz)
+- [Delivery record](delivery-001.json)
+
+The three reconciled existing works are Maleas's *Lavrio Landscape*, Triantafyllidis's *Girl with turkeys*, and Moralis's *Nude Standing*. Their catalogue titles, dates, creator links and publication states were preserved. The last two retain unknown catalogue dates; the museum's dated evidence is recorded separately. Seven new records retain unknown numeric dates or explicit source conflicts. New records retain their literal creator labels, including unresolved L.C. initials. No artist-authority links or current-display claims were invented.
+
+The 1946 Kanas lithograph album counts once, with twelve source plates and image views. Separate print impressions and illustrated manuscript versions were checked using dedications, handwriting, dimensions and full frames. In particular, the Giallinas Gastouri watercolours, Galanis boy-on-horse impressions, and Vassiliou funeral-feast manuscripts remain distinct physical works. The selected new types are 120 paintings, eight drawings, 39 prints and 17 watercolours, supported by source categories and techniques.
+
+The images comprise **181 new primary attachments and 24 alternate views**. All **13 existing primary images** remain unchanged. Full frames and watermarks are retained; every delivered JPEG is at most 100,000 bytes. Actual CC BY-NC 4.0 source labels and credits remain separate from the user's Greek-art source authorization. Five new works remain unillustrated because of missing source images or physical-date uncertainty. All 205 explicitly observed HTTPS SearchCulture image URLs returned bytes identical to captured native originals, satisfying the evidence schema without fabricating a secure native URL.
+
+Successful Cloud SQL backup **1791639050008** preceded the atomic transaction. Nineteen offline tests passed, including the album identifier regression. The first transaction rolled back on the one-identifier-per-source constraint; the corrected plan uses one canonical album identifier while preserving all twelve plate references in metadata and image evidence. Readback proved no records or audits were committed by the failed attempt. Live preflight, atomic verification, independent readback and a zero-write replay passed, protecting 71 existing comparison records and 1,026 previous campaign artworks. Public delivery checks fetched all 205 image files and verified exact SHA-256 matches; four public artwork API samples confirmed review records and documented holdings. The plan SHA-256 is `950bc19931f2583ebf5f9a29b17ead319f6d009c4ed959b1e7f4a3950798b07b`. Use the reconciled-v2 apply adapter and PLAN002, which records eight unrelated image additions observed between comparison review and preflight; the original pinned writer remains unchanged.
+
+The two undated existing works returned 200 through their public artist routes. They remain outside the numerically dated atlas; its initial 404 was an expected date-scope result. No dates or visibility rules were changed. A concurrent ingestion briefly delayed the zero-write replay; the other operation was left untouched and the replay subsequently passed.
+
+The selected production campaign now totals **1,209 new artworks and four existing-work links across eight museums**, with 1,213 protected artwork IDs. Only Larissa's register row was refreshed; the remaining 231-row priority subset is not a fresh global census. Historical local totals stay separate. **596 reviewed candidates** remain pending live reconciliation: Chania 174, Zongolopoulos 199, Theocharakis 197 and Kilkis 26. The every-museum goal remains active and incomplete.

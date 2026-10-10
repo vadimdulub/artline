@@ -130,8 +130,94 @@ def matches():
     p.save(RUN / 'holds.json.gz', held, immutable=False)
 
 
+def rights():
+    matches = p.load(RUN / 'matches.json.gz')
+    artists = {}
+    for row in matches:
+        if row['coverArtistUrl'] and row['coverArtistUrl'].startswith('https://en.wikipedia.org/wiki/'):
+            title = urllib.parse.unquote(row['coverArtistUrl'].split('/wiki/', 1)[1]).replace('_', ' ')
+            artists[title] = row['coverArtist']
+    authorities = {}
+    titles = sorted(artists)
+    for offset in range(0, len(titles), 30):
+        batch = titles[offset:offset + 30]
+        data, proof = p.capture({'action': 'wbgetentities', 'sites': 'enwiki', 'titles': '|'.join(batch),
+            'props': 'info|labels|claims|sitelinks', 'languages': 'en', 'sitefilter': 'enwiki', 'redirects': 'yes'}, host='www.wikidata.org')
+        for qid, e in data.get('entities', {}).items():
+            if not isinstance(e, dict):
+                continue
+            title = e.get('sitelinks', {}).get('enwiki', {}).get('title')
+            dates = []
+            for claim in e.get('claims', {}).get('P570', []):
+                v = claim.get('mainsnak', {}).get('datavalue', {}).get('value')
+                if claim.get('rank') != 'deprecated' and isinstance(v, dict) and v.get('precision', 0) >= 9:
+                    dates.append(int(v['time'][:5]))
+            if title:
+                authorities[title] = {'qid': qid, 'label': e.get('labels', {}).get('en', {}).get('value'),
+                    'deathYears': dates, 'evidence': proof, 'revision': e.get('lastrevid')}
+    p.save(RUN / 'cover-artists.json', authorities, immutable=False)
+    selected, held = [], []
+    for row in matches:
+        title = urllib.parse.unquote((row['coverArtistUrl'] or '').split('/wiki/')[-1]).replace('_', ' ')
+        authority = authorities.get(title)
+        if not authority or not authority['deathYears'] or max(authority['deathYears']) > 1955:
+            held.append(row | {'artistAuthority': authority, 'decision': 'underlying-artwork-term-not-established'})
+            continue
+        selected.append(row | {'artistAuthority': authority, 'decision': 'eligible-for-cover-visual-review',
+            'rightsBasis': 'Publisher dedicates its cover design to CC0 and declares the source artwork public domain in the US. Matched cover-artist authority records death no later than 1955, beyond life plus 70 completed calendar years in 2026. This is a cover-image review, not a licence for the book text or translation.'})
+    p.save(RUN / 'rights-selected.json.gz', selected, immutable=False)
+    p.save(RUN / 'rights-held.json.gz', held, immutable=False)
+    print('Publisher covers eligible', len(selected), 'held', len(held), flush=True)
+
+
+def artworks():
+    """Verify the publisher's exact artwork-to-edition provenance metadata."""
+    matched, qualified, held = [], [], []
+    for index, row in enumerate(p.load(RUN / 'matches.json.gz')):
+        url = 'https://standardebooks.org/artworks?' + urllib.parse.urlencode({'query': row['edition']['title'], 'status': 'approved_in_use', 'per-page': 80})
+        raw, search_proof = get(url)
+        soup = BeautifulSoup(raw, 'html.parser')
+        links = list(dict.fromkeys(a['href'] for a in soup.select('.artwork-list a[href]')))
+        found = []
+        for link in links[:20]:
+            raw, proof = get(urllib.parse.urljoin(url, link))
+            art = BeautifulSoup(raw, 'html.parser').select_one('main')
+            editions = [urllib.parse.urljoin(url, a['href']) for a in art.select('a[href^="/ebooks/"]')]
+            if row['edition']['url'] not in editions:
+                continue
+            fields = {dt.get_text(' ', strip=True).rstrip(':'): dt.find_next_sibling('dd').get_text(' ', strip=True) for dt in art.select('dt')}
+            external = [a['href'] for a in art.select('a[href^="https://"]')]
+            text = art.get_text(' ', strip=True)
+            death = re.search(r'\bd\.\s*(\d{4})', fields.get('Artist', ''))
+            finding = {'editionUrl': row['edition']['url'], 'artworkUrl': proof['url'], 'metadata': fields,
+                'externalSources': external, 'evidence': proof, 'searchEvidence': search_proof,
+                'artistDeathYear': int(death[1]) if death else None, 'text': text}
+            found.append(finding)
+        if len(found) != 1:
+            held.append(row | {'decision': 'publisher-artwork-link-not-unique', 'artworkMatches': found})
+        else:
+            evidence = found[0]
+            matched.append({'id': row['id']} | evidence)
+            terms = evidence['text'] + ' ' + ' '.join(evidence['externalSources'])
+            if not evidence['artistDeathYear'] or evidence['artistDeathYear'] > 1955:
+                decision = 'underlying-artwork-term-not-established'
+            elif re.search(r'gallica|bnf\.fr|Biblioth[eè]que nationale de France|beniculturali|cultura\.gov\.it|uffizi|borghese|museo archeologico nazionale|gallerieaccademia|pinacotecabrera', terms, re.I):
+                decision = 'custodian-commercial-permission-needs-review'
+            elif not evidence['externalSources'] or 'U.S. public domain proof' not in evidence['text']:
+                decision = 'publisher-artwork-proof-needs-review'
+            else:
+                decision = 'eligible-for-cover-visual-review'
+            result = row | {'artworkEvidence': evidence, 'decision': decision,
+                'rightsBasis': 'Exact publisher artwork page links this edition, documents the underlying source and US public-domain proof, and gives the artist’s death no later than 1955. The publisher dedicates its new cover design to CC0. No book text or translation is being licensed.'}
+            (qualified if decision == 'eligible-for-cover-visual-review' else held).append(result)
+        p.save(RUN / 'artwork-matches.json.gz', matched, immutable=False)
+        p.save(RUN / 'publisher-qualified.json.gz', qualified, immutable=False)
+        p.save(RUN / 'publisher-held.json.gz', held, immutable=False)
+        print('Publisher provenance', index + 1, 'qualified', len(qualified), 'held', len(held), flush=True)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('phase', choices=['catalogue', 'matches'])
+    parser.add_argument('phase', choices=['catalogue', 'matches', 'rights', 'artworks'])
     args = parser.parse_args()
     globals()[args.phase]()
