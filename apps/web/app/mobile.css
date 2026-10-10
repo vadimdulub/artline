@@ -11,7 +11,7 @@
 .mobile-navigation nav a:hover{background:var(--stone)}
 .mobile-navigation nav a[aria-current]{background:var(--ink);color:var(--paper)}
 .mobile-navigation nav svg{width:22px;height:22px;flex-shrink:0}
-.mobile-navigation nav a:nth-child(3),.mobile-navigation nav a:nth-child(5){border-top:1px solid var(--line);margin-top:8px;border-top-left-radius:0;border-top-right-radius:0}
+.mobile-navigation nav a[href="/bookmarks"],.mobile-navigation nav a[href="/art-history-timeline"]{border-top:1px solid var(--line);margin-top:8px;border-top-left-radius:0;border-top-right-radius:0}
 
 @media(max-width:760px){
   :root{--site-header-height:108px;--page-gutter:16px;--page:calc(100% - 32px)}
