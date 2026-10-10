@@ -10,7 +10,6 @@ const links = [
   { href: "/artists", label: "Artists", icon: "artists" },
   { href: "/artworks", label: "Artworks", icon: "artworks" },
   { href: "/museums", label: "Museums", icon: "museum" },
-  { href: "/bookmarks", label: "Bookmarks", icon: "star" },
   { href: "/account", label: "Your account", icon: "user" },
   { href: "/art-history-timeline", label: "Art history guide", icon: "guide" },
   { href: "/about", label: "About & sources", icon: "about" },

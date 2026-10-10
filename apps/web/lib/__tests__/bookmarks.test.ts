@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
-import { BookmarkClient, type BookmarkRef } from "../bookmarks";
+import { BookmarkClient, validBookmarkRef, type BookmarkRef } from "../bookmarks";
 const upstream = vi.fn();
 const ref = (n: number): BookmarkRef => ({ kind: n % 2 ? "artist" : "artwork", id: `11111111-1111-4111-8111-${String(n).padStart(12, "0")}` });
 beforeEach(() => { vi.stubGlobal("fetch", upstream); upstream.mockReset(); });
@@ -80,4 +80,20 @@ it("refreshes visible saved states after another tab changes them", async () => 
   expect(client.get(ref(1))).toMatchObject({ saved: false, busy: false });
   expect(client.getRevision()).toBe(1);
   unsubscribe(); client.dispose();
+});
+
+it.each(["book", "event"] as const)("saves and restores %s states alongside artwork states", async kind => {
+  const reference = { kind, id: "record-q123" };
+  expect(validBookmarkRef(reference)).toBe(true);
+  expect(validBookmarkRef({ kind, id: "../account" })).toBe(false);
+  expect(validBookmarkRef({ kind, id: "x".repeat(161) })).toBe(false);
+  expect(validBookmarkRef({ kind: "artist", id: reference.id })).toBe(false);
+  upstream.mockResolvedValueOnce(Response.json({ saved: [reference] })).mockResolvedValueOnce(Response.json({ saved: false }));
+  const client = new BookmarkClient("member");
+  await client.toggle(reference);
+  expect(upstream.mock.calls[0][0]).toBe(`/api/bookmarks/state?${kind}=record-q123`);
+  expect(upstream.mock.calls[1][0]).toBe(`/api/bookmarks/${kind}/record-q123`);
+  expect(upstream.mock.calls[1][1].method).toBe("DELETE");
+  expect(client.get(reference)).toMatchObject({ saved: false, ready: true });
+  client.dispose();
 });

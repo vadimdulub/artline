@@ -76,9 +76,15 @@ func reviewedImageLicense(label, link string) bool {
 }
 
 func attachImage(event *Event) {
-	event.Image = nil
-	if selected, ok := selectedImages[event.ID]; ok && selected.SourceID == event.SourceID {
+	event.Image = SelectedImage(event.ID, event.SourceID)
+}
+
+// SelectedImage returns a copy of a reviewed illustration for an already
+// visible event. Both identities must match the selection manifest.
+func SelectedImage(id, sourceID string) *Image {
+	if selected, ok := selectedImages[id]; ok && selected.SourceID == sourceID {
 		image := selected.Image
-		event.Image = &image
+		return &image
 	}
+	return nil
 }

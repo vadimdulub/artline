@@ -1,16 +1,26 @@
-.bookmark-control{display:inline-flex;align-items:center;gap:8px;position:relative;vertical-align:middle}
-.bookmark-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:8px 12px;border:1px solid var(--line);border-radius:4px;background:var(--white);color:var(--ink);font:500 13px var(--sans);cursor:pointer}
-.bookmark-button:hover{background:var(--stone)}
-.bookmark-button[aria-pressed=true]{color:var(--oxblood);border-color:currentColor}
+.bookmark-control{display:inline-flex;align-items:center;flex-shrink:0;position:relative;vertical-align:middle;color:var(--ink)}
+.bookmark-control .bookmark-button{display:inline-flex;align-items:center;justify-content:center;position:relative;width:44px;height:44px;min-height:44px;min-width:44px;padding:0;border:0;border-radius:50%;background:transparent;color:inherit;cursor:pointer;touch-action:manipulation}
+.bookmark-button::before{content:"";position:absolute;inset:10px;border-radius:50%;background:transparent;transition:background .15s}
+.bookmark-button svg{position:relative;flex-shrink:0}
+.bookmark-button:hover::before{background:var(--stone)}
+.bookmark-control .bookmark-button[aria-pressed=true]{color:var(--oxblood)}
 .bookmark-button:disabled{cursor:wait;opacity:.65}
-.bookmark-button:focus-visible,.bookmark-tabs button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.bookmark-control.is-compact .bookmark-button{padding:8px}
+.bookmark-button:focus-visible,.bookmark-tabs button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 .bookmark-error{position:absolute;top:100%;right:0;z-index:5;width:min(260px,65vw);padding:12px;background:var(--white);border:1px solid var(--line);color:var(--oxblood);font:13px/1.5 var(--sans);box-shadow:0 4px 18px #0002}
-.site-header .bookmarks-shortcut{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:#f6f3eb}
-.bookmarks-shortcut svg{width:22px;height:22px}
-.bookmark-record-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:12px 0}
+.bookmark-title{display:flex;align-items:center;gap:4px;min-width:0;margin-block:12px}
+/* Keep heading margins outside the alignment row, so the star centers on text. */
+.bookmark-title>:is(h1,h2,h3){min-width:0;margin-block:0!important;overflow-wrap:anywhere}
+.artist-heading>.bookmark-title{margin-block:0 10px}
+.image-dialog-caption .bookmark-title{justify-content:center;margin-block:0}
+.image-dialog-caption .bookmark-control{color:var(--paper)}
+.image-dialog-caption .bookmark-button:hover::before{background:#343029}
+.image-dialog-caption .bookmark-button[aria-pressed=true]{color:#e3b387}
 .bookmark-grid-item{position:relative}
-.bookmark-grid-item>.bookmark-control{position:absolute;top:8px;right:8px;z-index:1}
+.bookmark-grid-item>.bookmark-control{position:absolute;top:4px;right:4px;z-index:1}
+.bookmark-grid-item>.bookmark-control .bookmark-button::before,.bookmark-card>.bookmark-control .bookmark-button::before{background:#f6f3ebed;box-shadow:0 1px 5px #0001}
+.bookmark-grid-item>.bookmark-control .bookmark-button:hover::before,.bookmark-card>.bookmark-control .bookmark-button:hover::before{background:var(--white)}
+.bookmark-index-item{display:flex;align-items:center;gap:8px}
+.bookmark-index-item>button{flex:1;min-width:0}
 .bookmarks-page{max-width:1280px;margin:0 auto;padding:clamp(24px,5vw,64px) clamp(16px,4vw,48px);min-height:70vh}
 .bookmarks-heading{max-width:700px;margin-bottom:28px}
 .bookmarks-heading h1{font:normal clamp(38px,6vw,64px)/1.1 var(--serif);margin:12px 0 20px}
@@ -21,13 +31,14 @@
 .bookmark-tabs button[aria-pressed=true]{background:var(--ink);color:var(--white);border-color:var(--ink)}
 .bookmark-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .bookmark-card{position:relative;border:1px solid var(--line);background:var(--white)}
-.bookmark-card-link{display:block;height:100%;text-decoration:none;color:inherit}
+.bookmark-card-link{display:block;text-decoration:none;color:inherit}
 .bookmark-image{height:220px;background:var(--stone);display:grid;place-items:center;overflow:hidden}
+.bookmark-image .library-image{height:100%;background:transparent}
 .bookmark-image img{width:100%;height:100%;object-fit:contain}
 .bookmark-card-copy{padding:24px;padding-right:58px}
 .bookmark-card h2{font:normal 26px/1.2 var(--serif);margin:12px 0;overflow-wrap:anywhere}
 .bookmark-card p{font-size:14px;color:var(--muted)}
-.bookmark-card>.bookmark-control{position:absolute;right:8px;top:8px}
+.bookmark-card>.bookmark-control{position:absolute;right:4px;top:4px}
 .bookmarks-empty{text-align:center;padding:64px 20px;border:1px dashed var(--line)}
 .bookmarks-empty>svg{width:36px;height:36px;color:var(--muted)}
 .bookmarks-empty h2{font:normal 30px/1.2 var(--serif)}
@@ -37,4 +48,15 @@
 @media(max-width:540px){.bookmark-grid{grid-template-columns:minmax(0,1fr)}.bookmarks-page{padding:28px 16px}.bookmarks-heading h1{font-size:40px}}
 
 .artist-bookmark-card>a{padding-right:62px!important}
+/* Directory stars align with the first title line, including wrapped names. */
+.artist-bookmark-card>.bookmark-control{top:calc(26px + clamp(27.6px,2.64vw,38.4px)/2 - 22px)}
+.artist-bookmark-card>.bookmark-control .bookmark-button::before{background:transparent;box-shadow:none}
+.artist-bookmark-card>.bookmark-control .bookmark-button:hover::before{background:var(--stone)}
+@media(max-width:620px){.artist-bookmark-card>.bookmark-control{top:calc(24px + clamp(27.6px,2.64vw,38.4px)/2 - 22px)}}
 .bookmark-grid-item>.work-card{width:100%;height:100%}
+
+.bookmark-image-credit{margin:0;padding:0 24px 20px;font-size:11px!important;line-height:1.5;overflow-wrap:anywhere}
+.bookmark-image-credit a{color:inherit;text-underline-offset:2px}
+
+.bookmark-work-row{display:flex;align-items:center;gap:4px;min-width:0}
+.bookmark-work-row>.work-card{flex:1;min-width:0}

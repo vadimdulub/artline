@@ -1,10 +1,11 @@
 import type { NextRequest } from "next/server";
 import { memberRequestHeaders } from "@/lib/session-cookies";
+import { validBookmarkRef } from "@/lib/bookmarks";
 export const dynamic = "force-dynamic";
 async function proxy(request: NextRequest, context: { params: Promise<{ path?: string[] }> }) {
   const { path = [] } = await context.params;
   const read = path.length === 0 || (path.length === 1 && path[0] === "state");
-  const write = path.length === 2 && ["artist", "artwork"].includes(path[0]) && /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(path[1]);
+  const write = path.length === 2 && validBookmarkRef({ kind: path[0], id: path[1].toLowerCase() });
   if (!read && !write) return new Response(null, { status: 404 });
   if (read ? request.method !== "GET" : !["PUT", "DELETE"].includes(request.method)) return new Response(null, { status: 405 });
   const target = new URL(`/api/v1/member/bookmarks${path.length ? `/${path.join("/")}` : ""}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");

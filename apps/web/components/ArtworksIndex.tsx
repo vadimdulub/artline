@@ -45,7 +45,7 @@ export function ArtworksIndex() {
         <button className={`${styles.workCard} ${recordStyles.card}`} aria-label={`Open ${work.title}`} aria-haspopup="dialog" onClick={() => updateQuery({ work: work.id }, true)}>
           {work.media_url && <span className={styles.workImage}><ArtworkImage work={work} /></span>}
           <span className={styles.workCopy}>{work.creator && <span className={styles.place}>{work.creator}</span>}<strong>{work.title}</strong>{artworkDate(work) && <span>{artworkDate(work)}</span>}{work.museum && <span>{work.museum.name}</span>}</span>
-        </button><BookmarkButton kind="artwork" id={work.id} title={work.title} compact />
+        </button><BookmarkButton kind="artwork" id={work.id} title={work.title} />
       </li>)}</ul> : <div className={styles.empty}><h3>No artworks match these filters</h3><button onClick={reset}>Show all artworks</button></div>}
     </section>
     {result.data && <CursorPager paging={paging} next={result.data.next_cursor} busy={result.loading} total={result.data.total} shown={result.data.items.length} label="Artwork pages" noun="artworks" />}

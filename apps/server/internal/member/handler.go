@@ -50,7 +50,7 @@ func memberReturnTo(value string) string {
 	path, _, _ := strings.Cut(value, "?")
 	path, _, _ = strings.Cut(path, "#")
 	switch path {
-	case "/", "/artists", "/artworks", "/all", "/bookmarks":
+	case "/", "/artists", "/artworks", "/all", "/bookmarks", "/books", "/events":
 		return value
 	}
 	match := painterRecordPath.FindStringSubmatch(path)

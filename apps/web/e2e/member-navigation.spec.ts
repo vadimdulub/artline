@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 // Member previews use the API's loopback-only debug session, with no database fixtures.
-test("Account opens Artists and keeps the panel across collection navigation", async ({ page, request }) => {
+test("Account opens account settings and keeps the panel across collection navigation", async ({ page, request }) => {
   expect((await (await request.get("/api/auth/session")).json()).local_debug).toBe(true);
   let sessionRequests = 0;
   page.on("request", req => { if (req.url().endsWith("/api/auth/session")) sessionRequests++; });
@@ -15,14 +15,14 @@ test("Account opens Artists and keeps the panel across collection navigation", a
   await expect(panel).toHaveCount(0);
   const initialRequests = sessionRequests;
   await account.click();
-  await expect(page).toHaveURL(/\/artists$/);
-  await expect(panel.getByRole("link", { name: "Artists", exact: true })).toHaveAttribute("aria-current", "page");
+  await expect(page).toHaveURL(/\/account$/);
+  await expect(panel.getByRole("link", { name: "Your account", exact: true })).toHaveAttribute("aria-current", "page");
   await panel.getByRole("link", { name: "Museums", exact: true }).click();
   await expect(page).toHaveURL(/\/museums$/);
   await expect(panel.getByRole("link", { name: "Museums", exact: true })).toHaveAttribute("aria-current", "page");
   await expect(panel.getByRole("link", { name: "Artists", exact: true })).toBeVisible();
   await account.click();
-  await expect(page).toHaveURL(/\/artists$/);
+  await expect(page).toHaveURL(/\/account$/);
   await panel.getByRole("button", { name: "Collapse account panel" }).click();
   await expect(panel).toHaveAttribute("data-collapsed", "true");
   await expect(panel.getByRole("navigation")).toBeVisible();
@@ -33,7 +33,7 @@ test("Account opens Artists and keeps the panel across collection navigation", a
   await expect(panel.getByRole("navigation")).toBeVisible();
   expect(sessionRequests).toBe(initialRequests);
   await header.getByRole("link", { name: "Your account", exact: true }).click();
-  await expect(page).toHaveURL(/\/artists$/);
+  await expect(page).toHaveURL(/\/account$/);
   expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);
 });
 
@@ -48,7 +48,7 @@ test("the account panel is absent from every public explorer tab", async ({ page
     await expect(panel).toHaveCount(0);
     await expect(page.locator("body")).toHaveCSS("padding-left", "0px");
     await header.getByRole("link", { name: "Account", exact: true }).click();
-    await expect(page).toHaveURL(/\/artists$/);
+    await expect(page).toHaveURL(/\/account$/);
     await expect(panel.getByRole("navigation")).toBeVisible();
     await expect(panel).toHaveAttribute("data-collapsed", "true");
   }

@@ -6,6 +6,8 @@ it.each([
   "/artists/claude-monet",
   "/museums",
   "/bookmarks?kind=artwork",
+  "/books?book=odyssey&start=-800&end=2000",
+  "/events?event=event-q123#details",
   "/all?itemType=artwork&item=11111111-1111-4111-8111-111111111111",
   "/museums/the-met?artist=monet&artist=giotto#collection",
   "/artists/artist_import?catalogue=all&art_q=Water+lilies&art_year=1900#works-painter",

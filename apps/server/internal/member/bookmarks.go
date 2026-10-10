@@ -12,6 +12,8 @@ import (
 )
 
 var bookmarkID = regexp.MustCompile(`^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$`)
+var bookmarkSlug = regexp.MustCompile(`^[a-z0-9]+(?:[-_][a-z0-9]+)*$`)
+var bookmarkKinds = []string{"artist", "artwork", "book", "event"}
 var ErrBookmarkMissing = errors.New("bookmark target not found")
 var ErrBookmarkLimit = errors.New("local bookmark limit reached")
 
@@ -21,13 +23,25 @@ type BookmarkRef struct {
 }
 type Bookmark struct {
 	BookmarkRef
-	Title        string    `json:"title"`
-	Subtitle     string    `json:"subtitle"`
-	Href         string    `json:"href"`
-	MediaURL     *string   `json:"media_url"`
-	AltText      *string   `json:"alt_text"`
-	RightsStatus *string   `json:"rights_status"`
-	SavedAt      time.Time `json:"saved_at"`
+	Title        string         `json:"title"`
+	Subtitle     string         `json:"subtitle"`
+	Href         string         `json:"href"`
+	MediaURL     *string        `json:"media_url"`
+	AltText      *string        `json:"alt_text"`
+	RightsStatus *string        `json:"rights_status"`
+	SavedAt      time.Time      `json:"saved_at"`
+	Image        *BookmarkImage `json:"image,omitempty"`
+}
+
+// Preserve the selected reproduction's own label and credit, separately from
+// artwork rights statuses and from the date of the book or historical event.
+type BookmarkImage struct {
+	ImageURL   string `json:"imageUrl"`
+	SourceURL  string `json:"sourceUrl"`
+	Label      string `json:"label"`
+	Credit     string `json:"credit"`
+	License    string `json:"license"`
+	LicenseURL string `json:"licenseUrl"`
 }
 type BookmarkCursor struct {
 	SavedAt time.Time `json:"t"`
@@ -46,14 +60,28 @@ type BookmarkStore interface {
 }
 
 func validBookmark(ref BookmarkRef) bool {
-	return (ref.Kind == "artist" || ref.Kind == "artwork") && bookmarkID.MatchString(ref.ID)
+	switch ref.Kind {
+	case "artist", "artwork":
+		return bookmarkID.MatchString(ref.ID)
+	case "book", "event":
+		return len(ref.ID) <= 160 && bookmarkSlug.MatchString(ref.ID)
+	}
+	return false
+}
+func validBookmarkKind(kind string) bool {
+	for _, candidate := range bookmarkKinds {
+		if kind == candidate {
+			return true
+		}
+	}
+	return false
 }
 
 func (h *Handler) RegisterBookmarks(mux *http.ServeMux, store BookmarkStore) {
 	mux.HandleFunc("GET /api/v1/member/bookmarks", h.memberOnly(func(w http.ResponseWriter, r *http.Request, user User) {
 		kind := r.URL.Query().Get("kind")
-		if kind != "" && kind != "artist" && kind != "artwork" {
-			accessError(w, 400, "INVALID_FILTER", "Choose artists, artworks, or all bookmarks.")
+		if kind != "" && !validBookmarkKind(kind) {
+			accessError(w, 400, "INVALID_FILTER", "Choose artists, artworks, books, events, or all bookmarks.")
 			return
 		}
 		cursor := BookmarkCursor{}
@@ -87,7 +115,7 @@ func (h *Handler) RegisterBookmarks(mux *http.ServeMux, store BookmarkStore) {
 	}))
 	mux.HandleFunc("GET /api/v1/member/bookmarks/state", h.memberOnly(func(w http.ResponseWriter, r *http.Request, user User) {
 		refs := []BookmarkRef{}
-		for _, kind := range []string{"artist", "artwork"} {
+		for _, kind := range bookmarkKinds {
 			for _, id := range r.URL.Query()[kind] {
 				ref := BookmarkRef{kind, strings.ToLower(id)}
 				if !validBookmark(ref) {

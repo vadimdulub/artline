@@ -7,6 +7,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/vadimdulub/artline/apps/server/internal/books"
+	"github.com/vadimdulub/artline/apps/server/internal/events"
+
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
@@ -17,40 +20,72 @@ type PostgresBookmarks struct{ DB *pgxpool.Pool }
 // is enriched; no global artwork collection, count, or offset scan is needed.
 const bookmarkPageSQL = `WITH picked AS MATERIALIZED (
  SELECT * FROM (
-  (SELECT 'artist'::text AS kind,b.artist_id AS id,b.created_at AS saved_at
+  (SELECT 'artist'::text AS kind,b.artist_id::text AS id,b.created_at AS saved_at
    FROM member_artist_bookmarks b JOIN artists a ON a.id=b.artist_id
    WHERE b.member_id=$1 AND ($2='' OR $2='artist') AND a.status<>'archived'
-    AND ($3::timestamptz IS NULL OR (b.created_at,'artist'::text,b.artist_id)<($3,$4::text,$5::uuid))
+    AND ($3::timestamptz IS NULL OR (b.created_at,'artist'::text,b.artist_id)<($3,$4::text,CASE WHEN $4='artist' THEN $5::text::uuid END))
    ORDER BY b.created_at DESC,b.artist_id DESC LIMIT $6)
   UNION ALL
-  (SELECT 'artwork'::text,b.artwork_id,b.created_at
+  (SELECT 'artwork'::text,b.artwork_id::text,b.created_at
    FROM member_artwork_bookmarks b JOIN artworks a ON a.id=b.artwork_id
    WHERE b.member_id=$1 AND ($2='' OR $2='artwork') AND a.status<>'archived'
-    AND ($3::timestamptz IS NULL OR (b.created_at,'artwork'::text,b.artwork_id)<($3,$4::text,$5::uuid))
+    AND ($3::timestamptz IS NULL OR (b.created_at,'artwork'::text,b.artwork_id)<($3,$4::text,CASE WHEN $4='artwork' THEN $5::text::uuid END))
    ORDER BY b.created_at DESC,b.artwork_id DESC LIMIT $6)
+  UNION ALL
+  (SELECT 'book'::text,b.book_id,b.created_at
+   FROM member_book_bookmarks b JOIN book_records a ON a.id=b.book_id
+   WHERE b.member_id=$1 AND ($2='' OR $2='book') AND a.status<>'archived'
+    AND (a.end_year<=2000 OR a.start_year IS NULL)
+    AND ($3::timestamptz IS NULL OR (b.created_at,'book'::text,b.book_id)<($3,$4::text,$5::text))
+   ORDER BY b.created_at DESC,b.book_id DESC LIMIT $6)
+  UNION ALL
+  (SELECT 'event'::text,b.event_id,b.created_at
+   FROM member_event_bookmarks b JOIN event_records a ON a.id=b.event_id
+   WHERE b.member_id=$1 AND ($2='' OR $2='event') AND a.status<>'archived'
+    AND ($3::timestamptz IS NULL OR (b.created_at,'event'::text,b.event_id)<($3,$4::text,$5::text))
+   ORDER BY b.created_at DESC,b.event_id DESC LIMIT $6)
  ) candidates ORDER BY saved_at DESC,kind DESC,id DESC LIMIT $6
 ) `
-const bookmarkDetailsSQL = `SELECT p.kind,p.id::text,p.saved_at,
- coalesce(a.display_name,w.title),coalesce(a.timeline_display,w.date_display,''),
+const bookmarkDetailsSQL = `SELECT p.kind,p.id,p.saved_at,
+ coalesce(a.display_name,w.title,b.title,e.title),
+ coalesce(a.timeline_display,w.date_display,b.author_label,e.record->>'years',''),
  CASE WHEN p.kind='artist' THEN '/artists/'||a.slug
+      WHEN p.kind='book' THEN '/books?book='||b.id
+      WHEN p.kind='event' THEN '/events?event='||e.id
       WHEN creator.slug IS NOT NULL THEN '/artists/'||creator.slug||'/works/'||w.id::text
       ELSE '/all?itemType=artwork&item='||w.id::text END,
- ma.storage_path,ma.alt_text,ma.rights_status
+ ma.storage_path,ma.alt_text,ma.rights_status,coalesce(b.source_id,e.source_id,'')
  FROM picked p
- LEFT JOIN artists a ON p.kind='artist' AND a.id=p.id
- LEFT JOIN artworks w ON p.kind='artwork' AND w.id=p.id
+ LEFT JOIN artists a ON a.id=CASE WHEN p.kind='artist' THEN p.id::uuid END
+ LEFT JOIN artworks w ON w.id=CASE WHEN p.kind='artwork' THEN p.id::uuid END
+ LEFT JOIN book_records b ON p.kind='book' AND b.id=p.id
+ LEFT JOIN event_records e ON p.kind='event' AND e.id=p.id
  LEFT JOIN media_assets ma ON ma.id=w.primary_media_id
  LEFT JOIN LATERAL (
   SELECT ar.slug FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id
-  WHERE p.kind='artwork' AND aa.artwork_id=p.id AND ar.status<>'archived'
+  WHERE aa.artwork_id=CASE WHEN p.kind='artwork' THEN p.id::uuid END AND ar.status<>'archived'
   ORDER BY (aa.attribution_role='primary') DESC,ar.slug LIMIT 1
  ) creator ON true
  WHERE (p.kind='artist' AND a.status<>'archived') OR (p.kind='artwork' AND w.status<>'archived')
+    OR (p.kind='book' AND b.status<>'archived' AND (b.end_year<=2000 OR b.start_year IS NULL))
+    OR (p.kind='event' AND e.status<>'archived')
  ORDER BY p.saved_at DESC,p.kind DESC,p.id DESC`
 
 func scanBookmark(row interface{ Scan(...any) error }) (Bookmark, error) {
 	var item Bookmark
-	err := row.Scan(&item.Kind, &item.ID, &item.SavedAt, &item.Title, &item.Subtitle, &item.Href, &item.MediaURL, &item.AltText, &item.RightsStatus)
+	var sourceID string
+	err := row.Scan(&item.Kind, &item.ID, &item.SavedAt, &item.Title, &item.Subtitle, &item.Href, &item.MediaURL, &item.AltText, &item.RightsStatus, &sourceID)
+	if err == nil {
+		if item.Kind == "book" {
+			if image := books.SelectedCover(item.ID, sourceID); image != nil {
+				item.Image = &BookmarkImage{image.ImageURL, image.SourceURL, image.Label, image.Credit, image.License, image.LicenseURL}
+			}
+		} else if item.Kind == "event" {
+			if image := events.SelectedImage(item.ID, sourceID); image != nil {
+				item.Image = &BookmarkImage{image.ImageURL, image.SourceURL, image.Label, image.Credit, image.License, image.LicenseURL}
+			}
+		}
+	}
 	return item, err
 }
 func (s PostgresBookmarks) List(ctx context.Context, memberID, kind string, cursor BookmarkCursor, limit int) ([]Bookmark, error) {
@@ -76,23 +111,38 @@ func (s PostgresBookmarks) List(ctx context.Context, memberID, kind string, curs
 	return items, rows.Err()
 }
 func (s PostgresBookmarks) Lookup(ctx context.Context, ref BookmarkRef) (Bookmark, error) {
-	item, err := scanBookmark(s.DB.QueryRow(ctx, `WITH picked AS (SELECT $1::text AS kind,$2::uuid AS id,now() AS saved_at) `+bookmarkDetailsSQL, ref.Kind, ref.ID))
+	item, err := scanBookmark(s.DB.QueryRow(ctx, `WITH picked AS (SELECT $1::text AS kind,$2::text AS id,now() AS saved_at) `+bookmarkDetailsSQL, ref.Kind, ref.ID))
 	if errors.Is(err, pgx.ErrNoRows) {
 		err = ErrBookmarkMissing
 	}
 	return item, err
 }
+
+// Only this fixed allowlist supplies SQL identifiers and predicates.
+func bookmarkTarget(kind string) (table, column, target, cast, scope string) {
+	switch kind {
+	case "artist":
+		return "member_artist_bookmarks", "artist_id", "artists", "uuid", ""
+	case "artwork":
+		return "member_artwork_bookmarks", "artwork_id", "artworks", "uuid", ""
+	case "book":
+		return "member_book_bookmarks", "book_id", "book_records", "text", " AND (a.end_year<=2000 OR a.start_year IS NULL)"
+	case "event":
+		return "member_event_bookmarks", "event_id", "event_records", "text", ""
+	}
+	return
+}
 func (s PostgresBookmarks) Set(ctx context.Context, memberID string, ref BookmarkRef, saved bool) error {
-	table, column, target := "member_artist_bookmarks", "artist_id", "artists"
-	if ref.Kind == "artwork" {
-		table, column, target = "member_artwork_bookmarks", "artwork_id", "artworks"
+	table, column, target, _, scope := bookmarkTarget(ref.Kind)
+	if table == "" || !validBookmark(ref) {
+		return ErrBookmarkMissing
 	}
 	if !saved {
 		_, err := s.DB.Exec(ctx, `DELETE FROM `+table+` WHERE member_id=$1 AND `+column+`=$2`, memberID, ref.ID)
 		return err
 	}
 	var exists bool
-	err := s.DB.QueryRow(ctx, `WITH target AS (SELECT id FROM `+target+` WHERE id=$2 AND status<>'archived'), inserted AS (
+	err := s.DB.QueryRow(ctx, `WITH target AS (SELECT a.id FROM `+target+` a WHERE a.id=$2 AND a.status<>'archived'`+scope+`), inserted AS (
   INSERT INTO `+table+`(member_id,`+column+`) SELECT $1,id FROM target ON CONFLICT DO NOTHING
  ) SELECT EXISTS(SELECT 1 FROM target)`, memberID, ref.ID).Scan(&exists)
 	if err == nil && !exists {
@@ -102,7 +152,7 @@ func (s PostgresBookmarks) Set(ctx context.Context, memberID string, ref Bookmar
 }
 func (s PostgresBookmarks) States(ctx context.Context, memberID string, refs []BookmarkRef) ([]BookmarkRef, error) {
 	saved := []BookmarkRef{}
-	for _, kind := range []string{"artist", "artwork"} {
+	for _, kind := range bookmarkKinds {
 		ids := []string{}
 		for _, ref := range refs {
 			if ref.Kind == kind {
@@ -112,11 +162,8 @@ func (s PostgresBookmarks) States(ctx context.Context, memberID string, refs []B
 		if len(ids) == 0 {
 			continue
 		}
-		table, column, target := "member_artist_bookmarks", "artist_id", "artists"
-		if kind == "artwork" {
-			table, column, target = "member_artwork_bookmarks", "artwork_id", "artworks"
-		}
-		rows, err := s.DB.Query(ctx, `SELECT b.`+column+`::text FROM `+table+` b JOIN `+target+` a ON a.id=b.`+column+` WHERE b.member_id=$1 AND b.`+column+`=ANY($2::uuid[]) AND a.status<>'archived'`, memberID, ids)
+		table, column, target, cast, scope := bookmarkTarget(kind)
+		rows, err := s.DB.Query(ctx, `SELECT b.`+column+`::text FROM `+table+` b JOIN `+target+` a ON a.id=b.`+column+` WHERE b.member_id=$1 AND b.`+column+`=ANY($2::`+cast+`[]) AND a.status<>'archived'`+scope, memberID, ids)
 		if err != nil {
 			return nil, err
 		}

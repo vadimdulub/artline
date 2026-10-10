@@ -1,4 +1,5 @@
 "use client";
+import { BookmarkButton } from "./Bookmarks";
 import { displayMetadata } from "@/lib/display-metadata";
 
 import { useState, type CSSProperties, type RefObject } from "react";
@@ -12,7 +13,7 @@ const isAuthor = (entry: Entry): entry is TimelineAuthor => "bookCount" in entry
 const readBooks = (response: BooksResponse) => ({ items: response.items as Entry[], nextCursor: response.nextCursor });
 const readAuthors = (response: BooksResponse) => ({ items: (response.authors ?? []) as Entry[], nextCursor: response.nextCursor });
 
-export function LibraryImage({ image, name, portrait = false }: { image?: Book["cover"]; name: string; portrait?: boolean }) {
+export function LibraryImage({ image, name, portrait = false }: { image?: Pick<NonNullable<Book["cover"]>, "imageUrl" | "label">; name: string; portrait?: boolean }) {
   const [failed, setFailed] = useState("");
   return <span className={`library-image${portrait ? " library-portrait" : ""}`}>
     {image && failed !== image.imageUrl ?
@@ -40,7 +41,7 @@ export function BooksGallery({ data, query, authorView, selected, strip, onBook,
         const author = isAuthor(entry);
         const title = author ? entry.name : entry.title;
         const dates = author ? authorLifespanLabel(entry) : entry.years;
-        return <li key={entry.id} aria-posinset={window.before + index + 1} aria-setsize={data.total}>
+        return <li key={entry.id} className="bookmark-grid-item" aria-posinset={window.before + index + 1} aria-setsize={data.total}>
           <button type="button" className="library-card all-gallery-card" data-entry-id={entry.id} aria-label={`${title}${displayMetadata(dates) ? `, ${dates}` : ""}. Open ${author ? "author" : "book"} details`} aria-haspopup="dialog" aria-current={selected === entry.id ? "true" : undefined}
             onClick={() => author ? onAuthor(entry) : onBook(entry, window.items.filter((item): item is Book => !isAuthor(item)))}>
             <LibraryImage image={author ? entry.portrait : entry.cover} name={title} portrait={author} />
@@ -48,6 +49,7 @@ export function BooksGallery({ data, query, authorView, selected, strip, onBook,
             <span>{author ? `${entry.bookCount.toLocaleString("en-GB")} ${entry.bookCount === 1 ? "book" : "books"}` : displayMetadata(entry.author)}</span>
             {displayMetadata(dates) && <time>{dates}</time>}
           </button>
+          {!author && <BookmarkButton kind="book" id={entry.id} title={title} />}
         </li>;
       })}
       {window.after > 0 && spacer(window.after)}

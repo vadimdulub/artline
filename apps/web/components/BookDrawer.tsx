@@ -1,4 +1,5 @@
 "use client";
+import { BookmarkButton } from "./Bookmarks";
 
 import { displayMetadata } from "@/lib/display-metadata";
 import { useEffect, useState } from "react";
@@ -40,7 +41,7 @@ export function BookDrawer({ id, items, close, select, navigation, fallbackFocus
     </nav>}>
     {error ? <div className={styles.drawerState} role="alert"><h2>Book unavailable</h2><p>{error}</p><button type="button" onClick={() => setRetry(value => value + 1)}>Retry book</button></div> :
       !book ? <p className={styles.drawerState} role="status"><LoadingIndicator label="Opening book record…" /></p> : <div className={styles.drawerContent}>
-        <header className={styles.bookHeading}><p>{displayMetadata(book.author)}{lifespan && lifespan.length < 40 && <> · {lifespan}</>}</p><h2 id="book-record-title">{book.title}</h2>{displayMetadata(book.years) && <p>{book.years}</p>}</header>
+        <header className={styles.bookHeading}><p>{displayMetadata(book.author)}{lifespan && lifespan.length < 40 && <> · {lifespan}</>}</p><div className="bookmark-title"><h2 id="book-record-title">{book.title}</h2><BookmarkButton kind="book" id={book.id} title={book.title} /></div>{displayMetadata(book.years) && <p>{book.years}</p>}</header>
         <div className={styles.drawerCover}><BookCover book={book} /></div>
         {(book.overview || displayMetadata(book.description)) && <section className={styles.bookAbout} aria-labelledby="book-description-title"><h3 id="book-description-title">About this book</h3>{book.overview ? <BookOverview overview={book.overview} /> : <p>{book.description}</p>}</section>}
         {(book.creators?.length || displayMetadata(book.author)) ? <section className={styles.creators} aria-labelledby="book-creators-title">

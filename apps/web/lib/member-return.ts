@@ -5,7 +5,7 @@ const destinationPath = new RegExp(`^(?:/artists/(${slug})(?:/works/[a-fA-F0-9]{
 export function memberReturnTo(value: unknown): string | null {
   if (typeof value !== "string" || value.length > 768 || /[\\]|[^\x21-\x7e]/.test(value)) return null;
   const path = value.split(/[?#]/, 1)[0];
-  if (["/", "/artists", "/artworks", "/all", "/bookmarks"].includes(path)) return value;
+  if (["/", "/artists", "/artworks", "/all", "/bookmarks", "/books", "/events"].includes(path)) return value;
   const match = destinationPath.exec(path);
   return match && (!match[1] || match[1].length <= 100) && (!match[2] || match[2].length <= 100) ? value : null;
 }

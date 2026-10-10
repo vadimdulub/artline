@@ -1,13 +1,15 @@
 import { ApiError } from "./api";
-export type BookmarkKind = "artist" | "artwork";
+export type BookmarkKind = "artist" | "artwork" | "book" | "event";
 export type BookmarkRef = { kind: BookmarkKind; id: string };
-export type BookmarkItem = BookmarkRef & { title: string; subtitle: string; href: string; saved_at: string; media_url: string | null; alt_text: string | null; rights_status: string | null };
+export type BookmarkItem = BookmarkRef & { title: string; subtitle: string; href: string; saved_at: string; media_url: string | null; alt_text: string | null; rights_status: string | null; image?: { imageUrl: string; label: string; sourceUrl: string; credit: string; license: string; licenseUrl: string } };
 export type BookmarkPage = { items: BookmarkItem[]; next_cursor: string };
 export const bookmarkKey = (ref: BookmarkRef) => `${ref.kind}:${ref.id}`;
 export const validBookmarkRef = (value: unknown): value is BookmarkRef => {
   if (!value || typeof value !== "object") return false;
   const ref = value as BookmarkRef;
-  return ["artist", "artwork"].includes(ref.kind) && typeof ref.id === "string" && /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(ref.id);
+  if (typeof ref.id !== "string") return false;
+  if (["artist", "artwork"].includes(ref.kind)) return /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(ref.id);
+  return ["book", "event"].includes(ref.kind) && ref.id.length <= 160 && /^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(ref.id);
 };
 export async function bookmarkRequest<T>(path = "", options: RequestInit = {}): Promise<T> {
   const response = await fetch(`/api/bookmarks${path}`, { ...options, cache: "no-store" });

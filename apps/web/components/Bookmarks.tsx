@@ -33,9 +33,9 @@ export function BookmarkProvider({ children }: { children: ReactNode }) {
   return <Bookmarks.Provider value={client}>{children}</Bookmarks.Provider>;
 }
 export function StarIcon({ filled = false }: { filled?: boolean }) {
-  return <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z" /></svg>;
+  return <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z" /></svg>;
 }
-export function BookmarkButton({ kind, id, title, compact = false }: { kind: BookmarkKind; id: string; title: string; compact?: boolean }) {
+export function BookmarkButton({ kind, id, title }: { kind: BookmarkKind; id: string; title: string }) {
   const client = useBookmarks(), signIn = useRequestSignIn();
   const ref = useMemo<BookmarkRef>(() => ({ kind, id }), [kind, id]);
   const subscribe = useMemo(() => (listener: () => void) => client.subscribe(ref, listener), [client, ref]);
@@ -46,13 +46,13 @@ export function BookmarkButton({ kind, id, title, compact = false }: { kind: Boo
     const destination = memberReturnTo(window.location.pathname + window.location.search + window.location.hash) ?? "/bookmarks";
     signIn?.(destination, trigger, { bookmark: true, onDismiss: () => { try { sessionStorage.removeItem(pendingKey); } catch { /* Storage may be disabled. */ } } });
   }
-  return <span className={`bookmark-control${compact ? " is-compact" : ""}`}>
+  return <span className="bookmark-control">
     <button className="bookmark-button" type="button" aria-label={label} title={label} aria-pressed={state.saved} aria-busy={state.busy} disabled={Boolean(client.owner) && state.busy} onClick={event => {
       event.preventDefault(); event.stopPropagation();
       const trigger = event.currentTarget;
       if (!client.owner) { login(trigger); return; }
       void client.toggle(ref).catch(error => { if (error instanceof ApiError && error.status === 401) login(trigger); });
-    }}><StarIcon filled={state.saved} />{!compact && <span>{state.busy ? state.ready ? "Saving…" : "Checking…" : state.saved ? "Saved" : "Bookmark"}</span>}</button>
+    }}><StarIcon filled={state.saved} /></button>
     {state.error && <span className="bookmark-error" role="alert">{state.error}</span>}
   </span>;
 }

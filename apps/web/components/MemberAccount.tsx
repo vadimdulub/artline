@@ -27,8 +27,8 @@ export function MemberAccount({ signInError, returnTo = null, dialog = false, bo
   </>;
   return <>
     <p className="eyebrow">Your Artline account</p>
-    <Heading>{saving ? "Keep the art you love." : returnTo ? museum ? "Sign in to explore museums." : "Sign in to Artline." : "A place for your curiosity."}</Heading>
-    <p>{saving ? "Sign in for free to bookmark artists and artworks, and find them again in your collection." : returnTo ? "Continue with your Google account. It’s free, and we’ll take you back to the page you selected." : "Sign in to Artline with your Google account."}</p>
+    <Heading>{saving ? "Keep what inspires you." : returnTo ? museum ? "Sign in to explore museums." : "Sign in to Artline." : "A place for your curiosity."}</Heading>
+    <p>{saving ? "Sign in for free to save artists, artworks, books, and events, and find them again in your collection." : returnTo ? "Continue with your Google account. It’s free, and we’ll take you back to the page you selected." : "Sign in to Artline with your Google account."}</p>
     {signInError && <p role="alert">Google sign-in wasn’t completed. Please try again.</p>}
     {session.enabled ? <form action={`/api/auth/google/start${returnTo ? `?${new URLSearchParams({ return_to: returnTo })}` : ""}`} method="post"><button className="google-signin" type="submit"><Image src="/google-signin.png" alt="Sign in with Google" width={180} height={40} unoptimized /></button></form> : <p role="status">Google sign-in is unavailable. You can explore the atlas without an account.</p>}
     <p className="account-note">Artline uses your name and email to create your account. <Link href="/privacy">Privacy</Link> · <Link href="/all">Continue exploring</Link></p>

@@ -1,4 +1,5 @@
 "use client";
+import { BookmarkButton } from "./Bookmarks";
 
 import Link from "next/link";
 import { displayMetadata } from "@/lib/display-metadata";
@@ -32,7 +33,7 @@ export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-t
   const books = contextualRange(-5000, 2026), art = contextualRange(1100, 2000);
   return <RecordDrawer label="Event details" closeLabel="Close event details" recordKey={id} title={event?.kind ?? "Event"} navigation={navigation && <RecordArrows navigation={navigation} noun="event" />} close={close} fallbackFocusId={fallbackFocusId}>
     {event ? <div className={`${styles.drawerContent} ${styles.eventContent}`}>
-      <header className={styles.bookHeading}><p>{event.kind} · {event.topics.join(" · ")}</p><h2>{event.title}</h2>{displayMetadata(event.years) && <p>{event.years}</p>}</header>
+      <header className={styles.bookHeading}><p>{event.kind} · {event.topics.join(" · ")}</p><div className="bookmark-title"><h2>{event.title}</h2><BookmarkButton kind="event" id={event.id} title={event.title} /></div>{displayMetadata(event.years) && <p>{event.years}</p>}</header>
       {event.image && <figure className={styles.eventIllustration}>
         {failedImage !== event.image.imageUrl &&
           // eslint-disable-next-line @next/next/no-img-element

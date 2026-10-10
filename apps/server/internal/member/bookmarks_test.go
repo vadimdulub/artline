@@ -96,56 +96,67 @@ func TestBookmarksAuthenticationAndCSRF(t *testing.T) {
 	}
 }
 func TestBookmarksArePrivateIdempotentAndRemovable(t *testing.T) {
-	_, auth, _, mux := bookmarkFixture()
-	ref := "/artist/11111111-1111-4111-8111-111111111111"
-	for i := 0; i < 2; i++ {
-		if w := bookmarkRequest(mux, auth, "a", "PUT", ref, "https://artlines.org"); w.Code != 200 {
-			t.Fatal(w.Body.String())
-		}
-	}
-	var first BookmarkPage
-	w := bookmarkRequest(mux, auth, "a", "GET", "?member_id=b", "")
-	json.Unmarshal(w.Body.Bytes(), &first)
-	if len(first.Items) != 1 {
-		t.Fatalf("duplicate or missing bookmark: %s", w.Body.String())
-	}
-	w = bookmarkRequest(mux, auth, "b", "GET", "?member_id=a", "")
-	var other BookmarkPage
-	json.Unmarshal(w.Body.Bytes(), &other)
-	if len(other.Items) != 0 {
-		t.Fatal("cross-member data leak")
-	}
-	w = bookmarkRequest(mux, auth, "a", "GET", "/state?artist=11111111-1111-4111-8111-111111111111", "")
-	if !strings.Contains(w.Body.String(), `"kind":"artist"`) {
-		t.Fatal("saved state lost")
-	}
-	for i := 0; i < 2; i++ {
-		if w = bookmarkRequest(mux, auth, "a", "DELETE", ref, "https://artlines.org"); w.Code != 200 {
-			t.Fatal(w.Code)
-		}
-	}
-	w = bookmarkRequest(mux, auth, "a", "GET", "/state?artist=11111111-1111-4111-8111-111111111111", "")
-	if w.Body.String() != "{\"saved\":[]}\n" {
-		t.Fatal(w.Body.String())
+	for _, kind := range bookmarkKinds {
+		t.Run(kind, func(t *testing.T) {
+			id := "11111111-1111-4111-8111-111111111111"
+			if kind == "book" || kind == "event" {
+				id = "catalogue-record"
+			}
+			_, auth, _, mux := bookmarkFixture()
+			ref := "/" + kind + "/" + id
+			for i := 0; i < 2; i++ {
+				if w := bookmarkRequest(mux, auth, "a", "PUT", ref, "https://artlines.org"); w.Code != 200 {
+					t.Fatal(w.Body.String())
+				}
+			}
+			var first BookmarkPage
+			w := bookmarkRequest(mux, auth, "a", "GET", "?member_id=b", "")
+			json.Unmarshal(w.Body.Bytes(), &first)
+			if len(first.Items) != 1 {
+				t.Fatalf("duplicate or missing bookmark: %s", w.Body.String())
+			}
+			w = bookmarkRequest(mux, auth, "b", "GET", "?member_id=a", "")
+			var other BookmarkPage
+			json.Unmarshal(w.Body.Bytes(), &other)
+			if len(other.Items) != 0 {
+				t.Fatal("cross-member data leak")
+			}
+			w = bookmarkRequest(mux, auth, "a", "GET", "/state?"+kind+"="+id, "")
+			if !strings.Contains(w.Body.String(), `"kind":"`+kind+`"`) {
+				t.Fatal("saved state lost")
+			}
+			for i := 0; i < 2; i++ {
+				if w = bookmarkRequest(mux, auth, "a", "DELETE", ref, "https://artlines.org"); w.Code != 200 {
+					t.Fatal(w.Code)
+				}
+			}
+			w = bookmarkRequest(mux, auth, "a", "GET", "/state?"+kind+"="+id, "")
+			if w.Body.String() != "{\"saved\":[]}\n" {
+				t.Fatal(w.Body.String())
+			}
+		})
 	}
 }
 func TestBookmarksBoundedPagingWithEqualTimestamps(t *testing.T) {
 	_, auth, _, mux := bookmarkFixture()
-	for i := 1; i <= 67; i++ {
-		kind := "artist"
-		if i%2 == 0 {
-			kind = "artwork"
+	counts := map[string]int{}
+	for i := 1; i <= 137; i++ {
+		kind := bookmarkKinds[(i-1)%len(bookmarkKinds)]
+		counts[kind]++
+		id := fmt.Sprintf("11111111-1111-4111-8111-%012d", i)
+		if kind == "book" || kind == "event" {
+			id = fmt.Sprintf("record-%03d", i)
 		}
-		path := fmt.Sprintf("/%s/11111111-1111-4111-8111-%012d", kind, i)
+		path := "/" + kind + "/" + id
 		w := bookmarkRequest(mux, auth, "a", "PUT", path, "https://artlines.org")
 		if w.Code != 200 {
 			t.Fatal(w.Code)
 		}
 	}
-	for _, kind := range []string{"", "artist", "artwork"} {
+	for _, kind := range []string{"", "artist", "artwork", "book", "event"} {
 		cursor := ""
 		seen := map[string]bool{}
-		for page := 0; page < 4; page++ {
+		for page := 0; page < 6; page++ {
 			w := bookmarkRequest(mux, auth, "a", "GET", "?"+url.Values{"kind": {kind}, "cursor": {cursor}}.Encode(), "")
 			if w.Code != 200 {
 				t.Fatal(w.Body.String())
@@ -175,11 +186,9 @@ func TestBookmarksBoundedPagingWithEqualTimestamps(t *testing.T) {
 				t.Fatal("cursor reused under different filter")
 			}
 		}
-		want := 67
-		if kind == "artist" {
-			want = 34
-		} else if kind == "artwork" {
-			want = 33
+		want := 137
+		if kind != "" {
+			want = counts[kind]
 		}
 		if len(seen) != want {
 			t.Fatalf("kind %q returned %d of %d", kind, len(seen), want)
@@ -188,12 +197,12 @@ func TestBookmarksBoundedPagingWithEqualTimestamps(t *testing.T) {
 }
 func TestBookmarkValidationPrecedesStorage(t *testing.T) {
 	_, auth, store, mux := bookmarkFixture()
-	for _, path := range []string{"?kind=other", "?cursor=bad", "/state", "/state?artist=not-a-uuid", "/state?" + strings.Repeat("artist=11111111-1111-4111-8111-111111111111&", 101)} {
+	for _, path := range []string{"?kind=other", "?cursor=bad", "/state", "/state?artist=not-a-uuid", "/state?book=../auth", "/state?event=a+b", "/state?" + strings.Repeat("artist=11111111-1111-4111-8111-111111111111&", 101)} {
 		if w := bookmarkRequest(mux, auth, "a", "GET", path, ""); w.Code != 400 {
 			t.Fatalf("%s got %d", path, w.Code)
 		}
 	}
-	for _, path := range []string{"/museum/11111111-1111-4111-8111-111111111111", "/artist/bad-id"} {
+	for _, path := range []string{"/museum/11111111-1111-4111-8111-111111111111", "/artist/bad-id", "/book/a..b", "/event/a%20b", "/book/" + strings.Repeat("a", 161)} {
 		if w := bookmarkRequest(mux, auth, "a", "PUT", path, "https://artlines.org"); w.Code != 400 {
 			t.Fatal(w.Code)
 		}

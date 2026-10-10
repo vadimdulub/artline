@@ -29,3 +29,13 @@ it("preserves unauthenticated responses instead of caching a successful empty li
   expect(upstream.mock.calls[0][0].search).toBe("?kind=artist");
   expect(response.headers.get("x-robots-tag")).toBe("noindex");
 });
+
+it.each(["book", "event"])("proxies %s saves with bounded catalogue identifiers", async kind => {
+  upstream.mockResolvedValue(Response.json({ saved: true }));
+  const request = new NextRequest(`https://artlines.org/api/bookmarks/${kind}/record-q123`, { method: "PUT" });
+  expect((await PUT(request, context([kind, "record-q123"]))).status).toBe(200);
+  expect(upstream.mock.calls[0][0].pathname).toBe(`/api/v1/member/bookmarks/${kind}/record-q123`);
+  expect((await PUT(request, context([kind, "../auth"]))).status).toBe(404);
+  expect((await PUT(request, context([kind, "x".repeat(161)]))).status).toBe(404);
+  expect(upstream).toHaveBeenCalledTimes(1);
+});

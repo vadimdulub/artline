@@ -1,4 +1,5 @@
 "use client";
+import { BookmarkButton } from "./Bookmarks";
 import { displayMetadata } from "@/lib/display-metadata";
 
 import { useState, type CSSProperties, type RefObject } from "react";
@@ -32,12 +33,13 @@ export function AllBookGallery({ lane, query, busy, selected, select, stripRef }
     </div>
     <ul ref={stripRef} className="all-book-strip" aria-label="Books in this view" aria-busy={window.loading || busy} tabIndex={0}>
       {window.before > 0 && spacer(window.before)}
-      {window.items.map((item, index) => <li key={item.id} aria-posinset={window.before + index + 1} aria-setsize={lane.total}>
+      {window.items.map((item, index) => <li key={item.id} className="bookmark-grid-item" aria-posinset={window.before + index + 1} aria-setsize={lane.total}>
         <button type="button" className="all-book-card all-gallery-card" data-book-id={item.id} title={item.title} aria-label={`${item.title}${displayMetadata(item.years) ? `, ${item.years}` : ""}. Open book details`} aria-haspopup="dialog" aria-current={selected === item.id ? "true" : undefined} disabled={busy} onClick={() => select(item)}>
           <Cover item={item} />
           <strong>{item.title}</strong>
           {displayMetadata(item.years) && <time title={item.years}>{item.years}</time>}
         </button>
+        <BookmarkButton kind="book" id={item.id} title={item.title} />
       </li>)}
       {window.after > 0 && spacer(window.after)}
     </ul>
