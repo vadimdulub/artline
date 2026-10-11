@@ -1,17 +1,18 @@
 /* Desktop return navigation belongs to the content; phones keep a header arrow. */
 .site-back{display:none}
-.page-return-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 20px;width:var(--page);margin:0 auto;padding-top:16px;font:13px/1.4 var(--sans)}
+.page-return-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 20px;width:var(--page);margin:0 auto;padding-top:8px;font:12px/1.4 var(--sans)}
 .page-return-nav[data-family=guide]{width:min(1360px,calc(100% - 48px))}
 .page-return-nav[data-family=prose],body:has(>#main-content.prose-page)>.page-return-nav{max-width:800px}
 .page-return-nav[data-family=study]{max-width:1600px}
-.page-return-nav a{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;text-underline-offset:3px}
-.page-back{padding:8px 12px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none}
+.page-return-nav a{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:32px;text-underline-offset:3px}
+.page-back{padding:4px 8px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none}
+.page-back svg{width:16px;height:16px}
 .page-back:hover{background:var(--stone)}
 .page-parent{color:var(--ultramarine)}
-@media(min-width:761px){body:has(>.page-return-nav)>#main-content{padding-top:16px}}
+@media(min-width:761px){body:has(>.page-return-nav)>#main-content{padding-top:8px}}
 @media(max-width:760px){
  .page-return-nav{display:none}
- .site-back{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-width:44px;min-height:44px;margin-inline-end:8px;padding:8px;color:var(--paper);border:1px solid #797368;border-radius:4px;text-decoration:none}
+ .site-back{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-width:36px;min-height:36px;margin-inline-end:6px;padding:6px;color:var(--paper);border:1px solid #797368;border-radius:4px;text-decoration:none}
  .site-back:hover{background:#38352f;color:#f0b29c}
  .site-back span{display:none}
  .site-back svg{flex-shrink:0}

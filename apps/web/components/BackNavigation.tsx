@@ -81,7 +81,7 @@ function ReturnLink({ className, canGoBack, pathname }: { className: string; can
 export function BackNavigation() {
   const pathname = usePathname();
   const canGoBack = useSyncExternalStore(subscribe, hasReturnHistory, noServerHistory);
-  if (pathname === "/" && !canGoBack) return null;
+  if (pathname === "/") return null;
   return <ReturnLink className="site-back" pathname={pathname} canGoBack={canGoBack} />;
 }
 
@@ -93,7 +93,7 @@ export function PageBackNavigation() {
   // Record templates already provide their own named directory/breadcrumb links.
   const hasParentLink = !artwork && (/^\/(artists|museums|guides|studies)\//.test(pathname) || pathname.startsWith("/shared/studies/"));
   const showParent = pathname !== "/" && !hasParentLink;
-  if (!canGoBack && !showParent) return null;
+  if (pathname === "/" || (!canGoBack && !showParent)) return null;
   const family = pathname.startsWith("/guides/") ? "guide" : ["/privacy", "/art-history-timeline"].includes(pathname) ? "prose" : pathname.startsWith("/studies") || pathname.startsWith("/shared/studies/") ? "study" : "standard";
   return <nav className="page-return-nav" aria-label="Return navigation" data-family={family}>
     {canGoBack && <ReturnLink className="page-back" pathname={pathname} canGoBack />}

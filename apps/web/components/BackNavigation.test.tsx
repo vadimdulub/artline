@@ -51,10 +51,12 @@ it("hides both controls on an initial homepage visit", async () => {
   state.path = "/"; render(<><BackNavigation /><PageBackNavigation /></>);
   expect(screen.queryByRole("link")).toBeNull();
 });
-it("offers Back on the homepage after internal navigation", async () => {
-  state.path = "/"; render(<PageBackNavigation />);
+it("hides both controls on the main timeline after internal navigation or filter changes", async () => {
+  state.path = "/"; render(<><BackNavigation /><PageBackNavigation /></>);
   await act(async () => window.history.pushState({ __NA: true }, "", "/?artist=monet"));
-  expect(screen.getByRole("link", { name: "Back" })).toBeInTheDocument();
+  expect(window.history.state.artlineCanGoBack).toBe(true);
+  expect(screen.queryByRole("link")).toBeNull();
+  expect(screen.queryByRole("navigation")).toBeNull();
 });
 it("distinguishes artwork history from its predictable artist destination", async () => {
   state.path = "/artists/monet/works/123"; render(<PageBackNavigation />);
