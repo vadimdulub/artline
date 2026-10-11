@@ -37,12 +37,14 @@ function subscribe(listener: () => void) {
     const push: History["pushState"] = function (this: History, data, unused, url) {
       const internal = !url || new URL(url, window.location.href).origin === window.location.origin;
       originalPush.call(this, internal ? { ...data, artlineCanGoBack: true } : data, unused, url);
-      notify();
+      // Next writes history during its insertion effect; notify after that commit.
+      queueMicrotask(notify);
     };
     const replace: History["replaceState"] = function (this: History, data, unused, url) {
       const marker = window.history.state?.artlineCanGoBack === true;
       originalReplace.call(this, marker ? { ...data, artlineCanGoBack: true } : data, unused, url);
-      notify();
+      // Next writes history during its insertion effect; notify after that commit.
+      queueMicrotask(notify);
     };
     window.history.pushState = push;
     window.history.replaceState = replace;
