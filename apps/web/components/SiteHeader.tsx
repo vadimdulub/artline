@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useMemberSession } from "./MemberSession";
 import { MemberNavigation, NavigationIcon } from "./MemberNavigation";
-import { BackNavigation, PageBackNavigation } from "./BackNavigation";
+import { PageBackNavigation } from "./BackNavigation";
 import { MobileNavigation } from "./MobileNavigation";
 import "./SiteNavigation.css";
 
@@ -37,7 +37,7 @@ export function SiteHeader() {
     return () => { observer.disconnect(); document.documentElement.style.removeProperty("--measured-header-height"); };
   }, []);
   return <><header ref={header} className="site-header" data-member={Boolean(user)}>
-    <div className="site-brand"><BackNavigation /><Link className="wordmark" href="/" aria-label="Artlines home">
+    <div className="site-brand"><Link className="wordmark" href="/" aria-label="Artlines home">
       <Image className="wordmark-logo" src="/brand/artlines-wordmark.webp" width={576} height={138} alt="Artlines" loading="eager" unoptimized />
       <small>Art, literature &amp; history</small>
     </Link></div>

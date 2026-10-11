@@ -1,4 +1,5 @@
 "use client";
+import { ContextualBackLink } from "./BackNavigation";
 import { BookmarkButton } from "./Bookmarks";
 import { artworkDate, museumDescription } from "@/lib/display-metadata";
 import Link from "@/components/MemberLink";
@@ -46,8 +47,8 @@ export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMus
     for (const value of group.values) filters.push({ key: `${group.key}-${value}`, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ [group.key]: group.values.filter(item => item !== value) }) });
   }
   const clear = () => setMuseumFilters(Object.fromEntries([...Object.keys(filterLabels), "artist", "movement", "venue", "work_type", "sort"].map(key => [key, null])));
-  return <main id="main-content" className={`${styles.page} ${styles.collectionPage}`}>
-    <Link className={styles.back} href="/museums">All museums and collections</Link>
+  return <main id="main-content" className={`${styles.page} ${styles.collectionPage}`} data-return-label={museum?.name || "museum"} data-return-path={`/museums/${slug}`}>
+    <ContextualBackLink className={styles.back} fallbackHref="/museums" fallbackLabel="All museums and collections" />
     {museumRequest.error && !museum ? <MuseumError message={museumRequest.error} retry={() => setRevision(value => value + 1)} /> : !museum ? <p className={styles.loading}>Opening collection…</p> : <>
       {museumRequest.error && <p role="status" className={styles.note}>Collection information could not be refreshed. <button type="button" onClick={() => setRevision(value => value + 1)}>Retry</button></p>}
       <header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}</h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>

@@ -1,20 +1,24 @@
-/* Desktop return navigation belongs to the content; phones keep a header arrow. */
-.site-back{display:none}
-.page-return-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 20px;width:var(--page);margin:0 auto;padding-top:8px;font:12px/1.4 var(--sans)}
+/* One quiet, named return link; reuse an existing navigation row where available. */
+.page-return-nav{display:flex;align-items:center;width:var(--page);margin:0 auto;padding:4px 0;font:13px/1.4 var(--sans)}
 .page-return-nav[data-family=guide]{width:min(1360px,calc(100% - 48px))}
 .page-return-nav[data-family=prose],body:has(>#main-content.prose-page)>.page-return-nav{max-width:800px}
 .page-return-nav[data-family=study]{max-width:1600px}
-.page-return-nav a{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:32px;text-underline-offset:3px}
-.page-back{padding:4px 8px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none}
-.page-back svg{width:16px;height:16px}
-.page-back:hover{background:var(--stone)}
-.page-parent{color:var(--ultramarine)}
-@media(min-width:761px){body:has(>.page-return-nav)>#main-content{padding-top:8px}}
+body:has(#main-content [data-contextual-return])>.page-return-nav{display:none}
+.contextual-back{display:inline-flex;align-items:center;gap:6px;min-height:44px;max-width:100%;color:var(--ultramarine);font:13px/1.4 var(--sans);text-decoration:none;text-underline-offset:3px;overflow-wrap:anywhere}
+.contextual-back:hover{text-decoration:underline}
+.contextual-back:focus-visible{outline:3px solid #b84a32;outline-offset:3px;border-radius:2px}
+.contextual-back svg{flex:0 0 16px}
+.contextual-back:dir(rtl) svg{transform:scaleX(-1)}
+.contextual-back .return-short{display:none}
+.record-toolbar:has([data-contextual-return]){padding:4px 32px;gap:4px 20px;min-height:52px}
+.record-toolbar:has([data-contextual-return])>a:not(.contextual-back){display:inline-flex;align-items:center;min-height:44px}
+.contextual-breadcrumb{align-items:center;min-height:44px;gap:12px}
+body:has(>.page-return-nav):not(:has(#main-content [data-contextual-return]))>#main-content{padding-top:8px}
 @media(max-width:760px){
- .page-return-nav{display:none}
- .site-back{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-width:36px;min-height:36px;margin-inline-end:6px;padding:6px;color:var(--paper);border:1px solid #797368;border-radius:4px;text-decoration:none}
- .site-back:hover{background:#38352f;color:#f0b29c}
- .site-back span{display:none}
- .site-back svg{flex-shrink:0}
+ .page-return-nav,.page-return-nav[data-family=guide]{width:calc(100% - 32px);padding:0}
+ .record-toolbar:has([data-contextual-return]){padding:0 16px;gap:4px 12px;min-height:48px}
+ .contextual-back .return-full{display:none}
+ .contextual-back .return-short{display:inline}
+ .contextual-back .return-short::first-letter{text-transform:uppercase}
 }
-@media print{.page-return-nav,.site-back{display:none}}
+@media print{.page-return-nav,.contextual-back{display:none}}
