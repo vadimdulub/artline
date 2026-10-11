@@ -1,0 +1,214 @@
+{
+  "verifiedAt": "2026-10-11T10:20:22.904928+00:00",
+  "site": "https://artlines.org/books",
+  "change": "Show complete book timelines up to 300 matches; use cover galleries and filter guidance above 300; include full women-author selections in shared filter URLs.",
+  "sourceCommit": "0e0bd4ce94fbc8c40190daaff50b7c7f03778ee5",
+  "source": "Generation-pinned sources from the previously deployed API and web releases, with only eight Books runtime files overlaid from the committed change. Cloud Build verified the baseline and replacement SHA-256 hashes. Existing museum guides and unrelated workspace edits were preserved.",
+  "deployment": {
+    "project": "artline-508319",
+    "region": "europe-west1",
+    "services": {
+      "api": {
+        "buildId": "e17205a5-193e-4a5b-88f5-3eca4c289227",
+        "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:fe9d247acbed2d7a2b23aefc7ac32d1368b61e4551d9cdc25ea3084b6ce5d55c",
+        "revision": "artline-api-books-1011-0e0bd4ce",
+        "rollbackRevision": "artline-api-museum-guides-1010-v1",
+        "runtimeSettingsPreserved": true,
+        "overlayURI": "gs://artline-508319-build-source/books-timeline-20261011/api-a082e287304e7a3e.tar.xz",
+        "overlayGeneration": "1791713488851498",
+        "overlaySHA256": "a082e287304e7a3e1284bc6104b6cede671f10e6c7d38c9f3da05372b24f9a83",
+        "baselineSource": {
+          "storageSource": {
+            "bucket": "artline-508319-build-source",
+            "generation": "1791663655084769",
+            "object": "source/1791663653.495096-308476d1af534e4f9e3ec76dc48b2602.tgz"
+          }
+        },
+        "trafficPercent": 100,
+        "overlayFiles": {
+          "internal/books/books.go": "e32be021ab8820c4dc5bd011313145336a361c57cfac20020d3a1aeb5a8be273",
+          "internal/books/repository.go": "efcfcbce78c32441206a8a9272cec18f6192c3452db07a75dc4b4689d308d62b",
+          "internal/httpapi/books.go": "d8b0233c08ed991a8e02b3ebb1b46d9611a6b90d80c787769ae84f2c0d768c15"
+        }
+      },
+      "web": {
+        "buildId": "e888d7f6-b24e-4042-a0ac-4ee95d30e1f6",
+        "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:9d6922b049c217f06f98b4b7e1617d1cbfbb51fe7f3d816bd88f1cecfcd83daf",
+        "revision": "artline-web-books-1011-0e0bd4ce",
+        "rollbackRevision": "artline-web-guide-prose-1011-v1",
+        "runtimeSettingsPreserved": true,
+        "overlayURI": "gs://artline-508319-build-source/books-timeline-20261011/web-03a87a4c059f1d1a.tar.xz",
+        "overlayGeneration": "1791713496709500",
+        "overlaySHA256": "03a87a4c059f1d1a47c11ecfcdb1999b1807c91684f3c0ca7c2c1f0c1c44d3d5",
+        "baselineSource": {
+          "storageSource": {
+            "bucket": "artline-508319-build-source",
+            "generation": "1791660631448965",
+            "object": "source/1791660403.355356-c78ccaf5cf4745558df5aa0dbd3af7d8.tgz"
+          }
+        },
+        "trafficPercent": 100,
+        "overlayFiles": {
+          "components/BooksGallery.css": "b6ea757c26d4b904b4f6f8e3fe9eed5ff922f607be1c510829cade1ed2c7d4a6",
+          "components/BooksGallery.tsx": "baf4aeb94fcd00c3d4fd51c38a9ce7ffab2849a091fc30f7ec7d3096b33e5d7b",
+          "components/BooksIndex.tsx": "51a9b0bf77ee7eeda3d192efebc0809dd9567fcaa599881de04755289780531d",
+          "components/BooksTimeline.tsx": "d8aef530e67c157f215c4a8064b9e9608d82d7d8d253f066214f58d083c03112",
+          "lib/books.ts": "747659f2d8a6e944c45320b46bca9819aac7b414fcb44b5bf3ebb2ec4a94ba34"
+        }
+      }
+    },
+    "terraformApply": false,
+    "localImagePinsUpdated": true,
+    "catalogueChanges": false,
+    "migrationsAdded": false,
+    "realLocalDatabaseWrites": false
+  },
+  "verification": {
+    "localBrowserCases": 18,
+    "localFrontendTests": 17,
+    "localBoundaryCounts": [
+      200,
+      300,
+      301
+    ],
+    "goBooksAndHTTPChecks": "passed",
+    "readOnlyHighlightsAndSummaryAudits": "passed",
+    "typeScriptAndFocusedLint": "passed",
+    "cloudProductionBuilds": "passed",
+    "candidate": {
+      "webURL": "https://books-1011-0e0bd4ce---artline-web-lpuqqlugnq-ew.a.run.app",
+      "apiURL": "https://books-1011-0e0bd4ce---artline-api-lpuqqlugnq-ew.a.run.app",
+      "api": [
+        {
+          "case": "women 1900\u20131950",
+          "total": 224,
+          "items": 224,
+          "mode": "individual"
+        },
+        {
+          "case": "all women and complete paging",
+          "total": 869,
+          "uniqueBooks": 869,
+          "mode": "density"
+        },
+        {
+          "case": "all highlights",
+          "total": 256,
+          "items": 256,
+          "mode": "individual"
+        }
+      ],
+      "browser": [
+        {
+          "width": 1440,
+          "timelineBooks": 224,
+          "galleryPageSize": 300,
+          "coverLoaded": true,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "timelineBooks": 224,
+          "galleryPageSize": 300,
+          "coverLoaded": true,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "timelineBooks": 224,
+          "galleryPageSize": 300,
+          "coverLoaded": true,
+          "overflow": false
+        }
+      ],
+      "preserved": [
+        {
+          "path": "/guides/prado",
+          "status": 200
+        },
+        {
+          "path": "/guides/prado/pdf/en",
+          "status": 200,
+          "sha256": "2cea4c148a7b3a5e256ebfb627ae7ad33ed21cd3c400b037f89bcb219c9588f4"
+        },
+        {
+          "path": "/about",
+          "status": 200
+        }
+      ],
+      "pageErrors": [],
+      "writes": []
+    },
+    "production": {
+      "webURL": "https://artlines.org",
+      "apiURL": "",
+      "api": [
+        {
+          "case": "women 1900\u20131950",
+          "total": 224,
+          "items": 224,
+          "mode": "individual"
+        },
+        {
+          "case": "all women and complete paging",
+          "total": 869,
+          "uniqueBooks": 869,
+          "mode": "density"
+        },
+        {
+          "case": "all highlights",
+          "total": 256,
+          "items": 256,
+          "mode": "individual"
+        }
+      ],
+      "browser": [
+        {
+          "width": 1440,
+          "timelineBooks": 224,
+          "galleryPageSize": 300,
+          "coverLoaded": true,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "timelineBooks": 224,
+          "galleryPageSize": 300,
+          "coverLoaded": true,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "timelineBooks": 224,
+          "galleryPageSize": 300,
+          "coverLoaded": true,
+          "overflow": false
+        }
+      ],
+      "preserved": [
+        {
+          "path": "/guides/prado",
+          "status": 200
+        },
+        {
+          "path": "/guides/prado/pdf/en",
+          "status": 200,
+          "sha256": "2cea4c148a7b3a5e256ebfb627ae7ad33ed21cd3c400b037f89bcb219c9588f4"
+        },
+        {
+          "path": "/about",
+          "status": 200
+        }
+      ],
+      "pageErrors": [],
+      "writes": []
+    },
+    "candidateAPIConnection": "Browser requests used genuine candidate API responses; production checks used the normal same-origin API. No authentication-response or catalogue fixtures were used.",
+    "limitations": [
+      "Functional and responsive checks, not a production-scale load test.",
+      "No real Google sign-in or authenticated account writes performed."
+    ],
+    "releaseErrorLogEntries": 0
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/books-timeline-20261011"
+}
