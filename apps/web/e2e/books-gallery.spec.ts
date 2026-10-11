@@ -5,7 +5,7 @@ for (const width of [1440, 390, 320]) test(`books gallery preserves space and ke
   await page.setViewportSize({ width, height: 1000 });
   await page.goto("/books?top100=false&start=1800&end=1900");
   const cards = page.locator(".library-card");
-  await expect(cards).toHaveCount(150);
+  await expect(cards).toHaveCount(300);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
   await expect(page.getByRole("group", { name: "Books display" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Scroll books right" })).toBeVisible();
@@ -26,15 +26,16 @@ for (const width of [1440, 390, 320]) test(`books gallery preserves space and ke
 for (const view of ["books", "authors"]) test(`${view} scrolls forward, evicts old cards, and restores earlier pages`, async ({ page }) => {
   await page.goto(`/books?top100=false&view=${view}`);
   const cards = page.locator(".library-card"), strip = page.locator(".library-strip");
-  await expect(cards).toHaveCount(150);
+  const pageSize = view === "books" ? 300 : 150;
+  await expect(cards).toHaveCount(pageSize);
   const first = await cards.first().getAttribute("data-entry-id");
-  for (const count of [300, 450, 600]) {
+  for (const count of [pageSize * 2, pageSize * 3, pageSize * 4]) {
     await strip.evaluate(el => { el.scrollLeft = el.scrollWidth; });
     await expect(strip.locator("li[aria-posinset]").last()).toHaveAttribute("aria-posinset", String(count));
     await expect(strip).toHaveAttribute("aria-busy", "false");
   }
-  expect(await cards.count()).toBeLessThanOrEqual(450);
-  await expect(strip.locator("li[aria-posinset]").first()).toHaveAttribute("aria-posinset", "151");
+  expect(await cards.count()).toBeLessThanOrEqual(pageSize * 3);
+  await expect(strip.locator("li[aria-posinset]").first()).toHaveAttribute("aria-posinset", String(pageSize + 1));
   const last = cards.last(), title = await last.locator("strong").textContent();
   await last.click();
   await expect(page.getByRole("dialog")).toContainText(title!);
@@ -46,7 +47,7 @@ for (const view of ["books", "authors"]) test(`${view} scrolls forward, evicts o
 
 test("incremental failures preserve cards and retry the same page", async ({ page }) => {
   await page.goto("/books?top100=false");
-  await expect(page.locator(".library-card")).toHaveCount(150);
+  await expect(page.locator(".library-card")).toHaveCount(300);
   let attempts = 0;
   await page.route("**/api/backend/v1/books?*", route => {
     if (!new URL(route.request().url()).searchParams.has("after")) return route.continue();
@@ -55,9 +56,9 @@ test("incremental failures preserve cards and retry the same page", async ({ pag
   });
   await page.locator(".library-strip").evaluate(el => { el.scrollLeft = el.scrollWidth; });
   await expect(page.getByText("Couldn’t load more books.", { exact: true })).toBeVisible();
-  await expect(page.locator(".library-card")).toHaveCount(150);
-  await page.getByRole("button", { name: "Try again", exact: true }).click();
   await expect(page.locator(".library-card")).toHaveCount(300);
+  await page.getByRole("button", { name: "Try again", exact: true }).click();
+  await expect(page.locator(".library-card")).toHaveCount(600);
   expect(attempts).toBe(2);
 });
 
@@ -78,6 +79,7 @@ test("selected author portrait has credits, opens books, and survives image fail
   await page.route("**/images/authors/**", route => route.abort());
   await page.goto("/books?view=authors&q=Tolstoy&top100=false");
   await author.click();
-  await expect(drawer.getByRole("img", { name: "Portrait unavailable" })).toBeVisible();
+  await expect(drawer.locator(".library-image-placeholder")).toBeVisible();
+  await expect(drawer.locator(".library-initials")).toHaveText("LT");
   await expect(drawer).toContainText("Leo Tolstoy");
 });

@@ -34,7 +34,11 @@ func (api *API) books(w http.ResponseWriter, r *http.Request) {
 	}
 	filter := books.Filter{Range: books.Range{Start: start, End: end}, View: q.Get("view"), Query: q.Get("q"), Authors: q["author"], Languages: q["language"], Countries: q["country"], Regions: q["region"], Women: women, Top100: top100, After: q.Get("after")}
 	filter.Summary = summary
-	filter.Limit, err = integerQuery(r, "limit", timeline.IndividualLimit, 1, filter.MaxPageSize())
+	defaultLimit := books.TimelineLimit
+	if filter.View == "authors" {
+		defaultLimit = timeline.IndividualLimit
+	}
+	filter.Limit, err = integerQuery(r, "limit", defaultLimit, 1, filter.MaxPageSize())
 	if err != nil {
 		writeError(w, 400, "INVALID_LIMIT", err.Error())
 		return

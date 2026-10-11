@@ -157,15 +157,21 @@ var Bounds = Range{-5000, 2000}
 var ErrNotFound = errors.New("book not found")
 var ErrUnavailable = errors.New("book catalogue unavailable")
 
-// The editorial selection has its own bounded capacity, independent of the
-// full catalogue. It fits the current highlights on one chronological view.
+// Books share one timeline capacity, including filtered and highlighted views.
+const TimelineLimit = 300
+
+// Keep the larger explicit highlight page available to existing API clients
+// and the author view. Book display mode still uses TimelineLimit.
 const HighlightsLimit = 500
 
 func (f Filter) MaxPageSize() int {
 	if f.Top100 {
 		return HighlightsLimit
 	}
-	return timeline.IndividualLimit
+	if f.View == "authors" {
+		return timeline.IndividualLimit
+	}
+	return TimelineLimit
 }
 
 func (f Filter) Validate() error {

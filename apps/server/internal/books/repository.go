@@ -49,11 +49,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		return result, err
 	}
 	result.MatchedRange = timeline.FitExtent(firstYear, lastYear, f.Start, f.End)
-	individualLimit := timeline.IndividualLimit
-	if f.Top100 {
-		individualLimit = HighlightsLimit
-	}
-	if result.Total > individualLimit || (result.Total > 0 && result.UndatedTotal == result.Total) {
+	if result.Total > TimelineLimit || (result.Total > 0 && result.UndatedTotal == result.Total) {
 		result.Mode = "density"
 	}
 	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM book_records b WHERE status <> 'archived'  AND `+publicationScope+``).Scan(&result.SelectionTotal); err != nil {

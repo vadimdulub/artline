@@ -5,7 +5,7 @@ import { timelineRequestKey } from "@/lib/timeline-request";
 import { discoveryChanges } from "@/lib/discovery";
 
 import { useEffect, useRef, useState } from "react";
-import { type Book, type TimelineAuthor, type BooksResponse, type BooksFacets } from "@/lib/books";
+import { BOOK_TIMELINE_LIMIT, type Book, type TimelineAuthor, type BooksResponse, type BooksFacets } from "@/lib/books";
 import { apiRequest, errorMessage } from "@/lib/api";
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import { BooksTimeline } from "./BooksTimeline";
@@ -18,7 +18,10 @@ import styles from "./Books.module.css";
 export function BooksIndex() {
   const queryString = useQueryString();
   const params = new URLSearchParams(queryString);
-  if (!params.has("top100")) params.set("top100", "true");
+  if (!params.has("top100")) {
+    const filtered = params.get("women") === "true" || ["q", "author", "language", "country", "region"].some(key => params.getAll(key).some(value => value.trim()));
+    params.set("top100", filtered ? "false" : "true");
+  }
   const authors = [...new Set(params.getAll("author"))];
   const languages = [...new Set(params.getAll("language"))];
   const countries = [...new Set(params.getAll("country"))];
@@ -29,8 +32,10 @@ export function BooksIndex() {
   const top100Only = params.get("top100") === "true";
   const selectionKey = `top100=false&${new URLSearchParams([...params].filter(([key]) => key === "women"))}`;
   const query = params.get("q") || "";
-  const requestParams = new URLSearchParams([...params].filter(([key]) => ["fit", "q", "author", "start", "end", "after", "women", "top100", "language", "country", "region", "view"].includes(key)));
-  requestParams.set("limit", top100Only ? "500" : "150");
+  // Gallery cursors belong to its scroll window. A shared URL must always open
+  // the complete first timeline page, even if it carries an old index cursor.
+  const requestParams = new URLSearchParams([...params].filter(([key]) => ["fit", "q", "author", "start", "end", "women", "top100", "language", "country", "region", "view"].includes(key)));
+  requestParams.set("limit", authorView ? top100Only ? "500" : "150" : String(BOOK_TIMELINE_LIMIT));
   if (!authorView) requestParams.set("summary", "true");
   const requestKey = timelineRequestKey(requestParams, { start: -5000, end: 2000 });
   const [result, setResult] = useState<{ key: string; data?: BooksResponse; error?: string }>();

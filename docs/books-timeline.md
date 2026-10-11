@@ -25,7 +25,7 @@ approach: 1100–1400 takes 15% of a broad view, with 85% for 1400–2000. Earli
 of Roman numerals. Both timelines' range buttons advance the start by one year while preserving
 the selected band's visual width (until constrained by the endpoints).
 Books can overlap several period counts. Undated records remain accessible in
-the full-range text index. Collections is no longer a filter.
+the full-range undated list or cover gallery. Collections is no longer a filter.
 
 Books has no visible range-presets heading or buttons, and neither timeline
 shows the range-movement helper sentence. From/To fields, labelled handles,
@@ -43,14 +43,38 @@ Ticks and retained entries keep their full-axis horizontal positions; a subtle
 band identifies the selected years. Calendar duration may change across
 compression boundaries. Edge handles and From/To edit the selected interval
 without zooming the chart.
-The Books screen shows a compact title/author/date index instead of cover cards.
-Covers appear only in the right details drawer, so no cover image request is
-made until a book is selected. Pagination remains server-bounded to 100 records.
+Book selections of up to **300** records appear together on the timeline,
+including women-author and highlight selections. The browser requests a bounded
+300-record summary page, so a 200–300-book selection is never truncated at 150.
+Dated books use timeline marks; undated books remain in a separate labelled list.
+Entirely undated selections use the gallery because they cannot be placed in time.
+
+Above 300 matches, Books shows the existing horizontal cover gallery and a
+visible count with guidance to add filters or narrow the years. Selected,
+source-backed covers load lazily; unavailable images have an explicit fallback.
+Gallery scrolling retains at most three server pages and can restore earlier
+pages. It never downloads the whole catalogue to select a display mode.
+
+Selecting Women authors clears the default highlights selection, as do the other
+discovery filters. Shared filtered URLs without an explicit `top100` value now
+behave the same way. An explicit `top100=true` remains an intentional intersection.
+The 300-book rule applies to women-author results too; a larger selection keeps
+all matching books accessible through gallery paging. Legacy URL cursors do not
+skip the beginning of the timeline.
+
+The 11 October 2026 update was checked at 200, 300 and 301 matches, including
+undated records, shared women-author links, reload/history and gallery paging.
+Browser coverage includes 1440, 1024, 768, 390 and 320px, image loading, drawer
+keyboard navigation and phone accessibility checks. The read-only local catalogue
+check returned all 224 women-authored books from 1900–1950 on the timeline; the
+869-book full women-author selection uses the gallery. Go/API checks, summary
+and highlights read-only audits, 17 focused frontend tests, TypeScript and lint
+passed. No catalogue fixtures or writes were used. SQL predicates, ordering and
+indexes are unchanged; these local checks are not a large-scale load test.
 
 ## Author lifespan view
 
-The **Show author lifespans** checkbox above the Books timeline is off by
-default. It writes `view=authors` to the URL and preserves search, discovery
+The **Books / Authors** control above the timeline defaults to Books. It writes `view=authors` to the URL and preserves search, discovery
 filters and years. Reload and browser history retain the choice. Reset view
 returns to books; changing views clears the pagination cursor.
 
@@ -98,7 +122,7 @@ lint and the production build. Final screenshots are under
 ## Data and visibility
 
 `0020_books_catalogue.sql` adds independent work, creator and credit tables.
-`GET /api/v1/books` returns at most 100 records, a keyset cursor, scoped counts,
+`GET /api/v1/books` defaults to 300 books, with a keyset cursor, scoped counts,
 period counts and range metadata. PostgreSQL owns visibility, date overlap,
 filtering, counts, ordering and pagination. The browser renders a bounded page.
 Creator details are batched for the returned book IDs. `GET /api/v1/books/authors`

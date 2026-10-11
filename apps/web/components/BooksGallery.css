@@ -1,4 +1,6 @@
 .books-page{padding-bottom:0}
+.books-gallery-guidance{flex-shrink:0;margin:0 0 16px;max-width:75ch;color:#b5ad9f;font-size:13px;line-height:1.6}
+.books-gallery-guidance strong{color:var(--paper);font-weight:500}
 .books-undated{display:flex;flex-wrap:wrap;align-content:flex-start;gap:2px 16px;flex-shrink:0;max-height:76px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#786b58 transparent;list-style:none;margin:6px 0;padding:4px;border-top:1px solid #454037}
 .books-undated li{min-width:0;max-width:100%}
 .books-undated button{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 6px;min-height:28px;background:none;border:0;padding:4px 2px;color:var(--paper);font-size:12px;line-height:1.4;text-align:left;overflow-wrap:anywhere}

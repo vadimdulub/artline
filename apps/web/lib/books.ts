@@ -1,3 +1,6 @@
+// Matches the book timeline capacity enforced by the Go API.
+export const BOOK_TIMELINE_LIMIT = 300;
+
 export type BookOverview = {
   paragraphs: string[];
   sourceUrl: string;

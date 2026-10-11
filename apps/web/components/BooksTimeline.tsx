@@ -2,7 +2,7 @@
 import { displayMetadata } from "@/lib/display-metadata";
 
 import { useEffect, useRef, useState } from "react";
-import { authorLifespanLabel, bookAxisTicks, bookTickPosition, bookYearAtPosition, bookYearLabel, positionBooks, type Book, type TimelineAuthor, type BookRange, type BooksResponse } from "@/lib/books";
+import { BOOK_TIMELINE_LIMIT, authorLifespanLabel, bookAxisTicks, bookTickPosition, bookYearAtPosition, bookYearLabel, positionBooks, type Book, type TimelineAuthor, type BookRange, type BooksResponse } from "@/lib/books";
 import { atlasTimelineScale } from "@/lib/atlas-timeline";
 import { TimelineGrid, TimelineLanes, TimelineMark } from "./TimelineGrid";
 import { BooksGallery } from "./BooksGallery";
@@ -55,6 +55,9 @@ export function BooksTimeline({ data, metadata, range, loading, error, selected,
       zoom={<TimelineZoomOut disabled={!focused && validRange && !error} onClick={onZoomOut} />}>
       <h1 id="books-timeline" className="time-title book-time-title" data-bce={displayRange.start < 0 || displayRange.end < 0} tabIndex={-1} aria-label={authorView ? "Authors through time" : "Books through time"}>{Math.abs(displayRange.start)}{displayRange.start < 0 && <small>BCE</small>}<span aria-hidden="true">—</span>{Math.abs(displayRange.end)}{displayRange.end < 0 && <small>BCE</small>}</h1>
     </TimelineHeader>
+    {gallery && !authorView && data.total > BOOK_TIMELINE_LIMIT && <p className="books-gallery-guidance">
+      <strong>{data.total.toLocaleString("en-GB")} books match.</strong>{" "}Add filters or narrow the years to see all results on the timeline (up to {BOOK_TIMELINE_LIMIT} books).
+    </p>}
     <TimelineGrid stageRef={stage} busy={loading} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>
       {error ? <div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={onRetry}>Retry</button> <button onClick={onReset}>Reset view</button></div> :
         data?.total ? gallery ? <BooksGallery key={query} data={data} query={query} authorView={authorView} selected={selected} strip={strip} onBook={onBook} onAuthor={onAuthor} /> :

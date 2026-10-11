@@ -22,6 +22,7 @@ export function LibraryImage({ image, name, portrait = false }: { image?: Pick<N
       <img src={image.imageUrl} alt={image.label} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(image.imageUrl)} /> :
       <span className="library-image-placeholder" aria-hidden="true">
         {portrait ? <span className="library-initials" aria-hidden="true">{name.split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join("")}</span> : <svg viewBox="0 0 48 60" fill="none" aria-hidden="true"><path d="M10 5h30v46H10a5 5 0 0 0 0 10M10 5a5 5 0 0 0-5 5v46a5 5 0 0 0 5 5h30M12 5v46M19 19h14M19 25h10" /></svg>}
+        {!portrait && <small>Cover unavailable</small>}
       </span>}
   </span>;
 }

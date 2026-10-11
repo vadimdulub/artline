@@ -35,7 +35,7 @@ func TestReadOnlyHighlightsTimeline(t *testing.T) {
 		t.Fatal(err)
 	}
 	wantMode := "individual"
-	if highlights.Total > HighlightsLimit || (highlights.Total > 0 && highlights.UndatedTotal == highlights.Total) {
+	if highlights.Total > TimelineLimit || (highlights.Total > 0 && highlights.UndatedTotal == highlights.Total) {
 		wantMode = "density"
 	}
 	if highlights.Total <= 100 || len(highlights.Items) != min(highlights.Total, f.Limit) || highlights.Mode != wantMode || highlights.HasMore != (highlights.Total > f.Limit) {
