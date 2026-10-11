@@ -91,7 +91,7 @@ export function PageBackNavigation() {
   const canGoBack = useSyncExternalStore(subscribe, hasReturnHistory, noServerHistory);
   const artwork = /^\/artists\/[^/]+\/works\/[^/]+/.test(pathname);
   // Record templates already provide their own named directory/breadcrumb links.
-  const hasParentLink = !artwork && /^\/(artists|museums|guides|studies)\//.test(pathname);
+  const hasParentLink = !artwork && (/^\/(artists|museums|guides|studies)\//.test(pathname) || pathname.startsWith("/shared/studies/"));
   const showParent = pathname !== "/" && !hasParentLink;
   if (!canGoBack && !showParent) return null;
   const family = pathname.startsWith("/guides/") ? "guide" : ["/privacy", "/art-history-timeline"].includes(pathname) ? "prose" : pathname.startsWith("/studies") || pathname.startsWith("/shared/studies/") ? "study" : "standard";

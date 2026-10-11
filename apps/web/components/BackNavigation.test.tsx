@@ -63,7 +63,7 @@ it("distinguishes artwork history from its predictable artist destination", asyn
   expect(screen.getByRole("link", { name: "Back" })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Artist" })).toHaveAttribute("href", "/artists/monet");
 });
-it.each(["/artists/monet", "/museums/louvre", "/guides/louvre/en", "/studies/123"])("keeps existing parent navigation for %s", async path => {
+it.each(["/artists/monet", "/museums/louvre", "/guides/louvre/en", "/studies/123", "/shared/studies/token"])("keeps existing parent navigation for %s", async path => {
   state.path = path; render(<PageBackNavigation />);
   expect(screen.queryByRole("navigation")).toBeNull();
   await act(async () => window.history.pushState({ __NA: true }, "", path));
