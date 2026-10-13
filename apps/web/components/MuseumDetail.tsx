@@ -1,5 +1,4 @@
 "use client";
-import { ContextualBackLink } from "./BackNavigation";
 import { BookmarkButton } from "./Bookmarks";
 import { artworkDate, museumDescription } from "@/lib/display-metadata";
 import Link from "@/components/MemberLink";
@@ -7,8 +6,9 @@ import { useRef, useState } from "react";
 import { queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import { MultiSelectFilter } from "./MultiSelectFilter";
 import { usePainterChoices, workTypeOptions } from "./use-painter-choices";
-import { countryName, safeSourceURL } from "@/lib/api";
+import { countryName } from "@/lib/api";
 import type { Museum, MuseumWorksPage } from "@/lib/types";
+import { MuseumWebsiteLink } from "./MuseumWebsiteLink";
 import { ArtworkImage } from "./ArtworkViewer";
 import { MuseumDrawer } from "./MuseumDrawer";
 import { useMuseumRequest } from "./museum-state";
@@ -48,13 +48,13 @@ export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMus
   }
   const clear = () => setMuseumFilters(Object.fromEntries([...Object.keys(filterLabels), "artist", "movement", "venue", "work_type", "sort"].map(key => [key, null])));
   return <main id="main-content" className={`${styles.page} ${styles.collectionPage}`} data-return-label={museum?.name || "museum"} data-return-path={`/museums/${slug}`}>
-    <ContextualBackLink className={styles.back} fallbackHref="/museums" fallbackLabel="All museums and collections" />
     {museumRequest.error && !museum ? <MuseumError message={museumRequest.error} retry={() => setRevision(value => value + 1)} /> : !museum ? <p className={styles.loading}>Opening collection…</p> : <>
       {museumRequest.error && <p role="status" className={styles.note}>Collection information could not be refreshed. <button type="button" onClick={() => setRevision(value => value + 1)}>Retry</button></p>}
-      <header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}</h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>
-        <details className={styles.visit}><summary>{museum.venues.length ? "Visiting information" : "Exhibition information"}</summary>{museum.venues.length ? <ul>{museum.venues.map(venue => <li key={venue.id}><a href={safeSourceURL(venue.visit_url)} target="_blank" rel="noreferrer">{venue.name} <span aria-hidden="true">↗</span></a></li>)}</ul> : <p><a href={safeSourceURL(museum.website_url)} target="_blank" rel="noreferrer">Check the collection’s website</a>.</p>}<p>Use the official site for access, opening hours and exhibition changes. A collection record does not guarantee display.</p></details>
+      <header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}<MuseumWebsiteLink url={museum.website_url || museum.venues[0]?.visit_url} name={museum.name} /></h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>
+
       </header>
-      <div className={styles.selectionTabs} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], ["museum", "Museum highlights"]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => setMuseumFilters({ selection: value, sort: value ? "curated" : "images" })}>{label}<span>{formatCount(value === "museum" ? museum.highlight_count : museum.work_count)}</span></button>)}</div>
+      <p className={styles.note}><Link href={`/exhibitions?institution=${museum.id}`} prefetch={false}>Exhibition history</Link></p>
+      <div className={`${styles.selectionTabs} catalogue-selection`} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], ["museum", "Museum highlights"]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => setMuseumFilters({ selection: value, sort: value ? "curated" : "images" })}>{label}<span>{formatCount(value === "museum" ? museum.highlight_count : museum.work_count)}</span></button>)}</div>
       <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} searchLabel="Search artworks" placeholder="Artwork or painter" columns={2} activeCount={filters.filter(filter => filter.key !== "q").length}>
         <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} />
         <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />
@@ -64,13 +64,13 @@ export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMus
         <AtlasSelect label="Display" value={display} onChange={value => setMuseumFilters({ display: value })} options={[{ value: "", label: "Any display status" }, { value: "on_view", label: "Confirmed on view" }]} />
         <MultiSelectFilter label="Confirmed at venues" allLabel="Any venue" options={venueOptions} values={venues} onChange={values => setMuseumFilters({ venue: values })} />
         <MultiSelectFilter label="Work types" allLabel="All types" options={workTypeOptions} values={workTypes} onChange={values => setMuseumFilters({ work_type: values })} />
-        <label><span>Created from</span><input type="number" aria-label="Creation start year" min={-10000} max={3000} step={1} value={params.get("start") ?? ""} onChange={event => setMuseumFilters({ start: event.target.value, unknown_date: null })} /></label>
-        <label><span>Created through</span><input type="number" aria-label="Creation end year" min={-10000} max={3000} step={1} value={params.get("end") ?? ""} onChange={event => setMuseumFilters({ end: event.target.value, unknown_date: null })} /></label>
+        <label className="atlas-select"><span>Created from</span><input type="number" aria-label="Creation start year" min={-10000} max={3000} step={1} value={params.get("start") ?? ""} onChange={event => setMuseumFilters({ start: event.target.value, unknown_date: null })} /></label>
+        <label className="atlas-select"><span>Created through</span><input type="number" aria-label="Creation end year" min={-10000} max={3000} step={1} value={params.get("end") ?? ""} onChange={event => setMuseumFilters({ end: event.target.value, unknown_date: null })} /></label>
         <label className={styles.check}><input type="checkbox" checked={params.get("unknown_date") === "1"} onChange={event => setMuseumFilters({ unknown_date: event.target.checked ? "1" : null, start: null, end: null })} /><span>Only unknown creation dates</span></label>
       </div><p className={styles.note}>Dates refer to artwork creation. Values within a filter combine with “or”; groups combine with “and”. Venue filters require current, confirmed display evidence.</p></details>
       <ActiveFilters filters={filters} onClear={clear} searchRef={search} />
       <div className={`${styles.resultsHeading} ${styles.resultsToolbar}`}><div><h2 id="museum-results-title" tabIndex={-1}>{selection === "museum" ? "Museum highlights" : "Works in this collection"}</h2><p role="status">{works.loading ? "Finding artworks…" : works.error ? "Connection interrupted" : `${formatCount(works.data?.total ?? 0)} ${(works.data?.total ?? 0) === 1 ? "work" : "works"} in this view${works.data?.image_count === undefined ? "" : ` · ${formatCount(works.data.image_count)} with images`}`}</p></div>
-        <div className={styles.resultControls}><div className={styles.viewToggle} role="group" aria-label="Artwork layout"><button aria-pressed={view === "grid"} onClick={() => updateQuery({ view: null })}>Grid</button><button aria-pressed={view === "list"} onClick={() => updateQuery({ view: "list" })}>List</button></div><label><span className="sr-only">Sort artworks</span><select value={params.get("sort") ?? "images"} onChange={event => setMuseumFilters({ sort: event.target.value })}><option value="images">Images first</option><option value="year">Creation date</option><option value="title">Title</option>{selection && <option value="curated">Selection order</option>}</select></label><label><span className="sr-only">Artworks per page</span><select value={params.get("limit") ?? "24"} onChange={event => setMuseumFilters({ limit: event.target.value })}><option value="24">24 per page</option><option value="48">48 per page</option></select></label></div>
+        <div className={styles.resultControls}><div className="catalogue-segmented" role="group" aria-label="Artwork layout"><button aria-pressed={view === "grid"} onClick={() => updateQuery({ view: null })}>Grid</button><button aria-pressed={view === "list"} onClick={() => updateQuery({ view: "list" })}>List</button></div><label><span className="sr-only">Sort artworks</span><select className="catalogue-control" value={params.get("sort") ?? "images"} onChange={event => setMuseumFilters({ sort: event.target.value })}><option value="images">Images first</option><option value="year">Creation date</option><option value="title">Title</option>{selection && <option value="curated">Selection order</option>}</select></label><label><span className="sr-only">Artworks per page</span><select className="catalogue-control" value={params.get("limit") ?? "24"} onChange={event => setMuseumFilters({ limit: event.target.value })}><option value="24">24 per page</option><option value="48">48 per page</option></select></label></div>
         <CursorPager compact paging={paging} next={works.data?.next_cursor ?? ""} busy={works.loading} total={works.data?.total ?? 0} shown={works.data?.items.length ?? 0} label="Artwork pages above results" />
       </div>
       <p className={styles.note}>Explore artworks from this collection.</p>

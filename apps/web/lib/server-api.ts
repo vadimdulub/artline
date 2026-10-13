@@ -2,7 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { cookies } from "next/headers";
 import { memberRequestHeaders } from "./session-cookies";
-import type { ArtistDetail, ArtistIdentity, ArtistBrowsePage, Artwork, Museum } from "./types";
+import type { ArtistDetail, ArtistIdentity, ArtistBrowsePage, Artwork, Museum, MuseumPage } from "./types";
 
 export const getArtist = cache(async (slug: string): Promise<ArtistDetail | null> => {
   if (slug.length > 100 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug)) return null;
@@ -25,11 +25,22 @@ export const getArtistIdentity = cache(async (slug: string): Promise<ArtistIdent
 export const getMuseum = cache(async (slug: string): Promise<Museum | null> => {
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || slug.length > 100) return null;
   const url = new URL(`/api/v1/museums/${encodeURIComponent(slug)}`, process.env.API_INTERNAL_URL ?? "http://localhost:8080");
-  const response = await fetch(url, { headers: memberRequestHeaders(await cookies()), cache: "no-store", redirect: "error", signal: AbortSignal.timeout(8000) });
+  const headers = memberRequestHeaders(await cookies());
+  const response = await fetch(url, { headers, cache: "no-store", redirect: "error", signal: AbortSignal.timeout(8000) });
   if (response.status === 404) return null;
   if (!response.ok) throw new Error("The museum catalogue is temporarily unavailable.");
   return response.json();
 });
+
+export async function getMuseumDirectory(params: URLSearchParams): Promise<MuseumPage | null> {
+  const url = new URL("/api/v1/museums", process.env.API_INTERNAL_URL ?? "http://localhost:8080");
+  url.search = params.toString();
+  const headers = memberRequestHeaders(await cookies());
+  const response = await fetch(url, { headers, cache: "no-store", redirect: "error", signal: AbortSignal.timeout(10000) });
+  if (response.status === 400) return null;
+  if (!response.ok) throw new Error("The museum catalogue is temporarily unavailable.");
+  return response.json();
+}
 
 export const getArtistArtwork = cache(async (slug: string, id: string): Promise<Artwork | null> => {
   if (slug.length > 100 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug) || !/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(id)) return null;

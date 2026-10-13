@@ -7,7 +7,7 @@ export function CursorPager({ paging, next, busy, total, shown, label, compact =
   total: number; shown: number; label: string; compact?: boolean; noun?: string;
 }) {
   if (!next && !paging.hasCursor && !busy) return null;
-  return <nav className={styles.cursorPager} aria-label={label}>
+  return <nav className={`${styles.cursorPager} catalogue-pagination`} aria-label={label}>
     {!compact && <span>{paging.number ? `Page ${paging.number} · ` : ""}{formatCount(shown)} of {formatCount(total)} {noun}</span>}
     <div>
       {!compact && paging.hasCursor && <button disabled={busy} onClick={paging.first}>First page</button>}

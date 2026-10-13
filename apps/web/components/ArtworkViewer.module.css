@@ -1,0 +1,33 @@
+.dialog:global(.image-dialog[open]) { gap: 8px; padding: max(12px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); overflow: hidden; }
+.dialog header.header { flex: 0 0 48px; align-items: center; }
+.identity { min-width: 0; }
+.dialog .identity h2 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 400 20px/1.25 var(--serif); margin: 0 0 3px; }
+.dialog .identity :global(.image-dialog-artist) { font: 12px/1.4 var(--sans); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 0; }
+.viewer:global(.image-viewer) { min-height: 0; gap: 8px; }
+.viewer > :global(.image-dialog-stage) { flex: 1 1 0; }
+.unavailableStage { flex: 1; min-height: 0; display: grid; place-items: center; color: var(--paper); font: 16px/1.5 var(--sans); }
+.unavailableControls { flex: none; display: flex; justify-content: flex-end; min-height: 44px; }
+.unavailableViewer .detailPanel { bottom: max(64px, calc(env(safe-area-inset-bottom) + 56px)); max-height: calc(100dvh - 140px); }
+.controls { flex: none; display: grid; grid-template-columns: minmax(204px, 1fr) minmax(0, 368px) minmax(84px, 1fr); align-items: center; gap: 16px; }
+.controls :global(.image-zoom-controls) { justify-content: flex-start; gap: 4px; }
+.controls :global(.image-zoom-controls button) { padding: 6px; }
+.controls :global(.image-zoom-controls output) { min-width: 60px; }
+.colors { min-width: 0; height: 44px; }
+.dialog .caption { flex: none; min-width: 0; overflow: visible; padding: 0; justify-self: end; }
+.dialog .details { margin: 0; text-align: left; }
+.dialog .details > summary { min-height: 44px; padding: 0 8px; text-decoration: none; border: 1px solid #625d55; border-radius: 3px; font: 13px var(--sans); cursor: pointer; }
+.dialog .details > summary:hover { background: #302a22; }
+.detailPanel { position: fixed; z-index: 10; right: max(16px, env(safe-area-inset-right)); bottom: max(72px, calc(env(safe-area-inset-bottom) + 64px)); width: min(420px, calc(100vw - 32px)); max-height: calc(100dvh - 152px); overflow: auto; overscroll-behavior: contain; border: 1px solid #625d55; background: var(--dark); padding: 20px; }
+.detailPanel strong { font: 400 24px/1.25 var(--serif); overflow-wrap: anywhere; }
+.detailPanel > p { color: #bdb4a6; font-size: 13px; line-height: 1.5; margin: 12px 0; }
+.detailPanel :global(.image-dialog-credit) { text-align: left; }
+.detailPanel .keyboardHelp { border-top: 1px solid #625d55; padding-top: 12px; font-size: 12px; }
+@media (max-width: 760px) {
+  .dialog:global(.image-dialog[open]) { padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right)); gap: 4px; }
+  .dialog header.header { gap: 8px; flex-basis: 48px; }
+  .dialog .identity h2 { font-size: 18px; }
+  .controls { grid-template-columns: minmax(204px, 1fr) auto; gap: 2px 8px; }
+  .colors { grid-column: 1 / -1; grid-row: 2; display: flex; justify-content: center; }
+  .caption { grid-column: 2; grid-row: 1; }
+  .detailPanel { bottom: max(108px, calc(env(safe-area-inset-bottom) + 100px)); max-height: calc(100dvh - 188px); }
+}

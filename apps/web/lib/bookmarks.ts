@@ -1,7 +1,7 @@
 import { ApiError } from "./api";
 export type BookmarkKind = "artist" | "artwork" | "book" | "event";
 export type BookmarkRef = { kind: BookmarkKind; id: string };
-export type BookmarkItem = BookmarkRef & { title: string; subtitle: string; href: string; saved_at: string; media_url: string | null; alt_text: string | null; rights_status: string | null; image?: { imageUrl: string; label: string; sourceUrl: string; credit: string; license: string; licenseUrl: string } };
+export type BookmarkItem = BookmarkRef & { title: string; subtitle: string; href: string; saved_at: string; media_url: string | null; alt_text: string | null; rights_status: string | null; image?: { artwork?: { id: string; title: string; href: string }; imageUrl: string; label: string; sourceUrl: string; credit: string; license: string; licenseUrl: string } };
 export type BookmarkPage = { items: BookmarkItem[]; next_cursor: string };
 export const bookmarkKey = (ref: BookmarkRef) => `${ref.kind}:${ref.id}`;
 export const validBookmarkRef = (value: unknown): value is BookmarkRef => {

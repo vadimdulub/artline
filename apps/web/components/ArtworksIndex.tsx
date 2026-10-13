@@ -43,7 +43,7 @@ export function ArtworksIndex() {
     <section aria-label="Artwork results" aria-busy={result.loading}>
       {result.error ? <MuseumError message={result.error} retry={() => setRetry(value => value + 1)} /> : result.loading ? <p className={styles.loading}>Opening artworks…</p> : result.data?.items.length ? <ul className={styles.worksGrid}>{result.data.items.map(work => <li key={work.id} className="bookmark-grid-item">
         <button className={`${styles.workCard} ${recordStyles.card}`} aria-label={`Open ${work.title}`} aria-haspopup="dialog" onClick={() => updateQuery({ work: work.id }, true)}>
-          {work.media_url && <span className={styles.workImage}><ArtworkImage work={work} /></span>}
+          <span className={styles.workImage}><ArtworkImage work={work} /></span>
           <span className={styles.workCopy}>{work.creator && <span className={styles.place}>{work.creator}</span>}<strong>{work.title}</strong>{artworkDate(work) && <span>{artworkDate(work)}</span>}{work.museum && <span>{work.museum.name}</span>}</span>
         </button><BookmarkButton kind="artwork" id={work.id} title={work.title} />
       </li>)}</ul> : <div className={styles.empty}><h3>No artworks match these filters</h3><button onClick={reset}>Show all artworks</button></div>}

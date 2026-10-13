@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-13T18:55:06.979022+00:00",
+  "attached_images": 51,
+  "metadata_status_and_holdings_preserved": true,
+  "real_local_database_writes": false,
+  "artist_counts": [
+    {
+      "display_name": "James Ensor",
+      "slug": "james-ensor-q158840",
+      "works": 244,
+      "illustrated": 130
+    },
+    {
+      "display_name": "Ben Nicholson",
+      "slug": "ben-nicholson-nga-5989",
+      "works": 40,
+      "illustrated": 21
+    }
+  ],
+  "ui_deployed": false,
+  "ui_validation": {
+    "typescript": "passed",
+    "targeted_eslint": "passed",
+    "focused_tests": "23/23 passed",
+    "full_suite": "577/579 initially; connections passed on rerun; existing BackNavigation signed-out access test remains failing",
+    "browser_widths": [
+      1440,
+      390,
+      320
+    ],
+    "museum_toolbar_height_px": 44,
+    "missing_details_control_height_px": 44,
+    "directory_initial_html": true,
+    "directory_duplicate_hydration_requests": 0,
+    "final_production_build": "passed",
+    "final_built_browser_checks": "museum controls, initial directory render, viewer, mixed-image cards passed",
+    "mixed_card_image_top_px": [
+      412.1875,
+      412.1875
+    ]
+  },
+  "museum_source_extension": "awaiting user response; not assumed"
+}

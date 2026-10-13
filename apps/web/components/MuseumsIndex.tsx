@@ -16,9 +16,9 @@ import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
-export function MuseumsIndex() {
+export function MuseumsIndex({ initialPage, initialQuery = "" }: { initialPage?: MuseumPage; initialQuery?: string }) {
   const search = useRef<HTMLInputElement>(null);
-  const params = new URLSearchParams(useQueryString());
+  const params = new URLSearchParams(useQueryString(initialQuery ? `?${initialQuery}` : ""));
   if (params.has("selection") && params.get("selection") !== "museum") { params.delete("selection"); params.delete("cursor"); }
   const painters = queryValues(params, "artist"), movements = queryValues(params, "movement");
   const painterChoices = usePainterChoices(painters);
@@ -32,7 +32,7 @@ export function MuseumsIndex() {
   if (params.get("cursor")) request.set("cursor", params.get("cursor")!);
   const collectionQuery = new URLSearchParams();
   for (const key of ["artist", "movement", "selection", "display"]) params.getAll(key).forEach(value => collectionQuery.append(key, value));
-  const { data, previousData, error, loading } = useMuseumRequest<MuseumPage>(`museums?${request}`, retry);
+  const { data, previousData, error, loading } = useMuseumRequest<MuseumPage>(`museums?${request}`, retry, initialPage, true);
   const facets = data?.facets ?? previousData?.facets;
   const regions = queryValues(params, "region"), countries = queryValues(params, "country").map(value => value.toUpperCase());
   const selection = params.get("selection") ?? "", display = params.get("display") ?? "", query = params.get("q") ?? "";

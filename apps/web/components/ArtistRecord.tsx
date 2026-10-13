@@ -7,6 +7,7 @@ import { artworkDate, displayMetadata } from "@/lib/display-metadata";
 import { ArtworkDialog, ArtworkImage, ArtworkViewer, ShareWorkLink } from "./ArtworkViewer";
 import { RecordArrows, type RecordNavigation } from "./RecordNavigation";
 import { ArtistBiography } from "./ArtistBiography";
+import { ArtisticConnections } from "./ArtisticConnections";
 import { updateQuery } from "@/lib/url-state";
 import { cleanEditorialBiography } from "@/lib/biography";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -61,14 +62,10 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
   const background = <section className="painter-background" aria-label="About the painter">
         <div className="record-classification"><span><i style={{ background: artist.movement.color }} />{artist.movement.name}</span>{artist.countries.map(code => <span key={code}>{countryName(code)}</span>)}</div>
         {artist.aliases.length > 0 && <details className="artist-aliases"><summary>Other names ({artist.aliases.length})</summary><p>{artist.aliases.join(", ")}</p></details>}
-      {(hasBiography || artist.influences.length > 0) && <ArtistContext collapsed={embedded && Boolean(workBrowser)}><section className={`artist-context${!artist.influences.length ? " research-context" : ""}`} aria-label="Biography and influences">
+      {(hasBiography || artist.connections?.incoming.total || artist.connections?.outgoing.total) ? <ArtistContext collapsed={embedded && Boolean(workBrowser)}><section className="artist-context research-context" aria-label="Biography and artistic connections">
         <ArtistBiography artist={artist} embedded={embedded} />
-        {(["incoming", "outgoing"] as const).map(direction => {
-          const claims = artist.influences.filter(item => item.direction === direction);
-          if (!claims.length) return null;
-          return <div key={direction} className={`influence-column ${direction}`}><h2>{direction === "incoming" ? "Influenced by" : "Later influence"}</h2><ul>{claims.map(claim => <li key={claim.id}>{claim.slug ? <Link href={`/artists/${claim.slug}`}>{claim.name}</Link> : claim.name}<small>{claim.evidence_level.replaceAll("_", " ")}</small><details><summary>Evidence</summary><p>{claim.evidence_note}</p><SourceList citations={claim.citations} /></details></li>)}</ul></div>;
-        })}
-      </section></ArtistContext>}
+        {artist.connections && <ArtisticConnections key={artist.id} artist={artist} initial={artist.connections} />}
+      </section></ArtistContext> : null}
 
       </section>;
   const artworkRecord = !gallery && (!embedded || work || workMessage) ? <aside ref={artworkPanel} className={`artwork-panel${embedded ? " painter-preview" : ""}`} aria-label={embedded ? "Artwork preview" : undefined} aria-labelledby={embedded ? undefined : "artwork-record-title"}>
@@ -85,7 +82,7 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
           {selectedIndex>=0 && <p className="image-credit">{selectedIndex + 1} / {works.length}{workBrowser ? " on this page" : ""}</p>}
           <PainterArtworkDetails artist={artist} work={work} />
         </>}
-      </div> : workMessage ?? <div className="artwork-waiting"><span aria-hidden="true">▧</span><h3>A closer look</h3><p>Select an artwork to explore its date, origin, collection, and sources.</p></div>}
+      </div> : workMessage ?? <div className="artwork-waiting"><h3>A closer look</h3><p>Select an artwork to explore its date, origin, collection, and sources.</p></div>}
     </aside> : null;
   return <div className={`artist-record${gallery ? " artist-gallery-record" : ""}`}>
     <div className="artist-main">

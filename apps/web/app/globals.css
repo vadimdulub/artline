@@ -39,9 +39,9 @@ button{cursor:pointer} a{color:inherit;text-underline-offset:4px} button:disable
 .timeline-controls>.reset-button,.timeline-controls>.more-filters>summary{height:100%;min-height:58px;padding:12px 18px;border:0;border-radius:0;color:var(--muted)}
 .timeline-controls>.more-filters{border-right:1px solid var(--line)}
 label{display:flex;flex-direction:column;gap:7px}label>span{font-size:11px;color:var(--muted)}
-input,select,textarea{width:100%;min-height:42px;border:1px solid #bfb7aa;border-radius:4px;background:var(--white);color:var(--ink);padding:10px 12px;font-size:13px}
+input,select,textarea{width:100%;min-height:var(--control-height,44px);border:1px solid var(--line);border-radius:var(--control-radius,4px);background:var(--white);color:var(--ink);padding:10px 12px;font-size:13px}
 /* Shared native pickers retain keyboard, type-ahead and mobile selection. */
-select{min-height:44px;padding:10px 14px;border-color:var(--line);border-radius:7px;cursor:pointer;line-height:1.5;text-overflow:ellipsis}
+select{min-height:var(--control-height,44px);padding:10px 12px;border-color:var(--line);border-radius:var(--control-radius,4px);cursor:pointer;line-height:22px;text-overflow:ellipsis}
 select:not([multiple]):not([size]){
   appearance:none;
   -webkit-appearance:none;
@@ -713,6 +713,9 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>strong{font-size:14px;line-height:24px;font-weight:400}
 .atlas-select{--select-end-padding:28px;--select-arrow-offset:0px;min-width:0;gap:4px;padding:8px 18px;border-right:1px solid var(--line)}
 .atlas-select select{width:100%;min-height:24px;padding:0 22px 0 0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:14px;line-height:24px;text-overflow:ellipsis;cursor:pointer}
+.atlas-select input[type="number"]{width:100%;min-width:0;min-height:24px;padding:0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:14px;line-height:24px;box-shadow:none}
+.atlas-select input[type="number"]:focus-visible{outline-offset:2px}
+@media(max-width:760px){.atlas-filter-system .atlas-select input[type="number"]{min-height:44px;font-size:16px}}
 .atlas-select:focus-within{background:var(--white)}
 .atlas-select:hover{background:var(--white)}
 .atlas-select select:focus-visible{outline-offset:2px}
@@ -726,7 +729,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
   .atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>span:first-child,.atlas-filter-system .atlas-select>span{font-size:11px;line-height:13px}
   .atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>strong{font-size:13px;line-height:18px}
   .atlas-filter-system .atlas-select{min-height:40px;padding:4px 12px;gap:0}
-  .atlas-filter-system .atlas-select select{min-height:18px;font-size:13px;line-height:18px}
+  .atlas-filter-system .atlas-select :is(select,input[type="number"]){min-height:18px;font-size:13px;line-height:18px}
   .atlas-filter-system .popular-filter-control{min-height:40px;padding:4px 12px}
   .atlas-filter-system .popular-filter{min-height:30px}
   .atlas-filter-system .popular-filter>span{font-size:12px}
@@ -830,3 +833,31 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .biography .biography-copy a{text-underline-offset:3px}
 .biography .biography-toggle{font:13px var(--sans);min-height:44px;margin:0 0 6px}
 @media(max-width:620px){.biography .biography-copy{font-size:16px}.biography .biography-copy>p:first-child{font-size:17px}}
+
+/* Missing reproductions remain readable in every catalogue image frame. */
+.work-placeholder.image-unavailable{align-items:center;justify-content:center;text-align:center;background:var(--stone);color:var(--muted);padding:12px;border:0}
+.work-placeholder.image-unavailable p{font:13px/1.5 var(--sans);margin:0;overflow-wrap:normal}
+.work-placeholder.image-unavailable.large-placeholder{min-height:180px;max-height:360px;aspect-ratio:4/3}
+.work-placeholder.image-unavailable.large-placeholder p{font-size:16px}
+
+/* Catalogue controls share geometry across museums, artists, artworks and archives. */
+:root{--control-height:44px;--control-radius:4px;--control-font:14px;--control-padding:12px}
+.catalogue-control,.catalogue-pagination.catalogue-pagination :is(button,a),.catalogue-selection.catalogue-selection button{box-sizing:border-box;min-height:var(--control-height);padding:10px var(--control-padding);border:1px solid var(--line);border-radius:var(--control-radius);background:var(--white);color:var(--ink);font:400 var(--control-font)/22px var(--sans);text-decoration:none}
+.catalogue-pagination.catalogue-pagination :is(button,a){display:inline-flex;align-items:center;justify-content:center;margin:0;white-space:nowrap}
+.catalogue-pagination.catalogue-pagination :is(button,a):not(:disabled):hover,.catalogue-control:hover,.catalogue-selection.catalogue-selection button:hover{background:var(--stone)}
+.catalogue-pagination button:disabled{opacity:.45;cursor:default}
+.catalogue-pagination>div{display:flex;flex-wrap:wrap;gap:8px}
+.catalogue-selection.catalogue-selection button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.catalogue-segmented{display:inline-flex;min-width:0;height:var(--control-height);border:1px solid var(--line);border-radius:var(--control-radius);overflow:hidden;background:var(--white)}
+.catalogue-segmented button{min-height:42px;min-width:54px;border:0;border-radius:0;padding:9px var(--control-padding);background:transparent;color:var(--ink);font:400 var(--control-font)/22px var(--sans)}
+.catalogue-segmented button+button{border-left:1px solid var(--line)}
+.catalogue-segmented button:hover{background:var(--stone)}
+.catalogue-segmented button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.museum-website-link{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:44px;height:44px;margin-left:8px;color:var(--muted);border-radius:var(--control-radius);text-decoration:none}
+.museum-website-link:hover{color:var(--ink);background:var(--stone)}
+@media(max-width:760px){.catalogue-control{font-size:16px}.catalogue-pagination.catalogue-pagination :is(button,a){font-size:14px}.catalogue-segmented button{min-height:44px}.catalogue-segmented{height:46px}}
+/* Search uses the same type size, inset and target height in every page family. */
+.atlas-filter-system>.search-field,.atlas-search:not(.filter-search){min-height:var(--control-height);padding-inline:14px}
+.atlas-filter-system>.search-field>input,.atlas-search:not(.filter-search)>input{min-height:var(--control-height);padding-block:6px;font:400 var(--control-font)/22px var(--sans)}
+.atlas-filter-system>.reset-button,.atlas-filter-system .atlas-search-actions>.reset-button{min-height:var(--control-height);padding:10px 14px;font:400 var(--control-font)/22px var(--sans)}
+@media(max-width:760px){.atlas-filter-system>.search-field>input,.atlas-search:not(.filter-search)>input{font-size:16px}}
