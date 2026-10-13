@@ -17,7 +17,7 @@
       "illustrated": 21
     }
   ],
-  "ui_deployed": false,
+  "ui_deployed": true,
   "ui_validation": {
     "typescript": "passed",
     "targeted_eslint": "passed",
@@ -39,5 +39,11 @@
       412.1875
     ]
   },
-  "museum_source_extension": "awaiting user response; not assumed"
+  "museum_source_extension": "awaiting user response; not assumed",
+  "ui_deployment": {
+    "revision": "artline-web-catalogue-ui-1013-v1",
+    "sourceCommit": "e7004edcab188916ce21301c95abd2ae367e8eae",
+    "verifiedAt": "2026-10-13T21:13:13.916751+00:00",
+    "site": "https://artlines.org"
+  }
 }

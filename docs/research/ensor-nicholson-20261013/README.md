@@ -2,8 +2,11 @@
 
 The request covers missing-image messages, the artwork viewer, the Ensor-to-MoMA
 museum link, James Ensor and Ben Nicholson image research, consistent catalogue
-controls, and museum loading. UI changes are local; no application deployment was
-performed for this request.
+controls, and museum loading. The catalogue UI release is deployed and verified
+at https://artlines.org from commit `e7004edc`. See
+[the deployment receipt](../../deployment-20261013-catalogue-ui.json).
+Unreleased museum-studio publication/streaming work remains local and is excluded
+from this release; the current production member-access rules remain in place.
 
 ## Delivered production images
 
@@ -60,7 +63,7 @@ See `catalogue-image-audit.csv` for every baseline object and its current image
 state. Image discovery is not complete worldwide; the remaining source and access
 holds are explicit.
 
-## Local interface changes
+## Interface changes
 
 - Shared artwork images show “Image not available” for absent/invalid/failed
   images, including the main artwork directory and artist artwork views. The
@@ -76,9 +79,8 @@ holds are explicit.
   control geometry and type. Existing page families and navigation icons remain.
 - The authenticated museum directory renders the initial bounded page on the
   server and reuses it on hydration. Session cookies are allowlisted through the
-  existing helper. Museum publication sections stream independently so secondary
-  material does not block the historical collection. A route loading state gives
-  immediate navigation feedback.
+  existing helper. A route loading state gives immediate navigation feedback.
+  Publication streaming changes for the unfinished museum studio remain local.
 
 ## Validation and limits
 
@@ -117,3 +119,15 @@ holds are explicit.
   `~/Library/Application Support/Artline/backups/ensor-nicholson-20261013/`
 - Disposable browser screenshots, query plans and test/build output:
   `/tmp/artline-catalogue-ui-20261013/`
+
+## Production release verification
+
+The exact release source passes TypeScript, an optimized local production build,
+and 19 focused viewer/artist/connections tests. Candidate and live browser checks
+cover artwork cards, missing-image details, the Ensor fullscreen viewer at 1440,
+390 and 320 pixels, exhibition search/reset and aligned fields, museum sign-in
+with retained destination, and unchanged English/Russian Louvre guide text.
+Signed-in museum controls and initial directory rendering were checked locally
+against captured read-only API responses, with zero duplicate hydration requests.
+The API, real local database and production catalogue were not changed by this
+application release. The previous 51-image delivery remains a separate operation.
