@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-14",
+  "service": {
+    "sourceCommit": "e9ba177a635bd8b152786a7f2ad7fdad07a2e857",
+    "baselineRevision": "artline-api-danish-golden-1013-v2",
+    "baselineBuildId": "3dab1e0a-8dc8-406b-ad01-8ad8db0a078d",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:museums-performance-1014-e9ba177a",
+    "buildId": "63a2c10c-2a54-4ebf-8470-3a14793eff1d",
+    "preimages": {
+      "internal/catalog/museums.go": "0ce6db5440968511be45f93b081f59a94f5dbc63ce51868d94037caa99cfea72",
+      "internal/catalog/museum_cards.go": null,
+      "internal/catalog/museum_directory_test.go": "8cf88d1a0748e8505451133eff1e8b07a5714963ac1530591d6a835b0bc89d08",
+      "internal/catalog/museum_cards_readonly_test.go": null,
+      "internal/catalog/museum_cards_fixture_test.go": null,
+      "db/migrations/0057_museum_cover_seek.sql": null
+    },
+    "files": {
+      "internal/catalog/museums.go": "783e420091e83e2dc7773bb39128815b4f1b2133e54989380570f5f6a3a9a6c9",
+      "internal/catalog/museum_cards.go": "75abeb628ebbfd47f93ee209da1944f1080b1f18b4132cf3fdd68ddba2edb5e5",
+      "internal/catalog/museum_directory_test.go": "25ef702323e0ae144f5a1fce29c2a8516cab13928c075ff41b6586a1d8b661d7",
+      "internal/catalog/museum_cards_readonly_test.go": "dfea87f4fe306a295308690aefe7d9539556f3793ae735993294d63e7ac59a12",
+      "internal/catalog/museum_cards_fixture_test.go": "e819cb7cac6b4c5d2fffade771d7425eb0fe5c7f4087a4842b8384d0aa9c49f2",
+      "db/migrations/0057_museum_cover_seek.sql": "8dc810bd694e65317ef9be8cfcfe87ee625905761fad58237362e5971d714bf9"
+    },
+    "overlaySHA256": "770993bd96a2ff776919ca88c288b057fba1e28206e21ac78a9fdac643b6d419",
+    "overlayURI": "gs://artline-508319-build-source/museums-performance-20261014/770993bd96a2ff77.tar.xz",
+    "overlayGeneration": "1791959937452789",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:3784a66d10aaa2167cdbdf31c174da89963b7d14d277c32365d9d4068a54d439",
+    "revision": "artline-api-museums-performance-1014-v1",
+    "candidateURL": "https://museums-performance-1014-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-api-danish-golden-1013-v2",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100
+  },
+  "database": {
+    "index": {
+      "indisvalid": true,
+      "indisready": true,
+      "size": "33 MB",
+      "definition": "CREATE INDEX artworks_museum_illustrated_cover_idx ON public.artworks USING btree (current_institution_id, creation_year_start, title, id) INCLUDE (primary_media_id) WHERE ((status <> 'archived'::text) AND (primary_media_id IS NOT NULL))"
+    },
+    "seconds": 2.994,
+    "migration": "0057_museum_cover_seek.sql",
+    "sha256": "8dc810bd694e65317ef9be8cfcfe87ee625905761fad58237362e5971d714bf9",
+    "catalogueRowsChanged": false,
+    "localDatabaseUsed": false,
+    "maintenance": {
+      "operation": "VACUUM (ANALYZE, INDEX_CLEANUP AUTO) artworks",
+      "seconds": 13.72
+    }
+  },
+  "candidateChecks": {
+    "stage": "candidate",
+    "base": "https://museums-performance-1014-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+    "revision": "artline-api-museums-performance-1014-v1",
+    "checks": [
+      {
+        "path": "/health",
+        "status": 200,
+        "seconds": 0.264,
+        "bodySHA256": "6489d6d7a33c5d40e18fc61eeb6c34c341279ee61816394dde5189aa4ad8fae5"
+      },
+      {
+        "path": "/ready",
+        "status": 200,
+        "seconds": 0.181,
+        "bodySHA256": "682c055ddf7d0afe32b7b2646e1635ab3c83f65884a37aecdc8549e7031a3417"
+      },
+      {
+        "path": "/api/v1/museums",
+        "status": 401,
+        "seconds": 0.175,
+        "bodySHA256": "5f236cab13816383ba94f3baa1ae774a999945acf25b96a2847856345e19d8fa"
+      },
+      {
+        "path": "/api/v1/museums/the-met",
+        "status": 401,
+        "seconds": 0.17,
+        "bodySHA256": "5f236cab13816383ba94f3baa1ae774a999945acf25b96a2847856345e19d8fa"
+      },
+      {
+        "path": "/api/v1/museums/the-met/works",
+        "status": 401,
+        "seconds": 0.177,
+        "bodySHA256": "5f236cab13816383ba94f3baa1ae774a999945acf25b96a2847856345e19d8fa"
+      },
+      {
+        "path": "/api/v1/artists/rembrandt/identity",
+        "status": 200,
+        "seconds": 0.204,
+        "bodySHA256": "e460335e6d01982ab958a9c90bbdb0da4a1a47eee11e09614346c46fb11001de"
+      },
+      {
+        "path": "/api/v1/exhibitions?limit=1",
+        "status": 200,
+        "seconds": 0.25,
+        "bodySHA256": "fe9d54d03e7a9b8761a97448b49e36f6b44fb1882d19c19be52118ff1249bb94"
+      }
+    ],
+    "authenticatedMuseumPayloadValidation": "Read-only production repository equivalence and local loopback API/browser; no production account/session fixture created"
+  },
+  "liveChecks": {
+    "stage": "live",
+    "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+    "revision": "artline-api-museums-performance-1014-v1",
+    "checks": [
+      {
+        "path": "/health",
+        "status": 200,
+        "seconds": 0.269,
+        "bodySHA256": "6489d6d7a33c5d40e18fc61eeb6c34c341279ee61816394dde5189aa4ad8fae5"
+      },
+      {
+        "path": "/ready",
+        "status": 200,
+        "seconds": 0.191,
+        "bodySHA256": "682c055ddf7d0afe32b7b2646e1635ab3c83f65884a37aecdc8549e7031a3417"
+      },
+      {
+        "path": "/api/v1/museums",
+        "status": 401,
+        "seconds": 0.173,
+        "bodySHA256": "5f236cab13816383ba94f3baa1ae774a999945acf25b96a2847856345e19d8fa"
+      },
+      {
+        "path": "/api/v1/museums/the-met",
+        "status": 401,
+        "seconds": 0.182,
+        "bodySHA256": "5f236cab13816383ba94f3baa1ae774a999945acf25b96a2847856345e19d8fa"
+      },
+      {
+        "path": "/api/v1/museums/the-met/works",
+        "status": 401,
+        "seconds": 0.168,
+        "bodySHA256": "5f236cab13816383ba94f3baa1ae774a999945acf25b96a2847856345e19d8fa"
+      },
+      {
+        "path": "/api/v1/artists/rembrandt/identity",
+        "status": 200,
+        "seconds": 0.184,
+        "bodySHA256": "e460335e6d01982ab958a9c90bbdb0da4a1a47eee11e09614346c46fb11001de"
+      },
+      {
+        "path": "/api/v1/exhibitions?limit=1",
+        "status": 200,
+        "seconds": 0.19,
+        "bodySHA256": "fe9d54d03e7a9b8761a97448b49e36f6b44fb1882d19c19be52118ff1249bb94"
+      }
+    ],
+    "authenticatedMuseumPayloadValidation": "Read-only production repository equivalence and local loopback API/browser; no production account/session fixture created"
+  },
+  "browserPreview": {
+    "loadingMS": 108,
+    "resultsMS": 898,
+    "firstCards": 24,
+    "duplicateHydrationRequest": false,
+    "searchPassed": true,
+    "mobileOverflow": false,
+    "errors": []
+  },
+  "frontendDeployment": false,
+  "productionBrowserLimit": "No signed-in production browser session was available. Full museum response and query validation used read-only production queries and an isolated local preview.",
+  "knownExistingChecks": {
+    "booksUnitTest": "TestBooksAcceptLegacyParametersAndValidBounds fails identically on the baseline (limit 151)",
+    "mobileResize": "Desktop-to-mobile resize can retain sidebar offset until reload; fresh mobile navigation fits viewport."
+  }
+}

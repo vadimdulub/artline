@@ -60,9 +60,11 @@ disposable cluster and rolls back its changes.
 
 The production page already includes a loading boundary. Browser checks against
 the isolated release preview and read-only production API showed loading feedback
-at 104ms and 24 directory cards at 415ms, with no hydration duplicate, working
-search/reset, and no settled mobile overflow or JavaScript errors. Network and
-cache conditions affect these observations. Signed-in production browser timing
+at 108ms and 24 directory cards at 898ms in the final run, with no hydration
+duplicate, working search/reset, and no overflow on a fresh mobile navigation or
+JavaScript errors. A desktop-to-mobile viewport resize exposed an existing sidebar
+offset until reload; that separate responsive-navigation issue was not changed.
+Network and cache conditions affect these observations. Signed-in production browser timing
 requires an existing authenticated browser; the in-app browser tool was unavailable.
 
 Release packaging is an explicit file overlay on the current deployed API build,
