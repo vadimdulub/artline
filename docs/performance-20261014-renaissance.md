@@ -65,3 +65,33 @@ history now records it as well; this release does not alter detail visibility.
 Plans, exact request/response captures, screenshots, source hashes and release
 receipts are retained under
 `~/Library/Application Support/Artline/backups/renaissance-performance-20261014/`.
+
+## Production release
+
+Both revisions serve 100% of traffic with their previous runtime settings:
+
+- API: `artline-api-renaissance-performance-1014-v1`, build
+  `eac7fcf6-7e9b-48b7-a74e-e7dfcad5701c`, source `a2a4c3b5`.
+- Web: `artline-web-renaissance-performance-1014-v1`, build
+  `b0c480b1-21ef-4ac3-b4fb-4b0c3babedcc`, source `c7ffc928`.
+
+The first candidate API comparison took 4.722 seconds on the previous revision
+and 1.171 seconds on the candidate; repeated requests on both took about
+0.17–0.21 seconds. A later explicit 150-item request took 2.152 seconds on the
+previous revision and 1.066 seconds on the live revision, with identical payloads.
+These HTTP timings include transport and service conditions, unlike the database
+plan timings above.
+
+The live view gained one eligible artwork during delivery. Both revisions returned
+the same updated 29,941 entries (29,922 artworks, 12 books and seven events), with
+unchanged first-page ordering. The candidate's second page also matched the old
+revision exactly, with 150 distinct works and no overlap with its first page.
+
+Public verification on `https://artlines.org/all` confirms the visible spinner,
+successful content replacement, 150 initial artwork cards, one timeline request
+and no JavaScript errors. API health/readiness, exhibition browsing and protected
+museum access checks pass. The preserved artwork-detail rule also passes read-only
+checks for supported undated and post-1970 objects.
+
+Rollback revisions remain `artline-api-museums-performance-1014-v1` and
+`artline-web-catalogue-ui-1013-v1`.
