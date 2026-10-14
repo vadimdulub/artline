@@ -347,6 +347,12 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 }
 func (r *Repository) ArtworkVisible(ctx context.Context, id string) (bool, error) {
 	var exists bool
-	err := r.db.QueryRow(ctx, `SELECT EXISTS(SELECT 1`+artScope+` AND a.id=$6::uuid)`, pgx.QueryExecModeCacheDescribe, Bounds.Start, Bounds.End, "", false, "", id).Scan(&exists)
+	// Direct inspection also serves exhibition links with uncertain dates or
+	// explicitly approved dates outside the timeline. Keep discovery bounds on
+	// lists, while retaining source-backed selection and archive checks here.
+	err := r.db.QueryRow(ctx, `SELECT EXISTS(SELECT 1 FROM artworks a
+ WHERE a.id=$1::uuid AND a.status<>'archived'
+ AND (EXISTS(`+selectedArt+` AND ci.artwork_id=a.id) OR `+acceptedArtHolding+`)
+ AND `+artworkCreatorVisibility+`)`, pgx.QueryExecModeCacheDescribe, id).Scan(&exists)
 	return exists, err
 }

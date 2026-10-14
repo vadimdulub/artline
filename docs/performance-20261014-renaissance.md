@@ -56,8 +56,11 @@ files/tests, on top of the exact current deployed builds. Existing runtime setti
 guide content, museum functionality and research processes are preserved. Source
 history also records the already-deployed browse/cache/search dependencies needed
 by the query implementation; it does not ship those again as additional changes.
-Unrelated working-tree changes, including the separate artwork-detail change,
-remain untouched.
+Unrelated working-tree changes remain untouched. The first API build was stopped
+by its preimage guard before release: the prior build includes an inline
+artwork-detail visibility patch, not an archive overlay. That deployed patch is
+preserved byte-for-byte in the corrected baseline and candidate. The source
+history now records it as well; this release does not alter detail visibility.
 
 Plans, exact request/response captures, screenshots, source hashes and release
 receipts are retained under
