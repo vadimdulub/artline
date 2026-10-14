@@ -30,22 +30,21 @@ func TestMuseumDirectoryKeepsEvidencePolicy(t *testing.T) {
 	}
 }
 
-func TestMuseumDirectoryCardScopesAndReusesNarrowWorks(t *testing.T) {
+func TestMuseumDirectoryCardScopesIndexedReads(t *testing.T) {
 	for _, fragment := range []string{
 		"aw.current_institution_id=page.id",
-		"aw.current_institution_id IS DISTINCT FROM page.id",
-		"la.institution_id=page.id",
-		"visible_works AS MATERIALIZED (",
-		"SELECT aw.id,aw.current_institution_id,aw.primary_media_id,aw.title,aw.creation_year_start",
-		"JOIN artworks aw ON aw.id=visible.id",
-		museumMembershipAggregate,
+		"current_institution_id IS DISTINCT FROM page.id",
+		"d.institution_id=page.id AND d.state='on_view'",
+		"SELECT DISTINCT aw.id,aw.title,aw.creation_year_start,aw.primary_media_id,aw.current_institution_id",
+		"SELECT (SELECT count(*) FROM card_holdings) AS holdings",
 	} {
 		if !strings.Contains(museumDirectoryCardCTE, fragment) {
 			t.Errorf("card scope changed: %s", fragment)
 		}
 	}
-	if !strings.Contains(museumDirectoryCardJSON, "museum_memberships member JOIN visible_works aw") {
-		t.Fatal("cover selection should reuse the bounded narrow relation")
+	if !strings.Contains(museumDirectoryCardJSON, "FROM selections s\n WHERE s.institution_id=i.id AND EXISTS(") ||
+		!strings.Contains(museumDirectoryCardJSON, "FROM card_holdings aw WHERE aw.primary_media_id IS NOT NULL") {
+		t.Fatal("highlight and cover lookup must start from indexed candidates")
 	}
 }
 

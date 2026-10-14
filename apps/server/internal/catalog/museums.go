@@ -282,22 +282,6 @@ var museumScopedFacetCTE = strings.NewReplacer(
 	"FROM visible_works aw LEFT JOIN institutions", "FROM visible_works visible JOIN artworks aw ON aw.id=visible.id LEFT JOIN institutions",
 ).Replace(museumScopedCTE)
 
-// Directory cards already have a bounded institution page. Read each holding
-// through its institution index directly, avoiding a second artwork UUID lookup
-// for every row. Incoming loans remain a separate indexed branch; exclude the
-// holding branch's IDs so a work in both branches is counted only once.
-var museumDirectoryCardCTE = `WITH card_candidates AS NOT MATERIALIZED (
- SELECT aw.* FROM artworks aw WHERE aw.current_institution_id=page.id
- UNION ALL
- SELECT aw.* FROM artworks aw WHERE aw.current_institution_id IS DISTINCT FROM page.id
- AND aw.id IN(SELECT la.artwork_id FROM artwork_location_assertions la
- WHERE la.institution_id=page.id AND la.claim_type='display' AND la.review_state='accepted' AND la.superseded_by IS NULL)
-), ` + strings.NewReplacer(
-	"visible_works AS NOT MATERIALIZED (", "visible_works AS MATERIALIZED (",
-	"SELECT aw.* FROM artworks aw WHERE", "SELECT aw.id,aw.current_institution_id,aw.primary_media_id,aw.title,aw.creation_year_start FROM card_candidates aw WHERE",
-	"FROM visible_works aw LEFT JOIN institutions", "FROM visible_works visible JOIN artworks aw ON aw.id=visible.id LEFT JOIN institutions",
-).Replace(strings.TrimPrefix(museumCTE, "WITH "))
-
 // Selective filters start from indexed artwork IDs, not from every museum's
 // holdings. Remaining predicates below still apply independently to each work,
 // including museum-specific selections and different creators on joint works.
@@ -357,21 +341,14 @@ const museumJSON = `jsonb_build_object('id',i.id,'slug',i.slug,'name',i.name,'ki
  (SELECT aw.id FROM museum_memberships member JOIN artworks aw ON aw.id=member.artwork_id
  WHERE member.institution_id=i.id ORDER BY aw.creation_year_start NULLS LAST,aw.title,aw.id LIMIT 1)))))`
 
-// The bounded card CTE retains only the columns needed by counts and cover
-// selection. Reuse that narrow relation, then enrich just the chosen cover UUID.
-var museumDirectoryCardJSON = strings.ReplaceAll(museumJSON,
-	"museum_memberships member JOIN artworks aw", "museum_memberships member JOIN visible_works aw")
-
-// An overview needs the same counts and cover as a directory card. Reuse its
-// narrow, materialized visibility set so each count does not revisit full
-// artwork rows and cover selection enriches only the chosen artwork.
+// An overview reuses the directory's indexed counts and cover lookup.
 const museumOverviewPage = `WITH museum_page AS MATERIALIZED (
  SELECT id FROM institutions WHERE slug=$1)
  SELECT detail.data FROM museum_page page CROSS JOIN LATERAL (`
 
 var museumOverviewSQL = museumOverviewPage + museumDirectoryCardCTE + ` SELECT ` + museumDirectoryCardJSON + ` AS data
  FROM institutions i WHERE i.id=page.id AND ` + museumVisible + `
- AND EXISTS(SELECT 1 FROM museum_memberships member WHERE member.institution_id=i.id)) detail`
+ AND EXISTS(SELECT 1 FROM card_works)) detail`
 
 func (r *Repository) Museums(ctx context.Context, f MuseumFilter) (MuseumPage, error) {
 	out := MuseumPage{Items: []Museum{}, Facets: emptyMuseumFacets()}
