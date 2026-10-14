@@ -10,7 +10,7 @@ import (
 // Names mirror the native catalogues. Prefixes keep the three layer scopes independent.
 var EntityFields = map[string][]string{
 	"book":    {"q", "author", "language", "country", "region", "women", "top100"},
-	"artwork": {"q", "painter", "movement", "country", "region", "work_type", "women", "popular", "image_only"},
+	"artwork": {"q", "id", "painter", "movement", "country", "region", "work_type", "women", "popular", "image_only"},
 	"event":   {"q", "topic", "kind", "country", "region", "top100"},
 }
 
@@ -20,7 +20,11 @@ func (f Filter) validateEntities() error {
 			return ErrFilter
 		}
 		for key, choices := range values {
-			if !slices.Contains(EntityFields[kind], key) || len(choices) == 0 || len(choices) > 32 {
+			maximum := 32
+			if kind == "artwork" && key == "id" {
+				maximum = 100
+			}
+			if !slices.Contains(EntityFields[kind], key) || len(choices) == 0 || len(choices) > maximum {
 				return ErrFilter
 			}
 			if key == "q" || key == "women" || key == "popular" || key == "top100" || key == "image_only" {
@@ -28,7 +32,12 @@ func (f Filter) validateEntities() error {
 					return ErrFilter
 				}
 			}
+			seen := map[string]bool{}
 			for _, value := range choices {
+				if key == "id" && (!uuidPattern.MatchString(value) || seen[strings.ToLower(value)]) {
+					return ErrFilter
+				}
+				seen[strings.ToLower(value)] = true
 				if len(value) > 250 || strings.TrimSpace(value) == "" {
 					return ErrFilter
 				}
@@ -89,6 +98,9 @@ func entityPredicate(kind string, values url.Values, args *[]any) string {
 			conditions = append(conditions, "e.top100")
 		}
 	case "artwork":
+		// Guide selections scope indexed object IDs before eligibility/enrichment.
+		// This affects the artwork lane only; books and events keep their context.
+		add("id", "a.id=ANY(%s::text[]::uuid[])")
 		add("work_type", "a.work_type=ANY(%s::text[])")
 		// image_only is accepted for old/shared URLs. All applies its mandatory
 		// image predicate once in Repository.List, including when this is false.
@@ -129,16 +141,27 @@ func entityPredicate(kind string, values url.Values, args *[]any) string {
 // Search narrow title/label and creator-ID projections before native eligibility.
 // UNION lets the existing covering and creator-link indexes avoid fetching the
 // wide artwork heap for every illustrated record. All values remain bound.
-func artworkSearchPredicate(parameter string) string {
-	return strings.ReplaceAll(`a.id IN (
- SELECT search.id FROM artworks search WHERE search.status<>'archived'
- AND (strpos(lower(search.title),lower($query))>0 OR strpos(lower(coalesce(search.unlinked_creator_label,'')),lower($query))>0)
+const artworkTextMatches = `
+ SELECT search.id FROM artwork_search_documents search WHERE search.status<>'archived'
+ AND search.title ILIKE '%'||replace(replace(replace($query,'!','!!'),'%','!%'),'_','!_')||'%' ESCAPE '!'
+ UNION SELECT search.id FROM artworks search WHERE search.status<>'archived' AND search.unlinked_creator_label IS NOT NULL
+ AND search.unlinked_creator_label ILIKE '%'||replace(replace(replace($query,'!','!!'),'%','!%'),'_','!_')||'%' ESCAPE '!'`
+
+func sharedArtworkSearchPredicate(parameter string) string {
+	return strings.ReplaceAll(`a.id IN (`+artworkTextMatches+`
  UNION SELECT aa.artwork_id FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id
- WHERE ar.status<>'archived' AND (
- strpos(lower(ar.display_name),lower($query))>0 OR strpos(lower(ar.sort_name),lower($query))>0
- OR ar.id IN(SELECT x.artist_id FROM artist_aliases x WHERE strpos(lower(x.alias),lower($query))>0)
- OR ar.id IN(SELECT x.artist_id FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE m.status<>'archived' AND strpos(lower(m.name),lower($query))>0)
- OR ar.id IN(SELECT x.artist_id FROM artist_countries x JOIN countries c ON c.code=x.country_code WHERE strpos(lower(c.name),lower($query))>0)
- OR ar.id IN(SELECT x.artist_id FROM artist_places x JOIN places pl ON pl.id=x.place_id WHERE strpos(lower(pl.name),lower($query))>0)
- ))`, "$query", parameter)
+ WHERE ar.status<>'archived' AND strpos(lower(ar.display_name),lower($query))>0)`, "$query", parameter)
+}
+
+func artworkSearchPredicate(parameter string) string {
+	pattern := "'%'||replace(replace(replace(" + parameter + ",'!','!!'),'%','!%'),'_','!_')||'%'"
+	return strings.NewReplacer("$query", parameter, "$pattern", pattern).Replace(`a.id IN (` + artworkTextMatches + `
+ UNION SELECT aa.artwork_id FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id
+ WHERE ar.status<>'archived' AND ar.id IN (
+ SELECT creator.id FROM artists creator WHERE creator.display_name ILIKE $pattern ESCAPE '!' OR creator.sort_name ILIKE $pattern ESCAPE '!'
+ UNION SELECT x.artist_id FROM artist_aliases x WHERE x.alias ILIKE $pattern ESCAPE '!'
+ UNION SELECT x.artist_id FROM artist_movements x JOIN movements m ON m.id=x.movement_id WHERE m.status<>'archived' AND m.name ILIKE $pattern ESCAPE '!'
+ UNION SELECT x.artist_id FROM artist_countries x JOIN countries c ON c.code=x.country_code WHERE c.name ILIKE $pattern ESCAPE '!'
+ UNION SELECT x.artist_id FROM artist_places x JOIN places pl ON pl.id=x.place_id WHERE pl.name ILIKE $pattern ESCAPE '!'
+ ))`)
 }

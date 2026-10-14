@@ -82,7 +82,35 @@ func artworkGeographyMatch(condition string) string {
  JOIN countries c ON c.code=pl.country_code WHERE (` + condition + `))) IS TRUE`
 }
 
+// Country-first lookup avoids materializing geography for the entire browse
+// projection. Keep it to the full-range, unselected artwork scope: resolving
+// geography after a selective creator/preset filter is substantially cheaper.
+// New native filters default to the scoped path until their plans are measured.
+func broadArtworkGeography(f Filter) bool {
+	if f.Range != Bounds || f.Highlights || f.PresetID != "" || len(f.Creators) > 0 ||
+		strings.TrimSpace(f.Query) != "" || f.Region != "" || f.NeighborOf != "" ||
+		len(f.Picks["artwork"]) > 0 || (len(f.Countries) == 0 && len(f.Continents) == 0) {
+		return false
+	}
+	for key, values := range f.Entities["artwork"] {
+		switch key {
+		case "image_only": // Legacy option; illustrated eligibility is mandatory.
+		case "popular", "women":
+			if len(values) != 1 || values[0] != "false" {
+				return false
+			}
+		default:
+			return false
+		}
+	}
+	return true
+}
+
 func geographyPredicate(kind string, f Filter, args *[]any) string {
+	return geographyPredicateWithArtwork(kind, f, args, artworkGeographyMatch)
+}
+
+func geographyPredicateWithArtwork(kind string, f Filter, args *[]any, matchArtwork func(string) string) string {
 	clauses := []string{"true"}
 	bind := func(v any) string { p := fmt.Sprintf("$%d", len(*args)); *args = append(*args, v); return p }
 	if len(f.Countries) > 0 && (f.CountryScope != "artwork" || kind == "artwork") {
@@ -93,7 +121,7 @@ func geographyPredicate(kind string, f Filter, args *[]any) string {
 		p := bind(names)
 		switch kind {
 		case "artwork":
-			clauses = append(clauses, artworkGeographyMatch(`lower(c.name)=ANY(`+p+`::text[])`))
+			clauses = append(clauses, matchArtwork(`lower(c.name)=ANY(`+p+`::text[])`))
 		case "book":
 			clauses = append(clauses, `d.countries && ARRAY(SELECT key FROM book_discovery_terms WHERE kind='country' AND lower(name)=ANY(`+p+`::text[]))`)
 		case "event":
@@ -108,7 +136,7 @@ func geographyPredicate(kind string, f Filter, args *[]any) string {
 		p := bind(regions)
 		switch kind {
 		case "artwork":
-			clauses = append(clauses, artworkGeographyMatch(`c.region_code=ANY(`+p+`::text[])`))
+			clauses = append(clauses, matchArtwork(`c.region_code=ANY(`+p+`::text[])`))
 		case "book":
 			clauses = append(clauses, `d.regions && `+p+`::text[]`)
 		case "event":

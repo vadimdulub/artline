@@ -3,6 +3,7 @@ package atlas
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -20,6 +21,9 @@ func TestEntityFiltersValidationAndCursor(t *testing.T) {
 	for kind, fields := range EntityFields {
 		for _, field := range fields {
 			value := "choice"
+			if field == "id" {
+				value = "ceb20e49-d7af-5f95-a525-a8e64e36a969"
+			}
 			if field == "women" || field == "popular" || field == "top100" || field == "image_only" {
 				value = "true"
 			}
@@ -37,6 +41,35 @@ func TestEntityFiltersValidationAndCursor(t *testing.T) {
 	for _, values := range []url.Values{{"language": {strings.Repeat("x", 251)}}, {"top100": {"yes"}}, {"top100": {"true", "false"}}, {"q": {strings.Repeat("x", 201)}}, {"invented": {"x"}}, {"country": {" "}}, {"region": make([]string, 33)}} {
 		if err := (Filter{Range: Bounds, Limit: 30, Entities: map[string]url.Values{"book": values}}).Validate(); err == nil {
 			t.Fatalf("accepted invalid filters: %v", values)
+		}
+	}
+}
+
+func TestGuideArtworkIDsStayInArtworkLane(t *testing.T) {
+	id := "ceb20e49-d7af-5f95-a525-a8e64e36a969"
+	for _, ids := range [][]string{{"not-a-uuid"}, {id, id}, {id, strings.ToUpper(id)}, make([]string, 101)} {
+		f := Filter{Range: Bounds, Limit: 30, Entities: map[string]url.Values{"artwork": {"id": ids}}}
+		if f.Validate() == nil {
+			t.Fatalf("accepted invalid guide IDs: %v", ids)
+		}
+	}
+	ids := make([]string, 100)
+	for i := range ids {
+		ids[i] = fmt.Sprintf("00000000-0000-4000-8000-%012d", i)
+	}
+	f := Filter{Range: Bounds, Limit: 30, Entities: map[string]url.Values{"artwork": {"id": ids}}}
+	if err := f.Validate(); err != nil {
+		t.Fatalf("100-work guide rejected: %v", err)
+	}
+	args := []any{nil}
+	predicate := entityPredicate("artwork", f.Entities["artwork"], &args)
+	if !strings.Contains(predicate, "a.id=ANY($1::text[]::uuid[])") || len(args) != 2 {
+		t.Fatalf("guide IDs not bound as a scoped predicate: %s %#v", predicate, args)
+	}
+	for _, kind := range []string{"book", "event"} {
+		args = []any{nil}
+		if p := entityPredicate(kind, f.Entities[kind], &args); p != "true" || len(args) != 1 {
+			t.Fatalf("artwork selection affected %s: %s", kind, p)
 		}
 	}
 }

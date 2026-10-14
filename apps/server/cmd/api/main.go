@@ -11,6 +11,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/vadimdulub/artline/apps/server/internal/atlas"
 	"github.com/vadimdulub/artline/apps/server/internal/config"
 	"github.com/vadimdulub/artline/apps/server/internal/database"
 	"github.com/vadimdulub/artline/apps/server/internal/httpapi"
@@ -55,6 +56,11 @@ func main() {
 
 	shutdownCtx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
+	// Derived-data maintenance is explicitly confined to the deployed API.
+	// Local and --skip-migrations previews keep their database read-only.
+	if os.Getenv("K_SERVICE") == "artline-api" && !cfg.LocalDebug && !*skipMigrations {
+		go atlas.MaintainBrowse(shutdownCtx, pool)
+	}
 	go func() {
 		<-shutdownCtx.Done()
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)

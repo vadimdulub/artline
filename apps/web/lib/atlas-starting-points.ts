@@ -1,5 +1,11 @@
 import type { AtlasPreset } from "./atlas";
 
+// Fully specified shared views can load alongside the preset labels. Incomplete
+// views must wait for the preset's default filters and date window.
+export function atlasNeedsPresetMetadata(params: URLSearchParams): boolean {
+  return Boolean(params.get("preset")) && !(params.get("preset_filters") === "custom" && params.has("start") && params.has("end"));
+}
+
 // Matches the API's ApplyStartingFilters. All filtering remains on the server.
 export function resolvedStartingFilters(params: URLSearchParams, preset?: AtlasPreset): URLSearchParams {
   const result = new URLSearchParams(params);

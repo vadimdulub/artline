@@ -16,13 +16,17 @@ type atlasDB interface {
 	Query(context.Context, string, ...any) (pgx.Rows, error)
 	QueryRow(context.Context, string, ...any) pgx.Row
 }
-type Repository struct{ db atlasDB }
+type Repository struct {
+	db         atlasDB
+	pool       *pgxpool.Pool
+	aggregates *aggregateCache
+}
 
 func NewRepository(db *pgxpool.Pool) *Repository {
 	if db == nil {
 		return &Repository{}
 	}
-	return &Repository{db}
+	return &Repository{db: db, pool: db, aggregates: newAggregateCache()}
 }
 
 // Both selections remain distinguishable in their native detail records.
@@ -35,11 +39,13 @@ const artScope = ` FROM artworks a WHERE a.status<>'archived'
  AND artline_creation_scope(a.creation_year_start,a.creation_year_end,a.date_precision)='eligible'
  AND coalesce(a.creation_year_start,a.creation_year_end)<>0 AND coalesce(a.creation_year_end,a.creation_year_start)<>0
  AND coalesce(a.creation_year_start,a.creation_year_end)<=$2 AND coalesce(a.creation_year_end,a.creation_year_start)>=$1
- AND (a.id IN (` + selectedArt + `) OR (NOT $4 AND ` + acceptedArtHolding + `))
- AND (NOT EXISTS(SELECT 1 FROM artwork_artists aa WHERE aa.artwork_id=a.id) OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived' ))
- AND ($3='' OR strpos(lower(a.title),lower($3))>0 OR strpos(lower(coalesce(a.unlinked_creator_label,'')),lower($3))>0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived'  AND strpos(lower(ar.display_name),lower($3))>0))
+` + artDiscoveryScope
+const artDiscoveryScope = ` AND (a.id IN (` + selectedArt + `) OR (NOT $4 AND ` + acceptedArtHolding + `))
+ AND ` + artworkCreatorVisibility + artSharedSearchScope + `
  AND ($5='' OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id JOIN artist_countries ac ON ac.artist_id=ar.id JOIN countries c ON c.code=ac.country_code WHERE aa.artwork_id=a.id AND ar.status<>'archived'  AND c.region_code=$5)
  OR EXISTS(SELECT 1 FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id JOIN countries c ON c.code=pl.country_code WHERE ap.artwork_id=a.id AND c.region_code=$5))`
+const artSharedSearchScope = `
+ AND ($3='' OR strpos(lower(a.title),lower($3))>0 OR strpos(lower(coalesce(a.unlinked_creator_label,'')),lower($3))>0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id WHERE aa.artwork_id=a.id AND ar.status<>'archived'  AND strpos(lower(ar.display_name),lower($3))>0))`
 const bookScope = ` FROM book_records b LEFT JOIN book_discovery d ON d.book_id=b.id AND d.book_checksum=b.source_checksum
  WHERE b.status<>'archived'  AND b.start_year<=$2 AND b.end_year>=$1 AND b.end_year<=2000
  AND ($3='' OR strpos(b.search_text,lower($3))>0) AND (NOT $4 OR d.top100) AND ($5='' OR $5=ANY(d.regions))`
@@ -71,6 +77,25 @@ var providers = map[string]provider{
 }
 
 func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
+	if r.pool == nil || f.Validate() != nil || (f.Selection && len(f.Types) == 0 && len(f.Picks) == 0) {
+		return r.list(ctx, f, "")
+	}
+	// Aggregates, dirty overlays and page details must describe one catalogue
+	// snapshot, even if an import commits between the separate SQL statements.
+	tx, err := r.pool.BeginTx(ctx, pgx.TxOptions{IsoLevel: pgx.RepeatableRead, AccessMode: pgx.ReadOnly})
+	if err != nil {
+		return Response{}, err
+	}
+	defer tx.Rollback(ctx)
+	var revision string
+	if err = tx.QueryRow(ctx, "SELECT sum(revision)::text FROM catalogue_cache_revisions HAVING count(*)=64").Scan(&revision); err != nil {
+		return Response{}, err
+	}
+	reader := &Repository{db: tx, aggregates: r.aggregates}
+	return reader.list(ctx, f, revision)
+}
+
+func (r *Repository) list(ctx context.Context, f Filter, revision string) (Response, error) {
 	out := Response{Range: f.Range, Bounds: Bounds, Lanes: []Lane{}, Ticks: Ticks(f.Range)}
 	if err := f.Validate(); err != nil {
 		return out, err
@@ -111,7 +136,7 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			args[4] = false
 		}
 		clause := entityPredicate(definition.Key, entity, &args)
-		highlight := "a.id IN (" + selectedArt + ")"
+		highlight := "a.is_highlight"
 		if definition.Key == "book" || definition.Key == "event" {
 			column := "d.top100"
 			if definition.Key == "event" {
@@ -148,72 +173,41 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			}
 		}
 		creatorScope := creatorPredicate(definition.Key, f.Creators, &args)
-		scope := "(" + selection + ") AND (" + creatorScope + ") AND (" + geographyPredicate(definition.Key, f, &args) + ") AND (" + focusPredicate(definition.Key, focus, &args) + ")"
-		// All is an illustrated discovery view, including legacy explicit picks.
-		imageScope := ` AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=a.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`
-		if definition.Key == "artwork" {
-			scope += imageScope
+		broadGeography := definition.Key == "artwork" && broadArtworkGeography(f)
+		needsGeography := false
+		pageGeography := []string{}
+		matchGeography := func(condition string) string {
+			if broadGeography {
+				return artworkGeographyMatch(condition)
+			}
+			needsGeography = true
+			scoped := scopedArtworkGeographyMatch(condition)
+			pageGeography = append(pageGeography, scoped, pageArtworkGeographyMatch(condition))
+			return scoped
 		}
+		geography := geographyPredicateWithArtwork(definition.Key, f, &args, matchGeography)
+		focusScope := focusPredicateWithArtwork(definition.Key, focus, &args, matchGeography)
 		prefix := ""
-		useNativeScope := true
-		if definition.Key == "artwork" && args[4] == true && len(f.Creators) == 0 && onlyIllustratedDefaults(entity) {
-			// Highlight windows start with the selected, eligible native records.
-			// Otherwise a broad geographic match can scan every image before
-			// narrowing to a small historical selection. Creator/facet lookups
-			// retain their indexed, filter-first path below.
-			prefix = `artwork_scope AS MATERIALIZED (
- SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,a.title,a.unlinked_creator_label,a.primary_media_id,a.work_type,a.cultural_context` + artScope + `),`
-			p.keys = artworkKeys + ` FROM artwork_scope a WHERE ` + scope
-		} else if definition.Key == "artwork" && (len(f.Creators) > 0 || focus != nil && !focus.Global || len(f.Countries) > 0 || len(f.Continents) > 0 || len(entity["country"]) > 0 || len(entity["region"]) > 0) {
-			// With several countries the planner can otherwise check holdings and
-			// visibility across the whole catalogue before applying geography.
-			// Materialize only the filtered native columns; enrich page IDs below.
-			native := "artworks"
-			if len(f.Creators) > 0 {
-				// Fence the indexed creator lookup before broad country/focus sets.
-				// Otherwise PostgreSQL can scan the entire artwork heap even for
-				// five selected painters, displacing the small instance's cache.
-				prefix = `artwork_creator_scope AS MATERIALIZED (
- SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,a.title,a.unlinked_creator_label,a.primary_media_id,a.work_type,a.cultural_context
- FROM artworks a WHERE ` + creatorScope + `),`
-				native = "artwork_creator_scope"
+		if definition.Key == "artwork" {
+			if strings.TrimSpace(f.Query) != "" {
+				selection = "(" + selection + ") AND " + sharedArtworkSearchPredicate("$3")
 			}
-			prefix += `artwork_scope AS MATERIALIZED (
- SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,a.title,a.unlinked_creator_label,a.work_type
- FROM ` + native + ` a WHERE ` + scope + `),`
-			p.keys = strings.Replace(p.keys, " FROM artworks a WHERE", " FROM artwork_scope a WHERE", 1)
-		} else if definition.Key == "artwork" && focus == nil && f.Query == "" && f.Region == "" && picked == nil && len(f.Picks["artwork"]) == 0 && onlyIllustratedDefaults(entity) {
-			useNativeScope = false
-			// Broad illustrated windows otherwise perform hundreds of thousands
-			// of random holding/image lookups before discovering the page scope.
-			// Join the native image and holding rows once, then apply the unchanged
-			// date, creator visibility and selection rules. The accepted-current-
-			// holding unique index guarantees this LEFT JOIN cannot duplicate works.
-			// Creator, institution, geography and explicit-ID lookups keep their
-			// selective paths above; only unfiltered windows use this relation.
-			prefix = `artwork_scope AS MATERIALIZED (
- SELECT a.id,a.status,a.date_precision,a.creation_year_start,a.creation_year_end,a.title,a.unlinked_creator_label,a.primary_media_id,a.work_type,
- (h.artwork_id IS NOT NULL) AS has_holding
- FROM artworks a JOIN media_assets image ON image.id=a.primary_media_id
- LEFT JOIN (artwork_location_assertions h JOIN sources s ON s.id=h.source_id AND s.is_active
- JOIN institutions i ON i.id=h.institution_id AND i.status<>'archived' )
- ON h.artwork_id=a.id AND h.claim_type='holding' AND h.review_state='accepted' AND h.superseded_by IS NULL
- WHERE a.primary_media_id IS NOT NULL AND a.status<>'archived'
- AND coalesce(a.creation_year_start,a.creation_year_end)<=$2 AND coalesce(a.creation_year_end,a.creation_year_start)>=$1
- AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'),`
-			p.keys = strings.Replace(p.keys, " FROM artworks a WHERE", " FROM artwork_scope a WHERE", 1)
-			p.keys = strings.Replace(p.keys, acceptedArtHolding, "a.has_holding", 1)
-			p.keys += " AND " + strings.TrimSuffix(scope, imageScope)
+			prefix = browseArtworkScope(selection, creatorScope)
+			if needsGeography {
+				// Geography references these IDs several times. Resolve a selected
+				// creator/filter scope once instead of repeating the browse view.
+				prefix = strings.Replace(prefix, "AS NOT MATERIALIZED", "AS MATERIALIZED", 1)
+				prefix += artworkGeographyScope
+			}
+			p.keys = `SELECT a.id::text AS id,a.start_year,a.end_year,a.gallery_priority
+ FROM artwork_native_scope a WHERE (NOT $4 OR a.is_highlight) AND (` + geography + `) AND (` + focusScope + `)
+ AND ($5='' OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists ar ON ar.id=aa.artist_id
+ JOIN artist_countries ac ON ac.artist_id=ar.id JOIN countries c ON c.code=ac.country_code
+ WHERE aa.artwork_id=a.id AND ar.status<>'archived' AND c.region_code=$5)
+ OR EXISTS(SELECT 1 FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id
+ JOIN countries c ON c.code=pl.country_code WHERE ap.artwork_id=a.id AND c.region_code=$5))`
 		} else {
-			p.keys += " AND " + scope
-		}
-		if definition.Key == "artwork" && useNativeScope {
-			nativeSelection := selection
-			if args[4] == true {
-				nativeSelection = "(" + selection + ") AND (" + highlight + ")"
-			}
-			prefix = nativeArtworkScope(f, nativeSelection, creatorScope) + boundedArtworkGeography(strings.ReplaceAll(prefix, "FROM artworks a", "FROM artwork_native_scope a"))
-			p.keys = boundedArtworkGeography(strings.Replace(p.keys, " FROM artworks a WHERE", " FROM artwork_native_scope a WHERE", 1))
+			p.keys += " AND (" + selection + ") AND (" + creatorScope + ") AND (" + geography + ") AND (" + focusScope + ")"
 		}
 		next := len(args)
 		starts, ends := []int{}, []int{}
@@ -221,47 +215,93 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			starts = append(starts, period.Start)
 			ends = append(ends, period.End)
 		}
-		c, _ := decodeCursor(f.After[definition.Key], f, definition.Key)
-		pageWhere := fmt.Sprintf("(gallery_priority,start_year,id)>($%d,$%d,$%d)", next+5, next+2, next+3)
-		pageOrder := "gallery_priority,start_year,id"
-		if f.NeighborOf != "" {
-			// Seek within the same eligible/filter-scoped relation. An anchor
-			// outside this view yields no neighbours and never leaks a record.
-			op := " > "
-			if f.Direction == "previous" {
-				op = " < "
-				pageOrder = "gallery_priority DESC,start_year DESC,id DESC"
-			}
-			pageWhere = fmt.Sprintf("$%d::int IS NOT NULL AND $%d::int IS NOT NULL AND (gallery_priority,start_year,id)"+op+"(SELECT gallery_priority,start_year,id FROM matching WHERE id=$%d)", next+2, next+5, next+3)
-			c.ID = f.NeighborOf
-			starts, ends = []int{}, []int{}
+		// Count distinct date groups once. This avoids materializing hundreds of
+		// thousands of IDs just to count them and compute their density.
+		groupPrefix := prefix
+		groupQuery := "SELECT start_year,end_year,count(*) AS weight FROM (" + p.keys + ") scope GROUP BY start_year,end_year"
+		// Text searches can be expensive even when they match no IDs (for
+		// example literal punctuation). Resolve that search once per query.
+		splitBrowse := definition.Key == "artwork" && strings.TrimSpace(f.Query) == "" && strings.TrimSpace(entity.Get("q")) == ""
+		if splitBrowse {
+			clean, pending := browseBranches(prefix)
+			groupQuery = "SELECT start_year,end_year,sum(weight) AS weight FROM ((WITH " + clean + "grouped AS (" + groupQuery + ") SELECT * FROM grouped) UNION ALL (WITH " + pending + "grouped AS (" + groupQuery + ") SELECT * FROM grouped)) branches GROUP BY start_year,end_year"
+			groupPrefix = ""
 		}
-		// Eligibility and geography can be costly for a broad filter. Evaluate the
-		// scoped ID/date relation once for totals, density and the bounded page.
-		// Only returned page IDs reach creator/title enrichment.
-		query := fmt.Sprintf(`WITH `+prefix+`matching AS MATERIALIZED (`+p.keys+`),
- totals AS (SELECT count(*) AS total,min(start_year) AS first_year,max(end_year) AS last_year FROM matching),
- periods AS (SELECT * FROM unnest($%d::int[],$%d::int[]) p(start_year,end_year)),
- page AS MATERIALIZED (SELECT * FROM matching WHERE `+pageWhere+` ORDER BY `+pageOrder+` LIMIT $%d)
- SELECT total,first_year,last_year,
+		aggregateSQL := fmt.Sprintf(`WITH %sdate_groups AS MATERIALIZED (
+ %s
+), totals AS (SELECT coalesce(sum(weight),0)::bigint AS total,min(start_year) AS first_year,max(end_year) AS last_year FROM date_groups),
+ periods AS (SELECT start_year,end_year,ordinality-1 AS bucket FROM unnest($%d::int[],$%d::int[]) WITH ORDINALITY p(start_year,end_year,ordinality)),
+ density_changes AS (
+ SELECT change.bucket,sum(change.amount) AS amount FROM date_groups m
+ CROSS JOIN LATERAL (VALUES
+  (width_bucket(m.start_year::bigint-1,$%d::bigint[]),m.weight),
+  (width_bucket(m.end_year,$%d::int[]),-m.weight)
+ ) change(bucket,amount) WHERE (SELECT total FROM totals)>%d GROUP BY change.bucket
+ ) SELECT total,first_year,last_year,
  coalesce((SELECT jsonb_agg(bins ORDER BY start_year) FROM (
-  SELECT p.start_year,p.end_year,count(*) AS count FROM periods p
-  JOIN matching m ON m.start_year<=p.end_year AND m.end_year>=p.start_year
-  WHERE totals.total>%d GROUP BY p.start_year,p.end_year
- ) bins),'[]'::jsonb),
- coalesce((SELECT jsonb_agg(details ORDER BY gallery_priority,"startYear",id) FROM (`+p.details+`)
- details(id,"startYear","endYear",title,context,years,approximate,gallery_priority)),'[]'::jsonb)
- FROM totals`, next, next+1, next+4, timeline.IndividualLimit)
-		var density, items []byte
-		var firstYear, lastYear *int
-		pageLimit := f.Limit + 1
-		if f.NeighborOf != "" {
-			pageLimit = 1
-		}
-		if err := r.db.QueryRow(ctx, query, append(slices.Clone(args), starts, ends, c.Year, c.ID, pageLimit, c.Priority)...).Scan(&lane.Total, &firstYear, &lastYear, &density, &items); err != nil {
+ SELECT * FROM (SELECT p.start_year,p.end_year,
+ sum(coalesce(d.amount,0)) OVER(ORDER BY p.bucket)::bigint AS count
+ FROM periods p LEFT JOIN density_changes d USING(bucket)) counts WHERE count>0
+ ) bins),'[]'::jsonb) FROM totals`, groupPrefix, groupQuery, next, next+1, next+1, next, timeline.IndividualLimit)
+		aggregateArgs := append(slices.Clone(args), starts, ends)
+		aggregate, err := r.aggregates.load(ctx, revision, aggregateSQL, aggregateArgs[1:], func() (laneAggregate, error) {
+			var v laneAggregate
+			var raw []byte
+			if err := r.db.QueryRow(ctx, aggregateSQL, aggregateArgs...).Scan(&v.Total, &v.FirstYear, &v.LastYear, &raw); err != nil {
+				return v, err
+			}
+			return v, json.Unmarshal(raw, &v.Density)
+		})
+		if err != nil {
 			return out, err
 		}
-		if err := json.Unmarshal(density, &lane.Density); err != nil {
+		lane.Total, lane.Density = aggregate.Total, aggregate.Density
+		if lane.Total == 0 {
+			out.Lanes = append(out.Lanes, lane)
+			continue
+		}
+		firstYear, lastYear := aggregate.FirstYear, aggregate.LastYear
+		c, _ := decodeCursor(f.After[definition.Key], f, definition.Key)
+		pageWhere := fmt.Sprintf("(gallery_priority,start_year,id)>($%d,$%d,$%d)", next+3, next, next+1)
+		pageOrder := "gallery_priority,start_year,id"
+		pageLimit := f.Limit + 1
+		if f.NeighborOf != "" {
+			op := ">"
+			if f.Direction == "previous" {
+				op = "<"
+				pageOrder = "gallery_priority DESC,start_year DESC,id DESC"
+			}
+			pageWhere = fmt.Sprintf("$%d::int IS NOT NULL AND $%d::int IS NOT NULL AND (gallery_priority,start_year,id) %s (SELECT gallery_priority,start_year,id FROM matching WHERE id=$%d)", next, next+3, op, next+1)
+			c.ID = f.NeighborOf
+			pageLimit = 1
+			lane.Density = []Period{}
+		}
+		// NOT MATERIALIZED lets the cursor/order/limit reach the browse index.
+		// Only the bounded page reaches titles, creator labels and image details.
+		pageSQL := fmt.Sprintf(`WITH %smatching AS NOT MATERIALIZED (%s),
+ page AS MATERIALIZED(SELECT * FROM matching WHERE %s ORDER BY %s LIMIT $%d)
+ SELECT coalesce(jsonb_agg(details ORDER BY gallery_priority,"startYear",id),'[]'::jsonb)
+ FROM (%s) details(id,"startYear","endYear",title,context,years,approximate,gallery_priority)`, prefix, p.keys, pageWhere, pageOrder, next+2, p.details)
+		if splitBrowse && f.NeighborOf == "" {
+			pagePrefix, pageKeys := prefix, p.keys
+			if needsGeography && f.End-f.Start <= 600 && lane.Total > timeline.IndividualLimit {
+				// Counts retain the set-based geographic plan. Bounded period pages
+				// seek the same memberships per candidate and stop at their LIMIT.
+				// Keep wide windows and sparse selections on their measured paths.
+				pagePrefix = browseArtworkScope(selection, creatorScope)
+				pageKeys = strings.NewReplacer(pageGeography...).Replace(p.keys)
+			}
+			clean, pending := browseBranches(pagePrefix)
+			branch := func(scope string) string {
+				return fmt.Sprintf("(WITH %smatching AS NOT MATERIALIZED (%s) SELECT * FROM matching WHERE %s ORDER BY %s LIMIT $%d)", scope, pageKeys, pageWhere, pageOrder, next+2)
+			}
+			pageSQL = fmt.Sprintf(`WITH page AS MATERIALIZED (
+ SELECT * FROM (%s UNION ALL %s) candidates ORDER BY %s LIMIT $%d)
+ SELECT coalesce(jsonb_agg(details ORDER BY gallery_priority,"startYear",id),'[]'::jsonb)
+ FROM (%s) details(id,"startYear","endYear",title,context,years,approximate,gallery_priority)`, branch(clean), branch(pending), pageOrder, next+2, p.details)
+		}
+		var items []byte
+		if err = r.db.QueryRow(ctx, pageSQL, append(slices.Clone(args), c.Year, c.ID, pageLimit, c.Priority)...).Scan(&items); err != nil {
 			return out, err
 		}
 		// The rank travels with each page key/cursor but is not public metadata.

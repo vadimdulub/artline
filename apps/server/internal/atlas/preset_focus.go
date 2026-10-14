@@ -15,6 +15,10 @@ func presetFocus(id string) *PresetFocus {
 }
 
 func focusPredicate(kind string, focus *PresetFocus, args *[]any) string {
+	return focusPredicateWithArtwork(kind, focus, args, artworkGeographyMatch)
+}
+
+func focusPredicateWithArtwork(kind string, focus *PresetFocus, args *[]any, matchArtwork func(string) string) string {
 	if focus == nil {
 		return "true"
 	}
@@ -25,13 +29,13 @@ func focusPredicate(kind string, focus *PresetFocus, args *[]any) string {
 		clauses = append(clauses, "true")
 	}
 	if len(focus.Countries) > 0 && !selected {
-		clauses = append(clauses, geographyPredicate(kind, Filter{Countries: focus.Countries}, args))
+		clauses = append(clauses, geographyPredicateWithArtwork(kind, Filter{Countries: focus.Countries}, args, matchArtwork))
 	}
 	if len(focus.Regions) > 0 && !selected {
 		p := bind(focus.Regions)
 		switch kind {
 		case "artwork":
-			clauses = append(clauses, artworkGeographyMatch(`c.region_code=ANY(`+p+`::text[])`))
+			clauses = append(clauses, matchArtwork(`c.region_code=ANY(`+p+`::text[])`))
 		case "book":
 			clauses = append(clauses, `d.regions && `+p+`::text[]`)
 		case "event":

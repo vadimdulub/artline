@@ -11,6 +11,7 @@ body:has(.all-page)>.site-footer{display:none}
 .all-explorer>.timeline-dark{display:flex;flex-direction:column;flex:1;min-height:400px;padding:12px 24px 8px}
 .all-canvas-heading .timeline-popover-panel button{background:none;border:0;color:#d7d0c3;min-height:32px;padding:4px 8px;font-size:12px}
 .all-explorer .timeline-stage{min-height:0;display:flex;flex-direction:column;padding-top:34px;flex:1;overflow-y:auto}
+.all-content-loading{display:grid;place-items:center;flex:1;min-height:180px;padding:24px;color:var(--paper);font-size:14px}
 .all-explorer .tick-row{z-index:0}.all-explorer .tick-row>span:first-child i{left:0}.all-explorer .tick-row>span:last-child i{left:100%}
 /* Keep time guides at the ruler, leaving entry labels on an uninterrupted canvas. */
 .all-explorer .tick-row i{bottom:auto;height:5px;background:#454037}

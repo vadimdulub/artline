@@ -28,7 +28,7 @@ import { LoadingIndicator } from "./LoadingIndicator";
 import { AllStartingPoints } from "./AllStartingPoints";
 import { AllArtworkGallery, GalleryScrollButtons } from "./AllArtworkGallery";
 import { AllBookGallery } from "./AllBookGallery";
-import { resolvedStartingFilters, startingFilters } from "@/lib/atlas-starting-points";
+import { atlasNeedsPresetMetadata, resolvedStartingFilters, startingFilters } from "@/lib/atlas-starting-points";
 import { useAtlasCreators } from "./use-atlas-creators";
 import "./AllAtlas.css";
 
@@ -69,8 +69,11 @@ export function AllAtlas(){
  for(const key of ["fit","preset","window","start","end","q","region","country","country_scope","continent","creator","after_artwork",...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
  request.set("artwork_image_only","true");
  for(const kind of layers)request.append("type",kind);
- const requestKey=timelineRequestKey(request,fallback),busy=populated&&(result?.key!==requestKey||result?.attempt!==retry);
- const data=populated?result?.data:undefined,error=populated&&!busy?result?.error:undefined;
+ const requestKey=timelineRequestKey(request,fallback);
+ const requestReady=Boolean(metadata)||!atlasNeedsPresetMetadata(rawParams);
+ const metadataBlocked=populated&&!requestReady&&Boolean(metaError);
+ const busy=populated&&!metadataBlocked&&(result?.key!==requestKey||result?.attempt!==retry);
+ const data=populated?result?.data:undefined,error=metadataBlocked?"Period information could not be loaded.":populated&&!busy?result?.error:undefined;
  // Selection is interaction state. A slow response must never move the handles back.
  // Invalid shared URLs still reach server validation, but cannot break the chart geometry.
  const validRange=Number.isInteger(targetRange.start)&&Number.isInteger(targetRange.end)&&targetRange.start!==0&&targetRange.end!==0&&targetRange.start>=bounds.start&&targetRange.end<=bounds.end&&targetRange.start<targetRange.end;
@@ -79,7 +82,7 @@ export function AllAtlas(){
  const selected=params.get("item")??"",selectedType=params.get("itemType"),panel=params.get("panel"),browseKind=params.get("browse") as AtlasType|null;
  useEffect(()=>{const c=new AbortController();apiRequest<AtlasMetadata>("atlas/presets",{signal:c.signal}).then(value=>{setMetadata(value);setMetaError("")}).catch(e=>{if(!c.signal.aborted)setMetaError(errorMessage(e))});return()=>c.abort()},[retry]);
  useEffect(()=>{const c=new AbortController();apiRequest<{countries:{slug:string;name:string}[]}>("atlas/geography",{signal:c.signal}).then(setGeography).catch(e=>{if(!c.signal.aborted)setGeography(previous=>({...previous,error:errorMessage(e)}))});return()=>c.abort()},[retry]);
- useEffect(()=>{if(!populated||presetID&&!metadata)return;const c=new AbortController();const timer=setTimeout(()=>apiRequest<AtlasResponse>(`atlas?${requestKey}`,{signal:c.signal}).then(data=>{if(!c.signal.aborted)setResult({key:requestKey,attempt:retry,data})}).catch(e=>{if(!c.signal.aborted)setResult(previous=>({key:requestKey,attempt:retry,data:previous?.data,error:errorMessage(e)}))}),140);return()=>{clearTimeout(timer);c.abort()}},[requestKey,populated,retry,presetID,metadata]);
+ useEffect(()=>{if(!populated||!requestReady)return;const c=new AbortController();const timer=setTimeout(()=>apiRequest<AtlasResponse>(`atlas?${requestKey}`,{signal:c.signal}).then(data=>{if(!c.signal.aborted)setResult({key:requestKey,attempt:retry,data})}).catch(e=>{if(!c.signal.aborted)setResult(previous=>({key:requestKey,attempt:retry,data:previous?.data,error:errorMessage(e)}))}),140);return()=>{clearTimeout(timer);c.abort()}},[requestKey,populated,retry,requestReady]);
  useEffect(()=>{const header=document.querySelector('.site-header');if(!header)return;const observer=new ResizeObserver(()=>shell.current?.style.setProperty('--all-header-height',`${header.getBoundingClientRect().height}px`));observer.observe(header);return()=>observer.disconnect()},[]);
  useEffect(()=>{if(!stage.current)return;const observer=new ResizeObserver(entries=>setWidth(entries[0].contentRect.width));observer.observe(stage.current);return()=>observer.disconnect()},[populated]);
  function change(values:Record<string,string|string[]|null>,push=true){setRangePreview(null);values=discoveryChanges(values,"highlights");updateQuery({fit:null,selection:"true",type:layers,creator:creators,country:countries,country_scope:params.get("country_scope"),highlights:String(highlights),preset_filters:"custom",book_collection:null,pick_artwork:null,pick_book:null,pick_event:null,after_artwork:null,after_book:null,after_event:null,item:null,itemType:null,...(Object.hasOwn(values,"country")&&(!values.country||Array.isArray(values.country)&&values.country.length===0)?{country_scope:null}:{}),...values},push)}
@@ -140,7 +143,7 @@ export function AllAtlas(){
       <h1 className="time-title" data-bce={displayRange.start<0||displayRange.end<0} id="all-timeline-title" tabIndex={-1}>{bookYearLabel(displayRange.start)}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{bookYearLabel(displayRange.end)}</h1>
     </TimelineHeader>
     <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(t=>({key:t.year,label:t.label,position:position(t.year)}))}>
-     {error?<div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry</button> <button onClick={reset}>Reset view</button></div>:data?.lanes.filter(lane=>layers.includes(lane.key)).map(lane=><Lane key={lane.key} lane={lane} range={range} position={position} width={width} busy={busy} loadingRange={loadingRange} selected={selected} select={open} narrow={narrow} browse={()=>browse(lane.key)} isolated={layers.length===1} onIsolate={()=>change({type:layers.length===1?allKinds:[lane.key],panel:null,browse:null})} galleryQuery={result?.key??requestKey}/>)}
+     {busy?<div className="all-content-loading" role="status"><LoadingIndicator label="Loading the timeline…"/></div>:error?<div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry</button> <button onClick={reset}>Reset view</button></div>:data?.lanes.filter(lane=>layers.includes(lane.key)).map(lane=><Lane key={lane.key} lane={lane} range={range} position={position} width={width} busy={busy} loadingRange={loadingRange} selected={selected} select={open} narrow={narrow} browse={()=>browse(lane.key)} isolated={layers.length===1} onIsolate={()=>change({type:layers.length===1?allKinds:[lane.key],panel:null,browse:null})} galleryQuery={result?.key??requestKey}/>)}
     </TimelineGrid>
     <p className="sr-only" id="all-timeline-help">Select an entry for details. Select a busy period or edit the years to zoom every lane to that interval. Zoom out returns to all years and keeps your layers and filters. Select a lane heading to open its entries for the selected years.</p>
     <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} onPreview={setRangePreview} omitYearZero inputPrefix="All " formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds,linearFrom),yearAt:position=>bookYearAtPosition(position,bounds,linearFrom),markers:[linearFrom,1700].map(year=>({year,label:String(year)}))}}/>
