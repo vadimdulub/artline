@@ -44,7 +44,7 @@ export function GuideDirectory({ initialPage, initialQuery }: { initialPage?: Gu
         : data?.items.length ? <div className={styles.museumGrid}>{data.items.map(guide => <article key={guide.slug} className={styles.museum}>
           {guide.image && <Link href={guide.href} prefetch={false} className={styles.museumImage} tabIndex={-1} aria-hidden="true"><img src={guide.image} alt="" width="600" height="420" loading="lazy" /></Link>}
           <p className={styles.city}>{guide.kind === "artist" ? "Artist guide · " : guide.kind === "museum" ? "Museum guide · " : ""}{guide.location}</p>
-          <h3><Link href={guide.href} prefetch={false}>{guide.label}</Link></h3>
+          <h3><Link href={guide.href} prefetch={false}>{guide.kind === "museum" ? guide.title : guide.label}</Link></h3>
           <p>{guide.subtitle}</p>
           {guide.count > 0 ? <span className={styles.editions}>{guide.count} artworks · {guide.languages} languages · PDF</span> : <Link className={styles.read} href={guide.href}>Read the guide</Link>}
         </article>)}</div>

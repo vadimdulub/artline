@@ -43,12 +43,15 @@ test('all 86 guides have complete Codex-authored titles in ten languages', () =>
     assert.equal(names.length, policy.locales.length);
     for (const locale of policy.locales) {
       const title = titleFor(policy, slug, locale); assert.ok(title.length >= 4); assert.ok(!title.includes('{museum}'));
-      if (locale === 'en') assert.equal(title, `Masterpieces for ${names[0]}`);
+      assert.ok(title.startsWith(names[policy.locales.indexOf(locale)]), `Museum must come first: ${slug}/${locale}`);
+      if (locale === 'en') assert.equal(title, `${names[0]}: Masterpieces`);
     }
   }
-  assert.equal(titleFor(policy, 'louvre', 'fr'), 'Chefs-d’œuvre : Louvre');
-  assert.equal(titleFor(policy, 'louvre', 'ja'), 'ルーヴル美術館の名作');
-  assert.equal(titleFor(policy, 'louvre', 'ar'), 'روائع متحف اللوفر');
+  assert.equal(titleFor(policy, 'louvre', 'ru'), 'Лувр: шедевры');
+  assert.equal(titleFor(policy, 'louvre', 'fr'), 'Louvre : chefs-d’œuvre');
+  assert.equal(titleFor(policy, 'louvre', 'ja'), 'ルーヴル美術館：名作');
+  assert.equal(titleFor(policy, 'louvre', 'zh'), '卢浮宫：杰作');
+  assert.equal(titleFor(policy, 'louvre', 'ar'), 'متحف اللوفر: روائع');
 });
 
 test('unknown locales and incomplete localization rows fail closed', () => {
@@ -68,7 +71,7 @@ test('changes titles and multilingual search while preserving all other content'
   const next = JSON.parse(fs.readFileSync(path.join(f.outputRoot, 'guide-search-index.json')));
   assert.deepEqual(next.entries.filter(e => e.kind !== 'museum'), f.index.entries.filter(e => e.kind !== 'museum'));
   const entry = next.entries.find(e => e.kind === 'museum');
-  assert.equal(entry.title, 'Masterpieces for Louvre'); assert.ok(entry.search.includes('Шедевры: Лувр'));
+  assert.equal(entry.title, 'Louvre: Masterpieces'); assert.ok(entry.search.includes('Лувр: шедевры'));
   assert.ok(!entry.search.includes('Old English title')); assert.ok(!entry.search.includes('Старое название'));
   assert.deepEqual({ ...entry, title: f.index.entries[1].title, search: f.index.entries[1].search }, f.index.entries[1]);
 });
