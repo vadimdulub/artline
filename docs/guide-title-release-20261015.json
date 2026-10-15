@@ -1,6 +1,7 @@
 {
   "release": "museum-guide-titles-20261015",
-  "status": "locally-applied-and-verified; deployment-awaiting-Google-Cloud-authorization",
+  "status": "deployed-and-verified",
+  "verifiedAt": "2026-10-15T10:21:53.679Z",
   "scope": {
     "museumAndGalleryGuides": 86,
     "languages": ["en", "ru", "it", "de", "zh", "fr", "es", "pt", "ja", "ar"],
@@ -11,6 +12,7 @@
     "unchanged": ["artist guides", "timeline guide", "guide prose", "artwork selection and credits", "URLs and museum identity mappings", "catalogue databases"]
   },
   "source": {
+    "commit": "cbf47da57fcc52dc03209d5ecb10c11f4cf6c07f",
     "policy": "content/curation/museum-guide-titles.json",
     "policySHA256": "74048839012dee9e47bfe26901e20a0d2133514fdc86a9a710338d2374fdc58a",
     "prepareCommand": "node ops/rename-museum-guide-titles.mjs --output <new-staging-directory>",
@@ -43,16 +45,50 @@
     "preExistingFailures": "TestSearchEditorialGuides and TestMuseumGuideIdentityAndReadOnlyProjection fail identically before and after this change: old Velazquez, art history through time, and Leonardo query expectations no longer match the existing content. These unrelated failures were not changed.",
     "browserFallback": "In-app browser bootstrap failed with missing sandboxPolicy; local headless Chrome used with external requests blocked or fulfilled from existing local assets"
   },
+  "deployment": {
+    "site": "https://artlines.org",
+    "api": {
+      "buildId": "429d174c-102e-4a52-8629-7f8ff419a56d",
+      "revision": "artline-api-guide-titles-1015-v1",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:e989011a3d7c3fb0c9fca239af20337241ab0acc77111dd91f6f845adb9e8577",
+      "rollbackRevision": "artline-api-gallery-chronology-1015-v1",
+      "baselineBuildId": "b48f3ac0-7c88-4aad-a6da-9a66ddef03ce",
+      "overlaySHA256": "22468660fba22483477202946bc908aaa82071b27a9bdc42b77adf3edc798020",
+      "overlayGeneration": "1792059008843669",
+      "trafficPercent": 100
+    },
+    "web": {
+      "buildId": "b147e41d-b2ec-430a-b8a1-ed2af82e70c1",
+      "revision": "artline-web-guide-titles-1015-v1",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:046509307d034e0cf7514a951bb41fe9fb78eaafcff1ff2216a51e549bd797d7",
+      "rollbackRevision": "artline-web-gallery-chronology-1015-v1",
+      "baselineBuildId": "fca656dc-ded8-4db7-969c-49ec5b703e4e",
+      "overlaySHA256": "02dd2f7cc64a67749e41958f89caf98444ebc13c77085be071af4baff7bf7f04",
+      "overlayGeneration": "1792058880611660",
+      "trafficPercent": 100
+    },
+    "candidateChecks": {"webPages": 860, "translatedSearchQueries": 860, "pdfDownloads": 10, "guideDirectoryEntries": 90, "passed": true},
+    "liveChecks": {"webPages": 860, "translatedSearchQueries": 860, "pdfDownloads": 10, "guideDirectoryEntries": 90, "webAPIProxy": "passed", "passed": true},
+    "requestRetries": 0,
+    "releaseErrorLogEntries": 0,
+    "runtimeSettingsPreserved": true,
+    "imagePinsUpdated": true,
+    "terraformApply": false,
+    "backgroundJobsChanged": false,
+    "unrelatedWorkspaceChangesPreserved": true,
+    "releaseMethod": "API rebuilt from the exact latest production source/overlay chain with only the embedded guide index replaced. Web image derives from the latest production digest with only the 1,721 guide JSON/PDF files replaced. Preimage and final hashes validated. Both zero-traffic candidates passed before promotion."
+  },
   "permissions": {
-    "googleAPICalls": 0,
+    "preparationGoogleAPICalls": 0,
     "translationAPICalls": 0,
     "databaseWrites": 0,
-    "deployment": "Not attempted. User requested deployment but also prohibited Google APIs; explicit permission for the existing Google Cloud build/storage/hosting workflow is still required."
+    "deployment": "User explicitly authorized: deploy use Google Cloud for deployment only. Cloud Translation remains prohibited and unused.",
+    "googleServicesUsedForDeployment": ["Cloud Build", "Artifact Registry", "Cloud Storage", "Cloud Run", "Cloud Logging"]
   },
-  "deploymentRequirements": [
-    "Obtain explicit Google Cloud deployment authorization; never invoke Cloud Translation.",
-    "Verify current live web/API revisions and preimage hashes before preparing a content-only release; do not build the unrelated dirty workspace.",
-    "Deploy all renamed web editions and PDFs together with the matching embedded API search index.",
-    "Validate no-traffic candidate pages, search and downloads, then promote and verify the public site."
+  "deploymentSafeguards": [
+    "Google Cloud used only after explicit deployment authorization; no translation service invoked.",
+    "The newer gallery-chronology production release was detected and preserved, rather than reverting to the older mobile-explorer baseline.",
+    "All renamed web editions and PDFs deployed with the matching embedded API search index.",
+    "Zero-traffic candidate and live page, search, PDF and directory checks passed; rollback revisions retained."
   ]
 }
