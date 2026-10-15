@@ -1,0 +1,142 @@
+{
+  "release": "museum-first-guide-titles-20261015",
+  "status": "deployed-and-verified",
+  "verifiedAt": "2026-10-15T11:59:40.817Z",
+  "scope": {
+    "museumAndGalleryGuides": 86,
+    "languages": [
+      "en",
+      "ru",
+      "it",
+      "de",
+      "zh",
+      "fr",
+      "es",
+      "pt",
+      "ja",
+      "ar"
+    ],
+    "renamedEditions": 860,
+    "regeneratedPDFs": 860,
+    "englishTitlePattern": "{museum}: Masterpieces",
+    "translationMethod": "Codex-authored localization; no translation service",
+    "surfaces": [
+      "guide pages",
+      "PDF covers and metadata",
+      "guide search",
+      "directory cards",
+      "About museum-guide cards",
+      "SEO and structured data"
+    ],
+    "unchanged": [
+      "artist guides",
+      "timeline guide",
+      "guide prose",
+      "artwork selections and credits",
+      "URLs and museum identity mappings",
+      "catalogue databases"
+    ]
+  },
+  "source": {
+    "commit": "002d4d56b4c1b0dde7e2d6833456b8ad04b8e857",
+    "policy": "content/curation/museum-guide-titles.json",
+    "policySHA256": "369fdcb9dee70d7bb905e4d521d1bc375a4d0fc683361bceaa018edc6f19e5dc",
+    "uiBindingPatch": "ops/museum-guide-title-bindings.json",
+    "uiBindingPatchSHA256": "1caedc19ca3d45d80159e10f3cf8aca7f22ab72b6944868783632768ac54dbcc",
+    "prepareCommand": "node ops/rename-museum-guide-titles.mjs --output <new-staging-directory>",
+    "verifyCommand": "node ops/verify-museum-guide-titles.mjs <prepared-directory> <local-preview-url>",
+    "artifactPolicy": "Generated editorial JSON, embedded API search index and PDFs are release artifacts. Versioned policy, transformer, verifier, tests and two exact UI-binding patches preserve reproducibility without committing unrelated workspace changes.",
+    "aboutSource": "The deployed About redesign predates this task and is not yet represented in Git. Its exact one-line title change is versioned in the UI-binding patch with production before/after hashes; the unrelated redesign was not staged."
+  },
+  "artifacts": {
+    "backupDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/guide-titles-v2-20261015",
+    "before": "before/ contains all 1,722 original content/index/PDF files; before-source/ preserves both UI sources",
+    "prepared": "prepared/ contains reviewed JSON, PDFs, render reports and visual QA evidence",
+    "applicationReceipt": "applied-files.json contains exact before/after SHA-256 hashes for all 1,722 files",
+    "museumIndexSHA256": "bc0eba7e1f7337939771017dc11c789990fcea0cc8917dee36fccc9f75f12231",
+    "searchIndexSHA256": "8eb49103a1cd1b28e12be4865490f88ebfdc803b90a7797ff1b4607d134c9396",
+    "pdfBytes": 1930249897,
+    "pdfPages": 19930
+  },
+  "verification": {
+    "titleTransformUnitTests": "6 passed",
+    "directoryTitleComponentTests": "11 passed",
+    "productionWebBuildAndTypeScript": "passed against reconstructed production source plus only the two title bindings",
+    "lint": "0 errors; one pre-existing next/no-img-element warning",
+    "titleOnlyJSONComparisons": "860 passed; all other fields preserved",
+    "previewHTML": "860 HTTP 200 pages with exact H1, metadata, Open Graph and Article titles",
+    "pdfMetadataAndPageCounts": "860 passed; original page counts preserved",
+    "pdfRenderOverflowChecks": "860 passed; existing local images only, network fetch disabled",
+    "pdfVisualReview": "Longest-title cover inspected in every language, including Arabic, Chinese and Japanese",
+    "browserLayouts": "20 longest-title page layouts at 390px/1440px; 9 directory/About checks at 320px/390px/1440px, with representative screenshots inspected",
+    "searchProjection": "Existing builder --check passed for all 90 entries",
+    "goSearchRegression": "All 860 translated-title queries, translated-title regression and pagination/scope tests passed",
+    "baselineLimitations": "Known unrelated Go editorial query expectations were documented in the preceding release; this release used targeted guide-search tests, not a claim of a clean full repository suite",
+    "browserFallback": "In-app browser bootstrap failed with missing sandboxPolicy; headless Chrome used for local QA with external requests blocked or fulfilled from existing local assets"
+  },
+  "deployment": {
+    "site": "https://artlines.org",
+    "api": {
+      "buildId": "a9ca81b0-409e-453a-bd5d-75f8582e2b84",
+      "revision": "artline-api-guide-titles-1015-v2",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:22bebac0a847ab995694cd1818e575bb5ac22bcc390bf4c95ca00827bf3f5022",
+      "rollbackRevision": "artline-api-guide-titles-1015-v1",
+      "baselineBuildId": "429d174c-102e-4a52-8629-7f8ff419a56d",
+      "overlaySHA256": "d9ff006ba1a5ae0372ac6861992c48f770d532b5fa054fc33fec92607c90483c",
+      "overlayGeneration": "1792064023048971",
+      "trafficPercent": 100
+    },
+    "web": {
+      "buildId": "f971a955-e5e7-4a40-bf66-def66c0274dc",
+      "revision": "artline-web-guide-titles-1015-v2",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:32933134d9cce1c7fd5316cc739ab875e84de327357f5c894c56886906803555",
+      "rollbackRevision": "artline-web-guide-titles-1015-v1",
+      "baselineBuildId": "fca656dc-ded8-4db7-969c-49ec5b703e4e",
+      "overlaySHA256": "b4cd3d3b69e7f0139c1a5b0258d3b8d3b480edc44f982090551c658f8e1fe835",
+      "overlayGeneration": "1792064371922725",
+      "trafficPercent": 100
+    },
+    "candidateChecks": {
+      "passed": true,
+      "webPages": 860,
+      "translatedSearchQueries": 860,
+      "pdfDownloads": 10,
+      "guideDirectoryEntries": 90,
+      "aboutCards": 6,
+      "aboutImages": 6,
+      "directoryTitleBinding": true,
+      "retries": 0
+    },
+    "liveChecks": {
+      "passed": true,
+      "webPages": 860,
+      "translatedSearchQueries": 860,
+      "pdfDownloads": 10,
+      "guideDirectoryEntries": 90,
+      "aboutCards": 6,
+      "aboutImages": 6,
+      "directoryTitleBinding": true,
+      "retries": 0
+    },
+    "releaseErrorLogEntries": 0,
+    "runtimeSettingsPreserved": true,
+    "imagePinsUpdated": true,
+    "terraformApply": false,
+    "backgroundJobsChanged": false,
+    "unrelatedWorkspaceChangesPreserved": true,
+    "releaseMethod": "Replayed exact latest production API and web source/overlay chains. API changes only its embedded guide index. Web applies two hash-guarded title bindings and 1,721 verified guide JSON/PDF files; the current live web digest supplies existing runtime content before the overlay. Runtime content preimage/final hashes validated. Both zero-traffic candidates passed before promotion."
+  },
+  "permissions": {
+    "preparationGoogleAPICalls": 0,
+    "translationAPICalls": 0,
+    "databaseWrites": 0,
+    "deployment": "User authorized Google Cloud for deployment only. No translation service or database operation was used.",
+    "googleServicesUsedForDeployment": [
+      "Cloud Build",
+      "Artifact Registry",
+      "Cloud Storage",
+      "Cloud Run",
+      "Cloud Logging"
+    ]
+  }
+}
