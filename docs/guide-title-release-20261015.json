@@ -1,0 +1,58 @@
+{
+  "release": "museum-guide-titles-20261015",
+  "status": "locally-applied-and-verified; deployment-awaiting-Google-Cloud-authorization",
+  "scope": {
+    "museumAndGalleryGuides": 86,
+    "languages": ["en", "ru", "it", "de", "zh", "fr", "es", "pt", "ja", "ar"],
+    "renamedEditions": 860,
+    "regeneratedPDFs": 860,
+    "englishTitlePattern": "Masterpieces for {museum}",
+    "translationMethod": "Codex-authored titles and museum names; no translation service",
+    "unchanged": ["artist guides", "timeline guide", "guide prose", "artwork selection and credits", "URLs and museum identity mappings", "catalogue databases"]
+  },
+  "source": {
+    "policy": "content/curation/museum-guide-titles.json",
+    "policySHA256": "74048839012dee9e47bfe26901e20a0d2133514fdc86a9a710338d2374fdc58a",
+    "prepareCommand": "node ops/rename-museum-guide-titles.mjs --output <new-staging-directory>",
+    "testCommand": "node --test ops/rename-museum-guide-titles.test.mjs",
+    "verifyCommand": "node ops/verify-museum-guide-titles.mjs <prepared-directory> <local-preview-url>",
+    "artifactPolicy": "Generated editorial content, embedded API index and PDFs are release artifacts, not added wholesale to Git from this pre-existing dirty worktree. The complete title policy, transformer, regression tests and verifier are versioned."
+  },
+  "artifacts": {
+    "backupDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/guide-titles-20261015",
+    "before": "before/ contains all 1,722 original files",
+    "prepared": "prepared/ contains reviewed JSON, PDFs and QA evidence",
+    "applicationReceipt": "applied-files.json contains exact before/after SHA-256 hashes for all 1,722 files",
+    "museumIndexSHA256": "57b55f12fa366b320ee9db84b0a7a60758147c30d7ba9e054ba24f01b71cc585",
+    "searchIndexSHA256": "e090719e6b2d743a313b9f2d71fcab53cbde14adea6f99e7fea640ab98344254",
+    "pdfBytes": 1930070698,
+    "pdfPages": 19930
+  },
+  "verification": {
+    "titleTransformUnitTests": "6 passed",
+    "titleOnlyJSONComparisons": "860 passed; all non-title fields preserved",
+    "previewHTML": "860 HTTP 200 pages; H1, page title, Open Graph title and Article headline/language verified",
+    "pdfMetadataAndPageCounts": "860 passed; original page counts preserved",
+    "pdfRenderOverflowChecks": "860 passed with network fetching disabled; existing local images only",
+    "pdfDownloadRoutes": "10 localized Louvre downloads matched the generated PDFs byte-for-byte",
+    "pdfVisualReview": "Longest-title covers reviewed in all 10 languages, including RTL Arabic and CJK",
+    "browserLayouts": "20 longest-title layouts checked at 390px and 1440px; representative mobile screenshots reviewed",
+    "searchProjection": "Existing builder --check passed for all 90 guides",
+    "translatedTitleQueries": "All 860 full translated titles return their intended guide through the Go search implementation",
+    "goSearchRegression": "Translated-title and pagination/scope tests passed",
+    "preExistingFailures": "TestSearchEditorialGuides and TestMuseumGuideIdentityAndReadOnlyProjection fail identically before and after this change: old Velazquez, art history through time, and Leonardo query expectations no longer match the existing content. These unrelated failures were not changed.",
+    "browserFallback": "In-app browser bootstrap failed with missing sandboxPolicy; local headless Chrome used with external requests blocked or fulfilled from existing local assets"
+  },
+  "permissions": {
+    "googleAPICalls": 0,
+    "translationAPICalls": 0,
+    "databaseWrites": 0,
+    "deployment": "Not attempted. User requested deployment but also prohibited Google APIs; explicit permission for the existing Google Cloud build/storage/hosting workflow is still required."
+  },
+  "deploymentRequirements": [
+    "Obtain explicit Google Cloud deployment authorization; never invoke Cloud Translation.",
+    "Verify current live web/API revisions and preimage hashes before preparing a content-only release; do not build the unrelated dirty workspace.",
+    "Deploy all renamed web editions and PDFs together with the matching embedded API search index.",
+    "Validate no-traffic candidate pages, search and downloads, then promote and verify the public site."
+  ]
+}
