@@ -1,0 +1,67 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verifiedAt": "2026-10-15T08:51:11.229Z",
+  "change": "Mobile explorers use one expandable date-range control, compact headers, larger artwork and book previews, and accessible date editing. Desktop date controls remain directly editable.",
+  "deployment": {
+    "sourceCommit": "93c69837cb08f161173aeba57f811c364a1afe16",
+    "baselineRevision": "artline-web-renaissance-performance-1014-v1",
+    "baselineBuildId": "b0c480b1-21ef-4ac3-b4fb-4b0c3babedcc",
+    "buildId": "1c7acd63-8f8c-4539-8418-e6ac293f2aaf",
+    "revision": "artline-web-mobile-explorers-1015-v1",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:6622a3c4584a1148a226d6479cdf4d8dc1477abb0ff4bcab2d3c5bbe93e218e8",
+    "candidateURL": "https://mobile-explorers-1015-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-renaissance-performance-1014-v1",
+    "trafficPercent": 100,
+    "runtimeSettingsPreserved": true,
+    "overlaySHA256": "acb3d8c25ed841cfc7677b93f2ae8e697072f262b0a1020411d0999e5f980c59",
+    "overlayURI": "gs://artline-508319-build-source/mobile-explorers-20261015/acb3d8c25ed841cf.tar.xz",
+    "overlayGeneration": "1792052852926052",
+    "files": {
+      "components/BooksTimeline.tsx": "9a29c5dbaa9aae49164db2e3e46942f8472fd64e2b5353aceff07906786746ca",
+      "components/ExplorerFrame.tsx": "26e46c308040963d88e412afd09f10470b8994747ceb58067072f49ceeb603ea",
+      "components/MobileExplorer.css": "1b70008d4bbb104a1b1435fc8e146174c62f617a6ce6bccf60c04247c0146091",
+      "components/TimelineRangeControls.css": "37746b5ff0160cddbcbbc82768ab0367b489a948c51153eee1a811cb68c4c735",
+      "components/TimelineRangeControls.tsx": "29e517546fb1ed31a1db98543204d578f788216d16204285891825a2bbbc30ba",
+      "components/TimelineZoomOut.tsx": "68e872e27b56b42456a2370a5b4fe5f2976609991ac2bb19c4584875f5aa0f4d"
+    }
+  },
+  "validation": {
+    "productionBuild": "passed",
+    "typeScript": "passed",
+    "targetedLint": "passed",
+    "focusedUnitTestsPassed": 10,
+    "fullUnitSuite": {
+      "passed": 588,
+      "failed": 1,
+      "existingUnrelatedFailure": "BackNavigation.test.tsx: respects member access on return (signed in: false)"
+    },
+    "candidateFixtureBrowserTestsPassed": 28,
+    "fixtureCoverage": [
+      "320px, 390px and 430px layouts across five views",
+      "768px, 1024px and 1440px desktop date controls",
+      "Date editing, validation, BCE dates, keyboard and pointer interaction",
+      "Full view, rotation, short landscape and focus restoration",
+      "Loading spinner, recoverable error and accessibility checks"
+    ],
+    "realDataCandidateChecksPassed": 13,
+    "realDataPublicSiteChecksPassed": 13,
+    "realDataViews": ["paintings", "painters", "books timeline", "book gallery", "events", "all"],
+    "realDataWidths": [320, 390, 1440],
+    "guideAndExhibitionHTTP": 200,
+    "authSessionHTTP": 200,
+    "signedOutMuseumHTTP": 401,
+    "javaScriptErrors": [],
+    "failedAPIReads": [],
+    "browser": "Headless Chrome; in-app browser connection was unavailable."
+  },
+  "releaseErrorLogEntries": 0,
+  "webImagePinUpdated": true,
+  "apiDeployment": false,
+  "databaseWrites": false,
+  "realLocalDatabaseWrites": false,
+  "backgroundJobsChanged": false,
+  "terraformApply": false,
+  "unrelatedWorkspaceChangesPreserved": true,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/mobile-explorers-20261015"
+}
