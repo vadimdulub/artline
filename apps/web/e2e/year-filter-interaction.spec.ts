@@ -36,6 +36,7 @@ for (const route of ["/books", "/", "/events", "/all"]) {
       for (const side of ["start", "end"] as const) {
         await page.goto(`${route}?${route === "/all" ? "selection=true&type=book&" : ""}start=1800&end=1801`);
         await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
+        if (width <= 760) await page.locator(".range-mobile-toggle").click();
         await page.locator(".range-track").scrollIntoViewIfNeeded();
         const track = (await page.locator(".range-track").boundingBox())!;
         const handle = await grip(page, side), other = await grip(page, side === "start" ? "end" : "start");

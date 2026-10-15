@@ -13,7 +13,9 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
   step?: number; omitYearZero?: boolean; formatYear?: (year: number) => string; inputPrefix?: string; disabled?: boolean;
   scale?: { position: (year: number) => number; yearAt: (position: number) => number; markers?: { year: number; label: string }[] };
 }) {
-  const headingId = useId(), errorId = useId();
+  const headingId = useId(), errorId = useId(), editorId = useId();
+  const [expanded, setExpanded] = useState(false);
+  const editor = useRef<HTMLDivElement>(null), toggle = useRef<HTMLButtonElement>(null);
   const fromInput = useRef<HTMLInputElement>(null), toInput = useRef<HTMLInputElement>(null);
   const startHandle = useRef<HTMLInputElement>(null), endHandle = useRef<HTMLInputElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -23,6 +25,16 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
   const [invalid, setInvalid] = useState<{ start: number; end: number; message: string } | null>(null);
   const message = invalid?.start === start && invalid.end === end ? invalid.message : undefined;
   const shownStart = preview?.start ?? start, shownEnd = preview?.end ?? end;
+  useEffect(() => {
+    const mobile = window.matchMedia("(max-width: 760px)");
+    const resize = () => {
+      // Rotating must not hide whichever date control currently owns focus.
+      if (mobile.matches && editor.current?.contains(document.activeElement)) setExpanded(true);
+      else if (!mobile.matches && document.activeElement === toggle.current) fromInput.current?.focus({ preventScroll: true });
+    };
+    mobile.addEventListener("change", resize);
+    return () => mobile.removeEventListener("change", resize);
+  }, []);
   useEffect(() => { if (fromInput.current) fromInput.current.value = String(shownStart); }, [shownStart]);
   useEffect(() => { if (toInput.current) toInput.current.value = String(shownEnd); }, [shownEnd]);
   const coordinate = (value: number) => omitYearZero && value < 0 ? value + 1 : value;
@@ -66,9 +78,11 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
     if (error) {
       if (leaving) resetFields();
       setInvalid({ start, end, message: error });
+      return false;
     } else {
       setInvalid(null);
       if (from !== start || to !== end) onChange(from, to);
+      return true;
     }
   }
   function fieldKey(event: KeyboardEvent<HTMLInputElement>) {
@@ -138,8 +152,33 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
     if (commit && (d.from !== d.start || d.to !== d.end)) setCoordinates(d.from, d.to);
   }
 
-  return <section className="timeline-focus" aria-labelledby={headingId}>
+  return <section className="timeline-focus" aria-labelledby={headingId} data-expanded={expanded} onKeyDown={event => {
+    if (event.key === "Escape" && expanded && window.matchMedia("(max-width: 760px)").matches) {
+      event.preventDefault(); event.stopPropagation(); resetFields(); setExpanded(false); toggle.current?.focus();
+    }
+  }}>
     <h2 id={headingId} className="sr-only">Timeline years</h2>
+    <div className="range-mobile-bar">
+      <button type="button" aria-label={`Move range ${step} ${step === 1 ? "year" : "years"} earlier`} disabled={disabled || a === min} onClick={() => pan(-step)}><span aria-hidden="true">←</span></button>
+      <button ref={toggle} type="button" className="range-mobile-toggle" aria-expanded={expanded} aria-controls={editorId}
+        aria-label={expanded ? "Done editing dates" : `Edit dates: ${formatYear(shownStart)} to ${formatYear(shownEnd)}`}
+        // Commit on click, not the preceding blur: a loading-state layout shift
+        // between pointerdown and pointerup can otherwise swallow the Done tap.
+        onPointerDown={event => { if (expanded) event.preventDefault(); }}
+        onClick={() => {
+          if (!expanded) { setExpanded(true); return; }
+          if (!commitFields()) return;
+          ignoreBlur.current = true;
+          toggle.current?.focus({ preventScroll: true });
+          ignoreBlur.current = false;
+          setExpanded(false);
+        }}>
+        <span>{expanded ? "Done" : `${formatYear(shownStart)} – ${formatYear(shownEnd)}`}</span>
+        <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={expanded ? "m5 12 5-5 5 5" : "m5 8 5 5 5-5"} /></svg>
+      </button>
+      <button type="button" aria-label={`Move range ${step} ${step === 1 ? "year" : "years"} later`} disabled={disabled || b === max} onClick={() => pan(step)}><span aria-hidden="true">→</span></button>
+    </div>
+    <div ref={editor} id={editorId} className="range-editor">
     <div ref={trackRef} className="range-track" onPointerDown={beginDrag} onPointerMove={event => { if (drag.current?.pointer === event.pointerId) previewAt(event.clientX); }} onPointerUp={event => finishDrag(event, true)} onPointerCancel={event => finishDrag(event, false)} onLostPointerCapture={event => finishDrag(event, false)}>
       <button className="range-window" type="button" disabled={disabled} aria-label="Move selected time range" style={{ left: trackWidth ? `${grips.start}px` : `${position(a)}%`, width: trackWidth ? `${grips.end - grips.start}px` : `${position(b) - position(a)}%` }}
         onKeyDown={event => { if (event.key === "ArrowLeft" || event.key === "ArrowRight") { event.preventDefault(); pan(event.key === "ArrowLeft" ? -step : step); } }}><span>Drag to move the range</span></button>
@@ -156,6 +195,7 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
         {message && <p className="year-error" id={errorId} role="alert">{message}</p>}
       </div>
       <button type="button" aria-label={`Move range ${step} ${step === 1 ? "year" : "years"} later`} disabled={disabled || b === max} onClick={() => pan(step)}>Later →</button>
+    </div>
     </div>
   </section>;
 }

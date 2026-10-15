@@ -75,10 +75,10 @@ export function BooksTimeline({ data, metadata, range, loading, error, selected,
         </ul>}</> :
         <div className="state-panel"><h2>{loading ? `Opening ${noun}…` : `No ${noun} match this view`}</h2>{!loading && <><p>Try another title, author, or idea, or clear your filters.</p><button onClick={onReset}>Clear filters</button></>}</div>}
     </TimelineGrid>
-    {metadata && <TimelineRangeControls start={range.start} end={range.end} minimum={metadata.bounds.start} maximum={metadata.bounds.end}
+    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end}
       onChange={onRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel} inputPrefix={authorView ? "Author " : "Book "}
-      scale={{ position: year => bookTickPosition(year, metadata.bounds), yearAt: position => bookYearAtPosition(position, metadata.bounds), markers: rangeMarkers }}
-      endpoints={[bookYearLabel(metadata.bounds.start), bookYearLabel(metadata.bounds.end)]}
-      disabled={Boolean(error)} />}
+      scale={{ position: year => bookTickPosition(year, bounds), yearAt: position => bookYearAtPosition(position, bounds), markers: rangeMarkers }}
+      endpoints={[bookYearLabel(bounds.start), bookYearLabel(bounds.end)]}
+      disabled={Boolean(error)} />
   </div>;
 }

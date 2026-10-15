@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useRef, useState, type ComponentPropsWithRef } from "react";
 import { lockBodyScroll } from "@/lib/modal-scroll";
 import "./ExplorerFrame.css";
+import "./MobileExplorer.css";
 
 const ExplorerView = createContext<{ fullView: boolean; setFullView: (value: boolean) => void } | null>(null);
 export const useExplorerView = () => useContext(ExplorerView);
