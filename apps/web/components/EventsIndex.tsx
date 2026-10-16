@@ -1,4 +1,6 @@
 "use client";
+import { CatalogueMap } from "./CatalogueMap";
+import { MapViewSwitch } from "./MapViewSwitch";
 import { BookmarkButton } from "./Bookmarks";
 import { displayMetadata } from "@/lib/display-metadata";
 import { ExplorerFrame } from "./ExplorerFrame";
@@ -12,6 +14,10 @@ import type { EventsFacets, EventsResponse, EventSuggestion } from "@/lib/events
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import { AtlasFilters, ActiveFilters } from "./AtlasFilters";
 import { EventFilterFields, eventDimensions } from "./EntityFilterFields";
+import { TimelineZoomOut } from "./TimelineZoomOut";
+import { TimelineHeader } from "./TimelineHeader";
+import { TimelineRangeControls } from "./TimelineRangeControls";
+import { bookYearLabel } from "@/lib/books";
 import { EventsTimeline } from "./EventsTimeline";
 import { EventDrawer } from "./EventDrawer";
 import styles from "./Books.module.css";
@@ -22,6 +28,7 @@ export function EventsIndex() {
   const queryString = useQueryString();
   const params = new URLSearchParams(queryString);
   if (!params.has("top100")) params.set("top100", "true");
+  const mapView = params.get("canvas") === "map";
   const top100 = params.get("top100") === "true";
   const query = params.get("q") ?? "";
   const selected = params.get("event") ?? "";
@@ -74,10 +81,15 @@ export function EventsIndex() {
         <EventFilterFields params={params} change={change} facets={facets?.data} unavailable={Boolean(facets?.error)} />
       </AtlasFilters>
       <ActiveFilters filters={active} onClear={() => change(cleared)} searchRef={search} />
-      <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
+      <MapViewSwitch map={mapView} onChange={map => updateQuery({ canvas: map ? "map" : null }, true)} />
+      {mapView ? <div className="timeline-dark">
+        <TimelineHeader zoom={<TimelineZoomOut disabled={range.start === bounds.start && range.end === bounds.end} onClick={() => change({ start: null, end: null })} />} status="Event places"><h1 id="events-timeline" className="time-title" tabIndex={-1}>{bookYearLabel(range.start)}–{bookYearLabel(range.end)}</h1></TimelineHeader>
+        <CatalogueMap items={(data?.items ?? []).map(item => ({ id: item.id, kind: "event", title: item.title, context: item.kind, years: item.years }))} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => updateQuery({ event: item.id }, true)} />
+        <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} omitYearZero onChange={(start, end) => change({ start: String(start), end: String(end) })} formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start), bookYearLabel(bounds.end)]} />
+      </div> : <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
         onPeriod={(start, end) => change({ start: String(start), end: String(end), top100: "false", fit: "true" })}
         onRange={(start, end) => change({ start: String(start), end: String(end) }, false)} onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset}
-        onSuggestion={applySuggestion} onTop100={() => change({ top100: null })} />
+        onSuggestion={applySuggestion} onTop100={() => change({ top100: null })} />}
     </ExplorerFrame>
     <section className={styles.shelf} aria-labelledby="event-index" aria-busy={loading}>
       <div className={styles.shelfHeader}><div><h2 id="event-index" tabIndex={-1}>Event index</h2><p>Explore the events, empires, and movements that connect art, literature, belief, science, and everyday life. World history through 2000.</p></div><p className={styles.count} role="status">{data ? `${data.total.toLocaleString("en-GB")} of ${data.selectionTotal.toLocaleString("en-GB")} events` : ""}</p></div>

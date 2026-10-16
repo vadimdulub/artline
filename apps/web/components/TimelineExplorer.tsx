@@ -1,4 +1,6 @@
 "use client";
+import { CatalogueMap } from "./CatalogueMap";
+import { MapViewSwitch } from "./MapViewSwitch";
 import { BookmarkButton } from "./Bookmarks";
 import { ExplorerFrame } from "./ExplorerFrame";
 import { useFitYears } from "./use-fit-years";
@@ -35,6 +37,7 @@ export function TimelineExplorer() {
   const [rangePreview, setRangePreview] = useState<{ start: number; end: number } | null>(null);
   const [showMovementKeyOnEntry, setShowMovementKeyOnEntry] = useState(false);
   const displayRange = rangePreview ?? { start, end };
+  const mapView = params.get("canvas") === "map";
   const query = params.get("q") ?? "";
   const countries = queryValues(params, "country").map(value => value.toUpperCase());
   const selectedMovements = queryValues(params, "movement");
@@ -169,26 +172,27 @@ export function TimelineExplorer() {
           <ArtworkFilterFields params={requestParams} change={values=>change(values,true)} facets={facets} painterChoices={painterChoices} unavailable={facetError} />
       </AtlasFilters>
       <ActiveFilters filters={activeFilters} onClear={clearFilters} searchRef={searchInput} />
-      {paintings ? <PainterPaintings filters={requestKey} start={start} end={end} setRange={setRange} onPeriod={(a,b)=>change({start:String(a),end:String(b),popular:"false",fit:"true"},true)} viewSwitch={viewSwitch} /> : <div className={`timeline-dark${focused ? "" : " artworks-compressed-scale"}`}>
+      <MapViewSwitch map={mapView} onChange={map => updateQuery({ canvas: map ? "map" : null }, true)} />
+      {paintings ? <PainterPaintings mapView={mapView} filters={requestKey} start={start} end={end} setRange={setRange} onPeriod={(a,b)=>change({start:String(a),end:String(b),popular:"false",fit:"true"},true)} viewSwitch={viewSwitch} /> : <div className={`timeline-dark${focused ? "" : " artworks-compressed-scale"}`}>
         <TimelineHeader className="painter-lifespan-heading" controls={viewSwitch}
           status={loading ? "Finding painters…" : error ? "Connection interrupted" : `${data?.total ?? 0} ${data?.total === 1 ? "painter" : "painters"} in this view`}
           zoom={<TimelineZoomOut disabled={!focused} onClick={() => change({ start: null, end: null }, true)} />}>
           <h1 id="timeline-title" className="time-title"><span className="sr-only">Painter lifespans: </span>{displayRange.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{displayRange.end}</h1>
         </TimelineHeader>
-        <TimelineGrid stageRef={stage} busy={loading} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>
+        {mapView ? <CatalogueMap items={!loading && !error ? (data?.items ?? []).map(item => ({ id: item.id, kind: "artist", title: item.name, years: item.date_display, context: item.movement.name })) : []} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={{ start, end }} onOpen={item => { const artist = data?.items.find(a => a.id === item.id); if (artist) openArtist(artist.slug); }} /> : <TimelineGrid stageRef={stage} busy={loading} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>
           {!focused && <div className="book-scale-break" style={{ left: `${artworkYearPosition(1400)}%` }} aria-hidden="true" />}
           {error ? <div className="state-panel"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={() => { setResult({ key: "" }); setRetry(value => value + 1); }}>Try again</button></div> :
             data?.mode === "density" ? <><TimelineOverview key={`${start}-${end}`} periods={data.periods} start={start} end={end} position={position} disabled={loading} suggestion={suggestions[0]} onSelect={selectPeriod} /><TimelineFilterSuggestions suggestions={suggestions} noun="painters" needsFilter={Boolean(needsFilter)} disabled={loading} guidanceId="density-guidance" onApply={applySuggestion} onChooseFilters={focusSearch}>{!popularOnly && <button type="button" disabled={loading} onClick={() => change({ popular: null }, true)}>Show popular painters</button>}</TimelineFilterSuggestions></> :
             positioned.length ? <TimelineLanes key={`${popularOnly}-${womenOnly}`} label="Painter timeline lanes" loading={loading} height={laneCount * 54 + 12}>{positioned.map(artist => <TimelineMark key={artist.id} className="artist-mark" disabled={loading} selected={artist.slug === slug} left={artist.left} top={artist.lane * 54 + 8} width={artist.width} labelOffset={artist.labelOffset} labelWidth={artist.labelWidth} color={artist.movement.color} onSelect={() => openArtist(artist.slug)} label={`${artist.name}, ${artist.date_display}, ${artist.movement.name}, ${artist.countries.map(countryName).join(", ")}, ${artist.artwork_count} recorded works`} title={`${artist.movement.name} · ${artist.artwork_count} recorded works`} name={artist.name} date={artist.date_display} />)}</TimelineLanes> :
             <div className="state-panel"><h2>{loading ? "Opening the atlas…" : "No painters in this view"}</h2>{!loading && <><p>{activeFilters.length ? "No records match these filters in this date range." : start !== 1100 || end !== 2000 ? "No painter records overlap these years. Try a wider date range." : "Choose another date range or adjust the painter filters."}</p><div className="empty-view-actions">{activeFilters.length > 0 && <button onClick={() => { clearFilters(); searchInput.current?.focus(); }}>Remove filters</button>}{(start !== 1100 || end !== 2000) && <button onClick={() => setRange(1100, 2000)}>Show full date range</button>}</div></>}</div>}
-        </TimelineGrid>
+        </TimelineGrid>}
       <TimelineRangeControls start={start} end={end} minimum={1100} maximum={2000} onChange={setRange} onPreview={setRangePreview}
         scale={{ position: year => artworkYearPosition(year), yearAt: percent => artworkYearAtPosition(percent), markers: rangeMarkers }}
         endpoints={["1100", "2000"]} />
       {movements.length > 0 && <div className="timeline-key-footer"><TimelinePopover label="Movement colour key" className="movement-key" defaultOpen={showMovementKeyOnEntry}><div className="timeline-legend" aria-label="Movements in this view">{movements.map(item => <button key={item.slug} aria-pressed={selectedMovements.includes(item.slug)} onClick={() => change({ movement: selectedMovements.includes(item.slug) ? selectedMovements.filter(value => value !== item.slug) : [...selectedMovements, item.slug] }, true)}><i style={{ background: item.color }} />{item.name}</button>)}</div></TimelinePopover></div>}
       </div>}
     </ExplorerFrame>
-    {!paintings && <section className="results-section" aria-busy={loading}><div className="results-heading"><h2 id="painter-index-title">{data?.mode === "density" ? "Explore a period" : "Painter index"}</h2><p>{data?.mode === "density" ? needsFilter ? "This period is busy. Try the suggested filter, or choose your own above." : "Choose a period to explore. Busy periods may need a painter, movement or country filter." : "Choose a name for artworks, collections and sources. Work counts describe our catalogue, not a painter’s lifetime output."}</p></div>
+    {!paintings && !mapView && <section className="results-section" aria-busy={loading}><div className="results-heading"><h2 id="painter-index-title">{data?.mode === "density" ? "Explore a period" : "Painter index"}</h2><p>{data?.mode === "density" ? needsFilter ? "This period is busy. Try the suggested filter, or choose your own above." : "Choose a period to explore. Busy periods may need a painter, movement or country filter." : "Choose a name for artworks, collections and sources. Work counts describe our catalogue, not a painter’s lifetime output."}</p></div>
       {error ? <p className="results-error">Results will return when the connection is restored. Use “Try again” above.</p> : data?.mode === "density" ? <ul className="density-results">{(data.periods ?? []).map(period => <li key={period.start_year}><button disabled={loading} onClick={() => selectPeriod(period.start_year, period.end_year)}>{period.start_year}–{period.end_year}<span>{period.count} {period.count === 1 ? "painter" : "painters"}{isCurrentPeriod(period, start, end) && (suggestions[0] ? ` · Try ${suggestions[0].name} · ${suggestions[0].count} painters →` : " · Choose filters →")}</span></button></li>)}</ul> :
         <div className="painter-index-scroll" role="region" aria-labelledby="painter-index-title" tabIndex={0}><ol className="artist-results">{(data?.items ?? []).map(artist => <li key={artist.id} className="bookmark-index-item"><button disabled={loading} aria-pressed={artist.slug === slug} onClick={() => openArtist(artist.slug)}><span className="movement-dot" style={{ background: artist.movement.color }} /><span><strong>{artist.name}</strong><small>{artist.date_display} · {artist.countries.map(countryName).join(", ")}</small></span><span className={`result-coverage${artist.artwork_count === 0 ? " is-missing" : ""}`}>{artist.artwork_count ? `${artist.artwork_count} ${artist.artwork_count === 1 ? "work" : "works"}` : "Works to add"}</span></button><BookmarkButton kind="artist" id={artist.id} title={artist.name} /></li>)}</ol></div>}
     </section>}

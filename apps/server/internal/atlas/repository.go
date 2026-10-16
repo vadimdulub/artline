@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"slices"
 	"strings"
+	"time"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -17,9 +18,10 @@ type atlasDB interface {
 	QueryRow(context.Context, string, ...any) pgx.Row
 }
 type Repository struct {
-	db         atlasDB
-	pool       *pgxpool.Pool
-	aggregates *aggregateCache
+	db          atlasDB
+	pool        *pgxpool.Pool
+	aggregates  *aggregateCache
+	localNative bool
 }
 
 func NewRepository(db *pgxpool.Pool) *Repository {
@@ -27,6 +29,23 @@ func NewRepository(db *pgxpool.Pool) *Repository {
 		return &Repository{}
 	}
 	return &Repository{db: db, pool: db, aggregates: newAggregateCache()}
+}
+
+// EnableLocalReadOnlyPreview is called only after config has verified a loopback
+// database and local-debug runtime. Old local catalogues remain untouched; they
+// can use native queries without production projection or cache migrations.
+func (r *Repository) EnableLocalReadOnlyPreview(ctx context.Context) error {
+	if r.pool == nil {
+		return nil
+	}
+	ctx, cancel := context.WithTimeout(ctx, 2*time.Second)
+	defer cancel()
+	var ready bool
+	if err := r.pool.QueryRow(ctx, "SELECT to_regclass('public.catalogue_cache_revisions') IS NOT NULL AND to_regclass('public.artwork_atlas_browse') IS NOT NULL").Scan(&ready); err != nil {
+		return err
+	}
+	r.localNative = !ready
+	return nil
 }
 
 // Both selections remain distinguishable in their native detail records.
@@ -87,10 +106,12 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 	}
 	defer tx.Rollback(ctx)
 	var revision string
-	if err = tx.QueryRow(ctx, "SELECT sum(revision)::text FROM catalogue_cache_revisions HAVING count(*)=64").Scan(&revision); err != nil {
-		return Response{}, err
+	if !r.localNative {
+		if err = tx.QueryRow(ctx, "SELECT sum(revision)::text FROM catalogue_cache_revisions HAVING count(*)=64").Scan(&revision); err != nil {
+			return Response{}, err
+		}
 	}
-	reader := &Repository{db: tx, aggregates: r.aggregates}
+	reader := &Repository{db: tx, aggregates: r.aggregates, localNative: r.localNative}
 	return reader.list(ctx, f, revision)
 }
 
@@ -136,6 +157,9 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 		}
 		clause := entityPredicate(definition.Key, entity, &args)
 		highlight := "a.is_highlight"
+		if r.localNative {
+			highlight = "a.id IN (" + selectedArt + ")"
+		}
 		if definition.Key == "book" || definition.Key == "event" {
 			column := "d.top100"
 			if definition.Key == "event" {
@@ -176,7 +200,7 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 		needsGeography := false
 		pageGeography := []string{}
 		matchGeography := func(condition string) string {
-			if broadGeography {
+			if broadGeography || r.localNative {
 				return artworkGeographyMatch(condition)
 			}
 			needsGeography = true
@@ -187,7 +211,7 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 		geography := geographyPredicateWithArtwork(definition.Key, f, &args, matchGeography)
 		focusScope := focusPredicateWithArtwork(definition.Key, focus, &args, matchGeography)
 		prefix := ""
-		if definition.Key == "artwork" {
+		if definition.Key == "artwork" && !r.localNative {
 			if strings.TrimSpace(f.Query) != "" {
 				selection = "(" + selection + ") AND " + sharedArtworkSearchPredicate("$3")
 			}
@@ -206,6 +230,9 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
  OR EXISTS(SELECT 1 FROM artwork_places ap JOIN places pl ON pl.id=ap.place_id
  JOIN countries c ON c.code=pl.country_code WHERE ap.artwork_id=a.id AND c.region_code=$5))`
 		} else {
+			if definition.Key == "artwork" {
+				p.keys += " AND a.primary_media_id IS NOT NULL" + artworkImageScope
+			}
 			p.keys += " AND (" + selection + ") AND (" + creatorScope + ") AND (" + geography + ") AND (" + focusScope + ")"
 		}
 		next := len(args)
@@ -220,7 +247,7 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 		groupQuery := "SELECT start_year,end_year,count(*) AS weight FROM (" + p.keys + ") scope GROUP BY start_year,end_year"
 		// Text searches can be expensive even when they match no IDs (for
 		// example literal punctuation). Resolve that search once per query.
-		splitBrowse := definition.Key == "artwork" && strings.TrimSpace(f.Query) == "" && strings.TrimSpace(entity.Get("q")) == ""
+		splitBrowse := !r.localNative && definition.Key == "artwork" && strings.TrimSpace(f.Query) == "" && strings.TrimSpace(entity.Get("q")) == ""
 		if splitBrowse {
 			clean, pending := browseBranches(prefix)
 			groupQuery = "SELECT start_year,end_year,sum(weight) AS weight FROM ((WITH " + clean + "grouped AS (" + groupQuery + ") SELECT * FROM grouped) UNION ALL (WITH " + pending + "grouped AS (" + groupQuery + ") SELECT * FROM grouped)) branches GROUP BY start_year,end_year"

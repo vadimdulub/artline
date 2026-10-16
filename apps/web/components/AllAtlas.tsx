@@ -1,4 +1,6 @@
 "use client";
+import { CatalogueMap } from "./CatalogueMap";
+import { MapViewSwitch } from "./MapViewSwitch";
 import { displayMetadata } from "@/lib/display-metadata";
 import { ExplorerFrame } from "./ExplorerFrame";
 import { useFitYears } from "./use-fit-years";
@@ -53,11 +55,13 @@ export function AllAtlas(){
  const shell=useRef<HTMLElement>(null),stage=useRef<HTMLDivElement>(null),search=useRef<HTMLInputElement>(null);
  const [metadata,setMetadata]=useState<AtlasMetadata>(),[metaError,setMetaError]=useState(""),[retry,setRetry]=useState(0),[width,setWidth]=useState(1000);
  const [geography,setGeography]=useState<{countries:{slug:string;name:string}[];error?:string}>({countries:[]});
+ const mapView = rawParams.get("canvas") === "map";
  const [result,setResult]=useState<{key:string;attempt:number;data?:AtlasResponse;error?:string}>();
  const [rangePreview,setRangePreview]=useState<BookRange|null>(null);
  const presetID=rawParams.get("preset")??"",windowKind=rawParams.get("window")??"context",preset=metadata?.presets.find(p=>p.id===presetID);
  const params=resolvedStartingFilters(rawParams,preset);
  const layers=atlasLayers(params);
+ if(mapView&&!rawParams.has("selection")&&layers.length===0)layers.push(...allKinds);
  const populated=layers.length>0;
  const bounds=metadata?.bounds??{start:-12000,end:2000},fallback=preset?.[windowKind==="period"?"period":"context"]??bounds;
  const targetRange={start:params.has("start")?Number(params.get("start")):fallback.start,end:params.has("end")?Number(params.get("end")):fallback.end};
@@ -66,7 +70,7 @@ export function AllAtlas(){
  const creatorChoices=useAtlasCreators(creators);
  const artworkCountries=params.get("country_scope")==="artwork";
  const request=new URLSearchParams({selection:"true",highlights:String(highlights),preset_filters:"custom"});
- for(const key of ["fit","preset","window","start","end","q","region","country","country_scope","continent","creator","after_artwork",...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
+ for(const key of ["fit","preset","window","start","end","q","region","country","country_scope","continent","creator","after_artwork",...(mapView?["after_book","after_event"]:[]),...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
  request.set("artwork_image_only","true");
  for(const kind of layers)request.append("type",kind);
  const requestKey=timelineRequestKey(request,fallback);
@@ -125,6 +129,7 @@ export function AllAtlas(){
    <AtlasCheckbox label="Highlights" checked={highlights} onChange={checked=>changeFilter({highlights:String(checked)})}/>
   </AtlasFilters>
   <ActiveFilters filters={activeFilters} onClear={clearFilters} searchRef={search}/>
+  <MapViewSwitch map={mapView} onChange={map => { if(map&&!populated) change({canvas:"map",type:allKinds}); else updateQuery({canvas:map?"map":null},true); }} />
   <div className={`timeline-dark${populated?"":" all-empty-canvas"}`}>
    {metaError&&<p role="alert">Periods could not be loaded. <button onClick={()=>setRetry(v=>v+1)}>Retry periods</button></p>}
    {populated?<>
@@ -142,9 +147,11 @@ export function AllAtlas(){
       </>}>
       <h1 className="time-title" data-bce={displayRange.start<0||displayRange.end<0} id="all-timeline-title" tabIndex={-1}>{bookYearLabel(displayRange.start)}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{bookYearLabel(displayRange.end)}</h1>
     </TimelineHeader>
-    <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(t=>({key:t.year,label:t.label,position:position(t.year)}))}>
+    {mapView ? <CatalogueMap items={!busy && !error ? (data?.lanes ?? []).filter(lane => layers.includes(lane.key)).flatMap(lane => lane.items.map(item => ({ id: item.id, kind: item.type, title: item.title, context: item.context, years: item.years, image: item.media_url ?? item.cover?.imageUrl }))) : []} total={data?.total ?? 0} loading={busy} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => { const record = data?.lanes.flatMap(lane => lane.items).find(record => record.id === item.id && record.type === item.kind); if (record) open(record); }}>
+      <nav className="map-pages" aria-label="Combined map pages">{["after_artwork","after_book","after_event"].some(key => params.has(key)) && <button onClick={() => updateQuery({after_artwork:null,after_book:null,after_event:null,item:null,itemType:null},true)}>First page in all layers</button>}{data?.lanes.filter(lane => layers.includes(lane.key) && lane.nextCursor).map(lane => <button key={lane.key} onClick={() => updateQuery({[`after_${lane.key}`]:lane.nextCursor,item:null,itemType:null},true)}>Next {lane.name.toLowerCase()}</button>)}</nav>
+    </CatalogueMap> : <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(t=>({key:t.year,label:t.label,position:position(t.year)}))}>
      {busy?<div className="all-content-loading" role="status"><LoadingIndicator label="Loading the timeline…"/></div>:error?<div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry</button> <button onClick={reset}>Reset view</button></div>:data?.lanes.filter(lane=>layers.includes(lane.key)).map(lane=><Lane key={lane.key} lane={lane} range={range} position={position} width={width} busy={busy} loadingRange={loadingRange} selected={selected} select={open} narrow={narrow} browse={()=>browse(lane.key)} isolated={layers.length===1} onIsolate={()=>change({type:layers.length===1?allKinds:[lane.key],panel:null,browse:null})} galleryQuery={result?.key??requestKey}/>)}
-    </TimelineGrid>
+    </TimelineGrid>}
     <p className="sr-only" id="all-timeline-help">Select an entry for details. Select a busy period or edit the years to zoom every lane to that interval. Zoom out returns to all years and keeps your layers and filters. Select a lane heading to open its entries for the selected years.</p>
     <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} onPreview={setRangePreview} omitYearZero inputPrefix="All " formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds,linearFrom),yearAt:position=>bookYearAtPosition(position,bounds,linearFrom),markers:[linearFrom,1700].map(year=>({year,label:String(year)}))}}/>
    </>:metadata?<AllStartingPoints metadata={metadata} select={id=>selectPreset(id)}/>:<div className="all-start"><h1 id="all-timeline-title">Explore a moment in history</h1>{!metaError&&<LoadingIndicator label="Loading starting points…"/>}</div>}

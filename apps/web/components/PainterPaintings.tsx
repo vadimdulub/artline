@@ -1,4 +1,5 @@
 "use client";
+import { CatalogueMap } from "./CatalogueMap";
 import { useFitYears } from "./use-fit-years";
 import { timelineRequestKey } from "@/lib/timeline-request";
 
@@ -20,7 +21,7 @@ import { TimelineHeader } from "./TimelineHeader";
 import "./AllAtlas.css";
 import "./PainterPaintings.css";
 
-export function PainterPaintings({ filters, start, end, setRange, onPeriod, viewSwitch }: { filters: string; start: number; end: number; setRange: (start: number, end: number) => void; onPeriod: (start: number, end: number) => void; viewSwitch: ReactNode }) {
+export function PainterPaintings({ filters, start, end, setRange, onPeriod, viewSwitch, mapView = false }: { mapView?: boolean; filters: string; start: number; end: number; setRange: (start: number, end: number) => void; onPeriod: (start: number, end: number) => void; viewSwitch: ReactNode }) {
   const params = new URLSearchParams(useQueryString());
   const selected = params.get("painting") ?? "";
   const request = new URLSearchParams({ selection: "true", type: "artwork", start: String(start), end: String(end), highlights: "false", artwork_image_only: "true" });
@@ -65,12 +66,14 @@ export function PainterPaintings({ filters, start, end, setRange, onPeriod, view
       zoom={<TimelineZoomOut disabled={!focused} onClick={() => changeRange(1100, 2000)} />}>
       <h1 id="timeline-title" className="time-title" tabIndex={-1}><span className="sr-only">Artwork creation dates: </span>{years.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{years.end}</h1>
     </TimelineHeader>
-    <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>
+    {mapView ? <CatalogueMap items={(lane?.items ?? []).map(item => ({ id: item.id, kind: "artwork", title: item.title, context: item.context, years: item.years, image: item.media_url }))} total={lane?.total ?? 0} loading={busy} error={error} onRetry={() => setRetry(v => v + 1)} range={{ start, end }} onOpen={item => updateQuery({ painting: item.id }, true)}>
+      <nav className="map-pages" aria-label="Artwork map pages">{params.has("painting_after") && <button onClick={() => updateQuery({ painting_after: null, painting: null }, true)}>First artworks</button>}{lane?.nextCursor && <button onClick={() => updateQuery({ painting_after: lane.nextCursor, painting: null }, true)}>Next artworks</button>}</nav>
+    </CatalogueMap> : <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>
       {error ? <div className="state-panel" role="alert"><h2>We couldn’t load these paintings</h2><p>{error}</p><button onClick={() => setRetry(value => value + 1)}>Try again</button></div> : busy ? <div className="state-panel"><LoadingIndicator label="Finding paintings…" /></div> : lane?.items.length ? <>
         <AllArtworkGallery key={key} lane={lane} query={key} busy={busy} selected={selected} select={open} />
         {lane.mode === "density" && <details className="all-artwork-density"><summary>Explore artworks by year</summary><TimelineOverview disabled={busy} periods={lane.density} start={start} end={end} position={position} showCurrentAction={false} noun="artworks" footnote="" onSelect={(a, b) => onPeriod(a, Math.max(a + 1, b))} /></details>}
       </> : <div className="state-panel"><h2>No paintings in this view</h2><p>{start > 1970 ? "Artwork coverage ends at 1970. Choose earlier years." : "Try another painter or a wider date range."}</p></div>}
-    </TimelineGrid>
+    </TimelineGrid>}
     <TimelineRangeControls start={start} end={end} minimum={1100} maximum={2000} onChange={changeRange} onPreview={setPreview} endpoints={["1100", "2000"]} scale={{ position: artworkYearPosition, yearAt: artworkYearAtPosition, markers: [1400, 1600, 1800].map(year => ({ year, label: String(year) })) }} />
     {selected && <AllArtworkDrawer id={selected} close={close} navigation={navigation} fallbackFocusId="timeline-title" />}
   </div>;

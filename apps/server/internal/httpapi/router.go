@@ -34,6 +34,11 @@ type API struct {
 
 func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	api := &API{config: cfg, db: db, repo: catalog.NewRepository(db), bookRepo: books.NewRepository(db), eventRepo: events.NewRepository(db), exhibitionRepo: exhibitions.NewRepository(db), atlasRepo: atlas.NewRepository(db)}
+	if cfg.LocalDebug {
+		if err := api.atlasRepo.EnableLocalReadOnlyPreview(context.Background()); err != nil {
+			slog.Warn("local atlas schema check failed", "error", err)
+		}
+	}
 	mux := http.NewServeMux()
 	memberOrigin := cfg.AuthOrigin
 	if cfg.LocalDebug {
@@ -67,6 +72,7 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /health", api.health)
 	mux.HandleFunc("GET /ready", api.ready)
 	mux.HandleFunc("GET /api/v1/timeline", api.timeline)
+	mux.HandleFunc("GET /api/v1/map/locations", api.mapLocations)
 	mux.HandleFunc("GET /api/v1/guides", api.guides)
 	mux.HandleFunc("GET /api/v1/books", api.books)
 	mux.HandleFunc("GET /api/v1/books/authors", api.bookAuthors)
