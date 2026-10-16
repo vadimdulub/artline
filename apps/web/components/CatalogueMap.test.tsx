@@ -32,6 +32,16 @@ describe("CatalogueMap", () => {
   await act(async () => resolveOld({ records: [{ id: item.id, connections: [connection], truncated: false }] }));
   expect(screen.queryByText("Geneva")).not.toBeInTheDocument();
  });
+ it("includes relationship filters in the evidence request and permits an empty selection", async () => {
+  request.mockResolvedValue({ records: [] });
+  const artist = { id: "artist-id", kind: "artist" as const, title: "Painter" };
+  const { rerender } = render(<CatalogueMap {...props} items={[artist]} relations={["birth"]} />);
+  await waitFor(() => expect(request).toHaveBeenCalledTimes(1));
+  expect(request.mock.calls[0][0]).toContain("relation=birth");
+  rerender(<CatalogueMap {...props} items={[]} relations={[]} />);
+  expect(await screen.findByText(/Choose at least one place type above/)).toBeInTheDocument();
+  expect(request).toHaveBeenCalledTimes(1);
+ });
  it("keeps unsupported locations accessible in the unlocated list", async () => {
   request.mockResolvedValue({ records: [{ id: item.id, connections: [{ ...connection, place: "Historical state", lat: null, lon: null, precision: "unlocated" }], truncated: false }] });
   render(<CatalogueMap {...props} />); fireEvent.click(await screen.findByRole("button", { name: "Unlocated (1)" }));

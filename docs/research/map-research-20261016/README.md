@@ -12,7 +12,7 @@ pagination. The map is a research implementation, not global geographic coverage
 
 Use these local examples with the web preview on port 3016:
 
-- [Van Gogh's life places](http://127.0.0.1:3016/?canvas=map&painter=vincent-van-gogh-q5582&popular=false)
+- [Van Gogh's life and painting places](http://127.0.0.1:3016/?canvas=map&painter=vincent-van-gogh-q5582&popular=false)
 - [Van Gogh paintings, 1888–1890](http://127.0.0.1:3016/?canvas=map&view=paintings&painter=vincent-van-gogh-q5582&popular=false&start=1888&end=1890)
 - [Frankenstein](http://127.0.0.1:3016/books?canvas=map&q=Frankenstein&top100=false)
 - [The Great Exhibition](http://127.0.0.1:3016/events?canvas=map&q=Great%20Exhibition&top100=false)
@@ -154,6 +154,52 @@ caching, preserves illustrated eligibility and native filter/scope rules. Produc
 still requires its normal projections and revision snapshot. This is a preview
 compatibility path, not an alternative production performance claim.
 
+## Artist filters and event regions — refinement
+
+The artist map now combines native painter records and the bounded painting page.
+Checkboxes select **Paintings made, Born, Lived or worked, Studied, Died,
+Travelled**, and **Country affiliations**. These can be combined; affiliations
+are off by default. Existing painter, country, movement, work type and year
+filters still select the underlying records. Painting eligibility and pagination
+remain those of the illustrated painting browser. Artist and artwork drawers
+remain native. Density-mode artists still require narrower filters.
+
+Repeated `map_relation` URL values preserve selections through reload and Back;
+`map_relation=none` preserves an explicitly empty selection. Relationship filters
+are sent to the map endpoint and applied before the per-record connection cap,
+including in the native SQL query. Curated evidence carries explicit category
+arrays: Antwerp can match both residence and education. Citizenship and cultural
+affiliation cannot become residence, and residence cannot become work creation.
+Unknown native association dates remain unknown, even where a curated connection
+has an exact date; filtering does not silently enrich or merge source claims.
+
+Events and All now offer **Highlight event regions** (on by default, with
+`map_regions=off` to preserve the off state). Only an exact country-level event
+location supplies the country code used to shade its Natural Earth polygon.
+Selecting a country from the map or place list emphasizes its outline and opens
+its event connections. Polygon keyboard activation moves focus to the place
+heading. A city-only event such as the Great Exhibition remains a point; neither
+its containing country nor a participant's country is inferred as event extent.
+
+The camera frames the polygon component around the country's label point; the
+full modern country geometry remains available. This avoids overseas components
+pushing the main area offscreen. It refits on viewport resizing. Modern polygon
+shading is orientation for the recorded country association, **not a historical
+territorial or battlefield reconstruction**. Unsupported historical states and
+subnational areas remain unresolved; continent/category tags do not become shapes.
+
+[Leaflet's GeoJSON choropleth example](https://leafletjs.com/examples/choropleth/)
+supports the chosen styling, selection and bounds interactions. Natural Earth's
+[admin-1 dataset](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/)
+was also reviewed. Its current administrative divisions do not establish the
+geometry of a historical region. No admin-1 data or name-based matching was added;
+subnational and historical regions need exact identity and dated geometry research.
+
+Examples:
+
+- [Birthplaces with painting creation](http://127.0.0.1:3016/?canvas=map&painter=vincent-van-gogh-q5582&popular=false&map_relation=birth&map_relation=creation)
+- [Event country highlighting](http://127.0.0.1:3016/events?canvas=map&q=Seventh%20Coalition&top100=false)
+
 ## Next research and scale work
 
 1. Add reviewed place identities and geometry to catalogue research, starting
@@ -211,3 +257,19 @@ for the first page; it is deliberately not presented as a painter-only optimal
 plan or a production scale substitute. Exact plans are in
 `native-map-preview-plans.json` in the external proof directory. No test database,
 fixture inserts or local migrations were created.
+
+
+Refinement validation: 21 focused web tests pass (map semantics, map requests and
+All layer/filter behavior); geography and HTTP API Go packages pass. Browser
+checks cover combined birth/painting filters, study-only and explicitly empty
+selections, reload and Back, both native drawers, country polygon keyboard
+selection and toggle persistence, city-only event exclusion, and region rendering
+in All. Artist and event layouts were inspected at 1440, 768, 390 and 320 px;
+controls retain 44 px touch targets and no horizontal overflow after resize.
+Both map regions have zero axe violations and no browser runtime errors. Proofs
+are `map-refinement-browser-report.json` and the `artist-filters-*` /
+`event-regions-*` screenshots in the external directory above. The in-app browser
+connection failed before initialization; standalone Playwright was used instead.
+The refinement production build (including TypeScript) passes. ESLint has no
+errors and retains the existing native-thumbnail warning. No catalogue,
+background programme or production service was modified.

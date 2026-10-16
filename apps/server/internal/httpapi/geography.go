@@ -45,9 +45,20 @@ func (api *API) mapLocations(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_RANGE", "Choose a valid year range.")
 		return
 	}
+	relations := q["relation"]
+	if len(relations) > 7 || (len(relations) > 0 && kind != "artist" && kind != "artwork") {
+		writeError(w, 400, "INVALID_MAP_RELATION", "Use artist or artwork place relationships.")
+		return
+	}
+	for _, relation := range relations {
+		if !geography.ValidRelation(relation) {
+			writeError(w, 400, "INVALID_MAP_RELATION", "Choose a supported place relationship.")
+			return
+		}
+	}
 	ctx, cancel := contextWithTimeout(r, 5*time.Second)
 	defer cancel()
-	result, err := geography.Lookup(ctx, api.db, kind, ids, start, end)
+	result, err := geography.Lookup(ctx, api.db, kind, ids, start, end, relations...)
 	if err != nil {
 		slog.Error("map locations failed", "error", err)
 		writeError(w, 500, "MAP_QUERY_FAILED", "Place evidence could not be loaded.")

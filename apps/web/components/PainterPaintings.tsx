@@ -1,4 +1,5 @@
 "use client";
+import { artistMapRelations, artistPlaceFilters, type MapItem } from "@/lib/map";
 import { CatalogueMap } from "./CatalogueMap";
 import { useFitYears } from "./use-fit-years";
 import { timelineRequestKey } from "@/lib/timeline-request";
@@ -21,9 +22,16 @@ import { TimelineHeader } from "./TimelineHeader";
 import "./AllAtlas.css";
 import "./PainterPaintings.css";
 
-export function PainterPaintings({ filters, start, end, setRange, onPeriod, viewSwitch, mapView = false }: { mapView?: boolean; filters: string; start: number; end: number; setRange: (start: number, end: number) => void; onPeriod: (start: number, end: number) => void; viewSwitch: ReactNode }) {
+export function PainterPaintings({ filters, start, end, setRange, onPeriod, viewSwitch, mapView = false, artists }: { artists?: { items: MapItem[]; total: number; loading: boolean; error?: string; retry: () => void; open: (item: MapItem) => void }; mapView?: boolean; filters: string; start: number; end: number; setRange: (start: number, end: number) => void; onPeriod: (start: number, end: number) => void; viewSwitch: ReactNode }) {
   const params = new URLSearchParams(useQueryString());
   const selected = params.get("painting") ?? "";
+  const relations = artistMapRelations(params);
+  const showPaintings = !mapView || relations.includes("creation");
+  const showArtists = mapView && relations.some(value => value !== "creation");
+  function toggleRelation(value: string) {
+    const next = relations.includes(value) ? relations.filter(r => r !== value) : [...relations, value];
+    updateQuery({ map_relation: next.length ? next : "none", painting: null }, true);
+  }
   const request = new URLSearchParams({ selection: "true", type: "artwork", start: String(start), end: String(end), highlights: "false", artwork_image_only: "true" });
   for (const [key, value] of new URLSearchParams(filters)) if (!["start", "end", "fit"].includes(key)) request.append(`artwork_${key}`, value);
   const scope = timelineRequestKey(request);
@@ -34,40 +42,47 @@ export function PainterPaintings({ filters, start, end, setRange, onPeriod, view
   const [preview, setPreview] = useState<{ start: number; end: number } | null>(null);
   const [width, setWidth] = useState(1000);
   const stage = useRef<HTMLDivElement>(null);
-  const busy = result?.key !== key || result?.attempt !== retry;
-  const data = !busy ? result?.data : undefined;
-  const error = !busy ? result?.error : undefined;
-  useFitYears(params.get("fit") === "true", !!data && !busy && !error, data?.matchedRange);
+  const busy = showPaintings && (result?.key !== key || result?.attempt !== retry);
+  const data = showPaintings && !busy ? result?.data : undefined;
+  const error = showPaintings && !busy ? result?.error : undefined;
+  useFitYears(!mapView && params.get("fit") === "true", !!data && !busy && !error, data?.matchedRange);
   const lane = data?.lanes[0];
   const years = preview ?? { start, end };
   const { focused, position, ticks } = atlasTimelineScale({ start, end }, { start: 1100, end: 2000 }, width, {
     position: artworkYearPosition, ticks: visibleArtworkTicks(1100, 2000, width).map(year => ({ year, label: String(year) })),
   });
   useEffect(() => {
+    if (!showPaintings) return;
     const controller = new AbortController();
     const timer = setTimeout(() => apiRequest<AtlasResponse>(`atlas?${key}`, { signal: controller.signal })
       .then(data => { if (!controller.signal.aborted) setResult({ key, attempt: retry, data }); })
       .catch(error => { if (!controller.signal.aborted) setResult({ key, attempt: retry, error: errorMessage(error) }); }), 140);
     return () => { clearTimeout(timer); controller.abort(); };
-  }, [key, retry]);
+  }, [key, retry, showPaintings]);
   useEffect(() => {
     if (!stage.current) return;
     const observer = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width));
     observer.observe(stage.current);
     return () => observer.disconnect();
-  }, []);
+  }, [mapView]);
   function open(item: AtlasItem) { updateQuery({ painting: item.id }, true); }
   function close() { updateQuery({ painting: null }, true); }
   function changeRange(a: number, b: number) { setPreview(null); setRange(a, b); }
   const navigation = useRecordNavigation(selected ? `atlas?${scope}` : null, selected, id => updateQuery({ painting: id }, true));
   return <div className="timeline-dark painter-paintings">
-    <TimelineHeader controls={viewSwitch}
-      status={busy ? "Finding paintings…" : error ? "Couldn’t load" : `${lane?.total.toLocaleString("en-GB") ?? 0} artworks`}
+    <TimelineHeader controls={mapView ? <span className="map-mode-label">Artists & paintings</span> : viewSwitch}
+      status={mapView ? "Explore the places behind an artist’s life and work" : busy ? "Finding paintings…" : error ? "Couldn’t load" : `${lane?.total.toLocaleString("en-GB") ?? 0} artworks`}
       zoom={<TimelineZoomOut disabled={!focused} onClick={() => changeRange(1100, 2000)} />}>
-      <h1 id="timeline-title" className="time-title" tabIndex={-1}><span className="sr-only">Artwork creation dates: </span>{years.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{years.end}</h1>
+      <h1 id="timeline-title" className="time-title" tabIndex={-1}><span className="sr-only">{mapView ? "Artist and artwork map years: " : "Artwork creation dates: "}</span>{years.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{years.end}</h1>
     </TimelineHeader>
-    {mapView ? <CatalogueMap items={(lane?.items ?? []).map(item => ({ id: item.id, kind: "artwork", title: item.title, context: item.context, years: item.years, image: item.media_url }))} total={lane?.total ?? 0} loading={busy} error={error} onRetry={() => setRetry(v => v + 1)} range={{ start, end }} onOpen={item => updateQuery({ painting: item.id }, true)}>
-      <nav className="map-pages" aria-label="Artwork map pages">{params.has("painting_after") && <button onClick={() => updateQuery({ painting_after: null, painting: null }, true)}>First artworks</button>}{lane?.nextCursor && <button onClick={() => updateQuery({ painting_after: lane.nextCursor, painting: null }, true)}>Next artworks</button>}</nav>
+    {mapView ? <CatalogueMap items={[
+      ...(showArtists ? artists?.items ?? [] : []),
+      ...(lane?.items ?? []).map(item => ({ id: item.id, kind: "artwork" as const, title: item.title, context: item.context, years: item.years, image: item.media_url })),
+    ]} total={(showArtists ? artists?.total ?? 0 : 0) + (lane?.total ?? 0)} loading={busy || (showArtists && !!artists?.loading)} error={error ?? (showArtists ? artists?.error : undefined)} onRetry={() => { setRetry(v => v + 1); artists?.retry(); }} range={{ start, end }} relations={relations}
+      controls={<fieldset className="map-relation-filters"><legend>Show places connected with</legend><div>{artistPlaceFilters.map(filter => <label key={filter.value}><input type="checkbox" checked={relations.includes(filter.value)} onChange={() => toggleRelation(filter.value)} />{filter.label}</label>)}</div><p>Combine life places and painting locations. Each connection keeps its own dates and source.</p></fieldset>}
+      onOpen={item => item.kind === "artist" ? artists?.open(item) : updateQuery({ painting: item.id, artist: null }, true)}>
+      {showArtists && !artists?.loading && !artists?.items.length && !!artists?.total && <p className="map-coverage">Narrow the painter filters or choose Top 100 painters to map individual lives.</p>}
+      {showPaintings && <nav className="map-pages" aria-label="Artwork map pages">{params.has("painting_after") && <button onClick={() => updateQuery({ painting_after: null, painting: null }, true)}>First artworks</button>}{lane?.nextCursor && <button onClick={() => updateQuery({ painting_after: lane.nextCursor, painting: null }, true)}>Next artworks</button>}</nav>}
     </CatalogueMap> : <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>
       {error ? <div className="state-panel" role="alert"><h2>We couldn’t load these paintings</h2><p>{error}</p><button onClick={() => setRetry(value => value + 1)}>Try again</button></div> : busy ? <div className="state-panel"><LoadingIndicator label="Finding paintings…" /></div> : lane?.items.length ? <>
         <AllArtworkGallery key={key} lane={lane} query={key} busy={busy} selected={selected} select={open} />
