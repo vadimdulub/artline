@@ -14,8 +14,6 @@ import type { EventsFacets, EventsResponse, EventSuggestion } from "@/lib/events
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import { AtlasFilters, ActiveFilters } from "./AtlasFilters";
 import { EventFilterFields, eventDimensions } from "./EntityFilterFields";
-import { TimelineZoomOut } from "./TimelineZoomOut";
-import { TimelineHeader } from "./TimelineHeader";
 import { TimelineRangeControls } from "./TimelineRangeControls";
 import { bookYearLabel } from "@/lib/books";
 import { EventsTimeline } from "./EventsTimeline";
@@ -83,8 +81,7 @@ export function EventsIndex() {
       <ActiveFilters filters={active} onClear={() => change(cleared)} searchRef={search} />
       <MapViewSwitch map={mapView} onChange={map => updateQuery({ canvas: map ? "map" : null }, true)} />
       {mapView ? <div className="timeline-dark">
-        <TimelineHeader zoom={<TimelineZoomOut disabled={range.start === bounds.start && range.end === bounds.end} onClick={() => change({ start: null, end: null })} />} status="Event places"><h1 id="events-timeline" className="time-title" tabIndex={-1}>{bookYearLabel(range.start)}–{bookYearLabel(range.end)}</h1></TimelineHeader>
-        <CatalogueMap items={(data?.items ?? []).map(item => ({ id: item.id, kind: "event", title: item.title, context: item.kind, years: item.years }))} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => updateQuery({ event: item.id }, true)} />
+        <CatalogueMap headingId="events-timeline" items={(data?.items ?? []).map(item => ({ id: item.id, kind: "event", title: item.title, context: item.kind, years: item.years }))} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => updateQuery({ event: item.id }, true)} />
         <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} omitYearZero onChange={(start, end) => change({ start: String(start), end: String(end) })} formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start), bookYearLabel(bounds.end)]} />
       </div> : <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
         onPeriod={(start, end) => change({ start: String(start), end: String(end), top100: "false", fit: "true" })}

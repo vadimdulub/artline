@@ -82,7 +82,8 @@ Sources: [Leaflet reference](https://leafletjs.com/reference),
 [Nominatim usage policy](https://operations.osmfoundation.org/policies/nominatim/).
 
 Natural Earth is [public domain](https://www.naturalearthdata.com/about/terms-of-use/).
-The self-hosted 1:110m background is about 260 KiB. The original download URL and
+The initial self-hosted 1:110m background was about 260 KiB; the product pass
+below replaces it with labelled 1:50m geometry. The original download URL and
 SHA256 are recorded in `apps/web/public/maps/README.md`. Country label coordinates
 come from the same source. Modern borders provide orientation, not historical
 boundaries, disputed-territory adjudication or exact site geometry.
@@ -273,3 +274,116 @@ connection failed before initialization; standalone Playwright was used instead.
 The refinement production build (including TypeScript) passes. ESLint has no
 errors and retains the existing native-thumbnail warning. No catalogue,
 background programme or production service was modified.
+
+## Product direction — 16 October continuation
+
+The next pass makes the map the primary browsing surface. The recommended pattern
+is a labelled, zoomable atlas with a synchronized place index and selected-place
+record view. The map answers **where**; the index answers **what happened here**;
+the existing record drawer supplies the full artwork, book, artist or event.
+
+Design plan before implementation:
+
+- Colour: existing paper `#f2efe8`, ink `#1b1916`, stone `#e8e3d9`, rust
+  `#8f3a29`, event moss `#53745b`; a subdued pale water surface provides map
+  contrast. These are Artlines' established materials, not a new brand palette.
+- Type: Georgia for places and record titles; Avenir/system for navigation,
+  relations, dates and map labels. Left alignment throughout.
+- Layout: compact controls above a generous map; a narrow place index beside it.
+  A place selection replaces the index with illustrated records and clear dates.
+  On phones, the map precedes a compact, reachable place panel.
+- Principle: named places and authentic works carry the experience. Cluster nearby
+  places only for display; never merge their identities or invent precise sites.
+  Source notes and coverage stay accessible in disclosures.
+
+```text
+Shared catalogue filters / Timeline–Map / years
+Title + mapped-place count                         Map options
+Painting / birth / life filters
++-------------------------------------+-----------------------+
+| country labels, named place markers | Find a mapped place   |
+| nearby-place clusters               | compact place index   |
+| selected event outline              | or selected records   |
+| zoom / Show all places               | images, dates, source |
++-------------------------------------+-----------------------+
+Coverage and map guide / native page controls / year controls
+```
+
+Review against the brief: the old large introduction, repeated evidence blocks
+and anonymous count dots hid the collection. Remove that duplication; give the
+map more room and let the place index reveal records on demand. Retain Artlines'
+existing visual language and real source limitations.
+
+Keep Leaflet for this bounded city/country atlas: it already supports the required
+[vector layers, named markers and camera interactions](https://leafletjs.com/reference.html)
+and [keyboard access](https://leafletjs.com/examples/accessibility/). Upgrade the
+self-hosted geography to Natural Earth 1:50m with country labels. For future
+street-level maps or catalogue-wide spatial tiles, evaluate MapLibre with
+[self-hosted PMTiles](https://docs.protomaps.com/pmtiles/); that is a separate
+hosting and backend coverage project. A renderer replacement alone would not
+resolve sparse historical place evidence. No live geocoder, paid map account or
+Google service is introduced by this product pass.
+
+
+### Product implementation and verification
+
+- The artist, book and event maps have one title/date row, compact controls and
+  a generous map. All retains its native layer/context controls. Existing date
+  editors, catalogue filters, record drawers and bounded page controls remain.
+- Self-hosted 1:50m Natural Earth geometry has 242 features and is 1,898,455 bytes
+  before HTTP compression. Country labels are background context, never a new
+  geocoding source. Original source SHA256 and processing are in the map asset README.
+- Markers name places and identify the content type. Nearby places cluster by
+  screen distance, with a representative name and the number of other places.
+  They retain every original identity. Zoom separates them where possible; a
+  keyboard-accessible chooser handles places too close at the maximum zoom.
+  Selected places remain individually visible. Displaced labels use short
+  leader lines to their original map position; these are label annotations,
+  not historical routes or changed coordinates.
+- A compact, searchable place index shows authentic thumbnail previews and
+  relationship summaries. Search applies only to mapped places on the current
+  page. A selection opens dated, illustrated records; `map_place` preserves the
+  selection on reload and Back. Country/city display options also persist.
+- Native catalogue dates and location-connection dates stay separate. An
+  event's known year remains visible when the location association is undated.
+  Evidence and precision are retained under Source & location / About this map.
+- Additional place filters and map options dismiss on Escape or outside click.
+  Menus preserve native checkbox semantics. Failed reproductions have an explicit
+  unavailable state and retain record access. Data and map-background failures
+  have separate recovery actions. The map remains mounted during data refresh.
+
+Production build and TypeScript pass. All 25 focused web tests pass, including
+clustering identity/selection, URL selection, place search, failed images, stale
+requests, and All's native layer/filter behavior. ESLint reports no errors and
+one existing-style native-image warning. No backend or database changes were
+required by this pass.
+
+Browser verification uses the real read-only preview, without fixture records:
+artist overview/detail, books, event regions, All, relationship combinations,
+place search, record drawers, reload and Back, full view / Escape, timeline
+return, and failed-place-service recovery. Artist layouts were checked at 1440,
+1024, 768, 390 and 320 px. Axe found zero map-region violations in the checked
+artist, book, event and All states, including phone views. The final visual pass
+also checks selected-label separation, map-background retry and independent
+record/location dates. Proofs and screenshots are in the existing external
+`map-research-20261016` directory (`product-browser-report.json`,
+`product-final-report.json`, `product-*.png`, build and lint logs).
+
+Two missing Van Gogh preview images reuse exact existing files in the original
+working copy through ignored local symlinks. The final bounded preview needed
+no further image links. No reproduction was generated,
+redownloaded, relabelled or added to the catalogue. Production asset delivery
+is unchanged; these links only make existing local images visible in this worktree.
+The in-app browser again failed before initialization, so standalone Playwright
+provided the visual and interaction checks.
+
+The preview also exposes a pre-existing catalogue-date inconsistency: the native
+Frankenstein record shows 1810 while its sourced writing connection says 1816.
+The map preserves both fields; it does not silently correct catalogue evidence.
+The catalogue date requires a separate factual review.
+
+Remaining product work is factual coverage and catalogue-wide spatial delivery:
+reviewed city/region identities, historical geometries, global coverage counts,
+viewport aggregates and realistic capacity tests. This pass improves the working
+atlas interface; it does not turn sparse evidence into complete geographic coverage
+or authorize a production deployment.

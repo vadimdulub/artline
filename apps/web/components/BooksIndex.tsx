@@ -10,8 +10,6 @@ import { useEffect, useRef, useState } from "react";
 import { BOOK_TIMELINE_LIMIT, type Book, type TimelineAuthor, type BooksResponse, type BooksFacets } from "@/lib/books";
 import { apiRequest, errorMessage } from "@/lib/api";
 import { updateQuery, useQueryString } from "@/lib/url-state";
-import { TimelineZoomOut } from "./TimelineZoomOut";
-import { TimelineHeader } from "./TimelineHeader";
 import { TimelineRangeControls } from "./TimelineRangeControls";
 import { bookYearLabel } from "@/lib/books";
 import { BooksTimeline } from "./BooksTimeline";
@@ -127,8 +125,7 @@ export function BooksIndex() {
       <ActiveFilters filters={activeFilters} onClear={() => change(clearChoices)} searchRef={search} />
       <MapViewSwitch map={mapView} onChange={map => { setSelectedAuthor(null); updateQuery({ canvas: map ? "map" : null, map_after: null }, true); }} />
       {mapView ? <div className="timeline-dark">
-        <TimelineHeader zoom={<TimelineZoomOut disabled={range.start === bounds.start && range.end === bounds.end} onClick={() => change({ start: null, end: null })} />} status="Book places"><h1 id="books-timeline" className="time-title" tabIndex={-1}>{bookYearLabel(range.start)}–{bookYearLabel(range.end)}</h1></TimelineHeader>
-        <CatalogueMap items={visibleBooks.map(item => ({ id: item.id, kind: "book", title: item.title, context: item.author, years: item.years, image: item.cover?.imageUrl }))} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => updateQuery({ book: item.id }, true)}>
+        <CatalogueMap headingId="books-timeline" items={visibleBooks.map(item => ({ id: item.id, kind: "book", title: item.title, context: item.author, years: item.years, image: item.cover?.imageUrl }))} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => updateQuery({ book: item.id }, true)}>
           <nav className="map-pages" aria-label="Book map pages">{params.has("map_after") && <button onClick={() => updateQuery({ map_after: null, book: null }, true)}>First books</button>}{data?.hasMore && <button onClick={() => updateQuery({ map_after: data.nextCursor, book: null }, true)}>Next books</button>}</nav>
         </CatalogueMap>
         <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} omitYearZero onChange={(start, end) => change({ start: String(start), end: String(end) })} formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start), bookYearLabel(bounds.end)]} />

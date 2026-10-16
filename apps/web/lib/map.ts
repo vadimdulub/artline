@@ -49,3 +49,46 @@ export function eventCountryGroups(groups: PlaceGroup[]): Map<string, PlaceGroup
   }
   return countries;
 }
+
+export const mapKindNames: Record<MapKind, string> = { artist: "Artist", artwork: "Artwork", book: "Book", event: "Event" };
+export const mapSymbolPaths: Record<MapKind, string[]> = {
+  artist: ["M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0", "M5 20v-2a7 7 0 0 1 14 0v2"],
+  artwork: ["M3 4h18v16H3z", "m3 16 5-5 4 4 3-3 6 5", "M16 8h.01"],
+  book: ["M12 5v15", "M12 5C9 3 6 3 3 4v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1"],
+  event: ["M5 21V3", "M5 4h14l-3 5 3 5H5"],
+};
+export function placeRecordCount(group: PlaceGroup): number {
+  return new Set(group.entries.map(({ item }) => `${item.kind}:${item.id}`)).size;
+}
+export function placeKind(group: PlaceGroup): MapKind {
+  return group.entries.find(e => e.item.image)?.item.kind ?? group.entries[0]?.item.kind ?? "artist";
+}
+export function relationLabel(value: string): string {
+  const labels: Record<string, string> = { birth: "Born in", death: "Died in", studio: "Studio in", active: "Worked in", education: "Studied in", travel: "Travelled to", created: "Created in", begun: "Begun in", continued: "Continued in", completed: "Completed in", citizenship: "Citizenship", cultural_affiliation: "Cultural affiliation", historical_region: "Historical region" };
+  return labels[value] ?? value.charAt(0).toUpperCase() + value.slice(1);
+}
+export function placeTopics(group: PlaceGroup): string {
+  const names: Record<string, string> = { creation: "Artworks", birth: "Birth", residence: "Life & work", education: "Study", death: "Death", travel: "Travel", association: "Country links", writing: "Writing", publication: "Publication", event: "Events" };
+  return [...new Set(group.entries.flatMap(e => e.connection.categories ?? []).map(c => names[c]).filter(Boolean))].join(" · ") || [...new Set(group.entries.map(e => mapKindNames[e.item.kind]))].join(" · ");
+}
+
+export type PlaceCluster = { x: number; y: number; groups: PlaceGroup[] };
+// Display-only screen clustering of the current bounded page. The anchor is a
+// stable first point, never a new catalogue coordinate or merged place identity.
+export function clusterPlaces(groups: PlaceGroup[], project: (group: PlaceGroup) => { x: number; y: number }, radius = 60, selected = ""): PlaceCluster[] {
+  const cells = new Map<string, PlaceCluster[]>(), clusters: PlaceCluster[] = [];
+  for (const group of [...groups].sort((a, b) => a.key.localeCompare(b.key))) {
+    const { x, y } = project(group);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+    const cluster = { x, y, groups: [group] };
+    if (group.key === selected) { clusters.push(cluster); continue; }
+    const cx = Math.floor(x / radius), cy = Math.floor(y / radius);
+    let found: PlaceCluster | undefined;
+    for (let dx = -1; dx <= 1 && !found; dx++) for (let dy = -1; dy <= 1 && !found; dy++) {
+      found = cells.get(`${cx + dx}:${cy + dy}`)?.find(c => Math.hypot(c.x - x, c.y - y) < radius);
+    }
+    if (found) found.groups.push(group);
+    else { const key = `${cx}:${cy}`; cells.set(key, [...(cells.get(key) ?? []), cluster]); clusters.push(cluster); }
+  }
+  return clusters;
+}

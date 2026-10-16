@@ -9,15 +9,38 @@ const request = vi.mocked(apiRequest);
 const connection = { place: "Geneva", relation: "begun near", precision: "area", lat: 46.2, lon: 6.2, start: 1816, end: 1816, note: "Beginning only", sourceLabel: "Author", sourceUrl: "https://example.org/source" };
 const item = { id: "wd-q150827", kind: "book" as const, title: "Frankenstein" };
 const props = { items: [item], total: 20, loading: false, onRetry: vi.fn(), range: { start: 1800, end: 1900 }, onOpen: vi.fn() };
-beforeEach(() => { vi.clearAllMocks(); });
+beforeEach(() => { vi.clearAllMocks(); window.history.replaceState(null, "", "/"); window.matchMedia = vi.fn().mockReturnValue({ matches: false }); });
 afterEach(cleanup);
 describe("CatalogueMap", () => {
  it("reports page coverage and opens the existing record", async () => {
   request.mockResolvedValue({ records: [{ id: item.id, connections: [connection], truncated: false }] });
   render(<CatalogueMap {...props} />);
   expect(await screen.findByText("1 of 1 loaded records located · 20 matching records")).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: /^Geneva/ }));
   fireEvent.click(screen.getByRole("button", { name: "Frankenstein" })); expect(props.onOpen).toHaveBeenCalledWith(item);
   expect(request.mock.calls[0][0]).toContain("start=1800&end=1900");
+ });
+ it("keeps selection in the URL and searches only the mapped places on the current page", async () => {
+  request.mockResolvedValue({ records: [{ id: item.id, connections: [connection, { ...connection, place: "London", lat: 51.5, lon: -0.1 }], truncated: false }] });
+  render(<CatalogueMap {...props} />);
+  const search = await screen.findByRole("searchbox", { name: "Find a mapped place on this page" });
+  fireEvent.change(search, { target: { value: "London" } });
+  expect(screen.queryByRole("button", { name: /^Geneva/ })).not.toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: /^London/ }));
+  expect(new URLSearchParams(window.location.search).get("map_place")).toBe("51.5,-0.1,local");
+  expect(screen.getByRole("heading", { name: "London" })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: "← All places" }));
+  expect(new URLSearchParams(window.location.search).has("map_place")).toBe(false);
+  expect(screen.getByRole("button", { name: /^Geneva/ })).toBeInTheDocument();
+ });
+ it("keeps a record usable when its reproduction is unavailable", async () => {
+  request.mockResolvedValue({ records: [{ id: item.id, connections: [connection], truncated: false }] });
+  render(<CatalogueMap {...props} items={[{ ...item, image: "/missing.jpg" }]} />);
+  fireEvent.click(await screen.findByRole("button", { name: /^Geneva/ }));
+  fireEvent.error(screen.getByRole("img", { name: "Frankenstein" }));
+  expect(screen.getByText("Image unavailable")).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: "Frankenstein" }));
+  expect(props.onOpen).toHaveBeenCalled();
  });
  it("does not misreport a failed location request as zero coverage", async () => {
   request.mockRejectedValue(new Error("Disconnected")); render(<CatalogueMap {...props} />);
@@ -44,7 +67,7 @@ describe("CatalogueMap", () => {
  });
  it("keeps unsupported locations accessible in the unlocated list", async () => {
   request.mockResolvedValue({ records: [{ id: item.id, connections: [{ ...connection, place: "Historical state", lat: null, lon: null, precision: "unlocated" }], truncated: false }] });
-  render(<CatalogueMap {...props} />); fireEvent.click(await screen.findByRole("button", { name: "Unlocated (1)" }));
-  expect(screen.getByText(/Historical state · begun near · coordinates unresolved/)).toBeInTheDocument();
+  render(<CatalogueMap {...props} />); fireEvent.click(await screen.findByRole("button", { name: "Not mapped (1)" }));
+  expect(screen.getByText(/Historical state · Begun near · coordinates unresolved/)).toBeInTheDocument();
  });
 });

@@ -3,25 +3,42 @@ import dynamic from "next/dynamic";
 import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import { apiRequest, errorMessage } from "@/lib/api";
-import { connectionYears, placeGroups, sourceHref, type LocatedItem, type MapItem, type MapKind, type MapRecord } from "@/lib/map";
+import { connectionYears, mapKindNames, mapSymbolPaths, placeGroups, placeKind, placeRecordCount, placeTopics, relationLabel, sourceHref, type LocatedItem, type MapItem, type MapKind, type MapRecord, type PlaceGroup } from "@/lib/map";
+import { MapMenu } from "./MapMenu";
 import { LoadingIndicator } from "./LoadingIndicator";
 import "./CatalogueMap.css";
 const MapSurface = dynamic(() => import("./MapSurface"), { ssr: false, loading: () => <div className="map-loading"><LoadingIndicator label="Opening the map…" /></div> });
 
-export function CatalogueMap({ items, total, loading, error, onRetry, range, onOpen, children, controls, relations }: {
+function MapSymbol({ kind }: { kind: MapKind }) {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{mapSymbolPaths[kind].map(path => <path key={path} d={path} />)}</svg>;
+}
+function MapImage({ src, alt, kind, compact = false }: { src: string; alt: string; kind: MapKind; compact?: boolean }) {
+  const [failed, setFailed] = useState(false);
+  return failed ? <span className="map-image-unavailable"><MapSymbol kind={kind} />{!compact && <small>Image unavailable</small>}</span> : <img src={src} alt={alt} loading="lazy" onError={() => setFailed(true)} />;
+}
+function PlacePreview({ place }: { place: PlaceGroup }) {
+  const work = place.entries.find(e => e.item.image)?.item;
+  return <span className={`map-place-preview is-${placeKind(place)}`}>{work?.image ? <MapImage key={work.image} src={work.image} alt="" kind={work.kind} compact /> : <MapSymbol kind={placeKind(place)} />}</span>;
+}
+
+export function CatalogueMap({ items, total, loading, error, onRetry, range, onOpen, children, controls, relations, headingId }: {
   items: MapItem[]; total: number; loading: boolean; error?: string; onRetry: () => void;
-  range: { start: number; end: number }; onOpen: (item: MapItem) => void; children?: ReactNode; controls?: ReactNode; relations?: string[];
+  range: { start: number; end: number }; onOpen: (item: MapItem) => void; children?: ReactNode; controls?: ReactNode; relations?: string[]; headingId?: string;
 }) {
   const params = new URLSearchParams(useQueryString());
   const highlightRegions = params.get("map_regions") !== "off";
+  const detail = params.get("map_detail") ?? "all", selected = params.get("map_place") ?? "";
   const hasEvents = items.some(item => item.kind === "event");
   const eventsOnly = hasEvents && items.every(item => item.kind === "event");
+  const booksOnly = items.length > 0 && items.every(item => item.kind === "book");
+  const artists = items.filter(item => item.kind === "artist");
   const relationKey = relations ? [...relations].sort().join(",") : "all";
   const identities = JSON.stringify(items.map(({ id, kind }) => ({ id, kind })));
   const key = `${range.start}:${range.end}:${relationKey}:${identities}`;
   const [result, setResult] = useState<{ key: string; records: Record<string, MapRecord>; error?: string }>();
-  const [retry, setRetry] = useState(0), [selected, setSelected] = useState(""), [detail, setDetail] = useState("all"), [missing, setMissing] = useState(false);
-  const listHeading = useRef<HTMLHeadingElement>(null), filterID = useId();
+  const [retry, setRetry] = useState(0), [missing, setMissing] = useState(false), [find, setFind] = useState("");
+  const [hovered, setHovered] = useState("");
+  const listHeading = useRef<HTMLHeadingElement>(null), focusSelection = useRef(false), filterID = useId(), findID = useId();
   useEffect(() => {
     if (loading || error) return;
     const controller = new AbortController();
@@ -45,8 +62,8 @@ export function CatalogueMap({ items, total, loading, error, onRetry, range, onO
     load().catch(e => { if (!controller.signal.aborted) setResult({ key, records: {}, error: errorMessage(e) }); });
     return () => controller.abort();
   }, [identities, relationKey, key, range.start, range.end, retry, loading, error]);
-  const busy = loading || result?.key !== key;
   const failure = error ?? (result?.key === key ? result.error : undefined);
+  const busy = !failure && (loading || result?.key !== key);
   const records = !busy && !failure ? result?.records : undefined;
   const entries: LocatedItem[] = useMemo(() => items.flatMap(item => (records?.[`${item.kind}:${item.id}`]?.connections ?? []).map(connection => ({ item, connection }))), [items, records]);
   const allGroups = useMemo(() => placeGroups(entries), [entries]);
@@ -54,33 +71,54 @@ export function CatalogueMap({ items, total, loading, error, onRetry, range, onO
   const located = new Set(allGroups.flatMap(g => g.entries.map(e => `${e.item.kind}:${e.item.id}`)));
   const unlocated = items.filter(i => !located.has(`${i.kind}:${i.id}`));
   const group = groups.find(g => g.key === selected);
-  const visible = group ? [group] : groups;
-  function selectPlace(key: string) { setSelected(key); setMissing(false); requestAnimationFrame(() => listHeading.current?.focus()); }
+  const visible = groups.filter(g => g.name.toLocaleLowerCase().includes(find.trim().toLocaleLowerCase()));
+  const selectedKey = group?.key;
+  useEffect(() => {
+    if (!focusSelection.current || !selectedKey) return;
+    focusSelection.current = false;
+    listHeading.current?.focus({ preventScroll: true });
+    if (window.matchMedia("(max-width: 760px)").matches) listHeading.current?.scrollIntoView({ block: "nearest" });
+  }, [selectedKey]);
+  function selectPlace(value: string) { focusSelection.current = true; setMissing(false); setHovered(""); updateQuery({ map_place: value }, true); }
+  function clearPlace() { setFind(""); updateQuery({ map_place: null }, true); }
+  const Heading = headingId ? "h1" : "h2";
+  const PlaceHeading = headingId ? "h2" : "h3";
+  const year = (value: number) => value < 0 ? `${Math.abs(value).toLocaleString("en-GB")} BCE` : String(value);
+  const title = artists.length === 1 ? artists[0].title : eventsOnly ? "Events on the map" : booksOnly ? "A world of books" : "Explore places";
   return <section className="catalogue-map" aria-label="Places connected with these results" aria-busy={busy}>
-    <div className="map-introduction"><div><h2>{eventsOnly ? "Where history happened" : "Places behind the collection"}</h2><p>{eventsOnly ? "Explore the places and regions connected with events." : "Explore where works were made and lives unfolded."}</p></div><label htmlFor={filterID}>Place detail<select id={filterID} value={detail} onChange={e => { setDetail(e.target.value); setSelected(""); setMissing(false); }}><option value="all">All recorded places</option><option value="city">Local places</option><option value="country">Countries only</option></select></label></div>
+    <div className="map-introduction">
+      <div><div className="map-title-line"><Heading id={headingId} tabIndex={headingId ? -1 : undefined}>{title}</Heading>{headingId && <span className="map-year-range" aria-label="Years in view">{year(range.start)}–{year(range.end)}</span>}</div><p role="status">{failure ? "Places are temporarily unavailable" : busy ? "Finding places…" : `${groups.length} ${groups.length === 1 ? "place" : "places"} · ${located.size} ${located.size === 1 ? "record" : "records"} on the map`}</p></div>
+      <MapMenu className="map-options" label="Map options"><div className="map-options-panel">
+        <label htmlFor={filterID}>Show locations<select id={filterID} value={detail} onChange={e => updateQuery({ map_detail: e.target.value === "all" ? null : e.target.value, map_place: null }, true)}><option value="all">All recorded places</option><option value="city">Cities and local areas</option><option value="country">Countries only</option></select></label>
+        {hasEvents && <label className="map-region-toggle"><input type="checkbox" checked={highlightRegions} onChange={e => updateQuery({ map_regions: e.target.checked ? null : "off" }, true)} />Highlight event regions</label>}
+        <p>Country outlines show modern geography. Shading identifies a recorded event country, not its historical boundaries.</p>
+      </div></MapMenu>
+    </div>
     {controls}
-    {hasEvents && <div className="map-region-control"><label><input type="checkbox" checked={highlightRegions} onChange={e => updateQuery({ map_regions: e.target.checked ? null : "off" }, true)} />Highlight event regions</label><p>Shaded areas are recorded event countries, shown with modern outlines. Local events keep their place markers.</p></div>}
-    <p className="map-coverage" role="status">{failure ? "Place evidence unavailable" : busy ? "Finding documented places…" : `${located.size} of ${items.length} loaded records located · ${total.toLocaleString("en-GB")} matching records`}</p>
-    {failure ? <div className="state-panel" role="alert"><h2>We couldn’t load these places</h2><p>{failure}</p><button onClick={() => { setResult(undefined); setRetry(v => v + 1); onRetry(); }}>Try again</button></div> : busy ? <div className="map-loading"><LoadingIndicator label="Finding place evidence…" /></div> : <>
-      <div className="map-workspace"><MapSurface highlightRegions={hasEvents && highlightRegions} groups={groups} selected={group?.key ?? ""} onSelect={selectPlace} />
-        <aside className="map-place-panel" aria-label="Place details">
-          <div className="map-list-tabs" role="group" aria-label="Map results"><button aria-pressed={!missing} onClick={() => setMissing(false)}>Places ({groups.length})</button><button aria-pressed={missing} onClick={() => setMissing(true)}>Unlocated ({unlocated.length})</button></div>
-          <h3 ref={listHeading} tabIndex={-1}>{missing ? "Places still to establish" : group ? group.name : "Explore a place"}</h3>
-          {group && !missing && <button className="map-back" onClick={() => setSelected("")}>Show all places</button>}
-          {missing ? <><p>These records have no mapped connection for the selected place types and years. Open a record to inspect its evidence.</p><ul className="map-unlocated">{unlocated.map(item => <li key={`${item.kind}:${item.id}`}><button onClick={() => onOpen(item)}>{item.title}</button>{records?.[`${item.kind}:${item.id}`]?.connections.map((c, index) => <small key={index}>{c.place} · {c.relation} · coordinates unresolved</small>)}</li>)}</ul></> : visible.length ? <div className="map-place-list">{visible.map(place => <section className="map-place" key={place.key}>
-            {!group && <button className="map-place-title" onClick={() => selectPlace(place.key)}>{place.name}<span>{place.entries.length} connections</span></button>}
-            <p className="map-precision">{place.country ? "Country only · marker is a label position" : place.precision === "recorded point" ? "Recorded coordinate · precision unverified" : "Approximate city / area position"}</p>
-            {(group ? place.entries : place.entries.slice(0, 2)).map(({ item, connection: c }, index) => <article className="map-connection" key={`${item.kind}:${item.id}:${index}`}>
-              {item.image && <img src={item.image} alt="" loading="lazy" />}
-              <div><span className="map-relation">{c.relation}</span><button className="map-record-title" onClick={() => onOpen(item)}>{item.title}</button>{item.context && item.context !== "Unclassified" && <p>{item.context}</p>}<time>{connectionYears(c)}</time><details><summary>Place evidence</summary><p>{c.note}</p>{sourceHref(c.sourceUrl) ? <a href={sourceHref(c.sourceUrl)} target="_blank" rel="noreferrer">{c.sourceLabel}</a> : <p>{c.sourceLabel}</p>}</details></div>
-            </article>)}
-            {!group && place.entries.length > 2 && <button className="map-back" onClick={() => selectPlace(place.key)}>View all {place.entries.length} connections</button>}
-          </section>)}</div> : <p>{relationKey === "" ? "Choose at least one place type above to explore an artist’s life or paintings." : items.length ? "No mapped places at this detail level. Try all recorded places, or inspect the unlocated records." : total ? "Narrow the painter filters or choose Top 100 painters to load individual records for the map." : "No records match these filters. Choose other years or remove a filter."}</p>}
-        </aside>
+    <div className="map-workspace">
+      <div className="map-canvas-wrap"><MapSurface busy={busy || !!failure} highlightRegions={hasEvents && highlightRegions} groups={groups} selected={group?.key ?? ""} hovered={hovered} onSelect={selectPlace} onReset={clearPlace} />
+        {(busy || failure) && <div className="map-updating" aria-hidden="true">{!failure && <LoadingIndicator label="Finding places…" />}</div>}
+        {!busy && !failure && <div className="map-canvas-key"><span><i className="map-city-key" />City or area</span><span><i className="map-country-key" />Country</span>{hasEvents && highlightRegions && <span><i className="map-region-key" />Event region</span>}</div>}
       </div>
-      <div className="map-footnote"><span><i className="map-city-key" /> City or area</span><span><i className="map-country-key" /> Country only</span>{hasEvents && highlightRegions && <span><i className="map-region-key" /> Event country · modern outline</span>}<p>Modern geography for orientation. Countries of origin and cultural affiliations do not establish where a work was created. Only the loaded page is mapped. Years select records and their dated place connections.</p></div>
-      {Object.values(records ?? {}).some(r => r.truncated) && <p className="map-coverage">Some records have more place connections. This view shows up to 32 per record.</p>}
-      {children}
-    </>}
+      <aside className="map-place-panel" aria-label="Place details">
+        {failure ? <div className="map-state" role="alert"><PlaceHeading>Places couldn’t load</PlaceHeading><p>{failure}</p><button onClick={() => { setResult(undefined); setRetry(v => v + 1); onRetry(); }}>Try again</button></div> : busy ? <div className="map-state"><LoadingIndicator label="Finding place evidence…" /></div> : <>
+          <div className="map-list-tabs" role="group" aria-label="Map results"><button aria-pressed={!missing} onClick={() => setMissing(false)}>Places ({groups.length})</button><button aria-pressed={missing} onClick={() => setMissing(true)}>Not mapped ({unlocated.length})</button></div>
+          {missing ? <><PlaceHeading ref={listHeading} tabIndex={-1}>Places still to discover</PlaceHeading><p className="map-panel-intro">No mapped connection for these place types and years. You can still explore each record.</p><ul className="map-unlocated">{unlocated.map(item => <li key={`${item.kind}:${item.id}`}><button onClick={() => onOpen(item)}>{item.title}</button>{records?.[`${item.kind}:${item.id}`]?.connections.map((c, index) => <small key={index}>{c.place} · {relationLabel(c.relation)} · coordinates unresolved</small>)}</li>)}</ul></> : group ? <>
+            <button className="map-back" onClick={clearPlace}>← All places</button>
+            <div className="map-place-heading"><PlaceHeading ref={listHeading} tabIndex={-1}>{group.name}</PlaceHeading><p>{group.country ? "Country-level location" : group.precision === "recorded point" ? "Recorded location · precision unverified" : "Approximate city / area"} · {placeRecordCount(group)} {placeRecordCount(group) === 1 ? "record" : "records"}</p></div>
+            <div className="map-place-records">{[...group.entries].sort((a,b) => (a.connection.start ?? Infinity) - (b.connection.start ?? Infinity)).map(({ item, connection: c }, index) => <article className={`map-connection is-${item.kind}`} key={`${item.kind}:${item.id}:${index}`}>
+              {item.image && <button className="map-record-image" aria-label={`Open ${item.title}`} onClick={() => onOpen(item)}><MapImage key={item.image} src={item.image} alt={item.title} kind={item.kind} /></button>}
+              <div className="map-connection-body"><span className="map-record-kind"><MapSymbol kind={item.kind} />{mapKindNames[item.kind]}</span><button className="map-record-title" onClick={() => onOpen(item)}>{item.title}</button>{item.context && item.context !== "Unclassified" && <p>{item.context}</p>}{item.years && item.years !== connectionYears(c) && <time className="map-record-years">{item.years}</time>}<div className="map-place-fact"><span>{relationLabel(c.relation)}</span><time>{connectionYears(c).replace("Association dates unrecorded", "Location dates not recorded")}</time></div><details><summary>Source & location</summary><p>{c.note}</p>{sourceHref(c.sourceUrl) ? <a href={sourceHref(c.sourceUrl)} target="_blank" rel="noreferrer">{c.sourceLabel}</a> : <p>{c.sourceLabel}</p>}</details></div>
+            </article>)}</div>
+          </> : <>
+            <PlaceHeading ref={listHeading} tabIndex={-1}>Discover a place</PlaceHeading>
+            {groups.length > 0 && <div className="map-place-search"><label className="sr-only" htmlFor={findID}>Find a mapped place on this page</label><input id={findID} type="search" placeholder="Find a mapped place" value={find} onChange={e => setFind(e.target.value)} />{find && <button aria-label="Clear place search" onClick={() => setFind("")}>×</button>}</div>}
+            {visible.length ? <div className="map-place-list">{visible.map(place => <button className="map-place-card" key={place.key} onClick={() => selectPlace(place.key)} onMouseEnter={() => setHovered(place.key)} onMouseLeave={() => setHovered("")} onFocus={() => setHovered(place.key)} onBlur={() => setHovered("")}><PlacePreview place={place} /><span><strong>{place.name}</strong><small>{placeTopics(place)}</small><small>{placeRecordCount(place)} {placeRecordCount(place) === 1 ? "record" : "records"}{place.country ? " · country" : ""}</small></span><span className="map-place-chevron" aria-hidden="true">›</span></button>)}</div> : <div className="map-empty"><p>{relationKey === "" ? "Choose at least one place type above to explore an artist’s life or paintings." : find ? `No mapped place matches “${find}” on this page.` : items.length ? "No mapped places for this selection. Try all recorded places, or explore the records in Not mapped." : total ? "Narrow the painter filters or choose Top 100 painters to load individual records for the map." : "No records match these filters. Choose other years or remove a filter."}</p>{find && <button onClick={() => setFind("")}>Show every place</button>}{detail !== "all" && <button onClick={() => updateQuery({ map_detail: null }, true)}>Show all location types</button>}</div>}
+          </>}
+        </>}
+      </aside>
+    </div>
+    <div className="map-bottom-bar"><p className="map-coverage">{failure ? "Place evidence unavailable" : busy ? "Finding documented places…" : `${located.size} of ${items.length} loaded records located · ${total.toLocaleString("en-GB")} matching records`}</p><details className="map-guide"><summary>About this map</summary><div><p>Only the current page of results is mapped. Choose a place to see its works, people or events. Nearby places group together as you zoom out.</p><p>City and area markers are approximate. Country markers identify a whole country; they are not an exact site. Modern outlines provide orientation, not historical boundaries. Country affiliations do not establish where a work was created.</p><p>The year controls select catalogue records and their dated place connections. Unknown association dates remain unknown.</p>{Object.values(records ?? {}).some(r => r.truncated) && <p>Some records have additional connections. Up to 32 matching connections per record are shown.</p>}</div></details></div>
+    {children}
   </section>;
 }

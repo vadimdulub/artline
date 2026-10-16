@@ -1,13 +1,15 @@
 # Map geometry
 
-`countries.geojson` contains Natural Earth 1:110m admin-0 countries, with only
-name/ISO label properties retained. Downloaded 16 October 2026 from:
-https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson
+`countries.geojson` contains Natural Earth 1:50m admin-0 countries. It retains
+country names, ISO codes, label positions/ranks, and geometry rounded to four
+decimal places. Downloaded 16 October 2026 from:
+https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson
 
-Original SHA256: `6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f`.
+Original SHA256: `3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb`.
+Served size: 1,898,455 bytes; 242 country features.
 
 Natural Earth data is public domain: https://www.naturalearthdata.com/about/terms-of-use/.
-Current geometry is an orientation layer, never a reconstruction of historical
-boundaries. Small places and disputed boundaries require further research.
-Country label coordinates from the same file are embedded in the Go geography
-package. A label position is not an asserted creation site.
+Modern boundaries and country labels provide orientation, not historical event
+extent or precise creation sites. Country label coordinates in the Go evidence
+projection remain the existing 1:110m gazetteer; display labels never change an
+association or infer a catalogue place. No live tile or geocoding service is used.

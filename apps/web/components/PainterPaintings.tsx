@@ -1,5 +1,6 @@
 "use client";
-import { artistMapRelations, artistPlaceFilters, type MapItem } from "@/lib/map";
+import { artistMapRelations, type MapItem } from "@/lib/map";
+import { ArtistMapFilters } from "./ArtistMapFilters";
 import { CatalogueMap } from "./CatalogueMap";
 import { useFitYears } from "./use-fit-years";
 import { timelineRequestKey } from "@/lib/timeline-request";
@@ -30,7 +31,7 @@ export function PainterPaintings({ filters, start, end, setRange, onPeriod, view
   const showArtists = mapView && relations.some(value => value !== "creation");
   function toggleRelation(value: string) {
     const next = relations.includes(value) ? relations.filter(r => r !== value) : [...relations, value];
-    updateQuery({ map_relation: next.length ? next : "none", painting: null }, true);
+    updateQuery({ map_relation: next.length ? next : "none", painting: null, map_place: null }, true);
   }
   const request = new URLSearchParams({ selection: "true", type: "artwork", start: String(start), end: String(end), highlights: "false", artwork_image_only: "true" });
   for (const [key, value] of new URLSearchParams(filters)) if (!["start", "end", "fit"].includes(key)) request.append(`artwork_${key}`, value);
@@ -70,16 +71,16 @@ export function PainterPaintings({ filters, start, end, setRange, onPeriod, view
   function changeRange(a: number, b: number) { setPreview(null); setRange(a, b); }
   const navigation = useRecordNavigation(selected ? `atlas?${scope}` : null, selected, id => updateQuery({ painting: id }, true));
   return <div className="timeline-dark painter-paintings">
-    <TimelineHeader controls={mapView ? <span className="map-mode-label">Artists & paintings</span> : viewSwitch}
-      status={mapView ? "Explore the places behind an artist’s life and work" : busy ? "Finding paintings…" : error ? "Couldn’t load" : `${lane?.total.toLocaleString("en-GB") ?? 0} artworks`}
+    {!mapView && <TimelineHeader controls={viewSwitch}
+      status={busy ? "Finding paintings…" : error ? "Couldn’t load" : `${lane?.total.toLocaleString("en-GB") ?? 0} artworks`}
       zoom={<TimelineZoomOut disabled={!focused} onClick={() => changeRange(1100, 2000)} />}>
-      <h1 id="timeline-title" className="time-title" tabIndex={-1}><span className="sr-only">{mapView ? "Artist and artwork map years: " : "Artwork creation dates: "}</span>{years.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{years.end}</h1>
-    </TimelineHeader>
-    {mapView ? <CatalogueMap items={[
+      <h1 id="timeline-title" className="time-title" tabIndex={-1}><span className="sr-only">Artwork creation dates: </span>{years.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{years.end}</h1>
+    </TimelineHeader>}
+    {mapView ? <CatalogueMap headingId="timeline-title" items={[
       ...(showArtists ? artists?.items ?? [] : []),
       ...(lane?.items ?? []).map(item => ({ id: item.id, kind: "artwork" as const, title: item.title, context: item.context, years: item.years, image: item.media_url })),
     ]} total={(showArtists ? artists?.total ?? 0 : 0) + (lane?.total ?? 0)} loading={busy || (showArtists && !!artists?.loading)} error={error ?? (showArtists ? artists?.error : undefined)} onRetry={() => { setRetry(v => v + 1); artists?.retry(); }} range={{ start, end }} relations={relations}
-      controls={<fieldset className="map-relation-filters"><legend>Show places connected with</legend><div>{artistPlaceFilters.map(filter => <label key={filter.value}><input type="checkbox" checked={relations.includes(filter.value)} onChange={() => toggleRelation(filter.value)} />{filter.label}</label>)}</div><p>Combine life places and painting locations. Each connection keeps its own dates and source.</p></fieldset>}
+      controls={<ArtistMapFilters selected={relations} toggle={toggleRelation} />}
       onOpen={item => item.kind === "artist" ? artists?.open(item) : updateQuery({ painting: item.id, artist: null }, true)}>
       {showArtists && !artists?.loading && !artists?.items.length && !!artists?.total && <p className="map-coverage">Narrow the painter filters or choose Top 100 painters to map individual lives.</p>}
       {showPaintings && <nav className="map-pages" aria-label="Artwork map pages">{params.has("painting_after") && <button onClick={() => updateQuery({ painting_after: null, painting: null }, true)}>First artworks</button>}{lane?.nextCursor && <button onClick={() => updateQuery({ painting_after: lane.nextCursor, painting: null }, true)}>Next artworks</button>}</nav>}
