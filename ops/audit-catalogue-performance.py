@@ -86,6 +86,7 @@ def main():
                     "cache": response_headers.get("x-artline-cache", "unmarked"),
                     "encoding": response_headers.get("content-encoding"),
                     "cache_control": response_headers.get("cache-control"),
+                    "server_timing": response_headers.get("server-timing"),
                 }
                 if result.returncode:
                     record["curl_error"] = result.stderr.strip()

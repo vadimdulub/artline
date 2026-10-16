@@ -1,10 +1,17 @@
 import { describe, expect, it } from "vitest";
-import { resolvedStartingFilters, startingFilters } from "../atlas-starting-points";
+import { atlasNeedsPresetMetadata, resolvedStartingFilters, startingFilters } from "../atlas-starting-points";
 import type { AtlasPreset } from "../atlas";
 import presets from "../../../server/internal/atlas/presets.json";
 const period = (id: string) => presets.find(p => p.id === id) as AtlasPreset;
 
 describe("reviewed period selections", () => {
+  it("loads explicit custom dates without waiting for preset labels", () => {
+    expect(atlasNeedsPresetMetadata(new URLSearchParams("preset=romanticism&preset_filters=custom&start=1750&end=1870"))).toBe(false);
+    expect(atlasNeedsPresetMetadata(new URLSearchParams("type=artwork"))).toBe(false);
+    for (const query of ["preset=romanticism", "preset=romanticism&start=1750&end=1870", "preset=romanticism&preset_filters=custom&start=1750", "preset=romanticism&preset_filters=custom&end=1870"]) {
+      expect(atlasNeedsPresetMetadata(new URLSearchParams(query))).toBe(true);
+    }
+  });
   it("resolves every shared starting point consistently with an explicit selection", () => {
     for (const p of presets as AtlasPreset[]) {
       const params = resolvedStartingFilters(new URLSearchParams({ preset: p.id }), p);

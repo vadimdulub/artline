@@ -13,13 +13,13 @@ const kinds = [{ value: "", label: "All guides" }, { value: "artist", label: "Ar
 export function GuideDirectory({ initialPage, initialQuery }: { initialPage?: GuideSearchPage; initialQuery: string }) {
   const params = new URLSearchParams(useQueryString(initialQuery ? `?${initialQuery}` : ""));
   const request = new URLSearchParams();
-  for (const key of ["q", "kind", "cursor"]) params.getAll(key).forEach(value => request.append(key, value));
+  for (const key of ["q", "kind", "cursor", "institution"]) params.getAll(key).forEach(value => request.append(key, value));
   const query = params.get("q") ?? "", kind = params.get("kind") ?? "";
   const [retry, setRetry] = useState(0);
   const search = useRef<HTMLInputElement>(null);
   const { data, loading, error } = useCatalogueRequest<GuideSearchPage>(`guides?${request}`, retry, initialPage, true);
   const change = (values: Record<string, string | null>, push = true) => updateQuery({ ...values, cursor: null }, push);
-  const clear = () => { change({ q: null, kind: null }); search.current?.focus(); };
+  const clear = () => { change({ q: null, kind: null, institution: null }); search.current?.focus(); };
   function go(cursor: string | null) {
     updateQuery({ cursor }, true);
     document.getElementById("guide-results-title")?.focus();
@@ -29,14 +29,14 @@ export function GuideDirectory({ initialPage, initialQuery }: { initialPage?: Gu
   return <>
     <div className={styles.searchPanel}>
       <AtlasSearchField label="Search guides" placeholder="Search artists, museums, places or keywords…" value={query} onChange={value => change({ q: value || null }, false)} inputRef={search} />
-      <p className={styles.searchHint}>Find a place to begin. Search by name, subject or location.</p>
+      <p className={styles.searchHint}>{params.has("institution") ? "Showing Artline guides for this museum. Clear filters to explore all guides." : "Find a place to begin. Search by name, subject or location."}</p>
       <div className={`${styles.filters} catalogue-selection`} role="group" aria-label="Guide types">
         {kinds.map(option => <button key={option.value} type="button" aria-pressed={kind === option.value} onClick={() => change({ kind: option.value || null })}>{option.label}{data && <span>{data.counts[option.value || "all"]}</span>}</button>)}
       </div>
     </div>
     <div className={styles.resultsHeading}>
       <h2 id="guide-results-title" tabIndex={-1} aria-live="polite">{loading ? "Finding guides…" : error ? "Guides unavailable" : `${data?.matched ?? 0} ${data?.matched === 1 ? "guide" : "guides"}${query.trim() ? ` for “${query.trim()}”` : " to explore"}`}</h2>
-      {(query || kind) && <button type="button" onClick={clear}>Clear filters</button>}
+      {(query || kind || params.has("institution")) && <button type="button" onClick={clear}>Clear filters</button>}
     </div>
     <section aria-label="Guide results" aria-busy={loading}>
       {error ? <div className={styles.empty} role="alert"><h3>We couldn’t load these guides</h3><p>{error}</p><button type="button" onClick={() => setRetry(value => value + 1)}>Try again</button><button type="button" onClick={clear}>Show all guides</button></div>

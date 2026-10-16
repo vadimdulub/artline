@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "ateneum",
+  "museum": "Ateneum Art Museum",
+  "city": "Helsinki",
+  "country": "Finlande",
+  "title": "Musée d’art Ateneum : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres, de l'ange blessé de Simberg aux visages réduits à quelques traits de Schjerfbeck.",
+  "introduction": "Un ange blessé doit être porté. Une enfant convalescente s'intéresse à une petite branche. Ces tableaux inscrivent des sujets inhabituels ou lourds de conséquences dans des rapports corporels précis, permettant à l'image de rester compréhensible sans en fermer le sens.\n\nLa sélection de l'Ateneum passe de sujets littéraires finlandais aux intérieurs quotidiens et à des œuvres réalisées ailleurs en Europe ou dans le Pacifique. La quantité d'informations offerte change aussi : l'autoportrait tardif de Schjerfbeck décrit un visage avec très peu de marques, tandis qu'un jardin parisien peuplé multiplie les petites occupations. Les vingt textes suivent ces choix d'attention. Ils constituent une coupe dans la collection, non une définition complète de l'art finlandais.",
+  "visitNote": "L’Ateneum fait partie de la Galerie nationale de Finlande. Ce guide s’appuie sur les notices des collections des deux institutions, mais ne garantit pas que les œuvres soient actuellement exposées. Les peintures et les études peuvent faire l’objet de prêts ou de rotations ; veuillez consulter la programmation actuelle du musée et les notices individuelles des œuvres avant votre visite.",
+  "locale": "fr",
+  "website": "https://ateneum.fi/en/",
+  "officialGuide": "https://ateneum.fi/en/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Kalevala: The Epic Poem of Finland",
+      "author": "Elias Lönnrot; English translation by John Martin Crawford (1888)",
+      "url": "https://www.gutenberg.org/ebooks/5186",
+      "access": "Texte et livre numérique en anglais gratuits sur le projet Gutenberg.",
+      "note": "La traduction anglaise de Crawford, datant du XIXe siècle, livre les récits qui sous-tendent les tableaux de Gallen-Kallela consacrés à Aino et Lemminkäinen. Le langage d'époque la distingue d'une traduction moderne, et les images doivent néanmoins être considérées comme relevant des choix propres au peintre."
+    }
+  ],
+  "works": [
+    {
+      "id": "fa554fbc-c24b-4a3a-8575-05695eb56957",
+      "title": "L'Ange blessé",
+      "catalogueTitle": "The Wounded Angel",
+      "artist": "Hugo Simberg",
+      "artists": [
+        {
+          "name": "Hugo Simberg",
+          "role": "primary",
+          "slug": "hugo-simberg-q263080"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "Huile sur toile",
+      "accession": "A II 1703",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/111550c2-44ab-4807-b1c0-ac16ee2693f5-84ced29cb2745c97.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/396251",
+      "credit": "Hugo Simberg. The Wounded Angel. Hugo Simberg; Finnish National Gallery; photograph: Hannu Aaltonen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/396251",
+      "description": "Les garçons peuvent porter l'ange parce qu'il a reçu le poids et la vulnérabilité d'un corps : une aile blessée, des yeux bandés, une place sur une civière. Le cadre est un lieu réel d'Helsinki. Ces relations concrètes ne fixent pourtant pas le sens de l'image. Lors de sa première exposition, un tiret lui tenait lieu de titre explicatif.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "002d4512-69a8-4a0c-8c3e-dc8636de1814",
+      "title": "La mère de Lemminkäinen",
+      "catalogueTitle": "Lemminkäinen's Mother",
+      "artist": "Akseli Gallen-Kallela",
+      "artists": [
+        {
+          "name": "Akseli Gallen-Kallela",
+          "role": "primary",
+          "slug": "akseli-gallen-kallela-q170068"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "Toile",
+      "accession": "A I 640",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/51386b66-b928-4c30-b201-58e025f2934a-ad69e2708504f6e7.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/398211",
+      "credit": "Akseli Gallen-Kallela. Lemminkäinen's Mother. Akseli Gallen-Kallela; Finnish National Gallery; photograph: Hannu Pakarinen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/398211",
+      "description": "La mère reste dressée près du corps pâle et horizontal, attirant le regard vers un fils qui ne peut répondre à sa posture. Eau sombre, ossements et pierres rouges donnent à cette veille un cadre inhospitalier. L'épisode vient du *Kalevala*, mais sa force immédiate tient à une relation compréhensible avant même de connaître l'ensemble du récit.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "75a2e4d4-69f1-4f13-9829-e5ea811829f7",
+      "title": "Le Mythe d'Aino, triptyque",
+      "catalogueTitle": "Aino Myth, triptych",
+      "artist": "Akseli Gallen-Kallela",
+      "artists": [
+        {
+          "name": "Akseli Gallen-Kallela",
+          "role": "primary",
+          "slug": "akseli-gallen-kallela-q170068"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "Huile sur toile",
+      "accession": "A I 518",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/d2208568-c3d6-4aa9-945f-d54ea5414982-fd1caf2f83f36dc7.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/392351",
+      "credit": "Akseli Gallen-Kallela. Aino Myth, triptych. Akseli Gallen-Kallela; Finnish National Gallery; photograph: Aleks Talve. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/392351",
+      "description": "Aino refuse la demande du vieux sage Väinämöinen ; au centre, elle lui échappe encore après avoir été capturée sous la forme d'un poisson. Les trois scènes ne composent pas un paysage continu. Elles répartissent le récit entre plusieurs moments, reliés notamment par le cadre sculpté de l'artiste et le texte du *Kalevala* qui y figure.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "30dd2b6f-c5aa-48f2-a483-c9adf5cfff98",
+      "title": "Le jardin du Luxembourg, Paris",
+      "catalogueTitle": "The Luxembourg Gardens, Paris",
+      "artist": "Albert Edelfelt",
+      "artists": [
+        {
+          "name": "Albert Edelfelt",
+          "role": "primary",
+          "slug": "albert-edelfelt-q356644"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "Huile sur toile",
+      "accession": "A II 835",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/bdccbf63-a673-42ce-849d-0bceccbcc8c3-602c0f4dfa7449e7.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/387173",
+      "credit": "Albert Edelfelt. The Luxembourg Gardens, Paris. Albert Edelfelt; Finnish National Gallery; photograph: Hannu Pakarinen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/387173",
+      "description": "Un cerceau, des chaises et des groupes sous les arbres font coexister plusieurs occupations dans le jardin. Jouer, regarder et se reposer restent distincts de part et d'autre de la large allée. Le lieu public se constitue par cette coexistence, non par un événement dominant. Aucune figure n'a besoin de représenter tout l'après-midi.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "71ea9f69-8bb5-41e1-a787-7dde3e3e1cf8",
+      "title": "La Convalescente",
+      "catalogueTitle": "The Convalescent",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile",
+      "accession": "A I 223",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/ea76cc85-f544-4473-aa89-7806ea33fab3-359c9fad3f7c5c45.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/624337",
+      "credit": "Helene Schjerfbeck. The Convalescent. Helene Schjerfbeck; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/624337",
+      "description": "Le fauteuil d'osier paraît grand autour de l'enfant ; sa petite taille reste manifeste, même lorsque le regard revient à la branche tenue près de la table. La guérison se montre par l'intérêt retrouvé pour une chose ordinaire. Le tableau n'a pas à reconstituer la maladie : le rapport entre un corps fragile et une curiosité renouvelée suffit.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "57ef3f6f-a914-4727-b467-c88ac3f30cc4",
+      "title": "Autoportrait, 1912",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "Toile",
+      "accession": "A-2016-51",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/9bd18ac8-b306-4a0f-9679-cb53dfff5da4-4c97048219a948c1.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/422394",
+      "credit": "Helene Schjerfbeck. Self-Portrait. Helene Schjerfbeck; Finnish National Gallery; photograph: Yehia Eweis. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/422394",
+      "description": "Le visage s'élève au-dessus d'un col sombre et se distingue des grandes zones grises et jaunes à l'arrière. Les différentes parties n'ont pas le même degré de précision : le portrait ne se donne pas pour une surface uniformément achevée. Son économie apparaît mieux auprès de l'autoportrait frontal ultérieur, qui retire encore davantage d'informations descriptives.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "a2282310-aa29-4cfd-9150-bc415d6d9c2a",
+      "title": "Autoportrait, de face I",
+      "catalogueTitle": "Self-Portrait, en face I",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1945",
+      "start": 1945,
+      "end": 1945,
+      "medium": "",
+      "accession": "A-2005-131",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/d2ddb3ee-ce87-4e96-ade6-8c4ecb4e8f73-6bf9de1d8c20c594.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/598510",
+      "credit": "Helene Schjerfbeck. Self-Portrait, en face I. Helene Schjerfbeck; Finnish National Gallery; photograph: Hannu Pakarinen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/598510",
+      "description": "Quelques marques séparent juste assez les yeux, le nez et la bouche pour qu'un visage reste lisible. La position frontale rend ces décisions particulièrement apparentes. La comparaison avec l'autoportrait de 1912 révèle une autre méthode de description, mais la réduction des traits ne doit pas devenir un récit non vérifié des pensées intimes de l'artiste.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "8526f958-e54d-4974-8dbe-280e44bb5ad0",
+      "title": "Rue à Auvers-sur-Oise",
+      "catalogueTitle": "Street in Auvers-sur-Oise",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "A I 755",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/a8d41514-5117-4392-a3ce-b84c804e7980-efb1684641d4f9a9.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/394702",
+      "credit": "Vincent van Gogh. Street in Auvers-sur-Oise. Image credit: Finnish National Gallery / Yehia Eweis. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/394702",
+      "description": "On peut encore suivre la route entre les maisons malgré l'activité de la surface alentour. Toits, végétation et ciel reçoivent des rythmes de touches différents, distinguant les constructions de la croissance végétale et de l'atmosphère. Le trajet ordinaire dans la ville tient la scène ensemble, tandis que la peinture empêche chacune de ses parties de paraître neutre.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "01d346db-b27b-43db-ad66-575a00a6292b",
+      "title": "Le pont routier de L'Estaque",
+      "catalogueTitle": "The Road Bridge at L'Estaque",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1879–1882",
+      "start": 1879,
+      "end": 1882,
+      "medium": "Huile sur toile",
+      "accession": "A II 906",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/d4db0574-613a-43da-8f67-d6b0db36f38a-d87d14579ddfe8ed.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/401049",
+      "credit": "Paul Cézanne. The Road Bridge at L'Estaque. Image credit: Finnish National Gallery / Jenni Nurminen. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/401049",
+      "description": "Le pont donne aux arbres et au terrain incliné une structure ferme à laquelle se mesurer. De courtes touches colorées se joignent en plans sans dissimuler entièrement leur séparation. Le paysage se lit donc de deux façons à la fois : comme un espace qui s'enfonce et comme des zones peintes voisines qui contribuent à construire cette distance.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "11b6c82b-0bfa-51f0-9949-3512b69084df",
+      "title": "Jeune fille lisant",
+      "catalogueTitle": "Girl Reading",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/11b6c82b-0bfa-51f0-9949-3512b69084df-690068441e6f799e.jpg",
+      "imageSource": "https://www.wikiart.org/en/helene-schjerfbeck/girl-reading-1904",
+      "credit": "Helene Schjerfbeck. Girl Reading. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/helene-schjerfbeck/girl-reading-1904",
+      "description": "Les barreaux de la chaise passent devant la jeune fille avant que le regard atteigne son profil incliné et sa page. La lecture se présente comme une absorption, avec un accès seulement partiel au visage. Le meuble n'est pas accessoire : ses divisions répétées rendent le léger mouvement du corps plus visible et maintiennent la lectrice dans un espace étroitement organisé.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "39abce3d-5e7a-4c50-8a48-4927dc1b7b33",
+      "title": "Le violoniste",
+      "catalogueTitle": "The Violinist",
+      "artist": "Pekka Halonen",
+      "artists": [
+        {
+          "name": "Pekka Halonen",
+          "role": "primary",
+          "slug": "pekka-halonen-round2-04f298230d92"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "Huile sur toile",
+      "accession": "A III 2071",
+      "image": "https://artlines.org/assets/artworks/wikiart/aabb0697-5be5-4227-aa7b-e8ba3ec726b3-a7b7a8f3669602e1.jpg",
+      "imageSource": "https://www.wikiart.org/en/halonen-pekka/the-violinist-1900",
+      "credit": "Pekka Halonen. The Violinist. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/438346",
+      "description": "Le violon est tenu par le menton, la main et l'épaule, non exposé à côté du modèle comme un attribut. Le haut du corps découvert rend ce rapport particulièrement direct. L'attention musicale prend ici une disposition physique : même sans entendre l'instrument, on voit les contacts et les positions dont dépend le jeu.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "ba9001d0-3222-4094-8b23-b6ac103451fc",
+      "title": "Paysage d'hiver à Kinahmi",
+      "catalogueTitle": "Winter Landscape, Kinahmi",
+      "artist": "Pekka Halonen",
+      "artists": [
+        {
+          "name": "Pekka Halonen",
+          "role": "primary",
+          "slug": "pekka-halonen-round2-04f298230d92"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "Huile sur toile",
+      "accession": "A II 1546",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/e999d928-054a-4a3d-bc45-6a5aa2ce15ee-912e6571344d57cd.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/400442",
+      "credit": "Pekka Halonen. Winter Landscape, Kinahmi, 1923. Inventory A II 1546. Pekka Halonen; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/400442. Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/400442",
+      "description": "La neige cache une grande partie des ramifications familières des arbres et les remplace par des masses claires arrondies. Le bleu du lointain et les ombres internes empêchent ces masses de se fondre en une seule étendue blanche. L'hiver transforme la structure : les arbres restent reconnaissables, mais les formes qui permettent de les reconnaître ont changé.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "7eb7f388-78ac-4082-bb01-05e27a55eaf0",
+      "title": "Route dans le Häme : une chaude journée d'été",
+      "catalogueTitle": "Road in Häme (A Hot Summer Day)",
+      "artist": "Werner Holmberg",
+      "artists": [
+        {
+          "name": "Werner Holmberg",
+          "role": "primary",
+          "slug": "werner-holmberg-round2-6caf866f46d8"
+        }
+      ],
+      "date": "1860",
+      "start": 1860,
+      "end": 1860,
+      "medium": "Huile sur toile",
+      "accession": "A II 1002",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/de347ee6-fd6c-4e06-9ef9-17de44d663fc-56db3f8bc30e374e.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/608901",
+      "credit": "Werner Holmberg. Road in Häme (A Hot Summer Day), 1860. Inventory A II 1002. Werner Holmberg; Finnish National Gallery; photograph: Yehia Eweis. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/608901. Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/608901",
+      "description": "La petite charrette indique un passage sur la route sans prendre possession de la forêt. Les taches de soleil alternent avec les zones closes entre les grands troncs, donnant au trajet une succession visible. La profondeur vient de ces changements d'ouverture et de lumière, plutôt que d'une vue unique et dégagée sur la destination du chemin.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "77039fe1-7c78-45a5-b0d5-c6400206da1e",
+      "title": "Intérieur, été",
+      "catalogueTitle": "Interior, Summer",
+      "artist": "Elin Danielson-Gambogi",
+      "artists": [
+        {
+          "name": "Elin Danielson-Gambogi",
+          "role": "primary",
+          "slug": "elin-danielson-gambogi-q1827236"
+        }
+      ],
+      "date": "1900–1919",
+      "start": 1900,
+      "end": 1919,
+      "medium": "Huile sur toile",
+      "accession": "A-2026-55",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/f430c2ae-c999-42db-8b4f-12a8723b22a4-1e10e867df65f784.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/6127043",
+      "credit": "Elin Danielson-Gambogi. Interior, Summer, 1900–1919. Inventory A-2026-55. Elin Danielson-Gambogi; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/6127043. Full-frame proportional resize and JPEG compression. The current museum record dates this work 1903–1913; the existing catalogue range 1900–1919 is retained for editorial review.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/6127043",
+      "description": "La fenêtre claire et ses plantes animent la pièce vide. La lumière passe sur les chaises pâles et la table couverte, tandis que des touches plus chaudes empêchent le mobilier de devenir une seule masse blanche. Les signes d'usage subsistent sans occupant ; l'absence n'a pas à se transformer en histoire symbolique sur la personne qui serait partie.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "9e43d9dd-609b-4e01-ba50-9d81748788d4",
+      "title": "Paysage à Tahiti : Mahana Maà",
+      "catalogueTitle": "Landscape in Tahiti (Mahana Maà)",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "Huile sur toile",
+      "accession": "A II 986",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/e0eb70e7-9538-4dbf-813e-32cb5894b761-45d7ff11cc801921.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/427664",
+      "credit": "Paul Gauguin. Landscape in Tahiti (Mahana Maà). Image credit: Finnish National Gallery / Hannu Aaltonen. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/427664",
+      "description": "La petite figure assise est entourée de palmiers, de bâtiments et de zones orange et vertes fortement affirmées. L'ordre des couleurs assure la cohérence de la vue, mais ne constitue pas un compte rendu complet de la vie tahitienne. C'est l'image choisie et construite d'un lieu, modelée par les décisions du peintre sur ce qui reçoit de l'espace et de l'importance.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "7ecbd578-7724-44bc-a852-67bc8c8e228c",
+      "title": "Paysage avec un cochon et un cheval, Hiva Oa",
+      "catalogueTitle": "Landscape with a Pig and a Horse (Hiva Oa)",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "Huile sur toile",
+      "accession": "A II 854",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/f9bc878c-0f32-44be-94be-bed7677c2382-330126690885fdb9.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/433175",
+      "credit": "Paul Gauguin. Landscape with a Pig and a Horse (Hiva Oa). Image credit: Finnish National Gallery / Hannu Aaltonen. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/433175",
+      "description": "Le cochon et le cheval donnent une échelle familière à la clairière entourée de troncs et de feuillages vivement colorés. Violet, rouge et vert relient le paysage sans imiter une palette conventionnelle de lumière extérieure. Les animaux restent identifiables, tandis qu'une grande partie de l'espace qui les entoure fonctionne comme un motif coloré clos.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "a19fd8f8-8ae8-4768-b669-16cc4dab4cb6",
+      "title": "Hommes au bain",
+      "catalogueTitle": "Bathing Men ; Middle Age",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1907–1908",
+      "start": 1907,
+      "end": 1908,
+      "medium": "Huile sur toile",
+      "accession": "A II 908",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/37c4c090-f66f-4ab3-bf32-edeb9cb20679-9412a6f673e85906.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/399258",
+      "credit": "Edvard Munch. Bathing Men ; Middle Age. Image credit: Finnish National Gallery / Aleks Talve. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/399258",
+      "description": "Les baigneurs présentent leurs corps de face et de biais, faisant des différences de position une part du sujet. De larges touches traversent les figures comme le rivage et les relient au cadre ouvert. Aucun incident distinct n'est nécessaire pour organiser le groupe : la présence physique de plusieurs corps offre déjà une comparaison substantielle.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "f841fe4c-cd8e-4528-915d-3c1b8fcf270b",
+      "title": "Paysage mystérieux",
+      "catalogueTitle": "Mysterious Landscape",
+      "artist": "Tove Jansson",
+      "artists": [
+        {
+          "name": "Tove Jansson",
+          "role": "primary",
+          "slug": "tove-jansson-round2-4926cc2e6aa4"
+        }
+      ],
+      "date": "vers 1930–1939",
+      "start": 1930,
+      "end": 1939,
+      "medium": "Huile sur contreplaqué",
+      "accession": "A-2006-155",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/f841fe4c-cd8e-4528-915d-3c1b8fcf270b-5efe5701407556bb.jpg",
+      "imageSource": "https://www.wikiart.org/en/tove-jansson/mysterious-landscape-1930",
+      "credit": "Tove Jansson. Mysterious Landscape. WikiArt source label: Tove Jansson Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/tove-jansson/mysterious-landscape-1930",
+      "license": "Tove Jansson Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/385007",
+      "description": "Des montagnes sombres et des arbres clairs, retombants, entourent une petite ouverture lointaine. Des chemins proposent des passages possibles, mais aucun événement précis n'explique où ils mènent. Jansson donne au terrain inventé une structure cohérente sans achever son histoire. Le paysage peut suggérer un récit par ses seuls accès et obstacles.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "07fb7a36-2fd0-40c0-b4e3-0056bdc48959",
+      "title": "Le Printemps, étude pour les fresques du mausolée Jusélius",
+      "catalogueTitle": "Spring, study for the Jusélius Mausoleum Frescoes",
+      "artist": "Akseli Gallen-Kallela",
+      "artists": [
+        {
+          "name": "Akseli Gallen-Kallela",
+          "role": "primary",
+          "slug": "akseli-gallen-kallela-q170068"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "Toile",
+      "accession": "A IV 2962",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/f2e4b8ff-dcf1-47e6-b988-a8f19f3373cd-027d1308c9754d69.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/388496",
+      "credit": "Akseli Gallen-Kallela. Spring, study for the Jusélius Mausoleum Frescoes, 1903. Inventory A IV 2962. Akseli Gallen-Kallela; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/388496. Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/388496",
+      "description": "Les bras levés donnent à la croissance végétale une réponse corporelle sous les branches. L'eau s'ouvre derrière le groupe et offre un cadre ample à quelques gestes. Cette étude pour des fresques réfléchit aussi à la manière dont les figures organisent une plus grande surface décorative, où leurs actions doivent rester lisibles à l'échelle du mur.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "81882547-6422-4766-b69c-523257867c90",
+      "title": "Scénographie pour La Princesse Maleine",
+      "catalogueTitle": "Draft Set Design for Maurice Maeterlinck´s Play Princess Maleine",
+      "artist": "Nicholas Roerich",
+      "artists": [
+        {
+          "name": "Nicholas Roerich",
+          "role": "primary",
+          "slug": "nicholas-roerich-q208993"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "Gouache, fusain et pastel sur papier",
+      "accession": "A II 1267",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/4fff4984-d989-4f26-ae52-9a17f49c682e-fd17586c4ace7ab8.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/393781",
+      "credit": "Nicholas Roerich. Draft Set Design for Maurice Maeterlinck´s Play Princess Maleine. Image credit: Hannu Aaltonen; Finnish National Gallery / Hannu Aaltonen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/393781",
+      "description": "Arches et colonnes créent des ouvertures successives, tandis qu'une lumière orange distingue l'espace au-delà. Il s'agit d'un décor proposé pour une représentation, non d'un relevé d'architecture. La profondeur suggère où des corps pourraient apparaître ou circuler ; le projet anticipe ainsi une histoire sans illustrer un instant précis de son action.",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    }
+  ],
+  "context": {
+    "start": 1860,
+    "end": 1945
+  },
+  "closingSections": [
+    {
+      "title": "Laisser subsister l'inexpliqué",
+      "paragraphs": [
+        "Un titre ou une source littéraire peut éclairer une action sans déterminer toutes ses lectures possibles. Revenez à l'image après avoir lu son histoire et distinguez ce qu'elle montre de ce que la source ajoute. Pour une visite, consultez les informations actuelles du musée : des œuvres de la collection peuvent être prêtées ou ne pas être exposées."
+      ]
+    }
+  ]
+}

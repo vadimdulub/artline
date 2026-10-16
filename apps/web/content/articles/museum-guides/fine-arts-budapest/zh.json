@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "fine-arts-budapest",
+  "museum": "Museum of Fine Arts",
+  "city": "布达佩斯",
+  "country": "匈牙利",
+  "title": "布达佩斯美术博物馆：杰作",
+  "subtitle": "二十幅画，看一项任务或一个动作怎样组织整个场景。",
+  "introduction": "一个男人先削好羽毛笔，再准备写字。用餐者有人倒酒，有人接过。哀悼者共同托住死者的身体。这些动作属于不同题材，却都通过手、物品和身体的重量，让人物关系变得可见。从人们正在做什么入手，可以让宗教画或历史画不那么遥远，同时又不必把它们的意义缩减为日常生活。\n\n这组选作也有一些画，把观看分散到人群中，或让人物退居风景之内。勃鲁盖尔的布道者需要从听众中寻找；毕沙罗的田野则容许细小人物始终只是地景的一部分。我们要留意的，是动作何时让画面集中起来，广阔的环境又何时不让某一件事占据全部视线。",
+  "visitNote": "这二十幅画作属于馆藏精选，并不意味着它们会同时展出。参观前，请查询当前的借展情况、展厅开放状态及各藏品的具体记录。美术馆（Museum of Fine Arts）与匈牙利国家画廊（Hungarian National Gallery）是两个独立的场馆。",
+  "locale": "zh",
+  "website": "https://www.szepmuveszeti.hu",
+  "officialGuide": "https://www.szepmuveszeti.hu",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "列奥纳多关于绘画的笔记探讨了姿态、表情以及人物的布局。若将这些论述与勃鲁盖尔笔下的人群或阿尔泰米西亚画中的人物组合相对照，便会发现，哪怕只是位置上的细微变动，也承载了故事的很大一部分内涵。"
+    }
+  ],
+  "works": [
+    {
+      "id": "bba752b6-abf5-55d4-8351-9d4f0055d9aa",
+      "title": "圣安德烈",
+      "catalogueTitle": "Apostle St. Andrew",
+      "artist": "Francisco de Zurbarán",
+      "artists": [
+        {
+          "name": "Francisco de Zurbarán",
+          "role": "primary",
+          "slug": "francisco-de-zurbaran-q209615"
+        }
+      ],
+      "date": "1631",
+      "start": 1631,
+      "end": 1631,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/bba752b6-abf5-55d4-8351-9d4f0055d9aa-17a6b836e3f2f0dc.jpg",
+      "imageSource": "https://www.wikiart.org/en/francisco-de-zurbaran/apostle-st-andrew-1631",
+      "credit": "Francisco de Zurbarán. Apostle St. Andrew. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francisco-de-zurbaran/apostle-st-andrew-1631",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francisco-de-zurbaran/apostle-st-andrew-1631",
+      "description": "打开的书让使徒有事可做，而不是仅仅站着，展示一组供人辨认身份的标志。强光把厚重赭色袍服上方的手与脸联系起来。苏巴朗通过布料、姿势和阅读，使宗教权威有了具体的身体形象。即使尚未了解圣徒的完整事迹，也已经可以仔细观察这个人。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "f7fca8dc-b792-57a1-8235-65f53049a9ad",
+      "title": "削羽毛笔",
+      "catalogueTitle": "Cutting the Feather",
+      "artist": "Adriaen van Ostade",
+      "artists": [
+        {
+          "name": "Adriaen van Ostade",
+          "role": "primary",
+          "slug": "adriaen-van-ostade-q352438"
+        }
+      ],
+      "date": "约1660年—约1670年",
+      "start": 1660,
+      "end": 1670,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/f7fca8dc-b792-57a1-8235-65f53049a9ad-9df061084e238a12.jpg",
+      "imageSource": "https://www.wikiart.org/en/adriaen-van-ostade/cutting-the-feather",
+      "credit": "Adriaen van Ostade. Cutting the Feather. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/adriaen-van-ostade/cutting-the-feather",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/adriaen-van-ostade/cutting-the-feather",
+      "description": "书写还没开始。男人正在修整羽毛，双手与目光集中在这件小而实际的工作上。凡·奥斯塔德为准备过程单独画了一幅画。明暗不匀的光线使周围房间退下去，留下忙碌的手指。手工准备没有被省略，也没有把全部重要性都留给尚未写出的文字。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "b3799a19-6b8e-5bbe-a89e-30c834903703",
+      "title": "斜倚的让娜·迪瓦尔：持扇女子",
+      "catalogueTitle": "Jeanne Duval, Baudelaire's Mistress, Reclining (Lady with a Fan)",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1862",
+      "start": 1862,
+      "end": 1862,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/b3799a19-6b8e-5bbe-a89e-30c834903703-910baaf3145e6df8.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/portrait-of-jeanne-duval-1862",
+      "credit": "Édouard Manet. Jeanne Duval, Baudelaire's Mistress, Reclining (Lady with a Fan). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/portrait-of-jeanne-duval-1862",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/portrait-of-jeanne-duval-1862",
+      "description": "白裙占据的空间如此之大，人物的比例必须通过衣服来判断。深色头部和露出的一小只鞋打断这片白色，帘幕则挤满背景。马奈没有围绕中央面孔均匀分配重点。人物怎样占据画面，很大程度上由衣料决定。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "c7abd9a0-9e3a-5e5a-962f-bfdb3cde946b",
+      "title": "圣伊莱尔的拉瓦雷讷",
+      "catalogueTitle": "La Varenne de St. Hilaire",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c7abd9a0-9e3a-5e5a-962f-bfdb3cde946b-70e8347a8e18eccf.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/la-varenne-de-st-hilaire-1863",
+      "credit": "La Varenne de St. Hilaire. WikiArt; Camille Pissarro. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/la-varenne-de-st-hilaire-1863",
+      "description": "细小人物穿过田野，却没有形成一个主导事件。毕沙罗给大片土地和天空各留出空间，树木与房屋标出两者交接之处。人物说明这里有人活动，却不能概括风景的全部趣味。我们的视线既可以跟随他们移动，也可以停留在较大范围的空间分配上。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "2f780a14-2409-5397-8228-4b3df7378cbb",
+      "title": "哀悼基督",
+      "catalogueTitle": "Lamentation of Christ",
+      "artist": "Maarten van Heemskerck",
+      "artists": [
+        {
+          "name": "Maarten van Heemskerck",
+          "role": "primary",
+          "slug": "maarten-van-heemskerck-q538350"
+        }
+      ],
+      "date": "约 1543 年",
+      "start": 1543,
+      "end": 1543,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/2f780a14-2409-5397-8228-4b3df7378cbb-f55a7098cf891b8b.jpg",
+      "imageSource": "https://www.wikiart.org/en/maerten-van-heemskerck/lamentation-of-christ",
+      "credit": "Maarten van Heemskerck. Lamentation of Christ. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/maerten-van-heemskerck/lamentation-of-christ",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/maerten-van-heemskerck/lamentation-of-christ",
+      "description": "浅色而肌肉结实的身体，需要好几双手臂来支撑。海姆斯凯克让哀悼者的悲伤，与搬扶死者的实际困难无法分开。紧密拥挤的位置，使感受和行动几乎没有距离。把众人联系起来的是共同承担的重量，而不只是几张朝向同一对象的悲痛面孔。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "8c3e14b9-850e-5e39-8974-213f52abda45",
+      "title": "青年男子肖像，传统上被认为是安东尼奥·布罗卡尔多",
+      "catalogueTitle": "Portrait of a Youth (Antonio Broccardo)",
+      "artist": "Giorgione",
+      "artists": [
+        {
+          "name": "Giorgione",
+          "role": "primary",
+          "slug": "giorgione-q8459"
+        }
+      ],
+      "date": "1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/8c3e14b9-850e-5e39-8974-213f52abda45-d79dad8ee963abef.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/portrait-of-a-youth-antonio-broccardo-1500",
+      "credit": "Portrait of a Youth (Antonio Broccardo). WikiArt; Giorgione. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giorgione/portrait-of-a-youth-antonio-broccardo-1500",
+      "description": "摊开的手和略微转开的脸，让人难以说出男子究竟在留意什么。台沿上的小物件增加了一些线索，却没有解释这种内向的姿态。乔尔乔内把画中人呈现得很具体，但形象具体并不保证身份确定。无论在哪里刊用这幅肖像，传统姓名都应保留“被认为是”的限定。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "85817c42-cc2e-5392-9d45-39c8a173d060",
+      "title": "莎乐美",
+      "catalogueTitle": "Salome",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "约 1530 年",
+      "start": 1530,
+      "end": 1530,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/85817c42-cc2e-5392-9d45-39c8a173d060-7496ea667f161459.jpg",
+      "imageSource": "https://www.wikiart.org/en/lucas-cranach-the-elder/salome",
+      "credit": "Lucas Cranach the Elder. Salome. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/lucas-cranach-the-elder/salome",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lucas-cranach-the-elder/salome",
+      "description": "珠宝、精致服装与一颗被斩下的头，共处于狭窄画幅中。克拉纳赫让托盘平稳地端在眼前，使优雅与暴力无法被拆成故事中不同的时刻。令人不安的结果，与女子浅色皮肤一起出现在肖像般的布局里。装饰细节不能脱离它们紧挨着的东西来欣赏。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "74dacd0f-f0df-580a-a336-35155781d263",
+      "title": "天使向约阿希姆报喜",
+      "catalogueTitle": "The Annunciation to Joachim",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1518",
+      "start": 1518,
+      "end": 1518,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/74dacd0f-f0df-580a-a336-35155781d263-f65f0e118188252a.jpg",
+      "imageSource": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-annunciation-to-joachim-1518",
+      "credit": "Lucas Cranach the Elder. The Annunciation to Joachim. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/lucas-cranach-the-elder/the-annunciation-to-joachim-1518",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-annunciation-to-joachim-1518",
+      "description": "天使向下而来，跪着的男子向上仰望，两人之间有明显高度差。羊群与石地让相遇周围仍保持牧野环境。克拉纳赫让奇迹般的消息进入一个日常事物依然持续存在的世界。动作的朝向连接两个人物，却没有因此把地面和天空混成一个没有区别的空间。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "e1a2674e-3c1b-5be1-aee1-9d7e0390f02a",
+      "title": "午餐",
+      "catalogueTitle": "The Lunch",
+      "artist": "Diego Velázquez",
+      "artists": [
+        {
+          "name": "Diego Velázquez",
+          "role": "primary",
+          "slug": "diego-velazquez-q297"
+        }
+      ],
+      "date": "1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/e1a2674e-3c1b-5be1-aee1-9d7e0390f02a-789cf4d09c3c863d.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-velazquez/the-lunch-1620",
+      "credit": "Diego Velázquez. The Lunch. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/diego-velazquez/the-lunch-1620",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-velazquez/the-lunch-1620",
+      "description": "桌布上的东西都与动作有关：倒、接、伸手拿，以及吃。委拉斯开兹通过男人们怎样使用餐桌来联系他们，而不是让他们摆同样的姿势。因此，面包、器皿和水果也是聚餐的一部分。如果把静物从人物中单独分离出来，就会失去组织这顿饭的实际关系。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "7bd0c3b8-1f38-5f6b-aa5a-133e9c76d3ed",
+      "title": "圣普拉西杜斯与圣弗拉维娅殉难",
+      "catalogueTitle": "The Martyrdom of Sts Placidus and Flavia",
+      "artist": "Francesco Solimena",
+      "artists": [
+        {
+          "name": "Francesco Solimena",
+          "role": "primary",
+          "slug": "francesco-solimena-q736065"
+        }
+      ],
+      "date": "1697 - 1708",
+      "start": 1697,
+      "end": 1708,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/7bd0c3b8-1f38-5f6b-aa5a-133e9c76d3ed-568ab903c6441d50.jpg",
+      "imageSource": "https://www.wikiart.org/en/francesco-solimena/the-martyrdom-of-sts-placidus-and-flavia-1708",
+      "credit": "Francesco Solimena. The Martyrdom of Sts Placidus and Flavia. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francesco-solimena/the-martyrdom-of-sts-placidus-and-flavia-1708",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francesco-solimena/the-martyrdom-of-sts-placidus-and-flavia-1708",
+      "description": "空中群像之下，跪着的人体和持武器者形成几处动作中心。索利梅纳用鲜亮衣料，使这些中心在宽阔场景中仍能分别辨认。尘世暴力与天国回应发生在不同高度。看这幅画，需要在它们之间来回观察，不能指望一个动作就概括整个题材。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "5fdb54f3-393f-559f-844a-caf8b5e5b912",
+      "title": "施洗者圣约翰布道",
+      "catalogueTitle": "The Sermon of St. John the Baptist",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1566",
+      "start": 1566,
+      "end": 1566,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5fdb54f3-393f-559f-844a-caf8b5e5b912-4ea1556ea91ccc53.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-sermon-of-st-john-the-baptist-1566",
+      "credit": "The Sermon of St. John the Baptist. WikiArt; Pieter Bruegel the Elder. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-sermon-of-st-john-the-baptist-1566",
+      "description": "听众占据的画面，比布道者多得多。勃鲁盖尔把约翰放进密集人群，他们各自的朝向和位置，显示出参与这件事的不同方式。我们必须寻找布道发生在哪里，而不是直接面对一个主宰中央的人物。公开讲话通过周围聚集的人们显现，他们有远有近，反应也不一样。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "731ba94a-8de5-5a91-b56d-300729ebbc78",
+      "title": "维纳斯、丘比特与嫉妒",
+      "catalogueTitle": "Venus, Cupid and Jealousy",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "约 1549 年",
+      "start": 1549,
+      "end": 1549,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/731ba94a-8de5-5a91-b56d-300729ebbc78-1e2a82f50070c4e7.jpg",
+      "imageSource": "https://www.wikiart.org/en/agnolo-bronzino/venus-cupid-and-envy",
+      "credit": "Bronzino. Venus, Cupid and Jealousy. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/agnolo-bronzino/venus-cupid-and-envy",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/agnolo-bronzino/venus-cupid-and-envy",
+      "description": "光滑身体让人愿意细看，彼此扭转的关系又使人物难以分清。布龙齐诺把动作、花朵和较暗形状放进浅而拥挤的空间。寓意性的题名提供一个起点，却不是完整答案。人物相互重叠、伸手越过彼此，让亲昵与欲望变得复杂。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "6fb631d2-4972-58b9-a29f-0102634f1472",
+      "title": "圣家族与圣安娜",
+      "catalogueTitle": "Holy Family with Saint Anne",
+      "artist": "El Greco",
+      "artists": [
+        {
+          "name": "El Greco",
+          "role": "primary",
+          "slug": "el-greco-q301"
+        }
+      ],
+      "date": "约 1595 年",
+      "start": 1595,
+      "end": 1595,
+      "medium": "",
+      "accession": "50.755",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q102046466-1b965d6ef941ba00.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Budapest_kunst_0026.tif",
+      "credit": "El Greco. Holy Family with Saint Anne. Image credit: El Greco / After El Greco. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q102046466",
+      "description": "长长的手指伸到孩子周围，尽管人物比例被拉长，紧密的一群人仍有实际接触。格列柯用强烈衣色区分身体，却没有拆散他们共同的关注。翻涌的天空又使这里不同于普通家庭室内。即使人体不再符合日常尺度，触碰仍让亲近关系十分清楚。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "477f68da-27b5-54fb-ad5f-418b16a8e0a3",
+      "title": "利萨海战",
+      "catalogueTitle": "Naval battle at Lissa",
+      "artist": "Konstantinos Volanakis",
+      "artists": [
+        {
+          "name": "Konstantinos Volanakis",
+          "role": "primary",
+          "slug": "greek-volanakis-konstantinos"
+        }
+      ],
+      "date": "1869",
+      "start": 1869,
+      "end": 1869,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q138845130-d94c3204e7bde870.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Constantine_Volanakis_Naval_battle_at_Lissa.jpg",
+      "credit": "Konstantinos Volanakis. Naval battle at Lissa. Image credit: Konstantinos Volanakis. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q138845130",
+      "description": "烟雾和倾斜桅杆阻挡了对整个战局的俯瞰。低视点前，小船和残骸显出大战舰之下的脆弱处境。沃拉纳基斯没有提供作战地图般超然清晰的说明。我们在战争造成的即时后果中看见巨舰，船体结构与人的身体共同处在危险水域。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "66de2178-2c0b-537a-8949-241c883e7c87",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Christian Seybold",
+      "artists": [
+        {
+          "name": "Christian Seybold",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1081904"
+        }
+      ],
+      "date": "1760–1769",
+      "start": 1760,
+      "end": 1769,
+      "medium": "",
+      "accession": "421",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50902496-33bf7d734ff99616.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Self_Portrait_-Christian_Seybold.jpg",
+      "credit": "Christian Seybold. Self-Portrait. Image credit: Christian Seybold. Wikimedia Commons. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://www.wikidata.org/wiki/Q50902496",
+      "description": "敞开的白衬衫和宽松头巾围着年老的面孔，没有添加庄重仪式场景。赛博尔德特别留意皱纹和细小光线变化。年龄表现为看得见的皮肤表面，并不自动成为道德教训。这次正面相遇仍然只是与一个人相对，而不是面对人生某个阶段的象征。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "832927b1-9bf3-5575-9768-bdcf8bfbfaaf",
+      "title": "塔利亚",
+      "catalogueTitle": "Thalia",
+      "artist": "Michele Pannonio",
+      "artists": [
+        {
+          "name": "Michele Pannonio",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1548358"
+        }
+      ],
+      "date": "1456–1457",
+      "start": 1456,
+      "end": 1457,
+      "medium": "",
+      "accession": "44",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q3985472-6a38ad9411202e17.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Studiolo_di_belfiore,_thalia_di_michele_pannonio,_budapest_2.jpg",
+      "credit": "Michele Pannonio. Thalia. Image credit: Michele Pannonio; Source credit: [1]. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q3985472",
+      "description": "这位缪斯拥有宝座人物般精心布置的环境。装饰、果实和细小形象围绕中央粉红袍服，使抽象的文化身份获得丰盛的物质呈现。米凯莱·潘诺尼奥用仪式化陈列赋予人格化形象权威。纤细的中央身体属于一整套陈设，而不是仅拿着一件识别物独自站立。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "c91dc117-ae41-53b8-a26a-06a77bd82c34",
+      "title": "风暴中受惊的马",
+      "catalogueTitle": "Horse Frightened by a Storm",
+      "artist": "Eugène Delacroix",
+      "artists": [
+        {
+          "name": "Eugène Delacroix",
+          "role": "primary",
+          "slug": "eugene-delacroix-q33477"
+        }
+      ],
+      "date": "1824",
+      "start": 1824,
+      "end": 1824,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c91dc117-ae41-53b8-a26a-06a77bd82c34-cd22b3b1386fe1e3.jpg",
+      "imageSource": "https://www.wikiart.org/en/eugene-delacroix/horse-frightened-by-a-storm-1824",
+      "credit": "Eugène Delacroix. Horse Frightened by a Storm. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/eugene-delacroix/horse-frightened-by-a-storm-1824",
+      "description": "天气影响着马的平衡。抬起的前腿、被吹散的鬃毛与转动的身体，让恐惧遍及整匹马，而不只出现在眼睛里。德拉克洛瓦画的闪电和暗天始终与身体反应相连。因此，风暴是直接作用于主体的力量，不是后来加在背后的气氛装饰。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "3e023d45-8885-54a9-81de-6b6c903087bc",
+      "title": "雅亿与西西拉",
+      "catalogueTitle": "Jael and Sisera",
+      "artist": "Artemisia Gentileschi",
+      "artists": [
+        {
+          "name": "Artemisia Gentileschi",
+          "role": "primary",
+          "slug": "artemisia-gentileschi"
+        }
+      ],
+      "date": "1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/3e023d45-8885-54a9-81de-6b6c903087bc-a471a0389442e950.jpg",
+      "imageSource": "https://www.wikiart.org/en/artemisia-gentileschi/yael-et-sicera-1620",
+      "credit": "Artemisia Gentileschi. Jael and Sisera. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/artemisia-gentileschi/yael-et-sicera-1620",
+      "description": "举起的锤子使场景停在致命一击之前。阿尔泰米西娅·真蒂莱斯基让雅亿配合动作的双手，与前景伸展开、仍在熟睡的身体形成对比。一方已经准备好，另一方毫无防备，这构成了圣经故事的核心关系。通过准备与行动之间的短暂间隔，就能理解画面，无须把它牵强地解释为画家私人经历的寓言。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "86ed092d-ccb7-58d5-b0b0-e11302adc12d",
+      "title": "巴黎室内",
+      "catalogueTitle": "Paris Interior",
+      "artist": "Mihály Munkácsy",
+      "artists": [
+        {
+          "name": "Mihály Munkácsy",
+          "role": "primary",
+          "slug": "mihaly-munkacsy-q551652"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/86ed092d-ccb7-58d5-b0b0-e11302adc12d-bb3f4c797b5743e6.jpg",
+      "imageSource": "https://www.wikiart.org/en/mihaly-munkacsy/paris-interior-1877",
+      "credit": "Mihály Munkácsy. Paris Interior. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/mihaly-munkacsy/paris-interior-1877",
+      "description": "图画、织物和擦亮的物品如此密集地围着坐姿女子，房间几乎与她争做主角。蒙卡奇把财富描绘为整个生活环境，而不是一件昂贵财物。前景的狗又占据较低的一层。人物置身于不断累积的室内陈设之中，那些表面与她一样，都要求我们去看。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    },
+    {
+      "id": "75967ef5-6c38-537c-9763-bd685463f006",
+      "title": "彼得鲁斯·埃吉迪乌斯·德·莫里翁肖像",
+      "catalogueTitle": "Portrait of Petrus Egidius de Morrion",
+      "artist": "Jan Lievens",
+      "artists": [
+        {
+          "name": "Jan Lievens",
+          "role": "primary",
+          "slug": "jan-lievens-q430783"
+        }
+      ],
+      "date": "1637",
+      "start": 1637,
+      "end": 1637,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/75967ef5-6c38-537c-9763-bd685463f006-7c543b4f9d0c1d8f.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-lievens/portrait-of-petrus-egidius-de-morrion",
+      "credit": "Jan Lievens. Portrait of Petrus Egidius de Morrion. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jan-lievens/portrait-of-petrus-egidius-de-morrion",
+      "description": "繁复画框围着深色椭圆，但暖光使额头和白胡子足够醒目，仍能吸引视线。利文斯在正式呈现方式中保留了这张脸的个性。装饰决定肖像怎样被陈列，清楚而有差异的五官则使人物不至于只是展示装饰的借口。",
+      "importance": "",
+      "museum": "Museum of Fine Arts"
+    }
+  ],
+  "context": {
+    "start": 1456,
+    "end": 1877
+  },
+  "closingSections": [
+    {
+      "title": "从动作入手",
+      "paragraphs": [
+        "试着先看一幅画中的手：它拿着什么、递出什么、托着什么，或正准备做什么？再加入题名和历史背景。这份选单依据馆藏记录编写；请使用博物馆最新信息，确认参观时实际能看到哪些作品。"
+      ]
+    }
+  ]
+}

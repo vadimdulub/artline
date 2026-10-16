@@ -1,0 +1,178 @@
+{
+  "checks": [
+    "Six mixed records and named timeline rows",
+    "Combined type/search filtering and book inspector",
+    "Unsafe link schemes rejected",
+    "URL-only book creates an undated personal card and updates count",
+    "Link survives reload; adding optional year positions it on timeline",
+    "Only artworks enter comparison",
+    "Undated link remains visible; Seurat does not span the 1887 gap",
+    "Personal notes persist; export includes source URLs, record types and safe text",
+    "Link dialog Escape and focus restoration",
+    "Responsive timeline, gallery, link form, compare and details at six widths to 320px",
+    "URL-only artwork card works on mobile",
+    "New mobile visit defaults to gallery"
+  ],
+  "responsive": [
+    {
+      "width": 1440,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "gallery",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "link",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "gallery",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "link",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "gallery",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "link",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "gallery",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "link",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "gallery",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "link",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "gallery",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "link",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "record",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated browser-local mixed-record concept",
+  "visualFollowup": {
+    "seuratIntervalsClearOfCard": true,
+    "mobileDefaultGalleryVerified": [
+      390,
+      320
+    ],
+    "allOverviewImagesLoaded": true
+  }
+}

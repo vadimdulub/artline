@@ -1,0 +1,248 @@
+{
+  "site": "https://artlines.org/guides",
+  "status": "deployed_and_verified",
+  "change": "Public guide search with artist, museum and Using Artline filters; name, location, keyword and translated-title matching; URL state and bounded server pagination.",
+  "services": {
+    "api": {
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:guide-search-20261011-v1",
+      "files": {
+        "internal/guides/index.json": "69743c03c4deadc5dd39e9845281fb8ee30a20061bad0bb12b60781d7745aa9b",
+        "internal/guides/search.go": "935ac91953dcf9b230ed40054f69de57981e861ca334758417a0fa16070307f6",
+        "internal/guides/search_test.go": "04b5b0606475d991d3b37120e6ec73236d92eb9ca4ebe64ea8cd87d16df7797c",
+        "internal/httpapi/guides.go": "2876da92880ec7dab953e05466377a731eeabc16167272358faaf94610b23026",
+        "internal/httpapi/router.go": "57476cc3eb8b1fdfd8ae8f0231cbf9187030518727138bdb4aef7f1b93d6e943"
+      },
+      "preimages": {
+        "internal/guides/index.json": null,
+        "internal/guides/search.go": null,
+        "internal/guides/search_test.go": null,
+        "internal/httpapi/guides.go": null,
+        "internal/httpapi/router.go": "df94a00f4a188b72629d90134348abebf36b6bbf5b2fec828ec47641a8a75211"
+      },
+      "baselineRevision": "artline-api-sharing-1011-v1",
+      "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:d87d44cb18fe3fc8f6350ccf0c5d6a342e6c01a1d0ee50af3f2006e5d193bc79",
+      "buildId": "3e50e1ed-7084-4d34-901d-c4ff81f01b16",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:27521192bcf7e0737770f871f986a76070eb638cdacfaa3e9666ce266cb1b85d",
+      "revision": "artline-api-guide-search-1011-v1",
+      "candidateURL": "https://guide-search-1011-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-api-sharing-1011-v1",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100,
+      "localImagePinUpdated": true
+    },
+    "web": {
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:guide-search-20261011-v2",
+      "files": {
+        "app/guides/page.tsx": "58b2d5f91d7e2fa13a2f4b52f6aa138a487d0c31dc420a440a69def9309f2198",
+        "app/guides/guides.module.css": "c3bc6451ca5ed74eced5c83e928800623e39fa323523135b281cfbc39a9ba14c",
+        "app/guides/GuideDirectory.tsx": "c23adaa0b75645e090dee953f11cbb82926af2efe29d91c8161ca5f71b704df8",
+        "lib/guide-search.ts": "9df591ab97373094b0874767ab81203af2db426ee61fe894c7d674a520653177"
+      },
+      "preimages": {
+        "app/guides/page.tsx": "31904a6e8a35c3bd3f4fdc20a29745af0af098d05368b527710abd8dd5592990",
+        "app/guides/guides.module.css": "e91f5a8e4674f552a83a6b8660cc45d00bf959ba79b99d4a31dc7671b89877b3",
+        "app/guides/GuideDirectory.tsx": null,
+        "lib/guide-search.ts": null
+      },
+      "baselineRevision": "artline-web-about-carousel-1011-v1",
+      "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:bed03d474593af539b0d0184496111ae79fe16e4931f67a354f359a5c880c2a9",
+      "preservedConcurrentUpdates": [
+        "named back navigation",
+        "About guide carousel"
+      ],
+      "buildId": "cca510e7-2303-4656-91a4-ffe70762a912",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:584e6f7d92628395072b2803c97289298137c618d6dae273573f99b5561bcf6e",
+      "revision": "artline-web-guide-search-1011-v1",
+      "candidateURL": "https://guide-search-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-web-about-carousel-1011-v1",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100,
+      "localImagePinUpdated": true
+    }
+  },
+  "validation": {
+    "goRace": [
+      "internal/guides",
+      "internal/httpapi"
+    ],
+    "typecheck": "passed",
+    "eslint": "no errors; existing guide img rendering retained",
+    "webUnitTests": 190,
+    "browserScenarios": 3,
+    "viewports": [
+      1440,
+      390,
+      320
+    ],
+    "accessibilityViolations": 0,
+    "uniqueGuides": 90,
+    "pagination": [
+      24,
+      24,
+      24,
+      18
+    ],
+    "localDatabase": "read-only; migrations skipped",
+    "apiLocalURL": "http://127.0.0.1:8093",
+    "webLocalURL": "http://127.0.0.1:3119/guides"
+  },
+  "productionBrowser": {
+    "stage": "live",
+    "checks": [
+      {
+        "width": 1440,
+        "search": true,
+        "noOverflow": true,
+        "accessibilityViolations": 0
+      },
+      {
+        "width": 390,
+        "search": true,
+        "noOverflow": true,
+        "accessibilityViolations": 0
+      },
+      {
+        "width": 320,
+        "search": true,
+        "noOverflow": true,
+        "accessibilityViolations": 0
+      }
+    ],
+    "translatedSearch": true,
+    "guideLink": true,
+    "backState": true,
+    "pageErrors": []
+  },
+  "productionHTTP": {
+    "api": {
+      "uniqueGuides": 90,
+      "checks": [
+        {
+          "path": "/api/v1/guides",
+          "status": 200
+        },
+        {
+          "path": "/api/v1/guides?cursor=eyJpIjoyMywicyI6MCwicSI6IjQ3MzAyYmU5MDJhYTEwOTg0MzM3N2U1OTA2YWEwM2VlIn0",
+          "status": 200
+        },
+        {
+          "path": "/api/v1/guides?cursor=eyJpIjo0NywicyI6MCwicSI6IjQ3MzAyYmU5MDJhYTEwOTg0MzM3N2U1OTA2YWEwM2VlIn0",
+          "status": 200
+        },
+        {
+          "path": "/api/v1/guides?cursor=eyJpIjo3MSwicyI6MCwicSI6IjQ3MzAyYmU5MDJhYTEwOTg0MzM3N2U1OTA2YWEwM2VlIn0",
+          "status": 200
+        },
+        {
+          "path": "/api/v1/guides?q=Prado",
+          "status": 200
+        },
+        {
+          "path": "/api/v1/guides?q=Louvre%20Paris",
+          "status": 200
+        },
+        {
+          "path": "/api/v1/guides?q=%D0%A4%D1%80%D0%B8%D0%B4%D0%B0",
+          "status": 200
+        },
+        {
+          "path": "/api/v1/guides?cursor=bad",
+          "status": 400
+        },
+        {
+          "path": "/api/v1/member/studies",
+          "status": 401
+        }
+      ],
+      "databaseWrites": false
+    },
+    "web": {
+      "uniqueGuides": 90,
+      "checks": [
+        {
+          "path": "/api/backend/v1/guides",
+          "status": 200
+        },
+        {
+          "path": "/api/backend/v1/guides?cursor=eyJpIjoyMywicyI6MCwicSI6IjQ3MzAyYmU5MDJhYTEwOTg0MzM3N2U1OTA2YWEwM2VlIn0",
+          "status": 200
+        },
+        {
+          "path": "/api/backend/v1/guides?cursor=eyJpIjo0NywicyI6MCwicSI6IjQ3MzAyYmU5MDJhYTEwOTg0MzM3N2U1OTA2YWEwM2VlIn0",
+          "status": 200
+        },
+        {
+          "path": "/api/backend/v1/guides?cursor=eyJpIjo3MSwicyI6MCwicSI6IjQ3MzAyYmU5MDJhYTEwOTg0MzM3N2U1OTA2YWEwM2VlIn0",
+          "status": 200
+        },
+        {
+          "path": "/api/backend/v1/guides?q=Prado",
+          "status": 200
+        },
+        {
+          "path": "/api/backend/v1/guides?q=Louvre%20Paris",
+          "status": 200
+        },
+        {
+          "path": "/api/backend/v1/guides?q=%D0%A4%D1%80%D0%B8%D0%B4%D0%B0",
+          "status": 200
+        },
+        {
+          "path": "/api/backend/v1/guides?cursor=bad",
+          "status": 400
+        },
+        {
+          "path": "/guides",
+          "status": 200
+        },
+        {
+          "path": "/guides?q=Prado",
+          "status": 200
+        },
+        {
+          "path": "/guides/artemisia-gentileschi",
+          "status": 200
+        },
+        {
+          "path": "/guides/frida-kahlo",
+          "status": 200
+        },
+        {
+          "path": "/guides/louvre",
+          "status": 200
+        },
+        {
+          "path": "/guides?q=Prado",
+          "status": 200
+        },
+        {
+          "path": "/guides/louvre/pdf/en",
+          "status": 200
+        },
+        {
+          "path": "/guides/frida-kahlo/pdf/en",
+          "status": 200
+        },
+        {
+          "path": "/studies",
+          "status": 200
+        },
+        {
+          "path": "/api/studies",
+          "status": 401
+        },
+        {
+          "path": "/shared/studies/00000000-0000-4000-8000-000000000000",
+          "status": 200
+        }
+      ],
+      "databaseWrites": false
+    }
+  },
+  "sourceEditionDigestsVerified": 892,
+  "errorLogs": 0,
+  "catalogueWrites": false,
+  "accountWrites": false,
+  "databaseMigrations": false,
+  "verifiedAt": "2026-10-11T19:10:15.021261+00:00"
+}

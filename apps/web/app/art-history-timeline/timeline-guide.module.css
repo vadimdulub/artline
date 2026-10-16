@@ -1,0 +1,11 @@
+.page{max-width:880px;padding-bottom:80px}
+.page header{margin-bottom:18px}
+.eyebrow{font:12px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.subtitle{font:22px/1.55 var(--serif);max-width:760px;color:var(--muted)}
+.languages{display:flex;flex-wrap:wrap;gap:4px 20px;border-block:1px solid var(--line);margin:28px 0 40px;padding:7px 0}
+.languages a{display:flex;align-items:center;min-height:40px;font:13px/1.4 var(--sans);color:var(--muted)}
+.languages a[aria-current]{color:var(--ink);font-weight:600;text-decoration-thickness:2px}
+.introduction{font-size:20px;line-height:1.75;margin-bottom:48px}
+.page section{margin:44px 0}
+.updated{margin-top:55px;padding-top:18px;border-top:1px solid var(--line);font:12px/1.5 var(--sans);color:var(--muted)}
+@media(max-width:700px){.page{padding-bottom:55px}.subtitle{font-size:19px}.languages{gap:0 18px;margin-bottom:30px}.introduction{font-size:18px}.page section{margin:36px 0}}

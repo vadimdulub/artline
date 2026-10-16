@@ -18,7 +18,7 @@ import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
-export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMuseum?: Museum }) {
+export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: string; initialMuseum?: Museum; embedded?: boolean }) {
   const params = new URLSearchParams(useQueryString());
   if (params.has("selection") && params.get("selection") !== "museum") { params.delete("selection"); params.delete("cursor"); }
   const search = useRef<HTMLInputElement>(null);
@@ -47,13 +47,14 @@ export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMus
     for (const value of group.values) filters.push({ key: `${group.key}-${value}`, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ [group.key]: group.values.filter(item => item !== value) }) });
   }
   const clear = () => setMuseumFilters(Object.fromEntries([...Object.keys(filterLabels), "artist", "movement", "venue", "work_type", "sort"].map(key => [key, null])));
-  return <main id="main-content" className={`${styles.page} ${styles.collectionPage}`} data-return-label={museum?.name || "museum"} data-return-path={`/museums/${slug}`}>
+  const Container = embedded ? "section" : "main";
+  return <Container id={embedded ? undefined : "main-content"} className={`${styles.page} ${styles.collectionPage}`} data-return-label={museum?.name || "museum"} data-return-path={`/museums/${slug}`}>
     {museumRequest.error && !museum ? <MuseumError message={museumRequest.error} retry={() => setRevision(value => value + 1)} /> : !museum ? <p className={styles.loading}>Opening collection…</p> : <>
       {museumRequest.error && <p role="status" className={styles.note}>Collection information could not be refreshed. <button type="button" onClick={() => setRevision(value => value + 1)}>Retry</button></p>}
-      <header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}<MuseumWebsiteLink url={museum.website_url || museum.venues[0]?.visit_url} name={museum.name} /></h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>
+      {!embedded && <><header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}<MuseumWebsiteLink url={museum.website_url || museum.venues[0]?.visit_url} name={museum.name} /></h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>
 
       </header>
-      <p className={styles.note}><Link href={`/exhibitions?institution=${museum.id}`} prefetch={false}>Exhibition history</Link></p>
+      <p className={styles.note}><Link href={`/exhibitions?institution=${museum.id}`} prefetch={false}>Exhibition history</Link></p></>}
       <div className={`${styles.selectionTabs} catalogue-selection`} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], ["museum", "Museum highlights"]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => setMuseumFilters({ selection: value, sort: value ? "curated" : "images" })}>{label}<span>{formatCount(value === "museum" ? museum.highlight_count : museum.work_count)}</span></button>)}</div>
       <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} searchLabel="Search artworks" placeholder="Artwork or painter" columns={2} activeCount={filters.filter(filter => filter.key !== "q").length}>
         <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} />
@@ -80,5 +81,5 @@ export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMus
       {works.data && <CursorPager paging={paging} next={works.data.next_cursor} busy={works.loading} total={works.data.total} shown={works.data.items.length} label="Museum catalogue pages" />}
       {workID && <MuseumDrawer key={workID} museum={museum} workID={workID} close={() => updateQuery({ work: null }, true)} />}
     </>}
-  </main>;
+  </Container>;
 }

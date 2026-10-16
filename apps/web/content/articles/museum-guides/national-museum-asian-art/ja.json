@@ -1,0 +1,607 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "national-museum-asian-art",
+  "museum": "National Museum of Asian Art",
+  "city": "ワシントンD.C.",
+  "country": "米国",
+  "title": "国立アジア美術館：名作",
+  "subtitle": "屏風、掛軸、扇、額装された絵。それぞれにふさわしい見方がある。",
+  "introduction": "北斎の《砕ける波》は縦長の絹本画であり、おなじみの横長の波の版画の一種ではない。《富士山と江の島》が描かれているのは折り畳める屏風だ。どちらも風景と呼べるが、物としての形式が、部屋や見る人とのまったく異なる関係を生む。\n\nこの選集では、まず形式から始めたい。扇の曲線が場面を区切り、描かれていない紙の広がりが小鳥を際立たせ、屏風は連続する面に蔓を延ばす。アメリカとヨーロッパの作品も比較の相手になるが、各地の伝統を同じものとして扱うためではない。画像がどんな物に描かれているかを確かめてから、固有の縁や間隔を筆跡がどう使っているかを見ていこう。",
+  "visitNote": "紙や絹に描かれた多くの絵画は、光への露出を抑える必要があるため、展示替えが行われます。フリーア美術館およびサックラー美術館の最新の展示情報をご確認ください。北斎の『砕ける波（Breaking Waves）』は肉筆画の掛け軸であり、よく知られている木版画『大波（Great Wave）』とは異なる作品です。",
+  "locale": "ja",
+  "website": "https://asia.si.edu/",
+  "officialGuide": "https://asia.si.edu/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Spirit of Japanese Art",
+      "author": "Yoné Noguchi",
+      "url": "https://www.gutenberg.org/ebooks/62252",
+      "access": "無料で読む · 英語",
+      "note": "野口米次郎のエッセイは、20世紀初頭の作家の視点を通して日本の画家たちを紹介するものです。彼の言葉を作品そのものと照らし合わせ、本書の歴史的な視点を、現代の美術館の展覧会図録とは区別して捉えてください。"
+    },
+    {
+      "title": "Along the Riverbank: Chinese Paintings from the C. C. Wang Family Collection",
+      "author": "Maxwell K. Hearn and Wen C. Fong (1999)",
+      "url": "https://www.metmuseum.org/met-publications/along-the-riverbank-chinese-paintings-from-the-c-c-wang-family-collection",
+      "access": "メトロポリタン美術館による無料のPDFおよびオンライン閲覧",
+      "note": "メトロポリタン美術館が無料で提供するこのカタログは、本セレクションに含まれる中国の山水画について、もう一つの参照情報となるものです。また、個々の作品を詳細に論じるその内容は、形式、銘文、そして帰属（誰の作かという判断）といった要素が、いかにして絵画研究に関わってくるかを示してもいます。"
+    }
+  ],
+  "works": [
+    {
+      "id": "75742811-8163-5b1f-b21f-d8135547e7dc",
+      "title": "砕ける波",
+      "catalogueTitle": "Breaking Waves",
+      "artist": "Katsushika Hokusai",
+      "artists": [
+        {
+          "name": "Katsushika Hokusai",
+          "role": "primary",
+          "slug": "katsushika-hokusai"
+        }
+      ],
+      "date": "1847",
+      "start": 1847,
+      "end": 1847,
+      "medium": "絹本着色",
+      "accession": "F1905.276",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/75742811-8163-5b1f-b21f-d8135547e7dc-ecb6735902155bc2.jpg",
+      "imageSource": "https://asia.si.edu/object/F1905.276/",
+      "credit": "Katsushika Hokusai. Breaking Waves. Katsushika Hokusai; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1905.276. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1905.276/",
+      "description": "岩のそばの暗い水の上で泡が巻き、その細かな縁が下の重い水塊と対照をなす。北斎は高さ1メートルを超す細い縦の領域に動きを集中させた。方向は重要だ。波はパノラマに横へ広がるのではなく、掛軸の中で上がって砕ける。素材も版画の紙ではなく、絵を描いた絹である。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "55a10954-f488-53a5-bcbb-b118101f98a3",
+      "title": "富士山と江の島",
+      "catalogueTitle": "Mount Fuji and Enoshima",
+      "artist": "Katsushika Hokusai",
+      "artists": [
+        {
+          "name": "Katsushika Hokusai",
+          "role": "primary",
+          "slug": "katsushika-hokusai"
+        }
+      ],
+      "date": "1825〜1831年頃",
+      "start": 1825,
+      "end": 1831,
+      "medium": "Ink and colour on paper",
+      "accession": "F1904.175-176",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/55a10954-f488-53a5-bcbb-b118101f98a3-8ebc0a5aa5f8591a.jpg",
+      "imageSource": "https://asia.si.edu/object/F1904.175-176/",
+      "credit": "Katsushika Hokusai. Mount Fuji and Enoshima. Katsushika Hokusai; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1904.175-176. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1904.175-176/",
+      "description": "画面の下方の水と遠い陸地が、屏風の面を横切って富士へ続く。これは折り曲げられる物なので、展示されるときも一枚の平面を占めるとは限らない。景色を追うには、描かれた遠さと、その手前にある物理的な面の両方を見る必要がある。平らに開いた写真は、後者の空間を隠してしまうことがある。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "3576da6c-bb4c-5f3f-8877-83eebab1c3b9",
+      "title": "ネズミと米俵",
+      "catalogueTitle": "Rats and rice bales",
+      "artist": "Katsushika Hokusai",
+      "artists": [
+        {
+          "name": "Katsushika Hokusai",
+          "role": "primary",
+          "slug": "katsushika-hokusai"
+        }
+      ],
+      "date": "1843",
+      "start": 1843,
+      "end": 1843,
+      "medium": "絹本着色",
+      "accession": "F1904.132",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/3576da6c-bb4c-5f3f-8877-83eebab1c3b9-2ab4f6bd8a9132ba.jpg",
+      "imageSource": "https://asia.si.edu/object/F1904.132/",
+      "credit": "Katsushika Hokusai. Rats and rice bales. Katsushika Hokusai; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1904.132. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1904.132/",
+      "description": "小さなネズミが、重い俵の周りの隙間を活気づける。北斎はその散らばった位置によって、積まれた穀物の塊に変化をつけるが、周囲を埋め尽くさない。藁と毛には異なる筆遣いが必要で、その対照が大きさの違いをとりわけ明瞭にする。複雑な背景がなくても、この控えめな主題には近くで見ることが十分にある。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "06a8e15f-7c05-5beb-9e3f-85eb302e3f0b",
+      "title": "メドラーの枝",
+      "catalogueTitle": "A branch of medlars",
+      "artist": "Kano Tan'yū",
+      "artists": [
+        {
+          "name": "Kano Tan'yū",
+          "role": "primary",
+          "slug": "kano-tan-yu-round3-cce63116d2c4"
+        }
+      ],
+      "date": "17世紀",
+      "start": 1600,
+      "end": 1699,
+      "medium": "紙に墨・彩色",
+      "accession": "F1904.122",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/06a8e15f-7c05-5beb-9e3f-85eb302e3f0b-df02da4bb67ddff3.jpg",
+      "imageSource": "https://asia.si.edu/object/F1904.122/",
+      "credit": "Kano Tan'yū. A branch of medlars. Kano Tan'yū; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1904.122. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1904.122/",
+      "description": "一本の枝が連続した曲線となり、そこから細枝、葉、実が伸びる。狩野探幽は筆跡の幅と濃さを変えて、各部を描き分けた。描かれていない紙によって、その違いがよく見える。少ない描写でも植物とわかるのは、筆触が全体を均等に埋めるためではなく、それぞれ別の役割を果たしているからだ。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "4dc73b50-7bf5-5d95-be2b-84deb52a9d33",
+      "title": "月を眺める行商人と子ども",
+      "catalogueTitle": "A peddler and a child looking at the moon",
+      "artist": "Hanabusa Itchō",
+      "artists": [
+        {
+          "name": "Hanabusa Itchō",
+          "role": "primary",
+          "slug": "hanabusa-itcho-round3-27a115e47132"
+        }
+      ],
+      "date": "1615-1868",
+      "start": 1615,
+      "end": 1868,
+      "medium": "模造金箔地、墨・彩色",
+      "accession": "F1907.657",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/4dc73b50-7bf5-5d95-be2b-84deb52a9d33-7e793e9b461d057e.jpg",
+      "imageSource": "https://asia.si.edu/object/F1907.657/",
+      "credit": "Hanabusa Itchō. A peddler and a child looking at the moon. Hanabusa Itchō; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1907.657. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1907.657/",
+      "description": "行商人と子どもは同じ方を見上げ、二人の上には広い空間が残されている。扇形の境界は小さな人物を曲線の中へまとめる。英一蝶は表情の細かなやり取りなしに、関係を読めるようにした。同じものを眺める二つの身体だけで、他に何も知らない段階から、一緒にいることが伝わってくる。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "83b34fe3-cb83-503f-8907-c4d6a396470c",
+      "title": "雪の嵐山",
+      "catalogueTitle": "Arashiyama in Snow",
+      "artist": "Andō Hiroshige",
+      "artists": [
+        {
+          "name": "Andō Hiroshige",
+          "role": "primary",
+          "slug": "ando-hiroshige-nga-4350"
+        }
+      ],
+      "date": "19世紀",
+      "start": 1800,
+      "end": 1899,
+      "medium": "絹本着色",
+      "accession": "F1903.291",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/83b34fe3-cb83-503f-8907-c4d6a396470c-d8f5f9c48b94ab30.jpg",
+      "imageSource": "https://asia.si.edu/object/F1903.291/",
+      "credit": "Andō Hiroshige. Arashiyama in Snow. Andō Hiroshige; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1903.291. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1903.291/",
+      "description": "暗い枝が淡い雪を背景に形を保ち、風景の構造を残すだけの対比を作っている。広重の小ぶりな絵は、さらに縦長の表装の中に収まる。この二つを分けて考えたい。周囲の物としての形式は、場面に向き合う大きさの感覚や見る速さを変える。一方、絵そのものは少数の筆跡によって冬を描く。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "da8bb0c4-b1e4-5b7a-bba5-a26d784a07c1",
+      "title": "鳥と竹",
+      "catalogueTitle": "Bird on a bamboo branch",
+      "artist": "Kano Tan'yū",
+      "artists": [
+        {
+          "name": "Kano Tan'yū",
+          "role": "primary",
+          "slug": "kano-tan-yu-round3-cce63116d2c4"
+        }
+      ],
+      "date": "17世紀",
+      "start": 1600,
+      "end": 1699,
+      "medium": "紙にインク",
+      "accession": "F1904.367",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/da8bb0c4-b1e4-5b7a-bba5-a26d784a07c1-d26fd72dd396fbcc.jpg",
+      "imageSource": "https://asia.si.edu/object/F1904.367/",
+      "credit": "Kano Tan'yū. Bird on a bamboo branch. Kano Tan'yū; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1904.367. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1904.367/",
+      "description": "鳥は縦長の画面のごく一部しか占めないが、周囲の余白によって強く目立つ。竹の茎と葉は、鳥を窮屈に囲まず、その居場所がわかるだけの量がある。探幽は、目立つ大きさと実際の寸法が同じではないことを示す。少数の特徴を示す筆跡と競うものがなければ、小さな姿でも大きな画面を引き受けられる。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "0ca4394b-2526-5094-bf43-b5e05f9b3af7",
+      "title": "菩提達磨",
+      "catalogueTitle": "Bodhidharma",
+      "artist": "Kano Tan'yū",
+      "artists": [
+        {
+          "name": "Kano Tan'yū",
+          "role": "primary",
+          "slug": "kano-tan-yu-round3-cce63116d2c4"
+        }
+      ],
+      "date": "17世紀",
+      "start": 1600,
+      "end": 1699,
+      "medium": "紙にインク",
+      "accession": "F1904.368",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/0ca4394b-2526-5094-bf43-b5e05f9b3af7-7a6e29e57b4e2675.jpg",
+      "imageSource": "https://asia.si.edu/object/F1904.368/",
+      "credit": "Kano Tan'yū. Bodhidharma. Kano Tan'yū; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1904.368. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1904.368/",
+      "description": "衣を着た人物が、長く明るい画面の低い位置に座る。わずかな濃い筆跡が頭と衣を定め、ほとんどの面は描かれずに残る。この空白が重要であるために、一つの象徴的な意味を割り当てる必要はない。小さくまとまる身体と広い周囲との関係が、掛軸の構成の中心になっている。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "797209b3-3ea2-5a4c-a143-087814d7c86d",
+      "title": "蚊帳の中の遊女",
+      "catalogueTitle": "Courtesan beneath a Mosquito Net",
+      "artist": "Kunisada",
+      "artists": [
+        {
+          "name": "Kunisada",
+          "role": "primary",
+          "slug": "kunisada-q467427"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "絹本着色",
+      "accession": "F1995.17",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/797209b3-3ea2-5a4c-a143-087814d7c86d-e7239520911fda2d.jpg",
+      "imageSource": "https://asia.si.edu/object/F1995.17/",
+      "credit": "Kunisada. Courtesan beneath a Mosquito Net. Kunisada; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Purchase — Harold P. Stern Memorial Fund; F1995.17. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1995.17/",
+      "description": "下がる緑の布は女性を見せると同時に囲んでいる。国貞は蚊帳、模様のある衣服、身をかがめた姿を掛軸の長さに収め、上方には文字の場所も取った。遮るものは単なる調度ではなく、人物の見せ方の一部になる。私たちは絵を通して見るだけでなく、絵の内部にあるもう一枚の面を介して女性を見ている。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "b8dcf574-8c4b-5d0c-8606-62f8e55dd502",
+      "title": "ブドウの蔓",
+      "catalogueTitle": "Grape vines 葡萄図屏風",
+      "artist": "Kanō Eitoku",
+      "artists": [
+        {
+          "name": "Kanō Eitoku",
+          "role": "primary",
+          "slug": "kano-eitoku-q536696"
+        }
+      ],
+      "date": "1568-1615",
+      "start": 1568,
+      "end": 1615,
+      "medium": "紙に彩色・金泥",
+      "accession": "F1903.242",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/b8dcf574-8c4b-5d0c-8606-62f8e55dd502-2a928819a5853ea9.jpg",
+      "imageSource": "https://asia.si.edu/object/F1903.242/",
+      "credit": "Kanō Eitoku. Grape vines 葡萄図屏風. Kanō Eitoku; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1903.242. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1903.242/",
+      "description": "暗い茎が、金地の面をまたいで散らばる葉とブドウの房をつなぐ。蔓の伸び方は、折り畳む屏風の区切りを越えられるほど柔軟だ。金は周囲の光に対して、暗い絵具の跡とは違う物理的な反応をする。したがって枝の配置は変わらなくても、物としての見え方は変化しうる。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "ca6cc19b-8a6b-57b3-9022-c116c14a303a",
+      "title": "タチアオイ",
+      "catalogueTitle": "Hollyhocks",
+      "artist": "Ogata Kōrin",
+      "artists": [
+        {
+          "name": "Ogata Kōrin",
+          "role": "primary",
+          "slug": "ogata-korin-q952938"
+        }
+      ],
+      "date": "1615-1868",
+      "start": 1615,
+      "end": 1868,
+      "medium": "紙にインク",
+      "accession": "F1904.335",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/ca6cc19b-8a6b-57b3-9022-c116c14a303a-01db30c3615effb1.jpg",
+      "imageSource": "https://asia.si.edu/object/F1904.335/",
+      "credit": "Ogata Kōrin. Hollyhocks. Ogata Kōrin; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1904.335. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1904.335/",
+      "description": "花をつけた茎が、離れた葉と花に連続性を与える。光琳はすべての隙間を埋めず、一つ一つの筆跡が紙の上で固有の形を保つようにした。植物は少数のつながりによってまとまっている。空いている所を描き足りない欠落とみなすより、その接点を追った方が多くを読み取れる。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "f9998f1e-1018-5ff2-9867-518160c5fa55",
+      "title": "楼閣のある風景",
+      "catalogueTitle": "Landscape: pavilions on a mountain side; a stream below",
+      "artist": "馬遠の作と伝わる（制作年代に矛盾あり）",
+      "artists": [],
+      "date": "16世紀",
+      "start": 1500,
+      "end": 1599,
+      "medium": "絹本墨画",
+      "accession": "F1909.245c",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/f9998f1e-1018-5ff2-9867-518160c5fa55-bdfa6773a74f1f32.jpg",
+      "imageSource": "https://asia.si.edu/object/F1909.245c/",
+      "credit": "Ma Yuan. Landscape: pavilions on a mountain side; a stream below. Ma Yuan; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1909.245c. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1909.245c/",
+      "description": "画帖の一葉として表装された扇面では、手前の暗い形が淡い水面と遠景へ導く。ただし、作品記録には実際の問題がある。馬遠の名前と、その活動期より数世紀後の16世紀という年代が併記されているのだ。確定した帰属として扱うことはできない。それでも、近い枝、建物、奥へ退く空間の配置から、小さな風景を観察することは可能だ。",
+      "importance": "",
+      "museum": "National Museum of Asian Art",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "9ae3cdd7-8d8f-432f-ab07-8e609053286d",
+      "title": "クジャク",
+      "catalogueTitle": "Peacock",
+      "artist": "Mori Sosen",
+      "artists": [
+        {
+          "name": "Mori Sosen",
+          "role": "primary",
+          "slug": "mori-sosen-round3-dc2ba9eeb3a8"
+        }
+      ],
+      "date": "1786",
+      "start": 1786,
+      "end": 1786,
+      "medium": "絹本着色・墨画",
+      "accession": "F1898.6",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/62cf9bb8-f1e1-4554-8cc3-1854c54c6141-e3069931bec2d3a9.jpg",
+      "imageSource": "https://asia.si.edu/object/F1898.6/",
+      "credit": "Mori Sosen. Peacock. Mori Sosen; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1898.6. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1898.6/",
+      "description": "長い羽が画面の下方を広く占め、鳥の身体を大きく延長している。森狙仙は小さな筆跡を変化させ、羽と近くの草木を描き分けた。装飾と動物は切り離されない。尾を模様としてたどることはできるが、自重を支えて立つ生き物につながっているため、絵が純粋な飾りになることはない。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "17a8173c-2448-5e8e-a6c7-06f10796ca8a",
+      "title": "流水と秋の草花",
+      "catalogueTitle": "Running water, autumn grasses and flowers",
+      "artist": "Ogata Kōrin",
+      "artists": [
+        {
+          "name": "Ogata Kōrin",
+          "role": "primary",
+          "slug": "ogata-korin-q952938"
+        }
+      ],
+      "date": "1658-1868",
+      "start": 1658,
+      "end": 1868,
+      "medium": "紙に彩色、墨、銀",
+      "accession": "F1905.232",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/17a8173c-2448-5e8e-a6c7-06f10796ca8a-b4ee7957de3fb87b.jpg",
+      "imageSource": "https://asia.si.edu/object/F1905.232/",
+      "credit": "Ogata Kōrin. Running water, autumn grasses and flowers. Ogata Kōrin; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1905.232. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1905.232/",
+      "description": "水の帯が広い屏風を横へ導き、植物が不均等な間隔でそれを遮る。流れは硬直した反復を押しつけずに連続性を与える。記録された材料には、彩色と墨だけでなく銀も含まれる。複製の見かけの色だけでは金属の面を特定できず、室内の光が変わったときの反応も予測できないことを覚えておきたい。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "50e27fd7-6c65-52e5-b4d6-adf2e4df3f12",
+      "title": "雪に覆われた草と松",
+      "catalogueTitle": "Snow-laden grasses and Snow-laden pine branches",
+      "artist": "Ogata Kenzan",
+      "artists": [
+        {
+          "name": "Ogata Kenzan",
+          "role": "primary",
+          "slug": "ogata-kenzan-round3-559043865bb7"
+        }
+      ],
+      "date": "1690-1868",
+      "start": 1690,
+      "end": 1868,
+      "medium": "紙に墨・彩色",
+      "accession": "F1897.31a-b",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/50e27fd7-6c65-52e5-b4d6-adf2e4df3f12-461627c9f844bc22.jpg",
+      "imageSource": "https://asia.si.edu/object/F1897.31a-b/",
+      "credit": "Ogata Kenzan. Snow-laden grasses and Snow-laden pine branches. Ogata Kenzan; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1897.31a-b. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1897.31a-b/",
+      "description": "二つの扇形の画面は、表装の中でも曲線の境界を保つ。乾山は長方形の景色に見せかけず、雪と暗い葉をその縁に応じて配置した。対になった見せ方は、異なる植物の形を比較するよう促す。同時に、それは物の同一性の一部でもある。別々に交換できる二枚の絵ではなく、関係する二つの描画部分が一緒に記録されている。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "f4396433-7f2d-4a3b-9816-b048cb42ee75",
+      "title": "干潮",
+      "catalogueTitle": "Low Tide",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1883-1884",
+      "start": 1883,
+      "end": 1884,
+      "medium": "木製パネルに油彩",
+      "accession": "F1902.156a-b",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/cbe1aefe-f29f-4338-bff3-6ab7074ccb16-549eaeaf9189a0a6.jpg",
+      "imageSource": "https://asia.si.edu/object/F1902.156a-b/",
+      "credit": "James Abbott McNeill Whistler. Low Tide. James Abbott McNeill Whistler; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1902.156a-b. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1902.156a-b/",
+      "description": "舟と水辺の建物の下に、潮が引いて現れた岸が広がる。ホイッスラーは抑えた青と茶で景色をまとめ、仕事に使う物を残しながら、個々の事件にはしない。潮の後退が、この風景の特有の比率を作る。比較的静かな地面の大きな間隔は、その向こうの賑やかな帯と同じくらい、構成に働きかける。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "114640aa-12fa-4f56-ad57-b04d41062407",
+      "title": "バタシー",
+      "catalogueTitle": "Nocturne: Blue and Silver--Battersea Reach",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1870-1875",
+      "start": 1870,
+      "end": 1875,
+      "medium": "キャンバスに油彩",
+      "accession": "F1902.97a-b",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/f69dbfca-26a9-48e2-b3ea-8de99fc722e0-c862ccc41f3eea6f.jpg",
+      "imageSource": "https://asia.si.edu/object/F1902.97a-b/",
+      "credit": "James Abbott McNeill Whistler. Nocturne: Blue and Silver--Battersea Reach. James Abbott McNeill Whistler; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1902.97a-b. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1902.97a-b/",
+      "description": "近い青緑の色調の中から、舟と岸辺の形を見分ける必要がある。ホイッスラーは川だとわかるだけの情報を与えるが、すべての物に決定的な輪郭を付けない。この難しさによって、間隔や色調の違いへ目が向く。幅広い額も鑑賞時の見え方に関わるが、描かれた風景の一部と取り違えてはならない。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "deead475-98b5-4264-b98a-730a173e9d3b",
+      "title": "ボグナー",
+      "catalogueTitle": "Nocturne: Blue and Silver--Bognor",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1871-1876",
+      "start": 1871,
+      "end": 1876,
+      "medium": "キャンバスに油彩",
+      "accession": "F1906.103a-b",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/76dcfe19-a9f3-4842-9a39-58a3cb353cc7-cdbc86d77621364b.jpg",
+      "imageSource": "https://asia.si.edu/object/F1906.103a-b/",
+      "credit": "James Abbott McNeill Whistler. Nocturne: Blue and Silver--Bognor. James Abbott McNeill Whistler; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1906.103a-b. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1906.103a-b/",
+      "description": "小さな人物と舟が浜辺の規模を示し、細い水平の区切りが眺めを開いたままにする。ホイッスラーは、岸、海、空の間隔と競うような中心的な出来事を置かない。散らばる細部は必要だが控えめだ。その節度によって、物同士の間の空間も、物自体と同じくらい意識できる。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "cacd7a2f-a772-451e-bf68-cf84b8fa3c29",
+      "title": "ホイッスラーの肖像",
+      "catalogueTitle": "Portrait of Whistler",
+      "artist": "Henri Fantin-Latour",
+      "artists": [
+        {
+          "name": "Henri Fantin-Latour",
+          "role": "primary",
+          "slug": "henri-fantin-latour-q310715"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "アルミパネルにマウントされたキャンバス、油彩",
+      "accession": "F1906.276a-b",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/a078ee3c-2c92-465e-ae3e-65f741337457-8cb074e7db3f17d2.jpg",
+      "imageSource": "https://asia.si.edu/object/F1906.276a-b/",
+      "credit": "Henri Fantin-Latour. Portrait of Whistler. Henri Fantin-Latour; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1906.276a-b. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1906.276a-b/",
+      "description": "ファンタン＝ラトゥールは、職業を特定するための周囲の手がかりをほとんど描かない。暗い衣服と背景が、筆やパレットの助けなしに、向きを変えた顔を前へ出す。ここでのホイッスラーは、前後の風景画とは別の形で存在する。眺めを構成する人ではなく、別の人の選択的な観察の対象になっているのだ。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    },
+    {
+      "id": "b691af55-7ec4-54a9-b25e-ca4f552572ea",
+      "title": "唐の玄宗皇帝と楊貴妃",
+      "catalogueTitle": "The Chinese Emperor Minghuang and his concubine Yang Guifei, with attendants on a terrace",
+      "artist": "Kanō Eitoku",
+      "artists": [
+        {
+          "name": "Kanō Eitoku",
+          "role": "primary",
+          "slug": "kano-eitoku-q536696"
+        }
+      ],
+      "date": "16世紀",
+      "start": 1500,
+      "end": 1599,
+      "medium": "紙本墨画・彩色・金泥",
+      "accession": "F1900.10",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fsg/b691af55-7ec4-54a9-b25e-ca4f552572ea-520031fe0a5ef512.jpg",
+      "imageSource": "https://asia.si.edu/object/F1900.10/",
+      "credit": "Kanō Eitoku. The Chinese Emperor Minghuang and his concubine Yang Guifei, with attendants on a terrace. Kanō Eitoku; Freer Gallery of Art Collection, Smithsonian Institution, Washington, DC; Gift of Charles Lang Freer; F1900.10. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://asia.si.edu/object/F1900.10/",
+      "description": "中国の皇帝と楊貴妃が、日本の屏風に描かれた理想化された宮殿に現れる。建築が金地の上で人々を分け、各区域をつなぐ。主題が生まれた場所と、物が制作された場所は区別しなければならない。この画像が記すのは、中国の物語の伝播と再解釈であって、歴史上の宮廷を直接見た光景ではない。",
+      "importance": "",
+      "museum": "National Museum of Asian Art"
+    }
+  ],
+  "context": {
+    "start": 1500,
+    "end": 1899
+  },
+  "closingSections": [
+    {
+      "title": "画像とともに、物も読む",
+      "paragraphs": [
+        "複製が屏風全体を示すのか、描かれた部分だけなのか、表装付きの掛軸なのかを確かめたい。その選択で比率の見え方は変わる。ここにある年代の一部は広い時代区分であり、馬遠の記録には内部の矛盾が残る。正確な年表の点として使わない方がよい。光に敏感な作品の現在の展示は、美術館へ別途確認してほしい。"
+      ]
+    }
+  ]
+}

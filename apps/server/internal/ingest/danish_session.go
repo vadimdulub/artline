@@ -57,7 +57,10 @@ type danishSMK struct {
 }
 
 var danishPersonID = regexp.MustCompile(`^[0-9]+_person$`)
-var danishObjectID = regexp.MustCompile(`^[A-Za-z0-9][A-Za-z0-9./_-]{0,100}$`)
+// SMK assigns separate native records to the recto and verso of many sheets.
+// Their literal object numbers contain a space (for example "KKS10208/1 verso").
+// Retain that version identity while excluding controls and URL metacharacters.
+var danishObjectID = regexp.MustCompile(`^[A-Za-z0-9][A-Za-z0-9 ./_-]{0,160}$`)
 var danishUncertain = regexp.MustCompile(`(?i)(udateret|virkeår|levetid|baseret på kunstnerens årstal|tilgået museet|unknown|undated|after|before|efter|før|muligvis|tilskrevet)`)
 
 func danishAssociation(s string) bool {

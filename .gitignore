@@ -64,3 +64,6 @@ terraform.tfstate.*
 
 # Reviewed starting-point decisions are source configuration evidence.
 !docs/research/all-starting-points-20260924/selections.json
+
+# Disposable scan renders and local proof output.
+/tmp/

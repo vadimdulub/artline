@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "galleria-borghese",
+  "museum": "Galleria Borghese",
+  "city": "罗马",
+  "country": "意大利",
+  "title": "博尔盖塞美术馆：杰作",
+  "subtitle": "二十件作品，许多故事从身体如何接触开始。",
+  "introduction": "贝尼尼的普罗塞尔皮娜扭动身体，挣脱将她举起的双臂。拉斐尔笔下的抬扶者，则围绕死去基督的重量协调动作。在这两件作品里，不必先叫出每个人物的名字，身体之间的关系已经说明正在发生什么。面对常常伴随着复杂神话或教义的题材，观察接触方式，是一个直接的入口。\n\n这组选作也有肖像、音乐会和扮作古典角色的人物。身体有时不是在挣扎，而是在展示自身。请分清每件作品：下文的《阿波罗与达芙妮》是多索·多西的绘画，不是贝尼尼的雕塑。相同题名与熟悉故事，可能掩盖媒介、情节时刻和视点上的重要差别。",
+  "visitNote": "此处精选的作品属于博尔盖塞（Borghese）馆藏；外借展出及展厅陈列安排可能会有所变动。参观前，请查阅博物馆官方的预约及馆藏页面。本指南中提到的多索·多西（Dosso Dossi）的《阿波罗与达芙妮》是一幅画作，与贝尼尼（Bernini）同名题材的雕塑作品不同。",
+  "locale": "zh",
+  "website": "https://galleriaborghese.beniculturali.it/en/",
+  "officialGuide": "https://galleriaborghese.cultura.gov.it/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "关于动态与人物布局的章节，为比较拉斐尔画作中抬举者所付出的力道与贝尼尼雕塑中那些处于支撑状态、躯体扭转的人物，提供了一个切入点。"
+    }
+  ],
+  "works": [
+    {
+      "id": "c59ea748-224e-5a39-9648-2a922bcd1262",
+      "title": "阿波罗与达芙妮",
+      "catalogueTitle": "Apollo and Daphne",
+      "artist": "Dosso Dossi",
+      "artists": [
+        {
+          "name": "Dosso Dossi",
+          "role": "primary",
+          "slug": "dosso-dossi-q356777"
+        }
+      ],
+      "date": "1524",
+      "start": 1524,
+      "end": 1524,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c59ea748-224e-5a39-9648-2a922bcd1262-74210d9d18464642.jpg",
+      "imageSource": "https://www.wikiart.org/en/dosso-dossi/apollo-and-daphne-1524",
+      "credit": "Dosso Dossi. Apollo and Daphne. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dosso-dossi/apollo-and-daphne-1524",
+      "description": "多索·多西把奏乐的阿波罗放在近处，涉及达芙妮的追逐却在更远的地方展开。题名可能让人期待一次近在眼前的相遇，画面却把不同活动分开。观看需要往来于前景演奏与远处故事之间。风景参与了这种分隔，不只是单一动作背后的布景。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "867dd376-6e40-5559-b0ae-b09650fe5d91",
+      "title": "劫夺普罗塞尔皮娜",
+      "catalogueTitle": "The Rape of Proserpina",
+      "artist": "Gian Lorenzo Bernini",
+      "artists": [
+        {
+          "name": "Gian Lorenzo Bernini",
+          "role": "primary",
+          "slug": "gian-lorenzo-bernini-nga-2025"
+        }
+      ],
+      "date": "1621-1622",
+      "start": 1621,
+      "end": 1622,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/867dd376-6e40-5559-b0ae-b09650fe5d91-013297c696c8e09c.jpg",
+      "imageSource": "https://www.wikiart.org/en/gian-lorenzo-bernini/rape-of-proserpine-1622",
+      "credit": "Gian Lorenzo Bernini. The Rape of Proserpina. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gian-lorenzo-bernini/rape-of-proserpine-1622",
+      "description": "普鲁托向上抓举，普罗塞尔皮娜扭身抵抗，一只手推向他的脸。贝尼尼让相反方向的力量共存于一组雕塑。手指下仿佛凹陷的大腿又带来另一重矛盾：坚硬大理石描绘出柔软肌肤。精湛技巧不应遮住题材中的强迫；材料效果恰恰让施加在身体上的压力更清楚。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "920f73ba-cb08-42b8-8e96-7308f53f349d",
+      "title": "神圣与世俗之爱",
+      "catalogueTitle": "Sacred and Profane Love",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1515–1516",
+      "start": 1515,
+      "end": 1516,
+      "medium": "布面油画",
+      "accession": "147",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/920f73ba-cb08-42b8-8e96-7308f53f349d-9d2d4654f3a8798b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vecellio_Tiziano_(Pieve_di_Cadore_1488-90_-_Venezia_1576)_-_Amor_sacro_e_Amor_profano_-_147_-_Galleria_Borghese.jpg",
+      "credit": "Titian. Sacred and Profane Love. Image credit: Titian; Source credit: Galleria Borghese. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/sacred-and-profane-love",
+      "description": "相似面孔与不同衣着，把两名女子联系起来，又使她们区别分明。两人之间，丘比特将手伸入水中。熟悉题名并没有结束解释上的争议：美术馆讨论了多种读法，并较倾向于婚姻背景。先观察她们怎样成对出现，再考虑意义，不要直接认定其中一人在道德上高于另一人。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "63ee2183-ed2c-5278-9bde-ccfefa150e3c",
+      "title": "提果篮的男孩",
+      "catalogueTitle": "Boy with a Basket of Fruit",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1593",
+      "start": 1593,
+      "end": 1593,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/63ee2183-ed2c-5278-9bde-ccfefa150e3c-5209d0d8023246e3.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/boy-with-a-basket-of-fruit-1593-1",
+      "credit": "Caravaggio. Boy with a Basket of Fruit. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/boy-with-a-basket-of-fruit-1593-1",
+      "description": "篮子朝前伸出，让水果、叶子与面孔同样值得细看。卡拉瓦乔没有把静物留作肖像的小配件。青年转过的身体和滑落的衬衫形成一种面对观众的姿态，而他抱着的东西，占据了人物与观看者之间大部分空间。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "c9215c61-64f7-51e9-acc0-42f204b584a8",
+      "title": "生病的巴克斯",
+      "catalogueTitle": "Young Sick Bacchus",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1593",
+      "start": 1593,
+      "end": 1593,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c9215c61-64f7-51e9-acc0-42f204b584a8-72b9fbe33e4954a8.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/young-sick-bacchus",
+      "credit": "Caravaggio. Young Sick Bacchus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/young-sick-bacchus",
+      "description": "常春藤和葡萄表明，这个未经理想化的年轻身体正在扮演古典角色。他越过裸露肩膀转身，使身体与桌面、水果之间显得拘束。苍白肌肤可以被观察，但画出来的外貌不足以支持医学诊断。熟悉的题名不能代替关于疾病的证据。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "c5522d8a-f549-5e4b-8f62-67411c20dbac",
+      "title": "马夫圣母",
+      "catalogueTitle": "Madonna and Child with St. Anne",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1606",
+      "start": 1606,
+      "end": 1606,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c5522d8a-f549-5e4b-8f62-67411c20dbac-7c7941ae73f65aa3.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/madonna-and-child-with-st-anne-1606",
+      "credit": "Madonna and Child with St. Anne. WikiArt; Caravaggio. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/madonna-and-child-with-st-anne-1606",
+      "description": "玛利亚扶稳孩子，一只小脚踩向蛇，年长女子在旁观看。卡拉瓦乔让宗教动作依靠共同维持平衡和施力才能完成。三代人物处在暗色环境中，强光与身体大小将他们区分开来。最小的人物做出决定性动作，却仍在实际身体上依赖他人的支撑。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "29018a14-c627-53f3-815b-96ee3bef40ca",
+      "title": "马尔切洛·萨凯蒂",
+      "catalogueTitle": "Marcello Sacchetti",
+      "artist": "Pietro da Cortona",
+      "artists": [
+        {
+          "name": "Pietro da Cortona",
+          "role": "primary",
+          "slug": "pietro-da-cortona-q333323"
+        }
+      ],
+      "date": "约 1626 年",
+      "start": 1626,
+      "end": 1626,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/29018a14-c627-53f3-815b-96ee3bef40ca-ad6ddff37ddbd882.jpg",
+      "imageSource": "https://www.wikiart.org/en/pietro-da-cortona/marcello-sacchetti",
+      "credit": "Pietro da Cortona. Marcello Sacchetti. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pietro-da-cortona/marcello-sacchetti",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pietro-da-cortona/marcello-sacchetti",
+      "description": "领口和袖口的白蕾丝打断黑衣，把目光引向脸与手。建筑构件为站立人物提供正式背景。彼得罗·达·科尔托纳通过受控的仪态和不同材质，呈现一个人在公共场合的形象。展示效果分布在衣着与姿势之间，而不是集中于一个夸张的戏剧性动作。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "b0a8d5cc-9e19-4dd0-a96b-bc00ac5c5fea",
+      "title": "书写中的圣哲罗姆",
+      "catalogueTitle": "Saint Jerome",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "约 1606 年",
+      "start": 1606,
+      "end": 1606,
+      "medium": "布面油画",
+      "accession": "056",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/b0a8d5cc-9e19-4dd0-a96b-bc00ac5c5fea-d1cbb75031ffacd2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Saint_Jerome_Writing-Caravaggio_(1605-6).jpg",
+      "credit": "Caravaggio. Saint Jerome. Image credit: Caravaggio; Source credit: Self-scanned. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/saint-jerome",
+      "description": "裸露手臂横过桌面，伸向正在做的工作，在暗处连成一条长长的亮线。另一端的头骨，将死亡带进同一个工作空间。卡拉瓦乔没有把思想劳动与承担它的脆弱肉身分开。书写成为一种可见的努力，由一个正在衰老的人持续完成。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "d1d24f73-6abf-585f-af84-d5ce20ed7581",
+      "title": "着装中的密涅瓦",
+      "catalogueTitle": "Minerva Dressing",
+      "artist": "Lavinia Fontana",
+      "artists": [
+        {
+          "name": "Lavinia Fontana",
+          "role": "primary",
+          "slug": "lavinia-fontana-q236050"
+        }
+      ],
+      "date": "1613",
+      "start": 1613,
+      "end": 1613,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d1d24f73-6abf-585f-af84-d5ce20ed7581-57daa6ddea016d39.jpg",
+      "imageSource": "https://www.wikiart.org/en/lavinia-fontana/minerva-dressing-1613",
+      "credit": "Lavinia Fontana. Minerva Dressing. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lavinia-fontana/minerva-dressing-1613",
+      "description": "盔甲和头盔即使没有穿在身上，也能表明密涅瓦的身份。拉维尼娅·丰塔纳画的是穿衣过程中的一刻，女神转身伸手拿衣服。角色与装束暂时分离。周围物品维持她的神话身份，而动作则展现她如何实际穿戴，成为我们熟悉的样子。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "717dae4b-e12d-594c-94a1-5b5e60bd01ac",
+      "title": "丘比特与普赛克",
+      "catalogueTitle": "Amor and Psyche",
+      "artist": "Jacopo Zucchi",
+      "artists": [
+        {
+          "name": "Jacopo Zucchi",
+          "role": "primary",
+          "slug": "wikimedia-painter-q528968"
+        }
+      ],
+      "date": "1589",
+      "start": 1589,
+      "end": 1589,
+      "medium": "",
+      "accession": "010",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107250653-d3ad9efb7e287c93.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jacopo_Zucchi_-_Amor_and_Psyche.jpg",
+      "credit": "Jacopo Zucchi. Amor and Psyche. Image credit: Jacopo Zucchi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107250653",
+      "description": "举起的灯，使观看成为决定性动作。花朵、织物和浅色身体挤满场景，普赛克走近熟睡的丘比特。祖基让照明参与叙事：光使发现成为可能，也暴露了进行发现的举动。它来自场内某个人的决定，而不是一束无从解释的舞台灯光。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "10569bb7-b45b-429c-b68e-850da953b5ed",
+      "title": "基督下葬",
+      "catalogueTitle": "Deposition (The Carrying of the Dead Christ to the Sepulchre)",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "1507",
+      "start": 1507,
+      "end": 1507,
+      "medium": "木板油画",
+      "accession": "369",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/10569bb7-b45b-429c-b68e-850da953b5ed-8448d27f2dbafa3b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Raffaello,_pala_baglioni,_deposizione.jpg",
+      "credit": "Raphael. Deposition (The Carrying of the Dead Christ to the Sepulchre). Image credit: Raphael; Source credit: aiwaz.net. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/deposition-the-carrying-of-the-dead-christ-to-the-sepulchre",
+      "description": "抬扶者必须协调方向不同的步伐，共同承担基督的重量。旁边，一位支撑不住的哀悼者又需要别人扶住。拉斐尔把这些行动编入同一群体，让悲痛与身体用力不可分开。死去的身体和摇摇欲坠的活人，需要不同的应对，因此构图中不止一处存在彼此依赖的关系。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "a99c0b0a-e6fd-5394-b6d6-8653101f20f7",
+      "title": "施洗者圣约翰",
+      "catalogueTitle": "Saint John the Baptist",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "约 1560 年",
+      "start": 1560,
+      "end": 1560,
+      "medium": "",
+      "accession": "444",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110015681-360b1dd562e90b75.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Agnolo_di_Cosimo_detto_Bronzino_(Firenze_1503_-_1572)_-_San_Giovanni_Battista_(Ritratto_di_Giovanni_de%E2%80%99_Medici)_-_444_-_Galleria_Borghese.jpg",
+      "credit": "Bronzino. Saint John the Baptist. Image credit: Bronzino. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110015681",
+      "description": "布龙齐诺让躯干在岩石座位上扭转，指向外部的手臂又确立另一个方向。蓝布衬出裸露身体，却没有简化复杂姿势。圣徒通过身体安排得到呈现，而不是出现在一个叙述完整的故事里。先跟随手臂与躯干的不同方向，就能看懂人物的动态，再加入手势的宗教意义。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "b42cc00f-5aeb-574a-ae8e-8e4c409d3e3e",
+      "title": "成熟时期的自画像",
+      "catalogueTitle": "Self Portrait of Gianlorenzo Bernini as a Mature Man (1638-40)",
+      "artist": "Gian Lorenzo Bernini",
+      "artists": [
+        {
+          "name": "Gian Lorenzo Bernini",
+          "role": "primary",
+          "slug": "gian-lorenzo-bernini-nga-2025"
+        }
+      ],
+      "date": "约 1635–1640 年",
+      "start": 1635,
+      "end": 1640,
+      "medium": "",
+      "accession": "545",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19904754-789c4f57d018aa56.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gian_lorenzo_bernini_selfportrait.jpg",
+      "credit": "Gian Lorenzo Bernini. Self Portrait of Gianlorenzo Bernini as a Mature Man (1638-40). Image credit: Gian Lorenzo Bernini. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19904754",
+      "description": "光聚集在贝尼尼的眼睛和脸颊附近，小白领打断深色衣服。周围笔触十分节制，让面孔始终主导画面。与他的雕塑群像相比，这幅绘画中的自我呈现几乎不需要明显动作。直接面对人的感觉，来自有选择的突出，而不是某个故事事件。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "0860ceab-e287-5f5e-9c4e-b1e72941ee1a",
+      "title": "青年时期的自画像",
+      "catalogueTitle": "Self Portrait of Gianlorenzo Bernini as young man (1623)",
+      "artist": "Gian Lorenzo Bernini",
+      "artists": [
+        {
+          "name": "Gian Lorenzo Bernini",
+          "role": "primary",
+          "slug": "gian-lorenzo-bernini-nga-2025"
+        }
+      ],
+      "date": "1623",
+      "start": 1623,
+      "end": 1623,
+      "medium": "",
+      "accession": "554",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19882428-8f0ef73474f19c9f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gian_Lorenzo_Bernini,_self-portrait,_c1623.jpg",
+      "credit": "Gian Lorenzo Bernini. Self Portrait of Gianlorenzo Bernini as young man (1623). Image credit: Gian Lorenzo Bernini. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19882428",
+      "description": "转过的头与宽领下方的身体朝向不同。深色头发和阴影围着眼睛，使目光方向格外明显。比较贝尼尼这两幅自画像，可以先看姿势和照明上的小变化。没有必要从任何一种表情中，读出有关青春或成熟的整套人生解释。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "5a1ee38f-7cf5-5f75-b46c-16d3392d360f",
+      "title": "基督被捕",
+      "catalogueTitle": "The Capture of Jesus Christ",
+      "artist": "Dirck van Baburen",
+      "artists": [
+        {
+          "name": "Dirck van Baburen",
+          "role": "primary",
+          "slug": "dirck-van-baburen-q380708"
+        }
+      ],
+      "date": "约 1619 年",
+      "start": 1619,
+      "end": 1619,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111232767-e55f51c08be9c33a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Baburen,_Dirck_van_-_Gefangennahme_Christi_-_1619.jpg",
+      "credit": "Dirck van Baburen. The Capture of Jesus Christ. Image credit: Dirck van Baburen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111232767",
+      "description": "狭窄暗处，面孔和盔甲仿佛相互遮挡。巴布伦借反射光挑出逮捕过程的部分细节，其余身体接触仍难分清。空间不足并非无关紧要：它把事件变成近距离的身体冲突，不让观众从远处清楚看见各自分开的参与者。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "be6bb1fb-66e1-50bc-9add-c22b5f625236",
+      "title": "音乐会",
+      "catalogueTitle": "The Concert",
+      "artist": "Gerard van Honthorst",
+      "artists": [
+        {
+          "name": "Gerard van Honthorst",
+          "role": "primary",
+          "slug": "gerard-van-honthorst-q314548"
+        }
+      ],
+      "date": "1626–1630",
+      "start": 1626,
+      "end": 1630,
+      "medium": "",
+      "accession": "31",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105979064-83d38530d79db68a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gerrit_van_Honthorst_cat02.jpg",
+      "credit": "Gerard van Honthorst. The Concert. Image credit: Gerard van Honthorst. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105979064",
+      "description": "摊开的乐谱为挤在一起的人们提供共同参照，但他们的目光往来于纸页和同伴之间。洪特霍斯特在紧凑人群里区分演奏、读谱与聆听。羽饰帽子让人物的外轮廓向桌面上方延伸。音乐会表现为不同动作之间的配合，而不是重复同一种乐手姿势。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "eea5682e-b053-44c8-8a7a-0a81e41d665d",
+      "title": "施洗者圣约翰",
+      "catalogueTitle": "Saint John the Baptist",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1609–1610",
+      "start": 1609,
+      "end": 1610,
+      "medium": "布面油画",
+      "accession": "267",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/eea5682e-b053-44c8-8a7a-0a81e41d665d-807658850337856f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_the_Baptist_(Galleria_Borghese)-Caravaggio_(1610).jpg",
+      "credit": "Caravaggio. Saint John the Baptist. Image credit: Caravaggio; Source credit: Self-scanned. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/saint-john-the-baptist",
+      "description": "卡拉瓦乔的坐姿人物，与布龙齐诺扭转身体的圣徒形成鲜明对照。下垂肩膀和部分伸开的腿，在红布与附近公羊旁显出静止无力的姿态。传统标志可以辨明约翰的身份，却不要求他摆出充满活力的先知姿势。先看裸露身体和松弛的坐法，再考虑是否有依据解释年轻面孔的情绪。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "5a0377a0-c577-5d61-9e51-0c563589d5fd",
+      "title": "圣母子与幼年圣约翰",
+      "catalogueTitle": "Virgin and Child with the Infant Saint John the Baptist",
+      "artist": "Lorenzo di Credi",
+      "artists": [
+        {
+          "name": "Lorenzo di Credi",
+          "role": "primary",
+          "slug": "lorenzo-di-credi-q8511"
+        }
+      ],
+      "date": "1488–1490",
+      "start": 1488,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111663498-6e1895dba23bf09c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lorenzo_di_Credi_-_Madonna_col_Bambino_con_San_Giovanni_Battista_(Galleria_Borghese).jpg",
+      "credit": "Lorenzo di Credi. Virgin and Child with the Infant Saint John the Baptist. Image credit: Lorenzo di Credi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111663498",
+      "description": "圆形边界将不同方向的视线聚拢在端坐的玛利亚周围。洛伦佐·迪·克雷迪让孩子们以不同姿势活跃这个封闭范围，又不破坏群体的亲密。身后风景提供另一个空间。圆形画幅并非被动容器，它实际限制着身体与手势能够怎样配合。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "0a841020-3cec-5308-b4c4-76cc608ac6ff",
+      "title": "朝拜圣婴",
+      "catalogueTitle": "Adoration of the Child",
+      "artist": "Fra Bartolomeo",
+      "artists": [
+        {
+          "name": "Fra Bartolomeo",
+          "role": "primary",
+          "slug": "fra-bartolomeo-q7780"
+        }
+      ],
+      "date": "1499",
+      "start": 1499,
+      "end": 1499,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0a841020-3cec-5308-b4c4-76cc608ac6ff-ae9d97d2589ff2ce.jpg",
+      "imageSource": "https://www.wikiart.org/en/fra-bartolomeo/adoration-of-the-child",
+      "credit": "Fra Bartolomeo. Adoration of the Child. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/fra-bartolomeo/adoration-of-the-child",
+      "description": "孩子躺得很低，大人们便必须弯身向地面靠近。弗拉·巴托洛梅奥在圆形画板中，把他们的朝向组织成宽阔的三角关系。遗迹与风景留在身后，眼前最直接的动作则是身体逐渐俯低。最小的人物虽然占地不多，却决定了其他人的姿势。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "c5d17be3-185a-5039-812d-9b2743535770",
+      "title": "大卫与歌利亚的头颅",
+      "catalogueTitle": "David Contemplating the Head of Goliath",
+      "artist": "Orazio Gentileschi",
+      "artists": [
+        {
+          "name": "Orazio Gentileschi",
+          "role": "primary",
+          "slug": "orazio-gentileschi-q367360"
+        }
+      ],
+      "date": "1610",
+      "start": 1610,
+      "end": 1610,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c5d17be3-185a-5039-812d-9b2743535770-9ce6a8dd5541a1f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/orazio-gentileschi/david-contemplating-the-head-of-goliath-1612",
+      "credit": "Orazio Gentileschi. David Contemplating the Head of Goliath. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/orazio-gentileschi/david-contemplating-the-head-of-goliath-1612",
+      "description": "奥拉齐奥·真蒂莱斯基选择了搏斗之后的一刻。大卫低头望着被斩下的头，身体在暗树前已经较为安定。浅色布料与四肢使他清楚可见，却没有重演战斗。画作呈现结果以及凝视这个结果的动作，之前的暴力则留待我们从残存之物中推想。",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    }
+  ],
+  "context": {
+    "start": 1488,
+    "end": 1640
+  },
+  "closingSections": [
+    {
+      "title": "先比较姿势，再命名情绪",
+      "paragraphs": [
+        "两幅圣约翰和两幅贝尼尼自画像，尤其适合比较姿态。记得始终将艺术家与具体作品身份同题名对应起来。请向美术馆确认当前开放和展出情况；这份选单并不是按时间安排的展厅参观路线。"
+      ]
+    }
+  ]
+}

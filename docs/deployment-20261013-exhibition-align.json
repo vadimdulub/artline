@@ -1,0 +1,103 @@
+{
+  "site": "https://artlines.org/exhibitions",
+  "status": "deployed_and_verified",
+  "change": "Restore aligned exhibition filters after guide-release regression; preserve the latest guide content and match Museum field heights, typography, and baselines.",
+  "deployment": {
+    "buildId": "98e71c03-0411-4065-b850-67422a382e38",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:exhibition-align-20261013-v2",
+    "baselineRevision": "artline-web-guides-rewrite-1012-v2",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:09755a4837f5b419473ce11f1f60111cfd61c0f51d0b9346694c8b263d384f5a",
+    "files": {
+      "components/ExhibitionFilters.tsx": "06a1a58992b577be7fab22091433f371d2699563f6f01ce88185409dbfc415cb",
+      "app/globals.css": "79ba7d258afe31be4d34acf79e630115e56f104ffd7f43484de288fbf5106e62",
+      "app/exhibitions/exhibitions.module.css": "0a54b100f47edb5f7b7476e9dffd4893a14d5b7b72aece1278cdfbdd38fcb57b"
+    },
+    "preimages": {
+      "components/ExhibitionFilters.tsx": "3e71413ad1b154e8d6bf83b8ae8bd71005b343fa69c8c79a9d91ce63ac3c3f75",
+      "app/globals.css": "175e2fdcd629ad0d643976fb0b69f90f5044b389c49b7c3e0d5edd6f530f6ed1",
+      "app/exhibitions/exhibitions.module.css": "fa29b435d0b68784f0f3cc1762b2286ae906bdf3e7ae258a3099516a5a5109da"
+    },
+    "overlaySHA256": "b6c4bb3f293b05436dcea53a2ccd09560e3dfc7a5f413bb451755a2101cd0f56",
+    "overlayURI": "gs://artline-508319-build-source/exhibition-align-20261013/b6c4bb3f293b0543.tar.xz",
+    "preservedGuideContentImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:09755a4837f5b419473ce11f1f60111cfd61c0f51d0b9346694c8b263d384f5a",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:2b933e6de9b67987d314598eb7e551969fed460d88c1053e66742cfcc6d49cc8",
+    "revision": "artline-web-exhibition-align-1013-v2",
+    "candidateURL": "https://exhibition-align-1013-v2---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-guides-rewrite-1012-v2",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100
+  },
+  "candidate": {
+    "at": "2026-10-13T06:54:26.659Z",
+    "checks": [
+      {
+        "width": 1440,
+        "fields": 4,
+        "inputFont": "13px",
+        "selectFont": "13px",
+        "inputBorder": "0px",
+        "inputHeight": 18,
+        "selectHeight": 18,
+        "firstRowAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "fields": 4,
+        "inputFont": "16px",
+        "selectFont": "16px",
+        "inputBorder": "0px",
+        "inputHeight": 44,
+        "selectHeight": 44,
+        "firstRowAligned": true,
+        "overflow": false
+      }
+    ],
+    "searchAndReset": true,
+    "url": "https://exhibition-align-1013-v2---artline-web-lpuqqlugnq-ew.a.run.app/exhibitions"
+  },
+  "production": {
+    "at": "2026-10-13T06:55:21.524Z",
+    "checks": [
+      {
+        "width": 1440,
+        "fields": 4,
+        "inputFont": "13px",
+        "selectFont": "13px",
+        "inputBorder": "0px",
+        "inputHeight": 18,
+        "selectHeight": 18,
+        "firstRowAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "fields": 4,
+        "inputFont": "16px",
+        "selectFont": "16px",
+        "inputBorder": "0px",
+        "inputHeight": 44,
+        "selectHeight": 44,
+        "firstRowAligned": true,
+        "overflow": false
+      }
+    ],
+    "searchAndReset": true,
+    "url": "https://artlines.org/exhibitions"
+  },
+  "databaseWrites": false,
+  "verifiedAt": "2026-10-13T06:55:47.818972+00:00",
+  "guideRegressionChecks": [
+    {
+      "path": "/guides/louvre",
+      "title": "The Louvre, from a card trick to a shipwreck",
+      "textSHA256": "b565c7c0308f5121732bf1925356f78a04bcbd1dde2f6eaf43657a769e95c781"
+    },
+    {
+      "path": "/guides/louvre/ru",
+      "title": "\u041b\u0443\u0432\u0440: \u043e\u0442 \u043a\u0430\u0440\u0442\u043e\u0447\u043d\u043e\u0433\u043e \u043e\u0431\u043c\u0430\u043d\u0430 \u0434\u043e \u043a\u043e\u0440\u0430\u0431\u043b\u0435\u043a\u0440\u0443\u0448\u0435\u043d\u0438\u044f",
+      "textSHA256": "f84044938dcf884a7b12d23dbb34e27f8dbe8678e3f37afa1e6f51a4473351d6"
+    }
+  ],
+  "regressionCause": "Guide rewrite release rebuilt an older application source lineage that did not include the previously deployed exhibition filters. This release restores the three verified filter files and retains the current deployed content layer."
+}

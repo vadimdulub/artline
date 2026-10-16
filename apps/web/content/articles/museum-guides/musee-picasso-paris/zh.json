@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "musee-picasso-paris",
+  "museum": "Musée national Picasso-Paris",
+  "city": "巴黎",
+  "country": "法国",
+  "title": "巴黎国立毕加索博物馆：杰作",
+  "subtitle": "二十件作品：解剖结构、大小与材料改变之后，我们为什么仍认得出它们？",
+  "introduction": "车座和车把可以变成公牛，同时仍然是自行车零件。两种形象并存，为这组作品提供了一个入口。毕加索画中的人物也保留着足够熟悉的线索，让我们在比例、轮廓和视角改变之后，仍能辨认身体。\n\n这里并没有一条从青年时期的写实通向成熟期抽象的单行线。坐着的孩子的重量、浴者庞大的体积、杂技演员不可思议的弯曲，分别解决不同的绘画问题。修拉和库尔贝的作品用来比较，而不是充当毕加索发展的阶段。沿着反复出现的题材看下去，可以问：哪些保留了，哪些改变了，这种改变又让画面多了什么可能？",
+  "visitNote": "博物馆会不时更换展品，并向其他展览出借藏品。参观前请查阅当前的展览安排；这里的展示是馆藏精选，而非按房间逐一参观的固定路线。",
+  "locale": "zh",
+  "website": "https://pop.culture.gouv.fr/notice/museo/M5043",
+  "officialGuide": "https://pop.culture.gouv.fr/notice/museo/M5043",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Pablo Picasso: A Retrospective",
+      "author": "Edited by William Rubin",
+      "url": "https://www.moma.org/calendar/exhibitions/1818",
+      "access": "数字化目录（“出版物”栏目 · 英文）",
+      "note": "MoMA 在“出版物”栏目下提供了威廉·鲁宾（William Rubin）1980 年回顾展图录的数字化版本。该图录详尽的编年梳理，有助于将这些风格迥异的作品置于毕加索更广泛的创作全貌中加以审视。"
+    }
+  ],
+  "works": [
+    {
+      "id": "e92b2ebd-93c6-558c-ad68-af878641f2c4",
+      "title": "海滩上的浴者",
+      "catalogueTitle": "Bathers on the beach",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/e92b2ebd-93c6-558c-ad68-af878641f2c4-6f391d27953a2572.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bathers-on-the-beach-1928",
+      "credit": "Pablo Picasso. Bathers on the beach. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bathers-on-the-beach-1928",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/bathers-on-the-beach-1928",
+      "description": "蓝色海水先交代地点，随后那些橙色棱角形状才被认作浴者。毕加索省去了许多通常用来解释姿势的解剖细节，把任务交给位置和相对大小。人物仍然像身体，是因为少数线索彼此配合，而不是每条肢体都能在真实海滩上的人身上找到可信的对应。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "55aa6207-fee4-5512-87ae-52acc8089b59",
+      "title": "杰奎琳与花",
+      "catalogueTitle": "Jacqueline with flowers",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1954",
+      "start": 1954,
+      "end": 1954,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/55aa6207-fee4-5512-87ae-52acc8089b59-48fdd32d3cc1e7f7.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/jacqueline-with-flowers-1954",
+      "credit": "Pablo Picasso. Jacqueline with flowers. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/jacqueline-with-flowers-1954",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/jacqueline-with-flowers-1954",
+      "description": "杰奎琳的侧脸在蓝底前形成坚实的边线。开花的枝条与衣服纹样在周围带出细小、不规则的变化。长颈又把头部与下方繁密的区域分开。肖像没有把人物和装饰融成一片纹理；她安静的轮廓与四周图案保持着对照。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "35f19648-9250-52b4-a8ee-ad5260af19be",
+      "title": "坐着的女人",
+      "catalogueTitle": "Seated Woman",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "纸上蜡笔画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/35f19648-9250-52b4-a8ee-ad5260af19be-f1dce6985ab4f764.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/seated-woman-1881",
+      "credit": "Seated Woman. WikiArt; Georges Seurat. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/seated-woman-1881",
+      "description": "修拉通过深色笔痕的累积塑造体积。笔痕稀疏时，身体逐渐接近纸张的亮度，而非止于一条连续边线。这与本组作品中毕加索强调轮廓的做法形成有用的比较：坐姿可以靠明暗密度的改变成立，不一定要先用线把身体圈起来。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "82d2f660-1c36-5e1d-9d3a-87297394dcca",
+      "title": "赤脚女孩",
+      "catalogueTitle": "The barefoot girl",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/82d2f660-1c36-5e1d-9d3a-87297394dcca-1e48c12c68aad905.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/the-barefoot-girl-1895",
+      "credit": "Pablo Picasso. The barefoot girl. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/the-barefoot-girl-1895",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/the-barefoot-girl-1895",
+      "description": "合拢的双手和露出的脚，把直坐的女孩稳稳安放在座位上。红裙将她与暗色枝叶区分开，姿态却并不夸张。这幅早期作品说明，毕加索能从持久观察和相对传统的肖像画法中得到多少东西。后来的变形，不必解释成他无力表现身体重量或比例后的回避。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "17fea4af-4226-53aa-bd66-5b719c7ff4ca",
+      "title": "公牛头",
+      "catalogueTitle": "Bull's Head",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "集合艺术，现成物",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/17fea4af-4226-53aa-bd66-5b719c7ff4ca-24d04118a56fbe17.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bulls-head-1942",
+      "credit": "Pablo Picasso. Bull's Head. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bulls-head-1942",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/bulls-head-1942",
+      "description": "博物馆注明，材料是真正的皮革车座和金属车把。原先用途仍一目了然：窄车座成为口鼻，弯车把成为牛角。不需要用逼真的毛发或塑出的眼睛来掩饰零件。这件雕塑让两种辨认同时成立，自行车与公牛共用一套小小的结构。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "f2bab2d0-3925-555a-873c-50980d6d41dc",
+      "title": "山羊头",
+      "catalogueTitle": "Head of a goat",
+      "artist": "Gustave Courbet",
+      "artists": [
+        {
+          "name": "Gustave Courbet",
+          "role": "primary",
+          "slug": "gustave-courbet-q34618"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107112135-b39e9e075bae5715.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:T%C3%AAte_de_chamois.jpg",
+      "credit": "Gustave Courbet. Head of a goat. Image credit: Gustave Courbet. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107112135",
+      "description": "库尔贝从动物特有的解剖结构入手。弯角下，光照到眼睛和口鼻，山与天空则提供环境。把它与毕加索拼装的公牛并看，差别就很清楚：一幅画细分肌肉和质感，另一件作品借用现成物。两者都依靠少数部分之间可辨认的关系。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "db9b87ea-2ed4-4c62-be1c-90c6c7b4e190",
+      "title": "戴条纹帽的女子半身像",
+      "catalogueTitle": "Buste de femme au chapeau rayé",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1939",
+      "start": 1939,
+      "end": 1939,
+      "medium": "",
+      "accession": "MP180 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/db9b87ea-2ed4-4c62-be1c-90c6c7b4e190-95cf61b8cd3912e9.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bust-of-woman-1939",
+      "credit": "Pablo Picasso. Bust of woman. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bust-of-woman-1939",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000628",
+      "description": "条纹没有止步于衣饰与人的分界。它们参与切分面孔和衣服，背景又延续竖向节奏。五官仍能认出，却不再位于光滑连续的表面上。毕加索让图案参与塑造身体，而不是等肖像完成之后才给它加上装饰。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "ff1864e2-38d8-4881-9e56-cdebbb20cbae",
+      "title": "海滩上的两名裸体女子",
+      "catalogueTitle": "Deux Femmes nues sur la plage",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "MP163 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/ff1864e2-38d8-4881-9e56-cdebbb20cbae-fc6ac022a5fed709.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/two-naked-women-on-the-beach-1937",
+      "credit": "Pablo Picasso. Two naked women on the beach. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/two-naked-women-on-the-beach-1937",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000614",
+      "description": "女子们朝下看，放大的四肢却占据浅窄空间。一个小小的共同活动因此显得像纪念性群像。圆润形体相互挤压的关系，比宽敞环境更重要；视线几乎没有绕过身体的余地。她们的靠近，是由具体的体积和摆放方式造成的。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "cb96f264-77b3-485d-9aa2-9c9dd411c878",
+      "title": "百叶窗旁的熟睡女子",
+      "catalogueTitle": "Dormeuse aux persiennes",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "",
+      "accession": "MP152 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/cb96f264-77b3-485d-9aa2-9c9dd411c878-eaf1334322db4f58.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/sleeper-near-the-shutters-1936",
+      "credit": "Pablo Picasso. Sleeper near the shutters. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/sleeper-near-the-shutters-1936",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000608",
+      "description": "头、手臂和肩膀折成紧凑的一串曲线。后方的百叶窗则排出更有规律的线条。两者的不同，让睡者放松的姿势从房间中区分出来。人物无须每一处都符合正常解剖，我们仍能明白这个熟悉动作：把头枕在手臂上。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "3bde1d87-2e78-4a2e-bd49-666ae2407aae",
+      "title": "玩卡车的孩子",
+      "catalogueTitle": "Enfant jouant avec un camion",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "布面油画",
+      "accession": "MP1990-25",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/3bde1d87-2e78-4a2e-bd49-666ae2407aae-ebbea6873f7298fc.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/child-playing-in-camomilles-1953",
+      "credit": "Pablo Picasso. Child playing in camomilles. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/child-playing-in-camomilles-1953",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000830",
+      "description": "枝叶繁杂，玩具只占很小一块地方。但孩子弯下的姿势使它对整个场景都变得重要：身体把目光引向卡车。毕加索又用不安定的笔痕包围这一小处专注。孩子沉浸在游戏中的状态仍然清楚，画面的其他部分却不必同样安静。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "d6ce8036-06bf-40c3-8ed6-22ef101a6182",
+      "title": "室内的女子",
+      "catalogueTitle": "Femmes dans un intérieur",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "布面油画",
+      "accession": "MP156 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/d6ce8036-06bf-40c3-8ed6-22ef101a6182-8d55731e980f3956.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/woman-in-the-interior-1936",
+      "credit": "Pablo Picasso. Woman in the interior. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/woman-in-the-interior-1936",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000612",
+      "description": "人物并非按同一个尺度适应房间。一人拿书坐着，较大的条纹身体却挤压着棱角分明的家具与墙面。毕加索没有修正这种不协调来换取可信的室内空间，而是借它区分不同的占位方式。日常居室仍可辨认，尺寸却难以还原。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "9ae7d5c5-76eb-4568-88b0-3647353ea53b",
+      "title": "人物与侧面像",
+      "catalogueTitle": "Figure et profil",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "布面油画",
+      "accession": "MP103 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/9ae7d5c5-76eb-4568-88b0-3647353ea53b-25ae66e96678dd09.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/figure-and-profile-1928",
+      "credit": "Pablo Picasso. Figure and profile. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/figure-and-profile-1928",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000560",
+      "description": "多只眼睛让中央轮廓难以被读作一个固定姿势下的一张脸。旁边打开的窗户反而容易识别。这个普通物件提供了清晰程度的参照，使人物更显奇异。画面不要求我们最终选定一种面孔解读；几种可能同时存在，本就是它的构造之一。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "74f219d5-49a3-4fae-8c07-d930eba79c16",
+      "title": "持书的大浴女",
+      "catalogueTitle": "Grande Baigneuse au livre",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "MP160 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/74f219d5-49a3-4fae-8c07-d930eba79c16-3fd090f2c30e380b.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/great-bather-reading-1937",
+      "credit": "Pablo Picasso. Great bather reading. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/great-bather-reading-1937",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000613",
+      "description": "书在俯身围住它的身体旁显得很小。宽大的四肢有石块般的紧实感，姿势却表现日常阅读。毕加索让专注有了具体形态：庞大的人体收拢在一小片书页周围。比例的不相称反而使阅读更醒目，并未让它被身体彻底遮蔽。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "09cd2249-52b2-4be9-ad9c-bd7dd18d7adc",
+      "title": "座桌上的大型静物",
+      "catalogueTitle": "Grande Nature morte au guéridon",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1931",
+      "start": 1931,
+      "end": 1931,
+      "medium": "布面油画",
+      "accession": "MP134 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/09cd2249-52b2-4be9-ad9c-bd7dd18d7adc-24f7b4a4ccd9de3a.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/great-still-life-on-pedestal-1931",
+      "credit": "Pablo Picasso. Great Still life on pedestal. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/great-still-life-on-pedestal-1931",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000582",
+      "description": "物件争取的空间，比整齐的桌面视图所能容纳的更多。曲线穿过色块，时而分开器皿，时而将它们连在一起。我们只能逐处、逐形辨认，而不能依赖单一稳定视点。座桌提供主题和构图限制，却不是让各件物品独立站立的稳固小舞台。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "e33103b3-2acf-4125-bcb7-2ddc34250f10",
+      "title": "杂技演员",
+      "catalogueTitle": "L'Acrobate",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "布面油画",
+      "accession": "MP120 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/e33103b3-2acf-4125-bcb7-2ddc34250f10-7003a1aaf6073044.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/female-acrobat-1930",
+      "credit": "Pablo Picasso. Female acrobat. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/female-acrobat-1930",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000576",
+      "description": "动作先于解剖上的可信。毕加索把浅色身体拉成一个长环，再靠手和脚让这段弯曲仍被理解为人的姿势。灰底清楚衬出弯折轮廓。沿着它追看，会发现这个身体按连续运动来组织，而不是受普通关节活动范围支配。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "da2ed4b8-9bed-4a6f-b252-8fefbc9d979a",
+      "title": "孩子与鸽子",
+      "catalogueTitle": "L'Enfant aux colombes",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1943",
+      "start": 1943,
+      "end": 1943,
+      "medium": "布面油画",
+      "accession": "MP192 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/da2ed4b8-9bed-4a6f-b252-8fefbc9d979a-fcc0eb6b15531904.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/a-child-with-pigeons-1943",
+      "credit": "Pablo Picasso. A child with pigeons. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/a-child-with-pigeons-1943",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000637",
+      "description": "棱角分明的家具填满孩子周围的大半房间。浅色鸟把视线带向上方，圆润的小身体却仍低低地留在拥挤框架中。尺度差别使它无法轻易成为安适的家庭场景。孩子受到空间围困，这一点从物件排列就能看出，无须编造他的内心感受。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "00c59b2a-f353-42cb-8490-81a9e0ebffb3",
+      "title": "饰有蓝色叶片的草帽",
+      "catalogueTitle": "Le Chapeau de paille au feuillage bleu",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "布面油画",
+      "accession": "MP155 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/00c59b2a-f353-42cb-8490-81a9e0ebffb3-069ef5c82c88b597.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/woman-in-a-straw-hat-1936",
+      "credit": "Pablo Picasso. The straw hat with blue leaves. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/woman-in-a-straw-hat-1936",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000611",
+      "description": "帽子比下方的脸更繁复。环形装饰和蓝叶在侧脸上方展开，而面部仅由几块黑、乳白和紫色围成。毕加索有选择地分配细节。各部分不必同样详尽，肖像仍能辨认；面部线索越简省，夸张头饰就越突出。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "940f67c6-f801-4335-8dce-f90a5f2ccaf9",
+      "title": "扮作阿尔勒金的保罗",
+      "catalogueTitle": "Paul en Arlequin",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "布面油画",
+      "accession": "MP83 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/940f67c6-f801-4335-8dce-f90a5f2ccaf9-215f062260e608d0.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/paul-as-harlequin-1924",
+      "credit": "Pablo Picasso. Paul as harlequin. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/paul-as-harlequin-1924",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000554",
+      "description": "菱格戏服让保罗成为演员，但细心描绘的脸与手仍指向一个具体孩子。下方家具附近较未完成的部分，显示画面各处受到的描绘并不均等。舞台角色没有完全吞没模特。戏服、孩子的具体面貌和不同完成程度仍可分别观察。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "1b411480-207e-4b02-97a2-5310c9f6bfbb",
+      "title": "朝鲜大屠杀",
+      "catalogueTitle": "Massacre en Corée",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1951",
+      "start": 1951,
+      "end": 1951,
+      "medium": "胶合板油画",
+      "accession": "MP203 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/1b411480-207e-4b02-97a2-5310c9f6bfbb-20a5a5f5f16b1606.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/massacre-in-korea-1951",
+      "credit": "Pablo Picasso. Massacre in Korea. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/massacre-in-korea-1951",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000647",
+      "description": "一条空地把毫无遮蔽的妇女、儿童与武装人物隔开。这个间隔至关重要：两组人相对而立，却没有可比的行动手段。像机械装置的武器进一步加剧不对等。画的抗议来自力量与脆弱的这种安排，不需要把人物画成某一时刻的摄影记录。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "b56809ad-3510-4ace-b8d4-d6f2318bb972",
+      "title": "玛雅与玩偶",
+      "catalogueTitle": "Maya à la poupée",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1938",
+      "start": 1938,
+      "end": 1938,
+      "medium": "布面油画",
+      "accession": "MP170 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/b56809ad-3510-4ace-b8d4-d6f2318bb972-ec791028e5cefb8e.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/portrait-of-maya-with-her-doll-1938",
+      "credit": "Pablo Picasso. Portrait of Maya with her doll. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/portrait-of-maya-with-her-doll-1938",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000690",
+      "description": "玛雅的大头和朝向不同的五官使肖像复杂起来，玩偶却让她的活动立刻变得熟悉。重复的颜色连接玩具、裙子和女孩。改变解剖结构，并未消除孩子与贴身物件的关系；它改变的是这份陪伴怎样安置在紧凑画面里，而非用抽象谜题取代它。",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    }
+  ],
+  "context": {
+    "start": 1875,
+    "end": 1954
+  },
+  "closingSections": [
+    {
+      "title": "追看一种变化",
+      "paragraphs": [
+        "比较早期肖像、海滩人物和杂技演员中的手。每一双都承担不同任务。这组作品不对应保证可见的参观路线；请查博物馆最新信息，确认到访时能够看到哪些作品。"
+      ]
+    }
+  ]
+}

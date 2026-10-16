@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline selected these works from documented museum holdings. The selection is independent of the museum, and individual works may be on loan or off display. Dates and attributions retain the qualifications in the linked records.",
+  "labels": {
+    "guides": "All guides",
+    "download": "Download PDF",
+    "language": "Guide language",
+    "translation": "AI-assisted translation",
+    "explore": "Explore this selection in Artline",
+    "contextNote": "See the selected works alongside books and events from their period, or compare when the artists lived. The books and events provide context, not evidence of direct influence. Works without confirmed dates remain in this guide.",
+    "all": "Artworks in context",
+    "allHint": "The selected works with books and history from their time.",
+    "painters": "Who lived when?",
+    "paintersHint": "See when the artists lived and whose lives overlapped.",
+    "events": "Historical events",
+    "eventsHint": "Explore events during the guide’s period",
+    "books": "Books timeline",
+    "booksHint": "Explore notable books from the same period",
+    "contents": "The selection",
+    "artworks": "Selected artworks",
+    "importance": "Why it matters",
+    "artwork": "Open artwork",
+    "source": "Object source",
+    "inventory": "Inventory",
+    "reading": "Further reading",
+    "visit": "Before your visit",
+    "website": "Museum website",
+    "officialGuide": "Official collection guide",
+    "updated": "Sources and visitor information checked"
+  },
+  "slug": "mauritshuis",
+  "museum": "Mauritshuis",
+  "city": "The Hague",
+  "country": "Netherlands",
+  "title": "Mauritshuis: Masterpieces",
+  "subtitle": "A pearl, a chained bird and a dissected arm reveal different ways of directing a gaze.",
+  "introduction": "Some pictures in this selection attract attention through an event: a lesson, a deliverance, a commotion at court. Others offer very little action. A bird remains on its perch; a tulip rises from a glass; Delft lies beyond the water. What keeps these quieter subjects from disappearing beside the narrative paintings is the precision with which attention is distributed.\n\nLook for the point where a painting becomes most specific, then notice what it leaves indistinct. Vermeer does not describe every part of a city equally, and Rembrandt does not illuminate every member of a gathering with equal force. Selectivity can make a picture feel more present than exhaustive detail would.",
+  "visitNote": "Check the museum's current collection entries and visitor information for display locations and loans. Some collection works may be shown at other venues or kept in storage.",
+  "locale": "en",
+  "website": "https://www.mauritshuis.nl/",
+  "officialGuide": "https://www.mauritshuis.nl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "Read online or download · English",
+      "note": "Walter Liedtke's Dutch Paintings in The Metropolitan Museum of Art includes sustained studies of portraiture, still life and daily-life painting. The freely readable volumes provide context for the genres gathered in this guide."
+    }
+  ],
+  "works": [
+    {
+      "id": "b385c469-a37d-57b8-8924-0409473d6c9e",
+      "title": "Girl with a Pearl Earring",
+      "catalogueTitle": "The Girl with a Pearl Earring",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "1665",
+      "start": 1665,
+      "end": 1665,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b385c469-a37d-57b8-8924-0409473d6c9e-8b98985de817aec7.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/the-girl-with-a-pearl-earring",
+      "credit": "Johannes Vermeer. The Girl with a Pearl Earring. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/johannes-vermeer/the-girl-with-a-pearl-earring",
+      "description": "The turned head suggests a movement interrupted, yet Vermeer supplies almost none of the setting that would explain it. Soft edges allow the face to emerge without a hard outline. Beside them, the bright earring needs very little description. Its sharpest effect is light, making the named accessory both conspicuous and surprisingly difficult to pin down as a solid object.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "6f904a58-f4b5-49d9-a19b-a365e0e066ba",
+      "title": "View of Delft",
+      "catalogueTitle": "View of Delft",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "c. 1660–1661",
+      "start": 1660,
+      "end": 1661,
+      "medium": "Oil on canvas",
+      "accession": "92",
+      "image": "https://artlines.org/assets/artworks/wikiart/6f904a58-f4b5-49d9-a19b-a365e0e066ba-d7238fb92dd06c22.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/view-on-delft",
+      "credit": "Johannes Vermeer. View of Delft. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/92-view-of-delft",
+      "description": "The strip of water keeps the city at a distance. Within its skyline, sunlight chooses certain buildings while others remain in shadow, so looking is directed rather than left evenly distributed. Vermeer makes weather part of the city's structure as it appears at this moment. The near figures provide scale without becoming the subject of an anecdote.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "89ea4820-dd83-58c8-99b8-8d0dc1275ae3",
+      "title": "Homer",
+      "catalogueTitle": "Homer",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1663",
+      "start": 1663,
+      "end": 1663,
+      "medium": "",
+      "accession": "584",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11710021-ede62e62e318b869.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_061.jpg",
+      "credit": "Rembrandt. Homer. Image credit: Rembrandt. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11710021",
+      "description": "The legendary poet receives the face and raised hand of an elderly man. Rembrandt keeps the surroundings subdued, allowing the gesture to suggest speech or recollection without staging a large historical setting. The painting's specificity lies in the imagined bodily presence. It does not depend on claiming that a particular expression can reveal the contents of Homer's thought.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "14c8ff0a-9a17-426a-ba4e-97bf0ac7bced",
+      "title": "Self-Portrait",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1669",
+      "start": 1669,
+      "end": 1669,
+      "medium": "Oil on canvas",
+      "accession": "840",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/14c8ff0a-9a17-426a-ba4e-97bf0ac7bced-38ab7e33fa17cfd1.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/self-portrait-1669-1",
+      "credit": "Rembrandt. Self-Portrait. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/840-self-portrait",
+      "description": "The face remains uneven, both as an ageing surface and as worked paint. That double visibility matters: Rembrandt depicts himself through a material that does not pretend to vanish. The dark coat and soft cap give the features room to register. Neither the sitter's age nor the handling establishes one definitive mood; the painting warrants closer attention than that shortcut allows.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "b3b98bf2-77df-56aa-98a5-b7ec7b7485f6",
+      "title": "Flowers in a Glass Vase",
+      "catalogueTitle": "Flowers in a Glass Vase",
+      "artist": "Rachel Ruysch",
+      "artists": [
+        {
+          "name": "Rachel Ruysch",
+          "role": "primary",
+          "slug": "rachel-ruysch-q234385"
+        }
+      ],
+      "date": "c. 1700",
+      "start": 1700,
+      "end": 1700,
+      "medium": "",
+      "accession": "L191",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117846483-1e0abd76f934519f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rachel_Ruysch_-_Summer_flowers_in_a_vase.jpg",
+      "credit": "Rachel Ruysch. Flowers in a Glass Vase. Image credit: Rachel Ruysch. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117846483",
+      "description": "The bouquet has an irregular perimeter. Tall stems, outward leaves and drooping flowers keep it from reading as a compact ornamental mass. Ruysch makes the whole arrangement depend on differences between its members. A blossom's direction and stage of growth matter alongside its colour, so botanical attention and compositional invention remain difficult to separate.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "5d167427-145e-5d1b-a82a-64934df1de9c",
+      "title": "Aletta Hanemans",
+      "catalogueTitle": "Portrait of Aletta Hanemans",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1625",
+      "start": 1625,
+      "end": 1625,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/5d167427-145e-5d1b-a82a-64934df1de9c-524fa480557b4bb9.jpg",
+      "imageSource": "https://www.wikiart.org/en/frans-hals/portrait-of-aletta-hanemans-1625",
+      "credit": "Frans Hals. Portrait of Aletta Hanemans. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/frans-hals/portrait-of-aletta-hanemans-1625",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frans-hals/portrait-of-aletta-hanemans-1625",
+      "description": "The large ruff creates a bright boundary beneath Aletta's face, while embroidery and the coat of arms declare a more public identity. Hals gives costume ample descriptive attention without making the sitter merely its support. Compare her pose with Jacob Olycan's: the pair share a language of status, but their bodily arrangements are not interchangeable.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "d1b7a75c-f9fd-557a-875f-c2e6c2c5c0fe",
+      "title": "Apelles Painting Campaspe",
+      "catalogueTitle": "Appelles painting Campaspe",
+      "artist": "Willem van Haecht",
+      "artists": [
+        {
+          "name": "Willem van Haecht",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2313990"
+        }
+      ],
+      "date": "1630",
+      "start": 1630,
+      "end": 1630,
+      "medium": "",
+      "accession": "266",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11685128-d4b9604bb0a18295.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Willem_van_Haecht_(II)_-_Apelles_painting_Campaspe_-_2.jpg",
+      "credit": "Willem van Haecht. Appelles painting Campaspe. Image credit: Willem van Haecht. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11685128",
+      "description": "The painter and model occupy only one part of a room already full of images. Van Haecht sets the ancient story inside a setting that makes looking itself conspicuous. Visitors examine objects, and the viewer must likewise choose among pictures, sculpture and distant openings. No single act of attention can take possession of the whole collection.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "759955bc-05a9-5690-bea7-adab82ee757f",
+      "title": "Andromeda Chained to the Rocks",
+      "catalogueTitle": "Andromeda Chained to the Rocks",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1630",
+      "start": 1630,
+      "end": 1630,
+      "medium": "",
+      "accession": "707",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1130734-b00fb7b6495ae8aa.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Andromeda,_Rembrandt_van_Rijn,_1630-1631,_Mauritshuis,_The_Hague.jpg",
+      "credit": "Rembrandt. Andromeda Chained to the Rocks. Image credit: Rembrandt. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1130734",
+      "description": "The raised arms belong to restraint rather than a triumphant gesture. Rembrandt confines the captive against the rock and gives light to a vulnerable body, leaving the larger adventure outside the immediate encounter. The myth is approached through waiting and exposure. An expected rescue does not remove the condition in which the painting holds its central figure.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "49830935-d730-547b-b8ac-ba0bdbdf58a9",
+      "title": "Moses and Pharaoh's Crown",
+      "catalogueTitle": "Moses and Pharaoh’s Crown",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "c. 1670",
+      "start": 1670,
+      "end": 1670,
+      "medium": "",
+      "accession": "1167",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11784784-3c0dbf24d9039f2c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jan_Steen_(1626-1679),_Moses_and_Pharaoh%E2%80%99s_Crown,_c.1670.jpg",
+      "credit": "Jan Steen. Moses and Pharaoh’s Crown. Image credit: Jan Steen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11784784",
+      "description": "The child is small beside the adults, but their gestures make him the source of a large disturbance. The crown in the foreground offers a concrete object around which to read their reactions. Steen treats courtly history as an event passing unevenly through a crowd: authority, surprise and attention do not all occupy the same place.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "da3768d3-9d6b-5385-b540-f58eaf4e4a36",
+      "title": "Brothel Scene",
+      "catalogueTitle": "Brothel Scene",
+      "artist": "Frans van Mieris the Elder",
+      "artists": [
+        {
+          "name": "Frans van Mieris the Elder",
+          "role": "primary",
+          "slug": "frans-van-mieris-the-elder-q959236"
+        }
+      ],
+      "date": "1658",
+      "start": 1658,
+      "end": 1658,
+      "medium": "Oil on panel",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/da3768d3-9d6b-5385-b540-f58eaf4e4a36-3ed90ca02844f515.jpg",
+      "imageSource": "https://www.wikiart.org/en/frans-van-mieris-the-elder/brothel-scene-1658",
+      "credit": "Frans van Mieris the Elder. Brothel Scene. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/frans-van-mieris-the-elder/brothel-scene-1658",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frans-van-mieris-the-elder/brothel-scene-1658",
+      "description": "The reaching hand makes the encounter more specific than a general scene of sociability. Van Mieris gives fabric and furnishings a finish that can initially attract attention away from that gesture. The title asks for a second reading of the room's relations. What appears comfortable and familiar may also organise an exchange whose terms are not openly stated.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "a09311fb-9220-50f8-9900-11f14de1c356",
+      "title": "The Deliverance of Saint Peter",
+      "catalogueTitle": "The Deliverance of St. Peter",
+      "artist": "Hendrick ter Brugghen",
+      "artists": [
+        {
+          "name": "Hendrick ter Brugghen",
+          "role": "primary",
+          "slug": "hendrick-ter-brugghen-q437233"
+        }
+      ],
+      "date": "1624",
+      "start": 1624,
+      "end": 1624,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/a09311fb-9220-50f8-9900-11f14de1c356-d83f738cefeb107e.jpg",
+      "imageSource": "https://www.wikiart.org/en/hendrick-terbrugghen/the-deliverance-of-st-peter",
+      "credit": "Hendrick ter Brugghen. The Deliverance of St. Peter. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hendrick-terbrugghen/the-deliverance-of-st-peter",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hendrick-terbrugghen/the-deliverance-of-st-peter",
+      "description": "The angel's pointing hand gives a direction to a scene otherwise crowded by two closely placed bodies. Peter's low hands and answering face keep the response physically distinct from the instruction. Ter Brugghen concentrates the release into an exchange rather than a panorama of escape. The difference between the two gestures supplies its movement.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "3e8b3339-3bd7-570d-845f-ad0d20450e73",
+      "title": "The Goldfinch",
+      "catalogueTitle": "The Goldfinch",
+      "artist": "Carel Fabritius",
+      "artists": [
+        {
+          "name": "Carel Fabritius",
+          "role": "primary",
+          "slug": "carel-fabritius-q352954"
+        }
+      ],
+      "date": "1654",
+      "start": 1654,
+      "end": 1654,
+      "medium": "Oil panel",
+      "accession": "605",
+      "image": "https://artlines.org/assets/artworks/wikiart/3e8b3339-3bd7-570d-845f-ad0d20450e73-35cb5fb896782635.jpg",
+      "imageSource": "https://www.wikiart.org/en/carel-fabritius/the-goldfinch-1654",
+      "credit": "Carel Fabritius. The Goldfinch. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/605-the-goldfinch",
+      "description": "The chain makes a limit visible in an otherwise spare image. Fabritius gives the perched bird convincing presence through shadows and economical paint rather than an inventory of feathers. The museum identifies scratches through the thick yellow of its wing. A mark can therefore remain plainly made by a hand while helping sustain the illusion of a living creature.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "9b86ca40-1adb-57ad-8c03-6f5f5352565a",
+      "title": "Hilly Landscape beside a Stream",
+      "catalogueTitle": "Hilly Landscape beside a Stream",
+      "artist": "Guillam Dubois",
+      "artists": [
+        {
+          "name": "Guillam Dubois",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5616002"
+        }
+      ],
+      "date": "1652",
+      "start": 1652,
+      "end": 1652,
+      "medium": "",
+      "accession": "554",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q17275977-6a4c6b0f681fd786.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hilly_Landscape_beside_a_Stream_by_Guillam_Du_Bois_Mauritshuis_554.jpg",
+      "credit": "Guillam Dubois. Hilly Landscape beside a Stream. Image credit: Guillam Dubois. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q17275977",
+      "description": "The boat provides a small measure against which to judge the rising bank and trees. Dubois does not need a spectacular incident to articulate the terrain: gradual tonal changes carry the movement from water into distance. The route offers an alternative passage across the land. Together they make the view traversable without turning it into a diagram.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "848a6d1c-fd6e-5da3-ab9c-c73686f6e154",
+      "title": "The Anatomy Lesson of Dr Nicolaes Tulp",
+      "catalogueTitle": "The Anatomy Lesson of Dr Nicolaes Tulp",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1632",
+      "start": 1632,
+      "end": 1632,
+      "medium": "Oil canvas",
+      "accession": "146",
+      "image": "https://artlines.org/assets/artworks/wikiart/848a6d1c-fd6e-5da3-ab9c-c73686f6e154-4b1f11b4f0bc6104.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/the-anatomy-lesson-of-dr-nicolaes-tulp-1632",
+      "credit": "Rembrandt van Rijn. The Anatomy Lesson of Dr Nicolaes Tulp. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp",
+      "description": "The demonstrated arm supplies the group with a shared reason to be present. Yet the men's different sightlines keep the portrait from becoming one repeated expression of interest. Rembrandt places their faces above the sharply foreshortened body, joining public self-presentation to an event. The corpse is both the lesson's subject and the compositional ground on which the gathering depends.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "981aa0bc-3da0-5c00-919e-e6711bb6780e",
+      "title": "Diana and Her Nymphs",
+      "catalogueTitle": "Diana and her Companions",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "c.1653 - c. 1654",
+      "start": 1653,
+      "end": 1654,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikiart-500-painters-20261011/981aa0bc-3da0-5c00-919e-e6711bb6780e-12d98f7c27ef8114.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/diana-and-her-companions",
+      "credit": "Johannes Vermeer. Diana and her Companions. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/johannes-vermeer/diana-and-her-companions",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/406-diana-and-her-nymphs",
+      "description": "Foot-washing brings the mythological company down to an act of physical care. The kneeling figure directs attention to Diana without the goddess needing a commanding gesture. This early Vermeer offers a useful check on expectations formed by the interiors: large figures in a dark clearing can also produce concentration through a modest, carefully organised action.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "28097867-77d1-5e30-8fae-09cbef56356a",
+      "title": "Jacob Pietersz. Olycan",
+      "catalogueTitle": "Portrait of Jacob Pietersz Olycan",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1625",
+      "start": 1625,
+      "end": 1625,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/28097867-77d1-5e30-8fae-09cbef56356a-81559b4cea4fad50.jpg",
+      "imageSource": "https://www.wikiart.org/en/frans-hals/portrait-of-jacob-pietersz-olycan",
+      "credit": "Frans Hals. Portrait of Jacob Pietersz Olycan. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/frans-hals/portrait-of-jacob-pietersz-olycan",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frans-hals/portrait-of-jacob-pietersz-olycan",
+      "description": "The hand at the side and slight turn of the body give Jacob room to assert his presence. Bright lace defines edges within the dark costume, whose distinctions would disappear if it were treated as one black shape. Hals's companion portrait of Aletta uses similar resources differently. Formal pairing need not require identical posture or identical emphasis.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "a5d39233-e902-52e5-a995-b39d560c911d",
+      "title": "Slaughtered Pig in a Moonlit Landscape",
+      "catalogueTitle": "Slaughtered Pig in a Moonlit Landscape",
+      "artist": "Cornelis Symonsz van der Schalcke",
+      "artists": [
+        {
+          "name": "Cornelis Symonsz van der Schalcke",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5171250"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "",
+      "accession": "800",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q17276084-952851533fd3116f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Slaughtered_Pig_in_a_Moonlit_Landscape_by_Cornelis_Symonsz._van_der_Schalcke_Mauritshuis_800.jpg",
+      "credit": "Cornelis Symonsz van der Schalcke. Slaughtered Pig in a Moonlit Landscape. Image credit: Cornelis Symonsz van der Schalcke. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q17276084",
+      "description": "The rural task emerges from a small pool of illumination. Van der Schalcke withholds an immediately readable setting, making the suspended carcass and nearby figures appear gradually against the surrounding darkness. The light determines how much of the activity can be known. The subject's ordinariness does not make its nocturnal presentation ordinary.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "94f55f4e-84a1-5caf-8cca-e61319f52ef7",
+      "title": "Still Life with a Stoneware Jug, Herring and Smoking Utensils",
+      "catalogueTitle": "Still Life with Stone Jug, Kipper and smoker's requisites.",
+      "artist": "Pieter Claesz",
+      "artists": [
+        {
+          "name": "Pieter Claesz",
+          "role": "primary",
+          "slug": "pieter-claesz-q354832"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "",
+      "accession": "3714",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q112583954-fae934bc27cde16b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pieter_Claesz._-_Still-Life_-_WGA4967.jpg",
+      "credit": "Pieter Claesz. Still Life with Stone Jug, Kipper and smoker's requisites.. Image credit: Pieter Claesz. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q112583954",
+      "description": "Bread, fish, drink and pipes place different uses within reach of the same table. Claesz keeps the palette restrained, allowing a change of surface to distinguish stoneware from glass or a clay stem. The picture rewards attention to how an object could be handled. Its material differences remain specific even when its colours are close.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "435acb52-2321-5555-8a41-1bb71ef11119",
+      "title": "Still Life",
+      "catalogueTitle": "Still life",
+      "artist": "Isaac van Kipshaven",
+      "artists": [
+        {
+          "name": "Isaac van Kipshaven",
+          "role": "primary",
+          "slug": "wikimedia-painter-q17516183"
+        }
+      ],
+      "date": "1661",
+      "start": 1661,
+      "end": 1661,
+      "medium": "",
+      "accession": "814",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q17276092-601cad63f4201fb7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sumptuous_Still_Life_by_Isaack_van_Kipshaven_Mauritshuis_814.jpg",
+      "credit": "Isaac van Kipshaven. Still life. Image credit: Isaac van Kipshaven. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q17276092",
+      "description": "The fruit seems to spread out of its containers, but heavier vessels and the table edge prevent the arrangement from losing its bearings. Van Kipshaven makes a controlled display appear generous rather than regimented. Small highlights recover individual skins from the dark setting, letting the abundance be examined piece by piece instead of merely counted as plenty.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "a5e3db92-bd0a-5e67-bfef-7b115ec77830",
+      "title": "Vase with a Single Tulip",
+      "catalogueTitle": "Vase with a single tulip",
+      "artist": "Balthasar van der Ast",
+      "artists": [
+        {
+          "name": "Balthasar van der Ast",
+          "role": "primary",
+          "slug": "balthasar-van-der-ast-q472522"
+        }
+      ],
+      "date": "c. 1625",
+      "start": 1625,
+      "end": 1625,
+      "medium": "",
+      "accession": "1229",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117293962-bc1ef91d1db725ea.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ast_Balthasar_van_der,_A_Single_Tulip_in_a_Vase_(1b).jpg",
+      "credit": "Balthasar van der Ast. Vase with a single tulip. Image credit: Balthasar van der Ast. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117293962",
+      "description": "One flower is enough to organise the picture. Its stripes and bent leaves offer distinctions that a larger bouquet might absorb into a mass. Van der Ast leaves space around the glass and butterfly, making their relations easier to follow. The reduced cast of objects increases the consequence of each turn, interval and translucent edge.",
+      "importance": "",
+      "museum": "Mauritshuis"
+    }
+  ],
+  "context": {
+    "start": 1624,
+    "end": 1700
+  },
+  "closingSections": [
+    {
+      "title": "Make room for a small subject",
+      "paragraphs": [
+        "Pair a crowded narrative with a spare painting, then compare how each chooses its centre. The single tulip need not be an interlude before a more important picture. Works may move between display, conservation and loans; use the Mauritshuis's current object information when planning a visit."
+      ]
+    }
+  ]
+}

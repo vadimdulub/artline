@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "national-gallery-prague",
+  "museum": "National Gallery Prague",
+  "city": "布拉格",
+  "country": "捷克",
+  "title": "布拉格国家美术馆：杰作",
+  "subtitle": "二十件作品，在自画像、寓言与有人生活的风景之间展开。",
+  "introduction": "一幅自画像里，亨利·卢梭把自己画得远大于身后的城市；另一幅里，佩帕·马尔扎科娃把自己放在父亲和绘画器材旁。两人都在宣告艺术家的在场，却为这份在场选择了不同环境：一个是公共景观，一个是共同工作的关系。\n\n这份布拉格国家美术馆选集，往来于个人身份与承担更广意义的形象之间，其中有斯拉维亚、慈悲与地方社群。风景也包含人的选择，既可见于耕作的土地，也可见于强烈重组的颜色。以下文字追随这些变化，不主张二十件作品都属于同一种风格或同一条民族叙事。",
+  "visitNote": "布拉格国家美术馆分布于多处馆舍。此处精选的馆藏并非参观路线图，也未涵盖所有主要藏品。展品可能会在不同场馆间调配或外借展出；请在前往参观前查阅美术馆的最新展陈信息。",
+  "locale": "zh",
+  "website": "https://www.ngprague.cz",
+  "officialGuide": "https://www.ngprague.cz",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基的著作为“色彩脱离具象描绘而独立”这一观点提供了当时的论据。不妨将其与什帕拉（Špála）笔下粉色的风景和棱角分明的人体形象进行比较，但切勿预设这些画作是对其书中所述理念的图解。"
+    }
+  ],
+  "works": [
+    {
+      "id": "a68941be-ec65-523e-bd07-d2b200e0a91d",
+      "title": "化身斯拉维亚的约瑟芬·克兰-布拉德利",
+      "catalogueTitle": "Portrait of Josephine Crane-Bradley as Slavia",
+      "artist": "Alphonse Mucha",
+      "artists": [
+        {
+          "name": "Alphonse Mucha",
+          "role": "primary",
+          "slug": "alphonse-mucha-q146691"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "O 3978",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q48977656-6d4f7363abd1635d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:SlaviaMucha.jpg",
+      "credit": "Alphonse Mucha. Portrait of Josephine Crane-Bradley as Slavia. Image credit: Alphonse Mucha; Source credit: Národní galerie v Praze. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q48977656",
+      "description": "坐着的女子仍然是一个具体的人，但礼服与象征性环境又要求她代表斯拉维亚。肖像与拟人形象因此同时存在，并非后者替代前者。花纹边框让这层转化成为公开展示：有名有姓的人被放进一套设计，其含义超出了她个人的生平。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "db616a03-e442-5989-a764-5894cbbf28c8",
+      "title": "捷克之心",
+      "catalogueTitle": "Czech Heart",
+      "artist": "Alphonse Mucha",
+      "artists": [
+        {
+          "name": "Alphonse Mucha",
+          "role": "primary",
+          "slug": "alphonse-mucha-q146691"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "",
+      "accession": "O 3641",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/db616a03-e442-5989-a764-5894cbbf28c8-36d34418f8093b44.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Alfons_Mucha_-_Czech_Heart_-_O_3641_-_National_Gallery_Prague.jpg",
+      "credit": "Alphonse Mucha. Czech Heart. Image credit: Alphonse Mucha; Source credit: National Gallery Prague. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q114081299",
+      "description": "女子垂下的手与孩子单薄的身体，让照料关系中的不对等立即可见。穆夏把寓言的任务收束为一次近距离相遇，没有不断添加装饰性符号。标题指向更宽广的意义，但最清楚的依据仍是这两个人物的身体关系。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "7865596b-b313-5789-8d1d-7258059899d4",
+      "title": "圣路易岛自画像",
+      "catalogueTitle": "Self Portrait from L'ile Saint Louis",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7865596b-b313-5789-8d1d-7258059899d4-145844edd1d21027.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/self-portrait-from-l-ile-saint-louis-1890",
+      "credit": "Henri Rousseau. Self Portrait from L'ile Saint Louis. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/self-portrait-from-l-ile-saint-louis-1890",
+      "description": "调色板与画笔说明这位高大的深色人物是画家，后方城市则提供了他要在其中占有一席之地的世界。博物馆称此作为《我自己：肖像—风景》，恰好点出两者不对等的结合。环境仍然可辨，却不决定站在其前方的艺术家应有多大。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "8515b8b0-e206-569d-a7c3-3057444ea423",
+      "title": "塔季扬娜·列宾娜——艺术家的母亲",
+      "catalogueTitle": "Tatyana Repina, the Artist's Mother",
+      "artist": "Ilya Repin",
+      "artists": [
+        {
+          "name": "Ilya Repin",
+          "role": "primary",
+          "slug": "ilya-repin-q172911"
+        }
+      ],
+      "date": "1867",
+      "start": 1867,
+      "end": 1867,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/8515b8b0-e206-569d-a7c3-3057444ea423-5a76f1f35c0e6bf0.jpg",
+      "imageSource": "https://www.wikiart.org/en/ilya-repin/tatyana-repina-the-artist-s-mother-1867",
+      "credit": "Ilya Repin. Tatyana Repina, the Artist's Mother. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ilya-repin/tatyana-repina-the-artist-s-mother-1867",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ilya-repin/tatyana-repina-the-artist-s-mother-1867",
+      "description": "披巾包住面孔，紧密取景又排除了双手与大部分身体。因此，列宾的母亲通过有限的五官和布料被呈现。母子关系为观看提供背景，却不能授权我们编写她在这一刻心里想了什么。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "b93fc77b-1223-58a5-9f84-88f310ca80df",
+      "title": "蓬图瓦兹的埃尔米塔日花园",
+      "catalogueTitle": "The Gardens of l'Hermitage, Pontoise",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1867",
+      "start": 1867,
+      "end": 1867,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/b93fc77b-1223-58a5-9f84-88f310ca80df-819059cd50b61702.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/the-gardens-of-l-hermitage-pontoise",
+      "credit": "The Gardens of l'Hermitage, Pontoise. WikiArt; Camille Pissarro. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/the-gardens-of-l-hermitage-pontoise",
+      "description": "这片山坡经过耕作，并非未经触碰。小小的劳动者尚未清楚，墙、路与种植区块便已将地面分开；人的活动不只见于居民，也见于土地结构。毕沙罗让园艺与聚居在以树木、房屋和天空为主的景中，仍保有可辨认的位置。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "7b2dfc65-7b0c-5d4d-bca4-3f8a6d735ad6",
+      "title": "夜曲",
+      "catalogueTitle": "Nocturne",
+      "artist": "Robert Macaulay Stevenson",
+      "artists": [
+        {
+          "name": "Robert Macaulay Stevenson",
+          "role": "primary",
+          "slug": "wikimedia-painter-q15435269"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "",
+      "accession": "O 716",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117215606-2c220efd2bdab7b0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Macaulay_Stevenson_1860-_-_Nocturno.jpg",
+      "credit": "Robert Macaulay Stevenson. Nocturne. Image credit: Robert Macaulay Stevenson; Source credit: National Gallery in Prague. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117215606",
+      "description": "树木与倒影在水边形成对应的暗色形状。有限的明暗范围中，一小片亮处变得格外醒目。由于现有复制图是单色，不能可靠地用颜色作解释；这里可见的重要关系，是剪影、明亮空隙与包围它们的暗部之间的关系。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "6df48fd0-a430-54bd-889f-3d62b1c22546",
+      "title": "洛普德岛上的一条路",
+      "catalogueTitle": "A Road on Lopud",
+      "artist": "Václav Špála",
+      "artists": [
+        {
+          "name": "Václav Špála",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2477590"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "O 8598",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117215445-d11ed650e2a397f6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:V%C3%A1clav_%C5%A0p%C3%A1la_-_Cesta_na_Lopudu.jpg",
+      "credit": "Václav Špála. A Road on Lopud. Image credit: Václav Špála; Source credit: https://sbirky.ngprague.cz/dielo/CZE:NG.O_8598. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117215445",
+      "description": "道路仍是穿过风景的路线，但带棱角的树木与粉、蓝、绿色面，使它无法敞开为一条连续通道。什帕拉让向前推进的视线不断遇到打断。可辨认的地形与醒目的色彩组织同时存在，任何一方都没有完全从属于另一方。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "7aba859e-ccc1-550d-946d-6fc9e2b18c16",
+      "title": "手持苹果的夏娃",
+      "catalogueTitle": "Eve with an Apple",
+      "artist": "Václav Špála",
+      "artists": [
+        {
+          "name": "Václav Špála",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2477590"
+        }
+      ],
+      "date": "1911–1912",
+      "start": 1911,
+      "end": 1912,
+      "medium": "",
+      "accession": "O 7979",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117215037-a03f94738cc5606a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:V%C3%A1clav_%C5%A0p%C3%A1la_-_Eva_s_jablkem.jpg",
+      "credit": "Václav Špála. Eve with an Apple. Image credit: Václav Špála; Source credit: https://sbirky.ngprague.cz/en/dielo/CZE:NG.O_7979. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117215037",
+      "description": "深色轮廓将巨大的红粉色身体圈在绿坡与蓝天之前。夏娃的大小让她与周围地形同样引人注目。宽阔色块在画面上连接人物与风景，明确的边界又确保题材仍然看得清。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "888317c4-61a6-523f-9f73-5ee81797499e",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Václav Špála",
+      "artists": [
+        {
+          "name": "Václav Špála",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2477590"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "O 3482",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117214835-bbea350cfd303c45.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:V%C3%A1clav_%C5%A0p%C3%A1la_-_Autoportr%C3%A9t.jpg",
+      "credit": "Václav Špála. Self-Portrait. Image credit: Václav Špála; Source credit: https://sbirky.ngprague.cz/en/dielo/CZE:NG.O_3482. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117214835",
+      "description": "调色板说明了人物职业，面部的蓝、绿分区则演示了这一职业可以做什么。要画得像，并不要求每块颜色都模仿通常的肤色。在这幅自画像里，画家的身份既由膝上的工具说明，也由使用颜色的方法来传达。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "a35feff0-3d1c-5109-811d-22bad5be90d3",
+      "title": "三位洗衣妇",
+      "catalogueTitle": "Three Washerwomen",
+      "artist": "Václav Špála",
+      "artists": [
+        {
+          "name": "Václav Špála",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2477590"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "O 9019",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117215030-a44d735aec445e82.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:V%C3%A1clav_%C5%A0p%C3%A1la_-_T%C5%99i_pradleny.jpg",
+      "credit": "Václav Špála. Three Washerwomen. Image credit: Václav Špála; Source credit: https://sbirky.ngprague.cz/en/dielo/CZE:NG.O_9019. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117215030",
+      "description": "洗衣妇不易彼此分开，因为弯曲的背和手臂嵌入了同一组折角。她们反复进行的劳动，是这种图案的基础。画面减少了周围环境，洗衣的动作主要靠所需的身体姿势被辨认，而非靠一整套家用物品的罗列。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "6af3341d-f09b-5ab0-a6ee-1bb910b95c95",
+      "title": "在巴黎的一场展览上",
+      "catalogueTitle": "At an Exhibition in Paris",
+      "artist": "Karel Špillar",
+      "artists": [
+        {
+          "name": "Karel Špillar",
+          "role": "primary",
+          "slug": "wikimedia-painter-q15360515"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "",
+      "accession": "O 6492",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/6af3341d-f09b-5ab0-a6ee-1bb910b95c95-cd89358cfa6aacf5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Karel_%C5%A0pillar_-_At_an_Exhibition_in_Paris_-_O_6492_-_National_Gallery_Prague.jpg",
+      "credit": "Karel Špillar. At an Exhibition in Paris. Image credit: Karel Špillar; National Gallery Prague. https://commons.wikimedia.org/wiki/File:Karel_%C5%A0pillar_-_At_an_Exhibition_in_Paris_-_O_6492_-_National_Gallery_Prague.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117215532",
+      "description": "展览通常把注意力引向作品，什皮拉尔却转而描绘在作品间行走、站立和观看的人。前景人物标出这个社交空间中离我们较近的位置，画作与展架则成为环境。观看艺术本身，也成了一种值得画下来的活动。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "06b5c601-a836-5f2e-a4b6-685ff13c05d0",
+      "title": "在咖啡馆里",
+      "catalogueTitle": "In a Café",
+      "artist": "Karel Špillar",
+      "artists": [
+        {
+          "name": "Karel Špillar",
+          "role": "primary",
+          "slug": "wikimedia-painter-q15360515"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "",
+      "accession": "O 5283",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/06b5c601-a836-5f2e-a4b6-685ff13c05d0-ac1347fb2400a5bc.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Karel_%C5%A0pillar_-_In_a_Caf%C3%A9_-_O_5283_-_National_Gallery_Prague.jpg",
+      "credit": "Karel Špillar. In a Café. Image credit: Karel Špillar; National Gallery Prague. https://commons.wikimedia.org/wiki/File:Karel_%C5%A0pillar_-_In_a_Caf%C3%A9_-_O_5283_-_National_Gallery_Prague.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117215488",
+      "description": "即使面孔有些被遮住，帽子、花朵与杯子仍说明这是一个社交场所。浅色衣服逐渐松散到周围较暖的笔痕里，让人和房间不再分得那么清。画面呈现众人共处公共空间，却没有替桌边人物安排一段确定的谈话。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "014b1410-722c-573b-9957-b3b3ed3aa17b",
+      "title": "领取早餐的孩子们",
+      "catalogueTitle": "Children received their breakfast",
+      "artist": "Ferdinand Georg Waldmüller",
+      "artists": [
+        {
+          "name": "Ferdinand Georg Waldmüller",
+          "role": "primary",
+          "slug": "ferdinand-georg-waldmuller-q186816"
+        }
+      ],
+      "date": "1859",
+      "start": 1859,
+      "end": 1859,
+      "medium": "",
+      "accession": "O 12502",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105958374-f966b44f74fef0a5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Waldm%C3%BCller_-_Kinder_erhalten_ihr_Fr%C3%BCst%C3%BCck.jpeg",
+      "credit": "Ferdinand Georg Waldmüller. Children received their breakfast. Image credit: Ferdinand Georg Waldmüller; Source credit: repro from artbook. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105958374",
+      "description": "门口把明亮室外与昏暗房间分开，孩子们因位置不同而有的清楚、有的不那么清楚。食物在他们之间传递，外墙边的男孩则更明显地独立出来。一次共同早餐包含等待与领取等不同处境，不必把整群孩子读成某种单一的“童年表情”。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "06e9adc7-7939-595b-b6bf-4e15d952e092",
+      "title": "哈蒂格伯爵夫妇：罗马的慈悲",
+      "catalogueTitle": "Count Franz de Paula Graf von Hartig and his wife Eleanore as Caritas Romana",
+      "artist": "Barbara Krafft",
+      "artists": [
+        {
+          "name": "Barbara Krafft",
+          "role": "primary",
+          "slug": "krafft-barbara-research-6579d43ea67d"
+        }
+      ],
+      "date": "1797",
+      "start": 1797,
+      "end": 1797,
+      "medium": "",
+      "accession": "O 9690",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110812755-bdd72cb007e46615.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Barbara_Krafft_-_Franz_de_Paula_hrab%C4%9B_Hartig_a_jeho_man%C5%BEelka_Eleonora_jako_Caritas_Romana_(1797).jpg",
+      "credit": "Barbara Krafft. Count Franz de Paula Graf von Hartig and his wife Eleanore as Caritas Romana. Image credit: Barbara Krafft; Source credit: kultura.zpravy.idnes.cz. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110812755",
+      "description": "姓名明确的人物承担了“罗马的慈悲”这一题材，画面因而既是双人肖像，也借用了一段故事。他们亲密的身体安排，在普通社会身份肖像里会显得不同寻常。历史角色改变了呈现方式，却不意味着所画事件真的发生在他们自己的生活中。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "8787e986-73d3-5892-ad24-e194fe98cfd7",
+      "title": "第欧根尼",
+      "catalogueTitle": "Diogenes",
+      "artist": "Maximilian Pirner",
+      "artists": [
+        {
+          "name": "Maximilian Pirner",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1648193"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "",
+      "accession": "O 5069",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/8787e986-73d3-5892-ad24-e194fe98cfd7-d64981e90df42264.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Max_Pirner_-_Diogenes_-_O_5069_-_National_Gallery_Prague.jpg",
+      "credit": "Maximilian Pirner. Diogenes. Image credit: Maximilian Pirner; National Gallery Prague. https://commons.wikimedia.org/wiki/File:Max_Pirner_-_Diogenes_-_O_5069_-_National_Gallery_Prague.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117213683",
+      "description": "年老哲人在木桶旁俯身，空中人物则占据上方另一层区域。粗糙地面与简陋住处给下方人物一个可触知的地方，上方幻想因而也有了对照。两层画面通过差异相连：身体需求、所处位置，以及看起来能多自由地移动，都不同。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "fc745b6d-fc3c-54e5-be24-4a909c561656",
+      "title": "傍晚的宁静",
+      "catalogueTitle": "Evening Silence",
+      "artist": "Antonín Hudeček",
+      "artists": [
+        {
+          "name": "Antonín Hudeček",
+          "role": "primary",
+          "slug": "wikimedia-painter-q10853893"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "O 8411",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/fc745b6d-fc3c-54e5-be24-4a909c561656-529695c0d3662be2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anton%C3%ADn_Hude%C4%8Dek_-_Evening_Silence_-_O_8411_-_National_Gallery_Prague.jpg",
+      "credit": "Antonín Hudeček. Evening Silence. Image credit: Antonín Hudeček; National Gallery Prague. https://commons.wikimedia.org/wiki/File:Anton%C3%ADn_Hude%C4%8Dek_-_Evening_Silence_-_O_8411_-_National_Gallery_Prague.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117213459",
+      "description": "女子面对山谷，我们看不到她的表情。她的位置让风景中也有一个正在向外远望的人，弯曲小径则把近景接向远处。即使没有可讲述的事件，暮色仍足以让人停留。宁静来自构图，而不是对她内心感受的断言。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "93f8b332-b816-5eea-b0f4-e9ca346077b6",
+      "title": "与父亲的自画像",
+      "catalogueTitle": "Self-Portrait with Her Father",
+      "artist": "Pepa Mařáková",
+      "artists": [
+        {
+          "name": "Pepa Mařáková",
+          "role": "primary",
+          "slug": "wikimedia-painter-q20428113"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "",
+      "accession": "O 3591",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/93f8b332-b816-5eea-b0f4-e9ca346077b6-ce511fe83efed066.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pepa_Ma%C5%99%C3%A1kov%C3%A1_-_Self-Portrait_with_Her_Father_-_O_3591_-_National_Gallery_Prague.jpg",
+      "credit": "Pepa Mařáková. Self-Portrait with Her Father. Image credit: Pepa Mařáková; National Gallery Prague. https://commons.wikimedia.org/wiki/File:Pepa_Ma%C5%99%C3%A1kov%C3%A1_-_Self-Portrait_with_Her_Father_-_O_3591_-_National_Gallery_Prague.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117214342",
+      "description": "马尔扎科娃朝向画外，父亲则转向她，两人的目光没有趋于一致。绘画器材使这里既是家庭肖像，也是共同的职业环境。父亲教她画画，并在女性尚不能正式入学的年代，让她得以非正式地接触布拉格美术学院。这层关系的实际影响，远远超出了眼前房间。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "cf4e7dee-333f-5988-b4a4-014e7d82761a",
+      "title": "巨人山脉中的高山湖泊",
+      "catalogueTitle": "Mountain Lake in the Giant Mountains",
+      "artist": "Otakar Lebeda",
+      "artists": [
+        {
+          "name": "Otakar Lebeda",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1248344"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "",
+      "accession": "O 3765",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105062253-0c062fef21ca09c0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Otakar_Lebeda_-_Horsk%C3%A9_oko_v_Krkono%C5%A1%C3%ADch_(1896).jpg",
+      "credit": "Otakar Lebeda. Mountain Lake in the Giant Mountains. Image credit: Otakar Lebeda; Source credit: National Gallery in Prague. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105062253",
+      "description": "湖面低伏在四周陡坡之间，群山由此形成环抱结构。前景破碎的岩石先呈现较近、较粗粝的地带，目光随后才到达水面。风景没有敞开为无限的全景，而是借围住湖泊的地形，让人感受其中的距离。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "75b245fc-4ca7-5c99-908a-0c745701e187",
+      "title": "摩拉维亚-斯洛伐克圣母：摩拉维亚歌曲",
+      "catalogueTitle": "Moravian Slovak Madonna (Moravian Song)",
+      "artist": "Joža Uprka",
+      "artists": [
+        {
+          "name": "Joža Uprka",
+          "role": "primary",
+          "slug": "wikimedia-painter-q12027136"
+        }
+      ],
+      "date": "1902",
+      "start": 1902,
+      "end": 1902,
+      "medium": "",
+      "accession": "O 3919",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/75b245fc-4ca7-5c99-908a-0c745701e187-aced684f44384367.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jo%C5%BEa_Uprka_-_Moravian_Slovak_Madonna_(Moravian_Song)_-_O_3919_-_National_Gallery_Prague.jpg",
+      "credit": "Joža Uprka. Moravian Slovak Madonna (Moravian Song). Image credit: Joža Uprka; National Gallery Prague. https://commons.wikimedia.org/wiki/File:Jo%C5%BEa_Uprka_-_Moravian_Slovak_Madonna_(Moravian_Song)_-_O_3919_-_National_Gallery_Prague.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117214901",
+      "description": "中央供敬拜的人物，与身着地方服饰的人群，以不同方式吸引目光。三块画板既容纳共同的宗教中心，也容纳众多参加集体仪式的人。服装与重复的动作使聚集有了当地特征，让这件三联画不只是可以随意替换的礼拜图像。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    },
+    {
+      "id": "2c159ac0-4bdb-55c4-9c5b-eb5d03be6f63",
+      "title": "边缘地带的星期日",
+      "catalogueTitle": "Sunday on the Periphery",
+      "artist": "Georges Kars",
+      "artists": [
+        {
+          "name": "Georges Kars",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1508974"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "O 12797",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/2c159ac0-4bdb-55c4-9c5b-eb5d03be6f63-0be7c8803b71260a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ji%C5%99%C3%AD_Kars_-_Sunday_on_the_Periphery_-_O_12797_-_National_Gallery_Prague.jpg",
+      "credit": "Georges Kars. Sunday on the Periphery. Image credit: Georges Kars; National Gallery Prague. https://commons.wikimedia.org/wiki/File:Ji%C5%99%C3%AD_Kars_-_Sunday_on_the_Periphery_-_O_12797_-_National_Gallery_Prague.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117215305",
+      "description": "休息者与行走者，同样被画成树木和地面那样的棱角形体。公共景观被压缩起来，而不是整齐分成一个个身体与远方背景。因此，星期日的休闲生活通过共同的画面结构被呈现，尽管其中每个人仍在做不同的事。",
+      "importance": "",
+      "museum": "National Gallery Prague"
+    }
+  ],
+  "context": {
+    "start": 1797,
+    "end": 1920
+  },
+  "closingSections": [
+    {
+      "title": "先比较角色，再看年代",
+      "paragraphs": [
+        "在 Artline 中把卢梭、马尔扎科娃与什帕拉并列，看看各自如何表现“做艺术家”这件事。年代提供背景，却不能证明直接关联。国家美术馆分布于多栋建筑，展陈也会调整；确定参观路线前，请查明相关收藏与具体作品的位置。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "national-museum-oslo",
+  "museum": "National Museum",
+  "city": "オスロ",
+  "country": "ノルウェー",
+  "title": "オスロ国立美術館：名作",
+  "subtitle": "窓、手すり、海岸線、想像の庭は、異なる空間を分けている。",
+  "introduction": "《叫び》の手すりは、揺れる輪郭の世界に確かな斜線を引く。別の絵では、バルコニーが静かな冬景色を囲み、教会の戸口が薄暗い内部を日光につなぐ。これらの境界は、背景の便利な部品以上のものだ。人物の立つ位置、届く範囲、外の世界が画面に入る方法を決めている。\n\nこの選集はムンク、バッケル、クローグ夫妻、ヒェランをはじめ、風景画や童話の場面をたどる。どの絵にも不安の表現を求めるわけではない。敷居や境目は疎外感を強めるだけでなく、日常の仕事や共同生活を組み立てることもできる。繰り返す形と同じほど、使い方の違いを見る必要がある。",
+  "visitNote": "これらは国立美術館の所蔵作品の一部です。オスロにある別の施設、ムンク美術館の所蔵作品とは異なります。ご来館の際は、展示状況や貸出状況、その他の変更点について、国立美術館の最新の所蔵作品情報をご確認ください。",
+  "locale": "ja",
+  "website": "https://www.nasjonalmuseet.no/en/",
+  "officialGuide": "https://www.nasjonalmuseet.no/en/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "無料で読む · 英語",
+      "note": "トーン、線、構図を扱ったスピードの章は、バッカーの光あふれる室内画とバルケの凝縮された風景画を比較するための、実践的な語彙を提供している。本書はそうした差異を理解する手がかりとなるものであり、直接的な影響の証拠ではない。"
+    }
+  ],
+  "works": [
+    {
+      "id": "3b27f10e-6b48-45cf-8004-d6bc7ec499fc",
+      "title": "叫び",
+      "catalogueTitle": "The Scream",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "厚紙にテンペラ、ワックスクレヨン",
+      "accession": "NG.M.00939",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/c6909208-ec12-45d4-8a22-ddd029afd397-3c37b0a1092a21a2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Scream_by_Edvard_Munch,_1893_-_Nasjonalgalleriet.png",
+      "credit": "Edvard Munch, The Scream. National Museum, Oslo. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00939",
+      "description": "手すりの直線は場面を通る道筋を示すが、空と水はその安定に従わない。ムンクはそれらの曲線を、口を開けて頭を抱える人物に近づけた。苦痛は一人の身体だけには収まらないように見える。周囲も構図によって参加しており、風景が実際に聞こえる音を出していると主張する必要はない。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "bf70337f-e950-4958-8c3a-e831c0c18e13",
+      "title": "マドンナ",
+      "catalogueTitle": "Madonna",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "キャンバスに油彩",
+      "accession": "NG.M.00841",
+      "image": "https://artlines.org/assets/artworks/wikiart/bf70337f-e950-4958-8c3a-e831c0c18e13-54ea040f64815679.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/madonna-1894",
+      "credit": "Edvard Munch. Madonna. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00841",
+      "description": "聖なる題名に対して、暗い髪と陰に囲まれた、一部を露出する身体がある。赤い光輪のような形が、信仰の連想と肉体のあいだの定まらない関係を強める。ムンクの傾いた頭と宙にとどまるような姿勢は、一つの見慣れた分類に落ち着かない。曖昧さは説明の挿話が欠けるからでなく、絵が何を結びつけているかから生まれる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "6f30b012-9e05-5235-a82b-57f3925821b8",
+      "title": "ラファイエット通り",
+      "catalogueTitle": "Street Lafayette",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/6f30b012-9e05-5235-a82b-57f3925821b8-8ed45118124ed49a.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/street-lafayette-1891",
+      "credit": "Edvard Munch. Street Lafayette. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edvard-munch/street-lafayette-1891",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edvard-munch/street-lafayette-1891",
+      "description": "バルコニーの男は都市の活動を見渡すが、身体はそこから離れている。はるか下では短い色の筆跡が通りを忙しくし、歩行者を一人ずつ詳しく描くことは避ける。ムンクは距離を、見ることの条件にした。比較的静かな観察者の下で、都市は動きの広がる場所になる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "8c082244-d84d-5381-bc1c-a1f19b6a0d66",
+      "title": "春",
+      "catalogueTitle": "Spring",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8c082244-d84d-5381-bc1c-a1f19b6a0d66-aa89cff8d660e950.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/spring-1889",
+      "credit": "Edvard Munch. Spring. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edvard-munch/spring-1889",
+      "description": "明るい窓と動くカーテンが、青白い若い女性と年長の付き添いに外を近づける。ムンクは病気と看病を、新しい空気の気配と同じ部屋に置いた。その対比は回復を保証しない。光は弱った人の周囲を変えることができても、その人の状態自体を解決するわけではない。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "6af8a531-6013-5c88-baba-72ba9c46328e",
+      "title": "妹インゲル",
+      "catalogueTitle": "Sister Inger",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6af8a531-6013-5c88-baba-72ba9c46328e-551f813359310cde.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/sister-inger-1884",
+      "credit": "Edvard Munch. Sister Inger. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edvard-munch/sister-inger-1884",
+      "description": "暗い服は背景にほぼ溶け込み、顔と手が身体の位置を定める。明るい部分の配置が不均等なので、左右対称の記号にはならない。ムンクは暗さのなかのわずかな違いから肖像をつくった。背景を限ることで人物の存在は集中するが、特定の内心を割り当てる根拠はほとんどない。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "8389ba60-8804-5a6f-8be0-52c88ad50d6e",
+      "title": "青い室内",
+      "catalogueTitle": "Blue Interior",
+      "artist": "Harriet Backer",
+      "artists": [
+        {
+          "name": "Harriet Backer",
+          "role": "primary",
+          "slug": "harriet-backer-q263025"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "NG.M.02582",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q22303213-a8438aec2ff0e481.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harriet_Backer_-_Blue_Interior_-_Google_Art_Project.jpg",
+      "credit": "Harriet Backer. Blue Interior. Image credit: Harriet Backer; Source credit: hgEgkxpd_4iyCA at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q22303213",
+      "description": "寒色の部屋で赤い書き物机が明快な対比をつくるが、バッケルは座る女性だけに注意を集めない。家具、絵、光の当たる間隔も、十分な主題である。人物は部屋の配置に属している。色が女性を空間につなぎ、その空間の面白さは、彼女が何を考えているかだけには左右されない。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "bddc4aaa-e5a9-59ca-8d93-6963fcc8894d",
+      "title": "タヌム教会の洗礼式",
+      "catalogueTitle": "Christening in Tanum Church",
+      "artist": "Harriet Backer",
+      "artists": [
+        {
+          "name": "Harriet Backer",
+          "role": "primary",
+          "slug": "harriet-backer-q263025"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "",
+      "accession": "NG.M.02465",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21177097-1985d2149b910d7e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harriet_Backer_-_Christening_in_Tanum_Church_-_Google_Art_Project.jpg",
+      "credit": "Harriet Backer. Christening in Tanum Church. Image credit: Harriet Backer; Source credit: HwFRac5hmtoV0w at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21177097",
+      "description": "戸口は明るい屋外の人々と、薄暗い教会にすでに座る人々をつなぐ。バッケルは共同体の行事を、それを迎える空間の条件から描いた。続く開口部が目を内外へ動かし、題名の儀式だけにはとどめない。建築が、集まるための段階的な入口と、待つ場所を与えている。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "61cad4b0-a9bf-5137-a614-63a4f92ea650",
+      "title": "ランプの光のもとで",
+      "catalogueTitle": "By Lamp Light",
+      "artist": "Harriet Backer",
+      "artists": [
+        {
+          "name": "Harriet Backer",
+          "role": "primary",
+          "slug": "harriet-backer-q263025"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "NG.M.02323",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q22304362-ce77dae1baf5e8f5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harriet_Backer_-_By_Lamp_Light_-_Google_Art_Project.jpg",
+      "credit": "Harriet Backer. By Lamp Light. Image credit: Harriet Backer; Source credit: OgEFw8dGHdBwQw at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q22304362",
+      "description": "ランプの照らす範囲と女性の注意は、作業の場所で重なる。手と横顔には姿勢が分かるだけの暖かな光が届き、部屋の多くは暗いままだ。バッケルは集中の範囲を見えるものにした。周囲の暗さを孤独と読む必要はない。仕事に役立つ光と、今は必要のない空間を分けてもいる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "5a250437-bd75-56ce-8305-654fb891ce66",
+      "title": "日本の提灯",
+      "catalogueTitle": "A Japanese Lantern",
+      "artist": "Oda Krohg",
+      "artists": [
+        {
+          "name": "Oda Krohg",
+          "role": "primary",
+          "slug": "oda-krohg-q271470"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "NG.M.00879",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55423005-b4d84915bcf114d6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Oda_Krohg_-_A_Japanese_Lantern_-_Google_Art_Project.jpg",
+      "credit": "Oda Krohg. A Japanese Lantern. Image credit: Oda Krohg; Source credit: fwGBNpCfAiI86w at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55423005",
+      "description": "暖かな人工の光が、開口部の向こうの冷たい水と木々を前に吊られている。オダ・クローグは二つの条件を、一つの雰囲気に混ぜずに共存させた。座る女性は、光の交わるところにいる。境目は部屋と眺めをただ分けるのでなく、室内と夕暮れの関係をつくっている。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "0e591988-11da-5c55-a44a-cf7a5b76b56d",
+      "title": "イーゼルに向かうクリスチャン・クローグ",
+      "catalogueTitle": "Christian Krohg at the Easel",
+      "artist": "Oda Krohg",
+      "artists": [
+        {
+          "name": "Oda Krohg",
+          "role": "primary",
+          "slug": "oda-krohg-q271470"
+        }
+      ],
+      "date": "1885–1890",
+      "start": 1885,
+      "end": 1890,
+      "medium": "",
+      "accession": "NMK.2020.0293",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106470890-be130cb7e40846e3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Oda_Krohg_-_Christian_Krohg_at_the_Easel_-_NMK.2020.0293_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Oda Krohg. Christian Krohg at the Easel. Image credit: Oda Krohg. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q106470890",
+      "description": "画家の注意はキャンバスに向いたままで、こちらは横からその姿を見る。パレット、椅子、姿勢が、正式なアトリエ肖像の格式なしに制作を示す。オダ・クローグは屋外の周囲を自由な筆で残した。実用的な配置だけで、仕事をする身体に明確な位置と目的を与えられる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "b1ae11ed-ec7d-554e-a6ca-3ba7ff2c78b5",
+      "title": "ソリア・モリア城",
+      "catalogueTitle": "Soria Moria Palace",
+      "artist": "Theodor Kittelsen",
+      "artists": [
+        {
+          "name": "Theodor Kittelsen",
+          "role": "primary",
+          "slug": "theodor-kittelsen-q380085"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "NG.M.00551",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55421468-f236f1fce06d622c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Theodor_Kittelsen_-_Soria_Moria_Palace_-_NG.M.00551_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Theodor Kittelsen. Soria Moria Palace. Image credit: Theodor Kittelsen; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55421468",
+      "description": "金色の塔は鮮明だが、そこを到達できる場所につなぐ構造は霧に隠れる。キッテルセンは目的地を、見えているのに近づけないものにした。童話らしさは、その接近経路の欠落にもある。明るさが見分ける手がかりを与える一方、隠れた土台は、どう行けばよいかという普通の理解を妨げる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "0cf2b1a8-e47d-5fd5-833c-949aae41fdca",
+      "title": "灰かぶりの若者と狐",
+      "catalogueTitle": "The Ash Lad and the Fox",
+      "artist": "Theodor Kittelsen",
+      "artists": [
+        {
+          "name": "Theodor Kittelsen",
+          "role": "primary",
+          "slug": "theodor-kittelsen-q380085"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "NG.M.00547",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55421461-9b82bf704ec0da34.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Theodor_Kittelsen_-_The_Ash_Lad_and_the_Fox_-_NG.M.00547_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Theodor Kittelsen. The Ash Lad and the Fox. Image credit: Theodor Kittelsen; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55421461",
+      "description": "林の開けた場所で、少年と直立する狐が向かい合う。立ち止まった姿は、人同士の出会いのように見える。キッテルセンは物語の不可能さを導入するのに、派手な景観をほとんど必要としない。分かる道と、二者の距離だけで足りる。普通ならありえない相手が、それ以外はもっともらしい尺度の場所に入っている。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "b982d693-9771-5965-80e8-4991b2326b13",
+      "title": "バルコニーの冬",
+      "catalogueTitle": "Winter on the Balcony",
+      "artist": "Harald Sohlberg",
+      "artists": [
+        {
+          "name": "Harald Sohlberg",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1367020"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "NMK.2021.0434",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111496870-e4513948e41006c2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harald_Sohlberg_-_Winter_on_the_Balcony_-_NMK.2021.0434_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Harald Sohlberg. Winter on the Balcony. Image credit: Harald Sohlberg; Source credit: Nasjonalmuseet for kunst, arkitektur og design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111496870",
+      "description": "手すりは近く、明確だが、その向こうの水と地面には動きが少ない。ソールベルグは、視界を開くために囲いを除かず、守られた観察地点を風景の一部にした。これは屋外を自由に浮く目の眺めではなく、境界に立つ誰かの眺めだ。抑えた色は隔たりを強めるが、一つの決まった感情としては説明しない。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "7917e329-eb24-5cc6-a12f-c04d350433c4",
+      "title": "霧のなかのステティン",
+      "catalogueTitle": "Stetind in Mist",
+      "artist": "Peder Balke",
+      "artists": [
+        {
+          "name": "Peder Balke",
+          "role": "primary",
+          "slug": "peder-balke-research-1c8dae003685"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7917e329-eb24-5cc6-a12f-c04d350433c4-b63b7ed5f2a2d454.jpg",
+      "imageSource": "https://www.wikiart.org/en/peder-balke/stetind-in-mist-1865",
+      "credit": "Peder Balke. Stetind in Mist. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/peder-balke/stetind-in-mist-1865",
+      "description": "尖った峰は、それを支える地形の多くより鮮明に見える。バルケは霞に情報を消させ、決定的な輪郭だけで山の存在を示した。暗い岸と淡い遠方の対比が大きさを伝える。場面の力は、広大な場所のすべてを等しく詳述するのでなく、何をはっきりさせるかの選択から生まれる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "b8bbf977-aaae-5c24-9404-f853beb0efd0",
+      "title": "ノルウェー沿岸の灯台",
+      "catalogueTitle": "Lighthouse on the Norwegian Coast",
+      "artist": "Peder Balke",
+      "artists": [
+        {
+          "name": "Peder Balke",
+          "role": "primary",
+          "slug": "peder-balke-research-1c8dae003685"
+        }
+      ],
+      "date": "1850–1860",
+      "start": 1850,
+      "end": 1860,
+      "medium": "",
+      "accession": "NG.M.01320",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/norwegian/q20113250-b4e6b507eb68360c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Peder_Balke_-_Lighthouse_on_the_Norwegian_Coast_-_NG.M.01320_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Lighthouse on the Norwegian Coast. Peder Balke; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20113250",
+      "description": "水と雲の大きな動きに対し、灯台は細い垂直線を示す。その小ささによって、海岸の荒々しさを測りやすくなる。バルケは建物を明るく読める形にするが、周囲を支配する力はほとんど与えない。航海を助ける構造物が、その働きの及ぶ範囲をはるかに越える条件のなかに置かれている。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "5eae5fb4-54db-5edc-aa41-984f2f48aec1",
+      "title": "夏の夜",
+      "catalogueTitle": "Summer Night",
+      "artist": "Kitty Lange Kielland",
+      "artists": [
+        {
+          "name": "Kitty Lange Kielland",
+          "role": "primary",
+          "slug": "kitty-lange-kielland-q2596759"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "NG.M.00357",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55424945-375df761dc462020.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kitty_Kielland_-_Summer_Night_-_Google_Art_Project.jpg",
+      "credit": "Kitty Lange Kielland. Summer Night. Image credit: Kitty Lange Kielland; Source credit: PwGtQgwyhKNSTw at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55424945",
+      "description": "ヒェランは目立つ一点の光ではなく、近い色調の関係で夕べを保つ。葦、スイレン、反射が水際に小さな違いを加える。劇的な出来事よりも、その変化に注意を向ける絵だ。静けさは情報の欠如ではない。追ってみる価値のある情報の大きさを変えるのである。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "f18ea841-fd13-5a87-aebd-9a44ccb76a54",
+      "title": "イェーレン、オグナから望む海",
+      "catalogueTitle": "View over the Sea from Ogna, Jæren",
+      "artist": "Kitty Lange Kielland",
+      "artists": [
+        {
+          "name": "Kitty Lange Kielland",
+          "role": "primary",
+          "slug": "kitty-lange-kielland-q2596759"
+        }
+      ],
+      "date": "1878",
+      "start": 1878,
+      "end": 1878,
+      "medium": "",
+      "accession": "NG.M.00975",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55425166-e4df9d2b6ef89223.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kitty_Kielland_-_View_over_the_Sea_from_Ogna,_J%C3%A6ren_-_NG.M.00975_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Kitty Lange Kielland. View over the Sea from Ogna, Jæren. Image credit: Kitty Lange Kielland; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55425166",
+      "description": "丸い岩と浅い水路が手前の地面を複雑にし、その後に開けた海へ目が届く。ヒェランは不揃いな表面と低い植物で、そこまでの道のりを実感させる。水平線は比較的単純だが、前景は素早い通過を許さない。海岸は遠い眺望だけでなく、足元に近いものからも理解できる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "2c75da72-0951-5e7f-87bb-a5f7f0203819",
+      "title": "バレストラン",
+      "catalogueTitle": "Balestrand",
+      "artist": "Hans Gude",
+      "artists": [
+        {
+          "name": "Hans Gude",
+          "role": "primary",
+          "slug": "hans-gude-q701669"
+        }
+      ],
+      "date": "1848",
+      "start": 1848,
+      "end": 1848,
+      "medium": "",
+      "accession": "NMK.2021.0108",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106019345-09cd4feb8f4272a2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hans_Gude_-_Balestrand_-_NMK.2021.0108_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Hans Gude. Balestrand. Image credit: Hans Gude. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q106019345",
+      "description": "小さな人物と建物が岸辺に馴染みのある尺度を置き、その後で山々が規模を広げる。グーデは近い岩、水、斜面を読み取れる距離に分け、光で一部を区別した。フィヨルドは量感がありながら、形のない巨大さにはならない。住居が基準となり、風景を長く渡る距離を判断できる。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "974df0f1-a12c-53b6-ab70-d590af47d167",
+      "title": "森",
+      "catalogueTitle": "A Forest",
+      "artist": "Lars Hertervig",
+      "artists": [
+        {
+          "name": "Lars Hertervig",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1346539"
+        }
+      ],
+      "date": "1853",
+      "start": 1853,
+      "end": 1853,
+      "medium": "",
+      "accession": "NG.M.02009",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55424736-548af4d03863de35.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lars_Hertervig_-_A_Forest_-_Google_Art_Project.jpg",
+      "credit": "Lars Hertervig. A Forest. Image credit: Lars Hertervig; Source credit: EwG0W3HsCM_1KA at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55424736",
+      "description": "手前の木々が眺めの多くを囲むが、遠い開口部と淡い雲の帯が完全な閉鎖を防ぐ。ヘルテルヴィグは、見える量を不均等に配分した。密な塊をたどってから、その先の明るさに届くので、森の緊張は配置そのものにある。入りにくさを説明するために、森の事件を創作する必要はない。",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "237f313c-1752-5127-8c2e-6dd6dcba025a",
+      "title": "黄金時代",
+      "catalogueTitle": "The Golden Age",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1530",
+      "start": 1530,
+      "end": 1530,
+      "medium": "板に油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/237f313c-1752-5127-8c2e-6dd6dcba025a-85157d715a672658.jpg",
+      "imageSource": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-golden-age",
+      "credit": "The Golden Age. WikiArt; Lucas Cranach the Elder. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-golden-age",
+      "description": "休み、踊り、水浴する人々が、動物や果樹と庭を共有する。クラナハは、悩みのない異なる活動によって想像上の調和を具体化し、その周りに壁を置いた。この境界は見逃せない。理想世界は、明らかに外から隔てられている。安らかさは整えられた囲いに依存し、その外の日常を記録したという主張ではない。",
+      "importance": "",
+      "museum": "National Museum"
+    }
+  ],
+  "context": {
+    "start": 1530,
+    "end": 1900
+  },
+  "closingSections": [
+    {
+      "title": "境界をたどる",
+      "paragraphs": [
+        "窓、岸、手すりを一つ選び、その両側で何が変わるか見てみよう。一国に共通する気分の図解にせず、作品をつなぐことができる。この選集は国立美術館の所蔵品を扱い、別のMUNCHのコレクションや、固定された現在の展示ではない。訪問前に、個々の作品と公開条件を美術館で確認したい。"
+      ]
+    }
+  ]
+}

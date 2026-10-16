@@ -1,5 +1,105 @@
 # Artline image use
 
+## Museum of Russian Impressionism — 12 October 2026
+
+The user requested the museum's collection and exhibitions, then explicitly
+approved its exhibitions beyond 1989 and all dated museum artworks beyond 1970.
+This selected production delivery adds 68 authentic collection reproductions
+and 71 additional documentary exhibition images. Three collection images are
+reused by exact native object identity. Every derivative was visually reviewed,
+retains the complete source frame and is at most 100,000 bytes; all 139 new
+public assets were checksum-verified. The existing Yuon primary image stays
+unchanged, with the museum reproduction added as an alternate.
+
+The museum states that image use is available by enquiry; no reuse licence was
+found. Actual rights remain unknown, with museum/creator credit, policy URL,
+source captures, download receipts and original files retained. The user's
+selection is separate from an independently obtained rights-holder licence.
+Exhibition loans do not become museum holdings or new main-catalogue works.
+See [the museum delivery record](research/russian-impressionism-museum-20261012/README.md).
+
+## Historical exhibition production images — 12 October 2026
+
+The user's deployment request and subsequent historical correction authorize
+selected production images for exhibitions from 1600 through 1989, retaining
+paintings, drawings, prints and icons. The retired 2020–2025 gallery is excluded.
+The real local catalogue remains read-only. This supersedes the local-only
+restriction of the earlier exhibition preview below.
+
+The Cleveland continuation delivers 234 exact native-object images with explicit
+per-object CC0 evidence, original downloads, checksums and full-frame derivatives
+under 100,000 bytes. Every prepared image was visually reviewed. Whole screen
+pairs, individual panels and album leaves retain their own catalogue identities;
+representative primary views are labelled as such. Closed covers and
+calligraphy-only pages do not fill pictorial image gaps. Five stale API dimension
+values were resolved through per-file original-image review without changing
+source metadata. Existing artwork facts, artist links and statuses are preserved.
+See [the historical delivery record](research/historical-exhibitions-20261012/README.md).
+
+The Chicago 1933 continuation adds five independently matched WikiArt images to
+existing linked works. Actual Public domain / Public domain US labels remain
+separate from the user's source approval. All five derivatives were visually
+reviewed and public delivery checksums verified; source framing, metadata
+discrepancies and unknown catalogue dates were preserved. Thirty-seven selected
+museum image candidates were not downloaded after the first route returned HTTP
+403. That route remains held; the WikiArt delivery is an independent source pass.
+
+## Selected local exhibition images — 12 October 2026
+
+For the 700-exhibition local preview, the user asked to show the exhibited
+artwork images first, add missing pictures into our system, and remove external
+navigation links. This authorizes the selected missing-image delivery for those
+local exhibition objects. Existing catalogue images are preserved. Other images
+come from the exact Artsy object/image references and exact Cleveland object
+pages, with source captures, actual rights labels, original files and checksums
+retained separately from the user's request. This local instruction is not an
+independently obtained licence or production/public-commercial clearance.
+
+Use full-frame proportional derivatives under 100,000 bytes; inspect exceptional
+aspect ratios and preserve scrolls, print states and object/version identities.
+Keep credits and evidence notes as text in the interface and source URLs in the
+underlying records. The catalogue databases remain read-only; originals and
+evidence stay under Application Support. See
+`research/exhibition-images-local-20261012/README.md`.
+
+## Continued illustrated expansion — 11 October 2026
+
+The user instructed “ok, go ahead find more and more” after the French
+printmaking delivery. This continues selected source-backed production artwork
+and image additions, including the reviewed French reserve and American
+printmaking, 1800–1970. Preserve exact object/impression identity, actual rights
+labels and credits, date-review uncertainty, provider access holds and review
+status. Source metadata licences are not automatically image licences; user
+approval remains separate. Evidence is recorded in
+`research/printmaking-continuation-20261011/` and
+`research/american-printmaking-20261011/`. The real local database remains read-only.
+
+## Further selected topic delivery — 11 October 2026
+
+Following the completed Soviet Realism delivery below, the user instructed:
+“ok, find another random topic and cover ir in the same way, then add more”.
+This continues selected authentic image delivery for the assistant-selected
+topic, currently French printmaking beginning in the nineteenth century and
+extending through 1970. Preserve actual
+image-specific rights labels and source credits separately from user approval,
+exact impression/version identity, source access holds, uncropped proportions,
+the 100,000-byte derivative limit and review status. Public collection metadata
+licences are not automatically image licences. The real local database remains
+read-only. Evidence is retained in `research/french-printmaking-20261011/`.
+
+## Soviet Realism image approval — 11 October 2026
+
+The user requested the Soviet Realism movement and 2,000–3,000 eligible artworks,
+adding “u can add all images don't think about rights! this is ok”. This
+authorizes selected authentic source reproductions for this collection, including
+eligible works created in 1956–1970, without separate rights-label approval.
+Preserve the source's actual rights label, credits and URL separately from this
+user authorization; do not replace a restricted or unknown label with a licence.
+Continue exact artwork/version matching, provider access holds, full-frame image
+preparation, the 100,000-byte derivative limit and review-state safeguards.
+The real local database remains read-only. Delivery evidence is recorded in
+`research/soviet-realism-20261011/`.
+
 ## Nationwide Greek museum delivery — 8 October 2026
 
 The user instructed “let's cover all greek museums and upload pictures and
@@ -267,3 +367,15 @@ Museum copyright and permission requirements remain recorded as restricted;
 this instruction does not establish copyright-holder permission. Existing review
 and publication states are preserved. Derivatives remain at most 100,000 bytes,
 with the complete supplied frame and separately archived source originals.
+
+## Getty historical checklist expansion — 12 October 2026
+
+The selected historical exhibition batch adds 32 full-frame museum images:
+31 have object-specific Getty CC0 statements, while Poussin 81.PA.43 retains
+its canvas-specific No Copyright – United States statement. Its manifest-level
+CC0 statement is preserved as conflicting evidence rather than used to replace
+the more specific label. This is selected delivery under the user's historical
+production image authorization, not an independently obtained licence.
+All derivatives were visually reviewed, are at most 100,000 bytes, and were
+verified by public checksum. Existing images were reused for six matched works.
+See `research/historical-exhibitions-20261012/getty-checklist-expansion-delivery.json`.

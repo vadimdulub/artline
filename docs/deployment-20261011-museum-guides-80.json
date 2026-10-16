@@ -1,0 +1,177 @@
+{
+  "verifiedAt": "2026-10-11T14:32:31.262684+00:00",
+  "site": "https://artlines.org/guides",
+  "change": "80 additional illustrated museum guides, 20 artworks each, English plus nine translations, downloadable PDFs, reading links and exact portal selections. Preserve source-derived Met artist identifiers in API lookups.",
+  "newGuides": 80,
+  "totalGuides": 86,
+  "newArtworkEntries": 1600,
+  "newEditions": 800,
+  "newPDFs": 800,
+  "totalEditions": 860,
+  "languages": [
+    "en",
+    "ru",
+    "it",
+    "de",
+    "zh",
+    "fr",
+    "es",
+    "pt",
+    "ja",
+    "ar"
+  ],
+  "services": {
+    "web": {
+      "revision": "artline-web-museum-guides80-1011-v2",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:8e705ac5d637a4bb2e5cd6075dd8b2a99602c5d14b0ec9fcf75338de55b37e5f",
+      "trafficPercent": 100,
+      "runtimeSettingsPreserved": true,
+      "rollbackRevision": "artline-web-studies-1011-v1",
+      "sourceManifest": "/Users/vadimdulub/Library/Application Support/Artline/backups/museum-guides-80-20261011/overlay-manifest.json",
+      "changedFileCount": 1604
+    },
+    "api": {
+      "revision": "artline-api-guide-artists-1011-v1",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:ad3bf680c6be5292be43e5c1d47d281ce760d1b254fbe906ff164785d9d5874a",
+      "trafficPercent": 100,
+      "runtimeSettingsPreserved": true,
+      "rollbackRevision": "artline-api-studies-1011-v1",
+      "sourceManifest": "/Users/vadimdulub/Library/Application Support/Artline/backups/museum-guides-80-20261011/api-overlay-manifest.json",
+      "changedFileCount": 5
+    }
+  },
+  "builds": {
+    "webBase": "b7060dcd-0636-4c72-b11c-b8a3a07ea7fe",
+    "webFinalCorrection": "98ea9fb5-62b9-44c9-be04-03c97ccdc765",
+    "api": "074b131c-66ba-4e37-80ee-918905d063f3"
+  },
+  "webSource": {
+    "baselineSource": {
+      "storageSource": {
+        "bucket": "artline-508319-build-source",
+        "generation": "1791660631448965",
+        "object": "source/1791660403.355356-c78ccaf5cf4745558df5aa0dbd3af7d8.tgz"
+      }
+    },
+    "mainOverlay": {
+      "uri": "gs://artline-508319-build-source/museum-guides-80-20261011/overlay-74d81d8591236cfd.tar.xz",
+      "generation": "1791726496557693",
+      "sha256": "74d81d8591236cfd4dc989b19d81a95404180448f16a99159c5dab3a8f5ae741"
+    },
+    "finalCorrection": {
+      "parentImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:cc6b1ddc2e180ba15b56f787d9c35440ff8ee9d4e1873aa1f15fc275372d2fa7",
+      "files": {
+        "content/articles/museum-guides/national-museum-asian-art/ar.json": "5015e752acd98d72402348e52ce0251107c2f37876c3e5609a317588db769034",
+        "content/articles/museum-guides/national-museum-asian-art/ar.pdf": "ce173d1363ca2fca0bd2364027d27300add2ff8119131b109b9d1496a0cadb18",
+        "content/articles/museum-guides/national-museum-asian-art/de.json": "4e8d0a92dc5af28075e74968f32ad9d4470eadec8e3ec174f372e1efb64cb9e6",
+        "content/articles/museum-guides/national-museum-asian-art/de.pdf": "2afdd1a1b7e9bb6e5b1413927d1876281adfc9648509cfdc761b1847b63b2020",
+        "content/articles/museum-guides/national-museum-asian-art/en.json": "6174674533cc04d5791094ec777f0c7130d2fe0dfcfb0a17daf808ba5b410eaa",
+        "content/articles/museum-guides/national-museum-asian-art/en.pdf": "2bf7b77412b3f2e137839713e45effa03b18d8a2520e30009119272a88f54f20",
+        "content/articles/museum-guides/national-museum-asian-art/es.json": "c891bd420233ac3dc6ec844659789c6553be824d60a47412335ff07e9c2a8cb2",
+        "content/articles/museum-guides/national-museum-asian-art/es.pdf": "74279d1956c84e0555337c3afb827a4987865980a47e77451a7c6c1cc2e5aff9",
+        "content/articles/museum-guides/national-museum-asian-art/fr.json": "03e80d4b3c5dbfb6350419f926827d953db21ccdfb2df479e1af907328b0ee23",
+        "content/articles/museum-guides/national-museum-asian-art/fr.pdf": "f39078dc27123deba0d2413c887d607947709ea5d2705fbac7b04df5cdb64e3a",
+        "content/articles/museum-guides/national-museum-asian-art/it.json": "53d6731354c64a748cd598357f3c738f991b23a1d85264612d30e2a939a6e00b",
+        "content/articles/museum-guides/national-museum-asian-art/it.pdf": "237605cd51112ada4dce07f4562458f28872c9ec3a0de1730923e386fe9fe51f",
+        "content/articles/museum-guides/national-museum-asian-art/ja.json": "3edf06b4107882d6bc1f0d0d4779e9555af76b46e4d112fb48544e2be909d079",
+        "content/articles/museum-guides/national-museum-asian-art/ja.pdf": "74932ad9c82cf157420f5d362cfc78ee60b7fb23a1654ab2e4e4ce255913268c",
+        "content/articles/museum-guides/national-museum-asian-art/pt.json": "f0a08338ebe3f5a282c2c1c74907632b36c3a0f3a32ad733a47ce659f482d48d",
+        "content/articles/museum-guides/national-museum-asian-art/pt.pdf": "5753b744237a9467ef50f913ccc5701be1a7dc9752eaec20262c3d18641c6389",
+        "content/articles/museum-guides/national-museum-asian-art/ru.json": "7ad5d556b5a85b8fd49837928c518dbc7b1f12e8ad33deef115bc48994a4a9f0",
+        "content/articles/museum-guides/national-museum-asian-art/ru.pdf": "78cf7a4124da2afa53660e175d13b7bdb3bed80158fb7d4ffc25349dce2cb2b1",
+        "content/articles/museum-guides/national-museum-asian-art/zh.json": "6bc78f876ab01ece97423fca847316bb58629fb41541073b58be3195b0ffc9e4",
+        "content/articles/museum-guides/national-museum-asian-art/zh.pdf": "4dc8dc0905a3c877b35aa404735f55fe9ba1f03c8ec842850394553053a77a6b"
+      },
+      "predecessors": {
+        "content/articles/museum-guides/national-museum-asian-art/ar.json": "aa5faf299a543461d787ced80a6a1d4589c011960370f80211d89cb8e2828e0b",
+        "content/articles/museum-guides/national-museum-asian-art/ar.pdf": "e09a13888ee044320f0470603f9fd3af358b832ce805dee1c63d10bc6ccd7a5d",
+        "content/articles/museum-guides/national-museum-asian-art/de.json": "9f299bf52c10e911e69080a4219b4d94e88a36659556f8d6f08f724a7cc6de99",
+        "content/articles/museum-guides/national-museum-asian-art/de.pdf": "631162e5e381ea8f28e77ed26a0eea80ceb1ef6784fd6f4eb6e44df27264daff",
+        "content/articles/museum-guides/national-museum-asian-art/en.json": "2723687377291399dca24da257a9b222d2b57500ffcfce3ae1c8dcb5fdc4adf4",
+        "content/articles/museum-guides/national-museum-asian-art/en.pdf": "10b781e4e2bfb012754aadfc064f7a0775e2d33d6fa7270039acb0a9eed67417",
+        "content/articles/museum-guides/national-museum-asian-art/es.json": "3abca0087c7682d8915d5efffe886b700e628ca3b900ee5de874ad40ab8d89f0",
+        "content/articles/museum-guides/national-museum-asian-art/es.pdf": "9aac3ae5285fd85dc2993634f368a27350fa0f29d3f70a48631d71ba4ee4e0e8",
+        "content/articles/museum-guides/national-museum-asian-art/fr.json": "bbd08b42624021989c5d0a1c67b33dd71563db2512a51349c25c0a922f01f70f",
+        "content/articles/museum-guides/national-museum-asian-art/fr.pdf": "baeccca6f2c10e57223afad8b90413fca4600178bfb910b38e64ac29c1fcded8",
+        "content/articles/museum-guides/national-museum-asian-art/it.json": "0a5b854d200f4d715eead983853298b1da74db21b1f230ee2828e231f1baca6a",
+        "content/articles/museum-guides/national-museum-asian-art/it.pdf": "75613101e79a01aeae9bf9476de9d164931a3011cb6cdd87647a162e475d71b8",
+        "content/articles/museum-guides/national-museum-asian-art/ja.json": "5907cc345694a7111d857f094660395e6ef7f6ff359d1773eb985f7a736ec0ea",
+        "content/articles/museum-guides/national-museum-asian-art/ja.pdf": "51b738a3d5e0744044fd3780fe4c29822ec9b25f2d8505d6bdcbb653c992dab9",
+        "content/articles/museum-guides/national-museum-asian-art/pt.json": "aa0ddd48a9aa62da8c38be2b49783da328d374008601704cde74e15cfa0d79a4",
+        "content/articles/museum-guides/national-museum-asian-art/pt.pdf": "5c46bd99e908bae7e0ef38e492fb24a97997cdd12ec76015cf2a3fc567698012",
+        "content/articles/museum-guides/national-museum-asian-art/ru.json": "1f82f47e0d64ba29a914e5a8c737cb683443e365262067545762b6783a888f5d",
+        "content/articles/museum-guides/national-museum-asian-art/ru.pdf": "ce3919a33edece0d55b9745f5abc4692a41924efb2c81ae6de894e7143664423",
+        "content/articles/museum-guides/national-museum-asian-art/zh.json": "51fe8df64564b118d8538e9d9587598ef6dd1f72723106c670815377f0010d0a",
+        "content/articles/museum-guides/national-museum-asian-art/zh.pdf": "9d3844e2f24bc2d18e554a89a1626ecd82fca3943b83b20f8eab86d5493fef2e"
+      },
+      "sha256": "af194becb99f236bb162707b303fc8e81c7fef4aeaa62fd9c9d13ac2bdf7814d",
+      "uri": "gs://artline-508319-build-source/museum-guides-80-20261011/web-correction-af194becb99f236b.tar.xz",
+      "generation": "1791728547040147",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web:museum-guides80-20261011-v2"
+    }
+  },
+  "apiSource": {
+    "baselineSource": {
+      "storageSource": {
+        "bucket": "artline-508319-build-source",
+        "generation": "1791663655084769",
+        "object": "source/1791663653.495096-308476d1af534e4f9e3ec76dc48b2602.tgz"
+      }
+    },
+    "overlay": {
+      "files": {
+        "internal/httpapi/artist_chronology.go": "4d6a4cb6d45fb7789d52be3690cda3ba26905c74c7db69fd6ba98ef19e851e50",
+        "internal/httpapi/filters.go": "6d24d9cedfddc2a2cc143783daf9d468797ac375c07062fb010aab56780d05e1",
+        "internal/httpapi/router.go": "df94a00f4a188b72629d90134348abebf36b6bbf5b2fec828ec47641a8a75211",
+        "internal/httpapi/museums.go": "cee694fa2653532bddc8fe718afb8b6ffd2e8bc4f77e2b3009cf741de975260f",
+        "internal/httpapi/painter_options.go": "ddbec6e400593713d4e4c5bf405852626a006fa6e1f39bd021b7487e29ebb809"
+      },
+      "predecessors": {
+        "internal/httpapi/artist_chronology.go": "efb89c16b39643bfd8238802daedd5f4e1dc81aa05d65d5839e9a16823de96d5",
+        "internal/httpapi/filters.go": "c20faaa9908275709f51f77fa34d99f2fb2e0c051ca91328bd5ec204c0c7c07e",
+        "internal/httpapi/router.go": "0868bc406a2d7d120e3702fdf31d84cdca7b4e111636117dfb7a3ca0e98d00ac",
+        "internal/httpapi/museums.go": "fbe5d83847730675d90ca84a742acd023829c7b379edb2b9a38e84b5283e740c",
+        "internal/httpapi/painter_options.go": "082d98514e30c213306c3b67de52db3c65becbc2c1ede3a1551aac4f3301cf4c"
+      },
+      "sha256": "a7dca88b50338e708fe14d2377917164dbb386e907ea8e2598b965f46bfeccb6",
+      "uri": "gs://artline-508319-build-source/museum-guides-80-20261011/api-identities-a7dca88b50338e70.tar.xz",
+      "generation": "1791727965483453",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api:guide-artists-20261011-v1"
+    }
+  },
+  "verification": {
+    "unitAndSEOTests": 177,
+    "typescript": "passed",
+    "lintErrors": 0,
+    "existingImageLintWarnings": 4,
+    "httpApiTests": "passed",
+    "all800PDFs": "23 pages each; text, artwork images and links verified",
+    "all1600Images": "HTTP 200 image responses",
+    "all800MobileEditions": "passed at 320 pixels",
+    "all80ArtistSelections": "exact matches in API",
+    "all1600ArtworkLinks": "HTTP 200 and correct object ID",
+    "initialHostedEditionChecks": 806,
+    "initialHostedPDFHashes": 95,
+    "correctedHostedEditionsAndPDFHashes": 10,
+    "productionEditionChecks": 95,
+    "productionPDFHashes": 95,
+    "publicGuideCards": 86,
+    "sitemapEditions": 860,
+    "productionBrowserLanguages": 10,
+    "productionBrowserErrors": [],
+    "transientCatalogueErrors": "Five atlas requests returned 503 during candidate checks. Subsequent direct requests, candidate browser recheck and production browser checks passed."
+  },
+  "database": {
+    "localWrites": 0,
+    "productionCatalogueWrites": 0,
+    "schemaChanges": 0
+  },
+  "terraformApply": false,
+  "ignoredLocalImagePinsUpdated": {
+    "web": true,
+    "api": true
+  },
+  "commitCreated": false,
+  "research": "docs/research/museum-guides-80-20261011/README.md",
+  "translationReview": "Completeness and evidence checked for every edition; sampled language review. AI-assisted translations, not independently proofread by native speakers."
+}

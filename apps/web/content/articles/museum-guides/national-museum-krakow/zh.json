@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "national-museum-krakow",
+  "museum": "National Museum in Kraków",
+  "city": "克拉科夫",
+  "country": "波兰",
+  "title": "克拉科夫国家博物馆：杰作",
+  "subtitle": "从切奇莉娅·加莱拉尼转过的头，到马泰伊科笔下的人群，身体姿态使私人关系与公共事件变得可见。",
+  "introduction": "伸出的手可以托着动物，宣告预言，递上一杯危险的饮料，也可以照顾另一个人。但手势只是起点。它的意思取决于周围的身体、别人怎样回应，以及它发生在哪里。本选目从集中的肖像转向人物密集的历史场景，尤其清楚地显出这些关系。\n\n维斯皮安斯基又提供了另一种尺度的比较：一个孩子支着身体的手臂，与一幅舒展的窗画设计，对人体提出的要求很不相同。可以跨越这些差异来读画。熟悉的公共题材，并不让每个表情都不言自明；私人肖像也无须交出完整的个人故事。",
+  "visitNote": "克拉科夫国家博物馆分布于多栋建筑内。《抱银鼠的女子》属于恰尔托雷斯基亲王博物馆（Princes Czartoryski Museum）；其他展品则来自不同的分馆，可能会进行轮换或外借巡展。此处展示的维斯皮安斯基（Wyspiański）设计的窗户图案属于博物馆馆藏，而非教堂内已安装窗户的照片。",
+  "locale": "zh",
+  "website": "https://mnk.pl/",
+  "officialGuide": "https://mnk.pl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "列奥纳多的笔记通过对运动、光线和人体的观察来探讨绘画。这些笔记为那幅最早的肖像画提供了切入点，同时也与维斯皮安斯基作品中更为突出的轮廓线形成了富有成效的对比。"
+    }
+  ],
+  "works": [
+    {
+      "id": "c9468bb3-37c4-5f33-af3c-05427d54c809",
+      "title": "抱银鼠的女子",
+      "catalogueTitle": "The Lady with an Ermine (Cecilia Gallerani)",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "1489-1490",
+      "start": 1489,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c9468bb3-37c4-5f33-af3c-05427d54c809-e8fbb6b1b3b0c7fe.jpg",
+      "imageSource": "https://www.wikiart.org/en/leonardo-da-vinci/the-lady-with-the-ermine-cecilia-gallerani-1496",
+      "credit": "Leonardo da Vinci. The Lady with an Ermine (Cecilia Gallerani). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/157417",
+      "description": "切奇莉娅·加莱拉尼与银鼠关注同一个方向，姿势却并不相同。她修长的手顺着动物背部，将各自的动作实际连接起来。达·芬奇使画框外一个看不见的位置，也与肖像有关。人物的转身暗示一次相遇，却没有替观看者交代完整。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "b335f9a7-a7be-5758-9a34-8083f3d979ee",
+      "title": "抱菊花的女孩",
+      "catalogueTitle": "Girl with Chrysanthemums",
+      "artist": "Olga Boznańska",
+      "artists": [
+        {
+          "name": "Olga Boznańska",
+          "role": "primary",
+          "slug": "olga-boznanska-q466639"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b335f9a7-a7be-5758-9a34-8083f3d979ee-6c4d2fbbc300fdb7.jpg",
+      "imageSource": "https://www.wikiart.org/en/olga-boznanska/girl-with-chrysanthemums-1894",
+      "credit": "Olga Boznańska. Girl with Chrysanthemums. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/161259",
+      "description": "白花打断彼此接近的灰色，让女孩直视前方的深色眼睛之下，那双合拢的手也显现出来。博兹南斯卡将环境留得简洁，因此细小差别格外重要。肖像的强烈感，无须靠虚构孩子的情绪来解释。面孔周围几乎没有干扰，观看因而成为一次持续的对视。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "991b35f8-89b0-5e35-985c-2cf7f21307fb",
+      "title": "保罗·瑙恩肖像",
+      "catalogueTitle": "Portrait of Paul Nauen",
+      "artist": "Olga Boznańska",
+      "artists": [
+        {
+          "name": "Olga Boznańska",
+          "role": "primary",
+          "slug": "olga-boznanska-q466639"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/991b35f8-89b0-5e35-985c-2cf7f21307fb-ff1d42762dcf3b0d.jpg",
+      "imageSource": "https://www.wikiart.org/en/olga-boznanska/portrait-of-paul-nauen-1893",
+      "credit": "Olga Boznańska. Portrait of Paul Nauen. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/35369",
+      "description": "人物侧着身体，头却转过来，像是房间中的活动暂时停下。近旁杯子加强了拜访被打断的感觉，浓黑衣服则将脸与手单独显出。博兹南斯卡用相对随意的安排完成正式肖像。姿势提供了一种场合，却不需要再添一段详尽轶事。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "24348dda-e4bd-5dd1-9fae-16c2d0daeed5",
+      "title": "狂乱",
+      "catalogueTitle": "Szał",
+      "artist": "Władysław Podkowiński",
+      "artists": [
+        {
+          "name": "Władysław Podkowiński",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2065760"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "布面油画",
+      "accession": "MNK II-b-887",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/24348dda-e4bd-5dd1-9fae-16c2d0daeed5-8c958ec89a21.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/143955",
+      "credit": "Władysław Podkowiński; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/143955",
+      "description": "女子紧紧抓住马，使苍白身体与腾起的黑马相连。波德科温斯基让两者无法分开，却又岌岌可危：把一个身体带向高处的力量，同时威胁另一个身体的平衡。模糊地面几乎不能提供安稳感。题名中的极端状态，体现为紧附与失衡的身体关系，而非只靠一张脸宣告情绪。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "3335c1cd-e75d-5925-88a4-9177c6e3d14b",
+      "title": "四马车",
+      "catalogueTitle": "Four-in-Hand",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/3335c1cd-e75d-5925-88a4-9177c6e3d14b-b2c7740cab3a97ba.jpg",
+      "imageSource": "https://www.wikiart.org/en/jozef-chelmonski/four-in-hand-1881",
+      "credit": "Józef Chełmoński. Four-in-Hand. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jozef-chelmonski/four-in-hand-1881",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/330685",
+      "description": "马匹向近处驶来，占据整幅构图的宽度。切乌蒙斯基让展开的马队难以被看成一个紧凑物体，腿与身体将向前的力量分成多股。宽大的横向画布强化了迎面而来的感觉。这幅克拉科夫藏画，应与华沙收藏中尺寸较小、题材相关的马车画区分。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "86801694-c810-54ed-9fb3-32f5320e6b5a",
+      "title": "暴风雨",
+      "catalogueTitle": "Burza",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "布面油画",
+      "accession": "MNK II-a-237",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/86801694-c810-54ed-9fb3-32f5320e6b5a-9591de7ec168.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/326691",
+      "credit": "Józef Chełmoński; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/326691",
+      "description": "尚未注意到闪电，弯下的身体与匆忙动作就已说明天气的影响。衣服和携带的包袱牵制着前进，使风暴产生一连串实际后果。切乌蒙斯基让田野始终与劳动、无遮蔽的处境相连。天空的剧烈变化，要通过它迫使地面上的人怎样行动来衡量。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "c93b7b90-fce9-58f3-8a7f-262baaa2bfbc",
+      "title": "韦尔尼霍拉",
+      "catalogueTitle": "Wernyhora",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "布面油画",
+      "accession": "MNK II-a-433",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/c93b7b90-fce9-58f3-8a7f-262baaa2bfbc-dee01189fe0f.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/372941",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/372941",
+      "description": "抬起的手标示预言权威的来源，听者却并未同样回应。不同的面孔与注意方向，使话语以不均匀的方式传过人群。马泰伊科通过众人怎样接收，赋予中心手势力量。周围人物参与形成它的意义，并非仅供装饰的听众。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "8133dfe6-49fe-5642-8403-c131c3fb261f",
+      "title": "拉茨瓦维采的科希丘什科",
+      "catalogueTitle": "Kościuszko pod Racławicami",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "布面油画",
+      "accession": "MNK II-a-151",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/8133dfe6-49fe-5642-8403-c131c3fb261f-ea1e6beea778.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/306743",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/306743",
+      "description": "旗帜、骑手与高举的手势，组织起战后的公共集会；前景受伤的身体，则保留了对事件的另一种说明。马泰伊科让仪式与胜利的代价同处一片土地。宽广历史场景不能只通过骑马的中心人物理解。那些较小的参与者，使主群体展示的胜利多了复杂的一面。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "b5adf40f-c02e-5305-b10e-1ccb5b37427e",
+      "title": "波洛尼亚，1863年",
+      "catalogueTitle": "Polonia 1863 (Zakuwana Polska)",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "布面油画",
+      "accession": "MNK XII-453",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/b5adf40f-c02e-5305-b10e-1ccb5b37427e-8509aff96bef.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/325087",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/325087",
+      "description": "波兰的人格化形象置身逼仄室内，周围有士兵和受限制的人物。一条伸出的苍白手臂，使强迫在局部变得可见，将政治处境化为身体之间的接触。马泰伊科没有让寓意停留在安全的抽象层面。人物如此接近，权力便在脆弱者触手可及之处运作，而非只发生在遥远的历史尺度上。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "07e58822-4f81-5b4b-be71-23eeffc227c9",
+      "title": "博娜王后遭毒杀",
+      "catalogueTitle": "Otrucie królowej Bony",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1859",
+      "start": 1859,
+      "end": 1859,
+      "medium": "布面油画",
+      "accession": "MNK II-a-1321",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/07e58822-4f81-5b4b-be71-23eeffc227c9-d5a0b81bba79.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/521275",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/521275",
+      "description": "杯盏尚未完全递到坐着的女子面前。马泰伊科让视线停留在即将发生的交接上，周围面孔使普通的递送动作显出危险。题材依赖不同的人知道不同事情。在陈设齐备的房间里，看似服侍的行为，因为历史题名改变了阅读方式而变得可怕。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "9b6f6334-7c19-507e-8ddc-a444d2c92d9e",
+      "title": "阿波罗：哥白尼的太阳系",
+      "catalogueTitle": "Apollo - Copernicus' Solar System",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "纸板粉彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/9b6f6334-7c19-507e-8ddc-a444d2c92d9e-ad7446b708f6205c.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "credit": "Stanisław Wyspiański. Apollo - Copernicus' Solar System. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "description": "中央黄色人体处在蓝色曲带与较小形状交织的网络中。维斯皮安斯基为窗画设计组织人物，分隔的区域之间，边界仍需清楚可辨。天文学秩序由此成为视觉排列的问题。身体提供中心，周围线条又使它属于更大、彼此衔接的系统。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "d3b4b9cc-d511-538b-a591-1ecddb7c80db",
+      "title": "母性",
+      "catalogueTitle": "Motherhood",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "纸板粉彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/d3b4b9cc-d511-538b-a591-1ecddb7c80db-27a727612a98da97.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "credit": "Stanisław Wyspiański. Motherhood. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "description": "哺乳为这群人提供了具体的中心。女孩们倾斜的头把视线引向母婴，带图案的衣服与花仍在周围活跃。维斯皮安斯基用装饰连接人物，但没有让装饰取代他们正在做的事。重复曲线将照料婴儿的动作与画面纹样相接，使亲密的行为在繁密装饰中仍清楚可见。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "205a3e5f-2f27-58ea-a06d-4833220eccff",
+      "title": "与妻子的自画像",
+      "catalogueTitle": "Autoportret z żoną",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "罗纹纸粉彩画",
+      "accession": "MNK III-r.a-10895",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/205a3e5f-2f27-58ea-a06d-4833220eccff-b68f693554b0.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/195852",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/195852",
+      "description": "夫妻一起朝向画外，表情和衣着却没有融为一体。红珠与头巾界定其中一人，并肩的位置则提供共同安排。维斯皮安斯基通过靠近表现伴侣关系，同时保留区别。这幅肖像塑造了一种在一起的形象，并不能证明两个人具有同一种性情。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "d7a2a1f9-3b43-5fa3-b0bf-75ce5508e3df",
+      "title": "去世前一个月的自画像",
+      "catalogueTitle": "Autoportret na miesiąc przed śmiercią",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "纸上蜡笔画",
+      "accession": "MNK III-r.a-4780",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/d7a2a1f9-3b43-5fa3-b0bf-75ce5508e3df-862b3d7cc079.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/374514",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/374514",
+      "description": "题名提供了生命将尽的背景，但若用它解释每根线条，素描本身就会被压过去。维斯皮安斯基将最深笔迹集中于眼、嘴和散发，纸面其余部分相对疏朗。这张脸始终具体而鲜明。简练的描绘记录一个身体的在场，却没有替作品编造它无法透露的临终想法。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "88950739-4fa1-50dc-b10d-e7d8e60a0927",
+      "title": "米耶泰克支着双臂",
+      "catalogueTitle": "Mietek oparty na rękach",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "纸本色粉画",
+      "accession": "MNK III-r.a-10757",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/88950739-4fa1-50dc-b10d-e7d8e60a0927-a8d42f24b77d.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/187697",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/187697",
+      "description": "下巴落在交叠双手上方，孩子的重量也成为肖像的一部分。压低的眉改变眼周空间，并不需要夸张表情。维斯皮安斯基给予这一随意姿势肖像般的细看。支撑的手臂说明脸是怎样被托住的，使画面不只停留于五官研究。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "8b8e2016-7b1b-5c7f-ba40-e05988cb38d4",
+      "title": "天父：窗画设计的复制品",
+      "catalogueTitle": "Bóg Ojciec. Replika projektu witraża do okna zachodniego nawy kościoła Franciszkanów w Krakowie",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "布面粉彩与蛋彩",
+      "accession": "MNK II-b-514",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/8b8e2016-7b1b-5c7f-ba40-e05988cb38d4-5922c1413017.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/98102",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/98102",
+      "description": "穿长袍的高大人物伸展于拱形画幅，浅色分隔线仍然可见。蓝与黄的形状以大幅运动越过这些边界。博物馆藏品是设计的复制品，而非已经安装的窗本身。不过，它仍清楚说明：人体可以如何配合狭长、在结构上分段的表面来构思。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "3b73b81f-7519-53bc-bd34-75d4065c3354",
+      "title": "持调色板的自画像",
+      "catalogueTitle": "Autoportret z paletą",
+      "artist": "Anna Bilińska",
+      "artists": [
+        {
+          "name": "Anna Bilińska",
+          "role": "primary",
+          "slug": "anna-bilinska-q273115"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "布面油画",
+      "accession": "MNK II-a-211",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/3b73b81f-7519-53bc-bd34-75d4065c3354-2a67acb886ed.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/321062",
+      "credit": "Anna Bilińska-Bohdanowicz; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/321062",
+      "description": "绘画工具与浅色围裙，通过工作的实际条件表明比林斯卡的艺术家身份。膝上摆着器具，直面前方的脸保持镇定。节制的背景避免其他东西争夺目光。职业形象由身体与工具的可用关系建立，无须加上一间宏大画室作背景。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "176ca67e-6c36-50f1-98ef-cbc132eeeb88",
+      "title": "白衣自画像",
+      "catalogueTitle": "Autoportret w białym stroju",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "布面油画",
+      "accession": "MNK II-b-1762",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/176ca67e-6c36-50f1-98ef-cbc132eeeb88-acb26dfa4ce7.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/249159",
+      "credit": "Jacek Malczewski; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/249159",
+      "description": "精致白衣与帽子表明，马尔切夫斯基的装扮经过明显选择。腰间的手强化正面展示，红色细节则点破浅色衣服。这是借由一个可见角色进行的自我描绘。特殊服饰应促使人关注画家怎样呈现自己，而不是认定它是一眼毫无防备的私下瞬间。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "ca278aa9-a6fc-53a1-a932-264a613d7833",
+      "title": "埃莱奈之死",
+      "catalogueTitle": "Śmierć Ellenai",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "布面油画",
+      "accession": "MNK II-b-1",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/ca278aa9-a6fc-53a1-a932-264a613d7833-c638072e346f.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/34570",
+      "credit": "Jacek Malczewski; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/34570",
+      "description": "厚重织物围住苍白、横卧的身体，旁边坐着的男子却仍然直起身。马尔切夫斯基把文学中的死亡转化为重量、位置和静止的关系。即使同处逼近的房间，生者也无法与死者分享同一种身体状态。这种实际的分隔，比泛泛宣称悲痛更准确地支撑场景。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "59749767-f65d-5cc3-93a0-ba6c07a6894a",
+      "title": "红阳伞",
+      "catalogueTitle": "Czerwona parasolka",
+      "artist": "Józef Mehoffer",
+      "artists": [
+        {
+          "name": "Józef Mehoffer",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1354695"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "布面油画",
+      "accession": "MNK II-b-3845",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/59749767-f65d-5cc3-93a0-ba6c07a6894a-dda1a2d30b80.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/415094",
+      "credit": "Józef Mehoffer; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/415094",
+      "description": "阳伞使一位小小的坐着女子，在广阔花园中集中显现。梅霍费尔让小路、花坛与密树保留自己的结构，因此女子并不成为环境唯一的目的。鲜红色在丰盛的人工栽植间标出一处歇息。闲暇有了具体位置，而不只是得到漂亮背景。",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    }
+  ],
+  "context": {
+    "start": 1489,
+    "end": 1917
+  },
+  "closingSections": [
+    {
+      "title": "一座博物馆，多个场所",
+      "paragraphs": [
+        "克拉科夫国家博物馆包括不同分馆，本选目不是单栋建筑内的路线。请确认每件作品当前所在位置与开放信息。跨馆比较时，可以一直留意手：托住、限制、劳动或指挥，都可能改变人们理解题材的尺度。"
+      ]
+    }
+  ]
+}

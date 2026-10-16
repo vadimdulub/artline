@@ -9,7 +9,7 @@ import (
 func (api *API) painterOptions(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
 	query, museum := strings.TrimSpace(q.Get("q")), q.Get("museum")
-	selected, err := parseChoices(q["selected"], validArtistSlug, false)
+	selected, err := parseArtistChoices(q["selected"])
 	if err != nil || len(query) > 200 || (museum != "" && (len(museum) > 100 || !museumSlugPattern.MatchString(museum))) {
 		writeError(w, 400, "INVALID_FILTER", "Check the painter search and selected values.")
 		return
@@ -30,6 +30,14 @@ func (api *API) painterOptions(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		api.museumError(w, err)
 		return
+	}
+	// Choices use the lowercase URL representation expected by the filter UI.
+	// Database lookups above retain the source-derived artist identity.
+	for i := range result.Items {
+		result.Items[i].Slug = strings.ToLower(result.Items[i].Slug)
+	}
+	for i := range result.Selected {
+		result.Selected[i].Slug = strings.ToLower(result.Selected[i].Slug)
 	}
 	w.Header().Set("Cache-Control", "no-store")
 	writeJSON(w, 200, result)

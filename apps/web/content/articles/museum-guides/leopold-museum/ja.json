@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "leopold-museum",
+  "museum": "Leopold Museum",
+  "city": "ウィーン",
+  "country": "オーストリア",
+  "title": "レオポルド美術館：名作",
+  "subtitle": "身体も木も町も、容易には落ち着かせない線によってまとめられている。",
+  "introduction": "シーレの曲がる手足、裸の枝、密集する屋根には、一つの部分が別の部分と出会う角度への共通した関心が見える。輪郭は人物をまとめながら、その姿勢を難しいものにもする。ゲルストルやコリントでは、筆触が境界を緩め、身体と周囲が同じ活発な画面に加わる。\n\n選集はクリムトの《死と生》から始まる。二組の間の隙間は、それぞれの装飾と同じほど重要だ。この空間から、何が人物を隔て、何が結ぶのかという問いが続く。家族の集まり、肖像、手入れされた風景、生きた人々の間を骸骨が歩く行列では、答えが異なる。どれも同じ気分を表すと考えることはできない。",
+  "visitNote": "これらはコレクションの選抜作品であり、貸出中や一時的に展示されていない作品も含まれます。展示の詳細は、レオポルト美術館の現在の展覧会情報やコレクション情報をご確認ください。シーレの作品には類似した題名を持つ異なる作品が存在する場合がありますが、各作品へのリンクによって、ここで取り上げている特定のバージョンが示されています。",
+  "locale": "ja",
+  "website": "https://www.leopoldmuseum.org/",
+  "officialGuide": "https://www.leopoldmuseum.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "無料で読む · 英語",
+      "note": "線と量塊（マス）に関するスピードの解説は、シーレの描く輪郭線を考察する上で実用的な出発点となります。また、彼が挙げるより伝統的な作例は、これらの絵画に見られる（従来の規範からの）逸脱を説明する際にも役立ちます。"
+    }
+  ],
+  "works": [
+    {
+      "id": "82087b7e-4613-58e3-81c7-3f1c8aac3891",
+      "title": "死と生",
+      "catalogueTitle": "Death and Life",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1910/11, reworked in 1912/13 and 1915/16",
+      "start": 1910,
+      "end": 1915,
+      "medium": "",
+      "accession": "LM 630",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/82087b7e-4613-58e3-81c7-3f1c8aac3891-e69369efb663c7d9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Leopold_Museum,_Vienna,_September_2018_(05).jpg",
+      "credit": "Gustav Klimt. Death and Life. Image credit: Ardfern; Own work. https://commons.wikimedia.org/wiki/File:Leopold_Museum,_Vienna,_September_2018_(05).jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://onlinecollection.leopoldmuseum.org/en/object/629-death-and-life/",
+      "description": "骸骨の姿は、人生のさまざまな年齢を含む密集した人々から離れて立つ。十字模様の暗い服が、空の間隔を越えて明るい装飾と裸の肌に向き合う。クリムトは装飾を対立の両側で働かせた。隙間があるため、二組の関係は空間の中で決着しない。死は構図の一部だが、生きた身体が囲う集団の外にとどまる。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "a2aaf58d-7288-5d78-b56c-28d7a233452c",
+      "title": "ヴァリーの肖像",
+      "catalogueTitle": "Portrait of Wally",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "LM 453",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/a2aaf58d-7288-5d78-b56c-28d7a233452c-507199cb2a46d503.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_Wally_Neuzil_Egon_Schiele_1912.jpg",
+      "credit": "Egon Schiele. Portrait of Wally. Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Portrait_of_Wally_Neuzil_Egon_Schiele_1912.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q1555137",
+      "description": "赤い髪、青い目、明るい襟が、簡潔な周囲の中で顔の明確な手がかりになる。傾いた頭はまっすぐな視線を複雑にし、正式な正面肖像より非対称な出会いをつくる。シーレは、本人を見分けるのに必要な場所へ描写を集中した。服と背景は、より鋭く単純な形で顔を囲んでいる。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4e38b094-f99d-521f-b0eb-f87455f40cb8",
+      "title": "二人の子どもと母親Ⅱ",
+      "catalogueTitle": "Mother with Two Children II",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/4e38b094-f99d-521f-b0eb-f87455f40cb8-a1e10fa7bbc354a5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mother_with_two_children_II_Egon_Schiele_1915.jpg",
+      "credit": "Egon Schiele. Mother with Two Children II. Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Mother_with_two_children_II_Egon_Schiele_1915.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q126007918",
+      "description": "体は重なっても、顔は別々の方向と明確な形を保つ。角張った境界があるため、家族は柔らかい一つの塊にはならない。シーレは狭い集団を、配置を工夫して近くに収められた個人の組み合わせとして残した。親密な距離は確かにあるが、近づくことが人々の違いを自動的に消すわけではない。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "a02d372e-3767-5348-acd9-a87d7cf6424a",
+      "title": "座る男性裸体、自画像",
+      "catalogueTitle": "Seated Male Nude (Self-Portrait)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "Inv. 465",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/a02d372e-3767-5348-acd9-a87d7cf6424a-93d237db0769714b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Seated_male_nude_(Self-Portrait)_Egon_Schiele_1910.jpg",
+      "credit": "Egon Schiele. Seated Male Nude (Self-Portrait). Image credit: Egon Schiele; Own work , Yelkrokoyade , 2012-07-13 12:27:42. https://commons.wikimedia.org/wiki/File:Seated_male_nude_(Self-Portrait)_Egon_Schiele_1910.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797691",
+      "description": "挙げた腕と伸ばした脚が、ほとんど空の背景の前で体の角度を際立たせる。姿勢を説明したり支えたりする家具や部屋はほぼない。シーレは自画像を、関節でつながる構造そのものに依存させた。孤立することで一つひとつの曲がりが強調され、周囲に苦痛の物語を描かなくても緊張が読み取れる。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "349a2684-6d41-5120-9e8f-785de31b7aad",
+      "title": "肩をあらわにした自画像",
+      "catalogueTitle": "Self-Portrait with Bare Shoulder",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "Inv.Nr 653",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/349a2684-6d41-5120-9e8f-785de31b7aad-930e9b32031f3d2b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Self_portrait_with_raised_bare_shoulder_Egon_Schiele_1912.jpg",
+      "credit": "Egon Schiele. Self-Portrait with Bare Shoulder. Image credit: Egon Schiele; Own work , Yelkrokoyade , 2012-07-13 12:21:57. https://commons.wikimedia.org/wiki/File:Self_portrait_with_raised_bare_shoulder_Egon_Schiele_1912.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q107645899",
+      "description": "向きを変えた顔の下で、肩が異例に強い位置を占める。明るい塊は顔を静かに支えるのではなく、五官と目を引き合う。暗い髪と強い縁が肌を中断し、頭の周りを滑らかにたどらせない。少しの露出した身体だけで、顔を優先する肖像の見慣れた順序が揺らぐ。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "d8dba44f-d32b-503b-b86c-888bffe96259",
+      "title": "池のほとりの朝",
+      "catalogueTitle": "A Morning by the Pond",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "LM 2007",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/d8dba44f-d32b-503b-b86c-888bffe96259-989167a531964b52.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustav-klimt/quiet-pond-in-the-park-of-appeal",
+      "credit": "Gustav Klimt. A Morning by the Pond. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q19912822",
+      "description": "植物は水の中にも現れ、配置を残しながら質感を和らげる。クリムトにとって反射は単なる複製ではなく変奏だ。暗い岸の先に明るい遠方が見え、もう一つ水平の間隔を添える。目立つ人物や事件がなくても、繰り返す形と明瞭さの違いを追って、風景を読み進められる。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "3fe1c3d6-226e-587b-9218-284f02679052",
+      "title": "枢機卿と修道女、愛撫",
+      "catalogueTitle": "Cardinal and Nun (Caress)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "LM 455",
+      "image": "https://artlines.org/assets/artworks/wikiart/3fe1c3d6-226e-587b-9218-284f02679052-82ab316ac06bde2e.jpg",
+      "imageSource": "https://www.wikiart.org/en/egon-schiele/cardinal-and-nun-caress-1912",
+      "credit": "Egon Schiele. Cardinal and Nun (Caress). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28797682",
+      "description": "明るい顔と手が、赤と暗色の急な衣の塊から現れる。服の硬い形によって、抱擁は柔らかく寄り添うというより、不自由に見える。宗教的な服装は身体の動作だけではない意味を接触に与える。シーレは二つのしるしを緊張させたまま残す。二人はしがみつくが、衣装は各自の役割を頑固に見せ続ける。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4c32e184-ef15-5621-b0ef-c06ad87936b5",
+      "title": "ヴルタヴァ川沿いのクルマウ、小さな町Ⅳ",
+      "catalogueTitle": "Krumau on the Vltava (The Small Town IV)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1913–1914",
+      "start": 1913,
+      "end": 1914,
+      "medium": "",
+      "accession": "655",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/4c32e184-ef15-5621-b0ef-c06ad87936b5-22418e58b71a7743.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Krumau_on_the_Moldova_(Small_town_IV)_Egon_Schiele_1914.jpg",
+      "credit": "Egon Schiele. Krumau on the Vltava (The Small Town IV). Image credit: Egon Schiele; Own work , Yelkrokoyade , Taken in 13 July 2012, 13:30:27. https://commons.wikimedia.org/wiki/File:Krumau_on_the_Moldova_(Small_town_IV)_Egon_Schiele_1914.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q136047789",
+      "description": "暗い川の帯の上で、屋根、窓、細い通路が急に傾いた眺めへはまり込む。目立つ人物の活動がなくても、建物の構造が人の住む町を示す。シーレは身体に似た仕方で建築をつなげた。隣り合う角が絵をまとめると同時に、その圧縮を明らかにする。川は混み合う形の下に確かな境界を置く。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "3d48ca46-ddb6-5538-a73f-23d43d64a752",
+      "title": "食卓",
+      "catalogueTitle": "Covered Table",
+      "artist": "Anton Faistauer",
+      "artists": [
+        {
+          "name": "Anton Faistauer",
+          "role": "primary",
+          "slug": "austrian-research-painter-q589241"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/painter-key-artworks-20261008/q111821778-b8e03d658944ea66.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anton_Faistauer_003.jpg",
+      "credit": "Anton Faistauer · The Yorck Project (2002)       10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH.  ISBN:  3936122202. · Public domain · Wikimedia Commons",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://www.wikidata.org/wiki/Q111821778",
+      "description": "天板が見る側へ傾き、皿や果物を暗い部屋の前へ運び出す。椅子は、描かれていない人の席を示している。ファイスタウアーは、食事が社交の出来事になる前に、物の配置を整えた。大きな色面が品物に実体を与え、白いクロスがそれらを一枚の斜めの面へまとめる。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "d4e7c45e-b96b-56cb-b943-976637dacf3d",
+      "title": "死の舞踏、第Ⅳ版",
+      "catalogueTitle": "Danse Macabre (version IV)",
+      "artist": "Albin Egger-Lienz",
+      "artists": [
+        {
+          "name": "Albin Egger-Lienz",
+          "role": "primary",
+          "slug": "austrian-research-painter-q639706"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "Inv. 195",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/d4e7c45e-b96b-56cb-b943-976637dacf3d-c8759be15a7a6533.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Danse_macabre_(fourth_Version)_Albin_Egger-Lienz.jpg",
+      "credit": "Albin Egger-Lienz. Danse Macabre (version IV). Image credit: Albin Egger-Lienz; Own work , Yelkrokoyade , 2012-07-13 13:33:07. https://commons.wikimedia.org/wiki/File:Danse_macabre_(fourth_Version)_Albin_Egger-Lienz.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q136028368",
+      "description": "骸骨は道具を持つ男たちと同じ歩幅で進む。曲がる手足の反復が、浅い土色の空間を行く一つの行列に彼らをまとめる。エッガー＝リーンツは、死を別の場所に置いて遠くから生者を見守らせない。死は歩行そのものに加わり、共通のリズムを、一人の身元より重要なものにしている。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "47ee20a5-1c12-52c2-bf04-eed818acbff9",
+      "title": "バルビゾンの農家",
+      "catalogueTitle": "Farm in Barbizon",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1874",
+      "start": 1874,
+      "end": 1874,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/47ee20a5-1c12-52c2-bf04-eed818acbff9-7957de9e1ea73569.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Max_Liebermann_-_Bauernhof_in_Barbizon.jpg",
+      "credit": "Max Liebermann. Farm in Barbizon. Image credit: Derbrauni; Own work. https://commons.wikimedia.org/wiki/File:Max_Liebermann_-_Bauernhof_in_Barbizon.jpg. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q134006049",
+      "description": "散らばるガチョウが、庭と低い建物、急な屋根との関係を中断する。位置がばらばらだから、単なる建築の眺めではなく、使われている仕事場になる。リーバーマンは凹凸のある地面に多くの色調の変化を与え、日常の農作業を物質的な環境から切り離さない。鳥の小さな動きが、近景を静止させない。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "55c95848-7d4c-5c51-bf7e-f5a504fda2b0",
+      "title": "風の中の秋の木、冬の木",
+      "catalogueTitle": "Autumn Tree in Stirred Air (Winter Tree)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "LM 449",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/55c95848-7d4c-5c51-bf7e-f5a504fda2b0-8ef9150f84400d7d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Automn_Tree_in_Stirred_Air_(Winter_Tree)_Egon_Schiele_1912.jpg",
+      "credit": "Egon Schiele. Autumn Tree in Stirred Air (Winter Tree). Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Automn_Tree_in_Stirred_Air_(Winter_Tree)_Egon_Schiele_1912.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797681",
+      "description": "枝を柔らかく覆う葉が少なく、方向の変化が一つ残らず見える。地面の暗い帯が、明るく途切れがちな背景の前で幹を支える。シーレは木に、素描された身体に似た関節のつながりを与えるが、本当に人間の姿である必要はない。比較できるのは構造だ。下の支え、上の反復する分岐、不均一な輪郭を伝わる張りがある。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "8d8943e0-e327-59a7-baa2-06d3646775cd",
+      "title": "トラウン湖と「眠れるギリシャの女」の山",
+      "catalogueTitle": "Lake Traun with Mountain Sleeping Greek Woman",
+      "artist": "Richard Gerstl",
+      "artists": [
+        {
+          "name": "Richard Gerstl",
+          "role": "primary",
+          "slug": "richard-gerstl-q129113"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "",
+      "accession": "LM 646",
+      "image": "https://artlines.org/assets/artworks/wikiart/e5c361e6-3c58-5527-b2e3-9991197d8c25-dd1825b5bdc887ce.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-gerstl/lake-traunsee-with-the-schlafende-griechin-mountain",
+      "credit": "Richard Gerstl. Lake Traunsee with the Schlafende Griechin mountain. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798148",
+      "description": "巻くような筆触が山と空を横切り、地形そのものにはできない運動を両者の表面に共有させる。ゲルストルは細い湖の上の青緑の斜面に量感を残しながら、描写をほどいている。絵は二種類の情報を保つ。認識できる風景と、それを見いだすために行われた絵具の動きである。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4ae7bfda-64ce-55a5-98d6-b0dab2ef16e3",
+      "title": "ヴァルヒェン湖の風景",
+      "catalogueTitle": "Landscape at the Walchensee",
+      "artist": "Lovis Corinth",
+      "artists": [
+        {
+          "name": "Lovis Corinth",
+          "role": "primary",
+          "slug": "lovis-corinth-q157610"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "LM 109",
+      "image": "https://artlines.org/assets/artworks/wikiart/4ae7bfda-64ce-55a5-98d6-b0dab2ef16e3-488b8938f599456a.jpg",
+      "imageSource": "https://www.wikiart.org/en/lovis-corinth/landscape-at-the-walchensee-1923",
+      "credit": "Lovis Corinth. Landscape at the Walchensee. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798001",
+      "description": "斜面、建物、湖は主要な区分として残るが、斜めの筆触がその縁を何度も切る。コリントは筆跡をならして継ぎ目のない眺めにしない。風景は活発な絵具の面を通して見なければならない。上方の遠景にある暗い跡が、目には奥へ退くはずの場所でも、その活動を保っている。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "9d983411-4737-5b66-8532-e7ea24c887a7",
+      "title": "日没",
+      "catalogueTitle": "Setting Sun",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "625",
+      "image": "https://artlines.org/assets/artworks/wikiart/9d983411-4737-5b66-8532-e7ea24c887a7-6c82a82db756fb90.jpg",
+      "imageSource": "https://www.wikiart.org/en/egon-schiele/setting-sun-1913",
+      "credit": "Egon Schiele. Setting Sun. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28780356",
+      "description": "細い幹と暗い枝が、土地、水、暖かな空の帯を横切る。垂直の木と水平の遠方という二つの構造は、はっきり別のままだ。シーレは夕日の暖かさを行き渡らせながら、堅い区分を溶かさない。色が光の状態を示しても、一つの部分の終わりと次の始まりを決めるのは、なお輪郭なのである。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "2fa16958-6f2e-559f-a80d-963009265a49",
+      "title": "アルフレート・クーン",
+      "catalogueTitle": "Portrait of Alfred Kuhn",
+      "artist": "Lovis Corinth",
+      "artists": [
+        {
+          "name": "Lovis Corinth",
+          "role": "primary",
+          "slug": "lovis-corinth-q157610"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "LM 2091",
+      "image": "https://artlines.org/assets/artworks/wikiart/2fa16958-6f2e-559f-a80d-963009265a49-37e8d187d2a71eaa.jpg",
+      "imageSource": "https://www.wikiart.org/en/lovis-corinth/portrait-of-alfred-kuhn-1923",
+      "credit": "Lovis Corinth. Portrait of Alfred Kuhn. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798002",
+      "description": "向きを変えた顔が明暗差から浮かび、斜めの筆触は服から背景へ続く。コリントはすべての外縁を閉じずに、人物へ実体を与える。共通する描き方が人と周囲を結び、光が両者の違いを保つ。描いた跡が跡として明瞭に見えていても、肖像の身体は確かなものになれる。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "2af9d653-59d4-5c04-b9ec-026436e16cfa",
+      "title": "抒情詩人",
+      "catalogueTitle": "The Lyricist",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "LM 450",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/2af9d653-59d4-5c04-b9ec-026436e16cfa-213df574f0605613.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Lyricist_Egon_Schiele_1911.jpg",
+      "credit": "Egon Schiele. The Lyricist. Image credit: Yelkrokoyade; Own work. https://commons.wikimedia.org/wiki/File:The_Lyricist_Egon_Schiele_1911.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797697",
+      "description": "開いた指が、傾いた頭の外まで人物の自己提示を延ばす。明るい肌には色の跡と切れた縁が通り、手の動作が暗い体から分かれる。シーレは自分を見せることを、固定した似姿ではなく、目に見える演技にした。手はそれ自体として見られることを求め、顔だけでは成立しない方向を肖像に与えている。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4b009d26-b75d-5924-8436-6672cbe3c2e6",
+      "title": "ヘンリカ・コーン",
+      "catalogueTitle": "Portrait of Henryka Cohn",
+      "artist": "Richard Gerstl",
+      "artists": [
+        {
+          "name": "Richard Gerstl",
+          "role": "primary",
+          "slug": "richard-gerstl-q129113"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "LM 650",
+      "image": "https://artlines.org/assets/artworks/wikiart/4b009d26-b75d-5924-8436-6672cbe3c2e6-16e17c79694083bd.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-gerstl/portrait-of-henryka-cohn-1908",
+      "credit": "Richard Gerstl. Portrait of Henryka Cohn. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798150",
+      "description": "冷たい青と紫が、横向きに座る女性と模様のある部屋の間を行き来する。ゲルストルは姿勢を失わずに、表面同士の分離を弱めた。明るい服は見分けられる体の一部であり、より大きな色の配置の一部でもある。同じ描き方によって室内は肖像に加わり、中立的な入れ物にはとどまらない。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "e080b48e-5478-5d9e-8000-475af60973b0",
+      "title": "盲目の母、母",
+      "catalogueTitle": "Blind Mother, or The Mother",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/e080b48e-5478-5d9e-8000-475af60973b0-a64704aeb8011f10.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Blind_Mother_Egon_Schiele_1914.jpg",
+      "credit": "Egon Schiele. Blind Mother, or The Mother. Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Blind_Mother_Egon_Schiele_1914.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q134067801",
+      "description": "暗く狭く区切られた場所で、女性は子どもの上に身をかがめる。重い輪郭が体、服、家具をつなぎ、守るようでありながら窮屈な構造をつくる。シーレは世話の具体的な難しさを示した。二人は限られた空間に体を収め、互いを支えなければならない。主題の優しさは、姿勢が楽に見えることを必要としない。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "7decb831-6398-5f6e-8b87-59134d46755a",
+      "title": "果樹のある日なたの草地",
+      "catalogueTitle": "Sunny Meadow with Fruit Trees",
+      "artist": "Richard Gerstl",
+      "artists": [
+        {
+          "name": "Richard Gerstl",
+          "role": "primary",
+          "slug": "richard-gerstl-q129113"
+        }
+      ],
+      "date": "1908年頃",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/7decb831-6398-5f6e-8b87-59134d46755a-0003a1cb0adcef0a.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-gerstl/sunny-meadow-with-fruit-trees",
+      "credit": "Richard Gerstl. Sunny Meadow with Fruit Trees. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q107640618",
+      "description": "繰り返す筆触が、幹や広がる枝の周囲に密な緑をつくる。光の斑点はその堆積を切るが、磨かれた眺めに整理し直すことはない。ゲルストルは晴れた風景に絵具の厚みを保ち、目は葉と同じほど頻繁に筆跡と出会う。明るい題材と強い描き方は、同じ感情を示さなくても共存できる。",
+      "importance": "",
+      "museum": "Leopold Museum"
+    }
+  ],
+  "context": {
+    "start": 1874,
+    "end": 1923
+  },
+  "closingSections": [
+    {
+      "title": "違う主題の輪郭を比べる",
+      "paragraphs": [
+        "裸の枝と曲げた腕、屋根の角と服の折れを比べてみよう。似ていることは構造を調べる手がかりであり、すべての主題に同じ意味が隠れている証拠ではない。実際に訪れるなら、美術館で作品ごとの現在の公開状況を確かめたい。この選集は所蔵品を紹介するもので、恒久的な順路ではない。"
+      ]
+    }
+  ]
+}

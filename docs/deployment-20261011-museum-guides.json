@@ -1,0 +1,141 @@
+{
+  "verifiedAt": "2026-10-10T21:20:13.075143+00:00",
+  "site": "https://artlines.org/guides",
+  "change": "Publish six illustrated museum guides in ten languages with matching downloadable PDFs, exact artwork selections, painter lifespan diagrams and period book/event context.",
+  "scope": {
+    "guides": 6,
+    "institutions": 8,
+    "artworkEntries": 135,
+    "languages": [
+      "en",
+      "ru",
+      "it",
+      "de",
+      "zh",
+      "fr",
+      "es",
+      "pt",
+      "ja",
+      "ar"
+    ],
+    "pdfs": 60,
+    "targetInstitutions": 100,
+    "targetComplete": false,
+    "remainingInstitutions": 92,
+    "guidesPublished": [
+      {
+        "slug": "louvre",
+        "works": 20
+      },
+      {
+        "slug": "prado",
+        "works": 20
+      },
+      {
+        "slug": "leventis-gallery",
+        "works": 20
+      },
+      {
+        "slug": "national-gallery-armenia",
+        "works": 25
+      },
+      {
+        "slug": "munich-museums",
+        "works": 30
+      },
+      {
+        "slug": "muma-le-havre",
+        "works": 20
+      }
+    ]
+  },
+  "content": {
+    "manual": "apps/web/Art_Writing_Editorial_Manual_EN.md",
+    "manualCopiedExactlyAndRead": true,
+    "articlesDirectory": "apps/web/content/articles",
+    "cmsAdded": false,
+    "originalLanguage": "en",
+    "translation": "Static Google Cloud Translation API editions with small AI-assisted translation labels and editorial corrections; no claim of native-speaker review.",
+    "translationApiEnabled": true,
+    "runtimeTranslationRequests": false,
+    "officialGuides": "Existing official Louvre and MuMa resources are linked; absence of good official guides is not asserted.",
+    "dateCaveat": "Four selected works remain outside dated timeline plotting because their catalogue date classifications are unresolved; they remain illustrated in the guides."
+  },
+  "builds": {
+    "api": {
+      "id": "be628f10-487e-4861-ac7c-4e8dc5b4c7a0",
+      "status": "SUCCESS",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:f3355e39e14bf5568ed988f29f859a30d349389de157d0d33255916035aea790"
+    },
+    "web": {
+      "id": "504b4de1-213a-42e4-944c-571654073239",
+      "status": "SUCCESS",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:fa0a4a753487f367dddb9c900397df33bf31c316a8a3c7fb834978e9e27872af",
+      "baseSourceBucket": "artline-508319-build-source",
+      "baseSourceObject": "source/1791660403.355356-c78ccaf5cf4745558df5aa0dbd3af7d8.tgz",
+      "baseSourceGeneration": "1791660631448965",
+      "overlayObject": "museum-guides-20261010/web-overlay-9e0f7d54522db0c0.tar.xz",
+      "overlayGeneration": "1791666034910821",
+      "overlaySHA256": "9e0f7d54522db0c09dbaa14dd4e0d8c61c7529a307684a05e31dacf7911e2da3",
+      "overlayVerification": "SHA-256 and safe archive paths verified during build; includes current MobileNavigation.tsx."
+    }
+  },
+  "deployment": {
+    "project": "artline-508319",
+    "region": "europe-west1",
+    "apiRevision": "artline-api-museum-guides-1010-v1",
+    "webRevision": "artline-web-museum-guides-1010-v1",
+    "apiTrafficPercent": 100,
+    "webTrafficPercent": 100,
+    "runtimeSettingsPreserved": true,
+    "rollbackApiRevision": "artline-api-stars-1010-6fe925ba",
+    "rollbackWebRevision": "artline-web-open-nav-1010-416c9f92",
+    "terraformApply": false,
+    "localImagePinsUpdated": true,
+    "commitsCreatedByThisWork": false
+  },
+  "catalogue": {
+    "selectedMuMaImagesAttached": 20,
+    "backupID": "1791662970886",
+    "catalogueMetadataChanged": false,
+    "publicationStatusesChanged": false,
+    "localDatabaseChanged": false,
+    "imagesVerified": 20,
+    "sourceCreditsAndRightsPreserved": true
+  },
+  "validation": {
+    "webUnitTests": 333,
+    "webTestFiles": 40,
+    "webLint": "0 errors; 3 warnings for intentional image elements",
+    "focusedGoSuites": [
+      "atlas",
+      "httpapi",
+      "config"
+    ],
+    "readOnlyProductionGuideAudits": 6,
+    "queryPlans": "Scoped indexed artwork lookup verified with actual guide IDs; roughly 100\u2013120ms in captured plans. Not a ten-million-row load test.",
+    "pdfsVerifiedLocally": 60,
+    "renderedPdfSamples": [
+      "en",
+      "ru",
+      "de",
+      "zh",
+      "ar"
+    ],
+    "candidateBrowserTests": 11,
+    "candidateEditionsAndPdfsVerified": 60,
+    "productionBrowserTests": 2,
+    "productionEditionsAndPdfsVerified": 60,
+    "canonicalHreflangSitemapAnd404s": "Passed on candidate and production",
+    "browserWidthsPx": [
+      1440,
+      390,
+      320
+    ],
+    "accessibility": "Axe WCAG 2/2.1 AA checks passed",
+    "broadGoSuiteLimitation": "Unrelated historical ingestion tests lack pre-existing research inventory files; no fabricated fixtures were added.",
+    "localDatabaseFixturesCreated": false
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/museum-guides-20261010",
+  "research": "docs/research/museum-guides-editorial-20261010/README.md"
+}

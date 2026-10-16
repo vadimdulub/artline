@@ -1,0 +1,608 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "musee-orangerie",
+  "museum": "Musée de l’Orangerie",
+  "city": "巴黎",
+  "country": "法国",
+  "title": "橘园美术馆：杰作",
+  "subtitle": "二十件作品，看尺度、轮廓与颜色如何改变辨认题材的方式。",
+  "introduction": "黑丝带可以组织一幅肖像。在橘园，它也能与垂柳枝帘相比较，后者铺展在宽得多的画面上。莫迪利亚尼让目光集中于脖颈和脸，莫奈则提供一片没有熟悉地平线可依靠的池塘。改变的不只是大小，也包括寻找方位的办法。\n\n选集将三件《睡莲》构图与肖像、风景、室内画并置。它们的联系并非都在走向抽象，而是各自都问：可辨认的题材，在多大程度上依靠轮廓、比例、色彩或环境？卢梭的一座工厂，与苏丁一片倾斜风景，答案非常不同。",
+  "visitNote": "参观时，请参考博物馆最新的平面图和藏品页面。《睡莲》系列作品与特定的建筑空间融为一体，因此请预留充足时间，既要欣赏单幅画作，也要体验整个展厅的空间氛围。",
+  "locale": "zh",
+  "website": "https://www.musee-orangerie.fr",
+  "officialGuide": "https://www.musee-orangerie.fr",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "在线阅读或下载 · 英语",
+      "note": "大都会艺术博物馆举办的“印象派：百年纪念展”为莫奈、雷诺阿和西斯莱的作品提供了背景介绍。该展览聚焦于他们创作生涯的早期阶段，因此是一个切入点，而非对馆内所有二十世纪作品的全面梳理。"
+    }
+  ],
+  "works": [
+    {
+      "id": "303f548e-bf8a-512a-80d7-3d062ccb0e96",
+      "title": "戴天鹅绒丝带的女子",
+      "catalogueTitle": "A woman with velvet ribbon",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/303f548e-bf8a-512a-80d7-3d062ccb0e96-b039a15ad91ca5d4.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/a-woman-with-velvet-ribbon",
+      "credit": "A woman with velvet ribbon. WikiArt; Amedeo Modigliani. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/a-woman-with-velvet-ribbon",
+      "description": "黑色丝带使长脖子不可能被当成偶然的变形略过。它在突出的竖向形体上划出一道细横线，强调了拉开头与身体距离的比例。黑发与浅色脸再次使用这种简明对比，让肖像集中于少数醒目的安排。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "4f9b461a-991e-5559-beae-2dbe3d04d8df",
+      "title": "悬崖",
+      "catalogueTitle": "Cliffs",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "约1897年",
+      "start": 1897,
+      "end": 1897,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/4f9b461a-991e-5559-beae-2dbe3d04d8df-e3babffbf75ebce3.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/cliffs",
+      "credit": "Henri Rousseau. Cliffs. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/cliffs",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/cliffs",
+      "description": "竖向石脊使悬崖有别于海与岸的长条形状，小船则在这套简化秩序里各占一处。海岸仍然可辨，但清晰并不主要来自丰富细节，而来自每个部分相对于其他部分都被放置得十分明确。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "fb1b844a-b4e5-5acf-8ab2-228ed48c0605",
+      "title": "保罗·纪尧姆",
+      "catalogueTitle": "Paul Guillaume",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "纸板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/fb1b844a-b4e5-5acf-8ab2-228ed48c0605-7283e8782d3b6639.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/paul-guillaume-1915",
+      "credit": "Amedeo Modigliani. Paul Guillaume. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/amedeo-modigliani/paul-guillaume-1915",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/paul-guillaume-1915",
+      "description": "深色西装与帽子在红底前构成紧凑剪影。胸前单独露出的手，为本来收拢的形状增加了一个动作。莫迪利亚尼有意让年轻画商以公共人物的姿态出现；权威来自姿势和对比，而不是豪华室内或成批财物。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "430c4f26-ab4f-5e01-a68f-7b3cf0453d4c",
+      "title": "埃米尔·勒热纳肖像",
+      "catalogueTitle": "Portrait of Emile Lejeune",
+      "artist": "Chaim Soutine",
+      "artists": [
+        {
+          "name": "Chaim Soutine",
+          "role": "primary",
+          "slug": "chaim-soutine-q160141"
+        }
+      ],
+      "date": "1925",
+      "start": 1925,
+      "end": 1925,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/430c4f26-ab4f-5e01-a68f-7b3cf0453d4c-440c1775c01c7f2e.jpg",
+      "imageSource": "https://www.wikiart.org/en/chaim-soutine/portrait-of-emile-lejeune-1925",
+      "credit": "Chaim Soutine. Portrait of Emile Lejeune. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/chaim-soutine/portrait-of-emile-lejeune-1925",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/chaim-soutine/portrait-of-emile-lejeune-1925",
+      "description": "面孔不齐整的角度延续到笔触明显的背景中，没有归于光滑表面。这些不规则让肖像活跃，又没有使人物无法辨认。苏丁与莫迪利亚尼修长、控制严密的轮廓正好构成对照：两者都改变面孔，却以不同方式引导目光。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "0063ec13-098d-515b-898c-3c6cbb3b946b",
+      "title": "阿尔福维尔的椅子工厂",
+      "catalogueTitle": "The chair factory at Alfortville",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/0063ec13-098d-515b-898c-3c6cbb3b946b-08074c1d447ab4e0.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-chair-factory-at-alfortville",
+      "credit": "The chair factory at Alfortville. WikiArt; Henri Rousseau. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-chair-factory-at-alfortville",
+      "description": "低矮工厂保持清楚边缘，上方云朵则更宽地鼓起。小人物与分岔道路给工业地点带来朴素的人的尺度。卢梭让工作场所也能具有风景构图的静止感；题材本身，并不决定画面必须有多忙碌。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "63c30972-e1de-562b-96f7-38bd956df86b",
+      "title": "抱着娃娃的女孩",
+      "catalogueTitle": "The girl with a doll",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "约 1904–1905 年",
+      "start": 1904,
+      "end": 1905,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/63c30972-e1de-562b-96f7-38bd956df86b-bdaea72c907588cd.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-girl-with-a-doll-1905",
+      "credit": "Henri Rousseau. The girl with a doll. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/the-girl-with-a-doll-1905",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-girl-with-a-doll-1905",
+      "description": "在女孩的正面姿态之内，玩偶再次重复小小的人形。放大的头与红裙，使她比后方窄地面或开阔天空更引人注目。卢梭不去捕捉一瞬即逝的玩耍动作，而让孩子与物件持续、直接地并立在眼前。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "6a9f923a-97fa-5118-9b79-f35a9d8145d7",
+      "title": "平森山丘",
+      "catalogueTitle": "Butte Pinson",
+      "artist": "Maurice Utrillo",
+      "artists": [
+        {
+          "name": "Maurice Utrillo",
+          "role": "primary",
+          "slug": "maurice-utrillo-q108301"
+        }
+      ],
+      "date": "1905–1908",
+      "start": 1905,
+      "end": 1908,
+      "medium": "",
+      "accession": "RF 1963 104",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q137697498-3f7b6872aeda3820.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Maurice_Utrillo_-_Butte_Pinson_(1905-1908).jpg",
+      "credit": "Maurice Utrillo. Butte Pinson. Image credit: Maurice Utrillo. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q137697498",
+      "description": "无叶枝条横在观众与小建筑之间。暗色枝网使房子不能成为目光直达的简单终点，浅色水面与天空则仍可透过空隙看见。景色由阻挡来组织：挡在前面的东西，与其后的事物同样重要。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "3f274c17-90ee-533a-8f33-d4c8c56bfd59",
+      "title": "穿红裤的后宫女奴",
+      "catalogueTitle": "Odalisque in red trousers",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1924–1925",
+      "start": 1924,
+      "end": 1925,
+      "medium": "",
+      "accession": "RF 1963 66",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q22043249-4707afbb5e9a4dc7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Odalisque_%C3%A0_la_culotte_rouge_d%27Henri_Matisse.jpg",
+      "credit": "Henri Matisse. Odalisque in red trousers. Image credit: JackyM59. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q22043249",
+      "description": "斜卧身体所在的房间里，织物也在争夺注意力。浅色上衣为花纹之间提供一处较安静的区域，却没有让人物摆脱它们。装饰反复截住空间纵深，使室内既像容纳一个人的地方，也像相邻的色彩区域。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "e21ef56b-d058-59b4-8d8d-ec87b127a119",
+      "title": "戴宽檐帽的纪尧姆夫人",
+      "catalogueTitle": "Portrait of Madame Guillaume with pamela",
+      "artist": "André Derain",
+      "artists": [
+        {
+          "name": "André Derain",
+          "role": "primary",
+          "slug": "andre-derain-q156272"
+        }
+      ],
+      "date": "1928–1929",
+      "start": 1928,
+      "end": 1929,
+      "medium": "",
+      "accession": "RF 1960-36",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21748978-001506db27dfc454.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_de_Madame_Paul_Guillaume_au_grand_chapeau.jpg",
+      "credit": "André Derain. Portrait of Madame Guillaume with pamela. Image credit: Philippe Cendron. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21748978",
+      "description": "宽帽在肖像上方形成圆形边界，下方手套与聚拢布料与之呼应。稳定安排之中，面孔依然具体。时髦衣服不只是装饰，也确定了画面各部分的分量与结构；人物的公开形象因此无法同她穿着的衣服分开。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "417715a6-65f5-43b1-a5d0-b5c65ed0d96c",
+      "title": "睡莲：日落",
+      "catalogueTitle": "Soleil couchant",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1914–1926",
+      "start": 1914,
+      "end": 1926,
+      "medium": "",
+      "accession": "INV 20103",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q28797622-9d44e042bcb0fd57.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Water_Lilies_-_Setting_Sun_-_Google_Art_Project.jpg",
+      "credit": "Claude Monet. The Water Lilies - Setting Sun. Image credit: Claude Monet. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.musee-orangerie.fr/fr/oeuvres/soleil-couchant-196305",
+      "description": "暖色倒影横跨六米宽的池塘画面。宽度很重要：观众与它之间的距离和观看方式，不会与一幅小型装框肖像相同。天空与水生植物在水面共存，又没有传统前景可供定位，于是色彩变化承担了许多辨认方位的工作。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "6a6d9406-5827-554b-b7d7-f24d69c14b64",
+      "title": "从蒙比松到卢沃谢讷的道路",
+      "catalogueTitle": "The Road from Montbuisson to Louveciennes",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "RF 1960-47",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19820384-1cbb5591e573b301.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sisley_Orangerie_02.jpg",
+      "credit": "Alfred Sisley. The Road from Montbuisson to Louveciennes. Image credit: Miguel Hermoso Cuesta. Wikimedia Commons. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://www.wikidata.org/wiki/Q19820384",
+      "description": "浅色道路给开阔田野一个方向，却没有填满它。小小行人使道路退远的程度可感，广大天空则让这条路不至于吸走全部目光。西斯莱通过比例使普通的穿行变得可读：人在使用一条路，周围天地却比这项活动大得多。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "0063cf36-0249-50a0-bc8b-2e6e53a152e8",
+      "title": "睡莲：垂柳映照下的清晨",
+      "catalogueTitle": "The Water Lilies - Clear Morning with Willows",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1914–1926",
+      "start": 1914,
+      "end": 1926,
+      "medium": "",
+      "accession": "INV 20106",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q28797618-52ad13613d7521d7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Water_Lilies_-_Clear_Morning_with_Willows_-_Google_Art_Project.jpg",
+      "credit": "Claude Monet. The Water Lilies - Clear Morning with Willows. Image credit: Claude Monet. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797618",
+      "description": "垂柳枝条重复在宽阔表面上，跨过浅水，也跨过自身倒影。在通常可能出现地平线的地方，向下的垂势提供了节奏。区分真实树木与映出的树木需要时间，因为这片画面不断将两者重新放在一起。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "2f206114-6043-5abf-a786-44c3c45b32a1",
+      "title": "睡莲：绿色的倒影",
+      "catalogueTitle": "The Water Lilies - Green Reflections",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1914–1926",
+      "start": 1914,
+      "end": 1926,
+      "medium": "",
+      "accession": "INV 20102",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q28797619-69533dabd9743667.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Water_Lilies_-_Green_Reflections_-_Google_Art_Project.jpg",
+      "credit": "Claude Monet. The Water Lilies - Green Reflections. Image credit: Claude Monet. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797619",
+      "description": "成簇莲叶与较亮间隙，必须在看不到岸、也没有明确地平线的情况下建立远近。水并非物体之间的空白，而是一切区分都要在其中发生的连续平面。目光穿过作品，靠的是比较疏密，而非沿一条道路走向远处。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "e673f5ec-56e4-5005-8025-6cb3e92da054",
+      "title": "辅祭",
+      "catalogueTitle": "Altar Boy",
+      "artist": "Chaim Soutine",
+      "artists": [
+        {
+          "name": "Chaim Soutine",
+          "role": "primary",
+          "slug": "chaim-soutine-q160141"
+        }
+      ],
+      "date": "1927 - 1928",
+      "start": 1927,
+      "end": 1928,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/e673f5ec-56e4-5005-8025-6cb3e92da054-a5cb778d9a9a4783.jpg",
+      "imageSource": "https://www.wikiart.org/en/chaim-soutine/altar-boy-1928",
+      "credit": "Chaim Soutine. Altar Boy. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/chaim-soutine/altar-boy-1928",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/chaim-soutine/altar-boy-1928",
+      "description": "红白礼服标明正式职责，但布料与身体并未达到完美对称。合手使姿态集中，扭转的白色区域又带来不安定。礼服代表一种稳定的公共身份，穿着者的身体却自有姿态；肖像没有抹平两者的差别。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "608b3623-0c7f-4bfb-a675-8676fda1607c",
+      "title": "安东尼娅",
+      "catalogueTitle": "Antonia",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "日期未核实：1915年",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/abbfe777-a1a8-4013-90c3-bc8ca1d7bcfe-fae2620970b478ac.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/antonia-1915",
+      "credit": "Amedeo Modigliani. Antonia. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000089487",
+      "description": "黑裙为长脖子与浅色脸提供低调底部。头肩的小幅倾斜，打断了面朝前方的坐姿看似均衡的安排。莫迪利亚尼把周围室内压得很浅，使这些偏离格外重要：画中几乎没有别的东西可以让人转移注意。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "c65db804-e21c-52f4-9bc1-1db3aaa9e14c",
+      "title": "鹿",
+      "catalogueTitle": "Deer",
+      "artist": "Marie Laurencin",
+      "artists": [
+        {
+          "name": "Marie Laurencin",
+          "role": "primary",
+          "slug": "marie-laurencin-q233088"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c65db804-e21c-52f4-9bc1-1db3aaa9e14c-f3af4ea3ec55a424.jpg",
+      "imageSource": "https://www.wikiart.org/en/marie-laurencin/deer-1923",
+      "credit": "Marie Laurencin. Deer. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/marie-laurencin/deer-1923",
+      "description": "动物与人共享柔和蓝灰色调，其间穿插粉与白。弯曲且重叠的轮廓，让形象从相邻形状中逐渐被认出，而不是靠硬性分割。身体仍可辨认，但它们共同的色彩关系也保持可见，值得单独细看。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "a66bfd2a-3383-5449-9b62-a51bfdd7dddd",
+      "title": "有人物的风景",
+      "catalogueTitle": "Landscape with Figures",
+      "artist": "Chaim Soutine",
+      "artists": [
+        {
+          "name": "Chaim Soutine",
+          "role": "primary",
+          "slug": "chaim-soutine-q160141"
+        }
+      ],
+      "date": "1918 - 1919",
+      "start": 1918,
+      "end": 1919,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/a66bfd2a-3383-5449-9b62-a51bfdd7dddd-4e4fd5a805d9f999.jpg",
+      "imageSource": "https://www.wikiart.org/en/chaim-soutine/landscape-with-figures-1919",
+      "credit": "Chaim Soutine. Landscape with Figures. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/chaim-soutine/landscape-with-figures-1919",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/chaim-soutine/landscape-with-figures-1919",
+      "description": "道路、房屋与树木都加入景色的倾斜运动。小人物带来熟悉尺度，却无法稳住整片风景。苏丁让变形超出单一物件，成为周围空间的整体状态，而非一个可以单独修正的奇怪局部。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie"
+    },
+    {
+      "id": "f7013502-63b9-49f0-98bc-7745b4ab247a",
+      "title": "钢琴旁的伊冯娜与克里斯汀·勒罗尔",
+      "catalogueTitle": "Yvonne et Christine Lerolle au piano",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "c. 1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/f7013502-63b9-49f0-98bc-7745b4ab247a-b46ecde8f08238c2.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/young-girls-at-the-piano-1892",
+      "credit": "Pierre-Auguste Renoir. Yvonne et Christine Lerolle au piano. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000089515",
+      "description": "一位姐妹弹奏，另一位在近旁跟随乐曲，两人的头肩因此都朝向同一处。深色钢琴连接白衣与红衣，却没有把姿势变成一样。协作来自各做其事，不是两个身体执行完全相同的动作。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "1d9de9b1-50da-47ae-9e77-ad5d75732a9b",
+      "title": "扮作小丑的克洛德·雷诺阿",
+      "catalogueTitle": "Claude Renoir en clown",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/1d9de9b1-50da-47ae-9e77-ad5d75732a9b-4e436ffa2344f947.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/the-clown-claude-ranoir-in-clown-costume-1909",
+      "credit": "Pierre-Auguste Renoir. Claude Renoir en clown. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000089522",
+      "description": "红戏服扩大了孩子轮廓，小鞋与直腿又让人看清戏剧外形下实际的身体。他严肃的脸，并未简单配合服装所暗示的娱乐。这个差别让一个有姓名的孩子，与他表演的角色，同时留在画中。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "75dcc8d6-eb9f-4496-8b2a-6002c1183849",
+      "title": "风景中的裸女",
+      "catalogueTitle": "Femme nue dans un paysage",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/75dcc8d6-eb9f-4496-8b2a-6002c1183849-5ad9fcf1cde491d4.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/nude-in-a-landscape-1883",
+      "credit": "Pierre-Auguste Renoir. Femme nue dans un paysage. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000089510",
+      "description": "即使身体与枝叶的边界柔化，坐姿仍有明确的重量。暖肤与冷些的植物，通过相似的圆润形态相接，不必每处都画出同样锐利的轮廓。回身动作建立了向外的联系，同时人物仍融入风景较大的色彩安排。",
+      "importance": "",
+      "museum": "Musée de l’Orangerie",
+      "catalogueArtistSlug": null
+    }
+  ],
+  "context": {
+    "start": 1875,
+    "end": 1929
+  },
+  "closingSections": [
+    {
+      "title": "读图，也读尺寸",
+      "paragraphs": [
+        "屏幕可以让莫奈的长画板与紧凑肖像显得同样宽。在 Artline 比较时，请记住记录的实际大小。到访前请查询博物馆当前安排；这份选择并不完整代表全部展陈。"
+      ]
+    }
+  ]
+}

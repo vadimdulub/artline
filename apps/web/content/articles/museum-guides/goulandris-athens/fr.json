@@ -1,0 +1,579 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "goulandris-athens",
+  "museum": "Basil & Elise Goulandris Foundation",
+  "city": "Athènes",
+  "country": "Grèce",
+  "title": "Fondation Basil et Elise Goulandris : chefs-d’œuvre",
+  "subtitle": "Vingt peintures où les touches et les formes restent visibles dans les choses qu'elles décrivent.",
+  "introduction": "La cafetière de Van Gogh est résolument bleue, la campagne de Cézanne s'assemble par taches, la cathédrale de Monet commence à perdre la solidité attendue de la pierre. Ces œuvres n'abandonnent pas les sujets reconnaissables. Elles rendent difficile d'oublier que ceux-ci sont construits en peinture.\n\nLa sélection Goulandris comprend aussi des images moins aisées à identifier. Quelques lignes suffisent à une tête ; un titre propose un insecte ; un fragment d'architecture voisine avec des chevaux cabrés. Plutôt que de demander quelles œuvres sont « réalistes », observez la quantité variable d'indices nécessaire pour reconnaître quelque chose. Un simple verre et un corps imaginaire peuvent montrer combien la crédibilité d'une image dépend du rapport entre une forme et son entourage.",
+  "visitNote": "Ce guide porte sur la collection de la Fondation Basil & Elise Goulandris à Athènes, et non sur son musée d'Andros. La disposition des œuvres et les prêts sont susceptibles d'évoluer. Le musée d'Athènes propose également ses propres informations sur la collection ainsi que des audioguides ; veuillez consulter la page dédiée aux visiteurs sur le site de la fondation pour connaître les modalités d'accès actuelles.",
+  "locale": "fr",
+  "website": "https://goulandris.gr/en/visit/be-athens",
+  "officialGuide": "https://goulandris.gr/en/visit/be-athens",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Kandinsky soutient que la couleur et la forme peuvent agir sans copier des objets visibles. Son texte constitue un pendant direct à Both Striped et offre un point de comparaison avec Klee, Léger et les surfaces plus matérielles de Fautrier."
+    }
+  ],
+  "works": [
+    {
+      "id": "0efbe42c-b716-5266-a30e-7d47078d3a56",
+      "title": "La Cueillette des olives",
+      "catalogueTitle": "Olive Picking",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Décembre 1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/0efbe42c-b716-5266-a30e-7d47078d3a56-b27b33532baa479c.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/vincent-van-gogh-olive-picking",
+      "credit": "Vincent van Gogh (1853 - 1890); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/vincent-van-gogh-olive-picking",
+      "source": "https://goulandris.gr/en/artwork/vincent-van-gogh-olive-picking",
+      "description": "Les gestes des travailleurs appartiennent à un verger déjà animé de touches courtes et de troncs tors. Van Gogh ne sépare pas le labeur humain d'un paysage tranquillement neutre. Arbres, sol et figures partagent une facture agitée, tout en restant distincts par leurs formes. Le mouvement vient à la fois de la tâche représentée et des marques qui relient son cadre.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "af7cf38b-df55-5e5b-b474-9e9401b6e363",
+      "title": "Nature morte à la cafetière",
+      "catalogueTitle": "Still Life with Coffee Pot",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Mai 1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/af7cf38b-df55-5e5b-b474-9e9401b6e363-2b426b7d650d008a.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/vincent-van-gogh-still-life-coffee-pot",
+      "credit": "Vincent van Gogh (1853 - 1890); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/vincent-van-gogh-still-life-coffee-pot",
+      "source": "https://goulandris.gr/en/artwork/vincent-van-gogh-still-life-coffee-pot",
+      "description": "La cafetière bleue se tient fermement devant le jaune ; les petits objets l'entourent de motifs et de contours variables. Van Gogh emploie des récipients ordinaires comme partenaires d'un arrangement coloré. Leur familiarité permet de suivre les écarts : une tasse reste une tasse, alors que son contour et son ombre deviennent des éléments vigoureux de la surface.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "0e3129aa-d0fb-47a3-bf26-0306b66ba9e8",
+      "title": "Tous deux rayés",
+      "catalogueTitle": "Beide gestreift",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1932",
+      "start": 1932,
+      "end": 1932,
+      "medium": "Huile et gouache sur panneau",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/0e3129aa-d0fb-47a3-bf26-0306b66ba9e8-45a3deee391b988e.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/kandinsky-wassily-both-striped",
+      "credit": "Wassily Kandinsky (1866 - 1944); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/kandinsky-wassily-both-striped",
+      "source": "https://goulandris.gr/en/artwork/kandinsky-wassily-both-striped",
+      "description": "Les deux grandes formes semblent apparentées avant de pouvoir être identifiées. Des bandes répétées les relient ; des différences de direction et d'échelle les empêchent d'être jumelles. Kandinsky les place parmi de petits arcs et rectangles. Une interaction peut être suggérée par les positions sans recourir à des personnages ou à un événement illustré.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "b0dd3adb-29fd-46b4-8202-19da8db6c2a0",
+      "title": "Dynamique d'une tête",
+      "catalogueTitle": "Dynamik eines Kopfes",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/b0dd3adb-29fd-46b4-8202-19da8db6c2a0-9d0fdb1bd3a098d4.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/klee-paul-dynamics-of-a-head",
+      "credit": "Paul Klee (1879 - 1940); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/klee-paul-dynamics-of-a-head",
+      "source": "https://goulandris.gr/en/artwork/klee-paul-dynamics-of-a-head",
+      "description": "Les cercles pâles permettent de commencer à voir des yeux dans les couleurs superposées. Une fois le visage apparu, les bandes environnantes restent des formes visiblement indépendantes. Klee maintient les deux lectures. L'image est plus structurée qu'un amas arbitraire de taches, moins fixée qu'un portrait conventionnel ; son activité tient au passage entre ces possibilités.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "af35131b-221a-4265-bbb6-91eee5a1779a",
+      "title": "La Cathédrale de Rouen au matin : dominante rose",
+      "catalogueTitle": "La cathédrale de Rouen le matin (dominante rose)",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/af35131b-221a-4265-bbb6-91eee5a1779a-43adfa332a551145.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/monet-claude-rouen-cathedral-pink-dominant",
+      "credit": "Claude Monet (1840 - 1926); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/monet-claude-rouen-cathedral-pink-dominant",
+      "source": "https://goulandris.gr/en/artwork/monet-claude-rouen-cathedral-pink-dominant",
+      "description": "Les ouvertures sombres préservent les divisions de la façade dans les touches roses et violettes. La pierre n'a pas disparu, mais son apparence peinte dépend de conditions qu'elle ne commande pas. Monet rend architecture et éclairage difficiles à séparer. La structure répétée du bâtiment permet aux légers changements de couleur de devenir l'essentiel de l'événement pictural.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "a4e83675-3fad-48a4-8621-e1103f74d437",
+      "title": "La Sauterelle",
+      "catalogueTitle": "La sauterelle",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/a4e83675-3fad-48a4-8621-e1103f74d437-e495e5ab340bdcf9.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/miro-joan-the-grasshopper",
+      "credit": "Joan Miró (1893 - 1983); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © ADAGP, Paris / OSDEETE, Athens 2023; © ADAGP, Paris / OSDEETE, Athens 2023; © ADAGP, Paris / OSDEETE, Athens 2023; © ADAGP, Paris / OSDEETE, Athens 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/miro-joan-the-grasshopper",
+      "source": "https://goulandris.gr/en/artwork/miro-joan-the-grasshopper",
+      "description": "Le titre propose une créature avant que les signes clairsemés ne fournissent un corps évident. Lignes fines et petites formes colorées se dispersent sur le jaune, interrompu en bas par une forme sombre. Miró laisse la reconnaissance partielle. Faire de chaque marque un organe d'insecte réduirait l'ouverture du tableau : des signes peuvent suggérer la vie sans illustrer une anatomie.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "ead7dbd0-dfee-5cfd-b7e6-95cdd67e6b31",
+      "title": "Paysage archaïque",
+      "catalogueTitle": "Archaic Landscape",
+      "artist": "Theodoros Stamos",
+      "artists": [],
+      "date": "1947",
+      "start": 1947,
+      "end": 1947,
+      "medium": "Huile sur panneau dur",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/ead7dbd0-dfee-5cfd-b7e6-95cdd67e6b31-170c48d0309276db.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/stamos-theodoros-archaic-landscape",
+      "credit": "Theodoros Stamos (1922 - 1997); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/stamos-theodoros-archaic-landscape",
+      "source": "https://goulandris.gr/en/artwork/stamos-theodoros-archaic-landscape",
+      "description": "Fragments et formes de mares suggèrent un terrain sans en fixer l'échelle. Le champ brun texturé de Stamos peut sembler proche et matériel, tandis que les formes dispersées invitent à une lecture paysagère plus vaste. La zone bleue du bas introduit une autre surface. La peinture évoque une matière accumulée sans devenir la carte d'un lieu identifiable.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "8a07a8d9-a80e-5551-a5fb-a8fbfc276c96",
+      "title": "Balcon aux pilastres horizontaux",
+      "catalogueTitle": "Balcony with Horizontal Pilasters",
+      "artist": "Nikos Hadjikyriakos-Ghika",
+      "artists": [],
+      "date": "1954",
+      "start": 1954,
+      "end": 1954,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/8a07a8d9-a80e-5551-a5fb-a8fbfc276c96-a94890f5c32f2602.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/hadjikyriakos-ghika-nikos-balcony",
+      "credit": "Nikos Hadjikyriakos-Ghika (1906 - 1994); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/hadjikyriakos-ghika-nikos-balcony",
+      "source": "https://goulandris.gr/en/artwork/hadjikyriakos-ghika-nikos-balcony",
+      "description": "Le balcon fournit un point de départ architectural à des bandes, grilles et courbes qui n'obéissent plus à un seul point de vue. Hadjikyriakos-Ghika place de petits détails décoratifs dans des divisions plus larges. Répétitions et surfaces imbriquées font lire la structure. L'architecture devient matière à réagencement, plutôt qu'un simple objet fidèlement observé de l'extérieur.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "6e197085-11b8-5698-abf3-c580d7761030",
+      "title": "Cariatide",
+      "catalogueTitle": "Caryatid",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "vers 1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "Crayon et gouache sur papier marouflé sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/6e197085-11b8-5698-abf3-c580d7761030-481b4438daabd9e7.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/modigliani-amedeo-cariatide",
+      "credit": "Amedeo Modigliani (1884 - 1920); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/modigliani-amedeo-cariatide",
+      "source": "https://goulandris.gr/en/artwork/modigliani-amedeo-cariatide",
+      "description": "Les bras levés donnent à la figure agenouillée l'allure d'un support, alors qu'aucun bâtiment ne repose sur elle. Modigliani simplifie les articulations en larges courbes, rapprochant portage et équilibre dans un corps compact. Le titre architectural modifie la lecture de la pose. L'organisation du corps peut suggérer une charge avant même que celle-ci soit montrée.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "05e5dfda-cf0d-55b9-ab4f-1cdb2c280e2d",
+      "title": "Campagne à Auvers-sur-Oise",
+      "catalogueTitle": "Countryside in Auvers-sur-Oise",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1881-1882",
+      "start": 1881,
+      "end": 1882,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/05e5dfda-cf0d-55b9-ab4f-1cdb2c280e2d-25e574fd3bd65f8d.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/cezanne-paul-the-countryside-of-auvers-sur-oise",
+      "credit": "Paul Cézanne (1839 - 1906); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/cezanne-paul-the-countryside-of-auvers-sur-oise",
+      "source": "https://goulandris.gr/en/artwork/cezanne-paul-the-countryside-of-auvers-sur-oise",
+      "description": "Route et pentes établissent la distance ; les touches vertes et ocre répétées en laissent voir la construction. Les grands arbres de Cézanne encadrent un paysage dont la solidité vient de taches adjacentes plutôt que d'un modelé continu. L'œil peut suivre le chemin vers les maisons ou s'arrêter aux rapports locaux de couleur qui rendent ce parcours possible.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "04985f0c-c090-5a12-b454-6573cf038727",
+      "title": "Sortie du bain",
+      "catalogueTitle": "Getting Out of the Bath",
+      "artist": "Pierre Bonnard",
+      "artists": [
+        {
+          "name": "Pierre Bonnard",
+          "role": "primary",
+          "slug": "pierre-bonnard-q26408"
+        }
+      ],
+      "date": "vers 1926-1930",
+      "start": 1926,
+      "end": 1930,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/04985f0c-c090-5a12-b454-6573cf038727-83d7074b1a9fb0a4.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/bonnard-pierre-getting-out-of-the-bath",
+      "credit": "Pierre Bonnard (1867 - 1947); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/bonnard-pierre-getting-out-of-the-bath",
+      "source": "https://goulandris.gr/en/artwork/bonnard-pierre-getting-out-of-the-bath",
+      "description": "Carreaux à motifs, équipements et étoffes rivalisent avec la figure penchée. Bonnard rend ce geste privé familier plus difficile à isoler, tant la couleur anime la pièce entière. Il faut trouver le corps parmi ces surfaces. Son enchevêtrement partiel avec le lieu distingue l'œuvre d'une figure simplement posée devant un fond décoratif.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "f0ebf003-1db7-59aa-bdd0-bf465373d17d",
+      "title": "Verre d'eau",
+      "catalogueTitle": "Glass with Water",
+      "artist": "Jean Fautrier",
+      "artists": [],
+      "date": "1947",
+      "start": 1947,
+      "end": 1947,
+      "medium": "Technique mixte sur papier marouflé sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/f0ebf003-1db7-59aa-bdd0-bf465373d17d-1c9ad5305c72c588.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/fautrier-jean-glass-with-water",
+      "credit": "Jean Fautrier (1898 - 1964); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © ADAGP, Paris / OSDEETE, Athens 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/fautrier-jean-glass-with-water",
+      "source": "https://goulandris.gr/en/artwork/fautrier-jean-glass-with-water",
+      "description": "Le verre se reconnaît, mais le champ pictural rugueux refuse d'imiter sa douceur attendue. Fines crêtes et matière épaisse maintiennent un contour sans produire l'illusion d'une transparence pure. Fautrier confronte deux réalités matérielles : le récipient représenté et la surface travaillée qui le rend visible.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "238e812b-1f1f-5fa7-bd3b-bbbb0186e170",
+      "title": "Harmonie",
+      "catalogueTitle": "Harmony",
+      "artist": "Constantinos Parthenis",
+      "artists": [],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/238e812b-1f1f-5fa7-bd3b-bbbb0186e170-6c7b9334fedf78cf.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/parthenis-constantinos-harmony",
+      "credit": "Constantinos Parthenis (1878 - 1967); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/parthenis-constantinos-harmony",
+      "source": "https://goulandris.gr/en/artwork/parthenis-constantinos-harmony",
+      "description": "Les longs corps se distinguent à peine du champ clair environnant. Parthenis atténue la chair et le lieu défini, laissant les contours courbes relier les figures. Le titre allégorique ne correspond pas à une action facile à nommer. La cohérence de l'image se découvre en suivant ces liens retenus.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "53809fce-e804-5f12-9cdb-6332cc1bdad9",
+      "title": "Tête d'otage no 17",
+      "catalogueTitle": "Head of Hostage nο. 17",
+      "artist": "Jean Fautrier",
+      "artists": [],
+      "date": "1944",
+      "start": 1944,
+      "end": 1944,
+      "medium": "Technique mixte sur papier marouflé sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/53809fce-e804-5f12-9cdb-6332cc1bdad9-9b96b512ca3721e6.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/fautrier-jean-head-of-hostage-no-17",
+      "credit": "Jean Fautrier (1898 - 1964); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © ADAGP, Paris / OSDEETE, Athens 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/fautrier-jean-head-of-hostage-no-17",
+      "source": "https://goulandris.gr/en/artwork/fautrier-jean-head-of-hostage-no-17",
+      "description": "Un ovale pâle et quelques traits suffisent à peine à maintenir un visage devant le fond rugueux. Le mot « otage » empêche cette réduction de rester un simple exercice formel. Fautrier conduit un sujet humain à la limite de la reconnaissance par une matière d'aspect abîmé, non par une scène descriptive de violence. Il faut considérer ensemble le titre et la surface.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "6368b57a-17a7-5a0f-aba4-c12e377d2f25",
+      "title": "Chevaux sur la plage",
+      "catalogueTitle": "Horses on the Beach",
+      "artist": "Giorgio de Chirico",
+      "artists": [
+        {
+          "name": "Giorgio de Chirico",
+          "role": "primary",
+          "slug": "giorgio-de-chirico-q156622"
+        }
+      ],
+      "date": "vers 1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/6368b57a-17a7-5a0f-aba4-c12e377d2f25-9efe482cde8574da.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/giorgio-de-chirico-horses-on-the-beach",
+      "credit": "Giorgio de Chirico (1888 - 1978); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © SIAE 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/giorgio-de-chirico-horses-on-the-beach",
+      "source": "https://goulandris.gr/en/artwork/giorgio-de-chirico-horses-on-the-beach",
+      "description": "Les chevaux cabrés apportent du mouvement à un assemblage étrangement posé de plage et de fragments architecturaux. De Chirico garde chaque chose lisible sans fournir d'explication ordinaire à leur coexistence. Reconnaître ne résout pas la scène. Savoir ce qu'est un cheval ou un fragment laisse entière la question de leur présence dans ce lieu si précisément montré.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "ce0b0e6d-68a7-5397-a700-1c77d4c518c8",
+      "title": "Ville italienne",
+      "catalogueTitle": "Italian Town",
+      "artist": "André Derain",
+      "artists": [
+        {
+          "name": "André Derain",
+          "role": "primary",
+          "slug": "andre-derain-q156272"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "Gouache sur carton marouflé sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/ce0b0e6d-68a7-5397-a700-1c77d4c518c8-9cd76826b08a1173.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/derain-andre-italian-town",
+      "credit": "André Derain (1880 - 1954); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © ADAGP, Paris / OSDEETE, Athens 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/derain-andre-italian-town",
+      "source": "https://goulandris.gr/en/artwork/derain-andre-italian-town",
+      "description": "Peu d'activité sur la grande place détourne le regard des intervalles entre les bâtiments. Les façades nettement limitées et les petits nuages gardent leur clarté sous le vaste ciel. Derain fait de l'espace urbain un sujet sans événement dominant. Son quasi-vide donne aux proportions et aux séparations une importance inhabituelle.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "5e479015-aa98-5ac5-a65b-dfedaeb323f6",
+      "title": "Homme dans un intérieur",
+      "catalogueTitle": "Man in Interior",
+      "artist": "Victor Brauner",
+      "artists": [
+        {
+          "name": "Victor Brauner",
+          "role": "primary",
+          "slug": "victor-brauner-q558060"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "Huile sur panneau",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/5e479015-aa98-5ac5-a65b-dfedaeb323f6-f01075bc01263bec.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/brauner-victor-man-in-interior",
+      "credit": "Victor Brauner (1903 - 1966); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © ADAGP, Paris / OSDEETE, Athens 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/brauner-victor-man-in-interior",
+      "source": "https://goulandris.gr/en/artwork/brauner-victor-man-in-interior",
+      "description": "La chaise, le sol et l'ombre se comportent plus normalement que la figure dressée à côté. Brauner utilise ces indices familiers d'une pièce pour faire occuper l'espace à un impossible assemblage de parties corporelles et d'objets. Le cadre accentue la contradiction. Un environnement moins plausible rendrait cette figure moins nettement étrange.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "187bb5c9-2f6c-5ed0-8c30-04ab594e7ad0",
+      "title": "Élément mécanique",
+      "catalogueTitle": "Mechanical Element",
+      "artist": "Fernand Léger",
+      "artists": [
+        {
+          "name": "Fernand Léger",
+          "role": "primary",
+          "slug": "fernand-leger-q157183"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/187bb5c9-2f6c-5ed0-8c30-04ab594e7ad0-1ae62d0795582a20.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/leger-fernand-mechanical-element",
+      "credit": "Fernand Léger (1881 - 1955); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © ADAGP, Paris / OSDEETE, Athens 2023; © ADAGP, Paris / OSDEETE, Athens 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/leger-fernand-mechanical-element",
+      "source": "https://goulandris.gr/en/artwork/leger-fernand-mechanical-element",
+      "description": "Tubes, disques et bandes évoquent des machines sans expliquer de mécanisme. Léger extrait des rapports de courbe, de recouvrement et de contraste de composants associés à un usage pratique. Leur organisation est claire, même si aucune séquence de fonctionnement ne peut être reconstituée. Que peuvent produire visuellement les formes mécaniques, une fois dispensées de fonctionner ensemble ?",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "da704872-e95a-5450-bedc-71b9b8b267a4",
+      "title": "Quatre-vingt-dix-neuf têtes",
+      "catalogueTitle": "Ninety-nine Heads",
+      "artist": "Friedensreich Hundertwasser",
+      "artists": [],
+      "date": "Juin-août 1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "Huile sur panneau de fibres dur apprêté au blanc de Meudon, au blanc de zinc et à la colle de poisson, avec photographie collée et aquarelle lilas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/da704872-e95a-5450-bedc-71b9b8b267a4-0f49c6acde98a6ed.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/hundertwasser-ninety-nine-heads",
+      "credit": "Friedensreich Hundertwasser (1928 - 2000); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © 2023 NAMIDA AG, Glarus, Switzerland, All Rights Reserved; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/hundertwasser-ninety-nine-heads",
+      "source": "https://goulandris.gr/en/artwork/hundertwasser-ninety-nine-heads",
+      "description": "Les visages s'accumulent sur le rouge, souvent dans de petits compartiments colorés. Les différences de taille interrompent le format répété ; de grands yeux dérangent tout comptage régulier. Hundertwasser donne à chaque tête assez d'indices pour rester lisible, tout en étendant le groupe comme un motif. La répétition crée une compagnie sans uniformité d'échelle ni rangs ordonnés.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation"
+    },
+    {
+      "id": "c174e7a2-9743-5429-8283-8ae815b0df86",
+      "title": "Nu",
+      "catalogueTitle": "Nude",
+      "artist": "André Derain",
+      "artists": [
+        {
+          "name": "André Derain",
+          "role": "primary",
+          "slug": "andre-derain-q156272"
+        }
+      ],
+      "date": "vers 1948-1950",
+      "start": 1948,
+      "end": 1950,
+      "medium": "Huile sur toile marouflée sur panneau parqueté",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-museums-20261008/c174e7a2-9743-5429-8283-8ae815b0df86-57eeac00819948da.jpg",
+      "imageSource": "https://goulandris.gr/en/artwork/derain-andre-nude",
+      "credit": "André Derain (1880 - 1954); Basil & Elise Goulandris Foundation",
+      "license": "Copyright © 2026 Basil & Elise Goulandris Foundation; © ADAGP, Paris / OSDEETE, Athens 2023; Copyright © 2026 Basil & Elise Goulandris Foundation; Terms of Use & Privacy Policy Financial information",
+      "licenseUrl": "https://goulandris.gr/en/artwork/derain-andre-nude",
+      "source": "https://goulandris.gr/en/artwork/derain-andre-nude",
+      "description": "Des zones pâles distinguent le torse parmi le feuillage sombre et les marques courbes rugueuses. Derain rapproche la facture du corps de celle de la végétation, mais le bras étendu et la pose assise préservent une figure séparée. Nul besoin d'une limite claire d'atelier pour lui donner du poids. Sa distinction du paysage demeure partielle, obtenue par le travail pictural.",
+      "importance": "",
+      "museum": "Basil & Elise Goulandris Foundation",
+      "catalogueArtistSlug": null
+    }
+  ],
+  "context": {
+    "start": 1881,
+    "end": 1954
+  },
+  "closingSections": [
+    {
+      "title": "Garder deux lectures possibles",
+      "paragraphs": [
+        "Choisissez un objet reconnaissable et suivez les marques qui le construisent. Regardez ensuite une œuvre plus abstraite sans exiger aussitôt un nom pour toutes ses formes. Ces comparaisons concernent la collection ; consultez les informations d'accrochage actuelles de la Fondation pour une visite."
+      ]
+    }
+  ]
+}

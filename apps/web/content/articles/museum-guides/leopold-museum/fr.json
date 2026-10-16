@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "leopold-museum",
+  "museum": "Leopold Museum",
+  "city": "Vienne",
+  "country": "Autriche",
+  "title": "Musée Leopold : chefs-d’œuvre",
+  "subtitle": "Corps, arbres et villes tiennent ensemble grâce à des lignes qui les laissent rarement en repos.",
+  "introduction": "Les membres pliés, les branches nues et les toits serrés de Schiele témoignent d'un même intérêt pour l'angle auquel une partie en rejoint une autre. Un contour peut maintenir une figure tout en rendant sa position difficile. Chez Gerstl et Corinth, les touches desserrent ces limites : corps et décor participent alors à la même surface active.\n\nLa sélection commence avec *Mort et Vie* de Klimt, où l'intervalle entre deux groupes compte autant que leur décoration. Cet espace introduit une question récurrente : qu'est-ce qui sépare les figures, et qu'est-ce qui les réunit ? Les réponses varient entre groupes familiaux, portraits, paysages cultivés et procession où un squelette marche parmi les vivants. Aucune humeur unique ne les décrit tous.",
+  "visitNote": "Il s’agit d’une sélection d’œuvres issues de la collection, incluant des pièces susceptibles d’être prêtées ou temporairement absentes. Veuillez consulter les informations relatives aux expositions en cours et à la collection du Leopold Museum pour connaître les détails de présentation. Des titres très proches attribués à Schiele peuvent désigner des œuvres différentes ; les liens vers les objets permettent d’identifier les versions présentées ici.",
+  "locale": "fr",
+  "website": "https://www.leopoldmuseum.org/",
+  "officialGuide": "https://www.leopoldmuseum.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Lecture gratuite · Anglais",
+      "note": "L’analyse de la ligne et de la masse proposée par Speed offre un point de départ pratique pour aborder les contours chez Schiele. Ses exemples plus conventionnels permettent également de décrire plus aisément les écarts observés dans ces peintures."
+    }
+  ],
+  "works": [
+    {
+      "id": "82087b7e-4613-58e3-81c7-3f1c8aac3891",
+      "title": "Mort et Vie",
+      "catalogueTitle": "Death and Life",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1910/11, reworked in 1912/13 and 1915/16",
+      "start": 1910,
+      "end": 1915,
+      "medium": "",
+      "accession": "LM 630",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/82087b7e-4613-58e3-81c7-3f1c8aac3891-e69369efb663c7d9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Leopold_Museum,_Vienna,_September_2018_(05).jpg",
+      "credit": "Gustav Klimt. Death and Life. Image credit: Ardfern; Own work. https://commons.wikimedia.org/wiki/File:Leopold_Museum,_Vienna,_September_2018_(05).jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://onlinecollection.leopoldmuseum.org/en/object/629-death-and-life/",
+      "description": "La figure squelettique se tient à l'écart d'un groupe serré réunissant plusieurs âges de la vie. Son vêtement sombre à croix fait face aux ornements vifs et à la peau exposée, par-delà un intervalle vide. Klimt met la décoration au service des deux pôles. L'écart maintient leur relation en suspens : la mort appartient à la composition, mais reste hors de l'enclos formé par les corps vivants.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "a2aaf58d-7288-5d78-b56c-28d7a233452c",
+      "title": "Portrait de Wally",
+      "catalogueTitle": "Portrait of Wally",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "LM 453",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/a2aaf58d-7288-5d78-b56c-28d7a233452c-507199cb2a46d503.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_Wally_Neuzil_Egon_Schiele_1912.jpg",
+      "credit": "Egon Schiele. Portrait of Wally. Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Portrait_of_Wally_Neuzil_Egon_Schiele_1912.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q1555137",
+      "description": "Cheveux roux, yeux bleus et col clair donnent au visage des repères distincts dans un entourage légèrement travaillé. La tête inclinée complique le regard direct et rend la rencontre moins symétrique qu'un portrait frontal officiel. Schiele concentre la description là où la reconnaissance l'exige, laissant vêtement et fond former un cadre plus tranché et plus simple autour de la ressemblance.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4e38b094-f99d-521f-b0eb-f87455f40cb8",
+      "title": "Mère avec deux enfants II",
+      "catalogueTitle": "Mother with Two Children II",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/4e38b094-f99d-521f-b0eb-f87455f40cb8-a1e10fa7bbc354a5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mother_with_two_children_II_Egon_Schiele_1915.jpg",
+      "credit": "Egon Schiele. Mother with Two Children II. Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Mother_with_two_children_II_Egon_Schiele_1915.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q126007918",
+      "description": "Les corps se superposent, mais les visages gardent des orientations et des contours distincts. Les limites anguleuses empêchent la famille de devenir une seule forme adoucie. Schiele maintient dans le groupe étroit des individus dont la proximité physique demande un arrangement. Ils sont proches, sans que cette proximité efface automatiquement les différences entre les personnes réunies.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "a02d372e-3767-5348-acd9-a87d7cf6424a",
+      "title": "Nu masculin assis, autoportrait",
+      "catalogueTitle": "Seated Male Nude (Self-Portrait)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "Inv. 465",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/a02d372e-3767-5348-acd9-a87d7cf6424a-93d237db0769714b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Seated_male_nude_(Self-Portrait)_Egon_Schiele_1910.jpg",
+      "credit": "Egon Schiele. Seated Male Nude (Self-Portrait). Image credit: Egon Schiele; Own work , Yelkrokoyade , 2012-07-13 12:27:42. https://commons.wikimedia.org/wiki/File:Seated_male_nude_(Self-Portrait)_Egon_Schiele_1910.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797691",
+      "description": "Bras levés et jambes étendues rendent les angles du corps manifestes sur un fond presque vide. Ni mobilier ni pièce ne viennent vraiment expliquer ou soutenir la pose. Schiele fait dépendre l'autoportrait de la structure articulée elle-même. L'isolement amplifie chaque changement de direction aux jointures, rendant la tension lisible sans récit de souffrance autour d'elle.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "349a2684-6d41-5120-9e8f-785de31b7aad",
+      "title": "Autoportrait à l'épaule nue",
+      "catalogueTitle": "Self-Portrait with Bare Shoulder",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "Inv.Nr 653",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/349a2684-6d41-5120-9e8f-785de31b7aad-930e9b32031f3d2b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Self_portrait_with_raised_bare_shoulder_Egon_Schiele_1912.jpg",
+      "credit": "Egon Schiele. Self-Portrait with Bare Shoulder. Image credit: Egon Schiele; Own work , Yelkrokoyade , 2012-07-13 12:21:57. https://commons.wikimedia.org/wiki/File:Self_portrait_with_raised_bare_shoulder_Egon_Schiele_1912.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q107645899",
+      "description": "L'épaule prend une place inhabituellement forte sous le visage tourné. Sa masse claire concurrence les traits au lieu de les soutenir discrètement. Cheveux sombres et contours insistants interrompent la peau, empêchant un passage fluide autour de la tête. Une petite portion de corps exposé suffit à troubler l'ordre habituel du regard dans un portrait.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "d8dba44f-d32b-503b-b86c-888bffe96259",
+      "title": "Une matinée au bord de l'étang",
+      "catalogueTitle": "A Morning by the Pond",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "LM 2007",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/d8dba44f-d32b-503b-b86c-888bffe96259-989167a531964b52.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustav-klimt/quiet-pond-in-the-park-of-appeal",
+      "credit": "Gustav Klimt. A Morning by the Pond. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q19912822",
+      "description": "La végétation revient dans l'eau avec sa disposition conservée et sa texture adoucie. Klimt fait du reflet une variation plutôt qu'une simple copie. Un lointain plus clair apparaît au-delà de la rive sombre, ajoutant un intervalle horizontal. On peut suivre le paysage à travers les formes répétées et leurs différences de netteté, sans personnage ni événement dominant.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "3fe1c3d6-226e-587b-9218-284f02679052",
+      "title": "Cardinal et religieuse, Caresse",
+      "catalogueTitle": "Cardinal and Nun (Caress)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "LM 455",
+      "image": "https://artlines.org/assets/artworks/wikiart/3fe1c3d6-226e-587b-9218-284f02679052-82ab316ac06bde2e.jpg",
+      "imageSource": "https://www.wikiart.org/en/egon-schiele/cardinal-and-nun-caress-1912",
+      "credit": "Egon Schiele. Cardinal and Nun (Caress). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28797682",
+      "description": "Visages et mains pâles émergent d'une masse escarpée de robes rouges et sombres. Les formes rigides du vêtement rendent l'étreinte maladroite plutôt que souple. L'habit religieux donne au contact une portée qui dépasse le seul geste. Schiele laisse ces signes en tension : les figures s'agrippent l'une à l'autre, tandis que le costume rappelle obstinément leurs rôles.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4c32e184-ef15-5621-b0ef-c06ad87936b5",
+      "title": "Krumau sur la Vltava, La Petite Ville IV",
+      "catalogueTitle": "Krumau on the Vltava (The Small Town IV)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1913–1914",
+      "start": 1913,
+      "end": 1914,
+      "medium": "",
+      "accession": "655",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/4c32e184-ef15-5621-b0ef-c06ad87936b5-22418e58b71a7743.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Krumau_on_the_Moldova_(Small_town_IV)_Egon_Schiele_1914.jpg",
+      "credit": "Egon Schiele. Krumau on the Vltava (The Small Town IV). Image credit: Egon Schiele; Own work , Yelkrokoyade , Taken in 13 July 2012, 13:30:27. https://commons.wikimedia.org/wiki/File:Krumau_on_the_Moldova_(Small_town_IV)_Egon_Schiele_1914.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q136047789",
+      "description": "Toits, fenêtres et passages étroits s'emboîtent dans une vue très inclinée au-dessus du ruban sombre de la rivière. Les structures rendent la ville habitée, même sans activité humaine marquante. Schiele articule l'architecture comme ses corps : des angles voisins tiennent l'image ensemble tout en montrant sa compression. La rivière fournit une limite ferme sous les formes serrées.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "3d48ca46-ddb6-5538-a73f-23d43d64a752",
+      "title": "Table dressée",
+      "catalogueTitle": "Covered Table",
+      "artist": "Anton Faistauer",
+      "artists": [
+        {
+          "name": "Anton Faistauer",
+          "role": "primary",
+          "slug": "austrian-research-painter-q589241"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/painter-key-artworks-20261008/q111821778-b8e03d658944ea66.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anton_Faistauer_003.jpg",
+      "credit": "Anton Faistauer · The Yorck Project (2002)       10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH.  ISBN:  3936122202. · Public domain · Wikimedia Commons",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://www.wikidata.org/wiki/Q111821778",
+      "description": "Le plateau s'incline vers le spectateur et avance vaisselle et fruits devant la pièce plus sombre. Les chaises réservent des places à des personnes absentes. Faistauer donne au repas une disposition matérielle avant d'en faire un événement social. De grandes zones colorées rendent les objets consistants, tandis que la nappe blanche les rassemble sur un même plan oblique.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "d4e7c45e-b96b-56cb-b943-976637dacf3d",
+      "title": "Danse macabre, version IV",
+      "catalogueTitle": "Danse Macabre (version IV)",
+      "artist": "Albin Egger-Lienz",
+      "artists": [
+        {
+          "name": "Albin Egger-Lienz",
+          "role": "primary",
+          "slug": "austrian-research-painter-q639706"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "Inv. 195",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/d4e7c45e-b96b-56cb-b943-976637dacf3d-c8759be15a7a6533.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Danse_macabre_(fourth_Version)_Albin_Egger-Lienz.jpg",
+      "credit": "Albin Egger-Lienz. Danse Macabre (version IV). Image credit: Albin Egger-Lienz; Own work , Yelkrokoyade , 2012-07-13 13:33:07. https://commons.wikimedia.org/wiki/File:Danse_macabre_(fourth_Version)_Albin_Egger-Lienz.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q136028368",
+      "description": "Le squelette adopte la même foulée que les hommes portant des outils. Les membres pliés se répètent et les unissent en un cortège dans un espace peu profond de couleurs terreuses. Egger-Lienz ne place pas la mort dans une zone séparée, observant les vivants de loin. Elle participe à leur mouvement, donnant au rythme partagé plus de portée qu'à l'identité d'un seul individu.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "47ee20a5-1c12-52c2-bf04-eed818acbff9",
+      "title": "Ferme à Barbizon",
+      "catalogueTitle": "Farm in Barbizon",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1874",
+      "start": 1874,
+      "end": 1874,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/47ee20a5-1c12-52c2-bf04-eed818acbff9-7957de9e1ea73569.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Max_Liebermann_-_Bauernhof_in_Barbizon.jpg",
+      "credit": "Max Liebermann. Farm in Barbizon. Image credit: Derbrauni; Own work. https://commons.wikimedia.org/wiki/File:Max_Liebermann_-_Bauernhof_in_Barbizon.jpg. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q134006049",
+      "description": "Les oies éparses interrompent le rapport entre la cour, les bâtiments bas et le toit raide. Leurs positions variées font de l'endroit un espace de travail occupé plutôt qu'une simple vue architecturale. Liebermann multiplie les nuances du sol irrégulier, gardant l'activité agricole ordinaire dans ses conditions matérielles. Les petits mouvements des oiseaux empêchent le premier plan de se figer.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "55c95848-7d4c-5c51-bf7e-f5a504fda2b0",
+      "title": "Arbre d'automne dans le vent, Arbre d'hiver",
+      "catalogueTitle": "Autumn Tree in Stirred Air (Winter Tree)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "LM 449",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/55c95848-7d4c-5c51-bf7e-f5a504fda2b0-8ef9150f84400d7d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Automn_Tree_in_Stirred_Air_(Winter_Tree)_Egon_Schiele_1912.jpg",
+      "credit": "Egon Schiele. Autumn Tree in Stirred Air (Winter Tree). Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Automn_Tree_in_Stirred_Air_(Winter_Tree)_Egon_Schiele_1912.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797681",
+      "description": "Peu de feuilles adoucissent les branches : chaque changement de direction se voit. Une bande de sol sombre ancre le tronc contre le cadre pâle et fragmenté. Schiele donne à l'arbre une articulation comparable à celle d'un corps dessiné, sans lui attribuer une identité humaine littérale. La comparaison porte sur la structure : appui en bas, jointures répétées en haut, tension transmise par un contour irrégulier.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "8d8943e0-e327-59a7-baa2-06d3646775cd",
+      "title": "Le Lac Traun et la montagne de la « Grecque endormie »",
+      "catalogueTitle": "Lake Traun with Mountain Sleeping Greek Woman",
+      "artist": "Richard Gerstl",
+      "artists": [
+        {
+          "name": "Richard Gerstl",
+          "role": "primary",
+          "slug": "richard-gerstl-q129113"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "",
+      "accession": "LM 646",
+      "image": "https://artlines.org/assets/artworks/wikiart/e5c361e6-3c58-5527-b2e3-9991197d8c25-dd1825b5bdc887ce.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-gerstl/lake-traunsee-with-the-schlafende-griechin-mountain",
+      "credit": "Richard Gerstl. Lake Traunsee with the Schlafende Griechin mountain. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798148",
+      "description": "Des touches courbes traversent montagne et ciel, donnant à leurs surfaces une activité que le terrain lui-même ne peut accomplir. Gerstl préserve la masse des pentes bleu-vert au-dessus du lac étroit tout en assouplissant leur description. L'image garde ensemble deux informations : un paysage reconnaissable et les mouvements de peinture par lesquels il s'est constitué.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4ae7bfda-64ce-55a5-98d6-b0dab2ef16e3",
+      "title": "Paysage au Walchensee",
+      "catalogueTitle": "Landscape at the Walchensee",
+      "artist": "Lovis Corinth",
+      "artists": [
+        {
+          "name": "Lovis Corinth",
+          "role": "primary",
+          "slug": "lovis-corinth-q157610"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "LM 109",
+      "image": "https://artlines.org/assets/artworks/wikiart/4ae7bfda-64ce-55a5-98d6-b0dab2ef16e3-488b8938f599456a.jpg",
+      "imageSource": "https://www.wikiart.org/en/lovis-corinth/landscape-at-the-walchensee-1923",
+      "credit": "Lovis Corinth. Landscape at the Walchensee. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798001",
+      "description": "Pente, bâtiments et lac restent les principales divisions de la vue, mais les touches obliques en interrompent sans cesse les bords. Corinth ne lisse pas sa facture pour offrir un panorama sans couture. Le paysage se voit à travers une surface peinte active. Des marques sombres dans le lointain supérieur maintiennent cette activité là même où l'œil attend que la vue s'éloigne.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "9d983411-4737-5b66-8532-e7ea24c887a7",
+      "title": "Soleil couchant",
+      "catalogueTitle": "Setting Sun",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "625",
+      "image": "https://artlines.org/assets/artworks/wikiart/9d983411-4737-5b66-8532-e7ea24c887a7-6c82a82db756fb90.jpg",
+      "imageSource": "https://www.wikiart.org/en/egon-schiele/setting-sun-1913",
+      "credit": "Egon Schiele. Setting Sun. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28780356",
+      "description": "Troncs minces et branches sombres coupent les bandes de terre, d'eau et de ciel chaud. Les deux structures, arbres verticaux et lointain horizontal, restent nettement distinctes. Schiele laisse la chaleur du couchant remplir la vue sans dissoudre ses divisions fermes. La couleur indique un état de lumière, mais le contour continue à décider où une partie finit et où l'autre commence.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "2fa16958-6f2e-559f-a80d-963009265a49",
+      "title": "Alfred Kuhn",
+      "catalogueTitle": "Portrait of Alfred Kuhn",
+      "artist": "Lovis Corinth",
+      "artists": [
+        {
+          "name": "Lovis Corinth",
+          "role": "primary",
+          "slug": "lovis-corinth-q157610"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "LM 2091",
+      "image": "https://artlines.org/assets/artworks/wikiart/2fa16958-6f2e-559f-a80d-963009265a49-37e8d187d2a71eaa.jpg",
+      "imageSource": "https://www.wikiart.org/en/lovis-corinth/portrait-of-alfred-kuhn-1923",
+      "credit": "Lovis Corinth. Portrait of Alfred Kuhn. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798002",
+      "description": "Le visage tourné émerge par contraste de valeurs, tandis que les touches diagonales passent du vêtement au fond. Corinth donne au modèle de la consistance sans fermer tous ses contours extérieurs. La facture commune relie personne et décor, mais la lumière préserve leur différence. Un portrait peut rester solide même lorsque les marques qui le décrivent se montrent ouvertement comme telles.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "2af9d653-59d4-5c04-b9ec-026436e16cfa",
+      "title": "Le Poète lyrique",
+      "catalogueTitle": "The Lyricist",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "LM 450",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/2af9d653-59d4-5c04-b9ec-026436e16cfa-213df574f0605613.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Lyricist_Egon_Schiele_1911.jpg",
+      "credit": "Egon Schiele. The Lyricist. Image credit: Yelkrokoyade; Own work. https://commons.wikimedia.org/wiki/File:The_Lyricist_Egon_Schiele_1911.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q28797697",
+      "description": "Les doigts écartés prolongent la présentation du personnage au-delà de la tête inclinée. La peau claire, traversée de touches colorées et de contours brisés, distingue ces gestes du corps plus sombre. Schiele fait de la présentation de soi une performance visible plutôt qu'une ressemblance arrêtée. Les mains sollicitent le regard pour elles-mêmes, donnant au portrait une direction que le seul visage n'établirait pas.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "4b009d26-b75d-5924-8436-6672cbe3c2e6",
+      "title": "Henryka Cohn",
+      "catalogueTitle": "Portrait of Henryka Cohn",
+      "artist": "Richard Gerstl",
+      "artists": [
+        {
+          "name": "Richard Gerstl",
+          "role": "primary",
+          "slug": "richard-gerstl-q129113"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "LM 650",
+      "image": "https://artlines.org/assets/artworks/wikiart/4b009d26-b75d-5924-8436-6672cbe3c2e6-16e17c79694083bd.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-gerstl/portrait-of-henryka-cohn-1908",
+      "credit": "Richard Gerstl. Portrait of Henryka Cohn. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q28798150",
+      "description": "Bleus froids et violets circulent entre le modèle assis de côté et la pièce à motifs. Gerstl réduit la séparation des surfaces sans perdre la pose. La robe claire appartient à la fois à un corps reconnaissable et à une répartition plus vaste des couleurs. Ce traitement commun fait participer l'intérieur au portrait, au lieu de le laisser servir de contenant neutre.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "e080b48e-5478-5d9e-8000-475af60973b0",
+      "title": "Mère aveugle, La Mère",
+      "catalogueTitle": "Blind Mother, or The Mother",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/e080b48e-5478-5d9e-8000-475af60973b0-a64704aeb8011f10.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Blind_Mother_Egon_Schiele_1914.jpg",
+      "credit": "Egon Schiele. Blind Mother, or The Mother. Image credit: Egon Schiele; Own work; Photographic credit: Yelkrokoyade. https://commons.wikimedia.org/wiki/File:Blind_Mother_Egon_Schiele_1914.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q134067801",
+      "description": "La femme se penche sur l'enfant dans un cadre sombre et resserré. Des contours lourds relient corps, vêtements et meubles en une structure protectrice mais peu commode. Schiele donne au soin une difficulté concrète : les figures doivent trouver place et se soutenir dans l'espace disponible. La tendresse du sujet n'exige pas de rendre cet arrangement détendu.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    },
+    {
+      "id": "7decb831-6398-5f6e-8b87-59134d46755a",
+      "title": "Prairie ensoleillée avec des arbres fruitiers",
+      "catalogueTitle": "Sunny Meadow with Fruit Trees",
+      "artist": "Richard Gerstl",
+      "artists": [
+        {
+          "name": "Richard Gerstl",
+          "role": "primary",
+          "slug": "richard-gerstl-q129113"
+        }
+      ],
+      "date": "vers 1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/7decb831-6398-5f6e-8b87-59134d46755a-0003a1cb0adcef0a.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-gerstl/sunny-meadow-with-fruit-trees",
+      "credit": "Richard Gerstl. Sunny Meadow with Fruit Trees. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q107640618",
+      "description": "Les touches répétées forment un champ vert dense autour des troncs et des branches déployées. Des plages de lumière interrompent l'accumulation sans la transformer en vue polie. Gerstl garde au paysage ensoleillé une forte matérialité : l'œil rencontre la peinture aussi constamment que le feuillage. Sujet lumineux et facture énergique coexistent sans devoir suggérer la même émotion.",
+      "importance": "",
+      "museum": "Leopold Museum"
+    }
+  ],
+  "context": {
+    "start": 1874,
+    "end": 1923
+  },
+  "closingSections": [
+    {
+      "title": "Suivre un contour d'un sujet à l'autre",
+      "paragraphs": [
+        "Comparez une branche nue à un bras plié, un angle de toit à un vêtement froissé. La ressemblance sert à examiner la structure ; elle ne prouve pas que chaque sujet cache le même sens. Pour une visite, vérifiez l'œuvre précise et son exposition actuelle auprès du musée : cette sélection recense des pièces de collection, non un parcours permanent."
+      ]
+    }
+  ]
+}

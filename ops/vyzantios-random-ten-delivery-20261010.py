@@ -357,7 +357,7 @@ def _apply(connection):
                 receipt_path=RUN/'applied-batches'/artist_id/f'{start//40:04d}.json'
                 if receipt_path.exists():batch_results.append(r.load(receipt_path));continue
                 with db.transaction():
-                    db.execute("SET LOCAL lock_timeout='5s'")
+                    db.execute("SET LOCAL lock_timeout='120s'")
                     db.execute('SELECT pg_advisory_xact_lock(2026100607)')
                     db.execute('SELECT id FROM artworks WHERE id=ANY(%s::uuid[]) ORDER BY id FOR UPDATE',(ids,)).fetchall()
                     before=s.snapshots(db,ids)
@@ -521,50 +521,8 @@ def verify():
 
 
 def report():
-    import csv,html
-    rows=[];source_rows=[]
-    for pair in m.cohort():
-        artist=pair['artist'];aid=artist['id'];idx=r.load(RUN/'indexes'/(aid+'.json.gz'))
-        record={'artist':artist['display_name'],'artist_id':aid,'artist_url':'https://artlines.org/artists/'+artist['slug'],
-                'wikiart_url':pair['source']['url'],'source_entries':len(idx['items']),'status':'research_in_progress'}
-        path=RUN/'selections'/(aid+'.json.gz')
-        if path.exists():
-            plan=r.load(path);record.update(before_records=plan['baseline_counts']['works'],before_images=plan['baseline_counts']['images'],
-                new_proposed=plan['counts'].get('create',0),existing_matches=plan['counts'].get('existing',0),
-                source_holds=plan['counts'].get('hold',0),excluded_after_1970=plan['source_excluded_after_1970']+plan['counts'].get('excluded',0),
-                unlinked_creator_leads=len(plan['unlinked_creator_leads']),status='selected')
-            for x in plan['rows']:
-                source_rows.append({'artist':artist['display_name'],'artist_id':aid,'title':x.get('title',x.get('record',{}).get('index',{}).get('title')),
-                  'source_url':x.get('source_url',x.get('record',{}).get('index',{}).get('url')),'action':x['action'],'artwork_id':x.get('artwork_id'),
-                  'source_date':x.get('page',{}).get('metadata',{}).get('year'),'source_rights_label':x.get('source_rights_label'),
-                  'reason':x.get('reason') or x.get('image_hold') or ('Undated: metadata review; image deferred' if x.get('page') and not x['page']['date'] else '')})
-        path=RUN/'delivery-plans'/(aid+'.json.gz')
-        if path.exists():
-            delivery=r.load(path);record.update(delivery_holds=len(delivery['held']),undated_image_holds=len(delivery['image_scope_holds']),reviewed_image_holds=len(delivery.get('manual_image_holds',{})),status='delivery_planned')
-        path=RUN/'applied'/(aid+'.json')
-        if path.exists():
-            applied=r.load(path);record.update(created=applied['created'],images_added=applied['attached'],status='production_applied')
-        path=RUN/'verified'/(aid+'.json')
-        if path.exists():
-            verified=r.load(path);record.update(after_records=verified['production_artist_totals']['artworks'],after_images=verified['production_artist_totals']['images'],status='production_verified')
-        rows.append(record)
-    totals={key:sum(x.get(key,0) for x in rows) for key in ['source_entries','before_records','before_images','new_proposed','existing_matches','source_holds','excluded_after_1970','unlinked_creator_leads','delivery_holds','undated_image_holds','reviewed_image_holds','created','images_added','after_records','after_images']}
-    summary={'at':r.now(),'operation':OP,'painters':len(rows),'statuses':dict(collections.Counter(x['status'] for x in rows)),'totals':totals,
-             'complete':all(x['status']=='production_verified' for x in rows),'painters_report':rows,
-             'scope':'Research of available WikiArt indexes for a reproducible random cohort of 200 securely matched production painter identities, excluding Otto Dix and all 1000 painters from the five previous batches. Unavailable indexes are reported explicitly. This is source coverage, not a catalogue raisonne or claim to every artwork worldwide.',
-             'date_policy':'Creation after 1970 excluded. Unknown dates retained as review metadata, not invented or automatically eligible. Undated images deferred until creation evidence.',
-             'image_policy':'Exact WikiArt per-image rights labels retained; restricted labels do not imply an independent licence. Full supplied frame; application derivatives <=100000 bytes. Original images and recovery snapshots archived outside Documents.',
-             'preservation':'New records remain review. Existing images, catalogue metadata, accepted holdings, display claims and publication state preserved. No local database writes.'}
-    for filename,values in [('painters.csv',rows),('source-dispositions.csv',source_rows)]:
-        fields=list(dict.fromkeys(k for value in values for k in value));temp=RUN/(filename+'.partial')
-        with temp.open('w',newline='') as file:
-            writer=csv.DictWriter(file,fieldnames=fields);writer.writeheader();writer.writerows(values)
-        temp.replace(RUN/filename)
-    temp=RUN/'summary.partial';temp.write_text(json.dumps(summary,ensure_ascii=False,indent=2));temp.replace(RUN/'summary.json')
-    table=''.join('<tr>'+''.join('<td>'+html.escape(str(x.get(key,'')))+'</td>' for key in ['artist','status','source_entries','created','images_added','source_holds','undated_image_holds'])+'</tr>' for x in rows)
-    page='<!doctype html><meta charset="utf-8"><title>Random 200 painter production research</title><style>body{font:15px system-ui;max-width:1300px;margin:40px auto;padding:20px}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background:#f3f3f3;position:sticky;top:0}p{line-height:1.5}</style><h1>Random 200-painter production research</h1><p>Updated '+html.escape(summary['at'])+'</p><p>'+html.escape(summary['scope'])+'</p><p>'+html.escape(summary['date_policy'])+'</p><p>'+html.escape(summary['image_policy'])+'</p><p>'+html.escape(summary['preservation'])+'</p><p><a href="painters.csv">Per-painter CSV</a> · <a href="source-dispositions.csv">Every source disposition</a> · <a href="selected-200-painters.csv">Frozen random cohort</a> · <a href="summary.json">Summary JSON</a></p><p>'+html.escape(json.dumps(totals))+'</p><table><thead><tr><th>Painter</th><th>Status</th><th>Source entries</th><th>New records</th><th>Images added</th><th>Source holds</th><th>Undated image holds</th></tr></thead><tbody>'+table+'</tbody></table>'
-    temp=RUN/'report.partial';temp.write_text(page);temp.replace(RUN/'report.html')
-    print(json.dumps({'complete':summary['complete'],'statuses':summary['statuses'],'totals':totals}),flush=True)
+    import runpy
+    runpy.run_path(str(m.ROOT/'ops/vyzantios-random-ten-report-20261010.py'),run_name='__main__')
 
 
 if __name__=='__main__':

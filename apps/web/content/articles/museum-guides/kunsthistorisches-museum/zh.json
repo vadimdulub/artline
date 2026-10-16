@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "kunsthistorisches-museum",
+  "museum": "Kunsthistorisches Museum",
+  "city": "维也纳",
+  "country": "奥地利",
+  "title": "维也纳艺术史博物馆：杰作",
+  "subtitle": "从勃鲁盖尔繁忙的世界到王后几乎不动的双手，这二十件作品不断改变观看的尺度。",
+  "introduction": "巴别塔大得令工人显得微不足道；王室孩子的衣裙仿佛倒转了服装与身体本应有的比例。另一幅画里，人物头像则由海洋生物拼成。大小关系一次次改变我们最先认出什么。\n\n本选集将这种观看方式，放在人群场面与集中刻画个人的作品旁边比较。勃鲁盖尔通过微小动作铺开一个完整的社会，霍尔拜因则以同样持久的观察面对一位姿态克制的模特。差别不在细节重要或不重要，而在它们如何被组织：一个人物可以独自支撑整幅画，也可以通过身边许多其他身体获得意义。",
+  "visitNote": "这些展品选自博物馆的绘画藏品。外借、修复工作或展厅调整可能会影响参观，因此若计划专程欣赏某幅画作，请务必先查询最新信息。展品的排列顺序基于视觉上的对比，而非馆内的参观动线。",
+  "locale": "zh",
+  "website": "https://www.khm.at",
+  "officialGuide": "https://www.khm.at",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "列奥纳多关于人体、透视和光影的观察，为审视此处的构图布局提供了视角。这些观察在解读肖像画和虚构建筑场景时尤为有益，尽管这并不意味着他与每一位画家之间都存在直接联系。"
+    }
+  ],
+  "works": [
+    {
+      "id": "bd221a44-5717-54ff-877a-7f98f596410e",
+      "title": "巴别塔",
+      "catalogueTitle": "The Tower of Babel",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1563",
+      "start": 1563,
+      "end": 1563,
+      "medium": "",
+      "accession": "GG_1026",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/bd221a44-5717-54ff-877a-7f98f596410e-24b7144a75450047.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_der_Turmbau_zu_Babel.JPG",
+      "credit": "Pieter Bruegel the Elder. The Tower of Babel. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_der_Turmbau_zu_Babel.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q15293656",
+      "description": "巨大的圆形建筑使工人与访客显得极小，同时又靠这些人让尺度可以理解。墙体上暴露着不同施工阶段，使建筑表面上规则的外形变得复杂。勃鲁盖尔既画出宏大的建造野心，也画出无数实际任务。目光从整座塔移向细小活动时，单一建筑就变成大量劳动的积累。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "b6ef61be-344d-54af-a81d-914a4171364e",
+      "title": "雪中猎人",
+      "catalogueTitle": "The Hunters in the Snow",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1565",
+      "start": 1565,
+      "end": 1565,
+      "medium": "",
+      "accession": "GG_1838",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/b6ef61be-344d-54af-a81d-914a4171364e-55692b85fd47d794.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder,_Hunters_in_the_Snow_(Winter).jpg",
+      "credit": "Pieter Bruegel the Elder. The Hunters in the Snow. Image credit: Dudva; Own work. https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder,_Hunters_in_the_Snow_(Winter).jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q500985",
+      "description": "猎人与狗从近处密集的深色树木旁走下坡，前方山谷里许多人正在滑冰。他们的归来只是更广阔冬日生活的一部分。陡峭的俯视角度，让近处身体的疲惫与远下方的活动同时可见。勃鲁盖尔给远方安排自己的事件，没有让它仅仅化为背景风景。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "e351217e-a0c0-590d-8acb-abc9495a7277",
+      "title": "农民婚礼",
+      "catalogueTitle": "The Peasant Wedding",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "约 1568 年",
+      "start": 1568,
+      "end": 1568,
+      "medium": "",
+      "accession": "GG_1027",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/e351217e-a0c0-590d-8acb-abc9495a7277-e95f20eb3a119764.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Le_repas_de_noce_Pieter_Brueghel_l%27Ancien.jpg",
+      "credit": "Pieter Bruegel the Elder. The Peasant Wedding. Image credit: Yelkrokoyade; Own work. https://commons.wikimedia.org/wiki/File:Le_repas_de_noce_Pieter_Brueghel_l%27Ancien.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q603751",
+      "description": "新娘相对安静，送餐者却在拥挤谷仓中搬运食物。反复出现的碗与忙碌双手建立了用餐节奏。勃鲁盖尔让庆典对实际协作的依赖清楚可见：身体必须抬、弯、接、吃。把这场聚会维系起来的，不只是仪式中心，也包括供众人进食的劳动。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "792e52d5-0449-5624-bd5d-6fe07792e828",
+      "title": "绘画艺术",
+      "catalogueTitle": "The Art of Painting",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约 1666–1668 年",
+      "start": 1666,
+      "end": 1668,
+      "medium": "",
+      "accession": "GG_9128",
+      "image": "https://artlines.org/assets/artworks/wikiart/792e52d5-0449-5624-bd5d-6fe07792e828-c0ad14ad15e2491d.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/the-art-of-painting",
+      "credit": "Johannes Vermeer. The Art of Painting. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q588695",
+      "description": "画家背对观者，藏起脸庞，拉开的帷幕却让我们进入他仔细安排的房间。模特、地砖、吊灯和墙上地图各处于计算过的距离。维米尔将描绘这一行为本身变成需要描绘的题材。我们看见一位正在观看的画家，却并不站在他的位置上。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "15453c42-4431-5a2b-bb66-b2f8e9917455",
+      "title": "荆棘加冕",
+      "catalogueTitle": "The Crowning with Thorns",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1602",
+      "start": 1602,
+      "end": 1602,
+      "medium": "",
+      "accession": "GG_307",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1117094-df6f93f0a64415e6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Crowning_with_Thorns-Caravaggio_(1602).jpg",
+      "credit": "Caravaggio. The Crowning with Thorns. Image credit: Caravaggio. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1117094",
+      "description": "杆子压向基督低垂的头，一位穿盔甲的人在旁观看。裸露皮肤与防护金属形成对照，使这组紧靠的人物并非同样脆弱。卡拉瓦乔几乎没有为暴力动作留下周围余地。旁观者受到保护的身体，即使没有直接参与施暴，也成为画面意义的一部分。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "151b2381-bf9d-503e-acaa-32dea2368a35",
+      "title": "牧群归来",
+      "catalogueTitle": "The Return of the Herd",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1565",
+      "start": 1565,
+      "end": 1565,
+      "medium": "",
+      "accession": "GG_1018",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/151b2381-bf9d-503e-acaa-32dea2368a35-93f4e52568d0832b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:La_rentr%C3%A9e_des_troupeaux_Pieter_Brueghel_l%27Ancien.jpg",
+      "credit": "Pieter Bruegel the Elder. The Return of the Herd. Image credit: Pieter Brueghel the Elder; Own work , Yelkrokoyade , Taken in 13 July 2012, 09:56:21. https://commons.wikimedia.org/wiki/File:La_rentr%C3%A9e_des_troupeaux_Pieter_Brueghel_l%27Ancien.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q698254",
+      "description": "牛群一起走过前景，山丘与水面则延伸到远远超出它们行进路线的地方。变幻天空下，暖色动物身体与较冷远景分开。勃鲁盖尔用共同的移动方向联系起季节性劳作。广阔风景交代了这项任务的环境，却没有把牛群缩减成偶然的装饰队列。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "2c04a856-9f34-596b-bc4c-8a9094f12d88",
+      "title": "狂欢节与大斋期之争",
+      "catalogueTitle": "The Fight Between Carnival and Lent",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1559",
+      "start": 1559,
+      "end": 1559,
+      "medium": "",
+      "accession": "GG_1016",
+      "image": "https://artlines.org/assets/artworks/wikiart/2c04a856-9f34-596b-bc4c-8a9094f12d88-4a40b2691b2d9226.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-fight-between-carnival-and-lent-1559-1",
+      "credit": "Pieter Bruegel the Elder. The Fight Between Carnival and Lent. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q689236",
+      "description": "前景相对的两组人，身处一个已经充满食物、游戏和小型往来的广场。他们的较量并不代表全城所有活动。勃鲁盖尔为彼此竞争的习俗提供共同环境，周围行为又使这种对立更复杂。当目光离开看似居中的决斗，转向四周仍在继续的生活，画面就变得更丰富。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "8ad72f6a-ec02-5a30-a9cc-152f115298f1",
+      "title": "凸面镜中的自画像",
+      "catalogueTitle": "Self-portrait in a Convex Mirror",
+      "artist": "Parmigianino",
+      "artists": [
+        {
+          "name": "Parmigianino",
+          "role": "primary",
+          "slug": "parmigianino-q9348"
+        }
+      ],
+      "date": "约 1523–1524 年",
+      "start": 1523,
+      "end": 1524,
+      "medium": "",
+      "accession": "GG_286",
+      "image": "https://artlines.org/assets/artworks/wikiart/8ad72f6a-ec02-5a30-a9cc-152f115298f1-e17638a9dbaf2774.jpg",
+      "imageSource": "https://www.wikiart.org/en/parmigianino/self-portrait-at-the-mirror",
+      "credit": "Parmigianino. Self-portrait in a Convex Mirror. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q699319",
+      "description": "前景的手膨大，房间则沿圆形边缘弯曲。帕尔米贾尼诺保留了凸面镜的变形，没有将它修正为普通相貌。脸仍可辨认，所在空间的比例却由光学装置决定。肖像不只展示一个人，也展示这个人在怎样的具体条件下被看见。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "b48a8fe7-3916-55f6-87d1-0d83d3b04fed",
+      "title": "三位哲学家",
+      "catalogueTitle": "The Three Philosophers",
+      "artist": "Giorgione",
+      "artists": [
+        {
+          "name": "Giorgione",
+          "role": "primary",
+          "slug": "giorgione-q8459"
+        }
+      ],
+      "date": "1505–1509",
+      "start": 1505,
+      "end": 1509,
+      "medium": "",
+      "accession": "GG_111",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/b48a8fe7-3916-55f6-87d1-0d83d3b04fed-e91c21fa55d6a5c3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Giorgione-The_Three_Philosophers-Kunsthistorisches_Museum.jpg",
+      "credit": "Giorgione. The Three Philosophers. Image credit: Giorgione; Yair Haklai Taken in 28 March 2010. https://commons.wikimedia.org/wiki/File:Giorgione-The_Three_Philosophers-Kunsthistorisches_Museum.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q877191",
+      "description": "不同衣服与位置将三个男人区分开，他们之间的关系却没有归结为一个明显动作。坐着的人转向深色岩石，后方风景则向外打开。乔尔乔内赋予人物彼此之间、人物与环境之间的空隙特殊的重要性。这份不确定值得保留；若自信地编造一段对话，就会封闭画面仍然开放的可能。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "cf540ef8-e479-5228-90c8-0c6e279558ff",
+      "title": "儿童游戏",
+      "catalogueTitle": "Children's Games",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1560",
+      "start": 1560,
+      "end": 1560,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cf540ef8-e479-5228-90c8-0c6e279558ff-55c696a7a7a6d3de.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/children-s-games-1560",
+      "credit": "Pieter Bruegel the Elder. Children's Games. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pieter-bruegel-the-elder/children-s-games-1560",
+      "description": "奔跑、保持平衡与扭打，占据城镇地面上接连的一小片区域。每组人物都有自己的身体安排，反复出现的游戏却汇成广阔社会场景。勃鲁盖尔允许我们既逐处细看，也通观全幅。规则通过身体一起做什么而显现，无须一个讲述者逐项解释。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "9a917f30-f60e-5df0-a04e-52a3c4e81a7d",
+      "title": "圣塞巴斯蒂安",
+      "catalogueTitle": "Saint Sebastian",
+      "artist": "Andrea Mantegna",
+      "artists": [
+        {
+          "name": "Andrea Mantegna",
+          "role": "primary",
+          "slug": "andrea-mantegna-q5681"
+        }
+      ],
+      "date": "约 1457–1459 年",
+      "start": 1457,
+      "end": 1459,
+      "medium": "",
+      "accession": "GG_301",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/9a917f30-f60e-5df0-a04e-52a3c4e81a7d-97740852040eed9d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1459_Mantegna_Heiliger_Sebastian_Kunsthistorisches_Museum_Wienanagoria.jpg",
+      "credit": "Andrea Mantegna. Saint Sebastian. Image credit: Andrea Mantegna; anagoria. https://commons.wikimedia.org/wiki/File:1459_Mantegna_Heiliger_Sebastian_Kunsthistorisches_Museum_Wienanagoria.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q3947948",
+      "description": "坚硬的古典石构件旁，箭插在浅色皮肤上。曼特尼亚鲜明区分材质，同时以反复的竖线托住被绑缚的站立身体。周围废墟又带来另一种类似关系：建筑也可能受损，却仍保持原有形状。远方风景提供距离，但眼前的主要对照仍是脆弱皮肤与雕刻石面。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "5bcba78c-431f-56d8-a007-da0df5b8cc44",
+      "title": "雅科波·斯特拉达",
+      "catalogueTitle": "Portrait of Jacopo Strada",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1567–1568",
+      "start": 1567,
+      "end": 1568,
+      "medium": "",
+      "accession": "GG_81",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/5bcba78c-431f-56d8-a007-da0df5b8cc44-7a1e421a892fc951.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Tizian,_Jacopo_Strada.JPG",
+      "credit": "Titian. Portrait of Jacopo Strada. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Tizian,_Jacopo_Strada.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q698993",
+      "description": "斯特拉达身旁围着书本和收藏物，手边有一件小雕塑，身体向前倾入交流之中。提香把拿取、展示物品的动作变成模特公众身份的一部分。知识与拥有之物通过行动呈现，而非像附件一样排在一具不动身体后面。向前的动作，使拥挤环境有了明确的人物朝向。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "6dfa46f4-826b-512a-b3ee-32e5aca55186",
+      "title": "敬拜三位一体",
+      "catalogueTitle": "Adoration of the Trinity",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1511",
+      "start": 1511,
+      "end": 1511,
+      "medium": "",
+      "accession": "GG_838",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/6dfa46f4-826b-512a-b3ee-32e5aca55186-1f21a3dbc166ff99.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Albrecht_D%C3%BCrer,_Allerheiligenbild.JPG",
+      "credit": "Albrecht Dürer. Adoration of the Trinity. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Albrecht_D%C3%BCrer,_Allerheiligenbild.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q688870",
+      "description": "不同层次使庞大集会变得易于观看。天上人物建立上方中心，敬拜者聚集于下，狭窄风景则提供更远的尘世一层。丢勒为集体信仰安排整体结构，又不要求每张面孔失去个性。大区块先建立秩序，细看时便能在其中发现一个个不同的人。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "e4e5ea2c-36ca-54e1-94b6-202d06fc82b2",
+      "title": "简·西摩",
+      "catalogueTitle": "Jane Seymour",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "1536–1537",
+      "start": 1536,
+      "end": 1537,
+      "medium": "",
+      "accession": "GG_881",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/e4e5ea2c-36ca-54e1-94b6-202d06fc82b2-fbdad0a3dab4480a.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/jane-seymour-1536",
+      "credit": "Hans Holbein the Younger. Jane Seymour. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q20091565",
+      "description": "珠宝、布料与头饰，使王后的身份拥有精确的物质形式。合拢双手与克制表情几乎没有动作，因此细微变化更为重要。霍尔拜因让服饰包含丰富信息，却没有让它代替人物。肖像在准确的材质表面与收敛的人的形象之间，维持着细致平衡。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "6c69abf2-1fba-5f30-a262-5fd123e48eef",
+      "title": "赫拉克勒斯与翁法勒",
+      "catalogueTitle": "Herakles and Omphale",
+      "artist": "Bartholomeus Spranger",
+      "artists": [
+        {
+          "name": "Bartholomeus Spranger",
+          "role": "primary",
+          "slug": "bartholomeus-spranger-q447682"
+        }
+      ],
+      "date": "约 1585 年",
+      "start": 1585,
+      "end": 1585,
+      "medium": "铜板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/6c69abf2-1fba-5f30-a262-5fd123e48eef-ae591c87c3b84dc9.jpg",
+      "imageSource": "https://www.wikiart.org/en/bartholomaus-spranger/herakles-and-omphale-1585",
+      "credit": "Bartholomeus Spranger. Herakles and Omphale. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/bartholomaus-spranger/herakles-and-omphale-1585",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/bartholomaus-spranger/herakles-and-omphale-1585",
+      "description": "身份标志的交换，改变了坐着的赫拉克勒斯与转身女子之间原本预期的关系。施普朗格同时用物品与姿态表现角色逆转。复杂的身体扭转，使厚重衣褶下重叠的人物仍可分辨；互换的角色又打乱了熟悉的英雄等级。神话成为重新安排权力象征归谁展示的一种方式。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "5b4ef5f8-fe06-56ff-b6e6-ae14669b47c2",
+      "title": "从花园望向美泉宫",
+      "catalogueTitle": "Imperial summer palace of Schönbrunn, garden façade",
+      "artist": "Bernardo Bellotto",
+      "artists": [
+        {
+          "name": "Bernardo Bellotto",
+          "role": "primary",
+          "slug": "bernardo-bellotto-q164688"
+        }
+      ],
+      "date": "1758",
+      "start": 1758,
+      "end": 1758,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/5b4ef5f8-fe06-56ff-b6e6-ae14669b47c2-1586004a5f1f0009.jpg",
+      "imageSource": "https://www.wikiart.org/en/bernardo-bellotto/imperial-summer-palace-of-sch%C3%B6nbrunn-garden-fa%C3%A7ade-1758",
+      "credit": "Bernardo Bellotto. Imperial summer palace of Schönbrunn, garden façade. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/bernardo-bellotto/imperial-summer-palace-of-sch%C3%B6nbrunn-garden-fa%C3%A7ade-1758",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/bernardo-bellotto/imperial-summer-palace-of-sch%C3%B6nbrunn-garden-fa%C3%A7ade-1758",
+      "description": "规则花园后方，长长立面形成稳定横线。小小访客在小径间分散移动，为建筑提供尺度，却没有动摇它的主导地位。贝洛托精确的建筑描绘也容纳了社交场景。宫殿依旧宏伟，但人物让我们知道园地如何被使用，而不是留下一个完全无人的建筑正立面。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "65cf76b1-f776-59b7-b6f8-dc9dbc3a8a38",
+      "title": "五岁的玛格丽塔公主",
+      "catalogueTitle": "Portrait of the Infanta Margarita Aged Five",
+      "artist": "Diego Velázquez",
+      "artists": [
+        {
+          "name": "Diego Velázquez",
+          "role": "primary",
+          "slug": "diego-velazquez-q297"
+        }
+      ],
+      "date": "1656",
+      "start": 1656,
+      "end": 1656,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/65cf76b1-f776-59b7-b6f8-dc9dbc3a8a38-51c3a954661b59d7.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-velazquez/portrait-of-the-infanta-margarita-aged-five-1656",
+      "credit": "Diego Velázquez. Portrait of the Infanta Margarita Aged Five. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/diego-velazquez/portrait-of-the-infanta-margarita-aged-five-1656",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-velazquez/portrait-of-the-infanta-margarita-aged-five-1656",
+      "description": "衣裙占据的空间远多于孩子露出的头与双手。宽大的几何外形，使王室身份成为她的身体必须置身其中的条件。亮饰边与一朵花引导目光穿过服装，小脸则保持个人的尺度。委拉斯开兹将童年画在等级制度的视觉装置之内，而不是置于其外。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "2e2b7cc7-d460-5f09-9249-22b99403dbd6",
+      "title": "农民舞蹈",
+      "catalogueTitle": "The Peasant Dance",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "约 1568 年",
+      "start": 1568,
+      "end": 1568,
+      "medium": "",
+      "accession": "GG_1059",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/2e2b7cc7-d460-5f09-9249-22b99403dbd6-092207217f808926.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_Bauerntanz.JPG",
+      "credit": "Pieter Bruegel the Elder. The Peasant Dance. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_Bauerntanz.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q95562",
+      "description": "抬起的脚与摆动的手臂，把节庆拉近到足以看出用力的距离。前景舞者的身体分量，与勃鲁盖尔冬日山谷中细小的滑冰者不同。他们被截取的动作与风笛手一起填满街道。靠近观看后，集体休闲不再只是一片广阔图案，也显出每个身体实际承担的动作。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "5b930782-95a3-59c3-97b3-abea7376fa52",
+      "title": "水",
+      "catalogueTitle": "Water",
+      "artist": "Giuseppe Arcimboldo",
+      "artists": [
+        {
+          "name": "Giuseppe Arcimboldo",
+          "role": "primary",
+          "slug": "giuseppe-arcimboldo-q7751"
+        }
+      ],
+      "date": "1566",
+      "start": 1566,
+      "end": 1566,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5b930782-95a3-59c3-97b3-abea7376fa52-e7d4fbfd0ab0f65a.jpg",
+      "imageSource": "https://www.wikiart.org/en/giuseppe-arcimboldo/water-1566",
+      "credit": "Giuseppe Arcimboldo. Water. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giuseppe-arcimboldo/water-1566",
+      "description": "鱼与贝壳组成侧面头像后，各自仍可辨认。阿尔钦博托让画面始终依赖两种无法同时完整成立的尺度。集中看一只生物，面孔就散开；退后看，头像又恢复。构图通过这种反复转换成立，而不是最终找到一个答案，使其中一种看法变得多余。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "ae09e00a-8c22-5798-9f07-5afd30ca28a7",
+      "title": "年轻女子肖像，通称《劳拉》",
+      "catalogueTitle": "Portrait of a Young Woman (Laura)",
+      "artist": "Giorgione",
+      "artists": [
+        {
+          "name": "Giorgione",
+          "role": "primary",
+          "slug": "giorgione-q8459"
+        }
+      ],
+      "date": "1506",
+      "start": 1506,
+      "end": 1506,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ae09e00a-8c22-5798-9f07-5afd30ca28a7-f0be90c12e7616c4.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/portrait-of-a-young-woman-laura-1506",
+      "credit": "Portrait of a Young Woman (Laura). WikiArt; Giorgione. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giorgione/portrait-of-a-young-woman-laura-1506",
+      "description": "桂叶、毛皮衬里的衣服与浅色布料，比模特的真实身份更能确定。她的转身与拢住衣物的动作，让这些材质紧挨裸露皮肤。乔尔乔内集中描绘材料之间的关系，却没有给出完整生平。沿用的名称应当保留这份不确定，而不是将其伪装成已获证实的身份。",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    }
+  ],
+  "context": {
+    "start": 1457,
+    "end": 1758
+  },
+  "closingSections": [
+    {
+      "title": "在整体与一个细节之间来回看",
+      "paragraphs": [
+        "可以试着关注巴别塔的工人、婚礼的送餐者，或《水》中的一只海洋生物。返回整体后，细节的作用应该改变，而不是消失。作品属于博物馆馆藏，但这里的顺序不保证对应实际展厅路线；参观前请确认当前陈列与开放安排。"
+      ]
+    }
+  ]
+}

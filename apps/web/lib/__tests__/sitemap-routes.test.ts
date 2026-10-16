@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
 vi.mock("../seo-api", () => ({ discoveryRequest: vi.fn() }));
+import { getGuideIndex } from "../museum-guides";
 import { discoveryRequest } from "../seo-api";
 import { GET as index } from "../../app/sitemap.xml/route";
 import { GET as shard } from "../../app/[sitemapFile]/route";
@@ -33,8 +34,8 @@ it("advertises public pages and artworks while omitting member pages", async () 
   expect(pages).toContain("<loc>https://artline.example/art-history-timeline</loc>");
   expect(pages).toContain("<loc>https://artline.example/guides</loc>");
   expect(guideMetadata().robots).toMatchObject({ index: true });
-  expect(guidesMetadata().alternates).toMatchObject({ canonical: "https://artline.example/guides" });
-  expect(guidesMetadata().robots).toMatchObject({ index: true });
+  expect((await guidesMetadata({ searchParams: Promise.resolve({}) })).alternates).toMatchObject({ canonical: "https://artline.example/guides" });
+  expect((await guidesMetadata({ searchParams: Promise.resolve({}) })).robots).toMatchObject({ index: true });
   expect(pages).not.toContain("/museums");
   vi.mocked(discoveryRequest).mockResolvedValueOnce({ items: [{ path: "/artists/giotto", name: "Giotto" }] });
   expect(await (await request("sitemap-artists-abc.xml")).text()).toContain("/artists/giotto");
@@ -48,7 +49,29 @@ it("reports outages as retryable failures rather than empty successful sitemaps"
     expect(response.headers.get("cache-control")).toBe("no-store");
   }
 });
+it("keeps all public artist and museum guide editions and their selected images discoverable without the catalogue API", async () => {
+  const response = await request("sitemap-pages.xml");
+  const xml = new DOMParser().parseFromString(await response.text(), "application/xml");
+  expect(xml.querySelector("parsererror")).toBeNull();
+  const urls = [...xml.getElementsByTagName("url")];
+  const guides = urls.filter(url => url.getElementsByTagName("loc")[0].textContent?.includes("/guides/"));
+  expect(guides).toHaveLength(getGuideIndex().reduce((n, guide) => n + guide.locales.length, 0));
+  for (const slug of ["artemisia-gentileschi", "mary-cassatt", "frida-kahlo"]) {
+    expect(guides.some(guide => guide.getElementsByTagName("loc")[0].textContent === `https://artline.example/guides/${slug}/ru`)).toBe(true);
+  }
+  for (const guide of guides) {
+    expect(guide.getElementsByTagName("lastmod")[0].textContent).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    expect(guide.getElementsByTagNameNS("http://www.google.com/schemas/sitemap-image/1.1", "image").length).toBeGreaterThanOrEqual(20);
+  }
+  expect(discoveryRequest).not.toHaveBeenCalled();
+});
 it("validates ranges before contacting the API", async () => {
   expect((await request("sitemap-artworks-INVALID.xml")).status).toBe(404);
   expect(discoveryRequest).not.toHaveBeenCalled();
+});
+
+it("keeps filtered guide searches out of indexing with the directory canonical", async () => {
+  const metadata = await guidesMetadata({ searchParams: Promise.resolve({ q: "Louvre" }) });
+  expect(metadata.robots).toMatchObject({ index: false, follow: true });
+  expect(metadata.alternates).toMatchObject({ canonical: "https://artline.example/guides" });
 });

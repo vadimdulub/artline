@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "minneapolis-institute-art",
+  "museum": "Minneapolis Institute of Art",
+  "city": "明尼阿波利斯",
+  "country": "美国",
+  "title": "明尼阿波利斯艺术博物馆：杰作",
+  "subtitle": "二十件作品，关注一块污迹、一笔颜料或细微色差如何改变观看。",
+  "introduction": "伦勃朗笔下，卢克雷蒂娅浅色衣物上的血迹改变了整幅画的读法。梵高的橄榄林提出另一种要求：地面、树与天空各自分明，相近的笔触却让动势贯穿其间。到这组选画的另一端，阿德·莱因哈特要求我们辨别那些接近黑色、一眼容易漏过的差别。\n\n这是使用绘画表面的三种不同方式。这份指南沿着它们，阅读明尼阿波利斯艺术学院的肖像、风景和一幅戏剧人物挂轴。有时，颜料使对象清楚；有时，它让辨认变得困难。值得问的不只是画得像不像，而是这样的画法让哪些差异成为可见。",
+  "visitNote": "这批精选展品出自 Mia 规模宏大的馆藏。请查阅最新的藏品记录，以了解展厅位置、外借及轮换展出情况，尤其是针对纸本艺术品的信息。正如画作标题所示，这幅描绘圣安东尼瀑布（Saint Anthony Falls）的作品记录的是该地早期的景象，而非其当今的面貌。",
+  "locale": "zh",
+  "website": "https://new.artsmia.org/",
+  "officialGuide": "https://new.artsmia.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）关于色调与构图的实用论述，可以通过此处的肖像画和风景画加以验证。不妨从曼奇尼（Mancini）那幅色调深沉的自画像与普桑（Poussin）画中色调明亮的形象入手——在这两类作品中，截然不同的光影分布引导着观者的视觉辨识。"
+    }
+  ],
+  "works": [
+    {
+      "id": "565ca71e-948e-44c6-8a28-84de69cde577",
+      "title": "橄榄树",
+      "catalogueTitle": "Olive Trees",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "布面油画",
+      "accession": "51.7",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/8483e579-acf3-410f-b155-f0445c92a07d-23678d13a90a773d.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1218",
+      "credit": "Vincent van Gogh. Olive Trees. Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1218",
+      "description": "扭曲的树木与赭色地面仍然分开，贯穿两者的笔触却赋予它们相近的动势。梵高没有把运动只留给受天气吹动的枝叶，天空与土地也参与其中。蓝色山峦稳住远景，使笔触密集的前景仍能读作扎根土地的树林，而非混成一片的图案。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "0def07fe-13a9-4786-ac21-aaa45267901f",
+      "title": "卢克雷蒂娅",
+      "catalogueTitle": "Lucretia",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1666",
+      "start": 1666,
+      "end": 1666,
+      "medium": "布面油画",
+      "accession": "34.19",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/a3f024e4-5e5f-4c98-b723-7d042c25a783-ef1bdcb1c0414ec4.jpg",
+      "imageSource": "https://collections.artsmia.org/art/529",
+      "credit": "Rembrandt van Rijn. Lucretia. Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/529",
+      "description": "内衣上的血迹说明这一刻发生在卢克雷蒂娅自伤之后。伦勃朗没有给她胜利般的姿态：垂下的眼睛与向绳索抬起的手，把注意力留在脆弱的身体上。这个古代故事经常服务于公共的荣誉观念；这里，它的后果集中在布料、血液，以及仅仅维持站立所需的力气之中。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "9297bb47-3c0b-43f6-a312-409601aa4f62",
+      "title": "奥尔唐斯·瓦尔潘松",
+      "catalogueTitle": "Portrait of Mlle. Hortense Valpinçon",
+      "artist": "Edgar Degas",
+      "artists": [
+        {
+          "name": "Edgar Degas",
+          "role": "primary",
+          "slug": "edgar-degas-q46373"
+        }
+      ],
+      "date": "约 1871 年",
+      "start": 1871,
+      "end": 1871,
+      "medium": "床垫布面油画",
+      "accession": "48.1",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/dad2ed46-9a21-4a6f-a05d-6a19f115ad86-318c45bd4dfb68a2.jpg",
+      "imageSource": "https://collections.artsmia.org/art/774",
+      "credit": "Edgar Degas. Portrait of Mlle. Hortense Valpinçon. Image credit: Minneapolis Institute of Art, The John R. Van Derlip Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/774",
+      "description": "女孩斜倚的姿势打断了房间繁复的纹样。德加给她足够自然的姿态，让她像是正待在自己的环境里；转过来的头又使她回应肖像的观看。花朵与陈设本可以盖过这么小的人物，实际却恰好相反：环境越密，她手、肩膀与脸部的独特排列就越清楚。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "01705492-3b9c-47ca-aa37-1a61a76bd443",
+      "title": "日本桥",
+      "catalogueTitle": "The Japanese Bridge",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "约 1923–25 年",
+      "start": 1923,
+      "end": 1925,
+      "medium": "布面油画",
+      "accession": "61.36.15",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/c6ea294e-cdb3-43de-9e51-ca7d19a15867-92127bbe16cd886b.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1413",
+      "credit": "Claude Monet. The Japanese Bridge. Image credit: Minneapolis Institute of Art, Bequest of Putnam Dana McMillan. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1413",
+      "description": "桥必须从密集的红、蓝、黄、绿笔迹中寻找。在这幅莫奈晚期作品里，熟悉的建筑不再提供清楚外轮廓，让颜色围绕它安排。辨认只能依靠少数尚存的关系。花园仍是题材，但这幅画格外突出一个临界点：熟悉的地方开始难以与表现它的颜料分开。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "c9dd7622-1c13-416d-9cfb-7e7a27643566",
+      "title": "新泽西州蒙特克莱尔的磨坊溪",
+      "catalogueTitle": "The Mill Stream, Montclair, New Jersey",
+      "artist": "George Inness",
+      "artists": [
+        {
+          "name": "George Inness",
+          "role": "primary",
+          "slug": "george-inness-nga-1413"
+        }
+      ],
+      "date": "约 1888 年",
+      "start": 1888,
+      "end": 1888,
+      "medium": "布面油画",
+      "accession": "2000.236",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/6595777a-30ed-4f02-adf7-cf79c3a6a5f9-7fe7052d973cd59f.jpg",
+      "imageSource": "https://collections.artsmia.org/art/12936",
+      "credit": "George Inness. The Mill Stream, Montclair, New Jersey. George Inness; Minneapolis Institute of Art; Gift of Don and Diana Lee Lucker. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/12936",
+      "description": "稀疏树木后方，屋顶和烟囱依然可见，即使暖光柔化了它们与风景的界线。英尼斯不必移除工业建筑，也能取得连贯感。模糊的倒影把人工与自然形体连入同一种空气之中。留意哪些边缘保持清晰、哪些变得柔和：正是这种变化让景色统一。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "20481fb9-0914-5fd6-87a8-c7c35fd14142",
+      "title": "日耳曼尼库斯之死",
+      "catalogueTitle": "The Death of Germanicus",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1627",
+      "start": 1627,
+      "end": 1627,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/20481fb9-0914-5fd6-87a8-c7c35fd14142-743ac64ad5dfe0e9.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/the-death-of-germanicus-1627",
+      "credit": "The Death of Germanicus. WikiArt; Nicolas Poussin. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/the-death-of-germanicus-1627",
+      "description": "伸出的手臂把垂死者的床与士兵连接起来，家属则占据聚会的另一侧。普桑让不同反应各自可辨，没有把悲伤画成一种重复表情。上方深蓝帷幔把场景收拢。公共责任与私人丧失同处一室，但人物的位置使这两种经验不至于混为一谈。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "0fd6074b-3835-4aa9-9a2c-a709726d211c",
+      "title": "城市之夜",
+      "catalogueTitle": "City Night",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "布面油画",
+      "accession": "80.28",
+      "image": "https://artlines.org/assets/artworks/wikiart/2c9f8c8d-727c-4303-a218-9602f312337b-ee0a2aa7cadd3111.jpg",
+      "imageSource": "https://www.wikiart.org/en/georgia-o-keeffe/city-night",
+      "credit": "Georgia O'Keeffe. City Night. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collections.artsmia.org/art/2725",
+      "description": "欧姬芙只在高耸建筑之间留下一道狭窄天空。从这个仰视角度看，城市与其说是许多地址的集合，不如说是围住观看者的结构。下缘附近的一点小光，使尺度差异更加鲜明。大片暗色体块让高度可以切身感受，而不必逐一描写窗户或街道活动。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "18476396-0f6b-45ae-a674-22f0dd651872",
+      "title": "我们的看护，玛格丽特·伯吉斯",
+      "catalogueTitle": "Portrait of Our Nurse, Margaret Burgess",
+      "artist": "Florine Stettheimer",
+      "artists": [
+        {
+          "name": "Florine Stettheimer",
+          "role": "primary",
+          "slug": "florine-stettheimer-round2-8f62ae931f72"
+        }
+      ],
+      "date": "1929",
+      "start": 1929,
+      "end": 1929,
+      "medium": "布面油画",
+      "accession": "59.21",
+      "image": "https://artlines.org/assets/artworks/wikiart/744a8f1a-afac-4822-bc5a-5a6f98add9e2-c1b3b9872e74621c.jpg",
+      "imageSource": "https://www.wikiart.org/en/florine-stettheimer/portrait-of-our-nurse-margaret-burgess",
+      "credit": "Florine Stettheimer. Portrait of Our Nurse, Margaret Burgess. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collections.artsmia.org/art/1369",
+      "description": "斯特泰默写出这位家庭工作人员的姓名，让她修长的身影居于中央，周围是小物件与人物。大小比例服从画面的装饰安排，而非一间始终可以精确测量的房间。标题中的“我们的”记录了家庭雇佣关系，但玛格丽特·伯吉斯没有被化为匿名职务。她的名字给周围这个构想出的世界一个明确的人物中心。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "7f9193f5-0694-4c80-a1f8-031f73d3aa5a",
+      "title": "与阿里埃塔医生在一起的自画像",
+      "catalogueTitle": "Self-Portrait with Dr. Arrieta",
+      "artist": "Francisco Goya",
+      "artists": [
+        {
+          "name": "Francisco Goya",
+          "role": "primary",
+          "slug": "francisco-goya-q5432"
+        }
+      ],
+      "date": "1820",
+      "start": 1820,
+      "end": 1820,
+      "medium": "布面油画",
+      "accession": "52.14",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/89b26ff2-7fed-4867-94f7-9cfc1976069f-fbc0fdcd102877c7.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1226",
+      "credit": "Francisco Goya. Self-Portrait with Dr. Arrieta. Image credit: Minneapolis Institute of Art, The Ethel Morrison Van Derlip Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1226",
+      "description": "戈雅把自己画得无法维持传统肖像中独立自持的姿态。阿里埃塔扶着他，把杯子送近他的嘴。医生具体的照料动作构成画面结构：一个身体支撑另一个身体，使其得以保持位置。身后模糊的人群无法与这场近距离照护争夺注意力。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "1962b595-3814-45f0-a879-4253a0be17e8",
+      "title": "露兜树下",
+      "catalogueTitle": "I Raro Te Oviri (Under the Pandanus)",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "41.4",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/adc34134-4028-42b1-a84d-c9f9eeae898e-fd7d0bdacb7977b8.jpg",
+      "imageSource": "https://collections.artsmia.org/art/601",
+      "credit": "Paul Gauguin. I Raro Te Oviri (Under the Pandanus). Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/601",
+      "description": "紫色地面与图案化枝叶建立的秩序，并不依赖自然主义色彩。高更把女子和深色动物放入这个构造出的环境。画面上的统一不应被误认为对塔希提生活毫无遮拦的记录。这幅画同时显示，一位欧洲艺术家如何决定某个地方及其居民应当以什么样貌出现。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "9e60ed43-badf-4c50-9396-54daf91efd47",
+      "title": "白羽饰",
+      "catalogueTitle": "White Plumes",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "布面油画",
+      "accession": "47.41",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/a0c25822-7de1-4f86-a6e3-cd58ab1a1d1a-d53e24ae7a08025a.jpg",
+      "imageSource": "https://collections.artsmia.org/art/766",
+      "credit": "Henri Matisse. White Plumes. Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/766",
+      "description": "羽毛帽伸展到头部之外，让一件配饰在肖像里占据很大分量。马蒂斯用红色背景、深色头发和浅色衣物与之平衡。人物的脸必须在这些形状的竞争中保持存在。因此，服装不只是时尚信息；它还改变了我们观看这个人时所面对的比例。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "1744785e-ba15-4203-a008-0359b8866e8b",
+      "title": "戴活动领的自画像",
+      "catalogueTitle": "Self-Portrait with Detachable Collar",
+      "artist": "Frédéric Bazille",
+      "artists": [
+        {
+          "name": "Frédéric Bazille",
+          "role": "primary",
+          "slug": "frederic-bazille-q207298"
+        }
+      ],
+      "date": "1865–67",
+      "start": 1865,
+      "end": 1867,
+      "medium": "布面油画",
+      "accession": "62.39",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/a6d02845-ca50-4e6d-8cb0-121a4489fc1d-f600716acb8a8680.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1480",
+      "credit": "Frédéric Bazille. Self-Portrait with Detachable Collar. Frédéric Bazille; Minneapolis Institute of Art; The John R. Van Derlip Fund. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1480",
+      "description": "一道窄白领把巴齐耶的头与较暗的外套、背景分开。画中明亮点缀很少，这小片衣物便成了组织画面的关键。微微转动的脸不需要画室、调色板或其他道具说明身份，也能显现。肖像依靠细致控制的明暗差别，而不是画家职业用品的清单。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "4dd69c8c-dc8b-5989-8a66-ad93f4f6937b",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Antonio Mancini",
+      "artists": [
+        {
+          "name": "Antonio Mancini",
+          "role": "primary",
+          "slug": "antonio-mancini-research-5af6609f4871"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "布面油画",
+      "accession": "71.50",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/4dd69c8c-dc8b-5989-8a66-ad93f4f6937b-bffb494d0512afe8.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1865",
+      "credit": "Antonio Mancini. Self-Portrait. Antonio Mancini; Minneapolis Institute of Art; The Putnam Dana McMillan Fund; 71.50. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1865",
+      "description": "曼奇尼的脸并非均匀显露，粗糙亮点与仍陷在暗处的区域打断了形体。颜料没有以相同清晰度交代每一个特征。尽管有所省略，脸仍可辨认，于是寻找面孔本身成了观看肖像的一部分。与巴齐耶清楚的白领比较：两幅小自画像可以设定截然不同的显现方式。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "3e32a5d6-29f9-5710-af45-c83d7bac5368",
+      "title": "1848年时的圣安东尼瀑布",
+      "catalogueTitle": "St. Anthony Falls as It Appeared in 1848",
+      "artist": "Henry Lewis",
+      "artists": [
+        {
+          "name": "Henry Lewis",
+          "role": "primary",
+          "slug": "wikimedia-painter-q16031005"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "布面油画",
+      "accession": "28.79",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/3e32a5d6-29f9-5710-af45-c83d7bac5368-c4b6d68c0280a45f.jpg",
+      "imageSource": "https://collections.artsmia.org/art/356",
+      "credit": "Henry Lewis. St. Anthony Falls as It Appeared in 1848. Henry Lewis; Minneapolis Institute of Art; Gift of E. C. Gale; 28.79. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/356",
+      "description": "刘易斯标题中的年代属于被描绘的景象，不是这幅1855年作品的制作时间。这个区别赋予河景一种回望性质。瀑布、岛屿、树木和低矮建筑记录了地点在某一时期的状态。即使标题要求它承担历史记录的任务，整体安排依然是一幅经过组织的风景。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "42a3254e-79be-48f4-968e-c20cf25a4233",
+      "title": "莫尔旺的池塘",
+      "catalogueTitle": "A Pond in the Morvan",
+      "artist": "Charles-François Daubigny",
+      "artists": [
+        {
+          "name": "Charles-François Daubigny",
+          "role": "primary",
+          "slug": "charles-francois-daubigny-q252357"
+        }
+      ],
+      "date": "1869",
+      "start": 1869,
+      "end": 1869,
+      "medium": "布面油画",
+      "accession": "71.66",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/f187c57f-110b-47d6-ad89-54833449bb19-2555bf0b3d76d0f1.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1878",
+      "credit": "Charles-François Daubigny. A Pond in the Morvan. Charles-François Daubigny; Minneapolis Institute of Art; Gift of Mr. M. R. Schweitzer. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1878",
+      "description": "杜比尼用相近色调把水面与密树联系起来。没有醒目的中心事件组织景色，暗前景、池塘和较暖亮光之间的区别，便成了主要分区。这种静止感是画家建立的，不只是偶然发现的。几块大的形体提供足够变化，让目光愿意继续停留。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "477d520e-54e4-5130-8e55-4019f0e6e3a4",
+      "title": "托希肯溪畔：秋日",
+      "catalogueTitle": "A Scene on the Tohickon Creek: Autumn",
+      "artist": "Thomas Moran",
+      "artists": [
+        {
+          "name": "Thomas Moran",
+          "role": "primary",
+          "slug": "thomas-moran-nga-1730"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "布面油画",
+      "accession": "68.82",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/477d520e-54e4-5130-8e55-4019f0e6e3a4-ebbf7395071bbae6.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1694",
+      "credit": "Thomas Moran. A Scene on the Tohickon Creek: Autumn. Thomas Moran; Minneapolis Institute of Art; The Frances E. Andrews Wilderness Fund, in memory of her mother Mary Hunt Andrews; 68.82. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1694",
+      "description": "溪流在树木间打开通道，否则树林可能闭合成一堵连续的墙。莫兰用小瀑布和较亮水域，把目光带向更明亮的远处。秋叶提供暖色，溪流则提供穿行画面的路径。跟着它看，就能发现密集的风景怎样变得可供视线通行。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "aeb76699-c8e8-5339-8839-f1a5116d0692",
+      "title": "照看圣火的维斯塔贞女",
+      "catalogueTitle": "A Vestal Virgin Tending Fire",
+      "artist": "François Lemoyne",
+      "artists": [
+        {
+          "name": "François Lemoyne",
+          "role": "primary",
+          "slug": "francois-lemoyne-q732468"
+        }
+      ],
+      "date": "约 1726–27 年",
+      "start": 1726,
+      "end": 1727,
+      "medium": "布面油画",
+      "accession": "65.48",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/aeb76699-c8e8-5339-8839-f1a5116d0692-73632e72b7c15648.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1593",
+      "credit": "François Lemoyne. A Vestal Virgin Tending Fire. François Lemoyne; Minneapolis Institute of Art; The Ethel Morrison Van Derlip Fund; 65.48. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1593",
+      "description": "火焰说明女子承担的仪式职责，也照亮了照看它的人。勒穆瓦纳把动作推近，让脸与手成为衡量这一行动的主要依据。物件可以同时发挥这两种作用，无需复杂的象征解释：小小圣火既是她在场的原因，也是使她显现的光源。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "a66fc307-8722-46e5-9b39-cae9e0dd9abc",
+      "title": "抽象画第9号",
+      "catalogueTitle": "Abstract Painting No. 9",
+      "artist": "Ad Reinhardt",
+      "artists": [
+        {
+          "name": "Ad Reinhardt",
+          "role": "primary",
+          "slug": "ad-reinhardt-nga-1821"
+        }
+      ],
+      "date": "1960–66",
+      "start": 1960,
+      "end": 1966,
+      "medium": "布面油画",
+      "accession": "74.73",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/a66fc307-8722-46e5-9b39-cae9e0dd9abc-9809bd5b35222913.jpg",
+      "imageSource": "https://www.wikiart.org/en/ad-reinhardt/abstract-painting-no-9-1966",
+      "credit": "Ad Reinhardt. Abstract Painting No. 9. WikiArt source label: Ad Reinhardt Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ad-reinhardt/abstract-painting-no-9-1966",
+      "license": "Ad Reinhardt Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collections.artsmia.org/art/10440",
+      "description": "接近黑色的矩形并不会立即从深暗背景中分离。莱因哈特取消了通常让构图一眼可读的强对比，观看需要时间，细微差别才会浮现。屏幕复制图可能压低或夸大这些差异，所以不能把它当作原画精确明暗关系的可靠替代品。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "5ea0d85f-d57b-53f1-bd62-6fe6bbea3fd8",
+      "title": "丰硕的果实",
+      "catalogueTitle": "Abundant Fruit",
+      "artist": "Severin Roesen",
+      "artists": [
+        {
+          "name": "Severin Roesen",
+          "role": "primary",
+          "slug": "severin-roesen-nga-26696"
+        }
+      ],
+      "date": "1858",
+      "start": 1858,
+      "end": 1858,
+      "medium": "布面油画",
+      "accession": "2005.96",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/5ea0d85f-d57b-53f1-bd62-6fe6bbea3fd8-e8018a6a0225ae8d.jpg",
+      "imageSource": "https://collections.artsmia.org/art/98269",
+      "credit": "Severin Roesen. Abundant Fruit. Severin Roesen; Minneapolis Institute of Art; Gift of Don and Diana Lee Lucker; 2005.96. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/98269",
+      "description": "罗森摆出的水果多于随手陈列所需，完整果皮、切开的内部、叶片与卷须都争相引人注意。黑暗使密集展示中的各部分更容易分辨。丰盛是一种有秩序的绘画效果：每种水果必须保留足够区别，数量才能被看成丰富多样，而不是模糊的一大堆。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "ad2c3540-c7f0-5288-a0de-9b394a032b86",
+      "title": "第五代市川团十郎饰演《暂》中的角色",
+      "catalogueTitle": "Actor Ichikawa Danjūrō V in a Shibaraku Role",
+      "artist": "Katsukawa Shunshō",
+      "artists": [
+        {
+          "name": "Katsukawa Shunshō",
+          "role": "primary",
+          "slug": "katsukawa-shunsho-round3-2034191d0157"
+        }
+      ],
+      "date": "约 1788 年",
+      "start": 1788,
+      "end": 1788,
+      "medium": "立轴（肉笔），绢本设色",
+      "accession": "74.1.110",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/ad2c3540-c7f0-5288-a0de-9b394a032b86-e9cf710f32797065.jpg",
+      "imageSource": "https://collections.artsmia.org/art/8636",
+      "credit": "Katsukawa Shunshō. Actor Ichikawa Danjūrō V in a Shibaraku Role. Katsukawa Shunshō; Minneapolis Institute of Art; Bequest of Richard P. Gale; 74.1.110. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/8636",
+      "description": "演员的红色戏服、跪姿和长刀已经表明舞台身份，不需要周围再搭出复杂舞台。胜川春章利用空白背景，使剪影特别清晰。这是手绘挂轴，不是木版画；简练既体现在单幅图像的笔法中，也体现在角色表达的明确程度上。",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    }
+  ],
+  "context": {
+    "start": 1627,
+    "end": 1966
+  },
+  "closingSections": [
+    {
+      "title": "不同作品，需要不同的观看速度",
+      "paragraphs": [
+        "密集水果与莱因哈特近乎全黑的画面，不会以相同方式回应第一眼。让作品自身的对比决定，需要多久才能区分各部分。这是一份基于馆藏的选择，不是当前陈列的说明。若计划专程看某件作品，请先查阅最新记录，尤其是纸本或绢本作品。"
+      ]
+    }
+  ]
+}

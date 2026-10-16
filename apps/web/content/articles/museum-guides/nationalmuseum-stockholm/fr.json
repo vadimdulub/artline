@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "nationalmuseum-stockholm",
+  "museum": "Nationalmuseum",
+  "city": "Stockholm",
+  "country": "Suède",
+  "title": "Musée national de Suède : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres sur les réunions, les occupations solitaires et les lieux qui composent un portrait.",
+  "introduction": "Une danse, une table de petit-déjeuner et une réunion du soir proposent trois façons de rassembler des gens. Ici, être ensemble n’exige pas que chacun regarde les autres. Des corps qui tournent, le cercle lumineux d’une lampe ou une table préparée peuvent suffire. Les figures solitaires sont tout aussi précises : une main soutient une tête, une femme écrit, un peintre travaille dehors dans la neige.\n\nCette sélection rapproche la peinture suédoise de Rembrandt, Zurbarán, Renoir et Cézanne. Plutôt qu’un défilé d’écoles nationales, suivez les attentions représentées : comment une personne regarde, attend, travaille ou partage un lieu.",
+  "visitNote": "Cette sélection fait partie des collections du Nationalmuseum, mais certaines œuvres peuvent être prêtées, conservées sur un autre site ou en réserve. Les aquarelles font l'objet d'une rotation pour des raisons de conservation. Consultez les fiches individuelles des œuvres et les informations pratiques avant de vous attendre à voir les vingt pièces dans le bâtiment principal.",
+  "locale": "fr",
+  "website": "https://www.nationalmuseum.se",
+  "officialGuide": "https://www.nationalmuseum.se",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les chapitres consacrés à la tonalité et à la composition de l'image constituent un complément pratique à l'étude de Pauli, Zorn et Liljefors. Comparez la manière dont chacun utilise les surfaces lumineuses ou les silhouettes sombres avant de leur attribuer une étiquette stylistique générale."
+    }
+  ],
+  "works": [
+    {
+      "id": "d8b7c4f8-62b2-59ed-81b6-1087810588d1",
+      "title": "Danse de la Saint-Jean",
+      "catalogueTitle": "Midsummer Dance",
+      "artist": "Anders Zorn",
+      "artists": [
+        {
+          "name": "Anders Zorn",
+          "role": "primary",
+          "slug": "anders-zorn-nga-1991"
+        }
+      ],
+      "date": "Signé 1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "Huile sur toile",
+      "accession": "NM 1603",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/d8b7c4f8-62b2-59ed-81b6-1087810588d1-f647ce84c725d2a7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Midsummer_Dance_(Anders_Zorn)_-_Nationalmuseum_-_18607.tif",
+      "credit": "Anders Zorn. Midsummer Dance. Anders Zorn; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Midsummer_Dance_(Anders_Zorn)_-_Nationalmuseum_-_18607.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/18607/",
+      "description": "Le mât de la Saint-Jean n’est pas le centre du tableau. Zorn accorde davantage de place aux couples qui tournent, dont les chemises accrochent la clarté persistante de la nuit. Il raconte avoir peint après le coucher du soleil, en juin et juillet. Cette lumière appartient donc à la réalisation autant qu’au sujet : une scène nocturne qui ne devient pas obscure.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "3a13e0fc-5bd9-4880-a1f4-fe359e6850c8",
+      "title": "La servante de cuisine",
+      "catalogueTitle": "The Kitchen Maid",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1651",
+      "start": 1651,
+      "end": 1651,
+      "medium": "Huile sur toile",
+      "accession": "NM584",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/3a13e0fc-5bd9-4880-a1f4-fe359e6850c8-5cf95c8e12bc664d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Kitchen_Maid_(Rembrandt_Harmensz._van_Rijn)_-_Nationalmuseum_-_17587.tif",
+      "credit": "Rembrandt van Rijn. The Kitchen Maid. Image credit: Rembrandt; Source credit: Nationalmuseum. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/17587/",
+      "description": "La main pressée contre la tête fait du repos un geste soumis au poids du corps. Les vêtements rouges et le linge clair émergent de l’obscurité ; le rebord rapproche aussi la femme du spectateur. Quoi que le titre traditionnel suggère de son métier, le sujet immédiat est cette disposition particulière d’une personne qui s’arrête.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "e5bb0d6a-d038-547a-96f1-62fc8fbfcc5c",
+      "title": "Branches d'acacia en fleurs",
+      "catalogueTitle": "Blossoming Acacia Branches",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/e5bb0d6a-d038-547a-96f1-62fc8fbfcc5c-d7e397c427d521a2.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/blossoming-acacia-branches-1890",
+      "credit": "Blossoming Acacia Branches. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/blossoming-acacia-branches-1890",
+      "description": "Les fleurs sont vues de près, sans paysage lointain par lequel les aborder. Fleurs jaunes et feuilles vertes remplissent le champ, orientées par des groupes de touches. Certaines branches se suivent aisément, d’autres se perdent dans les traces voisines. La croissance apparaît comme un enchevêtrement, non comme une planche botanique qui isolerait chaque partie.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "6d86414b-030d-595b-84ba-21a68828e0df",
+      "title": "Syméon au Temple",
+      "catalogueTitle": "Simeon in the Temple",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1669",
+      "start": 1669,
+      "end": 1669,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/6d86414b-030d-595b-84ba-21a68828e0df-c5a83c4d315b2600.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/simeon-with-the-christ-child-in-the-temple",
+      "credit": "Simeon in the Temple. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/simeon-with-the-christ-child-in-the-temple",
+      "description": "Le petit corps de l’enfant repose dans les mains d’un vieillard ; ce contraste d’échelle établit la relation essentielle. Visages et langes apparaissent sans que le lieu devienne aussi clair. Cette concentration rapproche l’épisode biblique d’un geste concret : l’importance du nourrisson se comprend à la précaution avec laquelle il est reçu.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "2337b744-7523-5bf2-a35f-865ac361d289",
+      "title": "La conjuration des Bataves",
+      "catalogueTitle": "The Conspiracy of the Batavians",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1662",
+      "start": 1662,
+      "end": 1662,
+      "medium": "Pétrole",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/2337b744-7523-5bf2-a35f-865ac361d289-569b0286fb7c95e5.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/the-conspiration-of-the-bataves-1662",
+      "credit": "The Conspiracy of the Batavians. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/the-conspiration-of-the-bataves-1662",
+      "description": "Les épées réunissent des hommes distincts dans une action commune au-dessus de la table éclairée. Certains visages restent difficiles à reconnaître, mais leur convergence est nette. Rembrandt donne au serment une forme collective sans rendre chaque participant également lisible. La lumière les rassemble autour d’une décision, plutôt que d’aligner des portraits indépendants.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "5cc99d23-4a40-543b-9f10-c3ffb2c43093",
+      "title": "Carl Gustaf Tessin",
+      "catalogueTitle": "Portrait of Carl Gustaf Tessin",
+      "artist": "François Boucher",
+      "artists": [
+        {
+          "name": "François Boucher",
+          "role": "primary",
+          "slug": "francois-boucher-q180932"
+        }
+      ],
+      "date": "1740",
+      "start": 1740,
+      "end": 1740,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5cc99d23-4a40-543b-9f10-c3ffb2c43093-8a9b40f1f9a92c8a.jpg",
+      "imageSource": "https://www.wikiart.org/en/francois-boucher/portrait-of-carl-gustaf-tessin",
+      "credit": "Portrait of Carl Gustaf Tessin. WikiArt; François Boucher. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francois-boucher/portrait-of-carl-gustaf-tessin",
+      "description": "Livres, globe et feuille tenue à la main entourent Tessin des objets d’une vie publique cultivée. Son visage tourné empêche de réduire le tableau à un inventaire de possessions. Les objets indiquent une fonction ; l’interruption détendue de son attention montre un homme qui l’exerce, non une simple collection d’attributs.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "e82a0542-13c9-5a9c-8120-565ef4f5ba60",
+      "title": "La Sainte Face",
+      "catalogueTitle": "The Holy Face",
+      "artist": "Francisco de Zurbarán",
+      "artists": [
+        {
+          "name": "Francisco de Zurbarán",
+          "role": "primary",
+          "slug": "francisco-de-zurbaran-q209615"
+        }
+      ],
+      "date": "vers 1631",
+      "start": 1631,
+      "end": 1631,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/e82a0542-13c9-5a9c-8120-565ef4f5ba60-52885536c28a00e6.jpg",
+      "imageSource": "https://www.wikiart.org/en/francisco-de-zurbaran/the-holy-face",
+      "credit": "Francisco de Zurbarán. The Holy Face. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francisco-de-zurbaran/the-holy-face",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francisco-de-zurbaran/the-holy-face",
+      "description": "Le visage est peu marqué, mais le linge qui le porte présente des plis et des ombres nettement décrits. Cela inverse l’attente selon laquelle l’effigie sacrée devrait être la partie la plus consistante de l’image. Zurbarán nous fait d’abord regarder un objet matériel convaincant, avant d’y découvrir un visage moins tangible.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "304c0224-e4b9-5b70-b647-6bd269aed1a6",
+      "title": "L'auberge de Mère Anthony",
+      "catalogueTitle": "The Inn of Mother Anthony",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1866",
+      "start": 1866,
+      "end": 1866,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/304c0224-e4b9-5b70-b647-6bd269aed1a6-bed4352ba1c5b1c4.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/the-inn-of-mother-anthony-1866",
+      "credit": "The Inn of Mother Anthony. WikiArt; Pierre-Auguste Renoir. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-auguste-renoir/the-inn-of-mother-anthony-1866",
+      "description": "La nappe blanche donne un centre commun aux personnages réunis, tandis que leurs positions variées évitent l’alignement officiel. Un chien occupe l’espace proche, plus bas. La disposition ménage les petits ajustements ordinaires des corps à table. La compagnie se voit dans l’usage partagé du lieu, plutôt que dans une émotion déclarée.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "92bd108c-a3a4-5a5f-9b97-f68ffe22d7da",
+      "title": "Amis",
+      "catalogueTitle": "Friends",
+      "artist": "Hanna Hirsch-Pauli",
+      "artists": [
+        {
+          "name": "Hanna Hirsch-Pauli",
+          "role": "primary",
+          "slug": "wikimedia-painter-q436803"
+        }
+      ],
+      "date": "1907–1910",
+      "start": 1907,
+      "end": 1910,
+      "medium": "",
+      "accession": "NM 1723",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10717397-8cf2e15a177c2aae.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hanna_Pauli_-_Friends_-_Google_Art_Project.jpg",
+      "credit": "Hanna Hirsch-Pauli. Friends. Image credit: Hanna Pauli (1864 - 1940)  (Swedish) Details on Google Art Project; Source credit: wgGTWIkYzTLaDQ at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10717397",
+      "description": "La lampe ne rend pas tous les membres du groupe également visibles. Certains sont proches de sa lumière ; d’autres restent dans les ombres de la pièce. Le tableau n’en fonctionne pas moins comme portrait collectif. Une situation commune les rassemble, sans obliger chaque visage à revendiquer la même importance.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "a71c6ca7-d425-50c7-91f1-3c285c3607d3",
+      "title": "L'heure du petit-déjeuner",
+      "catalogueTitle": "Breakfast Time",
+      "artist": "Hanna Hirsch-Pauli",
+      "artists": [
+        {
+          "name": "Hanna Hirsch-Pauli",
+          "role": "primary",
+          "slug": "wikimedia-painter-q436803"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "NM 1705",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10499488-0f507f51f91545ce.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hanna_Pauli_-_Breakfast-Time_-_Google_Art_Project.jpg",
+      "credit": "Hanna Hirsch-Pauli. Breakfast Time. Image credit: Hanna Hirsch-Pauli. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10499488",
+      "description": "La table est préparée avant d’être entièrement occupée. Sur le blanc, verre, argent et vaisselle divisent la lumière du jour en petits reflets. La femme au-delà de la table est entourée d’objets qui annoncent la compagnie. Le moment domestique se construit par ce qui a été disposé et préparé, pas seulement par le nombre de présents.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "8e84c882-16ed-53bb-866f-809e63577b26",
+      "title": "Marie Suzanne Roslin, née Giroust",
+      "catalogueTitle": "Portrait of the Artist's Wife Marie Suzanne, née Giroust",
+      "artist": "Alexander Roslin",
+      "artists": [
+        {
+          "name": "Alexander Roslin",
+          "role": "primary",
+          "slug": "alexander-roslin-q315102"
+        }
+      ],
+      "date": "Signé 1763",
+      "start": 1763,
+      "end": 1763,
+      "medium": "",
+      "accession": "NM 1011",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/8e84c882-16ed-53bb-866f-809e63577b26-15c93567e65af914.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_Marie_Suzanne,_n%C3%A9e_Giroust_(Alexander_Roslin)_-_Nationalmuseum_-_18014.tif",
+      "credit": "Alexander Roslin. Portrait of the Artist's Wife Marie Suzanne, née Giroust. Alexander Roslin; Nationalmuseum, Sweden (museum-contributed reproduction); Åsa Lundén / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_Marie_Suzanne,_n%C3%A9e_Giroust_(Alexander_Roslin)_-_Nationalmuseum_-_18014.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/18014/",
+      "description": "Les fleurs près de l’épaule et dans les cheveux accompagnent la rotation du modèle. Le tissu froncé prolonge ce mouvement loin du visage, assouplissant le portrait sans noyer la ressemblance dans le décor. Tout tient à la retenue : les accessoires soutiennent la pose, plutôt que d’exiger une interprétation séparée de chaque fleur.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "0d96ae8b-4620-53f0-a55b-55cae2dabf90",
+      "title": "Carl von Linné",
+      "catalogueTitle": "Carl Linnaeus (1707–1778), Professor and Botanist, 1775",
+      "artist": "Alexander Roslin",
+      "artists": [
+        {
+          "name": "Alexander Roslin",
+          "role": "primary",
+          "slug": "alexander-roslin-q315102"
+        }
+      ],
+      "date": "1775",
+      "start": 1775,
+      "end": 1775,
+      "medium": "",
+      "accession": "NMGrh 1053",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/0d96ae8b-4620-53f0-a55b-55cae2dabf90-6a3b22f4be3e7456.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Carl_von_Linn%C3%A9,_1707-1778,_botanist,_professor_(Alexander_Roslin)_-_Nationalmuseum_-_15723.tif",
+      "credit": "Alexander Roslin. Carl Linnaeus (1707–1778), Professor and Botanist, 1775. Alexander Roslin; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Carl_von_Linn%C3%A9,_1707-1778,_botanist,_professor_(Alexander_Roslin)_-_Nationalmuseum_-_15723.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/15723/",
+      "description": "La plante près de la poitrine de Linné est un petit détail à côté du manteau sombre, des boutons clairs et de la perruque poudrée. Cette taille rend l’allusion professionnelle discrète, mais précise. Roslin maintient les conventions du portrait officiel tout en introduisant un sujet botanique dans l’espace immédiat du modèle.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "7f0e959c-b937-5a7c-8e34-adc9727b9ab9",
+      "title": "Notre pain quotidien",
+      "catalogueTitle": "Our Daily Bread",
+      "artist": "Anders Zorn",
+      "artists": [
+        {
+          "name": "Anders Zorn",
+          "role": "primary",
+          "slug": "anders-zorn-nga-1991"
+        }
+      ],
+      "date": "Signé en septembre 1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "Aquarelle",
+      "accession": "NMB 184",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/7f0e959c-b937-5a7c-8e34-adc9727b9ab9-5294992d9ea443b6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Our_Daily_Bread_(Anders_Zorn)_-_Nationalmuseum_-_24125.tif",
+      "credit": "Anders Zorn. Our Daily Bread. Anders Zorn; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Our_Daily_Bread_(Anders_Zorn)_-_Nationalmuseum_-_24125.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/24125/",
+      "description": "La femme assise et la marmite fumante occupent le premier plan ; le travail continue dans le champ. Le repas n’est donc ni une nature morte isolée ni une occasion domestique à part. Il appartient à la même journée de labeur. La distance entre ceux qui se reposent et ceux qui travaillent rend cette relation visible.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "1156d496-d04d-5fe9-a2c1-fb197cbf54d7",
+      "title": "Pygargues",
+      "catalogueTitle": "Sea Eagles",
+      "artist": "Bruno Liljefors",
+      "artists": [
+        {
+          "name": "Bruno Liljefors",
+          "role": "primary",
+          "slug": "bruno-liljefors-q730008"
+        }
+      ],
+      "date": "Signé 1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "NM 1505",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/1156d496-d04d-5fe9-a2c1-fb197cbf54d7-b3d6c9b9fc160246.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sea_Eagles_(Bruno_Liljefors)_-_Nationalmuseum_-_18508.tif",
+      "credit": "Bruno Liljefors. Sea Eagles. Bruno Liljefors; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Sea_Eagles_(Bruno_Liljefors)_-_Nationalmuseum_-_18508.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/18508/",
+      "description": "Les ailes déployées créent des angles concurrents au-dessus du rivage accidenté. Il faut comprendre les oiseaux en mouvement, non seulement les identifier à leur plumage. La mer claire derrière eux rend leur envergure lisible. Liljefors les maintient dans un milieu, tout en donnant à leurs actions assez de force pour organiser l’image.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "32938077-8edd-5154-9d85-288d609cd3f1",
+      "title": "Renard dans un paysage d'hiver",
+      "catalogueTitle": "Fox in Winter Landscape",
+      "artist": "Bruno Liljefors",
+      "artists": [
+        {
+          "name": "Bruno Liljefors",
+          "role": "primary",
+          "slug": "bruno-liljefors-q730008"
+        }
+      ],
+      "date": "Signé 1938",
+      "start": 1938,
+      "end": 1938,
+      "medium": "",
+      "accession": "NM 6654",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/32938077-8edd-5154-9d85-288d609cd3f1-3bef36049984531e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Fox_in_Winter_Landscape_(Bruno_Liljefors)_-_Nationalmuseum_-_23703.tif",
+      "credit": "Bruno Liljefors. Fox in Winter Landscape. Bruno Liljefors; Nationalmuseum, Sweden (museum-contributed reproduction); Per-Åke Persson / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Fox_in_Winter_Landscape_(Bruno_Liljefors)_-_Nationalmuseum_-_23703.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/23703/",
+      "description": "La fourrure chaude distingue le renard de la neige, mais les branches interrompent constamment une vue facile. Sa visibilité dépend du paysage, non d’un fond neutre. Regardez donc l’animal et son couvert ensemble : le lieu fait partie de la rencontre, ce n’est pas un décor autour d’un spécimen.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "1fb09d42-cc60-5c1d-9019-f1baf217b841",
+      "title": "Portrait de la femme de l'artiste",
+      "catalogueTitle": "Portrait of the Artist's Wife",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "Huile sur toile",
+      "accession": "NM 6348",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/1fb09d42-cc60-5c1d-9019-f1baf217b841-fab0647bf3fbac41.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_(Paul_C%C3%A9zanne)_-_Nationalmuseum_-_23397.tif",
+      "credit": "Paul Cézanne. Portrait of the Artist's Wife. Paul Cézanne; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_(Paul_C%C3%A9zanne)_-_Nationalmuseum_-_23397.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/23397/",
+      "description": "Le fauteuil rouge encadre fermement la figure assise. Sa tête s’incline vers ses mains, loin d’un échange de regards avec le spectateur. Les grandes zones colorées conservent le poids du corps et du meuble. L’occupation privée reste lisible sans révéler la pensée qui pourrait l’accompagner.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "1a0ab72c-e4b5-5ba1-83b3-d07f32605a20",
+      "title": "Peintre de plein air : motif hivernal de la rue Åsögatan",
+      "catalogueTitle": "Open-Air Painter. Winter-Motif from Åsögatan 145, Stockholm",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "Signé 1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "Huile sur toile",
+      "accession": "NM 2546",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/1a0ab72c-e4b5-5ba1-83b3-d07f32605a20-fcf199d0deeb2182.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Open-Air_Painter._Winter-Motif_from_%C3%85s%C3%B6gatan_145,_Stockholm_(Carl_Larsson)_-_Nationalmuseum_-_19607.tif",
+      "credit": "Carl Larsson. Open-Air Painter. Winter-Motif from Åsögatan 145, Stockholm. Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Open-Air_Painter._Winter-Motif_from_%C3%85s%C3%B6gatan_145,_Stockholm_(Carl_Larsson)_-_Nationalmuseum_-_19607.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/19607/",
+      "description": "Le matériel au premier plan rappelle les conditions pratiques de la peinture en plein air. La cour enneigée est à la fois le sujet du tableau et le lieu où un peintre doit se tenir pour l’observer. Larsson inclut cette seconde réalité. Comparez les paysages qui effacent toute trace du travail nécessaire pour les produire.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "51a3b7f0-4fc9-562a-a537-93e8a5fd9ca9",
+      "title": "Une journée de fête",
+      "catalogueTitle": "A Day of Celebration. From A Home (26 watercolours)",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "vers 1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "Aquarelle",
+      "accession": "NMB 280",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/51a3b7f0-4fc9-562a-a537-93e8a5fd9ca9-f3a4aa28a3375083.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:A_Day_of_Celebration._From_A_Home_(26_watercolours)_(Carl_Larsson)_-_Nationalmuseum_-_24221.tif",
+      "credit": "Carl Larsson. A Day of Celebration. From A Home (26 watercolours). Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:A_Day_of_Celebration._From_A_Home_(26_watercolours)_(Carl_Larsson)_-_Nationalmuseum_-_24221.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/24221/",
+      "description": "Poutres décorées, portes, rambardes et meubles répartissent la fête en petits épisodes. Les figures n’ont pas besoin de se réunir en un point central pour que la pièce les relie. Couleurs répétées et divisions architecturales guident le regard d’un groupe à l’autre : l’aménagement intérieur participe à l’occasion.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "65b148ca-37f8-5104-aa19-08b1bc6d6572",
+      "title": "La Lettre",
+      "catalogueTitle": "Letter-Writing",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "Aquarelle sur papier",
+      "accession": "NMB 1438",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/65b148ca-37f8-5104-aa19-08b1bc6d6572-5bcd555568f2fa24.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Letter-Writing_(Carl_Larsson)_-_Nationalmuseum_-_25407.tif",
+      "credit": "Carl Larsson. Letter-Writing. Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Letter-Writing_(Carl_Larsson)_-_Nationalmuseum_-_25407.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/25407/",
+      "description": "Le contenu de la lettre reste privé. Le tableau donne plutôt la posture penchée de la rédactrice et ce qui permet son travail : bureau, fenêtre, plantes et boiseries. Une action modeste devient précise grâce à son lieu. Inutile d’inventer le message pour comprendre la concentration.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "df042b34-e96b-52d5-bfb6-b0ac0b18af1d",
+      "title": "Murre : Portrait de Casimir Laurin",
+      "catalogueTitle": "\"Murre\". Portrait of Casimir Laurin",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "Aquarelle sur papier",
+      "accession": "NMB 2528",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/df042b34-e96b-52d5-bfb6-b0ac0b18af1d-8d7c45d8ea41905b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Murre_._Portrait_of_Casimir_Laurin_(Carl_Larsson)_-_Nationalmuseum_-_90181.tif",
+      "credit": "Carl Larsson. \"Murre\". Portrait of Casimir Laurin. Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Murre_._Portrait_of_Casimir_Laurin_(Carl_Larsson)_-_Nationalmuseum_-_90181.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/90181/",
+      "description": "Le cheval à bascule donne à la pose assise de l’enfant un appui différent de celui d’un portrait d’adulte. Ses patins courbes et le vêtement rouge situent clairement la petite figure parmi les meubles plus lourds. Le jouet reste fait pour bouger, même si son cavalier s’immobilise le temps du portrait.",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    }
+  ],
+  "context": {
+    "start": 1631,
+    "end": 1938
+  },
+  "closingSections": [
+    {
+      "title": "Comparer une pause et une réunion",
+      "paragraphs": [
+        "Rapprochez *La servante de cuisine* d’*Amis*, ou *La Lettre* de *L’heure du petit-déjeuner*. Chaque paire distingue attention privée et occasion partagée sans imposer une humeur fixe. Posséder une œuvre et l’exposer sont deux choses différentes : consultez les informations actuelles du musée avant d’organiser une visite autour d’un tableau."
+      ]
+    }
+  ]
+}

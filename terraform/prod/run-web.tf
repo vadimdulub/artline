@@ -48,6 +48,11 @@ resource "google_cloud_run_v2_service" "web" {
         value = var.bing_site_verification
       }
 
+      env {
+        name  = "ARTLINE_CLOUDFLARE_WEB_ANALYTICS_TOKEN"
+        value = var.cloudflare_web_analytics_token
+      }
+
       resources {
         cpu_idle = true
         limits = {

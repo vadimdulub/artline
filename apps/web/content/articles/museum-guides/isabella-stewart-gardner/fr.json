@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "isabella-stewart-gardner",
+  "museum": "Isabella Stewart Gardner Museum",
+  "city": "Boston",
+  "country": "États-Unis",
+  "title": "Musée Isabella Stewart Gardner : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres reliées par des mains tendues, des poses tenues et le mouvement des étoffes.",
+  "introduction": "Dans le portrait de Zorn, Isabella Stewart Gardner ouvre les portes, les bras largement écartés. Le musée rattache cet instant à son retour après avoir regardé un feu d’artifice à Venise. La danseuse d’*El Jaleo*, chez Sargent, domine une autre assemblée : son corps coupe la ligne des musiciens assis. Pour l’une comme pour l’autre, nul besoin d’une explication écrite pour comprendre que quelque chose a changé dans la pièce.\n\nLe geste offre un chemin à travers cette sélection sans réduire la collection Gardner à une liste de noms célèbres. Les mains d’un enfant qui se tendent, la tête tournée d’un musicien, un saint qui s’occupe d’un autre corps expriment différentes formes d’attention. Même les dessins d’architecture et de costumes interrogent la manière dont une surface dirige le mouvement ou garde la trace d’un regard.",
+  "visitNote": "Veuillez consulter les guides de salle actuels du musée pour connaître l'emplacement des œuvres et les éventuelles absences temporaires. Cette sélection n'inclut pas les œuvres volées en 1990 parmi les pièces exposées. Elle comprend des peintures, des dessins, des projets de costumes et une fresque déposée ; les deux feuilles de Bakst sont des projets pour les interprètes et non des représentations d'une performance en cours.",
+  "locale": "fr",
+  "website": "https://www.gardnermuseum.org/",
+  "officialGuide": "https://www.gardnermuseum.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les notes de Léonard sur le geste et la disposition des figures soulèvent des questions à appliquer aux peintures italiennes. Comparez les corps immobiles de l’Hercule de Piero et de la Madone de Botticelli avec les nombreuses actions qui s’entrecroisent dans L’Histoire de Lucrèce."
+    }
+  ],
+  "works": [
+    {
+      "id": "99c63158-e7bb-5f9a-a8cc-51f0cba19231",
+      "title": "L’Enlèvement d’Europe",
+      "catalogueTitle": "Abduction of Europa",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1559 - 1562",
+      "start": 1559,
+      "end": 1562,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikiart-500-painters-20261011/99c63158-e7bb-5f9a-a8cc-51f0cba19231-8366dd98c65d58e3.jpg",
+      "imageSource": "https://www.wikiart.org/en/titian/rape-of-europe-1562",
+      "credit": "Titian. Abduction of Europa. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/titian/rape-of-europe-1562",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.gardnermuseum.org/experience/rooms/titian-room",
+      "description": "Europe s’accroche au taureau blanc qui avance dans l’eau. Membres levés et étoffe flottante empêchent son corps de trouver un appui stable. La couleur de Titien peut rendre la scène somptueuse, mais l’action reste un enlèvement. Regarder la posture exposée et incertaine de la femme évite de faire de la beauté peinte une raison d’ignorer la violence.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "df9f3f50-d38e-549d-9c70-02518ac8c044",
+      "title": "L’Histoire de Lucrèce",
+      "catalogueTitle": "The Story of Lucretia",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "1496 - 1504",
+      "start": 1496,
+      "end": 1504,
+      "medium": "Détrempe sur panneau",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/df9f3f50-d38e-549d-9c70-02518ac8c044-45065fb2fa3bc88f.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/the-story-of-lucretia-1504",
+      "credit": "Sandro Botticelli. The Story of Lucretia. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/sandro-botticelli/the-story-of-lucretia-1504",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.gardnermuseum.org/experience/collection/10986",
+      "description": "Botticelli répartit plusieurs épisodes dans un cadre architectural au lieu de choisir un seul instant. Le corps et la foule gesticulante sur la place centrale donnent des conséquences publiques à l’histoire romaine. Les bâtiments relient les actions séparées, permettant au regard de passer de l’atteinte privée à la réponse collective. Le récit exige de parcourir l’espace, pas seulement de reconnaître la figure centrale.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "a60d289b-40ed-5869-9f8c-04fe7f603222",
+      "title": "El Jaleo",
+      "catalogueTitle": "El Jaleo",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a60d289b-40ed-5869-9f8c-04fe7f603222-6c4c0b539ae85bca.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-singer-sargent/el-jaleo-1882",
+      "credit": "John Singer Sargent. El Jaleo. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-singer-sargent/el-jaleo-1882",
+      "description": "La lumière venue du bas accroche la jupe et les bras de la danseuse, laissant son visage dans l’ombre. Sargent oppose ce corps aux angles vifs aux positions répétées des musiciens assis. La grande ombre prolonge le mouvement sur le mur. Large de plus de trois mètres, la toile donne de l’ampleur à la danse, alors même que les figures restent serrées contre un fond peu profond.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "e332f25b-af33-5999-820c-bb51dc970a80",
+      "title": "Hercule",
+      "catalogueTitle": "Hercules",
+      "artist": "Piero della Francesca",
+      "artists": [
+        {
+          "name": "Piero della Francesca",
+          "role": "primary",
+          "slug": "piero-della-francesca-q5822"
+        }
+      ],
+      "date": "1465",
+      "start": 1465,
+      "end": 1465,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/e332f25b-af33-5999-820c-bb51dc970a80-7cb337c922a18ab4.jpg",
+      "imageSource": "https://www.wikiart.org/en/piero-della-francesca/hercules",
+      "credit": "Hercules. WikiArt; Piero della Francesca. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piero-della-francesca/hercules",
+      "description": "La massue identifie Hercule, mais Piero della Francesca ne montre aucun exploit en cours. Presque nu, le corps se tient fermement dans une ouverture architecturale peu profonde. Il remplit le champ par ses proportions plutôt que par l’action. Après l’instabilité d’Europe, cette figure campée fournit un contraste utile : la force peut être une capacité à rester immobile, sans adversaire vaincu à ses pieds.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "f68c9b8e-7193-5def-8da5-2ca85b1a72da",
+      "title": "La Présentation de l’Enfant Jésus au Temple",
+      "catalogueTitle": "The Presentation of the Infant Jesus in the Temple",
+      "artist": "Giotto di Bondone",
+      "artists": [
+        {
+          "name": "Giotto di Bondone",
+          "role": "primary",
+          "slug": "giotto"
+        }
+      ],
+      "date": "1320",
+      "start": 1320,
+      "end": 1320,
+      "medium": "Détrempe sur panneau",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/f68c9b8e-7193-5def-8da5-2ca85b1a72da-c09d3b0766bba8ba.jpg",
+      "imageSource": "https://www.wikiart.org/en/giotto/the-presentation-of-the-infant-jesus-in-the-temple",
+      "credit": "The Presentation of the Infant Jesus in the Temple. WikiArt; Giotto di Bondone. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giotto/the-presentation-of-the-infant-jesus-in-the-temple",
+      "description": "Les adultes tendent les bras par-dessus le petit autel, et l’enfant répond de son propre corps. Giotto donne à la reconnaissance sacrée une mesure physique immédiate : la distance entre des mains tendues. Le dais pointu et l’architecture compacte assignent aux participants des places distinctes. Mais l’enfant qui se tend interrompt cet ordre. Son mouvement permet de suivre l’événement avant de nommer chaque figure.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "9c0f9c52-a72a-5aa5-8356-0fde410d85eb",
+      "title": "Vierge à l’Enfant avec un ange",
+      "catalogueTitle": "Madonna and Child with an Angel",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "1470",
+      "start": 1470,
+      "end": 1470,
+      "medium": "Détrempe sur bois",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/9c0f9c52-a72a-5aa5-8356-0fde410d85eb-37b40bb2dbb82ac6.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-an-angel",
+      "credit": "Sandro Botticelli. Madonna and Child with an Angel. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-an-angel",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-an-angel",
+      "description": "Les têtes inclinées ramènent l’attention vers l’enfant ; les mains qui le soutiennent donnent à cette attention une forme tangible. Botticelli ne laisse qu’une mince ouverture sur le paysage derrière le groupe rapproché. La fonction dévotionnelle du panneau n’efface pas les gestes ordinaires du soin : il faut tenir un petit corps, et la disposition de ceux qui le portent fournit l’activité discrète du tableau.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "25cf1b36-7ed5-5120-bdb6-46339381de56",
+      "title": "Harmonie en bleu et argent : Trouville",
+      "catalogueTitle": "Harmony in Blue and Silver: Trouville",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/25cf1b36-7ed5-5120-bdb6-46339381de56-04404005806343a1.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-mcneill-whistler/harmony-in-blue-and-silver-trouville",
+      "credit": "Harmony in Blue and Silver: Trouville. WikiArt; James Abbott McNeill Whistler. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-mcneill-whistler/harmony-in-blue-and-silver-trouville",
+      "description": "La petite figure debout interrompt brièvement les divisions horizontales de la plage. Whistler donne à la mer, au rivage et au ciel des tons proches, dont les différences restent légères. La personne aide à mesurer la distance sans s’emparer de la scène. Cette retenue explique l’importance de la couleur dans le titre : les rapports de tons unissent la vue davantage qu’un événement sur la plage.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "f593a8c7-ada7-5e27-96eb-42578a507d4c",
+      "title": "L’Omnibus",
+      "catalogueTitle": "The Omnibus",
+      "artist": "Anders Zorn",
+      "artists": [
+        {
+          "name": "Anders Zorn",
+          "role": "primary",
+          "slug": "anders-zorn-nga-1991"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "",
+      "accession": "P3e1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/f593a8c7-ada7-5e27-96eb-42578a507d4c-afd737edcc5fe0d0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anders_Zorn_-_The_Omnibus_-_P3e1_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "Anders Zorn. The Omnibus. Image credit: Anders Zorn; Isabella Stewart Gardner Museum. https://commons.wikimedia.org/wiki/File:Anders_Zorn_-_The_Omnibus_-_P3e1_-_Isabella_Stewart_Gardner_Museum.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103837770",
+      "description": "Les voyageurs partagent un véhicule exigu sans devenir un groupe uni. La lumière de la fenêtre choisit des visages et des morceaux de vêtements ; d’autres corps restent partiellement cachés. Zorn rend visible une condition ordinaire du transport collectif : la proximité ne produit pas nécessairement un échange. L’absence d’attention mutuelle compte autant que le manque d’espace entre les passagers.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "9209b5c2-4c10-5506-881b-8d1da19b81aa",
+      "title": "Isabella Stewart Gardner à Venise",
+      "catalogueTitle": "Isabella Stewart Gardner in Venice",
+      "artist": "Anders Zorn",
+      "artists": [
+        {
+          "name": "Anders Zorn",
+          "role": "primary",
+          "slug": "anders-zorn-nga-1991"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "",
+      "accession": "P17e10",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/9209b5c2-4c10-5506-881b-8d1da19b81aa-f46555660267a2b6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anders_Zorn_-_Isabella_Stewart_Gardner_in_Venice_-_P17e10_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "Anders Zorn. Isabella Stewart Gardner in Venice. Image credit: Anders Zorn; Isabella Stewart Gardner Museum. https://commons.wikimedia.org/wiki/File:Anders_Zorn_-_Isabella_Stewart_Gardner_in_Venice_-_P17e10_-_Isabella_Stewart_Gardner_Museum.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103838740",
+      "description": "Les bras écartés de Gardner vont vers les portes de part et d’autre d’elle. Zorn place la figure éclairée entre la pièce et le balcon sombre. Selon le journal de son mari, elle venait de regarder un feu d’artifice et invitait les convives à sortir. Le portrait conserve une invitation en cours, remplaçant l’immobilité du modèle par un geste qui réorganise la compagnie.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "fe0320d0-3e16-57a8-856e-2cb89b55d607",
+      "title": "Jeanne d’Autriche avec une jeune fille",
+      "catalogueTitle": "Portrait of Juana of Austria with a Young Girl",
+      "artist": "Sofonisba Anguissola",
+      "artists": [
+        {
+          "name": "Sofonisba Anguissola",
+          "role": "primary",
+          "slug": "sofonisba-anguissola-q236038"
+        }
+      ],
+      "date": "1561",
+      "start": 1561,
+      "end": 1561,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fe0320d0-3e16-57a8-856e-2cb89b55d607-63599ccce3c68ac6.jpg",
+      "imageSource": "https://www.wikiart.org/en/sofonisba-anguissola/portrait-of-juana-of-austria-with-a-young-girl-1561",
+      "credit": "Sofonisba Anguissola. Portrait of Juana of Austria with a Young Girl. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sofonisba-anguissola/portrait-of-juana-of-austria-with-a-young-girl-1561",
+      "description": "La différence de taille établit immédiatement une hiérarchie, renforcée par les vêtements de cérémonie. Sofonisba Anguissola maintient des expressions retenues devant le fond sombre. Les contacts discrets et la place de l’enfant doivent donc porter une grande part de la relation. Le portrait enregistre un lien sans offrir la familiarité facile d’un sourire ou d’une occupation partagée.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "59b8d05c-afcd-59e9-9ee8-e8afb5a5b11e",
+      "title": "La Tour romaine, Andernach",
+      "catalogueTitle": "The Roman Tower, Andernach",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1817",
+      "start": 1817,
+      "end": 1817,
+      "medium": "",
+      "accession": "P1e12",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q103832865-df57a56a7bff18f0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_The_Roman_Tower,_Andernach_-_P1e12_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "J. M. W. Turner. The Roman Tower, Andernach. Image credit: J. M. W. Turner; Source credit: Isabella Stewart Gardner Museum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103832865",
+      "description": "La tour trace une verticale puissante parmi les bâtiments riverains, mais le vaste ciel de Turner lui refuse la maîtrise exclusive de la vue. Bateaux et personnages entretiennent l’activité de l’eau à ses pieds. Le monument appartient au temps qu’il fait, à la circulation et à la lumière changeante. Sa solidité devient plus sensible parce que tant de choses autour de lui ne peuvent rester en place.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "dc1aa9f3-2917-59d8-a7ea-27847cabf2ca",
+      "title": "La Casa Loredan, Venise",
+      "catalogueTitle": "The Casa Loredan, Venice",
+      "artist": "John Ruskin",
+      "artists": [
+        {
+          "name": "John Ruskin",
+          "role": "primary",
+          "slug": "john-ruskin-nga-6550"
+        }
+      ],
+      "date": "1850",
+      "start": 1850,
+      "end": 1850,
+      "medium": "",
+      "accession": "P17e32",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q103832432-0f8508b443c2d053.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Ruskin_-_The_Casa_Loredan,_Venice_-_P17e32_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "John Ruskin. The Casa Loredan, Venice. Image credit: John Ruskin; Source credit: Isabella Stewart Gardner Museum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103832432",
+      "description": "Certaines parties de l’architecture reçoivent couleur et détails ; d’autres restent légèrement esquissées. Ces choix de Ruskin enregistrent une manière d’étudier la façade, non un relevé également achevé partout. Suivez les déplacements d’attention entre arcs et ornements. Les zones inachevées aident à distinguer ce qu’il voulait examiner de près des formes environnantes nécessaires seulement pour le situer.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "08eaae9b-0fbe-52ff-ac92-edcf2269c199",
+      "title": "Salut d’amour",
+      "catalogueTitle": "Love's Greeting",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "vers 1861",
+      "start": 1861,
+      "end": 1861,
+      "medium": "",
+      "accession": "P1w8",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q103838320-bc6e9d5f6debd7fa.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dante_Gabriel_Rossetti_-_Love%27s_Greeting_-_P1w8_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "Dante Gabriel Rossetti. Love's Greeting. Image credit: Dante Gabriel Rossetti; Source credit: Isabella Stewart Gardner Museum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103838320",
+      "description": "Rossetti laisse peu d’espace aux figures étroitement unies en dehors de l’ornement qui les entoure. Fleurs, motifs et inscription ne constituent pas une bordure neutre autour d’une scène autonome : ils participent à sa concentration. Le geste se prolonge dans le décor. La rencontre est présentée comme un objet encadré et rendu précieux, non comme un instant aperçu par hasard dans un cadre ordinaire.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "6ed4d3df-5e0e-5152-b4ce-95da22b5c22f",
+      "title": "Ida Rubinstein en saint Sébastien",
+      "catalogueTitle": "Ida Rubinstein as Saint Sebastian",
+      "artist": "Léon Bakst",
+      "artists": [
+        {
+          "name": "Léon Bakst",
+          "role": "primary",
+          "slug": "leon-bakst-q214666"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "3.1.o.91",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/6ed4d3df-5e0e-5152-b4ce-95da22b5c22f-5384d13618a4d1d4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:L%C3%A9on_Bakst_-_Ida_Rubinstein_as_Saint_Sebastian_-_3.1.o.91_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "Léon Bakst. Ida Rubinstein as Saint Sebastian. Image credit: Léon Bakst; Source credit: Isabella Stewart Gardner Museum. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103832247",
+      "description": "La vaste cape bleue rend la silhouette lisible avant que ses motifs ne se précisent. Bakst l’oppose à un vêtement rouge sur une feuille autrement dégagée. Un costume de scène doit fonctionner à plusieurs distances. Les grandes formes établissent ici le rôle ; leur décoration intérieure offre d’autres découvertes quand le regard se rapproche.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "a1c890de-b6ed-5ecd-b7c5-42468d1880bb",
+      "title": "Anna Pavlova dans Fantaisie orientale",
+      "catalogueTitle": "Anna Pavlova in the Ballet 'Oriental Fantasy'",
+      "artist": "Léon Bakst",
+      "artists": [
+        {
+          "name": "Léon Bakst",
+          "role": "primary",
+          "slug": "leon-bakst-q214666"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "3.1.o.92",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/a1c890de-b6ed-5ecd-b7c5-42468d1880bb-30ed77178a76b916.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:L%C3%A9on_Bakst_-_Anna_Pavlova_in_the_Ballet_%27Oriental_Fantasy%27_-_3.1.o.92_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "Léon Bakst. Anna Pavlova in the Ballet 'Oriental Fantasy'. Image credit: Léon Bakst; Source credit: Isabella Stewart Gardner Museum. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103832232",
+      "description": "Bras étendus, jupe courte évasée et écharpe traînante font prolonger par le costume le mouvement de la danseuse. Bakst ne dessine pas pour un mannequin immobile. Les directions contraires des pieds et des membres montrent comment le tissu pourrait amplifier un geste. Le cadre imaginé du titre relève de la fantaisie théâtrale, non d’un témoignage fiable sur l’habillement d’une culture précise.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "8c2d4984-576c-5bf9-9fbf-72e87631d6e9",
+      "title": "Charles Martin Loeffler",
+      "catalogueTitle": "Charles Martin Loeffler",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "P1w6",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q103831693-975ee5fbfb3fa0a2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_-_Charles_Martin_Loeffler_1903.jpg",
+      "credit": "Τζον Σίνγκερ Σάρτζεντ. Charles Martin Loeffler. Image credit: John Singer Sargent; Source credit: https://www.gardnermuseum.org/experience/collection/10870. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103831693",
+      "description": "L’instrument partiellement visible désigne le musicien sans transformer le portrait en concert. Sargent détourne le visage clair du spectateur, tandis que les vêtements sombres retiennent la majeure partie du corps dans l’ombre. Comparez cette réserve à *El Jaleo* : la musique entre dans un tableau par une scène occupée, mais aussi par la présence de quelqu’un qui ne joue pas.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "b6000117-7d9b-5207-b531-470db72d55f8",
+      "title": "Une tente dans les Rocheuses",
+      "catalogueTitle": "A Tent in the Rockies",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "vers 1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "",
+      "accession": "P3w17",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q103830452-b3a3024608033d0e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_-_A_Tent_in_the_Rockies.jpg",
+      "credit": "Τζον Σίνγκερ Σάρτζεντ. A Tent in the Rockies. Image credit: John Singer Sargent; Source credit: https://www.gardnermuseum.org/experience/collection/10882. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103830452",
+      "description": "L’étoffe ensoleillée devient une autre surface changeante parmi les arbres. Les touches larges de Sargent n’isolent pas la tente comme un objet rigide devant la forêt ; elles relient sa lumière et son ombre au terrain voisin. L’entrée ouverte révèle cet abri provisoire. Habiter dépend ici d’une frontière mince et perméable, plutôt que du poids des murs.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "37dc41cc-7bfb-5a2a-8625-a439aad15675",
+      "title": "Encenser le voile",
+      "catalogueTitle": "Incensing the Veil",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1880",
+      "start": 1880,
+      "end": 1880,
+      "medium": "",
+      "accession": "P3w33",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q103831756-dc896f710f6a5453.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_-_Incensing_the_Veil_-_P3w33_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "Τζον Σίνγκερ Σάρτζεντ. Incensing the Veil. Image credit: John Singer Sargent; Source credit: Isabella Stewart Gardner Museum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103831756",
+      "description": "Étoffe suspendue, vêtements clairs et fumée empêchent de séparer nettement la figure de la pièce. Chez Sargent, la scène ne se donne qu’en partie. Au lieu de chercher un contour décisif, suivez les couches à travers lesquelles le corps devient lisible. L’action nommée dans le titre affecte sa propre visibilité : l’encens modifie aussi l’air autour d’elle.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "cc50877f-0a08-5e8c-afab-67f9eecbc789",
+      "title": "Une jeune femme à la mode",
+      "catalogueTitle": "A Young Lady of Fashion",
+      "artist": "Attribué à Paolo Uccello",
+      "artists": [
+        {
+          "name": "Paolo Uccello",
+          "role": "attributed",
+          "slug": "paolo-uccello-q192488"
+        }
+      ],
+      "date": "Début des années 1460",
+      "start": 1464,
+      "end": 1464,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cc50877f-0a08-5e8c-afab-67f9eecbc789-3ae2b254cff08449.jpg",
+      "imageSource": "https://www.wikiart.org/en/paolo-uccello/a-young-lady-of-fashion",
+      "credit": "Paolo Uccello. A Young Lady of Fashion. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.gardnermuseum.org/experience/collection/12396",
+      "description": "Le profil strict soustrait le regard du modèle à tout échange avec nous. Perles et manche à motifs renseignent abondamment sur sa présentation, tandis que le visage reste délimité et réservé. Attribué à Paolo Uccello, le portrait donne une forme matérielle précise à l’apparence sociale sans prétendre dévoiler une personnalité privée derrière elle.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    },
+    {
+      "id": "54a29df1-0052-5c7c-83d8-56ccf758299f",
+      "title": "Toilette du matin",
+      "catalogueTitle": "Morning Toilet",
+      "artist": "Anders Zorn",
+      "artists": [
+        {
+          "name": "Anders Zorn",
+          "role": "primary",
+          "slug": "anders-zorn-nga-1991"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "P25e13",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/54a29df1-0052-5c7c-83d8-56ccf758299f-33a2b1a802d5d235.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anders_Zorn_-_Morning_Toilet_-_P25e13_-_Isabella_Stewart_Gardner_Museum.jpg",
+      "credit": "Anders Zorn. Morning Toilet. Image credit: Anders Zorn; Isabella Stewart Gardner Museum. https://commons.wikimedia.org/wiki/File:Anders_Zorn_-_Morning_Toilet_-_P25e13_-_Isabella_Stewart_Gardner_Museum.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q103838798",
+      "description": "La posture penchée de la femme rend son activité lisible parmi les reflets brisés. Zorn place un geste intime près de l’eau peu profonde et des rochers, là où la lumière environnante ne cesse de bouger. La figure ne domine pas le paysage et n’y disparaît pas. Son petit mouvement concentré fixe un point d’attention au milieu de l’activité plus dispersée de l’eau.",
+      "importance": "",
+      "museum": "Isabella Stewart Gardner Museum"
+    }
+  ],
+  "context": {
+    "start": 1320,
+    "end": 1916
+  },
+  "closingSections": [
+    {
+      "title": "Garder la pièce dans le regard",
+      "paragraphs": [
+        "Au musée Gardner, le cadre d’exposition peut modifier l’échelle perçue et les associations d’un tableau autant qu’une œuvre voisine. Prenez le temps de regarder l’ensemble avant d’en isoler les objets. Cette sélection suit des thèmes, non un itinéraire physique. Consultez les informations actuelles du musée pour l’accès et les présentations ; les œuvres sur papier peuvent ne pas être exposées en permanence."
+      ]
+    }
+  ]
+}

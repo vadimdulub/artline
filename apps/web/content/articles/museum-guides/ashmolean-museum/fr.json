@@ -1,0 +1,606 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "ashmolean-museum",
+  "museum": "Ashmolean Museum",
+  "city": "Oxford",
+  "country": "Royaume-Uni",
+  "title": "Ashmolean Museum : chefs-d’œuvre",
+  "subtitle": "Vingt peintures et dessins montrent où un artiste a concentré son travail.",
+  "introduction": "Un visage peut être soigneusement résolu tandis que les épaules restent à peine indiquées. Quelques lignes d’encre donnent de la profondeur à un canal. Un bras isolé révèle parfois davantage de la construction d’un corps qu’un récit peuplé. Cette sélection rapproche peintures et dessins de l’Ashmolean : les degrés de finition deviennent des choses à lire, plutôt qu’une simple frontière entre complet et incomplet.\n\nLa chasse rigoureusement organisée d’Uccello offre un départ ; le portrait largement brossé de Manet en propose un autre. Entre eux, paysages, scènes littéraires et effigies distribuent le détail de façon à déterminer ce que l’on peut connaître et ce qui reste ouvert.",
+  "visitNote": "Les collections de l’Ashmolean s’étendent bien au-delà des peintures et dessins présentés ici. Les œuvres sur papier sont sensibles à la lumière ; elles peuvent être conservées en réserve ou exposées uniquement de manière temporaire. Veuillez vérifier les expositions en cours et les prêts avant de planifier une visite pour voir une œuvre en particulier.",
+  "locale": "fr",
+  "website": "https://www.ashmolean.org/",
+  "officialGuide": "https://www.ashmolean.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les analyses de Speed concernant le trait et la valeur offrent un vocabulaire pratique pour aborder les dessins de Raphaël, Michel-Ange, Canaletto et Grünewald. Elles s'avèrent particulièrement utiles lorsqu'elles sont confrontées aux différences concrètes de facture et de degré de finition."
+    }
+  ],
+  "works": [
+    {
+      "id": "fc4ada37-bf73-500f-b9c2-e1114ad47582",
+      "title": "La chasse en forêt",
+      "catalogueTitle": "The Hunt in the Forest",
+      "artist": "Paolo Uccello",
+      "artists": [
+        {
+          "name": "Paolo Uccello",
+          "role": "primary",
+          "slug": "paolo-uccello-q192488"
+        }
+      ],
+      "date": "c. 1465–1470",
+      "start": 1465,
+      "end": 1470,
+      "medium": "Tempera et huile sur panneau, avec des traces d'or",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fc4ada37-bf73-500f-b9c2-e1114ad47582-680254ba47f0bc65.jpg",
+      "imageSource": "https://www.wikiart.org/en/paolo-uccello/the-hunt-in-the-forest",
+      "credit": "Paolo Uccello. The Hunt in the Forest. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://ashmolean.web.ox.ac.uk/hunt-forest",
+      "description": "Cavaliers et chiens reculent entre les troncs répétés vers le centre de la forêt. Uccello a préparé cet espace avec une grille perspective, mais la nuit refuse la vue claire qu’une telle organisation pourrait promettre. Le musée décrit cette chasse nocturne comme ludique ou symbolique, non comme un compte rendu réaliste : précision et invention travaillent ensemble.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "47b4204a-273e-5182-bea2-b1582729972b",
+      "title": "Portrait d'un jeune homme, peut-être un autoportrait",
+      "catalogueTitle": "Self Portrait",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "vers 1498–1499",
+      "start": 1498,
+      "end": 1499,
+      "medium": "Pierre noire avec rehauts de blanc",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/47b4204a-273e-5182-bea2-b1582729972b-48507a1cbe3d0242.jpg",
+      "imageSource": "https://www.wikiart.org/en/raphael/self-portrait",
+      "credit": "Raphael. Self Portrait. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.ox.ac.uk/sites/files/oxford/field/field_document/Oxford%20and%20the%20World%20brochure%202021.WEB_compact.pdf",
+      "description": "Les yeux et la joue du jeune homme reçoivent une ombre concentrée, tandis que cheveux et bonnet demandent moins de marques. L’identification possible comme autoportrait reste une hypothèse ; le regard direct ne la prouve pas. Le dessin est précis comme effigie, même lorsque le nom du modèle demeure incertain.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "5fbede2b-abc3-50d0-930c-266ca4af7863",
+      "title": "Andrea Quaratesi",
+      "catalogueTitle": "Portrait of Andrea Quaratesi",
+      "artist": "Michelangelo",
+      "artists": [
+        {
+          "name": "Michelangelo",
+          "role": "primary",
+          "slug": "michelangelo-q5592"
+        }
+      ],
+      "date": "1532",
+      "start": 1532,
+      "end": 1532,
+      "medium": "Craie sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5fbede2b-abc3-50d0-930c-266ca4af7863-6504440ae183de69.jpg",
+      "imageSource": "https://www.wikiart.org/en/michelangelo/portrait-of-andrea-quaratesi",
+      "credit": "Portrait of Andrea Quaratesi. WikiArt; Michelangelo. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/michelangelo/portrait-of-andrea-quaratesi",
+      "description": "La tête soigneusement modelée et les épaules plus légèrement indiquées appellent des attentions différentes. L’ombre donne au visage sa continuité ; les vêtements revendiquent moins de finition. Michel-Ange développe la feuille autour de sa rencontre principale. Les zones moins résolues montrent où se porte cette concentration.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "c41228df-7222-5d1a-9f0f-ba2bf0420907",
+      "title": "L’Abandon de Moïse",
+      "catalogueTitle": "The Exposure of Moses",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "vers 1650",
+      "start": 1650,
+      "end": 1650,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/c41228df-7222-5d1a-9f0f-ba2bf0420907-d833a050b42ce111.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/the-exposition-of-moses",
+      "credit": "Nicolas Poussin. The Exposure of Moses. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/the-exposition-of-moses",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/the-exposition-of-moses",
+      "description": "La position de l’enfant près de l’eau suscite plusieurs réactions, sans fondre les gestes en une action unique. Arbres et bâtiments lointains prolongent le lieu au-delà du groupe. Poussin utilise cet espace pour distinguer les réponses et rendre l’épisode biblique lisible à travers les relations entre personnes et endroits.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "3ac970f7-8ee8-577b-8a59-7b8e7aeaf774",
+      "title": "Ophélie",
+      "catalogueTitle": "Ophelia",
+      "artist": "Arthur Hughes",
+      "artists": [
+        {
+          "name": "Arthur Hughes",
+          "role": "primary",
+          "slug": "arthur-hughes-research-e525f9e3fab0"
+        }
+      ],
+      "date": "vers 1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "",
+      "accession": "WA1977.23",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119083070-4bab1c3cd10deb91.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Arthur_Hughes_(1832-1915)_-_Ophelia_-_WA1977.23_-_Ashmolean_Museum.jpg",
+      "credit": "Arthur Hughes. Ophelia. Image credit: Arthur Hughes; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/5da0601e-0ad8-33d8-849a-1b31b5405d72",
+      "description": "Hughes garde Ophélie debout près d’un arbre, entourée de végétation et tenant des fleurs. Ne la confondez ni avec la figure flottante de Millais ni avec la première version assise de Hughes. Ici, le corps clair et vertical est enclos par les plantes. L’eau associée au sujet reste une menace alentour, non un événement accompli.",
+      "importance": "",
+      "museum": "Ashmolean Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "2c40cd7e-4d87-5ec2-8be8-d9d45ec587df",
+      "title": "La rêverie",
+      "catalogueTitle": "The Daydream",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "1872 - 1878",
+      "start": 1872,
+      "end": 1878,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/2c40cd7e-4d87-5ec2-8be8-d9d45ec587df-ef60857dd86f42b8.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/the-daydream-1878",
+      "credit": "Dante Gabriel Rossetti. The Daydream. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/dante-gabriel-rossetti/the-daydream-1878",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dante-gabriel-rossetti/the-daydream-1878",
+      "description": "Le livre est ouvert, mais l’attention de la femme ne suit plus la page. Une petite branche levée près des mains offre un autre point où s’arrêter. Le cadre légèrement décrit laisse de la place à la pause sans l’expliquer. L’interruption de la lecture est visible ; le contenu de la rêverie ne l’est pas.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "2a152dd2-71fb-5dcb-a3ae-d9d9e099b7aa",
+      "title": "Jeune fille en coiffe, la tête posée sur un oreiller bleu",
+      "catalogueTitle": "Girl in a Bonnet with her Head on a Blue Pillow",
+      "artist": "Anna Alma-Tadema",
+      "artists": [
+        {
+          "name": "Anna Alma-Tadema",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2770619"
+        }
+      ],
+      "date": "1902",
+      "start": 1902,
+      "end": 1902,
+      "medium": "",
+      "accession": "WA1964.81",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q125983339-f767624dfb5f0248.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anna_Alma-Tadema_-_Girl_in_a_Bonnet_with_her_Head_on_a_Blue_Pillow.jpg",
+      "credit": "Anna Alma-Tadema. Girl in a Bonnet with her Head on a Blue Pillow. Image credit: Anna Alma-Tadema; Source credit: https://wsimag.com/art/12787-great-british-drawings. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q125983339",
+      "description": "La joue repose contre l’oreiller bleu : le contact du visage et du tissu devient le centre de l’image. Volants de la coiffe et autres étoffes pâles entourent cette pression d’une surface douce contre une autre. Le bleu reste assez affirmé pour attirer l’attention sur le support autant que sur la personne qu’il porte.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "96637724-0e6c-56f8-a6dc-43b01730a577",
+      "title": "Asolo",
+      "catalogueTitle": "Asolo",
+      "artist": "Edith Corbet",
+      "artists": [
+        {
+          "name": "Edith Corbet",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5338520"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "WA1969.20",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119148853-28bf728891d14f0c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Edith_Corbet_(c.1850-1920)_-_Asolo_-_WA1969.20_-_Ashmolean_Museum.jpg",
+      "credit": "Edith Corbet. Asolo. Image credit: Edith Corbet; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/e12ca6bd-93c9-3d22-842b-0018dec48edc",
+      "description": "Les bâtiments ne se présentent pas comme des attractions isolées. Champs et longues étendues de sol les relient à un territoire habité plus vaste. Le grand ciel de Corbet conserve l’importance de ces intervalles. On approche la ville par ses terres, plutôt que de la recevoir comme un objet complet prêt à l’inspection.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "45a58630-edec-51a7-9864-3555c549836f",
+      "title": "Dolo sur la Brenta",
+      "catalogueTitle": "Dolo on the Brenta",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "1728",
+      "start": 1728,
+      "end": 1728,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/45a58630-edec-51a7-9864-3555c549836f-17dc31d010258b21.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/dolo-on-the-brenta",
+      "credit": "Canaletto. Dolo on the Brenta. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/dolo-on-the-brenta",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/dolo-on-the-brenta",
+      "description": "La voie d’eau relie architecture et usage : les bâtiments la bordent, de petites figures et des installations de travail occupent ses rives. Le clocher fournit une verticale claire parmi les toits bas. Canaletto distingue assez les distances pour laisser paraître les petites actions sans les faire rivaliser avec la ville entière.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "17bafeb0-cc83-5110-be45-d0e06cbe1ec1",
+      "title": "Le Grand Canal près du pont du Rialto",
+      "catalogueTitle": "The Grand Canal near the Ponte del Rialto",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "1725",
+      "start": 1725,
+      "end": 1725,
+      "medium": "Encre sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/17bafeb0-cc83-5110-be45-d0e06cbe1ec1-8b4535cdf838f60a.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/the-grand-canal-nethe-ponte-del-rialto",
+      "credit": "The Grand Canal near the Ponte del Rialto. WikiArt; Canaletto. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/the-grand-canal-nethe-ponte-del-rialto",
+      "description": "Certains bords sont renforcés par des traits d’encre répétés ; d’autres restent ouverts. Bateaux, façades et direction du canal sont reconnaissables sans les surfaces continues d’une peinture achevée. Le dessin rend la sélection manifeste : quelques lignes décisives établissent l’espace, et le détail s’accumule là où il est utile.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "1f9023fd-8f59-5577-a5c4-ec5c5727775f",
+      "title": "Hester Tradescant et son beau-fils, John",
+      "catalogueTitle": "Hester Tradescant and her Stepson, John",
+      "artist": "Thomas de Critz",
+      "artists": [
+        {
+          "name": "Thomas de Critz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q7795470"
+        }
+      ],
+      "date": "1645",
+      "start": 1645,
+      "end": 1645,
+      "medium": "",
+      "accession": "WA1898.14",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q118894135-4f1c848f84ae9b76.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Thomas_de_Critz_(1607-1653)_(attributed_to)_-_Hester_Tradescant_and_her_Stepson,_John_-_WA1898.14_-_Ashmolean_Museum.jpg",
+      "credit": "Thomas de Critz. Hester Tradescant and her Stepson, John. Image credit: Thomas de Critz; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/dc749da0-3ae2-31d3-88f0-f16cd054c590",
+      "description": "Les mains qui se rejoignent donnent à la femme et au garçon un point commun au premier plan. Leurs tailles et leurs vêtements restent distincts autour. Le double portrait possède donc plus de structure que deux ressemblances juxtaposées. Une petite liaison maintient la relation familiale dans le champ visible.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "662a014a-e453-5ffc-9fc9-ec938f3d1b7b",
+      "title": "Au-dessus des collines du Kurdistan : survol de Kirkouk",
+      "catalogueTitle": "Over the Hills of Kurdistan: Flying above Kirkuk",
+      "artist": "Sydney Carline",
+      "artists": [
+        {
+          "name": "Sydney Carline",
+          "role": "primary",
+          "slug": "sydney-carline-research-2eef5573cb6e"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "",
+      "accession": "WA1929.30",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119182102-a521d90c7f0c679c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sydney_William_Carline_(1888-1929)_-_Over_the_Hills_of_Kurdistan,_Flying_above_Kirkuk_-_WA1929.30_-_Ashmolean_Museum.jpg",
+      "credit": "Sydney Carline. Over the Hills of Kurdistan: Flying above Kirkuk. Image credit: Sydney Carline; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q119182102",
+      "description": "L’aile de l’appareil interrompt le sol en dessous et rappelle que cette vue élevée vient d’une machine précise. D’autres avions partagent l’espace au-dessus des collines et des champs. Carline n’offre pas un panorama dégagé. Le vol change ce qui peut être vu, et le moyen de voir reste dans l’image.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "48ade287-3d44-5d87-bca6-dbc68d470cc0",
+      "title": "Le dîner de Noël de la pauvre actrice",
+      "catalogueTitle": "The poor Actress's Christmas Dinner",
+      "artist": "Robert Braithwaite Martineau",
+      "artists": [
+        {
+          "name": "Robert Braithwaite Martineau",
+          "role": "primary",
+          "slug": "robert-braithwaite-martineau-research-dee15679878d"
+        }
+      ],
+      "date": "vers 1860",
+      "start": 1860,
+      "end": 1860,
+      "medium": "",
+      "accession": "WA1941.61",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119082123-1034af75baaff8c4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Braithwaite_Martineau_(1826-1869)_-_The_poor_Actress%27s_Christmas_Dinner_-_WA1941.61_-_Ashmolean_Museum.jpg",
+      "credit": "Robert Braithwaite Martineau. The poor Actress's Christmas Dinner. Image credit: Robert Braithwaite Martineau; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/446b8254-8e5f-3027-97ef-bd5d3a965aac",
+      "description": "Le petit plat attire une attention disproportionnée, car peu d’autres choses sont pleinement décrites. Une grande partie du corps de la femme reste légère autour du geste de manger. Le titre donne la pauvreté comme condition de la scène ; le dessin la rapproche par la modestie du repas, non par une liste de biens manquants.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "144260a3-7d03-5927-bd05-1add0a5aad52",
+      "title": "Katherine et Petruchio",
+      "catalogueTitle": "Katherine and Petruchio",
+      "artist": "Robert Braithwaite Martineau",
+      "artists": [
+        {
+          "name": "Robert Braithwaite Martineau",
+          "role": "primary",
+          "slug": "robert-braithwaite-martineau-research-dee15679878d"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "",
+      "accession": "WA1950.197",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119082115-5d91d31eeab8a8f6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Braithwaite_Martineau_(1826-1869)_-_Katherine_and_Petruchio_-_WA1950.197_-_Ashmolean_Museum.jpg",
+      "credit": "Robert Braithwaite Martineau. Katherine and Petruchio. Image credit: Robert Braithwaite Martineau; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/d8c38e98-d4a3-340c-a5ae-ec44fb409692",
+      "description": "Le récipient levé et les postures opposées font de la pièce meublée un lieu de confrontation. Costume et décor situent l’échange dans des rôles sociaux joués, mais les gestes le rendent lisible avant que toutes les références littéraires soient reconnues. Regardez les conditions physiques de la dispute, pas seulement les noms du titre.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "27156a84-c7b5-5571-9d6e-16ac26593152",
+      "title": "Thomas Balston",
+      "catalogueTitle": "Thomas Balston",
+      "artist": "Mark Gertler",
+      "artists": [
+        {
+          "name": "Mark Gertler",
+          "role": "primary",
+          "slug": "mark-gertler-research-3447dbfef583"
+        }
+      ],
+      "date": "1921",
+      "start": 1921,
+      "end": 1921,
+      "medium": "",
+      "accession": "WA1968.21",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119190381-d54af57863ba8783.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mark_Gertler_(1891-1939)_-_Thomas_Balston_-_WA1968.21_-_Ashmolean_Museum.jpg",
+      "credit": "Mark Gertler. Thomas Balston. Image credit: Mark Gertler; Source credit: Ashmolean Museum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/a299bd71-d90e-3dbb-aef2-04f9f6c935c0",
+      "description": "La veste lilas et le fond verdâtre distinguent le modèle de son milieu par la couleur. Face à ces grandes zones, la tête est plus précise ; la cravate claire ajoute un accent plus petit. La différence de traitement donne priorité au visage, sans projecteur ni longue explication de la profession du modèle.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "cccc75cb-9ed0-5ab7-9d2c-290c726add02",
+      "title": "Bosquet au bord d'un lac en automne",
+      "catalogueTitle": "Copse by a Lake (Autumn)",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1898",
+      "start": 1898,
+      "end": 1898,
+      "medium": "",
+      "accession": "WA1949.313",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/cccc75cb-9ed0-5ab7-9d2c-290c726add02-ce91a27906552a2b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Isaak_Il%27ich_Levitan_(1860-1900)_-_Copse_by_a_Lake_(Autumn)_-_WA1949.313_-_Ashmolean_Museum.jpg",
+      "credit": "Isaac Levitan. Copse by a Lake (Autumn). Image credit: Isaac Levitan; Source credit: Art UK. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q119148329",
+      "description": "La rive basse se prolonge entre arbres, roseaux et reflets plus sombres. L’automne apparaît dans les ajustements de couleur, non dans un incident dramatique ou un site exceptionnel. Ce bord continu permet aux petites variations de s’accumuler. La saison devient une condition répartie dans un endroit ordinaire.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "696f20df-bf09-5ad3-adc6-aa985ae953a6",
+      "title": "Vue sur le Nil",
+      "catalogueTitle": "View on the Nile",
+      "artist": "Thomas Seddon",
+      "artists": [
+        {
+          "name": "Thomas Seddon",
+          "role": "primary",
+          "slug": "wikimedia-painter-q681041"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "",
+      "accession": "WA1944.31",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119082075-215980a3bc91a27a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Thomas_Seddon_(1821-1856)_-_View_on_the_Nile_-_WA1944.31_-_Ashmolean_Museum.jpg",
+      "credit": "Thomas Seddon. View on the Nile. Image credit: Thomas Seddon; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/b4c46463-0652-3a4b-b663-aad9df98f5bc",
+      "description": "La voile claire introduit une diagonale dans une vue dominée par la longue rencontre de la rive, de l’eau et du ciel du soir. Les reflets relient le fleuve à la lumière distante. Les bateaux restent des objets particuliers, mais la composition ne se ferme pas autour d’eux : l’étendue horizontale se poursuit au-delà.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "30c11a62-48c2-5b81-a4d9-9dd63173e523",
+      "title": "Hêtres au coucher du soleil, Kensington Gardens",
+      "catalogueTitle": "Beech Trees at Sunset, Kensington Gardens",
+      "artist": "Paul Maitland",
+      "artists": [
+        {
+          "name": "Paul Maitland",
+          "role": "primary",
+          "slug": "wikimedia-painter-q19569687"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "",
+      "accession": "WA1961.31",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119156300-c479f3f4ae7b3aad.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_Fordyce_Maitland_(1863-1909)_-_Beech_Trees_at_Sunset,_Kensington_Gardens_-_WA1961.31_-_Ashmolean_Museum.jpg",
+      "credit": "Paul Maitland. Beech Trees at Sunset, Kensington Gardens. Image credit: Paul Maitland; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q119156300",
+      "description": "Les troncs se répètent assez serrés pour limiter la vue lointaine. La profondeur se cherche dans les petites trouées éclairées, non dans une vaste ouverture. Maitland donne au jardin un espace contenu, construit par répétition et lumière filtrée plutôt que par un arbre vedette ou un panorama ample.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "2204d368-a0e8-5548-826d-a7f13e83918c",
+      "title": "Portrait de Mademoiselle Claus",
+      "catalogueTitle": "Portrait of Mademoiselle Claus",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2204d368-a0e8-5548-826d-a7f13e83918c-6e2e1a6a761d7b95.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/portrait-of-mademoiselle-claus-1868",
+      "credit": "Édouard Manet. Portrait of Mademoiselle Claus. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/portrait-of-mademoiselle-claus-1868",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://ashmolean.org/portrait-mademoiselle-claus",
+      "description": "Le visage est plus abouti que la robe et que la figure partiellement développée à côté. Une balustrade verte relie ces degrés de finition inégaux. Le portrait de Manet se lit ainsi sur deux plans : comme ressemblance et comme trace de décisions encore différemment visibles sur une même surface peinte.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "284928cc-02f9-5ede-baeb-0ccbfccdc2e6",
+      "title": "Étude d’un haut de bras",
+      "catalogueTitle": "Upper arm Study",
+      "artist": "Matthias Grünewald",
+      "artists": [
+        {
+          "name": "Matthias Grünewald",
+          "role": "primary",
+          "slug": "matthias-grunewald-q154338"
+        }
+      ],
+      "date": "1512 - 1514",
+      "start": 1512,
+      "end": 1514,
+      "medium": "Craie",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/284928cc-02f9-5ede-baeb-0ccbfccdc2e6-d97711ffe8ee6b2d.jpg",
+      "imageSource": "https://www.wikiart.org/en/matthias-grunewald/forearm-study-1514",
+      "credit": "Matthias Grünewald. Upper arm Study. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/matthias-grunewald/forearm-study-1514",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/matthias-grunewald/forearm-study-1514",
+      "description": "Le bras est détaché de l’action plus vaste à laquelle il pourrait participer. La craie et les passages plus clairs suffisent à modeler sa courbe, donnant un fragment anatomique à examiner de près. L’isolement change la tâche : au lieu de suivre une histoire, on observe comment contour et ombre donnent de la force à une partie du corps.",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    }
+  ],
+  "context": {
+    "start": 1470,
+    "end": 1921
+  },
+  "closingSections": [
+    {
+      "title": "Regarder où la finition change",
+      "paragraphs": [
+        "Comparez les trois premiers dessins de figures au portrait de Manet et à la vue à l’encre de Canaletto. Qu’est-ce qui est posé en premier ? Que peut-on abréger sans le perdre ? Dessins et peintures peuvent avoir des modalités d’exposition différentes. Consultez les notices actuelles du musée plutôt que de traiter la sélection comme un parcours fixe."
+      ]
+    }
+  ]
+}

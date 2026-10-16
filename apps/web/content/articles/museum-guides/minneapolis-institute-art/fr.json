@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "minneapolis-institute-art",
+  "museum": "Minneapolis Institute of Art",
+  "city": "Minneapolis",
+  "country": "États-Unis",
+  "title": "Institut d’art de Minneapolis : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres où une tache, un coup de pinceau ou un léger écart de couleur devient décisif.",
+  "introduction": "Le sang sur le vêtement pâle de Lucrèce change la lecture de tout le tableau de Rembrandt. L’oliveraie de Van Gogh pose une autre question : sol, arbres et ciel restent distincts, mais des touches apparentées font circuler le mouvement entre eux. À l’autre bout de cette sélection, Ad Reinhardt demande de discerner des différences si proches du noir qu’un regard rapide risque de les manquer.\n\nVoilà trois usages très différents d’une surface peinte. Ce guide les suit parmi des portraits, des paysages et un rouleau à sujet théâtral du Minneapolis Institute of Art. Parfois, la peinture précise un objet ; parfois, elle complique sa reconnaissance. Plutôt que de demander si un tableau paraît réaliste, mieux vaut examiner quelles distinctions sa facture rend possibles.",
+  "visitNote": "Cette sélection ciblée est issue des collections bien plus vastes du Mia. Veuillez consulter les fiches actuelles des œuvres pour connaître leur emplacement en salle, ainsi que les informations relatives aux prêts et aux rotations, en particulier pour les œuvres sur papier. La peinture représentant les chutes de Saint Anthony témoigne d'une vue ancienne, comme l'indique explicitement son titre ; il ne s'agit pas d'une représentation du site tel qu'il se présente aujourd'hui.",
+  "locale": "fr",
+  "website": "https://new.artsmia.org/",
+  "officialGuide": "https://new.artsmia.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Lecture gratuite · Anglais",
+      "note": "L’approche pratique de Speed concernant les valeurs tonales et la composition peut être mise à l’épreuve au regard des portraits et paysages présentés ici. Commencez par l’autoportrait sombre de Mancini et les formes claires de Poussin, où des répartitions de lumière très différentes guident la reconnaissance."
+    }
+  ],
+  "works": [
+    {
+      "id": "565ca71e-948e-44c6-8a28-84de69cde577",
+      "title": "Oliviers",
+      "catalogueTitle": "Olive Trees",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur toile",
+      "accession": "51.7",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/8483e579-acf3-410f-b155-f0445c92a07d-23678d13a90a773d.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1218",
+      "credit": "Vincent van Gogh. Olive Trees. Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1218",
+      "description": "Les arbres tordus restent distincts du sol ocre, mais les touches qui parcourent les uns et l’autre les animent de façon voisine. Van Gogh ne réserve pas le mouvement au feuillage que le temps pourrait agiter : ciel et terre y participent aussi. Les montagnes bleues stabilisent le lointain. Le premier plan densément travaillé reste ainsi un bosquet enraciné, plutôt qu’un motif indifférencié.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "0def07fe-13a9-4786-ac21-aaa45267901f",
+      "title": "Lucrèce",
+      "catalogueTitle": "Lucretia",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1666",
+      "start": 1666,
+      "end": 1666,
+      "medium": "Huile sur toile",
+      "accession": "34.19",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/a3f024e4-5e5f-4c98-b723-7d042c25a783-ef1bdcb1c0414ec4.jpg",
+      "imageSource": "https://collections.artsmia.org/art/529",
+      "credit": "Rembrandt van Rijn. Lucretia. Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/529",
+      "description": "La tache sur le vêtement de dessous situe l’instant après que Lucrèce s’est blessée. Rembrandt ne lui donne aucun geste triomphant. Le regard baissé et la main levée vers un cordon retiennent l’attention sur un corps vulnérable. Le récit antique a souvent servi des conceptions publiques de l’honneur. Ici, ses conséquences se concentrent dans le tissu, le sang et l’effort de simplement rester debout.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "9297bb47-3c0b-43f6-a312-409601aa4f62",
+      "title": "Hortense Valpinçon",
+      "catalogueTitle": "Portrait of Mlle. Hortense Valpinçon",
+      "artist": "Edgar Degas",
+      "artists": [
+        {
+          "name": "Edgar Degas",
+          "role": "primary",
+          "slug": "edgar-degas-q46373"
+        }
+      ],
+      "date": "vers 1871",
+      "start": 1871,
+      "end": 1871,
+      "medium": "Huile sur toile à matelas",
+      "accession": "48.1",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/dad2ed46-9a21-4a6f-a05d-6a19f115ad86-318c45bd4dfb68a2.jpg",
+      "imageSource": "https://collections.artsmia.org/art/774",
+      "credit": "Edgar Degas. Portrait of Mlle. Hortense Valpinçon. Image credit: Minneapolis Institute of Art, The John R. Van Derlip Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/774",
+      "description": "La pose penchée de la fillette interrompt les motifs chargés de la pièce. Degas lui donne assez de naturel pour qu’elle paraisse occupée dans son propre cadre, tandis que la tête tournée la maintient disponible au portrait. Fleurs et meubles pourraient aisément dominer cette petite figure. Leur densité fait au contraire de l’arrangement particulier des mains, des épaules et du visage un point d’attention plus net.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "01705492-3b9c-47ca-aa37-1a61a76bd443",
+      "title": "Le Pont japonais",
+      "catalogueTitle": "The Japanese Bridge",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "vers 1923–1925",
+      "start": 1923,
+      "end": 1925,
+      "medium": "Huile sur toile",
+      "accession": "61.36.15",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/c6ea294e-cdb3-43de-9e51-ca7d19a15867-92127bbe16cd886b.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1413",
+      "credit": "Claude Monet. The Japanese Bridge. Image credit: Minneapolis Institute of Art, Bequest of Putnam Dana McMillan. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1413",
+      "description": "Il faut chercher le pont parmi les marques denses de rouge, de bleu, de jaune et de vert. Dans ce Monet tardif, l’architecture familière n’offre plus un contour net autour duquel disposer la couleur. La reconnaissance dépend de quelques rapports conservés. Le jardin reste le sujet, mais le tableau insiste sur ce point où un lieu connu devient difficile à séparer de la peinture.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "c9dd7622-1c13-416d-9cfb-7e7a27643566",
+      "title": "Le Ruisseau du moulin, Montclair, New Jersey",
+      "catalogueTitle": "The Mill Stream, Montclair, New Jersey",
+      "artist": "George Inness",
+      "artists": [
+        {
+          "name": "George Inness",
+          "role": "primary",
+          "slug": "george-inness-nga-1413"
+        }
+      ],
+      "date": "vers 1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile",
+      "accession": "2000.236",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/6595777a-30ed-4f02-adf7-cf79c3a6a5f9-7fe7052d973cd59f.jpg",
+      "imageSource": "https://collections.artsmia.org/art/12936",
+      "credit": "George Inness. The Mill Stream, Montclair, New Jersey. George Inness; Minneapolis Institute of Art; Gift of Don and Diana Lee Lucker. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/12936",
+      "description": "Toits et cheminées restent visibles au-delà des arbres minces, même lorsque la lumière chaude adoucit leur séparation avec le paysage. Inness n’a pas besoin d’effacer l’industrie pour établir une continuité. Les reflets flous réunissent formes bâties et naturelles dans la même atmosphère. Cherchez où une limite reste ferme et où elle cède : la cohérence de la vue tient à cette variation.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "20481fb9-0914-5fd6-87a8-c7c35fd14142",
+      "title": "La Mort de Germanicus",
+      "catalogueTitle": "The Death of Germanicus",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1627",
+      "start": 1627,
+      "end": 1627,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/20481fb9-0914-5fd6-87a8-c7c35fd14142-743ac64ad5dfe0e9.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/the-death-of-germanicus-1627",
+      "credit": "The Death of Germanicus. WikiArt; Nicolas Poussin. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/the-death-of-germanicus-1627",
+      "description": "Des bras étendus relient le lit du mourant aux soldats, tandis que la famille occupe une autre partie du rassemblement. Poussin distingue les réponses au lieu de réduire le deuil à une expression répétée. Une draperie bleu profond unit la scène au-dessus d’eux. Devoir public et perte privée partagent une pièce, mais les positions des figures empêchent de confondre ces expériences.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "0fd6074b-3835-4aa9-9a2c-a709726d211c",
+      "title": "Nuit urbaine",
+      "catalogueTitle": "City Night",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "Huile sur toile",
+      "accession": "80.28",
+      "image": "https://artlines.org/assets/artworks/wikiart/2c9f8c8d-727c-4303-a218-9602f312337b-ee0a2aa7cadd3111.jpg",
+      "imageSource": "https://www.wikiart.org/en/georgia-o-keeffe/city-night",
+      "credit": "Georgia O'Keeffe. City Night. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collections.artsmia.org/art/2725",
+      "description": "O’Keeffe ne laisse qu’un mince intervalle de ciel entre les bâtiments qui s’élèvent. Depuis cette contre-plongée, la ville est moins un ensemble d’adresses qu’une structure enfermant celui qui regarde. Une petite lumière près du bord inférieur accentue l’écart d’échelle. Les larges masses sombres rendent la hauteur sensible sans décrire individuellement les fenêtres ou l’activité de la rue.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "18476396-0f6b-45ae-a674-22f0dd651872",
+      "title": "Notre infirmière, Margaret Burgess",
+      "catalogueTitle": "Portrait of Our Nurse, Margaret Burgess",
+      "artist": "Florine Stettheimer",
+      "artists": [
+        {
+          "name": "Florine Stettheimer",
+          "role": "primary",
+          "slug": "florine-stettheimer-round2-8f62ae931f72"
+        }
+      ],
+      "date": "1929",
+      "start": 1929,
+      "end": 1929,
+      "medium": "Huile sur toile",
+      "accession": "59.21",
+      "image": "https://artlines.org/assets/artworks/wikiart/744a8f1a-afac-4822-bc5a-5a6f98add9e2-c1b3b9872e74621c.jpg",
+      "imageSource": "https://www.wikiart.org/en/florine-stettheimer/portrait-of-our-nurse-margaret-burgess",
+      "credit": "Florine Stettheimer. Portrait of Our Nurse, Margaret Burgess. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collections.artsmia.org/art/1369",
+      "description": "Stettheimer nomme cette employée de la maison et donne à son corps allongé une place centrale parmi de petits objets et personnages. Les dimensions suivent l’ordre décoratif du tableau, non les mesures constantes d’une pièce. Le possessif du titre enregistre un rapport au foyer, mais Margaret Burgess n’est pas réduite à une fonction anonyme. Son nom sert de repère dans le monde inventé autour d’elle.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "7f9193f5-0694-4c80-a1f8-031f73d3aa5a",
+      "title": "Autoportrait avec le docteur Arrieta",
+      "catalogueTitle": "Self-Portrait with Dr. Arrieta",
+      "artist": "Francisco Goya",
+      "artists": [
+        {
+          "name": "Francisco Goya",
+          "role": "primary",
+          "slug": "francisco-goya-q5432"
+        }
+      ],
+      "date": "1820",
+      "start": 1820,
+      "end": 1820,
+      "medium": "Huile sur toile",
+      "accession": "52.14",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/89b26ff2-7fed-4867-94f7-9cfc1976069f-fbc0fdcd102877c7.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1226",
+      "credit": "Francisco Goya. Self-Portrait with Dr. Arrieta. Image credit: Minneapolis Institute of Art, The Ethel Morrison Van Derlip Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1226",
+      "description": "Goya se représente incapable de tenir la pose autonome d’un portrait conventionnel. Arrieta le soutient et approche un verre de sa bouche. Le geste pratique du médecin donne sa structure à l’image : un corps rend possible la position de l’autre. Les présences obscures derrière eux ne peuvent rivaliser avec cette description précise d’un soin rapproché.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "1962b595-3814-45f0-a879-4253a0be17e8",
+      "title": "Sous le pandanus",
+      "catalogueTitle": "I Raro Te Oviri (Under the Pandanus)",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "Huile sur toile",
+      "accession": "41.4",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/adc34134-4028-42b1-a84d-c9f9eeae898e-fd7d0bdacb7977b8.jpg",
+      "imageSource": "https://collections.artsmia.org/art/601",
+      "credit": "Paul Gauguin. I Raro Te Oviri (Under the Pandanus). Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/601",
+      "description": "Le sol violet et le feuillage à motifs donnent au lieu un ordre indépendant de la couleur naturaliste. Gauguin place les femmes et l’animal sombre dans ce champ construit. Sa cohérence visuelle ne doit pas être confondue avec un compte rendu transparent de la vie tahitienne. Le tableau montre aussi un artiste européen décidant de l’apparence qu’auront un lieu et ses habitants.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "9e60ed43-badf-4c50-9396-54daf91efd47",
+      "title": "Panaches blancs",
+      "catalogueTitle": "White Plumes",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "Huile sur toile",
+      "accession": "47.41",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/a0c25822-7de1-4f86-a6e3-cd58ab1a1d1a-d53e24ae7a08025a.jpg",
+      "imageSource": "https://collections.artsmia.org/art/766",
+      "credit": "Henri Matisse. White Plumes. Image credit: Minneapolis Institute of Art, The William Hood Dunwoody Fund. Public Domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/766",
+      "description": "Le chapeau à plumes déborde largement la tête, donnant à un accessoire une grande importance dans la composition. Matisse l’équilibre avec le fond rouge, les cheveux sombres et les vêtements clairs. Le visage doit garder sa place parmi ces formes concurrentes. Le costume ne renseigne donc pas seulement sur la mode : il modifie les proportions à travers lesquelles la personne est vue.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "1744785e-ba15-4203-a008-0359b8866e8b",
+      "title": "Autoportrait au col amovible",
+      "catalogueTitle": "Self-Portrait with Detachable Collar",
+      "artist": "Frédéric Bazille",
+      "artists": [
+        {
+          "name": "Frédéric Bazille",
+          "role": "primary",
+          "slug": "frederic-bazille-q207298"
+        }
+      ],
+      "date": "1865–67",
+      "start": 1865,
+      "end": 1867,
+      "medium": "Huile sur toile",
+      "accession": "62.39",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/a6d02845-ca50-4e6d-8cb0-121a4489fc1d-f600716acb8a8680.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1480",
+      "credit": "Frédéric Bazille. Self-Portrait with Detachable Collar. Frédéric Bazille; Minneapolis Institute of Art; The John R. Van Derlip Fund. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1480",
+      "description": "Un étroit col blanc sépare la tête de Bazille de la veste et du fond plus sombres. Avec si peu d’accents lumineux, ce petit morceau de vêtement devient essentiel à la construction. Le visage légèrement tourné peut émerger sans atelier, palette ni accessoire explicatif. La ressemblance dépend d’écarts de tons mesurés plutôt que d’un inventaire du métier de peintre.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "4dd69c8c-dc8b-5989-8a66-ad93f4f6937b",
+      "title": "Autoportrait",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Antonio Mancini",
+      "artists": [
+        {
+          "name": "Antonio Mancini",
+          "role": "primary",
+          "slug": "antonio-mancini-research-5af6609f4871"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "Huile sur toile",
+      "accession": "71.50",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/4dd69c8c-dc8b-5989-8a66-ad93f4f6937b-bffb494d0512afe8.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1865",
+      "credit": "Antonio Mancini. Self-Portrait. Antonio Mancini; Minneapolis Institute of Art; The Putnam Dana McMillan Fund; 71.50. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1865",
+      "description": "Le visage de Mancini apparaît inégalement, brisé par des rehauts rugueux et des zones d’ombre. La peinture n’offre pas chaque trait avec la même clarté. Malgré ces omissions, on le reconnaît : trouver un visage fait partie de la lecture du portrait. Comparez le col net de Bazille. Deux petits autoportraits peuvent établir des conditions de visibilité très différentes.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "3e32a5d6-29f9-5710-af45-c83d7bac5368",
+      "title": "Les Chutes de Saint Anthony telles qu’elles apparaissaient en 1848",
+      "catalogueTitle": "St. Anthony Falls as It Appeared in 1848",
+      "artist": "Henry Lewis",
+      "artists": [
+        {
+          "name": "Henry Lewis",
+          "role": "primary",
+          "slug": "wikimedia-painter-q16031005"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "Huile sur toile",
+      "accession": "28.79",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/3e32a5d6-29f9-5710-af45-c83d7bac5368-c4b6d68c0280a45f.jpg",
+      "imageSource": "https://collections.artsmia.org/art/356",
+      "credit": "Henry Lewis. St. Anthony Falls as It Appeared in 1848. Henry Lewis; Minneapolis Institute of Art; Gift of E. C. Gale; 28.79. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/356",
+      "description": "La date du titre de Lewis appartient à la scène représentée, non à la réalisation du tableau en 1855. Cette distinction donne à la vue un caractère rétrospectif. Chutes, îles, arbres et bâtiments bas enregistrent un état particulier du site. Le vaste ensemble reste un paysage composé, même si le titre lui demande également de servir de document historique.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "42a3254e-79be-48f4-968e-c20cf25a4233",
+      "title": "Un étang dans le Morvan",
+      "catalogueTitle": "A Pond in the Morvan",
+      "artist": "Charles-François Daubigny",
+      "artists": [
+        {
+          "name": "Charles-François Daubigny",
+          "role": "primary",
+          "slug": "charles-francois-daubigny-q252357"
+        }
+      ],
+      "date": "1869",
+      "start": 1869,
+      "end": 1869,
+      "medium": "Huile sur toile",
+      "accession": "71.66",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/f187c57f-110b-47d6-ad89-54833449bb19-2555bf0b3d76d0f1.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1878",
+      "credit": "Charles-François Daubigny. A Pond in the Morvan. Charles-François Daubigny; Minneapolis Institute of Art; Gift of Mr. M. R. Schweitzer. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1878",
+      "description": "Daubigny réunit l’eau et les arbres denses par des tons étroitement apparentés. Aucun événement central bien visible n’organise la vue. Les écarts entre le premier plan sombre, l’étang et la lumière plus chaude en deviennent les principales divisions. Cette tranquillité a été construite, non simplement trouvée. Quelques grandes masses donnent à l’œil assez de variations pour le retenir.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "477d520e-54e4-5130-8e55-4019f0e6e3a4",
+      "title": "Une scène sur le ruisseau Tohickon : l’automne",
+      "catalogueTitle": "A Scene on the Tohickon Creek: Autumn",
+      "artist": "Thomas Moran",
+      "artists": [
+        {
+          "name": "Thomas Moran",
+          "role": "primary",
+          "slug": "thomas-moran-nga-1730"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "Huile sur toile",
+      "accession": "68.82",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/477d520e-54e4-5130-8e55-4019f0e6e3a4-ebbf7395071bbae6.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1694",
+      "credit": "Thomas Moran. A Scene on the Tohickon Creek: Autumn. Thomas Moran; Minneapolis Institute of Art; The Frances E. Andrews Wilderness Fund, in memory of her mother Mary Hunt Andrews; 68.82. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1694",
+      "description": "Le ruisseau ouvre un passage entre des arbres qui pourraient autrement former un mur continu. Moran utilise de petites cascades et des plages d’eau claires pour conduire l’attention vers le lointain plus lumineux. Le feuillage d’automne apporte la chaleur, mais l’eau guide le déplacement dans l’image. La suivre révèle comment rendre un paysage encombré praticable au regard.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "aeb76699-c8e8-5339-8839-f1a5116d0692",
+      "title": "Une vestale entretenant le feu",
+      "catalogueTitle": "A Vestal Virgin Tending Fire",
+      "artist": "François Lemoyne",
+      "artists": [
+        {
+          "name": "François Lemoyne",
+          "role": "primary",
+          "slug": "francois-lemoyne-q732468"
+        }
+      ],
+      "date": "vers 1726–1727",
+      "start": 1726,
+      "end": 1727,
+      "medium": "Huile sur toile",
+      "accession": "65.48",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/aeb76699-c8e8-5339-8839-f1a5116d0692-73632e72b7c15648.jpg",
+      "imageSource": "https://collections.artsmia.org/art/1593",
+      "credit": "François Lemoyne. A Vestal Virgin Tending Fire. François Lemoyne; Minneapolis Institute of Art; The Ethel Morrison Van Derlip Fund; 65.48. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/1593",
+      "description": "La flamme désigne la responsabilité rituelle de la femme et éclaire celle qui l’entretient. Lemoyne rapproche l’action jusqu’à faire du visage et des mains ses principaux repères. Un objet peut remplir cette double fonction sans longue explication symbolique : le petit feu est à la fois la raison de sa présence et le moyen de la rendre visible.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "a66fc307-8722-46e5-9b39-cae9e0dd9abc",
+      "title": "Peinture abstraite n° 9",
+      "catalogueTitle": "Abstract Painting No. 9",
+      "artist": "Ad Reinhardt",
+      "artists": [
+        {
+          "name": "Ad Reinhardt",
+          "role": "primary",
+          "slug": "ad-reinhardt-nga-1821"
+        }
+      ],
+      "date": "1960–66",
+      "start": 1960,
+      "end": 1966,
+      "medium": "Huile sur toile",
+      "accession": "74.73",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/a66fc307-8722-46e5-9b39-cae9e0dd9abc-9809bd5b35222913.jpg",
+      "imageSource": "https://www.wikiart.org/en/ad-reinhardt/abstract-painting-no-9-1966",
+      "credit": "Ad Reinhardt. Abstract Painting No. 9. WikiArt source label: Ad Reinhardt Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ad-reinhardt/abstract-painting-no-9-1966",
+      "license": "Ad Reinhardt Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collections.artsmia.org/art/10440",
+      "description": "Les rectangles presque noirs ne se détachent pas immédiatement de leur entourage sombre. Reinhardt retire le contraste fort qui rend d’ordinaire une composition rapidement lisible. Il faut laisser le temps aux différences légères d’apparaître. Une reproduction à l’écran peut les supprimer ou les exagérer ; elle ne remplace donc pas fidèlement les rapports de tons exacts du tableau.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "5ea0d85f-d57b-53f1-bd62-6fe6bbea3fd8",
+      "title": "Fruits en abondance",
+      "catalogueTitle": "Abundant Fruit",
+      "artist": "Severin Roesen",
+      "artists": [
+        {
+          "name": "Severin Roesen",
+          "role": "primary",
+          "slug": "severin-roesen-nga-26696"
+        }
+      ],
+      "date": "1858",
+      "start": 1858,
+      "end": 1858,
+      "medium": "Huile sur toile",
+      "accession": "2005.96",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/5ea0d85f-d57b-53f1-bd62-6fe6bbea3fd8-e8018a6a0225ae8d.jpg",
+      "imageSource": "https://collections.artsmia.org/art/98269",
+      "credit": "Severin Roesen. Abundant Fruit. Severin Roesen; Minneapolis Institute of Art; Gift of Don and Diana Lee Lucker; 2005.96. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/98269",
+      "description": "Roesen réunit plus de fruits qu’un arrangement improvisé n’en demanderait. Peaux intactes, chairs coupées, feuilles et vrilles rivalisent pour attirer l’œil. L’obscurité rend cet étalage chargé plus facile à distinguer. L’abondance est un effet pictural ordonné : chaque variété doit rester assez séparée pour que la quantité apparaisse comme une diversité, non comme un tas indistinct.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    },
+    {
+      "id": "ad2c3540-c7f0-5288-a0de-9b394a032b86",
+      "title": "Ichikawa Danjūrō V dans un rôle de Shibaraku",
+      "catalogueTitle": "Actor Ichikawa Danjūrō V in a Shibaraku Role",
+      "artist": "Katsukawa Shunshō",
+      "artists": [
+        {
+          "name": "Katsukawa Shunshō",
+          "role": "primary",
+          "slug": "katsukawa-shunsho-round3-2034191d0157"
+        }
+      ],
+      "date": "vers 1788",
+      "start": 1788,
+      "end": 1788,
+      "medium": "Rouleau vertical (nikuhitsu), encre et couleurs sur soie",
+      "accession": "74.1.110",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-mia/ad2c3540-c7f0-5288-a0de-9b394a032b86-e9cf710f32797065.jpg",
+      "imageSource": "https://collections.artsmia.org/art/8636",
+      "credit": "Katsukawa Shunshō. Actor Ichikawa Danjūrō V in a Shibaraku Role. Katsukawa Shunshō; Minneapolis Institute of Art; Bequest of Richard P. Gale; 74.1.110. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collections.artsmia.org/art/8636",
+      "description": "Le costume rouge, la pose agenouillée et le long sabre suffisent à identifier le rôle théâtral sans décor élaboré. Shunshō utilise le fond vide pour rendre la silhouette particulièrement lisible. Il s’agit d’un rouleau suspendu peint, non d’une estampe gravée sur bois. Son économie tient autant au traitement d’une image unique qu’à la clarté du rôle.",
+      "importance": "",
+      "museum": "Minneapolis Institute of Art"
+    }
+  ],
+  "context": {
+    "start": 1627,
+    "end": 1966
+  },
+  "closingSections": [
+    {
+      "title": "Laisser chaque œuvre régler le rythme",
+      "paragraphs": [
+        "Les fruits entassés et le Reinhardt presque noir ne répondent pas au même premier coup d’œil. Laissez les contrastes déterminer le temps nécessaire pour distinguer les parties d’une œuvre. Cette sélection vient des collections ; elle ne décrit pas l’accrochage actuel. Consultez les notices à jour avant de prévoir une visite autour d’un objet particulier, notamment pour les œuvres sur papier ou sur soie."
+      ]
+    }
+  ]
+}

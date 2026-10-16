@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "mauritshuis",
+  "museum": "Mauritshuis",
+  "city": "海牙",
+  "country": "荷兰",
+  "title": "莫瑞泰斯皇家美术馆：杰作",
+  "subtitle": "珍珠、锁着的鸟与被解剖的手臂，呈现出引导目光的不同方式。",
+  "introduction": "这组选画中，有些靠事件吸引注意：一堂课，一次获救，一场宫廷骚动。另一些却几乎没有动作。鸟停在栖木上，郁金香从玻璃瓶中伸出，代尔夫特城位于水的彼岸。这些安静的题材没有在叙事画旁失去存在感，原因在于画家十分精确地决定了哪些地方应该引人注目。\n\n先找一幅画最具体、最清楚的部分，再看它把什么留得模糊。维米尔并不均匀地描绘城市的每一处，伦勃朗也没有让在场的每个人受到同样强的照明。有所选择，有时比穷尽细节更能使画中的事物显得就在眼前。",
+  "visitNote": "请查阅博物馆当前的藏品信息及访客指南，以了解展出地点及借展情况。部分藏品可能正在其他场馆展出或处于库房保存状态。",
+  "locale": "zh",
+  "website": "https://www.mauritshuis.nl/",
+  "officialGuide": "https://www.mauritshuis.nl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "在线阅读或下载 · 英语",
+      "note": "沃尔特·利特克（Walter Liedtke）所著的《大都会艺术博物馆中的荷兰绘画》（Dutch Paintings in The Metropolitan Museum of Art）一书，对肖像画、静物画及描绘日常生活场景的画作进行了深入研究。这些易于阅读的著作，为本指南所涵盖的各类画作提供了必要的背景信息。"
+    }
+  ],
+  "works": [
+    {
+      "id": "b385c469-a37d-57b8-8924-0409473d6c9e",
+      "title": "戴珍珠耳环的少女",
+      "catalogueTitle": "The Girl with a Pearl Earring",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "1665",
+      "start": 1665,
+      "end": 1665,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b385c469-a37d-57b8-8924-0409473d6c9e-8b98985de817aec7.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/the-girl-with-a-pearl-earring",
+      "credit": "Johannes Vermeer. The Girl with a Pearl Earring. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/johannes-vermeer/the-girl-with-a-pearl-earring",
+      "description": "转过来的头似乎暗示动作被打断，维米尔却几乎没有交代足以解释这一动作的环境。柔和的边缘让脸显现出来，而无须坚硬的轮廓。旁边明亮的耳环只用很少的描绘便已成立。它最鲜明的效果来自光，因此题名中的这件饰物虽然醒目，却又很难被看成一个确定、结实的物体。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "6f904a58-f4b5-49d9-a19b-a365e0e066ba",
+      "title": "代尔夫特风景",
+      "catalogueTitle": "View of Delft",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约 1660–1661 年",
+      "start": 1660,
+      "end": 1661,
+      "medium": "布面油画",
+      "accession": "92",
+      "image": "https://artlines.org/assets/artworks/wikiart/6f904a58-f4b5-49d9-a19b-a365e0e066ba-d7238fb92dd06c22.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/view-on-delft",
+      "credit": "Johannes Vermeer. View of Delft. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/92-view-of-delft",
+      "description": "一道水面把城市留在远处。天际线上，阳光照亮部分建筑，另一些仍在阴影中，视线因此有所先后，而不是平均分散。维米尔让天气参与塑造城市在这一刻的样子。近处人物提供了尺度，却没有成为一段小故事的主角。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "89ea4820-dd83-58c8-99b8-8d0dc1275ae3",
+      "title": "荷马",
+      "catalogueTitle": "Homer",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1663",
+      "start": 1663,
+      "end": 1663,
+      "medium": "",
+      "accession": "584",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11710021-ede62e62e318b869.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_061.jpg",
+      "credit": "Rembrandt. Homer. Image credit: Rembrandt. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11710021",
+      "description": "传说中的诗人被赋予一位老人的面容和抬起的手。伦勃朗压低周围环境的明暗，让手势暗示说话或追忆，而不必搭建宏大的历史场景。画作的具体感来自想象中的身体形象，不依赖一种武断的说法：仿佛某个表情就能揭示荷马究竟在想什么。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "14c8ff0a-9a17-426a-ba4e-97bf0ac7bced",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1669",
+      "start": 1669,
+      "end": 1669,
+      "medium": "布面油画",
+      "accession": "840",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/14c8ff0a-9a17-426a-ba4e-97bf0ac7bced-38ab7e33fa17cfd1.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/self-portrait-1669-1",
+      "credit": "Rembrandt. Self-Portrait. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/840-self-portrait",
+      "description": "这张脸并不平滑：它既是衰老的皮肤，也是反复运作的颜料表面。两者同时可见很重要，伦勃朗用来描绘自己的材料，并未假装完全消失。深色外衣与软帽为五官留出显现的余地。但年龄和笔法都不能证明一种唯一的情绪；这幅画值得比这种简便判断更仔细的观看。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "b3b98bf2-77df-56aa-98a5-b7ec7b7485f6",
+      "title": "玻璃花瓶中的花",
+      "catalogueTitle": "Flowers in a Glass Vase",
+      "artist": "Rachel Ruysch",
+      "artists": [
+        {
+          "name": "Rachel Ruysch",
+          "role": "primary",
+          "slug": "rachel-ruysch-q234385"
+        }
+      ],
+      "date": "约 1700 年",
+      "start": 1700,
+      "end": 1700,
+      "medium": "",
+      "accession": "L191",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117846483-1e0abd76f934519f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rachel_Ruysch_-_Summer_flowers_in_a_vase.jpg",
+      "credit": "Rachel Ruysch. Flowers in a Glass Vase. Image credit: Rachel Ruysch. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117846483",
+      "description": "花束的外缘并不整齐。高起的花茎、向外伸展的叶片和下垂的花，使它没有成为紧密的装饰团块。鲁伊施让整组安排依赖各部分之间的差异。一朵花的朝向、生长状态和颜色同样重要，因此，对植物的观察与构图上的创造很难截然分开。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "5d167427-145e-5d1b-a82a-64934df1de9c",
+      "title": "阿莱塔·哈内曼斯",
+      "catalogueTitle": "Portrait of Aletta Hanemans",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1625",
+      "start": 1625,
+      "end": 1625,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/5d167427-145e-5d1b-a82a-64934df1de9c-524fa480557b4bb9.jpg",
+      "imageSource": "https://www.wikiart.org/en/frans-hals/portrait-of-aletta-hanemans-1625",
+      "credit": "Frans Hals. Portrait of Aletta Hanemans. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/frans-hals/portrait-of-aletta-hanemans-1625",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frans-hals/portrait-of-aletta-hanemans-1625",
+      "description": "巨大的褶领在阿莱塔脸下划出明亮的边界，刺绣和纹章则宣示她公开示人的身份。哈尔斯充分描绘服装，但没有让人物只成为衣服的支架。与雅各布·奥利坎的姿态相比，两人使用相近的身份标志，身体的安排却并不相同。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "d1b7a75c-f9fd-557a-875f-c2e6c2c5c0fe",
+      "title": "阿佩莱斯为坎帕丝帕作画",
+      "catalogueTitle": "Appelles painting Campaspe",
+      "artist": "Willem van Haecht",
+      "artists": [
+        {
+          "name": "Willem van Haecht",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2313990"
+        }
+      ],
+      "date": "1630",
+      "start": 1630,
+      "end": 1630,
+      "medium": "",
+      "accession": "266",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11685128-d4b9604bb0a18295.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Willem_van_Haecht_(II)_-_Apelles_painting_Campaspe_-_2.jpg",
+      "credit": "Willem van Haecht. Appelles painting Campaspe. Image credit: Willem van Haecht. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11685128",
+      "description": "画家与模特只占房间的一部分，而室内早已陈列着大量图像。范·哈赫特把古代故事放进这样的环境，使“观看”本身也变得醒目。来客查看物品，画外的人同样必须在绘画、雕塑和远处开口之间作出选择。没有一次注视能将整个收藏全部收拢。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "759955bc-05a9-5690-bea7-adab82ee757f",
+      "title": "被锁在岩石上的安德洛墨达",
+      "catalogueTitle": "Andromeda Chained to the Rocks",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1630",
+      "start": 1630,
+      "end": 1630,
+      "medium": "",
+      "accession": "707",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1130734-b00fb7b6495ae8aa.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Andromeda,_Rembrandt_van_Rijn,_1630-1631,_Mauritshuis,_The_Hague.jpg",
+      "credit": "Rembrandt. Andromeda Chained to the Rocks. Image credit: Rembrandt. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1130734",
+      "description": "抬起的手臂来自束缚，而非胜利的姿态。伦勃朗把俘虏般的女子限制在岩石前，用光照出身体的脆弱，将更完整的冒险故事留在这次近距离相遇之外。神话通过等待和暴露无援的状态呈现。即使知道她将获救，也不能抹去画中人物此刻的处境。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "49830935-d730-547b-b8ac-ba0bdbdf58a9",
+      "title": "摩西与法老的王冠",
+      "catalogueTitle": "Moses and Pharaoh’s Crown",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "约 1670 年",
+      "start": 1670,
+      "end": 1670,
+      "medium": "",
+      "accession": "1167",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11784784-3c0dbf24d9039f2c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jan_Steen_(1626-1679),_Moses_and_Pharaoh%E2%80%99s_Crown,_c.1670.jpg",
+      "credit": "Jan Steen. Moses and Pharaoh’s Crown. Image credit: Jan Steen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11784784",
+      "description": "孩子在成人旁显得很小，但周围人的手势表明，他引起了很大的骚动。前景的王冠提供了一个具体线索，可以围绕它理解众人的反应。斯滕把宫廷历史画成一场在人群中以不同方式传开的事件：权威、惊讶和关注，并没有集中在同一个位置。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "da3768d3-9d6b-5385-b540-f58eaf4e4a36",
+      "title": "妓院场景",
+      "catalogueTitle": "Brothel Scene",
+      "artist": "Frans van Mieris the Elder",
+      "artists": [
+        {
+          "name": "Frans van Mieris the Elder",
+          "role": "primary",
+          "slug": "frans-van-mieris-the-elder-q959236"
+        }
+      ],
+      "date": "1658",
+      "start": 1658,
+      "end": 1658,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/da3768d3-9d6b-5385-b540-f58eaf4e4a36-3ed90ca02844f515.jpg",
+      "imageSource": "https://www.wikiart.org/en/frans-van-mieris-the-elder/brothel-scene-1658",
+      "credit": "Frans van Mieris the Elder. Brothel Scene. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/frans-van-mieris-the-elder/brothel-scene-1658",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frans-van-mieris-the-elder/brothel-scene-1658",
+      "description": "伸出的手让这次相遇比普通社交场面更具体。范·米里斯把织物和家具画得精细，起初可能让视线忽略那个手势。题名则促使人重新理解房间里的人际关系。看似舒适、熟悉的环境，也可能安排着一场交易，只是交易条件并未明说。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "a09311fb-9220-50f8-9900-11f14de1c356",
+      "title": "圣彼得获释",
+      "catalogueTitle": "The Deliverance of St. Peter",
+      "artist": "Hendrick ter Brugghen",
+      "artists": [
+        {
+          "name": "Hendrick ter Brugghen",
+          "role": "primary",
+          "slug": "hendrick-ter-brugghen-q437233"
+        }
+      ],
+      "date": "1624",
+      "start": 1624,
+      "end": 1624,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/a09311fb-9220-50f8-9900-11f14de1c356-d83f738cefeb107e.jpg",
+      "imageSource": "https://www.wikiart.org/en/hendrick-terbrugghen/the-deliverance-of-st-peter",
+      "credit": "Hendrick ter Brugghen. The Deliverance of St. Peter. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hendrick-terbrugghen/the-deliverance-of-st-peter",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hendrick-terbrugghen/the-deliverance-of-st-peter",
+      "description": "两个人紧靠在一起，画面显得拥挤，天使指向一处的手却为行动指出方向。彼得低放的手和转向天使的脸，使回应与指示在身体动作上清楚区分。特尔·布鲁根将获释集中为双方的交流，而没有展开逃离的全景。两种手势之间的差异，就使场景动了起来。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "3e8b3339-3bd7-570d-845f-ad0d20450e73",
+      "title": "金翅雀",
+      "catalogueTitle": "The Goldfinch",
+      "artist": "Carel Fabritius",
+      "artists": [
+        {
+          "name": "Carel Fabritius",
+          "role": "primary",
+          "slug": "carel-fabritius-q352954"
+        }
+      ],
+      "date": "1654",
+      "start": 1654,
+      "end": 1654,
+      "medium": "油画板",
+      "accession": "605",
+      "image": "https://artlines.org/assets/artworks/wikiart/3e8b3339-3bd7-570d-845f-ad0d20450e73-35cb5fb896782635.jpg",
+      "imageSource": "https://www.wikiart.org/en/carel-fabritius/the-goldfinch-1654",
+      "credit": "Carel Fabritius. The Goldfinch. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/605-the-goldfinch",
+      "description": "在这幅简洁的画里，锁链明确显示了行动的限度。法布里蒂乌斯依靠阴影和节制的用笔，让栖息的鸟显得真实，而不是逐根清点羽毛。博物馆指出，翅膀厚涂的黄色中有刮出的痕迹。因此，一道笔痕既可以清楚显出手工制作的过程，又能帮助维持活物的幻觉。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "9b86ca40-1adb-57ad-8c03-6f5f5352565a",
+      "title": "溪边丘陵风景",
+      "catalogueTitle": "Hilly Landscape beside a Stream",
+      "artist": "Guillam Dubois",
+      "artists": [
+        {
+          "name": "Guillam Dubois",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5616002"
+        }
+      ],
+      "date": "1652",
+      "start": 1652,
+      "end": 1652,
+      "medium": "",
+      "accession": "554",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q17275977-6a4c6b0f681fd786.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hilly_Landscape_beside_a_Stream_by_Guillam_Du_Bois_Mauritshuis_554.jpg",
+      "credit": "Guillam Dubois. Hilly Landscape beside a Stream. Image credit: Guillam Dubois. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q17275977",
+      "description": "小船提供了一把尺度，可以据此判断抬升的河岸与树木有多大。迪布瓦无须安排惊人的事件，就能交代地势：逐渐变化的明暗将视线从水面带向远方。道路又提供另一条穿越陆地的路径。两者共同使风景仿佛可以行经，却没有把它画成示意图。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "848a6d1c-fd6e-5da3-ab9c-c73686f6e154",
+      "title": "杜尔普博士的解剖课",
+      "catalogueTitle": "The Anatomy Lesson of Dr Nicolaes Tulp",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1632",
+      "start": 1632,
+      "end": 1632,
+      "medium": "油画画布",
+      "accession": "146",
+      "image": "https://artlines.org/assets/artworks/wikiart/848a6d1c-fd6e-5da3-ab9c-c73686f6e154-4b1f11b4f0bc6104.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/the-anatomy-lesson-of-dr-nicolaes-tulp-1632",
+      "credit": "Rembrandt van Rijn. The Anatomy Lesson of Dr Nicolaes Tulp. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/146-the-anatomy-lesson-of-dr-nicolaes-tulp",
+      "description": "正在演示的手臂，使这群人有了共同在场的理由。但每个人的视线不同，因此肖像没有变成重复一致的专注表情。伦勃朗把面孔排在透视缩短得很明显的身体上方，将公开展示身份与一个事件结合起来。尸体既是课程的对象，也是整组人物在构图上赖以成立的基础。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "981aa0bc-3da0-5c00-919e-e6711bb6780e",
+      "title": "狄安娜与仙女们",
+      "catalogueTitle": "Diana and her Companions",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约1653年—约1654年",
+      "start": 1653,
+      "end": 1654,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikiart-500-painters-20261011/981aa0bc-3da0-5c00-919e-e6711bb6780e-12d98f7c27ef8114.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/diana-and-her-companions",
+      "credit": "Johannes Vermeer. Diana and her Companions. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/johannes-vermeer/diana-and-her-companions",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.mauritshuis.nl/en/our-collection/artworks/406-diana-and-her-nymphs",
+      "description": "洗脚使神话人物的聚会落到照料身体的具体行动上。跪着的人把目光引向狄安娜，女神无须作出发号施令的姿势。这幅维米尔早期作品，可以修正从其室内画形成的单一期待：暗处空地上的大幅人物，也能凭一个不张扬、安排周密的动作集中视线。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "28097867-77d1-5e30-8fae-09cbef56356a",
+      "title": "雅各布·彼得斯宗·奥利坎",
+      "catalogueTitle": "Portrait of Jacob Pietersz Olycan",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1625",
+      "start": 1625,
+      "end": 1625,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/28097867-77d1-5e30-8fae-09cbef56356a-81559b4cea4fad50.jpg",
+      "imageSource": "https://www.wikiart.org/en/frans-hals/portrait-of-jacob-pietersz-olycan",
+      "credit": "Frans Hals. Portrait of Jacob Pietersz Olycan. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/frans-hals/portrait-of-jacob-pietersz-olycan",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frans-hals/portrait-of-jacob-pietersz-olycan",
+      "description": "侧边的手和身体轻微的转向，使雅各布的姿态向外展开。亮色蕾丝在深色服装中划出边缘；若将衣服看成整块黑色，内部的区别就会消失。哈尔斯在配对的阿莱塔肖像中，以不同方式运用相似手段。成对的正式肖像，并不需要同样的姿势或相同的重点。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "a5d39233-e902-52e5-a995-b39d560c911d",
+      "title": "月夜风景中的被宰猪",
+      "catalogueTitle": "Slaughtered Pig in a Moonlit Landscape",
+      "artist": "Cornelis Symonsz van der Schalcke",
+      "artists": [
+        {
+          "name": "Cornelis Symonsz van der Schalcke",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5171250"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "",
+      "accession": "800",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q17276084-952851533fd3116f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Slaughtered_Pig_in_a_Moonlit_Landscape_by_Cornelis_Symonsz._van_der_Schalcke_Mauritshuis_800.jpg",
+      "credit": "Cornelis Symonsz van der Schalcke. Slaughtered Pig in a Moonlit Landscape. Image credit: Cornelis Symonsz van der Schalcke. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q17276084",
+      "description": "乡间劳作从一小片光中显现。范·德·斯哈尔克没有让环境立刻变得清楚，悬挂的猪身与附近人物逐渐从四周黑暗中浮出。光决定了人们能了解多少正在进行的事情。题材虽然寻常，夜间的呈现方式却并不寻常。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "94f55f4e-84a1-5caf-8cca-e61319f52ef7",
+      "title": "陶壶、鲱鱼与烟具静物",
+      "catalogueTitle": "Still Life with Stone Jug, Kipper and smoker's requisites.",
+      "artist": "Pieter Claesz",
+      "artists": [
+        {
+          "name": "Pieter Claesz",
+          "role": "primary",
+          "slug": "pieter-claesz-q354832"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "",
+      "accession": "3714",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q112583954-fae934bc27cde16b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pieter_Claesz._-_Still-Life_-_WGA4967.jpg",
+      "credit": "Pieter Claesz. Still Life with Stone Jug, Kipper and smoker's requisites.. Image credit: Pieter Claesz. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q112583954",
+      "description": "面包、鱼、饮料与烟斗，让不同用途的物品集中在一张伸手可及的桌面上。克拉斯控制着色彩范围，依靠表面质感的变化，区分炻器、玻璃与陶制烟杆。这幅画值得细看物品可以怎样拿取和使用。即使颜色相近，材料的差别仍然具体。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "435acb52-2321-5555-8a41-1bb71ef11119",
+      "title": "静物",
+      "catalogueTitle": "Still life",
+      "artist": "Isaac van Kipshaven",
+      "artists": [
+        {
+          "name": "Isaac van Kipshaven",
+          "role": "primary",
+          "slug": "wikimedia-painter-q17516183"
+        }
+      ],
+      "date": "1661",
+      "start": 1661,
+      "end": 1661,
+      "medium": "",
+      "accession": "814",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q17276092-601cad63f4201fb7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sumptuous_Still_Life_by_Isaack_van_Kipshaven_Mauritshuis_814.jpg",
+      "credit": "Isaac van Kipshaven. Still life. Image credit: Isaac van Kipshaven. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q17276092",
+      "description": "水果仿佛从容器中向外铺开，较沉重的器皿与桌缘却使整体不至于失去秩序。范·基普斯哈文让精心控制的陈列显得丰盛，而不显僵硬。细小高光从暗背景中区分出每一处果皮，使人可以逐件观看这份富足，而不是只把它概括成“很多”。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    },
+    {
+      "id": "a5e3db92-bd0a-5e67-bfef-7b115ec77830",
+      "title": "插着一朵郁金香的花瓶",
+      "catalogueTitle": "Vase with a single tulip",
+      "artist": "Balthasar van der Ast",
+      "artists": [
+        {
+          "name": "Balthasar van der Ast",
+          "role": "primary",
+          "slug": "balthasar-van-der-ast-q472522"
+        }
+      ],
+      "date": "约 1625 年",
+      "start": 1625,
+      "end": 1625,
+      "medium": "",
+      "accession": "1229",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117293962-bc1ef91d1db725ea.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ast_Balthasar_van_der,_A_Single_Tulip_in_a_Vase_(1b).jpg",
+      "credit": "Balthasar van der Ast. Vase with a single tulip. Image credit: Balthasar van der Ast. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117293962",
+      "description": "一朵花已足以组织整幅画。花瓣条纹与弯曲叶片呈现出细微差别；换成更大的花束，这些差别可能被整体吞没。范·德·阿斯特在玻璃瓶与蝴蝶周围留出空间，使它们之间的关系更容易辨认。物品越少，每次转折、每段间隔和每一道透亮边缘便越重要。",
+      "importance": "",
+      "museum": "Mauritshuis"
+    }
+  ],
+  "context": {
+    "start": 1624,
+    "end": 1700
+  },
+  "closingSections": [
+    {
+      "title": "给小题材留一点时间",
+      "paragraphs": [
+        "将一幅拥挤的叙事画与一幅简洁的画配在一起，比较它们各自如何确立中心。单枝郁金香不必只是下一幅“重要作品”前的过场。藏品可能进入展厅、修复室或外借展览；规划参观时，请以莫瑞泰斯当前的作品信息为准。"
+      ]
+    }
+  ]
+}

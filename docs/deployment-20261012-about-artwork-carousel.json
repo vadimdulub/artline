@@ -1,0 +1,147 @@
+{
+  "site": "https://artlines.org/about",
+  "status": "deployed_and_verified",
+  "change": "Replace the opening three-work gallery with a nine-work carousel. Equal-height image frames preserve full compositions, with titles, artists and source date labels; arrow, keyboard and native swipe navigation. All About carousel images use contain fitting.",
+  "deployment": {
+    "buildId": "45f71088-c317-46fa-ae41-ce15644ff5a4",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:artwork-carousel-20261012-v1",
+    "baselineRevision": "artline-web-guide-search-1011-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:584e6f7d92628395072b2803c97289298137c618d6dae273573f99b5561bcf6e",
+    "files": {
+      "app/about/page.tsx": "eb18f93563da601695b7b08c63aad0509a1b65a4cbfdb0055298480e2338aa96",
+      "app/about/about.module.css": "955fa4aefafb10b29117975653325926d5d5a15cafa01700d544e2ea0d1f8cee",
+      "app/about/about-content.ts": "d272a20cac7c03ab492ab41fae869d3833ee1919b8a8b63e8d7eeaa4ddd33e8a"
+    },
+    "preimages": {
+      "app/about/page.tsx": "b3d4845df30714fe4cd3c061ce6c54d8d838f05788d85d2a7aab290c112fd85d",
+      "app/about/about.module.css": "5a56803f35853940ba6cafadbd7f4ae2562161022aa12db3197f97c847f4bcac",
+      "app/about/about-content.ts": "4ef75f47bb9a1e762f6f9c9f6c4780c87963fb598923b42eb49d4ba90baa877e"
+    },
+    "overlaySHA256": "7518b259926c2d00d7b9b912c16b30846528243e1705dd0eeefdb541ff2a73b8",
+    "overlayURI": "gs://artline-508319-build-source/about-artwork-carousel-20261012/overlay-7518b259926c2d00.tar.xz",
+    "overlayGeneration": "1791784897594866",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:34cf54a5a2f57eae7b53c4efff8c90819b90d2e06132f60e287d8609d83cc1b7",
+    "revision": "artline-web-artwork-carousel-1012-v1",
+    "candidateURL": "https://artwork-carousel-1012-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-guide-search-1011-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "localValidation": {
+    "typecheck": "passed",
+    "eslint": "passed",
+    "browserTestsPassed": 4,
+    "viewports": [
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "carouselImages": 9,
+    "allCarouselImagesChecked": 23,
+    "imageFit": "contain; full image within frame",
+    "accessibilityViolations": 0,
+    "noJavaScript": "all nine work links server-rendered",
+    "catalogueWrites": false,
+    "localURL": "http://127.0.0.1:3137/about"
+  },
+  "candidate": {
+    "stage": "candidate",
+    "checks": [
+      {
+        "width": 1440,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 1024,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 768,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 390,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 320,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      }
+    ],
+    "guideAnchor": true,
+    "guideSearch": true,
+    "pdf": true,
+    "noJS": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "production": {
+    "stage": "live",
+    "checks": [
+      {
+        "width": 1440,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 1024,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 768,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 390,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      },
+      {
+        "width": 320,
+        "nineWorks": true,
+        "all23ImagesFit": true,
+        "buttonsAndKeyboard": true,
+        "noOverflow": true
+      }
+    ],
+    "guideAnchor": true,
+    "guideSearch": true,
+    "pdf": true,
+    "noJS": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "errorLogs": 0,
+  "catalogueWrites": false,
+  "accountWrites": false,
+  "databaseMigrations": false,
+  "verifiedAt": "2026-10-12T06:10:10.883842+00:00"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "deployed_and_verified",
+  "deployed_at": "2026-10-13T00:19:44+03:00",
+  "source": "/Users/vadimdulub/Downloads/Artlines_All_Guides_Rewritten.md",
+  "change": "Replaced all museum and artist guide editions with the rewritten manuscript, added localized timeline editions, regenerated guide PDFs, updated guide rendering and search metadata, and applied the manuscript's factual corrections.",
+  "counts": {
+    "guides": 90,
+    "guide_editions": 900,
+    "localized_artwork_commentaries": 17950,
+    "distinct_guide_artworks": 1795,
+    "pdfs": 890,
+    "factual_corrections": 56,
+    "timeline_languages": 10
+  },
+  "production": {
+    "project": "artline-508319",
+    "region": "europe-west1",
+    "web_revision": "artline-web-guides-rewrite-1012-v2",
+    "web_image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:09755a4837f5b419473ce11f1f60111cfd61c0f51d0b9346694c8b263d384f5a",
+    "api_revision": "artline-api-guides-rewrite-1012-v1",
+    "api_image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:46def9de092fbb923aae18d8daa16591869b2d27f5a127f39903424dfc4e856d",
+    "web_traffic_percent": 100,
+    "api_traffic_percent": 100,
+    "previous_web_revision": "artline-web-exhibition-filters-1012-v3",
+    "previous_api_revision": "artline-api-geography-1012-v1"
+  },
+  "builds": {
+    "web_application": "8263370f-0782-4696-a8e1-f77b0eae1f55",
+    "web_content_layer": "c52f493c-37ad-45df-9ce3-fa4f26c69080",
+    "api": "68391c0d-e471-4bd8-b677-3197e49b70c8",
+    "web_overlay_sha256": "2dedd25ca4aed55bd6d82ace2cced4dc3c4492bf12b1ca50fdb6f5ac1c35b1e1",
+    "api_overlay_sha256": "1290f408b5603eace9cb4c459579a28471784b6d54f52f0bb6982c239bf77c81",
+    "web_overlay_generation": "1791830407886919",
+    "api_overlay_generation": "1791830411855875"
+  },
+  "verification": {
+    "importer": "900 editions and 17,950 localized artwork commentaries verified",
+    "search_index": "90 guides verified",
+    "web_build": "passed",
+    "lint": "0 errors; 5 pre-existing img warnings",
+    "guide_seo_sitemap_tests": "217 passed; one unrelated pre-existing BackNavigation assertion failed",
+    "production_html": "English and Russian Louvre guides returned 200 with rewritten titles and closing content; obsolete Why it matters headings absent",
+    "production_timeline": "Russian localized timeline returned 200 with the rewritten title",
+    "production_sitemap": "localized timeline and guide URLs present",
+    "production_pdf": "Louvre English PDF matched local SHA-256 7505bda31e1400cd203bbd11174f10dd49ad959fdd218b2a7d2fed2193252706 byte for byte",
+    "production_api": "Louvre search result returned the rewritten title and 10 languages",
+    "production_traffic": "web and API revisions each serve 100 percent",
+    "cloud_run_errors": "none at severity ERROR or higher after deployment"
+  },
+  "limitations": [
+    "The in-app browser connector was unavailable because its sandbox metadata was incomplete; candidate and production HTTP checks used direct requests instead.",
+    "The local Go search test could not run because the installed Go command and compiled standard library versions differ. The API candidate and production endpoint were verified directly."
+  ],
+  "safety": {
+    "database_writes": 0,
+    "terraform_apply": false,
+    "commits_created": 0,
+    "release_method": "generation-pinned, preimage-verified overlays applied to the exact production lineage"
+  },
+  "evidence_directory": "/Users/vadimdulub/Library/Application Support/Artline/backups/guides-rewrite-release-20261012"
+}

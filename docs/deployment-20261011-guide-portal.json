@@ -1,0 +1,67 @@
+{
+  "verifiedAt": "2026-10-11T08:06:49.950637+00:00",
+  "site": "https://artlines.org/guides/prado",
+  "change": "Keep the original guide exploration heading, explanation and five artwork thumbnails on the left; replace the four text destinations on the right with option D static image cards: Artworks in context and Who lived when?.",
+  "scope": {
+    "guides": 6,
+    "locales": 10,
+    "separateBookAndEventLinksRemoved": true,
+    "staticImages": true,
+    "guideFiltersPreserved": true
+  },
+  "build": {
+    "id": "fdafad46-4557-4ed8-ab03-da8bed88244d",
+    "status": "SUCCESS",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:18e5eb257700a2b7ab6e720806dc9eb41ae6811410906bd1446704026edf271f",
+    "overlay": {
+      "files": {
+        "components/MuseumGuide.tsx": "04ce303f0fceb69f21a323d0aa4234562610b8514307572bae1bdb5913ab06fa",
+        "app/guides/museum-guide.module.css": "467d6eefe4aab4e1b10a51fdd9dfc578427174004674b8e9111cda5bf5f495e2",
+        "lib/museum-guide-portal.ts": "e0ba6235b0624602875bd8c30b84b3f22989a91b5ef8ee7a3f34dd9c4bcf9b6a",
+        "content/articles/museum-guide-portal-images.json": "ce64482fa0b536d0d87aa24a3afeb6bedd09c7fefbef6b3a6b043b1dd9eadcd2"
+      },
+      "sha256": "4356acb02ceae7747e974ce4495144c27bed53f22b8247c1a1c62da79bd40c3c",
+      "uri": "gs://artline-508319-build-source/guide-portal-20261011/overlay-4356acb02ceae774.tar.xz",
+      "generation": "1791705546891646",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web:guide-portal-20261011-v1"
+    }
+  },
+  "deployment": {
+    "revision": "artline-web-guide-portal-1011-v1",
+    "trafficPercent": 100,
+    "previousRevision": "artline-web-museum-guides-1010-v1",
+    "runtimeSettingsPreserved": true,
+    "terraformApply": false,
+    "localImagePinUpdated": true,
+    "commitsCreated": false,
+    "catalogueChanges": false
+  },
+  "verification": {
+    "guideUnitTests": 12,
+    "candidateBrowserTests": 9,
+    "candidateGuides": 6,
+    "candidateLocales": 10,
+    "candidateWidths": [
+      1440,
+      900,
+      800,
+      560,
+      390,
+      320
+    ],
+    "productionGuides": 6,
+    "productionLocales": [
+      "en",
+      "ru",
+      "ar"
+    ],
+    "productionPDF": "Prado English: 200, actual PDF",
+    "imageLoading": "All nine section images loaded for each guide",
+    "browserErrors": [],
+    "accessibility": "Existing Axe WCAG2/2.1 AA guide checks passed",
+    "lint": "0 errors, 4 intentional img-element warnings",
+    "productionTypeScript": "Passed in clean container build",
+    "localTypecheckLimitation": "Stale generated /about route references in the shared .next directory; production build passed."
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/guide-portal-20261011"
+}

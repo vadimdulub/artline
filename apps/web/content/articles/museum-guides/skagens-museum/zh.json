@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "skagens-museum",
+  "museum": "Skagens Museum",
+  "city": "Skagen",
+  "country": "丹麦",
+  "title": "斯卡恩博物馆：杰作",
+  "subtitle": "二十件作品，分辨海边社群的劳动、停歇与光线变化。",
+  "introduction": "斯卡恩的海可以供人散步，可以提供工作，也可以成为几乎空无一人的色彩区域。这份选集中，差异已很清楚：渔民拉网，两个女人沿岸行走，还有足迹留在沙上，而留下它的人已走出视野。到了室内，光线也可能像居住者一样，决定一间屋子的面貌。\n\n安娜·安克尔、克罗耶及这里其他画家，并未共同描绘一种整齐的田园理想。工作、休息、交往与悲伤，需要不同的观看方式。这二十幅画更适合被读成具体情境，而非某种据说所有艺术家都在斯卡恩发现的统一氛围。",
+  "visitNote": "这些精选作品属于博物馆馆藏，但具体展出情况及外借安排可能会有所变动。请查阅斯卡恩艺术博物馆（Skagens Kunstmuseer）关于博物馆主馆及相关艺术家故居的最新资讯；本指南并不保证所有作品均在同一地点展出。",
+  "locale": "zh",
+  "website": "https://skagensmuseum.dk/",
+  "officialGuide": "https://skagensmuseum.dk/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）关于色调与构图的论述，提供了一种将安娜·安彻（Anna Ancher）画作中的室内光线与克罗耶（Krøyer）及比约克（Björck）的户外群像画进行比较的视角。该书侧重于提供实用的术语，而非讲述斯卡恩（Skagen）艺术家群体的历史。"
+    }
+  ],
+  "works": [
+    {
+      "id": "4ceb4ed7-f4f8-4076-a1ca-228a930586b3",
+      "title": "蓝屋里的阳光",
+      "catalogueTitle": "Sunlight in the Blue Room",
+      "artist": "Anna Ancher",
+      "artists": [
+        {
+          "name": "Anna Ancher",
+          "role": "primary",
+          "slug": "anna-ancher"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/fb111d9d-6df3-40ca-a0cc-9be910046de6-7e41c85fe1438060.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anna_Ancher_-_Sunlight_in_the_blue_room_-_Google_Art_Project.jpg",
+      "credit": "Anna Ancher, Sunlight in the Blue Room. Skagens Museum, Skagen. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://artsandculture.google.com/asset/sunlight-in-the-blue-room/mwE3yo7ZLwPcHA",
+      "description": "孩子身形虽小，却并不妨碍洒满阳光的墙成为屋里最醒目的部分。长方形光斑横过蓝色表面，将墙与地板、家具相连。博物馆确认孩子是赫尔加·安克尔。她的专注与光线共处一室，却不必相互解释。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "c9db4db5-dfed-4c47-81b3-d9fab58e2260",
+      "title": "斯卡恩南滩的夏日傍晚",
+      "catalogueTitle": "Summer Evening on Skagen Sønderstrand",
+      "artist": "P. S. Krøyer",
+      "artists": [
+        {
+          "name": "P. S. Krøyer",
+          "role": "primary",
+          "slug": "p-s-kroyer"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/f99c67bc-2087-4151-ba89-724cdedfbee8-79168b65902ef708.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:P.S._Kr%C3%B8yer_-_Summer_evening_on_Skagen%27s_Beach._Anna_Ancher_and_Marie_Kr%C3%B8yer_walking_together._-_Google_Art_Project.jpg",
+      "credit": "P. S. Krøyer, Summer Evening on Skagen Sønderstrand. Skagens Museum, Skagen. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://artsandculture.google.com/asset/summer-evening-on-skagen-s%C3%B8nderstrand-peder-severin-kr%C3%B8yer/_gEOHIMEsC_EQg",
+      "description": "两件浅色长裙在宽阔沙滩上构成一对同行者。海与天的颜色渐渐接近，于是海岸的延伸比清晰划开的地平线更重要。行走带来一件事，却是一件克制的小事。人物身在傍晚之中，并未把它变成显眼戏剧的布景。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "5aeedefb-12c2-5090-a65e-5fd0db19963d",
+      "title": "在斯卡恩北海滩拉网的渔民",
+      "catalogueTitle": "Fishermen Hauling the Net on Skagen's North Beach",
+      "artist": "P. S. Krøyer",
+      "artists": [
+        {
+          "name": "P. S. Krøyer",
+          "role": "primary",
+          "slug": "p-s-kroyer"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5aeedefb-12c2-5090-a65e-5fd0db19963d-a0836ff73ba61947.jpg",
+      "imageSource": "https://www.wikiart.org/en/peder-severin-kroyer/fishermen-hauling-the-net-on-skagen-s-north-beach-1883",
+      "credit": "P. S. Krøyer. Fishermen Hauling the Net on Skagen's North Beach. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/peder-severin-kroyer/fishermen-hauling-the-net-on-skagen-s-north-beach-1883",
+      "description": "即使网本身不够突出，男人后仰的姿势也让阻力可见。弯曲的膝与伸出的臂反复出现，但每个身体都在用力过程的不同位置。群体靠协调，而非一模一样的姿势来工作；这一区别让集体劳动具有可信的身体形态。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "c3a31771-8ecd-552c-a1f3-64c116312d10",
+      "title": "收割者",
+      "catalogueTitle": "Harvesters",
+      "artist": "Anna Ancher",
+      "artists": [
+        {
+          "name": "Anna Ancher",
+          "role": "primary",
+          "slug": "anna-ancher"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c3a31771-8ecd-552c-a1f3-64c116312d10-a55b035970c88adf.jpg",
+      "imageSource": "https://www.wikiart.org/en/anna-ancher/harvesters-1905",
+      "credit": "Anna Ancher. Harvesters. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anna-ancher/harvesters-1905",
+      "description": "直立庄稼遮住劳动者下半身的大部分，只留下工具与上身动作来说明活动。举起的长柄镰刀在天空中划出长长斜线。收割因此是被选择性呈现的：少数可见动作，让人想到还有更多动作在金色田地高高的表面之后继续。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "4317baf4-3b94-5f34-a3f7-7afb8941f1fc",
+      "title": "灯前的少女",
+      "catalogueTitle": "Young Girl Before a Lit Lamp",
+      "artist": "Anna Ancher",
+      "artists": [
+        {
+          "name": "Anna Ancher",
+          "role": "primary",
+          "slug": "anna-ancher"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/4317baf4-3b94-5f34-a3f7-7afb8941f1fc-396086a43497212f.jpg",
+      "imageSource": "https://www.wikiart.org/en/anna-ancher/young-girl-before-a-lit-lamp-1887",
+      "credit": "Anna Ancher. Young Girl Before a Lit Lamp. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anna-ancher/young-girl-before-a-lit-lamp-1887",
+      "description": "人物转过背去，面部表情可能提供的简单解释因此不在眼前。灯光转而把她与花、桌子及近旁窗户联系起来。日常动作仍未被明确说尽，小片亮区却为房间建立了中心，并不需要泄露某个私密念头。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "47e0de1c-e1d4-5a23-ba44-945a7fbb8634",
+      "title": "有红罂粟的室内",
+      "catalogueTitle": "Interior with Red Poppies",
+      "artist": "Anna Ancher",
+      "artists": [
+        {
+          "name": "Anna Ancher",
+          "role": "primary",
+          "slug": "anna-ancher"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/47e0de1c-e1d4-5a23-ba44-945a7fbb8634-468882459456dfbf.jpg",
+      "imageSource": "https://www.wikiart.org/en/anna-ancher/interior-with-red-poppies-1905",
+      "credit": "Anna Ancher. Interior with Red Poppies. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anna-ancher/interior-with-red-poppies-1905",
+      "description": "坐着的人物之前，红罂粟自己吸引着目光，而不只是肖像的装饰。花色把桌面接向室内较暖的区域，绿色沙发则提供另一片底色。人物仍在场，但在读面孔之前，我们已经可以通过颜色理解房间的平衡。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "86ec5af3-50da-53af-87b1-4ab0162b6547",
+      "title": "悲伤",
+      "catalogueTitle": "Grief",
+      "artist": "Anna Ancher",
+      "artists": [
+        {
+          "name": "Anna Ancher",
+          "role": "primary",
+          "slug": "anna-ancher"
+        }
+      ],
+      "date": "1902",
+      "start": 1902,
+      "end": 1902,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/86ec5af3-50da-53af-87b1-4ab0162b6547-a02dade660ba2fbf.jpg",
+      "imageSource": "https://www.wikiart.org/en/anna-ancher/grief-1902",
+      "credit": "Anna Ancher. Grief. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anna-ancher/grief-1902",
+      "description": "两个跪着的女人都低下身体，穿着却形成鲜明差别：一个着衣，另一个裸露。墓前十字架将她们联系起来，使安排超出了普通墓地场景。标题命名了悲伤，这对不寻常的人物却使悲伤不能被归结为一种熟悉、单一的外在表情。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "732b59c1-5840-546c-abd0-bcaa87957c2d",
+      "title": "在墓前",
+      "catalogueTitle": "At the Grave",
+      "artist": "Anna Ancher",
+      "artists": [
+        {
+          "name": "Anna Ancher",
+          "role": "primary",
+          "slug": "anna-ancher"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/732b59c1-5840-546c-abd0-bcaa87957c2d-5a914eef98e733aa.jpg",
+      "imageSource": "https://www.wikiart.org/en/anna-ancher/at-the-grave-1913",
+      "credit": "Anna Ancher. At the Grave. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anna-ancher/at-the-grave-1913",
+      "description": "女子窄窄的侧脸与合拢放低的双手，几乎无需明显动作就撑起场景。远处坟墓与天空画得较少，目光便留在坐着的身体近旁。不同于《悲伤》中两个人物的象征性对照，这幅画把哀悼放在一个人占据一处地方的具体尺度上。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "12e84580-6b83-533b-84ce-73d1283d736d",
+      "title": "安妮·赫德维格·布伦杜姆",
+      "catalogueTitle": "Portrait of Ane Hedvig Brøndum",
+      "artist": "Anna Ancher",
+      "artists": [
+        {
+          "name": "Anna Ancher",
+          "role": "primary",
+          "slug": "anna-ancher"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/12e84580-6b83-533b-84ce-73d1283d736d-9af1398ed36eb2d9.jpg",
+      "imageSource": "https://www.wikiart.org/en/anna-ancher/portrait-of-ane-hedvig-brondum",
+      "credit": "Anna Ancher. Portrait of Ane Hedvig Brøndum. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/anna-ancher/portrait-of-ane-hedvig-brondum",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anna-ancher/portrait-of-ane-hedvig-brondum",
+      "description": "强烈的蓝墙衬出侧脸，桌边与双手又将坐者放回房间的实际大小之中。她既不显得纪念碑般高大，也没有脱离日常物品。肖像的独特之处在于身体与环境的这种安排，而非一句关于“老年性格”的泛论。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "fdfc8515-16df-500b-be4b-42fd1d76b3c2",
+      "title": "布隆杜姆酒店里的一局隆布尔牌戏",
+      "catalogueTitle": "A game of L'hombre in Brøndum's Hotel",
+      "artist": "Anna Palm de Rosa",
+      "artists": [
+        {
+          "name": "Anna Palm de Rosa",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3631503"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "",
+      "accession": "672",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55809336-83872f9f15d93196.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anna_Palm_-_A_game_of_L%27hombre_in_Br%C3%B8ndum%27s_Hotel_-_Google_Art_Project.jpg",
+      "credit": "Anna Palm de Rosa. A game of L'hombre in Brøndum's Hotel. Image credit: Anna Palm de Rosa; Source credit: PgGB34Or82p_fw at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55809336",
+      "description": "纸牌与被照亮的面孔，在较暗的房间内围成紧密小圈。烟雾柔化外围，让牌局仿佛暂时自成一体。不必知道各人手里是什么牌，也能看出共同的专注。众人凑向的那一小块地方，已足以让这项社交活动变得清楚。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "34bb7877-9629-5ffe-a1a0-f47c81529996",
+      "title": "来自斯卡恩的年轻女子马伦·索菲·奥尔森",
+      "catalogueTitle": "A young woman from Skagen, Maren Sofie Olsen",
+      "artist": "Michael Ancher",
+      "artists": [
+        {
+          "name": "Michael Ancher",
+          "role": "primary",
+          "slug": "michael-ancher-q468252"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "1601",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105515147-6b459e6780d5508e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Michael_Ancher,_Skagenspige._1887,_1601,_Skagens_Kunstmuseer.jpg",
+      "credit": "Michael Ancher. A young woman from Skagen, Maren Sofie Olsen. Image credit: Michael Ancher. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105515147",
+      "description": "朴素的暖色背景几乎不给人物本人之外的解释。纽扣、中分头发与蓝色衣服明确的轮廓，形成端整的正面形象，双眼则望向观众。肖像认真凝视一位有姓名的当地女子，并未把她化成渔村社群的通用代表。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "159c5a54-b547-50b7-8f62-0cb4a2c32da5",
+      "title": "死去的鳐鱼",
+      "catalogueTitle": "Dead rays",
+      "artist": "P. S. Krøyer",
+      "artists": [
+        {
+          "name": "P. S. Krøyer",
+          "role": "primary",
+          "slug": "p-s-kroyer"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "",
+      "accession": "118",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104009370-b7b43568561b0569.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:P.S._Kr%C3%B8yer,_D%C3%B8de_rokker,_1884,_118,_Skagens_Museum.jpg",
+      "credit": "Peder Severin Krøyer. Dead rays. Image credit: Peder Severin Krøyer. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104009370",
+      "description": "鳐鱼一动不动，浅水却绕着扁平身体流动。这个对比让近看的海岸题材，具有不同于选集中渔民劳动的节奏。浅色鱼身也打断了湿沙，使鱼呈现出实际重量与大小，而非沙滩上可有可无的几道痕迹。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "7e09bfe2-c80c-53b8-836d-d07cab3b4c3c",
+      "title": "渔夫拉斯穆斯·盖赫德的午睡",
+      "catalogueTitle": "Fisherman Rasmus Gaihede's afternoon nap",
+      "artist": "Christian Krohg",
+      "artists": [
+        {
+          "name": "Christian Krohg",
+          "role": "primary",
+          "slug": "christian-krohg-q334200"
+        }
+      ],
+      "date": "约 1882 年",
+      "start": 1882,
+      "end": 1882,
+      "medium": "",
+      "accession": "SKM1018",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104217107-036abdebc0ef3681.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Christian_Krohg_-_Fisker_Rasmus_Gaihedes_middagslur_-_SKM1018_-_Skagens_Museum.png",
+      "credit": "Christian Krohg. Fisherman Rasmus Gaihede's afternoon nap. Image credit: Christian Krohg. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104217107",
+      "description": "脸转向枕头，衣服融入寝具宽大的形状。渔民在这里没有从事积极劳动。休息与拉网、推船属于同一种生活，但画作不必编出之前发生了什么，休息本身就已足够成为主题。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "31b99629-3192-59ae-80cd-bd39bc05fd05",
+      "title": "沙滩上的足迹",
+      "catalogueTitle": "Footprints in the sand",
+      "artist": "P. S. Krøyer",
+      "artists": [
+        {
+          "name": "P. S. Krøyer",
+          "role": "primary",
+          "slug": "p-s-kroyer"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "SKM2088",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105510441-7f46ab6e3999a850.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Peder_Severin_Kr%C3%B8yer,_Fodspor_i_sandet,_1883.JPG",
+      "credit": "Peder Severin Krøyer. Footprints in the sand. Image credit: Peder Severin Krøyer. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105510441",
+      "description": "足迹记录了一次经过，留下它们的人却已不在画中。它们把视线引过空疏海滩，通向鸟群与低低的浪花。岸边呈现的是行动留下的证据，而非行动本身；这些不起眼的痕迹，因而能暗示远超其大小的一段经过。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "62cab330-c97a-5f1f-846b-1bd70024b47a",
+      "title": "在斯卡恩推船下水",
+      "catalogueTitle": "Launching the Boat. Skagen",
+      "artist": "Oscar Björck",
+      "artists": [
+        {
+          "name": "Oscar Björck",
+          "role": "primary",
+          "slug": "oscar-bjorck-research-1657c2c9cb72"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "",
+      "accession": "1650",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q18001789-b3afee591e2faa05.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Oscar_Bj%C3%B6rck_-_Launching_the_boat._Skagen_-_Google_Art_Project.jpg",
+      "credit": "Oscar Björck. Launching the Boat. Skagen. Image credit: Oscar Björck; Source credit: cgHGNr3Yl9yyZQ at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q18001789",
+      "description": "几个身体弯向船壳，让船的重量变得可感。碎浪标出他们要抵达的地方，海因此是劳动环境，而非空荡的蓝色远景。协调的推力将海岸与船连起来；只画一艘船，无法显示这样的用力。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "dc0d115a-bc73-54d1-912a-b9dba76b874f",
+      "title": "沙丘之上的月升",
+      "catalogueTitle": "Moonrise over the dunes",
+      "artist": "Eilif Peterssen",
+      "artists": [
+        {
+          "name": "Eilif Peterssen",
+          "role": "primary",
+          "slug": "eilif-peterssen-research-2a4ca925a449"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "658",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106392309-821559a111689b3d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Eilif_Peterssen_-_Moonrise_over_the_dunes_-_Google_Art_Project.jpg",
+      "credit": "Eilif Peterssen. Moonrise over the dunes. Image credit: Eilif Peterssen; Source credit: 7AEbb_1VUcrmQA at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q106392309",
+      "description": "月亮在暗色植被上方提供一个集中的暖色亮点。它没有照亮四周一切，小人物仍处于勉强可辨的边缘。彼得森让黑暗保有自己的范围。风景的结构依靠逐渐才能分清的部分来建立，而不是一次交代得明明白白的全景。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "2d24e50b-1345-5348-b1eb-d1d35c1bbc0a",
+      "title": "大风天的斯卡恩南滩",
+      "catalogueTitle": "Skagen Sønderstrand on a windy day.",
+      "artist": "Oscar Björck",
+      "artists": [
+        {
+          "name": "Oscar Björck",
+          "role": "primary",
+          "slug": "oscar-bjorck-research-1657c2c9cb72"
+        }
+      ],
+      "date": "1882–1888",
+      "start": 1882,
+      "end": 1888,
+      "medium": "",
+      "accession": "SKM715",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q133891814-616285ca33778349.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Oscar_Bj%C3%B6rck_-_S%C3%B8nderstrand_p%C3%A5_en_bl%C3%A6stdag_-_SKM715.jpg",
+      "credit": "Oscar Björck. Skagen Sønderstrand on a windy day.. Image credit: Oscar Björck; Source credit: skyfish.com. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q133891814",
+      "description": "搁在沙滩上的船，让巨大天空下的狭窄海岸有了稳定形状。小人物与浪花也处在同一条下方区域，空气因而决定了画面的比例。这种不均分配让海岸显得无遮无挡，不需要靠一个突出的事件来证明风很大。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "5c97be25-630f-536c-b35c-3998da13420e",
+      "title": "斯卡恩的日落",
+      "catalogueTitle": "Sunset at Skagen",
+      "artist": "Michael Ancher",
+      "artists": [
+        {
+          "name": "Michael Ancher",
+          "role": "primary",
+          "slug": "michael-ancher-q468252"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "",
+      "accession": "1145",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105515133-3460eb0793ff6695.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Michael_Ancher,_Solnedgang._Skagen,_1906,_1145,_Skagens_Kunstmuseer_.jpg",
+      "credit": "Michael Ancher. Sunset at Skagen. Image credit: Michael Ancher. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105515133",
+      "description": "一条暖色天空分隔较暗的海岸与海面，只有稀疏云痕打断水平布局。特定时刻的颜色，比当地发生的小事更受重视。没有大人物或船只来稳住场景，水与空气相接的窄带就必须足以让人停下观看。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "c60c931a-7989-5502-964e-dd8dc0f66bf4",
+      "title": "布隆杜姆酒店外交谈的两位渔民",
+      "catalogueTitle": "Two fishermen talking on a bench in front of the stable wing of Brøndum's Hotel",
+      "artist": "Christian Krohg",
+      "artists": [
+        {
+          "name": "Christian Krohg",
+          "role": "primary",
+          "slug": "christian-krohg-q334200"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "SKM379",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104217157-8155929876cddf89.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Christian_Krohg_-_To_fiskere_samtaler_p%C3%A5_en_b%C3%A6nk_uden_for_staldl%C3%A6ngen_til_Br%C3%B8ndums_Hotel_-_SKM379_-_Skagens_Museum.png",
+      "credit": "Christian Krohg. Two fishermen talking on a bench in front of the stable wing of Brøndum's Hotel. Image credit: Christian Krohg. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104217157",
+      "description": "两人在刷白的墙前稍稍朝向彼此。窗、门与长凳表明这是一栋普通房屋，而非专为相遇搭出的正式场所。他们的交往通过细小的身体调整来传达，图像不需要透露谈话的原话。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    },
+    {
+      "id": "7fdf80d1-a06a-58fe-804b-eb5fa6a4f226",
+      "title": "林地中的维贝克·克罗耶",
+      "catalogueTitle": "Vibeke Krøyer in the plantation",
+      "artist": "P. S. Krøyer",
+      "artists": [
+        {
+          "name": "P. S. Krøyer",
+          "role": "primary",
+          "slug": "p-s-kroyer"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "",
+      "accession": "SKM2087",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105509810-20287c3bb27c0eac.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Peder_Severin_Kr%C3%B8yer,_Vibeke_i_Plantagen,_1909.JPG",
+      "credit": "Peder Severin Krøyer. Vibeke Krøyer in the plantation. Image credit: Peder Severin Krøyer. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105509810",
+      "description": "粉色身影在绿色小路与周围植物间很小，但颜色使她没有消失。枝条与草占去远多于孩子的空间。肖像因此也是一幅放入了具体人物的风景，而不是从环境中抽离出来的面貌。",
+      "importance": "",
+      "museum": "Skagens Museum"
+    }
+  ],
+  "context": {
+    "start": 1882,
+    "end": 1913
+  },
+  "closingSections": [
+    {
+      "title": "蓝色可以有不同作用",
+      "paragraphs": [
+        "把傍晚海滩与安娜·安克尔的蓝屋比较：相近的颜色，既能组织开阔海岸，也能组织封闭室内。不要因此忽略各自具体的场所。这份指南依照作品记录，并非固定展厅陈列；到访前请确认当前展品及所属馆址。"
+      ]
+    }
+  ]
+}

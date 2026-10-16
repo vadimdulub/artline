@@ -58,7 +58,6 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 			return out, err
 		}
 		e.Status = status
-		attachImage(&e)
 		out.Items = append(out.Items, e)
 	}
 	err = rows.Err()
@@ -70,6 +69,9 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		out.HasMore = true
 		out.Items = out.Items[:f.Limit]
 		out.NextCursor = encodeCursor(out.Items[len(out.Items)-1])
+	}
+	if err := ResolveImages(ctx, r.db, out.Items); err != nil {
+		return out, err
 	}
 	if out.Total-out.UndatedTotal > timeline.IndividualLimit {
 		out.Mode = "density"
@@ -140,10 +142,13 @@ func (r *Repository) ByID(ctx context.Context, id string) (Event, error) {
 	if err != nil {
 		return e, err
 	}
-	err = json.Unmarshal(raw, &e)
+	if err = json.Unmarshal(raw, &e); err != nil {
+		return e, err
+	}
 	e.Status = status
-	attachImage(&e)
-	return e, err
+	items := []Event{e}
+	err = ResolveImages(ctx, r.db, items)
+	return items[0], err
 }
 func (r *Repository) Facets(ctx context.Context, top100 bool) (Facets, error) {
 	out := Facets{Topics: []Option{}, Countries: []Option{}, Regions: []Option{}, Kinds: []Option{}}

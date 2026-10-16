@@ -98,7 +98,7 @@ export function AllAtlas(){
  const navigation=useRecordNavigation(selected&&allKinds.includes(selectedType as AtlasType)?`atlas?${neighborQuery}`:null,selected,id=>updateQuery({item:id},true));
  function open(item:AtlasItem,scope=requestKey){setNavigationScope({base:requestKey,query:scope});updateQuery({item:item.id,itemType:item.type,panel:null,browse:null},true)}
  function close(){updateQuery({item:null,itemType:null},true)}
- function remove(kind:AtlasType){change({...entityUpdates(kind),type:layers.filter(t=>t!==kind)})}
+ function remove(kind:AtlasType){change({type:layers.filter(t=>t!==kind)})}
  function addLayer(kind:AtlasType,filters:URLSearchParams,years:BookRange){change({...entityUpdates(kind,filters),type:[...new Set([...layers,kind])],start:String(years.start),end:String(years.end),panel:null,browse:null})}
  function clearFilters(){changeFilter({...Object.fromEntries(allEntityKeys.map(key=>[key,null])),q:null,creator:null,country:null,country_scope:null,continent:null,region:null,highlights:"false",...(presetID?{preset:null,window:null,start:null,end:null}:{})})}
  const activeFilters=[

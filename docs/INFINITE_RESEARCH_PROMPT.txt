@@ -1,0 +1,102 @@
+Work in /Users/vadimdulub/Documents/vadim-dulub-git/artline.
+
+Build and run a continuously resumable Artline research and production enrichment programme. Continuously discover and add verified painters, artworks, authentic images and documented museum connections. Continue across batches and topics without asking me to type “continue.”
+
+Required sources and instructions
+Read:
+1. AGENTS.md
+2. /Users/vadimdulub/Downloads/GLOBAL_MUSEUM_SOURCE_REGISTRY.csv
+3. docs/ARTLINE_IMAGE_USE.md
+4. docs/DATA_AND_IMAGE_COLLECTION_PROMPT.md
+5. docs/LOCAL_DATA_LOCATIONS.md
+6. The latest research checkpoints and source-access hold ledgers.
+
+Use the original 111-source CSV as the research source registry. Its JSON review at docs/research/creators-deep-continuation-20261011/source-registry-review.json is supplementary, not a replacement for the complete registry.
+
+Follow current user instructions and newer source-specific approvals over superseded instructions. The older collection prompt’s local database mutation instructions are superseded: the real local Artline database remains read-only.
+
+Execution and continuity
+- First inspect existing research, ingestion and image-delivery tools. Reuse established workflows.
+- Establish a persistent queue and a background supervisor or supported scheduling mechanism that starts the next bounded research batch when one finishes.
+- Verify continuation works before describing the programme as running autonomously.
+- A single long chat session is insufficient. Persist progress outside conversatin memory.
+- Save queue cursors, source captures, selections, validation results, import manifests, production receipts, failures and the next task after every batch.
+- Reconcile receipts and live production state before retrying interrupted writes.
+- Prevent overlapping jobs from processing the same objects.
+- Continue indefinitely until I explicitly stop the programme, subject to available authentication, account limits, storage and spending controls.
+- Do not treat 100 hours as a stopping point: provide a milestone report then and continue.
+- Never bypass spending limits or invent a spending budget. Use configured limits; if a separate paid service requires a new budget, save progress and request only that missing information.
+- Use bounded retries and backoff. Respect Retry-After and recorded provider holds. Switch to other eligible sources when blocked.
+- Do not keep repeating unchanged failed searches or sleep merely to claim activity.
+- If continuous execution cannot be established, explain the exact limitation and leave a working, resumable checkpoint. Never claim a background worker is running without verifying it.
+
+Production authorization
+- I explicitly authorize source-backed production inserts and updates for painters, artworks, authentic image attachments and museum connections through the established ingestion workflow.
+- This includes validated bulk batches without per-item or per-batch approval.
+- Verify the production target before every write. The real local catalogue remains read-only.
+- Use transactional, idempotent writes, audit history and the established backup/recovery procedures.
+- Preserve existing editorial work and unrelated records.
+- Do not delete catalogue records, bulk rewrite historical statuses, commit, push, deploy or apply infrastructure changes.
+
+Research programme
+- Advance the existing million-artwork and 300,000-distinct-illustrated-artwork goals.
+- Continue unfinished queues, including French printmaking, alongside missing-image enrichment and museum coverage.
+- Preserve Russian icon, Greek, Byzantine and post-Byzantine priorities.
+- Use source-registry priorities, documented access methods and object-level evidence.
+- Cover varied institutions, regions and creators rather than repeatedly harvesting one convenient provider.
+- Select eligible metadata before downloading images. Do not indiscriminately mirror websites or download unselected collections.
+- When a subject is exhausted or blocked, select another supported subject and continue.
+- Directory coverage is not artwork coverage; document both separately.
+
+Catalogue integrity
+- Follow the through-1970 artwork-creation scope and its documented exceptions.
+- Do not invent dates. Unknown dates and ranges crossing 1970 require the established editorial treatment.
+- Preserve original titles, source labels, qualified attributions, unknown fields and source identifiers.
+- Reconcile artists globally before creating new painter records.
+- Reconcile exact artwork identities before insertion: accession, creator, title, date, dimensions, provenance and composition where relevant.
+- Distinguish copies, studies, details, editions, impressions, casts and alternate versions.
+- Support anonymous and workshop-attributed works through the authorized workflows. Never invent a painter to satisfy an importer.
+- Keep new artworks in review and preserve existing historical statuses.
+- Follow unified catalogue visibility; do not reintroduce publication-status browsing gates.
+- Never create placeholders or duplicates to increase totals.
+
+Image research and delivery
+- Enrich existing image gaps and selected new artworks with authentic reproductions.
+- Follow the registry’s source rules together with newer explicit approvals in docs/ARTLINE_IMAGE_USE.md.
+- WikiArt is approved. Do not block selected WikiArt images solely because independent clearance or a public-domain label is missing.
+- Apply Prado, Greek, Cyprus, Russian museum, Soviet Realism and other source-specific extensions within their documented scope and date conditions.
+- Do not generalize one provider’s approval to every other provider.
+- Preserve actual image rights labels, credits, source URLs and user approval separately. User approval is not a copyright-holder licence.
+- Respect provider access holds; never bypass authentication or access restrictions.
+- Require the established minimum 90% editorial confidence for WikiArt image matching where applicable.
+- Verify the same physical artwork/version. Never substitute generated pictures, similar works, merchandise or detail crops.
+- Preserve the complete supplied composition and proportions.
+- Serve derivatives no larger than 100,000 bytes; archive originals in the established location outside Documents.
+- Validate every file’s size, hash, complete decoding, storage association and delivery.
+- Visually inspect samples and individually review flagged cases. Record which files were actually viewed; do not claim unsampled files were visually inspected.
+- Preserve existing valid primary images unless a documented correction justifies replacement.
+- Image-only enrichment does not authorize unrelated metadata changes.
+- Count distinct newly illustrated active artwork records separately from alternate images and already illustrated records.
+
+Museum connections
+- Add museum holdings only with documented object-level evidence and the established minimum 80% editorial-confidence policy.
+- Preserve the evidence, confidence basis and unresolved uncertainty.
+- Distinguish holdings, ownership, custody, loans, exhibitions and current display.
+- Claim “currently on view” only with fresh, dated display evidence.
+- Never use Wikidata location claims alone as proof of current display.
+- Do not invent works or connections to make empty museums visible.
+
+Validation and progress
+- Validate each batch before ingestion and verify resulting production rows, relationships, image storage and delivery afterward.
+- Preserve before/after values for updates and affected production IDs.
+- Maintain a source register with provider, policy reference, access status, last checked date and remaining gaps.
+- Report new painters, distinct new artworks, newly illustrated artworks, alternate images and museum links separately.
+- Distinguish discovered, selected, prepared, imported and verified results. Only verified production changes count as delivered.
+- Produce hourly summaries and cumulative milestone reports, including measured runtime, failures, unresolved cases and the next queue.
+- Keep application/database queries bounded and backend-owned; do not load entire collections into the browser.
+- Continue routine research decisions autonomously. Ask only when a genuine blocker requires information or authorization not already supplied.
+
+Begin now: inspect the required files and existing workflows, establish and verify durable continuation, then execute the first validated production batch. Do not stop at returning a plan or another prompt.
+
+Production access clarification — 13 October 2026
+The user explicitly reauthorized production uploads using Google Cloud SQL and Storage, including necessary authentication, secret access, proxies, backups and verification through the established workflow. Cloud Translation remains disabled and prohibited. Do not enable or call it. Do not use unrelated Google services. Reconcile interrupted batch 107 against live production and saved receipts before new writes.

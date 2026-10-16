@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "staedel-museum",
+  "museum": "Städel Museum",
+  "city": "Francfort",
+  "country": "Allemagne",
+  "title": "Musée Städel : chefs-d’œuvre",
+  "subtitle": "Vingt peintures qui font passer le regard d'un repas à un visage, d'un petit objet à un intérieur public.",
+  "introduction": "Avec *Le Déjeuner*, Monet donne à un repas familial une toile de plus de deux mètres de haut. Les fruits isolés de Juncker prennent de l'importance autrement : insectes et support de pierre rendent une pomme ou une poire singulièrement présente dans un petit arrangement. Dans les deux cas, un sujet ordinaire retient le regard grâce à sa manière d'être présenté.\n\nLa sélection passe d'une échelle à l'autre. Une grimace peut remplir l'image ; une foule peut devenir petite dans une église ou une salle de Bourse. Observer l'entourage d'un sujet et la place qu'il reçoit aide à comprendre son effet sans établir de classement des chefs-d'œuvre. Les œuvres conservent la diversité de la collection plutôt que de promettre une histoire continue.",
+  "visitNote": "Il s’agit d’une sélection d’œuvres de la collection, et non d’un parcours d’exposition fixe. Certaines œuvres peuvent être prêtées ou en réserve. Consultez les informations actualisées du Städel concernant les œuvres et la visite avant de prévoir un déplacement pour voir un tableau en particulier.",
+  "locale": "fr",
+  "website": "https://www.staedelmuseum.de",
+  "officialGuide": "https://www.staedelmuseum.de",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "Lire en ligne ou télécharger · Anglais",
+      "note": "Ce catalogue d’exposition apporte un éclairage sur la scène d’intérieur et la vue de rivière de Monet. Ses textes et ses illustrations permettent de mettre en perspective le traitement de la lumière dans ces œuvres au regard des scènes urbaines plus tardives présentées dans cette sélection."
+    }
+  ],
+  "works": [
+    {
+      "id": "f1e1df9b-d5fa-46eb-8dfe-00b2ca279b1d",
+      "title": "Le Déjeuner",
+      "catalogueTitle": "The Luncheon",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1868-1869",
+      "start": 1868,
+      "end": 1869,
+      "medium": "",
+      "accession": "SG 170",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-staedel/f1e1df9b-d5fa-46eb-8dfe-00b2ca279b1d-cc3cd4532d20aef5.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/the-luncheon",
+      "credit": "Claude Monet. The Luncheon. Städel Museum, Frankfurt am Main. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/en/work/the-luncheon",
+      "description": "La nappe claire s'avance au premier plan et relie des figures qui ne partagent pas toutes la même action. Haute de plus de deux mètres, la peinture donne à un repas privé l'échelle physique de sujets plus publics. Chez Monet, vaisselle, verres et pièce meublée méritent donc mieux qu'une identification rapide d'accessoires domestiques : ils font tenir cette grande composition.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "9587145b-13c5-5ffe-ab3f-35a7d7a71719",
+      "title": "La Madone de Lucques",
+      "catalogueTitle": "The Lucca Madonna",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1436",
+      "start": 1436,
+      "end": 1436,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/9587145b-13c5-5ffe-ab3f-35a7d7a71719-39a58d5337c1f391.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-van-eyck/the-lucca-madonna-1436",
+      "credit": "Jan van Eyck. The Lucca Madonna. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jan-van-eyck/the-lucca-madonna-1436",
+      "description": "La robe rouge et le trône établissent une autorité dans une pièce dont l'étroitesse reste très concrète. Fenêtres et petits meubles empêchent le lieu de devenir un espace sacré indéfini. Van Eyck rapproche deux registres. Marie peut garder une importance cérémonielle tout en tenant l'enfant contre elle, dans un environnement qui invite à remarquer les choses ordinaires.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "7e69d657-83e2-5f61-a9f8-673cf3d3e304",
+      "title": "Ecce Homo",
+      "catalogueTitle": "Here is a Man (Ecce Homo)",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "1475-1480",
+      "start": 1475,
+      "end": 1480,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7e69d657-83e2-5f61-a9f8-673cf3d3e304-b5e0a8a165c5814e.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/this-is-a-human-ecce-homo",
+      "credit": "Hieronymus Bosch. Here is a Man (Ecce Homo). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/this-is-a-human-ecce-homo",
+      "description": "L'estrade expose le Christ à la foule compacte en contrebas. L'architecture sépare celui qu'on présente de ceux qui lèvent les yeux, donnant au jugement public une disposition visible. Bosch renforce la foule par la concentration des visages et des vêtements vifs. L'hostilité s'incarne dans ce rapport inégal entre une personne exposée et l'attention collective.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "0fe8e3c6-fd35-534e-91da-b9699f1e5c42",
+      "title": "Jeune femme de la famille Fürleger aux cheveux dénoués",
+      "catalogueTitle": "Portrait of a Young Fürleger with Loose Hair",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1497",
+      "start": 1497,
+      "end": 1497,
+      "medium": "",
+      "accession": "937",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/0fe8e3c6-fd35-534e-91da-b9699f1e5c42-b93c965b6d6a453d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_Young_Woman,_Albrecht_D%C3%BCrer_(1497).jpg",
+      "credit": "Albrecht Dürer. Portrait of a Young Fürleger with Loose Hair. Image credit: Albrecht Dürer; Own work; Photographic credit: Sima Farshid. https://commons.wikimedia.org/wiki/File:Portrait_of_a_Young_Woman,_Albrecht_D%C3%BCrer_(1497).jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q1112111",
+      "description": "Les yeux baissés et les mains jointes donnent au portrait un mouvement recueilli, tandis que des boucles soigneusement décrites se déploient autour du visage. Dürer garde un fond assez sobre pour laisser compter ces contours. Le calme de la pose n'appauvrit pas la surface : cheveux, mains et visage exigent chacun une précision différente.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "b95b9a7a-ac23-5e95-ae91-40df1ee66584",
+      "title": "Helene Roederstein",
+      "catalogueTitle": "Portrait of Helene Roederstein",
+      "artist": "Ottilie Roederstein",
+      "artists": [
+        {
+          "name": "Ottilie Roederstein",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2037804"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "2037",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q126125661-9ccb893eff8b5ac7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:2037-ottilie_w._roederstein-bildnis_helene_roederstein_schwester_der-1890.png",
+      "credit": "Ottilie Roederstein. Portrait of Helene Roederstein. Image credit: Ottilie Roederstein; Source credit: Städelmuseum, Frankfurt am Main. Wikimedia Commons. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://www.wikidata.org/wiki/Q126125661",
+      "description": "La robe verte à motifs anime fortement la zone située sous un visage relativement stable. Les mains jointes clarifient la posture ; le chapeau pâle distingue la tête du fond assourdi. Ottilie Roederstein laisse la décoration bien visible sans disperser la modèle. L'équilibre dépend de degrés d'animation différents au sein d'une même figure.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "56277a89-c4af-5e4d-8723-1c144ce585bd",
+      "title": "Nature morte à la pomme et aux insectes",
+      "catalogueTitle": "Still Life with Apple and Insects",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1765",
+      "start": 1765,
+      "end": 1765,
+      "medium": "",
+      "accession": "1614",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64789266-44f2ddf127870643.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justus_Juncker_-_Stilleven_met_appel_en_insekten_-_1614_-_St%C3%A4del_Museum.jpg",
+      "credit": "Justus Juncker. Still Life with Apple and Insects. Image credit: Justus Juncker; Source credit: https://rkd.nl/nl/explore/images/281212. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64789266",
+      "description": "Un support de pierre à degrés donne à cette pomme seule la solennité d'un objet exposé. Les minuscules insectes fournissent une autre échelle, qui accentue son volume rond. Juncker renonce à l'abondance de nombreuses natures mortes de fruits. L'isolement permet d'observer longuement le contour, la peau et la petite vie alentour d'un sujet banal.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "f2fd41d4-2ed0-519d-affc-c4b4db35ed9e",
+      "title": "Nature morte à la poire et aux insectes",
+      "catalogueTitle": "Still Life with Pear and Insects",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1765",
+      "start": 1765,
+      "end": 1765,
+      "medium": "",
+      "accession": "1615",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64789633-d58275946c1fc352.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justus_Juncker_-_Stilleven_met_peer_en_insecten_-_1615_-_St%C3%A4del_Museum.jpg",
+      "credit": "Justus Juncker. Still Life with Pear and Insects. Image credit: Justus Juncker; Source credit: https://rkd.nl/nl/explore/images/281213. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64789633",
+      "description": "La poire se dresse sur le rebord de pierre avec un contour moins équilibré que celui de la pomme voisine. Papillon et insecte rapprochent leurs formes délicates du fruit et de la pierre fissurée. La comparaison montre l'intérêt d'un dispositif répété : quand le cadre reste apparenté, une modification du contour devient beaucoup plus manifeste.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "674a9355-3f2b-5c21-bd69-239cb2b97d41",
+      "title": "Un savant dans son cabinet",
+      "catalogueTitle": "A Scholar in his Study",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1754",
+      "start": 1754,
+      "end": 1754,
+      "medium": "",
+      "accession": "616",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64788671-d4ca5d6e908260b1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justus_Juncker_-_Geleerde_in_zijn_studeervertrek_-_616_-_St%C3%A4del_Museum.jpg",
+      "credit": "Justus Juncker. A Scholar in his Study. Image credit: Justus Juncker; Source credit: https://rkd.nl/nl/explore/images/254454. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64788671",
+      "description": "Livres et objets accumulés font de l'étude une pratique matérielle plutôt qu'un état mental invisible. La lumière se rassemble près de la table, les bords de la pièce restant moins lisibles. Juncker distingue un lieu de travail dans l'encombrement. La peinture peut montrer les conditions de la concentration sans prétendre nous donner accès aux pensées du savant.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "723bbf1a-2d34-52fc-863b-71235674b3ba",
+      "title": "Jeune femme dans un fauteuil en osier",
+      "catalogueTitle": "Young Woman in a Wicker Chair",
+      "artist": "Hanns Katz",
+      "artists": [
+        {
+          "name": "Hanns Katz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q11973939"
+        }
+      ],
+      "date": "vers 1933–1934",
+      "start": 1933,
+      "end": 1934,
+      "medium": "",
+      "accession": "2254",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q115131314-81f40e0d89cba877.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1933_Katz_Junge_Frau_im_Korbstuhl_anagoria.JPG",
+      "credit": "Hanns Katz. Young Woman in a Wicker Chair. Image credit: Hanns Ludwig Katz (1892-1940). Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q115131314",
+      "description": "Le fauteuil se courbe autour d'un corps étroit dont les mains restent près des genoux. Les cheveux roux et le vêtement bleu distinguent nettement la modèle dans cette composition resserrée. Katz sépare deux questions : être soutenue et être à l'aise. Un siège peut contenir un corps sans rendre sa pose ample. Cette observation n'exige aucun diagnostic de ses sentiments.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "e8749b41-c5c7-5bc5-9bd3-f6ae86780b20",
+      "title": "La Cour de l'orphelinat d'Amsterdam",
+      "catalogueTitle": "The Courtyard of the Orphanage in Amsterdam: Free Period in the Amsterdam Orphanage",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1881 – 1882",
+      "start": 1881,
+      "end": 1882,
+      "medium": "Huile sur toile",
+      "accession": "1351",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/e8749b41-c5c7-5bc5-9bd3-f6ae86780b20-d953e7459017.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/the-courtyard-of-the-orphanage-in-amsterdam",
+      "credit": "Städel Museum, Frankfurt am Main, Eigentum des Städelschen Museums-Vereins e.V.. Public Domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/en/work/the-courtyard-of-the-orphanage-in-amsterdam",
+      "description": "Les uniformes répétés indiquent une institution, mais les filles ne répètent pas une seule pose. Certaines sont debout, d'autres assises ; leurs pauses distinctes se lisent le long du bâtiment ombragé. Liebermann les confronte au soleil morcelé par les arbres. Dans cet espace partagé, l'appartenance au groupe n'efface ni la position ni l'activité de chacune.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "42816a51-7caf-5157-b9de-b785e385c6b6",
+      "title": "Carmencita",
+      "catalogueTitle": "Carmencita",
+      "artist": "Lovis Corinth",
+      "artists": [
+        {
+          "name": "Lovis Corinth",
+          "role": "primary",
+          "slug": "lovis-corinth-q157610"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "",
+      "accession": "2064",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1043744-85891e6e89954b6a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lovis_Corinth_Carmencita_1924.jpg",
+      "credit": "Lovis Corinth. Carmencita. Image credit: Lovis Corinth. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1043744",
+      "description": "De larges touches font partiellement se confondre robe et décor, donnant à la surface plus d'agitation qu'un portrait aux contours lisses. Des accents fermes près du visage empêchent la modèle d'y disparaître. Corinth réserve la netteté à certains endroits. Quelques repères suffisent à reconnaître la personne, tandis qu'alentour la peinture peut interrompre les contours stables.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "9b230422-6393-5eef-b9cd-5b098c167dd4",
+      "title": "Incendie nocturne",
+      "catalogueTitle": "Conflagration at Night",
+      "artist": "Johann Georg Trautmann",
+      "artists": [
+        {
+          "name": "Johann Georg Trautmann",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1693976"
+        }
+      ],
+      "date": "1762–1769",
+      "start": 1762,
+      "end": 1769,
+      "medium": "",
+      "accession": "1339",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64800008-d1b7eae960dfdac7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johann_Georg_Trautmann_-_Nachtelijke_vuurzee_-_1339_-_St%C3%A4del_Museum.jpg",
+      "credit": "Johann Georg Trautmann. Conflagration at Night. Image credit: Johann Georg Trautmann; Source credit: https://rkd.nl/nl/explore/images/275260. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64800008",
+      "description": "Le feu fournit la lumière qui révèle ses propres dégâts. Bâtiments et petites figures se rassemblent à sa portée, tandis que l'obscurité limite ce que l'on peut savoir. Un arbre interrompt la lueur et l'empêche de former une plage claire continue. Chez Trautmann, la visibilité du désastre dépend de l'événement même qui le produit.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "e6b5d5cd-f3e6-5987-bdc0-15a76be5b759",
+      "title": "Cerfs dans un paysage japonais",
+      "catalogueTitle": "Deer in Japanese Landscape",
+      "artist": "Jean-Bloé Niestlé",
+      "artists": [
+        {
+          "name": "Jean-Bloé Niestlé",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1648422"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "",
+      "accession": "SG 408",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/e6b5d5cd-f3e6-5987-bdc0-15a76be5b759-0cdfbcd9ece88843.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jean_Blo%C3%A9_Niestl%C3%A9,_Rehe_in_japanischer_Landschaft,_1918.jpg",
+      "credit": "Jean-Bloé Niestlé. Deer in Japanese Landscape. Image credit: Carl Ha; Own work. https://commons.wikimedia.org/wiki/File:Jean_Blo%C3%A9_Niestl%C3%A9,_Rehe_in_japanischer_Landschaft,_1918.jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q130379839",
+      "description": "Des cerfs reconnaissables habitent des plantes et un terrain aux couleurs tranchées, qui résistent à une perspective unique. Niestlé fait partager aux animaux un espace ouvertement décoratif. Le titre ne prouve pas l'observation directe d'un lieu. Suivre couleurs et courbes permet de comprendre comment le décor s'est construit autour de ses sujets vivants.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "ee03fca2-6a74-5d25-9415-856b4026b192",
+      "title": "La Boisson amère",
+      "catalogueTitle": "The Bitter Drunk",
+      "artist": "Adriaen Brouwer",
+      "artists": [
+        {
+          "name": "Adriaen Brouwer",
+          "role": "primary",
+          "slug": "adriaen-brouwer-q364139"
+        }
+      ],
+      "date": "1630-1638",
+      "start": 1630,
+      "end": 1638,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ee03fca2-6a74-5d25-9415-856b4026b192-76a6008227337192.jpg",
+      "imageSource": "https://www.wikiart.org/en/adriaen-brouwer/the-bitter-drunk",
+      "credit": "Adriaen Brouwer. The Bitter Drunk. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/adriaen-brouwer/the-bitter-drunk",
+      "description": "La boisson provoque une réaction incompatible avec une pose composée. Yeux plissés, bouche ouverte et main crispée sur le récipient font d'une sensation ordinaire tout le sujet. Brouwer s'attache à un visage en transition plutôt qu'à une identité fixée. La grimace est assez particulière pour porter la scène sans anecdote plus vaste.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "8fe58792-ca49-48c4-bc77-4c948fb4ed95",
+      "title": "Maisons au bord de la Zaan",
+      "catalogueTitle": "Häuser am Ufer der Zaan",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1871-1872",
+      "start": 1871,
+      "end": 1872,
+      "medium": "",
+      "accession": "1385",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-staedel/8fe58792-ca49-48c4-bc77-4c948fb4ed95-d79a3947f20113e0.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/de/werk/haeuser-am-ufer-der-zaan",
+      "credit": "Claude Monet. Häuser am Ufer der Zaan. Städel Museum, Frankfurt am Main. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/de/werk/haeuser-am-ufer-der-zaan",
+      "description": "Les façades vertes répétées rythment nettement la rive. Dans l'eau, leurs équivalents se brisent en touches plus petites et en limites instables. Monet installe une comparaison dans une seule vue : la fermeté des bâtiments permet de mesurer ce que perdent leurs reflets. Le fleuve décrit donc à nouveau la rive, autrement, au lieu d'être une simple bande colorée en dessous.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "23bba4fc-f211-5fb0-91cc-1a0fcdc84d8d",
+      "title": "À la Bourse",
+      "catalogueTitle": "In the Stock Exchange",
+      "artist": "Ferdinand Brütt",
+      "artists": [
+        {
+          "name": "Ferdinand Brütt",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1405155"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "",
+      "accession": "SG 326",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64789723-34589ccdc74ac42a.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/in-the-stock-exchange",
+      "credit": "In the Stock Exchange. Ferdinand Brütt; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64789723",
+      "description": "L'activité financière apparaît par les proximités, les corps tournés et les petits groupes en conversation. Brütt place ces échanges difficiles à déchiffrer dans un haut intérieur public, leur donnant une échelle qui dépasse les individus. La salle établit l'institution, les figures regroupées montrent son fonctionnement. Le tableau ne révèle pas chaque transaction, mais décrit les conditions de l'échange.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "76c0cfc7-84d8-5cc0-821e-6e8735548469",
+      "title": "Intérieur d'une église baroque",
+      "catalogueTitle": "Interior of a Baroque Church",
+      "artist": "Johann Ludwig Ernst Morgenstern",
+      "artists": [
+        {
+          "name": "Johann Ludwig Ernst Morgenstern",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1695336"
+        }
+      ],
+      "date": "1792",
+      "start": 1792,
+      "end": 1792,
+      "medium": "",
+      "accession": "609",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64787075-f343d439f7c90f31.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/interior-of-a-baroque-church",
+      "credit": "Interior of a Baroque Church. Johann Ludwig Ernst Morgenstern; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64787075",
+      "description": "Arcs, colonnes et coupole relient les différentes parties de l'intérieur. Les petits personnages rendent l'échelle lisible sans fournir l'événement principal. Morgenstern dirige le regard de plusieurs façons, par les formes arrondies et les ouvertures successives. L'espace organise mouvement et observation, même lorsque les figures n'en occupent qu'une faible partie.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "d4bbff12-a700-539b-95ec-9dad8086f120",
+      "title": "Intérieur d'une église gothique",
+      "catalogueTitle": "Interior of a Gothic Church",
+      "artist": "Johann Ludwig Ernst Morgenstern",
+      "artists": [
+        {
+          "name": "Johann Ludwig Ernst Morgenstern",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1695336"
+        }
+      ],
+      "date": "1793",
+      "start": 1793,
+      "end": 1793,
+      "medium": "",
+      "accession": "574",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64787079-ef2d8bf9886fb548.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/interior-of-a-gothic-church",
+      "credit": "Interior of a Gothic Church. Johann Ludwig Ernst Morgenstern; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64787079",
+      "description": "Arcs brisés et supports minces se répètent vers l'autel lointain. Leur élan vertical diffère des formes arrondies plus larges de l'intérieur baroque de Morgenstern. Ces deux œuvres permettent une comparaison concrète de l'organisation spatiale, sans exiger une histoire complète des styles. Suivez ce qui se répète et la direction donnée au regard.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "f7fafa4c-0d5e-5627-8f24-b2ecc940ba52",
+      "title": "Rue juive à Amsterdam",
+      "catalogueTitle": "Jewish Street in Amsterdam",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "Huile sur bois",
+      "accession": "SG 172",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/f7fafa4c-0d5e-5627-8f24-b2ecc940ba52-f8e792256db1.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/jewish-street-in-amsterdam",
+      "credit": "Städel Museum, Frankfurt am Main. Public Domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/en/work/jewish-street-in-amsterdam",
+      "description": "Les produits vivement colorés permettent de distinguer les petites transactions dans la foule plus sombre. Liebermann décrit le quartier par un rassemblement autour d'un étal, non par un monument isolé. Les façades de brique assurent une continuité derrière l'activité changeante. L'espace public se comprend par ce que les gens font ensemble, même si leurs échanges ne nous sont qu'en partie accessibles.",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "28868a52-5e01-5b9b-a822-a882e32d4326",
+      "title": "Intérieur de cuisine avec trois femmes",
+      "catalogueTitle": "Kitchen Interior with Three Women",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1750",
+      "start": 1750,
+      "end": 1750,
+      "medium": "",
+      "accession": "2006",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64787165-11565a974028fd6e.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/kitchen-interior-with-three-women",
+      "credit": "Kitchen Interior with Three Women. Justus Juncker; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64787165",
+      "description": "Manches, ustensiles et ingrédients occupent la zone claire de la cuisine et orientent le regard vers le travail à table. Juncker donne à chaque femme un geste différent dans la tâche commune. Leurs positions s'expliquent par la coordination, non par une pose de groupe. La pièce se décrit par son usage : préparer le repas organise à la fois personnes et objets.",
+      "importance": "",
+      "museum": "Städel Museum"
+    }
+  ],
+  "context": {
+    "start": 1436,
+    "end": 1934
+  },
+  "closingSections": [
+    {
+      "title": "Changer volontairement d'échelle",
+      "paragraphs": [
+        "Passez des fruits isolés au visage de Brouwer, puis aux grands intérieurs. Observez comment l'espace environnant modifie l'importance apparente du sujet. Consultez les notices actuelles du Städel pour l'accrochage ; cette sélection propose des comparaisons, pas un itinéraire fixe."
+      ]
+    }
+  ]
+}

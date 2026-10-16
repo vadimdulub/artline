@@ -1,24 +1,8 @@
-/* One quiet, named return link; reuse an existing navigation row where available. */
-.page-return-nav{display:flex;align-items:center;width:var(--page);margin:0 auto;padding:4px 0;font:13px/1.4 var(--sans)}
-.page-return-nav[data-family=guide]{width:min(1360px,calc(100% - 48px))}
-.page-return-nav[data-family=prose],body:has(>#main-content.prose-page)>.page-return-nav{max-width:800px}
-.page-return-nav[data-family=study]{max-width:1600px}
-body:has(#main-content [data-contextual-return])>.page-return-nav{display:none}
-.contextual-back{display:inline-flex;align-items:center;gap:6px;min-height:44px;max-width:100%;color:var(--ultramarine);font:13px/1.4 var(--sans);text-decoration:none;text-underline-offset:3px;overflow-wrap:anywhere}
-.contextual-back:hover{text-decoration:underline}
-.contextual-back:focus-visible{outline:3px solid #b84a32;outline-offset:3px;border-radius:2px}
-.contextual-back svg{flex:0 0 16px}
-.contextual-back:dir(rtl) svg{transform:scaleX(-1)}
-.contextual-back .return-short{display:none}
-.record-toolbar:has([data-contextual-return]){padding:4px 32px;gap:4px 20px;min-height:52px}
-.record-toolbar:has([data-contextual-return])>a:not(.contextual-back){display:inline-flex;align-items:center;min-height:44px}
-.contextual-breadcrumb{align-items:center;min-height:44px;gap:12px}
-body:has(>.page-return-nav):not(:has(#main-content [data-contextual-return]))>#main-content{padding-top:8px}
-@media(max-width:760px){
- .page-return-nav,.page-return-nav[data-family=guide]{width:calc(100% - 32px);padding:0}
- .record-toolbar:has([data-contextual-return]){padding:0 16px;gap:4px 12px;min-height:48px}
- .contextual-back .return-full{display:none}
- .contextual-back .return-short{display:inline}
- .contextual-back .return-short::first-letter{text-transform:uppercase}
-}
-@media print{.page-return-nav,.contextual-back{display:none}}
+/* A small arrow with a full-size target, aligned before either logo. */
+.site-header .header-back{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;padding:0;border:0;border-radius:4px;background:transparent;color:#b6b0a5;text-decoration:none}
+.site-header .header-back:hover{background:#302c26;color:var(--paper)}
+.site-header .header-back:focus-visible{outline:2px solid #f0b29c;outline-offset:-2px}
+.site-header .header-back:disabled{color:#625d55;background:transparent;cursor:default}
+.site-header .header-back svg{display:block;flex-shrink:0}
+.site-header .header-back:dir(rtl) svg{transform:scaleX(-1)}
+@media print{.site-header .header-back{display:none}}

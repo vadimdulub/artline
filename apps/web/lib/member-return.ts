@@ -5,14 +5,16 @@ const destinationPath = new RegExp(`^(?:/artists/(${slug})(?:/works/[a-fA-F0-9]{
 export function memberReturnTo(value: unknown): string | null {
   if (typeof value !== "string" || value.length > 768 || /[\\]|[^\x21-\x7e]/.test(value)) return null;
   const path = value.split(/[?#]/, 1)[0];
-  if (["/", "/artists", "/artworks", "/all", "/bookmarks", "/books", "/events"].includes(path)) return value;
+  if (["/", "/artists", "/artworks", "/all", "/bookmarks", "/studies", "/books", "/events", "/account/museums"].includes(path)) return value;
+  if (/^\/studies\/[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(path)) return value;
+  if (/^\/account\/museums\/[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(path) && path.length <= 117) return value;
   const match = destinationPath.exec(path);
   return match && (!match[1] || match[1].length <= 100) && (!match[2] || match[2].length <= 100) ? value : null;
 }
 
 export function requiresMember(path: string): boolean {
   const pathname = path.split(/[?#]/, 1)[0];
-  return pathname === "/bookmarks" || pathname === "/museums" || pathname.startsWith("/museums/");
+  return pathname === "/studies" || pathname.startsWith("/studies/") || pathname === "/bookmarks" || pathname === "/museums" || pathname === "/account/museums" || pathname.startsWith("/account/museums/");
 }
 
 export function memberSignInPath(destination: string): string {

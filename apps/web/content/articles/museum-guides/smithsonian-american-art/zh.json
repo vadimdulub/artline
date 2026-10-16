@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "smithsonian-american-art",
+  "museum": "Smithsonian American Art Museum",
+  "city": "华盛顿特区",
+  "country": "美国",
+  "title": "史密森尼美国艺术博物馆：杰作",
+  "subtitle": "二十件作品，区分细心的描绘与对一个人生活的完整说明。",
+  "introduction": "霍珀的女子正向画外某物探身；博物馆的讨论也承认，不知道她在看什么。劳伦斯的图书馆则为观看与阅读提供共同的公共场所。卡特林的肖像和仪式场景又提出另一类问题：一个群体之外的人所画的图像，能够告诉我们多少有关被画者的事情？\n\n这份选择同时关注画面如何引导目光，以及观看中人与人的关系。姓名已知的模特不应消失在泛泛类别中，一幅画里的小人物也不能代表整个群体。风景与静物同样相关：看似直接的观察，也经过距离、选择和中心位置的安排。",
+  "visitNote": "此处展示的是部分馆藏精选。在规划参观行程前，请查阅博物馆的最新记录，尤其是针对纸本作品及借展藏品。馆内展出的莫兰（Moran）黄石主题画作创作于1893年至1901年间，并非他于1872年创作的另一幅同类油画。",
+  "locale": "zh",
+  "website": "https://americanart.si.edu/",
+  "officialGuide": "https://americanart.si.edu/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）关于色调与构图的论述，为审视这些画面提出了切实的思考角度：最强光位于何处？哪些边缘依然清晰分明？当人物姿态置于不同的背景之下时，又会呈现出怎样的变化？"
+    }
+  ],
+  "works": [
+    {
+      "id": "66c9832d-30e4-5ea0-b40d-bea74729dc53",
+      "title": "科德角之晨",
+      "catalogueTitle": "Cape Cod Morning",
+      "artist": "Edward Hopper",
+      "artists": [
+        {
+          "name": "Edward Hopper",
+          "role": "primary",
+          "slug": "edward-hopper-q203401"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/66c9832d-30e4-5ea0-b40d-bea74729dc53-6523ef78f486f77b.jpg",
+      "imageSource": "https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "credit": "Edward Hopper. Cape Cod Morning. WikiArt source label: Edward Hopper Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "license": "Edward Hopper Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "description": "前倾的身体明确显示女子正在留神，但原因仍在画框之外。霍珀把凸出的窗与明亮风景分开，却不让观看者拥有她的视野。这道界限值得保留：姿势可以显得有所期待，却不能证明她正在等客人，或害怕某件事情。可见证据只有正在观看的身体。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "5cfb22a6-0423-5b50-a00d-d90a227e481b",
+      "title": "农夫的厨房",
+      "catalogueTitle": "The Farmer's Kitchen",
+      "artist": "Ivan Albright",
+      "artists": [
+        {
+          "name": "Ivan Albright",
+          "role": "primary",
+          "slug": "ivan-albright-nga-45"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/5cfb22a6-0423-5b50-a00d-d90a227e481b-f91d697aa5610086.jpg",
+      "imageSource": "https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "credit": "Ivan Albright. The Farmer's Kitchen. WikiArt source label: Ivan Albright Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "license": "Ivan Albright Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "description": "奥尔布赖特没有把家务劳动柔化成泛泛的温馨家庭图景。女子的皮肤、蔬菜与磨损的厨房表面，都得到不放松的细描。衰老和使用痕迹遍及环境，不只属于她的脸。层层笔迹使劳动成为房间的物质状态，而不仅是一项在房中进行的活动。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "11715cfb-0174-574f-bdb1-bef0e05cddf6",
+      "title": "图书馆",
+      "catalogueTitle": "The Library",
+      "artist": "Jacob Lawrence",
+      "artists": [
+        {
+          "name": "Jacob Lawrence",
+          "role": "primary",
+          "slug": "jacob-lawrence-nga-1468"
+        }
+      ],
+      "date": "1960",
+      "start": 1960,
+      "end": 1960,
+      "medium": "木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/11715cfb-0174-574f-bdb1-bef0e05cddf6-3e3eb6c5dab9105b.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "credit": "Jacob Lawrence. The Library. WikiArt source label: Jacob Lawrence Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "license": "Jacob Lawrence Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "description": "劳伦斯把读者聚在桌旁，没有任命某位杰出人物做中心。重复形状连接书架、家具与身体，不同姿势又区分各人。阅读被表现为对共享空间及资源的使用。简化色块使这种共同安排容易理解，却没有抹去其中每个人各自专注的动作。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "d6ce6f8c-8300-41ca-b551-6e1f0b214146",
+      "title": "北极光",
+      "catalogueTitle": "Aurora Borealis",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "布面油画",
+      "accession": "1911.4.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e350251d-51a6-47bc-815b-81788e74e8c9-134204af72bea33e.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=4806",
+      "credit": "Frederic Edwin Church. Aurora Borealis. Frederic Edwin Church; Smithsonian American Art Museum, Gift of Eleanor Blodgett. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=4806",
+      "description": "小船在极光之下提供人的尺度。丘奇让天空宽广得足以把这个旅行标记缩得极小，冰与山则分割下方黑暗。旅程在场，却没有成为详细的冒险故事。大小关系已足以表明，在如此广阔的风景中，人的事业可能显得多么无所庇护。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "1f0e1d6f-516c-535c-bd23-4ae8e696044c",
+      "title": "黄石大峡谷",
+      "catalogueTitle": "The Grand Canyon of the Yellowstone",
+      "artist": "Thomas Moran",
+      "artists": [
+        {
+          "name": "Thomas Moran",
+          "role": "primary",
+          "slug": "thomas-moran-nga-1730"
+        }
+      ],
+      "date": "1893-1901",
+      "start": 1893,
+      "end": 1901,
+      "medium": "布面油画",
+      "accession": "1928.7.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/1f0e1d6f-516c-535c-bd23-4ae8e696044c-7b6e30af6a636547.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=17831",
+      "credit": "Thomas Moran. The Grand Canyon of the Yellowstone. Thomas Moran; Smithsonian American Art Museum, Gift of George D. Pratt. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=17831",
+      "description": "前景人物给峡谷一种尺度，远在下方的水又给另一种。莫兰把近处岩石与植物接到巨大的俯瞰中，用变化光线区分中间层层崖壁。奇观是为观看者精心组织的。视野宽广，不等于呈现风景时没有作出选择。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "7d0563c0-4909-43f9-af08-af8348e308f8",
+      "title": "我留下的姑娘",
+      "catalogueTitle": "The Girl I Left Behind Me",
+      "artist": "Eastman Johnson",
+      "artists": [
+        {
+          "name": "Eastman Johnson",
+          "role": "primary",
+          "slug": "eastman-johnson-nga-1423"
+        }
+      ],
+      "date": "约 1872 年",
+      "start": 1872,
+      "end": 1872,
+      "medium": "布面油画",
+      "accession": "1986.79",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/eaa2899b-959d-415d-9f15-d4ae17e8f4b4-c739d7a808e88788.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11492",
+      "credit": "Eastman Johnson. The Girl I Left Behind Me. Eastman Johnson; Smithsonian American Art Museum, Museum purchase made possible in part by Mrs. Alexander Hamilton Rice in memory of her husband and by Ralph Cross Johnson. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11492",
+      "description": "书被紧紧抱在身前，头发与衣服却随风而动。约翰逊把年轻女子的站姿与周围作用于她的力量对照。标题带入离别，但画作没有指明缺席的人或地点。稳住身体与被风吹动之间的可见冲突，足以支撑场景，不必把故事补全。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "8a0f28fc-0e5d-45e9-a46e-08cb0678e201",
+      "title": "昔日女主人的来访",
+      "catalogueTitle": "A Visit from the Old Mistress",
+      "artist": "Winslow Homer",
+      "artists": [
+        {
+          "name": "Winslow Homer",
+          "role": "primary",
+          "slug": "winslow-homer-q344838"
+        }
+      ],
+      "date": "1876",
+      "start": 1876,
+      "end": 1876,
+      "medium": "布面油画",
+      "accession": "1909.7.28",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/2e87bc69-4d55-4c1b-8bc5-37708e93a831-921852f5a44636a1.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=10737",
+      "credit": "Winslow Homer. A Visit from the Old Mistress. Winslow Homer; Smithsonian American Art Museum, Gift of William T. Evans. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=10737",
+      "description": "来访的是曾经奴役她们的女子，不是黑人女性回到她家。因此，霍默的标题至关重要。博物馆指出，一位女子始终坐着，没有表现奴隶制度下曾被强迫遵守的恭顺。空间与姿态记录了解放之后改变的相遇，却不意味着同处一室已经抹去双方不平等的历史。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "9d773dfa-81b1-4bb4-9f5b-5fcd6a126f1d",
+      "title": "耶和华是我的牧者",
+      "catalogueTitle": "The Lord Is My Shepherd",
+      "artist": "Eastman Johnson",
+      "artists": [
+        {
+          "name": "Eastman Johnson",
+          "role": "primary",
+          "slug": "eastman-johnson-nga-1423"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "纤维板油画",
+      "accession": "1979.5.13",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/7eb89ed6-f767-4478-aab2-6444be215a8b-de9182fc6b2c93cb.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11494",
+      "credit": "Eastman Johnson. The Lord Is My Shepherd. Eastman Johnson; Smithsonian American Art Museum, Gift of Mrs. Francis P. Garvan, Transfer from the National Museum of American History, Smithsonian Institution. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11494",
+      "description": "光线连接翻开的书与男子的手、脸，使阅读具有集中的身体存在。约翰逊于美国内战期间的1863年绘制此画。这个背景使阅读不能只被看成沉思的一般象征。在自由与受教育机会深受争议的时刻，画面给予一名黑人读者持续的关注。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3fc12022-f07a-4b45-bb30-a71bf5a5360d",
+      "title": "兄弟",
+      "catalogueTitle": "Brothers",
+      "artist": "Malvin Gray Johnson",
+      "artists": [
+        {
+          "name": "Malvin Gray Johnson",
+          "role": "primary",
+          "slug": "malvin-gray-johnson-round6-27f0a50e2037"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "布面油画",
+      "accession": "1967.57.29",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/affcc9ce-9024-4710-b9ac-caeb0720d3af-ae5c7584e22413ba.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11518",
+      "credit": "Malvin Gray Johnson. Brothers. Malvin Gray Johnson; Smithsonian American Art Museum, Gift of the Harmon Foundation. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11518",
+      "description": "相似帽子与背带裤可能让两个男孩起初像一对匹配人物。马尔文·格雷·约翰逊却用篱笆旁的不同坐姿与表情区分他们。标题确认关系，不把个体变得可互换。寻找这些细微差别，可以避免乡村背景把两个具体的人变成匿名的乡村生活插图。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "ed3b4cd2-ddd5-4b30-9a98-1b28406181e0",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Malvin Gray Johnson",
+      "artists": [
+        {
+          "name": "Malvin Gray Johnson",
+          "role": "primary",
+          "slug": "malvin-gray-johnson-round6-27f0a50e2037"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "布面油画",
+      "accession": "1967.57.30",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/20703f5c-009e-4c52-82a5-2a4ef804c6cd-35139d1c6896ebe0.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11519",
+      "credit": "Malvin Gray Johnson. Self-Portrait. Malvin Gray Johnson; Smithsonian American Art Museum, Gift of the Harmon Foundation. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11519",
+      "description": "约翰逊在自己身旁放置调色板与画笔，周围还有图画和雕刻形体。画室确立的是工作身份，不是装饰背景。他出现在制造、使用与研究的东西之间。因此，肖像也可以被读作对艺术自主权的主张：被表现的人，同样能够选择并制作表现他人的图像。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3453fabc-19f3-461b-b33f-175416c7697e",
+      "title": "伊丽莎白·温思罗普·钱勒",
+      "catalogueTitle": "Elizabeth Winthrop Chanler (Mrs. John Jay Chapman)",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "布面油画",
+      "accession": "1980.71",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/a2b812d3-f006-4e1f-bed4-bfbda94b47c2-2015dbed6f7b2273.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=21621",
+      "credit": "John Singer Sargent. Elizabeth Winthrop Chanler (Mrs. John Jay Chapman). John Singer Sargent; Smithsonian American Art Museum, Gift of Chanler A. Chapman. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=21621",
+      "description": "带纹样的陈设建立了精致的社会环境，萨金特却让浅色脸庞与双手始终区别于周围。人物保持的姿势，比一份昂贵材料清单更能使这次相遇有分量。装饰清楚可见，却不能提供她的全部身份。肖像要求目光停在人身上，不只是停在房间拥有的东西上。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3fd02b6b-918c-4761-9dc1-6651058c0d8d",
+      "title": "母亲：安妮·威廉姆斯·甘迪",
+      "catalogueTitle": "Mother (Annie Williams Gandy)",
+      "artist": "Thomas Eakins",
+      "artists": [
+        {
+          "name": "Thomas Eakins",
+          "role": "primary",
+          "slug": "thomas-eakins-q214905"
+        }
+      ],
+      "date": "约 1903 年",
+      "start": 1903,
+      "end": 1903,
+      "medium": "布面油画",
+      "accession": "1961.11.12",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e75187a4-224f-44af-a3bf-9f10b10457d7-ee4ec6129f54313a.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=7710",
+      "credit": "Thomas Eakins. Mother (Annie Williams Gandy). Thomas Eakins; Smithsonian American Art Museum, Bequest of Mrs. Lucy G. Rodman through her sister Miss Helen W. Gandy. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=7710",
+      "description": "标题中的姓名，防止“母亲”成为完全匿名的角色。埃金斯用克制的明暗变化，让脸与手从深色衣服中显现。周围空间很少有东西与坐着的人物竞争。图像无需一段关于母爱的感伤概括：这位具体女子的姿势与外貌已经足够。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "19c56141-a406-4ecc-bcba-5e5910749288",
+      "title": "甜瓜与牵牛花",
+      "catalogueTitle": "Melons and Morning Glories",
+      "artist": "Raphaelle Peale",
+      "artists": [
+        {
+          "name": "Raphaelle Peale",
+          "role": "primary",
+          "slug": "raphaelle-peale-nga-23551"
+        }
+      ],
+      "date": "1813",
+      "start": 1813,
+      "end": 1813,
+      "medium": "布面油画",
+      "accession": "1967.39.2",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/60992f65-57ae-42f9-9f17-7963d231a03e-0064d463742e6544.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=19311",
+      "credit": "Raphaelle Peale. Melons and Morning Glories. Raphaelle Peale; Smithsonian American Art Museum, Gift of Paul Mellon. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=19311",
+      "description": "切开的甜瓜揭示完整果实藏在里面的东西：种子、果肉，以及外皮与内部的关系。皮尔把这些差异放在暗背景上的卷曲茎蔓和花朵旁。切开这个动作改变了观察能够确认的内容。静物不只提供悦目的摆放，也让外表与内部结构得以同时比较。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "8c1efaaa-2989-5b27-996a-3703e2b474f9",
+      "title": "老箭匠",
+      "catalogueTitle": "Old Arrow Maker",
+      "artist": "Edmonia Lewis",
+      "artists": [
+        {
+          "name": "Edmonia Lewis",
+          "role": "primary",
+          "slug": "wikiart-artist-edmonia-lewis"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8c1efaaa-2989-5b27-996a-3703e2b474f9-5f50e60c5e68199c.jpg",
+      "imageSource": "https://www.wikiart.org/en/edmonia-lewis/old-arrow-maker-1872",
+      "credit": "Edmonia Lewis. Old Arrow Maker. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edmonia-lewis/old-arrow-maker-1872",
+      "description": "坐着的男子所做的工作，把他的手和身体与旁边的年轻女子联系起来。刘易斯给文学题材以可触的大理石群像形式。它应被读作解释，而不是因为显得具体，就能证明艺术家亲自记录了原住民生活的现场。人物排列说明艺术选择，不能完整说明一个群体。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "0c7fc12a-e8bd-4480-bdd4-57b0256a287b",
+      "title": "新娘",
+      "catalogueTitle": "A Bride",
+      "artist": "Abbott Handerson Thayer",
+      "artists": [
+        {
+          "name": "Abbott Handerson Thayer",
+          "role": "primary",
+          "slug": "abbott-handerson-thayer-nga-38660"
+        }
+      ],
+      "date": "约 1895 年",
+      "start": 1895,
+      "end": 1895,
+      "medium": "布面油画",
+      "accession": "1929.6.111",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/eb863a50-296e-452c-a6c0-c8fc53d85865-e7f35ff7d0e3d80f.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=23925",
+      "credit": "Abbott Handerson Thayer. A Bride. Abbott Handerson Thayer; Smithsonian American Art Museum, Gift of John Gellatly. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=23925",
+      "description": "白衣接近浅色环境，面孔与深发则仍然分明。塞耶让站立人物各部分获得不同程度的定义。即使衣服与光几乎合并，身体依然存在。标题赋予人物角色，画法却允许另一个问题：多少地方可以不明确，而肖像仍保持可辨？",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "5ec4f45b-fd21-4786-8ff2-632534f980ef",
+      "title": "西班牙盲人歌手",
+      "catalogueTitle": "Blind Spanish Singer",
+      "artist": "Robert Henri",
+      "artists": [
+        {
+          "name": "Robert Henri",
+          "role": "primary",
+          "slug": "robert-henri-nga-1391"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "布面油画",
+      "accession": "1967.41",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/13496c71-12cb-40f2-a447-ecd0e4832695-df4e531832a0089e.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=10301",
+      "credit": "Robert Henri. Blind Spanish Singer. Robert Henri; Smithsonian American Art Museum, Gift of Mr. J.H. Smith. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=10301",
+      "description": "吉他让双手与坐着的身体形成实际的工作关系。亨利把衬衫、脸与乐器从暗处带出，却不搭建详细演出空间。标题说明失明，画面同时也表现一位工作中的音乐家。关注这项职业，便不会让身体状况成为人物唯一可知的身份。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "7d1be2bb-22eb-4ecc-bd3f-cf45974112ac",
+      "title": "乔克托族女子",
+      "catalogueTitle": "A Choctaw Woman",
+      "artist": "George Catlin",
+      "artists": [
+        {
+          "name": "George Catlin",
+          "role": "primary",
+          "slug": "george-catlin-nga-1113"
+        }
+      ],
+      "date": "1834",
+      "start": 1834,
+      "end": 1834,
+      "medium": "布面油画",
+      "accession": "1985.66.297",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e462cf7a-e0c1-42b0-8e1a-088f646197b3-4c5ed8a441d86938.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=3997",
+      "credit": "George Catlin. A Choctaw Woman. George Catlin; Smithsonian American Art Museum, Gift of Mrs. Joseph Harrison, Jr.. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=3997",
+      "description": "侧面像与开阔背景让服装和饰物容易分辨。卡特林为人物所属群体之外的观众选择了这些可见特征。它们仍是有用的历史证据，却不等于她自己的自我叙述。承认图像保留了什么，也承认由谁决定呈现方式，才能更好尊重这幅肖像的具体性。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "99a627a8-ca5b-44fb-b2de-ca3cb315c5b5",
+      "title": "赠马仪式（Smoking Horses）",
+      "catalogueTitle": "\"Smoking Horses,\" a Curious Custom of the Sauk and Fox",
+      "artist": "George Catlin",
+      "artists": [
+        {
+          "name": "George Catlin",
+          "role": "primary",
+          "slug": "george-catlin-nga-1113"
+        }
+      ],
+      "date": "1835-1836",
+      "start": 1835,
+      "end": 1836,
+      "medium": "布面油画",
+      "accession": "1985.66.463",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/3ffcaacd-1603-4556-805a-bbd897b877ea-e929dec117c1582f.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=4378",
+      "credit": "George Catlin. \"Smoking Horses,\" a Curious Custom of the Sauk and Fox. George Catlin; Smithsonian American Art Museum, Gift of Mrs. Joseph Harrison, Jr.. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=4378",
+      "description": "开放的环形排列让外部观看者同时总览人和马。卡特林安排的距离使集会清楚，却也让观众远离任何参与者自身的位置。看到排列不等于理解仪式。它的意义需要原住民知识和历史背景，超出画中身体分布本身所能说明的范围。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "d1fc9c9d-f729-4f8d-872f-bf69b450eda4",
+      "title": "苦根花",
+      "catalogueTitle": "Bitterroot (Lewisia redivivia)",
+      "artist": "Mary Vaux Walcott",
+      "artists": [
+        {
+          "name": "Mary Vaux Walcott",
+          "role": "primary",
+          "slug": "mary-vaux-walcott-round6-e5a8f3572970"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "纸本水彩",
+      "accession": "1970.355.196",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/be378fcb-e7e0-4525-a6d9-1353d094dd50-a9da892d09d5ddbe.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=25876",
+      "credit": "Mary Vaux Walcott. Bitterroot (Lewisia redivivia). Mary Vaux Walcott; Smithsonian American Art Museum, Gift of the artist. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=25876",
+      "description": "沃尔科特在大体留白的纸上分开花蕾、开放花朵与细叶。间距让小结构便于研究，没有户外其他植物的干扰。这种清楚是一种安排，不是没有安排。植物图说明，去除环境有时反而能够显示那些在广阔景观里难以细察的差别。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "4337d75d-6904-4a79-8b2b-42da516cbc5c",
+      "title": "有肖像画的室内",
+      "catalogueTitle": "Interior with Portraits",
+      "artist": "Thomas Le Clear",
+      "artists": [
+        {
+          "name": "Thomas Le Clear",
+          "role": "primary",
+          "slug": "thomas-le-clear-round6-bb7390496ffc"
+        }
+      ],
+      "date": "约 1865 年",
+      "start": 1865,
+      "end": 1865,
+      "medium": "布面油画",
+      "accession": "1993.6",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/36376cea-604b-4266-aabc-dd75fbf5cdd1-e959f4779198017b.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=33492",
+      "credit": "Thomas Le Clear. Interior with Portraits. Thomas Le Clear; Smithsonian American Art Museum, Museum purchase made possible by the Pauline Edwards Bequest. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=33492",
+      "description": "摄影师俯身在设备之下，孩子们保持姿势。勒克莱尔把器械与画室其他图像都纳入，而不是让肖像仿佛无须帮助便自然产生。制作肖像成为可见的活动。绘画既关注被表现的人，也关注使表现成为可能的条件。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    }
+  ],
+  "context": {
+    "start": 1813,
+    "end": 1960
+  },
+  "closingSections": [
+    {
+      "title": "使用图像，也保留它的限度",
+      "paragraphs": [
+        "肖像保存的是某个人选择的外貌，风景组织的是从某处看到的景色。限度不会使它们失去用途，而是让问题更准确。请结合单件藏品记录阅读，尤其涉及对群体的历史描绘时。若围绕这份选择安排参观，也应先核实最新展出信息。"
+      ]
+    }
+  ]
+}

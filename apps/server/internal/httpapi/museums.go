@@ -27,7 +27,11 @@ func museumFilter(r *http.Request) (catalog.MuseumFilter, error) {
 		{"artist", &f.Artists, validArtistSlug}, {"movement", &f.Movements, museumSlugPattern.MatchString},
 		{"venue", &f.Venues, museumIDPattern.MatchString}, {"work_type", &f.WorkTypes, validWorkType},
 	} {
-		*spec.dest, err = parseChoices(q[spec.key], spec.valid, false)
+		if spec.key == "artist" {
+			*spec.dest, err = parseArtistChoices(q[spec.key])
+		} else {
+			*spec.dest, err = parseChoices(q[spec.key], spec.valid, false)
+		}
 		if err != nil {
 			return f, catalog.ErrMuseumFilter
 		}

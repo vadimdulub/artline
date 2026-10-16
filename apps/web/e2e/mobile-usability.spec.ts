@@ -11,21 +11,30 @@ for (const width of [320, 390, 430]) {
     await expect(page.locator("body")).toHaveCSS("padding-left", "0px");
     await expect(page.locator(".member-sidebar")).toBeHidden();
     await expect(header.getByRole("link", { name: "Your account", exact: true })).toBeHidden();
-    expect((await header.boundingBox())!.height).toBeLessThanOrEqual(112);
-    for (const link of await header.locator(".primary-nav a:visible").all()) {
-      expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
-    }
+    expect((await header.boundingBox())!.height).toBeLessThanOrEqual(52);
+    await expect(header.locator(".wordmark")).toBeHidden();
+    await expect(header.locator(".mobile-home-link")).toBeVisible();
+    await expect(header.locator(".mobile-home-link")).toHaveAttribute("href", "/");
+    await expect(header.getByRole("navigation", { name: "Primary navigation" })).toBeHidden();
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
     await page.screenshot({ path: info.outputPath(`artists-${width}.png`) });
     const menuButton = page.getByRole("button", { name: "Menu", exact: true });
     await menuButton.click();
     const menu = page.getByRole("dialog", { name: "Explore Artline" });
     await expect(menu).toBeVisible();
+    await expect(menu.getByRole("region", { name: "Explore", exact: true })).toBeVisible();
+    await expect(menu.getByRole("region", { name: "Explore", exact: true }).getByRole("link")).toHaveText(["Painters", "Books", "Events", "All"]);
+    await expect(menu.getByRole("region", { name: "Catalogue", exact: true }).getByRole("link")).toHaveText(["Museums", "Artists", "Artworks", "Guides", "About"]);
+    await expect(menu.getByRole("region", { name: "Your account", exact: true })).toBeVisible();
+    for (const name of ["Painters", "Books", "Events", "All", "Exhibitions", "Guides", "Studies", "Bookmarks", "Your account"]) {
+      await expect(menu.getByRole("link", { name, exact: true })).toBeVisible();
+    }
     await expect(page.locator("body")).toHaveCSS("overflow", "hidden");
     for (const link of await menu.getByRole("link").all()) {
       await expect(link).toBeInViewport();
       expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
     }
+    await page.screenshot({ path: info.outputPath(`menu-${width}.png`) });
     await page.keyboard.press("Escape");
     await expect(menu).toBeHidden();
     await expect(menuButton).toBeFocused();

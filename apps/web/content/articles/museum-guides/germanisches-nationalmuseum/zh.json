@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "germanisches-nationalmuseum",
+  "museum": "Germanisches Nationalmuseum",
+  "city": "纽伦堡",
+  "country": "德国",
+  "title": "日耳曼国家博物馆：杰作",
+  "subtitle": "从用力、工作到人物身份，姿势能告诉我们什么？",
+  "introduction": "赫拉克勒斯背对观众拉弓，姐姐背着一个孩子。两个动作的题材与地位相差很大，但画家都必须用身体让重量和吃力程度变得可懂。从这个实际问题出发，可以进入日耳曼国家博物馆的这组选品。\n\n其他人物的身体活动较少。一本书、修士服、纹章或戏装，都能说明肖像打算把模特呈现为怎样的人。但这些属性不等于让我们彻底了解其性格。可以比较身体正在做什么、环境怎样说明人物，以及图像究竟留下哪些未知。",
+  "visitNote": "本指南精选了该博物馆的绘画作品，但该馆的馆藏远不止于绘画。部分展品为长期借展，当前的陈列安排可能会有所变动。在规划具体参观行程前，请查阅博物馆的藏品目录及参观指南。",
+  "locale": "zh",
+  "website": "https://www.gnm.de",
+  "officialGuide": "https://www.gnm.de",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）关于轮廓、色调及人物布局的章节，为比较丢勒（Dürer）细腻的描绘、亚夫连斯基（Jawlensky）色彩浓烈的人像以及奥本海默（Oppenheimer）的乐师画作，提供了实用的分析语言。"
+    }
+  ],
+  "works": [
+    {
+      "id": "54896053-5237-465f-859e-28fbae3c49f1",
+      "title": "赫拉克勒斯与斯廷法洛斯怪鸟交战",
+      "catalogueTitle": "Herkules im Kampf mit den Harpyen",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "平纹亚麻布上的 Tüchlein 绘画",
+      "accession": "5379",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ffe9348a-d0bf-5684-be49-76088992f84a-3b29218c61aed06e.jpg",
+      "imageSource": "https://www.wikiart.org/en/albrecht-durer/hercules-kills-the-symphalic-bird-1520",
+      "credit": "Hercules kills the Symphalic Bird. WikiArt; Albrecht Dürer. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.sammlung.pinakothek.de/de/artwork/02LAWJX4yk",
+      "description": "拉满的弓让赫拉克勒斯的身体呈现相反方向的力量。观众看见背部，但躯干转动仍说明射击朝向。丢勒借神话任务探究：从不便的角度，怎样仍让动作被理解？怪异生物提供目标，英雄的身体结构则是画面眼前要解决的问题。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "4e893d35-fb5b-50e7-b69f-7202c63aac5f",
+      "title": "约翰内斯·罗伊斯",
+      "catalogueTitle": "Johannes Reuss",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1503",
+      "start": 1503,
+      "end": 1503,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/4e893d35-fb5b-50e7-b69f-7202c63aac5f-73248e8dd4df1f49.jpg",
+      "imageSource": "https://www.wikiart.org/en/lucas-cranach-the-elder/johannes-reuss-1503",
+      "credit": "Lucas Cranach the Elder. Johannes Reuss. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/lucas-cranach-the-elder/johannes-reuss-1503",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lucas-cranach-the-elder/johannes-reuss-1503",
+      "description": "摊开的书使双手也参与人物身份的呈现。红帽、红袍连接头和躯干，树木在风景前框住面孔。克拉纳赫不只靠表情介绍罗伊斯。阅读、服装和环境共同提供公开可见的线索，让这个人以特定方式出现在我们面前。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "d1ed96d7-a27f-557a-b092-2920e83607cd",
+      "title": "天使报喜",
+      "catalogueTitle": "Annunciation",
+      "artist": "Konrad Witz",
+      "artists": [
+        {
+          "name": "Konrad Witz",
+          "role": "primary",
+          "slug": "konrad-witz-q313183"
+        }
+      ],
+      "date": "1440",
+      "start": 1440,
+      "end": 1440,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d1ed96d7-a27f-557a-b092-2920e83607cd-ece83f8031473357.jpg",
+      "imageSource": "https://www.wikiart.org/en/konrad-witz/annunciation",
+      "credit": "Konrad Witz. Annunciation. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/konrad-witz/annunciation",
+      "description": "木构房间为会面划出实在界限。低天花、墙壁和厚重衣褶，让天使与玛利亚共处一个具体环境。康拉德·维茨使神圣事件发生在必须容纳身体的空间里。狭窄因此重要：房间不是两个象征人物背后可以随意省略的模糊布景。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "1e9a0de9-6dbe-552e-9af3-2161d39b4789",
+      "title": "亚马逊之战",
+      "catalogueTitle": "Battle of the Amazons",
+      "artist": "Anselm Feuerbach",
+      "artists": [
+        {
+          "name": "Anselm Feuerbach",
+          "role": "primary",
+          "slug": "anselm-feuerbach-q250194"
+        }
+      ],
+      "date": "1870–1873",
+      "start": 1870,
+      "end": 1873,
+      "medium": "",
+      "accession": "Gm2054",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1029173-ca6a404794b9d0cb.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1873_Feuerbach_Amazonenschlacht_anagoria.JPG",
+      "credit": "Anselm Feuerbach. Battle of the Amazons. Image credit: Anselm Feuerbach. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1029173",
+      "description": "一匹腾起的马把局部搏斗带到周围身体上方。宽阔画面中，反复出现的肢体和反向运动连接各处冲突。费尔巴哈通过整体铺陈而非决定性一击，让战斗变得可读。横长格式给视线时间逐组移动，即使各人的行动不断破坏稳定平衡。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "cebcc992-f228-5c62-846c-f7e70f87ebbb",
+      "title": "幕后",
+      "catalogueTitle": "Behind the Scenes",
+      "artist": "Eduard von Grützner",
+      "artists": [
+        {
+          "name": "Eduard von Grützner",
+          "role": "primary",
+          "slug": "wikimedia-painter-q71509"
+        }
+      ],
+      "date": "1870",
+      "start": 1870,
+      "end": 1870,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111635657-9751440af9eeb45a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1870_Gruetzner_Hinter_den_Kulissen_anagoria.JPG",
+      "credit": "Eduard von Grützner. Behind the Scenes. Image credit: Eduard von Grützner. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111635657",
+      "description": "离开舞台后，戏服仍在说明角色，但穿着它的人此刻没有扮演。格吕茨纳把演员分成较小的站立与坐姿群体。等待与演出一样，成为题材。暂停时仍看得见表演用具，反而更容易分清扮演者与角色。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "b9a0e71b-c625-4eaf-ae53-1ec11d295381",
+      "title": "米夏埃尔·沃尔格穆特",
+      "catalogueTitle": "Bildnis Michael Wolgemut",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1516",
+      "start": 1516,
+      "end": 1516,
+      "medium": "椴木（椴树属）",
+      "accession": "700",
+      "image": "https://artlines.org/assets/artworks/imported/pinakothek-durer-gnm-study-b86b94529db1b91e36fc77fa184de532def89b78f78ed656a5f8269b6880b818.jpg",
+      "imageSource": "https://www.sammlung.pinakothek.de/de/artwork/M0xyZ1VLpl",
+      "credit": "© Bayerische Staatsgemäldesammlungen (als Dauerleihgabe im Germanischen Nationalmuseum Nürnberg). Albrecht Dürer, Bildnis Michael Wolgemut, 1516. https://www.sammlung.pinakothek.de/de/artwork/M0xyZ1VLpl CC BY-SA 4.0; compressed study reproduction.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.sammlung.pinakothek.de/de/artwork/M0xyZ1VLpl",
+      "description": "深色帽子和简单背景几乎不与脸争夺目光。丢勒沿着眼周、脸颊和嘴边的不规则轮廓描绘，没有把年老抹平成一般性的智慧象征。肖像的具体之处就在这些差别里。这是一位特定老人，无须替每道纹路编造心理原因。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "5514052d-e941-5128-a042-9a77f54866e9",
+      "title": "从南面看纽伦堡主市场",
+      "catalogueTitle": "View of the main market in Nuremberg from the south",
+      "artist": "Lorenz Strauch",
+      "artists": [
+        {
+          "name": "Lorenz Strauch",
+          "role": "primary",
+          "slug": "wikimedia-painter-q22341217"
+        }
+      ],
+      "date": "1594",
+      "start": 1594,
+      "end": 1594,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117228237-cf77c660faa4d4d5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Strauch_Der_Markt_zu_N%C3%BCrnberg_1594.jpg",
+      "credit": "Lorenz Strauch. View of the main market in Nuremberg from the south. Image credit: Lorenz Strauch; Source credit: Photo from a reproduction. Wikimedia Commons. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://www.wikidata.org/wiki/Q117228237",
+      "description": "周围建筑界定市民空间，摊位和小人物再把它分成不同活动地点。施特劳赫的教堂立面稳定了视图，却没有吞没四周市场。建筑既靠轮廓，也靠使用方式被理解。人物比例虽小，许多独立工作因此能够共存于同一幅城市图中。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "97adba66-8ae7-577b-b2cc-a2e0ed8795d4",
+      "title": "身着奥古斯丁会修士服的马丁·路德",
+      "catalogueTitle": "Portrait of Martin Luther as an Augustinian Monk",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1523",
+      "start": 1523,
+      "end": 1523,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/97adba66-8ae7-577b-b2cc-a2e0ed8795d4-df82bbe23539fb0e.jpg",
+      "imageSource": "https://www.wikiart.org/en/lucas-cranach-the-elder/portrait-of-martin-luther-as-an-augustinian-monk",
+      "credit": "Lucas Cranach the Elder. Portrait of Martin Luther as an Augustinian Monk. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lucas-cranach-the-elder/portrait-of-martin-luther-as-an-augustinian-monk",
+      "description": "在详细生平之前，修士服和书先说明宗教身份。一手抬到胸前附近，另一手仍与书相连。克拉纳赫在这些熟悉标志中保留具体面孔。肖像展示的是一种呈现方式，不是一张可以预读此后一切历史事件的脸。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "0dbf91d5-514e-5647-aafe-fc462bce82dd",
+      "title": "拿针、戴驴耳帽的小丑",
+      "catalogueTitle": "Depiction of a Fool with Needle and Ass's Ears",
+      "artist": "Andreas Herneisen",
+      "artists": [
+        {
+          "name": "Andreas Herneisen",
+          "role": "primary",
+          "slug": "wikimedia-painter-q16481545"
+        }
+      ],
+      "date": "约 1590 年",
+      "start": 1590,
+      "end": 1590,
+      "medium": "",
+      "accession": "Gm1548",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q125141164-2eb0db094b7bcf13.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Andreas_herneisen,_un_folle_con_ago_e_orecchie_d%27asino.JPG",
+      "credit": "Andreas Herneisen. Depiction of a Fool with Needle and Ass's Ears. Image credit: Sailko; Required attribution: I, Sailko. Wikimedia Commons. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://www.wikidata.org/wiki/Q125141164",
+      "description": "针让双手靠近咧嘴的脸，小动作在紧裁画幅中被放大。手势尚未完全明白，头饰夸张的耳朵已先说明滑稽角色。赫尔奈森让服装与动作相互加强。这里是对愚态的表演，不是普通肖像偶然捕捉到一个笨拙姿势。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "2f30b2b6-1328-5970-876c-b569b32a43cc",
+      "title": "科尔内莉娅·阿德里亚娜·蒙特与女儿",
+      "catalogueTitle": "Double portrait of Cornelia Adriana Munter (1770-1828) and her daughter Eleonore Louise Hedwig von Bose (1797-1831)",
+      "artist": "Johann Friedrich August Tischbein",
+      "artists": [
+        {
+          "name": "Johann Friedrich August Tischbein",
+          "role": "primary",
+          "slug": "wikimedia-painter-q213795"
+        }
+      ],
+      "date": "1798",
+      "start": 1798,
+      "end": 1798,
+      "medium": "",
+      "accession": "Gm1337",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117228210-c38a12723a49b280.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Cornelia_Adrienne_Countess_Bose_with_her_daughter,_by_Johann_Friedrich_August_Tischbein,_1798,_oil_on_canvas_-_Germanisches_Nationalmuseum_-_Nuremberg,_Germany_-_DSC03438.jpg",
+      "credit": "Johann Friedrich August Tischbein. Double portrait of Cornelia Adriana Munter (1770-1828) and her daughter Eleonore Louise Hedwig von Bose (1797-1831). Image credit: Daderot. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117228210",
+      "description": "孩子被抱在成人身体围出的空间里。母亲绿裙上方，浅色面孔和衣物从昏暗背景显出，让接触位置容易追踪。蒂施拜因以大小差别和身体靠近来组织双人肖像。不必额外发生什么，我们已经看明白一人抱着、另一人被抱的实际关系。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "2fcd044b-5ede-51bd-8e1e-e4aa7079d35f",
+      "title": "皇帝马克西米利安一世",
+      "catalogueTitle": "Emperor Maximilian I",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1519",
+      "start": 1519,
+      "end": 1519,
+      "medium": "",
+      "accession": "Gm169",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110892303-c9e43272ca07afff.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Bildnis_Kaiser_Maximilians_I._(1519).jpg",
+      "credit": "Albrecht Dürer. Emperor Maximilian I. Image credit: Albrecht Dürer. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110892303",
+      "description": "面孔只是帝王形象的一部分。铭文、纹章和华服把身份从外貌相似延伸到公共权威。丢勒让这套展示手段清楚可见。应当区分五官实际提供的信息与周围符号宣告的内容，而不是把等级当成天生写在脸上的东西。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "298ba711-04ac-5afa-91a0-a77604340be9",
+      "title": "泰根湖风景",
+      "catalogueTitle": "Tegernsee Landscape",
+      "artist": "August Macke",
+      "artists": [
+        {
+          "name": "August Macke",
+          "role": "primary",
+          "slug": "august-macke-q33981"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "Gm2034",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111417664-e7a486ca7356b729.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1910_Macke_Tegernsee_Landschaft_anagoria.JPG",
+      "credit": "August Macke. Tegernsee Landscape. Image credit: August Macke. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111417664",
+      "description": "鲜亮色块让树木、建筑和山围绕开阔坡地相互衔接。马凯保留地形的可辨认性，却不让每一种颜色服从自然阴影。蓝、黄强调色可以跨越不同物件，建立联系。风景既按所描绘的距离组织，也按色块如何相邻组织。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "a92804bf-778a-532c-8c02-09e9388fb50e",
+      "title": "罗泽四重奏",
+      "catalogueTitle": "Rose Quartet",
+      "artist": "Max Oppenheimer",
+      "artists": [
+        {
+          "name": "Max Oppenheimer",
+          "role": "primary",
+          "slug": "max-oppenheimer-nga-5127"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "",
+      "accession": "Gm2035",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q132348609-3b102745776f7dbb.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rose_Quartet_by_Max_Oppenheimer,_1924,_oil_on_canvas_-_Germanisches_Nationalmuseum_-_Nuremberg,_Germany_-_DSC02443.jpg",
+      "credit": "Max Oppenheimer. Rose Quartet. Image credit: Max Oppenheimer. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q132348609",
+      "description": "手臂、琴弓和乐器紧密交叠，个别动作进入更大的线条网络。奥本海默让合奏有了可见结构，又没有把四位音乐家简化为相同动作。共同演奏中，每人各有任务。重复线条连接他们，身体和乐器则保留组成四重奏所必需的差别。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "15afef1b-2c99-544c-8cb7-e8731c6cbbfe",
+      "title": "两个女孩",
+      "catalogueTitle": "Two Girls",
+      "artist": "Max Pechstein",
+      "artists": [
+        {
+          "name": "Max Pechstein",
+          "role": "primary",
+          "slug": "max-pechstein-q162105"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "",
+      "accession": "Gm1680",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q117488032-ba2c2836efe19908.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Zwei_M%C3%A4dchen.jpg",
+      "credit": "Max Pechstein. Two Girls. Image credit: Max Pechstein; Source credit: Ölgemälde. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q117488032",
+      "description": "一人的双臂抬起，打破了对称成双的可能。佩希施泰因用宽轮廓和强烈颜色，使身体从环境中独立出来。姿势反差比精细解剖更重要。坐得近并不意味着两人可以互换；不同手势让群像内部产生变化。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "757b4d7c-56cb-576a-a61f-2268322b81e4",
+      "title": "黑与绿的头像",
+      "catalogueTitle": "Head in Black and Green",
+      "artist": "Alexej von Jawlensky",
+      "artists": [
+        {
+          "name": "Alexej von Jawlensky",
+          "role": "primary",
+          "slug": "alexej-von-jawlensky-q156426"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "Gm1671",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q115159035-aab65eac93c5ded7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1913_Jawlensky_Kopf_in_Schwarz_und_Gruen_anagoria.JPG",
+      "credit": "Alexej von Jawlensky. Head in Black and Green. Image credit: Alexej von Jawlensky. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q115159035",
+      "description": "绿、蓝、粉、黑不再描述通常的肤色，大眼与长鼻却维持着一张脸。亚夫连斯基试探的是，辨认有多少依靠五官安排，而非物体本色。即使表面拒绝自然主义肖像的惯例，少数特征的位置和比例仍让头部可读。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "e0524a99-696d-59a0-a43e-e1ccf5e7eba3",
+      "title": "有阿格里真托朱诺神庙的理想风景",
+      "catalogueTitle": "Ideal Landscape with Juno Temple of Agrigento",
+      "artist": "Jacob Philipp Hackert",
+      "artists": [
+        {
+          "name": "Jacob Philipp Hackert",
+          "role": "primary",
+          "slug": "jacob-philipp-hackert-q560528"
+        }
+      ],
+      "date": "1794",
+      "start": 1794,
+      "end": 1794,
+      "medium": "",
+      "accession": "Gm2040",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111179245-e4a5200eeddb001f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1794_Hackert_Ideallandschaft_mit_Juno-Tempel_anagoria.jpg",
+      "credit": "Jacob Philipp Hackert. Ideal Landscape with Juno Temple of Agrigento. Image credit: Jacob Philipp Hackert. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111179245",
+      "description": "废墟、水、树和小人物被汇入有秩序的景观。标题里的“理想”很有帮助：不应把画当成从单一地点未经调整看到的实景。哈克特安排通往远方的通道，连接建筑与地形。我们是在一幅经过构成的风景中移动，而不是核对地形名录。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "8f6ce61d-3076-59a2-9217-a09b2f75d0d8",
+      "title": "友弟德与荷罗孚尼的头颅",
+      "catalogueTitle": "Judith with the Head of Holophernes",
+      "artist": "Hans Baldung",
+      "artists": [
+        {
+          "name": "Hans Baldung",
+          "role": "primary",
+          "slug": "hans-baldung-q164696"
+        }
+      ],
+      "date": "1525",
+      "start": 1525,
+      "end": 1525,
+      "medium": "",
+      "accession": "Gm1093",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110846785-dedd0a5b1698d516.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1525_Baldung_Judith_mit_dem_Haupt_des_Holofernes_anagoria.JPG",
+      "credit": "Hans Baldung Grien. Judith with the Head of Holophernes. Image credit: Hans Baldung Grien. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110846785",
+      "description": "友弟德直立、轮廓清晰的身体，在剑与断头旁显得镇定。巴尔东把暴力结果放进一个并不像杀人过程的画面。这种反差让单纯的英雄姿势复杂起来。故事知识与静止人物要放在一起看；任何一方都不足以解释身体与随身标志之间的不安关系。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "5d00e6ee-a734-53bb-961c-3e410c6bb508",
+      "title": "圣母子与鹦鹉",
+      "catalogueTitle": "Madonna with Child and Parrots",
+      "artist": "Hans Baldung",
+      "artists": [
+        {
+          "name": "Hans Baldung",
+          "role": "primary",
+          "slug": "hans-baldung-q164696"
+        }
+      ],
+      "date": "1533",
+      "start": 1533,
+      "end": 1533,
+      "medium": "",
+      "accession": "Gm1170",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q101040465-b1349bf9cfef8019.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1533_Baldung_Maria_mit_Kind_und_Papageien_anagoria.JPG",
+      "credit": "Hans Baldung Grien. Madonna with Child and Parrots. Image credit: Hans Baldung Grien. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q101040465",
+      "description": "扭动的孩子不让圣母子变成固定、均衡的徽记。鹦鹉在附近增加活动点，暗布则衬出浅色身体。巴尔东为熟悉的亲近组合带来运动。可以先看鸟怎样打断构图的安静，不必立即赋予它们缺乏根据的象征意义。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "4f0a9088-2ff4-5c90-8169-c17c2e601646",
+      "title": "基督诞生",
+      "catalogueTitle": "Nativity of Christ",
+      "artist": "Wilhelm Stetter",
+      "artists": [
+        {
+          "name": "Wilhelm Stetter",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2575262"
+        }
+      ],
+      "date": "1525",
+      "start": 1525,
+      "end": 1525,
+      "medium": "",
+      "accession": "Gm1210",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q125408650-79e5284b25676e0a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Wilhelm_Stetter,_Christi_Geburt.jpg",
+      "credit": "Wilhelm Stetter. Nativity of Christ. Image credit: Wilhelm Stetter; Source credit: Objektkatalog der Sammlungen des Germanischen Nationalmuseums. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q125408650",
+      "description": "诞生场景周围不止一个活动中心。施特特的建筑把画面分成相连空间，让远方人物、四周敬拜者与新生儿同时存在。视线可以离开中央，再通过建筑通道回来。神圣事件属于更大、有人生活的世界，并不独自占满图像。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    },
+    {
+      "id": "edb4456c-e779-5f53-9caa-f8d1f27bf7b5",
+      "title": "姐姐",
+      "catalogueTitle": "The Elder Sister",
+      "artist": "Fritz von Uhde",
+      "artists": [
+        {
+          "name": "Fritz von Uhde",
+          "role": "primary",
+          "slug": "wikimedia-painter-q210201"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "Gm1788",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110894189-ae5c1927c6be669d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Fritz_von_Uhde_-_Die_gro%C3%9Fe_Schwester_(1883).jpg",
+      "credit": "Fritz von Uhde. The Elder Sister. Image credit: Fritz von Uhde. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110894189",
+      "description": "照顾孩子在这里需要实实在在的力气。女孩背着更小的孩子，乌德以这项实际任务组织两人的关系。侧光在简朴房间里照出脸与旧衣。无需不同寻常的事件，场景也有分量：一个孩子背负的重量，已经使责任可见。",
+      "importance": "",
+      "museum": "Germanisches Nationalmuseum"
+    }
+  ],
+  "context": {
+    "start": 1440,
+    "end": 1924
+  },
+  "closingSections": [
+    {
+      "title": "从英雄的用力到日常劳动",
+      "paragraphs": [
+        "从姐姐回看赫拉克勒斯，比较身体如何表现用力。题材差异很大，但两幅画都依赖清楚可懂的姿势。有些作品属借展或寄存，列入馆藏不保证正在展出；请按具体作品查阅博物馆最新信息。"
+      ]
+    }
+  ]
+}

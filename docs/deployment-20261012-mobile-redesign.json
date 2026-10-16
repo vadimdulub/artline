@@ -1,0 +1,209 @@
+{
+  "verifiedAt": "2026-10-12T06:20:39.368503+00:00",
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "Compact mobile header with the existing A timeline mark and home link; three menu sections for Explore, Catalogue and Your account; smaller date headings, view tabs, painter labels and painting thumbnails; movement colour key below the range controls.",
+  "deployment": {
+    "baselineBuildId": "45f71088-c317-46fa-ae41-ce15644ff5a4",
+    "baselineRevision": "artline-web-artwork-carousel-1012-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:34cf54a5a2f57eae7b53c4efff8c90819b90d2e06132f60e287d8609d83cc1b7",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:mobile-20261012-v2",
+    "files": {
+      "app/mobile.css": "a56d651284a7c4968c2aa91de8047fd3a43c8e0ad13c652a5531eb6b386bcfc2",
+      "components/SiteHeader.tsx": "09f52365d867d47cfc77df7c2184fea72fcd7ee6a1a06e3747c126b65da09cf9",
+      "components/MobileNavigation.tsx": "8be4afceeb54b4cf18dc3d0895c6384b4512fbb842d20236752b928cb0751c65",
+      "components/MemberNavigation.tsx": "5b355a8d03e118c1d2b54f46045f620919fc80e98748a4d08c387f501f229b0b",
+      "components/SiteNavigation.css": "d6c427471b3b13b14d71342d5970f9687365fddffed454b9978ee9591f1255d3",
+      "components/TimelineHeader.css": "b75ce2f701430ea90930f6b191f5fa8f9b09135ae0ed5c668e6ecef45c9d7d39",
+      "components/TimelineExplorer.tsx": "0d7c74323560e3c1900efe565b00ed3e2cc2d92defd830aceda4906ac85b3fe5"
+    },
+    "preimages": {
+      "app/mobile.css": "de9730eea6b8269dcf974f24f3831251a3d3ece97aea2e47241894e4adf61b42",
+      "components/SiteHeader.tsx": "8c6ef7f8dec567daf44c176e5b47f445756b76a943e74d26430415b2b988ac08",
+      "components/MobileNavigation.tsx": "9b911f8b9428b22a1e582c273ef651f744562f7a6dc8e9b36259654744caa76f",
+      "components/MemberNavigation.tsx": "195fe2750338b03e2d4771236f52b901e555ceacf3887e7026d49e57c6925827",
+      "components/SiteNavigation.css": "f7806e49bd4f66de1a04b0d58ad2029164975f669eb82326d20b0826beaf3fc5",
+      "components/TimelineHeader.css": "aede31824124f7080f319249f4bf606f16845c24ac39517769eb00a1312e4713",
+      "components/TimelineExplorer.tsx": "442d5066166cac41ae1eac3babffc8f1e9fcc62d796e099f6e81f7b26e1887b1"
+    },
+    "overlaySHA256": "97ee26d0dd4f50960d9ae2a152ff347073798b027f3f072bf8d2a4f03cb11af7",
+    "overlayURI": "gs://artline-508319-build-source/mobile-redesign-20261012/mobile-97ee26d0dd4f5096.tar.xz",
+    "exclusions": [
+      "Local exhibition routes, navigation and data",
+      "Unrelated guide sidebar changes"
+    ],
+    "databaseWrites": false,
+    "overlayGeneration": "1791785482022333",
+    "buildId": "9d872c37-44f4-473c-860f-98c5b0ddbce9",
+    "preservedConcurrentUpdate": "About artwork carousel",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:7d75a0850c1ff9a7b66e92f84b7b0b0cedf62ea3859acf63950e044dcca5ee5e",
+    "revision": "artline-web-mobile-1012-v2",
+    "candidateURL": "https://mobile-1012-v2---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-artwork-carousel-1012-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "validation": {
+    "localMobileBrowserTestsPassed": 6,
+    "typecheck": "passed",
+    "targetedLint": "passed",
+    "productionBuild": "passed",
+    "candidate": {
+      "checks": [
+        {
+          "width": 1440,
+          "headerHeight": 60,
+          "noOverflow": true
+        },
+        {
+          "width": 768,
+          "headerHeight": 60,
+          "noOverflow": true
+        },
+        {
+          "width": 430,
+          "headerHeight": 52,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "headerHeight": 52,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "headerHeight": 52,
+          "noOverflow": true
+        }
+      ],
+      "http": [
+        {
+          "path": "/events",
+          "status": 200
+        },
+        {
+          "path": "/all",
+          "status": 200
+        },
+        {
+          "path": "/artists",
+          "status": 200
+        },
+        {
+          "path": "/artworks",
+          "status": 200
+        },
+        {
+          "path": "/guides",
+          "status": 200
+        },
+        {
+          "path": "/about",
+          "status": 200
+        },
+        {
+          "path": "/account",
+          "status": 200
+        },
+        {
+          "path": "/studies",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/session",
+          "status": 200
+        }
+      ],
+      "accessibilityViolations": 0,
+      "homeLink": true,
+      "booksNavigation": true,
+      "museumSignIn": true,
+      "paintingImage": true,
+      "movementKey": true,
+      "pageErrors": [],
+      "databaseWrites": false
+    },
+    "production": {
+      "checks": [
+        {
+          "width": 1440,
+          "headerHeight": 60,
+          "noOverflow": true
+        },
+        {
+          "width": 768,
+          "headerHeight": 60,
+          "noOverflow": true
+        },
+        {
+          "width": 430,
+          "headerHeight": 52,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "headerHeight": 52,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "headerHeight": 52,
+          "noOverflow": true
+        }
+      ],
+      "http": [
+        {
+          "path": "/events",
+          "status": 200
+        },
+        {
+          "path": "/all",
+          "status": 200
+        },
+        {
+          "path": "/artists",
+          "status": 200
+        },
+        {
+          "path": "/artworks",
+          "status": 200
+        },
+        {
+          "path": "/guides",
+          "status": 200
+        },
+        {
+          "path": "/about",
+          "status": 200
+        },
+        {
+          "path": "/account",
+          "status": 200
+        },
+        {
+          "path": "/studies",
+          "status": 200
+        },
+        {
+          "path": "/api/auth/session",
+          "status": 200
+        }
+      ],
+      "accessibilityViolations": 0,
+      "homeLink": true,
+      "booksNavigation": true,
+      "museumSignIn": true,
+      "paintingImage": true,
+      "movementKey": true,
+      "pageErrors": [],
+      "databaseWrites": false
+    }
+  },
+  "releaseErrorLogEntries": 0,
+  "catalogueWrites": false,
+  "realLocalDatabaseWrites": false,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/mobile-redesign-20261012"
+}

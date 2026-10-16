@@ -1,0 +1,13 @@
+# Batch 146 — Moralis 1988, six exact links
+
+Verified production increments: six exact artwork participation links enriching one existing exhibition. No new exhibitions, stops, creators, main-catalogue works, documentary-only entries, artist participation links or images. Six exhibition-entry rows and one supporting source record were inserted. Prior rows, statuses, dates, media, creators and holdings remain unchanged. The event now has twelve documented works; its checklist remains partial.
+
+The official 2011 museum catalogue, printed pages 252–257 (PDF 253–258), explicitly documents the 1988 participation of Marie Roussin (Π.7686 / no.16), The Artist with his Wife (Π.7688 / no.15), Two Girl Friends (Π.7693 / no.18), The Table (Π.7692 / no.19), Pregnant Woman (Π.7694 / no.20), and Female Nude 1950 (Π.5138 / no.26). All six pages and the six existing images were individually viewed. The Roussin entry spans two pages; both references are preserved. Titles/transliterations and catalogue numbers are distinct from the museum accessions.
+
+Smaragda Mostratou, Female Nude 1939, Composition I and Figure 1951 remain research candidates requiring exact identity review. The 1939 reclining nude was not confused with the 1950 half-length nude. Ioanna Lourou and Fokion Dimitriades have no explicit 1988 exhibition citation in the inspected entries and were not linked. Qualified Venice and Panhellenic catalogue references were not turned into certain participation claims. Original 1988 checklist completeness is unresolved.
+
+Source originals and rendered research pages remain outside Documents. Existing WikiArt images retain their restricted rights labels and were verified by checksum. No image or complete publication was uploaded. The 2011 donation and display labels are not used as 1988 lender, present holding or current-display assertions.
+
+The prior batch was reconciled against live production before writing. This operation had no prior audit or entry rows. The immutable backed-up plan, absent-entry transaction preimages under both shared ingestion locks, persisted source/link checksums and seven matching audit rows establish attribution. Independent read-only database and public API checks verify the six additions. All earlier and concurrent programme changes are excluded.
+
+Only the Athens source queue entry changed. Existing Arthive, Iliadis and Christodoulou holds remain. Resume at printed page 258 / PDF 259. The existing external supervisor and worker were verified live with the inherited singleton lock. No new supervisor, session or subagent was launched; the separate artwork programme and its files were untouched.

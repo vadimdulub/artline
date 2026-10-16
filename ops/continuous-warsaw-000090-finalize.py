@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+"""Finalize one verified batch; merge only the researched Warsaw queue route."""
+import copy, datetime, fcntl, importlib.util, json, os
+from pathlib import Path
+s=importlib.util.spec_from_file_location('b',Path(__file__).with_name('continuous-warsaw-batch-000090.py'))
+b=importlib.util.module_from_spec(s);s.loader.exec_module(b);h=b.h;i=b.i;E=b.E
+lock=(b.R/'worker.lock').open('a+');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+p,pin=h.pinned(b.PHASE);receipt=h.load(E/'batch-verification-receipt.json');counts=receipt['verified_counts'];ids=receipt['production_ids']
+assert counts==dict(new_painters=0,new_artworks=7,newly_illustrated=7,alternate_images=0,museum_links=7)
+assert h.load(E/'independent-resume-verification.json')['live_snapshots_equal']
+prod=h.load(E/'independent-production-verification.json');assert prod['plan_sha256']==pin
+holdingids=[v['holdings'][0]['id'] for v in prod['rows'].values()]
+with h.connect() as db,db.transaction():
+ db.execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ, READ ONLY');assert h.snapshot(db,ids)==prod['rows']
+ events=[dict(x) for x in db.execute("SELECT entity_type,entity_id::text,action,before_json,after_json,created_at FROM audit_log WHERE entity_type='location_assertion' AND entity_id=ANY(%s::uuid[]) AND action='insert' ORDER BY entity_id",(holdingids,))]
+ assert len(events)==7 and {x['entity_id'] for x in events}==set(holdingids)
+ assert all(x['before_json'] in [None,{}] and x['after_json']['claim_type']=='holding' and x['after_json']['display_state'] is None for x in events)
+b.save('independent-holding-audit-verification.json',dict(at=h.now(),insertions=len(events),records=events,current_display_claims=0))
+now=h.now();before=h.load(E/'source-queue-before.json');old=next(x for x in before['sources'] if x['source_id']=='national_museum_warsaw');prev=old['resume_cursor'];oldprocessed=set(prev['processed_native_ids'])
+checks={r['source_id']:r for r in h.load(E/'global-identity-reconciliation.json')['records']};newids=[r['source_id'] for r in p['records']]
+reasons={
+ '1045515':'IK 183/a is the painted panel paired with the already researched detached cover IK 183/b. Retain native evidence; reconcile the complete inventory unit and existing Vladimir icons before selection.',
+ '498378':'Source describes probable historical cutting, heavily damaged paint and transfer to a new support. Exact surviving-object composition and comparison with existing Dormition icons remain unreviewed. Not declared ineligible solely for conservation.',
+ '498382':'Questioned eighteenth-century source date and related apparition subject require preservation of the dating qualifier and visual comparison with the distinct smaller IK 166. No image downloaded in this batch.',
+ '498421':'Separately inventoried IK 196 is a component of group IK 195–197, with tentative P. F. Burmistrow attribution. Resolve component/group identity and global creator authority without flattening the qualification.',
+ '498572':'IK 334 has the same Mandylion title as existing IK 76, but different dimensions; source mentions earlier renovation. Compare exact composition and physical version before adding. Not declared a duplicate.',
+ '498623':'Source date XVIII–XX centuries crosses 1970 and narrative records extensive overpainting, including faces. Retain full wording; no invented narrower creation date.',
+ '498633':'Source explicitly records contemporary repainting. Resolve extent and date of painted layers before selecting a reproduction or claiming through-1970 physical composition.',
+ '498650':'IK 403/a-b combines a painted board with brass basma/halos; title and narrative differ about named saints. Preserve evidence and review the physical unit and complete primary view before selection.',
+ '498719':'Source says beginning of twentieth century without numeric bounds. Save for editorial date-precision treatment and exact Nativity-version comparison; no invented year and no claim that it is post-1970.'}
+casts={'498361','498598','499459','499464','499469','498442','499463'}
+page=h.load(E/'warsaw-icons-page9.json')['data'];records=[];skipped=[]
+for item in page['items']:
+ oid=str(item['id'])
+ if oid in oldprocessed:skipped.append(oid);continue
+ o,rc=b.capture(int(oid))
+ if oid in newids:decision='delivered_verified';reason='Absent locked transaction preimages, own persisted plan/source/visual checksums, insertion audits, storage and public image bytes independently verified.'
+ elif oid in casts:decision='saved_cast_candidate_not_selected';reason='Historical metal cast outside this painted-icon selection. Save exact inventory, dating and component evidence for a separate physical-cast/version review; no image request or delivered count.'
+ else:decision='targeted_editorial_hold';reason=reasons[oid]
+ records.append(dict(source_id=oid,title=o['title'],inventory=o['noEvidence'],source_date=o['createDates'],creators=o['authors'],owner=o['owner'],dimensions=o['dimensionText'],source_sha256=rc['sha256'],decision=decision,reason=reason,global_identity_checks=checks.get(oid),image_requested=oid in newids))
+held=[r['source_id'] for r in records if r['decision']=='targeted_editorial_hold']
+assert len(page['items'])==24 and len(records)==23 and len(skipped)==1 and len(held)==9 and len(casts)==7
+b.save('page-nine-editorial-dispositions.json',dict(at=now,page_items=24,new_detail_captures=23,previously_processed_skipped=skipped,metadata_candidates=7,selected=7,verified=7,held=9,saved_cast_candidates=7,search_hits=page['paginatorDetails']['totalItemsCount'],search_hits_are_not_eligible_artworks=True,records=records))
+b.save('research-holds.json',dict(at=now,prior_held_ids=prev['held_native_ids'],held_native_ids=held,records=[r for r in records if r['decision']=='targeted_editorial_hold'],unchanged_holds_not_retried=True))
+b.save('saved-cast-candidates.json',dict(at=now,source_ids=sorted(casts),records=[r for r in records if r['source_id'] in casts],production_increment=0,next_step='Reuse captured metadata; resolve exact physical casts, century dates and component identities before selection.'))
+b.save('failures-and-resolutions.json',dict(at=now,production_failures=[],provider_retries=0,held_provider_requests=0,new_access_holds=[],prewrite_errors=[dict(step='Prior-batch receipt reconciliation',error='Adapter initially looked for image_selection_sha256; batch 89 actually uses selection_sha256.',resolution='Read the immutable receipt schema, corrected the read-only adapter, verified live rows and persisted rights checksum before new writes.',writes_before_resolution=0)],web_tool_observations=[dict(url='https://cyfrowe.mnw.art.pl/pl/zbiory/498619',outcome='Tool internal accessibility error; no HTTP denial reported. Established official native API returned the exact object HTTP 200.'),dict(url='https://cyfrowe.mnw.art.pl/pl/zbiory/454465',outcome='Official page reachable; rendered text contains accessibility navigation only. Object evidence comes from native API capture.')],visual_dimension_discrepancy=dict(source_id='498651',native_image_id=445172,source_dimensions='38.2 x 35.2 cm',image_pixels=[315,380],decision='All four physical borders and complete described composition actually viewed. Preserve complete supplied frame and original source dimensions; no correction invented.')))
+next_task='Research QAGOMA existing primary-image gaps through approved WikiArt, preserving its native HTTP403 hold. Rotate institutions; Warsaw next page is 10, Athens page 4. Reuse saved source evidence for held versions rather than repeating unchanged requests.'
+b.save('source-register-final.json',dict(at=now,original_registry_rows=111,registry_reference='required-input-reconciliation.json',researched_routes=['national_museum_warsaw/painted_icons/page9'],provider=b.MUSEUM,policy='docs/ARTLINE_IMAGE_USE.md#general-image-use-policy',policy_capture=h.load(E/'policy-project.receipt.json'),access_status='Official native API page and 23 detail records HTTP 200; seven selected native images HTTP 200.',rights='Actual DOMENA PUBLICZNA and restricted=false retained. Archived official commercial-reuse policy capture rehashed. No CC0 assertion or user-approval-as-licence claim.',last_checked_at=now,remaining_gaps='Page 10 onward; prior and new editorial holds and unselected cast candidates preserved. Museum coverage remains incomplete.',verified_counts=counts,discovered_page_items=24,metadata_captured=23,selected=7,prepared=7,actually_viewed=7,imported=7,verified=7,directory_coverage_increment=0,whole_museum_coverage_claim=False))
+evidence=['batch-verification-receipt.json','independent-source-verification.json','independent-production-verification.json','independent-audit-history-verification.json','independent-holding-audit-verification.json','independent-file-verification.json','independent-image-source-verification.json','independent-storage-verification.json','independent-public-verification.json','independent-resume-verification.json','actual-visual-review.json','prior-batch-live-reconciliation.json','global-identity-reconciliation.json','creator-global-reconciliation.json','independent-historical-inventory-verification.json','page-nine-editorial-dispositions.json','source-register-final.json','research-holds.json','saved-cast-candidates.json','source-access-holds.json','warsaw-provider-hold-reconciliation.json','local-recovery-verification.json','failures-and-resolutions.json','external-continuation-observation.json']
+src=copy.deepcopy(old);src.setdefault('prior_resume_cursors',[]).append(copy.deepcopy(prev));c=src['resume_cursor']
+c['processed_native_ids']=list(dict.fromkeys(c['processed_native_ids']+[r['source_id'] for r in records]));c['delivered_native_ids']=list(dict.fromkeys(c['delivered_native_ids']+newids));c['held_native_ids']=list(dict.fromkeys(c['held_native_ids']+held));c['saved_cast_candidate_native_ids']=list(dict.fromkeys(c.get('saved_cast_candidate_native_ids',[])+sorted(casts)))
+c.update(query_url=h.load(E/'warsaw-icons-page9.receipt.json')['url'],captured_page=9,next_page_after_pending=10,next_discovery_page=10,pending_native_ids_current_page=[],priority_native_ids=[],metadata_page_sha256=h.load(E/'warsaw-icons-page9.receipt.json')['sha256'],metadata_plan_sha256=pin,image_selection_sha256=receipt['image_selection_sha256'],saved_discovery=str((E/'warsaw-icons-page9.json').relative_to(b.ROOT)),review_ledger=str((E/'page-nine-editorial-dispositions.json').relative_to(b.ROOT)),prior_cast_candidate_ledger=prev.get('cast_candidate_ledger'),cast_candidate_ledger=str((E/'saved-cast-candidates.json').relative_to(b.ROOT)),next_step='Rotate institutions, then page 10. Existing editorial holds require new evidence; no unchanged retries.')
+src.update(status='seven_page9_painted_icons_holdings_images_verified_page10_next',checkpoint=str((E/'CHECKPOINT.json').relative_to(b.ROOT)),last_checked_at=now,last_batch=90,access_status='Native page 9, 23 new detail captures and seven selected images HTTP200; production, storage and public delivery independently verified.',verified_counts=counts,latest_batch_verified_counts=counts)
+src['programme_verified_counts']={k:src['programme_verified_counts'][k]+v for k,v in counts.items()}
+src['remaining_gaps']=[str(len(c['held_native_ids']))+' editorial holds; nine new, all prior preserved.',str(len(c['saved_cast_candidate_native_ids']))+' saved historical cast candidates; seven new.','Page 10 onward; no whole-institution or directory coverage claim.']
+src.setdefault('research_history',[]).append(dict(batch=90,at=now,new_metadata_objects=23,selected=7,held=9,saved_cast_candidates=7,prior_processed_skipped=skipped,verified_counts=counts,evidence=str((E/'batch-verification-receipt.json').relative_to(b.ROOT))))
+src['evidence_paths']=list(dict.fromkeys(src['evidence_paths']+[str((E/x).relative_to(b.ROOT)) for x in evidence]))
+if (E/'source-queue-after.json').exists():
+ src=next(x for x in h.load(E/'source-queue-after.json')['sources'] if x['source_id']=='national_museum_warsaw');c=src['resume_cursor']
+queue=E.parents[1]/'source-queue.json'
+with (b.R.parents[1]/'source-queue-update.lock').open('a+') as qlock:
+ fcntl.flock(qlock,fcntl.LOCK_EX);current=h.load(queue);current_src=next(x for x in current['sources'] if x['source_id']=='national_museum_warsaw')
+ assert current_src in [old,src],'Concurrent Warsaw queue change requires reconciliation'
+ desired=copy.deepcopy(current);desired['sources']=[src if x['source_id']=='national_museum_warsaw' else x for x in desired['sources']]
+ if current!=desired:
+  temp=queue.with_name('source-queue.batch000090.tmp')
+  with temp.open('w') as f:json.dump(desired,f,ensure_ascii=False,indent=2);f.write('\n');f.flush();os.fsync(f.fileno())
+  os.replace(temp,queue)
+ after=h.load(queue);assert after==desired
+ assert {x['source_id']:x for x in current['sources'] if x['source_id']!='national_museum_warsaw'}=={x['source_id']:x for x in after['sources'] if x['source_id']!='national_museum_warsaw'}
+ b.save('source-queue-after.json',after)
+b.save('source-queue-update-verification.json',dict(at=h.now(),before_sha256=h.sha((E/'source-queue-before.json').read_bytes()),after_sha256=h.sha(queue.read_bytes()),total_sources=111,unrelated_entries_preserved=110,changed_source_ids=['national_museum_warsaw'],all_prior_hold_ids_preserved=True,next_discovery_page=10,newly_delivered_native_ids=newids))
+master=h.load(E.parents[1]/'CHECKPOINT.json');assert master['inflight']['batch']==90
+started=master['inflight']['started_at'];finished=h.now();elapsed=(datetime.datetime.fromisoformat(finished)-datetime.datetime.fromisoformat(started)).total_seconds()
+assert datetime.datetime.fromisoformat(h.load(h.BACKUP/b.PHASE/'locked-before.json.gz')['at'])>=datetime.datetime.fromisoformat(started)
+cp=b.save('CHECKPOINT.json',dict(at=finished,started_at=started,batch=90,outcome='progress',stage='independently_verified_complete',elapsed_seconds=elapsed,verified_counts=counts,discovered_page_items=24,new_metadata_captures=23,selected=7,prepared=7,individually_viewed=7,imported=7,verified=7,new_editorial_holds=9,saved_cast_candidates=7,production_ids=ids,metadata_plan_sha256=pin,image_selection_sha256=receipt['image_selection_sha256'],visual_review_sha256=receipt['visual_review_sha256'],production_target='artline-508319:europe-west1:artline-postgres',local_catalogue_connections=0,next_task=next_task,blocker='',source_queue_cursor=c,external_supervisor_unchanged=True,delivered_batch_do_not_count_again=True,resume_commands=['/tmp/artline-cyprus-venv/bin/python ops/continuous-warsaw-000090-verify.py','/tmp/artline-cyprus-venv/bin/python ops/continuous-warsaw-000090-resume.py','/tmp/artline-cyprus-venv/bin/python ops/continuous-warsaw-000090-finalize.py'],limitations=['All seven museum-supplied images are 315 pixels wide; inscriptions and unseen reverse sides not certified.','IK 404 physical-dimension versus pixel-aspect discrepancy preserved after individual full-frame review.','Recovery is full schema plus exact affected-row snapshots, not a full database export.','Workshop attributions retained without invented painters.']))
+h.save(b.R/'CHECKPOINT.json',cp)
+b.save('batch-summary.json',dict(at=finished,batch=90,elapsed_seconds=elapsed,verified_counts=counts,next_task=next_task))
+b.save('milestone-report.json',dict(at=finished,elapsed_seconds_this_batch=elapsed,verified_counts_this_batch=counts,supervisor_reported_prior_totals=master['totals'],expected_cumulative_after_supervisor_accepts_result={k:master['totals'][k]+v for k,v in counts.items()},prior_totals_not_reaudited_in_full=True,previous_batch_live_rows_reverified=1,previous_batch_increment_claimed=0,hourly_and_100h_reports_owned_by_external_supervisor=True,next_task=next_task))
+files=evidence+['source-queue-update-verification.json','CHECKPOINT.json','batch-summary.json','milestone-report.json']
+b.save('final-checkpoint-verification.json',dict(at=h.now(),batch=90,verified_counts=counts,runtime_checkpoint=str(b.R/'CHECKPOINT.json'),runtime_checkpoint_matches=h.load(b.R/'CHECKPOINT.json')==h.load(E/'CHECKPOINT.json'),evidence=[dict(path=str((E/x).relative_to(b.ROOT)),sha256=h.sha((E/x).read_bytes()),bytes=(E/x).stat().st_size) for x in files],all_evidence_exists=True,unrelated_queue_entries_preserved=110,source_queue_after_sha256=h.sha(queue.read_bytes()),no_supervisor_changes=True))
+print(json.dumps(dict(verified_counts=counts,elapsed_seconds=elapsed,next_task=next_task)))

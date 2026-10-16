@@ -1,0 +1,18 @@
+import importlib.util,json,fcntl
+s=importlib.util.spec_from_file_location('b','ops/continuous-greek-batch-000286.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b);h=b.h;i=b.i
+with (b.R/'worker.lock').open('a+') as lock:
+ fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+ receipt=h.load(b.E/'batch-verification-receipt.json');p,pin=h.pinned(b.PHASE);proof=h.load(b.E/'independent-production-verification.json');images,_,_=i.accepted(b.B)
+ assert pin==receipt['metadata_plan_sha256'] and h.sha((i.folder(b.B)/'selection.json.gz').read_bytes())==receipt['image_selection_sha256']
+ assert h.sha((i.folder(b.B)/'visual-review.json').read_bytes())==receipt['visual_review_sha256']
+ with h.connect() as db:
+  before=h.snapshot(db,receipt['production_ids']);assert before==proof['after']
+  notes=[dict(x) for x in db.execute("SELECT entity_id::text,evidence_note::jsonb->>'plan_sha256' pin FROM citations WHERE field_name=%s AND entity_id=ANY(%s::uuid[])",(b.FIELD,receipt['production_ids']))];assert len(notes)==2 and all(x['pin']==pin for x in notes)
+  rights=[dict(x) for x in db.execute('SELECT adapter_version,evidence_json FROM media_rights_evidence WHERE media_id=ANY(%s::uuid[])',([x['media_id'] for x in images],))];assert len(rights)==2
+  for x in rights:
+   ev=json.loads(x['evidence_json']) if isinstance(x['evidence_json'],str) else x['evidence_json'];assert x['adapter_version']==b.OP and ev['selection_sha256']==receipt['image_selection_sha256'] and ev['original_catalogue_plan_sha256']==pin
+ assert h.load(h.BACKUP/b.PHASE/'locked-before.json.gz')['artworks']=={}
+ b.apply()
+ with h.connect() as db:assert h.snapshot(db,receipt['production_ids'])==before
+ b.save('independent-resume-verification.json',dict(at=h.now(),passed=True,unchanged_snapshot=True,source_and_rights_checksums_match=True,empty_transaction_preimages=True,metadata_resume_guard_exercised=True,new_production_writes=0,replay_required=False,previous_campaign_increments=0,target=b.target()))
+ print('Resume guard exercised; exact source/rights checksum attribution and2 unchanged objects verified; no new writes.')

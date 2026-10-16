@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "kroller-muller-museum",
+  "museum": "Kröller-Müller Museum",
+  "city": "オッテルロー",
+  "country": "オランダ",
+  "title": "クレラー＝ミュラー美術館：名作",
+  "subtitle": "色、点、線は、それぞれ異なる道筋で、見分けられる像をつくる。",
+  "introduction": "ゴッホのカフェは、黄色と青の関係を考える前に、ある場所として見えてくる。モンドリアンの集まった線には、同じように入っていける通りはない。この選集の作品には、絵具の跡が人物や風景となるさまざまな方法と、その認識を未完のままにしておく方法がある。\n\n物の端をたどってみよう。スーラは小さなタッチから立体的な形をつくる。ルドンは輪郭をすべて閉じずに、頭部や伝説の場面を浮かび上がらせることがある。トーロップは身体の線を複雑な周囲へと伸ばす。これらは、写実から離れる一本道の段階ではない。それぞれが、描かれた対象と、それを載せる画面の関係を違う仕方で整えている。",
+  "visitNote": "オッテルローへお出かけの際は、美術館の利用案内、公園へのアクセス、および現在の展覧会情報をご確認ください。ここで紹介する作品は所蔵品の一部であり、貸出中や展示替えのためご覧いただけない場合があります。",
+  "locale": "ja",
+  "website": "https://www.krollermuller.nl/",
+  "officialGuide": "https://www.krollermuller.nl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Vincent van Gogh: The Letters",
+      "author": "Vincent van Gogh; edited by Leo Jansen, Hans Luijten and Nienke Bakker",
+      "url": "https://vangoghletters.org/",
+      "access": "無料で読む · 英語翻訳と原文",
+      "note": "ゴッホの書簡には、彼の制作手法や他の芸術家に対する反応が詳細に記されています。学術的なオンライン版では、「カフェ・テラス」やアルルの跳ね橋など、ここで取り上げられている主題を検索することができます。"
+    }
+  ],
+  "works": [
+    {
+      "id": "c7c4247d-17ce-5ebc-b37f-18670b5a45a5",
+      "title": "三人の花嫁",
+      "catalogueTitle": "The Three Brides",
+      "artist": "Jan Toorop",
+      "artists": [
+        {
+          "name": "Jan Toorop",
+          "role": "primary",
+          "slug": "jan-toorop-q369416"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/c7c4247d-17ce-5ebc-b37f-18670b5a45a5-1a17647494914bc9.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-toorop/the-three-fiancees",
+      "credit": "Jan Toorop. The Three Brides. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jan-toorop/the-three-fiancees",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jan-toorop/the-three-fiancees",
+      "description": "トーロップの曲線は、人物のあいだを埋めるだけではない。身体のリズムを、密に描き込まれた共通の環境へ伸ばし、一人の女性を周囲の模様から切り離しにくくする。題名は関係を示すが、すべての出会いを説明するわけではない。どこで輪郭がつながり、どこで人物同士を隔てているかから見始めたい。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "a7d6447e-fa30-4ccf-a511-cca8ed5cacae",
+      "title": "夜のカフェテラス",
+      "catalogueTitle": "Terrace of a Café at Night (Place du Forum)",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888年9月16日頃",
+      "start": 1888,
+      "end": 1888,
+      "medium": "キャンバスに油彩",
+      "accession": "KM 108.565",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/a7d6447e-fa30-4ccf-a511-cca8ed5cacae-a664f1447cf9c58f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Terrace_of_a_Caf%C3%A9_at_Night_(Place_du_Forum)_1888.jpg",
+      "credit": "Vincent van Gogh. Terrace of a Café at Night (Place du Forum). Image credit: Vincent van Gogh; Source credit: https://data.collectienederland.nl/page/aggregation/kroller-muller/44529. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.krollermuller.nl/en/collection/vincent-van-gogh-terrace-of-a-caf-at-night-place-du-forum-km-108-565",
+      "description": "黄色いテラスは、青い夜を背景に目立つだけではない。二つの色が互いを強めている。美術館の説明によれば、ゴッホはガス灯に照らされたこの場面を、夜の屋外で描いた。奥へ細くなる通りが、色の対比に深さを与える。夜は昼の景色に暗い層を重ねたものではなく、色同士の関係としてつくられている。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "b43f1606-864d-5bf7-a47d-9acfb12a9f52",
+      "title": "月桂冠を戴く頭部",
+      "catalogueTitle": "The laureate head",
+      "artist": "Odilon Redon",
+      "artists": [
+        {
+          "name": "Odilon Redon",
+          "role": "primary",
+          "slug": "odilon-redon-q154349"
+        }
+      ],
+      "date": "1875年頃",
+      "start": 1875,
+      "end": 1875,
+      "medium": "紙に木炭と鉛筆",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/b43f1606-864d-5bf7-a47d-9acfb12a9f52-1a65f30702bdd649.jpg",
+      "imageSource": "https://www.wikiart.org/en/odilon-redon/the-laureate-head",
+      "credit": "Odilon Redon. The laureate head. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/odilon-redon/the-laureate-head",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/odilon-redon/the-laureate-head",
+      "description": "冠によって横顔ははっきりするが、首や下端は曖昧で、完成した肖像には落ち着かない。ルドンは部分ごとに異なる確かさを与えた。輪郭の示す情報量が違うため、彫刻のように見える瞬間も、幻のように見える瞬間もある。頭のなかで像を補うことが、見る行為の一部として残る。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "79ef63cd-ab4b-5f8f-9a1e-b692626e7854",
+      "title": "黄色い胴衣の女",
+      "catalogueTitle": "Woman with a Yellow Bodice",
+      "artist": "Odilon Redon",
+      "artists": [
+        {
+          "name": "Odilon Redon",
+          "role": "primary",
+          "slug": "odilon-redon-q154349"
+        }
+      ],
+      "date": "1899年頃",
+      "start": 1899,
+      "end": 1899,
+      "medium": "紙にパステル",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/79ef63cd-ab4b-5f8f-9a1e-b692626e7854-69e59ed460ead1ef.jpg",
+      "imageSource": "https://www.wikiart.org/en/odilon-redon/woman-with-a-yellow-bodice",
+      "credit": "Odilon Redon. Woman with a Yellow Bodice. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/odilon-redon/woman-with-a-yellow-bodice",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/odilon-redon/woman-with-a-yellow-bodice",
+      "description": "柔らかく描かれた顔よりも、胴衣が強く目を引く。ルドンは、肖像なら最も鮮明な効果を顔立ちに集中させるはずだ、という期待に従わない。周囲の寒色が黄色を引き立て、人物の存在を示す。服が大きく印象を決め、その鮮やかさに、顔の穏やかな描写が別の調子を添えている。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "2a6377dc-fec1-4915-b807-3663da83c68d",
+      "title": "アルルのラングロワ橋",
+      "catalogueTitle": "Bridge at Arles (Pont de Langlois)",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888年3月中旬",
+      "start": 1888,
+      "end": 1888,
+      "medium": "キャンバスに油彩",
+      "accession": "KM 111.056",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/2a6377dc-fec1-4915-b807-3663da83c68d-b8e2fc280944286f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-Die_Br%C3%BCcke_von_Langlois_in_Arles_mit_W%C3%A4scherinnen.jpeg",
+      "credit": "Vincent van Gogh. Bridge at Arles (Pont de Langlois). Image credit: Vincent van Gogh; Source credit: Copied from an art book. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.krollermuller.nl/en/collection/vincent-van-gogh-bridge-at-arles-pont-de-langlois-km-111-056",
+      "description": "橋の上部の機構は、把握しやすい角度の組み合わせをつくる。下の水と反射は、その堅固さを不安定な筆跡に変える。ゴッホは実用的な構造物に場面の幾何学を担わせながら、風景全体をそれに従わせてはいない。岸辺の人々が橋を活動に結びつけ、孤立した設計図になるのを防いでいる。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "51dee475-e0f6-5b40-8104-aa383f17aace",
+      "title": "線のコンポジション、第2ステート",
+      "catalogueTitle": "Composition in line, second state",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1916–1917",
+      "start": 1916,
+      "end": 1917,
+      "medium": "キャンバスに油彩",
+      "accession": "KM 106.482",
+      "image": "https://artlines.org/assets/artworks/imported/digital-art-roots-20260925/mondrian-f3ad4be19179ba35.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mondrian_-_B082.83_(second_state).jpg",
+      "credit": "Composition in line, second state. Wikimedia Commons; Piet Mondrian; reproduction from catalogue.pietmondrian.nl. Public domain (PD-Art). Full-frame resize and JPEG compression.",
+      "license": "Public domain (PD-Art)",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://krollermuller.nl/media/expositionpage/exhibition_texts_the_patron_and_the_house_painter.pdf",
+      "description": "方向は少ない。淡い楕円のなかに、縦と横の線がある。それでも長さ、間隔、密度の変化によって、均一な網目にはならない。モンドリアンは線同士の関係だけで、見る理由を保っている。一本の線が何の物を表すかではなく、混み合う部分の密度と、端近くの開放感を比べてみよう。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "266c85b2-2479-5790-b71c-795d54840025",
+      "title": "幾何学的静物 I",
+      "catalogueTitle": "Geometrical still life I",
+      "artist": "Georges Valmier",
+      "artists": [
+        {
+          "name": "Georges Valmier",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1009528"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "",
+      "accession": "KM 103.852",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24022478-3cf76d662173a38a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1919_Georges_Valmier_Geometrical_still_life_I_anagoria.JPG",
+      "credit": "Georges Valmier. Geometrical still life I. Image credit: Georges Valmier. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24022478",
+      "description": "器や机と分かる断片が、画面の平面性を示す形と共存する。ヴァルミエは、すべてを一度に見渡せる単一の視点を与えない。途切れない眺めとして読むのではなく、部分のつながりから静物を組み立てる必要がある。見慣れた配置を即座に識別する代わりに、小さな判断を重ねて像を見いだすことになる。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "f33b2e87-ebd2-5236-b4e2-f91506c15cb5",
+      "title": "雪のなかの小村",
+      "catalogueTitle": "Hamlet in the Snow",
+      "artist": "William Degouve de Nuncques",
+      "artists": [
+        {
+          "name": "William Degouve de Nuncques",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1049510"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q113027161-e7714661142d44f3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hamlet_in_the_Snow_(1911),_oil_on_canvas,_98_x_119_cm.,_Kr%C3%B6ller-M%C3%BCller_Museum,_Otterlo.jpg",
+      "credit": "William Degouve de Nuncques. Hamlet in the Snow. Image credit: William Degouve de Nuncques. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q113027161",
+      "description": "暗い流れが、繰り返す裸の幹のあいだに曲がった道筋をつくる。低い家々はその遮りの向こうにあり、村を見つけることと、近づくことは同じではない。ドグーヴ・ド・ヌンクは、ごく普通の風景の要素を配置して冬の閉塞感をつくった。誰かが隠れているという設定や、絵にない物語を足さなくても、警戒するような気配は生まれる。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "c4b0c884-e071-5c82-9fda-bf6ea5688222",
+      "title": "麦の束と昇る月のある風景",
+      "catalogueTitle": "Landscape with wheat sheaves and rising moon",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "",
+      "accession": "KM 107.656",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/c4b0c884-e071-5c82-9fda-bf6ea5688222-9c04b7c9f58e9009.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Landscape_with_wheat_sheaves_and_rising_moon.jpg",
+      "credit": "Vincent van Gogh. Landscape with wheat sheaves and rising moon. Image credit: Vincent van Gogh; own photo in the Kröller-Müller museum. https://commons.wikimedia.org/wiki/File:Landscape_with_wheat_sheaves_and_rising_moon.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11815448",
+      "description": "畑に沿って筆跡の向きが変わる一方、橙色の月は上空に比較的単純な形を保つ。ゴッホは動きの種類を対比した。地面は繰り返し手を加えられたように見え、円は安定している。刈られた麦の束が、その活発な表面に識別できる内容を与える。物の配置と同じほど、色と筆の向きが風景を組み立てている。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "90ea8c28-d207-5c31-9fba-3097304a4d63",
+      "title": "ヴァールの漁師たち",
+      "catalogueTitle": "Pêcheurs (Var)",
+      "artist": "Henri-Edmond Cross",
+      "artists": [
+        {
+          "name": "Henri-Edmond Cross",
+          "role": "primary",
+          "slug": "henri-edmond-cross-q555224"
+        }
+      ],
+      "date": "1898年頃",
+      "start": 1898,
+      "end": 1898,
+      "medium": "",
+      "accession": "KM 109.001",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/90ea8c28-d207-5c31-9fba-3097304a4d63-9c9eb56d7a3b230c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Henri-Edmond-Cross-Fisherman.jpg",
+      "credit": "Henri-Edmond Cross. Pêcheurs (Var). Image credit: Henri-Edmond Cross; Own work. https://commons.wikimedia.org/wiki/File:Henri-Edmond-Cross-Fisherman.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q114164425",
+      "description": "身をかがめる人、岸、明るい空が、分離した色のタッチを共有する。クロスは、ポーズでは人物を区別しながら、描き方では働き手を環境につなげた。散らばる筆跡のなかで、帆は見分けやすい形となる。労働は独立した挿話として風景を中断せず、その光のなかに属している。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "43518ede-6016-40e1-9d46-92821d27d938",
+      "title": "悲しむ老人――永遠の門にて",
+      "catalogueTitle": "Sorrowing Old Man ('At Eternity’s Gate')",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890年5月",
+      "start": 1890,
+      "end": 1890,
+      "medium": "キャンバスに油彩",
+      "accession": "KM 111.041",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/43518ede-6016-40e1-9d46-92821d27d938-47552e18ec896cee.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:At_Eternity%27s_Gate_-_Vincent_Van_Gogh.jpg",
+      "credit": "Vincent van Gogh. Sorrowing Old Man ('At Eternity’s Gate'). Image credit: GoldenArtists. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://www.krollermuller.nl/en/collection/vincent-van-gogh-sorrowing-old-man-at-eternity-s-gate-km-111-041",
+      "description": "両手が顔を覆い、感情的な主題を説明すると期待される表情を隠している。その代わりに、曲がった背と下がった頭が苦しみを伝え、座った身体と地についた足が支える。ゴッホは原因をすべて特定せず、苦悩を明確な姿勢にした。顔が見えないことは、この人の考えについて語れる範囲を限っている。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "f93e162d-f835-5f3c-bea1-a41bc201b664",
+      "title": "静物",
+      "catalogueTitle": "Still Life circa 1640",
+      "artist": "Jan Treck",
+      "artists": [
+        {
+          "name": "Jan Treck",
+          "role": "primary",
+          "slug": "wikimedia-painter-q863887"
+        }
+      ],
+      "date": "1640年頃",
+      "start": 1640,
+      "end": 1640,
+      "medium": "",
+      "accession": "KM 108.288",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q112573493-53dca50b83908f2c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jan_Treck_-_Stilleven,_c._1640,_Kr%C3%B6ller-M%C3%BCller.jpg",
+      "credit": "Jan Treck. Still Life circa 1640. Image credit: Jan Treck. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q112573493",
+      "description": "小さな光が暗い器を見分けさせ、白い布は離れた品々のあいだに連続した道筋をつくる。縁から垂れる布は机の奥行きも示す。ヤン・トレックにとって、布は色を対比させるだけのものではない。つなぎ、分け、位置を定める。慎重に配分された光によって、ありふれた配置が読み取れるようになる。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "0dbf5696-124e-57c6-b3bc-2f5cd49d6d3c",
+      "title": "靴下を繕う女",
+      "catalogueTitle": "Woman Mending Stockings",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105312271-ce89c0b0c9815ae3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Woman_Mending_Stockings_f888r_jh68.jpg",
+      "credit": "Vincent van Gogh. Woman Mending Stockings. Image credit: Vincent van Gogh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105312271",
+      "description": "作業は、手と暗い靴下の小さな範囲に注意を集める。その下の長いスカートは、しっかり座った大きな身体を示す。ゴッホは、指先の反復運動と、それを支えるために保たれる姿勢という、異なる規模の動きを同時に描いた。家事は劇的な出来事にならなくても、身体を使う仕事としての実感を得る。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "3d5dd2ac-78f0-57b0-9ffa-4b3678a5acf3",
+      "title": "盲目の家",
+      "catalogueTitle": "The blind house",
+      "artist": "William Degouve de Nuncques",
+      "artists": [
+        {
+          "name": "William Degouve de Nuncques",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1049510"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q123399872-4125a73fd8a15cbf.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1892_Degouve_de_Nuncques_Het_blinde_huis_anagoria.JPG",
+      "credit": "William Degouve de Nuncques. The blind house. Image credit: William Degouve de Nuncques; Source credit: Kröller-Müller Museum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q123399872",
+      "description": "橙色の壁は家を目立たせるが、暗い木々と、応答しないような窓は近づきにくくする。明るさが必ずしも歓迎を意味するわけではない。ドグーヴ・ド・ヌンクは普通の建築の特徴と周囲によって、この矛盾をつくる。題名は、こちらの視線を返せない建物という印象を強めるが、内部は見せないままだ。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "124f4807-337a-5c26-b572-0e54da150964",
+      "title": "四月",
+      "catalogueTitle": "April",
+      "artist": "Maurice Denis",
+      "artists": [
+        {
+          "name": "Maurice Denis",
+          "role": "primary",
+          "slug": "maurice-denis-nga-3906"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/124f4807-337a-5c26-b572-0e54da150964-3225acef4d5db8a1.jpg",
+      "imageSource": "https://www.wikiart.org/en/maurice-denis/april-1892",
+      "credit": "Maurice Denis. April. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/maurice-denis/april-1892",
+      "description": "緑の地面に繰り返す明るい人物は、個々の人とも、反復する色の形とも見える。ドニは両方の読み方を残した。曲がった道は風景の奥への移動を示す一方、平たく塗られた部分は画面上の配置に目を向けさせる。距離はあるが、その錯覚のために模様が姿を消す必要はない。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "08512e84-8006-5b0f-8461-d4aba6c3b763",
+      "title": "ル・シャユ",
+      "catalogueTitle": "Chahut",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1889-1890",
+      "start": 1889,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/08512e84-8006-5b0f-8461-d4aba6c3b763-c38ea47dcfdda6f0.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/chahut-1890",
+      "credit": "Georges Seurat. Chahut. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/chahut-1890",
+      "description": "上がった脚と上向きに曲がる細部が、舞台上で繰り返される。スーラは筆を奔放に走らせるのではなく、極めて整然とした配置から熱気をつくった。踊り手の身振りを、画面の構造が絶えず反復している。ここに興味深い緊張がある。方向が徹底してそろえられているからこそ、見世物が生き生きして見えるのだ。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "9c0c8bde-d619-5c89-8623-372f5ae79a7e",
+      "title": "踊り手たち",
+      "catalogueTitle": "Dancers",
+      "artist": "Theo van Doesburg",
+      "artists": [
+        {
+          "name": "Theo van Doesburg",
+          "role": "primary",
+          "slug": "theo-van-doesburg-research-7be5ef7fc9d5"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/9c0c8bde-d619-5c89-8623-372f5ae79a7e-3f59dedd0c8ab00d.jpg",
+      "imageSource": "https://www.wikiart.org/en/theo-van-doesburg/dancers-1916",
+      "credit": "Theo van Doesburg. Dancers. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/theo-van-doesburg/dancers-1916",
+      "description": "二人は幾何学的な部品からできている。それでも腕の位置や形の釣り合いが変わるだけで、身振りの違いは分かる。ファン・ドゥースブルフは、人体の情報を減らしても、身体を見分けることまではなくさない。直接比べると、形の種類がこれほど絞られたとき、小さな組み替えが大きな効果をもつことが分かる。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "f0a0a009-2bbd-5adb-b277-2f6bb39c704a",
+      "title": "宿命",
+      "catalogueTitle": "Fatality",
+      "artist": "Jan Toorop",
+      "artists": [
+        {
+          "name": "Jan Toorop",
+          "role": "primary",
+          "slug": "jan-toorop-q369416"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f0a0a009-2bbd-5adb-b277-2f6bb39c704a-29b3451d0845576d.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-toorop/fatality-1893",
+      "credit": "Jan Toorop. Fatality. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jan-toorop/fatality-1893",
+      "description": "流れる髪と囲い込む線によって、中央の人物の周りには空いた場所を見つけにくい。トーロップは抽象的な題名を、絡み合って動きにくい状態として見せた。それだけで物語全体を解くことはできないが、具体的な出発点にはなる。身体は、個々の身振りを越えて圧力の及ぶ模様のなかに置かれている。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "381544a6-fc06-584d-b468-623d8dc2a5b1",
+      "title": "グラヴリーヌの水路、海を望む",
+      "catalogueTitle": "The Channel at Gravelines, in the Direction of the Sea",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/381544a6-fc06-584d-b468-623d8dc2a5b1-f724edadbe4d18c0.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/the-channel-at-gravelines-in-the-direction-of-the-sea-1890",
+      "credit": "Georges Seurat. The Channel at Gravelines, in the Direction of the Sea. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/the-channel-at-gravelines-in-the-direction-of-the-sea-1890",
+      "description": "淡い水面からマストが立ち、岸は長く安定した区切りをつくる。数多くの活発なタッチでできているのに、水路は静かだ。スーラは、主題の動きと、絵をつくる筆跡の活動を分けている。船と環境を静止して見せるために、絵具の跡を滑らかに均す必要はない。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    },
+    {
+      "id": "b3415e7a-a36a-5238-a460-588ec6732d72",
+      "title": "ロジェとアンジェリカ",
+      "catalogueTitle": "Roger and Angelica",
+      "artist": "Odilon Redon",
+      "artists": [
+        {
+          "name": "Odilon Redon",
+          "role": "primary",
+          "slug": "odilon-redon-q154349"
+        }
+      ],
+      "date": "1909年頃",
+      "start": 1909,
+      "end": 1909,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/b3415e7a-a36a-5238-a460-588ec6732d72-8f2970fece536dcb.jpg",
+      "imageSource": "https://www.wikiart.org/en/odilon-redon/roger-and-angelica",
+      "credit": "Odilon Redon. Roger and Angelica. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/odilon-redon/roger-and-angelica",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/odilon-redon/roger-and-angelica",
+      "description": "乗り手と翼のある生き物は、色彩のなかから部分的にだけ現れる。ルドンは伝説上の救出を示すだけの情報を与えながら、すべての箇所を明快な物語の指示には変えない。青、橙、金色は、表す物を越えて生き続ける。場面は識別されるのを待つだけでなく、今まさに形を取りつつあるように見える。",
+      "importance": "",
+      "museum": "Kröller-Müller Museum"
+    }
+  ],
+  "context": {
+    "start": 1640,
+    "end": 1919
+  },
+  "closingSections": [
+    {
+      "title": "距離を変えて見る",
+      "paragraphs": [
+        "良質な図版があれば、全体と細部を比べたい。ある距離では安定していた対象が、別の距離では個々の筆跡にほどけることがある。これは所蔵品をもとにした選集で、現在の展示を保証するものではない。一点を旅の目的にする前に、美術館の作品情報と見学案内を確認しよう。"
+      ]
+    }
+  ]
+}

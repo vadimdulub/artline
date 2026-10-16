@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "nationalmuseum-stockholm",
+  "museum": "Nationalmuseum",
+  "city": "斯德哥尔摩",
+  "country": "瑞典",
+  "title": "瑞典国家博物馆：杰作",
+  "subtitle": "二十幅作品，观察聚会、独自进行的活动，以及构成肖像的周围环境。",
+  "introduction": "一场舞会、一张早餐桌和一次夜间聚会，展示了三种不同的相聚方式。在这些作品里，共处不要求人人相互注视；转动的身体、一片灯光，或者为用餐准备好的桌子，也能建立联系。独处的人物同样具体：有人用手托头，有人写信，有画家站在雪地里作画。\n\n这组作品把瑞典绘画与伦勃朗、苏巴朗、雷诺阿、塞尚并置。与其把它们看成各国画派的依次登场，不如观察人物正关注什么：他们如何看、等候、工作，或与他人共享空间。",
+  "visitNote": "这批精选作品属于瑞典国家博物馆（Nationalmuseum）的馆藏，但部分作品可能正处于外借、存放于其他馆藏地点或处于库房保存状态。出于文物保护需要，水彩画会进行轮换展出。在前往主馆参观并期待看到全部二十件作品之前，请务必查阅具体的馆藏记录及最新的参观资讯。",
+  "locale": "zh",
+  "website": "https://www.nationalmuseum.se",
+  "officialGuide": "https://www.nationalmuseum.se",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "关于色调与画面布局的章节，是对保利（Pauli）、佐恩（Zorn）和利耶福什（Liljefors）相关研究的实用补充。在给他们贴上笼统的风格标签之前，不妨比较一下他们各自如何运用明亮的表面或深色的剪影。"
+    }
+  ],
+  "works": [
+    {
+      "id": "d8b7c4f8-62b2-59ed-81b6-1087810588d1",
+      "title": "仲夏舞会",
+      "catalogueTitle": "Midsummer Dance",
+      "artist": "Anders Zorn",
+      "artists": [
+        {
+          "name": "Anders Zorn",
+          "role": "primary",
+          "slug": "anders-zorn-nga-1991"
+        }
+      ],
+      "date": "1897年签署",
+      "start": 1897,
+      "end": 1897,
+      "medium": "布面油画",
+      "accession": "NM 1603",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/d8b7c4f8-62b2-59ed-81b6-1087810588d1-f647ce84c725d2a7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Midsummer_Dance_(Anders_Zorn)_-_Nationalmuseum_-_18607.tif",
+      "credit": "Anders Zorn. Midsummer Dance. Anders Zorn; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Midsummer_Dance_(Anders_Zorn)_-_Nationalmuseum_-_18607.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/18607/",
+      "description": "仲夏柱并非画面的中心。佐恩把更多空间留给旋转的舞伴，他们的衬衣接住夜里尚未消失的光。画家对创作过程的记述提到，他在六月和七月日落后作画。这种光既属于题材，也属于作品的形成过程：夜景已经到来，天却并未暗下去。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "3a13e0fc-5bd9-4880-a1f4-fe359e6850c8",
+      "title": "厨房女佣",
+      "catalogueTitle": "The Kitchen Maid",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1651",
+      "start": 1651,
+      "end": 1651,
+      "medium": "布面油画",
+      "accession": "NM584",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/3a13e0fc-5bd9-4880-a1f4-fe359e6850c8-5cf95c8e12bc664d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Kitchen_Maid_(Rembrandt_Harmensz._van_Rijn)_-_Nationalmuseum_-_17587.tif",
+      "credit": "Rembrandt van Rijn. The Kitchen Maid. Image credit: Rembrandt; Source credit: Nationalmuseum. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/17587/",
+      "description": "女子用手抵住头，使休息也成为有重量的动作。红衣与浅色亚麻布从暗处浮现，台沿又把她留在离观者很近的位置。不管传统标题如何提示她的职业，眼前首先可见的，是一个人在停歇时采取的具体姿势。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "e5bb0d6a-d038-547a-96f1-62fc8fbfcc5c",
+      "title": "盛开的相思树枝",
+      "catalogueTitle": "Blossoming Acacia Branches",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/e5bb0d6a-d038-547a-96f1-62fc8fbfcc5c-d7e397c427d521a2.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/blossoming-acacia-branches-1890",
+      "credit": "Blossoming Acacia Branches. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/blossoming-acacia-branches-1890",
+      "description": "花朵以近景出现，没有远处风景供视线逐步靠近。黄色花簇与绿叶填满画面，成组的笔触交代它们的方向。有些枝条容易追踪，有些则消失在周围的笔痕里。这里的生长是一片交织，而非把每个部分单独列出的植物图谱。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "6d86414b-030d-595b-84ba-21a68828e0df",
+      "title": "圣殿里的西面",
+      "catalogueTitle": "Simeon in the Temple",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1669",
+      "start": 1669,
+      "end": 1669,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/6d86414b-030d-595b-84ba-21a68828e0df-c5a83c4d315b2600.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/simeon-with-the-christ-child-in-the-temple",
+      "credit": "Simeon in the Temple. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/simeon-with-the-christ-child-in-the-temple",
+      "description": "孩子的小身体托在老人手中，大小差异构成这场相遇最重要的关系。面孔与襁褓浮现出来，周围却没有同样清楚。这种集中使圣经故事贴近一个接抱的动作：婴儿被多么谨慎地接纳，也在传达他的意义。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "2337b744-7523-5bf2-a35f-865ac361d289",
+      "title": "巴达维亚人的阴谋",
+      "catalogueTitle": "The Conspiracy of the Batavians",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1662",
+      "start": 1662,
+      "end": 1662,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/2337b744-7523-5bf2-a35f-865ac361d289-569b0286fb7c95e5.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/the-conspiration-of-the-bataves-1662",
+      "credit": "The Conspiracy of the Batavians. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/the-conspiration-of-the-bataves-1662",
+      "description": "照亮的桌面上方，剑把原本分开的男人连入同一行动。有些脸仍难以分辨，剑的会合却十分清楚。伦勃朗让誓言具有集体形式，而不让每个人都同样清晰。光线围绕一项决定把他们聚在一起，而非排出一列独立肖像。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "5cc99d23-4a40-543b-9f10-c3ffb2c43093",
+      "title": "卡尔·古斯塔夫·泰辛",
+      "catalogueTitle": "Portrait of Carl Gustaf Tessin",
+      "artist": "François Boucher",
+      "artists": [
+        {
+          "name": "François Boucher",
+          "role": "primary",
+          "slug": "francois-boucher-q180932"
+        }
+      ],
+      "date": "1740",
+      "start": 1740,
+      "end": 1740,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5cc99d23-4a40-543b-9f10-c3ffb2c43093-8a9b40f1f9a92c8a.jpg",
+      "imageSource": "https://www.wikiart.org/en/francois-boucher/portrait-of-carl-gustaf-tessin",
+      "credit": "Portrait of Carl Gustaf Tessin. WikiArt; François Boucher. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francois-boucher/portrait-of-carl-gustaf-tessin",
+      "description": "书籍、地球仪和手中纸页，表明泰辛在公共生活中的学识与身份。转开的脸让画面不只是这些物品的清单。物件交代他的角色，而他自然抬眼、暂时停下手头事情的姿态，又使我们看见身份背后的活人。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "e82a0542-13c9-5a9c-8120-565ef4f5ba60",
+      "title": "圣容",
+      "catalogueTitle": "The Holy Face",
+      "artist": "Francisco de Zurbarán",
+      "artists": [
+        {
+          "name": "Francisco de Zurbarán",
+          "role": "primary",
+          "slug": "francisco-de-zurbaran-q209615"
+        }
+      ],
+      "date": "约 1631 年",
+      "start": 1631,
+      "end": 1631,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/e82a0542-13c9-5a9c-8120-565ef4f5ba60-52885536c28a00e6.jpg",
+      "imageSource": "https://www.wikiart.org/en/francisco-de-zurbaran/the-holy-face",
+      "credit": "Francisco de Zurbarán. The Holy Face. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francisco-de-zurbaran/the-holy-face",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francisco-de-zurbaran/the-holy-face",
+      "description": "面容很淡，承载它的布却有清晰的褶皱与阴影。这颠倒了通常的期待：神圣面貌并不是图像里最结实的部分。苏巴朗让我们先看到可信的布料质感，才在其上遇见那个不那么可触的脸。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "304c0224-e4b9-5b70-b647-6bd269aed1a6",
+      "title": "安东尼妈妈客栈",
+      "catalogueTitle": "The Inn of Mother Anthony",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1866",
+      "start": 1866,
+      "end": 1866,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/304c0224-e4b9-5b70-b647-6bd269aed1a6-bed4352ba1c5b1c4.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/the-inn-of-mother-anthony-1866",
+      "credit": "The Inn of Mother Anthony. WikiArt; Pierre-Auguste Renoir. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-auguste-renoir/the-inn-of-mother-anthony-1866",
+      "description": "白桌布为聚集的人物提供共同中心，而各不相同的姿势避免用餐变成正式列队。一只狗占据他们前方较低的位置。布局容纳了围桌时身体的普通调整，通过共同占用一个地方表现相伴，而不是要求所有人表露某种情绪。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "92bd108c-a3a4-5a5f-9b97-f68ffe22d7da",
+      "title": "朋友",
+      "catalogueTitle": "Friends",
+      "artist": "Hanna Hirsch-Pauli",
+      "artists": [
+        {
+          "name": "Hanna Hirsch-Pauli",
+          "role": "primary",
+          "slug": "wikimedia-painter-q436803"
+        }
+      ],
+      "date": "1907–1910",
+      "start": 1907,
+      "end": 1910,
+      "medium": "",
+      "accession": "NM 1723",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10717397-8cf2e15a177c2aae.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hanna_Pauli_-_Friends_-_Google_Art_Project.jpg",
+      "credit": "Hanna Hirsch-Pauli. Friends. Image credit: Hanna Pauli (1864 - 1940)  (Swedish) Details on Google Art Project; Source credit: wgGTWIkYzTLaDQ at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10717397",
+      "description": "灯光并不平均照亮所有人。有些组员靠近亮处，另一些留在房间阴影中，但这并不妨碍画面成为群像。把他们维系在一起的是共同处境。每个人可以有不同的可见程度，不必让所有面孔都同样突出。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "a71c6ca7-d425-50c7-91f1-3c285c3607d3",
+      "title": "早餐时间",
+      "catalogueTitle": "Breakfast Time",
+      "artist": "Hanna Hirsch-Pauli",
+      "artists": [
+        {
+          "name": "Hanna Hirsch-Pauli",
+          "role": "primary",
+          "slug": "wikimedia-painter-q436803"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "NM 1705",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10499488-0f507f51f91545ce.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hanna_Pauli_-_Breakfast-Time_-_Google_Art_Project.jpg",
+      "credit": "Hanna Hirsch-Pauli. Breakfast Time. Image credit: Hanna Hirsch-Pauli. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10499488",
+      "description": "早餐桌已经准备好，却还没有坐满人。白桌布上，玻璃、银器和餐具把日光分成细小的闪动。桌后的女子被那些预示聚餐的物品围绕：家庭场合由布置与准备建立起来，不只取决于眼下到场的人数。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "8e84c882-16ed-53bb-866f-809e63577b26",
+      "title": "玛丽·苏珊娜·罗斯林（婚前姓吉鲁斯特）",
+      "catalogueTitle": "Portrait of the Artist's Wife Marie Suzanne, née Giroust",
+      "artist": "Alexander Roslin",
+      "artists": [
+        {
+          "name": "Alexander Roslin",
+          "role": "primary",
+          "slug": "alexander-roslin-q315102"
+        }
+      ],
+      "date": "签署于1763年",
+      "start": 1763,
+      "end": 1763,
+      "medium": "",
+      "accession": "NM 1011",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/8e84c882-16ed-53bb-866f-809e63577b26-15c93567e65af914.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_Marie_Suzanne,_n%C3%A9e_Giroust_(Alexander_Roslin)_-_Nationalmuseum_-_18014.tif",
+      "credit": "Alexander Roslin. Portrait of the Artist's Wife Marie Suzanne, née Giroust. Alexander Roslin; Nationalmuseum, Sweden (museum-contributed reproduction); Åsa Lundén / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_Marie_Suzanne,_n%C3%A9e_Giroust_(Alexander_Roslin)_-_Nationalmuseum_-_18014.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/18014/",
+      "description": "肩旁与发间的花伴随被画者转身的姿态。聚拢的衣褶把这股转动从脸部延展开来，让肖像不那么僵直，又不使容貌消失在装饰中。效果依赖克制：配饰帮助表现转身，而不是要求我们逐朵解释花的意义。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "0d96ae8b-4620-53f0-a55b-55cae2dabf90",
+      "title": "卡尔·林奈",
+      "catalogueTitle": "Carl Linnaeus (1707–1778), Professor and Botanist, 1775",
+      "artist": "Alexander Roslin",
+      "artists": [
+        {
+          "name": "Alexander Roslin",
+          "role": "primary",
+          "slug": "alexander-roslin-q315102"
+        }
+      ],
+      "date": "1775",
+      "start": 1775,
+      "end": 1775,
+      "medium": "",
+      "accession": "NMGrh 1053",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/0d96ae8b-4620-53f0-a55b-55cae2dabf90-6a3b22f4be3e7456.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Carl_von_Linn%C3%A9,_1707-1778,_botanist,_professor_(Alexander_Roslin)_-_Nationalmuseum_-_15723.tif",
+      "credit": "Alexander Roslin. Carl Linnaeus (1707–1778), Professor and Botanist, 1775. Alexander Roslin; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Carl_von_Linn%C3%A9,_1707-1778,_botanist,_professor_(Alexander_Roslin)_-_Nationalmuseum_-_15723.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/15723/",
+      "description": "与深色外套、亮纽扣和扑粉假发相比，林奈胸前的植物只是一个小细节。这个尺度让职业暗示不显突兀，却十分明确。罗斯林保留正式肖像的惯例，同时让植物进入被画者紧邻身体的空间。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "7f0e959c-b937-5a7c-8e34-adc9727b9ab9",
+      "title": "我们日用的饮食",
+      "catalogueTitle": "Our Daily Bread",
+      "artist": "Anders Zorn",
+      "artists": [
+        {
+          "name": "Anders Zorn",
+          "role": "primary",
+          "slug": "anders-zorn-nga-1991"
+        }
+      ],
+      "date": "1886年9月签署",
+      "start": 1886,
+      "end": 1886,
+      "medium": "水彩画",
+      "accession": "NMB 184",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/7f0e959c-b937-5a7c-8e34-adc9727b9ab9-5294992d9ea443b6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Our_Daily_Bread_(Anders_Zorn)_-_Nationalmuseum_-_24125.tif",
+      "credit": "Anders Zorn. Our Daily Bread. Anders Zorn; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Our_Daily_Bread_(Anders_Zorn)_-_Nationalmuseum_-_24125.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/24125/",
+      "description": "坐着的女子和冒热气的锅在近处，田里仍有人继续劳动。因此，这顿饭既不是孤立的静物，也不是另行展开的家庭场景；它属于同一个劳动日。休息者与工作者之间的距离，把这种关系变成可见的安排。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "1156d496-d04d-5fe9-a2c1-fb197cbf54d7",
+      "title": "海鹰",
+      "catalogueTitle": "Sea Eagles",
+      "artist": "Bruno Liljefors",
+      "artists": [
+        {
+          "name": "Bruno Liljefors",
+          "role": "primary",
+          "slug": "bruno-liljefors-q730008"
+        }
+      ],
+      "date": "1897年签署",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "NM 1505",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/1156d496-d04d-5fe9-a2c1-fb197cbf54d7-b3d6c9b9fc160246.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sea_Eagles_(Bruno_Liljefors)_-_Nationalmuseum_-_18508.tif",
+      "credit": "Bruno Liljefors. Sea Eagles. Bruno Liljefors; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Sea_Eagles_(Bruno_Liljefors)_-_Nationalmuseum_-_18508.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/18508/",
+      "description": "鸟展开的翅膀在崎岖岸边形成相互竞争的角度。需要从运动中理解它们的身体，而不只是凭羽毛辨认。后方浅色海面让翼展更清楚。利尔耶福斯让动物留在环境中，同时给予动作足够的分量来组织整幅画。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "32938077-8edd-5154-9d85-288d609cd3f1",
+      "title": "冬日风景中的狐狸",
+      "catalogueTitle": "Fox in Winter Landscape",
+      "artist": "Bruno Liljefors",
+      "artists": [
+        {
+          "name": "Bruno Liljefors",
+          "role": "primary",
+          "slug": "bruno-liljefors-q730008"
+        }
+      ],
+      "date": "1938年签署",
+      "start": 1938,
+      "end": 1938,
+      "medium": "",
+      "accession": "NM 6654",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/32938077-8edd-5154-9d85-288d609cd3f1-3bef36049984531e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Fox_in_Winter_Landscape_(Bruno_Liljefors)_-_Nationalmuseum_-_23703.tif",
+      "credit": "Bruno Liljefors. Fox in Winter Landscape. Bruno Liljefors; Nationalmuseum, Sweden (museum-contributed reproduction); Per-Åke Persson / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Fox_in_Winter_Landscape_(Bruno_Liljefors)_-_Nationalmuseum_-_23703.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/23703/",
+      "description": "狐狸暖色的毛皮区别于积雪，周围枝条却不断打断轻松、完整的观看。能否看清它，取决于风景，而不是一个中性背景。因此应同时留意动物与遮蔽物：环境是这次相遇的一部分，不是标本周围的装饰空间。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "1fb09d42-cc60-5c1d-9019-f1baf217b841",
+      "title": "艺术家妻子的肖像",
+      "catalogueTitle": "Portrait of the Artist's Wife",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "布面油画",
+      "accession": "NM 6348",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/1fb09d42-cc60-5c1d-9019-f1baf217b841-fab0647bf3fbac41.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_(Paul_C%C3%A9zanne)_-_Nationalmuseum_-_23397.tif",
+      "credit": "Paul Cézanne. Portrait of the Artist's Wife. Paul Cézanne; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist%27s_Wife_(Paul_C%C3%A9zanne)_-_Nationalmuseum_-_23397.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/23397/",
+      "description": "红色扶手椅为坐着的人物形成明确围合。她的头向双手倾斜，注意力不在与观者交换目光上。大片颜色保留身体与家具的重量；私人活动仍可辨认，却不泄露其后的具体念头。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "1a0ab72c-e4b5-5ba1-83b3-d07f32605a20",
+      "title": "户外画家：奥索加坦（Åsögatan）的冬日景致",
+      "catalogueTitle": "Open-Air Painter. Winter-Motif from Åsögatan 145, Stockholm",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "1886年签署",
+      "start": 1886,
+      "end": 1886,
+      "medium": "布面油画",
+      "accession": "NM 2546",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/1a0ab72c-e4b5-5ba1-83b3-d07f32605a20-fcf199d0deeb2182.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Open-Air_Painter._Winter-Motif_from_%C3%85s%C3%B6gatan_145,_Stockholm_(Carl_Larsson)_-_Nationalmuseum_-_19607.tif",
+      "credit": "Carl Larsson. Open-Air Painter. Winter-Motif from Åsögatan 145, Stockholm. Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Open-Air_Painter._Winter-Motif_from_%C3%85s%C3%B6gatan_145,_Stockholm_(Carl_Larsson)_-_Nationalmuseum_-_19607.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/19607/",
+      "description": "前景里的器材让户外绘画有了实际条件。雪院既是画中的题材，也是画家必须站立观察的地方。拉尔松把第二层条件也纳入画面。可以把它与另一类风景比较：后者会隐藏制作图像所需劳动的一切痕迹。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "51a3b7f0-4fc9-562a-a537-93e8a5fd9ca9",
+      "title": "庆祝之日",
+      "catalogueTitle": "A Day of Celebration. From A Home (26 watercolours)",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "约 1895 年",
+      "start": 1895,
+      "end": 1895,
+      "medium": "水彩画",
+      "accession": "NMB 280",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/51a3b7f0-4fc9-562a-a537-93e8a5fd9ca9-f3a4aa28a3375083.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:A_Day_of_Celebration._From_A_Home_(26_watercolours)_(Carl_Larsson)_-_Nationalmuseum_-_24221.tif",
+      "credit": "Carl Larsson. A Day of Celebration. From A Home (26 watercolours). Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:A_Day_of_Celebration._From_A_Home_(26_watercolours)_(Carl_Larsson)_-_Nationalmuseum_-_24221.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/24221/",
+      "description": "装饰过的梁、门、栏杆与家具，把庆祝活动分成较小的片段。人物不必聚向一个中心，房间也能把他们联系起来。重复出现的颜色和建筑分隔，引导视线从一组人走向另一组，说明室内设计也参与了这场活动。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "65b148ca-37f8-5104-aa19-08b1bc6d6572",
+      "title": "写信",
+      "catalogueTitle": "Letter-Writing",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "纸本水彩",
+      "accession": "NMB 1438",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/65b148ca-37f8-5104-aa19-08b1bc6d6572-5bcd555568f2fa24.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Letter-Writing_(Carl_Larsson)_-_Nationalmuseum_-_25407.tif",
+      "credit": "Carl Larsson. Letter-Writing. Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction); Erik Cornelius / Nationalmuseum. https://commons.wikimedia.org/wiki/File:Letter-Writing_(Carl_Larsson)_-_Nationalmuseum_-_25407.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/25407/",
+      "description": "信的内容仍属私密。画面提供的是写信者弯下的姿势，以及让这件事得以进行的环境：书桌、窗、植物和周围木作。小动作因所在之处而变得具体。不必虚构信中消息，也能理解这里的专注。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    },
+    {
+      "id": "df042b34-e96b-52d5-bfb6-b0ac0b18af1d",
+      "title": "穆尔：卡西米尔·劳林的肖像",
+      "catalogueTitle": "\"Murre\". Portrait of Casimir Laurin",
+      "artist": "Carl Larsson",
+      "artists": [
+        {
+          "name": "Carl Larsson",
+          "role": "primary",
+          "slug": "carl-larsson-q187310"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "纸本水彩",
+      "accession": "NMB 2528",
+      "image": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/df042b34-e96b-52d5-bfb6-b0ac0b18af1d-8d7c45d8ea41905b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Murre_._Portrait_of_Casimir_Laurin_(Carl_Larsson)_-_Nationalmuseum_-_90181.tif",
+      "credit": "Carl Larsson. \"Murre\". Portrait of Casimir Laurin. Carl Larsson; Nationalmuseum, Sweden (museum-contributed reproduction). https://commons.wikimedia.org/wiki/File:Murre_._Portrait_of_Casimir_Laurin_(Carl_Larsson)_-_Nationalmuseum_-_90181.tif. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collection.nationalmuseum.se/en/collection/item/90181/",
+      "description": "摇马使孩子的坐姿有了不同于成人肖像的支撑。弯曲底座与红外套，在较沉重的家具间明确安置小小的身影。即使骑手为肖像保持不动，玩具仍能被辨认成一件原本可以活动的东西。",
+      "importance": "",
+      "museum": "Nationalmuseum"
+    }
+  ],
+  "context": {
+    "start": 1631,
+    "end": 1938
+  },
+  "closingSections": [
+    {
+      "title": "把停歇与聚会并置",
+      "paragraphs": [
+        "可以将《厨房女佣》与《朋友》并看，或把《写信》与《早餐时间》相比。每一组都区分私人专注与共同场合，却不把它们简化成固定情绪。收藏与展出是两回事；若为某件作品安排参观，请先确认博物馆的最新信息。"
+      ]
+    }
+  ]
+}

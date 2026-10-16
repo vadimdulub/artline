@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "national-gallery-victoria",
+  "museum": "National Gallery of Victoria",
+  "city": "メルボルン",
+  "country": "オーストラリア",
+  "title": "ビクトリア国立美術館：名作",
+  "subtitle": "二十点を通して、大きさと距離が絵をどう組み立てるかを見る。",
+  "introduction": "ストリートンの川は、一つの小さな出来事ではまとめきれないほど広い眺めの中を曲がる。一方、タッカーの《ユダ》では、窮屈な体、木の形、硬貨がほぼすべての目を引きつける。その両極の間には、仕事場となる庭、手と頭の比率に支えられた肖像、整然とした隊列と個人の危険が向き合う戦場がある。\n\nここでいう尺度は、画布の寸法だけではない。何を近づけ、縮め、拡大し、あるいは身近な比較対象を置かずに見せるのかという選択も含む。この選集は風景、肖像、物語の絵を通してそれを追い、最後には大きさを測る物体のない色面へたどり着く。",
+  "visitNote": "NGVは、オーストラリア・コレクションと国際コレクションをそれぞれ異なる施設で展示しています。各作品のコレクション・ページや、NGVインターナショナルおよびイアン・ポッター・センターの最新情報をご確認ください。",
+  "locale": "ja",
+  "website": "https://www.ngv.vic.gov.au/",
+  "officialGuide": "https://www.ngv.vic.gov.au/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "無料で読む · 英語",
+      "note": "『素描の原理（The Elements of Drawing）』は、読者に対し、木々や雲、影の構造を綿密に観察するよう求めています。同書は、サザン、サザーランド、ストリートンの制作意図を解き明かそうとはせず、彼らの作品を鑑賞する際の手がかりとなる実践的な問いを提示しています。"
+    }
+  ],
+  "works": [
+    {
+      "id": "ae1c418c-c29e-569b-a5c9-4b6b010ba2cf",
+      "title": "紫の真昼の透明な力",
+      "catalogueTitle": "The purple noon’s transparent might",
+      "artist": "Arthur Streeton",
+      "artists": [
+        {
+          "name": "Arthur Streeton",
+          "role": "primary",
+          "slug": "wikiart-artist-arthur-streeton"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "キャンバスに油彩",
+      "accession": "33-2",
+      "image": "https://artlines.org/assets/artworks/imported/creators-deep-4h-20261010/arthur-streeton/ae1c418c-c29e-569b-a5c9-4b6b010ba2cf-543aab771f5bcbd5.jpg",
+      "imageSource": "https://www.wikiart.org/en/arthur-streeton/the-purple-noon-s-transparent-might-1896",
+      "credit": "Arthur Streeton. The purple noon’s transparent might. WikiArt source label: Public domain. Full source frame, proportional resize and JPEG compression. https://www.wikiart.org/en/arthur-streeton/the-purple-noon-s-transparent-might-1896",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.ngv.vic.gov.au/explore/collection/work/3060/",
+      "description": "上から見る川は、広い景色をたどるための連続した曲線になる。手前の青は強く残るが、遠い丘や空では対比が弱まる。ストリートンは、その日の暑さを物語で説明するのではなく、距離ごとの見え方の関係に変えている。土地の明瞭さが移り変わることで、暑さの感覚が眺め全体へ広がる。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "df064321-b2f5-5ccc-af9f-500be48c771c",
+      "title": "リュエイユの家",
+      "catalogueTitle": "The House at Rueil",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/df064321-b2f5-5ccc-af9f-500be48c771c-19b54c1e3058084e.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/the-house-at-rueil-1882",
+      "credit": "Édouard Manet. The House at Rueil. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/the-house-at-rueil-1882",
+      "description": "幹が正面のほぼ中央を遮り、建物を完全な姿で見せない。木や庭の植物の間から、明るい壁と青い鎧戸が別々の断片として見える。マネは遮るものを取り除かず、それによって見る場所を決めている。家は庭のある位置から見たものとして現れ、必ず一部が隠される。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "92290489-41a2-5beb-a43a-218114a98038",
+      "title": "モンマルトル大通り、朝、曇天",
+      "catalogueTitle": "Boulevard Montmartre Morning, Grey Weather",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/92290489-41a2-5beb-a43a-218114a98038-62f323d0fcfe1a83.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/boulevard-montmartre-morning-grey-weather-1897",
+      "credit": "Camille Pissarro. Boulevard Montmartre Morning, Grey Weather. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/boulevard-montmartre-morning-grey-weather-1897",
+      "description": "繰り返す筆触が、歩行者や馬車を、狭まっていく通りに沿う集団の動きへ変える。建物と裸の木が大きな奥行きを示し、灰色の遠方では個々の姿が不明瞭になる。ピサロは街の交通を、同時に起こる多くの出来事として残した。一人ずつ独立した物語がなくても、人物は通りの目に見える生活に加わる。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "56dec1c8-c9f8-5f10-b4b7-dbf2c22226a4",
+      "title": "馬を襲うライオン",
+      "catalogueTitle": "Lion Attacking a Horse",
+      "artist": "George Stubbs",
+      "artists": [
+        {
+          "name": "George Stubbs",
+          "role": "primary",
+          "slug": "george-stubbs-q381728"
+        }
+      ],
+      "date": "1765",
+      "start": 1765,
+      "end": 1765,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/56dec1c8-c9f8-5f10-b4b7-dbf2c22226a4-56ed02e1709efbf5.jpg",
+      "imageSource": "https://www.wikiart.org/en/george-stubbs/lion-attacking-a-horse",
+      "credit": "George Stubbs. Lion Attacking a Horse. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/george-stubbs/lion-attacking-a-horse",
+      "description": "低い風景の上で、二頭の動物が一つの争いに絡み合う。馬の伸びた首は、ライオンに押さえられた力の影響を全身へ伝える。スタッブスは体の各部分のつながりによって力を説明する。襲われた側のねじれが攻撃を示すのだ。姿勢が分けがたくなっても、明るい体と暗い体の塊が双方を区別する。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "c1cf8818-1aae-5bd4-b273-af97ff09e005",
+      "title": "ダンテとウェルギリウスを降ろすアンタイオス",
+      "catalogueTitle": "Antaeus setting down Dante and Virgil in the last circle of hell",
+      "artist": "William Blake",
+      "artists": [
+        {
+          "name": "William Blake",
+          "role": "primary",
+          "slug": "william-blake-nga-970"
+        }
+      ],
+      "date": "1824-1827",
+      "start": 1824,
+      "end": 1827,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c1cf8818-1aae-5bd4-b273-af97ff09e005-58c141a171185ccf.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-blake/antaeus-setting-down-dante-and-virgil-in-the-last-circle-of-hell-1827",
+      "credit": "William Blake. Antaeus setting down Dante and Virgil in the last circle of hell. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-blake/antaeus-setting-down-dante-and-virgil-in-the-last-circle-of-hell-1827",
+      "description": "巨人の曲げた体が、小さな詩人二人を運ぶ手段になる。ブレイクは大きさの違いに物語を進めさせる。本来なら風景の中の道が必要な距離を、一人の体がつなぐのだ。その曲線を追う目は下の深みへ向かい、見る動作と降ろされる動作が重なる。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "86afc04e-c7eb-5ec9-a315-73915765341e",
+      "title": "画家マヌエル・ウンベルトの肖像",
+      "catalogueTitle": "Portrait of the painter Manuel Humbert",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/86afc04e-c7eb-5ec9-a315-73915765341e-8c9b3a3f5987a9d9.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/portrait-of-the-painter-manuel-humbert-1916-1",
+      "credit": "Amedeo Modigliani. Portrait of the painter Manuel Humbert. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/amedeo-modigliani/portrait-of-the-painter-manuel-humbert-1916-1",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/portrait-of-the-painter-manuel-humbert-1916-1",
+      "description": "小さな暖色の手が、暗いスーツの上に伸びる頭と首に釣り合う。モディリアーニは体の比率を変えても、姿勢をおろそかにはしない。正面を向くのは依然として座った人物であり、下にはまとまった手の動き、上には長い顔がある。肖像は不均等な尺度同士の関係で成り立ち、均一な人体の比率に修正する必要はない。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "f260513b-a859-5503-a18c-e8af7246abd5",
+      "title": "古い養蜂場",
+      "catalogueTitle": "An Old Bee Farm",
+      "artist": "Clara Southern",
+      "artists": [
+        {
+          "name": "Clara Southern",
+          "role": "primary",
+          "slug": "wikiart-artist-clara-southern"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f260513b-a859-5503-a18c-e8af7246abd5-68d88f46f53d2bc4.jpg",
+      "imageSource": "https://www.wikiart.org/en/clara-southern/an-old-bee-farm-1900",
+      "credit": "Clara Southern. An Old Bee Farm. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/clara-southern/an-old-bee-farm-1900",
+      "description": "巣箱はここが仕事場だと示すが、草や冷たい光の中に埋め込まれたままだ。人物の作業は、古びた品物や小さな建物を含む環境の一部分を占める。サザンはこの質素な場所全体を丁寧に見ている。人が使う土地であることは明らかでも、働き手がほかのすべてを圧倒する必要はない。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "1bb9c65e-5aa5-5b73-b4b2-836d0abffccb",
+      "title": "晩祷",
+      "catalogueTitle": "Evensong",
+      "artist": "Clara Southern",
+      "artists": [
+        {
+          "name": "Clara Southern",
+          "role": "primary",
+          "slug": "wikiart-artist-clara-southern"
+        }
+      ],
+      "date": "1900-1914",
+      "start": 1900,
+      "end": 1914,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/1bb9c65e-5aa5-5b73-b4b2-836d0abffccb-ce254bdca783470e.jpg",
+      "imageSource": "https://www.wikiart.org/en/clara-southern/evensong-1914",
+      "credit": "Clara Southern. Evensong. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/clara-southern/evensong-1914",
+      "description": "紫と灰色が、家、斜面、谷を次第に近い色調へまとめていく。壮大な太陽で告げるのではなく、景色全体で夕方が示される。サザンは差を小さくすることで、時間の変化を描いた。場所はまだ見分けられるが、各部分は薄れていく光の同じ条件を帯び始めている。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "724e7947-0a0f-5564-9388-33999c0ba300",
+      "title": "野外の博物学者たち",
+      "catalogueTitle": "Field Naturalists",
+      "artist": "Jane Sutherland",
+      "artists": [
+        {
+          "name": "Jane Sutherland",
+          "role": "primary",
+          "slug": "wikiart-artist-jane-sutherland"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/724e7947-0a0f-5564-9388-33999c0ba300-ded41e3ca7fb251e.jpg",
+      "imageSource": "https://www.wikiart.org/en/jane-sutherland/field-naturalists-1896",
+      "credit": "Jane Sutherland. Field Naturalists. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jane-sutherland/field-naturalists-1896",
+      "description": "人々は小さく描かれ、足元の植物が十分な場所を保っている。題名が示す丹念な観察は、この空間の配分にすでにふさわしい。サザーランドは観察者を風景の外に置いて唯一の尺度にするのではなく、風景の中に置く。見ること自体が、草や木の間で行われる活動の一つになる。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "65c03f14-8012-51dd-b35e-31984e104afa",
+      "title": "キノコ採り",
+      "catalogueTitle": "The Mushroom Gatherers",
+      "artist": "Jane Sutherland",
+      "artists": [
+        {
+          "name": "Jane Sutherland",
+          "role": "primary",
+          "slug": "wikiart-artist-jane-sutherland"
+        }
+      ],
+      "date": "1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/65c03f14-8012-51dd-b35e-31984e104afa-4b4f0278ca8f6730.jpg",
+      "imageSource": "https://www.wikiart.org/en/jane-sutherland/the-mushroom-gatherers-1895",
+      "credit": "Jane Sutherland. The Mushroom Gatherers. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jane-sutherland/the-mushroom-gatherers-1895",
+      "description": "一人はかがみ、もう一人は立ったままで、探す行為が異なる段階に分かれる。目を向ける草地には、切り株が点在する。作業が変わると、風景のどこに関心を向けるかも変わる。目の前の地面は、遠くの眺めと同じほど重要だ。サザーランドは日常的な採集に、その行為ならではの体勢と空間を与えている。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "c4ba240d-ad9a-5bdb-8e3f-608ffef7e0ec",
+      "title": "青と金――ドロシー・サザーランドの肖像",
+      "catalogueTitle": "Blue and Gold: Portrait of Dorothy Sutherland",
+      "artist": "Jane Sutherland",
+      "artists": [
+        {
+          "name": "Jane Sutherland",
+          "role": "primary",
+          "slug": "wikiart-artist-jane-sutherland"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c4ba240d-ad9a-5bdb-8e3f-608ffef7e0ec-5f932816f24a771e.jpg",
+      "imageSource": "https://www.wikiart.org/en/jane-sutherland/blue-and-gold-portrait-of-dorothy-sutherland-1908",
+      "credit": "Jane Sutherland. Blue and Gold: Portrait of Dorothy Sutherland. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jane-sutherland/blue-and-gold-portrait-of-dorothy-sutherland-1908",
+      "description": "銅色の髪と青い服が、題名の色の関係をつくる。その中で顔は、下の衣服より細かく描かれている。仕上げの違いが視線を導くので、五官を一つずつ硬い線で囲む必要はない。人物の面影は色の配置から現れ、もっとも自由な筆遣いの箇所も全体に欠かせない。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "81ae2b63-3338-5845-87e2-396edc756667",
+      "title": "春",
+      "catalogueTitle": "Spring",
+      "artist": "Arthur Streeton",
+      "artists": [
+        {
+          "name": "Arthur Streeton",
+          "role": "primary",
+          "slug": "wikiart-artist-arthur-streeton"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "合板に貼ったキャンバスに油彩",
+      "accession": "A14-1978",
+      "image": "https://artlines.org/assets/artworks/imported/creators-deep-4h-20261010/arthur-streeton/81ae2b63-3338-5845-87e2-396edc756667-8c9d875b7e1cf629.jpg",
+      "imageSource": "https://www.wikiart.org/en/arthur-streeton/spring-1890",
+      "credit": "Arthur Streeton. Spring. WikiArt source label: Public domain. Full source frame, proportional resize and JPEG compression. https://www.wikiart.org/en/arthur-streeton/spring-1890",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.ngv.vic.gov.au/explore/collection/work/3067/",
+      "description": "細い道が近景を畑へ導き、花の咲く木々には姿を見せる余地がある。新緑と青空で季節の変化がわかり、事件を詰め込む必要はない。ストリートンは普通の植物の生長だけで十分だとしている。周囲に開けた場所があるため、比較的小さな色や草木の変化が、絵の中では大きな働きをする。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "04b3ee49-2ddc-5c77-93eb-cc42c970aaa5",
+      "title": "シドニー湾",
+      "catalogueTitle": "Sydney Harbour",
+      "artist": "Arthur Streeton",
+      "artists": [
+        {
+          "name": "Arthur Streeton",
+          "role": "primary",
+          "slug": "wikiart-artist-arthur-streeton"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "合板に貼ったキャンバスに油彩",
+      "accession": "491-2",
+      "image": "https://artlines.org/assets/artworks/imported/creators-deep-4h-20261010/arthur-streeton/04b3ee49-2ddc-5c77-93eb-cc42c970aaa5-26de39b39447a6ac.jpg",
+      "imageSource": "https://www.wikiart.org/en/arthur-streeton/sydney-harbour-1907",
+      "credit": "Arthur Streeton. Sydney Harbour. WikiArt source label: Public domain. Full source frame, proportional resize and JPEG compression. https://www.wikiart.org/en/arthur-streeton/sydney-harbour-1907",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.ngv.vic.gov.au/explore/collection/work/3068/",
+      "description": "近い枝が視点を岸につなぎとめ、その先の水には船、建物、岬が広がる。手前で視界が遮られることで、湾の幅はかえって明らかになる。ストリートンは限られた観察点と広い眺めを釣り合わせている。絵の中を目が遠くまで旅しても、見る人の位置は一か所に定まっている。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "6b5155f0-aede-5665-a446-90668181b1ed",
+      "title": "ハイデルベルク近郊の冬の朝",
+      "catalogueTitle": "Winter morning near Heidelberg",
+      "artist": "Louis Buvelot",
+      "artists": [
+        {
+          "name": "Louis Buvelot",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3030006"
+        }
+      ],
+      "date": "1866",
+      "start": 1866,
+      "end": 1866,
+      "medium": "",
+      "accession": "p.300.4-1",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20441290-b3f91ac2847865bd.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Wintermorgen_bei_Heidelberg_Abram_Louis_Buvelot.jpg",
+      "credit": "Louis Buvelot. Winter morning near Heidelberg. Image credit: Louis Buvelot; Source credit: National Gallery of Victoria, Scan using old \"Original & Fälschung\"-Pictures from Hörzu 10/1988, S. 162. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20441290",
+      "description": "木とその反射が中央に密な構造をつくり、背後の明るい土地へ開く。ビュヴェロは池を、岸の木々をもう一度見せるためだけでなく、暗い形を延長するために使った。朝の光はこの囲いの中をたどる必要がある。奥行きは遠い地平線だけでなく、塊同士の間の通り道からも生まれる。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "6f07eb32-ae81-54b0-a4ed-0b6bda5d5d1f",
+      "title": "テンプルストウ、夏の午後",
+      "catalogueTitle": "Summer afternoon, Templestowe",
+      "artist": "Louis Buvelot",
+      "artists": [
+        {
+          "name": "Louis Buvelot",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3030006"
+        }
+      ],
+      "date": "1866",
+      "start": 1866,
+      "end": 1866,
+      "medium": "",
+      "accession": "p.300.5-1",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20441293-1c54e3c6fc98771f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Louis_Buvelot_-_Summer_afternoon,_Templestowe_-_Google_Art_Project.jpg",
+      "credit": "Louis Buvelot. Summer afternoon, Templestowe. Image credit: Louis Buvelot (03 March 1814 - 30 May 1888)  (Swiss) Born in Morges, Vaud, Switzerland. Died in Melbourne, Victoria. Details on Google Art Project; Source credit: twHB-7i_mIcVaA at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20441293",
+      "description": "空と乾いた地面は暖色を共有し、両者の対比が弱まる。道、細い木、柵が十分な構造を与えるため、その連続性は曖昧さにはならない。ビュヴェロは、強い中断を少なくして午後の光を行き渡らせた。局所的な小さな出来事より、全景に繰り返される光の状態が優先されている。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "d6e227d3-0244-5675-99ad-38d6c295906d",
+      "title": "リンゴ売りの女と夫",
+      "catalogueTitle": "The apple woman and her husband",
+      "artist": "Mark Gertler",
+      "artists": [
+        {
+          "name": "Mark Gertler",
+          "role": "primary",
+          "slug": "mark-gertler-research-3447dbfef583"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "3002-4",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20422068-eed160bb8e636142.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mark_Gertler_-_The_apple_woman_and_her_husband_-_Google_Art_Project.jpg",
+      "credit": "Mark Gertler. The apple woman and her husband. Image credit: Mark Gertler (09 December 1891 - 23 June 1939)  (English) Born in Spitalfields, London, England. Died in Highgate, London, England. Details on Google Art Project; Source credit: 1AGFb1dEzkOQqw at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20422068",
+      "description": "狭い空間で妻は夫の前に座り、寄り合う身体の縁にリンゴが集まる。明確な輪郭が二人を厚みのある存在にする。その重い形に対して、赤い水玉のスカーフは軽快な装飾のリズムを添える。ガートラーは模様によって人物群を活気づけながら、空間が窮屈になるほどの身体の存在感を弱めてはいない。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "208a0640-7a81-5f51-a325-1ee57b429628",
+      "title": "1815年、カトル・ブラの第28連隊",
+      "catalogueTitle": "The 28th Regiment at Quatre Bras, 1815",
+      "artist": "Elizabeth Thompson",
+      "artists": [
+        {
+          "name": "Elizabeth Thompson",
+          "role": "primary",
+          "slug": "wikimedia-painter-q517349"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/208a0640-7a81-5f51-a325-1ee57b429628-ed257c76d5ba1873.jpg",
+      "imageSource": "https://www.wikiart.org/en/elizabeth-thompson/the-28th-regiment-at-quatre-bras-1815-1875",
+      "credit": "Elizabeth Thompson. The 28th Regiment at Quatre Bras, 1815. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/elizabeth-thompson/the-28th-regiment-at-quatre-bras-1815-1875",
+      "description": "歩兵の保たれた陣形が、近景へ押し寄せる馬や人物の混乱に向き合う。遠方の戦闘は一部が煙に隠れる。トンプソンは軍隊の秩序を、静かな配置ではなく、見える圧力の下で維持されるものとして描いた。兵士の列は個々の危険を集団の状況に結びつけ、周囲の動きはその見かけの安定を試している。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "fa4bef6c-c430-5c7c-ad72-c9e235be2c3d",
+      "title": "人物のいる室内",
+      "catalogueTitle": "Interior with Figures",
+      "artist": "Gwen John",
+      "artists": [
+        {
+          "name": "Gwen John",
+          "role": "primary",
+          "slug": "wikimedia-painter-q274339"
+        }
+      ],
+      "date": "1898-1899",
+      "start": 1898,
+      "end": 1899,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fa4bef6c-c430-5c7c-ad72-c9e235be2c3d-b6246792382bcea5.jpg",
+      "imageSource": "https://www.wikiart.org/en/gwen-john/interior-with-figures-1899",
+      "credit": "Gwen John. Interior with Figures. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gwen-john/interior-with-figures-1899",
+      "description": "薄暗く家具のある部屋で、明るい服と暖色の服が、近くに立つ二人の女性を区別する。体の向きの小さな違いが二人の関係を示し、模様のある壁や家具は周囲の空きを少なくする。グウェン・ジョンは劇的な会話を指定する必要がない。近さと控えめな動きだけで、この室内ならではの人の配置が生まれる。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "346eca47-6b77-5c09-851a-d4bf96044194",
+      "title": "無題（赤）",
+      "catalogueTitle": "Untitled (Red)",
+      "artist": "Mark Rothko",
+      "artists": [
+        {
+          "name": "Mark Rothko",
+          "role": "primary",
+          "slug": "mark-rothko-q160149"
+        }
+      ],
+      "date": "1956",
+      "start": 1956,
+      "end": 1956,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/346eca47-6b77-5c09-851a-d4bf96044194-2f2c916ba0661ade.jpg",
+      "imageSource": "https://www.wikiart.org/en/mark-rothko/untitled-red-1956",
+      "credit": "Mark Rothko. Untitled (Red). WikiArt source label: Mark Rothko Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/mark-rothko/untitled-red-1956",
+      "license": "Mark Rothko Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/mark-rothko/untitled-red-1956",
+      "description": "赤や橙の面の大きさを定める地平線も、見覚えのある物体もない。目は代わりに、柔らかく不均一な接点や、色の内部の小さな違いへ向かう。ロスコの境界は、定規で引いた区切りになることを拒むため、変化を保つ。縁に時間をかけると、色を素早く数えただけでは見落とす動きが現れる。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    },
+    {
+      "id": "eb46056b-2269-52c2-88f6-e2778aa88bfe",
+      "title": "ユダ",
+      "catalogueTitle": "Judas",
+      "artist": "Albert Tucker",
+      "artists": [
+        {
+          "name": "Albert Tucker",
+          "role": "primary",
+          "slug": "albert-tucker-round2-d10cd8abf377"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/eb46056b-2269-52c2-88f6-e2778aa88bfe-e5001833555edb1e.jpg",
+      "imageSource": "https://www.wikiart.org/en/albert-tucker/judas-1955",
+      "credit": "Albert Tucker. Judas. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/albert-tucker/judas-1955",
+      "description": "しゃがむ体は限られた空間に押し込まれ、明るい硬貨の上で幅広い木の形をつかんでいる。タッカーは聖書の主題を、物としての強さを持つ少数の要素に凝縮した。低い頭と窮屈な手足によって、重荷はまず身体的な関係として見え、その後に道徳的な解釈が続く。金銭も補足情報に退かず、構図の中に明瞭に残されている。",
+      "importance": "",
+      "museum": "National Gallery of Victoria"
+    }
+  ],
+  "context": {
+    "start": 1765,
+    "end": 1956
+  },
+  "closingSections": [
+    {
+      "title": "見る距離を変える",
+      "paragraphs": [
+        "川の曲がりと赤い面の縁では、必要な見方が違う。それぞれにふさわしい尺度で眺め、急いで見ると何が消えるかを比べてみよう。これらは所蔵作品からの選集で、特定の展示を保証するものではない。一点を目当てに訪れる際は、NGVで現在の公開状況を確認したい。"
+      ]
+    }
+  ]
+}

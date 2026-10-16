@@ -1,0 +1,73 @@
+B: Show more experiments — 12 October 2026
+
+User selected B and requested experiments before deployment, with Show more on
+Teachers & influences and Influence & legacy when either exceeds five entries.
+These are local interaction experiments, not a deployment or catalogue update.
+
+Keep the approved B palette, typography, centre artist and directional links.
+Paper #f2efe8; surface #faf8f3; ink #1b1916; muted #625d55; line #d0c9be;
+editorial accent #8f3a29. Georgia headings, Avenir Next/system sans controls.
+
+[ Teachers & influences ][ selected artist ][ Influence & legacy ]
+[ first 5 people        ]                   [ first 5 people     ]
+[ Show more · N left    ]                   [ Show more · N left ]
+
+Experiments:
+1. Five at a time (recommended): independently append up to five on each click.
+   Keep the centre positioned against the first five entries when either grows.
+   Show less returns that side to five. Show more includes remaining count.
+2. Expand all: independently reveal every remaining entry. Use the same visual
+   language, so the long-map cost can be compared directly with experiment 1.
+3. Side panel: Show more opens a searchable list for that direction while the
+   five-person map stays compact. Initially show at most 20 panel matches and
+   reveal another 20 as needed. Evidence opens inside the panel with a back link.
+
+Common behavior:
+- Exactly five entries: no Show more. Six entries: show exactly one remaining.
+- Count grouped people/source identities, not separate relationship claims.
+- Stable saved-research order: documented/consensus evidence first, then name.
+  Preserve all types and levels within each entry; grouping does not validate a
+  claim or merge artist IDs by display name.
+- Draw connectors only to visible nodes. No edge to a Show more control.
+- Expand each direction independently; return keyboard focus sensibly.
+- Teaching, admiration and artistic influence remain separate claims.
+- Unresolved source labels stay labels; do not invent profile links.
+- Reduced-motion support, visible focus, 44px targets, no horizontal overflow.
+
+Content: frozen research data from 8–9 October 2026, not live catalogue totals.
+Fragonard: 2/5; Delacroix: 11/14; Cézanne: 9/61. The 5/6 boundary case is an
+explicit subset of Delacroix's saved records, never presented as his full counts.
+No invented relationships or database fixtures. Sources retain exact saved URLs.
+
+Design review: keep B's visual identity; vary only overflow interaction. Avoid
+nested scrolling inside the graph. A modal side panel is the deliberate separate
+exploration alternative. Test long names, duplicate claims and uncertain labels.
+For a future production version, Go/PostgreSQL must group/count/order/page these
+connections; this static prototype uses a bounded frozen research sample only.
+
+Verification and result
+
+Recommended: Five at a time. The controls show remaining counts and operate
+independently; expanded maps retain the initial centre position. Expand all is
+available for comparison, with the observed cost of a much taller graph. Side
+panel offers search for larger lists while retaining the five-person map.
+
+Verified locally on 12 October 2026:
+- Fragonard's five outgoing people include six claims, with no Show more button.
+- Exactly five: no button; six: one remaining, then Show less.
+- Delacroix: independent 5 → 10 → final partial groups on both sides.
+- Cézanne: all 61 outgoing entries reachable without repeated nodes.
+- Collapse returns one side to five; the other side retains its state.
+- The centre stays aligned with the first five entries after expansion.
+- Focus moves to the first revealed person and returns after closing a dialog.
+- Search, no results, 20-entry panel batches, evidence/back navigation and Escape.
+- Outgoing teacher-of claims are labelled Student; incoming ones remain Teacher.
+- No page overflow at 1440, 1024, 768, 390 and 320px.
+- Desktop/mobile screenshot inspection. Modal screenshots use viewport capture.
+- Automated WCAG 2 A/AA and 2.1 AA checks reported no violations in the tested
+  desktop/mobile expanded-map and desktop-panel states; this is not certification.
+- No JavaScript page errors. Every sampled claim retained saved source links.
+
+Detailed disposable checks: /tmp/artline-b-experiment-verification.json.
+Source plans, notes and content snapshots remain in their existing research paths.
+This experiment does not alter the application or any database and is not deployed.

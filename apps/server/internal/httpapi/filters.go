@@ -46,6 +46,17 @@ func parseChoices(values []string, valid func(string) bool, upper bool) ([]strin
 
 var countryPattern = regexp.MustCompile(`^[A-Z]{2}$`)
 
+func parseArtistChoices(values []string) ([]string, error) {
+	choices, err := parseChoices(values, validArtistSlug, false)
+	if err != nil {
+		return nil, err
+	}
+	for i, value := range choices {
+		choices[i] = sourceArtistSlug(value)
+	}
+	return choices, nil
+}
+
 func validWorkType(value string) bool {
 	return allowed(value, "painting", "fresco", "manuscript_illumination", "drawing", "watercolor", "print", "ceramic", "metalwork", "sculpture", "calligraphy")
 }

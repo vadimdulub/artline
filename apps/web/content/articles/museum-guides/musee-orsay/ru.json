@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Компания Artline отобрала эти произведения из задокументированных музейных фондов. Данная подборка сформирована независимо от музея; отдельные работы могут находиться на временной выставке в другом месте или быть сняты с экспозиции. Датировка и атрибуция приводятся с учетом оговорок, содержащихся в соответствующих записях.",
+  "labels": {
+    "guides": "Все путеводители",
+    "download": "Скачать PDF",
+    "language": "Язык путеводителя",
+    "translation": "Перевод с помощью ИИ",
+    "explore": "Эта подборка в Artline",
+    "contextNote": "Посмотрите выбранные работы рядом с книгами и событиями их времени или сравните годы жизни художников. Книги и события дают исторический контекст, но не доказывают прямого влияния. Работы без подтверждённой даты остаются в путеводителе.",
+    "all": "Произведения искусства в контексте",
+    "allHint": "Избранные работы, связанные с книгами и историей их эпохи.",
+    "painters": "Кто когда жил?",
+    "paintersHint": "Узнайте, когда жили эти художники и чьи жизненные пути пересекались.",
+    "events": "Исторические события",
+    "eventsHint": "События за период, охваченный путеводителем",
+    "books": "Хронология книг",
+    "booksHint": "Значимые книги того же периода",
+    "contents": "Произведения",
+    "artworks": "Выбранные произведения",
+    "importance": "Почему это важно",
+    "artwork": "Открыть произведение",
+    "source": "Страница произведения в источнике",
+    "inventory": "Инвентарный номер",
+    "reading": "Что почитать",
+    "visit": "Перед посещением",
+    "website": "Сайт музея",
+    "officialGuide": "Материалы музея",
+    "updated": "Дата проверки источников и информации для посетителей"
+  },
+  "slug": "musee-orsay",
+  "museum": "Musée d’Orsay",
+  "city": "Париж",
+  "country": "Франция",
+  "title": "Музей Орсе: шедевры",
+  "subtitle": "В этих двадцати картинах похороны, половицы и карточная игра становятся значительными темами.",
+  "introduction": "Деревенские похороны Курбе растянулись на холсте почти семиметровой ширины. Размер важен: местное сообщество занимает пространство, традиционно отведённое великим историческим или религиозным событиям. В других работах подборки рабочие стоят на коленях над половицами, танцовщицы ждут между упражнениями, а двое мужчин следят за карточной игрой.\n\nЭти картины не высказывают одной общей мысли о современной художникам жизни. Мане проверяет условности нагой фигуры; Уистлер подчёркивает расположение тонов; Сезанн делает устройство стола неясным. Здесь их связывает внимание к темам и решениям, которые иерархия великих сюжетов могла бы упустить. Полезно спросить, какое значение каждая картина поручает обычному действию, предмету или позе.",
+  "visitNote": "Информацию о расположении залов и временном отсутствии произведений (в связи с выдачей на выставки) можно найти в актуальных сведениях о коллекции музея Орсе. Порядок изложения здесь определяется тематикой и сопоставлением работ, а не маршрутом осмотра экспозиции.",
+  "locale": "ru",
+  "website": "https://www.musee-orsay.fr",
+  "officialGuide": "https://www.musee-orsay.fr",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "Читать онлайн или скачать · Английский",
+      "note": "Выставка «Импрессионизм: столетие» представляет работы Моне, Ренуара, Дега и их современников в контексте ранних выставок импрессионистов. Метрополитен-музей разместил каталог выставки в интернете."
+    }
+  ],
+  "works": [
+    {
+      "id": "a4a7592f-9f1b-49eb-aeec-341bd390e65c",
+      "title": "Олимпия",
+      "catalogueTitle": "Olympia",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/949b73ae-aaf2-4f54-981f-d8e803684ca0-297aeedbf74aceef.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/olympia-1863",
+      "credit": "Édouard Manet. Olympia. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/olympia-1863",
+      "description": "Женщине приносят цветы, но её внимание направлено за пределы картины. Эта разница делает лежащую позу настороженной, непохожей на образ спящей Венеры. Мане написал современную ему проститутку, сохранив композицию идеализированной нагой фигуры, но убрав мифологическое оправдание. Созданная в 1863 году работа вызвала скандал на Салоне 1865 года.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "d37d1cee-e787-4299-8ca8-9b38b8b5d0d0",
+      "title": "Завтрак на траве",
+      "catalogueTitle": "Le Déjeuner sur l’herbe",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "Холст, масло",
+      "accession": "RF 1668",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/d37d1cee-e787-4299-8ca8-9b38b8b5d0d0-bd2fb9541814722b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Le_D%C3%A9jeuner_sur_l%27herbe_-_%C3%89douard_Manet.jpg",
+      "credit": "Édouard Manet. Le Déjeuner sur l’herbe. Image credit: Édouard Manet; Self-photographed. https://commons.wikimedia.org/wiki/File:Le_D%C3%A9jeuner_sur_l%27herbe_-_%C3%89douard_Manet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/le-dejeuner-sur-lherbe-904",
+      "description": "Обнажённая женщина и двое одетых мужчин словно принадлежат разным общественным ситуациям. Мане не пытается объяснить несоответствие мифологией. При этом композиция опирается на старое искусство, в том числе на группу Рафаэля, известную по гравюре. Отвергнутая жюри Салона, картина появилась на Салоне отверженных 1863 года: вызов заключался отчасти в непривычном использовании знакомых условностей.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "2bf247e0-364c-4f70-b2f6-93b7a7ba682a",
+      "title": "Похороны в Орнане",
+      "catalogueTitle": "Un enterrement à Ornans",
+      "artist": "Gustave Courbet",
+      "artists": [
+        {
+          "name": "Gustave Courbet",
+          "role": "primary",
+          "slug": "gustave-courbet-q34618"
+        }
+      ],
+      "date": "1849–1850",
+      "start": 1849,
+      "end": 1850,
+      "medium": "Холст, масло",
+      "accession": "RF 325",
+      "image": "https://artlines.org/assets/artworks/wikiart/bc8cb234-0e6f-58ce-83b4-75afa7ec388f-bcfa6e95a99e859a.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustave-courbet/a-burial-at-ornans-1850-1",
+      "credit": "Gustave Courbet. A Burial at Ornans. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/un-enterrement-ornans-924",
+      "description": "При ширине 6,68 метра деревенские похороны занимают пространство, обычно предназначавшееся возвышенным историческим или религиозным сюжетам. Курбе распределяет его среди скорбящих без главного героя. Открытая могила выносит на передний план физическую реальность обряда. Поэтому масштаб имеет и общественный смысл: обычные люди показаны в натуральную величину, не превращаясь в идеальные фигуры.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "53bfa6e7-a9fc-463a-af87-ac9e5c9e24a1",
+      "title": "Собирательницы колосьев",
+      "catalogueTitle": "Des glaneuses ou Les glaneuses",
+      "artist": "Jean-François Millet",
+      "artists": [
+        {
+          "name": "Jean-François Millet",
+          "role": "primary",
+          "slug": "jean-francois-millet-q148458"
+        }
+      ],
+      "date": "1857",
+      "start": 1857,
+      "end": 1857,
+      "medium": "Холст, масло",
+      "accession": "RF 592",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/db5cb39c-76e8-440f-87e5-eeffeac96ffd-846596fed7b16f58.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg",
+      "credit": "Jean-François Millet. Des glaneuses ou Les glaneuses. Image credit: Jean-François Millet; Source credit: Google Arts & Culture — GgHsT2RumWxbtw. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.pop.culture.gouv.fr/notice/joconde/000PE002031",
+      "description": "Женщины собирают остатки после жатвы, а не сам урожай. Милле делает разницу видимой, противопоставляя их горсти далёкому изобилию. Повторяющиеся наклоны связывают фигуры, не превращая их во взаимозаменяемые копии. На переднем плане изнурительная работа с малым результатом получает больше живописного значения, чем крупное хозяйство вдали.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "892efb8c-1ddc-46e0-ba7e-e24d4806b94b",
+      "title": "Ангелус",
+      "catalogueTitle": "L’Angélus",
+      "artist": "Jean-François Millet",
+      "artists": [
+        {
+          "name": "Jean-François Millet",
+          "role": "primary",
+          "slug": "jean-francois-millet-q148458"
+        }
+      ],
+      "date": "1857–1859",
+      "start": 1857,
+      "end": 1859,
+      "medium": "Холст, масло",
+      "accession": "RF 1877",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/892efb8c-1ddc-46e0-ba7e-e24d4806b94b-327b3c1ac97fcf6e.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-francois-millet/the-angelus-1859",
+      "credit": "Jean-Francois Millet. L’Angélus. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/langelus-345",
+      "description": "Инструменты и корзина остаются рядом, поэтому молитва выглядит перерывом, а не отдельной церемонией. Опущенные головы направляют взгляд к промежутку между мужчиной и женщиной. Далёкая церковь связывает частную паузу с более широким окружением. Милле делает неподвижность понятной через временно остановленную работу.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "7f01199b-0fe5-4966-b838-f180b8b7e9a9",
+      "title": "Бал в Мулен-де-ла-Галетт",
+      "catalogueTitle": "Bal du moulin de la Galette",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1876",
+      "start": 1876,
+      "end": 1876,
+      "medium": "Холст, масло",
+      "accession": "RF 2739",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/7f01199b-0fe5-4966-b838-f180b8b7e9a9-04f101a0188d8d14.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pierre_auguste_renoir,_ballo_del_moulin_del_la_galette,_1876,_01.JPG",
+      "credit": "Pierre-Auguste Renoir. Bal du moulin de la Galette. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Pierre_auguste_renoir,_ballo_del_moulin_del_la_galette,_1876,_01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/en/artworks/bal-du-moulin-de-la-galette-497",
+      "description": "Свет пересекает границы между людьми. Рассеянные пятна касаются лиц, одежды и земли, связывая отдельные разговоры и танцующие пары без единого главного события. Сидящие на переднем плане дают точки входа в толпу; дальше внимание рассеивается. Компания Ренуара остаётся общительной отчасти потому, что ни одна фигура не присваивает картину целиком.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "b2b84678-3221-4d07-ba65-202a72296c8c",
+      "title": "Паркетчики",
+      "catalogueTitle": "LES RABOTEURS DE PARQUET",
+      "artist": "Gustave Caillebotte",
+      "artists": [
+        {
+          "name": "Gustave Caillebotte",
+          "role": "primary",
+          "slug": "gustave-caillebotte-q295144"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/9dfe6040-3ff3-5b23-b920-b4c468ce1c60-e53ac3e38b7768c6.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustave-caillebotte/the-parquet-planers-1875",
+      "credit": "Gustave Caillebotte. The Parquet Planers (The Floor Scrapers). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/000PE003717",
+      "description": "Доски пола задают направление работы. Длинные полосы ведут взгляд в глубину комнаты, а стоящие на коленях мужчины находятся на разных этапах одной задачи. Свет окна выделяет соскобленное дерево и обнажённые спины. Кайботт даёт ручному труду размеренное окружение, не скрывая неудобных поз, которых он требует.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "0edd9c42-f15a-5f08-b46a-75e93b62e974",
+      "title": "Композиция в сером и чёрном № 1: Мать художника",
+      "catalogueTitle": "Arrangement in Grey and Black No.1, Portrait of the Artist's Mother",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1871",
+      "start": 1871,
+      "end": 1871,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0edd9c42-f15a-5f08-b46a-75e93b62e974-06ccecf4eadbf915.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-mcneill-whistler/arrangement-in-grey-and-black-no-1-portrait-of-the-artist-s-mother-1871",
+      "credit": "James Abbott McNeill Whistler. Arrangement in Grey and Black No.1, Portrait of the Artist's Mother. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-mcneill-whistler/arrangement-in-grey-and-black-no-1-portrait-of-the-artist-s-mother-1871",
+      "description": "Название предлагает обратить внимание и на человека, и на композицию. Большие серые и чёрные участки определяют портрет раньше, чем становятся различимы светлые акценты лица, чепца и рук. Картина в раме и узорная занавеска делят стену. Эти решения не отменяют присутствия модели, а дают её спокойному профилю необычно твёрдое окружение.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "83b1c160-ace0-4039-9b20-7951e7962901",
+      "title": "Урок танца",
+      "catalogueTitle": "La Classe de danse",
+      "artist": "Edgar Degas",
+      "artists": [
+        {
+          "name": "Edgar Degas",
+          "role": "primary",
+          "slug": "edgar-degas-q46373"
+        }
+      ],
+      "date": "1873–1876",
+      "start": 1873,
+      "end": 1876,
+      "medium": "Холст, масло",
+      "accession": "RF 1976",
+      "image": "https://artlines.org/assets/artworks/wikiart/a9a1a096-3b60-5b7b-85e8-a302a587f86d-b476c4883c89d7ec.jpg",
+      "imageSource": "https://www.wikiart.org/en/edgar-degas/the-dancing-class-1874",
+      "credit": "Edgar Degas. The Ballet Class. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/en/artworks/la-classe-de-danse-1151",
+      "description": "На уроке танца происходит гораздо больше, чем танец. Одни упражняются, другие ждут, отдыхают или поправляют одежду. Открытый пол позволяет этим занятиям оставаться отдельными, хотя преподаватель и урок связывают группу. У Дега дисциплинированное исполнение рождается из неравномерного внимания, повторения и промежутков между движениями.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "f39bf9d1-055b-440c-89b6-ca0700aa2902",
+      "title": "Звездная ночь над Роной",
+      "catalogueTitle": "La Nuit étoilée",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Холст, масло",
+      "accession": "RF 1975 19",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/f39bf9d1-055b-440c-89b6-ca0700aa2902-ecc312ec14115ff4.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1888-2",
+      "credit": "Vincent van Gogh. La Nuit étoilée. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/la-nuit-etoilee-78696",
+      "description": "Ночь содержит два вида света: рассеянные звёзды наверху и длинные городские отражения внизу. Разница разделяет небо и реку даже там, где цвета сближаются. Пара у берега помогает оценить ширину воды. Сцена обширна, но в ней сохраняется место для двух маленьких фигур.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "3f2be8a0-d6c0-41b6-9324-10a46034e6a1",
+      "title": "Церковь в Овере",
+      "catalogueTitle": "L’église d’Auvers-sur-Oise, vue du chevet",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890 (написано 4–8 июня 1890 г.)",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Холст, масло",
+      "accession": "RF 1951 42",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/3f2be8a0-d6c0-41b6-9324-10a46034e6a1-03d2dec5583b4296.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_Van_Gogh,_la_chiesa_di_auvers-sur-oise,_1890,_01.JPG",
+      "credit": "Vincent van Gogh. L’église d’Auvers-sur-Oise, vue du chevet. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Vincent_Van_Gogh,_la_chiesa_di_auvers-sur-oise,_1890,_01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/leglise-dauvers-sur-oise-vue-du-chevet-755",
+      "description": "Дорожки расходятся вокруг церкви, предлагая пройти мимо здания, чьи очертания кажутся менее устойчивыми, чем должна позволять каменная кладка. Под глубоким синим небом стены изгибаются; маленькая идущая фигура движется в ином масштабе. Ван Гог сохраняет узнаваемость церкви, вовлекая её контуры в подвижность окружающего пейзажа.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "39cc19f8-2400-4c95-88b7-d1fb106253cf",
+      "title": "Доктор Поль Гаше",
+      "catalogueTitle": "Le Docteur Paul Gachet",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Холст, масло",
+      "accession": "RF 1949 16",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/39cc19f8-2400-4c95-88b7-d1fb106253cf-f5e8f6b281596874.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paris_7e_Mus%C3%A9e_d%E2%80%99Orsay_Van_Gogh_%C3%A0_Auvers-sur-Oise_981.jpg",
+      "credit": "Vincent van Gogh. Le Docteur Paul Gachet. Image credit: GFreihalter; Own work. https://commons.wikimedia.org/wiki/File:Paris_7e_Mus%C3%A9e_d%E2%80%99Orsay_Van_Gogh_%C3%A0_Auvers-sur-Oise_981.jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/le-docteur-paul-gachet-751",
+      "description": "Рука Гаше поддерживает голову, а не обращается жестом к другому человеку. Покатые плечи и диагональ тела повторяют давление вниз, тогда как цветы рядом стоят более прямо. Позу можно прочесть как усталость. Но это не устанавливает заболевание и не даёт оснований ставить модели диагноз.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "710283db-d1d7-4d54-94c1-fd65912a7b58",
+      "title": "Игроки в карты",
+      "catalogueTitle": "Les Joueurs de cartes",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1893-1896",
+      "start": 1893,
+      "end": 1896,
+      "medium": "Холст, масло",
+      "accession": "RF 1969",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/710283db-d1d7-4d54-94c1-fd65912a7b58-1c230455819297f7.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-cezanne/the-card-players-1896",
+      "credit": "Paul Cezanne. Les Joueurs de cartes. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/les-joueurs-de-cartes-1312",
+      "description": "Бутылка создаёт вертикальное разделение, не делая мужчин зеркальными отражениями. Их разные позы располагаются по сторонам узкого стола; внимание обращено к картам, а не зрителю. Сезанн находит в этой сосредоточенности длительный предмет для живописи. Почти ничего не должно происходить, чтобы равновесие фигур оставалось интересным для изучения.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "59675849-d769-44e9-bee9-99729d911c86",
+      "title": "Яблоки и апельсины",
+      "catalogueTitle": "Pommes et oranges",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "ок. 1899 г.",
+      "start": 1899,
+      "end": 1899,
+      "medium": "Холст, масло",
+      "accession": "RF 1972",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/59675849-d769-44e9-bee9-99729d911c86-12bf9db11e64a969.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_c%C3%A9zanne,_mele_e_arance,_1899_ca._01.JPG",
+      "credit": "Paul Cézanne. Pommes et oranges. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Paul_c%C3%A9zanne,_mele_e_arance,_1899_ca._01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/pommes-et-oranges-1470",
+      "description": "Фрукты выглядят плотными, хотя стол трудно восстановить как единую согласованную поверхность. Тарелки, складки и высокое блюдо задают несовпадающие углы. Вместо того чтобы считать их только ошибками перспективы, проследите, как каждый поворот позволяет лучше увидеть отдельный предмет. Композиция Сезанна связана местными отношениями, а не одной неподвижной точкой зрения.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "667bc885-756f-4c14-8ccc-aeae46757d25",
+      "title": "Ареареа",
+      "catalogueTitle": "Arearea",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "Холст, масло",
+      "accession": "RF 1961 6",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/667bc885-756f-4c14-8ccc-aeae46757d25-e304575d6bb73f78.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_gauguin,_arearea,_1892,_01.JPG",
+      "credit": "Paul Gauguin. Arearea. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Paul_gauguin,_arearea,_1892,_01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/arearea-291",
+      "description": "Красная собака мешает принять сцену за нейтральный отчёт об увиденном Гогеном. Цветовые полосы организуют землю вокруг сидящих женщин; маленькие фигуры позади образуют другой ярус. Упрощение связывает сцену, но одновременно обнаруживает вмешательство художника. Картина не должна заменять непосредственное свидетельство о жизни Таити.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "a60609f1-e6ac-4bf6-801a-d0f9df7d5db7",
+      "title": "Таитянки",
+      "catalogueTitle": "Femmes de Tahiti",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1891 (ноябрь–декабрь)",
+      "start": 1891,
+      "end": 1891,
+      "medium": "Холст, масло",
+      "accession": "RF 2765",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/a60609f1-e6ac-4bf6-801a-d0f9df7d5db7-bc6db9bcc3bb1b4f.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/tahitian-women-1891",
+      "credit": "Paul Gauguin. Femmes de Tahiti. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/femmes-de-tahiti-290",
+      "description": "Две сидящие женщины смотрят в разные стороны. Одна повёрнута боком, другая наружу, поэтому близость не становится одинаковой позой. Широкие контуры и небольшая глубина пространства придают телам вес. Руки и узорная одежда вносят мелкие различия, не позволяя свести пару к повтору одной формы.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "3f65099d-0f2b-5841-9f9a-594b3a10d75e",
+      "title": "Портрет Эдмы Понтийон",
+      "catalogueTitle": "Portrait of Edma Pontillon",
+      "artist": "Berthe Morisot",
+      "artists": [
+        {
+          "name": "Berthe Morisot",
+          "role": "primary",
+          "slug": "berthe-morisot-q105320"
+        }
+      ],
+      "date": "1871",
+      "start": 1871,
+      "end": 1871,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3f65099d-0f2b-5841-9f9a-594b3a10d75e-45d583f69cb0ff87.jpg",
+      "imageSource": "https://www.wikiart.org/en/berthe-morisot/portrait-of-edma-pontillon",
+      "credit": "Berthe Morisot. Portrait of Edma Pontillon. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/berthe-morisot/portrait-of-edma-pontillon",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/berthe-morisot/portrait-of-edma-pontillon",
+      "description": "Тёмная одежда могла бы превратить сидящую фигуру в единый блок, но Моризо разделяет руки, лицо и платье небольшими изменениями света. Лёгкий поворот головы противопоставлен спокойно сложенным рукам. Светлая узорная мебель окружает эти сдержанные движения. Конкретность портрета держится на подобных поправках, а не на эффектном жесте.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "2775eda9-5256-574d-990a-d035cc3b735f",
+      "title": "Портрет Эмиля Золя",
+      "catalogueTitle": "Portrait of Emile Zola",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2775eda9-5256-574d-990a-d035cc3b735f-7ed71c145edb88c1.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/portrait-of-emile-zola-1868",
+      "credit": "Édouard Manet. Portrait of Emile Zola. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/portrait-of-emile-zola-1868",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/portrait-of-emile-zola-1868",
+      "description": "Открытая книга и изображения на стене включают чтение и рассматривание в тему портрета. Они окружают Золя, не растворяя его чёткий профиль в перечне интересов. Мане удерживает в одной раме физическое присутствие модели и интеллектуальное окружение. Предметы заслуживают внимания, но не объясняют о человеке всего.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "a44848e9-66e5-51cb-b6ef-b92491eca2e4",
+      "title": "Фредерик Базиль пишет цаплю",
+      "catalogueTitle": "Frederic Bazille Painting The Heron (Frederic Bazille at his Easel)",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1867",
+      "start": 1867,
+      "end": 1867,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/a44848e9-66e5-51cb-b6ef-b92491eca2e4-a480f9215e8778d1.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/frederic-bazille-painting-the-heron-1867",
+      "credit": "Frederic Bazille Painting The Heron (Frederic Bazille at his Easel). WikiArt; Pierre-Auguste Renoir. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-auguste-renoir/frederic-bazille-painting-the-heron-1867",
+      "description": "Базиль занят созданием изображения, а не представлением себя для портрета. Вид сбоку позволяет наклонённому телу, кисти и соседним материалам объяснить действие. Ренуар делает обычную рабочую позу коллеги основой портрета. Профессия раскрывается через незавершённую задачу, а не формальное заявление о статусе.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "3a26b997-5ada-5bf0-b8e0-c4b917ff366b",
+      "title": "Хуан Прим, 8 октября 1868 года",
+      "catalogueTitle": "Juan Prim, October 8, 1868",
+      "artist": "Henri Regnault",
+      "artists": [
+        {
+          "name": "Henri Regnault",
+          "role": "primary",
+          "slug": "henri-regnault-nga-39043"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "Нефть",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3a26b997-5ada-5bf0-b8e0-c4b917ff366b-115dd1efbcbe98a1.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-regnault/juan-prim-october-8-1868-1868",
+      "credit": "Henri Regnault. Juan Prim, October 8, 1868. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-regnault/juan-prim-october-8-1868-1868",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-regnault/juan-prim-october-8-1868-1868",
+      "description": "Поднятая передняя нога не позволяет лошади превратиться в неподвижную подставку под Примом. Её беспокойство подчёркивает самообладание всадника; люди и флаги продолжают сцену за пределы главной пары. Реньо использует знакомую форму публичной власти — конный портрет, — но её действие зависит от заметной подвижности животного.",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    }
+  ],
+  "context": {
+    "start": 1849,
+    "end": 1899
+  },
+  "closingSections": [
+    {
+      "title": "Сравните способы сосредоточиться",
+      "paragraphs": [
+        "Поставьте рядом игроков в карты и танцовщиц Дега либо работающего Базиля и читающего Золя. Сосредоточенность, ожидание и самопредставление создают разные виды портрета. Такие сопоставления полезнее, чем считать каждую работу шагом к единому современному стилю. Перед посещением проверьте актуальные сведения музея: выборка из его собрания не гарантирует, что все картины выставлены."
+      ]
+    }
+  ]
+}

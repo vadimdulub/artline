@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "beaux-arts-rouen",
+  "museum": "Musée des Beaux-Arts de Rouen",
+  "city": "鲁昂",
+  "country": "法国",
+  "title": "鲁昂美术馆：杰作",
+  "subtitle": "鲁昂美术馆的二十件作品，从天气变化到肖像，再到想象中的历史相遇。",
+  "introduction": "莫奈的大教堂几乎填到画幅边缘。毕沙罗的桥则仍是城市中的通道，四周有烟、交通与暮光。两人都画鲁昂，却以不同距离观看：一个把立面拉近，另一个给城市往来更宽的场地。\n\n鲁昂美术馆的选集远超城市图像。肖像询问衣着与姿态如何标识人，大型历史和神话场景则在环境中安排权威或暴力。德拉罗什画的狱中贞德，尤其适合用来区分有说服力的图像与可靠的事件记录。看这二十件作品时，分清“画得可信”与“历史已证实”，会有所收获。",
+  "visitNote": "出发前，请查询博物馆当前的开放信息与展览情况。本指南基于馆藏内容编写，但外借展出、文物修复及陈列调整等因素可能会影响实际展出内容。",
+  "locale": "zh",
+  "website": "https://mbarouen.fr",
+  "officialGuide": "https://mbarouen.fr",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "在线阅读或下载 · 英语",
+      "note": "大都会艺术博物馆的“印象派：百年纪念展”提供了关于莫奈、毕沙罗和西斯莱等参展画家的介绍条目与历史评述。建议结合鲁昂与塞纳河的对比景观来阅读这些内容。"
+    }
+  ],
+  "works": [
+    {
+      "id": "06aa13c7-16e4-5722-a3ff-1d8d320b98bc",
+      "title": "阳光下的山间小径",
+      "catalogueTitle": "Hill Path in Sunlight",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/06aa13c7-16e4-5722-a3ff-1d8d320b98bc-6682ae0709ec20fb.jpg",
+      "imageSource": "https://www.wikiart.org/en/alfred-sisley/hill-path-in-sunlight-1891",
+      "credit": "Alfred Sisley. Hill Path in Sunlight. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/alfred-sisley/hill-path-in-sunlight-1891",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/alfred-sisley/hill-path-in-sunlight-1891",
+      "description": "上升的小径给行人路线，也给风景方向。温暖草地与零星树木，在大得多的蓝天下构成坡面。人物帮助衡量上坡的高度，因此并非无关紧要；但他们很小，普通散步便不会成为景色唯一的主题。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "b5675697-0139-513f-9d5b-0861a8d3a83a",
+      "title": "男性习作：坐姿背影",
+      "catalogueTitle": "Male 'académie' Seated and Seen from Behind",
+      "artist": "Théodore Géricault",
+      "artists": [
+        {
+          "name": "Théodore Géricault",
+          "role": "primary",
+          "slug": "theodore-gericault-q184212"
+        }
+      ],
+      "date": "1816",
+      "start": 1816,
+      "end": 1816,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/b5675697-0139-513f-9d5b-0861a8d3a83a-405bc2ff255e5762.jpg",
+      "imageSource": "https://www.wikiart.org/en/theodore-gericault/male-academie-seated-and-seen-from-behind-1816",
+      "credit": "Male 'académie' Seated and Seen from Behind. WikiArt; Théodore Géricault. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/theodore-gericault/male-academie-seated-and-seen-from-behind-1816",
+      "description": "模特的背提供了关于姿势的大部分信息。光说明它同举起手臂的关系，下方收拢的双腿则支撑坐姿身体。不靠面孔，习作也能借受力、平衡与各部分的连接，让一种身体位置变得可懂。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "2c1d1a9a-dafc-5f37-99fa-f2e9600e5bd6",
+      "title": "雅克-埃米尔·布朗什肖像",
+      "catalogueTitle": "Portrait of Jacques-Emile Blanche",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "约 1886 年",
+      "start": 1886,
+      "end": 1886,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2c1d1a9a-dafc-5f37-99fa-f2e9600e5bd6-bb126847f78467b1.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-singer-sargent/portrait-of-jacques-emile-blanche",
+      "credit": "John Singer Sargent. Portrait of Jacques-Emile Blanche. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/john-singer-sargent/portrait-of-jacques-emile-blanche",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-singer-sargent/portrait-of-jacques-emile-blanche",
+      "description": "横过胸前的手，在灰外套宽大的形状内添入较不僵直的部分。浅衬衣与绿背景将人物分成清楚区域，没有把环境填得过满。萨金特更准确地处理面孔，周围衣服则留给较宽的笔触。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "ba858107-6145-5b4f-8395-3cefebc5aa7a",
+      "title": "艾蒙夫人（人称“美丽的泽莉”）",
+      "catalogueTitle": "Portrait of Madame Aymon, La belle Zélie",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1806",
+      "start": 1806,
+      "end": 1806,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/ba858107-6145-5b4f-8395-3cefebc5aa7a-d129636fdbd01be1.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-aymon-la-belle-z%C3%A9lie-1806",
+      "credit": "Jean-Auguste-Dominique Ingres. Portrait of Madame Aymon, La belle Zélie. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-aymon-la-belle-z%C3%A9lie-1806",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-aymon-la-belle-z%C3%A9lie-1806",
+      "description": "椭圆边界以另一道包围曲线，呼应卷发、披肩与脸的转向。坚实边缘使形状各自清楚，让肖像带有强烈的设计感。服饰没有同身份分开；它们如何排列，本身就参与了这位具体人物的呈现。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "8c127e78-1311-545c-b910-4fd677fc7696",
+      "title": "维纳斯与丘比特",
+      "catalogueTitle": "Venus and Cupid",
+      "artist": "Lavinia Fontana",
+      "artists": [
+        {
+          "name": "Lavinia Fontana",
+          "role": "primary",
+          "slug": "lavinia-fontana-q236050"
+        }
+      ],
+      "date": "1592",
+      "start": 1592,
+      "end": 1592,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8c127e78-1311-545c-b910-4fd677fc7696-ef1d6593c15e6979.jpg",
+      "imageSource": "https://www.wikiart.org/en/lavinia-fontana/isabella-ruini-as-venus-1592",
+      "credit": "Lavinia Fontana. Venus and Cupid. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lavinia-fontana/isabella-ruini-as-venus-1592",
+      "description": "丘比特凑近维纳斯脸颊，让神话中的两人异乎寻常地亲近。珍珠、薄纱与刺绣织物被仔细区分，近乎肖像画的用心。亲密感来自距离与表面细节，并不需要把传统上对某位模特的猜认当成定论。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "9fa572fd-fdb8-5a48-a7d3-9c6a6f7fb3aa",
+      "title": "卡拉比尼尔骑兵肖像",
+      "catalogueTitle": "Portrait of a Carabinier",
+      "artist": "Théodore Géricault",
+      "artists": [
+        {
+          "name": "Théodore Géricault",
+          "role": "primary",
+          "slug": "theodore-gericault-q184212"
+        }
+      ],
+      "date": "1814",
+      "start": 1814,
+      "end": 1814,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/9fa572fd-fdb8-5a48-a7d3-9c6a6f7fb3aa-a01ca8f0be139b28.jpg",
+      "imageSource": "https://www.wikiart.org/en/theodore-gericault/portrait-of-rifleman",
+      "credit": "Portrait of a Carabinier. WikiArt; Théodore Géricault. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/theodore-gericault/portrait-of-rifleman",
+      "description": "磨亮胸甲给躯干一层坚硬表面，同有生命的脸与手形成对比。大帽子又在士兵旁占去一块空间，让军事装备仍然醒目，却没有完全包住他。籍里柯通过这些不同材质，把个人与职业角色留在一起。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "1c509544-352f-5eec-81fb-687dd22a7c28",
+      "title": "芒什省某村庄的水手葬礼",
+      "catalogueTitle": "Burial of a Sailor in a Manche Village",
+      "artist": "August Hagborg",
+      "artists": [
+        {
+          "name": "August Hagborg",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2870939"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "1911.6",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27019850-473f3afd83eb021f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hagborg-_Enterrement_dans_un_village_de_la_Manche.jpg",
+      "credit": "August Hagborg. Burial of a Sailor in a Manche Village. Image credit: August Hagborg; Source credit: Musée des Beaux-Arts de Rouen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27019850",
+      "description": "道路让葬礼不只局限于一小群紧聚的哀悼者。村民在不同远近处加入队伍，普通聚落仍围在他们身边。哈格堡把共同的失落放在一个人们仍将继续居住的地方，没有把哀悼从日常风景中抽离。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "95caedbe-ae5e-4be9-8fa0-d431d0238541",
+      "title": "狄俄墨得斯被自己的马匹吞噬",
+      "catalogueTitle": "DIOMEDE DEVORE PAR SES CHEVAUX",
+      "artist": "Gustave Moreau",
+      "artists": [
+        {
+          "name": "Gustave Moreau",
+          "role": "primary",
+          "slug": "gustave-moreau-q203828"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "布面油画",
+      "accession": "931.16.1",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/95caedbe-ae5e-4be9-8fa0-d431d0238541-97d7c3ac1fe81622.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustave-moreau/diomedes-being-eaten-by-his-horses-1865",
+      "credit": "Gustave Moreau. DIOMEDE DEVORE PAR SES CHEVAUX. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000056563",
+      "description": "巨大的废墟几乎压倒下方小人物与马匹。因此，暴力题材并未以一场立刻可懂的相遇来呈现。目光必须穿过庞大建筑与暗色开口，才找得到动作；环境在这里主动阻碍了对神话的快速识读。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "3eed8017-1d81-4dee-ba97-1862d779d08c",
+      "title": "病中的贞德在狱中受审",
+      "catalogueTitle": "Jeanne d’Arc malade est interrogée dans sa prison par le cardinal de Winchester",
+      "artist": "Paul Delaroche",
+      "artists": [
+        {
+          "name": "Paul Delaroche",
+          "role": "primary",
+          "slug": "paul-delaroche-q322582"
+        }
+      ],
+      "date": "1824",
+      "start": 1824,
+      "end": 1824,
+      "medium": "布面油画",
+      "accession": "982.6.1",
+      "image": "https://artlines.org/assets/artworks/imported/havre-rouen-cyprus-20261006/3eed8017-1d81-4dee-ba97-1862d779d08c-f9f16d9042034fb1.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-delaroche/joan-d-arc-being-interrogated-1824",
+      "credit": "Paul Delaroche; WikiArt",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/paul-delaroche/joan-d-arc-being-interrogated-1824",
+      "source": "https://mbarouen.fr/fr/oeuvres/jeanne-d-arc-malade-est-interrogee-dans-sa-prison-par-le-cardinal-de-winchester",
+      "description": "红衣主教的长袍强烈占据牢房，与贞德较受限制的位置形成对照。但这一历史场景是虚构的：博物馆指出，温彻斯特从未到狱中探访她。德拉罗什借想象中的会面使权力不平等可见，并不是在提供一次审讯的目击记录。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "a6172ef0-3599-4053-89c6-d78bf0155e81",
+      "title": "鲁昂大教堂：正门与阿尔巴纳塔，阴天",
+      "catalogueTitle": "La Cathédrale de Rouen. Le Portail et la tour d’Albane. Temps gris",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "布面油画",
+      "accession": "909.32",
+      "image": "https://artlines.org/assets/artworks/imported/havre-rouen-cyprus-20261006/a6172ef0-3599-4053-89c6-d78bf0155e81-ab5db49b595c81b2.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-monet/rouen-cathedral-the-portal-and-the-tour-d-albene-grey-weather",
+      "credit": "Claude Monet; WikiArt",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/claude-monet/rouen-cathedral-the-portal-and-the-tour-d-albene-grey-weather",
+      "source": "https://mbarouen.fr/fr/oeuvres/la-cathedrale-de-rouen-le-portail-et-la-tour-d-albane-temps-gris",
+      "description": "紧密取景几乎排除周围整座城市，让立面占满画幅。灰与蓝紫笔痕，使石头成为天气变化的记录。博物馆将此画定为1894年，同时解释大教堂系列实际在1892—1893年间绘制，后来才落款日期；画面所见与题写年份，应当分清。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "fcdcc3c5-5f6f-4596-bdaf-bf3dcf41ce80",
+      "title": "图拉真的公正",
+      "catalogueTitle": "La Justice de Trajan",
+      "artist": "Eugène Delacroix",
+      "artists": [
+        {
+          "name": "Eugène Delacroix",
+          "role": "primary",
+          "slug": "eugene-delacroix-q33477"
+        }
+      ],
+      "date": "1840",
+      "start": 1840,
+      "end": 1840,
+      "medium": "布面油画",
+      "accession": "D.844.1.1",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/fcdcc3c5-5f6f-4596-bdaf-bf3dcf41ce80-012d4c484ba5b030.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:La_justice_de_Trajan.jpg",
+      "credit": "Eugène Delacroix. La Justice de Trajan. Image credit: Eugène Delacroix; Source credit: Musée des Beaux-Arts de Rouen. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://mbarouen.fr/fr/oeuvres/la-justice-de-trajan",
+      "description": "亮色马匹帮助我们在交错手势、旗帜和人群中找到图拉真。权威经由一场正在展开的公共相遇呈现，而不是一位独坐王座的统治者。周围人物不可缺少：裁决须在人前落实，不能仅靠皇帝的面貌来宣告。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "9acd5b9a-078c-5f86-889f-0c44339b85e8",
+      "title": "圣母与施祝福的圣婴",
+      "catalogueTitle": "La Vierge et l'enfant bénissant",
+      "artist": "Charles-André van Loo",
+      "artists": [
+        {
+          "name": "Charles-André van Loo",
+          "role": "primary",
+          "slug": "charles-andre-van-loo-q686597"
+        }
+      ],
+      "date": "1738",
+      "start": 1738,
+      "end": 1738,
+      "medium": "",
+      "accession": "SR 53",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105444118-a8e536e8a0a664f0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Van-Loo-Carle-Vierge-Enfant-Rouen.jpg",
+      "credit": "Шарль Андре Ван Лоо. La Vierge et l'enfant bénissant. Image credit: Charles André van Loo. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105444118",
+      "description": "圣婴举起的手与背景分得足够清楚，让人认出祝福。玛利亚扶着他站立，把仪式性手势与实际照料连接起来。两人亲近的安排，使精神权威经由一个需要依靠他人的孩子出现，而非孤立而发号施令的形象。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "69183e90-c69a-4021-8213-8e43a5d84e39",
+      "title": "威尔士，莱迪湾",
+      "catalogueTitle": "Lady’s Cove, Pays de Galles",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "布面油画",
+      "accession": "909.1.48",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/69183e90-c69a-4021-8213-8e43a5d84e39-2c44e61f96e0d806.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sisley_-_Ladys-Cove,-Wales,-1897.jpg",
+      "credit": "Alfred Sisley. Lady’s Cove, Pays de Galles. Image credit: Alfred Sisley; Source credit: https://www.alfredsisley.org/the-complete-works.html?ps=96&pageno=9. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://mbarouen.fr/fr/oeuvres/lady-s-cove-pays-de-galles",
+      "description": "接连的浪带描出离岩石和岬角不同的距离。海岸线相对稳定，水则散成变动笔痕。西斯莱利用这一对比，让运动有参照：浪每刻都可改变，却不会使岸线向远处退去的方向变得无法跟随。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "0c58d8b2-5bcd-5641-9599-1f384a23509a",
+      "title": "丘比特与普赛克的婚礼",
+      "catalogueTitle": "Le Mariage de l'Amour et Psyché",
+      "artist": "François Boucher",
+      "artists": [
+        {
+          "name": "François Boucher",
+          "role": "primary",
+          "slug": "francois-boucher-q180932"
+        }
+      ],
+      "date": "1744",
+      "start": 1744,
+      "end": 1744,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105444117-74526957d85a5acd.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Boucher-rouen.jpg",
+      "credit": "François Boucher. Le Mariage de l'Amour et Psyché. Image credit: François Boucher. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105444117",
+      "description": "人物在云间形成开放弧线，空隙让天上宾客不至于成为一整块人群。更小的有翼身体与垂褶扩展聚集，却没有给它一个地上的平台。悬浮本就是设计的一部分，身体之间的空处让庆典显得轻盈无重。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "335f9640-7d32-45e7-a81b-83bb9246baa1",
+      "title": "鲁昂布瓦尔迪厄桥：日落，雾天",
+      "catalogueTitle": "Le Pont Boieldieu à Rouen, soleil couchant, temps brumeux",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "布面油画",
+      "accession": "D.2000.1.1",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/335f9640-7d32-45e7-a81b-83bb9246baa1-0a7024c634c44d03.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pissaro-pont-mus%C3%A9eRouen.jpg",
+      "credit": "Camille Pissarro. Le Pont Boieldieu à Rouen, soleil couchant, temps brumeux. Image credit: Camille Pissarro; Source credit: http://mbarouen.fr/fr/oeuvres/le-pont-boieldieu-a-rouen-soleil-couchant-temps-brumeux. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://mbarouen.fr/fr/oeuvres/le-pont-boieldieu-a-rouen-soleil-couchant-temps-brumeux",
+      "description": "桥在烟与晚雾之间划出清楚斜线。人车沿线保持为小小痕迹，把天气景象接回普通交通。毕沙罗让一座运作中的城市可辨，又不将工业与天气分开：两者共同改变了空气，河流和建筑正是透过这层空气被看见。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "d9739d43-91c7-4670-b37a-85afe5e4db4d",
+      "title": "阳光下的莫雷教堂",
+      "catalogueTitle": "L’Eglise de Moret (plein soleil)",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "布面油画",
+      "accession": "909.1.47",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/d9739d43-91c7-4670-b37a-85afe5e4db4d-ee3693905eb61bb2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Alfred_Sisley_038.jpg",
+      "credit": "Alfred Sisley. L’Eglise de Moret (plein soleil). Image credit: Alfred Sisley; Source credit: The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 .. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://mbarouen.fr/fr/oeuvres/l-eglise-de-moret-plein-soleil",
+      "description": "黄色石材与蓝紫阴影，把同一座教堂分成冷暖不同的区域。小遮棚与人物将它放进街道，取景却让墙面显得相当庞大。建筑提供固定安排，阳光条件的变化因此能在其上鲜明显露。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "ccdbf027-bbc3-5f2a-b1bf-3964ed04e6ee",
+      "title": "一场纸牌游戏",
+      "catalogueTitle": "A Game of Cards",
+      "artist": "Judith Leyster",
+      "artists": [
+        {
+          "name": "Judith Leyster",
+          "role": "primary",
+          "slug": "judith-leyster-q232423"
+        }
+      ],
+      "date": "1633",
+      "start": 1633,
+      "end": 1633,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ccdbf027-bbc3-5f2a-b1bf-3964ed04e6ee-2b044cbcd5a86fa7.jpg",
+      "imageSource": "https://www.wikiart.org/en/judith-leyster/a-game-of-cards",
+      "credit": "Judith Leyster. A Game of Cards. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/judith-leyster/a-game-of-cards",
+      "description": "红衣女子转向牌局圈子以外，另一位参与者则露出纸牌。聚会已经在进行，这些手势却向额外观察者打开了它。莱斯特让社交同时具有数个方向；围绕木桶桌的全部关系，不能由某一道目光独自解释。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "b1e924e5-5d90-599b-aeca-fcfd713c0636",
+      "title": "纪念亨利三世的隆重弥撒",
+      "catalogueTitle": "Messe solennelle en l'honneur d'Henri III",
+      "artist": "Herman van der Mast",
+      "artists": [
+        {
+          "name": "Herman van der Mast",
+          "role": "primary",
+          "slug": "wikimedia-painter-q20247195"
+        }
+      ],
+      "date": "1575–1604",
+      "start": 1575,
+      "end": 1604,
+      "medium": "",
+      "accession": "SR 89",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/b1e924e5-5d90-599b-aeca-fcfd713c0636-a2037d021f058cdc.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Messe_solennelle_en_pr%C3%A9sence_dHenri_III_IMG_7446.jpg",
+      "credit": "Herman van der Mast. Messe solennelle en l'honneur d'Henri III. Image credit: David.Monniaux; Own work. https://commons.wikimedia.org/wiki/File:Messe_solennelle_en_pr%C3%A9sence_dHenri_III_IMG_7446.jpg. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q141156350",
+      "description": "跪着和站着的群体在教堂内各占不同位置，借姿势与服装区分职责。建筑将视线引向更深处的典礼，也给所有人共同的秩序。场景可以容纳许多参与者，而不要求把每个人都独立画成一幅肖像。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "a64d051f-c6ac-5382-b886-51c6b7df60de",
+      "title": "保罗·瓦莱里肖像",
+      "catalogueTitle": "Portrait de Paul Valéry",
+      "artist": "Jacques-Emile Blanche",
+      "artists": [
+        {
+          "name": "Jacques-Emile Blanche",
+          "role": "primary",
+          "slug": "jacques-emile-blanche-nga-21921"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "1930.1.2",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q102036399-45a6604ee981610e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_de_Paul_Val%C3%A9ry.jpg",
+      "credit": "Jacques-Émile Blanche. Portrait de Paul Valéry. Image credit: Jacques-Émile Blanche. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q102036399",
+      "description": "贴着瓦莱里脸颊的手撑住头，打破坐姿直立而正式的外形。带图案的红底围着浅色面孔。这动作可能让人想到思考，却不能透露思考内容；肖像的力量在于具体安排，而不是替作家编造内心活动。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    },
+    {
+      "id": "89f38f75-898c-5d74-929f-8e5d917a98ad",
+      "title": "巴黎城前的圣吉纳维芙",
+      "catalogueTitle": "Sainte Geneviève devant Paris",
+      "artist": "Charles Le Brun",
+      "artists": [
+        {
+          "name": "Charles Le Brun",
+          "role": "primary",
+          "slug": "charles-le-brun-q271676"
+        }
+      ],
+      "date": "约 1638 年",
+      "start": 1638,
+      "end": 1638,
+      "medium": "",
+      "accession": "975.4.45",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105444119-75876e0cce7e4d82.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Le_Brun_Sainte_Genevi%C3%A8ve.jpg",
+      "credit": "Charles Le Brun. Sainte Geneviève devant Paris. Image credit: Charles Le Brun. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105444119",
+      "description": "圣女在天使下方阅读，巴黎仍在远方可见。于是，看似隐居独处的虔敬行为，同身后城市发生联系。光集中在人物身上，但城市场所让他们的意义不完全属于私人，也不限于眼前近景。",
+      "importance": "",
+      "museum": "Musée des Beaux-Arts de Rouen"
+    }
+  ],
+  "context": {
+    "start": 1575,
+    "end": 1923
+  },
+  "closingSections": [
+    {
+      "title": "把一个比较带到城里",
+      "paragraphs": [
+        "看过莫奈的大教堂或毕沙罗的桥，再看今日实景，有助于理解每幅画作出了多少选择。但现实不会准确重现画家的位置、天气与历史环境。请另行确认美术馆当前展品，尤其当某件作品是到访的主要理由时。"
+      ]
+    }
+  ]
+}

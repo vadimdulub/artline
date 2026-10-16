@@ -1,0 +1,599 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "art-gallery-new-south-wales",
+  "museum": "Art Gallery of New South Wales",
+  "city": "Sydney",
+  "country": "Australie",
+  "title": "Galerie d’art de Nouvelle-Galles du Sud : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres passent des étendues rurales aux rues urbaines, en observant la place donnée à ceux qui les habitent.",
+  "introduction": "Un vaste paysage peut faire paraître ses personnages accessoires. Une gare peut les disperser sur un sol mouillé, tandis qu'une scène de cérémonie rangera chaque corps dans un alignement. Cette sélection invite à regarder ces choix d'échelle et de position, de la vallée fluviale de Streeton à une petite famille sous des fougères immenses.\n\nCes vues sont construites, et non simplement trouvées. La couleur peut ordonner une côte, le reflet d'un arbre refermer un bras mort, des colonnes structurer une cour antique imaginée. Les portraits proposent un contrepoint : un visage et quelques gestes maintenus peuvent occuper l'espace qu'ailleurs le paysage réserve aux collines ou au ciel. Le guide suit ces changements sans prétendre donner un aperçu complet de la collection.",
+  "visitNote": "Consultez les pages consacrées à la collection de la galerie ainsi que les informations sur les expositions en cours pour connaître les lieux spécifiques. Cette sélection comprend des peintures et des œuvres sur papier, dont les calendriers d'exposition peuvent varier.",
+  "locale": "fr",
+  "website": "https://www.artgallery.nsw.gov.au/",
+  "officialGuide": "https://www.artgallery.nsw.gov.au/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "Lecture gratuite · Anglais",
+      "note": "L'ouvrage de John Ruskin, Elements of Drawing, propose des exercices pour observer les arbres, l'eau, la lumière et la distance. Lisez-le en regard des paysages présentés ici comme un manuel de dessin historique, et non comme un guide de l'histoire de l'Australie."
+    }
+  ],
+  "works": [
+    {
+      "id": "2e0a1bc5-830f-50fd-80f4-a0d3fb293a81",
+      "title": "Le fleuve coule encore, et coulera toujours",
+      "catalogueTitle": "Still glides the stream, and shall for ever glide",
+      "artist": "Arthur Streeton",
+      "artists": [
+        {
+          "name": "Arthur Streeton",
+          "role": "primary",
+          "slug": "wikiart-artist-arthur-streeton"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile, marouflée ultérieurement sur panneau de fibres dur",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/creators-deep-4h-20261010/arthur-streeton/2e0a1bc5-830f-50fd-80f4-a0d3fb293a81-73e6d6393eac4cdd.jpg",
+      "imageSource": "https://www.wikiart.org/en/arthur-streeton/still-glides-the-stream-and-shall-for-ever-glide-1890",
+      "credit": "Arthur Streeton. Still glides the stream, and shall for ever glide. WikiArt source label: Public domain. Full source frame, proportional resize and JPEG compression. https://www.wikiart.org/en/arthur-streeton/still-glides-the-stream-and-shall-for-ever-glide-1890",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://media.artgallery.nsw.gov.au/downloads/files/Streeton_exhibition_text.pdf",
+      "description": "Les méandres empêchent la vallée de se réduire à des bandes horizontales superposées. Les variations de largeur établissent la profondeur ; les arbres proches interrompent la vue sans la fermer. Streeton rend lisible un vaste panorama grâce à un trajet continu. L'espace dépend de ce rapport construit entre un premier plan partiellement obstrué et un lointain ouvert, pas de la seule ampleur du site.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "30748a94-9bb0-5a18-8c04-e156ef5470c8",
+      "title": "La Gare de Redfern",
+      "catalogueTitle": "The railway station, Redfern",
+      "artist": "Arthur Streeton",
+      "artists": [
+        {
+          "name": "Arthur Streeton",
+          "role": "primary",
+          "slug": "wikiart-artist-arthur-streeton"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/creators-deep-4h-20261010/arthur-streeton/30748a94-9bb0-5a18-8c04-e156ef5470c8-ddf8de5fbabaca48.jpg",
+      "imageSource": "https://www.wikiart.org/en/arthur-streeton/the-railway-station-redfern-1893",
+      "credit": "Arthur Streeton. The railway station, Redfern. WikiArt source label: Public domain. Full source frame, proportional resize and JPEG compression. https://www.wikiart.org/en/arthur-streeton/the-railway-station-redfern-1893",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://media.artgallery.nsw.gov.au/downloads/files/Streeton_exhibition_text.pdf",
+      "description": "Le sol mouillé relie des passants qui restent séparés dans la rue. Leurs silhouettes sombres se répètent en reflets et répandent le mouvement dans le premier plan gris. Fumée et air humide adoucissent les bâtiments ferroviaires : l'architecture solide ne domine donc pas entièrement la scène. Le temps modifie la structure visuelle de la ville, donnant aux surfaces passagères autant d'importance qu'aux formes permanentes de la gare.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "8dc583a0-8d66-5a2c-989a-7d5ca1670a86",
+      "title": "Depuis mon campement, Sirius Cove",
+      "catalogueTitle": "From my camp (Sirius Cove)",
+      "artist": "Arthur Streeton",
+      "artists": [
+        {
+          "name": "Arthur Streeton",
+          "role": "primary",
+          "slug": "wikiart-artist-arthur-streeton"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "Huile sur contreplaqué",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/creators-deep-4h-20261010/arthur-streeton/8dc583a0-8d66-5a2c-989a-7d5ca1670a86-d1cee97ad5ba4956.jpg",
+      "imageSource": "https://www.wikiart.org/en/arthur-streeton/from-my-camp-sirius-cove-1896",
+      "credit": "Arthur Streeton. From my camp (Sirius Cove). WikiArt source label: Public domain. Full source frame, proportional resize and JPEG compression. https://www.wikiart.org/en/arthur-streeton/from-my-camp-sirius-cove-1896",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://media.artgallery.nsw.gov.au/downloads/files/Streeton_exhibition_text.pdf",
+      "description": "La crique commence par des rochers tout proches, puis s'ouvre vers de petites embarcations sur l'eau bleue. Une rive boisée et escarpée limite la vue, concentrant le regard à la rencontre de l'ombre et du soleil. Streeton donne à cette scène portuaire une échelle plus proche du corps que celle de son vaste fleuve. Le lointain subsiste, mais on l'aborde depuis un morceau de rivage précis.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "f73725b4-ba9e-5322-a178-a5531a464ba1",
+      "title": "Antibes",
+      "catalogueTitle": "Antibes",
+      "artist": "John Russell",
+      "artists": [
+        {
+          "name": "John Russell",
+          "role": "primary",
+          "slug": "john-russell-q1365633"
+        }
+      ],
+      "date": "1890-1892",
+      "start": 1890,
+      "end": 1892,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f73725b4-ba9e-5322-a178-a5531a464ba1-25c11edc5dbdc614.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-peter-russell/antibes-1892",
+      "credit": "John Russell. Antibes. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-peter-russell/antibes-1892",
+      "description": "Falaises jaunes, bâtiments roses et mer verte établissent la côte avant que le moindre petit détail soit nécessaire. Russell distingue premier plan, ville et eau par de larges zones colorées. Leurs contacts accomplissent une bonne part du travail qu'effectuerait un contour. Le lieu demeure reconnaissable tandis que la surface conserve des passages de peinture nettement séparés.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "a7ce3ede-cfb5-5ceb-a665-ffab23e37a23",
+      "title": "Mer agitée, Morestil",
+      "catalogueTitle": "Rough sea, Morestil",
+      "artist": "John Russell",
+      "artists": [
+        {
+          "name": "John Russell",
+          "role": "primary",
+          "slug": "john-russell-q1365633"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a7ce3ede-cfb5-5ceb-a665-ffab23e37a23-33b633ccee7849e4.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-peter-russell/rough-sea-morestil-1900",
+      "credit": "John Russell. Rough sea, Morestil. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-peter-russell/rough-sea-morestil-1900",
+      "description": "Les touches tournent avec l'eau autour des rochers côtiers. Leurs changements de direction maintiennent la surface bleu-vert en mouvement, même lorsqu'aucune vague entière ne s'isole. Russell répartit l'agitation dans la peinture au lieu de la concentrer sur une crête spectaculaire. Le rocher sombre apporte la résistance qui permet de comprendre cette surface mobile.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "0d33238a-d6a3-553d-a684-d7eff1c5daf7",
+      "title": "Mon ami 'Polite",
+      "catalogueTitle": "Mon ami 'Polite",
+      "artist": "John Russell",
+      "artists": [
+        {
+          "name": "John Russell",
+          "role": "primary",
+          "slug": "john-russell-q1365633"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0d33238a-d6a3-553d-a684-d7eff1c5daf7-a073dc2698c2e8d3.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-peter-russell/mon-ami-polite-1900",
+      "credit": "John Russell. Mon ami 'Polite. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-peter-russell/mon-ami-polite-1900",
+      "description": "Le bleu traverse barbe et vêtements pour rejoindre la mer, donnant au portrait et à la côte une facture commune. Le long outil et la prise ferme de l'homme maintiennent pourtant son corps distinct dans cette texture. Russell relie une personne à un lieu sans les confondre. Un objet de travail donne à la pose sa direction la plus claire.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "09fcef60-7723-5cf9-9783-c7c55c733ecf",
+      "title": "La Salle paroissiale",
+      "catalogueTitle": "The Parish Hall",
+      "artist": "Dorrit Black",
+      "artists": [
+        {
+          "name": "Dorrit Black",
+          "role": "primary",
+          "slug": "wikiart-artist-dorrit-black"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/09fcef60-7723-5cf9-9783-c7c55c733ecf-4579e4eec05f3d53.jpg",
+      "imageSource": "https://www.wikiart.org/en/dorrit-black/the-parish-hall-1937",
+      "credit": "Dorrit Black. The Parish Hall. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dorrit-black/the-parish-hall-1937",
+      "description": "Toits pointus et murs droits rencontrent une allée courbe et les formes vertes taillées du jardin. Dorrit Black simplifie la vue en préservant ces différences, plutôt qu'en décrivant chaque surface au même degré. Les fenêtres répètent le rythme anguleux de l'architecture. Le bâtiment conserve son caractère parce que quelques rapports choisis entre jardin et construction restent précis.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "b54b190d-680f-54cd-a8c6-b5c8c5bf47c6",
+      "title": "Elizabeth Street, Sydney",
+      "catalogueTitle": "Elizabeth Street, Sydney",
+      "artist": "Dorrit Black",
+      "artists": [
+        {
+          "name": "Dorrit Black",
+          "role": "primary",
+          "slug": "wikiart-artist-dorrit-black"
+        }
+      ],
+      "date": "1939",
+      "start": 1939,
+      "end": 1939,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b54b190d-680f-54cd-a8c6-b5c8c5bf47c6-e20f2dbb07d0e3ac.jpg",
+      "imageSource": "https://www.wikiart.org/en/dorrit-black/elizabeth-street-sydney-1939",
+      "credit": "Dorrit Black. Elizabeth Street, Sydney. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dorrit-black/elizabeth-street-sydney-1939",
+      "description": "Les rails dessinent une courbe parmi des blocs resserrés de rouge, de crème et de vert. Bâtiments et arbres inclinés font du mouvement une propriété de toute la composition, et non des seuls véhicules ou passants. Black retire beaucoup de détails secondaires tout en gardant ce qui dirige une vue urbaine : trajets, angles répétés et interruption d'une masse par une autre.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "f01456bc-da62-5937-a355-ea63e5ce508a",
+      "title": "Funérailles navales",
+      "catalogueTitle": "Naval Funeral",
+      "artist": "Dorrit Black",
+      "artists": [
+        {
+          "name": "Dorrit Black",
+          "role": "primary",
+          "slug": "wikiart-artist-dorrit-black"
+        }
+      ],
+      "date": "1945",
+      "start": 1945,
+      "end": 1945,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f01456bc-da62-5937-a355-ea63e5ce508a-945fdfd243684077.jpg",
+      "imageSource": "https://www.wikiart.org/en/dorrit-black/naval-funeral-1945",
+      "credit": "Dorrit Black. Naval Funeral. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dorrit-black/naval-funeral-1945",
+      "description": "Chapeaux sombres et croix blanches se répètent sur un champ rouge, transformant les corps en unités ordonnées d'une cérémonie collective. Chaque personnage reste visible, mais le rang détermine ses rapports aux autres. La régularité du tableau appartient au sujet. La forme publique des funérailles se lit dans l'abandon des positions et des mouvements librement choisis.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "2d1f8b45-462b-5efb-820b-336aa9021d61",
+      "title": "La Première Victoire de David",
+      "catalogueTitle": "David's first victory",
+      "artist": "William Strutt",
+      "artists": [
+        {
+          "name": "William Strutt",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1644986"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "",
+      "accession": "76.1974",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20487892-1416cb84ca13653c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:William_Strutt_-_David%27s_first_victory_-_Google_Art_Project.jpg",
+      "credit": "William Strutt. David's first victory. Image credit: William Strutt (1825 - 1915) – creator Born in Teignmouth, Devonshire, England. Died in Wadhurst, East Sussex, England. Details on Google Art Project; Source credit: rAHycKA0dYmQBg at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20487892",
+      "description": "Les jambes nues de David se dressent au-dessus du lion abattu, dont la crinière occupe le premier plan. La différence d'échelle expose immédiatement l'exploit : un corps plus petit en a vaincu un plus grand. La main levée complète cette mise en scène de la victoire. Strutt rend l'épisode biblique compréhensible par les proportions avant toute explication narrative détaillée.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "87840dc1-5d7c-5904-9062-ffd53a36d3fd",
+      "title": "Ravin de fougères avec une famille aborigène",
+      "catalogueTitle": "Fern gully with Aboriginal family",
+      "artist": "Thomas Clark",
+      "artists": [
+        {
+          "name": "Thomas Clark",
+          "role": "primary",
+          "slug": "wikimedia-painter-q20781519"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "",
+      "accession": "OA27.1970",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20440469-5c78f560fb0ff14d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Thomas_Clark_-_Fern_gully_with_Aboriginal_family_-_Google_Art_Project.jpg",
+      "credit": "Thomas Clark. Fern gully with Aboriginal family. Image credit: Thomas Clark (circa 1814 - 1883) – creator Born in London, England. Died in South Yarra, Melbourne, Victoria, Australia. Details on Google Art Project; Source credit: OQESJm1KWLE8pw at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20440469",
+      "description": "La famille aborigène occupe une petite partie d'un ravin dominé par les grandes courbes des fougères. Cette réduction dirige le regard vers la végétation, mais ne rend pas la terre inhabitée. Lire un paysage colonial exige de garder ensemble ces deux faits. La répartition de l'espace relève d'un choix de visibilité, non d'une mesure neutre de l'importance des présences.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "7e876eda-adb5-5c74-a4fc-820a519e6f99",
+      "title": "Un bras mort de la Goulburn, dans le Victoria",
+      "catalogueTitle": "A billabong of the Goulburn, Victoria",
+      "artist": "Henry James Johnstone",
+      "artists": [
+        {
+          "name": "Henry James Johnstone",
+          "role": "primary",
+          "slug": "wikimedia-painter-q19665882"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "",
+      "accession": "5771",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20443225-71ddff37a9554efa.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:H.J._Johnstone_-_A_billabong_of_the_Goulburn,_Victoria_-_Google_Art_Project.jpg",
+      "credit": "1835-1907, Henry James Johnstone. A billabong of the Goulburn, Victoria. Image credit: H.J. Johnstone (1835 - 1907) – creator Born in Birmingham, Warwickshire, England. Died in London, England. Details on Google Art Project; Source credit: pgHo2TGml7JaNw at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20443225",
+      "description": "Les arbres reflétés prolongent la rive sombre vers le bas et renforcent l'enclos autour de l'eau immobile. Une ouverture claire au loin prend d'autant plus d'importance que la vue se referme partout autour. Johnstone utilise le reflet pour construire l'espace, pas seulement pour répéter les objets. Le principal passage vers le lointain reste étroit, tenu entre les arbres et leurs doubles.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "1c9b0342-4832-5551-b1f6-0eee469a6cca",
+      "title": "Stalagmites, grotte de Burragalong",
+      "catalogueTitle": "Stalagmites, Burragalong Cavern",
+      "artist": "Conrad Martens",
+      "artists": [
+        {
+          "name": "Conrad Martens",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1126926"
+        }
+      ],
+      "date": "1843",
+      "start": 1843,
+      "end": 1843,
+      "medium": "",
+      "accession": "OA1.1964",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20446561-97ca9e2e8ff211a6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Conrad_Martens_-_Stalagmites,_Burragalong_Cavern_-_Google_Art_Project.jpg",
+      "credit": "Conrad Martens. Stalagmites, Burragalong Cavern. Image credit: Conrad Martens (1801 - 1878) – creator Born in London, England. Died in North Sydney, New South Wales, Australia. Details on Google Art Project; Source credit: WQHbDtXpn1ifAQ at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20446561",
+      "description": "La lumière accroche les bords irréguliers de la pierre et fait émerger séparément les formations de l'obscurité. Un petit personnage fournit l'échelle qui manquerait autrement à cette vue souterraine. Martens donne à l'espace fermé la profondeur d'un paysage. Ce que l'on distingue dépend de quelques limites éclairées plutôt que de la lumière générale d'un ciel ouvert.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "9476b5fc-b824-59b6-a628-33a51bb84e7d",
+      "title": "Autoportrait",
+      "catalogueTitle": "Self portrait",
+      "artist": "Nicholas Chevalier",
+      "artists": [],
+      "date": "1857",
+      "start": 1857,
+      "end": 1857,
+      "medium": "",
+      "accession": "945",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20440416-82198e984e8cbc1b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Nicholas_Chevalier_self-portrait.jpg",
+      "credit": "Nicholas Chevalier. Self portrait. Image credit: Nicholas Chevalier; Source credit: https://www.artgallery.nsw.gov.au/collection/works/945/. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20440416",
+      "description": "Le large chapeau de Chevalier agrandit sa silhouette tandis qu'une grande partie du visage demeure dans l'ombre. Yeux, joue et barbe reçoivent assez de lumière pour établir la ressemblance sans être également nets partout. La masse sombre qui les entoure ramène le regard vers eux. L'éclairage sélectif concentre ainsi une présence au lieu de simplement cacher des informations.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "38ebc613-da5c-5b0d-b274-20f9414c48fe",
+      "title": "Portrait d'Inez Bensusan",
+      "catalogueTitle": "Portrait of Inez Bensusan",
+      "artist": "Cecil William Rea",
+      "artists": [
+        {
+          "name": "Cecil William Rea",
+          "role": "primary",
+          "slug": "wikimedia-painter-q21288613"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "",
+      "accession": "OB1.1968",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20486626-0f13e9c0d4dd62d9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_Inez_Bensusan_1924_by_Cecil_William_Rea.jpg",
+      "credit": "Cecil William Rea. Portrait of Inez Bensusan. Image credit: Cecil William Rea died 1935; Source credit: https://www.artgallery.nsw.gov.au/collection/works/OB1.1968/. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20486626",
+      "description": "Les mains réunies stabilisent le bas de la figure vêtue de vert, tandis que la tête de Bensusan se détourne de l'axe du corps. Ce léger écart empêche la pose de se figer sur une seule ligne. Rea laisse au visage éclairé une certaine indépendance par rapport à la posture posée. L'animation du portrait tient à cet ajustement discret, non à un geste démonstratif.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "2233078c-d738-59c8-b931-5c499b5a7cc2",
+      "title": "L'Attente",
+      "catalogueTitle": "Waiting",
+      "artist": "Gordon Coutts",
+      "artists": [
+        {
+          "name": "Gordon Coutts",
+          "role": "primary",
+          "slug": "wikimedia-painter-q21329110"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "",
+      "accession": "5893",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20536643-b87f4aa8a805c14b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gordon_Coutts_-_Waiting_-_Google_Art_Project.jpg",
+      "credit": "Gordon Coutts. Waiting. Image credit: Gordon Coutts; Source credit: 6wGRrRzA1P4jEA at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20536643",
+      "description": "Le titre nomme un intervalle, sans dire avec certitude ce qui y mettra fin. Les mains reposent sur la chaise et la robe claire reçoit la lumière de la fenêtre. Le paysage continue au-delà de la pièce, dans une direction que la personne assise ne suit pas. Coutts maintient la pause par ce rapport entre une vue disponible et un corps immobile.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "5babe284-bc38-52bb-99ba-6c919ae040a8",
+      "title": "La Visite de la reine de Saba au roi Salomon",
+      "catalogueTitle": "The visit of the Queen of Sheba to King Solomon",
+      "artist": "Sir Edward John Poynter",
+      "artists": [
+        {
+          "name": "Sir Edward John Poynter",
+          "role": "primary",
+          "slug": "sir-edward-john-poynter-nga-9861"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/5babe284-bc38-52bb-99ba-6c919ae040a8-0b048947768e5d3d.jpg",
+      "imageSource": "https://www.wikiart.org/en/edward-poynter/the-visit-of-the-queen-of-sheba-to-king-solomon-1890",
+      "credit": "Sir Edward John Poynter. The visit of the Queen of Sheba to King Solomon. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edward-poynter/the-visit-of-the-queen-of-sheba-to-king-solomon-1890",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edward-poynter/the-visit-of-the-queen-of-sheba-to-king-solomon-1890",
+      "description": "Les colonnes répétées structurent une profusion de marches, de costumes et de personnages. La cour antique imaginée par Poynter a besoin de cet ordre pour que la rencontre royale se repère au sein du spectacle. L'architecture participe activement au récit : elle répartit le regard et établit les rangs, au lieu de fournir seulement un décor élaboré derrière les protagonistes.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "ac25a470-e77f-5b57-9c93-ebadeadfc35c",
+      "title": "Blanche-Neige et les sept petits hommes",
+      "catalogueTitle": "Snowdrop and the seven little men",
+      "artist": "John D. Batten",
+      "artists": [
+        {
+          "name": "John D. Batten",
+          "role": "primary",
+          "slug": "wikimedia-painter-q13385323"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "1113",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20428403-b14d698b8c9e949b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Nswag,_john_dickson_batten,_biancaneve_e_i_sette_nani,_1897.JPG",
+      "credit": "John D. Batten. Snowdrop and the seven little men. Image credit: Own work sailko. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20428403",
+      "description": "Le long corps endormi de l'héroïne traverse le premier plan et ralentit le rassemblement des petites figures derrière elle. Des rouges chauds et des ors les relient à l'intérieur décoré. Batten donne au conte un instant suspendu plutôt qu'une action continue. Le contraste entre la dormeuse horizontale et les observateurs réunis permet à l'immobilité elle-même d'organiser la scène.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "7a0e2121-c1e7-594d-b4a5-c7a417b0384e",
+      "title": "Mucius Scaevola",
+      "catalogueTitle": "Mucius Scaevola",
+      "artist": "Matthias Stom",
+      "artists": [
+        {
+          "name": "Matthias Stom",
+          "role": "primary",
+          "slug": "matthias-stom-research-6a2157f42d23"
+        }
+      ],
+      "date": "vers 1640 – vers 1645",
+      "start": 1640,
+      "end": 1645,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/7a0e2121-c1e7-594d-b4a5-c7a417b0384e-275f80701f3f3f23.jpg",
+      "imageSource": "https://www.wikiart.org/en/matthias-stom/mucius-scaevola",
+      "credit": "Matthias Stom. Mucius Scaevola. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/matthias-stom/mucius-scaevola",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/matthias-stom/mucius-scaevola",
+      "description": "La main tendue au-dessus des flammes concentre l'action à l'endroit même d'où vient la lumière. Celle-ci se répand depuis cette épreuve d'endurance sur les visages et les vêtements, puis rejoint l'ombre. Stom condense la portée morale du récit romain dans une petite partie exposée du corps. L'assemblée témoigne d'un acte dont le coût physique reste essentiel.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    },
+    {
+      "id": "e1da8211-f194-5741-905d-b8a0d9d37c06",
+      "title": "À Lilydale",
+      "catalogueTitle": "At Lilydale",
+      "artist": "Louis Buvelot",
+      "artists": [
+        {
+          "name": "Louis Buvelot",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3030006"
+        }
+      ],
+      "date": "1870",
+      "start": 1870,
+      "end": 1870,
+      "medium": "",
+      "accession": "244.1990",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q20440218-c63153288570637f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Louis_Buvelot_-_At_Lilydale_-_Google_Art_Project.jpg",
+      "credit": "Louis Buvelot. At Lilydale. Image credit: Louis Buvelot (1814 - 1888) – creator Born in Morges, Switzerland. Died in Melbourne, Victoria, Australia. Details on Google Art Project; Source credit: swHxc1c_UePU6w at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20440218",
+      "description": "Branches coupées et terrain irrégulier compliquent le premier plan avant que le chemin s'ouvre vers champs et collines. Buvelot place les traces d'un travail tout près du regard sur cette campagne habitée. Le paysage ne se réduit donc pas à une vue lisse vers le lointain. Son bord proche conserve des transformations matérielles : le trajet commence parmi des choses déplacées ou coupées.",
+      "importance": "",
+      "museum": "Art Gallery of New South Wales"
+    }
+  ],
+  "context": {
+    "start": 1640,
+    "end": 1945
+  },
+  "closingSections": [
+    {
+      "title": "Repérer ce que l'échelle rend petit",
+      "paragraphs": [
+        "Revenez à un paysage pour y chercher personnes, chemins ou traces de travail avant de suivre la vue au loin. L'image peut leur accorder moins de place que leur importance ne le justifie. Cette sélection ne décrit pas les salles actuelles : vérifiez auprès du musée quelles œuvres sont exposées avant d'organiser une visite."
+      ]
+    }
+  ]
+}

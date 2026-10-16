@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "slovak-national-gallery",
+  "museum": "Slovak National Gallery",
+  "city": "布拉迪斯拉发及其他地点",
+  "country": "斯洛伐克",
+  "title": "斯洛伐克国家美术馆：杰作",
+  "subtitle": "风景与人物为普通活动安排具体环境，也让日常生活显出不同速度。",
+  "introduction": "割草人带着说明职业的工具，画面却捕捉了他在水边停下的时刻。矿工用手支着头。另一边，婚礼马车和玩耍的孩子，提供了这些劳动者暂时没有的动作。日常生活因此有了几种节奏，每一种都由具体活动或活动的中断形成。\n\n光也改变节奏。昏暗湖面需要慢慢区分形体，清晨庭院却划成明确的黄与蓝。肖像和静物进一步缩小范围，让手中的苹果、一枝花，或织物的变化，承担起风景整体通常起到的组织作用。",
+  "visitNote": "斯洛伐克国家美术馆在多处设有馆藏及展区。此处呈现的是从其馆藏中精选出的部分画作，而非涵盖所有亮点的完整参观路线。参观前，请务必查阅美术馆的最新展览安排及各件作品的具体展出地点。",
+  "locale": "zh",
+  "website": "https://www.sng.sk/en",
+  "officialGuide": "https://www.sng.sk/en",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "免费阅读 · 英语",
+      "note": "拉斯金的练习始于对边缘、色调和自然形态的细致观察。你可以对着此处的树木、岩石和乡村景色尝试这些练习，同时也应留意，不同的画家在画面的精细度与简化处理上做出了各自不同的选择。"
+    }
+  ],
+  "works": [
+    {
+      "id": "1662edac-6c9d-5e1e-998d-960504230302",
+      "title": "河边的割草人",
+      "catalogueTitle": "Kosec pri rieke",
+      "artist": "László Mednyánszky",
+      "artists": [
+        {
+          "name": "László Mednyánszky",
+          "role": "primary",
+          "slug": "wikimedia-painter-q652975"
+        }
+      ],
+      "date": "1880–1885",
+      "start": 1880,
+      "end": 1885,
+      "medium": "",
+      "accession": "O 7146",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104171012-f39a178d81259611.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ladislav_Medny%C3%A1nszky_-_Kosec_pri_rieke_-_O_7146_-_Slovak_National_Gallery.jpg",
+      "credit": "László Mednyánszky. Kosec pri rieke. Image credit: László Mednyánszky; Source credit: Web umenia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104171012",
+      "description": "镰刀说明职业，但男子细长的身体并没有正在挥动工具。梅德尼扬斯基在昏暗风景中，为停歇留出独立位置。高窄画幅使身体轻微的倾斜也变得重要。即使眼前没有可见的生产成果，工作仍通过器具与身体状态存在。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "6d0170bd-32f4-5e67-b056-448d26914748",
+      "title": "前线的画家",
+      "catalogueTitle": "Frontový maliar",
+      "artist": "László Mednyánszky",
+      "artists": [
+        {
+          "name": "László Mednyánszky",
+          "role": "primary",
+          "slug": "wikimedia-painter-q652975"
+        }
+      ],
+      "date": "1914–1918",
+      "start": 1914,
+      "end": 1918,
+      "medium": "",
+      "accession": "O 7145",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104170790-dc5aef3e363cb9b1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ladislav_Medny%C3%A1nszky_-_Frontov%C3%BD_maliar_-_O_7145_-_Slovak_National_Gallery.jpg",
+      "credit": "László Mednyánszky. Frontový maliar. Image credit: László Mednyánszky; Source credit: Web umenia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104170790",
+      "description": "粗糙台阶与临时搭建物，挡在走近人物的路上。低视点无法让人轻松综览。梅德尼扬斯基把画家放在战争时期不便的物质条件之中。这种安排表明，获得一个视野本身也是身体行为，取决于人能站在哪里，以及怎样到达那个位置。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "b2c4e2e8-e336-5130-ac9e-32ece6269171",
+      "title": "湖边暮景",
+      "catalogueTitle": "Večerná krajina pri jazere",
+      "artist": "László Mednyánszky",
+      "artists": [
+        {
+          "name": "László Mednyánszky",
+          "role": "primary",
+          "slug": "wikimedia-painter-q652975"
+        }
+      ],
+      "date": "1885–1895",
+      "start": 1885,
+      "end": 1895,
+      "medium": "",
+      "accession": "O 7147",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104170877-7708f18496483fb3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ladislav_Medny%C3%A1nszky_-_Ve%C4%8Dern%C3%A1_krajina_pri_jazere_-_O_7147_-_Slovak_National_Gallery.jpg",
+      "credit": "László Mednyánszky. Večerná krajina pri jazere. Image credit: László Mednyánszky; Source credit: Web umenia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104170877",
+      "description": "近乎黑暗之中，水、树和低地只能逐渐分清。小月亮没有用充足光线交代场景。梅德尼扬斯基凭相近明暗建立风景纵深，让看不清本身成为题材的一部分。观看像是在收集有限证据：每个刚刚辨出的形体，又帮助定位其余事物。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "714e1c1e-0505-50d7-b1f1-4670d6f2cc9f",
+      "title": "旧科希策",
+      "catalogueTitle": "Staré Košice",
+      "artist": "Konštantín Kővári-Kačmarik",
+      "artists": [
+        {
+          "name": "Konštantín Kővári-Kačmarik",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18249755"
+        }
+      ],
+      "date": "约1915年",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "O 5320",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q51298141-e429e6bc04664327.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kon%C5%A1tant%C3%ADn_K%C3%B6v%C3%A1ri-Ka%C4%8Dmarik_-_Star%C3%A9_Ko%C5%A1ice_-_O_5320_-_Slovak_National_Gallery.jpg",
+      "credit": "Konštantín Kővári-Kačmarik. Staré Košice. Image credit: Konštantín Kővári-Kačmarik; Source credit: https://www.webumenia.sk/dielo/SVK:SNG.O_5320. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q51298141",
+      "description": "宽阔屋顶形状把成群房屋连起来，不齐轮廓又防止它们变成相同方块。科瓦里—卡奇马里克让城镇显得紧凑，却没有抹去个别建筑。蓝色天空开口下，棕与紫将房屋汇成整体。街道的组织既通过建筑描绘，也通过色彩显现。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "ce22cca9-4ac2-5ebb-960b-d71afd2a44b8",
+      "title": "晨光中的乡村庭院",
+      "catalogueTitle": "In the Morning Sun (Village Courtyard)",
+      "artist": "Konštantín Kővári-Kačmarik",
+      "artists": [
+        {
+          "name": "Konštantín Kővári-Kačmarik",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18249755"
+        }
+      ],
+      "date": "约 1910 年",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "O 5179",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50661184-1c959f60ed068ce0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kon%C5%A1tant%C3%ADn_K%C3%B6v%C3%A1ri-Ka%C4%8Dmarik_-_In_the_Morning_Sun_(Village_Courtyard)_-_O_5179_-_Slovak_National_Gallery.jpg",
+      "credit": "Konštantín Kővári-Kačmarik. In the Morning Sun (Village Courtyard). Image credit: Konštantín Kővári-Kačmarik; Source credit: http://www.webumenia.sk/dielo/SVK:SNG.O_5179. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50661184",
+      "description": "黄色光与蓝色阴影，比小建筑细节更有力地划分庭院。白屋为这种划分提供可见表面。科瓦里—卡奇马里克使熟悉的地方对应某种特定光照，树与屋顶线又防止明暗界线变得僵直。院子还是那个院子，时刻的改变却重新组织了它。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "dcf925d8-ff9f-5bab-a6e7-1f54c225b2ef",
+      "title": "头骨与勿忘我静物",
+      "catalogueTitle": "Still Life with a Skull and a Forget-Me-Not",
+      "artist": "František Klimkovič",
+      "artists": [
+        {
+          "name": "František Klimkovič",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1113845"
+        }
+      ],
+      "date": "约 1860 年",
+      "start": 1860,
+      "end": 1860,
+      "medium": "",
+      "accession": "O 775",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50630787-969fe52558d22b3e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Franti%C5%A1ek_Klimkovi%C4%8D_-_Z%C3%A1ti%C5%A1ie_s_lebkou_a_nez%C3%A1budkou_-_O_775_-_Slovak_National_Gallery.jpg",
+      "credit": "František Klimkovič. Still Life with a Skull and a Forget-Me-Not. Image credit: František Klimkovič; Source credit: https://www.webumenia.sk/dielo/SVK:SNG.O_775. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50630787",
+      "description": "开花小枝相对于头骨很小，但横放在顶部的位置使它与骨直接相接。克林科维奇让布置足够简洁，使这种接触保持清楚。题名引导人把纪念与死亡并读。这些观念始终依附具体物品，没有扩展成一场繁复的象征布景。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "935d0bd2-2df2-5749-b823-dfe85d4a3816",
+      "title": "矿工",
+      "catalogueTitle": "Baník",
+      "artist": "Géza Kukán",
+      "artists": [
+        {
+          "name": "Géza Kukán",
+          "role": "primary",
+          "slug": "wikimedia-painter-q34455154"
+        }
+      ],
+      "date": "1919–1925",
+      "start": 1919,
+      "end": 1925,
+      "medium": "",
+      "accession": "O 3286",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55415839-13337b2189d21d94.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gejza_Kuk%C3%A1n_-_Ban%C3%ADk_-_O_3286_-_Slovak_National_Gallery.jpg",
+      "credit": "Géza Kukán. Baník. Image credit: Géza Kukán; Source credit: Web umenia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55415839",
+      "description": "坐着的男子一手托头，让休息也显出身体的重量。库坎把房间大部分留得不确定，依靠暗红衬衣与姿态确立劳动者的存在。题名指出职业，却没有提供采矿情节。停歇作为身体状态本身就值得看，不只是更容易叙述的行动之间的空档。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "55aa16c6-9cb0-5b66-8bd5-cd54d9542c0f",
+      "title": "开花的草地与树木",
+      "catalogueTitle": "Blooming Meadow with Trees",
+      "artist": "Frida Konstantin",
+      "artists": [
+        {
+          "name": "Frida Konstantin",
+          "role": "primary",
+          "slug": "wikimedia-painter-q28476668"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "O 5085",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50676502-9702c2eff1e93d73.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Frida_Konstantin_-_Blooming_Meadow_with_Trees_-_O_5085_-_Slovak_National_Gallery.jpg",
+      "credit": "Frida Konstantin. Blooming Meadow with Trees. Image credit: Frida Konstantin; Source credit: https://www.webumenia.sk/dielo/SVK:SNG.O_5085. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50676502",
+      "description": "浅色与粉色短笔迹不断打断绿地。弗里达·康斯坦丁将花聚成簇，让许多小笔触一起描绘草甸的生长。它既可以是贴近眼前的纹样，也可以是树下延展的土地。目光在画面上移动时，两种读法始终都能成立。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "259f467c-d624-5243-a7e1-52e46e53ffbd",
+      "title": "清贫的午餐",
+      "catalogueTitle": "Poor Lunch",
+      "artist": "Tivadar Zemplényi",
+      "artists": [
+        {
+          "name": "Tivadar Zemplényi",
+          "role": "primary",
+          "slug": "wikimedia-painter-q7810390"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "O 780",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50694636-ff108d09fab94d47.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Teodor_Zempl%C3%A9nyi_-_Chudobn%C3%BD_obed_-_O_780_-_Slovak_National_Gallery.jpg",
+      "credit": "Tivadar Zemplényi. Poor Lunch. Image credit: Tivadar Zemplényi; Source credit: Web umenia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50694636",
+      "description": "白炉旁，女子与孩子倾身进行少量食物的递接。曾普莱尼将室内留得稀疏，让一餐的份量变得重要，却没有把人物推远为某种社会状况的例子。他们的关系仍是两个人之间的行动。社会题材通过特定环境与共同需要来承担。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "9729f143-65d4-59fb-a043-81f047f047bd",
+      "title": "保罗归信",
+      "catalogueTitle": "Conversion of Paul",
+      "artist": "Árpád Feszty",
+      "artists": [
+        {
+          "name": "Árpád Feszty",
+          "role": "primary",
+          "slug": "wikimedia-painter-q926831"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "O 5725",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50632118-5854b99c2da8fa5e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:%C3%81rp%C3%A1d_Feszty_-_Conversion_of_Paul_-_O_5725_-_Slovak_National_Gallery.jpg",
+      "credit": "Árpád Feszty. Conversion of Paul. Image credit: Árpád Feszty; Source credit: https://www.webumenia.sk/dielo/SVK:SNG.O_5725. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50632118",
+      "description": "倒下的人与附近的马，使启示呈现为身体秩序的破坏。强烈黄光将中心地面，与阴影中作出反应的身体区分。费斯蒂让宗教事件改变站立与看见的条件。失衡和不均的可见程度，将转变传过整个场景，使周围人物也卷入震动。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "b9180698-054a-5f77-b3b8-1b95e2169610",
+      "title": "布拉迪斯拉发旧市政厅庭院",
+      "catalogueTitle": "Courtyard of Old Town Hall in Bratislava",
+      "artist": "Jindřich Tomec",
+      "artists": [
+        {
+          "name": "Jindřich Tomec",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1599061"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "K 936",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50761926-8d21a3cab9923a58.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jind%C5%99ich_Tomec_-_Courtyard_of_Old_Town_Hall_in_Bratislava_-_K_936_-_Slovak_National_Gallery.jpg",
+      "credit": "Jindřich Tomec. Courtyard of Old Town Hall in Bratislava. Image credit: Jindřich Tomec; Source credit: http://www.webumenia.sk/dielo/SVK:SNG.K_936. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50761926",
+      "description": "重复的拱门与高塔前，铺石前景提供可站立的空间。小鸟给空地带来轻微变化，却不与建筑竞争。托梅茨将行人尺度的围合，与高得多的建筑连起来。庭院从内部呈现公共建筑，人们可以用地面这一处受庇护空间，估量它的高度。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "02d20ad3-ce9e-5144-ab7c-e2ce3ffb17ee",
+      "title": "德文：绘画习作",
+      "catalogueTitle": "Devín - štúdia k obrazu",
+      "artist": "Jindřich Tomec",
+      "artists": [
+        {
+          "name": "Jindřich Tomec",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1599061"
+        }
+      ],
+      "date": "1925",
+      "start": 1925,
+      "end": 1925,
+      "medium": "",
+      "accession": "O 1524",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/02d20ad3-ce9e-5144-ab7c-e2ce3ffb17ee-4856b5e192a63ee7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jind%C5%99ich_Tomec_-_Dev%C3%ADn_-_%C5%A1t%C3%BAdia_k_obrazu_-_O_1524_-_Slovak_National_Gallery.jpg",
+      "credit": "Jindřich Tomec. Devín - štúdia k obrazu. Image credit: Jindřich Tomec; Web umenia. https://commons.wikimedia.org/wiki/File:Jind%C5%99ich_Tomec_-_Dev%C3%ADn_-_%C5%A1t%C3%BAdia_k_obrazu_-_O_1524_-_Slovak_National_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q51308217",
+      "description": "残墙从河边岩石岬地上升起。托梅茨开放的画法让砖石、地势与空气相连，没有给各部分同样的完成度。习作记录尚在发展的安排，完成程度的差异引导视线穿过景色。历史建筑的位置，来自支撑它的土地。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "ac9f4540-4df1-53e5-9b3b-0597022ec110",
+      "title": "拿苹果的女孩",
+      "catalogueTitle": "Dievča s jablkom",
+      "artist": "Ignác Roskovics",
+      "artists": [
+        {
+          "name": "Ignác Roskovics",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1251079"
+        }
+      ],
+      "date": "1890–1900",
+      "start": 1890,
+      "end": 1900,
+      "medium": "",
+      "accession": "O 3106",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q51191830-95d2ae0099f4e83e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ign%C3%A1c_Ro%C5%A1kovi%C4%8D_-_Diev%C4%8Da_s_jablkom_-_O_3106_-_Slovak_National_Gallery.jpg",
+      "credit": "Ignác Roskovics. Dievča s jablkom. Image credit: Ignác Roskovics; Source credit: https://www.webumenia.sk/dielo/SVK:SNG.O_3106. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q51191830",
+      "description": "肩旁红苹果将手与脸拉进同一组近距离安排。罗斯科维奇用笑容和受光头发，在深色背景前建立相遇。物品让姿态有所作为，无须加入更大的家庭场景。在提出任何象征含义之前，它直接的构图作用就已值得注意。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "e0fea200-c837-5ae2-994f-665015047311",
+      "title": "穿缎裙、戴珍珠项链的女士",
+      "catalogueTitle": "Dáma v atlasových šatách s perlovým náhrdelníkom",
+      "artist": "Ferdinand Karl Theodor Christoph Peter von Lütgendorff",
+      "artists": [
+        {
+          "name": "Ferdinand Karl Theodor Christoph Peter von Lütgendorff",
+          "role": "primary",
+          "slug": "wikimedia-painter-q15454388"
+        }
+      ],
+      "date": "1834",
+      "start": 1834,
+      "end": 1834,
+      "medium": "",
+      "accession": "O 5140",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q51194627-1ebdb447ad60f506.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ferdinand_Karl_Theodor_L%C3%BCtgendorff_-_D%C3%A1ma_v_atlasov%C3%BDch_%C5%A1at%C3%A1ch_s_perlov%C3%BDm_n%C3%A1hrdeln%C3%ADkom_-_O_5140_-_Slovak_National_Gallery.jpg",
+      "credit": "Ferdinand Karl Theodor Christoph Peter von Lütgendorff. Dáma v atlasových šatách s perlovým náhrdelníkom. Image credit: Ferdinand Karl Theodor Christoph Peter von Lütgendorff; Source credit: https://www.webumenia.sk/dielo/SVK:SNG.O_5140. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q51194627",
+      "description": "缎子、浅色围巾与小项链，对光的反应各不相同。吕特根多夫将这些区别纳入正式的社会形象，克制姿态则让目光自由往返于脸和织物。不同表面为肖像带来有分寸的变化。精心打理的衣服说明一种呈现方式，并未揭示完整的个人性格。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "ba1d98dd-923a-51e1-94f2-8ab7dbc236ab",
+      "title": "傍晚风景",
+      "catalogueTitle": "Early Evening Landscape",
+      "artist": "László Paál",
+      "artists": [
+        {
+          "name": "László Paál",
+          "role": "primary",
+          "slug": "wikimedia-painter-q920009"
+        }
+      ],
+      "date": "1870–1879",
+      "start": 1870,
+      "end": 1879,
+      "medium": "",
+      "accession": "O 2918",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/ba1d98dd-923a-51e1-94f2-8ab7dbc236ab-53316e255695b923.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:L%C3%A1szl%C3%B3_Pa%C3%A1l_-_Early_Evening_Landscape_-_O_2918_-_Slovak_National_Gallery.jpg",
+      "credit": "László Paál. Early Evening Landscape. Image credit: László Paál; http://www.webumenia.sk/dielo/SVK:SNG.O_2918. https://commons.wikimedia.org/wiki/File:L%C3%A1szl%C3%B3_Pa%C3%A1l_-_Early_Evening_Landscape_-_O_2918_-_Slovak_National_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50704999",
+      "description": "围栏和植被聚成较深色块时，天空暖色窄带提供了最清楚的分界。帕尔让减弱的光简化景色，却没有使它空洞。坐着的人物衡量近地尺度，仍从属于更广泛的能见度变化。黄昏通过哪些还能分清、哪些开始融合来表现。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "ebfe70fb-ba9c-5066-8369-4b5071abc61f",
+      "title": "法国里维埃拉",
+      "catalogueTitle": "French Riviera",
+      "artist": "János Vaszary",
+      "artists": [
+        {
+          "name": "János Vaszary",
+          "role": "primary",
+          "slug": "wikimedia-painter-q829892"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "O 4091",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50751198-a98e5ad959eee2fc.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:J%C3%A1nos_Vaszary_-_French_Riviera_-_O_4091_-_Slovak_National_Gallery.jpg",
+      "credit": "János Vaszary. French Riviera. Image credit: János Vaszary; Source credit: http://www.webumenia.sk/dielo/SVK:SNG.O_4091. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50751198",
+      "description": "汽车和露台家具，与枝叶、蓝水一样自然地属于场景。沃绍里把休闲视为现代物品与有人活动的场所之间的安排，以快笔和露出的浅色底面描绘。松开的画法让视线从一处相遇转向下一处，没有单一事件支配整个景色。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "6f1efa13-56df-5879-a096-e50f15ec92fd",
+      "title": "抱玩偶的女孩",
+      "catalogueTitle": "Girl with a Doll",
+      "artist": "Josef Czauczik",
+      "artists": [
+        {
+          "name": "Josef Czauczik",
+          "role": "primary",
+          "slug": "wikimedia-painter-q27996686"
+        }
+      ],
+      "date": "1830",
+      "start": 1830,
+      "end": 1830,
+      "medium": "",
+      "accession": "O 6985",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/6f1efa13-56df-5879-a096-e50f15ec92fd-a017ac14f5c88285.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jozef_Czauczik_-_Girl_with_a_Doll_-_O_6985_-_Slovak_National_Gallery.jpg",
+      "credit": "Josef Czauczik. Girl with a Doll. Image credit: Josef Czauczik; http://www.webumenia.sk/dielo/SVK:SNG.O_6985. https://commons.wikimedia.org/wiki/File:Jozef_Czauczik_-_Girl_with_a_Doll_-_O_6985_-_Slovak_National_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50672501",
+      "description": "端整姿势和精心展示的浅色裙子之中，玩偶带入儿童游戏的尺度。乔奇克把童年放进要求模特保持可供观察的肖像规范。玩具使她区别于成人，却没有把肖像变成正在玩耍的场面。可以与后面赖特尔画中较不安定的身体比较。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "6dd926b8-46b5-55e8-b268-bac33ab7eced",
+      "title": "夜间的塔特拉山",
+      "catalogueTitle": "The Tatra Mountain in the Night",
+      "artist": "Nándor Katona",
+      "artists": [
+        {
+          "name": "Nándor Katona",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1105615"
+        }
+      ],
+      "date": "约 1900 年",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "O 6052",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50631772-91b05939501c2a14.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ferdinand_Katona_-_The_Tatra_Mountain_in_the_Night_-_O_6052_-_Slovak_National_Gallery.jpg",
+      "credit": "Nándor Katona. The Tatra Mountain in the Night. Image credit: Nándor Katona; Source credit: https://www.webumenia.sk/dielo/SVK:SNG.O_6052. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50631772",
+      "description": "浅色山顶比下方坡地与前景小屋顶更清楚。考托瑙通过不均照明表现高度，将可见之处集中在画面上方。云影打断周围山脊，使主峰独自保持清晰。有人居住的地面仍然存在，却几乎消失在山的巨大尺度之下。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "afcbbe12-cfc0-54a3-8dc0-94e20b50a49c",
+      "title": "农民婚礼",
+      "catalogueTitle": "The Peasant Wedding",
+      "artist": "Joža Uprka",
+      "artists": [
+        {
+          "name": "Joža Uprka",
+          "role": "primary",
+          "slug": "wikimedia-painter-q12027136"
+        }
+      ],
+      "date": "1900–1910",
+      "start": 1900,
+      "end": 1910,
+      "medium": "",
+      "accession": "O 884",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/afcbbe12-cfc0-54a3-8dc0-94e20b50a49c-3d0a7b387f4771c2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jo%C5%BEa_%C3%9Aprka_-_Sedliacka_svatba_-_O_884_-_Slovak_National_Gallery.jpg",
+      "credit": "Joža Uprka. The Peasant Wedding. Image credit: Joža Uprka; Web umenia. https://commons.wikimedia.org/wiki/File:Jo%C5%BEa_%C3%9Aprka_-_Sedliacka_svatba_-_O_884_-_Slovak_National_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50629121",
+      "description": "马与车将庆祝队伍带过密集人群，红布和反复出现的服装，使行进有了可见的间隔。乌普尔卡描绘的社会事件超过任何单个参与者。个人仍然可辨，游行队伍则提供更大的组织。向画缘持续延伸的队列，使人群没有成为一张整齐封闭的仪式肖像。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    },
+    {
+      "id": "0a567f92-3b8c-55ab-a108-2fcdd9448b53",
+      "title": "玩耍的小女孩",
+      "catalogueTitle": "Hrajúce sa dievčatko",
+      "artist": "Johann Baptist Reiter",
+      "artists": [
+        {
+          "name": "Johann Baptist Reiter",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1692583"
+        }
+      ],
+      "date": "1851",
+      "start": 1851,
+      "end": 1851,
+      "medium": "",
+      "accession": "O 1181",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/0a567f92-3b8c-55ab-a108-2fcdd9448b53-ecc926ae0e6cfefc.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johann_Baptist_Reiter_-_Hraj%C3%BAce_sa_diev%C4%8Datko_-_O_1181_-_Slovak_National_Gallery.jpg",
+      "credit": "Johann Baptist Reiter. Hrajúce sa dievčatko. Image credit: Johann Baptist Reiter; Web umenia. https://commons.wikimedia.org/wiki/File:Johann_Baptist_Reiter_-_Hraj%C3%BAce_sa_diev%C4%8Datko_-_O_1181_-_Slovak_National_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55415848",
+      "description": "抬起的手臂与倾斜身体，偏离正式儿童肖像的安定姿势。赖特尔让彩色物品直接对应尚在进行的动作。深色帷布围住空间，浅衣使不稳的姿势容易追踪。玩耍成为孩子正在做的事，而非一个被静静拿着、供人识别的身份特征。",
+      "importance": "",
+      "museum": "Slovak National Gallery"
+    }
+  ],
+  "context": {
+    "start": 1830,
+    "end": 1925
+  },
+  "closingSections": [
+    {
+      "title": "将工作与停歇放在一起看",
+      "paragraphs": [
+        "镰刀、被托住的头和玩耍时抬起的手，说明身体的不同用途。看过风景后再回到它们，周围环境可能更值得注意。本选目来自馆藏记录；请查询斯洛伐克国家美术馆最新的场馆与展出信息，不要假定所有作品共处一个展览空间。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verifiedAt": "2026-10-15T09:13:01.508705+00:00",
+  "change": "All and Artists picture galleries sort oldest to newest by recorded creation date. Each caption displays its recorded creation year/date label immediately after the artwork title, retaining ranges and approximate dates. Pagination and next/previous navigation follow the same order.",
+  "authorization": "User requested deploy after reviewing the completed gallery changes.",
+  "api": {
+    "kind": "api",
+    "sourceCommit": "bdfc7f4449b06539a4238180c95c1e2bc368eb63",
+    "source": "approved uncommitted gallery changes over exact deployed source",
+    "preimages": {
+      "internal/atlas/repository.go": "03278c66e63bfcc992124b9b3b17fd633a5889fc76081751abb22cbaeaecf320",
+      "internal/atlas/atlas.go": "fcfdaebd4ceeec927821f395390ac17ff2c671c69b26df6f4571f2ba21a18ac0",
+      "internal/atlas/gallery_order_test.go": "5beab0369386638811e1ee32ad7a14e790b8d27199f2618d24edfc82d6363c93",
+      "internal/atlas/gallery_order_readonly_test.go": "ea34ecfada33b3107dd5a6836f6257821c01e3e682a1461cb6b43e2fa010b0bd",
+      "internal/atlas/readonly_test.go": "05c041389efcd0c5a5f4cb620b93b941e19d94d8eb230010c5ec8811e29e0bd2",
+      "db/migrations/0058_atlas_creation_order.sql": null
+    },
+    "files": {
+      "internal/atlas/repository.go": "4fe60b9b625ff28c6886f589d725c90ad0af73c7ac3ed45f9a568b9e8cac5374",
+      "internal/atlas/atlas.go": "548b3fc52a51d35731b0e70baabd35521cf00309720706e31bdd88b870cc10ef",
+      "internal/atlas/gallery_order_test.go": "bfcd75a1a9a4129e686a3631f12fcbf5ca37a619856d84c1589601732d09226c",
+      "internal/atlas/gallery_order_readonly_test.go": "76932412ad0e12f90ef3d34644a58151fef2e99e54e61ece8abc3ead9b168a17",
+      "internal/atlas/readonly_test.go": "c52d1ba972808c48a6ac055765b56a438679759541929d02343388d6cdcdd020",
+      "db/migrations/0058_atlas_creation_order.sql": "375e32d0d0977b2f0cb9881001c6e8f0a0f9fe72a9ef78eafd472c787c5f2fc7"
+    },
+    "overlaySHA256": "7edaa7db5dcab54ce5275f4af492629838cfba55237e40a92560258e377abc4f",
+    "baselineRevision": "artline-api-renaissance-performance-1014-v1",
+    "baselineBuildId": "eac7fcf6-7e9b-48b7-a74e-e7dfcad5701c",
+    "buildId": "b48f3ac0-7c88-4aad-a6da-9a66ddef03ce",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:gallery-chronology-1015-7edaa7db",
+    "overlayURI": "gs://artline-508319-build-source/gallery-chronology-20261015/api-7edaa7db5dcab54c.tar.xz",
+    "overlayGeneration": "1792054648673965",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:f2c728b914db862a7bd2be507b0de3a181ab1bd6bbdbfdb3bd260c25c2066f29",
+    "revision": "artline-api-gallery-chronology-1015-v1",
+    "candidateURL": "https://gallery-chronology-1015-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-api-renaissance-performance-1014-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100
+  },
+  "web": {
+    "kind": "web",
+    "sourceCommit": "bdfc7f4449b06539a4238180c95c1e2bc368eb63",
+    "source": "approved uncommitted gallery changes over exact deployed source",
+    "preimages": {
+      "components/AllArtworkGallery.tsx": "be6d9ea9b8d8d4d287f11ff576a21b5d5f921d53d6136d538c2cb8df56445a1c",
+      "components/AllAtlas.css": "4d5e07907376ab342fe59ae2e89f644e23ab603b9a597c07340bcb2e3c77b848"
+    },
+    "files": {
+      "components/AllArtworkGallery.tsx": "e195da1ce9acde0f6ad27461a6de91360e88435567d770628c9bf1cc4b73c868",
+      "components/AllAtlas.css": "3eea5e8e6a10d0f0292b2908713ca7f89142e6b2c65626b4566b94b4978b798b"
+    },
+    "overlaySHA256": "e2f994c4c36fa66b53922c6f68ab215b21625ef3e502360794979a8047af672a",
+    "baselineRevision": "artline-web-mobile-explorers-1015-v1",
+    "baselineBuildId": "1c7acd63-8f8c-4539-8418-e6ac293f2aaf",
+    "buildId": "fca656dc-ded8-4db7-969c-49ec5b703e4e",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:gallery-chronology-1015-e2f994c4",
+    "overlayURI": "gs://artline-508319-build-source/gallery-chronology-20261015/web-e2f994c4c36fa66b.tar.xz",
+    "overlayGeneration": "1792054655995348",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:8a3dcc632417f20dcc7da28b9a3ea0458b311bcec5bc8ea4c4c975b0fde93bbc",
+    "revision": "artline-web-gallery-chronology-1015-v1",
+    "candidateURL": "https://gallery-chronology-1015-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-mobile-explorers-1015-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100
+  },
+  "database": {
+    "migration": "0058_atlas_creation_order.sql",
+    "sha256": "375e32d0d0977b2f0cb9881001c6e8f0a0f9fe72a9ef78eafd472c787c5f2fc7",
+    "seconds": 2.34,
+    "indexes": [
+      {
+        "relname": "artwork_atlas_creation_page_idx",
+        "indisvalid": true,
+        "indisready": true,
+        "bytes": 26157056,
+        "definition": "CREATE INDEX artwork_atlas_creation_page_idx ON public.artwork_atlas_projection USING btree (start_year, gallery_priority, ((id)::text)) INCLUDE (id, end_year)"
+      },
+      {
+        "relname": "artwork_atlas_highlight_creation_page_idx",
+        "indisvalid": true,
+        "indisready": true,
+        "bytes": 8069120,
+        "definition": "CREATE INDEX artwork_atlas_highlight_creation_page_idx ON public.artwork_atlas_projection USING btree (start_year, gallery_priority, ((id)::text)) INCLUDE (id, end_year) WHERE is_highlight"
+      }
+    ],
+    "catalogueRowsChanged": false,
+    "realLocalDatabaseUsed": false,
+    "sharedAdvisoryLock": 20250907001
+  },
+  "validation": {
+    "atlasUnitTests": "passed on release source",
+    "atlasHTTPTests": "passed on release source",
+    "typeScript": "passed on release source",
+    "targetedLint": "passed on release source",
+    "frontendUnitTests": {
+      "passed": 4,
+      "suite": "AllAtlas"
+    },
+    "knownExistingFailure": "TestBooksAcceptLegacyParametersAndValidBounds: limit=151; reproduced on unchanged production baseline",
+    "productionReadOnly": "27 existing works across 13 media; pagination and every adjacent next/previous pair passed; real filtered All/highlights/Rembrandt/print views passed",
+    "sampleQuery": "The original global sampling query timed out at 15 seconds. Final bounded sampling uses only existing projection identities, with an ephemeral Go test overlay; application query unchanged.",
+    "queryPlans": {
+      "broadPageMS": 13.47,
+      "painterPageMS": 30.52,
+      "chronologicalIndexUsed": true,
+      "painterIndexUsed": true
+    },
+    "scaleLimitation": "Representative production snapshot of 303017 projected works, not a ten-million-row concurrency benchmark."
+  },
+  "candidateAPIChecks": 26,
+  "liveAPIChecks": 26,
+  "candidateWebChecks": {
+    "stage": "candidate",
+    "base": "https://gallery-chronology-1015-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "verifiedAt": "2026-10-15T09:10:49.185Z",
+    "checks": [
+      {
+        "width": 1440,
+        "view": "all",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 1440,
+        "view": "artists",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "view": "all",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "view": "artists",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 320,
+        "view": "all",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 320,
+        "view": "artists",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "path": "/about",
+        "status": 200
+      },
+      {
+        "path": "/guides",
+        "status": 200
+      },
+      {
+        "path": "/exhibitions",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200
+      }
+    ]
+  },
+  "liveWebChecks": {
+    "stage": "live",
+    "base": "https://artlines.org",
+    "verifiedAt": "2026-10-15T09:11:53.328Z",
+    "checks": [
+      {
+        "width": 1440,
+        "view": "all",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 1440,
+        "view": "artists",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "view": "all",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "view": "artists",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 320,
+        "view": "all",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 320,
+        "view": "artists",
+        "firstYear": 1600,
+        "firstTitle": "Christ with the Sick Around Him, Receiving Little Children",
+        "checkedCaptions": 20,
+        "imagesLoaded": true,
+        "overflow": false,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "path": "/about",
+        "status": 200
+      },
+      {
+        "path": "/guides",
+        "status": 200
+      },
+      {
+        "path": "/exhibitions",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200
+      }
+    ]
+  },
+  "releaseErrorLogEntries": 0,
+  "imagePinsUpdated": true,
+  "catalogueRowsChanged": false,
+  "realLocalDatabaseWrites": false,
+  "backgroundJobsChanged": false,
+  "runtimeSettingsPreserved": true,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "unrelatedWorkspaceChangesPreserved": true,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/gallery-chronology-20261015"
+}

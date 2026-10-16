@@ -10,7 +10,7 @@ import (
 func TestCatalogueAccessRequiresValidSession(t *testing.T) {
 	h, store, _, _ := fixture()
 	token := strings.Repeat("a", 43)
-	for _, path := range []string{"/api/v1/museums", "/api/v1/museums/the-met", "/api/v1/museums/the-met/works", "/api/v1/museums/the-met/works/11111111-1111-4111-8111-111111111111"} {
+	for _, path := range []string{"/api/v1/museums"} {
 		for _, state := range []string{"anonymous", "forged", "valid", "revoked", "unavailable"} {
 			t.Run(path+"/"+state, func(t *testing.T) {
 				reached := false
@@ -47,7 +47,7 @@ func TestCatalogueAccessRequiresValidSession(t *testing.T) {
 
 func TestPublicCatalogueDoesNotLookUpSession(t *testing.T) {
 	h := New(Config{}, nil)
-	for _, path := range []string{"/api/v1/timeline", "/api/v1/artists", "/api/v1/artists/monet", "/api/v1/artists/monet/identity", "/api/v1/artists/monet/works", "/api/v1/artists/monet/works/work-id", "/api/v1/artworks"} {
+	for _, path := range []string{"/api/v1/museums/the-met", "/api/v1/museums/the-met/works", "/api/v1/museums/the-met/works/11111111-1111-4111-8111-111111111111", "/api/v1/timeline", "/api/v1/artists", "/api/v1/artists/monet", "/api/v1/artists/monet/identity", "/api/v1/artists/monet/works", "/api/v1/artists/monet/works/work-id", "/api/v1/artworks"} {
 		w := httptest.NewRecorder()
 		h.CatalogueAccess(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { w.WriteHeader(204) })).ServeHTTP(w, httptest.NewRequest("GET", path, nil))
 		if w.Code != 204 {

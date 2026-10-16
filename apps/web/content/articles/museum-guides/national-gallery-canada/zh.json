@@ -1,0 +1,599 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "national-gallery-canada",
+  "museum": "National Gallery of Canada",
+  "city": "渥太华",
+  "country": "加拿大",
+  "title": "加拿大国家美术馆：杰作",
+  "subtitle": "从二十件作品看图像放大了什么、围住了什么，又让什么几乎隐没。",
+  "introduction": "条纹船只高高立在涂装工人上方；松树在水与天空的横向色带前铺开枝条。一个是为战争而改造的工业物体，一个是风景中的母题，却都凭强烈结构占据画面，细节无法将其瓦解。把两者并置，便有了不同于寻找某种贯穿始终的“民族风格”的出发点。\n\n这份加拿大国家美术馆选集，包含加拿大及国际作品、肖像与风景，也有离开可辨认物体的图像。反复出现的问题是尺度：什么被画大，什么仍然很小，画面要求目光停在哪里？它只是部分选择，不是对整座收藏的概括。",
+  "visitNote": "这是从更广泛的馆藏中精选出的部分作品，而非对加拿大艺术的全面概览。请查阅各展品页面，了解其当前展示地点及借展情况。所注日期为作品的创作时间；其涉及的历史事件或文学题材可能属于不同时期。",
+  "locale": "zh",
+  "website": "https://www.gallery.ca/",
+  "officialGuide": "https://www.gallery.ca/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "免费阅读 · 英语",
+      "note": "拉斯金关于观察自然形态的实践，为汤姆森、麦克唐纳及其风景画创作提供了一个有益的起点。在审视他的评判观点时，不妨将其与后来的艺术家进行批判性对比——这些艺术家往往会对那些形态进行简化或重组，而非对其进行连贯的描绘。"
+    }
+  ],
+  "works": [
+    {
+      "id": "f9be1f6b-805a-5d2f-8560-0d04640e4b04",
+      "title": "班克松（The Jack Pine）",
+      "catalogueTitle": "The Jack Pine",
+      "artist": "Tom Thomson",
+      "artists": [
+        {
+          "name": "Tom Thomson",
+          "role": "primary",
+          "slug": "wikiart-artist-tom-thomson"
+        }
+      ],
+      "date": "1916–1917",
+      "start": 1916,
+      "end": 1917,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/f9be1f6b-805a-5d2f-8560-0d04640e4b04-db98e0fe0251d510.jpg",
+      "imageSource": "https://www.wikiart.org/en/tom-thomson/the-jack-pine-1917",
+      "credit": "Tom Thomson. The Jack Pine. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/tom-thomson/the-jack-pine-1917",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/tom-thomson/the-jack-pine-1917",
+      "description": "松树不规则的枝条横穿由宽阔水平色带组织起来的背景。树与远景因此承担不同作用：一个打断，另一个连接。画面的清晰来自这两种结构被维系在一起。这棵树没有在“荒野”的泛泛概念中失去自身形状，恰恰是它独特的形状，组织了整片风景。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "d2e4f3e5-995c-5dfa-a091-46e546d829ac",
+      "title": "沃尔夫将军之死",
+      "catalogueTitle": "The Death of General Wolfe",
+      "artist": "Benjamin West",
+      "artists": [
+        {
+          "name": "Benjamin West",
+          "role": "primary",
+          "slug": "benjamin-west-nga-1970"
+        }
+      ],
+      "date": "1770",
+      "start": 1770,
+      "end": 1770,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d2e4f3e5-995c-5dfa-a091-46e546d829ac-7f3c7088967c4701.jpg",
+      "imageSource": "https://www.wikiart.org/en/benjamin-west/the-death-of-general-wolfe-1770",
+      "credit": "Benjamin West. The Death of General Wolfe. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/benjamin-west/the-death-of-general-wolfe-1770",
+      "description": "周围男人的动作与目光都指向沃尔夫苍白的身体。这种安排把战场上的死亡，转成一场共同见证的事件。画作完成于事后，也为事件建构意义；制服与面孔画得令人信服，并不意味着它如实记录了某一瞬间究竟有哪些人在场。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "ee5312cf-3062-5413-97af-ae2fd2ed4f2b",
+      "title": "杂草丛生的花园",
+      "catalogueTitle": "The Tangled Garden",
+      "artist": "J. E. H. MacDonald",
+      "artists": [
+        {
+          "name": "J. E. H. MacDonald",
+          "role": "primary",
+          "slug": "wikiart-artist-j-e-h-macdonald"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ee5312cf-3062-5413-97af-ae2fd2ed4f2b-255af8578f481894.jpg",
+      "imageSource": "https://www.wikiart.org/en/j-e-h-macdonald/the-tangled-garden-1916",
+      "credit": "J. E. H. MacDonald. The Tangled Garden. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/j-e-h-macdonald/the-tangled-garden-1916",
+      "description": "低垂的植物没有为穿行花园留出一条明晰路线。叶子、花朵与明亮色块彼此重叠，需要一点点分辨。麦克唐纳让人工栽培的生长呈现出不易整理的浓密。观看的收获，在于认清相邻形状，而不是期待整座花园最后归结为一个简单图案。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "aa14bfbc-fff5-518c-a64a-0c9337472a23",
+      "title": "希望 I",
+      "catalogueTitle": "Hope I",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/aa14bfbc-fff5-518c-a64a-0c9337472a23-aa4e44f5ddbe60c6.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustav-klimt/hope-i",
+      "credit": "Gustav Klimt. Hope I. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/gustav-klimt/hope-i",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gustav-klimt/hope-i",
+      "description": "孕妇与身后的黑暗形体清楚分开，因此周围的不安没有让她自身的身体也变得模糊。标题中的希望，由此受到伴随之物的限定。怀孕与令人不安的意象共处一幅画，却没有合成毫无复杂性的庆祝，也没有指向唯一确定的预言。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "e28fbb96-24b7-5d36-9ef7-0e4f50e68ac9",
+      "title": "帕凡舞曲",
+      "catalogueTitle": "Pavane",
+      "artist": "Jean-Paul Riopelle",
+      "artists": [
+        {
+          "name": "Jean-Paul Riopelle",
+          "role": "primary",
+          "slug": "wikiart-artist-jean-paul-riopelle"
+        }
+      ],
+      "date": "1954",
+      "start": 1954,
+      "end": 1954,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e28fbb96-24b7-5d36-9ef7-0e4f50e68ac9-2ee556f7ead51dd8.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-paul-riopelle/pavane-1954",
+      "credit": "Jean-Paul Riopelle. Pavane. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-paul-riopelle/pavane-1954",
+      "description": "没有一个被描绘的物体告诉眼睛该停在哪里。三部分的划分与色彩聚散的变化，提供了不同层次的秩序。广阔画面之内，单个笔痕仍然清楚。重复让视线穿行于作品，但疏密的差异又使它不至于成为均匀复制的图案。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "9ff32104-41e1-5b40-ad51-86e6bfa6684a",
+      "title": "利物浦干船坞中的“眩目迷彩”涂装舰船",
+      "catalogueTitle": "Dazzle-ships in Drydock at Liverpool",
+      "artist": "Edward Wadsworth",
+      "artists": [
+        {
+          "name": "Edward Wadsworth",
+          "role": "primary",
+          "slug": "wikiart-artist-edward-wadsworth"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "",
+      "accession": "8925",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q29561294-2e02fc2900ae327e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dazzle-ships_in_Drydock_at_Liverpool.jpg",
+      "credit": "Edward Wadsworth. Dazzle-ships in Drydock at Liverpool. Image credit: Edward Wadsworth; Source credit: Self-photographed by Mzajac of original painting.. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.gallery.ca/collection/artwork/dazzleships-in-dry-dock-at-liverpool",
+      "description": "条纹船壳高高压过正在完成涂装的人。“眩目迷彩”的用途，是扰乱对船舶航向的判断，而非简单地让船消失。沃兹沃思将这种刻意制造的视觉干扰，转成一幅组织清晰的图画：几何图案与承载它的巨大物体，都保留了自身的形态。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "255d0991-6bb0-593a-9254-268ae2464c3d",
+      "title": "加拿大军队的炮位",
+      "catalogueTitle": "A Canadian Gun-pit",
+      "artist": "Wyndham Lewis",
+      "artists": [
+        {
+          "name": "Wyndham Lewis",
+          "role": "primary",
+          "slug": "wyndham-lewis-nga-18405"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "",
+      "accession": "8356",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59523212-f70f92aedb949af6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Wyndham_Lewis-A_Canadian_Gun-pit.jpg",
+      "credit": "Wyndham Lewis. A Canadian Gun-pit. Image credit: Wyndham Lewis; Source credit: https://www.gallery.ca/collection/artwork/a-canadian-gun-pit. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.gallery.ca/collection/artwork/a-canadian-gun-pit",
+      "description": "士兵的工作位置由火炮及其周围支撑物决定。棱角分明的形状贯穿身体、设备与地面，把人同所操作的机器连起来。场景依然可以读作一个个具体的人在工作，但他们共享的作业空间，是由武器规定的。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "d3ab6ffb-5274-5f19-8acc-b0bcb77b1806",
+      "title": "安特卫普港",
+      "catalogueTitle": "Port of Antwerp",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/d3ab6ffb-5274-5f19-8acc-b0bcb77b1806-bca3b9ec4bb55ebb.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/port-of-antwerp-1906",
+      "credit": "Georges Braque. Port of Antwerp. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/port-of-antwerp-1906",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/port-of-antwerp-1906",
+      "description": "前景弯曲的栏杆为港口划出近处边界，船只与远方建筑则占据较强烈的色域。这些颜色不必符合通常的日光，地方仍能被认出。形状之间的关系维持着空间结构，即使色调已经离开了对滨水地带的克制描写。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "7e89818e-acd4-54de-bbf1-cbb1648d2b84",
+      "title": "北海 I：雷暴",
+      "catalogueTitle": "North Sea I (Thunderstorm)",
+      "artist": "Max Beckmann",
+      "artists": [
+        {
+          "name": "Max Beckmann",
+          "role": "primary",
+          "slug": "max-beckmann-q164683"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105560194-464af11e69600db4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:NORDSEELANDSCHAFT_I_(GEWITTER)_NORTH_SEA_I_(THUNDERSTORM)_.jpg",
+      "credit": "Max Beckmann. North Sea I (Thunderstorm). Image credit: Max Beckmann; Source credit: https://www.sothebys.com/en/auctions/ecatalogue/2010/impressionist-modern-art-evening-sale-n08675/lot.57.html. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105560194",
+      "description": "狭窄的地平线，让沉重天空几乎压上破碎的水面。微黄笔触穿过云层向下落，与海浪翻滚的方向不同。贝克曼明确的分割，使风暴保持结构与坚硬感。天气没有把世界融成柔软而连续的雾气。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "9e56ca25-3507-5e89-8ca5-653c52345b9d",
+      "title": "向日葵的至日",
+      "catalogueTitle": "Solstice of the Sunflower",
+      "artist": "Paul Nash",
+      "artists": [
+        {
+          "name": "Paul Nash",
+          "role": "primary",
+          "slug": "paul-nash-nga-5074"
+        }
+      ],
+      "date": "1945",
+      "start": 1945,
+      "end": 1945,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/9e56ca25-3507-5e89-8ca5-653c52345b9d-9aa45c70c6bcd2fa.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-nash/solstice-of-the-sunflower-1945",
+      "credit": "Paul Nash. Solstice of the Sunflower. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/paul-nash/solstice-of-the-sunflower-1945",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-nash/solstice-of-the-sunflower-1945",
+      "description": "放大的向日葵花盘与太阳，在风景的不同位置重复圆形。相似性组织了画面，但两者的大小无法按普通景观来协调。纳什通过绘画的虚构建立这层联系，让植物与天体产生一种仅靠植物学准确性无法生成的关系。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "096446c9-b04e-5bc6-8aa0-9d50621e675a",
+      "title": "持毡帽男子肖像",
+      "catalogueTitle": "Portrait of a Man with a Felt Hat",
+      "artist": "Lorenzo Lotto",
+      "artists": [
+        {
+          "name": "Lorenzo Lotto",
+          "role": "primary",
+          "slug": "lorenzo-lotto-q310973"
+        }
+      ],
+      "date": "1541",
+      "start": 1541,
+      "end": 1541,
+      "medium": "纸本油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/096446c9-b04e-5bc6-8aa0-9d50621e675a-22a35c5c8e31b7c2.jpg",
+      "imageSource": "https://www.wikiart.org/en/lorenzo-lotto/portrait-of-a-man-with-a-felt-hat-1541",
+      "credit": "Lorenzo Lotto. Portrait of a Man with a Felt Hat. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/lorenzo-lotto/portrait-of-a-man-with-a-felt-hat-1541",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lorenzo-lotto/portrait-of-a-man-with-a-felt-hat-1541",
+      "description": "拿着的帽子给一只手安排了动作，直视的目光则建立另一种接触。大块深色衣服衬住面孔，没有繁复环境来说明人物地位。帽子参与了姿势的形成，不只是随身物品；若把它拿掉，身体呈现自己的方式也会改变。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "859c2dc5-8162-56a8-a3d0-d8c976b54262",
+      "title": "绅士肖像",
+      "catalogueTitle": "Portrait of a gentleman",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "约 1552 年",
+      "start": 1552,
+      "end": 1552,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/859c2dc5-8162-56a8-a3d0-d8c976b54262-7cc1342b9aea49c2.jpg",
+      "imageSource": "https://www.wikiart.org/en/agnolo-bronzino/portrait-of-a-gentleman",
+      "credit": "Bronzino. Portrait of a gentleman. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/agnolo-bronzino/portrait-of-a-gentleman",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/agnolo-bronzino/portrait-of-a-gentleman",
+      "description": "小雕塑在活生生的人物身边，引入另一种形象。它让肖像关联到财物与修养的展示，却不能单凭自身告诉我们这个男人知道什么、重视什么。布龙齐诺借这组并置，让社会形象的经营成为肖像的一部分，不必全靠面孔来承担。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "dc8dd2c1-2c16-58c4-9029-e61b9962126e",
+      "title": "安娜·伊万诺夫娜·托尔斯塔娅",
+      "catalogueTitle": "Anna Ivanovna Tolstaya",
+      "artist": "Élisabeth Vigée Le Brun",
+      "artists": [
+        {
+          "name": "Élisabeth Vigée Le Brun",
+          "role": "primary",
+          "slug": "elisabeth-vigee-le-brun-q213163"
+        }
+      ],
+      "date": "1796",
+      "start": 1796,
+      "end": 1796,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/dc8dd2c1-2c16-58c4-9029-e61b9962126e-358b1a56c1144909.jpg",
+      "imageSource": "https://www.wikiart.org/en/louise-elisabeth-vigee-le-brun/anna-ivanovna-tolstaya-1796",
+      "credit": "Élisabeth Vigée Le Brun. Anna Ivanovna Tolstaya. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/louise-elisabeth-vigee-le-brun/anna-ivanovna-tolstaya-1796",
+      "description": "支着的头与松垂的布料带来随意感，但两者都属于精心安排的姿势。岩石与树木替代了正式室内，却没有取消肖像对外观的控制。看似轻松的状态来自服装、动作与环境的配合，并不能证明这是一个毫无戒备的瞬间。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "7f6817b1-eb30-5bc8-a047-d3676b73724a",
+      "title": "盛开的苹果树",
+      "catalogueTitle": "Apple Trees in Bloom",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1880",
+      "start": 1880,
+      "end": 1880,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7f6817b1-eb30-5bc8-a047-d3676b73724a-6656c1945787f1b4.jpg",
+      "imageSource": "https://www.wikiart.org/en/alfred-sisley/apple-trees-in-bloom-1880",
+      "credit": "Alfred Sisley. Apple Trees in Bloom. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/alfred-sisley/apple-trees-in-bloom-1880",
+      "description": "树干在果园里建立起重复的位置，花朵则把轮廓打散成较亮、较不稳定的区域。不需要哪一棵树独占画面。深度来自树间距离与细小色差，使画面即使没有醒目的中心事件，也仍保有连贯空间。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "9ef36240-c3d7-5462-bd73-c06369c9b016",
+      "title": "东部乡镇地区的九月午后",
+      "catalogueTitle": "September Afternoon, Eastern Townships",
+      "artist": "John Arthur Fraser",
+      "artists": [
+        {
+          "name": "John Arthur Fraser",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3180935"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "",
+      "accession": "18159",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59543324-f037c00470ba798c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Arthur_Fraser_-_September_Afternoon,_Eastern_Townships.jpg",
+      "credit": "John Arthur Fraser. September Afternoon, Eastern Townships. Image credit: John Arthur Fraser; Source credit: The AMICA Library. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59543324",
+      "description": "羊群在近岸休息，让这片土地显出生活气息，也使远近大小有了参照。它们后方，水与山向着更淡的远处展开，视线可以从乡间小细节移向广阔地貌。羊群的重要之处，部分就在于它没有占据全部：借它们作比较，才更容易看出周围天地的宽广。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "dfbe867f-8194-5729-a777-6fe022968742",
+      "title": "斯库戈格湖，黎明中的一声枪响",
+      "catalogueTitle": "A Shot in the Dawn, Lake Scugog",
+      "artist": "John Arthur Fraser",
+      "artists": [
+        {
+          "name": "John Arthur Fraser",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3180935"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "",
+      "accession": "6938",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59522632-7e8a159cf366cd26.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Arthur_Fraser_-_A_Shot_in_the_Dawn,_Lake_Scugog.jpg",
+      "credit": "John Arthur Fraser. A Shot in the Dawn, Lake Scugog. Image credit: John Arthur Fraser; Source credit: The AMICA Library. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59522632",
+      "description": "相对于水面与广阔的黎明天空，人和狗都很小。没有标题，他们的活动或许始终次于光线的变化。“枪响”这个说法将目光引向风景内部的一件事，也区分了两种主次：什么占据最多画面，与文字把什么认作主题，并不相同。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "ffbc5f0e-6f4d-5c2c-9b5f-5e38c6c2093d",
+      "title": "在罗杰斯山口",
+      "catalogueTitle": "At the Rogers Pass, Summit of the Selkirk Range, B.C.",
+      "artist": "John Arthur Fraser",
+      "artists": [
+        {
+          "name": "John Arthur Fraser",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3180935"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "4227",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59503594-210f7ff8254bfa89.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Arthur_Fraser_-_At_the_Rogers_Pass,_Summit_of_the_Selkirk_Range,_B.C..jpg",
+      "credit": "John Arthur Fraser. At the Rogers Pass, Summit of the Selkirk Range, B.C.. Image credit: John Arthur Fraser; Source credit: 1. The AMICA Library 2. Musée des beaux-arts du Canada, Ottawa. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59503594",
+      "description": "深色针叶树先界定近处山谷，目光才到达裸露而受日光照亮的山峰。这几层区域之间的移动，不借助巨大前景人物也能传达规模。弗雷泽让山峰显远，主要靠的是视线抵达那里之前必须穿越的地形，而非仅靠山的轮廓。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "41273d88-6199-5382-9d70-e1bb6b249ad9",
+      "title": "埃德蒙·迪奥内",
+      "catalogueTitle": "Edmond Dyonnet",
+      "artist": "George Horne Russell",
+      "artists": [],
+      "date": "约 1920 年",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "17947",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59542796-9d828b667f380c80.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dyonnet_par_Russell.jpg",
+      "credit": "George Horne Russell. Edmond Dyonnet. Image credit: George Horne Russell; Source credit: Cybermuse des beaux arts du Canada. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59542796",
+      "description": "深色衣服与低调背景，让面孔和领口成为主要亮区。由于少有物件补充人物信息，五官必须依靠细微明暗来区分。这种节制不同于布龙齐诺那幅带雕塑的肖像：身份在这里被呈现，周围的展示却少得多。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "971c0a20-c88f-5d7b-b615-e1b03f1262ef",
+      "title": "渡鸦",
+      "catalogueTitle": "The Raven",
+      "artist": "Odilon Redon",
+      "artists": [
+        {
+          "name": "Odilon Redon",
+          "role": "primary",
+          "slug": "odilon-redon-q154349"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/971c0a20-c88f-5d7b-b615-e1b03f1262ef-59ccc65d5e02bca4.jpg",
+      "imageSource": "https://www.wikiart.org/en/odilon-redon/the-raven-1882",
+      "credit": "Odilon Redon. The Raven. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/odilon-redon/the-raven-1882",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/odilon-redon/the-raven-1882",
+      "description": "深色鸟停在开窗附近的狭小室内。头与喙仍很清楚，目光因此集中到这个小而警觉的生命上。标题带有文学联想，但图像并不需要说明整篇故事。封闭环境与鸟的位置，已提供了一个范围较小、却可以持续凝视的情境。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "f05de41f-03c3-5083-93c2-eb3b40bb8c89",
+      "title": "从树上取下的俄狄浦斯",
+      "catalogueTitle": "Oedipus Taken Down from the Tree",
+      "artist": "Jean-François Millet",
+      "artists": [
+        {
+          "name": "Jean-François Millet",
+          "role": "primary",
+          "slug": "jean-francois-millet-q148458"
+        }
+      ],
+      "date": "1847",
+      "start": 1847,
+      "end": 1847,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f05de41f-03c3-5083-93c2-eb3b40bb8c89-69dd0905a5d42e38.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-francois-millet/oedipus-taken-down-from-the-tree-1847",
+      "credit": "Jean-François Millet. Oedipus Taken Down from the Tree. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-francois-millet/oedipus-taken-down-from-the-tree-1847",
+      "description": "众人围着一个身体裸露的幼儿。暗色树枝从外围将他们笼在一起，光则让人看清，他们如何抱住并托稳这个脆弱的孩子。米勒先通过这些身体之间的关系，让古代题材变得可懂；观众不必预先认出俄狄浦斯故事的每一个细节。",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    }
+  ],
+  "context": {
+    "start": 1541,
+    "end": 1954
+  },
+  "closingSections": [
+    {
+      "title": "小复制图量不出的东西",
+      "paragraphs": [
+        "在 Artline 比较作品时，也请查看记录的尺寸：屏幕可能让一幅小肖像与一件大三联画显得同样大。若计划实地参观，请向美术馆确认是否可见。馆藏身份与目录条目，并不必然意味着作品当下挂在展厅里。"
+      ]
+    }
+  ]
+}

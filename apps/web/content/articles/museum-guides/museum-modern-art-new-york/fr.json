@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "museum-modern-art-new-york",
+  "museum": "Museum of Modern Art",
+  "city": "New York",
+  "country": "États-Unis",
+  "title": "Museum of Modern Art de New York : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres qui changent les règles du corps, des objets et de l’espace peint.",
+  "introduction": "Une boîte de soupe apparaît trente-deux fois. Un lit se dresse contre un mur. Des montres ramollissent, un gant de caoutchouc partage son cadre avec une tête antique et un canapé surgit dans la jungle. L’objet ordinaire survit à chacune de ces transformations. C’est même parce qu’on le reconnaît que le changement devient plus sensible.\n\nCette sélection du Museum of Modern Art suit plusieurs manières de déranger le familier. Certains artistes modifient la forme d’une chose ; d’autres, son voisinage, son échelle ou son usage. D’autres encore éliminent les objets reconnaissables et laissent la couleur ou le trajet de la peinture guider l’attention. Ce ne sont pas les étapes successives d’une seule direction. Les comparer révèle combien de questions différentes se cachent sous l’étiquette commode d’art moderne.",
+  "visitNote": "Cette sélection couvre plusieurs parties de la collection. Consultez les fiches des œuvres sur le site du MoMA pour connaître les lieux d'exposition actuels et les prêts en cours. La Danse (I) de Matisse, peinte en 1909, est la toile la plus ancienne ; la version de 1910, aux couleurs plus vives, appartient au musée de l'Ermitage.",
+  "locale": "fr",
+  "website": "https://www.moma.org/",
+  "officialGuide": "https://www.moma.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Pablo Picasso: A Retrospective",
+      "author": "Edited by William Rubin",
+      "url": "https://www.moma.org/calendar/exhibitions/1818",
+      "access": "Catalogue numérisé dans la rubrique Publications · Anglais",
+      "note": "Le catalogue numérisé de la rétrospective Picasso du MoMA situe Les Demoiselles d’Avignon parmi des études et des œuvres ultérieures. Les comparer permet de mieux saisir comment le tableau s’écarte du dessin de figure conventionnel."
+    }
+  ],
+  "works": [
+    {
+      "id": "79e302c4-73f0-4264-a48d-9378ada06e7c",
+      "title": "La Nuit étoilée",
+      "catalogueTitle": "The Starry Night",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Saint-Rémy, juin 1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur toile",
+      "accession": "472.1941",
+      "image": "https://artlines.org/assets/artworks/wikiart/c66409a6-9da7-43b8-a60d-16b3da75dc97-d871d685c9d4e6b8.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889",
+      "credit": "Vincent van Gogh. The Starry Night. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79802",
+      "description": "La ville occupe une surface relativement petite sous le ciel tournoyant. Van Gogh relie les étoiles séparées par des courbes et des anneaux répétés, donnant à l’obscurité entre elles sa propre activité. Le grand cyprès joint le premier plan au champ supérieur. On peut étudier la force du tableau dans cette distribution de l’espace sans traiter chaque touche comme un symptôme de la vie de son auteur.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "180786a9-bce9-41bd-8124-5c0247350dd4",
+      "title": "Les Demoiselles d’Avignon",
+      "catalogueTitle": "Les Demoiselles d'Avignon",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "Paris, juin-juillet 1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "Huile sur toile",
+      "accession": "333.1939",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/180786a9-bce9-41bd-8124-5c0247350dd4-44ab5e6ae2e42bfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/the-girls-of-avignon-1907",
+      "credit": "Pablo Picasso. The girls of Avignon. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/the-girls-of-avignon-1907",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79766",
+      "description": "Cinq figures font face au spectateur, mais leurs corps ne se fixent ni dans une pièce continue ni dans une méthode de représentation cohérente. Des plans anguleux traversent chair et espace, tandis que les visages reçoivent des traitements très différents. Picasso maintient la confrontation avec le groupe alors que son unité spatiale s’effondre. Identifier les femmes ne résout pas l’incompatibilité des façons dont elles sont montrées.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "12c329d4-ee25-4ba3-bd19-f41514ee4ae1",
+      "title": "La Persistance de la mémoire",
+      "catalogueTitle": "The Persistence of Memory",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1931",
+      "start": 1931,
+      "end": 1931,
+      "medium": "Huile sur toile",
+      "accession": "162.1934",
+      "image": "https://artlines.org/assets/artworks/wikiart/a2277e7a-09a7-4e5a-a2c5-5830b359e74a-f6c75b535175bb53.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/the-persistence-of-memory-1931",
+      "credit": "Salvador Dalí. The Persistence of Memory. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79018",
+      "description": "Dalí donne aux montres molles des bords précis et des surfaces tangibles. Elles sont faciles à reconnaître, impossibles à utiliser comme des montres ordinaires. Les falaises lointaines gardent une apparence plus ferme, ce qui précise le contraste. L’incertitude ne vient pas d’une peinture vague : des choses identifiables perdent les propriétés physiques dont dépendent leurs fonctions familières.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "917d5d65-d66c-4b31-b6bd-823784ad7b89",
+      "title": "Broadway Boogie Woogie",
+      "catalogueTitle": "Broadway Boogie Woogie",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1942–43",
+      "start": 1942,
+      "end": 1943,
+      "medium": "Huile sur toile",
+      "accession": "73.1943",
+      "image": "https://artlines.org/assets/artworks/wikiart/6ec0ea73-5346-4054-b362-43c124e0982f-6b181b5c96bda99f.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/broadway-boogie-woogie-1943",
+      "credit": "Piet Mondrian. Broadway Boogie Woogie. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78682",
+      "description": "De petits carrés colorés interrompent la grille jaune et empêchent ses lignes de former des frontières continues. Mondrian garde l’ordre orthogonal tout en lui donnant une pulsation intérieure agitée. Le titre associe l’œuvre à une ville et à un rythme musical, sans imposer de scène de rue littérale. L’espacement des interruptions peut suggérer le mouvement sur une surface pourtant immobile.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "bae779a1-3800-4a56-bda6-120b3a3c48e6",
+      "title": "La Bohémienne endormie",
+      "catalogueTitle": "The Sleeping Gypsy",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "Huile sur toile",
+      "accession": "646.1939",
+      "image": "https://artlines.org/assets/artworks/wikiart/8e065bed-40d7-4867-907b-6d5ae5d4ae08-bf63aa6b892f6d8b.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-sleeping-gypsy-1897",
+      "credit": "Henri Rousseau. The Sleeping Gypsy. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/80172",
+      "description": "Le lion se penche vers la femme endormie sans aller jusqu’à l’attaque. Son instrument et son récipient restent près d’elle, nettement identifiables dans le paysage ouvert. Rousseau suspend la scène à l’instant où la proximité pourrait signifier danger, curiosité ou autre chose que l’image n’explique pas. Le titre reprend la désignation historique de l’artiste ; il ne transforme pas la scène en document ethnographique.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "e183c786-40c6-49ba-bbfa-2e7303587601",
+      "title": "Le Rêve",
+      "catalogueTitle": "The Dream",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "Huile sur toile",
+      "accession": "252.1954",
+      "image": "https://artlines.org/assets/artworks/wikiart/0ce63345-7ca8-4bfd-84b2-ac23a419cb97-4705e803eeac949f.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-dream-1910",
+      "credit": "Henri Rousseau. The Dream. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79277",
+      "description": "Le canapé interdit de prendre cette jungle pour une rencontre spontanée avec la nature. Rousseau place un objet domestique familier parmi des feuilles surdimensionnées, des animaux et un musicien. Chaque partie se laisse examiner clairement, même si l’ensemble résiste à l’explication ordinaire. Ce cadre convainc comme image inventée précisément parce que ses détails n’ont pas à composer une géographie plausible.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "f063e2c6-65b0-4503-9389-008b668dbd88",
+      "title": "Boîtes de soupe Campbell",
+      "catalogueTitle": "Campbell's Soup Cans",
+      "artist": "Andy Warhol",
+      "artists": [
+        {
+          "name": "Andy Warhol",
+          "role": "primary",
+          "slug": "andy-warhol-nga-1966"
+        }
+      ],
+      "date": "1962",
+      "start": 1962,
+      "end": 1962,
+      "medium": "Acrylique et peinture émail métallisée sur toile, 32 panneaux",
+      "accession": "476.1996.1-32",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/f063e2c6-65b0-4503-9389-008b668dbd88-8f4527938b82f485.jpg",
+      "imageSource": "https://www.wikiart.org/en/andy-warhol/campbells-soup-cans-1962",
+      "credit": "Andy Warhol. Campbell's Soup Cans. WikiArt source label: Andy Warhol Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/andy-warhol/campbells-soup-cans-1962",
+      "license": "Andy Warhol Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79809",
+      "description": "Le motif répété fait ressortir les changements de variétés de soupe. Malgré leur ressemblance avec des images commerciales imprimées, ces trente-deux toiles ont été peintes à la main. Warhol les exposa d’abord sur des étagères, comme des produits d’épicerie. La répétition ne crée donc pas seulement un motif : elle déplace la question vers les petites distinctions entre des marchandises presque identiques.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "5b2452fe-0923-569b-beda-ab80c4de6fb6",
+      "title": "One: Number 31, 1950",
+      "catalogueTitle": "One: Number 31",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "Émail et huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5b2452fe-0923-569b-beda-ab80c4de6fb6-085da1cccc5006f0.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/one-number-31-1950",
+      "credit": "One: Number 31. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/one-number-31-1950",
+      "description": "Les boucles et les fils de peinture ne convergent vers aucune figure principale. Pollock laisse voir croisements, ruptures et couches successives sur toute la grande surface. Au lieu de traverser ces marques pour trouver un objet représenté, l’attention suit leur passage sur la toile. L’absence de sujet conventionnel ne supprime pas la structure : elle la déplace dans les rapports entre les traces.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "ef467ddd-4a7f-4f01-aba1-36ea6fadce73",
+      "title": "Moi et le village",
+      "catalogueTitle": "I and the Village",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "Huile sur toile",
+      "accession": "146.1945",
+      "image": "https://artlines.org/assets/artworks/wikiart/26992f70-c738-43c7-80b0-30d6a0321447-a947303256c960fa.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/i-and-the-village-1911",
+      "credit": "Marc Chagall. I and the Village. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78984",
+      "description": "L’homme au visage vert et l’animal se regardent au-dessus de petites maisons et de figures. Chagall fait coexister plusieurs échelles ; cercles et diagonales relient des zones incompatibles avec un espace uniformément mesuré. L’échange entre les deux grands visages donne à ce monde déplacé un centre intime. Le village peut être présent par associations sans être reconstitué en panorama.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "3b4f7340-31d1-5ccd-a61a-6b4ba2ce51ae",
+      "title": "Le Chant d’amour",
+      "catalogueTitle": "The Song of Love",
+      "artist": "Giorgio de Chirico",
+      "artists": [
+        {
+          "name": "Giorgio de Chirico",
+          "role": "primary",
+          "slug": "giorgio-de-chirico-q156622"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "Huile sur toile",
+      "accession": "950.1979",
+      "image": "https://artlines.org/assets/artworks/imported/greek-images-20260920/3b4f7340-31d1-5ccd-a61a-6b4ba2ce51ae-c53bb93b0a1eb72b.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgio-de-chirico/the-song-of-love-1914",
+      "credit": "Giorgio de Chirico; WikiArt; Public domain (WikiArt label). Source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/giorgio-de-chirico/the-song-of-love-1914",
+      "source": "https://www.wikidata.org/wiki/Q1154410",
+      "description": "Une tête antique, un gant de caoutchouc et une balle verte occupent un cadre dont la perspective est plus compréhensible que le contenu. De Chirico ne donne aucune raison pratique à leur rencontre. Le train lointain appartient à un autre mouvement quotidien, mais n’explique pas le premier plan. La netteté des objets maintient l’énigme précise, plutôt que de la dissoudre dans une rêverie générale.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "91ff7bef-1db0-4260-bc47-204478d54e57",
+      "title": "La Ville qui monte",
+      "catalogueTitle": "The City Rises",
+      "artist": "Umberto Boccioni",
+      "artists": [
+        {
+          "name": "Umberto Boccioni",
+          "role": "primary",
+          "slug": "umberto-boccioni-q152797"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "Huile sur toile",
+      "accession": "507.1951",
+      "image": "https://artlines.org/assets/artworks/wikiart/b185afea-af53-47a3-b883-9730818e6aea-94b10b1278d89727.jpg",
+      "imageSource": "https://www.wikiart.org/en/umberto-boccioni/the-city-rises-1910",
+      "credit": "Umberto Boccioni. The City Rises. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79865",
+      "description": "L’effort du cheval rouge se propage dans les touches qui entourent ouvriers et chantier. Boccioni rend difficile de séparer un corps en mouvement de l’activité urbaine alentour. Les contours se brouillent là où une vue plus descriptive distinguerait chaque tâche. La ville est représentée par la tension physique plutôt que par une silhouette achevée : construire reste une action en train de se faire.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "065c902f-70fa-5ad2-892b-93aea67fd36a",
+      "title": "Machine à gazouiller",
+      "catalogueTitle": "Twittering Machine",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/065c902f-70fa-5ad2-892b-93aea67fd36a-fa77918c871aa625.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/twittering-machine-1922",
+      "credit": "Paul Klee. Twittering Machine. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-klee/twittering-machine-1922",
+      "description": "La manivelle donne aux figures d’oiseaux de Klee un inquiétant mécanisme commun. Leurs corps minces restent individuels, comiques et fragiles, mais le dispositif suggère que leur son ou leur mouvement pourrait être commandé de l’extérieur. Le dessin n’a pas besoin de devenir une invention utilisable. Quelques lignes de liaison suffisent à réunir êtres vivants et contrôle mécanique dans une même petite structure.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "3a6769a0-2a45-45b6-ba5b-08715ad74a8e",
+      "title": "Peinture abstraite, bleu",
+      "catalogueTitle": "Abstract Painting (Blue)",
+      "artist": "Ad Reinhardt",
+      "artists": [
+        {
+          "name": "Ad Reinhardt",
+          "role": "primary",
+          "slug": "ad-reinhardt-nga-1821"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "Huile sur toile",
+      "accession": "427.1981",
+      "image": "https://artlines.org/assets/artworks/wikiart/1c598fb2-fbaa-4cdf-8278-bb719d04464a-b1b1be8fbab3c8f3.jpg",
+      "imageSource": "https://www.wikiart.org/en/ad-reinhardt/abstract-painting-blue",
+      "credit": "Ad Reinhardt. Abstract Painting (Blue). Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79684",
+      "description": "Au début, le bleu peut sembler continu. Des rectangles discrets le divisent peu à peu en zones plus sombres ou verdâtres, sans contour appuyé pour annoncer leur importance. Reinhardt remplace la recherche familière d’un sujet par la distinction entre couleurs voisines. Une reproduction peut modifier ces valeurs proches ; son apparente simplicité ne constitue donc pas une mesure définitive de l’œuvre.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "1bc033f9-467c-406a-b657-6eb220444524",
+      "title": "Danse (I)",
+      "catalogueTitle": "Dance (I)",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "Paris, boulevard des Invalides, début 1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "Huile sur toile",
+      "accession": "201.1963",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/7bb3b987-c4a3-4882-950e-da38a9bcecb7-09ac3d304f8a4d55.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Henri_Matisse,_1909,_La_danse_(I),_Museum_of_Modern_Art.jpg",
+      "credit": "Henri Matisse. Dance (I). Image credit: Henri Matisse; Source credit: MoMA. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.moma.org/collection/works/79124",
+      "description": "Les mains tendues manquent presque de fermer la ronde. Matisse dépouille suffisamment le cadre pour que cette petite ouverture et les écarts irréguliers entre les corps portent le mouvement. Les cinq figures ne forment pas un motif répété mécaniquement. Leur lien exige un effort : le cercle paraît maintenu dans la danse plutôt que disposé comme un emblème achevé.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "6347d238-ae88-4ce5-8b99-5b931a2bb8d1",
+      "title": "Masque d’acteur",
+      "catalogueTitle": "Actor's Mask",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "Huile sur toile marouflée sur panneau",
+      "accession": "616.1967",
+      "image": "https://artlines.org/assets/artworks/wikiart/7c0a3502-7a45-41f7-b6b5-47b9504fd3c9-d4d97135c9a58ac8.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/actors-mask",
+      "credit": "Paul Klee. Actor's Mask. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/80094",
+      "description": "De fines divisions font du visage vert une surface construite. Yeux et bouche restent suffisants pour le reconnaître, même sans expression facile à lire. Klee place cette image humaine entre deux catégories : un visage à interpréter et un objet à porter. Le titre conserve l’idée de représentation théâtrale sans fournir de personnage ni de récit.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "b2d9802c-fdc7-4c98-a8d3-ba0742eff7b8",
+      "title": "Agapanthe",
+      "catalogueTitle": "Agapanthus",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1914-26",
+      "start": 1914,
+      "end": 1926,
+      "medium": "Huile sur toile",
+      "accession": "527.1992",
+      "image": "https://artlines.org/assets/artworks/wikiart/db197f02-64a3-41f9-97d4-657e3749e69d-8791bc41eff8f214.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-monet/agapanthus-1917",
+      "credit": "Claude Monet. Agapanthus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79922",
+      "description": "Les fleurs proches et la végétation reflétée partagent les longues marques superposées de Monet. Aucun contour net ne sépare partout plante, eau et distance. Reconnaître la scène demande de suivre les changements de facture plutôt que de trouver une limite autour de chaque feuille. Les touches imbriquées gardent cette recherche près de la surface : le jardin devient moins un lieu à embrasser qu’un champ de couleur densément occupé.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "fd663d33-7cd2-4e0e-804d-2b7a3c3ec04f",
+      "title": "Agonie",
+      "catalogueTitle": "Agony",
+      "artist": "Arshile Gorky",
+      "artists": [
+        {
+          "name": "Arshile Gorky",
+          "role": "primary",
+          "slug": "arshile-gorky-q165648"
+        }
+      ],
+      "date": "1947",
+      "start": 1947,
+      "end": 1947,
+      "medium": "Huile sur toile",
+      "accession": "88.1950",
+      "image": "https://artlines.org/assets/artworks/wikiart/41c29d36-1948-4c35-8295-6a31e8fc9e3f-e7f995a9d4d3b5a1.jpg",
+      "imageSource": "https://www.wikiart.org/en/arshile-gorky/agony",
+      "credit": "Arshile Gorky. Agony. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78740",
+      "description": "Les contours minces de Gorky approchent de corps et de fragments reconnaissables sans les fixer tout à fait. Des formes rouges et noires se rassemblent inégalement sur le fond brunâtre. Le titre suggère la douleur, mais ne fournit pas un événement illustré que l’on puisse décoder une fois pour toutes. Des allusions corporelles persistent dans des formes qui restent ouvertes à d’autres lectures.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "ba953d19-0397-4503-b5e3-4305d6234674",
+      "title": "Paysage américain",
+      "catalogueTitle": "American Landscape",
+      "artist": "Charles Sheeler",
+      "artists": [
+        {
+          "name": "Charles Sheeler",
+          "role": "primary",
+          "slug": "charles-sheeler-nga-2745"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Huile sur toile",
+      "accession": "166.1934",
+      "image": "https://artlines.org/assets/artworks/wikiart/db781429-94c4-4b6d-8ead-a601eefff009-dfebd8683b48fdfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/charles-sheeler/american-landscape-1930",
+      "credit": "Charles Sheeler. American Landscape. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79032",
+      "description": "L’eau immobile et les constructions précisément placées donnent au complexe industriel de Sheeler un calme inhabituel. Le petit bateau fournit une mesure face aux formes de l’usine. À la différence du chantier de Boccioni, cette vue efface la tension du fonctionnement. Les machines semblent établies dans un paysage soigneusement espacé. Montrer un lieu de travail n’est pas la même chose que montrer le travail qu’on y accomplit.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "4d267ebc-9b74-4e0a-a4c1-174769b9180b",
+      "title": "Baigneur",
+      "catalogueTitle": "Bather",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "Cavalière, été 1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "Huile sur toile",
+      "accession": "17.1936",
+      "image": "https://artlines.org/assets/artworks/wikiart/a029a998-1688-42af-8e6c-5292898cafb3-43dd50dabd30e0d1.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/nude",
+      "credit": "Henri Matisse. Bather. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78464",
+      "description": "Le dos tourné et les grands membres gardent leur poids physique sans modelé anatomique élaboré. Matisse confie une grande part de cette tâche aux contours fermes et aux larges zones bleues et vertes. La figure reste corporellement présente malgré la réduction des détails descriptifs. On peut juger la simplification par ce qu’elle conserve, pas seulement en comptant ce qui manque.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "9d119008-d8c9-4906-84f9-25f0d490a8dd",
+      "title": "Lit",
+      "catalogueTitle": "Bed",
+      "artist": "Robert Rauschenberg",
+      "artists": [
+        {
+          "name": "Robert Rauschenberg",
+          "role": "primary",
+          "slug": "robert-rauschenberg-q164358"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "Huile et crayon sur oreiller, courtepointe et drap, sur supports en bois",
+      "accession": "79.1989",
+      "image": "https://artlines.org/assets/artworks/wikiart/0699b16e-f5e4-44c7-bbdb-6b21ce0092de-986cfc243a56cc42.jpg",
+      "imageSource": "https://www.wikiart.org/en/robert-rauschenberg/bed",
+      "credit": "Robert Rauschenberg. Bed. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78712",
+      "description": "Oreiller, drap et couvre-lit sont de véritables pièces de literie, non des imitations peintes. Rauschenberg les marque à l’huile et au crayon, puis les redresse sur des supports de bois. Ils conservent leur identité domestique, mais leur nouvelle position interdit l’usage ordinaire. L’œuvre ne permet pas de choisir confortablement entre meuble et tableau : chaque catégorie continue de gêner l’autre.",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    }
+  ],
+  "context": {
+    "start": 1889,
+    "end": 1962
+  },
+  "closingSections": [
+    {
+      "title": "Garder les différences en vue",
+      "paragraphs": [
+        "Warhol répète l’image d’un objet ; Rauschenberg emploie l’objet lui-même. Dalí en change le comportement physique ; de Chirico, le voisinage. Distinguer ces opérations donne davantage à discuter que de tout qualifier d’étrange. Consultez les notices actuelles du musée pour la présentation des œuvres : cette sélection relie des idées et des objets, non des arrêts garantis dans un accrochage précis."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "tate",
+  "museum": "Tate",
+  "city": "伦敦及其他地点",
+  "country": "英国",
+  "title": "泰特美术馆：杰作",
+  "subtitle": "二十幅作品，通过精确、空气感与变形，赋予经验不同形态。",
+  "introduction": "米莱的奥菲莉娅漂在水中，周围植物却仍被持续而清楚地刻画。特纳风暴的困难几乎相反：环境让船难以定位。两种方法并非一方简单地更写实。前者在死亡时刻保持可见世界的锋利，后者让天气干扰观看行为本身。\n\n这组作品沿着对比经过文学题材、城市场面与虚构身体。有些越看越密，有些取决于少数仍能认出的细节。这样入手，比把所有松动笔法都视为即兴、所有精确描写都视为确定更有帮助。",
+  "visitNote": "泰特（Tate）的藏品分布于多个场馆，包括泰特英国美术馆（Tate Britain）和泰特现代美术馆（Tate Modern）。本精选内容旨在介绍馆藏，而非针对单一建筑的参观路线。由于作品外借及展览陈设会发生变动，请在前往参观前确认每件作品当前的展出地点。",
+  "locale": "zh",
+  "website": "https://www.tate.org.uk",
+  "officialGuide": "https://www.tate.org.uk",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "免费阅读 · 英语",
+      "note": "拉斯金对自然形态的观察练习，与拉斐尔前派的画作形成了有益的互补。他对边缘与光线的关注，也为探讨为何特纳画作中的画面表面难以被区分成一个个独立物体，提供了一个切入点。"
+    }
+  ],
+  "works": [
+    {
+      "id": "1f837242-93a2-444b-8cba-797370c69a61",
+      "title": "奥菲莉娅",
+      "catalogueTitle": "Ophelia",
+      "artist": "John Everett Millais",
+      "artists": [
+        {
+          "name": "John Everett Millais",
+          "role": "primary",
+          "slug": "john-everett-millais-q159606"
+        }
+      ],
+      "date": "1851–2",
+      "start": 1851,
+      "end": 1852,
+      "medium": "布面油画",
+      "accession": "N01506",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1065493-65065788ca59e1e4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Ophelia_-_Google_Art_Project.jpg",
+      "credit": "John Everett Millais. Ophelia. Image credit: John Everett Millais. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/millais-ophelia-n01506",
+      "description": "奥菲莉娅张开的手与漂浮身体，占据一条植被被持续细描的溪流。环境没有围绕人的事件失焦。细节被平等对待，产生难解关系：植物继续吸引目光，人物却给予同一周围环境致命意义。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0cee5bd6-5dbd-4e8b-964f-7dc95f078e8c",
+      "title": "夏洛特女郎",
+      "catalogueTitle": "The Lady of Shalott",
+      "artist": "John William Waterhouse",
+      "artists": [
+        {
+          "name": "John William Waterhouse",
+          "role": "primary",
+          "slug": "john-william-waterhouse-q212754"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "布面油画",
+      "accession": "N01543",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/0cee5bd6-5dbd-4e8b-964f-7dc95f078e8c-4afd773f4331a638.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-william-waterhouse/the-lady-of-shalott-1888",
+      "credit": "John William Waterhouse. The Lady of Shalott. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/waterhouse-the-lady-of-shalott-n01543",
+      "description": "链条仍把船系在岸边。蜡烛、花纹织物和女子白裙，使离去有了具体物质细节；抬起的脸又把注意引向眼前动作之外。沃特豪斯把场面停在将走未走的近处，文学题材所预示的后果还没有呈现。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "440188db-4dd4-4f7c-a842-5d2da5a204b1",
+      "title": "觉醒的良知",
+      "catalogueTitle": "The Awakening Conscience",
+      "artist": "William Holman Hunt",
+      "artists": [
+        {
+          "name": "William Holman Hunt",
+          "role": "primary",
+          "slug": "william-holman-hunt-q211763"
+        }
+      ],
+      "date": "1853",
+      "start": 1853,
+      "end": 1853,
+      "medium": "布面油画",
+      "accession": "T02075",
+      "image": "https://artlines.org/assets/artworks/wikiart/92250598-69ee-441d-86c8-3f72f408f71d-2b2772b6099e3622.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-holman-hunt/the-awakening-conscience-1853",
+      "credit": "William Holman Hunt. The Awakening Conscience. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/hunt-the-awakening-conscience-t02075",
+      "description": "女子开始起身，改变了密集陈设中两个身体的关系。镜子提供另一种开口，朝向花园与户外光。亨特把叙事转折放进小小姿势变化，让封闭室内与超出它的可能方向同时存在。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "301e4ad1-cd90-4a81-b96e-f0323374137a",
+      "title": "康乃馨、百合、百合、玫瑰",
+      "catalogueTitle": "Carnation, Lily, Lily, Rose",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1885–6",
+      "start": 1885,
+      "end": 1886,
+      "medium": "布面油画",
+      "accession": "N01615",
+      "image": "https://artlines.org/assets/artworks/wikiart/7f44771b-bf66-4422-b344-da9ca30e994a-89f93bdfd7617773.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-singer-sargent/carnation-lily-lily-rose-from-the-world-s-greatest-paintings-published-by-oldham-s-press-in-1886",
+      "credit": "John Singer Sargent. Carnation, Lily, Lily, Rose. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/sargent-carnation-lily-lily-rose-n01615",
+      "description": "灯笼暖光只能照到较冷花园的有限范围。孩子浅裙与周围花朵，必须同时属于局部光晕和残留日光。萨金特保留两种照明，不让一种抵消另一种；这正是画面独有的难处。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "ac4c9adb-ae17-44e1-bc1c-d4f8becd59b8",
+      "title": "和平：海葬",
+      "catalogueTitle": "Peace - Burial at Sea",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "exhibited 1842",
+      "start": null,
+      "end": null,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/ac4c9adb-ae17-44e1-bc1c-d4f8becd59b8-7c401fc89615e6c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/peace",
+      "credit": "J.M.W. Turner. Peace - Burial at Sea. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/turner-peace-burial-at-sea-n00528",
+      "description": "暗帆在趋于模糊的水天之间显得沉重。作品纪念特纳同行戴维·威尔基的海葬，并于1842年展出。这一背景给黑色明确任务：哀悼集中在船的外观，而不是通过一场可清楚辨认的葬礼来交代。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "f9bac7bc-1e5f-4561-be97-5046b3d6cf8d",
+      "title": "诺勒姆城堡，日出",
+      "catalogueTitle": "Norham Castle, Sunrise",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "约1845年",
+      "start": 1845,
+      "end": 1845,
+      "medium": "布面油画",
+      "accession": "N01981",
+      "image": "https://artlines.org/assets/artworks/wikiart/a4773b79-d764-40c7-9cf7-368bb50409dd-9a7a26e2bcbe999d.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/norham-castle-sunrise-1845",
+      "credit": "J. M. W. Turner. Norham Castle, Sunrise. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/turner-norham-castle-sunrise-n01981",
+      "description": "城堡、低地与河仍可辨认，确定边缘却很少。这幅未完成的画，让浅蓝和黄色承担通常可能由建筑细节说明的关系。应区分作品留下的状态与对特纳原本打算怎样处理各处的推测；我们能够考察的是眼前表面。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "61f5ce42-83c9-5550-a672-f31cb6c3fdb2",
+      "title": "暴风雪：港口外的汽船",
+      "catalogueTitle": "Snow Storm - Steamboat off a Harbour's Mouth",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1842",
+      "start": 1842,
+      "end": 1842,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/61f5ce42-83c9-5550-a672-f31cb6c3fdb2-f31b73e5ea905ef9.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/snow-storm-steam-boat-off-a-harbours-mouth-1842",
+      "credit": "J. M. W. Turner. Snow Storm - Steamboat off a Harbour's Mouth. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-turner/snow-storm-steam-boat-off-a-harbours-mouth-1842",
+      "description": "船难以在环旋笔痕中被确定下来。海天不再提供传统海景中预期的稳定分界。特纳使寻找船的位置成为图像困难的一部分。风暴既通过个别可辨浪头描述，也通过这种观看秩序的破坏描述。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "101a93b3-0b1d-42d4-b39f-63a4f575f132",
+      "title": "受祝福的贝亚特丽克丝",
+      "catalogueTitle": "Beata Beatrix",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "约 1864–70 年",
+      "start": 1864,
+      "end": 1870,
+      "medium": "布面油画",
+      "accession": "N01279",
+      "image": "https://artlines.org/assets/artworks/wikiart/6f37c717-dcc1-487a-b86d-459c5393131c-4d5b687c2aa300e7.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/beata-beatrix-1880",
+      "credit": "Dante Gabriel Rossetti. Beata Beatrix. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/rossetti-beata-beatrix-n01279",
+      "description": "闭眼与静手中断了人物同观者的通常交流。一只红鸟靠近，后方较暖空间保持模糊。内在状态通过身体周围的迹象呈现，并没有真的被打开供人检查，也不能简化成一个可见的念头。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "d3f140ee-f449-415b-a59e-3469dba3ae89",
+      "title": "泥浴",
+      "catalogueTitle": "The Mud Bath",
+      "artist": "David Bomberg",
+      "artists": [
+        {
+          "name": "David Bomberg",
+          "role": "primary",
+          "slug": "david-bomberg-research-13411b574394"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "布面油画",
+      "accession": "T00656",
+      "image": "https://artlines.org/assets/artworks/wikiart/62790e78-ca33-49f3-a6ed-1f3d522d212d-e57ec59d902e2de0.jpg",
+      "imageSource": "https://www.wikiart.org/en/david-bomberg/the-mud-bath-1914",
+      "credit": "David Bomberg. The Mud Bath. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/bomberg-the-mud-bath-t00656",
+      "description": "蓝白色角状形体穿过红底，保留身体暗示，却没有连续解剖。群体行动存于方向与交叉，而非个人面孔。邦伯格改变了辨认身体的尺度：先见集体布局，再由碎片逐渐找回人物。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "15d3bae9-5877-42c0-9b02-899aeaf129c0",
+      "title": "仙界伐木工的绝妙一击",
+      "catalogueTitle": "The Fairy Feller’s Master-Stroke",
+      "artist": "Richard Dadd",
+      "artists": [
+        {
+          "name": "Richard Dadd",
+          "role": "primary",
+          "slug": "richard-dadd-research-a4c07e844c78"
+        }
+      ],
+      "date": "1855–64",
+      "start": 1855,
+      "end": 1864,
+      "medium": "布面油画",
+      "accession": "T00598",
+      "image": "https://artlines.org/assets/artworks/wikiart/9e82f6de-49da-473b-a89a-0b2aeeac3ad2-4141ba1af4568a78.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-dadd/the-fairy-feller-s-master-stroke-1864",
+      "credit": "Richard Dadd. The Fairy Feller’s Master-Stroke. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/dadd-the-fairy-fellers-master-stroke-t00598",
+      "description": "伐木者所处的群体如此密集，周围见证者几乎与中心动作争夺注意。草、叶与微小人物在浅空间交叠。达德的细节不会让整体立刻清楚，而是把观看分成接连相遇，每次又显出当前焦点外还剩多少东西。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "7a70f4ed-d854-4f3c-b625-7edf3028eab5",
+      "title": "跳蚤之魂",
+      "catalogueTitle": "The Ghost of a Flea",
+      "artist": "William Blake",
+      "artists": [
+        {
+          "name": "William Blake",
+          "role": "primary",
+          "slug": "william-blake-nga-970"
+        }
+      ],
+      "date": "约 1819–20 年",
+      "start": 1819,
+      "end": 1820,
+      "medium": "桃花心木板蛋彩与金箔",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fe441cc7-6f18-434c-bc66-647a9e3a60ff-16895d3b456af47c.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-blake/the-ghost-of-a-flea-1820",
+      "credit": "William Blake. The Ghost of a Flea. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/blake-the-ghost-of-a-flea-n05889",
+      "description": "怪物有肌肉重量与行走姿势，部分动物化的身体却拒绝普通人的身份。帷幕给动作一个舞台式环境，所持容器又补充小行为。布莱克的虚构依赖可辨解剖：正因留下足够熟悉结构，偏离才更加明确。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "5d4921d7-71c8-4415-a75a-164b1168a650",
+      "title": "夜曲：蓝与金——老巴特西桥",
+      "catalogueTitle": "Nocturne: Blue and Gold - Old Battersea Bridge",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "约1872–1875年",
+      "start": 1872,
+      "end": 1875,
+      "medium": "布面油画",
+      "accession": "N01959",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/9ab192e7-630d-42c5-ab6a-f0c7b8ba1520-93f6015de6f25ed3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:James_Abbot_McNeill_Whistler_006.jpg",
+      "credit": "James Abbott McNeill Whistler. Nocturne: Blue and Gold - Old Battersea Bridge. Image credit: James McNeill Whistler; Source credit: The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 .. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-battersea-bridge-n01959",
+      "description": "桥是水上一个巨大暗形，稀少灯光与小船则交代水中距离。蓝与金连接描写程度不一的元素。惠斯勒用少数参照让地点可读，省略的细节因此可以仍属夜色，而不成为必须由观者补齐的缺口。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "1294f855-7c06-4f8a-97db-26c49d5d8539",
+      "title": "工业景观",
+      "catalogueTitle": "Industrial Landscape",
+      "artist": "L.S. Lowry",
+      "artists": [
+        {
+          "name": "L.S. Lowry",
+          "role": "primary",
+          "slug": "l-s-lowry-research-8d1765d6d2be"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "布面油画",
+      "accession": "T00111",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/1294f855-7c06-4f8a-97db-26c49d5d8539-bc4270a0ece7efc7.jpg",
+      "imageSource": "https://www.wikiart.org/en/l-s-lowry/industrial-landscape-1955",
+      "credit": "L.S. Lowry. Industrial Landscape. WikiArt source label: L. S. Lowry Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/l-s-lowry/industrial-landscape-1955",
+      "license": "L. S. Lowry Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/lowry-industrial-landscape-t00111",
+      "description": "烟囱与建筑延伸到任何一处工作场所以外。小人物在重复之中提供人的尺度，道路则连接建成环境的各部分。劳里把工业视为有人居住的地方，而不只是机器集合，或一座从外观看的工厂。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "f20b8936-ff89-4c1f-a753-9e212a7b3911",
+      "title": "受难像基座人物三习作",
+      "catalogueTitle": "Three Studies for Figures at the Base of a Crucifixion",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "约1944年",
+      "start": 1944,
+      "end": 1944,
+      "medium": "三块木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/f20b8936-ff89-4c1f-a753-9e212a7b3911-dfd234e3a9588f1f.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "credit": "Francis Bacon. Three Studies for Figures at the Base of a Crucifixion. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "description": "三块画板给生物各自空间，却共享相近橙底。长颈、嘴与支撑保留足够身体信息，使扭曲能被清楚感知。它们不处于一间连续房室，也无需被硬排成事件顺序。重复建立联系，同时让各自困境保持不同。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "a3b17062-1de8-40ab-85f5-e379f76b9d44",
+      "title": "有彩虹的汉普斯特德荒野",
+      "catalogueTitle": "Hampstead Heath with a Rainbow",
+      "artist": "John Constable",
+      "artists": [
+        {
+          "name": "John Constable",
+          "role": "primary",
+          "slug": "john-constable-q159297"
+        }
+      ],
+      "date": "1836",
+      "start": 1836,
+      "end": 1836,
+      "medium": "布面油画",
+      "accession": "N01275",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/a3b17062-1de8-40ab-85f5-e379f76b9d44-b1f881346127d92b.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-constable/hampstead-heath-with-a-rainbow-1836-1",
+      "credit": "John Constable. Hampstead Heath with a Rainbow. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/constable-hampstead-heath-with-a-rainbow-n01275",
+      "description": "彩虹清晰的弧线横越天空，其他天空则分裂为不稳定的云与暗色。光只挑出下方荒地的一些部分，没有均匀照亮。康斯特布尔用短暂的弧连接分散区域，让天气主动重新分配风景的可见程度，而不只是背景条件。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "58aa6a84-cd00-4932-83b3-c5768e1e4a79",
+      "title": "佩戴徽章的自画像",
+      "catalogueTitle": "Self-Portrait with Badges",
+      "artist": "Peter Blake",
+      "artists": [
+        {
+          "name": "Peter Blake",
+          "role": "primary",
+          "slug": "peter-blake-research-624508d6e0f9"
+        }
+      ],
+      "date": "1961",
+      "start": 1961,
+      "end": 1961,
+      "medium": "木板油画",
+      "accession": "T02406",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/58aa6a84-cd00-4932-83b3-c5768e1e4a79-3945f47d134e50e5.jpg",
+      "imageSource": "https://www.wikiart.org/en/peter-blake/self-portrait-with-badges-1961",
+      "credit": "Peter Blake. Self-Portrait with Badges. WikiArt source label: Peter Blake Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/peter-blake/self-portrait-with-badges-1961",
+      "license": "Peter Blake Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/blake-self-portrait-with-badges-t02406",
+      "description": "徽章使挑选出的图像成为人物外观的一部分。它们打断夹克表面，也参与自画像对身份的说明。脸与站姿仍重要，但肖似并非唯一依据。一个人穿什么、展示什么，可以与天生五官占据同一画面位置。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0aa6ee50-b83a-4033-9417-84dc9e1cf491",
+      "title": "基督被剥去外衣",
+      "catalogueTitle": "The Disrobing of Christ",
+      "artist": "Sir Stanley Spencer",
+      "artists": [
+        {
+          "name": "Sir Stanley Spencer",
+          "role": "primary",
+          "slug": "sir-stanley-spencer-research-32d71e89bf61"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "木板油画",
+      "accession": "N04926",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/0aa6ee50-b83a-4033-9417-84dc9e1cf491-cfaecced6694527e.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanley-spencer/the-disrobing-of-christ-1922",
+      "credit": "The Disrobing of Christ. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain US",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/spencer-the-disrobing-of-christ-n04926",
+      "description": "脱下布料需要几具身体在狭窄棱角空间里协作。近乎裸露的人物，通过他们的操作被暴露出来，而不是独立陈列。斯宾塞让宗教情节贴在不顺畅的身体关系上：布可以遮盖、连接，也会抵抗那些拉扯它的人。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "45567dbf-c1a3-4126-88dd-4cb0508576cc",
+      "title": "炮弹爆炸",
+      "catalogueTitle": "Bursting Shell",
+      "artist": "Christopher Richard Wynne Nevinson",
+      "artists": [
+        {
+          "name": "Christopher Richard Wynne Nevinson",
+          "role": "primary",
+          "slug": "christopher-richard-wynne-nevinson-research-f26218068698"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "布面油画",
+      "accession": "T03676",
+      "image": "https://artlines.org/assets/artworks/wikiart/68b3134b-0cb0-4bce-933a-2f5698f148a0-9294900cb57efda6.jpg",
+      "imageSource": "https://www.wikiart.org/en/c-r-w-nevinson/bursting-shell-1915",
+      "credit": "Christopher Richard Wynne Nevinson. Bursting Shell. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/nevinson-bursting-shell-t03676",
+      "description": "爆炸不给人一个舒服的远处位置来观看。楔形与线条向整个结构放射，将力量传到单一描绘物之外。内文森给予暴力一种方向性的结构。即使没有细画受伤身体，空间本身正在破裂，也不会让事件变得遥远。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "763936e6-057e-4280-91b0-31d08f682ee8",
+      "title": "身穿黑裙的多雷莉亚",
+      "catalogueTitle": "Dorelia in a Black Dress",
+      "artist": "Gwen John",
+      "artists": [
+        {
+          "name": "Gwen John",
+          "role": "primary",
+          "slug": "wikimedia-painter-q274339"
+        }
+      ],
+      "date": "约1903–1904年",
+      "start": 1903,
+      "end": 1904,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/763936e6-057e-4280-91b0-31d08f682ee8-7c34c691c0423ad0.jpg",
+      "imageSource": "https://www.wikiart.org/en/gwen-john/dorelia-in-a-black-dres",
+      "credit": "Gwen John. Dorelia in a Black Dress. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/john-dorelia-in-a-black-dress-n05910",
+      "description": "松松交叠的手臂让站姿端定，却没有锁入严格对称。一个粉色强调与少量光变化，在受限色域中区分人物。格温·约翰让素墙继续保持朴素，把相遇集中在脸、手与姿势的细小调整。",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0133b673-eff9-4bbb-808e-2a0e299fb1e1",
+      "title": "奥维尔附近的农场",
+      "catalogueTitle": "Farms near Auvers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "N04713",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/0018416e-7cd4-4fe5-b27c-d7c8835f6942-51f05ab001f77d8a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:VanGoghThatchedCottagesByAHill.jpg",
+      "credit": "Vincent van Gogh. Farms near Auvers. Image credit: Vincent van Gogh; Source credit: 1. vangoghgallery.com 2. Tate Online , image. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/gogh-farms-near-auvers-n04713",
+      "description": "茅草屋顶、树、墙和坡地，分别接受不同方向的笔触。表面保持活跃，却没有让所有材料变成一样。凭这些变化可以追踪挤在一起的建筑：即使几乎没有哪部分颜料安静地形成连续色面，风景仍然可读。",
+      "importance": "",
+      "museum": "Tate"
+    }
+  ],
+  "context": {
+    "start": 1819,
+    "end": 1961
+  },
+  "closingSections": [
+    {
+      "title": "图像难看懂，不等于文字要含混",
+      "paragraphs": [
+        "达德的密度与特纳受干扰的可见性，需要不同的观看方法；二者都不需要用空泛赞美代替描述。比较它们各自让什么保持清楚。泰特的收藏分布在不同场馆与变化的陈列中，参观前请确认每件作品的当前地点。"
+      ]
+    }
+  ]
+}

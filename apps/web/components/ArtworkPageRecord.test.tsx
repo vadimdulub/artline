@@ -19,10 +19,11 @@ it("renders an unillustrated, undated review work and its qualified attribution 
     citations: [{ field_name: "title", source_name: "Museum catalogue", source_url: "https://example.org/object" }],
   };
   const artist = { id: "painter", slug: "painter", display_name: "Painter", entity_type: "person" };
-  const { container } = render(<ArtworkPageRecord artist={artist} work={work} browsePath="/artists/painter?art_images=false&art_year=undated" />);
+  const { container } = render(<ArtworkPageRecord artist={artist} work={work} />);
   expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Unfinished study");
   expect(screen.getByText("Workshop", { exact: true })).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Browse Painter artworks" })).toHaveAttribute("href", "/artists/painter?art_images=false&art_year=undated");
+  expect(screen.queryByRole("navigation", { name: "Artwork navigation" })).toBeNull();
+  expect(screen.getAllByRole("link", { name: "Painter" })[0]).toHaveAttribute("href", "/artists/painter");
   expect(container.querySelector('a[href="https://example.org/object"]')).toHaveTextContent("Museum catalogue");
   expect(container.querySelector("img")).toBeNull();
   expect(fetch).not.toHaveBeenCalled();

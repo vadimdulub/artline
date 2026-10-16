@@ -3,6 +3,7 @@ package atlas
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -86,8 +87,14 @@ func TestDiscoveryFiltersReadOnly(t *testing.T) {
 				t.Fatal(err)
 			}
 			t.Logf("total=%d elapsed=%s", data.Total, time.Since(started))
-			if len(data.Lanes) != 3 || len(recorder.statements) != 3 {
-				t.Fatal("each lane must load with one bounded query")
+			queries := 3
+			for _, lane := range data.Lanes {
+				if lane.Total > 0 {
+					queries++
+				}
+			}
+			if len(data.Lanes) != 3 || len(recorder.statements) != queries {
+				t.Fatal("each uncached lane must load an aggregate, with a page for nonempty results")
 			}
 			statements := slices.Clone(recorder.statements)
 			total := 0
@@ -184,10 +191,10 @@ func TestDiscoveryFiltersReadOnly(t *testing.T) {
 					if !json.Valid(plan) {
 						t.Fatal("invalid query plan")
 					}
-					if tc.name == "monet-geography" && index == 0 && (!strings.Contains(string(plan), "artwork_artists_artist_work_idx") || !strings.Contains(string(plan), "artworks_pkey")) {
+					if tc.name == "monet-geography" && index == 0 && (!strings.Contains(string(plan), "artwork_artists_artist_work_idx") || (!strings.Contains(string(plan), "artworks_pkey") && !strings.Contains(string(plan), "artwork_atlas_projection_pkey"))) {
 						t.Fatal("selected painter lost indexed artwork lookups")
 					}
-					if err := os.WriteFile(filepath.Join(dir, tc.name+"-"+Definitions[index].Key+".json"), plan, 0600); err != nil {
+					if err := os.WriteFile(filepath.Join(dir, fmt.Sprintf("%s-query-%d.json", tc.name, index)), plan, 0600); err != nil {
 						t.Fatal(err)
 					}
 				}

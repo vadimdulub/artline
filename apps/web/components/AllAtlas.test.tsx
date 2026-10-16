@@ -73,3 +73,73 @@ it("does not leave an endless spinner if required preset metadata fails", async 
  expect(screen.getByText("Period information could not be loaded.")).toBeVisible();
  expect(screen.queryByText("Loading the timeline…")).toBeNull();
 });
+
+const layerMetadata: AtlasMetadata = { ...metadata, types: [
+ { key: "artwork", name: "Artworks", singular: "Artwork", dateLabel: "Created", cutoff: 1970, color: "#abc" },
+ { key: "book", name: "Books", singular: "Book", dateLabel: "Published", cutoff: 2000, color: "#abc" },
+ { key: "event", name: "Events", singular: "Event", dateLabel: "Occurred", cutoff: 2000, color: "#abc" },
+] };
+function sortedParams(params: URLSearchParams) {
+ return [...params].sort(([key, value], [otherKey, otherValue]) => key.localeCompare(otherKey) || value.localeCompare(otherValue));
+}
+it.each(layerMetadata.types.flatMap(kind => [true, false].map(highlights => ({ ...kind, highlights }))))(
+ "preserves filters and years when hiding and restoring $name with Highlights $highlights",
+ async ({ key, name, highlights }) => {
+  const initial = new URLSearchParams({
+   selection: "true", preset: "renaissance", preset_filters: "custom", window: "context",
+   start: "1400", end: "1600", highlights: String(highlights), q: "portrait",
+   creator: "painter:test", country: "italy", country_scope: "artwork", continent: "europe", region: "western-europe",
+   artwork_movement: "renaissance", artwork_popular: "true",
+   book_language: "Q150", book_top100: "true", event_kind: "war", event_top100: "true",
+  });
+  layerMetadata.types.forEach(kind => initial.append("type", kind.key));
+  window.history.replaceState(null, "", `/all?${initial}`);
+  // A visibility change must not trigger fitting to this narrower result range.
+  mockRequests(Promise.resolve({ ...response, range: { start: 1400, end: 1600 }, matchedRange: { start: 1450, end: 1550 } }), Promise.resolve(layerMetadata));
+  const { container } = render(<AllAtlas />);
+  await waitFor(() => expect(container.querySelector(".timeline-stage")).toHaveAttribute("aria-busy", "false"));
+
+  fireEvent.click(screen.getByRole("checkbox", { name }));
+  expect(screen.getByRole("checkbox", { name })).not.toBeChecked();
+  await waitFor(() => expect(container.querySelector(".timeline-stage")).toHaveAttribute("aria-busy", "false"));
+  const hidden = new URLSearchParams(initial);
+  hidden.delete("type", key);
+  expect(sortedParams(new URLSearchParams(window.location.search))).toEqual(sortedParams(hidden));
+  expect(screen.getByRole("checkbox", { name: "Highlights" })).toHaveProperty("checked", highlights);
+  const request = vi.mocked(apiRequest).mock.calls.map(([path]) => path).filter(path => path.startsWith("atlas?")).at(-1)!;
+  const requestParams = new URLSearchParams(request.split("?")[1]);
+  for (const [filter, value] of hidden) {
+   expect(requestParams.getAll(filter)).toContain(value);
+  }
+  expect(requestParams.getAll("type")).not.toContain(key);
+  expect(requestParams.has("fit")).toBe(false);
+
+  fireEvent.click(screen.getByRole("checkbox", { name }));
+  await waitFor(() => expect(container.querySelector(".timeline-stage")).toHaveAttribute("aria-busy", "false"));
+  expect(screen.getByRole("checkbox", { name })).toBeChecked();
+  expect(sortedParams(new URLSearchParams(window.location.search))).toEqual(sortedParams(initial));
+ });
+
+it("keeps inherited preset filters and years when hiding Books and Events", async () => {
+ const presets: AtlasMetadata = { ...layerMetadata, presets: [{ ...metadata.presets[0], startingCountries: ["italy"], startingCreators: ["painter:test"], startingHighlights: true }] };
+ window.history.replaceState(null, "", "/all?preset=renaissance&selection=true&type=artwork&type=book&type=event");
+ mockRequests(Promise.resolve({ ...response, matchedRange: { start: 1450, end: 1550 } }), Promise.resolve(presets));
+ const { container } = render(<AllAtlas />);
+ await screen.findByText("Loaded artwork gallery");
+ for (const name of ["Books", "Events"]) {
+  fireEvent.click(screen.getByRole("checkbox", { name }));
+  await waitFor(() => expect(container.querySelector(".timeline-stage")).toHaveAttribute("aria-busy", "false"));
+ }
+ const params = new URLSearchParams(window.location.search);
+ expect(params.getAll("type")).toEqual(["artwork"]);
+ expect(params.getAll("country")).toEqual(["italy"]);
+ expect(params.get("country_scope")).toBe("artwork");
+ expect(params.getAll("creator")).toEqual(["painter:test"]);
+ expect(params.get("highlights")).toBe("true");
+ expect(params.get("preset")).toBe("renaissance");
+ expect(params.has("fit")).toBe(false);
+ const request = vi.mocked(apiRequest).mock.calls.map(([path]) => path).filter(path => path.startsWith("atlas?")).at(-1)!;
+ const requestParams = new URLSearchParams(request.split("?")[1]);
+ expect(requestParams.get("start")).toBe(String(range.start));
+ expect(requestParams.get("end")).toBe(String(range.end));
+});

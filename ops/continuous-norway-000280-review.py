@@ -1,0 +1,22 @@
+"""Persist seven actual derivative reviews and two source-image comparisons."""
+import importlib.util,fcntl
+s=importlib.util.spec_from_file_location('b','ops/continuous-norway-images-000280.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b);i=b.i
+notes={
+'19924107-495e-5c94-91ab-bd5d7f27081f':'Coastal landscape with dark foreground trees, water and pale sky behind; full supplied painting rectangle and lower-left Holmboe signature visible. Authentic painted composition, not a placeholder.',
+'19e938db-f1c8-527f-b083-bcfb03840d1e':'Industrial riverside with snow-covered buildings, chimneys and dark reflections. Entire supplied image rectangle retained with no detail substitution; dark areas contain authentic painted detail.',
+'19e9b3d4-b117-57dd-9c2f-f88fc6cbc6eb':'Three male figures of different ages, central youth holding a sheet, right figure pointing. Viewed derivative and source separately: same complete supplied composition and surface cracks. Exact museum inventory NG.M.00511 is August Eiebakke’s dated1894 copy after Giorgione; native source photo attaches to that physical copy, not the original Giorgione. Copy wording and creator retained.',
+'1a1b3012-4072-5fe0-98a3-e40b9fe62c48':'River sunset with two masts in foreground, moored boats, trees and small shore figures; supplied pale border and lower inscription retained. Full image, no introduced crop.',
+'1a6165ed-dbbc-5bad-8ff9-15c0ede67fda':'Tall narrow pencil landscape with ancient masonry ruins below rock face, distant valley and blank lower paper. Entire supplied sheet and margins retained; sparse pencil areas are authentic, not placeholder.',
+'1a665c45-f0da-51b7-8430-734db4346f81':'Pencil study of stone arch and wall with lower-right inscription. Derivative and source separately viewed: matching full sheet, including original cut upper-right corner against dark support. The corner is present in the supplied source and has not been removed by processing.',
+'1a9d3a5c-b797-5e1a-93cf-f481e2cacafb':'Vertical painted Breton landscape with pollarded trees, three foreground women, grazing animals and distant flying birds. Whole native painting rectangle and border retained; authentic full composition.'}
+originals={'19e9b3d4-b117-57dd-9c2f-f88fc6cbc6eb','1a665c45-f0da-51b7-8430-734db4346f81'}
+with (b.RUNTIME/'worker.lock').open('a+') as lock:
+ fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+ audit=b.load(i.folder(b.B)/'quality-audit.json');assert set(notes)==set(audit['sample_ids'])
+ ds=[]
+ for im in audit['prepared_images']:
+  ds.append(dict(artwork_id=im['artwork_id'],sha256=im['sha256'],artist=im['artist'],decision='accept',viewed_individually=True,tool='functions tools.view_image',path=im['path'],notes=notes[im['artwork_id']],flags_resolved=im['flags'],original_separately_viewed=im['artwork_id'] in originals,original_path=im['original_path'] if im['artwork_id'] in originals else None,original_sha256=im['source_sha256'] if im['artwork_id'] in originals else None))
+ rv=dict(at=b.h.now(),batch=b.B,batch_quality_decision='accept',decisions=ds,review_scope='All seven prepared JPEGs individually viewed with tools.view_image. Two original files independently viewed for copy identity and clipped paper corner; other five originals technically decoded and hashed, not visually viewed. Generated contact sheet not viewed.',full_supplied_composition_preserved=True,placeholder_flag_resolution='manual_visual_required creates source_display_placeholder flags. All seven are actual pictorial reproductions; copy flag resolved by exact dated copy inventory.')
+ b.save(i.folder(b.B)/'visual-review.json',rv);b.save(b.E/'actual-visual-review.json',rv)
+ b.save(b.E/'research-hold-clarification.json',dict(at=b.h.now(),records=[dict(artwork_id='19eb2142-21af-557b-9940-287e381be677',reason='Midten av 1600-tallet means middle of seventeenth century; this is not proof of a factual date conflict. Automated literal-year matcher does not interpret century phrases. Preserve1640–1660 and review date precision before a future image supplement; no change or download.'),dict(artwork_id='1a2f774f-be79-5dfc-b527-25ffb0197e4f',reason='Native English Dog Watch and stored Norwegian På hundevakt have a plausible translation connection; prior English Middle Watch differs. Requires documented individual title reconciliation, not proof of a different work. Preserved metadata and no image download.')]))
+print('Seven derivative and two original visual reviews saved')

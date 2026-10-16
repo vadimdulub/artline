@@ -1,0 +1,255 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "Give artwork images more room on record pages and in full view, with compact header and bottom controls, eight visible colors, floating copy feedback and an overlaid details disclosure. Fit fills the available image space without cropping; copy and details preserve image geometry and scroll.",
+  "deployment": {
+    "buildId": "1d1ea0fa-c56f-4a32-b2af-79286cda7547",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:spacious-viewer-20261012-v2",
+    "baselineRevision": "artline-web-visible-palettes-1012-v2",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:5a117b14b67ce8a4f21d4143a35577d4e17f40cc8e53a8e595c6c57003f83727",
+    "files": {
+      "components/ArtworkPalette.tsx": "c86bc7e4af937d329ca2adb2ceaae06753dcbae358cd63ffcf3c19d1f288a0b9",
+      "components/ArtworkPalette.module.css": "4c83d2d16590449841018838100c3ee54f8385f11aa87bdff3f7a0e91f2a1eea",
+      "components/ArtworkViewer.tsx": "59c8bba9904c67fcc7e7fa017f3a8f6ebe237b7e30c767e612abeaa41c288443",
+      "components/ArtworkViewer.module.css": "578bd227bd820a77768235872d7404cd8a59ef37eaaeed3dfd049554562e9223",
+      "components/ArtworkPageRecord.module.css": "479fe1b86186d9b00b4d1d377d8517c683b2c6152a6cdb6e1f4ae3630384ea61",
+      "lib/image-view.ts": "221386ec940b04b67d4eebe33ba7eb1b54c59fa24c1b8452fa9a5f26b09ccbdf"
+    },
+    "preimages": {
+      "components/ArtworkPalette.tsx": "710e96d7ce35407e0dbc7e87870c12b1c1cab35db1adc2882ccbe46cc34f2a0a",
+      "components/ArtworkPalette.module.css": "536f9a46a73682a4ecf8c26db312b048e16a1adc6cfa78b78086ec54d6c7a767",
+      "components/ArtworkViewer.tsx": "0c0243e1e0024ff4944012deb4ec0aef95e0b43da7ed36eeb3a433949a5e33f2",
+      "components/ArtworkViewer.module.css": null,
+      "components/ArtworkPageRecord.module.css": "f6f9fefe0fa85770779869f7e1fa4c13187454efce760593dc04e33760c39e3f",
+      "lib/image-view.ts": "1c92eb97ce5c4127a3f7b558ef668385d100ce1e3af20f14b97f3657f8c54c5a"
+    },
+    "overlaySHA256": "9617624c73b1df5eb2adfe72c32e03a749c70bc3fab999dbed173ff8eeb15330",
+    "overlayURI": "gs://artline-508319-build-source/spacious-viewer-20261012/palette-9617624c73b1df5e.tar.xz",
+    "overlayGeneration": "1791796106598390",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:1b1324e2cdd8c8153d2a43d3c7bd89a034763bb41acd0f0d971fab18d99a6ee0",
+    "revision": "artline-web-spacious-viewer-1012-v2",
+    "candidateURL": "https://spacious-viewer-1012-v2---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-visible-palettes-1012-v2",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "previousLocalImagePin": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:5a117b14b67ce8a4f21d4143a35577d4e17f40cc8e53a8e595c6c57003f83727",
+    "localImagePinUpdated": true
+  },
+  "localValidation": {
+    "unitTests": 14,
+    "browserRegressionTests": 5,
+    "typecheck": "passed",
+    "eslint": "passed",
+    "before": [
+      {
+        "width": 1440,
+        "height": 900,
+        "record": {
+          "x": 57.59375,
+          "y": 117.59375,
+          "width": 712.03125,
+          "height": 520
+        },
+        "stage": {
+          "x": 28,
+          "y": 144,
+          "width": 1384,
+          "height": 447
+        }
+      },
+      {
+        "width": 390,
+        "height": 900,
+        "record": {
+          "x": 24,
+          "y": 76,
+          "width": 342,
+          "height": 342
+        },
+        "stage": {
+          "x": 16,
+          "y": 144,
+          "width": 358,
+          "height": 453
+        }
+      }
+    ],
+    "after": [
+      {
+        "width": 1440,
+        "height": 900,
+        "record": {
+          "x": 28,
+          "y": 88,
+          "width": 840.59375,
+          "height": 648
+        },
+        "stage": {
+          "x": 16,
+          "y": 68,
+          "width": 1408,
+          "height": 772
+        }
+      },
+      {
+        "width": 390,
+        "height": 900,
+        "record": {
+          "x": 12,
+          "y": 64,
+          "width": 366,
+          "height": 279.984375
+        },
+        "stage": {
+          "x": 8,
+          "y": 64,
+          "width": 374,
+          "height": 730
+        }
+      }
+    ],
+    "legacyTestNote": "Three cases in artwork-layout.spec.ts target the removed inline artwork-panel after selecting a gallery artwork. They fail before reaching full-view assertions; the current direct-dialog flow is covered by three new passing long-title/navigation cases in artwork-palette.spec.ts.",
+    "databaseWrites": false,
+    "verifiedAt": "2026-10-12T09:03:31.772834+00:00",
+    "phoneRecordFollowsImageProportions": true
+  },
+  "candidate": {
+    "stage": "candidate",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      }
+    ],
+    "loadingAndRetryStable": true,
+    "floatingCopyNoticeDismisses": true,
+    "detailsPreserveImage": true,
+    "aboutGuidesAndConnectionsPreserved": true,
+    "historicalExhibitionsPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "production": {
+    "stage": "live",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "largerImageStage": true,
+        "allEightColorsInViewport": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      }
+    ],
+    "loadingAndRetryStable": true,
+    "floatingCopyNoticeDismisses": true,
+    "detailsPreserveImage": true,
+    "aboutGuidesAndConnectionsPreserved": true,
+    "historicalExhibitionsPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "errorLogs": 0,
+  "catalogueWrites": false,
+  "accountWrites": false,
+  "databaseMigrations": false,
+  "verifiedAt": "2026-10-12T09:18:05.130134+00:00"
+}

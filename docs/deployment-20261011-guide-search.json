@@ -1,0 +1,121 @@
+{
+  "verifiedAt": "2026-10-11T10:52:45.699949+00:00",
+  "site": "https://artlines.org/guides",
+  "change": "Add Article structured data to all public museum guide editions and expand the existing page sitemap with selected guide images and recorded editorial update dates.",
+  "scope": {
+    "guides": 6,
+    "languageEditions": 60,
+    "guideImageSitemapEntries": 1350,
+    "pageSitemapURLs": 68
+  },
+  "publicVerification": {
+    "all60AnonymousGuideRequests200": true,
+    "canonicalAndReciprocalHreflang": true,
+    "fullGuideTextInServerHTML": true,
+    "robotsAllowIndexing": true,
+    "googleOwnershipVerificationPreserved": true,
+    "uniqueImagesChecked": 140,
+    "imageFailures": 0,
+    "uniqueArtworkDetailURLsChecked": 134,
+    "transientArtworkErrors": [
+      {
+        "url": "https://artlines.org/artists/cypriot-painter-solomos/works/facc232e-932a-55dc-b545-20b4271b7eb5",
+        "initial_status": 500,
+        "recheck_status": 200,
+        "final_url": "https://artlines.org/artists/cypriot-painter-solomos/works/facc232e-932a-55dc-b545-20b4271b7eb5",
+        "checked_at": "2026-10-11T10:45:07.829038+00:00",
+        "upstream_failure": "Cloud Run API request returned 503 at the time of the initial page request; source cause not established."
+      },
+      {
+        "url": "https://artlines.org/artists/diego-velazquez-q297/works/0acff95b-bdd6-4ed1-b4dc-46dec522ec05",
+        "initial_status": 500,
+        "recheck_status": 200,
+        "final_url": "https://artlines.org/artists/diego-velazquez-q297/works/0acff95b-bdd6-4ed1-b4dc-46dec522ec05",
+        "checked_at": "2026-10-11T10:45:07.994323+00:00",
+        "upstream_failure": "Cloud Run API request returned 503 at the time of the initial page request; source cause not established."
+      }
+    ],
+    "pdfDownloads": "Public; intentionally noindex to keep the HTML editions as search destinations.",
+    "mobile": "Viewport and language/RTL markup checked. Fresh rendered mobile test unavailable because browser setup failed; Google PageSpeed API returned quota exceeded. No visual layout changes were made."
+  },
+  "build": {
+    "id": "d4abf90d-d74e-43ff-b07a-90281cd687bd",
+    "status": "SUCCESS",
+    "baselineBuildId": "0472c5cd-89da-4544-9e2a-6ee276643f94",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:96012937d189e6a59d614aa5763febc72f68c5ec7a6fe114d9410a4f1aeebd5c",
+    "changedRuntimeFiles": [
+      "lib/sitemap.ts",
+      "lib/museum-guide-seo.ts",
+      "app/[sitemapFile]/route.ts",
+      "components/MuseumGuide.tsx"
+    ]
+  },
+  "deployment": {
+    "revision": "artline-web-guide-seo-1011-v1",
+    "trafficPercent": 100,
+    "rollbackRevision": "artline-web-about-marketing-1011-v1",
+    "runtimeSettingsPreserved": true,
+    "localImagePinUpdated": true,
+    "terraformApply": false,
+    "commitsCreated": false,
+    "catalogueWrites": false
+  },
+  "tests": {
+    "targetedUnitTests": 28,
+    "targetedLint": "0 errors; 4 existing intentional image-element warnings",
+    "productionBuild": "passed",
+    "candidateGuideEditions": 60,
+    "productionGuideEditions": 60,
+    "sitemapXML": "68 URLs preserved; 1,350 selected guide-image entries; existing editorial dates; valid namespaces and escaped URLs"
+  },
+  "googleAccount": {
+    "accountAccess": "Verified through user-authorized Chrome v-test profile and existing work account",
+    "clicks": 1,
+    "impressions": 19,
+    "reportingSelection": "28 days; available chart 30 September\u20138 October 2026",
+    "indexedGuideURLsBeforeRequests": 0,
+    "individuallyInspectedEnglishGuides": 6,
+    "indexingRequestsSubmitted": 8,
+    "indexingRequestsAccepted": 8,
+    "sitemapSubmissionPerformed": true,
+    "sitemapSubmissionsAccepted": 2,
+    "googleProcessingStatus": "Both sitemaps show Success; updated sitemap processing and actual indexing after the new URL requests remain pending.",
+    "evidence": "docs/research/guide-search-visibility-20261011/search-console/baseline.json"
+  },
+  "evidenceDirectory": "docs/research/guide-search-visibility-20261011",
+  "privateReleaseBackups": "/Users/vadimdulub/Library/Application Support/Artline/backups/guide-search-visibility-20261011",
+  "sources": [
+    "https://developers.google.com/search/docs/appearance/structured-data/article",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+    "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl"
+  ],
+  "search_console_followup": {
+    "completed_on": "2026-10-11",
+    "access": "User-authorized Chrome v-test profile; existing work account",
+    "clicks": 1,
+    "impressions": 19,
+    "performance_chart_dates": [
+      "2026-09-30",
+      "2026-10-08"
+    ],
+    "google_live_tests_passed": 8,
+    "indexing_requests_accepted": 8,
+    "sitemap_resubmissions_accepted": 2,
+    "manual_actions": "No issues detected",
+    "security_issues": "No issues detected",
+    "actual_indexing_after_requests": "Pending",
+    "report": "docs/research/guide-search-visibility-20261011/search-console/README.md",
+    "data": "docs/research/guide-search-visibility-20261011/search-console/baseline.json"
+  },
+  "initialGoogleAccountAttempt": {
+    "accountAccess": "not available; browser initialization failed before Search Console opened",
+    "alternateConnection": "GSC Wizard suggested; installation/connection not confirmed",
+    "clicks": null,
+    "impressions": null,
+    "indexedGuideURLs": null,
+    "indexingRequestsSubmitted": 0,
+    "sitemapSubmissionPerformed": false,
+    "googleProcessingStatus": "Unverified; valid live sitemap does not prove Google processing or indexing."
+  }
+}

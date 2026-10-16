@@ -1,0 +1,13 @@
+# Museum image recovery — iteration 28
+
+Checked 10 previously unchecked existing Cleveland museum-held artworks without primary images. All ten official object pages and ten supported API responses returned HTTP 200 and agreed on native ID, accession and title. The 270 prior campaign IDs were excluded; campaign coverage now contains 280 distinct checked IDs. This completes one bounded iteration, not the 1,000-iteration programme.
+
+All ten are held for image rights. Their museum pages provide image and zoom routes labelled Copyrighted, while the open-access API exposes no image URLs. These are image-rights outcomes, not unavailable pages or absent museum pictures. No images were downloaded, visually reviewed, prepared, uploaded or attached. Storage and public image-asset verification are explicitly not applicable; no success is inferred from metadata routes.
+
+Loch, accession 1976.138 / native 148680, also has a documented 1976 creation-date hold. The two Slevogt illustrations with identical titles remain separate accessions 1963.438 and 1963.357. Fifth Avenue retains the museum's proof-with-two-or-three-blocks qualification. Salute retains its cover record type and source description of a grouped image, without a claim of visual inspection or replacement by a component. All source rights, credits, versions and uncertainties are retained in checked-artworks.json and the captured museum records.
+
+Batch 107's completed reconciliation and 13 saved receipt hashes were checked. Previous completion pins and the full distinct-ID history passed. The running proxy was verified as artline-508319:europe-west1:artline-postgres on port 55519; production reads explicitly used read-only transactions. Independent database snapshots verified all ten artwork rows, media associations, creator links and holdings unchanged. The search projection and all ten public artwork APIs confirmed the same imageless records and Cleveland holdings. No real local catalogue connection or database/storage mutation occurred. No write transaction or Cloud SQL backup was needed; read-only snapshots and checksum-pinned empty delivery plan are retained, with copies under Application Support/Artline/backups/museum-image-recovery-20261013/batches/000028.
+
+The artwork programme, exhibition programme, supervisor and prompt were left unchanged. No paid search API, Translation, unrelated Google service, deletion, commit, push, deployment or infrastructure change was performed.
+
+Next: continue after Cleveland cursor 0c8c6c54-2086-4d97-96b9-3a90f264be41 or switch museums. Exclude all 280 checked campaign IDs and preserve prior source and object holds using source-queue.json.

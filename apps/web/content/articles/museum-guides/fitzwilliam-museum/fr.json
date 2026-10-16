@@ -1,0 +1,606 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "fitzwilliam-museum",
+  "museum": "Fitzwilliam Museum",
+  "city": "Cambridge",
+  "country": "Royaume-Uni",
+  "title": "Musée Fitzwilliam : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres composées de seuils, d’espaces clos et d’intervalles entre les figures.",
+  "introduction": "L’Annonciation se déroule de part et d’autre d’un espace. Gabriel et Marie occupent les côtés opposés de la cour, tandis que l’architecture conduit le regard au-delà. Une rencontre de Rossetti pose presque le problème inverse : deux couples semblables se retrouvent dans un bois trop encombré pour que leurs identités restent aisément séparées. Les deux tableaux font de l’espace une partie de l’événement, non son contenant neutre.\n\nD’autres œuvres ont bien moins besoin de récit. Une tasse et sa soucoupe peuvent suffire à un tableau ; quelques bateaux et des accents rares établissent une lagune. Suivre ces changements d’échelle permet de lire la collection sans demander à chaque œuvre de proclamer son importance historique.",
+  "visitNote": "Cette sélection ne constitue pas un parcours figé au sein du Fitzwilliam. Les œuvres sur papier sont présentées par roulement, et certaines peintures peuvent être prêtées ou en réserve. La version en couleurs de l’œuvre de Rossetti intitulée How They Met Themselves est distincte du dessin à l’encre que possède également le musée ; ce guide porte sur la version en couleurs.",
+  "locale": "fr",
+  "website": "https://fitzmuseum.cam.ac.uk/",
+  "officialGuide": "http://www.fitzmuseum.cam.ac.uk/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les exercices de Ruskin, qui consistent à observer les contours, les tons et les formes naturelles, accompagnent aussi bien les tableaux détaillés du XIXe siècle que les aquarelles plus sobres. Ils incitent à revenir sur un détail visuel précis avant de porter un jugement d'ensemble."
+    }
+  ],
+  "works": [
+    {
+      "id": "e260039d-8805-54e0-9d05-72ba613fa77f",
+      "title": "La demoiselle d'honneur",
+      "catalogueTitle": "The Bridesmaid",
+      "artist": "John Everett Millais",
+      "artists": [
+        {
+          "name": "John Everett Millais",
+          "role": "primary",
+          "slug": "john-everett-millais-q159606"
+        }
+      ],
+      "date": "1851",
+      "start": 1851,
+      "end": 1851,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e260039d-8805-54e0-9d05-72ba613fa77f-4910e19194cf349b.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-everett-millais/the-bridesmaid",
+      "credit": "John Everett Millais. The Bridesmaid. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-everett-millais/the-bridesmaid",
+      "description": "La masse des cheveux roux encadre d’abord fortement le visage, mais le petit geste des mains demande aussi à être regardé. Objets au premier plan et espace sombre derrière maintiennent la figure près de nous. Millais fait coexister un geste intime et une surface voyante : la présence proche du portrait n’épuise pas la scène.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "44d5dd05-59e3-5110-bcbc-43ccf83a8ce5",
+      "title": "L'Annonciation",
+      "catalogueTitle": "The Annunciation, predella panel from the St. Lucy Altarpiece",
+      "artist": "Domenico Veneziano",
+      "artists": [
+        {
+          "name": "Domenico Veneziano",
+          "role": "primary",
+          "slug": "domenico-veneziano-q368546"
+        }
+      ],
+      "date": "c. 1442–1448",
+      "start": 1442,
+      "end": 1448,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/44d5dd05-59e3-5110-bcbc-43ccf83a8ce5-ce7c00928bdd8063.jpg",
+      "imageSource": "https://www.wikiart.org/en/domenico-veneziano/the-annunciation-predella-panel-from-the-st-lucy-altarpiece",
+      "credit": "Domenico Veneziano. The Annunciation, predella panel from the St. Lucy Altarpiece. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/domenico-veneziano/the-annunciation-predella-panel-from-the-st-lucy-altarpiece",
+      "description": "Le passage entre Gabriel et Marie souligne leur séparation et conduit vers une porte fermée au fond. Le musée précise que le panneau a été rogné à gauche, perturbant sa symétrie architecturale initiale. Son équilibre actuel est donc celui d’un objet modifié qui nous est parvenu, non un idéal géométrique demeuré intact.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "d9e8df73-55e3-5e64-8baf-b4ef8ba31703",
+      "title": "Le Miracle de saint Zénobe",
+      "catalogueTitle": "The Miracle of St. Zenobius",
+      "artist": "Domenico Veneziano",
+      "artists": [
+        {
+          "name": "Domenico Veneziano",
+          "role": "primary",
+          "slug": "domenico-veneziano-q368546"
+        }
+      ],
+      "date": "1442-1448",
+      "start": 1442,
+      "end": 1448,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d9e8df73-55e3-5e64-8baf-b4ef8ba31703-7064a0895519f0d1.jpg",
+      "imageSource": "https://www.wikiart.org/en/domenico-veneziano/the-miracle-of-st-zenobius-1448",
+      "credit": "Domenico Veneziano. The Miracle of St. Zenobius. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/domenico-veneziano/the-miracle-of-st-zenobius-1448",
+      "description": "La rue donne à l’évêque, à l’enfant et aux autres figures des positions définies pour agir et répondre. L’architecture distingue les gestes sans disperser l’épisode. Ce panneau et l’*Annonciation* appartenaient à la même prédelle, bande inférieure d’un retable. Leurs petites scènes se plaçaient sous une image sacrée beaucoup plus grande.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "a2b2d4f5-83fc-5e06-bdaa-41a0fbd8b001",
+      "title": "La Nativité",
+      "catalogueTitle": "The Nativity",
+      "artist": "Domenico Ghirlandaio",
+      "artists": [
+        {
+          "name": "Domenico Ghirlandaio",
+          "role": "primary",
+          "slug": "domenico-ghirlandaio-q191423"
+        }
+      ],
+      "date": "1492",
+      "start": 1492,
+      "end": 1492,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a2b2d4f5-83fc-5e06-bdaa-41a0fbd8b001-302aee193a82f57f.jpg",
+      "imageSource": "https://www.wikiart.org/en/domenico-ghirlandaio/the-nativity",
+      "credit": "Domenico Ghirlandaio. The Nativity. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/domenico-ghirlandaio/the-nativity",
+      "description": "Têtes et mains se chevauchent étroitement autour de l’enfant. L’abri et les animaux maintiennent un premier plan compact, malgré le paysage au-delà. Ghirlandaio fait de l’attention l’action commune du groupe : les personnages sont liés par leurs regards et leurs positions agenouillées, plutôt que par une succession de mouvements dramatiques.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "4ebc6be5-aa48-50da-9f68-48b3172700f1",
+      "title": "Comment ils se rencontrèrent eux-mêmes",
+      "catalogueTitle": "How They Met Themselves",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "Gouache sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/4ebc6be5-aa48-50da-9f68-48b3172700f1-1e8f0b1150c18f82.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/how-they-met-themselves-1864",
+      "credit": "Dante Gabriel Rossetti. How They Met Themselves. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/dante-gabriel-rossetti/how-they-met-themselves-1864",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.fitzmuseum.cam.ac.uk/id/object/13398",
+      "description": "La rencontre repose sur la ressemblance. Un couple en croise un autre identique à lui, et le bois laisse peu de place aux corps doublés. Mains et épées croisées renforcent cet encombrement. Le familier devient troublant précisément parce qu’il revient là où il ne devrait pas. L’inquiétude naît de la reconnaissance, non d’un monstre indéchiffrable.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "5c814d1e-e31e-5b6e-b18f-2070c486742b",
+      "title": "Jeanne d'Arc",
+      "catalogueTitle": "Joan of Arc",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5c814d1e-e31e-5b6e-b18f-2070c486742b-f29a227d587a6b7a.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/joan-of-arc-1882",
+      "credit": "Dante Gabriel Rossetti. Joan of Arc. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dante-gabriel-rossetti/joan-of-arc-1882",
+      "description": "L’épée monte près du visage de Jeanne, dont le regard se tourne vers le haut. Métal et étoffe riche donnent de la substance à la figure proche, mais le geste interrompt une simple action de combat. L’armure établit un rôle militaire ; le regard le complique, réunissant dévotion et équipement guerrier dans le même cadre resserré.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "b6001ba2-c3fd-54aa-80c0-faede49c514c",
+      "title": "Jeune fille à la fenêtre à croisillons",
+      "catalogueTitle": "Girl at a Lattice",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "1862",
+      "start": 1862,
+      "end": 1862,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/b6001ba2-c3fd-54aa-80c0-faede49c514c-b8e41d39456f661c.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/girl-at-a-lattice-1862",
+      "credit": "Dante Gabriel Rossetti. Girl at a Lattice. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/dante-gabriel-rossetti/girl-at-a-lattice-1862",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dante-gabriel-rossetti/girl-at-a-lattice-1862",
+      "description": "La fenêtre est une limite dont on ne voit pas la destination. La femme se penche près de l’appui, mais son visage détourné empêche un simple échange de regards. Les fleurs ajoutent une présence proche et tangible. Ce qui se trouve au-delà du seuil reste moins défini que la position de la figure à côté.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "d94727d9-eddb-568a-b33d-5b53196218ba",
+      "title": "Eau dorée",
+      "catalogueTitle": "Golden Water",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "1858",
+      "start": 1858,
+      "end": 1858,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/d94727d9-eddb-568a-b33d-5b53196218ba-ff56eb775af1bd41.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/golden-water-1858",
+      "credit": "Dante Gabriel Rossetti. Golden Water. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/dante-gabriel-rossetti/golden-water-1858",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dante-gabriel-rossetti/golden-water-1858",
+      "description": "Le vase sombre paraît pesant parce que les bras de la femme le retiennent contre son corps. Cheveux, vêtements pâles et plantes prolongent l’organisation verticale autour de ce rapport central. Le titre peut annoncer un récit, mais l’image demeure presque immobile. Elle montre surtout comment une personne tient un objet.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "3f9b15fa-a846-593c-8e1a-e6ae77f4e2ba",
+      "title": "Portrait d'un homme inconnu",
+      "catalogueTitle": "Portrait of an Unknown Man",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1660-1663",
+      "start": 1660,
+      "end": 1663,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/3f9b15fa-a846-593c-8e1a-e6ae77f4e2ba-617d0d533e5767f2.jpg",
+      "imageSource": "https://www.wikiart.org/en/frans-hals/portrait-of-an-unknown-man-1663",
+      "credit": "Frans Hals. Portrait of an Unknown Man. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frans-hals/portrait-of-an-unknown-man-1663",
+      "description": "Le visage s’adresse plus directement au spectateur que le vêtement gris, librement traité, ne détaille ses plis. Un large chapeau noir donne à la tête un cadre ferme. Hals fait coexister plusieurs degrés de finition : l’habit reste un champ de touches, tandis que la ressemblance conserve une présence individuelle.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "672cd838-7d36-527b-80c7-215ab4759583",
+      "title": "La lagune en direction de Murano depuis les Fondamenta Nuove",
+      "catalogueTitle": "The Lagoon Looking toward Murano from the Fondamenta Nuove",
+      "artist": "Francesco Guardi",
+      "artists": [
+        {
+          "name": "Francesco Guardi",
+          "role": "primary",
+          "slug": "francesco-guardi-q318769"
+        }
+      ],
+      "date": "1765 - 1770",
+      "start": 1765,
+      "end": 1770,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/672cd838-7d36-527b-80c7-215ab4759583-d613702ba8bc05ac.jpg",
+      "imageSource": "https://www.wikiart.org/en/francesco-guardi/the-lagoon-looking-toward-murano-from-the-fondamenta-nuove-1770",
+      "credit": "Francesco Guardi. The Lagoon Looking toward Murano from the Fondamenta Nuove. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francesco-guardi/the-lagoon-looking-toward-murano-from-the-fondamenta-nuove-1770",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francesco-guardi/the-lagoon-looking-toward-murano-from-the-fondamenta-nuove-1770",
+      "description": "L’architecture se réduit à des marques basses sur l’horizon, laissant beaucoup plus de place à l’eau et au ciel gris. Bateaux et mâts fins empêchent cette ouverture de devenir sans lieu. Guardi rend la ville reconnaissable sans façade monumentale dominante. Venise tient ici dans la lagune et les intervalles entre ses petits accents.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "18e4eb21-a9d5-58e9-b5d7-9139cb2a6e5e",
+      "title": "Tasse et soucoupe blanches",
+      "catalogueTitle": "White Cup And Saucer",
+      "artist": "Henri Fantin-Latour",
+      "artists": [
+        {
+          "name": "Henri Fantin-Latour",
+          "role": "primary",
+          "slug": "henri-fantin-latour-q310715"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/18e4eb21-a9d5-58e9-b5d7-9139cb2a6e5e-f55f0d5a4b862451.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-fantin-latour/white-cup-and-saucer-1864",
+      "credit": "Henri Fantin-Latour. White Cup And Saucer. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-fantin-latour/white-cup-and-saucer-1864",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.fitzmuseum.cam.ac.uk/id/object/2658",
+      "description": "La tasse n’a pas besoin d’un décor élaboré. Bord, anse et corps arrondi divisent le blanc selon la lumière ; soucoupe et cuillère ajoutent quelques formes liées. L’isolement accorde à ces nuances assez d’importance pour soutenir le tableau. Le récipient quotidien n’est ni perdu dans un festin ni obligé de le symboliser.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "b3fbb177-189a-5315-b388-ac38b0dee48d",
+      "title": "Travailler la terre",
+      "catalogueTitle": "Working the land",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/b3fbb177-189a-5315-b388-ac38b0dee48d-9235e242f745ebe7.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/working-the-land-1873",
+      "credit": "Working the land. WikiArt; Paul Gauguin. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-gauguin/working-the-land-1873",
+      "description": "Travailleurs et animaux restent dans de larges étendues cultivées. Arbres, bâtiments bas et ciel relient leur activité à un lieu continu. Pour qui associe Gauguin à ses compositions ultérieures plus planes, ce paysage précoce apporte une nuance utile : un nom d’artiste ne garantit pas une façon immuable de construire une scène.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "c421a671-5249-5649-897d-5fc99e89d75e",
+      "title": "Lindisfarne",
+      "catalogueTitle": "Lindisfarne",
+      "artist": "Thomas Girtin",
+      "artists": [
+        {
+          "name": "Thomas Girtin",
+          "role": "primary",
+          "slug": "thomas-girtin-nga-4206"
+        }
+      ],
+      "date": "1798",
+      "start": 1798,
+      "end": 1798,
+      "medium": "Aquarelle",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/c421a671-5249-5649-897d-5fc99e89d75e-fb087cc1669a57f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/thomas-girtin/lindisfarne-1798",
+      "credit": "Thomas Girtin. Lindisfarne. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/thomas-girtin/lindisfarne-1798",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/thomas-girtin/lindisfarne-1798",
+      "description": "Le ciel entre dans la ruine par les maçonneries manquantes autant qu’au-dessus des murs conservés. Ces ouvertures sont essentielles à la vue. Girtin distingue pierre et air sans reconstruire le bâtiment intact. Les pertes donnent aux arches restantes leur rythme et leur exposition particuliers.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "668813c2-830c-506c-b6c9-cfe04fc16827",
+      "title": "Hortensias",
+      "catalogueTitle": "Hydrangeas",
+      "artist": "Philip Wilson Steer",
+      "artists": [
+        {
+          "name": "Philip Wilson Steer",
+          "role": "primary",
+          "slug": "philip-wilson-steer-nga-16630"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/668813c2-830c-506c-b6c9-cfe04fc16827-87afae8e32c1515a.jpg",
+      "imageSource": "https://www.wikiart.org/en/philip-wilson-steer/hydrangeas-1901",
+      "credit": "Philip Wilson Steer. Hydrangeas. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/philip-wilson-steer/hydrangeas-1901",
+      "description": "Fleurs, vêtements et environnement partagent presque un même réseau animé de lumière et de touches. La main tendue et le visage maintiennent l’activité de la femme lisible. Steer reste près de ce point d’équilibre : assez de distinction pour suivre le geste, assez de continuité pour que la figure appartienne à la même surface que les hortensias.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "2221e044-9882-5ff8-945e-18dd5c1f036a",
+      "title": "Les Trois Maries au tombeau vide",
+      "catalogueTitle": "The Three Marys at the Empty Sepulchre",
+      "artist": "Giovanni Battista Gaulli",
+      "artists": [
+        {
+          "name": "Giovanni Battista Gaulli",
+          "role": "primary",
+          "slug": "giovanni-battista-gaulli-q520573"
+        }
+      ],
+      "date": "vers 1684 – vers 1685",
+      "start": 1684,
+      "end": 1685,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/2221e044-9882-5ff8-945e-18dd5c1f036a-c57003615915bae2.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-battista-gaulli/the-three-maries-at-the-empty-sepulchre",
+      "credit": "Giovanni Battista Gaulli. The Three Marys at the Empty Sepulchre. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/giovanni-battista-gaulli/the-three-maries-at-the-empty-sepulchre",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giovanni-battista-gaulli/the-three-maries-at-the-empty-sepulchre",
+      "description": "Les mains désignent une absence. Les femmes approchent, les anges indiquent le tombeau : la place vide doit porter la découverte. La couleur distingue les figures, mais les gestes expliquent leurs rapports. L’événement dépend moins de ce qui occupe le centre que de la réaction du groupe à ce qui manque.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "aea70689-7bf3-5d7e-90da-8513de1b2570",
+      "title": "L'Adoration des bergers",
+      "catalogueTitle": "The Adoration of the Shepherds",
+      "artist": "Luis Tristán",
+      "artists": [
+        {
+          "name": "Luis Tristán",
+          "role": "primary",
+          "slug": "luis-tristan-round3-abfee130845d"
+        }
+      ],
+      "date": "1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "",
+      "accession": "M.78",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/f550415b-5114-56b6-a1d1-186b646566c8-af21595b3e6cd0fa.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Luis_Trist%C3%A1n_de_Escamilla_(1585-1624)_-_The_Adoration_of_the_Shepherds_-_M.78_-_Fitzwilliam_Museum.jpg",
+      "credit": "Luis Tristán. The Adoration of the Shepherds. Image credit: Luis Tristán; Art UK. https://commons.wikimedia.org/wiki/File:Luis_Trist%C3%A1n_de_Escamilla_(1585-1624)_-_The_Adoration_of_the_Shepherds_-_M.78_-_Fitzwilliam_Museum.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/db9fb2ba-98f2-35d2-8711-ec8e9da6ce27",
+      "description": "L’enfant est le centre d’un rassemblement dense qui se poursuit vers le haut, dans les anges et l’obscurité. Visages et étoffes claires ramènent le regard vers des corps particuliers. La lumière organise : répartie également, elle laisserait les nombreuses figures rivaliser et affaiblirait la concentration autour du nouveau-né.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "72e7f1e0-921d-5541-b218-f4af03e26f24",
+      "title": "Les tombeaux des sultans près du Caire",
+      "catalogueTitle": "The Tombs of the Sultans near Cairo",
+      "artist": "Elijah Walton",
+      "artists": [
+        {
+          "name": "Elijah Walton",
+          "role": "primary",
+          "slug": "wikimedia-painter-q16063414"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "",
+      "accession": "456*",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50820390-90517f788b97b00f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Elijah_Walton_(1832-1880)_-_The_Tombs_of_the_Sultans_near_Cairo_-_456*_-_Fitzwilliam_Museum.jpg",
+      "credit": "Elijah Walton. The Tombs of the Sultans near Cairo. Image credit: Elijah Walton; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50820390",
+      "description": "Les monuments occupent moins de place que le coucher de soleil au-dessus. Traces plus sombres et sol rude du premier plan conduisent à une vue dont le changement principal se produit dans le ciel. Walton donne à l’architecture une heure et une atmosphère, au lieu d’isoler chaque édifice comme un objet détachable de son milieu.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "c6f3d739-80d5-521f-bffe-9ee39b69f854",
+      "title": "La famille Andrews",
+      "catalogueTitle": "The Andrews Family",
+      "artist": "James Wills",
+      "artists": [
+        {
+          "name": "James Wills",
+          "role": "primary",
+          "slug": "wikimedia-painter-q21457932"
+        }
+      ],
+      "date": "1749",
+      "start": 1749,
+      "end": 1749,
+      "medium": "",
+      "accession": "657",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50821640-dea4d215671534d3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:James_Wills_(c.1705-1776)_-_The_Andrews_Family_-_657_-_Fitzwilliam_Museum.jpg",
+      "credit": "James Wills. The Andrews Family. Image credit: James Wills; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50821640",
+      "description": "Cinq personnes partagent une terrasse, mais leurs hauteurs et leurs orientations varient. Le lien familial passe par l’espace commun et la présentation coordonnée, non par une rangée de poses équivalentes. Arbres et paysage offrent un cadre assez ample pour réunir le groupe tout en distinguant les figures assises et debout.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "1b0885b9-05d6-5a00-b915-29058c4f0ff8",
+      "title": "Marie-Isabelle de Bourbon, reine des Deux-Siciles",
+      "catalogueTitle": "Maria Isabel du Boubón, Queen of the Two Sicilies",
+      "artist": "Vicente López Portaña",
+      "artists": [
+        {
+          "name": "Vicente López Portaña",
+          "role": "primary",
+          "slug": "wikimedia-painter-q117543"
+        }
+      ],
+      "date": "1829–1830",
+      "start": 1829,
+      "end": 1830,
+      "medium": "",
+      "accession": "PD.254-2015",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/75c6c251-7042-5dc2-b915-c35900d6af4c-36474234d67b4a75.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vicente_L%C3%B3pez_Porta%C3%B1a_(1772-1850)_-_Mar%C3%ADa_Isabel_de_Borb%C3%B3n,_Queen_of_the_Two_Sicilies_-_PD.254-2015_-_Fitzwilliam_Museum.jpg",
+      "credit": "Vicente López Portaña. Maria Isabel du Boubón, Queen of the Two Sicilies. Image credit: Vicente López Portaña; Art UK. https://commons.wikimedia.org/wiki/File:Vicente_L%C3%B3pez_Porta%C3%B1a_(1772-1850)_-_Mar%C3%ADa_Isabel_de_Borb%C3%B3n,_Queen_of_the_Two_Sicilies_-_PD.254-2015_-_Fitzwilliam_Museum.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/61dc5dba-7927-31f0-8015-6a26bd6bdefb",
+      "description": "Manches et coiffure élaborées, robe sombre et tissu rouge établissent un cadre cérémoniel autour de la reine. Une main appuyée contribue à maintenir la pose debout maîtrisée. Le vaste déploiement s’organise autour d’un visage : rang public et ressemblance individuelle restent liés, sans que l’un suffise à expliquer le portrait.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    },
+    {
+      "id": "d41c2971-6ad7-56f0-95dd-09c65f5bd3f0",
+      "title": "Homme inconnu",
+      "catalogueTitle": "Unknown man (1693)",
+      "artist": "Charles Beale",
+      "artists": [
+        {
+          "name": "Charles Beale",
+          "role": "primary",
+          "slug": "wikimedia-painter-q19361269"
+        }
+      ],
+      "date": "1693",
+      "start": 1693,
+      "end": 1693,
+      "medium": "",
+      "accession": "643",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q50813843-72788a99da7dadb4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Charles_Beale_(1660-1714)_-_Portrait_of_an_Unknown_Man_-_643_-_Fitzwilliam_Museum.jpg",
+      "credit": "Charles Beale. Unknown man (1693). Image credit: Charles Beale; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q50813843",
+      "description": "Le nom du modèle est inconnu, mais le portrait n’en devient pas vague. La tête tournée, le linge blanc au cou et la robe brune chaude composent une disposition précise devant l’obscurité. La lumière se concentre au visage et à la poitrine, donnant une présence orientée même lorsque l’identification historique est perdue.",
+      "importance": "",
+      "museum": "Fitzwilliam Museum"
+    }
+  ],
+  "context": {
+    "start": 1442,
+    "end": 1901
+  },
+  "closingSections": [
+    {
+      "title": "Laisser une place à ce qui n’est pas montré",
+      "paragraphs": [
+        "Comparez le passage vide de l’*Annonciation*, le tombeau vacant de Gaulli et la vue indéfinie au-delà de la fenêtre de Rossetti. Ces vides ne font pas la même chose. Les comparaisons n’ont pas à suivre l’ordre des salles. Consultez les informations actuelles du Fitzwilliam si une œuvre est essentielle à votre visite."
+      ]
+    }
+  ]
+}

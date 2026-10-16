@@ -1,0 +1,610 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "rijksmuseum",
+  "museum": "Rijksmuseum",
+  "city": "阿姆斯特丹",
+  "country": "荷兰",
+  "title": "荷兰国立博物馆：杰作",
+  "subtitle": "民兵、家务劳动者和路过的行人，以不同方式成为画面的重点。",
+  "introduction": "《夜巡》把受委托描绘的民兵连，变成了人群中的一场活动。《倒牛奶的女仆》则让一位家务劳动者持续关注一缕细细的奶流。两幅画都没有平均分配重点：光线、大小和位置，决定什么首先被看清。从它们的差异出发，可以更具体地阅读这组选画。\n\n公开示人的肖像通过衣着和身体姿态展示身份。家庭场景把重要性赋予一种活动或小小的冲突；较晚的一幅街景，则允许路人遮住身后的城市。留意谁占据主位，谁在空间中劳动，谁的行动正被旁观。答案比“宏伟与日常”的笼统对比更具体。",
+  "visitNote": "参观前，请查阅国立博物馆（Rijksmuseum）关于馆藏及访客信息的页面。展览安排、文物修复及借展活动可能会影响参观；此外，马滕（Marten）与奥普延（Oopjen）的肖像画（一对）也涉及与卢浮宫相关的展出安排。",
+  "locale": "zh",
+  "website": "https://www.rijksmuseum.nl",
+  "officialGuide": "https://www.rijksmuseum.nl",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "在线阅读或下载 · 英语",
+      "note": "沃尔特·利特克（Walter Liedtke）所著的两卷本《大都会艺术博物馆中的荷兰绘画》（Dutch Paintings in The Metropolitan Museum of Art）收录了馆内许多艺术家的详尽条目。书中对具体作品的分析，有助于阐明群像画、家庭生活场景画与静物画之间的区别。"
+    }
+  ],
+  "works": [
+    {
+      "id": "0352ffac-a67a-484d-9fca-d18b71701f7f",
+      "title": "夜巡",
+      "catalogueTitle": "Officers and other civic guardsmen of District II in Amsterdam, under the command of Captain Frans Banninck Cocq and Lieutenant Willem van Ruytenburch, known as ‘The Night Watch’",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1642",
+      "start": 1642,
+      "end": 1642,
+      "medium": "布面油画",
+      "accession": "SK-C-5",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/0352ffac-a67a-484d-9fca-d18b71701f7f-41ffdcbe7d85c3ea.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-5--3137deb45cd7765f9a76084a16c99544",
+      "credit": "Rembrandt van Rijn. Officers and other civic guardsmen of District II in Amsterdam, under the command of Captain Frans Banninck Cocq and Lieutenant Willem van Ruytenburch, known as ‘The Night Watch’. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-5--3137deb45cd7765f9a76084a16c99544",
+      "description": "迈步向前的队长与副官，为整个队伍指出方向；周围的手与武器，却产生彼此竞争的动作。伦勃朗以强弱不等的照明区分人群中的活动。结果并不像每位模特分得同样空间的列队像。集体身份需要通过这些各做不同事情的身体，仍然维系在一起。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "7e35ca8b-a4dc-4398-9eef-6a93c553dad6",
+      "title": "倒牛奶的女仆",
+      "catalogueTitle": "The Milkmaid",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约 1660 年",
+      "start": 1660,
+      "end": 1660,
+      "medium": "布面油画",
+      "accession": "SK-A-2344",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/7e35ca8b-a4dc-4398-9eef-6a93c553dad6-570a33085304e548.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2344--42dd0e658c2979aec8e144d2357c55c0",
+      "credit": "Johannes Vermeer. The Milkmaid. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2344--42dd0e658c2979aec8e144d2357c55c0",
+      "description": "匆匆一看，很容易错过细小的奶流，但女子的整个姿势都围绕如何保持它而展开。面包、篮子和桌面，为这项工作提供具体环境。维米尔让墙面相对空白，少有东西与她的专注争夺目光。活动可以成为画面中心，而不必带来幅度很大的动静。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "1b51e729-e25b-4daa-8a0e-a08c8e47ef04",
+      "title": "布商公会理事",
+      "catalogueTitle": "The Sampling Officials of the Amsterdam Drapers’ Guild, known as ‘The Syndics’",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1662",
+      "start": 1662,
+      "end": 1662,
+      "medium": "布面油画",
+      "accession": "SK-C-6",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/1b51e729-e25b-4daa-8a0e-a08c8e47ef04-cab7274e8baadfc2.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234",
+      "credit": "Rembrandt van Rijn. The Sampling Officials of the Amsterdam Drapers’ Guild, known as ‘The Syndics’. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234",
+      "description": "几位男子将视线投向画外，仿佛观看者的位置也与桌边事务有关。他们的姿态有所不同，更像工作被打断，而不是同步摆好姿势。伦勃朗让这群官式人物保持整体，又留下不一致的回应。公共权威在这里表现为人与人的工作关系，不仅是一排体面面孔。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "1c35425f-879a-4b5e-a42f-a11dc7f9ed34",
+      "title": "小街",
+      "catalogueTitle": "Gezicht op huizen in Delft, bekend als ‘Het straatje’",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约 1658 年",
+      "start": 1658,
+      "end": 1658,
+      "medium": "布面油画",
+      "accession": "SK-A-2860",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/90591bf7-2b65-4f52-8357-52f6db9700ee-43e7d0fdde9e685a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft,_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg",
+      "credit": "Johannes Vermeer. Gezicht op huizen in Delft, bekend als ‘Het straatje’. Image credit: Johannes Vermeer; Source credit: Google Arts & Culture — YAGJRuPz8yVuRQ. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2860--a7dbf937cbd6f7c30f66f8aca4a0207c",
+      "description": "房屋立面占据的空间，远超过使用门口和通道的人。修补痕迹打断砖墙的规律，无须戏剧性故事，也让建筑显出经年使用的历史。维米尔以不同尺度处理建筑与家务活动。小人物确认房屋有人使用，墙面本身也仍值得观看。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "c81b12bf-774f-4bd8-8bac-06159aebd66d",
+      "title": "蓝衣读信女子",
+      "catalogueTitle": "Woman in Blue Reading a Letter",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约 1663 年",
+      "start": 1663,
+      "end": 1663,
+      "medium": "布面油画",
+      "accession": "SK-C-251",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/c81b12bf-774f-4bd8-8bac-06159aebd66d-bfc46219778be2fb.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba",
+      "credit": "Johannes Vermeer. Woman in Blue Reading a Letter. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba",
+      "description": "信作为物体清晰可见，内容却不可知。维米尔将目光引向读信者的投入，而没有交代令她如此专注的消息。墙上地图使室内与更大的世界相连，却同样不能解释信中所写。画面让私人的专注状态可以被看见，同时保留阅读内容的私密性。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "e0a68cc3-689e-4c77-8dfd-cb460cc891ee",
+      "title": "受威胁的天鹅",
+      "catalogueTitle": "De bedreigde zwaan",
+      "artist": "Jan Asselijn",
+      "artists": [
+        {
+          "name": "Jan Asselijn",
+          "role": "primary",
+          "slug": "jan-asselijn-q541976"
+        }
+      ],
+      "date": "约 1650 年",
+      "start": 1650,
+      "end": 1650,
+      "medium": "布面油画",
+      "accession": "SK-A-4",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/bdafdea6-7ded-4f92-962a-26c5cf2c4b60-1c2fbb46e6494f4f.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4--22040f90565e730131983a44a85b989f",
+      "credit": "Jan Asselijn. De bedreigde zwaan. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4--22040f90565e730131983a44a85b989f",
+      "description": "狗的靠近，为展开的翅膀与伸长的颈部提供了直接原因。阿瑟林让明亮的身体成为深色水面前巨大有力的形状，巢则说明天鹅在保卫什么。即使尚未追索象征解释，这次相遇也已清楚：闯入者、容易受侵扰的地方和奋力抵抗的动物，构成了具体关系。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "2a9ab3b9-53e8-4bf1-abb5-6aaf880478d4",
+      "title": "欢乐的一家",
+      "catalogueTitle": "Het vrolijke huisgezin",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1668",
+      "start": 1668,
+      "end": 1668,
+      "medium": "布面油画",
+      "accession": "SK-C-229",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/3ed7e71c-5375-49cb-a171-b36eccdfe7a7-93494c8b422bf34e.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-229--f6c4f4db1681a8704b372bda0183623b",
+      "credit": "Jan Steen. Het vrolijke huisgezin. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-229--f6c4f4db1681a8704b372bda0183623b",
+      "description": "围桌的不同世代，都参与音乐与饮酒。斯滕让孩子做出成人行为的相应版本，因此欢乐场面也是一幅示范与模仿的图像。散落的物品使活动不再整齐局限于桌边。一家人自得其乐，同时也显出了年幼成员如何通过习惯学着加入其中。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "688dbe2c-7f7d-438f-8631-3c04d50db8a4",
+      "title": "圣尼古拉斯节",
+      "catalogueTitle": "Het Sint-Nicolaasfeest",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1665 - 1668",
+      "start": 1665,
+      "end": 1668,
+      "medium": "布面油画",
+      "accession": "SK-A-385",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/3bd8bcd6-5c21-4237-8ac4-7224e77c5817-c4ea52962f0dc14f.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-385--b61f0c4c7cf5a503a2246ecde104fd28",
+      "credit": "Jan Steen. Het Sint-Nicolaasfeest. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-385--b61f0c4c7cf5a503a2246ecde104fd28",
+      "description": "庆祝活动并没有给每个孩子带来同一种感受。礼物在一处引起满足，在另一处造成失望，成人则看着这些不同结果。斯滕让几个小情节同时存在，没有挑选一种代表所有人的情绪。同一个节日装进一间房，欢乐与挫折却仍落在不同的人身上。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "5a56e1c5-9e86-4ee3-8d06-57b66d9f485d",
+      "title": "奥普延·科皮特",
+      "catalogueTitle": "Portrait of Oopjen Coppit",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1634",
+      "start": 1634,
+      "end": 1634,
+      "medium": "布面油画",
+      "accession": "SK-C-1768",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/5a56e1c5-9e86-4ee3-8d06-57b66d9f485d-5e8610ac148ffe18.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1768--6b7d967cdf05b81c2416359e06adaf52",
+      "credit": "Rembrandt van Rijn. Portrait of Oopjen Coppit. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1768--6b7d967cdf05b81c2416359e06adaf52",
+      "description": "全身像给奥普延足够空间，让她以完整的身体站立，而不只是一张从服饰中露出的脸。领口和袖口在深色衣服中划出亮边，较细微的光变则区分昂贵衣料的表面。伦勃朗使克制本身也成为展示的一部分。与配对肖像中马滕更向外舒展的站姿比较，这一点更为清楚。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "8a26546a-b912-454c-b841-ffe0cef9c640",
+      "title": "马滕·索尔曼斯",
+      "catalogueTitle": "Portrait of Marten Soolmans",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1634",
+      "start": 1634,
+      "end": 1634,
+      "medium": "",
+      "accession": "SK-A-5033",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/8a26546a-b912-454c-b841-ffe0cef9c640-a0a4acfb15053b0a.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-5033--8e1e37eae253bf0f528928483b8ca933",
+      "credit": "Rembrandt van Rijn. Portrait of Marten Soolmans. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-5033--8e1e37eae253bf0f528928483b8ca933",
+      "description": "弯曲的手臂扩展了马滕的外轮廓，浅色长袜与精致鞋饰，又让视线沿全身向下移动。服装在这里明确承担展示身份的作用。与奥普延并置时，两幅画形成一对，却没有让任何一人成为另一人的附属。相同的尺度和不同的姿态，同时确立了联系与个人的社会形象。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "be099a9d-68c9-44fd-82a6-96318de5aa38",
+      "title": "城镇附近的冰上娱乐",
+      "catalogueTitle": "Enjoying the Ice near a Town",
+      "artist": "Hendrick Avercamp",
+      "artists": [
+        {
+          "name": "Hendrick Avercamp",
+          "role": "primary",
+          "slug": "hendrick-avercamp-q212593"
+        }
+      ],
+      "date": "约 1620 年",
+      "start": 1620,
+      "end": 1620,
+      "medium": "油画颜料、木材与纺织品",
+      "accession": "SK-C-1705",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/329e1942-0e36-4a04-aeb1-53fb4244b300-c83fb91eddde2db0.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1705--368e399771917717acdad5c160dfe747",
+      "credit": "Hendrick Avercamp. Enjoying the Ice near a Town. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1705--368e399771917717acdad5c160dfe747",
+      "description": "冰面让许多活动占据同一片连续空间。阿弗坎普通过姿态与间隔区分小群体，再让浅淡的远方逐渐将他们吸收进去。画面值得逐处细看，却不要求每件小事都成为中心。冬天提供了一片共同的公共场所，每群人则找到各自的使用方式。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "49b98140-304f-44df-820d-1bcedee81388",
+      "title": "夫妇肖像，可能为伊萨克·马萨与贝娅特丽克丝·范德拉恩",
+      "catalogueTitle": "Portrait of a Married Couple, Likely Isaac Abrahamsz Massa and Beatrix van der Laen",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "约 1622 年",
+      "start": 1622,
+      "end": 1622,
+      "medium": "布面油画",
+      "accession": "SK-A-133",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/10b4b281-920e-466e-bb80-f8740b0038dd-4cc6ee391eaed059.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Frans_Hals_-_Portret_van_een_stel_in_een_landschap_-_Google_Art_Project.jpg",
+      "credit": "Frans Hals. Portrait of a Married Couple, Likely Isaac Abrahamsz Massa and Beatrix van der Laen. Image credit: Frans Hals; Source credit: Google Arts & Culture — TQGvNkNZ3MM17g. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-133--29d98c79eda4e9d954f80ce0bb0c8b17",
+      "description": "树叶下，两人倾身靠近，姿态相对放松。哈尔斯通过身体的接近与带笑的面容表现婚姻，而没有让二人分别摆出完全独立的正式姿态。所推测的身份仍不确定，画中可见的关系却很明确。可以据此谈论这幅肖像如何显得自在，却不能重建夫妇全部的私人生活。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "b7e0faa6-e056-5a8c-a36a-423897f310e8",
+      "title": "雷尼尔·雷阿尔队长的民兵连",
+      "catalogueTitle": "Militia Company of District XI under the Command of Captain Reynier Reael",
+      "artist": "Pieter Codde; Frans Hals",
+      "artists": [
+        {
+          "name": "Pieter Codde",
+          "role": "primary",
+          "slug": "austrian-research-painter-q655049"
+        },
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1637",
+      "start": 1637,
+      "end": 1637,
+      "medium": "布面油画",
+      "accession": "SK-C-374",
+      "image": "https://artlines.org/assets/artworks/imported/million-catalogue-20261010/b7e0faa6-e056-5a8c-a36a-423897f310e8-2be61352343baf19.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-374--39d1a561a0e487fe7f299dbaf6314d22",
+      "credit": "Pieter Codde; Frans Hals. Native museum collection image; source designation: Public Domain Mark 1.0. Rijksmuseum. Full source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-374--39d1a561a0e487fe7f299dbaf6314d22",
+      "description": "宽阔的队形需要同时容纳个人肖像和连队身份。绶带、武器、旗帜与站姿变化，打断了原本可能成为一整条长列的排列。在哈尔斯与科德合作的这幅画中，变化使群像形成节奏。可与《夜巡》比较：后者更明显地把集体组织成一场正在发生的事件。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "36303c25-76fe-40d9-9974-4731e7e76f5b",
+      "title": "教猫跳舞的孩子们",
+      "catalogueTitle": "Children Teaching a Cat to Dance, Known as The Dancing Lesson",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1660 - 1679",
+      "start": 1660,
+      "end": 1679,
+      "medium": "木板油画",
+      "accession": "SK-A-718",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/20a3d8e1-24ba-4aad-bebf-21171bf4d778-e1309f5581a76ba3.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-718--40acc398a86a306d05d286fa947cffcc",
+      "credit": "Jan Steen. Children Teaching a Cat to Dance, Known as The Dancing Lesson. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-718--40acc398a86a306d05d286fa947cffcc",
+      "description": "孩子们围着一只并未自愿表演的动物。斯滕利用孩子的游戏与猫的困境之间的落差制造喜剧效果，下方的狗又增加一种反应。场面很活跃，但热闹不是唯一题材。它也显示，快乐有时依赖于对另一种生物的抵抗视而不见。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "f7a61eb2-5a9f-5b8f-a76b-554b24098967",
+      "title": "老妇人肖像，可能为伊丽莎白·巴斯",
+      "catalogueTitle": "Portrait of an Old Lady, Possibly Elisabeth Bas",
+      "artist": "Attributed to Ferdinand Bol",
+      "artists": [
+        {
+          "name": "Ferdinand Bol",
+          "role": "attributed",
+          "slug": "ferdinand-bol-q374039"
+        }
+      ],
+      "date": "c. 1640–c. 1645",
+      "start": 1640,
+      "end": 1645,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/f7a61eb2-5a9f-5b8f-a76b-554b24098967-fa767cc4d2f3230d.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "credit": "Ferdinand Bol. Portrait of Elisabeth Jacobsdr. Bas. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "description": "合拢的双手在面孔下方形成第二个中心，白领则将两者从深色衣裙中区分出来。荷兰国立博物馆对人物身份保留限定，并将作品归于费迪南德·博尔。这些不确定性应在作品说明中保留。它们并不减损画面以静止、年龄痕迹和正式坐姿塑造人物的精确程度。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "2b57b6dd-9307-4efc-8624-20adbfedf0e2",
+      "title": "扮作使徒保罗的自画像",
+      "catalogueTitle": "Self Portrait as the Apostle Paul",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1661",
+      "start": 1661,
+      "end": 1661,
+      "medium": "布面油画",
+      "accession": "SK-A-4050",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/2b57b6dd-9307-4efc-8624-20adbfedf0e2-4988ce30403f760b.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d",
+      "credit": "Rembrandt van Rijn. Self Portrait as the Apostle Paul. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d",
+      "description": "书本与包裹式头巾把人物放入宗教角色，伦勃朗的脸却仍是他本人的肖像。画面同时要求两种辨认：一位具体画家，以及一位想象中的使徒。深色背景将这两个身份集中于同一个人。在这里，自画像也包含有意识地扮作另一个人的行为。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "6487707a-10aa-56f7-b1dc-40bc5503d4d0",
+      "title": "阿姆斯特丹王宫街附近的辛格尔桥",
+      "catalogueTitle": "De Singelbrug bij de Paleisstraat in Amsterdam",
+      "artist": "George Hendrik Breitner",
+      "artists": [
+        {
+          "name": "George Hendrik Breitner",
+          "role": "primary",
+          "slug": "george-hendrik-breitner-q289441"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "布面油画",
+      "accession": "SK-A-3580",
+      "image": "https://artlines.org/assets/artworks/imported/million-catalogue-20261010/6487707a-10aa-56f7-b1dc-40bc5503d4d0-44234a0204734f6e.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3580--596ea47fa3632feadb1469236bc9838f",
+      "credit": "George Hendrik Breitner. Native museum collection image; source designation: Public Domain Mark 1.0. Rijksmuseum. Full source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3580--596ea47fa3632feadb1469236bc9838f",
+      "description": "前景路人走得太近，已无法成为城市风景中的小小点缀。她的大小与被画框截断的身体，打断了桥梁和建筑的远景。布赖特纳把街道画成与其他行人的相遇，而不是没有遮挡的建筑景观。雪中的地点仍可辨认，但眼前空间先被路过的人占据。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "4b6a09e0-e262-5745-9cf9-e8eea7c896e0",
+      "title": "玻璃花瓶中的花卉静物",
+      "catalogueTitle": "Still Life with Flowers in a Glass Vase",
+      "artist": "Jan Davidsz. de Heem",
+      "artists": [
+        {
+          "name": "Jan Davidsz. de Heem",
+          "role": "primary",
+          "slug": "jan-davidsz-de-heem-q454656"
+        }
+      ],
+      "date": "1650 - 1683",
+      "start": 1650,
+      "end": 1683,
+      "medium": "",
+      "accession": "SK-C-214",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/4b6a09e0-e262-5745-9cf9-e8eea7c896e0-a4327be677f040f0.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-214--9f1ca72cf761e1764fe22a5516b46ecc",
+      "credit": "Jan Davidsz. de Heem. Still Life with Flowers in a Glass Vase. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-214--9f1ca72cf761e1764fe22a5516b46ecc",
+      "description": "花朵挤满瓶口，却仍保留颜色、形状和朝向的差异。卷曲花茎与昆虫使外缘复杂起来，花束与空背景之间不再有干净的分界。德·希姆让近距离细看与丰盛的整体同时成立。没有哪一朵花必须支配其余部分，整组安排也能连成一体。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "a2bb2050-ab6f-417c-baf8-4ee972a68808",
+      "title": "冬日风景",
+      "catalogueTitle": "Winter Landscape",
+      "artist": "Jacob van Ruisdael",
+      "artists": [
+        {
+          "name": "Jacob van Ruisdael",
+          "role": "primary",
+          "slug": "jacob-van-ruisdael-q213612"
+        }
+      ],
+      "date": "约 1665 年",
+      "start": 1665,
+      "end": 1665,
+      "medium": "布面油画",
+      "accession": "SK-A-349",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/86891d1f-6f54-4af8-a00f-5130c1e5cb3f-a717f7d33742b6e3.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-349--c8efd9ed1004685d2aa5096d061d184c",
+      "credit": "Jacob van Ruisdael. Winter Landscape. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-349--c8efd9ed1004685d2aa5096d061d184c",
+      "description": "厚重云层放过有限的光，雪地将它接住。由于其余景物都很暗淡，鲁伊斯达尔让天空狭窄的开口变得重要。小人物没有把天气降为故事背景；相反，他们提供了人的尺度，说明周围状况远超过眼前这些活动的范围。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "d0af1c93-5359-51f9-9378-f2a1a0b97b76",
+      "title": "造兵器的工匠",
+      "catalogueTitle": "The Armorer",
+      "artist": "Gabriël Metsu",
+      "artists": [
+        {
+          "name": "Gabriël Metsu",
+          "role": "primary",
+          "slug": "gabriel-metsu-q355213"
+        }
+      ],
+      "date": "约1650年—约1660年",
+      "start": 1650,
+      "end": 1660,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/d0af1c93-5359-51f9-9378-f2a1a0b97b76-0b6a6c7c8ad5c216.jpg",
+      "imageSource": "https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "credit": "Gabriël Metsu. The Armorer. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "description": "两位工人围着设备处在不同位置，器具已占去暗室的部分空间。一小处炽热亮光，让人在工具与金属之间找到工作的中心。梅特苏通过身体、材料和可供使用的场所之间的关系描绘劳动。即使个别物件难以分清，作坊里的拥挤仍有其实际用途。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    }
+  ],
+  "context": {
+    "start": 1620,
+    "end": 1896
+  },
+  "closingSections": [
+    {
+      "title": "比较公开与私下的姿态",
+      "paragraphs": [
+        "把一幅全身肖像与劳动者或读书者的画放在一起，问问人物占了多少空间，为什么如此。本选目依据馆藏，部分作品的展出安排可能变化。请查询最新藏品与参观信息；这里的顺序是一种观看思路，并非保证可行的步行路线。"
+      ]
+    }
+  ]
+}

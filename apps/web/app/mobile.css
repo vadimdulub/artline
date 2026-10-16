@@ -1,26 +1,32 @@
 /* Phone layouts keep the catalogue full width and controls comfortable to tap.
    Use the existing Artline palette and type; desktop layouts keep their density. */
 .mobile-menu-toggle{display:none}
-.mobile-navigation{width:min(420px,calc(100% - 24px));max-height:calc(100dvh - 32px);margin:auto;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);overscroll-behavior:contain}
+.mobile-navigation{width:min(420px,calc(100% - 24px));max-height:calc(100dvh - 32px);margin:auto;padding:20px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);overscroll-behavior:contain}
 .mobile-navigation::backdrop{background:#080704aa}
 .mobile-navigation>header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
-.mobile-navigation h2{margin:0;font:400 28px/1.2 var(--serif)}
+.mobile-navigation h2{margin:0;font:400 24px/1.2 var(--serif)}
 .mobile-navigation>header button{width:44px;height:44px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-size:28px}
-.mobile-navigation nav{display:grid;gap:4px}
-.mobile-navigation nav a{display:flex;align-items:center;gap:16px;min-height:52px;padding:12px;border-radius:6px;text-decoration:none;font-size:16px}
+.mobile-navigation nav{display:grid;gap:20px}
+.mobile-nav-group h3{margin:0 0 8px;font:500 12px/1.5 var(--sans);color:var(--muted)}
+.mobile-nav-group>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+.mobile-nav-group+.mobile-nav-group{padding-top:16px;border-top:1px solid var(--line)}
+.mobile-navigation nav a{display:flex;align-items:center;gap:10px;min-height:44px;padding:10px 8px;border-radius:4px;text-decoration:none;font-size:14px;line-height:1.4}
 .mobile-navigation nav a:hover{background:var(--stone)}
 .mobile-navigation nav a[aria-current]{background:var(--ink);color:var(--paper)}
-.mobile-navigation nav svg{width:22px;height:22px;flex-shrink:0}
-.mobile-navigation nav a[href="/account"]{border-top:1px solid var(--line);margin-top:8px;border-top-left-radius:0;border-top-right-radius:0}
+.mobile-navigation nav svg{width:18px;height:18px;flex-shrink:0}
+.mobile-navigation nav a[href="/account"]{grid-column:1/-1}
+.mobile-navigation :focus-visible{outline-color:var(--ultramarine);outline-offset:2px}
 
 @media(max-width:760px){
-  :root{--site-header-height:108px;--page-gutter:16px;--page:calc(100% - 32px)}
-  html{scroll-padding-top:calc(var(--measured-header-height,108px) + 12px)}
-  body>.site-header[data-member]{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:4px max(12px,env(safe-area-inset-right)) 6px max(16px,env(safe-area-inset-left));min-height:0;height:auto}
-  .site-header[data-member]>.site-brand{grid-column:1;grid-row:1}
-  .site-header .wordmark{min-height:44px;display:flex;align-items:center}
-  .site-header .wordmark-logo{width:124px;height:auto}
-  .site-header .wordmark small,.site-header[data-member] .header-aside{display:none}
+  :root{--site-header-height:52px;--page-gutter:16px;--page:calc(100% - 32px)}
+  html{scroll-padding-top:calc(var(--measured-header-height,52px) + 12px)}
+  body>.site-header[data-member]{grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:3px max(12px,env(safe-area-inset-right)) 4px max(16px,env(safe-area-inset-left));min-height:52px;height:auto}
+  .site-header[data-member] .site-brand,.site-header[data-member] .header-aside{display:none}
+  .site-header .header-brand{grid-column:1;grid-row:1;gap:0;margin-left:-12px}
+  .site-header .mobile-brand{display:flex;align-items:center;gap:8px;min-width:0;grid-column:1;grid-row:1}
+  .mobile-home-link{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:44px;height:44px;margin-left:0;color:var(--paper)}
+  .mobile-home-link svg{display:block;width:30px;height:30px}
+  .site-header .mobile-section-name{font-size:14px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .site-header .mobile-menu-toggle{grid-column:2;grid-row:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 10px;border:0;background:transparent;color:var(--paper);font-size:14px}
   .mobile-menu-toggle svg{width:22px;height:22px}
   body>.member-sidebar{display:none}
@@ -61,20 +67,25 @@
   .active-filters>button{flex-shrink:0;min-height:44px;max-width:85vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
   .timeline-dark{padding-inline:16px}
-  .timeline-lanes .timeline-mark>span{font-size:13px}
-  .timeline-lanes .timeline-mark>small{font-size:11px}
-  .timeline-heading-row.timeline-compact-heading .time-title{font-size:26px}
+  .timeline-lanes .timeline-mark>span{font-size:12px}
+  .timeline-lanes .timeline-mark>small{font-size:10px}
+  .timeline-dark .timeline-heading-row.timeline-compact-heading .time-title{font-size:22px}
+  .timeline-dark .timeline-heading-row.timeline-compact-heading .time-title[data-bce=true]{font-size:20px}
   .timeline-compact-heading .timeline-index-link,.timeline-compact-heading .timeline-popover>summary{min-height:44px;font-size:13px}
-  .timeline-heading-controls .painter-view-switch{display:flex;width:100%}
-  .timeline-heading-controls .painter-view-switch button{flex:1;min-height:44px;font-size:14px}
+  .timeline-heading-controls .painter-view-switch{display:inline-flex;width:auto;gap:4px;padding:0;border:0}
+  .timeline-heading-controls .painter-view-switch button{flex:none;min-height:44px;padding:4px 10px;font-size:12px;background:transparent;border:0;border-radius:0}
+  .timeline-heading-controls .painter-view-switch button[aria-pressed=true]{background:transparent;color:var(--paper);box-shadow:inset 0 -2px var(--paper)}
+  .timeline-heading-controls .painter-view-switch button[aria-pressed=false]{color:#b5ad9f}
+  .timeline-heading-controls .painter-view-switch button:hover{background:#302c26}
   .timeline-heading-controls .books-view-switch{display:inline-flex;flex:1}
   .timeline-heading-controls .books-view-switch button{flex:1;min-height:44px;padding-inline:16px;font-size:14px}
   .books-undated button,.timeline-popover-panel .timeline-legend button{min-height:44px}
   .timeline-dark .all-artwork-density>summary{min-height:44px}
   .timeline-compact-heading .popular-filter{min-height:44px}
   .timeline-compact-heading .popular-filter>span{font-size:14px}
-  .explorer>.painter-paintings .all-artwork-strip{--artwork-card-width:min(68vw,260px)}
-  .explorer>.painter-paintings .all-artwork-image{height:min(68vw,260px)}
+  .explorer>.painter-paintings .all-artwork-strip{--artwork-card-width:clamp(136px,42vw,180px);--artwork-gap:12px}
+  .explorer>.painter-paintings .all-artwork-image{height:clamp(136px,42vw,180px)}
+  .painter-paintings .all-artwork-card strong{font-size:14px}
   .artist-section-links a,.biography-toggle,.artwork-details details>summary,.influence-column details>summary{min-height:44px}
   .artist-section-links a{display:inline-flex;align-items:center}
   .painter-dialog .dialog-toolbar{min-height:64px;padding:10px 16px;gap:8px}

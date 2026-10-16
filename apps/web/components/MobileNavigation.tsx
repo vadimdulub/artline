@@ -6,13 +6,26 @@ import Link from "./MemberLink";
 import { NavigationIcon } from "./MemberNavigation";
 import { lockBodyScroll } from "@/lib/modal-scroll";
 
-const links = [
-  { href: "/guides", label: "Guides", icon: "guide" },
-  { href: "/artists", label: "Artists", icon: "artists" },
-  { href: "/artworks", label: "Artworks", icon: "artworks" },
-  { href: "/museums", label: "Museums", icon: "museum" },
-  { href: "/account", label: "Your account", icon: "user" },
-  { href: "/about", label: "About & sources", icon: "about" },
+const groups = [
+  { label: "Explore", links: [
+    { href: "/", label: "Painters", icon: "artists" },
+    { href: "/books", label: "Books", icon: "guide" },
+    { href: "/events", label: "Events", icon: "events" },
+    { href: "/all", label: "All", icon: "timeline" },
+  ] },
+  { label: "Catalogue", links: [
+    { href: "/museums", label: "Museums", icon: "museum" },
+    { href: "/artists", label: "Artists", icon: "artists" },
+    { href: "/artworks", label: "Artworks", icon: "artworks" },
+    { href: "/guides", label: "Guides", icon: "guide" },
+    { href: "/about", label: "About", icon: "about" },
+  ] },
+  { label: "Your account", links: [
+    { href: "/exhibitions", label: "Exhibitions", icon: "artworks" },
+    { href: "/studies", label: "Studies", icon: "studies" },
+    { href: "/bookmarks", label: "Bookmarks", icon: "star" },
+    { href: "/account", label: "Your account", icon: "user" },
+  ] },
 ];
 
 export function MobileNavigation() {
@@ -52,7 +65,10 @@ export function MobileNavigation() {
       <nav aria-label="Explore Artline">
         {/* Close on navigation, including the current page. A member sign-in
             intercept cancels navigation and keeps the menu's focus target. */}
-        {links.map(link => <Link key={link.href} href={link.href} prefetch={false} onNavigate={() => setOpen(false)} aria-current={pathname === link.href || pathname.startsWith(`${link.href}/`) || (link.href === "/guides" && pathname === "/art-history-timeline") ? "page" : undefined}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}
+        {groups.map(group => <section className="mobile-nav-group" key={group.label} aria-label={group.label}>
+          <h3>{group.label}</h3>
+          <div>{group.links.map(link => <Link key={link.href} href={link.href} prefetch={false} onNavigate={() => setOpen(false)} aria-current={pathname === link.href || pathname.startsWith(`${link.href}/`) || (link.href === "/guides" && pathname.startsWith("/art-history-timeline")) ? "page" : undefined}><NavigationIcon kind={link.icon} /><span>{link.label}</span></Link>)}</div>
+        </section>)}
       </nav>
     </dialog>}
   </>;

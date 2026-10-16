@@ -1,6 +1,6 @@
 export function fitImage(imageWidth: number, imageHeight: number, viewportWidth: number, viewportHeight: number) {
   if (imageWidth <= 0 || imageHeight <= 0 || viewportWidth <= 0 || viewportHeight <= 0) return { width: 0, height: 0 };
-  const scale = Math.min(viewportWidth / imageWidth, viewportHeight / imageHeight, 1);
+  const scale = Math.min(viewportWidth / imageWidth, viewportHeight / imageHeight);
   return { width: imageWidth * scale, height: imageHeight * scale };
 }
 

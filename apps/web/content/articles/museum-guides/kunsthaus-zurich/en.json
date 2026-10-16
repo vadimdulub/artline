@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline selected these works from documented museum holdings. The selection is independent of the museum, and individual works may be on loan or off display. Dates and attributions retain the qualifications in the linked records.",
+  "labels": {
+    "guides": "All guides",
+    "download": "Download PDF",
+    "language": "Guide language",
+    "translation": "AI-assisted translation",
+    "explore": "Explore this selection in Artline",
+    "contextNote": "See the selected works alongside books and events from their period, or compare when the artists lived. The books and events provide context, not evidence of direct influence. Works without confirmed dates remain in this guide.",
+    "all": "Artworks in context",
+    "allHint": "The selected works with books and history from their time.",
+    "painters": "Who lived when?",
+    "paintersHint": "See when the artists lived and whose lives overlapped.",
+    "events": "Historical events",
+    "eventsHint": "Explore events during the guide’s period",
+    "books": "Books timeline",
+    "booksHint": "Explore notable books from the same period",
+    "contents": "The selection",
+    "artworks": "Selected artworks",
+    "importance": "Why it matters",
+    "artwork": "Open artwork",
+    "source": "Object source",
+    "inventory": "Inventory",
+    "reading": "Further reading",
+    "visit": "Before your visit",
+    "website": "Museum website",
+    "officialGuide": "Official collection guide",
+    "updated": "Sources and visitor information checked"
+  },
+  "slug": "kunsthaus-zurich",
+  "museum": "Kunsthaus Zürich",
+  "city": "Zurich",
+  "country": "Switzerland",
+  "title": "Kunsthaus Zürich: Masterpieces",
+  "subtitle": "Twenty works that distribute attention through colour, intervals and the pressure of bodies.",
+  "introduction": "Mondrian’s red square and Hodler’s broad lake ask a related question in very different forms: how much can a large area of colour do? One painting dispenses with a depicted place; the other remains a view of Lake Geneva. Their resemblance is a useful comparison, not evidence that landscape must develop into abstraction.\n\nThe other works complicate the question. A caught trout is held close to the surface, a scholar pauses over his book, and archaeologists work beneath a church arch. Shape and spacing are never merely decorative decisions. They determine what sort of access the spectator has to a person, a place or an event.",
+  "visitNote": "The twenty paintings are selected collection works, not a guaranteed route through the Kunsthaus buildings. Check individual records for current location, loans and display changes before visiting.",
+  "locale": "en",
+  "website": "https://www.kunsthaus.ch/",
+  "officialGuide": "https://www.kunsthaus.ch/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "Read free · English",
+      "note": "Kandinsky’s writing gives a contemporary argument for the independence of colour and form. Read it beside Itten and Mondrian, then return to Hodler’s recognizable landscapes to see where the comparison remains useful and where it stops."
+    }
+  ],
+  "works": [
+    {
+      "id": "afe1594c-d316-58b1-8558-e7b01bfb1870",
+      "title": "Composition with Red, Blue and Yellow",
+      "catalogueTitle": "Composition with Red,  Blue and Yellow",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/afe1594c-d316-58b1-8558-e7b01bfb1870-69adcc5683f573c0.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/composition-with-red-blue-and-yellow-1930",
+      "credit": "Piet Mondrian. Composition with Red,  Blue and Yellow. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/piet-mondrian/composition-with-red-blue-and-yellow-1930",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/2455",
+      "description": "The red area dominates without occupying the centre of a symmetrical design. Smaller blue and yellow sections act across unequal intervals of white, held apart by black lines. With no depicted object to identify, attention falls on those differences themselves: the weight of one area depends on what has been left beside it.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "b40ddcc9-d260-59e6-b26d-ed0ed09d98a5",
+      "title": "The Gardener",
+      "catalogueTitle": "Gardener",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "Oil on wood",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/b40ddcc9-d260-59e6-b26d-ed0ed09d98a5-5e4fef50a2a531a8.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/gardener-1882",
+      "credit": "Gardener. WikiArt; Georges Seurat. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/gardener-1882",
+      "description": "The long tool’s diagonal gives the gardener’s stance a clear purpose. Broad marks allow the surrounding growth to remain less individually described than the man and his work. This is a useful place to resist expecting a familiar later Seurat technique: the painting’s immediate structure comes from a body, a tool and a patch of ground.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "b8780a95-98f6-5ef0-a24f-877ad629f000",
+      "title": "Lake Geneva from Caux",
+      "catalogueTitle": "Lake Geneva from the Caux",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/b8780a95-98f6-5ef0-a24f-877ad629f000-0970cb5b40453d43.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-from-the-caux-1917",
+      "credit": "Ferdinand Hodler. Lake Geneva from the Caux. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-from-the-caux-1917",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1413",
+      "description": "The lake occupies the view as a broad turquoise shape before small details of place become important. Its curve is distinct from the mountains and cloud band beyond. Hodler does not abandon geography, but concentrates its recognition into a few boundaries; an extensive distance is made readable through a compact arrangement of colour.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "2300c671-80db-5fde-a129-a3ab17815c2d",
+      "title": "Lake Geneva in the Evening from Chexbres",
+      "catalogueTitle": "Lake Geneva on the evening in Chexbres",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/2300c671-80db-5fde-a129-a3ab17815c2d-f7f172efcaddc241.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-on-the-evening-in-chexbres-1895",
+      "credit": "Ferdinand Hodler. Lake Geneva on the evening in Chexbres. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-on-the-evening-in-chexbres-1895",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1564",
+      "description": "Bare trees interrupt the bands of water and evening sky. They establish a near position from which the more distant light can be seen, preventing the stripes of colour from becoming entirely detached from a place. Compare this with the later Caux view, where the lake’s large shape carries more of the composition.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "3339ca1d-78e0-542b-8675-5a7336692c1c",
+      "title": "Landscape at Caux with Rising Clouds",
+      "catalogueTitle": "Landscape at Caux with increasing clouds",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/3339ca1d-78e0-542b-8675-5a7336692c1c-b9bf74d8485d8ecf.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/landscape-at-caux-with-increasing-clouds-1917",
+      "credit": "Ferdinand Hodler. Landscape at Caux with increasing clouds. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/landscape-at-caux-with-increasing-clouds-1917",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1478",
+      "description": "Clouds rise above the lake in broken forms that answer the curved foreground without copying it. The resemblance gives the scene coherence while preserving the difference between solid terrain and changing vapour. Alongside the other Hodlers, this is an opportunity to follow one painter adjusting relationships within a recurring landscape subject.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "37868b51-d463-5788-b9db-2a0929005b68",
+      "title": "Johann Joachim Winckelmann",
+      "catalogueTitle": "Portrait of Johann Joachim Winckelmann",
+      "artist": "Angelica Kauffman",
+      "artists": [
+        {
+          "name": "Angelica Kauffman",
+          "role": "primary",
+          "slug": "angelica-kauffman-q123098"
+        }
+      ],
+      "date": "1764",
+      "start": 1764,
+      "end": 1764,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/37868b51-d463-5788-b9db-2a0929005b68-8c86eb5b77526682.jpg",
+      "imageSource": "https://www.wikiart.org/en/angelica-kauffman/portrait-of-johann-joachim-winckelmann-1764",
+      "credit": "Angelica Kauffman. Portrait of Johann Joachim Winckelmann. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/angelica-kauffman/portrait-of-johann-joachim-winckelmann-1764",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1970",
+      "description": "Winckelmann’s pen remains above the book, but his head turns away from the page. Writing has been interrupted rather than completed or abandoned. That small discrepancy makes the portrait active: the scholar’s occupation is identifiable, while his attention reaches beyond the immediate task represented by the objects in front of him.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "a018e3b7-4372-55d3-9ca7-f9c68b3c5f5e",
+      "title": "Pierre Loti",
+      "catalogueTitle": "Portrait of Pierre Loti",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "c. 1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/a018e3b7-4372-55d3-9ca7-f9c68b3c5f5e-9929c451857ffa5f.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/portrait-of-pierre-loti",
+      "credit": "Henri Rousseau. Portrait of Pierre Loti. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/portrait-of-pierre-loti",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/portrait-of-pierre-loti",
+      "description": "The fez, cat, tree and distant industrial forms are kept distinct rather than absorbed into a continuous naturalistic setting. Their unequal scales make the image feel assembled. The sitter’s identity is presented through a combination of signs, so that recognition depends on the arrangement as much as on a convincing account of shared space.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "42e7c7a3-0b91-5737-aaed-87fcd31b6297",
+      "title": "Sleeping Venus Surprised by a Satyr",
+      "catalogueTitle": "Sleeping Venus, surprised by Satyr",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1626",
+      "start": 1626,
+      "end": 1626,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/42e7c7a3-0b91-5737-aaed-87fcd31b6297-51c4bfe37e6537de.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/sleeping-venus-surprised-by-satyr-1626",
+      "credit": "Nicolas Poussin. Sleeping Venus, surprised by Satyr. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/sleeping-venus-surprised-by-satyr-1626",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/sleeping-venus-surprised-by-satyr-1626",
+      "description": "The sleeping figure and the approaching satyr do not share the same awareness of the encounter. Poussin establishes that inequality through their contrasting bodily states: rest against movement, exposure against active looking. The mythological subject does not remove the tension. It gives that imbalance a narrative setting.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "0464c018-0bcc-5b49-8642-23cf35665e2e",
+      "title": "The Apostle Simon",
+      "catalogueTitle": "The Apostle Simon",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1661",
+      "start": 1661,
+      "end": 1661,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/0464c018-0bcc-5b49-8642-23cf35665e2e-8e44791dd1b9ee02.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/the-apostle-simon-1661",
+      "credit": "The Apostle Simon. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/the-apostle-simon-1661",
+      "description": "Before identifying an apostle, the picture offers an ageing face and hands brought forward by limited light. The dark object held close to the chest belongs to that concentrated bodily presence. Sacred identity is not staged through a broad public scene; it is encountered at the scale of one person.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "922674b0-efd4-5702-86f4-a555741cb586",
+      "title": "The Meeting",
+      "catalogueTitle": "The Meeting",
+      "artist": "Johannes Itten",
+      "artists": [
+        {
+          "name": "Johannes Itten",
+          "role": "primary",
+          "slug": "johannes-itten-q123138"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "Oil",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/922674b0-efd4-5702-86f4-a555741cb586-f47c9a457ea01f3e.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-itten/die-begegnung-1916",
+      "credit": "Johannes Itten. The Meeting. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/johannes-itten/die-begegnung-1916",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1202",
+      "description": "A turning circular arrangement meets a dark upright form. The title encourages an idea of encounter, but there is no need to translate each shape into a person. Their differing directions already establish a relation: one suggests rotation, another holds its position, and the coloured bands make the intersection visible.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "4083c71e-46d5-52ee-9c30-5bfc7fb8dd04",
+      "title": "The Servant",
+      "catalogueTitle": "The Servant",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/4083c71e-46d5-52ee-9c30-5bfc7fb8dd04-50e957d98b5f8f80.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/the-servant-1916",
+      "credit": "Amedeo Modigliani. The Servant. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/amedeo-modigliani/the-servant-1916",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/the-servant-1916",
+      "description": "The slight inclination of the head prevents the frontal pose from becoming rigid. A long neck and sloping shoulders carry the sitter’s presence through a small number of curves, while rougher colour surrounds her. The portrait is economical, but its economy concentrates attention on posture rather than making the woman interchangeable.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "5014f3a6-5ff5-5975-a2a6-519ec1021343",
+      "title": "The Trout",
+      "catalogueTitle": "The Trout",
+      "artist": "Gustave Courbet",
+      "artists": [
+        {
+          "name": "Gustave Courbet",
+          "role": "primary",
+          "slug": "gustave-courbet-q34618"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5014f3a6-5ff5-5975-a2a6-519ec1021343-586cd7d7f9341a6a.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustave-courbet/the-trout-1872",
+      "credit": "The Trout. WikiArt; Gustave Courbet. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gustave-courbet/the-trout-1872",
+      "description": "The trout’s open mouth and bent body occupy the near foreground with little surrounding distraction. Its spotted skin is an identifying surface, but the picture also insists on the animal’s physical weight. This is a catch shown as a body, not an abundance of food arranged at a comfortable distance.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "2cfa6df9-728e-57b2-a0a2-8856482160e9",
+      "title": "Vanity",
+      "catalogueTitle": "Vanity",
+      "artist": "Giovanni Segantini",
+      "artists": [
+        {
+          "name": "Giovanni Segantini",
+          "role": "primary",
+          "slug": "giovanni-segantini-q379300"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "Oil on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2cfa6df9-728e-57b2-a0a2-8856482160e9-994a6ea081b92f8f.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-segantini/vanity-1897",
+      "credit": "Giovanni Segantini. Vanity. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/giovanni-segantini/vanity-1897",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1263",
+      "description": "The woman bends toward a pool, a familiar situation of looking that the dark form in the water complicates. Pale animals and green slopes remain comparatively readable around her. The uncertainty is localised: it gathers where a reflection might be expected, preventing the pastoral setting from settling into uncomplicated reassurance.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "89751ce2-2198-4637-a7ed-35a71bc97db3",
+      "title": "Houses of Parliament, Sunset",
+      "catalogueTitle": "Houses of Parliament, Sunset",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Oil on canvas",
+      "accession": "1995/0003",
+      "image": "https://artlines.org/assets/artworks/wikiart/89751ce2-2198-4637-a7ed-35a71bc97db3-0fe49be0d2fa4deb.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-monet/houses-of-parliament-sunset",
+      "credit": "Claude Monet. Houses of Parliament, Sunset. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/2585/",
+      "description": "The buildings remain recognisable while their edges are partly lost in orange-red haze. That limited recognition matters: without it, the changes of light would have no stable subject against which to register. Reflections carry the colour into the water, where architecture becomes still less solid than it is above.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "e6f58419-1dc0-5e04-a034-204bc6bbe07a",
+      "title": "My Models",
+      "catalogueTitle": "My Models",
+      "artist": "Giovanni Segantini",
+      "artists": [
+        {
+          "name": "Giovanni Segantini",
+          "role": "primary",
+          "slug": "giovanni-segantini-q379300"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/e6f58419-1dc0-5e04-a034-204bc6bbe07a-c51c2202fe4c8278.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-segantini/meine-modelle-1888",
+      "credit": "Giovanni Segantini. My Models. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/giovanni-segantini/meine-modelle-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/3029",
+      "description": "An easel, figures and a painted scene share the studio, making it necessary to distinguish objects from their representations. The room is occupied by both models and the work made from them. Rather than hiding the conditions of production, Segantini makes those conditions part of what the painting asks the spectator to sort out.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "43dd91c6-5991-5fa0-b2cd-a83696b8c682",
+      "title": "War",
+      "catalogueTitle": "War",
+      "artist": "Arnold Böcklin",
+      "artists": [
+        {
+          "name": "Arnold Böcklin",
+          "role": "primary",
+          "slug": "arnold-bocklin-q123071"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "776",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110990025-252f659f4d9b514a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_002.jpg",
+      "credit": "Arnold Böcklin. War. Image credit: Arnold Böcklin; Source credit: The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 .. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110990025",
+      "description": "Horses’ limbs, raised arms and falling bodies collide in a space that leaves little separation between one action and the next. The title names a condition rather than a documented battle. Böcklin gives it bodily consequences: the compression makes destructive movement clearer than any secure position from which to watch it.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "c01d9a36-f7a1-59cc-a213-b48a2837cb99",
+      "title": "Bodmer and Fuseli before the Bust of Homer",
+      "catalogueTitle": "Bodmer und Füssli vor der Büste Homers",
+      "artist": "Henry Fuseli",
+      "artists": [
+        {
+          "name": "Henry Fuseli",
+          "role": "primary",
+          "slug": "henry-fuseli-q122382"
+        }
+      ],
+      "date": "1778–1780",
+      "start": 1778,
+      "end": 1780,
+      "medium": "",
+      "accession": "70",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107572740-3acaa6e60a38f694.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johann_Heinrich_F%C3%BCssli_012.jpg",
+      "credit": "Henry Fuseli. Bodmer und Füssli vor der Büste Homers. Image credit: Henry Fuseli. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107572740",
+      "description": "The bust’s size prevents Homer from remaining a small decorative reference behind a conversation. It shares the space emphatically with the two men and the gesture between them. An inherited literary authority thus takes a material form: something present enough to organise how the living figures sit and address one another.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "99534a81-5a7d-5381-b117-1701c4886682",
+      "title": "Adoration of the Magi",
+      "catalogueTitle": "Anbetung der Heiligen Drei Könige",
+      "artist": "Hans Fries",
+      "artists": [
+        {
+          "name": "Hans Fries",
+          "role": "primary",
+          "slug": "wikimedia-painter-q115997"
+        }
+      ],
+      "date": "c. 1490",
+      "start": 1490,
+      "end": 1490,
+      "medium": "",
+      "accession": "2296",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q131586329-7e80ed26abafd2c9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hans_Fries_-_Anbetung_der_Heiligen_Drei_K%C3%B6nige_-_2296_-_Kunsthaus_Z%C3%BCrich.jpg",
+      "credit": "Hans Fries. Anbetung der Heiligen Drei Könige. Image credit: Hans Fries; Source credit: Kunsthaus Zürich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q131586329",
+      "description": "Costume, gifts and faces crowd into the panel around Mary and the child. The material density makes the act of approach tangible: each visitor has a position and something to bring, even where bodies overlap. Devotion is expressed through an encounter among differently dressed people rather than through empty space around an isolated figure.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "777dbd55-1997-530d-af10-74c1c6e42e91",
+      "title": "Archaeologists in the Church of Valeria",
+      "catalogueTitle": "Archäologe in der Kirche von Valeria",
+      "artist": "Rafael Ritz",
+      "artists": [
+        {
+          "name": "Rafael Ritz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3419516"
+        }
+      ],
+      "date": "1870",
+      "start": 1870,
+      "end": 1870,
+      "medium": "",
+      "accession": "701",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q131587152-d69dec67600fb6e1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Raphael_Ritz_-_Arch%C3%A4ologe_in_der_Kirche_von_Valeria_-_701_-_Kunsthaus_Z%C3%BCrich.jpg",
+      "credit": "Rafael Ritz. Archäologe in der Kirche von Valeria. Image credit: Rafael Ritz; Source credit: Kunsthaus Zürich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q131587152",
+      "description": "The church interior is being examined, not simply admired from an unoccupied viewpoint. Equipment and small investigators give historical study a place within the building’s fabric. The large arch makes their relative size apparent, holding individual acts of inspection inside a structure that exceeds what any one figure can take in.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "4305f259-a263-5019-b5a2-3de4ba97107b",
+      "title": "Evening Landscape with a Flock of Sheep",
+      "catalogueTitle": "Abendlandschaft mit Schafherde",
+      "artist": "Robert Zünd",
+      "artists": [
+        {
+          "name": "Robert Zünd",
+          "role": "primary",
+          "slug": "wikimedia-painter-q563312"
+        }
+      ],
+      "date": "1889–1891",
+      "start": 1889,
+      "end": 1891,
+      "medium": "",
+      "accession": "761",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q131586627-8c59eb13d735e390.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Z%C3%BCnd_-_Abendlandschaft_mit_Schafherde_-_761_-_Kunsthaus_Z%C3%BCrich.jpg",
+      "credit": "Robert Zünd. Abendlandschaft mit Schafherde. Image credit: Robert Zünd; Source credit: Kunsthaus Zürich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q131586627",
+      "description": "The moving flock provides a route from the shaded foreground toward the pale distance. Tall trees contain the near space, while the opening beyond permits it to continue. The scene’s repose is therefore organised rather than motionless: light and passage give the sheep somewhere to go.",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    }
+  ],
+  "context": {
+    "start": 1490,
+    "end": 1930
+  },
+  "closingSections": [
+    {
+      "title": "Keep the comparisons local",
+      "paragraphs": [
+        "The three Hodlers make one compact group; Mondrian and Itten make another. Compare the actual intervals and directions before reaching for a movement label. These works form a collection selection, not a guaranteed gallery route. Consult the Kunsthaus for current displays and access."
+      ]
+    }
+  ]
+}

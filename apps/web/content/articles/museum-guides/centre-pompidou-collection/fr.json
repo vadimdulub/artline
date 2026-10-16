@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "centre-pompidou-collection",
+  "museum": "Musée national d’art moderne — Centre Pompidou",
+  "city": "Paris",
+  "country": "France",
+  "title": "Musée national d’art moderne — Centre Pompidou : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres qui réorganisent les rapports entre un sujet reconnaissable et la surface peinte.",
+  "introduction": "Une fenêtre permet généralement de voir au-delà d'elle. Une peinture le peut aussi, mais les œuvres de cette sélection interrompent souvent ce passage. Les objets de Braque se divisent en plans ; les couleurs de Kandinsky n'ont besoin d'aucun objet ; une tête en bois peint de Taeuber-Arp fait coexister ressemblance et construction apparente.\n\nCe sont des choix différents, pas les échelons successifs d'une ascension vers l'abstraction. La femme allongée de Valadon et la cour de Balthus conservent des lieux reconnaissables tout en montrant comment une figure ou un cadre règle notre accès à ceux-ci. Où l'œil peut-il circuler, et où rencontre-t-il la surface ? Cette question accompagne la sélection, qui porte sur des œuvres de la collection, non sur leurs lieux d'exposition actuels.",
+  "visitNote": "Le bâtiment du Centre Pompidou à Paris est fermé pour rénovation ; sa réouverture est prévue pour 2030. Consultez les informations du musée via le lien indiqué pour connaître la programmation sur les autres sites. Ce guide porte sur la collection et ne constitue pas un itinéraire à travers les galeries parisiennes actuellement ouvertes.",
+  "locale": "fr",
+  "website": "http://www.centrepompidou.fr",
+  "officialGuide": "https://www.centrepompidou.fr/en/centre-pompidou-is-transforming-itself/renovation-project-centre-pompidou-2030",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Du spirituel dans l'art présente la vision de Kandinsky lui-même quant à ses ambitions en matière de couleur et de forme abstraite. Il s'agit d'une réflexion historique émanant d'un artiste, utile pour accompagner ces œuvres, mais qui ne constitue pas un manuel de règles pour tous les artistes de la sélection."
+    }
+  ],
+  "works": [
+    {
+      "id": "e1759642-babf-5b18-9889-f41d6827aa53",
+      "title": "Un piédestal rouge",
+      "catalogueTitle": "A Red Pedestal",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1939",
+      "start": 1939,
+      "end": 1939,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/e1759642-babf-5b18-9889-f41d6827aa53-fd0f1151ef5f789e.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/a-red-pedestal-1939",
+      "credit": "Georges Braque. A Red Pedestal. WikiArt source label: Georges Braque Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/a-red-pedestal-1939",
+      "license": "Georges Braque Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/a-red-pedestal-1939",
+      "description": "Le support donne aux plans superposés de Braque un point autour duquel se rassembler. On reconnaît les récipients, sans que leurs positions composent une vue entièrement cohérente. La zone rouge verticale ramène régulièrement le regard vers cette haute structure. Elle sert de repère sans effacer les petites incertitudes qui subsistent à la rencontre des objets.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "a2f67dbe-e754-5b0b-90c7-c789ae26032a",
+      "title": "Buste de jeune femme d'Avignon",
+      "catalogueTitle": "Bust of young woman from Avignon",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/a2f67dbe-e754-5b0b-90c7-c789ae26032a-4b3b64fe8c638556.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bust-of-young-woman-from-avignon-1907",
+      "credit": "Pablo Picasso. Bust of young woman from Avignon. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bust-of-young-woman-from-avignon-1907",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/bust-of-young-woman-from-avignon-1907",
+      "description": "Des contours sombres découpent le visage en zones distinctes plutôt que de modeler une chair continue. La large épaule et la tête tournée établissent encore un buste, mais sa construction rend ce format familier moins évident. Picasso conserve assez de la figure pour faire sentir combien ses différentes parties résistent à un point de vue unique.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "bb9105d1-fb1a-5c54-a5bb-362c67822572",
+      "title": "Coupe à fruits",
+      "catalogueTitle": "Fruit Dish",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "Fusain, gouache et huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/bb9105d1-fb1a-5c54-a5bb-362c67822572-05d17bfb0cf6167d.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/fruit-dish-1913",
+      "credit": "Georges Braque. Fruit Dish. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/fruit-dish-1913",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/fruit-dish-1913",
+      "description": "Coupe, fruits et table doivent être reconstitués à partir d'indices incomplets. Les lignes traversent des zones dont la tonalité ou la texture les ramène vers la surface plane. Braque maintient les deux lectures : les marques indiquent des objets, mais leur assemblage n'est jamais une simple vue transparente de ceux-ci. L'effort de reconnaissance fait partie de l'observation.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "ebb91761-4e0c-528a-aeb0-512fa735e807",
+      "title": "Lolotte",
+      "catalogueTitle": "Lolotte",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/ebb91761-4e0c-528a-aeb0-512fa735e807-96b08e138a27692c.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/lolotte-1916",
+      "credit": "Amedeo Modigliani. Lolotte. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/amedeo-modigliani/lolotte-1916",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/lolotte-1916",
+      "description": "Le long cou prolonge l'élan vertical entre les vêtements sombres et les cheveux roux. Modigliani répète les courbes sans rendre le visage parfaitement symétrique ni interchangeable. De petites différences dans les yeux et la bouche interrompent la régularité générale. Une personne particulière demeure présente dans cette construction ouvertement stylisée ; l'allongement n'essaie pas de passer pour une proportion naturelle.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "d0e036f9-08cd-594d-b13f-b56e0542e3a7",
+      "title": "Souvenir des galeries des glaces à Bruxelles",
+      "catalogueTitle": "Memory of the Halls of Mirrors in Brussels",
+      "artist": "Otto Dix",
+      "artists": [
+        {
+          "name": "Otto Dix",
+          "role": "primary",
+          "slug": "otto-dix-q153104"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/otto-dix-20261006/d0e036f9-08cd-594d-b13f-b56e0542e3a7-213f68d735b3d43e.jpg",
+      "imageSource": "https://www.wikiart.org/en/otto-dix/memory-of-the-halls-of-mirrors-in-brussels",
+      "credit": "Otto Dix. Memory of the Halls of Mirrors in Brussels. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/otto-dix/memory-of-the-halls-of-mirrors-in-brussels",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/otto-dix/memory-of-the-halls-of-mirrors-in-brussels",
+      "description": "Les miroirs devraient multiplier la pièce ; ici, ils la rendent plus difficile à reconstituer. Figures, mobilier et fragments reflétés se heurtent selon des angles brusques. Dix laisse peu de passages sûrs dans cet intérieur encombré. Le titre annonce un souvenir, pas un relevé architectural : une scène peut demeurer insistante sans que son espace devienne cohérent.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "c8c312b6-698c-5722-877f-2e3dc117fe82",
+      "title": "Jaune-Rouge-Bleu",
+      "catalogueTitle": "Yellow-Red-Blue",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1925",
+      "start": 1925,
+      "end": 1925,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c8c312b6-698c-5722-877f-2e3dc117fe82-1c0b2b9d83ba2f56.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/yellow-red-blue-1925",
+      "credit": "Wassily Kandinsky. Yellow-Red-Blue. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/yellow-red-blue-1925",
+      "description": "Les deux moitiés ne se comportent pas de la même façon. D'un côté s'étendent des formes jaunes anguleuses ; de l'autre se rassemblent masses circulaires sombres et lignes sinueuses. Les zones rouges participent à leur rencontre. Kandinsky n'a pas besoin d'un événement représenté pour créer du mouvement. Des masses inégales et des contours contrastés obligent l'œil à réévaluer sans cesse l'équilibre.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "0a2be045-ce69-5247-a197-91be35e54cb2",
+      "title": "Femme-cheval paranoïaque",
+      "catalogueTitle": "Paranoiac Woman-Horse (Invisible Sleeping Woman, Lion, Horse)",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/0a2be045-ce69-5247-a197-91be35e54cb2-7f5e644c97970021.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/paranoiac-woman-horse-invisible-sleeping-woman-lion-horse",
+      "credit": "Salvador Dalí. Paranoiac Woman-Horse (Invisible Sleeping Woman, Lion, Horse). WikiArt source label: Salvador Dali Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/salvador-dali/paranoiac-woman-horse-invisible-sleeping-woman-lion-horse",
+      "license": "Salvador Dali Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/salvador-dali/paranoiac-woman-horse-invisible-sleeping-woman-lion-horse",
+      "description": "Les ombres semblent plus certaines que les choses qui les projettent. Dalí éclaire précisément le paysage bas et ses formes ambiguës, dont les contours suggèrent plusieurs corps possibles. La description réaliste entretient ici l'incertitude. Il ne s'agit pas forcément de résoudre l'image une fois pour toutes, mais de voir comment une identification en remplace une autre.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "670d2122-0e0f-5858-8ca5-71909bdf6a09",
+      "title": "Peinture, 146 × 114 cm, 1950",
+      "catalogueTitle": "Peinture 146 x 114 cm, 1950",
+      "artist": "Pierre Soulages",
+      "artists": [
+        {
+          "name": "Pierre Soulages",
+          "role": "primary",
+          "slug": "pierre-soulages-q708631"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "Pétrole",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/670d2122-0e0f-5858-8ca5-71909bdf6a09-ae384a07762e4463.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-soulages/peinture-146-x-114-cm-1950-1950",
+      "credit": "Pierre Soulages. Peinture 146 x 114 cm, 1950. WikiArt source label: Pierre Soulages Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pierre-soulages/peinture-146-x-114-cm-1950-1950",
+      "license": "Pierre Soulages Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-soulages/peinture-146-x-114-cm-1950-1950",
+      "description": "Le noir occupe une grande partie de la surface sans être uniforme. Les larges traces se croisent, se recouvrent et laissent de petites ouvertures claires dont la forme modifie la densité apparente du noir voisin. Leurs bords révèlent des changements de direction et de pression. Soulages adopte un titre sobre comme une notice ; les rapports entre les marques fournissent toute l'activité du tableau.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "e34e0ed7-fbcf-5e9a-b13c-376ed5ca4c18",
+      "title": "Portrait d'Erik Satie",
+      "catalogueTitle": "Portrait of Erik Satie",
+      "artist": "Suzanne Valadon",
+      "artists": [
+        {
+          "name": "Suzanne Valadon",
+          "role": "primary",
+          "slug": "suzanne-valadon-q156889"
+        }
+      ],
+      "date": "vers 1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/e34e0ed7-fbcf-5e9a-b13c-376ed5ca4c18-6cf9954597ce047b.jpg",
+      "imageSource": "https://www.wikiart.org/en/suzanne-valadon/portrait-of-erik-satie",
+      "credit": "Suzanne Valadon. Portrait of Erik Satie. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/suzanne-valadon/portrait-of-erik-satie",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/suzanne-valadon/portrait-of-erik-satie",
+      "description": "Le cadrage serré laisse peu de place à un décor au-delà du chapeau et du manteau. Des tons plus chauds distinguent le visage et la barbe dans cet entourage sombre. Valadon se concentre sur l'inclinaison de la tête et la direction du regard. Le portrait peut établir une attitude sans meubler la pièce d'attributs censés raconter toute la carrière d'un compositeur.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "41e78a21-750b-5fc0-b058-e6936fde86d7",
+      "title": "Nature morte au buste antique",
+      "catalogueTitle": "Still life with antique bust",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1925",
+      "start": 1925,
+      "end": 1925,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/41e78a21-750b-5fc0-b058-e6936fde86d7-4dd6b56078e330c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/still-life-with-antique-bust-1925",
+      "credit": "Pablo Picasso. Still life with antique bust. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/still-life-with-antique-bust-1925",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/still-life-with-antique-bust-1925",
+      "description": "Le buste fait attendre un volume solide et modelé dans une pièce divisée en plans tranchants. Autour de lui, les zones orange, blanches et noires rendent la profondeur difficile à suivre. Picasso soumet l'objet classique au même environnement instable que les récipients. Sa solidité familière offre une comparaison, pas la garantie d'un espace qui finirait par devenir cohérent.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "9ba1c1b8-16ab-50da-abb8-f85b042272c7",
+      "title": "La Femme-Lune coupe le cercle",
+      "catalogueTitle": "The Moon-Woman Cuts the Circle",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1943",
+      "start": 1943,
+      "end": 1943,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/9ba1c1b8-16ab-50da-abb8-f85b042272c7-020df9a25233df04.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/the-moon-woman-cuts-the-circle-1943",
+      "credit": "The Moon-Woman Cuts the Circle. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/the-moon-woman-cuts-the-circle-1943",
+      "description": "Des suggestions de figures persistent dans les lignes denses et les marques colorées. Elles se séparent mal de l'activité environnante ; l'œil passe donc des corps possibles à la surface qui les relie. Pollock autorise la reconnaissance sans lui donner toute la maîtrise. Courbes et pointes peuvent appartenir à une figure tout en interrompant un motif plus vaste.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "2e4e9eac-c420-5032-a374-f6634c87268a",
+      "title": "Le Palais aux rochers de fenêtres",
+      "catalogueTitle": "The Palace of Window Rocks",
+      "artist": "Yves Tanguy",
+      "artists": [
+        {
+          "name": "Yves Tanguy",
+          "role": "primary",
+          "slug": "yves-tanguy-q66809948"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/2e4e9eac-c420-5032-a374-f6634c87268a-69a3115559cb8568.jpg",
+      "imageSource": "https://www.wikiart.org/en/yves-tanguy/palace-on-windows-rocks",
+      "credit": "Yves Tanguy. The Palace of Window Rocks. WikiArt source label: Yves Tanguy Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/yves-tanguy/palace-on-windows-rocks",
+      "license": "Yves Tanguy Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/yves-tanguy/palace-on-windows-rocks",
+      "description": "Les objets ont des ombres nettes, mais aucun usage clair. La plaine basse de Tanguy suit les règles d'un paysage plausible, donnant aux formes dispersées une assise convaincante. Cette certitude accentue leur étrangeté. Sur un sol moins crédible, on les prendrait plus facilement pour des formes flottantes ; ici, elles semblent bien appartenir à un lieu, même si leur fonction nous échappe.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "aa481044-0316-52de-8e12-32db3ab13972",
+      "title": "La Basse-Cour",
+      "catalogueTitle": "The Poultry Yard",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1896 - 1898",
+      "start": 1896,
+      "end": 1898,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/aa481044-0316-52de-8e12-32db3ab13972-f40df06ae430fc86.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-poultry-yard-1898",
+      "credit": "Henri Rousseau. The Poultry Yard. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/the-poultry-yard-1898",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-poultry-yard-1898",
+      "description": "Chemins, clôtures et bâtiments divisent la cour en compartiments lisibles. Rousseau ordonne fortement le lieu avant que les petits oiseaux y introduisent des mouvements irréguliers. Ce contraste ne requiert aucun sujet exotique. Un enclos ordinaire mérite l'examen parce que ses limites sont si affirmées et que ses occupants n'en suivent pas les lignes droites.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "75fed275-813a-5669-ae74-d49040ae4d45",
+      "title": "La Sérénade",
+      "catalogueTitle": "The serenade",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/75fed275-813a-5669-ae74-d49040ae4d45-6d262bfea04282ec.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/the-serenade-1942",
+      "credit": "The serenade. WikiArt; Pablo Picasso. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Pablo Picasso",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/the-serenade-1942",
+      "description": "Une figure jaune allongée et une musicienne dressée suivent des directions différentes dans la pièce anguleuse. Malgré le décor fragmenté, leur relation reste intelligible : l'une joue pour l'autre. Picasso distingue leurs positions par la couleur et l'organisation des corps. Une situation sociale reconnaissable se maintient donc sans description naturaliste de l'un ou l'autre personnage.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "2cf2d5d1-9185-557e-bd68-bdb8158fbcb1",
+      "title": "Fenêtre, cour de Rohan",
+      "catalogueTitle": "Window, Cour de Rohan",
+      "artist": "Balthus",
+      "artists": [
+        {
+          "name": "Balthus",
+          "role": "primary",
+          "slug": "balthus-q325925"
+        }
+      ],
+      "date": "1951",
+      "start": 1951,
+      "end": 1951,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/2cf2d5d1-9185-557e-bd68-bdb8158fbcb1-e493fce3f59ddcc0.jpg",
+      "imageSource": "https://www.wikiart.org/en/balthus/window-cour-de-rohan-1951",
+      "credit": "Balthus. Window, Cour de Rohan. WikiArt source label: Balthus Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/balthus/window-cour-de-rohan-1951",
+      "license": "Balthus Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/balthus/window-cour-de-rohan-1951",
+      "description": "L'immeuble d'en face ne se présente pas directement. Il apparaît à travers la fenêtre ouverte, au-delà de l'appui et des objets proches, dans une succession de cadres. Balthus donne à ces intervalles plus d'importance qu'à une éventuelle activité dans la cour. Le sujet est à la fois la vue et la distance mesurée qui l'empêche de se confondre avec la pièce.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "34ea0de0-c727-531d-ad7c-23df6be2f220",
+      "title": "Figure",
+      "catalogueTitle": "Character",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "Pastel sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/34ea0de0-c727-531d-ad7c-23df6be2f220-568dba5227156fa6.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-miro/character",
+      "credit": "Character. WikiArt; Joan Miró. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Joan Miro",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joan-miro/character",
+      "description": "Une tête, des bras courbes et des pieds suffisent à indiquer un corps, malgré des proportions qui ne permettraient pas à une personne de tenir dans l'espace ordinaire. Miró oppose cette figure nettement délimitée à des couleurs environnantes plus douces. Quelques relations entre les parties rendent le geste lisible. Ajouter de l'anatomie pourrait préciser le corps tout en affaiblissant cette économie.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "a2098470-f41b-526e-b029-461efac2f1c2",
+      "title": "La Chambre bleue",
+      "catalogueTitle": "The Blue Room",
+      "artist": "Suzanne Valadon",
+      "artists": [
+        {
+          "name": "Suzanne Valadon",
+          "role": "primary",
+          "slug": "suzanne-valadon-q156889"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a2098470-f41b-526e-b029-461efac2f1c2-1fb47f878b0bb56a.jpg",
+      "imageSource": "https://www.wikiart.org/en/suzanne-valadon/the-blue-room-1923",
+      "credit": "Suzanne Valadon. The Blue Room. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/suzanne-valadon/the-blue-room-1923",
+      "description": "Le pantalon rayé et le lit bleu à motifs animent vêtements et mobilier autour de la femme allongée. Les livres indiquent un usage ordinaire de la pièce, qui n'est pas un décor vide destiné à une pose. Valadon donne au corps sa pesanteur sans exposer une anatomie idéalisée. Les motifs environnants ne réduisent pas la place qu'y prend cette femme.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "d97f6e81-1160-513b-a9af-73abb4437de7",
+      "title": "Tête Dada",
+      "catalogueTitle": "Dada Head",
+      "artist": "Sophie Taeuber-Arp",
+      "artists": [
+        {
+          "name": "Sophie Taeuber-Arp",
+          "role": "primary",
+          "slug": "sophie-taeuber-arp-q254395"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d97f6e81-1160-513b-a9af-73abb4437de7-165f3ba32772735f.jpg",
+      "imageSource": "https://www.wikiart.org/en/sophie-taeuber-arp/dada-head-1920",
+      "credit": "Sophie Taeuber-Arp. Dada Head. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sophie-taeuber-arp/dada-head-1920",
+      "description": "Le volume arrondi annonce une tête ; la géométrie peinte refuse d'achever un visage naturaliste. Taeuber-Arp fait coexister ces deux indications sur un objet monté sur un pied étroit. La couleur ne décrit pas simplement la forme qu'elle recouvre. Elle la divise selon un autre ordre, maintenant la construction visible à côté de la ressemblance.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "fa7437b0-e92b-595f-b158-8ce0ca5f3784",
+      "title": "Bleu de ciel",
+      "catalogueTitle": "Sky Blue",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1940",
+      "start": 1940,
+      "end": 1940,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fa7437b0-e92b-595f-b158-8ce0ca5f3784-33e5fd1d6b4f1633.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/sky-blue-1940",
+      "credit": "Wassily Kandinsky. Sky Blue. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/sky-blue-1940",
+      "description": "Les intervalles se remarquent autant que les formes flottantes. Chacune possède ses courbes, ses rayures ou ses appendices, mais le bleu continu les réunit dans un même champ. Kandinsky évite de les laisser fusionner en une masse unique. Leur séparation donne à l'œil la place de passer d'un motif intérieur à l'autre sans perdre l'espace environnant.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "d15d6697-18ca-5fd2-8a48-bb6d3b17c4bb",
+      "title": "La Tristesse du roi",
+      "catalogueTitle": "The King's Sadness",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d15d6697-18ca-5fd2-8a48-bb6d3b17c4bb-03db7a921aab0612.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/the-king-s-sadness-1952",
+      "credit": "Henri Matisse. The King's Sadness. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-matisse/the-king-s-sadness-1952",
+      "description": "L'instrument jaune et les formes dispersées semblables à des feuilles apportent de petits mouvements aux grandes plages colorées. Les découpages de Matisse suggèrent corps et spectacle sans en modeler la profondeur. Leurs bords nets rendent les superpositions lisibles malgré l'encombrement. Le titre propose une émotion ; les formes peuvent lui donner un cadre sans imiter l'expression d'un visage triste.",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    }
+  ],
+  "context": {
+    "start": 1892,
+    "end": 1952
+  },
+  "closingSections": [
+    {
+      "title": "Comparer les limites",
+      "paragraphs": [
+        "Rapprochez la table incertaine de Braque et la vue soigneusement encadrée de Balthus, puis revenez au champ bleu ouvert de Kandinsky. Ce sont trois conceptions de l'espace pictural. L'appartenance à une collection ne garantit pas l'exposition actuelle : consultez le programme et les notices du Centre Pompidou avant de vous déplacer."
+      ]
+    }
+  ]
+}

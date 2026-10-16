@@ -17,6 +17,18 @@ test("Account opens account settings and keeps the panel across collection navig
   await account.click();
   await expect(page).toHaveURL(/\/account$/);
   await expect(panel.getByRole("link", { name: "Your account", exact: true })).toHaveAttribute("aria-current", "page");
+  await expect(panel.getByRole("link", { name: "Art history guide", exact: true })).toHaveCount(0);
+  await panel.getByRole("link", { name: "Guides", exact: true }).click();
+  await expect(page).toHaveURL(/\/guides$/);
+  await expect(page.getByRole("heading", { name: "Museum guides", exact: true })).toBeVisible();
+  await expect(panel.getByRole("link", { name: "Guides", exact: true })).toHaveAttribute("aria-current", "page");
+  await page.locator("main h3 a").first().click();
+  await expect(page).toHaveURL(/\/guides\/[^/]+$/);
+  await expect(panel.getByRole("link", { name: "Guides", exact: true })).toHaveAttribute("aria-current", "page");
+  await panel.getByRole("link", { name: "Guides", exact: true }).click();
+  await page.getByRole("link", { name: "Read the guide", exact: true }).click();
+  await expect(page).toHaveURL(/\/art-history-timeline$/);
+  await expect(panel.getByRole("link", { name: "Guides", exact: true })).toHaveAttribute("aria-current", "page");
   await panel.getByRole("link", { name: "Museums", exact: true }).click();
   await expect(page).toHaveURL(/\/museums$/);
   await expect(panel.getByRole("link", { name: "Museums", exact: true })).toHaveAttribute("aria-current", "page");
@@ -43,7 +55,7 @@ test("the account panel is absent from every public explorer tab", async ({ page
   const panel = page.getByRole("complementary", { name: "Account navigation" });
   await expect(panel).toBeVisible();
   await panel.getByRole("button", { name: "Collapse account panel" }).click();
-  for (const name of ["Painters", "Books", "Events", "All", "Guides"]) {
+  for (const name of ["Painters", "Books", "Events", "All"]) {
     await header.getByRole("link", { name, exact: true }).click();
     await expect(panel).toHaveCount(0);
     await expect(page.locator("body")).toHaveCSS("padding-left", "0px");
@@ -83,7 +95,7 @@ for (const width of [1440, 1024, 768]) {
     if (width > 900) expect(await iconPositions()).toEqual(expandedIcons);
     expect((await page.locator("main").boundingBox())!.x).toBeGreaterThanOrEqual(56);
     expect((await panel.boundingBox())!.y).toBe((await header.boundingBox())!.height);
-    for (const name of ["Artists", "Museums", "Art history guide", "About & sources", "Your account"]) {
+    for (const name of ["Artists", "Museums", "Guides", "About", "Your account"]) {
       const link = panel.getByRole("link", { name, exact: true });
       await expect(link).toBeVisible();
       await expect(link).toHaveAttribute("title", name);

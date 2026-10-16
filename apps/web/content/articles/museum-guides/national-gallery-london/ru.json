@@ -1,0 +1,608 @@
+{
+  "selectionNote": "Компания Artline отобрала эти произведения из задокументированных музейных фондов. Данная подборка сформирована независимо от музея; отдельные работы могут находиться на временной выставке в другом месте или быть сняты с экспозиции. Датировка и атрибуция приводятся с учетом оговорок, содержащихся в соответствующих записях.",
+  "labels": {
+    "guides": "Все путеводители",
+    "download": "Скачать PDF",
+    "language": "Язык путеводителя",
+    "translation": "Перевод с помощью ИИ",
+    "explore": "Эта подборка в Artline",
+    "contextNote": "Посмотрите выбранные работы рядом с книгами и событиями их времени или сравните годы жизни художников. Книги и события дают исторический контекст, но не доказывают прямого влияния. Работы без подтверждённой даты остаются в путеводителе.",
+    "all": "Произведения искусства в контексте",
+    "allHint": "Избранные работы, связанные с книгами и историей их эпохи.",
+    "painters": "Кто когда жил?",
+    "paintersHint": "Узнайте, когда жили эти художники и чьи жизненные пути пересекались.",
+    "events": "Исторические события",
+    "eventsHint": "События за период, охваченный путеводителем",
+    "books": "Хронология книг",
+    "booksHint": "Значимые книги того же периода",
+    "contents": "Произведения",
+    "artworks": "Выбранные произведения",
+    "importance": "Почему это важно",
+    "artwork": "Открыть произведение",
+    "source": "Страница произведения в источнике",
+    "inventory": "Инвентарный номер",
+    "reading": "Что почитать",
+    "visit": "Перед посещением",
+    "website": "Сайт музея",
+    "officialGuide": "Материалы музея",
+    "updated": "Дата проверки источников и информации для посетителей"
+  },
+  "slug": "national-gallery-london",
+  "museum": "National Gallery",
+  "city": "Лондон",
+  "country": "Соединенное Королевство",
+  "title": "Национальная галерея в Лондоне: шедевры",
+  "subtitle": "Двадцать работ, которые приближают сцену, удерживают её вдали или делают точку зрения неустойчивой.",
+  "introduction": "Зеркало расширяет комнату в «Портрете четы Арнольфини». В «Послах» форма на полу становится черепом только под косым углом. В других картинах корзина придвинута к краю стола, лошадь почти лишена фона, а локомотив наступает по мосту, который погода грозит скрыть. Эти изображения отводят зрителю неодинаковое место.\n\nПодборка следует за таким различием. Одни работы дают устойчивую позицию для взгляда, другие её осложняют. Задача не в том, чтобы найти тайный приём в каждой картине, а в том, чтобы заметить, как пространство влияет на доступную встречу.",
+  "visitNote": "Для поиска произведений используйте актуальные планы этажей Национальной галереи и страницы, посвященные отдельным картинам. Порядок изложения материала не привязан к номерам залов.",
+  "locale": "ru",
+  "website": "https://www.nationalgallery.org.uk",
+  "officialGuide": "https://www.nationalgallery.org.uk",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Читать бесплатно · Английский",
+      "note": "В «Трактате о живописи» Леонардо рассматриваются свет, расстояние, жест и наблюдение. Эти темы служат историческим дополнением к различным способам построения пространства, представленным в данной подборке."
+    }
+  ],
+  "works": [
+    {
+      "id": "02240c7c-ef8f-437e-8e1c-227776c7b163",
+      "title": "Портрет четы Арнольфини",
+      "catalogueTitle": "The Arnolfini Portrait",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1434",
+      "start": 1434,
+      "end": 1434,
+      "medium": "Масло, дерево",
+      "accession": "NG186",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/02240c7c-ef8f-437e-8e1c-227776c7b163-6d9b81d01184aed8.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg",
+      "credit": "Jan van Eyck. The Arnolfini Portrait. Image credit: Jan van Eyck; Source credit: Web site of National Gallery, London. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0D8P-0001-0000-0000",
+      "description": "Маленькое зеркало продолжает комнату за пределами прямо показанного, добавляя фигуры позади главной пары. Деталь меняет объём зрительского знания. Тщательная живопись ван Эйка не просто заполняет уже завершённую сцену: она даёт второй вид, из-за которого первый перестаёт быть самодостаточным.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "0daff2b3-c481-4332-8c9a-e2a1de37170b",
+      "title": "Послы",
+      "catalogueTitle": "The Ambassadors",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "1533",
+      "start": 1533,
+      "end": 1533,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/0daff2b3-c481-4332-8c9a-e2a1de37170b-b70439bb8816f940.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/the-ambassadors-1533",
+      "credit": "Hans Holbein the Younger. The Ambassadors. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.ng.ac.uk/0CWR-0001-0000-0000.html",
+      "description": "Инструменты и книги на полках видны ясно, но светлая форма у ног мужчин требует другой точки обзора. Под косым углом она становится черепом. Гольбейн делает напоминание о смерти несовместимым с прямым взглядом на статус и учёность: зритель не может одновременно одинаково ясно увидеть все части портрета.",
+      "importance": "",
+      "museum": "National Gallery",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "c353a701-62b5-584a-b29d-ff3c797bf47b",
+      "title": "Последний рейс корабля «Отважный»",
+      "catalogueTitle": "The Fighting Temeraire tugged to her last berth to be broken up",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1839",
+      "start": 1839,
+      "end": 1839,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c353a701-62b5-584a-b29d-ff3c797bf47b-30fadbfd441fb023.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/the-fighting-temeraire-tugged-to-her-last-berth-to-be-broken-up-1839",
+      "credit": "J. M. W. Turner. The Fighting Temeraire tugged to her last berth to be broken up. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-turner/the-fighting-temeraire-tugged-to-her-last-berth-to-be-broken-up-1839",
+      "description": "Светлый парусник и тёмный дымящий буксир существуют в очень разных условиях освещения. Буксир выполняет практическое действие, тогда как большой корабль кажется менее плотным на фоне неба. Закат даёт ещё одну широкую область света на воде. Контраст между судами становится виден прежде, чем превращается в рассказ о переменах.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "600125fc-8c4d-5bc3-af54-835df7a390b4",
+      "title": "Подсолнухи",
+      "catalogueTitle": "Still Life - Vase with Fifteen Sunflowers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/600125fc-8c4d-5bc3-af54-835df7a390b4-84fe35aa725b5638.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1",
+      "credit": "Still Life - Vase with Fifteen Sunflowers. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1",
+      "description": "Некоторые головки уже потеряли раскрытую форму, которую другие сохраняют. В вазе, фоне и лепестках жёлтый меняется достаточно, чтобы различить эти состояния без широкой палитры. Поэтому букет не является рядом равнозначных цветов. Поникшие головки и обнажённые сердцевины вводят различие и длительность в ограниченное цветовое построение.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "f2f0320a-0190-4380-891a-1dc33336f567",
+      "title": "Вакх и Ариадна",
+      "catalogueTitle": "Bacchus and Ariadne",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1520-3",
+      "start": 1520,
+      "end": 1523,
+      "medium": "Холст, масло",
+      "accession": "NG35",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/f2f0320a-0190-4380-891a-1dc33336f567-eed9b9f63aba00d4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Titian_Bacchus_and_Ariadne.jpg",
+      "credit": "Titian. Bacchus and Ariadne. Image credit: Titian; Source credit: National Gallery, London - online catalogue .. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0F6J-0001-0000-0000",
+      "description": "Ноги Вакха отрываются от земли, пока Ариадна поворачивается между его приближением и удаляющимся кораблём. Просвет под телом делает встречу зависшим мгновением, а не устойчивой парой поз. Летящий плащ продолжает прыжок по небу; другие направления движения мешают этому мгновению принадлежать одному Вакху.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "b6b77228-2a3f-4c26-a3c6-ee0aea736ede",
+      "title": "Ужин в Эммаусе",
+      "catalogueTitle": "The Supper at Emmaus",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1601",
+      "start": 1601,
+      "end": 1601,
+      "medium": "Холст, масло",
+      "accession": "NG172",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/b6b77228-2a3f-4c26-a3c6-ee0aea736ede-074c45ffaafd5349.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Supper_at_Emmaus-Caravaggio_(1601).jpg",
+      "credit": "Caravaggio. The Supper at Emmaus. Image credit: Caravaggio; Source credit: Self-scanned. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0D1M-0001-0000-0000",
+      "description": "Вытянутая рука и корзина возле края стола выдвигают сцену к зрителю. Еда остаётся обыденной и осязаемой, но реакции фигур меняют происходящее за столом. Узнавание получает телесную форму: расположение рук отмечает событие, которое нельзя объяснить одним натюрмортом.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "d7336790-47cf-450c-9d87-c095c0e0a4fb",
+      "title": "Телега для сена",
+      "catalogueTitle": "The Hay Wain",
+      "artist": "John Constable",
+      "artists": [
+        {
+          "name": "John Constable",
+          "role": "primary",
+          "slug": "john-constable-q159297"
+        }
+      ],
+      "date": "1821",
+      "start": 1821,
+      "end": 1821,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/d7336790-47cf-450c-9d87-c095c0e0a4fb-361ccfa7017f9325.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-constable/the-hay-wain-1821",
+      "credit": "John Constable. The Hay Wain. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.ng.ac.uk/0FV6-0001-0000-0000.html",
+      "description": "Повозка принадлежит мелкой воде и труду окружающей земли, а не стоит перед отдельным пейзажем. Деревья укрывают сторону с домом, делая дальнее поле более открытым. Констебл соединяет пространства светом и проходами, сохраняя одновременно возможность укрытия и даль.",
+      "importance": "",
+      "museum": "National Gallery",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "f6c6897f-27bb-57b7-97ed-7126600c3c06",
+      "title": "Крещение Христа",
+      "catalogueTitle": "Baptism of Christ",
+      "artist": "Piero della Francesca",
+      "artists": [
+        {
+          "name": "Piero della Francesca",
+          "role": "primary",
+          "slug": "piero-della-francesca-q5822"
+        }
+      ],
+      "date": "probably about 1437–1445",
+      "start": 1437,
+      "end": 1445,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f6c6897f-27bb-57b7-97ed-7126600c3c06-71d20f7a8bb154ef.jpg",
+      "imageSource": "https://www.wikiart.org/en/piero-della-francesca/baptism-of-christ-1450",
+      "credit": "Piero della Francesca. Baptism of Christ. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piero-della-francesca/baptism-of-christ-1450",
+      "description": "Небольшой жест Иоанна, льющего воду, помещён в особенно устойчивое построение. Прямое тело Христа и соседний светлый ствол дают параллельные формы, над ними раскрывает крылья голубь. Неподвижность не означает отсутствия события: она позволяет скромному жесту достаточно ясно нести весь обряд.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "61d4b7b7-0300-5af0-ac61-f5b7bee0a84d",
+      "title": "Уистлджакет",
+      "catalogueTitle": "Whistlejacket",
+      "artist": "George Stubbs",
+      "artists": [
+        {
+          "name": "George Stubbs",
+          "role": "primary",
+          "slug": "george-stubbs-q381728"
+        }
+      ],
+      "date": "1762",
+      "start": 1762,
+      "end": 1762,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/61d4b7b7-0300-5af0-ac61-f5b7bee0a84d-ba723f4ff2582399.jpg",
+      "imageSource": "https://www.wikiart.org/en/george-stubbs/whistlejacket",
+      "credit": "George Stubbs. Whistlejacket. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/george-stubbs/whistlejacket",
+      "description": "Без всадника и подробно описанной местности вставшая на дыбы лошадь должна удержать всё изображение. Поднятые передние ноги, повёрнутая голова и хвост распределяют движение по телу. Почти пустой фон обостряет эти связи. Стаббс показывает животное с собственным обликом и равновесием, а не опору для человеческой модели.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "f1ddf948-fa0e-4687-a351-876d05aa7b92",
+      "title": "Казнь леди Джейн Грей",
+      "catalogueTitle": "The Execution of Lady Jane Grey",
+      "artist": "Paul Delaroche",
+      "artists": [
+        {
+          "name": "Paul Delaroche",
+          "role": "primary",
+          "slug": "paul-delaroche-q322582"
+        }
+      ],
+      "date": "1833",
+      "start": 1833,
+      "end": 1833,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b01a56cf-e4fd-51c3-8ad3-7b43893eb298-8acffd3ed9821c80.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-delaroche/the-execution-of-lady-jane-grey-1833",
+      "credit": "Paul Delaroche. The Execution of Lady Jane Grey. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.ng.ac.uk/0FSG-0001-0000-0000.html",
+      "description": "Джейн не видит плаху, к которой тянется. Помощь сопровождающего делает зависимость конкретным действием среди горя и ожидания. Белое платье сохраняет уязвимость на виду. Деларош сужает историческую катастрофу до трудности найти место, где должно расположиться тело.",
+      "importance": "",
+      "museum": "National Gallery",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "6748b952-f9a2-4c4d-98e3-8968feec1c2a",
+      "title": "Девушка у вирджинала",
+      "catalogueTitle": "A Young Woman standing at a Virginal",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "около 1670–1672 гг.",
+      "start": 1670,
+      "end": 1672,
+      "medium": "Холст, масло",
+      "accession": "NG1383",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/6748b952-f9a2-4c4d-98e3-8968feec1c2a-bd6a72e0ec58c5d9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Lady_Standing_at_a_Virginal_-_National_Gallery,_London.jpg",
+      "credit": "Johannes Vermeer. A Young Woman standing at a Virginal. Image credit: Johannes Vermeer; Source credit: www.nationalgallery.org.uk : Home : Info. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0CVV-0001-0000-0000",
+      "description": "Женщина отворачивается от клавиш к зрителю. Вокруг небольшого движения плитки пола, картины и инструмент сохраняют более правильную последовательность прямоугольников. Контраст придаёт повороту силу. Комнате не требуется абсолютная неподвижность, чтобы лёгкое прерывание стало её самым заметным событием.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "80bfd722-c3fe-4456-ab2a-d1c25913e813",
+      "title": "Дождь, пар и скорость. Большая Западная железная дорога",
+      "catalogueTitle": "Rain, Steam, and Speed - The Great Western Railway",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1844",
+      "start": 1844,
+      "end": 1844,
+      "medium": "Холст, масло",
+      "accession": "NG538",
+      "image": "https://artlines.org/assets/artworks/wikiart/80bfd722-c3fe-4456-ab2a-d1c25913e813-8fe5cbca285a495b.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/rain-steam-and-speed-the-great-western-railway",
+      "credit": "J. M. W. Turner. Rain, Steam, and Speed - The Great Western Railway. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nationalgallery.org.uk/data/0CV2-0001-0000-0000",
+      "description": "Мост задаёт локомотиву ясное направление, пока дождь и пар делают окружающую землю менее определённой. Тёмный перед двигателя становится приближающейся точкой внутри этой неустойчивости. Транспорт и погода вместе воздействуют на зрение: путь ещё можно проследить, хотя его окружение теряет чёткие границы.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "2eb09a2c-1f4c-5f3f-9b5e-2e8983ea5bbb",
+      "title": "Кристина Датская",
+      "catalogueTitle": "Christina of Denmark",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "ок. 1538 г.",
+      "start": 1538,
+      "end": 1538,
+      "medium": "Масло, дерево",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2eb09a2c-1f4c-5f3f-9b5e-2e8983ea5bbb-3fa6979dcd5a14cc.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/christina-of-denmark",
+      "credit": "Hans Holbein the Younger. Christina of Denmark. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hans-holbein-the-younger/christina-of-denmark",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hans-holbein-the-younger/christina-of-denmark",
+      "description": "Чёрное платье занимает большую часть фигуры; лицо и соединённые руки дают немногие светлые области. Небольшие различия внутри тёмной одежды не позволяют ей стать плоским вырезанным силуэтом. Гольбейн удерживает присутствие в полный рост без множества акцентов, поэтому положение рук приобретает особое значение.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "d17aac4f-899b-5a4b-9373-0abac41927a5",
+      "title": "Христос в доме Марфы и Марии",
+      "catalogueTitle": "Christ in the House of Mary and Martha",
+      "artist": "Diego Velázquez",
+      "artists": [
+        {
+          "name": "Diego Velázquez",
+          "role": "primary",
+          "slug": "diego-velazquez-q297"
+        }
+      ],
+      "date": "ок. 1620 г.",
+      "start": 1620,
+      "end": 1620,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/d17aac4f-899b-5a4b-9373-0abac41927a5-e1355a55ba8b8a77.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-velazquez/christ-in-the-house-of-mary-and-martha",
+      "credit": "Diego Velázquez. Christ in the House of Mary and Martha. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/diego-velazquez/christ-in-the-house-of-mary-and-martha",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-velazquez/christ-in-the-house-of-mary-and-martha",
+      "description": "Кухня заполняет передний план едой, сосудами и работой, а сцена с Христом появляется в меньшем проёме позади. Их пространственное отношение не вполне однозначно. Эта неопределённость важна: зрителю приходится рассматривать, как труд, занимающий ближайшее пространство, соотносится с наставлением дальше.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "6ac03396-f371-5926-afc6-ba9e041d85b3",
+      "title": "Аллегория любви: уважение",
+      "catalogueTitle": "Allegory of Love: Respect",
+      "artist": "Paolo Veronese",
+      "artists": [
+        {
+          "name": "Paolo Veronese",
+          "role": "primary",
+          "slug": "paolo-veronese-q9440"
+        }
+      ],
+      "date": "ок. 1575 г.",
+      "start": 1575,
+      "end": 1575,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/6ac03396-f371-5926-afc6-ba9e041d85b3-d7e4f563f893205c.jpg",
+      "imageSource": "https://www.wikiart.org/en/paolo-veronese/respect",
+      "credit": "Paolo Veronese. Allegory of Love: Respect. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/paolo-veronese/respect",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paolo-veronese/respect",
+      "description": "Поворот вооружённого мужчины и ребёнок под его вытянутой рукой осложняют простое приближение к лежащей женщине. Аллегорическое название предлагает нравственное толкование, но движение стоит рассмотреть до окончательного вывода. Сдержанность должна проявиться через тела, способные продолжить действие в ином направлении.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "42a34ab2-3d3e-5e7c-903f-9f2e8abc08ac",
+      "title": "Вакханалия перед статуей Пана",
+      "catalogueTitle": "Bacchanal Before a Statue of Pan",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1631 - 1633",
+      "start": 1631,
+      "end": 1633,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/42a34ab2-3d3e-5e7c-903f-9f2e8abc08ac-3d2d9f5ff228093b.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/bacchanal-before-a-statue-of-pan-1633",
+      "credit": "Nicolas Poussin. Bacchanal Before a Statue of Pan. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/bacchanal-before-a-statue-of-pan-1633",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/bacchanal-before-a-statue-of-pan-1633",
+      "description": "Соединённые танцующие образуют непрерывное действие на поляне. Поднятые руки и ткань продолжают движение за пределами отдельного тела, а соседние фигуры по-разному относятся к танцу. Пуссен делает группу понятной, не сводя оживление к набору несвязанных жестов.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "2cd235b5-ba9b-509a-bb6f-4c3a6a718eca",
+      "title": "Берега Сены в Пор-Марли",
+      "catalogueTitle": "Banks of the Seine at Port Marly",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/2cd235b5-ba9b-509a-bb6f-4c3a6a718eca-2b022e90870fe37d.jpg",
+      "imageSource": "https://www.wikiart.org/en/alfred-sisley/banks-of-the-seine-at-port-marly-1875",
+      "credit": "Alfred Sisley. Banks of the Seine at Port Marly. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/alfred-sisley/banks-of-the-seine-at-port-marly-1875",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/alfred-sisley/banks-of-the-seine-at-port-marly-1875",
+      "description": "Деревья и светлые здания обозначают берег устойчивее, чем их разбитые отражения. Река повторяет сцену, не создавая столь же твёрдой версии. Сислей позволяет знакомому месту предстать сразу в двух состояниях: различие между прочным краем и движущейся поверхностью становится негромким предметом картины.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "5e29fdc7-990f-53a5-af8b-8941f25a0029",
+      "title": "Строительство Троянского коня",
+      "catalogueTitle": "Building of the Trojan Horse",
+      "artist": "Giovanni Domenico Tiepolo",
+      "artists": [
+        {
+          "name": "Giovanni Domenico Tiepolo",
+          "role": "primary",
+          "slug": "giovanni-domenico-tiepolo-q435316"
+        }
+      ],
+      "date": "1760",
+      "start": 1760,
+      "end": 1760,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/5e29fdc7-990f-53a5-af8b-8941f25a0029-f2a2a4431f6fae9a.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-domenico-tiepolo/building-of-the-troyan-horse-1760",
+      "credit": "Giovanni Domenico Tiepolo. Building of the Trojan Horse. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/giovanni-domenico-tiepolo/building-of-the-troyan-horse-1760",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nationalgallery.org.uk/paintings/giovanni-domenico-tiepolo-the-building-of-the-trojan-horse",
+      "description": "Конь принадлежит легенде, но людям вокруг предстоит практическая задача: построить нечто гораздо крупнее себя. Инструменты, лестницы и шесты показывают согласованный труд. Тьеполо переносит внимание со знаменитой хитрости на её изготовление, придавая необыкновенному предмету масштаб работы, которую нужно выполнить.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "f81b03b3-cd3b-578b-8aad-4e4fe8db60bf",
+      "title": "Голландские суда в шторм",
+      "catalogueTitle": "Dutch Boats in a Gale",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1801",
+      "start": 1801,
+      "end": 1801,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/f81b03b3-cd3b-578b-8aad-4e4fe8db60bf-336d747d1941d067.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/dutch-boats-in-a-gale",
+      "credit": "Dutch Boats in a Gale. WikiArt; J. M. W. Turner. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-turner/dutch-boats-in-a-gale",
+      "description": "Яркий парус резко наклонён на фоне тёмных волн и несёт значительную часть опасности без центрального человеческого лица. Более крупное судно остаётся вдали. Низкая точка обзора почти не отделяет ближние лодки от окружающей воды: равновесие становится непосредственной проблемой, а не далёким зрелищем.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "7c39a2b4-a611-53a1-a0e6-cc649dfd3abc",
+      "title": "Посещение дожем церкви и Скуолы Сан-Рокко",
+      "catalogueTitle": "Feast of San Rocco (The Doge Visiting the Church and Scuola di S. Rocco)",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "ок. 1735 г.",
+      "start": 1735,
+      "end": 1735,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/7c39a2b4-a611-53a1-a0e6-cc649dfd3abc-df67c305a0e10e96.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/feast-of-san-rocco-the-doge-visiting-the-church-and-scuola-di-s-rocco",
+      "credit": "Canaletto. Feast of San Rocco (The Doge Visiting the Church and Scuola di S. Rocco). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/feast-of-san-rocco-the-doge-visiting-the-church-and-scuola-di-s-rocco",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/feast-of-san-rocco-the-doge-visiting-the-church-and-scuola-di-s-rocco",
+      "description": "Временные ткани и выставленные картины добавляют зданию новые поверхности на время церемонии. Фасад даёт размеренную структуру, на фоне которой различимы небольшие нерегулярные движения толпы. Каналетто показывает публичное событие через изменение места: городская архитектура вмещает то, что будет здесь не всегда.",
+      "importance": "",
+      "museum": "National Gallery"
+    }
+  ],
+  "context": {
+    "start": 1434,
+    "end": 1888
+  },
+  "closingSections": [
+    {
+      "title": "Попробуйте две разные позиции",
+      "paragraphs": [
+        "Сравните намеренную смену точки зрения у Гольбейна с физической близостью ужина Караваджо, затем с пустым окружением Уистлджакета. Каждая работа устанавливает иное отношение со зрителем. Это последовательность чтения, а не пешеходный маршрут; доступность произведений во время визита уточняйте по текущим записям Национальной галереи."
+      ]
+    }
+  ]
+}

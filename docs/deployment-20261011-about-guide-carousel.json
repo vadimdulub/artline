@@ -1,0 +1,79 @@
+{
+  "verifiedAt": "2026-10-11T18:56:14.850713+00:00",
+  "site": "https://artlines.org/about",
+  "status": "deployed_and_verified",
+  "change": "Replace the full museum guide grid with a bounded six-guide carousel, preserving the full guide directory link and adding arrow, keyboard and native touch navigation.",
+  "deployment": {
+    "buildId": "c575f9be-a31d-4e59-a519-0eccfe31b922",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:about-carousel-20261011-v1",
+    "files": {
+      "app/about/page.tsx": "b3d4845df30714fe4cd3c061ce6c54d8d838f05788d85d2a7aab290c112fd85d",
+      "app/about/about.module.css": "5a56803f35853940ba6cafadbd7f4ae2562161022aa12db3197f97c847f4bcac",
+      "app/about/about-content.ts": "4ef75f47bb9a1e762f6f9c9f6c4780c87963fb598923b42eb49d4ba90baa877e"
+    },
+    "preimages": {
+      "app/about/page.tsx": "da65ebc375c58472350b5058ca3ff63c07d51c054b7ce3179d58ab740f659b59",
+      "app/about/about.module.css": "7da643e6fee158c8cf860d49e00e73170c94a44b26132a555f21908eec02969f",
+      "app/about/about-content.ts": "54fa7d79d9ed6443b9452b9e6fde7967eb618c8157610930f131945ae9472fb7"
+    },
+    "overlaySHA256": "fea6da8008ad1bec4bf92653dd6697f4dbc8a42dca235a6efc79c434f87a6d9a",
+    "overlayURI": "gs://artline-508319-build-source/about-guide-carousel-20261011/carousel-fea6da8008ad1bec.tar.xz",
+    "overlayGeneration": "1791744266045816",
+    "baselineBuildId": "f58a1c5f-cab6-4022-8bcd-601d49014a85",
+    "baselineRevision": "artline-web-named-back-1011-v1",
+    "baselineSource": {
+      "storageSource": {
+        "bucket": "artline-508319-build-source",
+        "generation": "1791660631448965",
+        "object": "source/1791660403.355356-c78ccaf5cf4745558df5aa0dbd3af7d8.tgz"
+      }
+    },
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:bed03d474593af539b0d0184496111ae79fe16e4931f67a354f359a5c880c2a9",
+    "revision": "artline-web-about-carousel-1011-v1",
+    "candidateURL": "https://about-carousel-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-named-back-1011-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "verification": {
+    "candidate": {
+      "browserTestsPassed": 7,
+      "stats": {
+        "startTime": "2026-10-11T18:54:16.918Z",
+        "duration": 16672.391,
+        "expected": 7,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "httpRoutesPassed": 8,
+      "guideDirectoryCount": 89,
+      "pdfHashesPreserved": true,
+      "visualReview": "Desktop and phone screenshots inspected; carousel, typography, images and surrounding sections render correctly."
+    },
+    "production": {
+      "browserTestsPassed": 7,
+      "stats": {
+        "startTime": "2026-10-11T18:55:19.524Z",
+        "duration": 16641.844,
+        "expected": 7,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "httpRoutesPassed": 8,
+      "guideDirectoryCount": 89,
+      "pdfHashesPreserved": true,
+      "visualReview": "Desktop and phone screenshots inspected; carousel, typography, images and surrounding sections render correctly."
+    }
+  },
+  "releaseErrorLogEntries": 0,
+  "source": "Exact generation-pinned source chain from the deployed named-navigation release, plus three hash-verified About files. Existing 89 guides, PDFs, assets and runtime settings preserved.",
+  "workspaceValidation": "Targeted ESLint passed. A repeat full-workspace TypeScript check encountered concurrent unrelated sitemap-test errors; those files were excluded from this release. The exact Cloud Build release passed compilation and TypeScript.",
+  "catalogueWrites": false,
+  "realLocalDatabaseWrites": false,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/about-guide-carousel-20261011"
+}

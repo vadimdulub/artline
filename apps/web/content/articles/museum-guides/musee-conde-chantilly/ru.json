@@ -1,0 +1,599 @@
+{
+  "selectionNote": "Компания Artline отобрала эти произведения из задокументированных музейных фондов. Данная подборка сформирована независимо от музея; отдельные работы могут находиться на временной выставке в другом месте или быть сняты с экспозиции. Датировка и атрибуция приводятся с учетом оговорок, содержащихся в соответствующих записях.",
+  "labels": {
+    "guides": "Все путеводители",
+    "download": "Скачать PDF",
+    "language": "Язык путеводителя",
+    "translation": "Перевод с помощью ИИ",
+    "explore": "Эта подборка в Artline",
+    "contextNote": "Посмотрите выбранные работы рядом с книгами и событиями их времени или сравните годы жизни художников. Книги и события дают исторический контекст, но не доказывают прямого влияния. Работы без подтверждённой даты остаются в путеводителе.",
+    "all": "Произведения искусства в контексте",
+    "allHint": "Избранные работы, связанные с книгами и историей их эпохи.",
+    "painters": "Кто когда жил?",
+    "paintersHint": "Узнайте, когда жили эти художники и чьи жизненные пути пересекались.",
+    "events": "Исторические события",
+    "eventsHint": "События за период, охваченный путеводителем",
+    "books": "Хронология книг",
+    "booksHint": "Значимые книги того же периода",
+    "contents": "Произведения",
+    "artworks": "Выбранные произведения",
+    "importance": "Почему это важно",
+    "artwork": "Открыть произведение",
+    "source": "Страница произведения в источнике",
+    "inventory": "Инвентарный номер",
+    "reading": "Что почитать",
+    "visit": "Перед посещением",
+    "website": "Сайт музея",
+    "officialGuide": "Материалы музея",
+    "updated": "Дата проверки источников и информации для посетителей"
+  },
+  "slug": "musee-conde-chantilly",
+  "museum": "Musée Condé",
+  "city": "Шантийи",
+  "country": "Франция",
+  "title": "Музей Конде: шедевры",
+  "subtitle": "Двадцать картин музея Конде, где предмет в руке может изменить смысл фигуры.",
+  "introduction": "Мария-Антуанетта держит атрибуты Гебы, сохраняя облик модели придворного портрета. В другой работе подборки женщине, традиционно называемой Симонеттой Веспуччи, дана змея, но не вполне достоверное имя. Сходство может быть конкретным, тогда как личность или приписанная ей роль остаётся сложным вопросом.\n\nКартины музея Конде показывают, почему эти различия стоит сохранять. Их персонажи выступают святыми, мифологическими существами, военачальниками, музыкантами и названными по имени людьми. Иногда для организации изображения достаточно небольшого жеста: поднять покрывало, не отдать лук, протянуть руку. Двадцать разборов следуют таким действиям, сохраняя разницу между оригинальной картиной, эскизом и неуверенным определением модели.",
+  "visitNote": "Информацию о доступе в залы и временных изменениях в работе музея можно найти на странице для посетителей замка Шантийи. Данный путеводитель содержит сведения о произведениях из коллекции, однако не гарантирует, что все они будут представлены в экспозиции.",
+  "locale": "ru",
+  "website": "https://pop.culture.gouv.fr/notice/museo/M5052",
+  "officialGuide": "https://pop.culture.gouv.fr/notice/museo/M5052",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Читать бесплатно · Английский",
+      "note": "В английском переводе «Трактата о живописи» Леонардо рассматриваются вопросы жеста, света и наблюдения за человеческими фигурами. Эти темы позволяют по-новому взглянуть на работы Рафаэля, Пьеро ди Козимо и Энгра в историческом контексте, не подразумевая при этом, что каждый из этих мастеров непременно следовал данному трактату."
+    }
+  ],
+  "works": [
+    {
+      "id": "d2a423be-93cb-4c0f-a19f-e906e12adc42",
+      "title": "Мадонна Лорето",
+      "catalogueTitle": "LA VIERGE DE LORETTE",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "c. 1509–1510",
+      "start": 1509,
+      "end": 1510,
+      "medium": "Масло, тополь",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/d2a423be-93cb-4c0f-a19f-e906e12adc42-7ccfe545aaed3cc7.jpg",
+      "imageSource": "https://www.wikiart.org/en/raphael/the-madonna-of-loreto-1509",
+      "credit": "Raphael. LA VIERGE DE LORETTE. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077327",
+      "description": "Покрывало связывает два движения: Мария осторожно поднимает ткань, младенец тянется к ней руками. Иосиф остаётся дальше, в тени, наблюдая действие, которое сближает передние фигуры. Святое семейство организовано вокруг этой небольшой материальной связи. Почти прозрачная ткань оказывается самым существенным связующим звеном группы.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "ebdcb49a-07d4-5159-bd84-aea90c03f2ca",
+      "title": "Портрет женщины, предположительно Симонетты Веспуччи",
+      "catalogueTitle": "Portrait of a Woman, said to be of Simonetta Vespucci",
+      "artist": "Piero di Cosimo",
+      "artists": [
+        {
+          "name": "Piero di Cosimo",
+          "role": "primary",
+          "slug": "piero-di-cosimo-q280851"
+        }
+      ],
+      "date": "1490",
+      "start": 1490,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ebdcb49a-07d4-5159-bd84-aea90c03f2ca-1ed13278798e82fb.jpg",
+      "imageSource": "https://www.wikiart.org/en/piero-di-cosimo/portrait-of-simonetta-vespucci-as-cleopatra-1490",
+      "credit": "Piero di Cosimo. Portrait of a Woman, said to be of Simonetta Vespucci. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piero-di-cosimo/portrait-of-simonetta-vespucci-as-cleopatra-1490",
+      "description": "Точный профиль словно обещает устойчивую определённость модели, но змея и тёмные облака её усложняют. Традиционное имя Симонетты Веспуччи остаётся предположением; атрибуты не должны превращать его в достоверность. Портретная конкретность и неуверенность в том, кто изображён, одинаково важны при рассмотрении этой работы.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "95287b23-d8ea-57bc-9631-5ce83fa17f3d",
+      "title": "Автопортрет в возрасте двадцати четырех лет",
+      "catalogueTitle": "Self-Portrait at the Age of 24",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1804",
+      "start": 1804,
+      "end": 1804,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/95287b23-d8ea-57bc-9631-5ce83fa17f3d-5ffbfe642b9ec275.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/self-portrait-at-the-age-of-24",
+      "credit": "Jean-Auguste-Dominique Ingres. Self-Portrait at the Age of 24. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-auguste-dominique-ingres/self-portrait-at-the-age-of-24",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/self-portrait-at-the-age-of-24",
+      "description": "Художник отворачивается от своего занятия и встречает взгляд зрителя, соединяя работу и самопредставление в одной позе. Светлая рубашка отделяет верхнюю часть тела от тёмного пальто. Пауза сконструирована внутри автопортрета: тот, кто словно бы прервал занятие, сам же устроил эту встречу.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "0359471e-cabd-59cc-866c-ace1d7ab7c13",
+      "title": "Мадам Антония де Восе, урождённая де Ниттис",
+      "catalogueTitle": "Portrait of Madame Antonia de Vaucay nee de Nittis",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1807",
+      "start": 1807,
+      "end": 1807,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/0359471e-cabd-59cc-866c-ace1d7ab7c13-e650837b8e12b303.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-antonia-de-vaucay-nee-de-nittis-1807",
+      "credit": "Jean-Auguste-Dominique Ingres. Portrait of Madame Antonia de Vaucay nee de Nittis. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-antonia-de-vaucay-nee-de-nittis-1807",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-antonia-de-vaucay-nee-de-nittis-1807",
+      "description": "Соединённые руки покоятся внутри более широкого обрамления из платья, шали и кресла. Красная мебель чётче очерчивает сидящее тело, а руки создают спокойный внутренний центр. Энгр связывает портрет вложенными друг в друга изгибами: в строгой композиции даже небольшая перемена лица или позы становится значимой.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "3e17a41c-255e-49d9-8f63-f5db1984ce9e",
+      "title": "Венера Анадиомена",
+      "catalogueTitle": "VENUS ANADYOMENE",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1807-1848",
+      "start": 1807,
+      "end": 1848,
+      "medium": "Холст, масло",
+      "accession": "PE 433",
+      "image": "https://artlines.org/assets/artworks/wikiart/3e17a41c-255e-49d9-8f63-f5db1984ce9e-43267dfbfd0080d2.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/venus-anadyomene",
+      "credit": "Jean-Auguste-Dominique Ingres. VENUS ANADYOMENE. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076461",
+      "description": "Длинное светлое тело сохраняет неподвижную позу над гораздо меньшими крылатыми фигурами. Важна и длительность создания картины: Энгр начал замысел в первые римские годы и завершил его в 1848 году. Кажущаяся неподвижность — результат долгой работы, а не свидетельство того, что весь образ возник сразу.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "28b01ddb-e01d-4e27-a91b-895480afd17f",
+      "title": "Пять танцующих ангелов",
+      "catalogueTitle": "CINQ ANGES DANSANT",
+      "artist": "Giovanni di Paolo",
+      "artists": [
+        {
+          "name": "Giovanni di Paolo",
+          "role": "primary",
+          "slug": "giovanni-di-paolo-q946420"
+        }
+      ],
+      "date": "ок. 1436 г.",
+      "start": 1436,
+      "end": 1436,
+      "medium": "Масло и золото на древесине хвойных пород",
+      "accession": "PE 9",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/28b01ddb-e01d-4e27-a91b-895480afd17f-fc53f8e585acafab.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Angels_dancing_sun_Giovanni_di_Paolo_Cond%C3%A9_Chantilly.jpg",
+      "credit": "Giovanni di Paolo. CINQ ANGES DANSANT. Image credit: Giovanni di Paolo; Own work , Jebulon , 2011-07-03. https://commons.wikimedia.org/wiki/File:Angels_dancing_sun_Giovanni_di_Paolo_Cond%C3%A9_Chantilly.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077298",
+      "description": "Соединённые руки непрерывно связывают пять тел, в том числе повёрнутые спиной к зрителю. Складки и смена поз передают движение на золотом фоне без глубокого пространства, куда можно было бы уйти. Танец становится понятным благодаря повторяющимся поворотам внутри самого круга.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "4cd00c09-dea2-5ebc-8572-ab0999f3d272",
+      "title": "Исполнитель серенад",
+      "catalogueTitle": "The Serenader",
+      "artist": "Jean-Antoine Watteau",
+      "artists": [
+        {
+          "name": "Jean-Antoine Watteau",
+          "role": "primary",
+          "slug": "jean-antoine-watteau-q183221"
+        }
+      ],
+      "date": "1715",
+      "start": 1715,
+      "end": 1715,
+      "medium": "Масло, дерево",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/4cd00c09-dea2-5ebc-8572-ab0999f3d272-9a1934e5751533ed.jpg",
+      "imageSource": "https://www.wikiart.org/en/antoine-watteau/the-serenader",
+      "credit": "The Serenader. WikiArt; Jean-Antoine Watteau. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/antoine-watteau/the-serenader",
+      "description": "Скрещённые ноги и диагональ инструмента придают музыканту позу, словно уже определённую исполнением. Костюм обрамляет лицо, но действие не держится на нём одном. Ватто включает в музыку всё тело, позволяя беззвучной картине передать часть игры через стойку и направление движения.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "593b7ec6-8da1-4567-a180-f2d695926ac2",
+      "title": "Разоруженная любовь",
+      "catalogueTitle": "L'AMOUR DESARME",
+      "artist": "Jean-Antoine Watteau",
+      "artists": [
+        {
+          "name": "Jean-Antoine Watteau",
+          "role": "primary",
+          "slug": "jean-antoine-watteau-q183221"
+        }
+      ],
+      "date": "ок. 1715 г.",
+      "start": 1715,
+      "end": 1715,
+      "medium": "Холст, масло",
+      "accession": "PE 369",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/593b7ec6-8da1-4567-a180-f2d695926ac2-e20e216c20da18f9.jpg",
+      "imageSource": "https://www.wikiart.org/en/antoine-watteau/cupid-disarmed",
+      "credit": "Antoine Watteau. L'AMOUR DESARME. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076654",
+      "description": "Купидон тянется за луком, который держат вне его досягаемости. Небольшой промежуток между рукой и предметом задаёт всё действие, а овал сближает два тела. Аллегория разоружённой любви понятна через знакомое неравенство: один обладает тем, чего другой хочет, но пока не может достать.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "6797d090-432a-54c6-9ce0-240ac1b962b4",
+      "title": "Лошадь выходит из конюшни",
+      "catalogueTitle": "Horse leaving a Stable",
+      "artist": "Théodore Géricault",
+      "artists": [
+        {
+          "name": "Théodore Géricault",
+          "role": "primary",
+          "slug": "theodore-gericault-q184212"
+        }
+      ],
+      "date": "1810",
+      "start": 1810,
+      "end": 1810,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/6797d090-432a-54c6-9ce0-240ac1b962b4-e0d30f95ecbbb3b1.jpg",
+      "imageSource": "https://www.wikiart.org/en/theodore-gericault/horse-leaving-a-stable",
+      "credit": "Horse leaving a Stable. WikiArt; Théodore Géricault. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/theodore-gericault/horse-leaving-a-stable",
+      "description": "Поднятая передняя нога отмечает переход между стоянием и выходом лошади из конюшни. Проводник рядом занимает тот же узкий порог, а свет отделяет массивное животное от тёмной двери. Сцена держится на ещё не завершённом переходе; окажись лошадь уже в открытом пейзаже, картина существенно изменилась бы.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "0a6c525d-c628-4319-8bcc-aff65f41097d",
+      "title": "Пиренейский пастух",
+      "catalogueTitle": "Berger des Pyrénées",
+      "artist": "Rosa Bonheur",
+      "artists": [
+        {
+          "name": "Rosa Bonheur",
+          "role": "primary",
+          "slug": "rosa-bonheur-nga-15002"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "Холст, масло",
+      "accession": "PE 531",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/0a6c525d-c628-4319-8bcc-aff65f41097d-bdd10534f5b3dd22.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Rosa_Bonheur,_sheeps_in_the_Pyrenees.JPG",
+      "credit": "Rosa Bonheur. Berger des Pyrénées. Image credit: Rosa Bonheur; Own work; Photographic credit: Dguendel. https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Rosa_Bonheur,_sheeps_in_the_Pyrenees.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076555",
+      "description": "Посох, животные и неровная земля определяют общую рабочую среду. Пастух не просто украшает горный вид, а животные не служат взаимозаменяемыми пятнами сельского колорита. Различия поз и фактур делают их связь с местностью достаточно конкретной, чтобы картина обходилась без драматического события.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "393c4ef9-10e9-4551-8104-dd2133bb4de6",
+      "title": "Детство Вакха",
+      "catalogueTitle": "L'ENFANCE DE BACCHUS",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "ок. 1630 г.",
+      "start": 1630,
+      "end": 1630,
+      "medium": "Холст, масло",
+      "accession": "PE 298",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/393c4ef9-10e9-4551-8104-dd2133bb4de6-800e211863bf901b.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/nurture-of-bacchus-1635",
+      "credit": "Nicolas Poussin. Nurture of Bacchus. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/nurture-of-bacchus-1635",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077256",
+      "description": "Младенец находится среди собрания, разделённого на небольшие взаимодействия людей и сатиров. Жесты связывают эпизоды в лесном окружении, позволяя следить за мифом без слияния всех тел в толпу. Пуссен делает отношения участников понятными ещё до того, как установлена личность каждого.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "1174bb76-8a75-4eaa-8505-a1ecba90c623",
+      "title": "Младенец Христос — Спаситель мира",
+      "catalogueTitle": "L'ENFANT JESUS, SAUVEUR DU MONDE",
+      "artist": "Bernardino Luini",
+      "artists": [
+        {
+          "name": "Bernardino Luini",
+          "role": "primary",
+          "slug": "bernardino-luini-q8537"
+        }
+      ],
+      "date": "ок. 1520 г.",
+      "start": 1520,
+      "end": 1520,
+      "medium": "Масло, дерево",
+      "accession": "PE 24",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/1174bb76-8a75-4eaa-8505-a1ecba90c623-d76204a0ad226256.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Bernardino_Luini,_Jesu_as_a_child.JPG",
+      "credit": "Bernardino Luini. L'ENFANT JESUS, SAUVEUR DU MONDE. Image credit: Bernardino Luini; Own work; Photographic credit: Dguendel. https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Bernardino_Luini,_Jesu_as_a_child.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077313",
+      "description": "Маленькое тело ребёнка сопровождают поднятая рука, посох с крестом и держава — знаки, чьи притязания несоизмеримы с его физическим размером. Раздельность атрибутов делает эту разницу ясной. Образ соединяет младенчество и духовную власть, не отменяя одного другим; чёткий силуэт сохраняет оба начала.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "5474b0a7-628e-437d-9b30-2d3a835077de",
+      "title": "Ассуир выбирает Есфирь",
+      "catalogueTitle": "Esther choisie par Assuérus",
+      "artist": "LIPPI Filippino",
+      "artists": [],
+      "date": "ок. 1480 г.",
+      "start": 1480,
+      "end": 1480,
+      "medium": "Темпера на дереве",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/5474b0a7-628e-437d-9b30-2d3a835077de-73d4cc4c5ed00113.jpg",
+      "imageSource": "https://www.wikiart.org/en/filippino-lippi/esther-choisie-par-assuerus-1480",
+      "credit": "Filippino Lippi. Esther choisie par Assuérus. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077308",
+      "description": "Аркады делят широкую доску на связанные пространства, давая придворной истории несколько мест для развития. Яркая одежда различает группы внутри повторяющейся архитектуры. Царский трон задаёт центр, но ширина картины позволяет вниманию переходить между участниками, а не навсегда останавливаться на одной главной фигуре.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "96d9300d-331f-4632-9f3d-cd7ffab9ab0e",
+      "title": "Граф Анри де Берг",
+      "catalogueTitle": "PORTRAIT DU COMTE HENRI DE BERGHE",
+      "artist": "Anthony van Dyck",
+      "artists": [
+        {
+          "name": "Anthony van Dyck",
+          "role": "primary",
+          "slug": "anthony-van-dyck-q150679"
+        }
+      ],
+      "date": "1625-1629",
+      "start": 1625,
+      "end": 1629,
+      "medium": "Холст, масло",
+      "accession": "PE 126",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/96d9300d-331f-4632-9f3d-cd7ffab9ab0e-cc678bfabcabefd0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_du_comte_Henri_de_Berghe_-_Anton_van_Dyck_-_Mus%C3%A9e_Cond%C3%A9.jpg",
+      "credit": "Anthony van Dyck. PORTRAIT DU COMTE HENRI DE BERGHE. Image credit: Anthony van Dyck; Base Joconde. https://commons.wikimedia.org/wiki/File:Portrait_du_comte_Henri_de_Berghe_-_Anton_van_Dyck_-_Mus%C3%A9e_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076602",
+      "description": "Доспехи закрывают большую часть тела твёрдой оболочкой; лицо и рука, напротив, открыты. Положение руки возле меча связывает живую плоть с военным снаряжением. Ван Дейк передаёт ранг через собранную композицию, сохраняя индивидуальность человека и не снимая роли, которую объявляет его одежда.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "9b7ac0b3-b8f3-4e19-844c-71a31d5029b9",
+      "title": "Мария-Антуанетта в образе Гебы",
+      "catalogueTitle": "Madame la Dauphine Marie-Antoinette, en Hébé",
+      "artist": "François-Hubert Drouais",
+      "artists": [
+        {
+          "name": "François-Hubert Drouais",
+          "role": "primary",
+          "slug": "francois-hubert-drouais-nga-1242"
+        }
+      ],
+      "date": "1773",
+      "start": 1773,
+      "end": 1773,
+      "medium": "Холст, масло",
+      "accession": "PE 395",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/9b7ac0b3-b8f3-4e19-844c-71a31d5029b9-3daf12d8844b55a3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Marie_Antoinette_dauphine_H%C3%A9b%C3%A9_Drouais_Chantilly.jpg",
+      "credit": "François-Hubert Drouais. Madame la Dauphine Marie-Antoinette, en Hébé. Image credit: François-Hubert Drouais; Jebulon ( talk · contribs ) (2011). https://commons.wikimedia.org/wiki/File:Marie_Antoinette_dauphine_H%C3%A9b%C3%A9_Drouais_Chantilly.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000104677",
+      "description": "Кувшин и орёл обозначают Гебу, а лицо и сложная причёска сохраняют условности королевского портрета. Поэтому Мария-Антуанетта представлена в роли, а не заменена безымянной мифологической фигурой. Переодевание предлагает классическое обрамление для конкретной публичной личности.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "df81cdfb-19e4-442b-8756-8b625ca8d128",
+      "title": "Обед с ветчиной",
+      "catalogueTitle": "LE DEJEUNER DE JAMBON",
+      "artist": "Nicolas Lancret",
+      "artists": [
+        {
+          "name": "Nicolas Lancret",
+          "role": "primary",
+          "slug": "nicolas-lancret-q188172"
+        }
+      ],
+      "date": "1735",
+      "start": 1735,
+      "end": 1735,
+      "medium": "Холст, масло",
+      "accession": "PE 383",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/df81cdfb-19e4-442b-8756-8b625ca8d128-74236c70b379806b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:D%C3%A9jeuner_de_jambon_-_Nicolas_Lancret_-_mus%C3%A9e_Cond%C3%A9.jpg",
+      "credit": "Nicolas Lancret. LE DEJEUNER DE JAMBON. Image credit: Nicolas Lancret; Joconde database :  entry 00000076666. https://commons.wikimedia.org/wiki/File:D%C3%A9jeuner_de_jambon_-_Nicolas_Lancret_-_mus%C3%A9e_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076666",
+      "description": "Белая скатерть собирает трапезу в одно светлое пятно, но бутылки внизу и жесты вокруг не дают компании застыть в парадном групповом портрете. Парк оставляет простор общению. Несколько небольших взаимодействий сосуществуют, не делая одного из обедающих бесспорным центром события.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "5ad39bc1-ed6d-4f7e-82bc-56ebc5d9b9e7",
+      "title": "Бонапарт посещает больных чумой в Яффе: версия из Шантийи",
+      "catalogueTitle": "BONAPARTE, GENERAL EN CHEF DE L'ARMEE D'ORIENT, TOUCHE UNE TUMEUR PESTILENTIELLE, EN VISITANT LES PESTIFERES DANS L'HOPITAL DE JAFFA",
+      "artist": "Antoine-Jean Gros",
+      "artists": [
+        {
+          "name": "Antoine-Jean Gros",
+          "role": "primary",
+          "slug": "antoine-jean-gros-q216999"
+        }
+      ],
+      "date": "ок. 1802 г.",
+      "start": 1802,
+      "end": 1802,
+      "medium": "Холст, масло",
+      "accession": "PE 428",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/5ad39bc1-ed6d-4f7e-82bc-56ebc5d9b9e7-1135df9e513cd64a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Chantilly_(60),_mus%C3%A9e_Cond%C3%A9,_Antoine_Jean_Baron_Gros,_Bonaparte_et_les_pestif%C3%A9r%C3%A9s_de_Jaffa,_1804.jpg",
+      "credit": "Antoine-Jean Gros. BONAPARTE, GENERAL EN CHEF DE L'ARMEE D'ORIENT, TOUCHE UNE TUMEUR PESTILENTIELLE, EN VISITANT LES PESTIFERES DANS L'HOPITAL DE JAFFA. Image credit: Antoine-Jean Gros; Own work , Pierre Poschadel , 2019-09-22. https://commons.wikimedia.org/wiki/File:Chantilly_(60),_mus%C3%A9e_Cond%C3%A9,_Antoine_Jean_Baron_Gros,_Bonaparte_et_les_pestif%C3%A9r%C3%A9s_de_Jaffa,_1804.jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076456",
+      "description": "Приближение Бонапарта к больным выделено внутри огороженного аркадами пространства. Свет разделяет тела и превращает поступок в публичное представление вождя. Шантийийская работа описана в каталоге как эскиз, связанный с большой картиной Лувра. Её нужно рассматривать как самостоятельный предмет, а не взаимозаменяемое воспроизведение той версии.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "54fea717-ff3a-469a-ab94-e8cd775c299b",
+      "title": "В Абруццо",
+      "catalogueTitle": "DANS LES ABRUZZES",
+      "artist": "Oswald Achenbach",
+      "artists": [
+        {
+          "name": "Oswald Achenbach",
+          "role": "primary",
+          "slug": "oswald-achenbach-q76415"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "Холст, масло",
+      "accession": "PE 606",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/54fea717-ff3a-469a-ab94-e8cd775c299b-a19fe58ac3818555.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Oswald_Achenbach,_in_the_Abruzzo.JPG",
+      "credit": "Oswald Achenbach. DANS LES ABRUZZES. Image credit: Oswald Achenbach; Own work , 2017-08-30, Dguendel. https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Oswald_Achenbach,_in_the_Abruzzo.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/000PE018739",
+      "description": "Придорожная святыня даёт путникам повод остановиться, хотя дорога продолжается к далёким горам. Пейзаж содержит и паузу, и движение; фигуры на разных расстояниях позволяют их соотнести. Путешествие построено через места краткого пребывания, а не через непрерывную панораму, показанную вне человеческого использования.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "ca87a44e-7b4c-4de6-bdae-283ae7628732",
+      "title": "Охота на цапель в Алжире",
+      "catalogueTitle": "LA CHASSE AU HERON (ALGERIE)",
+      "artist": "Eugène Fromentin",
+      "artists": [
+        {
+          "name": "Eugène Fromentin",
+          "role": "primary",
+          "slug": "eugene-fromentin-q353746"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "Холст, масло",
+      "accession": "PE 528",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/ca87a44e-7b4c-4de6-bdae-283ae7628732-af564c72167d31cd.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Chasse_au_h%C3%A9ron_Fromentin_Mus%C3%A9e_Cond%C3%A9.jpg",
+      "credit": "Eugène Fromentin. LA CHASSE AU HERON (ALGERIE). Image credit: Eugène Fromentin; Jebulon , Own work. https://commons.wikimedia.org/wiki/File:Chasse_au_h%C3%A9ron_Fromentin_Mus%C3%A9e_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076552",
+      "description": "Охотники далеко отстоят друг от друга на мелководье; птицы и всадники прерывают низкую линию горизонта. Расстояние становится частью действия: охоту нельзя свести к одной близкой встрече. Большое небо тоже удерживает фигуры внутри обширной местности, не позволяя их движению заполнить картину целиком.",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "e9c96b9f-cb66-4601-a8b4-2b07299e1691",
+      "title": "Архангел Гавриил с музицирующими ангелами и херувимами",
+      "catalogueTitle": "L'ANGE GABRIEL DANS UNE GLOIRE D'ANGES MUSICIENS ET DE CHERUBINS",
+      "artist": "Annibale Carracci",
+      "artists": [
+        {
+          "name": "Annibale Carracci",
+          "role": "primary",
+          "slug": "annibale-carracci-q7824"
+        }
+      ],
+      "date": "Вторая половина XVI века",
+      "start": 1550,
+      "end": 1600,
+      "medium": "Холст, масло",
+      "accession": "PE 62",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/e9c96b9f-cb66-4601-a8b4-2b07299e1691-4784dc4c811ddd19.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Annibale_Carracci,_Arcangelo_Gabriele,_Museo_Cond%C3%A9.jpg",
+      "credit": "Annibale Carracci. L'ANGE GABRIEL DANS UNE GLOIRE D'ANGES MUSICIENS ET DE CHERUBINS. Image credit: Annibale Carracci; Joconde database :  entry 00000077351. https://commons.wikimedia.org/wiki/File:Annibale_Carracci,_Arcangelo_Gabriele,_Museo_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077351",
+      "description": "Раскрытые руки Гавриила дают ясный центр окружающему восхождению. Синие и красные одеяния выделяют главное тело, а меньшие ангелы и облака продолжают движение вокруг. Небесное собрание связано направлением и цветом, а не общей поверхностью земли, на которой могли бы стоять все фигуры.",
+      "importance": "",
+      "museum": "Musée Condé"
+    }
+  ],
+  "context": {
+    "start": 1436,
+    "end": 1865
+  },
+  "closingSections": [
+    {
+      "title": "Не смешивайте предмет и его историю",
+      "paragraphs": [
+        "Знакомый сюжет может существовать в нескольких версиях, а традиционное имя бывает менее достоверно, чем кажется по точному лицу. Ссылки на каталожные записи помогут сохранить эти различия. Актуальные сведения о посещении замка проверяйте отдельно: подборка не задаёт маршрут и не гарантирует доступность каждого предмета."
+      ]
+    }
+  ]
+}

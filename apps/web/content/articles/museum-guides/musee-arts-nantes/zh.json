@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "musee-arts-nantes",
+  "museum": "Musée d’arts de Nantes",
+  "city": "南特",
+  "country": "法国",
+  "title": "南特艺术博物馆：杰作",
+  "subtitle": "二十件作品，从烛光下的指控到一列抽象形状，看看画面怎样安排我们的视线。",
+  "introduction": "宗教事件可以发生在一间屋子里，而屋里的人几乎没有留意；哲学家也可能隐没在树丛之间。在这组南特馆藏中，标题所说的主题未必最先映入眼帘。跟着光线走，或比较不同人物各占多少地方，往往更容易看出画面的重点。\n\n没有人物时，这个问题同样有用。面对康定斯基反复出现的形状，以及马内西耶划分出的色块，我们仍要决定在哪里停留、把哪些部分联系起来。以下作品提供了不同的观看方法。这是一组馆藏选读，不是展厅顺序，也不是要求观众逐一打卡的清单。",
+  "visitNote": "请查阅博物馆当前的访客页面，了解展厅开放情况及临时展览信息。这二十件作品属于馆藏；在此列出并不意味着它们目前正在展出。",
+  "locale": "zh",
+  "website": "https://pop.culture.gouv.fr/notice/museo/M0743",
+  "officialGuide": "https://pop.culture.gouv.fr/notice/museo/M0743",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基的《论艺术中的精神》阐述了他的观点，即色彩与形式本身就是独立的主题。请结合《八次》（Eight Times）一作阅读此书，随后比较马内西耶（Manessier）与布莱恩（Bryen）截然不同的抽象风格。"
+    }
+  ],
+  "works": [
+    {
+      "id": "1a9c7799-a74d-534f-9777-5984f1a92298",
+      "title": "德谟克利特与阿布德拉人",
+      "catalogueTitle": "Democritus and the Abderiti",
+      "artist": "Jean-Baptiste-Camille Corot",
+      "artists": [
+        {
+          "name": "Jean-Baptiste-Camille Corot",
+          "role": "primary",
+          "slug": "jean-baptiste-camille-corot-q148475"
+        }
+      ],
+      "date": "1841",
+      "start": 1841,
+      "end": 1841,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/1a9c7799-a74d-534f-9777-5984f1a92298-07370c1f5defeae3.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-corot/democritus-and-the-abderiti-1841",
+      "credit": "Democritus and the Abderiti. WikiArt; Jean-Baptiste-Camille Corot. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-corot/democritus-and-the-abderiti-1841",
+      "description": "标题说的是哲学家，画面大半却留给了树木和岩石地面。柯罗笔下的小人物需要在这片环境中寻找。穿过枝叶的光又带出另一条观看路线，不必先认全古代故事中的人物也能沿着它看下去。风景与故事并不同步展开。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "ac1dfe5a-4f1f-502e-bd7d-724f325acfc3",
+      "title": "八次",
+      "catalogueTitle": "Eight times",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1929",
+      "start": 1929,
+      "end": 1929,
+      "medium": "纸板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/ac1dfe5a-4f1f-502e-bd7d-724f325acfc3-d4854298b7094b56.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/eight-times-1929",
+      "credit": "Wassily Kandinsky. Eight times. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/wassily-kandinsky/eight-times-1929",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/eight-times-1929",
+      "description": "八个形状排成一列，却没有整齐的节拍。它们高低不一，轮廓棱角分明，打断了那条把它们连起来的水平线。上方浅色长条提供第二条参照，让这些差异更加明显。康定斯基让小小的位置变化也值得注意，因为四周几乎没有别的事情来分散视线。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "6354c9e2-f035-5c4c-b55a-2672736031a1",
+      "title": "穿粉色衣服的基泽特",
+      "catalogueTitle": "Kizette in Pink",
+      "artist": "Tamara de Lempicka",
+      "artists": [
+        {
+          "name": "Tamara de Lempicka",
+          "role": "primary",
+          "slug": "tamara-de-lempicka-q229351"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6354c9e2-f035-5c4c-b55a-2672736031a1-ff65354b4bd98ad9.jpg",
+      "imageSource": "https://www.wikiart.org/en/tamara-de-lempicka/kizette-in-pink-1926",
+      "credit": "Tamara de Lempicka. Kizette in Pink. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://museedartsdenantes.nantesmetropole.fr/collections/art-moderne/",
+      "description": "摊开的书让基泽特不只是坐着供人描绘，她还有自己的事情可做。围绕这份专注，莱姆皮茨卡塑造出格外结实的身体：衣褶、受光强烈的四肢，还有挤在窄座上的弯腿。女孩没有融入背景，圆润的体积反而与周围的棱角相对，使安静的一刻近乎雕刻。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "777e3539-4f99-58fe-92b5-8778f82d89d6",
+      "title": "阿尔勒金，月亮皇帝",
+      "catalogueTitle": "Arlecchino Emperor in the Moon",
+      "artist": "Jean-Antoine Watteau",
+      "artists": [
+        {
+          "name": "Jean-Antoine Watteau",
+          "role": "primary",
+          "slug": "jean-antoine-watteau-q183221"
+        }
+      ],
+      "date": "1708",
+      "start": 1708,
+      "end": 1708,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/777e3539-4f99-58fe-92b5-8778f82d89d6-d39798e003b6121f.jpg",
+      "imageSource": "https://www.wikiart.org/en/antoine-watteau/arlecchino-emperor-in-the-moon-1708",
+      "credit": "Jean-Antoine Watteau. Arlecchino Emperor in the Moon. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/antoine-watteau/arlecchino-emperor-in-the-moon-1708",
+      "description": "阿尔勒金的权威来自身边聚集的人。戏服、抬高的座位和其他演员的位置，暂时把一个舞台人物变成皇帝。华托没有掩饰这场转变依靠哪些布置。我们可以把它当作表演欣赏，无须把临时搭起的等级关系误认成宫廷肖像里的帝王威仪。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "9b8ce938-358e-429b-9de4-a4727a25f9d5",
+      "title": "山岳习作",
+      "catalogueTitle": "Etude de montagnes",
+      "artist": "Maxime Maufra",
+      "artists": [
+        {
+          "name": "Maxime Maufra",
+          "role": "primary",
+          "slug": "maxime-maufra-nga-22915"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "布面油画",
+      "accession": "Prov ; 1922",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/9b8ce938-358e-429b-9de4-a4727a25f9d5-9c523a02990d2005.jpg",
+      "imageSource": "https://www.wikiart.org/en/maxime-maufra/study-of-mountains-1904",
+      "credit": "Maxime Maufra. Study of mountains. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/maxime-maufra/study-of-mountains-1904",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430001908",
+      "description": "莫弗拉把近处植物与远山分开，却没有为每片叶子、每块石头画出完整边线。从凌乱的前景草木转到山坡时，笔触的方向和厚重程度也在改变。距离因此不仅靠大小表现，也靠画法区分。浅色山峰即使边缘渐渐融入天空，仍保留着沉实的体积。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "48313721-eb48-43b5-b6b2-ac757d905add",
+      "title": "友弟德",
+      "catalogueTitle": "Judith",
+      "artist": "Marie Laurencin",
+      "artists": [
+        {
+          "name": "Marie Laurencin",
+          "role": "primary",
+          "slug": "marie-laurencin-q233088"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "布面油画",
+      "accession": "6685 ; 960.6.2.P",
+      "image": "https://artlines.org/assets/artworks/wikiart/48313721-eb48-43b5-b6b2-ac757d905add-ccb7b9a5a7f53786.jpg",
+      "imageSource": "https://www.wikiart.org/en/marie-laurencin/judith-1930",
+      "credit": "Marie Laurencin. Judith. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430001569",
+      "description": "抬起的手臂留下行动的迹象，但洛朗森笔下苍白的人物和粉色织物，几乎没有常见友弟德图像中的强烈暴力。装饰精细的头饰与手势一样醒目。圣经标题和克制的画法指向不同的情绪。与其期待故事最血腥的一幕，不如留意两者之间的落差。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "c84e2a55-f9ad-4c01-a002-284b040ffc8d",
+      "title": "圣彼得不认主",
+      "catalogueTitle": "Le Reniement de saint Pierre",
+      "artist": "Georges de La Tour",
+      "artists": [
+        {
+          "name": "Georges de La Tour",
+          "role": "primary",
+          "slug": "georges-de-la-tour-q203371"
+        }
+      ],
+      "date": "1650",
+      "start": 1650,
+      "end": 1650,
+      "medium": "布面油画",
+      "accession": "643",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/c84e2a55-f9ad-4c01-a002-284b040ffc8d-2831199b5f18c885.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Georges_de_La_Tour_061.jpg",
+      "credit": "Georges de La Tour. Le Reniement de saint Pierre. Image credit: Georges de La Tour; www.culture.gouv.fr : Home : Info : Pic. https://commons.wikimedia.org/wiki/File:Georges_de_La_Tour_061.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430004404",
+      "description": "屋里的人并未都参与同一场冲突。彼得遭到质问的情节发生在一侧，其他人仍忙着桌边的事。烛光把脸和手连接起来，却没有赋予他们共同的目的。拉图尔使一个决定性的宗教事件发生在人群之中，同时仍像一场几乎私下进行的对峙。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "f5ff6403-78ea-428c-a89c-539adcdf62a1",
+      "title": "教宗福尔摩索与斯蒂芬七世",
+      "catalogueTitle": "Le pape Formose et Etienne VII",
+      "artist": "Jean-Paul Laurens",
+      "artists": [
+        {
+          "name": "Jean-Paul Laurens",
+          "role": "primary",
+          "slug": "jean-paul-laurens-q708568"
+        }
+      ],
+      "date": "1870",
+      "start": 1870,
+      "end": 1870,
+      "medium": "布面油画",
+      "accession": "1052",
+      "image": "https://artlines.org/assets/artworks/wikiart/989191fe-3dcd-5453-9b5b-078966f64b35-50a51fa7f1fe9b18.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-paul-laurens/pope-formosus-and-stephen-vi-the-cadaver-synod-1870",
+      "credit": "Jean-Paul Laurens. Pope Formosus and Stephen VI - The Cadaver Synod. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430003977",
+      "description": "被告无法回答。劳伦斯把穿着礼服的僵硬尸体与活着的指控者相对照，让死后审判成为动作与不动之间的冲突。肃穆的室内几乎没有东西能使人忽略这种不对等。无论衣袍象征何种权威，它都掩盖不了一个事实：向尸体索要答复，在身体层面上就荒谬至极。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "2a5a3ecf-5178-42a5-ac3e-433bd124bfd8",
+      "title": "勒阿弗尔港",
+      "catalogueTitle": "Le port du Havre",
+      "artist": "Raoul Dufy",
+      "artists": [
+        {
+          "name": "Raoul Dufy",
+          "role": "primary",
+          "slug": "raoul-dufy-q45205"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "布面油画",
+      "accession": "6308 ; 951.5.2.P",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/2a5a3ecf-5178-42a5-ac3e-433bd124bfd8-3f43e76959a66135.jpg",
+      "imageSource": "https://www.wikiart.org/en/raoul-dufy/the-port-of-le-havre-1906",
+      "credit": "Raoul Dufy. The Port of Le Havre. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/raoul-dufy/the-port-of-le-havre-1906",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430000789",
+      "description": "桅杆为拥挤的港口排出一组竖线。水中的倒影却把这种秩序打散成短促、摇摆的色痕。杜菲的橙色船只足够醒目，不会淹没在建筑和索具之间。把船与倒影对照着看，就能发现一个结实的物体如何化为色彩组合，又没有彻底消失。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "bbe903da-e43c-47d7-ac6f-26f6ce07b5ec",
+      "title": "囚犯",
+      "catalogueTitle": "Le prisonnier",
+      "artist": "Jean-Léon Gérôme",
+      "artists": [
+        {
+          "name": "Jean-Léon Gérôme",
+          "role": "primary",
+          "slug": "jean-leon-gerome-q212499"
+        }
+      ],
+      "date": "1861",
+      "start": 1861,
+      "end": 1861,
+      "medium": "",
+      "accession": "990",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/bbe903da-e43c-47d7-ac6f-26f6ce07b5ec-e36b526ac47f872d.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-leon-gerome/the-prisoner",
+      "credit": "Jean-Leon Gerome. Le prisonnier. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430003910",
+      "description": "开阔水面在这里不等于自由。囚犯在船内低伏、受限的位置，与宽广的河流和远岸形成对照。热罗姆围绕行动自由的不平等来组织场景：几个人同乘一船，却不能同样自在地移动。风景看起来越宽阔，囚禁就越容易被看见。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "d43908d0-dc3e-4544-bcc7-72b7e353c15e",
+      "title": "筛麦的妇女",
+      "catalogueTitle": "Les Cribleuses de blé",
+      "artist": "Gustave Courbet",
+      "artists": [
+        {
+          "name": "Gustave Courbet",
+          "role": "primary",
+          "slug": "gustave-courbet-q34618"
+        }
+      ],
+      "date": "1854",
+      "start": 1854,
+      "end": 1854,
+      "medium": "布面油画",
+      "accession": "874",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/d43908d0-dc3e-4544-bcc7-72b7e353c15e-73fcd8ab7e1a7046.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_The_Grain_Sifters_-_WGA05464.jpg",
+      "credit": "Gustave Courbet. Les Cribleuses de blé. Image credit: Gustave Courbet; Source credit: Web Gallery of Art : Image Info about artwork wga QS:P11807,\"c/courbet/1/courb110\". Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430003793",
+      "description": "举起筛子需要全身用力。库尔贝让跪着的妇女宽阔的背和抬起的双臂占据突出位置；在更庄严的题材里，这种位置可能留给英雄的动作。旁边坐着的劳动者和孩子又表现出不同程度的活动。筛麦本身已经足以组织一幅大规模人物画，不必借用历史故事增添戏剧性。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "e98c633c-27a1-48f2-854a-4f5f43742b4d",
+      "title": "有啤酒杯的静物",
+      "catalogueTitle": "Nature morte au verre de bière",
+      "artist": "Pieter Claesz",
+      "artists": [
+        {
+          "name": "Pieter Claesz",
+          "role": "primary",
+          "slug": "pieter-claesz-q354832"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "",
+      "accession": "516",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/e98c633c-27a1-48f2-854a-4f5f43742b4d-9a00f1a67b2e2541.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pieter_Claesz._007.jpg",
+      "credit": "Pieter Claesz. Nature morte au verre de bière. Image credit: Pieter Claesz; www.culture.gouv.fr : Home : Info : Pic. https://commons.wikimedia.org/wiki/File:Pieter_Claesz._007.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430004290",
+      "description": "色彩虽低调，物件却并不混同。克拉斯通过反光的细微变化，区分玻璃杯、陶壶与金属器具。半铺着桌布的桌面上，坚硬的口沿挨着柔软的布和食物。逐一追看这些边缘，就会发现有限的色调仍能容纳许多不同材质。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "f2ff4624-9cb0-489d-8126-e3daad724a8e",
+      "title": "科塞先生肖像",
+      "catalogueTitle": "Portrait de M. Cossé",
+      "artist": "Yvon Adolphe",
+      "artists": [
+        {
+          "name": "Yvon Adolphe",
+          "role": "primary",
+          "slug": "yvon-adolphe-research-326151e74104"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "1236",
+      "image": "https://artlines.org/assets/artworks/wikiart/788fa888-cd18-49db-945d-86c4ed94070a-275d29e2d9aa44bd.jpg",
+      "imageSource": "https://www.wikiart.org/en/adolphe-yvon/portrait-de-m-cosse-1890",
+      "credit": "Yvon Adolphe. Portrait de M. Cossé. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.pop.culture.gouv.fr/notice/joconde/07430004157",
+      "description": "外套为描绘更细致的面孔围出一片暗色。暖光区分额头、双颊和胡须，白衬衫则标出头部与躯干的衔接。与科塞夫人的肖像并看时，更有根据的做法是比较两人的姿态，而非猜测性格。他们采用相似的画幅格式，却并不以同一种方式出现在观众面前。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "3fd3b4f9-c150-4722-84d4-85b04257b93e",
+      "title": "科塞夫人肖像",
+      "catalogueTitle": "Portrait de Mme Cossé",
+      "artist": "Yvon Adolphe",
+      "artists": [
+        {
+          "name": "Yvon Adolphe",
+          "role": "primary",
+          "slug": "yvon-adolphe-research-326151e74104"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "布面油画",
+      "accession": "1235",
+      "image": "https://artlines.org/assets/artworks/wikiart/da46cdcd-b318-4b4e-8a4c-5f4d84a261f4-2f4c0302339bc7ac.jpg",
+      "imageSource": "https://www.wikiart.org/en/adolphe-yvon/portrait-de-mme-cosse-1889",
+      "credit": "Yvon Adolphe. Portrait de Mme Cossé. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.pop.culture.gouv.fr/notice/joconde/07430004156",
+      "description": "高领和小胸针为头部提供明确的衬托。夫人转动面孔的角度，使她与周围空间的关系不同于配对肖像中的男子。伊冯让背景和衣服保持低调，好让这些小差别显出来。这组画值得比较的，正是相近构图内部发生的变化。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "858984ef-1949-4009-b71f-3b5389886c2b",
+      "title": "又圣母经",
+      "catalogueTitle": "Salve Regina",
+      "artist": "Alfred Manessier",
+      "artists": [
+        {
+          "name": "Alfred Manessier",
+          "role": "primary",
+          "slug": "alfred-manessier-research-4dc966be4a43"
+        }
+      ],
+      "date": "1945",
+      "start": 1945,
+      "end": 1945,
+      "medium": "布面油画",
+      "accession": "2765 ; 947.2.1.P",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/858984ef-1949-4009-b71f-3b5389886c2b-e6379502a62e19eb.jpg",
+      "imageSource": "https://www.wikiart.org/en/alfred-manessier/salve-regina-1945",
+      "credit": "Alfred Manessier. Salve Regina. WikiArt source label: Alfred Manessier Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/alfred-manessier/salve-regina-1945",
+      "license": "Alfred Manessier Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.pop.culture.gouv.fr/notice/joconde/07430001839",
+      "description": "祈祷文式的标题没有对应一位圣徒或某段圣经情节。高长的画面上，狭窄色块向上延伸、彼此嵌合。暗色分隔有时像边界，有时又把相邻部分连起来。马内西耶把宗教联想留给标题；绘画本身要求持续观察色彩、间隙和向上的走向。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "49293820-3b1c-47c5-becd-77217bb815f6",
+      "title": "Tellurie",
+      "catalogueTitle": "Tellurie",
+      "artist": "Bryen Camille",
+      "artists": [
+        {
+          "name": "Bryen Camille",
+          "role": "primary",
+          "slug": "bryen-camille-research-bd33cfe0f61a"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "布面油画",
+      "accession": "973.1.1.P ; 7256",
+      "image": "https://artlines.org/assets/artworks/wikiart/25d4c04e-c91c-4cdf-833a-4e39c6e8c3d4-159ed8ca7cda47f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-bryen/tellurie-1952",
+      "credit": "Bryen Camille. Tellurie. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.pop.culture.gouv.fr/notice/joconde/07430000438",
+      "description": "画面并非处处同样活跃。深色、白色和紫色笔痕挤在一起，继而让位于较开阔的浅蓝区域。这些安静处也是构图的一部分，不是没用上的背景。布里恩借助四周的空处，让中央笔痕的拥挤感更加清楚。理解它们之间的关系，并不需要从中找出隐藏的物体。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "d08bcdde-e11d-56c7-8916-40d9b317ffb1",
+      "title": "洪水",
+      "catalogueTitle": "The Flood",
+      "artist": "Léon Comerre",
+      "artists": [
+        {
+          "name": "Léon Comerre",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1798144"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "2287",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10316722-fc5aff090b029851.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Le_d%C3%A9luge_-_mus%C3%A9e_de_beaux_arts_de_Nantes_20091017.jpg",
+      "credit": "Léon Comerre. The Flood. Image credit: Léon Comerre. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10316722",
+      "description": "避难之处太小，容不下所有寻求庇护的身体。科梅尔把人与动物压缩成水面上的一堆，使各自的挣扎反而加剧整体的不稳。阴暗天空也没有给视线轻松离开的出口。灾难不只体现于洪水的力量，也体现于身体被迫挤在一起的程度。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "abb2c3a3-1a07-41bb-a005-d3b1a625850f",
+      "title": "戴公羊角的女子头像",
+      "catalogueTitle": "Tête de femme coiffée de cornes de bélier",
+      "artist": "Jean-Léon Gérôme",
+      "artists": [
+        {
+          "name": "Jean-Léon Gérôme",
+          "role": "primary",
+          "slug": "jean-leon-gerome-q212499"
+        }
+      ],
+      "date": "1853",
+      "start": 1853,
+      "end": 1853,
+      "medium": "布面油画",
+      "accession": "987",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-20261010/abb2c3a3-1a07-41bb-a005-d3b1a625850f-ddbf80df186b375a.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-leon-gerome/the-bacchante",
+      "credit": "Jean-Léon Gérôme. Woman's head with ram horns. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-leon-gerome/the-bacchante",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/07430003906",
+      "description": "低垂的脸被当作肖像细心描绘，弯曲的羊角却使它不能停留在普通人物写照上。编起的头发把陌生的头饰接回身体。热罗姆无须扭曲脸庞来制造异样：可信的肌肤与不合常理的装饰放在一起，已经足够。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "f83a7c9c-2b62-5e8f-a668-9343c9f488ea",
+      "title": "维纳斯请求武尔坎为埃涅阿斯锻造盔甲",
+      "catalogueTitle": "Venus asks Vulcan to forge Aeneas' armour.",
+      "artist": "La Fosse Charles de",
+      "artists": [
+        {
+          "name": "La Fosse Charles de",
+          "role": "primary",
+          "slug": "la-fosse-charles-de-research-890ce6269451"
+        }
+      ],
+      "date": "约 1690–1699 年",
+      "start": 1690,
+      "end": 1699,
+      "medium": "",
+      "accession": "INV630",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110715143-86c672e8f843f704.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Charles_de_La_Fosse_001.jpg",
+      "credit": "Charles de La Fosse. Venus asks Vulcan to forge Aeneas' armour.. Image credit: Charles de La Fosse. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110715143",
+      "description": "这番请求跨越了高低位置。维纳斯在坐着的铁匠上方出现，工具和助手则使会面仍属于一间作坊。德·拉·福斯用光线和暖色布料把身体推到眼前。神的故事依赖一项实际协商：盔甲必须有人制作，而劝说也必须传到那位有能力制作的人那里。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    },
+    {
+      "id": "ad040911-8fcb-5a25-90ff-4b1b5a2ec813",
+      "title": "年轻的塞尔维亚罗姆女子",
+      "catalogueTitle": "Young Serbian gypsy woman",
+      "artist": "Charles Landelle",
+      "artists": [
+        {
+          "name": "Charles Landelle",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1065263"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "",
+      "accession": "INV1048",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q94998034-d691145253ae2df3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Young_Serbian_gypsy_woman_(1872),_by_Charles_Landelle.jpg",
+      "credit": "Charles Landelle. Young Serbian gypsy woman. Image credit: Charles Landelle. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q94998034",
+      "description": "朗德尔给站立的女子清楚的轮廓和直视的目光，浅色背景则衬出偏红的衣服。历史标题按族群与地域归类模特，却没有告诉我们她的姓名。两者应当分清：画上是一张具体的脸，目录给出的却是类别，而非足以重建这名女子生平的资料。",
+      "importance": "",
+      "museum": "Musée d’arts de Nantes"
+    }
+  ],
+  "context": {
+    "start": 1644,
+    "end": 1952
+  },
+  "closingSections": [
+    {
+      "title": "再看一次",
+      "paragraphs": [
+        "可以比较库尔贝和拉图尔怎样描绘手，或康定斯基与布里恩怎样安排形状之间的距离。这些联系不以作品挂在一起为前提。若打算专程看某件作品，请先查博物馆最新的展出信息。"
+      ]
+    }
+  ]
+}

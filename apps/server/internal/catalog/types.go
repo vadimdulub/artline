@@ -131,6 +131,7 @@ type Citation struct {
 }
 
 type ArtistDetail struct {
+	Connections        ArtistConnections   `json:"connections"`
 	KeyArtwork         *Artwork            `json:"key_artwork"`
 	WorkTypes          []FacetOption       `json:"work_types"`
 	ArtworkCount       int                 `json:"artwork_count"`

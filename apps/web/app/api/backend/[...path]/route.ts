@@ -19,8 +19,10 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
     const signal = AbortSignal.any([request.signal, timeout]);
     const response = await fetch(target, { headers, cache: "no-store", signal });
     const responseHeaders = new Headers({ "content-type": response.headers.get("content-type") ?? "application/json", "cache-control": "private, no-store" });
-    const cacheStatus = response.headers.get("x-artline-cache");
-    if (cacheStatus) responseHeaders.set("x-artline-cache", cacheStatus);
+    for (const name of ["x-artline-cache", "server-timing", "retry-after"]) {
+      const value = response.headers.get(name);
+      if (value) responseHeaders.set(name, value);
+    }
     responseHeaders.set("vary", "Accept-Encoding");
     const compress = request.method === "GET" && response.ok && response.body &&
       responseHeaders.get("content-type")?.includes("application/json") && acceptsGzip(request.headers.get("accept-encoding"));

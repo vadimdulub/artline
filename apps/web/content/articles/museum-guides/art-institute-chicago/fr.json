@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "art-institute-chicago",
+  "museum": "Art Institute of Chicago",
+  "city": "Chicago",
+  "country": "États-Unis",
+  "title": "Art Institute de Chicago : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres organisent la vie publique et le cadre privé de façons nettement différentes.",
+  "introduction": "La berge de Seurat est peuplée et pourtant remarquablement immobile. Le restaurant de Hopper est vivement visible depuis une rue presque vide, mais ses vitres nous gardent dehors. Les passants de Caillebotte frôlent le premier plan sous leurs parapluies, devant une ville qui s’éloigne largement. Chaque tableau propose l’espace commun autrement : organisation, séparation ou rencontre sur le point de passer.\n\nScènes domestiques et natures mortes poursuivent la question à plus petite échelle. Une bassine rapproche deux corps ; une chambre incline ses meubles vers l’œil ; un plateau de table refuse de s’aligner parfaitement. Les lieux et choses familiers ne produisent pas nécessairement un point de vue unique et fiable.",
+  "visitNote": "Consultez les fiches d’œuvres actualisées de l’Art Institute pour connaître l’emplacement des salles, les prêts et les modifications de présentation. Ce guide présente la version de 1889 de La Chambre conservée à Chicago, une version ultérieure de la toile peinte par Van Gogh en 1888 (aujourd’hui à Amsterdam). Les dates figurant dans les titres, comme La Grande Jatte — 1884, ne couvrent pas nécessairement toute la période de création de l’œuvre.",
+  "locale": "fr",
+  "website": "https://www.artic.edu",
+  "officialGuide": "https://www.artic.edu",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "Lire en ligne ou télécharger · Anglais",
+      "note": "Le catalogue de l’exposition du Metropolitan Museum replace Seurat, Caillebotte, Cassatt, Monet et leurs contemporains dans leur contexte historique. La diversité des exemples présentés permet de distinguer des démarches variées qu’une étiquette unique, telle que l’impressionnisme, risquerait autrement de niveler."
+    }
+  ],
+  "works": [
+    {
+      "id": "6b6a8026-124b-47d3-9533-89418fdb2c58",
+      "title": "Un dimanche après-midi à l'Île de la Grande Jatte — 1884",
+      "catalogueTitle": "A Sunday on La Grande Jatte — 1884",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1884–1886, bordure ajoutée en 1888–1889",
+      "start": 1884,
+      "end": 1886,
+      "medium": "Huile sur toile",
+      "accession": "1926.224",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1044742-21631c51e4dfcb38.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg",
+      "credit": "Georges Seurat. A Sunday Afternoon on the Island of La Grande Jatte. Image credit: Georges Seurat. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.artic.edu/artworks/27992",
+      "description": "Les profils nettement séparés restent immobiles sur une surface de petits points et de touches. Voir le rassemblement et voir sa construction sont deux tâches différentes. Les marques qui divisent la surface soutiennent aussi l’organisation d’ensemble. Seurat présente une journée publique au bord de l’eau comme soigneusement tenue, plutôt que saisie dans un mouvement fortuit.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "030e11a6-d6ba-4f8b-b6cd-f9c0c5ea4574",
+      "title": "Nighthawks",
+      "catalogueTitle": "Nighthawks",
+      "artist": "Edward Hopper",
+      "artists": [
+        {
+          "name": "Edward Hopper",
+          "role": "primary",
+          "slug": "edward-hopper-q203401"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "Huile sur toile",
+      "accession": "1942.51",
+      "image": "https://artlines.org/assets/artworks/wikiart/030e11a6-d6ba-4f8b-b6cd-f9c0c5ea4574-947219f3a617e412.jpg",
+      "imageSource": "https://www.wikiart.org/en/edward-hopper/nighthawks",
+      "credit": "Edward Hopper. Nighthawks. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.artic.edu/artworks/111628",
+      "description": "La lumière du restaurant rend ses occupants clairement visibles tandis que les rues restent sombres. Le verre donne accès à la scène par le regard, non par l’entrée. Le spectateur reste à l’extérieur de cette relation. Hopper établit une séparation sans attribuer nécessairement la même émotion privée à chaque client ou au serveur.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "b4a0898f-9723-46da-8dd3-b891ad405ddb",
+      "title": "American Gothic",
+      "catalogueTitle": "American Gothic",
+      "artist": "Grant Wood",
+      "artists": [
+        {
+          "name": "Grant Wood",
+          "role": "primary",
+          "slug": "grant-wood-q217434"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Huile sur panneau de fibres",
+      "accession": "1930.934",
+      "image": "https://artlines.org/assets/artworks/wikiart/b4a0898f-9723-46da-8dd3-b891ad405ddb-7ee8dec2b17d5aee.jpg",
+      "imageSource": "https://www.wikiart.org/en/grant-wood/american-gothic-1930",
+      "credit": "Grant Wood. American Gothic. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.artic.edu/artworks/6565",
+      "description": "Fourche, vêtements et fenêtre pointue répètent des formes verticales entre figures et maison. Cette construction donne un cadre plus vaste à la raideur du couple. L’image de Wood n’a pas à se résoudre en approbation ou en moquerie de la vie rurale. Les poses et expressions entretiennent une rencontre plus complexe qu’un seul verdict.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "8594ba9c-facb-47e4-9503-c232c7ede8fc",
+      "title": "La chambre à coucher",
+      "catalogueTitle": "The Bedroom",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur toile",
+      "accession": "1926.417",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/8594ba9c-facb-47e4-9503-c232c7ede8fc-351884286f7ab820.jpg",
+      "imageSource": "https://www.artic.edu/artworks/28560",
+      "credit": "Vincent van Gogh. The Bedroom. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/28560",
+      "description": "Lit, chaises et tableaux sont familiers, mais la pièce inclinée rend leurs relations moins stables. Des contours forts séparent les couleurs ; l’emplacement donne aux meubles leur caractère. Cette version de 1889 reprend une composition antérieure. La répétition appartient à sa fabrication, elle ne prouve pas qu’une nouvelle chambre se trouvait devant le peintre.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "50ac10a4-6647-40ca-a7b9-dc36d523d24f",
+      "title": "Au Moulin Rouge",
+      "catalogueTitle": "At the Moulin Rouge",
+      "artist": "Henri de Toulouse-Lautrec",
+      "artists": [
+        {
+          "name": "Henri de Toulouse-Lautrec",
+          "role": "primary",
+          "slug": "henri-de-toulouse-lautrec-q82445"
+        }
+      ],
+      "date": "1892–95",
+      "start": 1892,
+      "end": 1895,
+      "medium": "Huile sur toile",
+      "accession": "1928.610",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/50ac10a4-6647-40ca-a7b9-dc36d523d24f-217ce44226139cd0.jpg",
+      "imageSource": "https://www.artic.edu/artworks/61128",
+      "credit": "Henri de Toulouse-Lautrec. At the Moulin Rouge. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/61128",
+      "description": "Le visage éclairé de vert au bord empêche un portrait collectif confortablement unifié. Miroirs, figures mobiles et groupe attablé offrent différentes directions d’attention sous la lumière artificielle. Toulouse-Lautrec fait de la pièce un lieu inégal pour voir et être vu. Le cadrage donne à certains un accès bien plus brusque au premier plan.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "95e6574a-8509-4c70-ad3b-d22ed2cc1e83",
+      "title": "Rue de Paris, temps de pluie",
+      "catalogueTitle": "Paris Street; Rainy Day",
+      "artist": "Gustave Caillebotte",
+      "artists": [
+        {
+          "name": "Gustave Caillebotte",
+          "role": "primary",
+          "slug": "gustave-caillebotte-q295144"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "Huile sur toile",
+      "accession": "1964.336",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/95e6574a-8509-4c70-ad3b-d22ed2cc1e83-2d039051304a3234.jpg",
+      "imageSource": "https://www.artic.edu/artworks/20684",
+      "credit": "Gustave Caillebotte. Paris Street; Rainy Day. Gustave Caillebotte; Art Institute of Chicago; Charles H. and Mary F. S. Worcester Collection. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.artic.edu/artworks/20684",
+      "description": "Le réverbère divise nettement la large rue, mais le couple proche introduit une rencontre moins prévisible dans cet ordre. D’autres piétons avancent sous leurs parapluies sur les pavés mouillés. L’architecture organise le lointain sans gouverner tous les déplacements. L’espace mesuré de la ville reste soumis aux gens qui passent tout près.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "0d7c65e6-0250-40b5-96ef-c3c7cb09947b",
+      "title": "Le Bain de l'enfant",
+      "catalogueTitle": "The Child's Bath",
+      "artist": "Mary Cassatt",
+      "artists": [
+        {
+          "name": "Mary Cassatt",
+          "role": "primary",
+          "slug": "mary-cassatt-q173223"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "Huile sur toile",
+      "accession": "1910.2",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/0d7c65e6-0250-40b5-96ef-c3c7cb09947b-f4f64c240fe44f04.jpg",
+      "imageSource": "https://www.artic.edu/artworks/111442",
+      "credit": "Mary Cassatt. The Child's Bath. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/111442",
+      "description": "Le soutien de la femme et le lavage du pied de l’enfant forment une séquence pratique. Bassine et courbes des corps restent étroitement liées depuis le point de vue élevé, entourées de tissu à motifs. Cassatt rend le soin lisible par la manière de porter un poids et d’accomplir une tâche, sans déclaration sentimentale.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "455e2795-fa70-4006-899d-fada111dabd5",
+      "title": "Le panier de pommes",
+      "catalogueTitle": "The Basket of Apples",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "vers 1893",
+      "start": 1887,
+      "end": 1900,
+      "medium": "Huile sur toile",
+      "accession": "1926.252",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/455e2795-fa70-4006-899d-fada111dabd5-2d7c37e9db79646a.jpg",
+      "imageSource": "https://www.artic.edu/artworks/111436",
+      "credit": "Paul Cézanne. The Basket of Apples. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/111436",
+      "description": "Pommes, bouteille et biscuits possèdent une présence convaincante, mais les bords de la table ne s’alignent pas dans un espace parfait. Le panier incliné et le linge plié ajoutent d’autres rapports. Cézanne fait coexister solidité locale et instabilité générale. Couleur et forme doivent réunir ce qu’un point de vue unique ne réconcilie pas complètement.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "bbe02fe4-5fbc-4dac-93e0-3463728c8661",
+      "title": "Ciel au-dessus des nuages IV",
+      "catalogueTitle": "Sky above Clouds IV",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1965",
+      "start": 1965,
+      "end": 1965,
+      "medium": "Huile sur toile",
+      "accession": "1983.821",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/bbe02fe4-5fbc-4dac-93e0-3463728c8661-3a1e0df854ed8416.jpg",
+      "imageSource": "https://www.wikiart.org/en/georgia-o-keeffe/sky-above-clouds-iv-1965",
+      "credit": "Georgia O'Keeffe. Sky Above Clouds IV. WikiArt source label: Georgia O'Keeffe Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georgia-o-keeffe/sky-above-clouds-iv-1965",
+      "license": "Georgia O'Keeffe Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.artic.edu/artworks/100858",
+      "description": "Des formes blanches se répètent jusqu’à un mince horizon rose, séparées par des intervalles bleus. Leur continuation au-delà des bords latéraux fait paraître l’ensemble plus vaste que la toile. O’Keeffe donne au sujet aérien une échelle et un rythme différents de ceux d’un paysage organisé autour d’arbres, de bâtiments ou d’une personne au sol.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "4d6436cb-e1e7-4314-a178-6a8ecb95486a",
+      "title": "Le Chant de l'alouette",
+      "catalogueTitle": "The Song of the Lark",
+      "artist": "Jules Breton",
+      "artists": [
+        {
+          "name": "Jules Breton",
+          "role": "primary",
+          "slug": "jules-breton-q282043"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "Huile sur toile",
+      "accession": "1894.1033",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/4d6436cb-e1e7-4314-a178-6a8ecb95486a-ef41b537753b3678.jpg",
+      "imageSource": "https://www.artic.edu/artworks/94841",
+      "credit": "Jules Breton. The Song of the Lark. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/94841",
+      "description": "La faucille est au repos tandis que le visage de la femme se lève. Le titre identifie un moment d’écoute, mais l’outil et les pieds nus le gardent dans la journée agricole. La pause compte parce que le travail reste présent. L’attention a changé sans que l’image retire l’ouvrière de son champ.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "b4476eda-5355-4aa1-bf92-89e84648f6a4",
+      "title": "Baigneuses au bord d'une rivière",
+      "catalogueTitle": "Bathers by a River",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1909–1910, 1913 et 1916–1917",
+      "start": 1909,
+      "end": 1917,
+      "medium": "Huile sur toile",
+      "accession": "1953.158",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/b4476eda-5355-4aa1-bf92-89e84648f6a4-6bc7d36c29c0c352.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Bathers_by_a_River.jpg",
+      "credit": "Henri Matisse. Bathers by a River. Image credit: Henri Matisse; Source credit: Own work https://www.artic.edu/artworks/79307/bathers-by-a-river. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.artic.edu/artworks/79307",
+      "description": "Quatre corps occupent des zones verticales fortement divisées, avec des visages réduits et un milieu stylisé. Leur séparation compte autant que le sujet commun du bain. La composition a été reprise sur plusieurs années. Son ordonnance sévère ne doit pas passer pour une première décision sans effort ou une phase unique demeurée inchangée.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "d2f9b425-91d1-4652-a49a-4a21a4b08474",
+      "title": "Une paysanne bêchant devant sa chaumière",
+      "catalogueTitle": "A Peasant Woman Digging in Front of Her Cottage",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "vers 1885",
+      "start": 1880,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "1968.92",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/d2f9b425-91d1-4652-a49a-4a21a4b08474-be135bb32dd122e3.jpg",
+      "imageSource": "https://www.artic.edu/artworks/28862",
+      "credit": "Vincent van Gogh. A Peasant Woman Digging in Front of Her Cottage. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/28862",
+      "description": "La posture courbée de la femme appartient au sol près de la chaumière basse. La couleur atténuée relie corps, terre et toit sans dissoudre leurs formes différentes. Logis et travail restent proches. L’abri fait partie du même petit cadre où la terre doit être travaillée, plutôt que d’apparaître ailleurs comme une échappatoire.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "74e3c1d8-6d31-4ca5-a55c-ca06679fe6ac",
+      "title": "Le filet à harengs",
+      "catalogueTitle": "The Herring Net",
+      "artist": "Winslow Homer",
+      "artists": [
+        {
+          "name": "Winslow Homer",
+          "role": "primary",
+          "slug": "winslow-homer-q344838"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "Huile sur toile",
+      "accession": "1937.1039",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/74e3c1d8-6d31-4ca5-a55c-ca06679fe6ac-48406cbdba12f43d.jpg",
+      "imageSource": "https://www.artic.edu/artworks/25865",
+      "credit": "Winslow Homer. The Herring Net. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/25865",
+      "description": "Le poids du filet devient visible par l’effort coordonné des deux pêcheurs. Leur petite barque doit porter la prise et le travail de la remonter, tandis que l’eau continue de bouger. Homer laisse la mer agir dans la tâche. Le savoir-faire ne supprime pas l’instabilité des conditions dans lesquelles il doit s’exercer.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "1955035f-728f-4a2f-88f9-670889084d39",
+      "title": "Les Buveurs",
+      "catalogueTitle": "The Drinkers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "1953.178",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/1955035f-728f-4a2f-88f9-670889084d39-6a9a9fc3fc0a8bc4.jpg",
+      "imageSource": "https://www.artic.edu/artworks/79349",
+      "credit": "Vincent van Gogh. The Drinkers. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/79349",
+      "description": "Les hommes lèvent leurs récipients autour d’une table ; un enfant se tient près du groupe. Des touches courbes animent de façon apparentée corps et sol. Van Gogh retravaille une image de Daumier. On peut donc y penser la copie comme pratique : conserver l’organisation d’un autre artiste tout en transformant son caractère par la couleur et la touche.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "c1fa7909-579c-4a41-99d2-e3807df863b6",
+      "title": "Acrobates au Cirque Fernando",
+      "catalogueTitle": "Acrobats at the Cirque Fernando (Francisca and Angelina Wartenberg)",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "Huile sur toile",
+      "accession": "1922.440",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/c1fa7909-579c-4a41-99d2-e3807df863b6-9b440408e5142eb2.jpg",
+      "imageSource": "https://www.artic.edu/artworks/81558",
+      "credit": "Pierre-Auguste Renoir. Acrobats at the Cirque Fernando (Francisca and Angelina Wartenberg). Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/81558",
+      "description": "Les jeunes artistes se tiennent sur la piste sans être montrées au sommet d’un exploit. Costume, fruits et mains levées gardent les circonstances du spectacle public. Renoir donne à l’intervalle après ou autour de la représentation sa propre présence physique. Les figures ne deviennent pas seulement des démonstrations de leurs capacités.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "11bf2a94-84a5-4808-939c-6ff984bdfe5e",
+      "title": "Amédée-David, comte de Pastoret",
+      "catalogueTitle": "Amédée-David, the Comte de Pastoret",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1823–26",
+      "start": 1823,
+      "end": 1826,
+      "medium": "Huile sur toile",
+      "accession": "1971.452",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/11bf2a94-84a5-4808-939c-6ff984bdfe5e-ad5a193e8f4b8781.jpg",
+      "imageSource": "https://www.artic.edu/artworks/111317",
+      "credit": "Jean-Auguste-Dominique Ingres. Amédée-David, the Comte de Pastoret. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/111317",
+      "description": "Corps, bureau et draperie verte enveloppante maintiennent un rapport soigneusement contrôlé. Peu de détails rivalisent avec le visage, la main et l’habit officiel. Ingres construit le rang public à partir de ces éléments choisis, non d’une foule d’attributs. La disposition exacte du corps devient donc essentielle.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "923c1c3a-8858-4e2e-bc84-04d2b61bfaaf",
+      "title": "Arlésiennes : Mistral",
+      "catalogueTitle": "Arlésiennes (Mistral)",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile de jute",
+      "accession": "1934.391",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/923c1c3a-8858-4e2e-bc84-04d2b61bfaaf-af33babc864eb281.jpg",
+      "imageSource": "https://www.artic.edu/artworks/19339",
+      "credit": "Paul Gauguin. Arlésiennes (Mistral). Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/19339",
+      "description": "Les silhouettes sombres et liées des femmes avancent dans un paysage interrompu par arbres et fortes plages colorées. Leurs têtes penchées rendent le mouvement lisible même lorsque l’espace n’offre pas un chemin continu. Gauguin conserve un groupe reconnaissable tout en laissant le motif réorganiser le milieu traversé.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "c63f70c6-08a1-48b5-826d-87e70ee1c763",
+      "title": "Armide découvre Renaud endormi",
+      "catalogueTitle": "Armida Encounters the Sleeping Rinaldo",
+      "artist": "Giovanni Battista Tiepolo",
+      "artists": [
+        {
+          "name": "Giovanni Battista Tiepolo",
+          "role": "primary",
+          "slug": "giovanni-battista-tiepolo-q186202"
+        }
+      ],
+      "date": "vers 1742–1745",
+      "start": 1742,
+      "end": 1745,
+      "medium": "Huile sur toile",
+      "accession": "1925.700",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/c63f70c6-08a1-48b5-826d-87e70ee1c763-3bb81ad30b791735.jpg",
+      "imageSource": "https://www.artic.edu/artworks/16488",
+      "credit": "Giovanni Battista Tiepolo. Armida Encounters the Sleeping Rinaldo. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/16488",
+      "description": "Le dormeur ne peut répondre à l’attention de la femme richement vêtue qui approche. Son corps immobile fournit un point ferme parmi tissus volants et petites figures. Tiepolo fait de la conscience inégale la condition centrale de la rencontre. Les mouvements plus légers alentour empêchent la scène de sembler déjà fixée.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "cb33c32e-16ea-4d3e-9da0-287f5686585b",
+      "title": "Arrivée du train de Normandie, gare Saint-Lazare",
+      "catalogueTitle": "Arrival of the Normandy Train, Gare Saint-Lazare",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "Huile sur toile",
+      "accession": "1933.1158",
+      "image": "https://artlines.org/assets/artworks/open-museums/chicago/cb33c32e-16ea-4d3e-9da0-287f5686585b-51f2f1fad1642ab8.jpg",
+      "imageSource": "https://www.artic.edu/artworks/16571",
+      "credit": "Claude Monet. Arrival of the Normandy Train, Gare Saint-Lazare. Art Institute of Chicago. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.artic.edu/open-access/open-access-images",
+      "source": "https://www.artic.edu/artworks/16571",
+      "description": "La verrière et les supports de fer donnent à la gare une grande structure enveloppante. La vapeur en trouble la clarté, cache partiellement le train et filtre la lumière autour des figures dispersées. Monet traite l’intérieur industriel comme un lieu à l’atmosphère changeante. Les machines n’exigent pas toujours des contours durs et également visibles.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    },
+    {
+      "id": "28402600-b957-4192-a47f-e49004c1746b",
+      "title": "Musique bleue et verte",
+      "catalogueTitle": "Blue and Green Music",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1919–21",
+      "start": 1919,
+      "end": 1921,
+      "medium": "Huile sur toile",
+      "accession": "1969.835",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/28402600-b957-4192-a47f-e49004c1746b-ae9de928fc447d05.jpg",
+      "imageSource": "https://www.wikiart.org/en/georgia-o-keeffe/blue-and-green-music",
+      "credit": "Georgia O'Keeffe. Blue and Green Music. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georgia-o-keeffe/blue-and-green-music",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.artic.edu/artworks/24306",
+      "description": "Aucun instrument ni interprète n’explique le titre. Des bandes courbes bleues, vertes et pâles proposent direction et reprise, interrompues par des coins sombres. O’Keeffe fonde visuellement l’association musicale sans prétendre traduire la couleur en suite fixe de notes. Le mouvement appartient aux relations sur la surface.",
+      "importance": "",
+      "museum": "Art Institute of Chicago"
+    }
+  ],
+  "context": {
+    "start": 1742,
+    "end": 1965
+  },
+  "closingSections": [
+    {
+      "title": "Comparer la cohésion d’un lieu partagé",
+      "paragraphs": [
+        "Commencez par la berge, le restaurant et la rue pluvieuse, puis réduisez l’échelle à la bassine de Cassatt ou à la table de Cézanne. Les questions changent avec le lieu : qui peut entrer, qu’est-ce qui soutient un corps, à quels bords se fier ? Vérifiez l’exposition dans les informations actuelles de l’Art Institute. La sélection est éditoriale, non un parcours de salles."
+      ]
+    }
+  ]
+}

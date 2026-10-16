@@ -6,12 +6,11 @@ import (
 	"errors"
 	"net"
 	"net/http"
-	"strings"
 	"time"
 )
 
 func protectedCataloguePath(path string) bool {
-	return path == "/api/v1/museums" || strings.HasPrefix(path, "/api/v1/museums/")
+	return path == "/api/v1/museums"
 }
 
 // CatalogueAccess must run BEFORE the shared catalogue cache and admission queue.

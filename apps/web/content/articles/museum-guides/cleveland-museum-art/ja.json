@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "cleveland-museum-art",
+  "museum": "Cleveland Museum of Art",
+  "city": "クリーブランド",
+  "country": "米国",
+  "title": "クリーブランド美術館：名作",
+  "subtitle": "川岸、戸口、ボクシングの観客席。どこから見るかで変わる20の場面。",
+  "introduction": "ターナーが描いた燃える国会議事堂は、テムズ川を隔てた安全な場所から眺められる。カラヴァッジョは、死にゆく聖人の周囲にそれほどの余地を残さない。モネの《赤いスカーフ》では、雪の中にいるカミーユとこちら側の間にガラス戸がある。絵を見る人をどこまで近づけ、その間に何を置くか。それぞれの画家の選択が表れている。\n\nこの問いを手がかりに、クリーブランド美術館の作品をたどってみたい。すべてを一つの物語にまとめる必要はない。広い見渡しを与える絵もあれば、顔や身体、一輪の花に視野を絞る絵もある。場面の意味を決める前に、見る人がどこに立つ想定なのかを確かめる。重要なのは、ときに画面の外に残された私たちの場所なのだ。",
+  "visitNote": "このコレクション選集には、絵画だけでなく素描も含まれています。紙の作品は入れ替えが行われるほか、その他の作品は貸出中であったり、現在の展示に含まれていなかったりする場合があります。ターナーによるクリーブランド所蔵の絵画は、同じ国会議事堂の火災を描いたフィラデルフィア所蔵の作品とは別のキャンバス（別作品）です。",
+  "locale": "ja",
+  "website": "https://www.clevelandart.org",
+  "officialGuide": "https://www.clevelandart.org",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "無料で読む · 英語",
+      "note": "線、量塊（マス）、構図に関するスピードの解説は、ここに展示された、要素が密集した作品と余白の多い作品を比較する上で、実践的な視点を提供しています。彼のドローイングの練習法は、ペーヌによる描き込まれた素描と、より立体感豊かにモデリングされた絵画との違いを考える上で、特に有益です。"
+    }
+  ],
+  "works": [
+    {
+      "id": "594dbf09-1519-4408-8282-3b8ae0159be2",
+      "title": "貴族院・庶民院の焼失",
+      "catalogueTitle": "The Burning of the Houses of Lords and Commons, 16 October 1834",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1835",
+      "start": 1835,
+      "end": 1835,
+      "medium": "キャンバスに油彩",
+      "accession": "1942.647",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-302bd448f113e0e6e147d878ad745996be13a80847759a5e9de83d81f402b113.jpg",
+      "imageSource": "https://clevelandart.org/art/1942.647",
+      "credit": "Bequest of John L. Severance. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1942.647",
+      "description": "川面には火が映り、その光が見物する群衆の方へ伸びている。ターナーは1834年10月の国会議事堂火災の後にこの作品を描いた。炎は強調されており、中立的な記録ではない。建物と、それを焼く火との境も見分けにくい。対岸には眺めるだけの距離があるが、オレンジ色の光から逃れることはできない。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "cf1bff5c-2d86-4b2b-9c07-53eb0bf07fe4",
+      "title": "赤いスカーフ",
+      "catalogueTitle": "The Red Kerchief",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1868–73年頃",
+      "start": 1868,
+      "end": 1873,
+      "medium": "布に油彩",
+      "accession": "1958.39",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/0709c8aa-a20e-4e0d-8863-8c1b5576ce65-e54d50ce42708554.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.39",
+      "credit": "Bequest of Leonard C. Hanna Jr.. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1958.39",
+      "description": "カミーユ・モネが、外からガラス戸越しにこちらを見ている。淡いカーテンと雪景色の中で、身につけた赤い布が目を引く。一方、窓ガラスは内と外を隔てたままだ。肖像画は必ずしも、遮るもののない場所に人物を置く必要がない。ここでは普通の家の枠とガラスを通して、通りがかりの姿を認めることになる。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "a1a353a3-8f2b-4289-be53-1ac60adb57aa",
+      "title": "聖アンデレの磔刑",
+      "catalogueTitle": "The Crucifixion of Saint Andrew",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1606–7",
+      "start": 1606,
+      "end": 1607,
+      "medium": "キャンバスに油彩",
+      "accession": "1976.2",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/35fa786b-377f-44fd-8725-2137cb1fb9a6-7659097e3195bc5f.jpg",
+      "imageSource": "https://clevelandart.org/art/1976.2",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1976.2",
+      "description": "カラヴァッジョは、この殉教の場面から距離を取る余地をほとんど残していない。老いたアンデレの身体、周囲の人々、その粗末な服が、背景の大半を隠す闇から浮かぶ。聖なる出来事の全体を見渡すよりも、身体を支える動き、伸びる手、苦痛が読み取れるほど近い顔に向き合うことになる。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "62c07fda-7452-4933-9861-1ba687aee9c6",
+      "title": "聖家族と聖ヨハネ、聖マルガレタ",
+      "catalogueTitle": "The Holy Family with Saint John the Baptist and Saint Margaret",
+      "artist": "Filippino Lippi",
+      "artists": [
+        {
+          "name": "Filippino Lippi",
+          "role": "primary",
+          "slug": "filippino-lippi-q296265"
+        }
+      ],
+      "date": "1488–93年頃",
+      "start": 1488,
+      "end": 1493,
+      "medium": "木にテンペラ・油彩",
+      "accession": "1932.227",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/937d59ef-fb69-4d3b-b453-0a365854ec3d-498955438d6f8def.jpg",
+      "imageSource": "https://clevelandart.org/art/1932.227",
+      "credit": "The Delia E. Holden Fund and a fund donated as a memorial to Mrs. Holden by her children: Guerdon S. Holden, Delia Holden White, Roberta Holden Bole, Emery Holden Greenough, Gertrude Holden McGinley. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1932.227",
+      "description": "円形の画面には、余った空間を置いておける隅がない。フィリッピーノ・リッピは聖母子の周囲に人々を集め、曲線の内側で身ぶりを重ねている。垣間見える風景が、この近さを少し和らげる。手の動きと頭の向きを追うと、単なる左右対称ではなく、人と人との関わりによって集まりが整えられていることがわかる。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "90ae6dcf-8694-4259-a5c1-4c711c1a9e29",
+      "title": "大きなプラタナス",
+      "catalogueTitle": "The Large Plane Trees (Road Menders at Saint-Rémy)",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "布に油彩",
+      "accession": "1947.209",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/a9631396-b534-4e29-96db-7812c4c192ad-3e2cad7ce75e5a84.jpg",
+      "imageSource": "https://clevelandart.org/art/1947.209",
+      "credit": "Gift of the Hanna Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1947.209",
+      "description": "道路を直す人々は幹に比べて小さいが、その仕事があるため、これは木だけを眺める絵にはならない。ゴッホは短い筆触を変化させ、舗装、樹皮、葉を描き分けた。道路の修繕と季節に伴う木の生長が同じ地面で進む。画面には、木の下で働く人々に劣らない活発さが、木そのものにも与えられている。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "3070518e-e47a-4407-b524-2470f4a50e9b",
+      "title": "ロトと娘たち",
+      "catalogueTitle": "Lot and His Daughters",
+      "artist": "Antoine Pesne",
+      "artists": [
+        {
+          "name": "Antoine Pesne",
+          "role": "primary",
+          "slug": "antoine-pesne-q203758"
+        }
+      ],
+      "date": "1756",
+      "start": 1756,
+      "end": 1756,
+      "medium": "黒および赤チョークのウォッシュ、灰色のウォッシュ、白のグワッシュによるハイライト；黒インクの枠線",
+      "accession": "1975.15",
+      "image": "https://artlines.org/assets/artworks/open-museums/cleveland/3070518e-e47a-4407-b524-2470f4a50e9b-37d4b70160c2875c.jpg",
+      "imageSource": "https://clevelandart.org/art/1975.15",
+      "credit": "Antoine Pesne. Lot and His Daughters. The Cleveland Museum of Art. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.clevelandart.org/open-access",
+      "source": "https://clevelandart.org/art/1975.15",
+      "description": "ペーヌの素描は、起伏のある地面で三つの身体がどう組み合わさるかに集中している。暖色の淡彩はすべての輪郭を閉じずに量感を示し、濃い部分が顔と衣服を際立たせる。聖書の主題として物語を読める一方、制作上の検討としても見られる。姿勢、重なり、強調する場所を調整しながら、人物群が組み立てられているのだ。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "9357e06d-dff1-43c8-bd0c-f1e852162d2f",
+      "title": "夢",
+      "catalogueTitle": "The Dream",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1931",
+      "start": 1931,
+      "end": 1931,
+      "medium": "キャンバスに油彩",
+      "accession": "2001.34",
+      "image": "https://artlines.org/assets/artworks/wikiart/9357e06d-dff1-43c8-bd0c-f1e852162d2f-e90885dcba1d948d.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/the-dream",
+      "credit": "Salvador Dalí. The Dream. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://clevelandart.org/art/2001.34",
+      "description": "ダリは、何もかも曖昧にして夢を描いているのではない。頭部、遠くの柱、髪のように流れる形は、むしろ不穏なほど明瞭だ。不安定なのはそれらの関係であり、大きさや材質が予想どおりに振る舞わない。一つずつ名前を付けても、絵はあまりわかりやすくならない。難しさは輪郭の内側よりも、物と物の間にある。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "5ddf5171-0ec5-44ba-b05c-d529c7e9badf",
+      "title": "音楽の力",
+      "catalogueTitle": "The Power of Music",
+      "artist": "William Sidney Mount",
+      "artists": [
+        {
+          "name": "William Sidney Mount",
+          "role": "primary",
+          "slug": "william-sidney-mount-nga-1741"
+        }
+      ],
+      "date": "1847",
+      "start": 1847,
+      "end": 1847,
+      "medium": "キャンバスに油彩",
+      "accession": "1991.110",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-72fb3de87385085ea3398523da1707527b35ef62079aabf885ac99e75a7f9a43.jpg",
+      "imageSource": "https://clevelandart.org/art/1991.110",
+      "credit": "Leonard C. Hanna Jr. Fund. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1991.110",
+      "description": "音楽は戸口を通って届くが、黒人の聴き手はそこを越えない。くつろいだ姿勢からは室内の演奏を楽しむ様子が伝わる一方、壁は彼の身体を演奏者たちから隔てている。マウントの場面には喜びと排除が同居する。「音楽が人を結びつける絵」とだけ説明すれば、構図全体を成り立たせている境界を見落としてしまう。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "c380e469-0ed3-42f8-b3da-9c3af29a4a3d",
+      "title": "小川",
+      "catalogueTitle": "The Brook",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1895〜1900年頃",
+      "start": 1895,
+      "end": 1900,
+      "medium": "布に油彩",
+      "accession": "1958.20",
+      "image": "https://artlines.org/assets/artworks/open-museums/cleveland/c380e469-0ed3-42f8-b3da-9c3af29a4a3d-fcb6b696f17f69ec.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.20",
+      "credit": "Paul Cézanne. The Brook. The Cleveland Museum of Art. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.clevelandart.org/open-access",
+      "source": "https://clevelandart.org/art/1958.20",
+      "description": "小川はセザンヌの林の中へ視線を導く。ただし、岸は連続した整然とした線では描かれていない。青、緑、黄土色の色面が接し、重なり、離れながら、水や草木を示している。こうした変わり続ける関係から奥行きを読み取る必要がある。どの筆触も特定の物の描写に吸収されなくても、小川は小川として見えてくる。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "b3abe3bd-ab68-4787-92e3-21c2d9df4ba4",
+      "title": "磔刑",
+      "catalogueTitle": "The Crucifixion",
+      "artist": "Matteo di Giovanni",
+      "artists": [
+        {
+          "name": "Matteo di Giovanni",
+          "role": "primary",
+          "slug": "matteo-di-giovanni-nga-1708"
+        }
+      ],
+      "date": "1470年代",
+      "start": 1470,
+      "end": 1479,
+      "medium": "木製パネルにテンペラ、油彩、金",
+      "accession": "1940.535",
+      "image": "https://artlines.org/assets/artworks/open-museums/cleveland/b3abe3bd-ab68-4787-92e3-21c2d9df4ba4-d3f9c37b756632a8.jpg",
+      "imageSource": "https://clevelandart.org/art/1940.535",
+      "credit": "Matteo di Giovanni. The Crucifixion. The Cleveland Museum of Art. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.clevelandart.org/open-access",
+      "source": "https://clevelandart.org/art/1940.535",
+      "description": "マッテオ・ディ・ジョヴァンニは、高い十字架の下で立ち会う人々に、それぞれの場所を与えている。明確な輪郭と塗り分けられた色によって、小さな画面の中でも身ぶりを丁寧に読める。カラヴァッジョの身体が密集する闇と比べると、こちらは整然とした対面だ。出来事は厳しいが、視線は一人から次の一人へと落ち着いて移ることができる。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "f0b9a2d0-e99b-4b12-8293-68f507fbaaf6",
+      "title": "荒野の黄昏",
+      "catalogueTitle": "Twilight in the Wilderness",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1860",
+      "start": 1860,
+      "end": 1860,
+      "medium": "キャンバスに油彩",
+      "accession": "1965.233",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-59b7a4cc71ffaf194eee0aad1fbc46819815cd059ebdb161718fcd5a86b6bfae.jpg",
+      "imageSource": "https://clevelandart.org/art/1965.233",
+      "credit": "Mr. and Mrs. William H. Marlatt Fund. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1965.233",
+      "description": "チャーチは、人のいない谷の上に最も鮮烈な色を置いた。手前の暗い木々が見る位置を定め、そこから水面と遠い丘をたどって赤い雲へ進める。劇的な絵にするために、地上で事件が起こる必要はない。光の変化だけで、風景全体の構成が決まっている。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "b8ca44d8-7782-5e17-a3ab-d78fafe412dd",
+      "title": "シャーキーズでのボクシング・マッチ",
+      "catalogueTitle": "Stag at Sharkey's",
+      "artist": "George Bellows",
+      "artists": [
+        {
+          "name": "George Bellows",
+          "role": "primary",
+          "slug": "george-bellows-nga-940"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "キャンバスに油彩",
+      "accession": "1922.1133",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-cleveland/b8ca44d8-7782-5e17-a3ab-d78fafe412dd-4c7ea36e9f52cf9d.jpg",
+      "imageSource": "https://clevelandart.org/art/1922.1133",
+      "credit": "George Bellows. Stag at Sharkey's. George Bellows; The Cleveland Museum of Art; Hinman B. Hurlbut Collection. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1922.1133",
+      "description": "リングの下には観客が押し寄せ、その上でボクサーがぶつかり合う。ベローズの荒い描き方によって、腕、顔、身体は磨かれた独立の形に落ち着かない。見ることも画中の行動の一部だ。観客の近さが、この試合の息苦しいほど狭い空間を作る。ターナーの火災を遠い川岸から見るのとは、まったく違う立ち位置である。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "306924eb-4dd5-4e13-9804-5580924c23e4",
+      "title": "ナザレの家でのキリストと聖母",
+      "catalogueTitle": "Christ and the Virgin in the House at Nazareth",
+      "artist": "Francisco de Zurbarán",
+      "artists": [
+        {
+          "name": "Francisco de Zurbarán",
+          "role": "primary",
+          "slug": "francisco-de-zurbaran-q209615"
+        }
+      ],
+      "date": "1640年頃",
+      "start": 1635,
+      "end": 1645,
+      "medium": "キャンバスに油彩",
+      "accession": "1960.117",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/7e5f5e8e-a01e-4d9b-a786-4ae6639f064c-64d4ab4ac2b46e06.jpg",
+      "imageSource": "https://clevelandart.org/art/1960.117",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1960.117",
+      "description": "スルバランは少年と女性の間に空間を残し、物の少ない室内でそれぞれの姿勢を目立たせている。小物、花、鳥は、全体の配置をつかむときよりもゆっくり見るよう促す。題名は聖なる家族を示すが、画面が目を向けさせるのは、テーブル、日々の仕事、室内で一緒に過ごす時間という身近な大きさのものだ。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "79263a17-6628-4509-b104-6316060e3c0b",
+      "title": "チャーチ・ストリート高架鉄道",
+      "catalogueTitle": "Church Street El",
+      "artist": "Charles Sheeler",
+      "artists": [
+        {
+          "name": "Charles Sheeler",
+          "role": "primary",
+          "slug": "charles-sheeler-nga-2745"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "キャンバスに油彩",
+      "accession": "1977.43",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-4c6dab04808d71d8e932599be88bc9aabb6851d22d6dbe2f47ad3d81fda78ad8.jpg",
+      "imageSource": "https://clevelandart.org/art/1977.43",
+      "credit": "Mr. and Mrs. William H. Marlatt Fund. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1977.43",
+      "description": "急な角度で見下ろすと、高架鉄道と建物は噛み合う平面になる。シーラーは、眺めを賑やかな街の小話に変えそうな細部を減らした。実用の都市であることはわかるが、輪郭は別の見方も誘う。線路は一本の線でもあり、影はそれを落とす建物と同じくらい確かな形にも見える。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "d0d815ce-f1cd-412d-9a25-317cd306ce02",
+      "title": "キューピッドとプシュケ",
+      "catalogueTitle": "Cupid and Psyche",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1817",
+      "start": 1817,
+      "end": 1817,
+      "medium": "キャンバスに油彩",
+      "accession": "1962.37",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/d57662f7-5981-4286-957d-ad66f525af75-f5eaff6d842ca23f.jpg",
+      "imageSource": "https://clevelandart.org/art/1962.37",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1962.37",
+      "description": "プシュケが眠る一方、キューピッドは画面の外へ顔を向ける。見られていることへの意識が二人で違う。ダヴィッドの豪華な寝台と開けた風景は神話に贅沢な舞台を用意するが、青年のまっすぐな視線は鑑賞者との距離を揺さぶる。眠る身体から、その身体を見ていたこちらに気づいたような人物へ、注意が移る。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "1d0bf35c-a5c4-4c1c-8261-40f9320dccbd",
+      "title": "ダナエ",
+      "catalogueTitle": "Danaë",
+      "artist": "Orazio Gentileschi",
+      "artists": [
+        {
+          "name": "Orazio Gentileschi",
+          "role": "primary",
+          "slug": "orazio-gentileschi-q367360"
+        }
+      ],
+      "date": "1623年頃",
+      "start": 1618,
+      "end": 1628,
+      "medium": "キャンバスに油彩",
+      "accession": "1971.101",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/4fb34858-2c34-4534-9491-9346aa16574a-de994c4799bebe01.jpg",
+      "imageSource": "https://clevelandart.org/art/1971.101",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1971.101",
+      "description": "降り注ぐ黄金に向かって、淡い寝床の上で手と腕が動く。ジェンティレスキは、重さもひだも触れられそうな布に囲まれた場所で、超自然の訪れを描く。暗いカーテンが場面を閉じ、横たわる人物と上から届くものとのやり取りだけに世界を絞っている。神話は大勢の登場人物ではなく、手を伸ばし応じる動きで示される。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "438a5950-521c-497f-bf93-44d5d55c5a14",
+      "title": "エリザベス・シューウェル・ウェストと息子ラファエル",
+      "catalogueTitle": "Elizabeth Shewell West and Her Son, Raphael",
+      "artist": "Benjamin West",
+      "artists": [
+        {
+          "name": "Benjamin West",
+          "role": "primary",
+          "slug": "benjamin-west-nga-1970"
+        }
+      ],
+      "date": "1770年頃",
+      "start": 1765,
+      "end": 1775,
+      "medium": "キャンバスに油彩",
+      "accession": "1927.393",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-eed3e889356a29f0e6a34516ed7dc2836358d7e10569ba4051ae5547ba6dcb4a.jpg",
+      "imageSource": "https://clevelandart.org/art/1927.393",
+      "credit": "The Charles W. Harkness Gift. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1927.393",
+      "description": "ベンジャミン・ウェストは子どもの顔を母親の頬に近づけ、二人を母の腕の中に収めている。家や身分を説明する家具はほとんどない。暗がりの中で光が二つの顔を結ぶ。この肖像の親密さは、具体的な身体の配置から生まれる。二つの頭の短い間隔と、子を抱く大人の腕が作る囲いである。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "d9fc5017-a624-5025-a370-09644b08652d",
+      "title": "ハルテンフェルス城付近での狩猟",
+      "catalogueTitle": "Hunting near Hartenfels Castle",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1540",
+      "start": 1540,
+      "end": 1540,
+      "medium": "油彩（当初は木板、後にメソナイトへ転写）",
+      "accession": "1958.425",
+      "image": "https://artlines.org/assets/artworks/imported/period-images-20260926/cleveland-135428-fff0e996e2b7b977.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.425",
+      "credit": "Hunting near Hartenfels Castle. The Cleveland Museum of Art; John L. Severance Fund. CC0 1.0. Full-frame resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1958.425",
+      "description": "地上の猟師には、狩りのこれほど広い範囲を見渡すことはできない。クラーナハは騎手、犬、鹿を林、水辺、開けた土地に分散させ、個々の出来事を順に調べられるようにした。高い視点によって、狩猟は秩序立った見世物として眺められる。参加者には持てない全体の見通しを、鑑賞者だけが得る。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "3efea461-6783-4636-9ccf-58fa241c5b74",
+      "title": "ラ・チェルヴァーラ、ローマ近郊のカンパーニャ",
+      "catalogueTitle": "La Cervara, the Roman Campagna",
+      "artist": "Jean-Baptiste-Camille Corot",
+      "artists": [
+        {
+          "name": "Jean-Baptiste-Camille Corot",
+          "role": "primary",
+          "slug": "jean-baptiste-camille-corot-q148475"
+        }
+      ],
+      "date": "1830–31年頃",
+      "start": 1830,
+      "end": 1831,
+      "medium": "布に油彩",
+      "accession": "1963.91",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/1fe50913-fc47-4813-a6d2-ba6f39ddf5a8-f55da24dfb6cd701.jpg",
+      "imageSource": "https://clevelandart.org/art/1963.91",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1963.91",
+      "description": "まばらな木々の間を、明るく起伏のある地面が占める。コローは中心の劇的な出来事ではなく、大きく分かれた大地と空によって景色をまとめている。人や動物は土地の広さを測る目安だ。その控えめな姿はまた、彼らが何の用で来たにせよ、荒れた土地そのものを見る余地を残している。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "79047ed7-b419-415d-b26e-45e54b58e02e",
+      "title": "黒のあるアサガオ",
+      "catalogueTitle": "Morning Glory with Black",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "キャンバスに油彩",
+      "accession": "1958.42",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/5d5ed580-787a-4d03-9925-bb685e9091e8-279f6696cb1c045f.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.42",
+      "credit": "Bequest of Leonard C. Hanna Jr.. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1958.42",
+      "description": "拡大された花びらは、花の周囲にほとんど余白を残さない。オキーフは見る人を極端に近づけ、ひだを小さな植物の細部ではなく、こちらを囲む空間のようにも見せる。下部の暗い曲線が明るい面を断ち切る。この中断が大切だ。柔らかなひだに比較できる縁ができ、光の変化を見分けやすくなる。",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    }
+  ],
+  "context": {
+    "start": 1470,
+    "end": 1931
+  },
+  "closingSections": [
+    {
+      "title": "立ち位置を選び、見比べる",
+      "paragraphs": [
+        "鑑賞者を近くまで招く作品と、対象を遠くに保つ作品を組み合わせてみよう。制作年代に沿う必要はない。カラヴァッジョとオキーフは、とても異なる目的で視野の余地を狭めている。この選集は部屋順の見学ルートではない。特定の作品を目当てに訪れる際は、美術館の最新の作品情報と来館案内を確認してほしい。"
+      ]
+    }
+  ]
+}

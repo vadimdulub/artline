@@ -1,0 +1,607 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "detroit-institute-arts",
+  "museum": "Detroit Institute of Arts",
+  "city": "Détroit",
+  "country": "États-Unis",
+  "title": "Institut des arts de Detroit : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres qui rendent impossible de séparer une figure du milieu qu’elle occupe.",
+  "introduction": "Dans l’usine de Rivera, un ouvrier a une tâche et une place au sein d’un vaste système. La dormeuse du *Cauchemar* de Füssli occupe un espace tout aussi défini, mais les êtres qui l’entourent en rendent les règles incertaines. Entre ces extrêmes, un bar, un cabinet de travail et une librairie montrent des personnes donnant forme à leur environnement quotidien.\n\nCette sélection du Detroit Institute of Arts suit ces différentes manières de délimiter un espace. Une pièce peut protéger la concentration, organiser le travail ou emprisonner un corps. La couleur peut aussi l’ouvrir jusqu’à faire perdre aux murs leur solidité. Les œuvres n’apportent pas une réponse commune ; elles permettent de demander quelle place une personne possède, et qui ou quoi la contrôle.",
+  "visitNote": "Veuillez consulter les informations actualisées de la galerie concernant les modifications de présentation et les prêts. La notice relative à Rivera porte sur le mur nord des peintures murales Detroit Industry, et non sur le cycle complet. L'attribution et la datation reposent sur les éléments relatifs à l'œuvre citée ; les deux panneaux représentant saint Jérôme ont des historiques d'attribution distincts.",
+  "locale": "fr",
+  "website": "http://www.dia.org/",
+  "officialGuide": "http://www.dia.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Lecture gratuite · Anglais",
+      "note": "L’analyse que fait Speed de la masse, de la ligne et de la tonalité permet d’aborder aussi bien les petits panneaux que les grandes compositions de figures. Comparez les corps aux contours nets chez Rivera avec les formes presque dissoutes chez Whistler."
+    }
+  ],
+  "works": [
+    {
+      "id": "78399197-0414-553c-ad7d-6ef3dd204b2e",
+      "title": "Le Cauchemar",
+      "catalogueTitle": "The Nightmare",
+      "artist": "Henry Fuseli",
+      "artists": [
+        {
+          "name": "Henry Fuseli",
+          "role": "primary",
+          "slug": "henry-fuseli-q122382"
+        }
+      ],
+      "date": "1781",
+      "start": 1781,
+      "end": 1781,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/78399197-0414-553c-ad7d-6ef3dd204b2e-69117f76388a9b12.jpg",
+      "imageSource": "https://www.wikiart.org/en/henry-fuseli/the-nightmare-1781",
+      "credit": "Henry Fuseli. The Nightmare. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henry-fuseli/the-nightmare-1781",
+      "description": "Le corps de la dormeuse s’étend en travers du lit tandis qu’une créature siège sur son torse. Derrière eux, une tête de cheval passe entre les rideaux sombres. Füssli accorde à ces intrus la même présence physique qu’au mobilier. Le cauchemar prend possession de la chambre : la femme ne peut réagir, alors que les êtres impossibles semblent parfaitement chez eux.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "2dfbe2ba-8168-5318-abb5-860b11161cbc",
+      "title": "L’Industrie de Detroit : mur nord",
+      "catalogueTitle": "Detroit Industry, North Wall",
+      "artist": "Diego Rivera",
+      "artists": [
+        {
+          "name": "Diego Rivera",
+          "role": "primary",
+          "slug": "diego-rivera-q171128"
+        }
+      ],
+      "date": "1932–1933",
+      "start": 1932,
+      "end": 1933,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2dfbe2ba-8168-5318-abb5-860b11161cbc-6c5be1155a21cf4a.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-rivera/detroit-industry-north-wall",
+      "credit": "Diego Rivera. Detroit Industry, North Wall. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-rivera/detroit-industry-north-wall",
+      "description": "La répétition des corps et des tuyaux propage l’activité à travers l’usine de Rivera. Chaque ouvrier accomplit une tâche locale, mais l’échelle de la fresque insiste sur le système qui les relie. Réalisé en 1932–1933, le mur nord appartient à un cycle entourant la pièce. Une reproduction précise les actions individuelles ; elle ne restitue pas l’expérience d’une production industrielle occupant tout un espace architectural.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "a8b18827-5ed5-5bc6-b5a0-dde6a8c52d78",
+      "title": "Nocturne en noir et or : la fusée qui retombe",
+      "catalogueTitle": "Nocturne in Black and Gold – the Falling Rocket",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a8b18827-5ed5-5bc6-b5a0-dde6a8c52d78-f74bc5e9dc585794.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-mcneill-whistler/nocturne-in-black-and-gold-the-falling-rocket",
+      "credit": "James Abbott McNeill Whistler. Nocturne in Black and Gold – the Falling Rocket. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-mcneill-whistler/nocturne-in-black-and-gold-the-falling-rocket",
+      "description": "Des marques dorées descendent dans l’obscurité sans décrire toutes les étapes du feu d’artifice. Eau, figures et distance ne sont qu’en partie définies. Whistler donne assez d’indices pour reconnaître le spectacle, puis laisse la couleur et la lumière dispersée faire le reste. Ce manque de détails sert l’image : un décor entièrement décrit concurrencerait la brève visibilité des étincelles qui retombent.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "778dc270-4c6a-59ff-947f-698e78ae4517",
+      "title": "Marthe et Marie Madeleine",
+      "catalogueTitle": "Martha and Mary Magdalene",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1598",
+      "start": 1598,
+      "end": 1598,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/778dc270-4c6a-59ff-947f-698e78ae4517-49e2100ec2d137cb.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/martha-and-mary-magdalene",
+      "credit": "Martha and Mary Magdalene. WikiArt; Caravaggio. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/martha-and-mary-magdalene",
+      "description": "Le miroir fait de l’apparence un objet de la conversation. Une femme parle ; la main de l’autre attire l’attention vers son propre corps. Le Caravage ramène le sujet religieux à cet échange rapproché, sans lui donner un cadre public plus large. L’évolution du rapport entre les femmes importe davantage que le spectacle. Un geste peut révéler une réponse qu’une pièce minutieusement décrite n’expliquerait pas.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "e0138511-153a-504d-979e-d694a73beaac",
+      "title": "La Fenêtre",
+      "catalogueTitle": "The Window",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikiart-500-painters-20261011/e0138511-153a-504d-979e-d694a73beaac-800b5c554dd0f124.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/the-window-1916",
+      "credit": "Henri Matisse. The Window. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-matisse/the-window-1916",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/sites/default/files/2022-09/VG%20Brochure.pdf",
+      "description": "Matisse pose le vert de l’extérieur à côté du bleu intérieur avec une fermeté qui rend presque facultative la profondeur. Table, chaise et fleurs restent reconnaissables, mais leurs contours divisent aussi la toile en zones voisines. La fenêtre joue donc deux rôles : elle ouvre une pièce et marque une frontière entre des couleurs sur une surface plane.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "75f22749-1ce7-58ef-ad4e-e6aa76c87532",
+      "title": "Cotopaxi",
+      "catalogueTitle": "Cotopaxi (Ecuador)",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1862",
+      "start": 1862,
+      "end": 1862,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/75f22749-1ce7-58ef-ad4e-e6aa76c87532-1c1ecdca5c6ed582.jpg",
+      "imageSource": "https://www.wikiart.org/en/frederic-edwin-church/cotopaxi-1862",
+      "credit": "Frederic Edwin Church. Cotopaxi (Ecuador). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frederic-edwin-church/cotopaxi-1862",
+      "description": "La fumée déborde du volcan jusqu’à modifier la lumière de toute la vue. Church associe un premier plan soigneusement articulé à un horizon qui ne peut rester stable. Les petits détails du paysage donnent une mesure à l’événement. L’action essentielle n’est pas confinée à la montagne : elle se propage dans l’air rougeâtre.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "1f3f5782-25bd-548e-9545-aaf8ebf5974c",
+      "title": "Saint Jérôme dans son cabinet de travail",
+      "catalogueTitle": "St. Jerome in his Study",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "vers 1435",
+      "start": 1435,
+      "end": 1435,
+      "medium": "Huile sur papier toilé marouflé sur panneau de chêne",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/1f3f5782-25bd-548e-9545-aaf8ebf5974c-d606136bc3a901c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-van-eyck/st-jerome-in-his-study-1432",
+      "credit": "Jan van Eyck. St. Jerome in his Study. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jan-van-eyck/st-jerome-in-his-study-1432",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/saint-jerome-his-study/44739",
+      "description": "Livres et instruments font du cabinet de Jérôme un lieu de concentration méthodique. Le lion à ses pieds introduit la légende du saint dans ce cadre intellectuel. Ce très petit panneau, haut d’environ vingt centimètres, demande que l’on examine ses objets de près. Son attribution a varié au fil du temps ; le DIA le donne actuellement à Jan van Eyck et le date vers 1435.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "af8b24ef-a2d5-5c4b-b2f2-3274583cda4d",
+      "title": "Saint Jérôme au désert",
+      "catalogueTitle": "Saint Jerome and the Lion",
+      "artist": "Atelier de Rogier van der Weyden",
+      "artists": [
+        {
+          "name": "Rogier van der Weyden",
+          "role": "workshop",
+          "slug": "rogier-van-der-weyden-q68631"
+        }
+      ],
+      "date": "1450–1465",
+      "start": 1450,
+      "end": 1465,
+      "medium": "Huile sur panneau de chêne",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/af8b24ef-a2d5-5c4b-b2f2-3274583cda4d-e8c100fdea29dd0c.jpg",
+      "imageSource": "https://www.wikiart.org/en/rogier-van-der-weyden/saint-jerome-and-the-lion-1450",
+      "credit": "Saint Jerome and the Lion. WikiArt; Rogier van der Weyden. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/saint-jerome-desert/64849",
+      "description": "Jérôme s’occupe ici de la patte du lion, plutôt que des livres qui l’entourent dans l’œuvre précédente. Des rochers anguleux enferment le duo, donnant à l’épisode en plein air la concentration d’une petite pièce. Le musée attribue le panneau à l’atelier de Rogier van der Weyden. Il faut conserver cette distinction : le lien avec la pratique d’un maître ne prouve pas qu’il ait peint l’œuvre lui-même.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "6a5bb4e8-b8e2-5273-a404-a5dfa157287c",
+      "title": "Le Bar de McSorley",
+      "catalogueTitle": "McSorley's Bar",
+      "artist": "John Sloan",
+      "artists": [
+        {
+          "name": "John Sloan",
+          "role": "primary",
+          "slug": "john-sloan-q861756"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6a5bb4e8-b8e2-5273-a404-a5dfa157287c-e8df7082d172ace9.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-french-sloan/mcsorley-s-bar-1912",
+      "credit": "John Sloan. McSorley's Bar. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-french-sloan/mcsorley-s-bar-1912",
+      "description": "S’appuyer, se tenir debout, attendre : ces attitudes organisent les relations dans le bar de Sloan. L’employé vêtu de blanc attire l’œil dans la pièce sombre, mais aucun incident ne réduit les autres hommes à des rôles secondaires. Images et accessoires encombrent les murs comme les hommes occupent le comptoir. Le lieu se comprend par l’usage répété ; la distribution des corps importe davantage qu’une histoire identifiable.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "2767df6a-98f7-5af1-ba75-112d4a40e161",
+      "title": "L’Envol amoureux d’un cœur en sucre rose",
+      "catalogueTitle": "Love Flight of a Pink Candy Heart",
+      "artist": "Florine Stettheimer",
+      "artists": [
+        {
+          "name": "Florine Stettheimer",
+          "role": "primary",
+          "slug": "florine-stettheimer-round2-8f62ae931f72"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2767df6a-98f7-5af1-ba75-112d4a40e161-5bb16cc5f4d1bd0c.jpg",
+      "imageSource": "https://www.wikiart.org/en/florine-stettheimer/love-flight-of-a-pink-candy-heart-1930",
+      "credit": "Florine Stettheimer. Love Flight of a Pink Candy Heart. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/florine-stettheimer/love-flight-of-a-pink-candy-heart-1930",
+      "description": "Stettheimer n’impose pas une échelle commune à chaque figure et ornement. Petits personnages, signes vifs et forme rose évoquant un cœur partagent un fond jaune selon leur importance dans l’image, non selon leurs dimensions physiques. On peut parcourir les épisodes dispersés sans les contraindre à former l’espace continu attendu d’une scène conventionnelle.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "73970e16-5aed-55a8-8eb7-8cf42aa0bea5",
+      "title": "Librairie : livres hébraïques, livres pour les jours de fête",
+      "catalogueTitle": "Bookshop: Hebrew Books, Holy Day Books",
+      "artist": "Ben Shahn",
+      "artists": [
+        {
+          "name": "Ben Shahn",
+          "role": "primary",
+          "slug": "ben-shahn-nga-3030"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/73970e16-5aed-55a8-8eb7-8cf42aa0bea5-293891717b8e6067.jpg",
+      "imageSource": "https://www.wikiart.org/en/ben-shahn/bookshop-hebrew-books-holy-day-books-1953",
+      "credit": "Ben Shahn. Bookshop: Hebrew Books, Holy Day Books. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ben-shahn/bookshop-hebrew-books-holy-day-books-1953",
+      "description": "Les inscriptions indiquent la nature du commerce avant que le personnage à sa porte puisse nous renseigner sur une journée particulière. Shahn confie aux mots des informations culturelles qu’une devanture générique perdrait. Des lignes fines relient porte, enseigne et personne. L’entrée rouge donne à ce petit commerce précisément désigné sa place dans la rue.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "9d9166a5-454a-56b2-a356-84ef1808d2a1",
+      "title": "Étude pour un nu accroupi",
+      "catalogueTitle": "Study for Crouching Nude",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/9d9166a5-454a-56b2-a356-84ef1808d2a1-b6d47f2b8bef697e.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "credit": "Francis Bacon. Study for Crouching Nude. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "description": "Bacon entoure le corps accroupi d’un tracé semblable à une cage, puis refuse de donner à l’anatomie une forme aussi stable. Le contraste est essentiel : les limites claires de l’enceinte font ressortir l’instabilité de la figure. Des stries verticales troublent l’obscurité derrière elle. L’enfermement tient à la posture autant qu’à la structure mesurée qui lui laisse si peu de place.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "41370b75-f3cd-5aca-86b3-49c1560d99b8",
+      "title": "Vue des environs de Paris",
+      "catalogueTitle": "View of the Outskirts of Paris",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/41370b75-f3cd-5aca-86b3-49c1560d99b8-e2f282fc9969ad97.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "credit": "Henri Rousseau. View of the Outskirts of Paris. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "description": "Au-delà du fleuve, les usines et les cheminées de Rousseau forment des silhouettes nettes et séparées. L’industrie entre dans le paysage sans l’activité pressée de la fresque de Rivera. La différence concerne autant le point de vue que le sujet : l’observateur reste dehors, sur une rive d’où la production apparaît sous forme de bâtiments plutôt que de travail. L’ordre calme ne révèle pas ce qui s’y passe.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "12d94e28-a350-56cc-a70b-7e7fef605e97",
+      "title": "La Supplique (Deux femmes et un homme)",
+      "catalogueTitle": "The Appeal (Two Women and a Man)",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "Early–mid 16th century",
+      "start": null,
+      "end": null,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/12d94e28-a350-56cc-a70b-7e7fef605e97-681c64b1e489999a.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/two-women-and-a-man-trio-1510",
+      "credit": "Two women and a man ( Trio). WikiArt; Giorgione. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/appeal/63584",
+      "description": "Mains et regards relient les trois figures rapprochées, mais leur relation ne livre pas un récit certain. L’œuvre a aussi changé de titre et d’attribution. Le DIA la catalogue désormais comme *The Appeal* de Titien, du début au milieu du XVIe siècle. On peut suivre l’échange avec attention sans prétendre que la scène ou son auteur aient toujours été identifiés de façon définitive.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "4f616c0a-00f2-5397-9732-4f867df9b59a",
+      "title": "La Sainte Famille",
+      "catalogueTitle": "The Holy Family",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1641",
+      "start": 1641,
+      "end": 1641,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/4f616c0a-00f2-5397-9732-4f867df9b59a-5378c652da7cd7a5.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/the-holy-family-1641",
+      "credit": "Nicolas Poussin. The Holy Family. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/the-holy-family-1641",
+      "description": "Marie se penche vers l’enfant et le berceau tandis que Joseph occupe une place plus éloignée. Poussin donne à ces différents degrés de proximité un cadre architectural ferme. Draperies et haute ouverture unissent la pièce sans masquer le petit geste de soin en son centre. Le sujet sacré repose sur une distinction familière : s’occuper directement de quelqu’un ou rester à ses côtés.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "397d02a6-c419-5ebc-8e9d-69ece61e30cc",
+      "title": "Des aveugles conduisant des aveugles",
+      "catalogueTitle": "The Blind Leading the Blind",
+      "artist": "Louise Bourgeois",
+      "artists": [
+        {
+          "name": "Louise Bourgeois",
+          "role": "primary",
+          "slug": "louise-bourgeois-nga-9733"
+        }
+      ],
+      "date": "1949",
+      "start": 1949,
+      "end": 1949,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/397d02a6-c419-5ebc-8e9d-69ece61e30cc-bbbff817810a96d8.jpg",
+      "imageSource": "https://www.wikiart.org/en/louise-bourgeois/the-blind-leading-the-blind-1949",
+      "credit": "Louise Bourgeois. The Blind Leading the Blind. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/blind-leading-blind/35229",
+      "description": "Bourgeois relie les montants roses par une barre horizontale commune, mais leurs extrémités inférieures effilées rendent l’ensemble précaire. Le titre suggère un groupe humain sans exiger têtes ni corps complets. Soutien et dépendance se lisent dans la construction elle-même : chaque élément répété appartient au tout, alors que ce tout ne dispose d’aucune assise confortablement large.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "fee262fa-7502-5b6f-b649-548bed53b710",
+      "title": "L’Elbe près de Dresde",
+      "catalogueTitle": "The Elbe Near Dresden",
+      "artist": "Oskar Kokoschka",
+      "artists": [
+        {
+          "name": "Oskar Kokoschka",
+          "role": "primary",
+          "slug": "oskar-kokoschka-q154260"
+        }
+      ],
+      "date": "1921",
+      "start": 1921,
+      "end": 1921,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fee262fa-7502-5b6f-b649-548bed53b710-3e9f302258bcff92.jpg",
+      "imageSource": "https://www.wikiart.org/en/oskar-kokoschka/the-elbe-near-dresden",
+      "credit": "Oskar Kokoschka. The Elbe Near Dresden. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/oskar-kokoschka/the-elbe-near-dresden",
+      "description": "Le clocher et la ville restent identifiables dans la couleur vigoureusement travaillée de Kokoschka. Eau bleue et bandes rouges et vertes animent les rives d’un mouvement qui se poursuit dans le ciel. Au lieu d’opposer des bâtiments fixes à un fleuve changeant, le tableau soumet toute la vue à une surface agitée. L’architecture participe au mouvement plutôt qu’elle ne l’arrête.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "eb2d4b63-bf1a-5061-a870-377c0e5ec983",
+      "title": "La Wolf River, Kansas",
+      "catalogueTitle": "The Wolf River, Kansas",
+      "artist": "Albert Bierstadt",
+      "artists": [
+        {
+          "name": "Albert Bierstadt",
+          "role": "primary",
+          "slug": "albert-bierstadt-q77132"
+        }
+      ],
+      "date": "1859",
+      "start": 1859,
+      "end": 1859,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/eb2d4b63-bf1a-5061-a870-377c0e5ec983-7209d1283e429210.jpg",
+      "imageSource": "https://www.wikiart.org/en/albert-bierstadt/the-wolf-river-kansas",
+      "credit": "Albert Bierstadt. The Wolf River, Kansas. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/albert-bierstadt/the-wolf-river-kansas",
+      "description": "Tentes et personnes occupent une clairière sous de grands arbres. Le point de vue éloigné de Bierstadt inscrit leurs activités dans une distribution bien plus vaste de lumière et d’ombre. Il importe d’en reconnaître les limites : le tableau montre un lieu habité, mais ses petites figures ne donnent pas un récit complet des personnes qui y vivent.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "e4cab4ad-a5dc-572f-b2d7-f15042b77b64",
+      "title": "Jeune fille à la mandoline",
+      "catalogueTitle": "Girl with a Mandolin",
+      "artist": "Giovanni Battista Tiepolo",
+      "artists": [
+        {
+          "name": "Giovanni Battista Tiepolo",
+          "role": "primary",
+          "slug": "giovanni-battista-tiepolo-q186202"
+        }
+      ],
+      "date": "1758-1760",
+      "start": 1758,
+      "end": 1760,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e4cab4ad-a5dc-572f-b2d7-f15042b77b64-d96bdf0ae2243107.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-battista-tiepolo/girl-with-a-mandolin",
+      "credit": "Giovanni Battista Tiepolo. Girl with a Mandolin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giovanni-battista-tiepolo/girl-with-a-mandolin",
+      "description": "L’instrument donne aux mains de la femme une occupation commune et trace une diagonale sur son corps. La tête tournée empêche la pose de devenir une présentation régulière du costume. Tiepolo fait sortir la peau claire et le tissu vif de l’obscurité. L’animation dépend pourtant du léger décalage entre la direction du visage et celle des mains occupées.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "4e92454b-f9fa-55ac-89e4-5747f3b46efe",
+      "title": "Job",
+      "catalogueTitle": "Job",
+      "artist": "Jacob Jordaens",
+      "artists": [
+        {
+          "name": "Jacob Jordaens",
+          "role": "primary",
+          "slug": "jacob-jordaens-q270658"
+        }
+      ],
+      "date": "vers 1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "Huile sur panneau de chêne",
+      "accession": "43.418",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-followup-20261010/4e92454b-f9fa-55ac-89e4-5747f3b46efe-8dde05a44b59e747.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacob-jordaens/job",
+      "credit": "Job. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/job-50280",
+      "description": "Jordaens donne au visage éprouvé et à la poitrine découverte toute la substance de la prière de Job. Le regard levé porte le sujet biblique sans réduire l’homme à un emblème abstrait de patience. La lumière traverse une chair vulnérable et singulière. Après les usines, paysages et pièces de cette sélection, un corps et deux yeux levés suffisent.",
+      "importance": "",
+      "museum": "Detroit Institute of Arts",
+      "catalogueArtistSlug": null
+    }
+  ],
+  "context": {
+    "start": 1435,
+    "end": 1953
+  },
+  "closingSections": [
+    {
+      "title": "Revenir à l’échelle d’un corps",
+      "paragraphs": [
+        "Comparez les ouvriers de Rivera à la figure enfermée de Bacon, puis au lecteur du petit panneau de Van Eyck. Chaque cadre laisse au corps des libertés différentes. Ces œuvres sont choisies dans les collections, sans garantie d’un parcours d’exposition. Consultez les notices actuelles avant une visite, surtout lorsque l’attribution ou la présentation d’une œuvre est susceptible de changer."
+      ]
+    }
+  ]
+}

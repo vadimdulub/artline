@@ -15,7 +15,8 @@ export function backDestination(pathname: string): string {
   if (/^\/artists\/[^/]+\/works\/[^/]+/.test(pathname)) return pathname.split("/works/")[0];
   if (pathname.startsWith("/artists/")) return "/artists";
   if (pathname.startsWith("/museums/")) return "/museums";
-  if (pathname.startsWith("/guides/")) return "/guides";
+  if (pathname.startsWith("/guides/") || pathname.startsWith("/art-history-timeline")) return "/guides";
+  if (pathname.startsWith("/exhibitions/")) return "/exhibitions";
   if (pathname.startsWith("/studies/")) return "/studies";
   return "/";
 }
@@ -24,7 +25,8 @@ function parentLabel(pathname: string) {
   if (/^\/artists\/[^/]+\/works\/[^/]+/.test(pathname)) return "View artist";
   if (pathname.startsWith("/artists/")) return "All artists";
   if (pathname.startsWith("/museums/")) return "All museums";
-  if (pathname.startsWith("/guides/")) return "All guides";
+  if (pathname.startsWith("/guides/") || pathname.startsWith("/art-history-timeline")) return "All guides";
+  if (pathname.startsWith("/exhibitions/")) return "All exhibitions";
   if (pathname.startsWith("/studies/")) return "Your studies";
   return "Explore the timeline";
 }
@@ -46,6 +48,7 @@ function routeLabel(pathname: string): string {
   const pages: Record<string, string> = { "/": "timeline", "/books": "Books", "/events": "Events", "/all": "All", "/artists": "artists", "/artworks": "artworks", "/museums": "museums", "/guides": "guides", "/studies": "your studies", "/bookmarks": "bookmarks", "/about": "About", "/privacy": "Privacy", "/account": "your account", "/catalogue": "catalogue", "/art-history-timeline": "art history timeline" };
   if (pages[pathname]) return pages[pathname];
   if (pathname.startsWith("/guides/")) return "guide";
+  if (pathname.startsWith("/art-history-timeline/")) return "art history timeline";
   if (pathname.includes("/works/")) return "artwork";
   if (pathname.startsWith("/artists/")) return "artist";
   if (pathname.startsWith("/museums/")) return "museum";
@@ -127,36 +130,19 @@ function Arrow() {
   return <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14" /></svg>;
 }
 
-/** Reuses a page's existing parent-navigation row on desktop and mobile. */
-export function ContextualBackLink({ fallbackHref, fallbackLabel, className = "" }: { fallbackHref?: string; fallbackLabel?: string; className?: string }) {
+/** One return control for every page, beside the logo. */
+export function HeaderBackNavigation() {
   const pathname = usePathname();
   const previous = useReturnTarget();
   const router = useRouter();
   const { session } = useMemberSession();
-  if (pathname === "/") return null;
-  const href = previous?.href || fallbackHref || backDestination(pathname);
-  const label = previous ? `Back to ${previous.label}` : fallbackLabel || parentLabel(pathname);
-  const short = previous?.label || label;
-  return <Link data-contextual-return className={`contextual-back ${className}`} aria-label={label} title={label} href={href} prefetch={false} onClick={event => {
+  if (pathname === "/" && !previous) return <button className="header-back" type="button" aria-label="Go back" disabled><Arrow /></button>;
+  const href = previous?.href || backDestination(pathname);
+  const title = previous ? `Back to ${previous.label}` : parentLabel(pathname);
+  return <Link className="header-back" aria-label="Go back" title={title} href={href} prefetch={false} onClick={event => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     // Let MemberLink open its sign-in prompt for protected return destinations.
     if (requiresMember(href) && !session?.user?.id) return;
     if (previous && snapshot() === JSON.stringify(previous)) { event.preventDefault(); router.back(); }
-  }}><Arrow /><span className="return-full">{label}</span><span className="return-short" aria-hidden="true">{short}</span></Link>;
-}
-
-/** Keep a parent link only when it differs from the return destination. */
-export function ContextualParentLink({ href, label }: { href: string; label: string }) {
-  const previous = useReturnTarget();
-  if (!previous || previous.href.split(/[?#]/, 1)[0] === href.split(/[?#]/, 1)[0]) return null;
-  return <Link className="return-parent" href={href} prefetch={false}>{label}</Link>;
-}
-
-/** Fallback for pages without an integrated parent-navigation row. */
-export function PageBackNavigation() {
-  const pathname = usePathname();
-  const previous = useReturnTarget(); // Track history even where no link is rendered.
-  if (pathname === "/" || (!previous && (pathname.startsWith("/studies/") || pathname.startsWith("/shared/studies/")))) return null;
-  const family = pathname.startsWith("/guides/") ? "guide" : ["/privacy", "/art-history-timeline"].includes(pathname) ? "prose" : pathname.startsWith("/studies") || pathname.startsWith("/shared/studies/") ? "study" : "standard";
-  return <nav className="page-return-nav" aria-label="Return navigation" data-family={family}><ContextualBackLink /></nav>;
+  }}><Arrow /></Link>;
 }

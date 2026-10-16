@@ -1,0 +1,103 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "Show artwork colors only in the full-view image dialog. Regular artwork pages and record drawers no longer render or analyze palettes. Keep eight colors, floating copy feedback and the spacious full view.",
+  "deployment": {
+    "buildId": "9cc259b1-8ad3-4198-98cc-9c40b0016c86",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:fullview-colors-20261012-v1",
+    "baselineRevision": "artline-web-all-performance-1012-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:025df415a8df9838a1efefe6b8cbddccaa0851df07f465825008aabc474705b7",
+    "files": {
+      "components/ArtworkViewer.tsx": "cbf89e6473295188695a13931286472d17aeb2044784cf56634f901b96152ba5"
+    },
+    "preimages": {
+      "components/ArtworkViewer.tsx": "59c8bba9904c67fcc7e7fa017f3a8f6ebe237b7e30c767e612abeaa41c288443"
+    },
+    "overlaySHA256": "c094e4eed538eb9e96350b55ca91558e8621c1eb2b5fc866c5c3ef30174171e1",
+    "overlayURI": "gs://artline-508319-build-source/fullview-colors-20261012/palette-c094e4eed538eb9e.tar.xz",
+    "overlayGeneration": "1791799195915613",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:f47e1310a5fbffad3068a7bd80c09fd3f7bf1e5a803f972159767d0ead613023",
+    "revision": "artline-web-fullview-colors-1012-v1",
+    "candidateURL": "https://fullview-colors-1012-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-all-performance-1012-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "previousLocalImagePin": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:025df415a8df9838a1efefe6b8cbddccaa0851df07f465825008aabc474705b7",
+    "localImagePinUpdated": true
+  },
+  "localValidation": {
+    "typecheck": "passed",
+    "eslint": "passed",
+    "browserWidths": [
+      1440,
+      390,
+      320
+    ],
+    "noPaletteOrOriginalDownloadOnRecord": true,
+    "fullViewEightColorsAndCopy": "passed",
+    "closeRemovesColorsAndFeedback": "passed",
+    "databaseWrites": false,
+    "verifiedAt": "2026-10-12T09:59:32.965860+00:00"
+  },
+  "candidate": {
+    "stage": "candidate",
+    "checks": [
+      {
+        "width": 1440,
+        "noRecordColorsOrPaletteDownload": true,
+        "fullViewEightColors": true,
+        "copyKeepsImageStable": true,
+        "closingRemovesPaletteAndFeedback": true
+      },
+      {
+        "width": 390,
+        "noRecordColorsOrPaletteDownload": true,
+        "fullViewEightColors": true,
+        "copyKeepsImageStable": true,
+        "closingRemovesPaletteAndFeedback": true
+      },
+      {
+        "width": 320,
+        "noRecordColorsOrPaletteDownload": true,
+        "fullViewEightColors": true,
+        "copyKeepsImageStable": true,
+        "closingRemovesPaletteAndFeedback": true
+      }
+    ],
+    "galleryOpensFullViewPalette": true,
+    "pageErrors": []
+  },
+  "production": {
+    "stage": "live",
+    "checks": [
+      {
+        "width": 1440,
+        "noRecordColorsOrPaletteDownload": true,
+        "fullViewEightColors": true,
+        "copyKeepsImageStable": true,
+        "closingRemovesPaletteAndFeedback": true
+      },
+      {
+        "width": 390,
+        "noRecordColorsOrPaletteDownload": true,
+        "fullViewEightColors": true,
+        "copyKeepsImageStable": true,
+        "closingRemovesPaletteAndFeedback": true
+      },
+      {
+        "width": 320,
+        "noRecordColorsOrPaletteDownload": true,
+        "fullViewEightColors": true,
+        "copyKeepsImageStable": true,
+        "closingRemovesPaletteAndFeedback": true
+      }
+    ],
+    "galleryOpensFullViewPalette": true,
+    "pageErrors": []
+  },
+  "errorLogs": 0,
+  "catalogueWrites": false,
+  "accountWrites": false,
+  "databaseMigrations": false,
+  "verifiedAt": "2026-10-12T10:08:40.869897+00:00"
+}

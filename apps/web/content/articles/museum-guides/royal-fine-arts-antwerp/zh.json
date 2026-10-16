@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "royal-fine-arts-antwerp",
+  "museum": "Royal Museum of Fine Arts Antwerp",
+  "city": "安特卫普",
+  "country": "比利时",
+  "title": "安特卫普皇家美术馆：杰作",
+  "subtitle": "安特卫普皇家美术馆的二十件作品，观察衣着、物件与同伴如何确定一个人的位置。",
+  "introduction": "本组选集有两幅肖像都包含与工作有关的物品。亚伯拉罕·格拉菲乌斯身边是精致器皿与行会饰物；安特卫普扫街工身旁则是一根工具长柄。两幅画都借公共职责来标识人物，但人物又都不止于这份职责。\n\n这二十件作品不断改变着人和环境的关系。牡蛎餐与用餐者争夺注意力；婚礼展开为众人参与的队伍；两幅《各各他》则以身体之间不同的距离来组织同一题材。这些比较提供了一种进入安特卫普皇家美术馆的办法，而不必把选集变成名作排名。",
+  "visitNote": "这些作品属于 KMSKA（安特卫普皇家美术馆）的馆藏。素描作品的展出通常会定期轮换；若计划专程参观某件特定作品，请务必先查询博物馆当前的展出安排。下文的排列顺序基于作品间的对比关系，而非展厅编号。",
+  "locale": "zh",
+  "website": "https://www.kmska.be",
+  "officialGuide": "https://www.kmska.be",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）阐述了边缘、体块与线条如何构建人物形象。他那些侧重实操的章节，与德·布雷克莱尔（De Braekeleer）的两幅素描及此处展示的肖像画相得益彰，极具参考价值。"
+    }
+  ],
+  "works": [
+    {
+      "id": "f71c92cf-e822-5cfe-95cd-09f42200ffae",
+      "title": "被炽天使与智天使环绕的圣母",
+      "catalogueTitle": "Madonna and Child. Left Panel of Diptych de Melun",
+      "artist": "Jean Fouquet",
+      "artists": [
+        {
+          "name": "Jean Fouquet",
+          "role": "primary",
+          "slug": "jean-fouquet-q311398"
+        }
+      ],
+      "date": "c. 1450",
+      "start": 1450,
+      "end": 1450,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f71c92cf-e822-5cfe-95cd-09f42200ffae-ae3d9b8010d1b8e5.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-fouquet/madonna-and-child-left-panel-of-diptych-de-melun",
+      "credit": "Jean Fouquet. Madonna and Child. Left Panel of Diptych de Melun. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-fouquet/madonna-and-child-left-panel-of-diptych-de-melun",
+      "description": "洁白的圣母与圣婴，同色彩浓烈的红、蓝天使分明地区隔开来。但圣婴的手势又指向这组自成一体的安排之外：这幅画原是双联画的一半，另一幅画着祈祷中的委托人。缺席的配对画板，有助于解释一层单凭安特卫普这幅画无法完整展示的联系。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "85e5edfe-45d6-59fc-b4f6-8aedfc4a2e45",
+      "title": "吃牡蛎的女子",
+      "catalogueTitle": "The Oyster Eater",
+      "artist": "James Ensor",
+      "artists": [
+        {
+          "name": "James Ensor",
+          "role": "primary",
+          "slug": "james-ensor-q158840"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/85e5edfe-45d6-59fc-b4f6-8aedfc4a2e45-d8329e4e363ea5de.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-ensor/the-oyster-eater-1882",
+      "credit": "James Ensor. The Oyster Eater. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-ensor/the-oyster-eater-1882",
+      "description": "酒杯、花朵、餐具与反射的色彩，让这顿饭铺展在画面各处。女子仍在场，却没有一条干净的边界将她与餐桌的丰盛分开。不妨先让目光游移于物品之间，再回到她身上：近似肖像的人物与静物，在这里共享同一个场合。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "630f0872-52e7-5632-920b-bff7a50d2c90",
+      "title": "教皇亚历山大六世将雅科波·佩萨罗引荐给圣彼得",
+      "catalogueTitle": "Pope Alexander IV Presenting Jacopo Pesaro to St Peter",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1503",
+      "start": 1503,
+      "end": 1503,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/630f0872-52e7-5632-920b-bff7a50d2c90-b44dd1583df38717.jpg",
+      "imageSource": "https://www.wikiart.org/en/titian/pope-alexander-iv-presenting-jacopo-pesaro-to-st-peter",
+      "credit": "Pope Alexander IV Presenting Jacopo Pesaro to St Peter. WikiArt; Titian. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/titian/pope-alexander-iv-presenting-jacopo-pesaro-to-st-peter",
+      "description": "佩萨罗跪在圣彼得下方，进入一个清晰可见的等级关系，其中的位置安排已承担了许多解释工作。教皇站在他身后，近旁升起军旗。宗教认可与世俗权威相遇于同一构图，远处海面则将环境展开到眼前引荐仪式之外。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "bd2a7993-5c2d-5e08-a2a6-928ddd73a36d",
+      "title": "乡村景象",
+      "catalogueTitle": "A Village Scene",
+      "artist": "Peeter Bout",
+      "artists": [
+        {
+          "name": "Peeter Bout",
+          "role": "primary",
+          "slug": "peeter-bout-nga-3588"
+        }
+      ],
+      "date": "1680",
+      "start": 1680,
+      "end": 1680,
+      "medium": "木板油画",
+      "accession": "27",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/bd2a7993-5c2d-5e08-a2a6-928ddd73a36d-a709d85dce92.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/27",
+      "credit": "Pieter Bout; Royal Museum of Fine Arts Antwerp. CC0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/27",
+      "description": "没有一场交谈能够概括整个村庄。马匹和人分成几群，建筑之间的开口又把目光引向更远处。人物画得小，让多种活动得以并存。理解这条街，需要在各组人之间移动视线，而不是找到一个主角，再把其他一切视作背景。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "8e439de7-b13d-5d52-ab52-78efd26be3f9",
+      "title": "对照",
+      "catalogueTitle": "A contrast",
+      "artist": "Josef Lies",
+      "artists": [
+        {
+          "name": "Josef Lies",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18421731"
+        }
+      ],
+      "date": "约 1862 年",
+      "start": 1862,
+      "end": 1862,
+      "medium": "",
+      "accession": "1189",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21618770-4934335b348ef3b1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Joseph_Lies_-_A_contrast.jpg",
+      "credit": "Josef Lies. A contrast. Image credit: Josef Lies; Source credit: http://62.221.199.163/kmska2/zoom.aspx?image=1189.001.jpg&title=Een%20contrast. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21618770",
+      "description": "标题要求比较，构图便通过衣着、位置与工具提供了比较的依据。一位衣着精致的女子，与处境明显不同的劳动者出现在同一场景。露台让这些位置彼此靠近，却没有使它们相等。社会差别成为画的主题，而非人物身上附带的信息。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "2f148476-e1ba-5899-8a32-d36de1d5bf3e",
+      "title": "亚伯拉罕·格拉菲乌斯",
+      "catalogueTitle": "Abraham Grapheus",
+      "artist": "Cornelis de Vos",
+      "artists": [
+        {
+          "name": "Cornelis de Vos",
+          "role": "primary",
+          "slug": "cornelis-de-vos-q474934"
+        }
+      ],
+      "date": "1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "木板油画",
+      "accession": "104",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/2f148476-e1ba-5899-8a32-d36de1d5bf3e-facbebef4747.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/104",
+      "credit": "Cornelis de Vos; Royal Museum of Fine Arts Antwerp. CC0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/104",
+      "description": "格拉菲乌斯看似华贵的装束，需要再辨认一次。胸前金属饰牌属于安特卫普行会的修辞社，华丽器皿也是行会财产，不能直接看成个人财富的炫示。肖像把一张具体面孔与他服务的机构联系起来；这些物件既反射光线，也说明职责。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "51300bce-caed-5e1c-96a5-f51181beefba",
+      "title": "亚当与夏娃",
+      "catalogueTitle": "Adam and Eve",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1528-1530",
+      "start": 1528,
+      "end": 1530,
+      "medium": "木板油画",
+      "accession": "42",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/51300bce-caed-5e1c-96a5-f51181beefba-e00296379aab.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/42",
+      "credit": "Lucas Cranach I; Royal Museum of Fine Arts Antwerp. CC0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/42",
+      "description": "深色背景让两具浅色身体清楚分开，细小的动作又在果树下将他们连在一起。递出的果实把故事集中在一个并不夸张的举动上。画面不需要拥挤的环境；身体的几次转向与人物之间的关系，已能建立起决定整段故事的那个时刻。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "2b0ea5ad-a4c7-53b2-bbcd-47f3ae7814ad",
+      "title": "哀悼之后",
+      "catalogueTitle": "After the Mourning",
+      "artist": "Louis Thevenet",
+      "artists": [
+        {
+          "name": "Louis Thevenet",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2032016"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "2793",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21621092-a74280d13b500d97.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kmska_Louis_Thevenet_(1874-1930)_-_Na_de_rouw_(1908)_28-02-2010_12-52-17.png",
+      "credit": "Louis Thevenet. After the Mourning. Image credit: Louis Thevenet; Source credit: Own work (photo by Paul Hermans on 2010-02-28). Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21621092",
+      "description": "食物、盘碟与琴键留在房间里，却看不见居住者。标题提到哀悼，但物品没有说明谁去世了，或谁离开了。它们给出的是范围更有限、也更具体的主题：当那些决定房间用途的人不在时，熟悉的东西仍继续占据原来的位置。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "f6d5d985-5852-59b0-abca-015fb4aa2043",
+      "title": "阿尔布雷希特·丢勒沿莱茵河顺流而下",
+      "catalogueTitle": "Albrecht Durer descends the Rhine",
+      "artist": "Josef Lies",
+      "artists": [
+        {
+          "name": "Josef Lies",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18421731"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "",
+      "accession": "1100",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21618390-9ca4f9d873372a5a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Joseph_Lies_-_Albrecht_D%C3%BCrer_descends_the_Rhine.jpg",
+      "credit": "Josef Lies. Albrecht Durer descends the Rhine. Image credit: Josef Lies; Source credit: http://62.221.199.163/kmska2/zoom.aspx?image=1100.001.jpg&title=Albrecht%20Dürer%20vaart%20de%20Rijn%20af. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21618390",
+      "description": "这段莱茵河之旅属于列斯在十九世纪对丢勒的想象，并非对丢勒生平的亲眼记录。服装与站着的艺术家，将船组织成一个历史场景。因此，这幅画首先见证的是后来的时代如何描绘早先的艺术家；它的叙事虽显得近在眼前，这一区别仍应保留。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "72ca612c-6548-541c-b134-01a3c617f75b",
+      "title": "艾琳",
+      "catalogueTitle": "Aline",
+      "artist": "Jan de Smedt",
+      "artists": [
+        {
+          "name": "Jan de Smedt",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1860432"
+        }
+      ],
+      "date": "1938",
+      "start": 1938,
+      "end": 1938,
+      "medium": "",
+      "accession": "3533",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/72ca612c-6548-541c-b134-01a3c617f75b-3389eeef51eb4e74.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Aline_-_Jan_De_Smedt_-_KMSKA.jpg",
+      "credit": "Jan de Smedt. Aline. Image credit: Jan de Smedt; meemoo, Vlaams instituut voor het archief. https://commons.wikimedia.org/wiki/File:Aline_-_Jan_De_Smedt_-_KMSKA.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21623060",
+      "description": "交叠的双臂在转动的头部下方形成坚实的横向形状。橙色上衣使这种身体安排在低调背景前格外突出。没有环境细节可以解释她的心情，侧望的目光也不必被译成某种固定情绪。姿势本身已经是人物形象的重要部分。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "b8e2dc7b-3630-56be-bfaa-e1fc6c0025e3",
+      "title": "老妇人",
+      "catalogueTitle": "An Old Woman",
+      "artist": "Evert Larock",
+      "artists": [
+        {
+          "name": "Evert Larock",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2128932"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "",
+      "accession": "2081",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21620105-e2feaa6c7a2fd826.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Evert_Larock_-_Oude_vrouw_(1892).jpg",
+      "credit": "Evert Larock. An Old Woman. Image credit: Evert Larock; Source credit: Lukas - Art in Flanders. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21620105",
+      "description": "侧面角度限制了我们能获得的面部信息，却让轮廓变得格外重要。温暖的棕色使裹着头巾的头部贴近周围底色，只有细小的明暗变化将它区分出来。肖像让年老具有可见的形态，不需要象征性物件，也不需要补写人物一生的故事。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "006449d2-bded-54d2-ac8f-32480d442254",
+      "title": "安特卫普扫街工",
+      "catalogueTitle": "Antwerp Street Sweeper",
+      "artist": "Pieter Van Havermaet",
+      "artists": [
+        {
+          "name": "Pieter Van Havermaet",
+          "role": "primary",
+          "slug": "wikimedia-painter-q21289683"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "1292",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21618875-22c4b8125ee429b6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pieter_Van_Havermaet_-_Antwerp_street_sweeper.jpg",
+      "credit": "Pieter Van Havermaet. Antwerp Street Sweeper. Image credit: Pieter Van Havermaet; Source credit: http://anet.be/record/opackmska/a::art.2523. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21618875",
+      "description": "长柄工具表明了职业，但这个男人并没有被缩减为扫地动作的示范。他的面孔与休息中的手，让肖像停留在工作的间歇。可以将他与格拉菲乌斯相比较：两人身边都有与职责相关的物件，只是这些物件对应的公共地位很不相同。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "64c02da5-ad95-5b21-abc4-72877cb226b4",
+      "title": "安特卫普婚礼",
+      "catalogueTitle": "Antwerp wedding",
+      "artist": "Willem Linnig Junior",
+      "artists": [
+        {
+          "name": "Willem Linnig Junior",
+          "role": "primary",
+          "slug": "wikimedia-painter-q17651285"
+        }
+      ],
+      "date": "约 1866 年",
+      "start": 1866,
+      "end": 1866,
+      "medium": "",
+      "accession": "1344",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21618933-77a6bb7f167c36f9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Willem_Linnig_Junior_-_Antwerp_wedding.jpg",
+      "credit": "Willem Linnig Junior. Antwerp wedding. Image credit: Willem Linnig Junior; Source credit: http://62.221.199.163/kmska2/zoom.aspx?image=1344.001.jpg&title=Antwerpse%20bruiloft. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21618933",
+      "description": "宽阔画幅让婚礼得以作为队伍展开。参与者与旁观者在仪式中占据不同位置，使这场活动远不止一对新人的肖像。历史服装确立了场景的时代语境，但不能把这次聚集当成照片般的证据，替一个缺少其他记录的事件作证。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "13ce69ed-551d-54b5-853b-6b70e5bd1051",
+      "title": "游行队伍抵达",
+      "catalogueTitle": "Arrival of the Procession",
+      "artist": "Frans van Leemputten",
+      "artists": [
+        {
+          "name": "Frans van Leemputten",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18508181"
+        }
+      ],
+      "date": "约 1903–1905 年",
+      "start": 1903,
+      "end": 1905,
+      "medium": "",
+      "accession": "1599b",
+      "image": "https://artlines.org/assets/artworks/imported/kmska/1599b-18ed6a2cb9b3e73d.jpg",
+      "imageSource": "https://iiif.kmska.be/iiif/2/2159/manifest.json",
+      "credit": "Arrival of the Procession. Frans Van Leemputten; photograph: Hugo Maertens; Royal Museum of Fine Arts Antwerp – Flemish Community. Museum manifest: CC0 / public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21619669",
+      "description": "前景俯身的人物，把公共游行拉回到单个身体动作的尺度。更远处，马车与更多参与者占据街道。鹅卵石路连接了这些距离，让队伍逐渐靠近，却不让集体场面的壮观抹去离观众最近的动作。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "173e3891-5978-5e6d-91ff-f36afd97c474",
+      "title": "圣安东尼的诱惑",
+      "catalogueTitle": "The Temptation of Saint Anthony the Great",
+      "artist": "James Ensor",
+      "artists": [
+        {
+          "name": "James Ensor",
+          "role": "primary",
+          "slug": "james-ensor-q158840"
+        }
+      ],
+      "date": "1927",
+      "start": 1927,
+      "end": 1927,
+      "medium": "",
+      "accession": "4003",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q120370768-e08545ffd33ecdc9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:James_Ensor_-_De_verzoeking_van_de_heilige_Antonius_-_4003_-_Royal_Museum_of_Fine_Arts_Antwerp.jpg",
+      "credit": "James Ensor. The Temptation of Saint Anthony the Great. Image credit: James Ensor; Source credit: This file was derived from: James Ensor - De verzoeking van de heilige Antonius - 4003 - Royal Museum of Fine Arts Antwerp.tiff. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q120370768",
+      "description": "带有威胁意味的形体并未全都获得坚实边界。脸与身体从轻淡笔痕中浮现，之间仍隔着未画的纸面。对于诱惑这一题材，这种仿佛尚未完成的不稳定感很有效：视线刚认出某个生物，又可能在四周的暗示中把它看丢。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "0f7e3a3c-be85-5220-86b2-4548bd516135",
+      "title": "窗边的男子",
+      "catalogueTitle": "Man at the Window",
+      "artist": "Henri De Braekeleer",
+      "artists": [
+        {
+          "name": "Henri De Braekeleer",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-31e4cd3cc81d083e"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "纸上铅笔画",
+      "accession": "1683/21",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/0f7e3a3c-be85-5220-86b2-4548bd516135-25117b7514ad.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/168321",
+      "credit": "Henri De Braekeleer; Royal Museum of Fine Arts Antwerp. CC0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/168321",
+      "description": "窗户为房间提供最强的明暗对比，也给男子一个站立之处。密集铅笔线条在较亮的开口周围描写封闭的室内。素描没有多少事件，却建立了两个观看方向：朝向屋内，或朝向屋外。它不必为此描绘一个戏剧性的抉择。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "100cb83f-f451-5b21-9ae4-46dfd84d5fb2",
+      "title": "各各他",
+      "catalogueTitle": "Calvary",
+      "artist": "Antonello da Messina",
+      "artists": [
+        {
+          "name": "Antonello da Messina",
+          "role": "primary",
+          "slug": "antonello-da-messina-q5594"
+        }
+      ],
+      "date": "1475",
+      "start": 1475,
+      "end": 1475,
+      "medium": "木板油画",
+      "accession": "4",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/100cb83f-f451-5b21-9ae4-46dfd84d5fb2-d9747ad35651.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/4",
+      "credit": "Antonello da Messina; Royal Museum of Fine Arts Antwerp. CC0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/4",
+      "description": "基督笔直的十字架，与支撑两名盗贼的粗糙树干不同。尚未细看姿势，这些支架已把身体区分开。行刑场景后方，风景继续向远处延伸，前景人物却无法逃入其中。这份平静的纵深让暴力格外暴露，而不是使整幅画都陷入骚动。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "8bbc66d7-5df9-5dbb-9189-9d86854f7fa1",
+      "title": "各各他",
+      "catalogueTitle": "Calvary",
+      "artist": "Maerten de Vos",
+      "artists": [
+        {
+          "name": "Maerten de Vos",
+          "role": "primary",
+          "slug": "maerten-de-vos-q555022"
+        }
+      ],
+      "date": "1600",
+      "start": 1600,
+      "end": 1600,
+      "medium": "布面油画",
+      "accession": "71",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/8bbc66d7-5df9-5dbb-9189-9d86854f7fa1-a94c30606e55.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/71",
+      "credit": "Maerten de Vos; Royal Museum of Fine Arts Antwerp. CC0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/71",
+      "description": "哀悼者紧聚在十字架下，其中一人伸手环抱其基部。他们的动作试图接近基督，却因身体悬挂的高度而无法完成接触。与安东内洛铺展得更远的风景相比，这幅画的重心落在受难者正下方的人群，以及他们与他之间的距离上。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "6b2f491a-d202-589b-9618-6b21616d713d",
+      "title": "画家的工作室",
+      "catalogueTitle": "Studio of the Painter",
+      "artist": "Henri De Braekeleer",
+      "artists": [
+        {
+          "name": "Henri De Braekeleer",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-31e4cd3cc81d083e"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "纸上石墨铅笔画",
+      "accession": "1683/20",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/6b2f491a-d202-589b-9618-6b21616d713d-6609df4fd52c.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/168320",
+      "credit": "Henri De Braekeleer; Royal Museum of Fine Arts Antwerp. CC0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/168320",
+      "description": "画作、画架和家具与站着的画家一起占据工作室。石墨不同的浓淡，让这些堆积物保持可辨，却不赋予每件东西同等分量。这是一个围绕制作和观看图像而组织的工作场所；素描本身又给这项活动增加了一幅图像，并非站在完全无关的位置旁观它。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    },
+    {
+      "id": "cc8fde4e-b54f-59b7-926c-3bc6453448ad",
+      "title": "身着蓝衣的卡米拉",
+      "catalogueTitle": "Camilla in parmezaans blauw",
+      "artist": "Jan de Smedt",
+      "artists": [
+        {
+          "name": "Jan de Smedt",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1860432"
+        }
+      ],
+      "date": "1941",
+      "start": 1941,
+      "end": 1941,
+      "medium": "",
+      "accession": "3534",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/cc8fde4e-b54f-59b7-926c-3bc6453448ad-a321e6518874d8be.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Camilla_in_parmezaans_blauw_-_Jan_De_Smedt_-_KMSKA.jpg",
+      "credit": "Jan de Smedt. Camilla in parmezaans blauw. Image credit: Jan de Smedt; meemoo, Vlaams instituut voor het archief. https://commons.wikimedia.org/wiki/File:Camilla_in_parmezaans_blauw_-_Jan_De_Smedt_-_KMSKA.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21623069",
+      "description": "蓝紫色裙装先形成宽大的形状，面部较小的细节随后才凸显。稍稍转开的头，使坐姿不至于完全正对观众。与《艾琳》并看很有帮助：颜色和姿态的改变，就能改变人物的在场方式，而不必另换一种环境。",
+      "importance": "",
+      "museum": "Royal Museum of Fine Arts Antwerp"
+    }
+  ],
+  "context": {
+    "start": 1450,
+    "end": 1941
+  },
+  "closingSections": [
+    {
+      "title": "不急着结束比较",
+      "paragraphs": [
+        "两幅《各各他》、扬·德·斯梅特的两幅肖像，以及亨利·德·布拉克勒的两幅素描，都适合成对观看。在决定更喜欢哪一件之前，先比较一个具体特征。请另查博物馆的最新安排：这份选集介绍藏品，并不保证它们在某一天全部可见。"
+      ]
+    }
+  ]
+}

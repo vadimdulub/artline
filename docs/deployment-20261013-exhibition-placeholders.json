@@ -1,0 +1,131 @@
+{
+  "site": "https://artlines.org/exhibitions",
+  "status": "deployed_and_verified",
+  "change": "Show Image not available inside artwork and artist portrait frames in exhibition tabs, including failed image loads. Keep missing-image artwork cards aligned with illustrated cards.",
+  "deployment": {
+    "buildId": "bdef38b2-2cdc-48c9-bfef-7594efacb951",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:exhibition-placeholders-20261013-v1",
+    "baselineRevision": "artline-web-exhibition-align-1013-v2",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:2b933e6de9b67987d314598eb7e551969fed460d88c1053e66742cfcc6d49cc8",
+    "files": {
+      "app/exhibitions/[id]/page.tsx": "f6499bf4605d04eb98a734faf7e2831ecdcaf8d3c0c33cb3882c557956e1fa2a",
+      "components/ExhibitionImage.tsx": "623d8fbe5c97ee061eb9978c7ee67b6108be543019b43181324af4aa00256cc2",
+      "components/ExhibitionImage.module.css": "b2384f7c67dc777179d17189c985d8d5d8a3b14a835353301ceb2c7789f75203"
+    },
+    "preimages": {
+      "app/exhibitions/[id]/page.tsx": "feb76f95c85c0aba49766b89a7a9d2e4e2c63fdbdf014142342fd4ebb3c0ce12",
+      "components/ExhibitionImage.tsx": null,
+      "components/ExhibitionImage.module.css": null
+    },
+    "overlaySHA256": "3b6872f3d69a0f923da0739598e4de63a70129a1f92c78103c4fbd9d490534b0",
+    "overlayURI": "gs://artline-508319-build-source/exhibition-placeholders-20261013/3b6872f3d69a0f92.tar.xz",
+    "overlayGeneration": "1791876457310585",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:7ac9d5846111cc64b73018c34174ac52aa7dae16ab7516b045410a26e9746a8d",
+    "revision": "artline-web-exhibition-placeholders-1013-v1",
+    "candidateURL": "https://exhibition-placeholders-1013-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-exhibition-align-1013-v2",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100
+  },
+  "candidate": {
+    "at": "2026-10-13T07:40:01.029Z",
+    "checks": [
+      {
+        "width": 1440,
+        "equalImageFrames": true,
+        "missingArtworkLabel": true,
+        "missingPortraitLabel": true,
+        "noOverflow": true
+      },
+      {
+        "width": 390,
+        "equalImageFrames": true,
+        "missingArtworkLabel": true,
+        "missingPortraitLabel": true,
+        "noOverflow": true
+      },
+      {
+        "width": 320,
+        "equalImageFrames": true,
+        "missingArtworkLabel": true,
+        "missingPortraitLabel": true,
+        "noOverflow": true
+      }
+    ],
+    "failedArtworkFallback": true,
+    "catalogueWrites": false,
+    "url": "https://exhibition-placeholders-1013-v1---artline-web-lpuqqlugnq-ew.a.run.app/exhibitions/c4d90cd2-4774-52d1-b986-7c00ce220c35"
+  },
+  "production": {
+    "at": "2026-10-13T07:41:22.748Z",
+    "checks": [
+      {
+        "width": 1440,
+        "equalImageFrames": true,
+        "missingArtworkLabel": true,
+        "missingPortraitLabel": true,
+        "noOverflow": true
+      },
+      {
+        "width": 390,
+        "equalImageFrames": true,
+        "missingArtworkLabel": true,
+        "missingPortraitLabel": true,
+        "noOverflow": true
+      },
+      {
+        "width": 320,
+        "equalImageFrames": true,
+        "missingArtworkLabel": true,
+        "missingPortraitLabel": true,
+        "noOverflow": true
+      }
+    ],
+    "failedArtworkFallback": true,
+    "catalogueWrites": false,
+    "url": "https://artlines.org/exhibitions/c4d90cd2-4774-52d1-b986-7c00ce220c35"
+  },
+  "filterRegressionChecks": {
+    "at": "2026-10-13T07:41:21.703Z",
+    "checks": [
+      {
+        "width": 1440,
+        "fields": 4,
+        "inputFont": "13px",
+        "selectFont": "13px",
+        "inputBorder": "0px",
+        "inputHeight": 18,
+        "selectHeight": 18,
+        "firstRowAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "fields": 4,
+        "inputFont": "16px",
+        "selectFont": "16px",
+        "inputBorder": "0px",
+        "inputHeight": 44,
+        "selectHeight": 44,
+        "firstRowAligned": true,
+        "overflow": false
+      }
+    ],
+    "searchAndReset": true,
+    "url": "https://artlines.org/exhibitions"
+  },
+  "guideRegressionChecks": [
+    {
+      "path": "/guides/louvre",
+      "title": "The Louvre, from a card trick to a shipwreck",
+      "textSHA256": "b565c7c0308f5121732bf1925356f78a04bcbd1dde2f6eaf43657a769e95c781"
+    },
+    {
+      "path": "/guides/louvre/ru",
+      "title": "\u041b\u0443\u0432\u0440: \u043e\u0442 \u043a\u0430\u0440\u0442\u043e\u0447\u043d\u043e\u0433\u043e \u043e\u0431\u043c\u0430\u043d\u0430 \u0434\u043e \u043a\u043e\u0440\u0430\u0431\u043b\u0435\u043a\u0440\u0443\u0448\u0435\u043d\u0438\u044f",
+      "textSHA256": "f84044938dcf884a7b12d23dbb34e27f8dbe8678e3f37afa1e6f51a4473351d6"
+    }
+  ],
+  "databaseWrites": false,
+  "verifiedAt": "2026-10-13T07:41:45.073665+00:00"
+}

@@ -1,0 +1,161 @@
+{
+  "verifiedAt": "2026-10-11T10:39:49.483913+00:00",
+  "site": "https://artlines.org/about",
+  "change": "Deploy the approved visual About redesign: open artwork gallery, dated timeline preview, six illustrated museum guides, eight-artist carousel, responsive layouts and simplified About navigation.",
+  "source": "Generation-pinned source and overlays from the deployed Books and museum-guide releases, plus nine hash-verified About files. Shared navigation received only the About-label change. Unrelated workspace edits were excluded.",
+  "build": {
+    "id": "0472c5cd-89da-4544-9e2a-6ee276643f94",
+    "status": "SUCCESS",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:e942d7ef50844adb57d58a5c0869f9ba8646b3745a1f700fd5f7d792a5ec91e5",
+    "overlayURI": "gs://artline-508319-build-source/about-marketing-20261011/about-b31a4ddb886b69f1.tar.xz",
+    "overlayGeneration": "1791714620436698",
+    "overlaySHA256": "b31a4ddb886b69f1a3c36ed3e7a4706ddeadfd24a733308fe6bbd5f889301ab9",
+    "files": {
+      "app/about/page.tsx": "da65ebc375c58472350b5058ca3ff63c07d51c054b7ce3179d58ab740f659b59",
+      "app/about/about.module.css": "7da643e6fee158c8cf860d49e00e73170c94a44b26132a555f21908eec02969f",
+      "app/about/about-content.ts": "53f279d40801527d4593703c8a6b6d042a41caa6a1989d65fd599ee791ba5e17",
+      "app/about/TimelinePreview.tsx": "ba39f741de91ee8366760e8119e31c757af88a5b4d2814769fb8495bbf80a63e",
+      "app/about/PreviewScroller.tsx": "b110db98c814ec152be6e2b8b011b8500271814521f1486dc8f1d24a7801c2b9",
+      "app/layout.tsx": "fd4be74a971c3a4f566611eada7d2614758b4fe5835d7ab90157b07bf4307c9e",
+      "components/MemberNavigation.tsx": "fc58dd6fcb7e6208b9c52f5ca6887860c52a03349d31b4e4944b553d305bde64",
+      "components/MobileNavigation.tsx": "0993c6cb249406b19b27dc3b4a056ddb1b9093527131608d2fa38944d7c8ea28",
+      "app/art-history-timeline/page.tsx": "fb6f7a2a2cc501af3c84896c836965f279b770d8974d558bdbe095d469eadc62"
+    },
+    "baselineSource": {
+      "storageSource": {
+        "bucket": "artline-508319-build-source",
+        "generation": "1791660631448965",
+        "object": "source/1791660403.355356-c78ccaf5cf4745558df5aa0dbd3af7d8.tgz"
+      }
+    }
+  },
+  "deployment": {
+    "project": "artline-508319",
+    "region": "europe-west1",
+    "service": "artline-web",
+    "revision": "artline-web-about-marketing-1011-v1",
+    "trafficPercent": 100,
+    "rollbackRevision": "artline-web-books-1011-0e0bd4ce",
+    "runtimeSettingsPreserved": true,
+    "terraformApply": false,
+    "localImagePinUpdated": true,
+    "commitsCreated": false,
+    "catalogueChanges": false,
+    "realLocalDatabaseWrites": false
+  },
+  "verification": {
+    "candidate": {
+      "browserTestsPassed": 6,
+      "stats": {
+        "startTime": "2026-10-11T10:37:25.760Z",
+        "duration": 14011.519,
+        "expected": 6,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "http": [
+        {
+          "path": "/about",
+          "status": 200,
+          "ok": true,
+          "bytes": 92503
+        },
+        {
+          "path": "/guides",
+          "status": 200,
+          "ok": true,
+          "bytes": 30216
+        },
+        {
+          "path": "/guides/prado",
+          "status": 200,
+          "ok": true,
+          "bytes": 156005
+        },
+        {
+          "path": "/guides/prado/pdf/en",
+          "status": 200,
+          "ok": true,
+          "bytes": 2140927,
+          "sha256": "2cea4c148a7b3a5e256ebfb627ae7ad33ed21cd3c400b037f89bcb219c9588f4"
+        },
+        {
+          "path": "/books",
+          "status": 200,
+          "ok": true,
+          "bytes": 25472
+        },
+        {
+          "path": "/art-history-timeline",
+          "status": 200,
+          "ok": true,
+          "bytes": 24247
+        }
+      ]
+    },
+    "production": {
+      "browserTestsPassed": 6,
+      "stats": {
+        "startTime": "2026-10-11T10:39:04.732Z",
+        "duration": 12928.795,
+        "expected": 6,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "http": [
+        {
+          "path": "/about",
+          "status": 200,
+          "ok": true,
+          "bytes": 92503
+        },
+        {
+          "path": "/guides",
+          "status": 200,
+          "ok": true,
+          "bytes": 30216
+        },
+        {
+          "path": "/guides/prado",
+          "status": 200,
+          "ok": true,
+          "bytes": 156005
+        },
+        {
+          "path": "/guides/prado/pdf/en",
+          "status": 200,
+          "ok": true,
+          "bytes": 2140927,
+          "sha256": "2cea4c148a7b3a5e256ebfb627ae7ad33ed21cd3c400b037f89bcb219c9588f4"
+        },
+        {
+          "path": "/books",
+          "status": 200,
+          "ok": true,
+          "bytes": 25472
+        },
+        {
+          "path": "/art-history-timeline",
+          "status": 200,
+          "ok": true,
+          "bytes": 24247
+        }
+      ]
+    },
+    "notes": [
+      "Candidate and production checks used real anonymous sessions and catalogue reads; no auth, account, bookmark or catalogue fixtures.",
+      "Checked metadata and links without JavaScript, actual artwork destinations, sign-in destination/focus, timeline selection handoff, carousel keyboard/buttons, period filters, image loading, 1440/1024/768/390/320px overflow and desktop/mobile Axe WCAG A/AA checks.",
+      "Prado PDF bytes match the preceding guide-prose release; existing Books and guides remain available.",
+      "No real Google sign-in or authenticated account writes were performed."
+    ],
+    "releaseErrorLogEntries": 0,
+    "productionVisualReview": {
+      "desktop": "Passed: live full-page screenshot inspected.",
+      "mobile": "Passed: live hero screenshot matches the inspected candidate; responsive and image checks passed."
+    }
+  },
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/about-marketing-20261011",
+  "designReview": "docs/design/marketing-benchmark-20261011.md"
+}

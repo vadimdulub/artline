@@ -1,4 +1,3 @@
-import { ContextualBackLink } from "./BackNavigation";
 import Link from "next/link";
 import { StructuredData } from "./StructuredData";
 import { absoluteURL, breadcrumbs, pageMetadata } from "@/lib/seo";
@@ -21,14 +20,13 @@ export function MuseumGuide({ guide }: { guide: Guide }) {
   return <main id="main-content" className={styles.page} data-return-label={`${guideSubject(guide)} guide`} data-return-path={guidePath(guide.slug, guide.locale)} lang={guide.locale} dir={guide.locale === "ar" ? "rtl" : "ltr"}>
     <StructuredData data={museumGuideStructuredData(guide)} />
     <StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Guides", path: "/guides" }, { name: guide.title, path: guidePath(guide.slug, guide.locale) }])} />
-    <nav className={`${styles.breadcrumb} contextual-breadcrumb`} aria-label="Breadcrumb"><ContextualBackLink fallbackHref="/guides" fallbackLabel={l.guides} /><span aria-hidden="true">/</span><span>{guideSubject(guide)}</span></nav>
     <header className={styles.heading}>
       <div><p className={styles.place}>{guideLocation(guide)}</p><h1>{guide.title}</h1><p className={styles.subtitle}>{guide.subtitle}</p></div>
       <a className={styles.download} href={`/guides/${guide.slug}/pdf/${guide.locale}`} download={`${guide.slug}-${guide.locale}.pdf`}>{l.download}</a>
     </header>
     <nav className={styles.languages} aria-label={l.language}>{locales.map(locale => <Link key={locale} href={guidePath(guide.slug, locale)} hrefLang={locale} lang={locale} aria-current={guide.locale === locale ? "page" : undefined}>{guideLanguages[locale]}</Link>)}</nav>
     {guide.locale !== "en" && <p className={styles.translation}>{l.translation}</p>}
-    <div className={styles.introduction}><p>{guide.introduction}</p><p className={styles.note}>{guide.selectionNote}</p></div>
+    <div className={styles.introduction}>{guide.introduction.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}<p className={styles.note}>{guide.selectionNote}</p></div>
     <section className={styles.portal} aria-labelledby="guide-portal">
       <div><h2 id="guide-portal">{l.explore}</h2><p>{l.contextNote}</p><div className={styles.previews}>{guide.works.slice(0, 5).map(work => <a key={work.id} href={`#work-${work.id}`} title={`${work.artist}: ${work.title}`}><img src={work.image} alt={`${work.title} — ${work.artist}`} width="112" height="80" loading="lazy" /></a>)}</div></div>
       <nav className={styles.portalCards} aria-label={l.explore}>
@@ -47,10 +45,11 @@ export function MuseumGuide({ guide }: { guide: Guide }) {
     <details className={styles.contents}><summary>{l.contents} ({guide.works.length})</summary><ol>{guide.works.map(work => <li key={work.id}><a href={`#work-${work.id}`}>{work.title}<span> — {work.artist}</span></a></li>)}</ol></details>
     <section aria-label={l.artworks} className={styles.works}>{guide.works.map((work, i) => <article id={`work-${work.id}`} key={work.id} className={styles.work}>
       <figure><a href={workPath(work)}><img src={work.image} alt={`${work.title} — ${work.artist}`} loading={i === 0 ? "eager" : "lazy"} width="800" height="650" /></a><figcaption><a href={work.imageSource} target="_blank" rel="noreferrer">{work.credit}</a>{work.license && <span> · <a href={work.licenseUrl || work.imageSource} target="_blank" rel="noreferrer">{work.license}</a></span>}</figcaption></figure>
-      <div className={styles.copy}><span className={styles.number}>{String(i + 1).padStart(2, "0")}</span><h2>{work.title}</h2><p className={styles.artist}>{work.artists.length === 1 ? <Link prefetch={false} href={`/artists/${work.artists[0].slug}`}>{work.artist}</Link> : work.artist}</p><p className={styles.metadata}>{[work.date, work.medium, work.museum].filter(Boolean).join(" · ")}</p><p>{work.description}</p><h3>{l.importance}</h3><p>{work.importance}</p><div className={styles.workLinks}><Link prefetch={false} href={workPath(work)}>{l.artwork}</Link><a href={work.source} target="_blank" rel="noreferrer">{l.source}</a></div>{work.accession && <p className={styles.inventory}>{l.inventory}: {work.accession}</p>}</div>
+      <div className={styles.copy}><span className={styles.number}>{String(i + 1).padStart(2, "0")}</span><h2>{work.title}</h2><p className={styles.artist}>{work.artists.length === 1 ? <Link prefetch={false} href={`/artists/${work.artists[0].slug}`}>{work.artist}</Link> : work.artist}</p><p className={styles.metadata}>{[work.date, work.medium, work.museum].filter(Boolean).join(" · ")}</p>{work.description.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}{work.importance && <><h3>{l.importance}</h3>{work.importance.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</>}<div className={styles.workLinks}><Link prefetch={false} href={workPath(work)}>{l.artwork}</Link><a href={work.source} target="_blank" rel="noreferrer">{l.source}</a></div>{work.accession && <p className={styles.inventory}>{l.inventory}: {work.accession}</p>}</div>
     </article>)}</section>
+    {guide.closingSections?.length ? <section className={styles.closing}>{guide.closingSections.map(section => <article key={section.title}><h2>{section.title}</h2>{section.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</article>)}</section> : null}
     <section className={styles.reading} aria-labelledby="further-reading"><h2 id="further-reading">{l.reading}</h2><ul>{guide.books.map(book => <li key={book.url}><h3><a href={book.url} target="_blank" rel="noreferrer">{book.title}</a></h3><p className={styles.bookAuthor}>{book.author} <span>{book.access}</span></p><p>{book.note}</p></li>)}</ul></section>
-    <aside className={styles.visit}><h2>{l.visit}</h2><p>{guide.visitNote}</p><p><a href={guide.website} target="_blank" rel="noreferrer">{l.website}</a>{guide.officialGuide && <> · <a href={guide.officialGuide} target="_blank" rel="noreferrer">{l.officialGuide}</a></>}</p><p className={styles.note}>{l.updated}: {guide.updated}</p></aside>
-    <footer className={styles.end}><Link href="/guides">{l.guides}</Link><a className={styles.download} href={`/guides/${guide.slug}/pdf/${guide.locale}`} download>{l.download}</a></footer>
+    <aside className={styles.visit}>{!guide.closingSections?.length && <><h2>{l.visit}</h2><p>{guide.visitNote}</p></>}<p><a href={guide.website} target="_blank" rel="noreferrer">{l.website}</a>{guide.officialGuide && <> · <a href={guide.officialGuide} target="_blank" rel="noreferrer">{l.officialGuide}</a></>}</p><p className={styles.note}>{l.updated}: {guide.updated}</p></aside>
+    <footer className={styles.end}><a className={styles.download} href={`/guides/${guide.slug}/pdf/${guide.locale}`} download>{l.download}</a></footer>
   </main>;
 }

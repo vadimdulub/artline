@@ -1,0 +1,608 @@
+{
+  "selectionNote": "Artline hat diese Werke aus dokumentierten Museumsbeständen ausgewählt. Die Auswahl erfolgt unabhängig vom Museum; einzelne Werke können verliehen oder nicht ausgestellt sein. Datierungen und Zuschreibungen behalten die in den verlinkten Datensätzen enthaltenen Einschränkungen bei.",
+  "labels": {
+    "guides": "Alle Museumsführer",
+    "download": "PDF herunterladen",
+    "language": "Leitfadensprache",
+    "translation": "KI-gestützte Übersetzung",
+    "explore": "Entdecken Sie diese Auswahl in Artline",
+    "contextNote": "Betrachten Sie die ausgewählten Werke im Kontext von Büchern und Ereignissen ihrer Zeit oder vergleichen Sie die Lebensdaten der Künstler. Die Bücher und Ereignisse liefern den Kontext, nicht den Nachweis eines direkten Einflusses. Auch Werke ohne gesicherte Datierung sind in diesem Leitfaden enthalten.",
+    "all": "Kunstwerke im Kontext",
+    "allHint": "Die ausgewählten Arbeiten setzen sich mit Büchern und der Geschichte ihrer Zeit auseinander.",
+    "painters": "Wer lebte wann?",
+    "paintersHint": "Sehen Sie, wann die Künstler lebten und wessen Lebenszeiten sich überschnitten.",
+    "events": "Historische Ereignisse",
+    "eventsHint": "Erkunden Sie die Ereignisse während des im Reiseführer angegebenen Zeitraums",
+    "books": "Zeitleiste der Bücher",
+    "booksHint": "Entdecken Sie bemerkenswerte Bücher aus derselben Zeit.",
+    "contents": "Die Werkauswahl",
+    "artworks": "Ausgewählte Kunstwerke",
+    "importance": "Warum es wichtig ist",
+    "artwork": "Offene Kunstwerke",
+    "source": "Werkquelle",
+    "inventory": "Inventar",
+    "reading": "Weiterführende Lektüre",
+    "visit": "Vor Ihrem Besuch",
+    "website": "Museumswebsite",
+    "officialGuide": "Offizieller Sammlungsführer",
+    "updated": "Quellen und Besucherinformationen geprüft"
+  },
+  "slug": "national-gallery-london",
+  "museum": "National Gallery",
+  "city": "London",
+  "country": "Vereinigtes Königreich",
+  "title": "National Gallery London: Meisterwerke",
+  "subtitle": "Zwanzig Werke, die eine Szene nahe bringen, auf Abstand halten oder ihren Standpunkt verunsichern.",
+  "introduction": "Ein Spiegel erweitert den Raum im *Arnolfini-Porträt*. In den *Gesandten* wird eine Form am Boden erst aus schrägem Winkel zu einem Schädel. Anderswo rückt ein Korb an die Tischkante, hat ein Pferd fast keinen Hintergrund, und eine Lokomotive nähert sich über eine Brücke, die das Wetter zu verdecken droht. Diese Gemälde weisen uns sehr unterschiedliche Plätze zu.\n\nDie Auswahl folgt diesen Unterschieden. Manche Bilder geben einen sicheren Standort, andere machen ihn fraglich. Es geht nicht darum, in jedem Werk einen verborgenen Trick zu suchen, sondern darum, wie der Bildraum die mögliche Begegnung beeinflusst.",
+  "visitNote": "Nutzen Sie die aktuellen Grundrisse der National Gallery und die Einzelseiten zu den Gemälden, um die Werke zu lokalisieren. Diese Abfolge orientiert sich nicht an den Raumnummern.",
+  "locale": "de",
+  "website": "https://www.nationalgallery.org.uk",
+  "officialGuide": "https://www.nationalgallery.org.uk",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Kostenlos lesen · Englisch",
+      "note": "Leonardos Abhandlung über die Malerei erörtert Licht, Distanz, Geste und Beobachtung. Diese Fragen bilden eine historische Ergänzung zu den verschiedenen Arten der Raumkonstruktion in dieser Auswahl."
+    }
+  ],
+  "works": [
+    {
+      "id": "02240c7c-ef8f-437e-8e1c-227776c7b163",
+      "title": "Das Arnolfini-Porträt",
+      "catalogueTitle": "The Arnolfini Portrait",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1434",
+      "start": 1434,
+      "end": 1434,
+      "medium": "Öl auf Holz",
+      "accession": "NG186",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/02240c7c-ef8f-437e-8e1c-227776c7b163-6d9b81d01184aed8.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg",
+      "credit": "Jan van Eyck. The Arnolfini Portrait. Image credit: Jan van Eyck; Source credit: Web site of National Gallery, London. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0D8P-0001-0000-0000",
+      "description": "Der kleine Spiegel erweitert den Raum über die direkte Ansicht hinaus und zeigt zusätzliche Figuren hinter dem Hauptpaar. Dieses Detail verändert den Umfang dessen, was wir wissen. Van Eycks genaue Beschreibung füllt nicht nur eine bereits vollständige Szene aus. Sie liefert einen zweiten Blick, durch den der erste weniger abgeschlossen erscheint.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "0daff2b3-c481-4332-8c9a-e2a1de37170b",
+      "title": "Die Gesandten",
+      "catalogueTitle": "The Ambassadors",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "1533",
+      "start": 1533,
+      "end": 1533,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/0daff2b3-c481-4332-8c9a-e2a1de37170b-b70439bb8816f940.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/the-ambassadors-1533",
+      "credit": "Hans Holbein the Younger. The Ambassadors. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.ng.ac.uk/0CWR-0001-0000-0000.html",
+      "description": "Die Regale zeigen Instrumente und Bücher deutlich. Die helle Form bei den Füßen der Männer verlangt dagegen einen anderen Standort: Schräg betrachtet wird sie zu einem Schädel. Holbein macht diese Erinnerung an den Tod mit dem geraden Blick auf Rang und Gelehrsamkeit unvereinbar. Nicht alle Teile des Porträts lassen sich zugleich gleich klar erfassen.",
+      "importance": "",
+      "museum": "National Gallery",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "c353a701-62b5-584a-b29d-ff3c797bf47b",
+      "title": "Die Fighting Temeraire",
+      "catalogueTitle": "The Fighting Temeraire tugged to her last berth to be broken up",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1839",
+      "start": 1839,
+      "end": 1839,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c353a701-62b5-584a-b29d-ff3c797bf47b-30fadbfd441fb023.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/the-fighting-temeraire-tugged-to-her-last-berth-to-be-broken-up-1839",
+      "credit": "J. M. W. Turner. The Fighting Temeraire tugged to her last berth to be broken up. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-turner/the-fighting-temeraire-tugged-to-her-last-berth-to-be-broken-up-1839",
+      "description": "Das helle Segelschiff und der dunkle rauchende Schlepper befinden sich in sehr unterschiedlichen Lichtverhältnissen. Der Schlepper übernimmt die praktische Tätigkeit, während das größere Schiff vor dem Himmel weniger fest wirkt. Über dem Wasser bildet der Sonnenuntergang eine weitere große Helligkeit. Turner macht den Gegensatz sichtbar, bevor er zur Erzählung eines Wandels wird.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "600125fc-8c4d-5bc3-af54-835df7a390b4",
+      "title": "Sonnenblumen",
+      "catalogueTitle": "Still Life - Vase with Fifteen Sunflowers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/600125fc-8c4d-5bc3-af54-835df7a390b4-84fe35aa725b5638.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1",
+      "credit": "Still Life - Vase with Fifteen Sunflowers. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1",
+      "description": "Einige Blütenköpfe haben die offene Form verloren, die andere noch besitzen. In Vase, Hintergrund und Blütenblättern verändert sich Gelb genug, um diese Zustände ohne breite Palette zu unterscheiden. Der Strauß ist keine Reihe gleichwertiger Blüten. Hängende Köpfe und freiliegende Mitten bringen Verschiedenheit und Zeit in eine eng begrenzte Farbordnung.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "f2f0320a-0190-4380-891a-1dc33336f567",
+      "title": "Bacchus und Ariadne",
+      "catalogueTitle": "Bacchus and Ariadne",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1520-3",
+      "start": 1520,
+      "end": 1523,
+      "medium": "Öl auf Leinwand",
+      "accession": "NG35",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/f2f0320a-0190-4380-891a-1dc33336f567-eed9b9f63aba00d4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Titian_Bacchus_and_Ariadne.jpg",
+      "credit": "Titian. Bacchus and Ariadne. Image credit: Titian; Source credit: National Gallery, London - online catalogue .. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0F6J-0001-0000-0000",
+      "description": "Bacchus’ Füße verlassen den Boden, während Ariadne sich zwischen seinem Nahen und dem abfahrenden Schiff wendet. Der Zwischenraum unter ihm macht die Begegnung zum schwebenden Augenblick, nicht zu zwei feststehenden Posen. Sein fliegender Mantel verlängert den Sprung über den Himmel. Andere Bewegungsrichtungen verhindern zugleich, dass der Moment ihm allein gehört.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "b6b77228-2a3f-4c26-a3c6-ee0aea736ede",
+      "title": "Das Abendmahl in Emmaus",
+      "catalogueTitle": "The Supper at Emmaus",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1601",
+      "start": 1601,
+      "end": 1601,
+      "medium": "Öl auf Leinwand",
+      "accession": "NG172",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/b6b77228-2a3f-4c26-a3c6-ee0aea736ede-074c45ffaafd5349.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Supper_at_Emmaus-Caravaggio_(1601).jpg",
+      "credit": "Caravaggio. The Supper at Emmaus. Image credit: Caravaggio; Source credit: Self-scanned. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0D1M-0001-0000-0000",
+      "description": "Ein ausgestreckter Arm und der Korb an der Tischkante schieben die Szene auf uns zu. Das Essen bleibt alltäglich und greifbar, während die Reaktionen der Figuren die Bedeutung der Mahlzeit verändern. Erkennen erhält eine körperliche Form. Hände und Arme zeigen ein Ereignis an, das das Stillleben allein nicht erklären könnte.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "d7336790-47cf-450c-9d87-c095c0e0a4fb",
+      "title": "Der Heuwagen",
+      "catalogueTitle": "The Hay Wain",
+      "artist": "John Constable",
+      "artists": [
+        {
+          "name": "John Constable",
+          "role": "primary",
+          "slug": "john-constable-q159297"
+        }
+      ],
+      "date": "1821",
+      "start": 1821,
+      "end": 1821,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/d7336790-47cf-450c-9d87-c095c0e0a4fb-361ccfa7017f9325.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-constable/the-hay-wain-1821",
+      "credit": "John Constable. The Hay Wain. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.ng.ac.uk/0FV6-0001-0000-0000.html",
+      "description": "Der Wagen gehört zum flachen Wasser und zur Arbeit im umliegenden Land; er steht nicht vor einer gesonderten Landschaft. Bäume schützen die Seite mit dem Haus und lassen das Feld dahinter offener erscheinen. Constable verbindet diese Räume durch Licht und Durchgänge, sodass Umschlossenheit und Ferne zugleich erfahrbar bleiben.",
+      "importance": "",
+      "museum": "National Gallery",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "f6c6897f-27bb-57b7-97ed-7126600c3c06",
+      "title": "Die Taufe Christi",
+      "catalogueTitle": "Baptism of Christ",
+      "artist": "Piero della Francesca",
+      "artists": [
+        {
+          "name": "Piero della Francesca",
+          "role": "primary",
+          "slug": "piero-della-francesca-q5822"
+        }
+      ],
+      "date": "probably about 1437–1445",
+      "start": 1437,
+      "end": 1445,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f6c6897f-27bb-57b7-97ed-7126600c3c06-71d20f7a8bb154ef.jpg",
+      "imageSource": "https://www.wikiart.org/en/piero-della-francesca/baptism-of-christ-1450",
+      "credit": "Piero della Francesca. Baptism of Christ. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piero-della-francesca/baptism-of-christ-1450",
+      "description": "Johannes gießt Wasser in einer kleinen Geste innerhalb einer auffallend stabilen Ordnung. Christi aufrechter Körper und der benachbarte helle Baumstamm bilden Parallelen; darüber breitet die Taube ihre Flügel aus. Stille bedeutet nicht, dass nichts geschieht. Sie gibt der bescheidenen Bewegung genug Klarheit, um die Zeremonie zu tragen.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "61d4b7b7-0300-5af0-ac61-f5b7bee0a84d",
+      "title": "Whistlejacket",
+      "catalogueTitle": "Whistlejacket",
+      "artist": "George Stubbs",
+      "artists": [
+        {
+          "name": "George Stubbs",
+          "role": "primary",
+          "slug": "george-stubbs-q381728"
+        }
+      ],
+      "date": "1762",
+      "start": 1762,
+      "end": 1762,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/61d4b7b7-0300-5af0-ac61-f5b7bee0a84d-ba723f4ff2582399.jpg",
+      "imageSource": "https://www.wikiart.org/en/george-stubbs/whistlejacket",
+      "credit": "George Stubbs. Whistlejacket. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/george-stubbs/whistlejacket",
+      "description": "Ohne Reiter und beschreibende Landschaft muss das steigende Pferd das ganze Bild tragen. Erhobene Vorderbeine, gedrehter Kopf und Schweif verteilen die Bewegung im Körper. Der beinahe leere Grund schärft diese Beziehungen. Stubbs zeigt ein Tier mit eigener Erscheinung und Balance, statt es zur Stütze eines menschlichen Porträts zu machen.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "f1ddf948-fa0e-4687-a351-876d05aa7b92",
+      "title": "Die Hinrichtung von Lady Jane Grey",
+      "catalogueTitle": "The Execution of Lady Jane Grey",
+      "artist": "Paul Delaroche",
+      "artists": [
+        {
+          "name": "Paul Delaroche",
+          "role": "primary",
+          "slug": "paul-delaroche-q322582"
+        }
+      ],
+      "date": "1833",
+      "start": 1833,
+      "end": 1833,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b01a56cf-e4fd-51c3-8ad3-7b43893eb298-8acffd3ed9821c80.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-delaroche/the-execution-of-lady-jane-grey-1833",
+      "credit": "Paul Delaroche. The Execution of Lady Jane Grey. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://data.ng.ac.uk/0FSG-0001-0000-0000.html",
+      "description": "Jane kann den Block nicht sehen, nach dem sie tastet. Die Führung des Begleiters zeigt ihre Abhängigkeit als konkrete Handlung, umgeben von Trauer und Warten. Ihr weißes Kleid hält die Verletzlichkeit sichtbar. Delaroche verdichtet die historische Katastrophe auf die Schwierigkeit, den Ort zu finden, an dem ihr Körper liegen muss.",
+      "importance": "",
+      "museum": "National Gallery",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "6748b952-f9a2-4c4d-98e3-8968feec1c2a",
+      "title": "Junge Frau am Virginal",
+      "catalogueTitle": "A Young Woman standing at a Virginal",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "um 1670–1672",
+      "start": 1670,
+      "end": 1672,
+      "medium": "Öl auf Leinwand",
+      "accession": "NG1383",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/6748b952-f9a2-4c4d-98e3-8968feec1c2a-bd6a72e0ec58c5d9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Lady_Standing_at_a_Virginal_-_National_Gallery,_London.jpg",
+      "credit": "Johannes Vermeer. A Young Woman standing at a Virginal. Image credit: Johannes Vermeer; Source credit: www.nationalgallery.org.uk : Home : Info. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nationalgallery.org.uk/data/0CVV-0001-0000-0000",
+      "description": "Die Frau wendet sich von der Tastatur zu uns. Um diese kleine Bewegung herum bilden Fliesen, Bilder und Instrument eine regelmäßigere Folge von Rechtecken. Der Gegensatz gibt der Wendung Kraft. Ein Innenraum muss nicht völlig unbewegt sein, damit eine kleine Unterbrechung zu seinem auffälligsten Ereignis wird.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "80bfd722-c3fe-4456-ab2a-d1c25913e813",
+      "title": "Regen, Dampf und Geschwindigkeit – Die Great Western Railway",
+      "catalogueTitle": "Rain, Steam, and Speed - The Great Western Railway",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1844",
+      "start": 1844,
+      "end": 1844,
+      "medium": "Öl auf Leinwand",
+      "accession": "NG538",
+      "image": "https://artlines.org/assets/artworks/wikiart/80bfd722-c3fe-4456-ab2a-d1c25913e813-8fe5cbca285a495b.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/rain-steam-and-speed-the-great-western-railway",
+      "credit": "J. M. W. Turner. Rain, Steam, and Speed - The Great Western Railway. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nationalgallery.org.uk/data/0CV2-0001-0000-0000",
+      "description": "Die Brücke gibt der Lokomotive eine klare Richtung, während Regen und Dampf große Teile der Umgebung unsicher machen. Die dunkle Front der Maschine nähert sich innerhalb dieser Unbestimmtheit. Turner lässt Verkehr und Wetter gemeinsam auf das Sehen wirken. Der Weg bleibt verfolgbar, obwohl die Umgebung ihre klaren Grenzen verliert.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "2eb09a2c-1f4c-5f3f-9b5e-2e8983ea5bbb",
+      "title": "Christina von Dänemark",
+      "catalogueTitle": "Christina of Denmark",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "um 1538",
+      "start": 1538,
+      "end": 1538,
+      "medium": "Öl auf Holztafel",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2eb09a2c-1f4c-5f3f-9b5e-2e8983ea5bbb-3fa6979dcd5a14cc.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/christina-of-denmark",
+      "credit": "Hans Holbein the Younger. Christina of Denmark. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hans-holbein-the-younger/christina-of-denmark",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hans-holbein-the-younger/christina-of-denmark",
+      "description": "Das schwarze Kleid nimmt fast die gesamte Figur ein. Gesicht und zusammengeführte Hände bilden nur kleine helle Stellen. Feine Unterschiede im dunklen Stoff verhindern eine flache ausgeschnittene Silhouette. Holbein hält eine Ganzfigur mit wenigen konkurrierenden Akzenten gegenwärtig. Dadurch gewinnt gerade die Anordnung der Hände an Bedeutung.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "d17aac4f-899b-5a4b-9373-0abac41927a5",
+      "title": "Christus im Haus von Maria und Martha",
+      "catalogueTitle": "Christ in the House of Mary and Martha",
+      "artist": "Diego Velázquez",
+      "artists": [
+        {
+          "name": "Diego Velázquez",
+          "role": "primary",
+          "slug": "diego-velazquez-q297"
+        }
+      ],
+      "date": "um 1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/d17aac4f-899b-5a4b-9373-0abac41927a5-e1355a55ba8b8a77.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-velazquez/christ-in-the-house-of-mary-and-martha",
+      "credit": "Diego Velázquez. Christ in the House of Mary and Martha. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/diego-velazquez/christ-in-the-house-of-mary-and-martha",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-velazquez/christ-in-the-house-of-mary-and-martha",
+      "description": "Die Küche besetzt den Vordergrund mit Lebensmitteln, Gefäßen und Arbeit. Christus erscheint dagegen in einer kleineren Öffnung dahinter. Ihr räumliches Verhältnis ist nicht völlig eindeutig. Gerade diese Unsicherheit macht den Gegensatz wichtig: Wir müssen überlegen, wie die nahe Arbeit zur Lehre jenseits davon steht.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "6ac03396-f371-5926-afc6-ba9e041d85b3",
+      "title": "Allegorie der Liebe: Respekt",
+      "catalogueTitle": "Allegory of Love: Respect",
+      "artist": "Paolo Veronese",
+      "artists": [
+        {
+          "name": "Paolo Veronese",
+          "role": "primary",
+          "slug": "paolo-veronese-q9440"
+        }
+      ],
+      "date": "um 1575",
+      "start": 1575,
+      "end": 1575,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/6ac03396-f371-5926-afc6-ba9e041d85b3-d7e4f563f893205c.jpg",
+      "imageSource": "https://www.wikiart.org/en/paolo-veronese/respect",
+      "credit": "Paolo Veronese. Allegory of Love: Respect. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/paolo-veronese/respect",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paolo-veronese/respect",
+      "description": "Die Wendung des bewaffneten Mannes und das Kind unter seinem ausgestreckten Arm erschweren eine einfache Vorwärtsbewegung zur liegenden Frau. Der allegorische Titel fordert eine moralische Deutung. Zunächst lohnt es sich jedoch, die Bewegung zu betrachten. Zurückhaltung muss an Körpern sichtbar werden, die auch in eine andere Richtung weitergehen könnten.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "42a34ab2-3d3e-5e7c-903f-9f2e8abc08ac",
+      "title": "Bacchanal vor einer Statue des Pan",
+      "catalogueTitle": "Bacchanal Before a Statue of Pan",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1631 - 1633",
+      "start": 1631,
+      "end": 1633,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/42a34ab2-3d3e-5e7c-903f-9f2e8abc08ac-3d2d9f5ff228093b.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/bacchanal-before-a-statue-of-pan-1633",
+      "credit": "Nicolas Poussin. Bacchanal Before a Statue of Pan. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/bacchanal-before-a-statue-of-pan-1633",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/bacchanal-before-a-statue-of-pan-1633",
+      "description": "Die verbundenen Tanzenden bilden eine fortlaufende Handlung über die Lichtung. Erhobene Arme und Gewänder tragen die Bewegung über einzelne Körper hinaus; benachbarte Figuren stehen in unterschiedlichen Beziehungen zum Tanz. Poussin macht die Gruppe lesbar, ohne ihre Ausgelassenheit auf unverbundene Einzelgesten zu reduzieren.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "2cd235b5-ba9b-509a-bb6f-4c3a6a718eca",
+      "title": "Seineufer bei Port-Marly",
+      "catalogueTitle": "Banks of the Seine at Port Marly",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/2cd235b5-ba9b-509a-bb6f-4c3a6a718eca-2b022e90870fe37d.jpg",
+      "imageSource": "https://www.wikiart.org/en/alfred-sisley/banks-of-the-seine-at-port-marly-1875",
+      "credit": "Alfred Sisley. Banks of the Seine at Port Marly. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/alfred-sisley/banks-of-the-seine-at-port-marly-1875",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/alfred-sisley/banks-of-the-seine-at-port-marly-1875",
+      "description": "Bäume und helle Gebäude geben dem Ufer mehr Festigkeit, als ihre gebrochenen Spiegelungen besitzen. Der Fluss wiederholt die Szene, liefert aber keine ebenso stabile Fassung. Sisley zeigt einen vertrauten Ort zugleich in zwei Zuständen. Der Unterschied zwischen fester Kante und beweglicher Oberfläche wird zum stillen Thema des Bildes.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "5e29fdc7-990f-53a5-af8b-8941f25a0029",
+      "title": "Der Bau des Trojanischen Pferdes",
+      "catalogueTitle": "Building of the Trojan Horse",
+      "artist": "Giovanni Domenico Tiepolo",
+      "artists": [
+        {
+          "name": "Giovanni Domenico Tiepolo",
+          "role": "primary",
+          "slug": "giovanni-domenico-tiepolo-q435316"
+        }
+      ],
+      "date": "1760",
+      "start": 1760,
+      "end": 1760,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/5e29fdc7-990f-53a5-af8b-8941f25a0029-f2a2a4431f6fae9a.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-domenico-tiepolo/building-of-the-troyan-horse-1760",
+      "credit": "Giovanni Domenico Tiepolo. Building of the Trojan Horse. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/giovanni-domenico-tiepolo/building-of-the-troyan-horse-1760",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nationalgallery.org.uk/paintings/giovanni-domenico-tiepolo-the-building-of-the-trojan-horse",
+      "description": "Das Pferd gehört zur Sage, doch die Menschen darum haben ein praktisches Problem: Sie müssen etwas bauen, das viel größer ist als sie selbst. Werkzeuge, Leitern und Stangen zeigen abgestimmte Arbeit. Tiepolo richtet den Blick vom berühmten Betrug auf dessen Herstellung. Das außergewöhnliche Objekt erhält den Maßstab einer zu erledigenden Aufgabe.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "f81b03b3-cd3b-578b-8aad-4e4fe8db60bf",
+      "title": "Holländische Boote im Sturm",
+      "catalogueTitle": "Dutch Boats in a Gale",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1801",
+      "start": 1801,
+      "end": 1801,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/f81b03b3-cd3b-578b-8aad-4e4fe8db60bf-336d747d1941d067.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/dutch-boats-in-a-gale",
+      "credit": "Dutch Boats in a Gale. WikiArt; J. M. W. Turner. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-turner/dutch-boats-in-a-gale",
+      "description": "Das helle Segel neigt sich scharf gegen dunkle Wellen und vermittelt viel von der Gefahr, ohne ein menschliches Gesicht ins Zentrum zu setzen. Ein größeres Schiff bleibt weiter entfernt. Der niedrige Standpunkt trennt die nahen Boote kaum vom Wasser. Gleichgewicht wird zum unmittelbaren Problem, nicht zum fernen Schauspiel.",
+      "importance": "",
+      "museum": "National Gallery"
+    },
+    {
+      "id": "7c39a2b4-a611-53a1-a0e6-cc649dfd3abc",
+      "title": "Der Besuch des Dogen in der Kirche und der Scuola di San Rocco",
+      "catalogueTitle": "Feast of San Rocco (The Doge Visiting the Church and Scuola di S. Rocco)",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "um 1735",
+      "start": 1735,
+      "end": 1735,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/7c39a2b4-a611-53a1-a0e6-cc649dfd3abc-df67c305a0e10e96.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/feast-of-san-rocco-the-doge-visiting-the-church-and-scuola-di-s-rocco",
+      "credit": "Canaletto. Feast of San Rocco (The Doge Visiting the Church and Scuola di S. Rocco). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/feast-of-san-rocco-the-doge-visiting-the-church-and-scuola-di-s-rocco",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/feast-of-san-rocco-the-doge-visiting-the-church-and-scuola-di-s-rocco",
+      "description": "Vorübergehend angebrachte Behänge und ausgestellte Bilder ergänzen während der Feier die Flächen des Gebäudes. Die Fassade liefert eine regelmäßige Struktur, vor der die kleineren unregelmäßigen Bewegungen der Menge unterscheidbar bleiben. Canaletto zeigt den öffentlichen Anlass durch die Veränderung eines Orts. Die Architektur nimmt etwas auf, das nicht immer dort sein wird.",
+      "importance": "",
+      "museum": "National Gallery"
+    }
+  ],
+  "context": {
+    "start": 1434,
+    "end": 1888
+  },
+  "closingSections": [
+    {
+      "title": "Zwei Standpunkte ausprobieren",
+      "paragraphs": [
+        "Vergleichen Sie Holbeins absichtlichen Wechsel des Blickwinkels mit der körperlichen Nähe von Caravaggios Abendmahl und anschließend mit dem leeren Umfeld von *Whistlejacket*. Jedes Werk stellt eine andere Beziehung zum Betrachter her. Dies ist eine Folge zum Lesen, kein Laufweg. Für Ihre Reise sollten die aktuellen Angaben der National Gallery zur Ausstellung maßgeblich sein."
+      ]
+    }
+  ]
+}

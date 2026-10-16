@@ -122,7 +122,7 @@ export function TimelineExplorer() {
   function change(values: Record<string, string | string[] | null>, push = false) { setRangePreview(null); updateQuery({ painting_after: null, painting: null, fit: null, ...discoveryChanges(values, "popular") }, push); }
   function changeView(showPaintings: boolean) {
     if (showPaintings === paintings) return;
-    setShowMovementKeyOnEntry(true);
+    setShowMovementKeyOnEntry(window.matchMedia("(min-width: 761px)").matches);
     restoreViewFocus.current = true;
     change({ view: showPaintings ? "paintings" : null, artist: null }, true);
   }
@@ -174,7 +174,6 @@ export function TimelineExplorer() {
           status={loading ? "Finding painters…" : error ? "Connection interrupted" : `${data?.total ?? 0} ${data?.total === 1 ? "painter" : "painters"} in this view`}
           zoom={<TimelineZoomOut disabled={!focused} onClick={() => change({ start: null, end: null }, true)} />}>
           <h1 id="timeline-title" className="time-title"><span className="sr-only">Painter lifespans: </span>{displayRange.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{displayRange.end}</h1>
-          {movements.length > 0 && <TimelinePopover label="Movement colour key" className="movement-key" defaultOpen={showMovementKeyOnEntry}><div className="timeline-legend" aria-label="Movements in this view">{movements.map(item => <button key={item.slug} aria-pressed={selectedMovements.includes(item.slug)} onClick={() => change({ movement: selectedMovements.includes(item.slug) ? selectedMovements.filter(value => value !== item.slug) : [...selectedMovements, item.slug] }, true)}><i style={{ background: item.color }} />{item.name}</button>)}</div></TimelinePopover>}
         </TimelineHeader>
         <TimelineGrid stageRef={stage} busy={loading} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>
           {!focused && <div className="book-scale-break" style={{ left: `${artworkYearPosition(1400)}%` }} aria-hidden="true" />}
@@ -186,6 +185,7 @@ export function TimelineExplorer() {
       <TimelineRangeControls start={start} end={end} minimum={1100} maximum={2000} onChange={setRange} onPreview={setRangePreview}
         scale={{ position: year => artworkYearPosition(year), yearAt: percent => artworkYearAtPosition(percent), markers: rangeMarkers }}
         endpoints={["1100", "2000"]} />
+      {movements.length > 0 && <div className="timeline-key-footer"><TimelinePopover label="Movement colour key" className="movement-key" defaultOpen={showMovementKeyOnEntry}><div className="timeline-legend" aria-label="Movements in this view">{movements.map(item => <button key={item.slug} aria-pressed={selectedMovements.includes(item.slug)} onClick={() => change({ movement: selectedMovements.includes(item.slug) ? selectedMovements.filter(value => value !== item.slug) : [...selectedMovements, item.slug] }, true)}><i style={{ background: item.color }} />{item.name}</button>)}</div></TimelinePopover></div>}
       </div>}
     </ExplorerFrame>
     {!paintings && <section className="results-section" aria-busy={loading}><div className="results-heading"><h2 id="painter-index-title">{data?.mode === "density" ? "Explore a period" : "Painter index"}</h2><p>{data?.mode === "density" ? needsFilter ? "This period is busy. Try the suggested filter, or choose your own above." : "Choose a period to explore. Busy periods may need a painter, movement or country filter." : "Choose a name for artworks, collections and sources. Work counts describe our catalogue, not a painter’s lifetime output."}</p></div>

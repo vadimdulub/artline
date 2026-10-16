@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "van-gogh-museum",
+  "museum": "Van Gogh Museum",
+  "city": "Amsterdam",
+  "country": "Pays-Bas",
+  "title": "Musée Van Gogh : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres pour regarder couleur, cadrage et travail du regard avant de retrouver les récits biographiques familiers.",
+  "introduction": "Le jaune des *Tournesols* doit distinguer pétales, vase et espace environnant sans recourir à de grands écarts de teinte. Les intervalles bleus de l’*Amandier en fleurs* ont une autre tâche : laisser de l’air entre des branches minutieusement décrites. Ce sont des décisions pratiques de peinture. Elles offrent une entrée dans l’œuvre de Van Gogh qui ne commence pas par traiter chaque marque comme un symptôme.\n\nLes œuvres de Gauguin, Bernard, Angrand et d’autres élargissent la comparaison. Van Gogh apparaît parmi des artistes faisant d’autres choix, non comme une figure à l’écart des échanges. Dessins et sujets de jeunesse interrompent aussi, par leur traitement plus calme, l’idée que son œuvre devrait toujours s’annoncer avec des couleurs éclatantes.",
+  "visitNote": "Consultez les informations relatives à la billetterie et aux collections du musée avant votre visite. Certaines œuvres peuvent être prêtées ou absentes de l'exposition en cours, et les dessins sont particulièrement sensibles à une exposition prolongée à la lumière.",
+  "locale": "fr",
+  "website": "https://www.vangoghmuseum.nl/",
+  "officialGuide": "https://www.vangoghmuseum.nl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Vincent van Gogh: The Letters",
+      "author": "Vincent van Gogh; edited by Leo Jansen, Hans Luijten and Nienke Bakker",
+      "url": "https://vangoghletters.org/",
+      "access": "Lecture gratuite · Traductions anglaises et textes originaux",
+      "note": "L'édition des lettres réalisée par le musée Van Gogh et l'Institut Huygens comprend les textes originaux, des traductions en anglais, des images et des notes érudites. Effectuez une recherche par œuvre pour comparer ce que Van Gogh a réellement écrit avec les interprétations ultérieures de ses peintures."
+    }
+  ],
+  "works": [
+    {
+      "id": "286a736a-700b-53b9-9e62-3e49ed28a96f",
+      "title": "Les Mangeurs de pommes de terre",
+      "catalogueTitle": "The Potato Eaters",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/286a736a-700b-53b9-9e62-3e49ed28a96f-c55f92f849e13db7.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-potato-eaters-1885-1",
+      "credit": "Vincent van Gogh. The Potato Eaters. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/the-potato-eaters-1885-1",
+      "description": "La lampe rassemble cinq personnes dans une petite zone de lumière partagée. Les mains anguleuses relient les visages au plat, faisant du repas une activité physique plutôt qu’une réunion familiale posée. L’intérieur brun-vert de Van Gogh maintient les figures dans leur environnement. La rudesse se répartit dans toute la scène ; elle n’est pas réservée comme trait de caractère à un seul modèle.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "153ccea9-bef6-4b1e-ba20-3ebd31a08915",
+      "title": "Tournesols",
+      "catalogueTitle": "Sunflowers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Janvier 1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur toile",
+      "accession": "s0031V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/153ccea9-bef6-4b1e-ba20-3ebd31a08915-ad8ad3399ed7937b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Zonnebloemen_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Sunflowers. Image credit: Vincent van Gogh; Source credit: Google Arts & Culture — hwEGmsM-FoHAwA. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0031V1962",
+      "description": "Le bouquet comprend des fleurs dressées et d’autres retombantes, dont les cœurs sombres interrompent le jaune. Ces différences empêchent la palette restreinte de devenir uniforme. Van Gogh donne à chaque stade et à chaque direction une place dans l’ensemble. La familiarité du sujet peut masquer la difficulté du tableau : rendre de nombreuses formes distinctes lisibles avec des couleurs très proches.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "7c5b8360-fd4f-4ca5-9dc0-8f26aecca79c",
+      "title": "Amandier en fleurs",
+      "catalogueTitle": "Almond Blossom",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Février 1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "s0176V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/7c5b8360-fd4f-4ca5-9dc0-8f26aecca79c-1bcaa5fa36a49865.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Almond Blossom. Image credit: Vincent van Gogh; Source credit: dAFXSL9sZ1ulDw at Google Cultural Institute maximum zoom level. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0176V1962",
+      "description": "Le tronc et le cadre plus large sont exclus. Branches et intervalles organisent seuls l’image. Le musée présente ce tableau comme un cadeau destiné au neveu nouveau-né de Van Gogh. L’occasion compte, mais ne remplace pas la construction visuelle : les fleurs pâles restent distinctes parce que le fond bleu donne de la place à leur réseau complexe.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "69037a2c-bf50-4d89-9ab6-66088aafd002",
+      "title": "Champ de blé aux corbeaux",
+      "catalogueTitle": "Wheatfield with Crows",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Juillet 1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "s0149V1962",
+      "image": "https://artlines.org/assets/artworks/wikiart/69037a2c-bf50-4d89-9ab6-66088aafd002-f8543290c619e117.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/wheatfield-with-crows-1890",
+      "credit": "Vincent van Gogh. Wheatfield with Crows. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0149V1962",
+      "description": "Les chemins proposent des itinéraires concurrents dans les blés, tandis que les oiseaux sombres et les marques vigoureuses animent le ciel. Ces éléments entretiennent la tension sans qu’il soit nécessaire d’en faire le dernier tableau de Van Gogh. Le musée réfute cette affirmation persistante. Lire l’œuvre comme un adieu prédéterminé peut occulter les choix précis qui rendent le paysage si difficile à stabiliser.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "70dfc39d-3fb0-4e15-8509-6e0a61fec666",
+      "title": "La Maison jaune",
+      "catalogueTitle": "The Yellow House (The Street)",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Septembre 1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile",
+      "accession": "s0032V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/70dfc39d-3fb0-4e15-8509-6e0a61fec666-376df0bcec87d843.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_yellow_house_(%27The_street%27).jpg",
+      "credit": "Vincent van Gogh. The Yellow House (The Street). Image credit: Vincent van Gogh; Source credit: Van Gogh Museum. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0032V1962",
+      "description": "Le bâtiment jaune s’identifie facilement devant le ciel bleu profond, mais il n’est pas seul. Voisins, piétons et rue ouverte le maintiennent dans une ville en activité. Van Gogh donne à une résidence particulière une forte identité colorée sans dégager ses alentours ordinaires. Le lieu reste un morceau de rue même lorsqu’il devient le sujet nommé du tableau.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "f2d80116-debe-44bb-a01d-a15f287e716c",
+      "title": "Autoportrait au chapeau de feutre gris",
+      "catalogueTitle": "Self-Portrait with Grey Felt Hat",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Septembre–octobre 1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "Huile sur coton",
+      "accession": "s0016V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/f2d80116-debe-44bb-a01d-a15f287e716c-eb659a28c3685d1f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Self-Portrait with Grey Felt Hat. Image credit: Vincent van Gogh; Source credit: PgEJ1hPIzqsM2w at Google Cultural Institute maximum zoom level. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0016V1962",
+      "description": "De courtes touches changent de direction autour du chapeau, du visage et des vêtements. L’orange de la barbe répond aux zones plus froides : la ressemblance dépend de contrastes qui dépassent les seuls traits. Van Gogh fait participer l’espace voisin à la description de la tête. Le portrait expérimente la manière dont la peinture organise un visage ; il ne dévoile pas simplement un tempérament.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "ae612a6b-48df-56fc-91ce-14527bcd0671",
+      "title": "Van Gogh peignant des tournesols",
+      "catalogueTitle": "Van Gogh Painting Sunflowers",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ae612a6b-48df-56fc-91ce-14527bcd0671-0ac0cbe339ea8dd4.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/van-gogh-painting-sunflowers-1888",
+      "credit": "Paul Gauguin. Van Gogh Painting Sunflowers. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-gauguin/van-gogh-painting-sunflowers-1888",
+      "description": "Gauguin montre un peintre occupé, dont le bras plié relie la tâche aux fleurs voisines. Les grandes plages de couleur donnent à ce Van Gogh un cadre différent des touches agitées de ses propres autoportraits. L’image faite par un autre artiste est aussi une interprétation. Elle ne doit pas être traitée comme une vue sans filtre derrière les tableaux de Van Gogh.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "f4ba57ab-bb58-58a7-8f79-9685758c7831",
+      "title": "Le Fauteuil de Gauguin",
+      "catalogueTitle": "Paul Gauguin's Armchair",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f4ba57ab-bb58-58a7-8f79-9685758c7831-2fe888ad0abbf669.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/paul-gauguin-s-armchair-1888",
+      "credit": "Vincent van Gogh. Paul Gauguin's Armchair. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/paul-gauguin-s-armchair-1888",
+      "description": "Des livres et une bougie allumée occupent le siège vide, précisant l’absence sans peindre de personne. Les courbes du meuble, le mur vert et le sol à motifs construisent les rapports de formes et de couleurs. Van Gogh laisse certains objets accomplir une part du travail d’un portrait. Le fauteuil peut suggérer son occupant nommé sans dresser le compte rendu complet de sa personnalité.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "d5e99e6e-64b8-5888-9ffa-88f2ac8fe832",
+      "title": "Le Pêcher rose",
+      "catalogueTitle": "The pink peach tree",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "s0025V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11751766-476aec6e39e5cb8a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_De_roze_perzikboom_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. The pink peach tree. Image credit: Vincent van Gogh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11751766",
+      "description": "La floraison se disperse au lieu de former une seule couronne pâle. Les vides gardent les branches fines lisibles devant le ciel ; clôture et petits troncs situent l’arbre dans un verger. Van Gogh équilibre l’attention portée à un seul arbre avec assez de contexte pour éviter de l’isoler. La structure ouverte compte autant que l’accumulation des touches de fleurs.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "80a335b6-72d2-5ff3-91d7-5ef9d41fdcda",
+      "title": "Table de café avec absinthe",
+      "catalogueTitle": "Café table with absinth",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "s0186V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10335778-fc2b8ba0f09bdcda.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Caf%C3%A9tafel_met_absint_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Café table with absinth. Image credit: Vincent van Gogh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10335778",
+      "description": "Le verre et la carafe se tiennent devant une autre surface transparente, la fenêtre. Reflets et rue au-delà compliquent la séparation simple entre objets proches et fond lointain. Van Gogh fait coïncider regarder à travers et regarder la surface. La table de café offre un petit cadre à une question plus vaste : la transparence révèle l’espace tout en l’interrompant.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "c6b1a083-3588-5ada-b83f-14daadd89e50",
+      "title": "Phryné",
+      "catalogueTitle": "Phryne",
+      "artist": "Gustave Boulanger",
+      "artists": [
+        {
+          "name": "Gustave Boulanger",
+          "role": "primary",
+          "slug": "gustave-boulanger-q726564"
+        }
+      ],
+      "date": "1850",
+      "start": 1850,
+      "end": 1850,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q114440039-735cdaae1fcf5e5f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Phryne_by_Gustave_Boulanger.jpg",
+      "credit": "Gustave Boulanger. Phryne. Image credit: Gustave Boulanger. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q114440039",
+      "description": "La peau soigneusement modelée et le cadre rembourré de Boulanger produisent un corps d’un autre fini que les figures de Van Gogh. Main levée et pose allongée appartiennent à une présentation mise en scène, non à une tâche domestique interrompue. Comparez les traitements sans faire de l’un une amélioration automatique de l’autre. Chacun demande à la peinture de servir un idéal de représentation distinct.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "6afc6ea8-f314-5e8e-85d5-eadfa26c6cd9",
+      "title": "La Seine, matin à Saint-Ouen",
+      "catalogueTitle": "The Seine, Morning (Saint-Ouen)",
+      "artist": "Charles Angrand",
+      "artists": [
+        {
+          "name": "Charles Angrand",
+          "role": "primary",
+          "slug": "charles-angrand-nga-10653"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "s0524S2012",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19837988-e47c8feb4a890181.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_Seine,_ochtend_(Saint-Ouen)_-_s0524S2012_-_Van_Gogh_Museum.jpg",
+      "credit": "Charles Angrand. The Seine, Morning (Saint-Ouen). Image credit: Charles Angrand. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19837988",
+      "description": "Le large fleuve offre peu d’incidents pour saisir l’attention. Angrand travaille plutôt de petits écarts entre des tons pâles et voisins, donnant à l’eau une surface calme sans être vide. Arbres et bâtiments définissent un lointain bas. Le tableau contrebalance utilement les contrastes plus vifs : la retenue demande elle aussi de nombreuses décisions précises.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "305dbed8-46e4-5772-8df3-36b9c44ef098",
+      "title": "Autoportrait avec un portrait de Gauguin",
+      "catalogueTitle": "Self-Portrait with Portrait of Gauguin",
+      "artist": "Émile Bernard",
+      "artists": [
+        {
+          "name": "Émile Bernard",
+          "role": "primary",
+          "slug": "emile-bernard-q264193"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/305dbed8-46e4-5772-8df3-36b9c44ef098-5e6d311496e7433b.jpg",
+      "imageSource": "https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "credit": "Émile Bernard. Self-Portrait with Portrait of Gauguin. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "description": "Bernard place son visage recadré près d’une image plus petite de Gauguin, mais les deux portraits ne prétendent pas occuper un espace continu. Le bleu pâle les relie malgré cette différence. Se décrire inclut ici la présence d’un autre artiste. La relation naît de la disposition des images, non d’une scène montrant les deux hommes ensemble.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "b7f3d4be-7aae-5e76-ba5a-2fe51756552f",
+      "title": "La Fenaison à Éragny",
+      "catalogueTitle": "The Harvest of Hay in Eragny",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b7f3d4be-7aae-5e76-ba5a-2fe51756552f-3db64dcce6be19dd.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/the-harvest-of-hay-in-eragny-1887",
+      "credit": "Camille Pissarro. The Harvest of Hay in Eragny. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/the-harvest-of-hay-in-eragny-1887",
+      "description": "Les mouvements des travailleurs reviennent entre les meules et donnent au champ un rythme de labeur répété. Pissarro fait circuler de petites marques colorées sur les personnes et le sol, liant leurs activités à la construction du paysage. Les figures restent identifiables sans recevoir une manière de peindre entièrement différente. Comparez la façon dont Van Gogh sépare un corps penché des arbres dans le dessin suivant.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "4ef221ef-771b-5140-b064-15f7474f4f83",
+      "title": "Femme ramassant un bâton devant des arbres",
+      "catalogueTitle": "A Woman Picking Up a Stick in Front of Trees",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Craie sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/4ef221ef-771b-5140-b064-15f7474f4f83-0cf9f4171d45d913.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/a-woman-picking-up-a-stick-in-front-of-trees-1890",
+      "credit": "A Woman Picking Up a Stick in Front of Trees. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/a-woman-picking-up-a-stick-in-front-of-trees-1890",
+      "description": "La forte courbure du corps rend l’action claire avant qu’on ait démêlé le feuillage. Les directions différentes des traits distinguent ensuite vêtements, troncs et feuilles. Van Gogh garde le dessin ouvert tout en donnant assez d’informations pour comprendre la tâche. L’économie consiste à choisir les marques nécessaires, non simplement à en mettre moins partout.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "ac64d07d-7219-5878-aeb4-0c287a27cd00",
+      "title": "Mine de charbon dans le Borinage",
+      "catalogueTitle": "Coalmine in the Borinage",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "Crayon et aquarelle sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ac64d07d-7219-5878-aeb4-0c287a27cd00-c0cba766b8b96e94.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/coalmine-in-the-borinage-1879",
+      "credit": "Coalmine in the Borinage. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/coalmine-in-the-borinage-1879",
+      "description": "Des bâtiments bas et des cheminées fumantes s’étendent dans un paysage dépouillé. Les petites figures donnent une échelle humaine devant les constructions industrielles. Cette œuvre de jeunesse s’intéresse au milieu du travail sans la palette lumineuse ensuite étroitement associée à Van Gogh. L’inclure maintient cet environnement comme sujet, au lieu de réduire son évolution à un changement de couleur.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "5a214e8a-d1fc-4405-985e-9aab29c09720",
+      "title": "La Chambre à coucher",
+      "catalogueTitle": "The Bedroom",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Octobre 1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile",
+      "accession": "s0047V1962",
+      "image": "https://uploads1.wikiart.org/images/vincent-van-gogh/vincent-s-bedroom-in-arles-1888.jpg!Large.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/vincent-s-bedroom-in-arles-1888",
+      "credit": "Vincent van Gogh, The Bedroom, 1888. Reproduction via WikiArt; source label: Public domain.",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0047V1962",
+      "description": "Le grand lit et les deux chaises laissent peu d’espace libre. Meubles obliques et tableaux accrochés soulignent une géométrie simplifiée. Van Gogh construit un intérieur habité par des limites fortes et des rapports colorés, non par un relevé architectural neutre. Le tableau d’Amsterdam est la version de 1888 ; il ne faut pas le confondre avec les versions peintes ultérieures ni avec les croquis des lettres.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "5877359e-9e5c-5034-b23a-6bc82a5efeb9",
+      "title": "Iris",
+      "catalogueTitle": "Still Life with Irises",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/5877359e-9e5c-5034-b23a-6bc82a5efeb9-3113aa075790e9f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/still-life-with-irises-1890",
+      "credit": "Vincent van Gogh. Still Life with Irises. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/still-life-with-irises-1890",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0050V1962",
+      "description": "Les fleurs se détachent sur le jaune ; feuilles pointues et tiges retombantes brisent le bord du bouquet. Leur bleu actuel ne reproduit pas exactement le rapport peint par Van Gogh : un pigment rouge s’est estompé, faisant passer les iris du violet vers le bleu. Le contraste reste fort, mais cette histoire matérielle importe. La reproduction enregistre l’état présent, non une décision originale inchangée.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "764da244-fc11-5990-9ab2-266d472ca5b5",
+      "title": "Chaussures",
+      "catalogueTitle": "A Pair of Shoes",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/764da244-fc11-5990-9ab2-266d472ca5b5-e64c567bb99b3566.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/a-pair-of-shoes-1886",
+      "credit": "Vincent van Gogh. A Pair of Shoes. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/a-pair-of-shoes-1886",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0011V1962",
+      "description": "Les chaussures se présentent sous des angles différents, exposant cuir usé, ouvertures et lacets. Van Gogh leur donne assez d’espace pour devenir un sujet sans identifier leur propriétaire ni bâtir d’anecdote. Les traces d’usage sont visibles, pas une vie entière. L’attention concentrée se compare à celle d’un portrait, même si les objets ne peuvent rendre le regard.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "c0d7c470-a49a-5c30-9ae5-accb2a7dfeff",
+      "title": "Vue d’Arles avec des iris au premier plan",
+      "catalogueTitle": "View of Arles with Irises in the Foreground",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/c0d7c470-a49a-5c30-9ae5-accb2a7dfeff-9f513757eccebc0a.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "credit": "Vincent van Gogh. View of Arles with Irises in the Foreground. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "description": "Les fleurs proches conduisent vers des bandes de terrain cultivé, puis vers la ville lointaine. Van Gogh ne sacrifie pas le motif animé du premier plan pour rendre la profondeur lisible. Des zones colorées répétées établissent le passage, tandis que les arbres interrompent la ligne éloignée. Les iris appartiennent à la fois à l’étude rapprochée de la végétation et à une description bien plus vaste du lieu.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    }
+  ],
+  "context": {
+    "start": 1850,
+    "end": 1890
+  },
+  "closingSections": [
+    {
+      "title": "Garder la comparaison précise",
+      "paragraphs": [
+        "Suivez un choix dans quelques œuvres : l’espace entre les branches, le traitement des mains ou la direction des touches. La biographie peut ensuite intervenir là où les sources la rendent pertinente. Consultez les informations actuelles du musée pour l’exposition et l’accès. L’appartenance à la collection ne garantit pas que chaque œuvre choisie sera visible lors d’une même visite."
+      ]
+    }
+  ]
+}

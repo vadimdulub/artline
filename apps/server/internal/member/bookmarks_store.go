@@ -78,14 +78,11 @@ func scanBookmark(row interface{ Scan(...any) error }) (Bookmark, error) {
 	if err == nil {
 		if item.Kind == "book" {
 			if image := books.SelectedCover(item.ID, sourceID); image != nil {
-				item.Image = &BookmarkImage{image.ImageURL, image.SourceURL, image.Label, image.Credit, image.License, image.LicenseURL}
-			}
-		} else if item.Kind == "event" {
-			if image := events.SelectedImage(item.ID, sourceID); image != nil {
-				item.Image = &BookmarkImage{image.ImageURL, image.SourceURL, image.Label, image.Credit, image.License, image.LicenseURL}
+				item.Image = &BookmarkImage{ImageURL: image.ImageURL, SourceURL: image.SourceURL, Label: image.Label, Credit: image.Credit, License: image.License, LicenseURL: image.LicenseURL}
 			}
 		}
 	}
+	item.sourceID = sourceID
 	return item, err
 }
 func (s PostgresBookmarks) List(ctx context.Context, memberID, kind string, cursor BookmarkCursor, limit int) ([]Bookmark, error) {
@@ -108,14 +105,52 @@ func (s PostgresBookmarks) List(ctx context.Context, memberID, kind string, curs
 		}
 		items = append(items, item)
 	}
-	return items, rows.Err()
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	rows.Close()
+	return items, s.attachEventImages(ctx, items)
 }
 func (s PostgresBookmarks) Lookup(ctx context.Context, ref BookmarkRef) (Bookmark, error) {
 	item, err := scanBookmark(s.DB.QueryRow(ctx, `WITH picked AS (SELECT $1::text AS kind,$2::text AS id,now() AS saved_at) `+bookmarkDetailsSQL, ref.Kind, ref.ID))
 	if errors.Is(err, pgx.ErrNoRows) {
 		err = ErrBookmarkMissing
 	}
-	return item, err
+	if err != nil {
+		return item, err
+	}
+	items := []Bookmark{item}
+	err = s.attachEventImages(ctx, items)
+	return items[0], err
+}
+
+func bookmarkEventImage(image *events.Image) *BookmarkImage {
+	if image == nil {
+		return nil
+	}
+	return &BookmarkImage{Artwork: image.Artwork, ImageURL: image.ImageURL, SourceURL: image.SourceURL, Label: image.Label, Credit: image.Credit, License: image.License, LicenseURL: image.LicenseURL}
+}
+
+func (s PostgresBookmarks) attachEventImages(ctx context.Context, items []Bookmark) error {
+	refs := []events.Event{}
+	for _, item := range items {
+		if item.Kind == "event" {
+			refs = append(refs, events.Event{ID: item.ID, SourceID: item.sourceID})
+		}
+	}
+	if err := events.ResolveImages(ctx, s.DB, refs); err != nil {
+		return err
+	}
+	images := map[string]*events.Image{}
+	for _, ref := range refs {
+		images[ref.ID] = ref.Image
+	}
+	for i := range items {
+		if items[i].Kind == "event" {
+			items[i].Image = bookmarkEventImage(images[items[i].ID])
+		}
+	}
+	return nil
 }
 
 // Only this fixed allowlist supplies SQL identifiers and predicates.

@@ -3,7 +3,7 @@ import type { Book, BookRange, BookFilterOption } from "./books";
 export type HistoricalEvent = {
   id: string; sourceId: string; sourceRevision: number; sourceUrl: string;
   title: string; description: string; significance: string; years: string;
-  image?: Book["cover"];
+  image?: NonNullable<Book["cover"]> & { artwork?: { id: string; title: string; href: string } };
   descriptionSource?: { name: string; url: string; kind: "wikipedia" | "wikidata" | "editorial"; language?: string; title?: string; revision?: number; license?: string; licenseUrl?: string; notice: string };
   startYear: number | null; endYear: number | null; approximate: boolean;
   dateBasis: string; kind: "Event" | "Period" | "Movement";

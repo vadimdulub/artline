@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Компания Artline отобрала эти произведения из задокументированных музейных фондов. Данная подборка сформирована независимо от музея; отдельные работы могут находиться на временной выставке в другом месте или быть сняты с экспозиции. Датировка и атрибуция приводятся с учетом оговорок, содержащихся в соответствующих записях.",
+  "labels": {
+    "guides": "Все путеводители",
+    "download": "Скачать PDF",
+    "language": "Язык путеводителя",
+    "translation": "Перевод с помощью ИИ",
+    "explore": "Эта подборка в Artline",
+    "contextNote": "Посмотрите выбранные работы рядом с книгами и событиями их времени или сравните годы жизни художников. Книги и события дают исторический контекст, но не доказывают прямого влияния. Работы без подтверждённой даты остаются в путеводителе.",
+    "all": "Произведения искусства в контексте",
+    "allHint": "Избранные работы, связанные с книгами и историей их эпохи.",
+    "painters": "Кто когда жил?",
+    "paintersHint": "Узнайте, когда жили эти художники и чьи жизненные пути пересекались.",
+    "events": "Исторические события",
+    "eventsHint": "События за период, охваченный путеводителем",
+    "books": "Хронология книг",
+    "booksHint": "Значимые книги того же периода",
+    "contents": "Произведения",
+    "artworks": "Выбранные произведения",
+    "importance": "Почему это важно",
+    "artwork": "Открыть произведение",
+    "source": "Страница произведения в источнике",
+    "inventory": "Инвентарный номер",
+    "reading": "Что почитать",
+    "visit": "Перед посещением",
+    "website": "Сайт музея",
+    "officialGuide": "Материалы музея",
+    "updated": "Дата проверки источников и информации для посетителей"
+  },
+  "slug": "tate",
+  "museum": "Tate",
+  "city": "Лондон и другие места",
+  "country": "Соединенное Королевство",
+  "title": "Тейт: шедевры",
+  "subtitle": "Картины, в которых точность, атмосфера и искажение по-разному придают опыту видимую форму.",
+  "introduction": "Растения вокруг Офелии Милле остаются настойчиво подробными, пока среди них плывёт тело. В буре Тёрнера трудность почти обратная: окружение мешает найти судно. Ни один метод нельзя просто назвать более реалистичным. Один сохраняет отчётливость видимого мира в момент смерти; другой позволяет погоде нарушить сам процесс зрения.\n\nЭтот контраст проходит через литературные сюжеты, городские сцены и придуманные тела. Одни изображения становятся плотнее при долгом рассмотрении; другие держатся на немногих уцелевших подробностях. Разница полезнее предположения, будто всякая свободная манера спонтанна, а всякая точность означает уверенность.",
+  "visitNote": "Коллекция Tate размещена на нескольких площадках, включая Tate Britain и Tate Modern. Данная подборка представляет собой путеводитель по собранию, а не маршрут по одному зданию. Перед посещением уточняйте, где именно сейчас экспонируется то или иное произведение, так как состав выставок и места размещения работ могут меняться.",
+  "locale": "ru",
+  "website": "https://www.tate.org.uk",
+  "officialGuide": "https://www.tate.org.uk",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "Читать бесплатно · Английский",
+      "note": "Упражнения Раскина по наблюдению за природными формами служат полезным дополнением к живописи прерафаэлитов. Его внимание к контурам и свету также дает отправную точку для обсуждения того, почему поверхности на картинах Тернера труднее разделить на отдельные объекты."
+    }
+  ],
+  "works": [
+    {
+      "id": "1f837242-93a2-444b-8cba-797370c69a61",
+      "title": "Офелия",
+      "catalogueTitle": "Ophelia",
+      "artist": "John Everett Millais",
+      "artists": [
+        {
+          "name": "John Everett Millais",
+          "role": "primary",
+          "slug": "john-everett-millais-q159606"
+        }
+      ],
+      "date": "1851–2",
+      "start": 1851,
+      "end": 1852,
+      "medium": "Холст, масло",
+      "accession": "N01506",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1065493-65065788ca59e1e4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Ophelia_-_Google_Art_Project.jpg",
+      "credit": "John Everett Millais. Ophelia. Image credit: John Everett Millais. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/millais-ophelia-n01506",
+      "description": "Открытые ладони и плывущее тело Офелии находятся в ручье, растительность которого описана с продолжительным вниманием. Окружение не теряет резкости вокруг человеческого события. Равенство подробностей создаёт трудное отношение: растения продолжают привлекать взгляд, пока фигура придаёт тому же месту смертельное значение.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0cee5bd6-5dbd-4e8b-964f-7dc95f078e8c",
+      "title": "Леди из Шалотт",
+      "catalogueTitle": "The Lady of Shalott",
+      "artist": "John William Waterhouse",
+      "artists": [
+        {
+          "name": "John William Waterhouse",
+          "role": "primary",
+          "slug": "john-william-waterhouse-q212754"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Холст, масло",
+      "accession": "N01543",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/0cee5bd6-5dbd-4e8b-964f-7dc95f078e8c-4afd773f4331a638.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-william-waterhouse/the-lady-of-shalott-1888",
+      "credit": "John William Waterhouse. The Lady of Shalott. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/waterhouse-the-lady-of-shalott-n01543",
+      "description": "Цепь ещё соединяет лодку с берегом. Свечи, узорная ткань и белое платье делают отплытие вещественно конкретным, а поднятое лицо направляет внимание за пределы ближайшего действия. Уотерхаус удерживает сцену возле момента ухода. Последствия, связанные с литературным сюжетом, ещё не показаны.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "440188db-4dd4-4f7c-a842-5d2da5a204b1",
+      "title": "Пробудившаяся совесть",
+      "catalogueTitle": "The Awakening Conscience",
+      "artist": "William Holman Hunt",
+      "artists": [
+        {
+          "name": "William Holman Hunt",
+          "role": "primary",
+          "slug": "william-holman-hunt-q211763"
+        }
+      ],
+      "date": "1853",
+      "start": 1853,
+      "end": 1853,
+      "medium": "Холст, масло",
+      "accession": "T02075",
+      "image": "https://artlines.org/assets/artworks/wikiart/92250598-69ee-441d-86c8-3f72f408f71d-2b2772b6099e3622.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-holman-hunt/the-awakening-conscience-1853",
+      "credit": "William Holman Hunt. The Awakening Conscience. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/hunt-the-awakening-conscience-t02075",
+      "description": "Женщина начинает подниматься, меняя отношение двух тел в тесно обставленной комнате. Зеркало даёт другое открытие — к саду и наружному свету. Хант помещает поворот рассказа в небольшое изменение позы, оставляя рядом замкнутый интерьер и возможное направление за его пределы.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "301e4ad1-cd90-4a81-b96e-f0323374137a",
+      "title": "Гвоздика, лилия, лилия, роза",
+      "catalogueTitle": "Carnation, Lily, Lily, Rose",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1885–6",
+      "start": 1885,
+      "end": 1886,
+      "medium": "Холст, масло",
+      "accession": "N01615",
+      "image": "https://artlines.org/assets/artworks/wikiart/7f44771b-bf66-4422-b344-da9ca30e994a-89f93bdfd7617773.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-singer-sargent/carnation-lily-lily-rose-from-the-world-s-greatest-paintings-published-by-oldham-s-press-in-1886",
+      "credit": "John Singer Sargent. Carnation, Lily, Lily, Rose. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/sargent-carnation-lily-lily-rose-n01615",
+      "description": "Тёплый свет фонариков распространяется лишь на небольшую часть прохладного сада. Светлые платья детей и окружающие цветы должны принадлежать и локальному свечению, и остающемуся дневному свету. Особая сложность сцены в том, что Сарджент сохраняет оба освещения, не позволяя одному отменить другое.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "ac4c9adb-ae17-44e1-bc1c-d4f8becd59b8",
+      "title": "Мир. Погребение в море",
+      "catalogueTitle": "Peace - Burial at Sea",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "exhibited 1842",
+      "start": null,
+      "end": null,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/ac4c9adb-ae17-44e1-bc1c-d4f8becd59b8-7c401fc89615e6c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/peace",
+      "credit": "J.M.W. Turner. Peace - Burial at Sea. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/turner-peace-burial-at-sea-n00528",
+      "description": "Тёмные паруса выглядят тяжёлыми на фоне размытых воды и неба. Картина посвящена погребению в море Дэвида Уилки, товарища Тёрнера по живописи, и экспонировалась в 1842 году. В этом контексте чёрный становится цветом траура: скорбь передаёт прежде всего облик судов, а не подробное изображение похоронной церемонии.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "f9bac7bc-1e5f-4561-be97-5046b3d6cf8d",
+      "title": "Замок Норем. Восход солнца",
+      "catalogueTitle": "Norham Castle, Sunrise",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "ок. 1845 г.",
+      "start": 1845,
+      "end": 1845,
+      "medium": "Холст, масло",
+      "accession": "N01981",
+      "image": "https://artlines.org/assets/artworks/wikiart/a4773b79-d764-40c7-9cf7-368bb50409dd-9a7a26e2bcbe999d.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/norham-castle-sunrise-1845",
+      "credit": "J. M. W. Turner. Norham Castle, Sunrise. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/turner-norham-castle-sunrise-n01981",
+      "description": "Замок, низкий берег и река остаются узнаваемыми при немногих твёрдых границах. В незавершённой картине светло-синие и жёлтые поля несут отношения, которые иначе объясняла бы подробная архитектура. Сохранившееся состояние нужно отличать от гипотезы о том, каким Тёрнер намеревался сделать каждый участок: рассмотреть можно нынешнюю поверхность.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "61f5ce42-83c9-5550-a672-f31cb6c3fdb2",
+      "title": "Снежная буря. Пароход у входа в гавань",
+      "catalogueTitle": "Snow Storm - Steamboat off a Harbour's Mouth",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1842",
+      "start": 1842,
+      "end": 1842,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/61f5ce42-83c9-5550-a672-f31cb6c3fdb2-f31b73e5ea905ef9.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/snow-storm-steam-boat-off-a-harbours-mouth-1842",
+      "credit": "J. M. W. Turner. Snow Storm - Steamboat off a Harbour's Mouth. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-turner/snow-storm-steam-boat-off-a-harbours-mouth-1842",
+      "description": "Судно трудно закрепить взглядом среди кружащихся мазков. Море и небо перестают давать устойчивое разделение, привычное для морского вида. Трудность найти лодку становится частью картины. Бурю описывает это нарушение не меньше, чем отдельно узнаваемая волна.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "101a93b3-0b1d-42d4-b39f-63a4f575f132",
+      "title": "Блаженная Беатриче",
+      "catalogueTitle": "Beata Beatrix",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "ок. 1864–1870 гг.",
+      "start": 1864,
+      "end": 1870,
+      "medium": "Холст, масло",
+      "accession": "N01279",
+      "image": "https://artlines.org/assets/artworks/wikiart/6f37c717-dcc1-487a-b86d-459c5393131c-4d5b687c2aa300e7.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/beata-beatrix-1880",
+      "credit": "Dante Gabriel Rossetti. Beata Beatrix. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/rossetti-beata-beatrix-n01279",
+      "description": "Закрытые глаза и неподвижные руки прерывают обычный обмен между изображённой фигурой и зрителем. Красная птица приближается, а тёплое пространство сзади остаётся менее ясным. Внутреннее состояние передано знаками вокруг тела: его не открывают буквально для осмотра и не сводят к одной видимой мысли.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "d3f140ee-f449-415b-a59e-3469dba3ae89",
+      "title": "Грязевая ванна",
+      "catalogueTitle": "The Mud Bath",
+      "artist": "David Bomberg",
+      "artists": [
+        {
+          "name": "David Bomberg",
+          "role": "primary",
+          "slug": "david-bomberg-research-13411b574394"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "Холст, масло",
+      "accession": "T00656",
+      "image": "https://artlines.org/assets/artworks/wikiart/62790e78-ca33-49f3-a6ed-1f3d522d212d-e57ec59d902e2de0.jpg",
+      "imageSource": "https://www.wikiart.org/en/david-bomberg/the-mud-bath-1914",
+      "credit": "David Bomberg. The Mud Bath. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/bomberg-the-mud-bath-t00656",
+      "description": "Угловатые синие и белые формы пересекают красное поле, сохраняя намёки на тела без непрерывной анатомии. Общее действие выживает в направлениях и пересечениях, а не в отдельных лицах. Бомберг меняет масштаб узнавания телесного сюжета: сначала коллективное построение, затем фрагменты, из которых можно восстановить фигуры.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "15d3bae9-5877-42c0-9b02-899aeaf129c0",
+      "title": "Мастерский удар сказочного дровосека",
+      "catalogueTitle": "The Fairy Feller’s Master-Stroke",
+      "artist": "Richard Dadd",
+      "artists": [
+        {
+          "name": "Richard Dadd",
+          "role": "primary",
+          "slug": "richard-dadd-research-a4c07e844c78"
+        }
+      ],
+      "date": "1855–64",
+      "start": 1855,
+      "end": 1864,
+      "medium": "Холст, масло",
+      "accession": "T00598",
+      "image": "https://artlines.org/assets/artworks/wikiart/9e82f6de-49da-473b-a89a-0b2aeeac3ad2-4141ba1af4568a78.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-dadd/the-fairy-feller-s-master-stroke-1864",
+      "credit": "Richard Dadd. The Fairy Feller’s Master-Stroke. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/dadd-the-fairy-fellers-master-stroke-t00598",
+      "description": "Дровосек занимает общество, настолько густо населённое, что свидетели соперничают с главным действием. Травы, листья и крошечные фигуры перекрываются в неглубоком пространстве. Подробность у Дадда не делает целое мгновенно понятным. Она разбивает внимание на повторные встречи, каждая из которых обнаруживает оставшееся за пределами текущего взгляда.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "7a70f4ed-d854-4f3c-b625-7edf3028eab5",
+      "title": "Призрак блохи",
+      "catalogueTitle": "The Ghost of a Flea",
+      "artist": "William Blake",
+      "artists": [
+        {
+          "name": "William Blake",
+          "role": "primary",
+          "slug": "william-blake-nga-970"
+        }
+      ],
+      "date": "ок. 1819–1820 гг.",
+      "start": 1819,
+      "end": 1820,
+      "medium": "Темпера и золото на красном дереве",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fe441cc7-6f18-434c-bc66-647a9e3a60ff-16895d3b456af47c.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-blake/the-ghost-of-a-flea-1820",
+      "credit": "William Blake. The Ghost of a Flea. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/blake-the-ghost-of-a-flea-n05889",
+      "description": "У существа есть мышечная тяжесть и походка, хотя его отчасти животное тело не позволяет узнать обычного человека. Занавеси дают движению сценическое окружение, а сосуд — небольшое действие. Вымысел Блейка зависит от узнаваемой анатомии: отклонения яснее именно потому, что достаточно знакомой структуры сохранено.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "5d4921d7-71c8-4415-a75a-164b1168a650",
+      "title": "Ноктюрн в синем и золотом. Старый мост Баттерси",
+      "catalogueTitle": "Nocturne: Blue and Gold - Old Battersea Bridge",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "ок. 1872–1875 гг.",
+      "start": 1872,
+      "end": 1875,
+      "medium": "Холст, масло",
+      "accession": "N01959",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/9ab192e7-630d-42c5-ab6a-f0c7b8ba1520-93f6015de6f25ed3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:James_Abbot_McNeill_Whistler_006.jpg",
+      "credit": "James Abbott McNeill Whistler. Nocturne: Blue and Gold - Old Battersea Bridge. Image credit: James McNeill Whistler; Source credit: The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 .. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-battersea-bridge-n01959",
+      "description": "Мост становится крупной тёмной формой над водой, где расстояния обозначены редкими огнями и небольшой лодкой. Синее и золотое соединяют неодинаково подробно описанные элементы. Уистлер делает место понятным с немногими опорами, позволяя недостающим подробностям остаться частью ночи, а не задачей, которую зритель обязан закончить.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "1294f855-7c06-4f8a-97db-26c49d5d8539",
+      "title": "Промышленный пейзаж",
+      "catalogueTitle": "Industrial Landscape",
+      "artist": "L.S. Lowry",
+      "artists": [
+        {
+          "name": "L.S. Lowry",
+          "role": "primary",
+          "slug": "l-s-lowry-research-8d1765d6d2be"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "Холст, масло",
+      "accession": "T00111",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/1294f855-7c06-4f8a-97db-26c49d5d8539-bc4270a0ece7efc7.jpg",
+      "imageSource": "https://www.wikiart.org/en/l-s-lowry/industrial-landscape-1955",
+      "credit": "L.S. Lowry. Industrial Landscape. WikiArt source label: L. S. Lowry Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/l-s-lowry/industrial-landscape-1955",
+      "license": "L. S. Lowry Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/lowry-industrial-landscape-t00111",
+      "description": "Трубы и здания продолжаются далеко за пределами отдельного рабочего места. Маленькие фигуры задают человеческий масштаб внутри повторений, дороги связывают участки застройки. Лаури показывает промышленность как обитаемую среду, а не только набор машин или одну фабрику, увиденную снаружи.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "f20b8936-ff89-4c1f-a753-9e212a7b3911",
+      "title": "Три этюда к фигурам у подножия распятия",
+      "catalogueTitle": "Three Studies for Figures at the Base of a Crucifixion",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "ок. 1944 г.",
+      "start": 1944,
+      "end": 1944,
+      "medium": "Масло, три доски",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/f20b8936-ff89-4c1f-a753-9e212a7b3911-dfd234e3a9588f1f.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "credit": "Francis Bacon. Three Studies for Figures at the Base of a Crucifixion. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "description": "Три панели дают существам отдельные пространства, но сходные оранжевые фоны. Длинные шеи, рты и опоры сохраняют достаточно телесной информации, чтобы искажение было понятно. Общей комнаты нет, и навязывать одну последовательность событий необязательно. Повторение устанавливает связь, оставляя положения фигур различными.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "a3b17062-1de8-40ab-85f5-e379f76b9d44",
+      "title": "Хэмпстед-Хит с радугой",
+      "catalogueTitle": "Hampstead Heath with a Rainbow",
+      "artist": "John Constable",
+      "artists": [
+        {
+          "name": "John Constable",
+          "role": "primary",
+          "slug": "john-constable-q159297"
+        }
+      ],
+      "date": "1836",
+      "start": 1836,
+      "end": 1836,
+      "medium": "Холст, масло",
+      "accession": "N01275",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/a3b17062-1de8-40ab-85f5-e379f76b9d44-b1f881346127d92b.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-constable/hampstead-heath-with-a-rainbow-1836-1",
+      "credit": "John Constable. Hampstead Heath with a Rainbow. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/constable-hampstead-heath-with-a-rainbow-n01275",
+      "description": "Чёткая дуга радуги пересекает небо, в остальном распадающееся на неустойчивые облака и темноту. Свет выбирает участки пустоши, не освещая её равномерно. Констебл ненадолго соединяет отдельные области дугой: погода активно перераспределяет видимость пейзажа, а не просто служит фоном.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "58aa6a84-cd00-4932-83b3-c5768e1e4a79",
+      "title": "Автопортрет со значками",
+      "catalogueTitle": "Self-Portrait with Badges",
+      "artist": "Peter Blake",
+      "artists": [
+        {
+          "name": "Peter Blake",
+          "role": "primary",
+          "slug": "peter-blake-research-624508d6e0f9"
+        }
+      ],
+      "date": "1961",
+      "start": 1961,
+      "end": 1961,
+      "medium": "Холст на картоне, масло",
+      "accession": "T02406",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/58aa6a84-cd00-4932-83b3-c5768e1e4a79-3945f47d134e50e5.jpg",
+      "imageSource": "https://www.wikiart.org/en/peter-blake/self-portrait-with-badges-1961",
+      "credit": "Peter Blake. Self-Portrait with Badges. WikiArt source label: Peter Blake Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/peter-blake/self-portrait-with-badges-1961",
+      "license": "Peter Blake Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/blake-self-portrait-with-badges-t02406",
+      "description": "Значки вводят выбранные изображения в наружный облик фигуры. Они прерывают поверхность куртки и участвуют в рассказе автопортрета о личности. Лицо и поза остаются важны, но сходство не является единственным свидетельством. Надетое и выставленное напоказ занимает ту же картину, что и черты, данные от рождения.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0aa6ee50-b83a-4033-9417-84dc9e1cf491",
+      "title": "Снятие одежд с Христа",
+      "catalogueTitle": "The Disrobing of Christ",
+      "artist": "Sir Stanley Spencer",
+      "artists": [
+        {
+          "name": "Sir Stanley Spencer",
+          "role": "primary",
+          "slug": "sir-stanley-spencer-research-32d71e89bf61"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "Масло, дерево",
+      "accession": "N04926",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/0aa6ee50-b83a-4033-9417-84dc9e1cf491-cfaecced6694527e.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanley-spencer/the-disrobing-of-christ-1922",
+      "credit": "The Disrobing of Christ. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain US",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/spencer-the-disrobing-of-christ-n04926",
+      "description": "Снятие ткани требует совместного действия нескольких тел в тесном угловатом пространстве. Почти обнажённая фигура открывается через их обращение с ней, а не показана отдельно. Спенсер привязывает священный эпизод к неловким физическим отношениям: ткань способна скрывать, соединять и сопротивляться тянущим её людям.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "45567dbf-c1a3-4126-88dd-4cb0508576cc",
+      "title": "Разрыв снаряда",
+      "catalogueTitle": "Bursting Shell",
+      "artist": "Christopher Richard Wynne Nevinson",
+      "artists": [
+        {
+          "name": "Christopher Richard Wynne Nevinson",
+          "role": "primary",
+          "slug": "christopher-richard-wynne-nevinson-research-f26218068698"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "Холст, масло",
+      "accession": "T03676",
+      "image": "https://artlines.org/assets/artworks/wikiart/68b3134b-0cb0-4bce-933a-2f5698f148a0-9294900cb57efda6.jpg",
+      "imageSource": "https://www.wikiart.org/en/c-r-w-nevinson/bursting-shell-1915",
+      "credit": "Christopher Richard Wynne Nevinson. Bursting Shell. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/nevinson-bursting-shell-t03676",
+      "description": "За взрывом нельзя наблюдать с удобного расстояния. Клинья и линии расходятся через всё построение, распространяя силу за пределы одного предмета. Невинсон даёт насилию структуру направлений. Отсутствие подробно показанного раненого тела не делает событие далёким, когда распадается само пространство.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "763936e6-057e-4280-91b0-31d08f682ee8",
+      "title": "Дорелия в чёрном платье",
+      "catalogueTitle": "Dorelia in a Black Dress",
+      "artist": "Gwen John",
+      "artists": [
+        {
+          "name": "Gwen John",
+          "role": "primary",
+          "slug": "wikimedia-painter-q274339"
+        }
+      ],
+      "date": "ок. 1903–1904 гг.",
+      "start": 1903,
+      "end": 1904,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/763936e6-057e-4280-91b0-31d08f682ee8-7c34c691c0423ad0.jpg",
+      "imageSource": "https://www.wikiart.org/en/gwen-john/dorelia-in-a-black-dres",
+      "credit": "Gwen John. Dorelia in a Black Dress. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/john-dorelia-in-a-black-dress-n05910",
+      "description": "Свободно скрещённые руки придают стоячей позе собранность, не замыкая её в жёсткой симметрии. Розовый акцент и небольшие перемены света различают фигуру в сдержанном цвете. Гвен Джон позволяет стене остаться простой, сосредоточивая встречу на лице, руках и лёгких поправках положения тела.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0133b673-eff9-4bbb-808e-2a0e299fb1e1",
+      "title": "Фермы близ Овера",
+      "catalogueTitle": "Farms near Auvers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Холст, масло",
+      "accession": "N04713",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/0018416e-7cd4-4fe5-b27c-d7c8835f6942-51f05ab001f77d8a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:VanGoghThatchedCottagesByAHill.jpg",
+      "credit": "Vincent van Gogh. Farms near Auvers. Image credit: Vincent van Gogh; Source credit: 1. vangoghgallery.com 2. Tate Online , image. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/gogh-farms-near-auvers-n04713",
+      "description": "Соломенные крыши, деревья, стены и склоны получают мазки разных направлений. Поверхность остаётся деятельной, не уравнивая все материалы. Через перемены можно проследить тесную застройку: пейзаж сохраняет понятность, даже когда почти ни один участок краски не становится сплошным спокойным полем.",
+      "importance": "",
+      "museum": "Tate"
+    }
+  ],
+  "context": {
+    "start": 1819,
+    "end": 1961
+  },
+  "closingSections": [
+    {
+      "title": "Различайте трудное изображение и неясный текст",
+      "paragraphs": [
+        "Плотность Дадда и нарушенная видимость Тёрнера требуют разного рассматривания; ни одному не нужна расплывчатая похвала вместо описания. Сравните то, что каждый сохраняет ясным. Собрание Тейт распределено между зданиями и меняющимися экспозициями, поэтому перед визитом уточняйте нынешнее местонахождение работ."
+      ]
+    }
+  ]
+}

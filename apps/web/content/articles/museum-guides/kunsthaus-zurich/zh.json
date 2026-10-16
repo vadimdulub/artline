@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "kunsthaus-zurich",
+  "museum": "Kunsthaus Zürich",
+  "city": "苏黎世",
+  "country": "瑞士",
+  "title": "苏黎世美术馆：杰作",
+  "subtitle": "二十幅作品，观察色彩、间距与身体如何引导观看。",
+  "introduction": "蒙德里安的红方块与霍德勒宽阔的湖面，以截然不同的形式提出一个相近问题：一大片颜色能够完成多少事情？一幅画不再描绘地点，另一幅仍是日内瓦湖。它们的相似可以拿来比较，却不能证明风景必然要发展成抽象。\n\n其他作品让问题更复杂。一条被捕的鳟鱼逼近画面表面，一位学者在书前暂停，考古学家在教堂拱顶下工作。形状与间隔从来不只是装饰选择，它们决定观者能够以怎样的方式接近一个人、一个地方或一件事。",
+  "visitNote": "这二十幅画作属于精选馆藏，并不构成游览美术馆各建筑的既定路线。参观前，请查阅具体作品信息，以了解其当前位置、外借情况及展示变动。",
+  "locale": "zh",
+  "website": "https://www.kunsthaus.ch/",
+  "officialGuide": "https://www.kunsthaus.ch/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基的著作为色彩与形式的独立性提供了具有现代意义的论证。不妨将他的观点与伊顿及蒙德里安的理论结合起来研读，随后再回看霍德勒那些辨识度极高的风景画，以此探究这种比较在何处依然适用，又在何处不再奏效。"
+    }
+  ],
+  "works": [
+    {
+      "id": "afe1594c-d316-58b1-8558-e7b01bfb1870",
+      "title": "红、蓝、黄构图",
+      "catalogueTitle": "Composition with Red,  Blue and Yellow",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/afe1594c-d316-58b1-8558-e7b01bfb1870-69adcc5683f573c0.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/composition-with-red-blue-and-yellow-1930",
+      "credit": "Piet Mondrian. Composition with Red,  Blue and Yellow. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/piet-mondrian/composition-with-red-blue-and-yellow-1930",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/2455",
+      "description": "红色区块占据主导，却不是对称布局的中心。较小的蓝、黄区域隔着大小不一的白色间隙与它相对，黑线将它们分开。没有具体对象需要辨认，颜色之间的差异就格外清楚：每块颜色的视觉分量，都取决于尺寸、距离，以及旁边留下了什么。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "b40ddcc9-d260-59e6-b26d-ed0ed09d98a5",
+      "title": "园丁",
+      "catalogueTitle": "Gardener",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/b40ddcc9-d260-59e6-b26d-ed0ed09d98a5-5e4fef50a2a531a8.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/gardener-1882",
+      "credit": "Gardener. WikiArt; Georges Seurat. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/gardener-1882",
+      "description": "长柄工具的斜线使园丁的站姿有了明确目的。宽阔笔痕让周围植物的个别细节，比人物和他的工作更模糊。这里不宜一开始就期待修拉后来那种熟悉的技法。眼前画面的结构，首先来自身体、工具和一片地面。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "b8780a95-98f6-5ef0-a24f-877ad629f000",
+      "title": "从科（Caux）眺望日内瓦湖",
+      "catalogueTitle": "Lake Geneva from the Caux",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/b8780a95-98f6-5ef0-a24f-877ad629f000-0970cb5b40453d43.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-from-the-caux-1917",
+      "credit": "Ferdinand Hodler. Lake Geneva from the Caux. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-from-the-caux-1917",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1413",
+      "description": "在地点的细节变得重要之前，湖先以一大片绿松石色形状占据视野。它的弧线区别于后方山岭与云带。霍德勒没有抛弃地理，而是把地点的可辨认性集中到少数边界中，用简洁的色彩安排使辽阔距离变得清楚。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "2300c671-80db-5fde-a129-a3ab17815c2d",
+      "title": "从谢布尔（Chexbres）眺望傍晚的日内瓦湖",
+      "catalogueTitle": "Lake Geneva on the evening in Chexbres",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/2300c671-80db-5fde-a129-a3ab17815c2d-f7f172efcaddc241.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-on-the-evening-in-chexbres-1895",
+      "credit": "Ferdinand Hodler. Lake Geneva on the evening in Chexbres. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/lake-geneva-on-the-evening-in-chexbres-1895",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1564",
+      "description": "光秃的树打断水面与晚空的条带。它们确定一个近处的观看位置，使远方光线有所依托，也避免色带完全脱离地点。可与较晚的科村湖景对照：在那里，湖面的大形状承担了更多构图任务。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "3339ca1d-78e0-542b-8675-5a7336692c1c",
+      "title": "科（Caux）风景与升腾的云雾",
+      "catalogueTitle": "Landscape at Caux with increasing clouds",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/3339ca1d-78e0-542b-8675-5a7336692c1c-b9bf74d8485d8ecf.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/landscape-at-caux-with-increasing-clouds-1917",
+      "credit": "Ferdinand Hodler. Landscape at Caux with increasing clouds. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/landscape-at-caux-with-increasing-clouds-1917",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1478",
+      "description": "云以断续形态从湖上升起，呼应弯曲的前景，却不照搬它。相似性让画面连贯，同时保留坚实地形与变化水汽的区别。与另外两幅霍德勒并看，可以追踪同一位画家如何在反复出现的风景题材中调整关系。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "37868b51-d463-5788-b9db-2a0929005b68",
+      "title": "约翰·约阿希姆·温克尔曼",
+      "catalogueTitle": "Portrait of Johann Joachim Winckelmann",
+      "artist": "Angelica Kauffman",
+      "artists": [
+        {
+          "name": "Angelica Kauffman",
+          "role": "primary",
+          "slug": "angelica-kauffman-q123098"
+        }
+      ],
+      "date": "1764",
+      "start": 1764,
+      "end": 1764,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/37868b51-d463-5788-b9db-2a0929005b68-8c86eb5b77526682.jpg",
+      "imageSource": "https://www.wikiart.org/en/angelica-kauffman/portrait-of-johann-joachim-winckelmann-1764",
+      "credit": "Angelica Kauffman. Portrait of Johann Joachim Winckelmann. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/angelica-kauffman/portrait-of-johann-joachim-winckelmann-1764",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1970",
+      "description": "温克尔曼的笔仍停在书上方，头却从页面转开。写作只是被打断，并非已经完成或放弃。这个小差异使肖像具有行动感：学者的工作可以辨认，而他的注意力已超出面前物件所表明的即时任务。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "a018e3b7-4372-55d3-9ca7-f9c68b3c5f5e",
+      "title": "皮埃尔·洛蒂",
+      "catalogueTitle": "Portrait of Pierre Loti",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "约 1891 年",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/a018e3b7-4372-55d3-9ca7-f9c68b3c5f5e-9929c451857ffa5f.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/portrait-of-pierre-loti",
+      "credit": "Henri Rousseau. Portrait of Pierre Loti. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/portrait-of-pierre-loti",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/portrait-of-pierre-loti",
+      "description": "毡帽、猫、树与远处工业形态彼此分明，没有融进一处连续的自然主义环境。不相等的尺度让图像显出拼合感。被画者的身份由一组符号共同呈现，因此，辨认既依靠这些元素的安排，也依靠对共同空间的可信描述。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "42e7c7a3-0b91-5737-aaed-87fcd31b6297",
+      "title": "被萨堤尔窥见的熟睡维纳斯",
+      "catalogueTitle": "Sleeping Venus, surprised by Satyr",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1626",
+      "start": 1626,
+      "end": 1626,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/42e7c7a3-0b91-5737-aaed-87fcd31b6297-51c4bfe37e6537de.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/sleeping-venus-surprised-by-satyr-1626",
+      "credit": "Nicolas Poussin. Sleeping Venus, surprised by Satyr. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/sleeping-venus-surprised-by-satyr-1626",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/sleeping-venus-surprised-by-satyr-1626",
+      "description": "睡着的人物与正在靠近的萨堤尔，并不同样知晓这次相遇。普桑用两种身体状态建立差异：静止与运动、暴露与主动观看。神话题材没有消除紧张，只是给这种不平衡提供了叙事背景。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "0464c018-0bcc-5b49-8642-23cf35665e2e",
+      "title": "使徒西门",
+      "catalogueTitle": "The Apostle Simon",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1661",
+      "start": 1661,
+      "end": 1661,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/0464c018-0bcc-5b49-8642-23cf35665e2e-8e44791dd1b9ee02.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/the-apostle-simon-1661",
+      "credit": "The Apostle Simon. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/the-apostle-simon-1661",
+      "description": "在辨认使徒之前，我们先看到一张衰老的脸，以及被有限光线带到近处的双手。贴在胸前的深色物件也属于这种集中的身体存在。神圣身份不是通过大型公共场面上演，而是在一个人的尺度上与我们相遇。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "922674b0-efd4-5702-86f4-a555741cb586",
+      "title": "相遇",
+      "catalogueTitle": "The Meeting",
+      "artist": "Johannes Itten",
+      "artists": [
+        {
+          "name": "Johannes Itten",
+          "role": "primary",
+          "slug": "johannes-itten-q123138"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/922674b0-efd4-5702-86f4-a555741cb586-f47c9a457ea01f3e.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-itten/die-begegnung-1916",
+      "credit": "Johannes Itten. The Meeting. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/johannes-itten/die-begegnung-1916",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1202",
+      "description": "一个旋转般的圆形结构遇上深色竖直形状。标题引导我们想到相逢，却不必把每一块形状都翻译成人。不同方向本身已经建立关系：一个暗示旋转，另一个保持位置，彩色条带则让相交之处显现。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "4083c71e-46d5-52ee-9c30-5bfc7fb8dd04",
+      "title": "女仆",
+      "catalogueTitle": "The Servant",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/4083c71e-46d5-52ee-9c30-5bfc7fb8dd04-50e957d98b5f8f80.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/the-servant-1916",
+      "credit": "Amedeo Modigliani. The Servant. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/amedeo-modigliani/the-servant-1916",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/the-servant-1916",
+      "description": "轻微的头部倾斜使正面姿势不至于僵硬。修长脖颈与斜落肩线，只凭少数曲线就托出人物的存在，周围则是较粗放的颜色。肖像虽然简省，却不是把女子画成可替换的类型；它把注意力集中到了姿态上。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "5014f3a6-5ff5-5975-a2a6-519ec1021343",
+      "title": "鳟鱼",
+      "catalogueTitle": "The Trout",
+      "artist": "Gustave Courbet",
+      "artists": [
+        {
+          "name": "Gustave Courbet",
+          "role": "primary",
+          "slug": "gustave-courbet-q34618"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5014f3a6-5ff5-5975-a2a6-519ec1021343-586cd7d7f9341a6a.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustave-courbet/the-trout-1872",
+      "credit": "The Trout. WikiArt; Gustave Courbet. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gustave-courbet/the-trout-1872",
+      "description": "鳟鱼张开的嘴与弯曲身体占据近前，周围很少有分散视线的东西。斑点鱼皮有助于辨认种类，画面也坚持呈现动物的实体重量。这是作为身体出现的捕获物，而不是在舒服距离外摆好的丰盛食物。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "2cfa6df9-728e-57b2-a0a2-8856482160e9",
+      "title": "虚荣",
+      "catalogueTitle": "Vanity",
+      "artist": "Giovanni Segantini",
+      "artists": [
+        {
+          "name": "Giovanni Segantini",
+          "role": "primary",
+          "slug": "giovanni-segantini-q379300"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2cfa6df9-728e-57b2-a0a2-8856482160e9-994a6ea081b92f8f.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-segantini/vanity-1897",
+      "credit": "Giovanni Segantini. Vanity. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/giovanni-segantini/vanity-1897",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/1263",
+      "description": "女子俯身望向水池，这是熟悉的观看动作，水中的深色形状却让它变得复杂。周围浅色动物与绿色山坡相对清楚。不确定性集中在本该出现倒影的位置，使田园环境无法完全归于安稳。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "89751ce2-2198-4637-a7ed-35a71bc97db3",
+      "title": "议会大厦，日落",
+      "catalogueTitle": "Houses of Parliament, Sunset",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "布面油画",
+      "accession": "1995/0003",
+      "image": "https://artlines.org/assets/artworks/wikiart/89751ce2-2198-4637-a7ed-35a71bc97db3-0fe49be0d2fa4deb.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-monet/houses-of-parliament-sunset",
+      "credit": "Claude Monet. Houses of Parliament, Sunset. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/2585/",
+      "description": "建筑仍可辨认，边缘却部分消失在橙红薄雾里。这种有限的可辨认性很重要：若没有它，变化的光就缺少一个相对稳定的对象可供对照。倒影把颜色带入水中，让水里的建筑比上方更不牢固。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "e6f58419-1dc0-5e04-a034-204bc6bbe07a",
+      "title": "我的模特",
+      "catalogueTitle": "My Models",
+      "artist": "Giovanni Segantini",
+      "artists": [
+        {
+          "name": "Giovanni Segantini",
+          "role": "primary",
+          "slug": "giovanni-segantini-q379300"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/e6f58419-1dc0-5e04-a034-204bc6bbe07a-c51c2202fe4c8278.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-segantini/meine-modelle-1888",
+      "credit": "Giovanni Segantini. My Models. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/giovanni-segantini/meine-modelle-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://collection.kunsthaus.ch/en/collection/item/3029",
+      "description": "画架、人物和一幅已经绘出的场景共处画室，要求我们分清物体与物体的图像。房间既容纳模特，也容纳依据模特完成的作品。塞冈蒂尼并不隐藏制作条件，而是让这些条件成为观者必须辨别的一部分。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "43dd91c6-5991-5fa0-b2cd-a83696b8c682",
+      "title": "战争",
+      "catalogueTitle": "War",
+      "artist": "Arnold Böcklin",
+      "artists": [
+        {
+          "name": "Arnold Böcklin",
+          "role": "primary",
+          "slug": "arnold-bocklin-q123071"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "776",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110990025-252f659f4d9b514a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_002.jpg",
+      "credit": "Arnold Böcklin. War. Image credit: Arnold Böcklin; Source credit: The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 .. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110990025",
+      "description": "马腿、举起的手臂与倒下的身体挤撞在一起，各项动作之间几乎没有距离。标题命名一种处境，而非记载某场战役。勃克林给它身体层面的后果：拥挤使破坏性的运动十分明确，却不给我们一个可以安全旁观的位置。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "c01d9a36-f7a1-59cc-a213-b48a2837cb99",
+      "title": "荷马半身像前的博德默与富塞利",
+      "catalogueTitle": "Bodmer und Füssli vor der Büste Homers",
+      "artist": "Henry Fuseli",
+      "artists": [
+        {
+          "name": "Henry Fuseli",
+          "role": "primary",
+          "slug": "henry-fuseli-q122382"
+        }
+      ],
+      "date": "1778–1780",
+      "start": 1778,
+      "end": 1780,
+      "medium": "",
+      "accession": "70",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107572740-3acaa6e60a38f694.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johann_Heinrich_F%C3%BCssli_012.jpg",
+      "credit": "Henry Fuseli. Bodmer und Füssli vor der Büste Homers. Image credit: Henry Fuseli. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107572740",
+      "description": "半身像的体量，使荷马不能只是谈话背后的小型装饰典故。它与两位男子以及他们之间的手势，鲜明地共享同一空间。继承而来的文学权威因此取得实物形态，足够在场，能够组织活人的坐姿及相互交流。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "99534a81-5a7d-5381-b117-1701c4886682",
+      "title": "博士来朝",
+      "catalogueTitle": "Anbetung der Heiligen Drei Könige",
+      "artist": "Hans Fries",
+      "artists": [
+        {
+          "name": "Hans Fries",
+          "role": "primary",
+          "slug": "wikimedia-painter-q115997"
+        }
+      ],
+      "date": "约 1490 年",
+      "start": 1490,
+      "end": 1490,
+      "medium": "",
+      "accession": "2296",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q131586329-7e80ed26abafd2c9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hans_Fries_-_Anbetung_der_Heiligen_Drei_K%C3%B6nige_-_2296_-_Kunsthaus_Z%C3%BCrich.jpg",
+      "credit": "Hans Fries. Anbetung der Heiligen Drei Könige. Image credit: Hans Fries; Source credit: Kunsthaus Zürich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q131586329",
+      "description": "服装、礼物与面孔围绕玛利亚和孩子挤入画板。物质细节的密度，让走近这件事变得具体：即使身体交叠，每位来客仍有自己的位置和所带之物。虔敬通过穿着各异的人相遇来表达，而不是靠孤立人物周围的空场。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "777dbd55-1997-530d-af10-74c1c6e42e91",
+      "title": "瓦莱里亚教堂里的考古学家",
+      "catalogueTitle": "Archäologe in der Kirche von Valeria",
+      "artist": "Rafael Ritz",
+      "artists": [
+        {
+          "name": "Rafael Ritz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3419516"
+        }
+      ],
+      "date": "1870",
+      "start": 1870,
+      "end": 1870,
+      "medium": "",
+      "accession": "701",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q131587152-d69dec67600fb6e1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Raphael_Ritz_-_Arch%C3%A4ologe_in_der_Kirche_von_Valeria_-_701_-_Kunsthaus_Z%C3%BCrich.jpg",
+      "credit": "Rafael Ritz. Archäologe in der Kirche von Valeria. Image credit: Rafael Ritz; Source credit: Kunsthaus Zürich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q131587152",
+      "description": "教堂内部正在被考察，而不是供人从空无一人的视点欣赏。器材与小小的研究者，把历史研究安置在建筑实体之中。大拱门显出他们相对的尺寸：每个人的检查，都处在比任何一位人物所能尽览的范围更大的结构里。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    },
+    {
+      "id": "4305f259-a263-5019-b5a2-3de4ba97107b",
+      "title": "有羊群的傍晚风景",
+      "catalogueTitle": "Abendlandschaft mit Schafherde",
+      "artist": "Robert Zünd",
+      "artists": [
+        {
+          "name": "Robert Zünd",
+          "role": "primary",
+          "slug": "wikimedia-painter-q563312"
+        }
+      ],
+      "date": "1889–1891",
+      "start": 1889,
+      "end": 1891,
+      "medium": "",
+      "accession": "761",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q131586627-8c59eb13d735e390.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Z%C3%BCnd_-_Abendlandschaft_mit_Schafherde_-_761_-_Kunsthaus_Z%C3%BCrich.jpg",
+      "credit": "Robert Zünd. Abendlandschaft mit Schafherde. Image credit: Robert Zünd; Source credit: Kunsthaus Zürich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q131586627",
+      "description": "移动的羊群从阴影前景走向明亮远处，形成一条路线。高树包围近处空间，后方开口则让它得以延伸。因此，安宁并非没有运动，而是经过安排的结果：光与通道给羊群一个可以前往的地方。",
+      "importance": "",
+      "museum": "Kunsthaus Zürich"
+    }
+  ],
+  "context": {
+    "start": 1490,
+    "end": 1930
+  },
+  "closingSections": [
+    {
+      "title": "让比较落在具体之处",
+      "paragraphs": [
+        "三幅霍德勒可以组成一组，蒙德里安与伊顿又是一组。先比较实际的间隔与方向，再考虑艺术流派的标签。这是馆藏作品的阅读选择，并不保证对应某条展厅路线；当前展出与参观情况请向美术馆确认。"
+      ]
+    }
+  ]
+}

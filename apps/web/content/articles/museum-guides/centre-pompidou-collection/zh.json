@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "centre-pompidou-collection",
+  "museum": "Musée national d’art moderne — Centre Pompidou",
+  "city": "巴黎",
+  "country": "法国",
+  "title": "法国国家现代艺术博物馆——蓬皮杜中心：杰作",
+  "subtitle": "二十件作品，重新安排可辨认的事物与绘画表面之间的关系。",
+  "introduction": "窗户通常让人透过它看向另一边，绘画也可以如此，但这组选品一再打断这种通行。布拉克的物件分裂成平面，康定斯基的颜色根本不需要物件；陶柏-阿尔普的彩绘木头像则一边让人认出头部，一边显露它是怎样做成的。\n\n这些是不同选择，不是一步步走向抽象的阶梯。瓦拉东的斜卧女子、巴尔蒂斯的庭院仍有可辨认的房间，却使我们留意人物和边框如何影响观看。眼睛能往哪里走，又在哪里被拉回画面表层？这个问题贯穿以下作品。这里讨论的是馆藏，而非它们目前的展出地点。",
+  "visitNote": "蓬皮杜中心位于巴黎的馆舍因翻新工程而关闭，计划于2030年重新开放。请查阅相关链接，了解该中心在其他场馆举办的活动安排。本指南侧重于馆藏介绍，并非针对巴黎目前开放的各展馆的参观路线。",
+  "locale": "zh",
+  "website": "http://www.centrepompidou.fr",
+  "officialGuide": "https://www.centrepompidou.fr/en/centre-pompidou-is-transforming-itself/renovation-project-centre-pompidou-2030",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "《艺术中的精神》一书阐述了康定斯基关于色彩与抽象形式的抱负。这是出自一位艺术家的历史性论述，虽有助于理解这些作品，却并非适用于该选集中所有艺术家的准则。"
+    }
+  ],
+  "works": [
+    {
+      "id": "e1759642-babf-5b18-9889-f41d6827aa53",
+      "title": "红色底座",
+      "catalogueTitle": "A Red Pedestal",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1939",
+      "start": 1939,
+      "end": 1939,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/e1759642-babf-5b18-9889-f41d6827aa53-fd0f1151ef5f789e.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/a-red-pedestal-1939",
+      "credit": "Georges Braque. A Red Pedestal. WikiArt source label: Georges Braque Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/a-red-pedestal-1939",
+      "license": "Georges Braque Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/a-red-pedestal-1939",
+      "description": "底座让布拉克重叠的平面有了聚拢的中心。器皿仍可辨认，位置却不能拼成完全一致的视图。竖长的红色区域反复把目光带回那座高起的结构。它提供稳定参照，但没有消除物件相邻时那些细小的不确定之处。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "a2f67dbe-e754-5b0b-90c7-c789ae26032a",
+      "title": "阿维尼翁年轻女子半身像",
+      "catalogueTitle": "Bust of young woman from Avignon",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/a2f67dbe-e754-5b0b-90c7-c789ae26032a-4b3b64fe8c638556.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bust-of-young-woman-from-avignon-1907",
+      "credit": "Pablo Picasso. Bust of young woman from Avignon. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bust-of-young-woman-from-avignon-1907",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/bust-of-young-woman-from-avignon-1907",
+      "description": "深色轮廓把脸分成不同区域，没有把它们抹平为连续的肌肤。宽肩和转头仍交代出半身像，具体的画法却让这个熟悉格式变得不再理所当然。毕加索保留了足够的人物线索，让我们看出各部分多么抗拒被纳入同一个视角。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "bb9105d1-fb1a-5c54-a5bb-362c67822572",
+      "title": "水果盘",
+      "catalogueTitle": "Fruit Dish",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "布面炭笔、水粉与油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/bb9105d1-fb1a-5c54-a5bb-362c67822572-05d17bfb0cf6167d.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/fruit-dish-1913",
+      "credit": "Georges Braque. Fruit Dish. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/fruit-dish-1913",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/fruit-dish-1913",
+      "description": "盘、果实和桌子需要从不完整的线索中拼出来。线条穿越不同区域，那里的色调与肌理又提醒我们眼前仍是平面。布拉克保留两种看法：这些笔痕指向物体，但它们的排列从未完全退隐成物体的透明替身。辨认所需的努力，本身就是观看的一部分。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "ebb91761-4e0c-528a-aeb0-512fa735e807",
+      "title": "洛洛特",
+      "catalogueTitle": "Lolotte",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/ebb91761-4e0c-528a-aeb0-512fa735e807-96b08e138a27692c.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/lolotte-1916",
+      "credit": "Amedeo Modigliani. Lolotte. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/amedeo-modigliani/lolotte-1916",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/lolotte-1916",
+      "description": "长颈延续了暗衣与红发之间的竖向走势。莫迪利亚尼反复使用弧线，却没有把脸做成完全对称、可以替换的样式。眼睛和嘴的小差异打断整体的规律。具体模特仍存在于鲜明的风格化造型中；拉长的比例不是为了假装自然、让人毫无察觉。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "d0e036f9-08cd-594d-b13f-b56e0542e3a7",
+      "title": "布鲁塞尔镜厅的记忆",
+      "catalogueTitle": "Memory of the Halls of Mirrors in Brussels",
+      "artist": "Otto Dix",
+      "artists": [
+        {
+          "name": "Otto Dix",
+          "role": "primary",
+          "slug": "otto-dix-q153104"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/otto-dix-20261006/d0e036f9-08cd-594d-b13f-b56e0542e3a7-213f68d735b3d43e.jpg",
+      "imageSource": "https://www.wikiart.org/en/otto-dix/memory-of-the-halls-of-mirrors-in-brussels",
+      "credit": "Otto Dix. Memory of the Halls of Mirrors in Brussels. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/otto-dix/memory-of-the-halls-of-mirrors-in-brussels",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/otto-dix/memory-of-the-halls-of-mirrors-in-brussels",
+      "description": "镜子本应让房间增加几重，这里的倍增却使空间更难还原。人物、家具与倒影碎片以突兀角度相遇。迪克斯没有在拥挤室内留下多少可靠通道。标题说的是记忆，不是建筑测绘；破碎安排使这场景仍紧逼眼前，却不必在空间上完全自洽。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "c8c312b6-698c-5722-877f-2e3dc117fe82",
+      "title": "黄—红—蓝",
+      "catalogueTitle": "Yellow-Red-Blue",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1925",
+      "start": 1925,
+      "end": 1925,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c8c312b6-698c-5722-877f-2e3dc117fe82-1c0b2b9d83ba2f56.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/yellow-red-blue-1925",
+      "credit": "Wassily Kandinsky. Yellow-Red-Blue. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/yellow-red-blue-1925",
+      "description": "左右两半的组织方式不同。一边铺开棱角分明的黄色形状，另一边聚集较暗的圆团与卷曲线条，红色区域参与两边的衔接。康定斯基不用描绘某件事情，也能造成运动感。大小轻重的差别和不同类型的边缘，让眼睛不断重新判断画面的平衡。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "0a2be045-ce69-5247-a197-91be35e54cb2",
+      "title": "偏执狂式的女人—马",
+      "catalogueTitle": "Paranoiac Woman-Horse (Invisible Sleeping Woman, Lion, Horse)",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/0a2be045-ce69-5247-a197-91be35e54cb2-7f5e644c97970021.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/paranoiac-woman-horse-invisible-sleeping-woman-lion-horse",
+      "credit": "Salvador Dalí. Paranoiac Woman-Horse (Invisible Sleeping Woman, Lion, Horse). WikiArt source label: Salvador Dali Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/salvador-dali/paranoiac-woman-horse-invisible-sleeping-woman-lion-horse",
+      "license": "Salvador Dali Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/salvador-dali/paranoiac-woman-horse-invisible-sleeping-woman-lion-horse",
+      "description": "影子似乎比投影的东西还确定。达利给低平风景和含混形状以精确光照，它们的轮廓却可以被认作不止一种身体。写实描绘在这里维持了不确定性。观看不一定要最终解开谜底，也可以留意一种辨认如何挤走另一种。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "670d2122-0e0f-5858-8ca5-71909bdf6a09",
+      "title": "绘画，146 × 114厘米，1950年",
+      "catalogueTitle": "Peinture 146 x 114 cm, 1950",
+      "artist": "Pierre Soulages",
+      "artists": [
+        {
+          "name": "Pierre Soulages",
+          "role": "primary",
+          "slug": "pierre-soulages-q708631"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/670d2122-0e0f-5858-8ca5-71909bdf6a09-ae384a07762e4463.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-soulages/peinture-146-x-114-cm-1950-1950",
+      "credit": "Pierre Soulages. Peinture 146 x 114 cm, 1950. WikiArt source label: Pierre Soulages Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pierre-soulages/peinture-146-x-114-cm-1950-1950",
+      "license": "Pierre Soulages Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-soulages/peinture-146-x-114-cm-1950-1950",
+      "description": "黑色占去大半表面，却并不均一。宽笔触交叉、覆盖，留下小块浅色开口；开口的形状又使周围黑色显得更重或更轻。边缘透露出方向与用力的差异。苏拉热给作品一个目录条目般克制的标题，把画面中的变化留给笔痕之间的关系。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "e34e0ed7-fbcf-5e9a-b13c-376ed5ca4c18",
+      "title": "埃里克·萨蒂肖像",
+      "catalogueTitle": "Portrait of Erik Satie",
+      "artist": "Suzanne Valadon",
+      "artists": [
+        {
+          "name": "Suzanne Valadon",
+          "role": "primary",
+          "slug": "suzanne-valadon-q156889"
+        }
+      ],
+      "date": "约 1892 年",
+      "start": 1892,
+      "end": 1892,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/e34e0ed7-fbcf-5e9a-b13c-376ed5ca4c18-6cf9954597ce047b.jpg",
+      "imageSource": "https://www.wikiart.org/en/suzanne-valadon/portrait-of-erik-satie",
+      "credit": "Suzanne Valadon. Portrait of Erik Satie. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/suzanne-valadon/portrait-of-erik-satie",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/suzanne-valadon/portrait-of-erik-satie",
+      "description": "画框裁得很紧，萨蒂的帽子和外套之外，几乎没有环境可看。暖一些的颜色从暗部中分出脸和胡须。瓦拉东关注头部角度与目光朝向。肖像可以凭这些交代一个人的姿态，不必往房间里堆放道具，试图说明作曲家的整个生涯。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "41e78a21-750b-5fc0-b058-e6936fde86d7",
+      "title": "有古代半身像的静物",
+      "catalogueTitle": "Still life with antique bust",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1925",
+      "start": 1925,
+      "end": 1925,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/41e78a21-750b-5fc0-b058-e6936fde86d7-4dd6b56078e330c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/still-life-with-antique-bust-1925",
+      "credit": "Pablo Picasso. Still life with antique bust. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/still-life-with-antique-bust-1925",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/still-life-with-antique-bust-1925",
+      "description": "一尊半身像让人预期看到坚实、经过塑造的体积，房间却被锐利的平面切开。四周橙、白、黑色区域使前后关系难以一贯追踪。毕加索让古典雕像与器皿同处不稳定的环境。它熟悉的立体感只是比较依据，并不保证整个房间因此变得合理。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "9ba1c1b8-16ab-50da-abb8-f85b042272c7",
+      "title": "月亮女人切开圆环",
+      "catalogueTitle": "The Moon-Woman Cuts the Circle",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1943",
+      "start": 1943,
+      "end": 1943,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/9ba1c1b8-16ab-50da-abb8-f85b042272c7-020df9a25233df04.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/the-moon-woman-cuts-the-circle-1943",
+      "credit": "The Moon-Woman Cuts the Circle. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/the-moon-woman-cuts-the-circle-1943",
+      "description": "密集线条和色痕中仍有类似人物的迹象，但它们没有从周围活动中清楚分离。眼睛便在可能的身体和连接它们的表面之间来回。波洛克允许辨认发生，却不让它主宰一切。曲线与尖形既可以是人物部分，也可以打断更大的图案。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "2e4e9eac-c420-5032-a374-f6634c87268a",
+      "title": "窗岩宫",
+      "catalogueTitle": "The Palace of Window Rocks",
+      "artist": "Yves Tanguy",
+      "artists": [
+        {
+          "name": "Yves Tanguy",
+          "role": "primary",
+          "slug": "yves-tanguy-q66809948"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/2e4e9eac-c420-5032-a374-f6634c87268a-69a3115559cb8568.jpg",
+      "imageSource": "https://www.wikiart.org/en/yves-tanguy/palace-on-windows-rocks",
+      "credit": "Yves Tanguy. The Palace of Window Rocks. WikiArt source label: Yves Tanguy Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/yves-tanguy/palace-on-windows-rocks",
+      "license": "Yves Tanguy Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/yves-tanguy/palace-on-windows-rocks",
+      "description": "这些东西有清楚的影子，却没有清楚的用途。唐吉低平的原野遵循可信风景的规则，让散落形状像稳稳站在空间中。位置越确定，它们就越陌生。若地面不那么可信，我们大可以把它们当作悬浮图形；在这里，它们似乎确有归处，只是用途仍不得而知。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "aa481044-0316-52de-8e12-32db3ab13972",
+      "title": "家禽院",
+      "catalogueTitle": "The Poultry Yard",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1896 - 1898",
+      "start": 1896,
+      "end": 1898,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/aa481044-0316-52de-8e12-32db3ab13972-f40df06ae430fc86.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-poultry-yard-1898",
+      "credit": "Henri Rousseau. The Poultry Yard. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/the-poultry-yard-1898",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-poultry-yard-1898",
+      "description": "小径、篱笆和建筑把院子分成容易辨认的区域。卢梭先给环境明确秩序，再让小鸟带入不规则运动。这种对照不需要异国题材。普通围院也值得细看，因为边界画得十分鲜明，而里面的动物并不沿着这些直线行动。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "75fed275-813a-5669-ae74-d49040ae4d45",
+      "title": "小夜曲",
+      "catalogueTitle": "The serenade",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/75fed275-813a-5669-ae74-d49040ae4d45-6d262bfea04282ec.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/the-serenade-1942",
+      "credit": "The serenade. WikiArt; Pablo Picasso. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Pablo Picasso",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/the-serenade-1942",
+      "description": "斜卧的黄色人物与直立的乐师，在棱角分明的房间中朝向不同。环境虽然碎裂，两者的关系仍清楚：一人在演奏，另一人在听。毕加索用颜色和身体摆放区分他们的位置。因此，即使没有自然主义地描绘任何一个身体，熟悉的交往情境仍然成立。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "2cf2d5d1-9185-557e-bd68-bdb8158fbcb1",
+      "title": "窗户，罗昂庭院",
+      "catalogueTitle": "Window, Cour de Rohan",
+      "artist": "Balthus",
+      "artists": [
+        {
+          "name": "Balthus",
+          "role": "primary",
+          "slug": "balthus-q325925"
+        }
+      ],
+      "date": "1951",
+      "start": 1951,
+      "end": 1951,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/2cf2d5d1-9185-557e-bd68-bdb8158fbcb1-e493fce3f59ddcc0.jpg",
+      "imageSource": "https://www.wikiart.org/en/balthus/window-cour-de-rohan-1951",
+      "credit": "Balthus. Window, Cour de Rohan. WikiArt source label: Balthus Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/balthus/window-cour-de-rohan-1951",
+      "license": "Balthus Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/balthus/window-cour-de-rohan-1951",
+      "description": "对面建筑不是直接呈现在眼前的。视线先穿过敞开的窗，越过窗台和附近物件，再经过一层层框起的边界才到达它。巴尔蒂斯使这些间隔比庭院里的任何活动都重要。画的既是景色，也是让景色不至与房间混同的那段经过安排的距离。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "34ea0de0-c727-531d-ad7c-23df6be2f220",
+      "title": "人物",
+      "catalogueTitle": "Character",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "纸本色粉画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/34ea0de0-c727-531d-ad7c-23df6be2f220-568dba5227156fa6.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-miro/character",
+      "credit": "Character. WikiArt; Joan Miró. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Joan Miro",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joan-miro/character",
+      "description": "头、弯曲手臂和脚已经足以指明一个身体，尽管这种比例无法支撑现实中的人。米罗把边缘清晰的人形置于较柔和的周围颜色前。少数部分的位置关系让动作仍可理解。补上解剖细节也许能说清身体，却可能削弱这种简省造型的效果。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "a2098470-f41b-526e-b029-461efac2f1c2",
+      "title": "蓝色房间",
+      "catalogueTitle": "The Blue Room",
+      "artist": "Suzanne Valadon",
+      "artists": [
+        {
+          "name": "Suzanne Valadon",
+          "role": "primary",
+          "slug": "suzanne-valadon-q156889"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a2098470-f41b-526e-b029-461efac2f1c2-1fb47f878b0bb56a.jpg",
+      "imageSource": "https://www.wikiart.org/en/suzanne-valadon/the-blue-room-1923",
+      "credit": "Suzanne Valadon. The Blue Room. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/suzanne-valadon/the-blue-room-1923",
+      "description": "条纹长裤与蓝色花纹床铺，使斜卧女子周围的衣饰和家具都保持活跃。书本又给房间日常用途，使它不是只为姿势搭起的空背景。瓦拉东不靠展示理想化人体，也让人物有了结实分量。四周图案再繁忙，也没有削弱她占据空间的存在感。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "d97f6e81-1160-513b-a9af-73abb4437de7",
+      "title": "达达头像",
+      "catalogueTitle": "Dada Head",
+      "artist": "Sophie Taeuber-Arp",
+      "artists": [
+        {
+          "name": "Sophie Taeuber-Arp",
+          "role": "primary",
+          "slug": "sophie-taeuber-arp-q254395"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d97f6e81-1160-513b-a9af-73abb4437de7-165f3ba32772735f.jpg",
+      "imageSource": "https://www.wikiart.org/en/sophie-taeuber-arp/dada-head-1920",
+      "credit": "Sophie Taeuber-Arp. Dada Head. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sophie-taeuber-arp/dada-head-1920",
+      "description": "圆形体积提示一颗头，表面彩绘的几何图案却拒绝把它补成写实面孔。陶柏-阿尔普让两种信息同时留在这件立于窄底座的物体上。颜色不只是说明下面的形状，还按另一套规则切分它。我们既看见相貌的线索，也看见人为构造。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "fa7437b0-e92b-595f-b158-8ce0ca5f3784",
+      "title": "天蓝色",
+      "catalogueTitle": "Sky Blue",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1940",
+      "start": 1940,
+      "end": 1940,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fa7437b0-e92b-595f-b158-8ce0ca5f3784-33e5fd1d6b4f1633.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/sky-blue-1940",
+      "credit": "Wassily Kandinsky. Sky Blue. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/sky-blue-1940",
+      "description": "空隙和漂浮形状同样醒目。每个小形体都有自己的弧线、条纹或附肢，连续的蓝色却让它们留在同一个场域。康定斯基没有让它们并成一团。各自分开，眼睛才有地方从一组内部图案移到另一组，又不丢失四周空间。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    },
+    {
+      "id": "d15d6697-18ca-5fd2-8a48-bb6d3b17c4bb",
+      "title": "国王的忧伤",
+      "catalogueTitle": "The King's Sadness",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d15d6697-18ca-5fd2-8a48-bb6d3b17c4bb-03db7a921aab0612.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/the-king-s-sadness-1952",
+      "credit": "Henri Matisse. The King's Sadness. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-matisse/the-king-s-sadness-1952",
+      "description": "黄色乐器和散落的叶形，为大片颜色带来细小动势。马蒂斯的剪纸形状提示身体与表演，却不塑造纵深。即使场景拥挤，干净边缘也让交叠活动仍然可辨。标题提出一种情绪；形状不必模仿忧愁的面部表情，也能为它构成场景。",
+      "importance": "",
+      "museum": "Musée national d’art moderne — Centre Pompidou"
+    }
+  ],
+  "context": {
+    "start": 1892,
+    "end": 1952
+  },
+  "closingSections": [
+    {
+      "title": "比较边界",
+      "paragraphs": [
+        "把布拉克不稳定的桌面与巴尔蒂斯层层框起的景色并看，再回到康定斯基开阔的蓝底。这是三种不同的绘画空间。属于馆藏不等于正在展出；出行前请按蓬皮杜中心最新项目与作品信息确认所在地。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline ha selezionato queste opere dal patrimonio documentato del museo. La selezione è indipendente dal museo e le singole opere potrebbero essere in prestito o non esposte. Le date e le attribuzioni mantengono le precisazioni riportate nelle schede collegate.",
+  "labels": {
+    "guides": "Tutte le guide",
+    "download": "Scarica il PDF",
+    "language": "Lingua guida",
+    "translation": "Traduzione assistita dall’IA",
+    "explore": "Esplora questa selezione su Artline.",
+    "contextNote": "Visualizza le opere selezionate accanto a libri ed eventi dell'epoca, oppure confronta i periodi in cui vissero gli artisti. I libri e gli eventi forniscono un contesto, non la prova di un'influenza diretta. Anche le opere prive di datazione certa sono incluse in questa guida.",
+    "all": "Opere d'arte nel loro contesto",
+    "allHint": "Le opere selezionate si confrontano con i libri e la storia della loro epoca.",
+    "painters": "Chi è vissuto quando?",
+    "paintersHint": "Scopri quando vissero gli artisti e le cui vite si sovrapposero.",
+    "events": "Eventi storici",
+    "eventsHint": "Esplora gli eventi che si sono svolti durante il periodo della guida",
+    "books": "Cronologia dei libri",
+    "booksHint": "Scopri libri importanti dello stesso periodo",
+    "contents": "Le opere selezionate",
+    "artworks": "Opere d'arte selezionate",
+    "importance": "Perché è importante",
+    "artwork": "Opere d'arte aperte",
+    "source": "Scheda dell’opera",
+    "inventory": "Inventario",
+    "reading": "Letture consigliate",
+    "visit": "Prima della tua visita",
+    "website": "Sito web del museo",
+    "officialGuide": "Guida ufficiale alla collezione",
+    "updated": "Fonti e informazioni sui visitatori verificate"
+  },
+  "slug": "statens-museum-kunst",
+  "museum": "Statens Museum for Kunst",
+  "city": "Copenaghen",
+  "country": "Danimarca",
+  "title": "Galleria Nazionale di Danimarca: capolavori",
+  "subtitle": "Venti opere, da un incontro in osteria a uno studio vuoto e a un volto diviso dal verde.",
+  "introduction": "Un uomo si gira verso lo spettatore nell'osteria di Carl Bloch, come se qualcuno si fosse avvicinato al tavolo. Nella stanza di Hammershøi, il volto di una donna resta invece rivolto altrove. I due quadri offrono accessi diversi: uno produce un incontro, l'altro concede più liberamente l'ambiente che la sua abitante.\n\nLa selezione dello SMK di Copenaghen segue queste differenze del guardare. Gli artisti esaminano schizzi, nuvole e navi in costruzione; Matisse e Derain chiedono quanto possa cambiare il colore mentre un volto o un corpo restano leggibili. Le venti opere si collegano attraverso questi problemi, non una sola epoca. Alcune prendono a soggetto l'osservazione, altre rendono particolarmente avvertibile la posizione dello spettatore.",
+  "visitNote": "La selezione proviene dalla collezione dello SMK e non implica che tutte e venti le opere siano attualmente esposte. Si consiglia di consultare le informazioni del museo su collezioni e mostre per verificare eventuali prestiti, variazioni nell'allestimento e la disponibilità delle singole opere.",
+  "locale": "it",
+  "website": "https://www.smk.dk/",
+  "officialGuide": "https://www.smk.dk/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "Leggi gratis · Inglese",
+      "note": "La tesi di Kandinsky sul colore offre un riscontro storico ai dipinti di Matisse e Derain. Le sue affermazioni rappresentano la posizione di un singolo artista, non una formula per interpretare i ritratti più antichi o gli interni di Hammershøi."
+    }
+  ],
+  "works": [
+    {
+      "id": "3d2e7f3f-e722-4e94-8669-b818c072e3ce",
+      "title": "In un'osteria romana",
+      "catalogueTitle": "In a Roman Osteria",
+      "artist": "Carl Bloch",
+      "artists": [
+        {
+          "name": "Carl Bloch",
+          "role": "primary",
+          "slug": "carl-bloch-q547055"
+        }
+      ],
+      "date": "1866",
+      "start": 1866,
+      "end": 1866,
+      "medium": "Olio su tela",
+      "accession": "KMS4087",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/3d2e7f3f-e722-4e94-8669-b818c072e3ce-34175367eb9f63bd.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS4087",
+      "credit": "Carl Bloch. In a Roman Osteria. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS4087",
+      "description": "La testa girata fa percepire alla compagnia del tavolo una presenza fuori dal quadro. Il bordo vicino avvicina l'incontro, mentre altri commensali proseguono sul fondo della stanza scura. Bloch suggerisce un'interruzione senza mostrare chi sia arrivato. Lo spettatore occupa la posizione da cui quella pausa sembra provenire.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "aa58e0d1-6bb5-42fe-aa04-accc5288a0a1",
+      "title": "La caduta dei Titani",
+      "catalogueTitle": "The Fall of the Titans",
+      "artist": "Cornelis van Haarlem",
+      "artists": [
+        {
+          "name": "Cornelis van Haarlem",
+          "role": "primary",
+          "slug": "cornelis-van-haarlem-q442484"
+        }
+      ],
+      "date": "1588-1590",
+      "start": 1588,
+      "end": 1590,
+      "medium": "Olio su tela",
+      "accession": "KMS1",
+      "image": "https://artlines.org/assets/artworks/imported/smk-e36ee420543f48189cc2b7688a98a5b1bed5c4a1bf23b776d279a29a881c1652.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1",
+      "credit": "Cornelis van Haarlem. The Fall of the Titans. Statens Museum for Kunst, Copenhagen. Public domain; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1",
+      "description": "I corpi si girano in direzioni opposte, rendendo difficile trovare una posizione stabile nella caduta. Le rocce offrono contatti, ma poca sicurezza. La sconfitta mitologica diventa anche un'esibizione delle torsioni ed estensioni possibili del corpo: l'anatomia è il mezzo principale per rendere visibile il disastro collettivo.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "300fe5c0-600d-476b-b9be-2ff67ede153a",
+      "title": "Ritratto di Madame Matisse: La linea verde",
+      "catalogueTitle": "Portrait of Madame Matisse. The Green Line",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "Olio su tela",
+      "accession": "KMSr171",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-a1900c660d92f8b8f843f9748386f0db75163e0ff3d30b52880843b9cd2e0463.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr171",
+      "credit": "Henri Matisse. Portrait of Madame Matisse. The Green Line. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMSr171",
+      "description": "La fascia verde divide il volto in metà diversamente colorate senza impedire di riconoscere Amélie Matisse. La forza viene dal contrasto, non da incarnati naturalistici. Il quadro è inoltre piccolo, circa 40,5 per 32,5 centimetri: l'intensità del colore gli dà una presenza che una riproduzione su schermo può facilmente confondere con le dimensioni fisiche.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "43fe6ddd-6c92-57f0-915b-28d79746c78e",
+      "title": "Pierrot",
+      "catalogueTitle": "Pierrot (Self Portrait as Pierrot)",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "Olio su cartone",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/43fe6ddd-6c92-57f0-915b-28d79746c78e-470d289c5418c2bc.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/pierrot-self-portrait-as-pierrot-1915",
+      "credit": "Pierrot (Self Portrait as Pierrot). WikiArt; Amedeo Modigliani. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/pierrot-self-portrait-as-pierrot-1915",
+      "description": "La gorgiera e il copricapo angolare identificano un ruolo teatrale, mentre il viso lungo si compone di lineamenti stretti e zone verdastre. La figura resta umana nonostante l'aspetto di maschera. Il costume non è quindi soltanto un tema: permette di verificare quanto si possa semplificare un volto continuando a riconoscervi una persona.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "df4e83a3-352c-5998-bb83-38c157f66cf9",
+      "title": "Ritratto di uomo",
+      "catalogueTitle": "Portrait of a man (Andrea Palladio)",
+      "artist": "El Greco",
+      "artists": [
+        {
+          "name": "El Greco",
+          "role": "primary",
+          "slug": "el-greco-q301"
+        }
+      ],
+      "date": "1575",
+      "start": 1575,
+      "end": 1575,
+      "medium": "Olio su tela",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/df4e83a3-352c-5998-bb83-38c157f66cf9-b30b5b0e8125db36.jpg",
+      "imageSource": "https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "credit": "El Greco. Portrait of a man (Andrea Palladio). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "description": "La mano pallida si estende oltre l'abito scuro compatto, dando al ritratto un'azione fuori dal volto. Polsini e barba rimangono distinti sul fondo sommesso. Il modello è stato talvolta identificato con Palladio, ma il nome è discusso. Si possono descrivere gesto e somiglianza senza trasformare l'identità proposta in una certezza.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "5e163ea8-c717-43dc-a3fe-07818b68d55f",
+      "title": "Filottete ferito",
+      "catalogueTitle": "The Wounded Philoctetes",
+      "artist": "Nicolai Abildgaard",
+      "artists": [
+        {
+          "name": "Nicolai Abildgaard",
+          "role": "primary",
+          "slug": "nicolai-abildgaard-q319854"
+        }
+      ],
+      "date": "1775",
+      "start": 1775,
+      "end": 1775,
+      "medium": "Olio su tela",
+      "accession": "KMS586",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/5e163ea8-c717-43dc-a3fe-07818b68d55f-3510ab35611bfbfa.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS586",
+      "credit": "Nicolai Abildgaard. The Wounded Philoctetes. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS586",
+      "description": "Entrambe le mani portano l'attenzione al piede ferito, mentre schiena e arti si ripiegano intorno a esso. Il dolore organizza l'intero corpo, anziché limitarsi a un'espressione. L'isolamento rende particolarmente chiaro il gesto di tenere la ferita: nessun gruppo circostante distribuisce altrove l'attenzione della scena.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "edb2f080-d4fd-4191-b39c-eb6ccb1d6caa",
+      "title": "Un gruppo di artisti danesi a Roma",
+      "catalogueTitle": "A Group of Danish Artists in Rome",
+      "artist": "Constantin Hansen",
+      "artists": [
+        {
+          "name": "Constantin Hansen",
+          "role": "primary",
+          "slug": "constantin-hansen-q539474"
+        }
+      ],
+      "date": "1837",
+      "start": 1837,
+      "end": 1837,
+      "medium": "Olio su tela",
+      "accession": "KMS3236",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/edb2f080-d4fd-4191-b39c-eb6ccb1d6caa-5643da7647dc288d.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3236",
+      "credit": "Constantin Hansen. A Group of Danish Artists in Rome. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3236",
+      "description": "Gli uomini condividono una stanza, non un'unica azione. Sedersi, stare in piedi e girarsi in direzioni diverse dà alla compagnia artistica l'aspetto di un'attività in corso, non di un'assemblea cerimoniale. Le somiglianze individuali restano dentro un ritratto collettivo, e la veduta aperta oltre impedisce al mondo professionale di chiudersi del tutto.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "f2787d23-5689-474e-8b9b-d8309575b833",
+      "title": "Vista dell'interno del Colosseo",
+      "catalogueTitle": "View of the Interior of the Colosseum",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1816",
+      "start": 1816,
+      "end": 1816,
+      "medium": "Olio su tela",
+      "accession": "KMS1776",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/f2787d23-5689-474e-8b9b-d8309575b833-8efa336fafd33296.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1776",
+      "credit": "Christoffer Wilhelm Eckersberg. View of the Interior of the Colosseum. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1776",
+      "description": "Archi e muri rotti rimangono parti di una struttura di cui si possono seguire le distanze. Le piccole figure danno una scala corporea senza fare della rovina la cornice di un grande episodio. Eckersberg si affida a intervalli e piani mutevoli, conservando l'organizzazione dell'edificio insieme alla sua evidente incompletezza.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "6f4bab54-b54e-40c0-8fb6-bedb2436bf5d",
+      "title": "Vista da Dosseringen verso Nørrebro",
+      "catalogueTitle": "A View from Dosseringen near the Sortedam Lake Looking Towards Nørrebro",
+      "artist": "Christen Købke",
+      "artists": [
+        {
+          "name": "Christen Købke",
+          "role": "primary",
+          "slug": "christen-kobke-q381458"
+        }
+      ],
+      "date": "1838",
+      "start": 1838,
+      "end": 1838,
+      "medium": "Olio su tela",
+      "accession": "KMS359",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-ac6bdafe3d4beb4be6aabfbef36228d618aac4586003c37d35ac2c35fca8ac5b.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS359",
+      "credit": "Christen Købke. A View from Dosseringen near the Sortedam Lake Looking Towards Nørrebro. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS359",
+      "description": "L'asta della bandiera oppone una verticale ferma all'ampia continuità orizzontale di acqua e cielo. Due figure vicine e una barca lontana occupano solo una piccola parte dell'estensione. Ne nasce un paesaggio in cui l'attività ordinaria trova spazio senza diventare la misura principale di tutto ciò che la circonda.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "5b80c571-41e5-4ac1-a25d-4c3c927e7b66",
+      "title": "Una stanza in Strandgade con la moglie dell'artista",
+      "catalogueTitle": "A Room in the Artist's Home in Strandgade, Copenhagen, with the Artist's Wife",
+      "artist": "Vilhelm Hammershøi",
+      "artists": [
+        {
+          "name": "Vilhelm Hammershøi",
+          "role": "primary",
+          "slug": "vilhelm-hammershoi-q380706"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "Olio su tela",
+      "accession": "KMS3696",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-120cb5885f90392c87a020a00d6a42b6ebc853a1b2a694cbbe3cc7214749978f.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3696",
+      "credit": "Vilhelm Hammershøi. A Room in the Artist's Home in Strandgade, Copenhagen, with the Artist's Wife. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3696",
+      "description": "Il volto della donna è sottratto, mentre i confini della stanza restano insolitamente chiari. Una piccola griglia di sole dà al pavimento un evento locale entro la quiete generale. Il contrasto conta: il dipinto offre informazioni precise sullo spazio senza concedere un accesso equivalente alla persona che lo occupa.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "668ee4ab-9597-4fe1-a034-bde0ee9d9363",
+      "title": "Interno con il cavalletto dell'artista",
+      "catalogueTitle": "Interior with the Artist’s Easel",
+      "artist": "Vilhelm Hammershøi",
+      "artists": [
+        {
+          "name": "Vilhelm Hammershøi",
+          "role": "primary",
+          "slug": "vilhelm-hammershoi-q380706"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "Olio su tela",
+      "accession": "KMS7444",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/668ee4ab-9597-4fe1-a034-bde0ee9d9363-2a853c81370ad166.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS7444",
+      "credit": "Vilhelm Hammershøi. Interior with the Artist’s Easel. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMS7444",
+      "description": "Cavalletto e quadro incorniciato identificano un luogo di lavoro, ma l'artista manca. La porta aperta prolunga la stanza in un'altra zona senza introdurre attività visibili. La pittura diventa il soggetto attraverso strumenti e condizioni: un luogo per guardare e fare rimane anche quando nessuno compie le due azioni.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "c8425c81-ddc4-4fd6-9589-e4e148716554",
+      "title": "Donna in camicia",
+      "catalogueTitle": "Woman in a Chemise",
+      "artist": "André Derain",
+      "artists": [
+        {
+          "name": "André Derain",
+          "role": "primary",
+          "slug": "andre-derain-q156272"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "Olio su tela",
+      "accession": "KMSr14",
+      "image": "https://artlines.org/assets/artworks/imported/smk-abb22cb1f47666607f76ed0dafdc1cbd2e671686add65042dcebc4cba29bffe9.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr14",
+      "credit": "André Derain. Woman in a Chemise. Statens Museum for Kunst, Copenhagen. Public domain; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMSr14",
+      "description": "La posa familiare, con il mento sostenuto dalla mano, mantiene leggibile il corpo mentre rosa, blu e verde alterano le distinzioni consuete fra pelle, stoffa e ombra. Il colore costruisce, non riempie soltanto un contorno. Accanto al ritratto di Matisse, il dipinto propone un altro modo di conservare una figura cambiandone le tinte.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "0426b441-5b87-4c8c-87ed-634679e71a89",
+      "title": "La famiglia Ryberg",
+      "catalogueTitle": "The Ryberg Family",
+      "artist": "Jens Juel",
+      "artists": [
+        {
+          "name": "Jens Juel",
+          "role": "primary",
+          "slug": "jens-juel-q581361"
+        }
+      ],
+      "date": "ca. 1793-1797",
+      "start": 1793,
+      "end": 1797,
+      "medium": "Olio su tela",
+      "accession": "KMS2098",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/0426b441-5b87-4c8c-87ed-634679e71a89-6b0481f70eb3e385.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS2098",
+      "credit": "Jens Juel. The Ryberg Family. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS2098",
+      "description": "I gesti collegano l'anziano seduto alla coppia in piedi, mentre il paesaggio amplia il contesto sociale del gruppo familiare. La veduta lontana non è decorazione accessoria: estende la presentazione oltre il primo piano. La rivendicazione di una posizione dipende quindi dalla terra e dall'ambiente quanto dalla somiglianza.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "8189aa13-c24c-490d-b7ea-18b5c5d0d209",
+      "title": "Ditlev Blunck esamina uno schizzo allo specchio",
+      "catalogueTitle": "En ung kunstner (Ditlev Blunck) betragter en skitse i et spejl",
+      "artist": "Wilhelm Bendz",
+      "artists": [
+        {
+          "name": "Wilhelm Bendz",
+          "role": "primary",
+          "slug": "wilhelm-bendz-research-55e639d17130"
+        }
+      ],
+      "date": "1826",
+      "start": 1826,
+      "end": 1826,
+      "medium": "Olio su tela",
+      "accession": "KMS280",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/7df15770-d8e1-43d7-af44-f1c4571d2426-9b1260ac85dc4db6.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS280",
+      "credit": "Wilhelm Bendz. En ung kunstner (Ditlev Blunck) betragter en skitse i et spejl. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS280",
+      "description": "Lo specchio offre un'altra vista dello schizzo, rendendo il giudizio visibile come cambiamento pratico del punto di osservazione. Attrezzi e tele circondano il pittore, situando il gesto in una stanza di lavoro. Guardare appare parte del fare: l'artista si ferma per valutare ciò che un diverso orientamento può rivelare.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "8913b624-995a-4c00-b379-123a4a1b990d",
+      "title": "Interno con violino",
+      "catalogueTitle": "Interior with a Violin",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "Olio su tela",
+      "accession": "KMSr83",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/8913b624-995a-4c00-b379-123a4a1b990d-cc04a6dd19742075.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr83",
+      "credit": "Henri Matisse. Interior with a Violin. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMSr83",
+      "description": "Il violino appoggiato testimonia l'uso dell'interno senza richiedere un musicista. Le imposte aperte collegano la stanza a un esterno più luminoso; cornici scure dividono le zone adiacenti. Strumento e arredi partecipano alla disposizione cromatica, così un oggetto familiare trattiene lo sguardo senza diventare il centro di un racconto.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "2db45366-dbb2-4ac7-a898-417f364ce187",
+      "title": "Concerto: I figli dell'artista e i loro compagni di gioco",
+      "catalogueTitle": "\"Koncert\". Kunstnerens børn og deres legekammerater",
+      "artist": "Otto Haslund",
+      "artists": [
+        {
+          "name": "Otto Haslund",
+          "role": "primary",
+          "slug": "otto-haslund-research-644e17f06988"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "Olio su tela",
+      "accession": "KMS1306",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/ebb7f7fd-0bc0-4319-974a-0ab6cbcd95f5-1c7eee0862a30d79.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1306",
+      "credit": "Otto Haslund. \"Koncert\". Kunstnerens børn og deres legekammerater. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1306",
+      "description": "I bambini portano al pianoforte attenzioni diverse. Alcuni si concentrano; altri, fra cui i più piccoli, interrompono l'idea di un concerto perfettamente coordinato. La varietà rende il gruppo più preciso di un emblema dell'armonia domestica. L'esecuzione comprende la partecipazione diseguale di chi condivide una stanza a età diverse.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "cbb8ec1c-21fd-4412-a6b1-4ccc30cdf78e",
+      "title": "Un ciarlatano che vende lucido per scarpe in Piazza Barberini",
+      "catalogueTitle": "A Charlatan Selling Blacking in the Piazza Barberini in Rome",
+      "artist": "Wilhelm Marstrand",
+      "artists": [
+        {
+          "name": "Wilhelm Marstrand",
+          "role": "primary",
+          "slug": "wilhelm-marstrand-q358399"
+        }
+      ],
+      "date": "1840-1849",
+      "start": 1840,
+      "end": 1849,
+      "medium": "Olio su tela",
+      "accession": "KMS3770",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/cbb8ec1c-21fd-4412-a6b1-4ccc30cdf78e-b14f738932e6c4a4.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3770",
+      "credit": "Wilhelm Marstrand. A Charlatan Selling Blacking in the Piazza Barberini in Rome. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3770",
+      "description": "La dimostrazione del venditore raccoglie un pubblico: è la persuasione a unire le figure. Le loro diverse risposte contano quanto il suo gesto. Edifici e fontana collocano l'evento in una piazza romana, ma la rappresentazione commerciale ne dà la struttura ravvicinata: prima di vendere occorre conquistare l'attenzione.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "1cc81c41-13e0-433e-92e7-0160ab7a0bfc",
+      "title": "Paesaggio di nuvole, studio",
+      "catalogueTitle": "A Cloudscape. Study",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1826",
+      "start": 1826,
+      "end": 1826,
+      "medium": "Olio su tela",
+      "accession": "KMS6433",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/1cc81c41-13e0-433e-92e7-0160ab7a0bfc-969b8253291f174e.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS6433",
+      "credit": "Christoffer Wilhelm Eckersberg. A Cloudscape. Study. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS6433",
+      "description": "Solo una stretta fascia di terra ancora gli strati di nuvole. Il cielo va quindi distinto al proprio interno, attraverso masse pesanti e aperture chiare, invece di essere trattato come sfondo generico. Lo studio dedica attenzione prolungata alle forme atmosferiche mutevoli senza richiedere sotto di esse un soggetto più evidente.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "e50a83f9-d7c5-452e-92f4-7bf45e3c6e0a",
+      "title": "Una corvetta sugli scali, Copenaghen",
+      "catalogueTitle": "A Corvette on the Stocks. Copenhagen",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1828",
+      "start": 1828,
+      "end": 1828,
+      "medium": "Olio su tela",
+      "accession": "KMS6439",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/e50a83f9-d7c5-452e-92f4-7bf45e3c6e0a-e53972819376b8b2.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS6439",
+      "credit": "Christoffer Wilhelm Eckersberg. A Corvette on the Stocks. Copenhagen. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS6439",
+      "description": "Sollevato su sostegni di legno, lo scafo rivela superfici normalmente nascoste dall'acqua. La nave appare nelle condizioni che ne rendono possibile la costruzione, prima dell'immagine consueta di un'imbarcazione a galla. L'intelaiatura è dunque essenziale, non un ostacolo: spiega il rapporto fisico fra questa grande struttura e il terreno.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "14c7c9fe-6bb4-4457-82c1-77db89fb1bd1",
+      "title": "Un cieco fuori dalla sua casa",
+      "catalogueTitle": "A Blind Man Outside his House",
+      "artist": "Michael Ancher",
+      "artists": [
+        {
+          "name": "Michael Ancher",
+          "role": "primary",
+          "slug": "michael-ancher-q468252"
+        }
+      ],
+      "date": "ca. 1881-1884",
+      "start": 1881,
+      "end": 1884,
+      "medium": "Olio su tavola",
+      "accession": "KMS3459",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/14c7c9fe-6bb4-4457-82c1-77db89fb1bd1-99d88ba6ee7efe2e.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3459",
+      "credit": "Michael Ancher. A Blind Man Outside his House. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3459",
+      "description": "La testa abbassata e la posizione sostenuta collocano l'uomo accanto all'edificio, mentre la luce intensa si estende sul terreno. Il titolo indica la cecità, ma non deve spiegare tutta la sua presenza. L'attenzione quasi ritrattistica alla postura gli dà un posto nel paesaggio, anziché ridurlo a un contrasto con la visibilità del mondo circostante.",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    }
+  ],
+  "context": {
+    "start": 1575,
+    "end": 1918
+  },
+  "closingSections": [
+    {
+      "title": "Cambiare distanza",
+      "paragraphs": [
+        "Confrontate una composizione intera con la vista ravvicinata di un dettaglio, ricordando le dimensioni dell'oggetto. Il piccolo ritratto di Matisse agisce diversamente da una grande scena di corpi in caduta. Il catalogo dello SMK offre schede utili; esposizione attuale e modalità di visita vanno verificate separatamente."
+      ]
+    }
+  ]
+}

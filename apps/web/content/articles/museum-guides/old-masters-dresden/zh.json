@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "old-masters-dresden",
+  "museum": "Gemäldegalerie Alte Meister",
+  "city": "德累斯顿",
+  "country": "德国",
+  "title": "德累斯顿历代大师画廊：杰作",
+  "subtitle": "二十幅古典绘画，看看边界、视角和人物所占空间如何组织画面。",
+  "introduction": "在广泛流传的旧照片里，维米尔读信的少女身后是一面几乎空白的墙。修复后，一幅大型丘比特图像重现。这个变化提醒我们：让一幅画变得熟悉的复制图，未必呈现它如今的样子，甚至未必是画家留下的画面。\n\n本组其他作品中的距离则是刻意安排的。厚重桌毯把一群人隔在触不到的地方，帷幕框住走近的圣母，阶梯衬出孩子的幼小。卡纳莱托的运河又提供了几种不那么私密的进入方式。比较这些处理，比把每幅画都看成同样透明的窗口更有用。",
+  "visitNote": "本选集涵盖的是“古代大师画廊”（Gemäldegalerie Alte Meister）的藏品，不包括德累斯顿收藏的较晚时期的画作。参观前请查询当前的借展情况及画廊相关信息。关于维米尔《读信的女子》的复制图展示的是该画在2021年修复完成之前的状态；相关条目对这一变化进行了说明。",
+  "locale": "zh",
+  "website": "https://museum-kassel.de/",
+  "officialGuide": "https://museum-kassel.de/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "在线阅读或下载 · 英语",
+      "note": "沃尔特·利特克（Walter Liedtke）的图录详尽介绍了荷兰绘画，涵盖了维米尔和伦勃朗等大师的作品。尽管该图录收录的是大都会艺术博物馆而非德累斯顿博物馆的藏品，但它为深入了解这些画家的创作技法与题材提供了有益参考。"
+    }
+  ],
+  "works": [
+    {
+      "id": "ef081d93-bdea-5b6b-8107-4e8723451c5d",
+      "title": "窗边读信的少女",
+      "catalogueTitle": "Girl Reading a Letter at an Open Window",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "1657",
+      "start": 1657,
+      "end": 1657,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ef081d93-bdea-5b6b-8107-4e8723451c5d-80650346e575eb68.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/girl-reading-a-letter-at-an-open-window-1657",
+      "credit": "Johannes Vermeer. Girl Reading a Letter at an Open Window. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/johannes-vermeer/girl-reading-a-letter-at-an-open-window-1657",
+      "description": "少女在水果和花纹织物后方读信。若复制图显示她身后是空墙，那是作品较早的状态；修复已经重新揭示出一幅丘比特画。这个形象既改变室内构图的平衡，也改变信件可能引发的联想。在解读空白之前，先确认你看到的是哪个状态。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "b927af80-36f3-5c77-a53b-1a46b4e1b1e9",
+      "title": "老鸨",
+      "catalogueTitle": "The Procuress",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "1656",
+      "start": 1656,
+      "end": 1656,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b927af80-36f3-5c77-a53b-1a46b4e1b1e9-270671febe1257e1.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/the-procuress-1656",
+      "credit": "Johannes Vermeer. The Procuress. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/johannes-vermeer/the-procuress-1656",
+      "description": "几只手在花纹繁密的桌毯上方会合，使交易比拥挤的面孔排列显得更集中。厚织物同时做两件事：展示精细描绘的表面，又在前景横设一道障碍。维米尔把人物推近，却仍将他们的空间留在这道实在的阻隔另一边。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "13e365c0-d683-5dee-bcd7-c142e41b963d",
+      "title": "阿西斯与伽拉忒亚",
+      "catalogueTitle": "Acis and Galatea",
+      "artist": "Claude Lorrain",
+      "artists": [
+        {
+          "name": "Claude Lorrain",
+          "role": "primary",
+          "slug": "claude-lorrain-q214074"
+        }
+      ],
+      "date": "1657",
+      "start": 1657,
+      "end": 1657,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/13e365c0-d683-5dee-bcd7-c142e41b963d-9a2eb549ef677694.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-lorrain/acis-and-galatea-1657",
+      "credit": "Claude Lorrain. Acis and Galatea. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/claude-lorrain/acis-and-galatea-1657",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/claude-lorrain/acis-and-galatea-1657",
+      "description": "神话中的相遇只占洛兰风景的一小部分。树木庇护人物，水面和明亮远方则向他们之外延展。即使一时认不出恋人，环境也有自己的展开次序：从围合转向开阔。故事在风景中获得一席之地，而不是支配整个画面的尺度。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "b623fddb-d587-564f-9ca0-71c4c34325f8",
+      "title": "三王来朝",
+      "catalogueTitle": "Adoration of the Magi",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1633",
+      "start": 1633,
+      "end": 1633,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/b623fddb-d587-564f-9ca0-71c4c34325f8-ad5d85e55f6bd4bd.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/adoration-of-the-magi-1633",
+      "credit": "Adoration of the Magi. WikiArt; Nicolas Poussin. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/adoration-of-the-magi-1633",
+      "description": "俯下的身体和定向手势把注意聚到圣母与孩子周围。明亮衣袍使共同致敬的各人仍可区分。普桑的建筑提供框架，没有把人群变成僵直一排。虔敬通过身体一次次朝向另一个身体来显现，而非靠某张孤立面孔的表情说明。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "0e4bd917-aa78-5d0c-a331-0bad4442714f",
+      "title": "大运河入口，向东眺望",
+      "catalogueTitle": "Entrance To The Grand Canal Looking East",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "1725",
+      "start": 1725,
+      "end": 1725,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/0e4bd917-aa78-5d0c-a331-0bad4442714f-bf07a1e7a633cec3.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/entrance-to-the-grand-canal-looking-east-1725",
+      "credit": "Canaletto. Entrance To The Grand Canal Looking East. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/entrance-to-the-grand-canal-looking-east-1725",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/entrance-to-the-grand-canal-looking-east-1725",
+      "description": "水面在建筑前打开宽阔视野。小船穿行其间，把纪念碑般的建筑尺度与日常交通联系起来。卡纳莱托的运河既可观赏，也供实际通行。船只使那些立面不至于变成一组彼此孤立的建筑图纸。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "8044514a-83bb-5d62-8cd3-c8e42790c09b",
+      "title": "望向里亚托桥的大运河",
+      "catalogueTitle": "Grand Canal: Looking North East toward the Rialto Bridge",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "约1725年",
+      "start": 1725,
+      "end": 1725,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/8044514a-83bb-5d62-8cd3-c8e42790c09b-bf36fc3c7d0fdd2c.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/grand-canal-looking-north-east-toward-the-rialto-bridge",
+      "credit": "Canaletto. Grand Canal: Looking North East toward the Rialto Bridge. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/grand-canal-looking-north-east-toward-the-rialto-bridge",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/grand-canal-looking-north-east-toward-the-rialto-bridge",
+      "description": "水道弯曲，让立面以不同角度出现。同一段运河因此容纳多种建筑节奏，而非整齐地向一个方向后退。船停留或行驶在两岸之间，它们位置各异，将精细描述的建筑接回一座既需要观看、也必须穿行的城市。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "7a9e0b45-3cd7-5414-b331-0bbbe7647045",
+      "title": "从巴尔比宫眺望大运河",
+      "catalogueTitle": "Grand Canal: Looking from Palazzo Balbi",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "约 1726 年",
+      "start": 1726,
+      "end": 1726,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/7a9e0b45-3cd7-5414-b331-0bbbe7647045-07dc5dd6593a2fb8.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/grand-canal-looking-from-palazzo-balbi",
+      "credit": "Canaletto. Grand Canal: Looking from Palazzo Balbi. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/grand-canal-looking-from-palazzo-balbi",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/grand-canal-looking-from-palazzo-balbi",
+      "description": "这里运河的宽度与建筑一样引人注意。较空的水面隔开长长的立面行列，船只是点缀，并没有填满它。与旁边几幅运河图相比，这幅尤其强调两岸距离。只需改变视点，熟悉的主题便重新组织起来，无须添加新的地标。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "705324bd-c400-565f-920c-8c5fea0011ce",
+      "title": "醉酒的西勒诺斯",
+      "catalogueTitle": "Silenus Drunk",
+      "artist": "Anthony van Dyck",
+      "artists": [
+        {
+          "name": "Anthony van Dyck",
+          "role": "primary",
+          "slug": "anthony-van-dyck-q150679"
+        }
+      ],
+      "date": "1621",
+      "start": 1621,
+      "end": 1621,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/705324bd-c400-565f-920c-8c5fea0011ce-f01357cfa4131858.jpg",
+      "imageSource": "https://www.wikiart.org/en/anthony-van-dyck/silenus-drunk",
+      "credit": "Silenus Drunk. WikiArt; Anthony van Dyck. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anthony-van-dyck/silenus-drunk",
+      "description": "搀扶者让西勒诺斯的重量有了可见后果。他沉重的身体靠在他们身上，神话于是成为拥挤空间里如何维持平衡的实际问题。暖色肌肤和红布把人群连成整体。还未详细解释这些神话人物，凡·戴克已用身体的吃力状态交代出场面。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "4a1b0206-a192-5ca0-aa0e-2d7d04295125",
+      "title": "里亚托圣雅各伯教堂",
+      "catalogueTitle": "San Giacomo de Rialto",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "1725 - 1726",
+      "start": 1725,
+      "end": 1726,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/4a1b0206-a192-5ca0-aa0e-2d7d04295125-5d0f08a3b8112e65.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/san-giacomo-de-rialto",
+      "credit": "Canaletto. San Giacomo de Rialto. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/san-giacomo-de-rialto",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/san-giacomo-de-rialto",
+      "description": "与运河视图不同，这幅围绕一处开阔铺石广场安排移动。带显眼时钟的教堂立面提供稳定中心，小人物从前景穿过。卡纳莱托利用常驻建筑与短暂停留活动的区别，让公共空间变得清楚。建筑定义广场，却没有穷尽里面发生的一切。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "cc2d92f1-806c-5ac2-a0d5-20b2a63805da",
+      "title": "圣凯瑟琳殉道",
+      "catalogueTitle": "The Martyrdom of St. Catherine",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1506",
+      "start": 1506,
+      "end": 1506,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/cc2d92f1-806c-5ac2-a0d5-20b2a63805da-d441d3fa27948c55.jpg",
+      "imageSource": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-martyrdom-of-st-catherine-1506",
+      "credit": "Lucas Cranach the Elder. The Martyrdom of St. Catherine. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/lucas-cranach-the-elder/the-martyrdom-of-st-catherine-1506",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-martyrdom-of-st-catherine-1506",
+      "description": "华服和密集面孔使凯瑟琳的受难成为公开场面。破轮与动荡天空放大了周围混乱，她跪着的身影则相对静止。克拉纳赫不必把圣徒孤立在空处，也能使她突出。正因为四周太多活动争夺视线，这个姿势才格外不同。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "daa4c40c-957c-5c58-8e63-59e8a4a6b2fc",
+      "title": "施洗者圣约翰",
+      "catalogueTitle": "Saint John thet Baptist",
+      "artist": "Mateo Cerezo",
+      "artists": [
+        {
+          "name": "Mateo Cerezo",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1393359"
+        }
+      ],
+      "date": "约 1665 年",
+      "start": 1665,
+      "end": 1665,
+      "medium": "",
+      "accession": "GK 476",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q135207874-70cea67cb477ebbd.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mateo_Cerezo_-_Saint_John_thet_Baptist.jpg",
+      "credit": "Mateo Cerezo. Saint John thet Baptist. Image credit: Mateo Cerezo. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q135207874",
+      "description": "手杖和局部披布几乎不借环境帮助，就交代出宗教人物。塞雷索让头转向上方较亮区域，使直立身体的注意朝自身轮廓之外延伸。黑暗去除了竞争性的事件。画中主要的行动就是看，而面孔与光线的关系让这个动作可见。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "cb2950c4-bc46-5d38-a7fb-f0c73a756350",
+      "title": "维奥尔琴演奏者",
+      "catalogueTitle": "Gamba Player",
+      "artist": "Bernardo Strozzi",
+      "artists": [
+        {
+          "name": "Bernardo Strozzi",
+          "role": "primary",
+          "slug": "bernardo-strozzi-q437724"
+        }
+      ],
+      "date": "1635",
+      "start": 1635,
+      "end": 1635,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cb2950c4-bc46-5d38-a7fb-f0c73a756350-0eea51a62f5407fe.jpg",
+      "imageSource": "https://www.wikiart.org/en/bernardo-strozzi/gamba-player",
+      "credit": "Bernardo Strozzi. Gamba Player. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/bernardo-strozzi/gamba-player",
+      "description": "乐器占了足够大的地方，明确指出一种活动，而不只是身份小道具。弯曲琴身上方，女子直接看向观众。斯特罗齐让这次对视与乐器实在的体积相互平衡。绘画不能发声，却能通过人物与物件的关系提示音乐。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "b5c34b08-1b25-565c-8184-94f463c9c66c",
+      "title": "海因里希·冯·布吕尔伯爵",
+      "catalogueTitle": "Heinrich Graf Von Brühl",
+      "artist": "Marcello Bacciarelli",
+      "artists": [
+        {
+          "name": "Marcello Bacciarelli",
+          "role": "primary",
+          "slug": "marcello-bacciarelli-q380717"
+        }
+      ],
+      "date": "约 1753 年",
+      "start": 1753,
+      "end": 1753,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/b5c34b08-1b25-565c-8184-94f463c9c66c-f9ee6369fe159197.jpg",
+      "imageSource": "https://www.wikiart.org/en/marcello-bacciarelli/heinrich-graf-von-bruhl-1753",
+      "credit": "Marcello Bacciarelli. Heinrich Graf Von Brühl. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/marcello-bacciarelli/heinrich-graf-von-bruhl-1753",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/marcello-bacciarelli/heinrich-graf-von-bruhl-1753",
+      "description": "还没看清周围细节，红蓝服装已先让人物显出。桌子与建筑环境继续展示正式的等级身份。巴恰雷利把地位分散在姿势、衣着和场所之间，没有让脸独自解释一切。肖像说明，摆在人身边的东西可以向公众传达多少信息。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "5644012b-6a14-5be1-a887-67997d50f51b",
+      "title": "芭芭丽娜·坎帕尼尼",
+      "catalogueTitle": "Portrait of Barbarina Campani",
+      "artist": "Rosalba Carriera",
+      "artists": [
+        {
+          "name": "Rosalba Carriera",
+          "role": "primary",
+          "slug": "rosalba-carriera-q237726"
+        }
+      ],
+      "date": "1739",
+      "start": 1739,
+      "end": 1739,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5644012b-6a14-5be1-a887-67997d50f51b-05dd5afe6fc3b546.jpg",
+      "imageSource": "https://www.wikiart.org/en/rosalba-carriera/portrait-of-barbarina-campani",
+      "credit": "Rosalba Carriera. Portrait of Barbarina Campani. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rosalba-carriera/portrait-of-barbarina-campani",
+      "description": "浅蓝与白色衣服，让人物在低调背景前保持明亮。珠宝和花在面孔附近添上细小差别。卡列拉柔软的过渡没有使模特模糊，而是用细微区别而非坚硬边线确立她。值得慢看的是，一种浅色表面在哪里变成另一种。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "b63e7836-dd94-50a3-9a3b-70df9114a4a5",
+      "title": "戴珍珠饰帽的男子",
+      "catalogueTitle": "Portrait of a Man in the Hat Decorated with Pearls",
+      "artist": "伦勃朗·凡·莱茵的追随者",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "follower_of",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1667",
+      "start": 1667,
+      "end": 1667,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/b63e7836-dd94-50a3-9a3b-70df9114a4a5-eab841aeab8ea8d1.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/portrait-of-a-man-in-the-hat-decorated-with-pearls",
+      "credit": "Portrait of a Man in the Hat Decorated with Pearls. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://rembrandtdatabase.org/in-focus/81-6-paintings-from-the-gemaeldegalerie-in-dresden-added-to-the-database.html",
+      "description": "选择性的光照把脸和装饰华丽的胸部推到前方，帽子大半仍隐在暗处。所列研究资料将此画归入伦勃朗追随者作品，图注应保留这项限定。熟悉的用光方式也可能流传到其他画家手中；画法相似本身并不足以确定作者。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "e9008bf0-68c5-5f5e-9dd6-3171cb7c3063",
+      "title": "扮作维斯塔贞女的女子",
+      "catalogueTitle": "Portrait of a Woman as a Vestal Virgin",
+      "artist": "Angelica Kauffman",
+      "artists": [
+        {
+          "name": "Angelica Kauffman",
+          "role": "primary",
+          "slug": "angelica-kauffman-q123098"
+        }
+      ],
+      "date": "1787",
+      "start": 1787,
+      "end": 1787,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e9008bf0-68c5-5f5e-9dd6-3171cb7c3063-efead1c7f9bfb18a.jpg",
+      "imageSource": "https://www.wikiart.org/en/angelica-kauffman/portrait-of-a-woman-as-a-vestal-virgin-1",
+      "credit": "Angelica Kauffman. Portrait of a Woman as a Vestal Virgin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/angelica-kauffman/portrait-of-a-woman-as-a-vestal-virgin-1",
+      "description": "浅色披衣与小容器赋予模特古代角色，却没有为她展开完整的古代事件。考夫曼让肖像与古典身份共用同一人物。转向观众的动作保留人物写照的直接感，服装和手势则另添一层她被呈现的方式。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "348510de-2d96-5266-9d0e-332403111770",
+      "title": "圣母进殿",
+      "catalogueTitle": "Presentation of the Virgin at the Temple",
+      "artist": "Cima da Conegliano",
+      "artists": [
+        {
+          "name": "Cima da Conegliano",
+          "role": "primary",
+          "slug": "cima-da-conegliano-q8453"
+        }
+      ],
+      "date": "1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/348510de-2d96-5266-9d0e-332403111770-baf39c4c182afa38.jpg",
+      "imageSource": "https://www.wikiart.org/en/cima-da-conegliano/presentation-of-the-virgin-at-the-temple",
+      "credit": "Cima da Conegliano. Presentation of the Virgin at the Temple. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/cima-da-conegliano/presentation-of-the-virgin-at-the-temple",
+      "description": "阶梯让孩子的攀登距离可以估量。长长的空台阶把她与上方等待的人、下方观看的人分开。奇马借建筑给一个小小身体动作以仪式意义。空阶并非无用：它们显示距离，使这次上行不至淹没在周围人群中。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "609cd965-bef1-5eb8-ad45-c2ac743205d9",
+      "title": "《浪子》寓言中的伦勃朗与萨斯基亚",
+      "catalogueTitle": "Self-Portrait with Saskia in the Parable of the Prodigal Son",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1635",
+      "start": 1635,
+      "end": 1635,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/609cd965-bef1-5eb8-ad45-c2ac743205d9-13c7f4571f879d7a.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/self-portrait-with-saskia-in-the-parable-of-the-prodigal-son",
+      "credit": "Rembrandt van Rijn. Self-Portrait with Saskia in the Parable of the Prodigal Son. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/self-portrait-with-saskia-in-the-parable-of-the-prodigal-son",
+      "description": "举起的酒杯和大笑，让两人成为热闹场景中的演员。认出伦勃朗与萨斯基亚，不等于眼前是未经加工的家庭生活记录。戏服、手势和暖光共同构成表演。熟悉面貌可以进入一个故事，而角色未必与模特真实人生相同。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "51a7c0ad-9afe-56ba-ad67-943095eb080c",
+      "title": "西斯廷圣母",
+      "catalogueTitle": "The Sistine Madonna",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "1513",
+      "start": 1513,
+      "end": 1513,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/51a7c0ad-9afe-56ba-ad67-943095eb080c-4deca3d3a7cc8d0f.jpg",
+      "imageSource": "https://www.wikiart.org/en/raphael/the-sistine-madonna-1513",
+      "credit": "Raphael. The Sistine Madonna. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/raphael/the-sistine-madonna-1513",
+      "description": "拉开的帷幕，使神圣人物像刚刚显露在眼前。下方台沿和两个小天使又为画内空间与观众位置设下一道边界。拉斐尔让圣母和孩子走近，同时精心框住这个靠近过程。熟悉的小天使属于整幅安排，并非独立的装饰题材。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    },
+    {
+      "id": "1fcc68a2-7789-5675-86fe-ffd7038fca0f",
+      "title": "沉睡的维纳斯",
+      "catalogueTitle": "The Sleeping Venus",
+      "artist": "Giorgione",
+      "artists": [
+        {
+          "name": "Giorgione",
+          "role": "primary",
+          "slug": "giorgione-q8459"
+        }
+      ],
+      "date": "1508-1510",
+      "start": 1508,
+      "end": 1510,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/1fcc68a2-7789-5675-86fe-ffd7038fca0f-0b7802f02a898ded.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/the-sleeping-venus-1510",
+      "credit": "Giorgione. The Sleeping Venus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giorgione/the-sleeping-venus-1510",
+      "description": "身体长长的水平轮廓，与后方地面的起伏互相呼应。浅布把睡者与风景分开，却没有割断联系。延展的构图使安歇成为整幅画的状态，而不只表现为闭着眼睛。身体和地形凭形状建立关系，不靠叙述某次事件。",
+      "importance": "",
+      "museum": "Gemäldegalerie Alte Meister"
+    }
+  ],
+  "context": {
+    "start": 1500,
+    "end": 1787
+  },
+  "closingSections": [
+    {
+      "title": "图像和图注都要核对",
+      "paragraphs": [
+        "看维米尔时，可以把旧复制图与博物馆修复后的图像比较。查阅其他作品资料时，也应保留作者归属和年代中的限定。展陈会改变；若为某幅画安排旅行，请先核对德累斯顿最新的馆藏与参观信息。"
+      ]
+    }
+  ]
+}

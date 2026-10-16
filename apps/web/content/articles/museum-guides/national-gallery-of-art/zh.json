@@ -1,0 +1,610 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "national-gallery-of-art",
+  "museum": "National Gallery of Art",
+  "city": "华盛顿特区",
+  "country": "美国",
+  "title": "华盛顿国家美术馆：杰作",
+  "subtitle": "二十件作品里，一支笔、一只钟、一条船或一朵花，都可能改变整幅画的读法。",
+  "introduction": "维米尔笔下的女子暂停写信，笔却仍悬在纸上，随时可以继续。大卫的拿破仑站在一组经过安排的物件之间，让人想到工作一直持续到深夜。这些细节在说明人物是什么样的人，但画中的说法并不等于有关其生平的独立证据。\n\n这组国家美术馆作品关注看似次要的物件与手势究竟做了什么。有些帮助识别主体，有些组织空间，还有些试图使我们相信一种关于尽责、亲密或危险的形象。细看意味着区分这些作用。重要细节未必是隐藏符号，可信的外观也未必是不经安排的实录。",
+  "visitNote": "这些精选藏品涵盖了多个时期及不同的展区。请查阅国家美术馆最新的藏品记录，以了解具体的展出位置及借展情况。此处展示的是达·芬奇肖像画的正面；其背面则是同一件作品上独立的绘画表面。",
+  "locale": "zh",
+  "website": "https://www.nga.gov/",
+  "officialGuide": "https://www.nga.gov/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "列奥纳多的笔记探讨了面容、姿态、光影与风景。这些笔记让我们得以更深入地审视那幅早期肖像画背后的难题，并提出了一些问题，可供我们用来考察那些以不同方式解决类似难题的后世艺术家。"
+    }
+  ],
+  "works": [
+    {
+      "id": "1aae4f1a-3b50-4424-adfb-f59a734dfc36",
+      "title": "吉内芙拉·德·本奇",
+      "catalogueTitle": "Ginevra de’ Benci (obverse)",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "约 1474–1478 年",
+      "start": 1474,
+      "end": 1478,
+      "medium": "木板油画",
+      "accession": "1967.6.1.a",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/447765ab-4c2f-4b97-842b-16cf11f4d29d-76b8521a849e5023.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Ginevra_de%27_Benci_-_Google_Art_Project.jpg",
+      "credit": "Leonardo da Vinci, Ginevra de’ Benci (obverse). National Gallery of Art, Washington, DC. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nga.gov/artworks/50724-ginevra-de-benci-obverse",
+      "description": "浓密杜松紧贴吉内芙拉身后，肩膀另一侧的水面与树木却展开远景。达·芬奇让这张克制的脸同时面对两种环境。反差无需夸张动作，便加强了人物的存在。肖像的深度可以来自周围景物之间的关系，而不只来自复杂姿势。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "833366ed-a526-4cc9-8545-ca53f02640b7",
+      "title": "正在写信的女士",
+      "catalogueTitle": "A Lady Writing",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约 1665 年",
+      "start": 1665,
+      "end": 1665,
+      "medium": "布面油画",
+      "accession": "1962.10.1",
+      "image": "https://artlines.org/assets/artworks/imported/nga-study-a58a5b5389d1f211358d79db13fe3fab4921db694db78aa0e64f5640629fdd15.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46437.html",
+      "credit": "Johannes Vermeer. A Lady Writing. National Gallery of Art, Washington, 1962.10.1. NGA Open Access — unrestricted reuse; compressed study reproduction.",
+      "license": "NGA Open Access — unrestricted reuse",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46437.html",
+      "description": "女子转向观看者，仍握着悬停的笔。书写所需的一切保持原状，所以维米尔让这次相遇像一次打断。黄色外衣在暗墙前受光，但真正赋予姿势时间感的，是她与纸页尚未断开的联系。没有任何细节说明这次停顿会持续多久。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "f94101f1-01c4-454b-887f-6c31686a6100",
+      "title": "持天平的女子",
+      "catalogueTitle": "Woman Holding a Balance",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "约 1664 年",
+      "start": 1664,
+      "end": 1664,
+      "medium": "布面油画",
+      "accession": "1942.9.97",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/f94101f1-01c4-454b-887f-6c31686a6100-f84130f35cb37fb9.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.1236.html",
+      "credit": "Johannes Vermeer. Woman Holding a Balance. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.1236.html",
+      "description": "小天平仿佛没有重量，悬在桌上贵重物品的上方。女子身后的《最后的审判》把称量的问题扩大到道德衡量。维米尔让这些含义靠近，却没有把每件物品都变成旁边物件的注释。即使暂不考虑可能的寓意，手部动作的轻巧也值得细察。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "4031b7b7-c13f-4540-84ea-70b288937e05",
+      "title": "天使报喜",
+      "catalogueTitle": "The Annunciation",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "约 1434–1436 年",
+      "start": 1434,
+      "end": 1436,
+      "medium": "布面油画（由木板转移而来）",
+      "accession": "1937.1.39",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/ae43ffb2-e016-40cf-9cb1-020f3c89a2b0-69bfc8bb33022265.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Annunciation_-_Jan_van_Eyck_-_1434_-_NG_Wash_DC.jpg",
+      "credit": "Jan van Eyck, The Annunciation. National Gallery of Art, Washington, DC. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nga.gov/artworks/46-annunciation",
+      "description": "天使与玛利亚所在的教堂，其地板、铭文和远处建筑提供了超出两人相遇本身的信息。凡·艾克让细读成为虔敬观看的一部分：小元素把被宣告的事件与更大的基督教历史相连。狭长格式鼓励目光穿行建筑，而非停在人物交流上。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "77cc2faf-d049-4fc9-94f5-f127905bb5c3",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "布面油画",
+      "accession": "1998.74.5",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/77cc2faf-d049-4fc9-94f5-f127905bb5c3-380494bdbc53d9fd.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.106382.html",
+      "credit": "Vincent van Gogh. Self-Portrait. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.106382.html",
+      "description": "调色板与画笔说明梵高在工作，脸上及周围的笔触则展示工作的结果。工具与画法相互支持，却不是同一种证据。面孔在并不模仿光滑皮肤的笔迹之间仍然可读。画家的职业形象既通过画了什么建立，也通过怎样画建立。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "a373b1a6-eba6-4419-b56f-f8d26986fc18",
+      "title": "顺风",
+      "catalogueTitle": "Breezing Up (A Fair Wind)",
+      "artist": "Winslow Homer",
+      "artists": [
+        {
+          "name": "Winslow Homer",
+          "role": "primary",
+          "slug": "winslow-homer-q344838"
+        }
+      ],
+      "date": "1873-1876",
+      "start": 1873,
+      "end": 1876,
+      "medium": "布面油画",
+      "accession": "1943.13.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/a373b1a6-eba6-4419-b56f-f8d26986fc18-8cfb0174afafd006.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.30228.html",
+      "credit": "Winslow Homer. Breezing Up (A Fair Wind). National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.30228.html",
+      "description": "船身倾斜，男人与男孩们不同的姿势显示他们正适应船的运动。霍默让航行的愉快有了实际基础：平衡与留神。起伏的水面使船无法成为合影用的静止平台。人物怎样待在船上，与风正在怎样推动它密不可分。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "c8fecc43-d3c1-4926-9e4c-7a6c96bb6dd4",
+      "title": "沃森与鲨鱼",
+      "catalogueTitle": "Watson and the Shark",
+      "artist": "John Singleton Copley",
+      "artists": [
+        {
+          "name": "John Singleton Copley",
+          "role": "primary",
+          "slug": "john-singleton-copley-nga-1162"
+        }
+      ],
+      "date": "1778",
+      "start": 1778,
+      "end": 1778,
+      "medium": "布面油画",
+      "accession": "1963.6.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/c8fecc43-d3c1-4926-9e4c-7a6c96bb6dd4-1b60779e93698b1b.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46471.html",
+      "credit": "John Singleton Copley. Watson and the Shark. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46471.html",
+      "description": "救援依靠几项动作在适当时刻配合：伸向落水者、调整船的位置、应对鲨鱼。科普利用男人们的身体协调这些努力。远处滨水建筑交代地点，却无法提供眼前的援助。注意力集中在那个关键处：若干分开的手势必须成为一次成功的集体行动。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "e14233bb-33f2-4a5d-b079-4c79651cf8b0",
+      "title": "滑冰者：威廉·格兰特",
+      "catalogueTitle": "The Skater (Portrait of William Grant)",
+      "artist": "Gilbert Stuart",
+      "artists": [
+        {
+          "name": "Gilbert Stuart",
+          "role": "primary",
+          "slug": "gilbert-stuart-q41402"
+        }
+      ],
+      "date": "1782",
+      "start": 1782,
+      "end": 1782,
+      "medium": "布面油画",
+      "accession": "1950.18.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/e14233bb-33f2-4a5d-b079-4c79651cf8b0-63f89f6299d2807d.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.39729.html",
+      "credit": "Gilbert Stuart. The Skater (Portrait of William Grant). National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.39729.html",
+      "description": "交叉的双臂让格兰特上身从容，倾斜的腿却显示下方需要维持的平衡。斯图亚特把全身肖像用于表现一项运动中的技巧。远处滑冰者说明大家共享的活动，又不与主角争夺地位。人物的庄重来自控制得当的运动，而非站在那里任人观察的静止。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "0a56e524-4233-4273-aa30-d17701db4bfe",
+      "title": "人生之旅：童年",
+      "catalogueTitle": "The Voyage of Life: Childhood",
+      "artist": "Thomas Cole",
+      "artists": [
+        {
+          "name": "Thomas Cole",
+          "role": "primary",
+          "slug": "thomas-cole-q334001"
+        }
+      ],
+      "date": "1842",
+      "start": 1842,
+      "end": 1842,
+      "medium": "布面油画",
+      "accession": "1971.16.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/0a56e524-4233-4273-aa30-d17701db4bfe-2caad65606d74baf.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.52450.html",
+      "credit": "Thomas Cole. The Voyage of Life: Childhood. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.52450.html",
+      "description": "孩子坐在金色船中，却不掌舵。科尔把河流变成穿越寓意人生的道路，由天使陪伴它的开端。身后暗洞与前方繁茂明亮的世界，使方向具有了时间意义。一个风景元素在这里承担叙事工作：行舟成为表现年岁流逝的方法。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "ebfed71f-664e-5f17-ba32-2b4450eaa613",
+      "title": "众神的盛宴",
+      "catalogueTitle": "The Feast of the Gods",
+      "artist": "Giovanni Bellini, with later landscape alterations by Titian",
+      "artists": [
+        {
+          "name": "Giovanni Bellini",
+          "role": "primary",
+          "slug": "giovanni-bellini-q17169"
+        },
+        {
+          "name": "Titian",
+          "role": "later landscape alterations",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1514; landscape reworked 1529",
+      "start": 1514,
+      "end": 1529,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ebfed71f-664e-5f17-ba32-2b4450eaa613-4997fd19e8d10e06.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-bellini/the-feast-of-the-gods-1514",
+      "credit": "Giovanni Bellini. The Feast of the Gods. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nga.gov/collection/art-object-page.1138.html",
+      "description": "食物、容器与松散围坐的身体，使众神聚会像一顿户外用餐。风景本身还有修改的历史：贝利尼于1514年绘制作品，提香又在1529年重画环境。因此，表面上的统一出自不止一个时刻和一双手，提醒我们不要把每一块完成的画面都想成一次决定的结果。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "e6e03333-fe17-52d6-9ee7-caa38d8b26be",
+      "title": "拉奥孔",
+      "catalogueTitle": "Laocoon",
+      "artist": "El Greco",
+      "artists": [
+        {
+          "name": "El Greco",
+          "role": "primary",
+          "slug": "el-greco-q301"
+        }
+      ],
+      "date": "约 1610 年",
+      "start": 1610,
+      "end": 1610,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/e6e03333-fe17-52d6-9ee7-caa38d8b26be-ce85a1fb36f2ac6c.jpg",
+      "imageSource": "https://www.wikiart.org/en/el-greco/laocoon",
+      "credit": "El Greco. Laocoon. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/el-greco/laocoon",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/el-greco/laocoon",
+      "description": "与蛇搏斗的身体向不同方向拉扯。格列柯把古代题材放到一座类似托莱多的城市之前，不让传统古典背景带来舒适的距离感。人物上方翻涌的云继续着肢体的不稳定。失去平衡的威胁不只属于事件，也成为整片绘画环境的性质。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "aa1106bb-ce76-4c67-8dbe-f9fcb669340d",
+      "title": "杜伊勒里宫书房中的拿破仑",
+      "catalogueTitle": "The Emperor Napoleon in His Study at the Tuileries",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1812",
+      "start": 1812,
+      "end": 1812,
+      "medium": "布面油画",
+      "accession": "1961.9.15",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/aa1106bb-ce76-4c67-8dbe-f9fcb669340d-14b585a120c40034.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46114.html",
+      "credit": "Jacques-Louis David. The Emperor Napoleon in His Study at the Tuileries. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46114.html",
+      "description": "文件、时钟与蜡烛共同塑造一位专注行政职责的统治者。拿破仑制服上轻微的不整，也属于这套精心构造的说法。大卫并没有提供偶然窥见书房的一瞥。物件是在肖像关于勤勉的论述中发挥证据作用，并不能独立证明那一刻确实如画中所示发生。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "be33c714-660e-4198-877c-96b874051852",
+      "title": "日本桥",
+      "catalogueTitle": "The Japanese Footbridge",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "布面油画",
+      "accession": "1992.9.1",
+      "image": "https://artlines.org/assets/artworks/imported/nga-study-7bea36345c76e6d81ad10cb366d426152f0c0efcbbfbb88c4d7db3cb04bee420.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.74796.html",
+      "credit": "Claude Monet. The Japanese Footbridge. National Gallery of Art, Washington, 1992.9.1. NGA Open Access — unrestricted reuse; compressed study reproduction.",
+      "license": "NGA Open Access — unrestricted reuse",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.74796.html",
+      "description": "桥横跨池塘上部，却不通向遥远地平线。莫奈把观看留在花园内部，睡莲叶、植物倒影与岸边植被不断重叠。深度仍可感到，笔触却一次次把眼睛带回表面。桥提供了一个明确跨越两端的形状，帮助组织这片密集而难以区分的景色。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "3a11adb9-480e-4fe7-becb-b740daf99e3e",
+      "title": "持环女孩",
+      "catalogueTitle": "Girl with a Hoop",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "布面油画",
+      "accession": "1963.10.58",
+      "image": "https://artlines.org/assets/artworks/imported/nga-study-6800c88a5d0071451699a3c2a21669cd25935f1add1f2bf5ce3f8257062165ef.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46533.html",
+      "credit": "Pierre-Auguste Renoir. Girl with a Hoop. National Gallery of Art, Washington, 1963.10.58. NGA Open Access — unrestricted reuse; compressed study reproduction.",
+      "license": "NGA Open Access — unrestricted reuse",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46533.html",
+      "description": "圆环把女孩的手与地面连接，为站姿提供一种可能的活动。雷诺阿不必真正画出游戏进行中。花园破碎的光包围着足够静止、可以接受描绘的人物。玩具调和了两者：她是户外的某个具体孩子，但图像不必成为一个完整的小故事。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "380cf35b-5cb6-40c4-8b20-3792c564c809",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "木板油画",
+      "accession": "1963.10.150",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/380cf35b-5cb6-40c4-8b20-3792c564c809-1a11744a757ca0be.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46625.html",
+      "credit": "Paul Gauguin. Self-Portrait. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46625.html",
+      "description": "光环、蛇与苹果让相互冲突的宗教联想聚在高更头部周围。红黄平面不让这幅自画像落进一间普通房间。符号是塑造自我形象的手段，而非直接坦白。画面说明艺术家如何选择让公众形象变得复杂，并不提供对他道德品格毫无中介的说明。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "bb6f7a67-359f-482a-a6b2-efdb91cd8785",
+      "title": "铁路",
+      "catalogueTitle": "The Railway",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "布面油画",
+      "accession": "1956.10.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/bb6f7a67-359f-482a-a6b2-efdb91cd8785-eb03dae704181827.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.43624.html",
+      "credit": "Édouard Manet. The Railway. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.43624.html",
+      "description": "女子向画外看，孩子则转向栏杆与蒸汽。马奈把注意力分成两路：一边是提供给观看者的相遇，一边是栏杆外被挡住的活动。书与狗让坐着的女子处于较安静的状态。铁路的重要性在于它如何阻碍看见，场景并不需要一辆清楚画出的机车。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "bf420f51-62db-42a0-b062-c55a3866923c",
+      "title": "蓝色天鹅绒布上的大朵木兰",
+      "catalogueTitle": "Giant Magnolias on a Blue Velvet Cloth",
+      "artist": "Martin Johnson Heade",
+      "artists": [
+        {
+          "name": "Martin Johnson Heade",
+          "role": "primary",
+          "slug": "martin-johnson-heade-nga-1381"
+        }
+      ],
+      "date": "约 1890 年",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "1996.14.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/bf420f51-62db-42a0-b062-c55a3866923c-a73c65988d65d83e.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.93464.html",
+      "credit": "Martin Johnson Heade. Giant Magnolias on a Blue Velvet Cloth. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.93464.html",
+      "description": "木兰花躺在厚重织物上，而不是长在花园里。海德通过与深蓝褶皱的对比，让白花瓣显得有实体感。叶片和深色花茎帮助分开花朵，又保持整体紧凑。环境的改变，使花可以作为有重量、有表面的物件来观看，而不仅是风景的一部分。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "e000e90d-89b1-4442-bb2f-7524e903bc00",
+      "title": "蓝色扶手椅上的小女孩",
+      "catalogueTitle": "Little Girl in a Blue Armchair",
+      "artist": "Mary Cassatt",
+      "artists": [
+        {
+          "name": "Mary Cassatt",
+          "role": "primary",
+          "slug": "mary-cassatt-q173223"
+        }
+      ],
+      "date": "1878",
+      "start": 1878,
+      "end": 1878,
+      "medium": "布面油画",
+      "accession": "1983.1.18",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/e000e90d-89b1-4442-bb2f-7524e903bc00-84ccee49b95009bf.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.61368.html",
+      "credit": "Mary Cassatt. Little Girl in a Blue Armchair. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.61368.html",
+      "description": "孩子摊坐在宽大的家具里，她只是暂时占据它，这一点十分明显。卡萨特没有把身体不太雅观的自在修整成正式肖像姿势。带纹样的蓝色椅面填满房间大部分，与小人物争夺目光。这种不平衡给了童年一个具体尺度：成人环境仍远大于其中休息的身体。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "74dd8036-8ed0-4893-bf13-9cd15edf5529",
+      "title": "旧小提琴",
+      "catalogueTitle": "The Old Violin",
+      "artist": "John Frederick Peto",
+      "artists": [
+        {
+          "name": "John Frederick Peto",
+          "role": "primary",
+          "slug": "john-frederick-peto-nga-1780"
+        }
+      ],
+      "date": "约 1890 年",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "1974.19.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/74dd8036-8ed0-4893-bf13-9cd15edf5529-7ca79f15d32c98fe.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.54191.html",
+      "credit": "John Frederick Peto. The Old Violin. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.54191.html",
+      "description": "佩托画磨损，与画小提琴似乎真实的厚度一样仔细。破旧乐谱、有使用痕迹的木面和阴影，让平面颜料装成门上的不同物件。这种错觉依靠日常使用的证据，而非完好无损的表面。我们完全可以明知这是画，却仍逐一检查那些使它看起来不像画的细节。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "63b7c043-6395-4281-84df-64aeb0d35d2c",
+      "title": "天南星之四",
+      "catalogueTitle": "Jack-in-the-Pulpit No. IV",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "布面油画",
+      "accession": "1987.58.3",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/63b7c043-6395-4281-84df-64aeb0d35d2c-3b24697db1db4463.jpg",
+      "imageSource": "https://www.wikiart.org/en/georgia-o-keeffe/jack-in-the-pulpit-no-iv",
+      "credit": "Georgia O'Keeffe. Jack-in-the-Pulpit No. IV. WikiArt source label: Georgia O'Keeffe Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georgia-o-keeffe/jack-in-the-pulpit-no-iv",
+      "license": "Georgia O'Keeffe Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nga.gov/collection/art-object-page.70179.html",
+      "description": "欧姬芙把花放大，直到深色褶皱和一道窄长的浅色形体几乎填满可用空间。弧形色带把目光引向中央开口，使植物结构在这种尺度上接近抽象。植物不必消失，这些形状也可以取得独立性。识别植物与仔细观看颜色能够同时进行。",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    }
+  ],
+  "context": {
+    "start": 1434,
+    "end": 1930
+  },
+  "closingSections": [
+    {
+      "title": "一个细节究竟证明了什么？",
+      "paragraphs": [
+        "笔可以说明一项活动，时钟可以帮助塑造勤勉形象，但两者都不会自动揭示私人心境。比较这些作品时，请保留这个区别。这份选择不是当前展厅路线；作者归属更新、展出状态与实际参观信息，请查阅博物馆记录。"
+      ]
+    }
+  ]
+}

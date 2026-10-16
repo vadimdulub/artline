@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log/slog"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -17,20 +18,22 @@ import (
 	"github.com/vadimdulub/artline/apps/server/internal/catalog"
 	"github.com/vadimdulub/artline/apps/server/internal/config"
 	"github.com/vadimdulub/artline/apps/server/internal/events"
+	"github.com/vadimdulub/artline/apps/server/internal/exhibitions"
 	"github.com/vadimdulub/artline/apps/server/internal/member"
 )
 
 type API struct {
-	config    config.Config
-	db        *pgxpool.Pool
-	repo      *catalog.Repository
-	bookRepo  *books.Repository
-	eventRepo *events.Repository
-	atlasRepo *atlas.Repository
+	config         config.Config
+	db             *pgxpool.Pool
+	repo           *catalog.Repository
+	bookRepo       *books.Repository
+	eventRepo      *events.Repository
+	exhibitionRepo *exhibitions.Repository
+	atlasRepo      *atlas.Repository
 }
 
 func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
-	api := &API{config: cfg, db: db, repo: catalog.NewRepository(db), bookRepo: books.NewRepository(db), eventRepo: events.NewRepository(db), atlasRepo: atlas.NewRepository(db)}
+	api := &API{config: cfg, db: db, repo: catalog.NewRepository(db), bookRepo: books.NewRepository(db), eventRepo: events.NewRepository(db), exhibitionRepo: exhibitions.NewRepository(db), atlasRepo: atlas.NewRepository(db)}
 	mux := http.NewServeMux()
 	memberOrigin := cfg.AuthOrigin
 	if cfg.LocalDebug {
@@ -44,9 +47,27 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 		bookmarks = member.NewLocalBookmarks(bookmarkSQL.Lookup)
 	}
 	members.RegisterBookmarks(mux, bookmarks)
+	var studies member.StudyStore = member.PostgresStudies{DB: db}
+	if cfg.LocalDebug {
+		studies = member.NewLocalStudies()
+	}
+	members.RegisterStudies(mux, studies, member.PostgresStudyCatalogue{DB: db}, bookmarks)
+	studioSQL := member.PostgresMuseumStudio{DB: db}
+	var studio member.MuseumStudioStore = studioSQL
+	if cfg.LocalDebug {
+		studio = member.NewLocalMuseumStudio(studioSQL)
+	}
+	var museumBlobs member.MuseumBlobStore
+	if cfg.LocalDebug {
+		museumBlobs = member.NewMemoryMuseumBlobs()
+	} else if bucket := os.Getenv("ARTLINE_MUSEUM_UPLOAD_BUCKET"); bucket != "" {
+		museumBlobs = member.GCSMuseumBlobs{Bucket: bucket}
+	}
+	members.RegisterMuseumStudio(mux, studio, member.MuseumStudioOptions{Catalogue: member.PostgresMuseumArtworks{DB: db}, Blobs: museumBlobs})
 	mux.HandleFunc("GET /health", api.health)
 	mux.HandleFunc("GET /ready", api.ready)
 	mux.HandleFunc("GET /api/v1/timeline", api.timeline)
+	mux.HandleFunc("GET /api/v1/guides", api.guides)
 	mux.HandleFunc("GET /api/v1/books", api.books)
 	mux.HandleFunc("GET /api/v1/books/authors", api.bookAuthors)
 	mux.HandleFunc("GET /api/v1/books/facets", api.bookFacets)
@@ -54,6 +75,10 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /api/v1/events", api.events)
 	mux.HandleFunc("GET /api/v1/events/facets", api.eventFacets)
 	mux.HandleFunc("GET /api/v1/events/{id}", api.event)
+	mux.HandleFunc("GET /api/v1/exhibitions", api.exhibitions)
+	mux.HandleFunc("GET /api/v1/exhibitions/{id}", api.exhibition)
+	mux.HandleFunc("GET /api/v1/exhibitions/{id}/{action}", api.exhibitionSubresource)
+	mux.HandleFunc("GET /api/v1/exhibitions/artworks/{id}/exhibitions", api.exhibitionArtworkAppearances)
 	mux.HandleFunc("GET /api/v1/atlas", api.atlasTimeline)
 	mux.HandleFunc("GET /api/v1/atlas/presets", api.atlasPresets)
 	mux.HandleFunc("GET /api/v1/atlas/geography", api.atlasGeography)
@@ -65,6 +90,7 @@ func New(cfg config.Config, db *pgxpool.Pool) http.Handler {
 	mux.HandleFunc("GET /api/v1/artworks", api.artworkDirectory)
 	mux.HandleFunc("GET /api/v1/artists/{slug}", api.artist)
 	mux.HandleFunc("GET /api/v1/artists/{slug}/identity", api.artistIdentity)
+	mux.HandleFunc("GET /api/v1/artists/{slug}/connections", api.artistConnections)
 	mux.HandleFunc("GET /api/v1/seo/sitemaps", api.sitemapShards)
 	mux.HandleFunc("GET /api/v1/seo/sitemaps/{kind}/{prefix}", api.sitemapEntries)
 	mux.HandleFunc("GET /api/v1/seo/artists", api.discoveryArtists)
@@ -125,7 +151,11 @@ func (api *API) timeline(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
 	choices := map[string][]string{}
 	for key, valid := range map[string]func(string) bool{"country": countryPattern.MatchString, "movement": museumSlugPattern.MatchString, "painter": validArtistSlug, "work_type": validWorkType} {
-		choices[key], err = parseChoices(q[key], valid, key == "country")
+		if key == "painter" {
+			choices[key], err = parseArtistChoices(q[key])
+		} else {
+			choices[key], err = parseChoices(q[key], valid, key == "country")
+		}
 		if err != nil {
 			writeError(w, 400, "INVALID_FILTER", err.Error())
 			return

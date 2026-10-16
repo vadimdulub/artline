@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "museum-modern-art-new-york",
+  "museum": "Museum of Modern Art",
+  "city": "ニューヨーク",
+  "country": "米国",
+  "title": "ニューヨーク近代美術館：名作",
+  "subtitle": "身体、物、絵の中の空間。その決まりを変える20作品。",
+  "introduction": "スープ缶が32回繰り返される。ベッドが壁に立てかけられる。時計は柔らかくなり、ゴム手袋は古典彫刻の頭部と同じ場所に置かれ、ソファはジャングルに現れる。どれほど変わっても、日常の物だとはわかる。むしろ、何なのかわかるからこそ変化が目立つ。\n\nニューヨーク近代美術館のこの選集では、見慣れたものを揺さぶるいくつかの方法をたどる。形を変える画家もいれば、組み合わせ、大きさ、用途を変える作家もいる。認識できる物をすべて取り払い、色や絵具の跡で視線を導く場合もある。一つの到達点へ向かう順番ではない。比較すれば、便利な「近代美術」という名前の下に、どれほど異なる課題があるかが見えてくる。",
+  "visitNote": "この選集は、コレクションの様々な部分を網羅しています。現在の展示場所や貸出状況については、MoMAの作品ページをご確認ください。1909年に描かれたマティスの『ダンス（I）』は初期の作品であり、より鮮やかな色彩の1910年版はエルミタージュ美術館の所蔵となっています。",
+  "locale": "ja",
+  "website": "https://www.moma.org/",
+  "officialGuide": "https://www.moma.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Pablo Picasso: A Retrospective",
+      "author": "Edited by William Rubin",
+      "url": "https://www.moma.org/calendar/exhibitions/1818",
+      "access": "出版物・英語：デジタル化されたカタログ",
+      "note": "MoMAのピカソ回顧展のデジタル・カタログでは、『アビニヨンの娘たち』が習作や後期の作品と並べて掲載されています。それらを比較することで、この作品がいかに従来の人物画のあり方から逸脱しているかが理解しやすくなります。"
+    }
+  ],
+  "works": [
+    {
+      "id": "79e302c4-73f0-4264-a48d-9378ada06e7c",
+      "title": "星月夜",
+      "catalogueTitle": "The Starry Night",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "サン＝レミ、1889年6月",
+      "start": 1889,
+      "end": 1889,
+      "medium": "キャンバスに油彩",
+      "accession": "472.1941",
+      "image": "https://artlines.org/assets/artworks/wikiart/c66409a6-9da7-43b8-a60d-16b3da75dc97-d871d685c9d4e6b8.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889",
+      "credit": "Vincent van Gogh. The Starry Night. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79802",
+      "description": "渦巻く空の下で、街の占める面積は比較的小さい。ゴッホは曲線と輪の反復で離れた星を結び、その間の暗がり自体にも動きを与える。高い糸杉が手前と上方の空をつなぐ。筆触をすべて作者の人生の症状とみなさなくても、この空間の配分から絵の強さを検討できる。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "180786a9-bce9-41bd-8124-5c0247350dd4",
+      "title": "アヴィニョンの娘たち",
+      "catalogueTitle": "Les Demoiselles d'Avignon",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "パリ、1907年6月～7月",
+      "start": 1907,
+      "end": 1907,
+      "medium": "キャンバスに油彩",
+      "accession": "333.1939",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/180786a9-bce9-41bd-8124-5c0247350dd4-44ab5e6ae2e42bfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/the-girls-of-avignon-1907",
+      "credit": "Pablo Picasso. The girls of Avignon. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/the-girls-of-avignon-1907",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79766",
+      "description": "五人がこちらに向き合うが、その身体は一続きの部屋にも、一貫した表現方法にも収まらない。角ばった面が肌と周囲の空間を横切り、顔の描き方も大きく異なる。ピカソは空間の整合性を崩しながら、人物群の対面的な存在感を保っている。女性たちが何者かを特定しても、その両立しない見せ方が解消するわけではない。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "12c329d4-ee25-4ba3-bd19-f41514ee4ae1",
+      "title": "記憶の固執",
+      "catalogueTitle": "The Persistence of Memory",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1931",
+      "start": 1931,
+      "end": 1931,
+      "medium": "キャンバスに油彩",
+      "accession": "162.1934",
+      "image": "https://artlines.org/assets/artworks/wikiart/a2277e7a-09a7-4e5a-a2c5-5830b359e74a-f6c75b535175bb53.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/the-persistence-of-memory-1931",
+      "credit": "Salvador Dalí. The Persistence of Memory. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79018",
+      "description": "ダリは柔らかい時計に正確な縁と触れられそうな表面を与えた。何かはすぐわかるのに、普通の時計として使うことはできない。遠い崖はもっと硬い外見を保ち、対比を明確にする。不確かさはぼんやりした描写から生じるのではない。見慣れた物が、その用途を支えていた物理的な性質を失うことから生まれる。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "917d5d65-d66c-4b31-b6bd-823784ad7b89",
+      "title": "ブロードウェイ・ブギウギ",
+      "catalogueTitle": "Broadway Boogie Woogie",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1942–43",
+      "start": 1942,
+      "end": 1943,
+      "medium": "キャンバスに油彩",
+      "accession": "73.1943",
+      "image": "https://artlines.org/assets/artworks/wikiart/6ec0ea73-5346-4054-b362-43c124e0982f-6b181b5c96bda99f.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/broadway-boogie-woogie-1943",
+      "credit": "Piet Mondrian. Broadway Boogie Woogie. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78682",
+      "description": "小さな色の正方形が黄色い格子を遮り、線を連続した境界として働かせない。モンドリアンは直角の秩序を保ちつつ、その内部に落ち着かない脈動を作った。題名は都市と音楽のリズムを結びつけるが、街路を文字どおり描く必要はない。動かない面でも、中断の間隔によって動きを示すことができる。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "bae779a1-3800-4a56-bda6-120b3a3c48e6",
+      "title": "眠るジプシー",
+      "catalogueTitle": "The Sleeping Gypsy",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "キャンバスに油彩",
+      "accession": "646.1939",
+      "image": "https://artlines.org/assets/artworks/wikiart/8e065bed-40d7-4867-907b-6d5ae5d4ae08-bf63aa6b892f6d8b.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-sleeping-gypsy-1897",
+      "credit": "Henri Rousseau. The Sleeping Gypsy. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/80172",
+      "description": "ライオンは眠る女性に身を寄せるが、襲いかかるところまでは進まない。そばの楽器と器は、開けた景色の中で明瞭に見える。ルソーは、近さが危険なのか、好奇心なのか、それとも説明されない別の何かなのか、決まらない地点で場面を止める。題名の呼称は画家の時代の言葉であり、この場面を民族誌的な記録にするものではない。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "e183c786-40c6-49ba-bbfa-2e7303587601",
+      "title": "夢",
+      "catalogueTitle": "The Dream",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "キャンバスに油彩",
+      "accession": "252.1954",
+      "image": "https://artlines.org/assets/artworks/wikiart/0ce63345-7ca8-4bfd-84b2-ac23a419cb97-4705e803eeac949f.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-dream-1910",
+      "credit": "Henri Rousseau. The Dream. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79277",
+      "description": "ソファがあるため、このジャングルを手を加えずに見た自然の光景とは考えられない。ルソーは見慣れた室内の家具を、大きな葉、動物、音楽家の間に置く。それぞれは明確に観察できても、全体は普通の説明を受けつけない。細部をもっともらしい地理にまとめる必要がないからこそ、創作された絵としての説得力が保たれている。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "f063e2c6-65b0-4503-9389-008b668dbd88",
+      "title": "キャンベルのスープ缶",
+      "catalogueTitle": "Campbell's Soup Cans",
+      "artist": "Andy Warhol",
+      "artists": [
+        {
+          "name": "Andy Warhol",
+          "role": "primary",
+          "slug": "andy-warhol-nga-1966"
+        }
+      ],
+      "date": "1962",
+      "start": 1962,
+      "end": 1962,
+      "medium": "キャンバスにアクリルおよびメタリック・エナメル・ペイント、32パネル",
+      "accession": "476.1996.1-32",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/f063e2c6-65b0-4503-9389-008b668dbd88-8f4527938b82f485.jpg",
+      "imageSource": "https://www.wikiart.org/en/andy-warhol/campbells-soup-cans-1962",
+      "credit": "Andy Warhol. Campbell's Soup Cans. WikiArt source label: Andy Warhol Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/andy-warhol/campbells-soup-cans-1962",
+      "license": "Andy Warhol Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79809",
+      "description": "共通のデザインが繰り返されると、スープの種類の違いが目立つ。印刷された商品画像に似ているが、32枚のカンヴァスは手で描かれたものだ。ウォーホルは最初の展示で、食料品のように棚に並べた。反復は模様を生むだけではない。一個の缶をどう表すかから、ほぼ同じ商品がどんな小さな差を持つかへと、問いを変える。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "5b2452fe-0923-569b-beda-ab80c4de6fb6",
+      "title": "ワン：ナンバー31、1950年",
+      "catalogueTitle": "One: Number 31",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "キャンバスにエナメル、油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5b2452fe-0923-569b-beda-ab80c4de6fb6-085da1cccc5006f0.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/one-number-31-1950",
+      "credit": "One: Number 31. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/one-number-31-1950",
+      "description": "絵具の輪や糸は、中心となる人物へ集まらない。ポロックは広い画面の至る所に、交差、途切れ、重なる層を残している。それらを透かして描かれた物を見るのではなく、絵具がカンヴァス上を通った跡を追うことになる。通常の主題がないから構造もないのではない。構造は、筆跡同士の関係へ移っている。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "ef467ddd-4a7f-4f01-aba1-36ea6fadce73",
+      "title": "私と村",
+      "catalogueTitle": "I and the Village",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "キャンバスに油彩",
+      "accession": "146.1945",
+      "image": "https://artlines.org/assets/artworks/wikiart/26992f70-c738-43c7-80b0-30d6a0321447-a947303256c960fa.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/i-and-the-village-1911",
+      "credit": "Marc Chagall. I and the Village. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78984",
+      "description": "緑の顔の男と動物が、小さな家々や人物の上で目を合わせる。シャガールは異なる大きさを共存させ、一つの測定可能な空間には収まらない領域を、円や斜線で結んだ。二つの大きな顔のやり取りが、位置のずれた世界に親しい中心を作る。村はパノラマとして再現されなくても、連想を通じて存在できる。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "3b4f7340-31d1-5ccd-a61a-6b4ba2ce51ae",
+      "title": "愛の歌",
+      "catalogueTitle": "The Song of Love",
+      "artist": "Giorgio de Chirico",
+      "artists": [
+        {
+          "name": "Giorgio de Chirico",
+          "role": "primary",
+          "slug": "giorgio-de-chirico-q156622"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "キャンバスに油彩",
+      "accession": "950.1979",
+      "image": "https://artlines.org/assets/artworks/imported/greek-images-20260920/3b4f7340-31d1-5ccd-a61a-6b4ba2ce51ae-c53bb93b0a1eb72b.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgio-de-chirico/the-song-of-love-1914",
+      "credit": "Giorgio de Chirico; WikiArt; Public domain (WikiArt label). Source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/giorgio-de-chirico/the-song-of-love-1914",
+      "source": "https://www.wikidata.org/wiki/Q1154410",
+      "description": "古典的な頭部、ゴム手袋、緑の球が並ぶ。遠近法の仕組みはわかりやすいのに、なぜこれらがあるのかはわからない。デ・キリコは、同じ場所に集める実際的な理由を示さない。遠くの列車は日常の別の動きだが、手前の物を説明しない。物が明瞭だからこそ、謎は曖昧な夢の雰囲気に溶けず、具体的なまま残る。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "91ff7bef-1db0-4260-bc47-204478d54e57",
+      "title": "都市の勃興",
+      "catalogueTitle": "The City Rises",
+      "artist": "Umberto Boccioni",
+      "artists": [
+        {
+          "name": "Umberto Boccioni",
+          "role": "primary",
+          "slug": "umberto-boccioni-q152797"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "キャンバスに油彩",
+      "accession": "507.1951",
+      "image": "https://artlines.org/assets/artworks/wikiart/b185afea-af53-47a3-b883-9730818e6aea-94b10b1278d89727.jpg",
+      "imageSource": "https://www.wikiart.org/en/umberto-boccioni/the-city-rises-1910",
+      "credit": "Umberto Boccioni. The City Rises. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79865",
+      "description": "赤い馬の力みが、労働者と建設現場を囲む筆触にまで広がる。ボッチョーニは動く身体と周囲の都市活動を分けにくくしている。もっと説明的な眺めなら一つずつの仕事を区別する箇所で、縁がぼやける。都市は完成した建物の輪郭ではなく、身体の負荷によって表される。建設は、まだ進行中の行為なのだ。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "065c902f-70fa-5ad2-892b-93aea67fd36a",
+      "title": "さえずる機械",
+      "catalogueTitle": "Twittering Machine",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/065c902f-70fa-5ad2-892b-93aea67fd36a-fa77918c871aa625.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/twittering-machine-1922",
+      "credit": "Paul Klee. Twittering Machine. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-klee/twittering-machine-1922",
+      "description": "クレーの鳥のような姿には、クランクで動かす共通の仕組みが付いている。細く別々の身体は滑稽で壊れやすそうだが、装置は鳴き声や動きを外から操作できそうに見せる。この絵が実際に働く発明品になる必要はない。数本の接続線だけで、生き物と機械的な制御が同じ小さな構造に収まる。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "3a6769a0-2a45-45b6-ba5b-08715ad74a8e",
+      "title": "抽象画、青",
+      "catalogueTitle": "Abstract Painting (Blue)",
+      "artist": "Ad Reinhardt",
+      "artists": [
+        {
+          "name": "Ad Reinhardt",
+          "role": "primary",
+          "slug": "ad-reinhardt-nga-1821"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "キャンバスに油彩",
+      "accession": "427.1981",
+      "image": "https://artlines.org/assets/artworks/wikiart/1c598fb2-fbaa-4cdf-8278-bb719d04464a-b1b1be8fbab3c8f3.jpg",
+      "imageSource": "https://www.wikiart.org/en/ad-reinhardt/abstract-painting-blue",
+      "credit": "Ad Reinhardt. Abstract Painting (Blue). Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79684",
+      "description": "初めは青が一様に見えるかもしれない。次第に、控えめな長方形が暗い部分や緑がかった部分として分かれてくる。重要さを知らせる強い輪郭はない。ラインハートは、いつものように主題を探す行為を、隣り合う色の識別へ変えてゆく。複製は近い色調を変えることがあるため、画面上の単純さだけで作品を判断しきらない方がよい。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "1bc033f9-467c-406a-b657-6eb220444524",
+      "title": "ダンス（I）",
+      "catalogueTitle": "Dance (I)",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "パリ、アンヴァリッド大通り、1909年初頭",
+      "start": 1909,
+      "end": 1909,
+      "medium": "キャンバスに油彩",
+      "accession": "201.1963",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/7bb3b987-c4a3-4882-950e-da38a9bcecb7-09ac3d304f8a4d55.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Henri_Matisse,_1909,_La_danse_(I),_Museum_of_Modern_Art.jpg",
+      "credit": "Henri Matisse. Dance (I). Image credit: Henri Matisse; Source credit: MoMA. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.moma.org/collection/works/79124",
+      "description": "伸ばす手は、輪を閉じるのにかろうじて届こうとしている。マティスは背景を簡潔にし、その小さな隙間と身体間の不均等な間隔に動きを担わせた。五人は機械的に反復する模様にはならない。つながるには努力が必要であり、円は完成した標章として置かれるのではなく、動きながら保たれているように見える。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "6347d238-ae88-4ce5-8b99-5b931a2bb8d1",
+      "title": "役者の仮面",
+      "catalogueTitle": "Actor's Mask",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "ボードにマウントされたキャンバスに油彩",
+      "accession": "616.1967",
+      "image": "https://artlines.org/assets/artworks/wikiart/7c0a3502-7a45-41f7-b6b5-47b9504fd3c9-d4d97135c9a58ac8.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/actors-mask",
+      "credit": "Paul Klee. Actor's Mask. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/80094",
+      "description": "細い区切りが、緑の顔を組み立てられた面へ変える。目と口があれば顔だとわかるが、すぐ読める表情に落ち着くわけではない。クレーは、人のような像を二つの分類の間に置いた。表情を読む顔であり、身につける物でもある。題名は演技を意識させるが、特定の役や物語までは与えない。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "b2d9802c-fdc7-4c98-a8d3-ba0742eff7b8",
+      "title": "アガパンサス",
+      "catalogueTitle": "Agapanthus",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1914-26",
+      "start": 1914,
+      "end": 1926,
+      "medium": "キャンバスに油彩",
+      "accession": "527.1992",
+      "image": "https://artlines.org/assets/artworks/wikiart/db197f02-64a3-41f9-97d4-657e3749e69d-8791bc41eff8f214.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-monet/agapanthus-1917",
+      "credit": "Claude Monet. Agapanthus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79922",
+      "description": "近くの花と映り込む植物は、ともにモネの長く重なる筆触で描かれる。植物、水、遠さを、明瞭な輪郭がいつも分けてくれるわけではない。一枚一枚の葉の境を探すより、筆の扱いが変わる場所を追う必要がある。重なる跡はその探索を画面の表面に引き留め、庭を見渡せる場所というより、色が密に満ちた領域にしている。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "fd663d33-7cd2-4e0e-804d-2b7a3c3ec04f",
+      "title": "苦悶",
+      "catalogueTitle": "Agony",
+      "artist": "Arshile Gorky",
+      "artists": [
+        {
+          "name": "Arshile Gorky",
+          "role": "primary",
+          "slug": "arshile-gorky-q165648"
+        }
+      ],
+      "date": "1947",
+      "start": 1947,
+      "end": 1947,
+      "medium": "キャンバスに油彩",
+      "accession": "88.1950",
+      "image": "https://artlines.org/assets/artworks/wikiart/41c29d36-1948-4c35-8295-6a31e8fc9e3f-e7f995a9d4d3b5a1.jpg",
+      "imageSource": "https://www.wikiart.org/en/arshile-gorky/agony",
+      "credit": "Arshile Gorky. Agony. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78740",
+      "description": "ゴーキーの細い輪郭は、認識できる身体や断片に近づきながら、完全には定まらない。赤と黒の形が、茶色がかった地に不均等に集まる。題名は痛みを連想させるが、一度解読すれば終わるような出来事の挿絵ではない。別様にも読める形の中に、身体を思わせるものが残り続ける。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "ba953d19-0397-4503-b5e3-4305d6234674",
+      "title": "アメリカの風景",
+      "catalogueTitle": "American Landscape",
+      "artist": "Charles Sheeler",
+      "artists": [
+        {
+          "name": "Charles Sheeler",
+          "role": "primary",
+          "slug": "charles-sheeler-nga-2745"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "キャンバスに油彩",
+      "accession": "166.1934",
+      "image": "https://artlines.org/assets/artworks/wikiart/db781429-94c4-4b6d-8ead-a601eefff009-dfebd8683b48fdfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/charles-sheeler/american-landscape-1930",
+      "credit": "Charles Sheeler. American Landscape. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79032",
+      "description": "静かな水面と明確に配置された建物が、シーラーの工場群に珍しい落ち着きを与える。小さな舟は産業設備の大きさを測る目安だ。ボッチョーニの建設現場とは異なり、操業に伴う負荷は抑えられている。機械は間隔を整えた風景の中に収まり、仕事の場所を描くことと、そこで行われる仕事を描くことの違いが見えてくる。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "4d267ebc-9b74-4e0a-a4c1-174769b9180b",
+      "title": "水浴する女",
+      "catalogueTitle": "Bather",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "カヴァリエール、1909年夏",
+      "start": 1909,
+      "end": 1909,
+      "medium": "キャンバスに油彩",
+      "accession": "17.1936",
+      "image": "https://artlines.org/assets/artworks/wikiart/a029a998-1688-42af-8e6c-5292898cafb3-43dd50dabd30e0d1.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/nude",
+      "credit": "Henri Matisse. Bather. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78464",
+      "description": "背を向けた姿と大きな手足は、詳しい解剖学的な陰影がなくても身体の重さを保つ。マティスはその役割の多くを、確かな輪郭と広い青や緑の面に任せた。細かな説明が減っても、身体の存在感は失われない。何が省かれたかを数えるだけでなく、何が保たれているかによって、この簡略化を評価できる。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "9d119008-d8c9-4906-84f9-25f0d490a8dd",
+      "title": "ベッド",
+      "catalogueTitle": "Bed",
+      "artist": "Robert Rauschenberg",
+      "artists": [
+        {
+          "name": "Robert Rauschenberg",
+          "role": "primary",
+          "slug": "robert-rauschenberg-q164358"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "木製支持体上の枕、キルト、シーツに油彩および鉛筆",
+      "accession": "79.1989",
+      "image": "https://artlines.org/assets/artworks/wikiart/0699b16e-f5e4-44c7-bbdb-6b21ce0092de-986cfc243a56cc42.jpg",
+      "imageSource": "https://www.wikiart.org/en/robert-rauschenberg/bed",
+      "credit": "Robert Rauschenberg. Bed. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78712",
+      "description": "枕、シーツ、キルトは、描かれた模造品ではなく本物の寝具だ。ラウシェンバーグはそこに油絵具と鉛筆で跡を加え、木製の支持体に垂直に取り付けた。家庭用品だとはわかるが、新しい向きでは普通の使い方ができない。家具か絵画かを、どちらか一方に安心して決めることはできず、二つの分類が互いに干渉し続ける。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    }
+  ],
+  "context": {
+    "start": 1889,
+    "end": 1962
+  },
+  "closingSections": [
+    {
+      "title": "違いをそのまま見ておく",
+      "paragraphs": [
+        "ウォーホルは物の画像を繰り返し、ラウシェンバーグは物自体を使う。ダリは物理的な振る舞いを、デ・キリコは組み合わせを変える。すべてを「奇妙」と呼ぶより、これらの操作を区別した方が考えることは増える。展示情報には美術館の最新記録を使ってほしい。この選集は作品と考え方をつなぐもので、特定の展示室での鑑賞を保証するものではない。"
+      ]
+    }
+  ]
+}

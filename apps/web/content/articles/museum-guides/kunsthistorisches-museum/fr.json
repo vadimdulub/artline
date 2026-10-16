@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "kunsthistorisches-museum",
+  "museum": "Kunsthistorisches Museum",
+  "city": "Vienne",
+  "country": "Autriche",
+  "title": "Musée d’histoire de l’art de Vienne : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres changent l'échelle du regard, des mondes animés de Bruegel aux mains presque immobiles d'une reine.",
+  "introduction": "La tour de Babel est démesurée pour ses ouvriers ; la robe d'une enfant royale semble presque inverser les proportions du corps qu'elle contient. Ailleurs, une tête de portrait se compose de créatures marines. L'échelle modifie sans cesse ce que l'on reconnaît d'abord.\n\nCette sélection rapproche ce phénomène des tableaux de foule et des rencontres concentrées sur une personne. Bruegel déploie tout un monde social à travers de petites actions. Holbein accorde à un modèle réservé une attention tout aussi soutenue. La différence ne sépare pas détails importants et accessoires, mais plusieurs façons de les organiser : un personnage peut porter seul un tableau ou prendre sens parmi les nombreux corps alentour.",
+  "visitNote": "Cette sélection est issue de la collection de peintures du musée. Les prêts, les opérations de conservation et les réaménagements des salles peuvent en affecter l'accès ; il est donc conseillé de vérifier les informations actualisées avant de planifier une visite pour voir une œuvre en particulier. L'ordre de présentation repose sur des comparaisons visuelles plutôt que sur un parcours à travers le bâtiment.",
+  "locale": "fr",
+  "website": "https://www.khm.at",
+  "officialGuide": "https://www.khm.at",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les observations de Léonard sur les corps, la perspective et la lumière offrent des pistes pour examiner les compositions présentées ici. Elles s'avèrent particulièrement utiles au regard des portraits et des architectures imaginaires, sans pour autant impliquer un lien direct avec chacun des peintres."
+    }
+  ],
+  "works": [
+    {
+      "id": "bd221a44-5717-54ff-877a-7f98f596410e",
+      "title": "La Tour de Babel",
+      "catalogueTitle": "The Tower of Babel",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1563",
+      "start": 1563,
+      "end": 1563,
+      "medium": "",
+      "accession": "GG_1026",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/bd221a44-5717-54ff-877a-7f98f596410e-24b7144a75450047.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_der_Turmbau_zu_Babel.JPG",
+      "credit": "Pieter Bruegel the Elder. The Tower of Babel. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_der_Turmbau_zu_Babel.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q15293656",
+      "description": "L'énorme construction circulaire écrase les ouvriers et les visiteurs qui en rendent l'échelle compréhensible. Les murs exposent plusieurs étapes du chantier, compliquant sa régularité apparente. Bruegel donne au projet une ambition monumentale et d'innombrables tâches pratiques. Passer de la tour entière aux minuscules activités transforme un bâtiment unique en une immense accumulation de travail.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "b6ef61be-344d-54af-a81d-914a4171364e",
+      "title": "Les Chasseurs dans la neige",
+      "catalogueTitle": "The Hunters in the Snow",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1565",
+      "start": 1565,
+      "end": 1565,
+      "medium": "",
+      "accession": "GG_1838",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/b6ef61be-344d-54af-a81d-914a4171364e-55692b85fd47d794.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder,_Hunters_in_the_Snow_(Winter).jpg",
+      "credit": "Pieter Bruegel the Elder. The Hunters in the Snow. Image credit: Dudva; Own work. https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder,_Hunters_in_the_Snow_(Winter).jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q500985",
+      "description": "Chasseurs et chiens descendent depuis les arbres sombres et rapprochés vers une vallée animée de patineurs. Leur retour ne constitue qu'une partie de la vie hivernale. Le point de vue abrupt permet de voir à la fois la fatigue physique tout près et l'activité beaucoup plus bas. Bruegel donne au lointain ses propres événements, au lieu de le laisser se dissoudre en décor.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "e351217e-a0c0-590d-8acb-abc9495a7277",
+      "title": "La Noce paysanne",
+      "catalogueTitle": "The Peasant Wedding",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "vers 1568",
+      "start": 1568,
+      "end": 1568,
+      "medium": "",
+      "accession": "GG_1027",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/e351217e-a0c0-590d-8acb-abc9495a7277-e95f20eb3a119764.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Le_repas_de_noce_Pieter_Brueghel_l%27Ancien.jpg",
+      "credit": "Pieter Bruegel the Elder. The Peasant Wedding. Image credit: Yelkrokoyade; Own work. https://commons.wikimedia.org/wiki/File:Le_repas_de_noce_Pieter_Brueghel_l%27Ancien.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q603751",
+      "description": "La mariée reste relativement calme tandis que les serveurs transportent la nourriture dans la grange bondée. Les bols répétés et les mains au travail rythment le repas. Bruegel rend visible la coordination pratique nécessaire à la fête : il faut porter, se pencher, recevoir et manger. Le rassemblement tient donc autant au travail de nourrir les convives qu'à son centre cérémoniel.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "792e52d5-0449-5624-bd5d-6fe07792e828",
+      "title": "L'Art de la peinture",
+      "catalogueTitle": "The Art of Painting",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "vers 1666–1668",
+      "start": 1666,
+      "end": 1668,
+      "medium": "",
+      "accession": "GG_9128",
+      "image": "https://artlines.org/assets/artworks/wikiart/792e52d5-0449-5624-bd5d-6fe07792e828-c0ad14ad15e2491d.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-vermeer/the-art-of-painting",
+      "credit": "Johannes Vermeer. The Art of Painting. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q588695",
+      "description": "Le dos du peintre cache son visage, tandis que le rideau ouvre sur sa pièce soigneusement arrangée. Modèle, carrelage, lustre et carte murale occupent des distances mesurées. Vermeer fait de la représentation un sujet qu'il faut lui-même représenter. Le spectateur voit un peintre regarder, mais pas depuis la position de ce peintre.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "15453c42-4431-5a2b-bb66-b2f8e9917455",
+      "title": "Le Couronnement d'épines",
+      "catalogueTitle": "The Crowning with Thorns",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1602",
+      "start": 1602,
+      "end": 1602,
+      "medium": "",
+      "accession": "GG_307",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1117094-df6f93f0a64415e6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Crowning_with_Thorns-Caravaggio_(1602).jpg",
+      "credit": "Caravaggio. The Crowning with Thorns. Image credit: Caravaggio. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1117094",
+      "description": "Des tiges pressent vers la tête baissée du Christ ; un homme en armure observe tout près. Le contraste entre peau exposée et métal protecteur répartit inégalement la vulnérabilité dans ce groupe serré. Caravage laisse peu d'espace libre autour de l'acte. Le corps protégé du témoin prend part au sens de la scène, même sans participer à l'effort d'infliger la violence.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "151b2381-bf9d-503e-acaa-32dea2368a35",
+      "title": "Le Retour du troupeau",
+      "catalogueTitle": "The Return of the Herd",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1565",
+      "start": 1565,
+      "end": 1565,
+      "medium": "",
+      "accession": "GG_1018",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/151b2381-bf9d-503e-acaa-32dea2368a35-93f4e52568d0832b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:La_rentr%C3%A9e_des_troupeaux_Pieter_Brueghel_l%27Ancien.jpg",
+      "credit": "Pieter Bruegel the Elder. The Return of the Herd. Image credit: Pieter Brueghel the Elder; Own work , Yelkrokoyade , Taken in 13 July 2012, 09:56:21. https://commons.wikimedia.org/wiki/File:La_rentr%C3%A9e_des_troupeaux_Pieter_Brueghel_l%27Ancien.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q698254",
+      "description": "Les bovins avancent ensemble au premier plan, tandis que collines et eau s'étendent bien au-delà de leur trajet immédiat. Leurs corps chauds se détachent d'un lointain plus froid sous un ciel changeant. Bruegel lie le travail saisonnier à une direction commune. Le vaste paysage donne à cette tâche ses conditions, sans la réduire à un cortège décoratif secondaire.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "2c04a856-9f34-596b-bc4c-8a9094f12d88",
+      "title": "Le Combat de Carnaval et Carême",
+      "catalogueTitle": "The Fight Between Carnival and Lent",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1559",
+      "start": 1559,
+      "end": 1559,
+      "medium": "",
+      "accession": "GG_1016",
+      "image": "https://artlines.org/assets/artworks/wikiart/2c04a856-9f34-596b-bc4c-8a9094f12d88-4a40b2691b2d9226.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-fight-between-carnival-and-lent-1559-1",
+      "credit": "Pieter Bruegel the Elder. The Fight Between Carnival and Lent. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q689236",
+      "description": "Les groupes opposés au premier plan appartiennent à une place déjà pleine de nourriture, de jeux et de petites rencontres. Leur affrontement n'épuise pas l'activité de la ville. Bruegel donne aux coutumes rivales un environnement commun, où les comportements alentour compliquent l'opposition. Le tableau s'enrichit quand l'œil quitte le duel apparemment central pour suivre les occupations qui se poursuivent autour.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "8ad72f6a-ec02-5a30-a9cc-152f115298f1",
+      "title": "Autoportrait dans un miroir convexe",
+      "catalogueTitle": "Self-portrait in a Convex Mirror",
+      "artist": "Parmigianino",
+      "artists": [
+        {
+          "name": "Parmigianino",
+          "role": "primary",
+          "slug": "parmigianino-q9348"
+        }
+      ],
+      "date": "vers 1523–1524",
+      "start": 1523,
+      "end": 1524,
+      "medium": "",
+      "accession": "GG_286",
+      "image": "https://artlines.org/assets/artworks/wikiart/8ad72f6a-ec02-5a30-a9cc-152f115298f1-e17638a9dbaf2774.jpg",
+      "imageSource": "https://www.wikiart.org/en/parmigianino/self-portrait-at-the-mirror",
+      "credit": "Parmigianino. Self-portrait in a Convex Mirror. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q699319",
+      "description": "La main du premier plan s'agrandit, tandis que la pièce se courbe au bord du cercle. Le Parmesan conserve la déformation du miroir convexe au lieu de la corriger en une ressemblance ordinaire. Le visage reste reconnaissable dans un espace dont les proportions dépendent d'un instrument optique. Le portrait montre à la fois une personne et les conditions particulières qui la rendent visible.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "b48a8fe7-3916-55f6-87d1-0d83d3b04fed",
+      "title": "Les Trois Philosophes",
+      "catalogueTitle": "The Three Philosophers",
+      "artist": "Giorgione",
+      "artists": [
+        {
+          "name": "Giorgione",
+          "role": "primary",
+          "slug": "giorgione-q8459"
+        }
+      ],
+      "date": "1505–1509",
+      "start": 1505,
+      "end": 1509,
+      "medium": "",
+      "accession": "GG_111",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/b48a8fe7-3916-55f6-87d1-0d83d3b04fed-e91c21fa55d6a5c3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Giorgione-The_Three_Philosophers-Kunsthistorisches_Museum.jpg",
+      "credit": "Giorgione. The Three Philosophers. Image credit: Giorgione; Yair Haklai Taken in 28 March 2010. https://commons.wikimedia.org/wiki/File:Giorgione-The_Three_Philosophers-Kunsthistorisches_Museum.jpg. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://www.wikidata.org/wiki/Q877191",
+      "description": "Vêtements et positions distinguent les trois hommes, mais leur relation ne se résout pas en une action évidente. La figure assise se tourne vers le rocher sombre, tandis qu'un paysage s'ouvre au-delà. Giorgione donne une importance inhabituelle aux intervalles entre les corps et le décor. Cette incertitude mérite de subsister : inventer une conversation précise fermerait des possibilités laissées ouvertes par l'image.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "cf540ef8-e479-5228-90c8-0c6e279558ff",
+      "title": "Jeux d'enfants",
+      "catalogueTitle": "Children's Games",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1560",
+      "start": 1560,
+      "end": 1560,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cf540ef8-e479-5228-90c8-0c6e279558ff-55c696a7a7a6d3de.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/children-s-games-1560",
+      "credit": "Pieter Bruegel the Elder. Children's Games. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pieter-bruegel-the-elder/children-s-games-1560",
+      "description": "Courses, équilibres et luttes occupent des portions successives du sol urbain. Chaque groupe dispose ses corps à sa manière ; leur répétition transforme le jeu en un vaste monde social. Bruegel permet une lecture locale ou étendue à toute la surface. Les règles apparaissent dans ce que les corps font ensemble, sans narrateur unique pour expliquer chaque jeu.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "9a917f30-f60e-5df0-a04e-52a3c4e81a7d",
+      "title": "Saint Sébastien",
+      "catalogueTitle": "Saint Sebastian",
+      "artist": "Andrea Mantegna",
+      "artists": [
+        {
+          "name": "Andrea Mantegna",
+          "role": "primary",
+          "slug": "andrea-mantegna-q5681"
+        }
+      ],
+      "date": "vers 1457–1459",
+      "start": 1457,
+      "end": 1459,
+      "medium": "",
+      "accession": "GG_301",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/9a917f30-f60e-5df0-a04e-52a3c4e81a7d-97740852040eed9d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1459_Mantegna_Heiliger_Sebastian_Kunsthistorisches_Museum_Wienanagoria.jpg",
+      "credit": "Andrea Mantegna. Saint Sebastian. Image credit: Andrea Mantegna; anagoria. https://commons.wikimedia.org/wiki/File:1459_Mantegna_Heiliger_Sebastian_Kunsthistorisches_Museum_Wienanagoria.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q3947948",
+      "description": "Les flèches marquent la chair claire à côté de la pierre classique dure. Mantegna distingue fortement les matériaux, tandis que des verticales répétées maintiennent debout la figure liée. Les ruines proposent une autre analogie corporelle : l'architecture aussi peut être endommagée sans perdre sa forme. Le paysage ouvre un lointain, mais la rencontre immédiate reste celle de la peau vulnérable et des surfaces sculptées.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "5bcba78c-431f-56d8-a007-da0df5b8cc44",
+      "title": "Jacopo Strada",
+      "catalogueTitle": "Portrait of Jacopo Strada",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1567–1568",
+      "start": 1567,
+      "end": 1568,
+      "medium": "",
+      "accession": "GG_81",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/5bcba78c-431f-56d8-a007-da0df5b8cc44-7a1e421a892fc951.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Tizian,_Jacopo_Strada.JPG",
+      "credit": "Titian. Portrait of Jacopo Strada. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Tizian,_Jacopo_Strada.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q698993",
+      "description": "Strada se penche vers son interlocuteur, une petite sculpture à portée de main, au milieu de livres et d'objets de collection. Titien fait de la manipulation une composante de son identité publique. Savoir et possession se présentent par l'activité, pas seulement par des accessoires alignés derrière un corps immobile. Le mouvement en avant donne à cet environnement encombré une direction humaine.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "6dfa46f4-826b-512a-b3ee-32e5aca55186",
+      "title": "L'Adoration de la Trinité",
+      "catalogueTitle": "Adoration of the Trinity",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1511",
+      "start": 1511,
+      "end": 1511,
+      "medium": "",
+      "accession": "GG_838",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/6dfa46f4-826b-512a-b3ee-32e5aca55186-1f21a3dbc166ff99.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Albrecht_D%C3%BCrer,_Allerheiligenbild.JPG",
+      "credit": "Albrecht Dürer. Adoration of the Trinity. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Albrecht_D%C3%BCrer,_Allerheiligenbild.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q688870",
+      "description": "Des niveaux distincts permettent de parcourir la grande assemblée. Les figures célestes établissent le centre supérieur, les fidèles se groupent en dessous et un paysage étroit ouvre un registre terrestre plus lointain. Dürer structure la dévotion collective sans faire perdre à chaque visage son individualité. Les grandes divisions donnent l'ordre dans lequel un regard rapproché découvre des personnes distinctes.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "e4e5ea2c-36ca-54e1-94b6-202d06fc82b2",
+      "title": "Jane Seymour",
+      "catalogueTitle": "Jane Seymour",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "1536–1537",
+      "start": 1536,
+      "end": 1537,
+      "medium": "",
+      "accession": "GG_881",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/e4e5ea2c-36ca-54e1-94b6-202d06fc82b2-fbdad0a3dab4480a.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/jane-seymour-1536",
+      "credit": "Hans Holbein the Younger. Jane Seymour. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q20091565",
+      "description": "Bijoux, étoffe et coiffe donnent au rang de la reine une forme matérielle précise. Ses mains jointes et son visage retenu bougent peu : les petits écarts prennent donc davantage d'importance. Holbein rend le costume riche d'informations sans le laisser remplacer le modèle. Le portrait tient dans un équilibre soigneux entre surfaces exactes et présence humaine maîtrisée.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "6c69abf2-1fba-5f30-a262-5fd123e48eef",
+      "title": "Hercule et Omphale",
+      "catalogueTitle": "Herakles and Omphale",
+      "artist": "Bartholomeus Spranger",
+      "artists": [
+        {
+          "name": "Bartholomeus Spranger",
+          "role": "primary",
+          "slug": "bartholomeus-spranger-q447682"
+        }
+      ],
+      "date": "vers 1585",
+      "start": 1585,
+      "end": 1585,
+      "medium": "Huile sur cuivre",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/6c69abf2-1fba-5f30-a262-5fd123e48eef-ae591c87c3b84dc9.jpg",
+      "imageSource": "https://www.wikiart.org/en/bartholomaus-spranger/herakles-and-omphale-1585",
+      "credit": "Bartholomeus Spranger. Herakles and Omphale. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/bartholomaus-spranger/herakles-and-omphale-1585",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/bartholomaus-spranger/herakles-and-omphale-1585",
+      "description": "Les attributs échangés modifient le rapport attendu entre Hercule assis et la figure féminine en torsion. Spranger rend le renversement visible par les objets comme par les poses. Les mouvements élaborés distinguent les corps superposés sous les lourdes draperies, tandis que l'échange des rôles complique la hiérarchie héroïque familière. Le mythe permet de redistribuer les signes du pouvoir.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "5b4ef5f8-fe06-56ff-b6e6-ae14669b47c2",
+      "title": "Le Château de Schönbrunn vu du jardin",
+      "catalogueTitle": "Imperial summer palace of Schönbrunn, garden façade",
+      "artist": "Bernardo Bellotto",
+      "artists": [
+        {
+          "name": "Bernardo Bellotto",
+          "role": "primary",
+          "slug": "bernardo-bellotto-q164688"
+        }
+      ],
+      "date": "1758",
+      "start": 1758,
+      "end": 1758,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/5b4ef5f8-fe06-56ff-b6e6-ae14669b47c2-1586004a5f1f0009.jpg",
+      "imageSource": "https://www.wikiart.org/en/bernardo-bellotto/imperial-summer-palace-of-sch%C3%B6nbrunn-garden-fa%C3%A7ade-1758",
+      "credit": "Bernardo Bellotto. Imperial summer palace of Schönbrunn, garden façade. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/bernardo-bellotto/imperial-summer-palace-of-sch%C3%B6nbrunn-garden-fa%C3%A7ade-1758",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/bernardo-bellotto/imperial-summer-palace-of-sch%C3%B6nbrunn-garden-fa%C3%A7ade-1758",
+      "description": "La longue façade fournit une horizontale stable au-delà du jardin régulier. De petits visiteurs dispersent le mouvement dans les allées et mesurent le bâtiment sans contester sa domination. La précision architecturale de Bellotto accueille une vie sociale. Le palais demeure imposant, mais les figures montrent comment on peut occuper ses abords, au lieu d'en faire une élévation entièrement inhabitée.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "65cf76b1-f776-59b7-b6f8-dc9dbc3a8a38",
+      "title": "L'Infante Marguerite à cinq ans",
+      "catalogueTitle": "Portrait of the Infanta Margarita Aged Five",
+      "artist": "Diego Velázquez",
+      "artists": [
+        {
+          "name": "Diego Velázquez",
+          "role": "primary",
+          "slug": "diego-velazquez-q297"
+        }
+      ],
+      "date": "1656",
+      "start": 1656,
+      "end": 1656,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/65cf76b1-f776-59b7-b6f8-dc9dbc3a8a38-51c3a954661b59d7.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-velazquez/portrait-of-the-infanta-margarita-aged-five-1656",
+      "credit": "Diego Velázquez. Portrait of the Infanta Margarita Aged Five. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/diego-velazquez/portrait-of-the-infanta-margarita-aged-five-1656",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-velazquez/portrait-of-the-infanta-margarita-aged-five-1656",
+      "description": "La robe occupe beaucoup plus d'espace que la tête et les mains nues de l'enfant. Sa large géométrie fait de la représentation royale une condition corporelle qu'elle doit habiter. Les bordures brillantes et une fleur conduisent le regard sur le costume, tandis que le petit visage garde son échelle individuelle. Vélasquez montre l'enfance dans l'appareil visuel du rang, et non à l'extérieur.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "2e2b7cc7-d460-5f09-9249-22b99403dbd6",
+      "title": "La Danse paysanne",
+      "catalogueTitle": "The Peasant Dance",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "vers 1568",
+      "start": 1568,
+      "end": 1568,
+      "medium": "",
+      "accession": "GG_1059",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/2e2b7cc7-d460-5f09-9249-22b99403dbd6-092207217f808926.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_Bauerntanz.JPG",
+      "credit": "Pieter Bruegel the Elder. The Peasant Dance. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Kunsthistorisches_Museum_Wien,_Pieter_Bruegel_d.%C3%84.,_Bauerntanz.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q95562",
+      "description": "Pieds levés et bras balancés rapprochent la fête jusqu'à rendre l'effort visible. Les danseurs du premier plan ont un poids différent des minuscules patineurs de la vallée hivernale de Bruegel. Leurs mouvements saisis en cours remplissent la rue avec le joueur de cornemuse. S'approcher fait passer le loisir collectif d'un vaste motif aux exigences de chaque corps.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "5b930782-95a3-59c3-97b3-abea7376fa52",
+      "title": "L'Eau",
+      "catalogueTitle": "Water",
+      "artist": "Giuseppe Arcimboldo",
+      "artists": [
+        {
+          "name": "Giuseppe Arcimboldo",
+          "role": "primary",
+          "slug": "giuseppe-arcimboldo-q7751"
+        }
+      ],
+      "date": "1566",
+      "start": 1566,
+      "end": 1566,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5b930782-95a3-59c3-97b3-abea7376fa52-e7d4fbfd0ab0f65a.jpg",
+      "imageSource": "https://www.wikiart.org/en/giuseppe-arcimboldo/water-1566",
+      "credit": "Giuseppe Arcimboldo. Water. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giuseppe-arcimboldo/water-1566",
+      "description": "Poissons et coquillages restent identifiables après avoir formé un profil humain. Arcimboldo fait dépendre l'image de deux échelles de reconnaissance incompatibles. Se concentrer sur une créature défait le visage ; reculer le reconstitue. La composition fonctionne par cette alternance répétée, non par une solution finale qui rendrait l'une des deux lectures inutile.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    },
+    {
+      "id": "ae09e00a-8c22-5798-9f07-5afd30ca28a7",
+      "title": "Portrait de jeune femme, dite Laura",
+      "catalogueTitle": "Portrait of a Young Woman (Laura)",
+      "artist": "Giorgione",
+      "artists": [
+        {
+          "name": "Giorgione",
+          "role": "primary",
+          "slug": "giorgione-q8459"
+        }
+      ],
+      "date": "1506",
+      "start": 1506,
+      "end": 1506,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ae09e00a-8c22-5798-9f07-5afd30ca28a7-f0be90c12e7616c4.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/portrait-of-a-young-woman-laura-1506",
+      "credit": "Portrait of a Young Woman (Laura). WikiArt; Giorgione. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giorgione/portrait-of-a-young-woman-laura-1506",
+      "description": "Laurier, vêtement doublé de fourrure et tissu clair sont décrits avec plus de certitude que l'identité du modèle ne peut être établie. Son mouvement et l'habit qu'elle tient rapprochent ces surfaces de la peau nue. Giorgione concentre les rapports de matières sans livrer une biographie complète. Le nom traditionnel doit préserver cette incertitude, non la dissimuler sous une identification prétendument confirmée.",
+      "importance": "",
+      "museum": "Kunsthistorisches Museum"
+    }
+  ],
+  "context": {
+    "start": 1457,
+    "end": 1758
+  },
+  "closingSections": [
+    {
+      "title": "Passer de l'ensemble à un détail",
+      "paragraphs": [
+        "Essayez avec les ouvriers de Babel, un serveur de la noce ou une créature marine de *L'Eau*. Revenir à l'ensemble devrait changer le rôle du détail, pas le faire disparaître. Les œuvres appartiennent aux collections du musée, mais cette suite ne garantit pas un parcours dans les salles : vérifiez l'accrochage et l'accès actuels avant la visite."
+      ]
+    }
+  ]
+}

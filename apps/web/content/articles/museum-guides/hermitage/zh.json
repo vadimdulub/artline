@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "hermitage",
+  "museum": "State Hermitage Museum",
+  "city": "圣彼得堡",
+  "country": "俄罗斯",
+  "title": "国立艾尔米塔什博物馆：杰作",
+  "subtitle": "握手、拥抱、目光与间隔，在二十件作品中组织起人与人的关系。",
+  "introduction": "马蒂斯的《舞蹈》中，伸出的手尚未相接，环形因此没有成为封闭的图案。《音乐》里，各自分开的身体则无须接触，也能组成一群。这两幅画尤其适合比较人物群体怎样成立。本选目较早的作品以更细微的方式建立关系：婴儿伸手够书，女子向看不见的光源伸手，孩子从母亲怀里望向画外。\n\n先追踪这些联系，再把画面拆成一个个人物。身体之间的空间，可能与表情同样重要。由此也能跨越风格进行比较，而不把相似之处误当作直接影响的证据。",
+  "visitNote": "冬宫博物馆的藏品分布于多座建筑内，其中现代欧洲绘画主要陈列于总参谋部大楼。此处展示的是精选藏品，而非单一宫殿内的参观路线。请查阅具体作品信息，以了解其当前所在地及外借情况。《站立的佐拉》（Zorah Standing）的单色复制品无法呈现原作的色彩。",
+  "locale": "zh",
+  "website": "https://hermitagemuseum.org",
+  "officialGuide": "https://hermitagemuseum.org",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "列奥纳多关于姿态、光线和人体的笔记，为审视此处展出的早期画作提供了切入视角。不妨将这些关注点与马蒂斯笔下高度简化的形体进行比较，但不必将这本书视为对每一件作品的逐一解读。"
+    }
+  ],
+  "works": [
+    {
+      "id": "27829f32-2334-5bdd-b01c-ae3245c2c991",
+      "title": "达娜厄",
+      "catalogueTitle": "Danae",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1643",
+      "start": 1643,
+      "end": 1643,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/27829f32-2334-5bdd-b01c-ae3245c2c991-26a81d4b3703c03d.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/danae-1643",
+      "credit": "Rembrandt van Rijn. Danae. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/danae-1643",
+      "description": "伸出的手迎向光，而非一位被完整画出的来客。伦勃朗让神话相遇中的期待可见，却把另一参与者留在眼前场景之外。厚重帘幕围住床，转动的身体又将这一围合打开。回应的原因尚未完全显现，双方的关系就已通过回应建立。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "e7cd7bc6-93ef-5125-ab77-6375044aff2a",
+      "title": "鲁特琴演奏者",
+      "catalogueTitle": "The Lute Player",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1596",
+      "start": 1596,
+      "end": 1596,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e7cd7bc6-93ef-5125-ab77-6375044aff2a-5579d82bb1c07dc4.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/the-lute-player-1",
+      "credit": "Caravaggio. The Lute Player. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/the-lute-player-1",
+      "description": "打开的乐谱、花与水果摆在乐手面前的近处。卡拉瓦乔为演奏安排具体环境，让音乐、食物和生长之物共处有限空间。鲁特琴圆润的形状与亮色衬衣，把乐手带近观看者，物品却仍各自值得留意。画面聚合了一个瞬间，而其中每样东西能够维持的时间并不相同。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "58234189-3689-5b86-a5db-138118b04300",
+      "title": "舞蹈（二）",
+      "catalogueTitle": "Dance (II)",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikiart-500-painters-20261011/58234189-3689-5b86-a5db-138118b04300-ecd0ad1bf371f618.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/dance-ii-1910",
+      "credit": "Henri Matisse. Dance (II). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-matisse/dance-ii-1910",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.hermitagemuseum.org/explore/buildings/rooms/room_1890",
+      "description": "五个人围成环，伸出的手却留有明显断处。空隙让连接成为仍在努力完成的动作。马蒂斯将环境简化为绿地和蓝天，因此红橙色身体承担全部行动，无须周围故事辅助。圆圈之所以保持动感，正因为它尚未完全可靠地闭合。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "a05f7c82-d682-55a2-9dc4-368bac202333",
+      "title": "音乐",
+      "catalogueTitle": "Music",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/a05f7c82-d682-55a2-9dc4-368bac202333-d6b69c1bfa5079e2.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/music-1910",
+      "credit": "Music. WikiArt; Henri Matisse. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-matisse/music-1910",
+      "description": "敞开的间隔将人物分开。反复出现的红色身体和有分寸的距离，在绿与蓝的环境中确立共同活动。与配对作品《舞蹈》比较可见，在一起不一定要持续触碰。这里不同的姿势与乐器，让参与者在同样简化的绘画世界中仍可逐一区分。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "7a065480-2c56-56a9-a82b-a3eea2498aea",
+      "title": "利塔圣母",
+      "catalogueTitle": "Madonna Litta (Madonna and the Child)",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "1490",
+      "start": 1490,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7a065480-2c56-56a9-a82b-a3eea2498aea-ede23e51bd8d4505.jpg",
+      "imageSource": "https://www.wikiart.org/en/leonardo-da-vinci/madonna-litta-madonna-and-the-child",
+      "credit": "Leonardo da Vinci. Madonna Litta (Madonna and the Child). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/leonardo-da-vinci/madonna-litta-madonna-and-the-child",
+      "description": "两处开口通向远方蓝色，前面的玛利亚低下头，与孩子的身体组成紧密的一组。艾尔米塔什将作品列为达·芬奇所作，另一些研究则认为其工作室发挥了更大作用；归属仍有争议。哺乳关系通过相连轮廓，以及与远景的清楚分隔组织起来。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "c7b5de81-8b67-59bb-8c51-1108f06ab6e8",
+      "title": "科内斯塔比莱圣母",
+      "catalogueTitle": "The Madonna Conestabile",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "1502",
+      "start": 1502,
+      "end": 1502,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c7b5de81-8b67-59bb-8c51-1108f06ab6e8-2a8ed85b68184252.jpg",
+      "imageSource": "https://www.wikiart.org/en/raphael/the-madonna-conestabile-1502",
+      "credit": "Raphael. The Madonna Conestabile. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/raphael/the-madonna-conestabile-1502",
+      "description": "孩子伸手向书，使两人有了共同关注的物品。拉斐尔把这个小动作安排在圆形画幅里，却没有让身体僵硬对称。曲线将人物与边界联系，风景则围绕他们延续。从外缘到婴儿伸出的手，画幅形式始终在塑造构图。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "359eea42-1aea-5208-9659-920dfa8e134e",
+      "title": "壁炉前的圣母子",
+      "catalogueTitle": "Madonna and Child Before a Fireplace",
+      "artist": "Robert Campin",
+      "artists": [
+        {
+          "name": "Robert Campin",
+          "role": "primary",
+          "slug": "robert-campin-q80442"
+        }
+      ],
+      "date": "1430",
+      "start": 1430,
+      "end": 1430,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/359eea42-1aea-5208-9659-920dfa8e134e-819069eef02415ea.jpg",
+      "imageSource": "https://www.wikiart.org/en/robert-campin/madonna-and-child-before-a-fireplace-1430",
+      "credit": "Robert Campin. Madonna and Child Before a Fireplace. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/robert-campin/madonna-and-child-before-a-fireplace-1430",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/robert-campin/madonna-and-child-before-a-fireplace-1430",
+      "description": "炉火、窗户和小件设施，组成一间可以支持日常活动的房屋。康平把神圣母子放在这些具体物件之中，同时保留两人紧密关系的独特性。家庭环境不必仅被视为象征背景。家具也使空间实际可用，把宗教中的相遇带进一间可以理解的室内。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "2792b8a6-3857-57e8-8133-76542f7298ed",
+      "title": "协和广场",
+      "catalogueTitle": "Place de la Concorde",
+      "artist": "Edgar Degas",
+      "artists": [
+        {
+          "name": "Edgar Degas",
+          "role": "primary",
+          "slug": "edgar-degas-q46373"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2792b8a6-3857-57e8-8133-76542f7298ed-67452a740a266d4b.jpg",
+      "imageSource": "https://www.wikiart.org/en/edgar-degas/place-de-la-concorde-1875",
+      "credit": "Edgar Degas. Place de la Concorde. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edgar-degas/place-de-la-concorde-1875",
+      "description": "人物从宽阔广场边缘经过，画框将其中一些身体突然截断。德加没有采用传统家庭群像那种稳定、围合的安排。男子、女孩与狗的位置不齐，使相遇显得偶然。公共空间在他们周围继续展开，而不是专门用来容纳这一组关系。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "468cd15d-76c9-543a-8ac5-3854d378ac66",
+      "title": "蓝色风景",
+      "catalogueTitle": "Blue Landscape",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/468cd15d-76c9-543a-8ac5-3854d378ac66-938fbe067b0cb46d.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-cezanne/blue-landscape",
+      "credit": "Blue Landscape. WikiArt; Paul Cézanne. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-cezanne/blue-landscape",
+      "description": "蓝紫色枝叶聚在较亮的开口周围，建筑与地形只部分明确。即使轮廓消失，色块之间的关系仍使塞尚的风景可以辨认。视线需要判断一团形体在哪里结束，另一层距离从哪里开始。画面的色块排列与所描绘的空间，同时可见，彼此牵制又互相连接。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "1a32a5a6-4b41-5f85-aad8-0ebb46c7d9ee",
+      "title": "一组农舍",
+      "catalogueTitle": "A Group of Cottages",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/1a32a5a6-4b41-5f85-aad8-0ebb46c7d9ee-5dc7066f5d8b94f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/a-group-of-cottages-1890",
+      "credit": "A Group of Cottages. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/a-group-of-cottages-1890",
+      "description": "笔触从屋顶转到墙面、再到前景田地时，不断改变方向。梵高使聚在一起的房屋结构清楚，同时让整个表面保持活跃。每种材料都有自己的笔迹纹样。村庄借由笔触连成整体，而这些可见差异也说明了它们构成的形体。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "ecea76d8-af7f-5c23-9a77-c0e1e4c9e5f1",
+      "title": "有房屋与耕作者的风景",
+      "catalogueTitle": "Landscape with House and Ploughman",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ecea76d8-af7f-5c23-9a77-c0e1e4c9e5f1-19a2963872329488.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/landscape-with-house-and-ploughman-1889",
+      "credit": "Vincent van Gogh. Landscape with House and Ploughman. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/landscape-with-house-and-ploughman-1889",
+      "description": "小小劳动者为耕作山坡提供人的尺度，却没有成为视觉中心。黄、红色带引导目光越过被农业塑造的土地。梵高让劳动属于风景更大的组织。耕作者之所以重要，部分正因为正在耕的地远远超出他身体的范围。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "2d20e851-e017-5eca-b17f-3b776d7cc89c",
+      "title": "早餐",
+      "catalogueTitle": "Breakfast",
+      "artist": "Diego Velázquez",
+      "artists": [
+        {
+          "name": "Diego Velázquez",
+          "role": "primary",
+          "slug": "diego-velazquez-q297"
+        }
+      ],
+      "date": "约 1618 年",
+      "start": 1618,
+      "end": 1618,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/2d20e851-e017-5eca-b17f-3b776d7cc89c-9657237373daa55a.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-velazquez/breakfast",
+      "credit": "Diego Velázquez. Breakfast. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/diego-velazquez/breakfast",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-velazquez/breakfast",
+      "description": "举起的容器把站立者与桌边两人连起来。委拉斯开兹让面包、器皿和布参与端送与进食。手势将用餐变成相互配合的活动。物品说明这群人在狭小空间中能一起做什么，也让视线在站着的人和坐着的两人之间往返。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "f6033f6b-d487-5cd4-b1b5-b5015b0da468",
+      "title": "大卫与乌利亚",
+      "catalogueTitle": "David and Uriah",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1665",
+      "start": 1665,
+      "end": 1665,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/f6033f6b-d487-5cd4-b1b5-b5015b0da468-e7c3d428da7c3732.jpg",
+      "imageSource": "https://www.wikiart.org/en/rembrandt/david-and-uriah-1665",
+      "credit": "David and Uriah. WikiArt; Rembrandt van Rijn. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rembrandt/david-and-uriah-1665",
+      "description": "一位衣着华丽的人受到照明，另一位留在阴影中，较难看清。贴在胸前的手，以克制的动作吸引大量注意。伦勃朗呈现紧张相遇，却没有展示题名故事的每个阶段。两人的可见程度不等，值得保留为问题，而不是用自信的心理描述填满空白。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "99457b57-2ef8-51c8-a11d-a4270be941f3",
+      "title": "家庭肖像",
+      "catalogueTitle": "Family Portrait",
+      "artist": "Anthony van Dyck",
+      "artists": [
+        {
+          "name": "Anthony van Dyck",
+          "role": "primary",
+          "slug": "anthony-van-dyck-q150679"
+        }
+      ],
+      "date": "1621",
+      "start": 1621,
+      "end": 1621,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/99457b57-2ef8-51c8-a11d-a4270be941f3-17f084f5000b3bb1.jpg",
+      "imageSource": "https://www.wikiart.org/en/anthony-van-dyck/family-portrait",
+      "credit": "Family Portrait. WikiArt; Anthony van Dyck. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anthony-van-dyck/family-portrait",
+      "description": "成人倾身向孩子，使家庭联系具有身体形态。凡·戴克变化头部高低与目光方向。浅色双手和衣领在深色衣服中说明接触的位置。不同表情在群体内部仍然清楚，而整体的连贯正来自这些倾斜姿势与接触点。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "ea4588f6-0a70-52f3-8c30-5270770a5192",
+      "title": "安娜·斯特罗加诺娃男爵夫人与儿子谢尔盖",
+      "catalogueTitle": "Baroness Anna Sergeevna Stroganova and Her Son Sergey",
+      "artist": "Élisabeth Vigée Le Brun",
+      "artists": [
+        {
+          "name": "Élisabeth Vigée Le Brun",
+          "role": "primary",
+          "slug": "elisabeth-vigee-le-brun-q213163"
+        }
+      ],
+      "date": "1793",
+      "start": 1793,
+      "end": 1793,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/ea4588f6-0a70-52f3-8c30-5270770a5192-4ad6cb3a00926c34.jpg",
+      "imageSource": "https://www.wikiart.org/en/louise-elisabeth-vigee-le-brun/baroness-anna-sergeevna-stroganova-and-her-son-sergey-1793",
+      "credit": "Élisabeth Vigée Le Brun. Baroness Anna Sergeevna Stroganova and Her Son Sergey. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/louise-elisabeth-vigee-le-brun/baroness-anna-sergeevna-stroganova-and-her-son-sergey-1793",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/louise-elisabeth-vigee-le-brun/baroness-anna-sergeevna-stroganova-and-her-son-sergey-1793",
+      "description": "孩子望向画外，使母亲的拥抱也朝观看者打开。维热·勒布伦让母子身体紧靠，同时允许目光出现第二个方向。暖色衣服将他们从较暗风景中区分，使亲密动作成为社交肖像的一部分。画面呈现了亲爱之情，却不要求这个动作解释两人关系的每一面。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "17bbcd6a-0f87-5918-9acf-35432c3c90a0",
+      "title": "花园中的房屋",
+      "catalogueTitle": "House in a Garden",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/17bbcd6a-0f87-5918-9acf-35432c3c90a0-f8eb4b32761a4dc1.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/house-in-a-garden-1908",
+      "credit": "Pablo Picasso. House in a Garden. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/house-in-a-garden-1908",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/house-in-a-garden-1908",
+      "description": "墙、屋顶和树形在压缩的空间中彼此嵌合。毕加索留下足够建筑信息，使房屋仍然可辨，同时让边界配合周围植被。花园不再只是独立建筑松散的背景。两者都参与画面上带角度的块面排列。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "ac33c8db-14c0-5a4a-9215-9dc2cf753079",
+      "title": "站立的佐拉",
+      "catalogueTitle": "Zorah Standing",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "ГЭ-10044",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10395332-22a92c9b00a035da.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Matisse_-_Carra,_163.jpg",
+      "credit": "Henri Matisse. Zorah Standing. Image credit: Henri Matisse. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10395332",
+      "description": "狭长的正面人物占据竖幅大部分空间，双手聚在腰附近。马蒂斯通过外轮廓和重复装饰，紧密联系身体与衣服。本指南采用的单色复制图仍能显示这些纹样，却无法显示画作的色彩关系。保留这一限制，比描写图像不能呈现的色相更可靠。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "10464bbb-5757-5c4b-8fb3-76811411511d",
+      "title": "器皿与水果",
+      "catalogueTitle": "Dishes and Fruit",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "",
+      "accession": "ГЭ-7697",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/10464bbb-5757-5c4b-8fb3-76811411511d-1a492a215b760734.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/dishes-and-fruit-1906",
+      "credit": "Henri Matisse. Dishes and Fruit. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q10320046",
+      "description": "有些物件向观看者倾斜，没有服从一种稳定统一的桌面透视。马蒂斯通过这种调整，让盘碟、水果与花布同时保持醒目。它们的关系既依赖纵深，也依赖色彩和重复形状。静物可以连成整体，而不必假装每件东西都从完全相同的位置看去。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "06c6f4b2-7481-50a2-a98a-264aa660f822",
+      "title": "风景中的圣母子",
+      "catalogueTitle": "Madonna and Child in a Landscape",
+      "artist": "Giorgione",
+      "artists": [
+        {
+          "name": "Giorgione",
+          "role": "primary",
+          "slug": "giorgione-q8459"
+        }
+      ],
+      "date": "1504",
+      "start": 1504,
+      "end": 1504,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/06c6f4b2-7481-50a2-a98a-264aa660f822-c84009ec56e3ff21.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/madonna-and-child-in-a-landscape-1504",
+      "credit": "Madonna and Child in a Landscape. WikiArt; Giorgione. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giorgione/madonna-and-child-in-a-landscape-1504",
+      "description": "红绿衣服使近处母子在岩石、建筑与远山之前站稳。对这件与乔尔乔内相关联的作品而言，宗教人物之外的地形，也有自己的延伸和复杂性。尺度对比很重要：一个小小的托抱动作属于更大的世界，而世界的范围并不由这个动作决定。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    },
+    {
+      "id": "01942246-5eda-5651-b63b-216a1b5943f5",
+      "title": "沐浴",
+      "catalogueTitle": "Bathing",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/01942246-5eda-5651-b63b-216a1b5943f5-36b571a6cb6b68c1.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bathing-1908",
+      "credit": "Pablo Picasso. Bathing. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bathing-1908",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/bathing-1908",
+      "description": "宽阔曲线与尖锐关节，使两个身体的活动仍然可辨，同时改变了表现活动所用的人体结构。毕加索几乎没有在人物周围留空，周边形状因而紧密参与。场景没有提供平滑连续的空间。即使传统的空间稳定感被取消，人们仍能通过转身和动作认出身体。",
+      "importance": "",
+      "museum": "State Hermitage Museum"
+    }
+  ],
+  "context": {
+    "start": 1430,
+    "end": 1912
+  },
+  "closingSections": [
+    {
+      "title": "比较接触与距离",
+      "paragraphs": [
+        "看完一幅家庭肖像，再回到《舞蹈》，比较握手或拥抱究竟连接了什么。相似手势可以服务于很不相同的画面。艾尔米塔什馆藏分布于多栋建筑，作品也可能移动；请以博物馆最新信息确认位置与展出，不要将本选目当成同一展厅内的路线。"
+      ]
+    }
+  ]
+}

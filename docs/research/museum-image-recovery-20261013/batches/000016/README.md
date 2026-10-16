@@ -1,0 +1,5 @@
+Iteration 16: 10 distinct previously unchecked museum-held artwork IDs researched through exact official object pages and API records. Two CC0 source originals and two derivatives were visually reviewed; both derivatives were attached and independently database/audit/Storage/public-image/API verified. Eight Copyrighted images remain held; one is also dated 1971. All statuses, holdings, creators and unrelated metadata were preserved.
+
+The website embedded `artworkData.image_assets.primary_image` exposes routes even when the public API `images` field is empty. Thus the eight holds are rights-deferred, not no-image-at-source. Earlier receipts were not rewritten and repeated checks were not counted.
+
+Exact affected-row backups and pinned plans: `/Users/vadimdulub/Library/Application Support/Artline/backups/museum-image-recovery-20261013/batches/000016/`. Original downloads: corresponding `source-images/museum-image-recovery-20261013/batches/000016/` directory. No full database or Cloud SQL backup was created. No local catalogue connection, supervisor change, commit, push, deployment or infrastructure change occurred.

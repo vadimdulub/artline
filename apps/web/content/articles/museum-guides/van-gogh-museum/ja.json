@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "van-gogh-museum",
+  "museum": "Van Gogh Museum",
+  "city": "アムステルダム",
+  "country": "オランダ",
+  "title": "ゴッホ美術館：名作",
+  "subtitle": "よく知られた伝記より先に、色、切り取り方、見る仕事に注目する20点。",
+  "introduction": "《ひまわり》の黄色は、大きな色相の違いに頼らずに、花弁、花瓶、その周囲を区別しなければならない。《アーモンドの花》の青い隙間は別の役割を担い、細かく描かれた枝のあいだに空気を通す。こうした絵画上の具体的な判断から入れば、一つ一つの筆跡を症状として扱うことなく、ゴッホを見る道が開ける。\n\nゴーギャン、ベルナール、アングランらの作品は、比較の範囲を広げる。ゴッホは芸術上の交流の外にいる孤立した人ではなく、異なる選択をする人々のなかに現れる。素描や初期の題材も含まれ、その静かな描き方は、ゴッホなら必ず鮮烈な色で存在を告げるはずだ、という期待を中断する。",
+  "visitNote": "ご来館の前に、美術館のチケット情報や所蔵作品に関する情報をご確認ください。作品が貸し出し中であったり、現在の展示に含まれていなかったりする場合があります。特に素描（ドローイング）は、長時間光にさらされることに対して非常に敏感です。",
+  "locale": "ja",
+  "website": "https://www.vangoghmuseum.nl/",
+  "officialGuide": "https://www.vangoghmuseum.nl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Vincent van Gogh: The Letters",
+      "author": "Vincent van Gogh; edited by Leo Jansen, Hans Luijten and Nienke Bakker",
+      "url": "https://vangoghletters.org/",
+      "access": "無料で読む · 英語翻訳と原文",
+      "note": "ゴッホ美術館とホイヘンス研究所による書簡集には、原文、英訳、図版、そして学術的な注釈が収録されています。作品ごとに検索を行うことで、ゴッホ自身の記述と、その絵画に対する後世の解釈とを比較することができます。"
+    }
+  ],
+  "works": [
+    {
+      "id": "286a736a-700b-53b9-9e62-3e49ed28a96f",
+      "title": "ジャガイモを食べる人々",
+      "catalogueTitle": "The Potato Eaters",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/286a736a-700b-53b9-9e62-3e49ed28a96f-c55f92f849e13db7.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-potato-eaters-1885-1",
+      "credit": "Vincent van Gogh. The Potato Eaters. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/the-potato-eaters-1885-1",
+      "description": "ランプは五人を小さな光の範囲に集める。角ばった手が顔と皿を結び、食事を、家族がポーズを取る場ではなく身体的な行為にする。茶と緑の室内は人物を周囲につなぎとめる。粗さは一人の性格を表す特徴として限られず、場面全体に行き渡っている。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "153ccea9-bef6-4b1e-ba20-3ebd31a08915",
+      "title": "ひまわり",
+      "catalogueTitle": "Sunflowers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889年1月",
+      "start": 1889,
+      "end": 1889,
+      "medium": "キャンバスに油彩",
+      "accession": "s0031V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/153ccea9-bef6-4b1e-ba20-3ebd31a08915-ad8ad3399ed7937b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Zonnebloemen_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Sunflowers. Image credit: Vincent van Gogh; Source credit: Google Arts & Culture — hwEGmsM-FoHAwA. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0031V1962",
+      "description": "花束には立つ花も垂れる花もあり、暗い種の部分が黄色を区切る。この違いによって、限られた色は単調にならない。ゴッホは、花の各段階と向きに場所を与えた。題材に見慣れていると、近い色だけで多くの異なる形を読み取れるようにするという、難しい課題を見落としやすい。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "7c5b8360-fd4f-4ca5-9dc0-8f26aecca79c",
+      "title": "アーモンドの花",
+      "catalogueTitle": "Almond Blossom",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890年2月",
+      "start": 1890,
+      "end": 1890,
+      "medium": "キャンバスに油彩",
+      "accession": "s0176V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/7c5b8360-fd4f-4ca5-9dc0-8f26aecca79c-1bcaa5fa36a49865.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Almond Blossom. Image credit: Vincent van Gogh; Source credit: dAFXSL9sZ1ulDw at Google Cultural Institute maximum zoom level. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0176V1962",
+      "description": "幹や周囲の大きな景色は除かれ、枝と枝のあいだの空間が画面を組み立てる。美術館は、生まれたばかりの甥への贈り物と説明している。その機会は重要だが、構図の説明に代わるものではない。複雑に広がる枝に青い地が余地を与えるから、淡い花を一つずつ見分けられる。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "69037a2c-bf50-4d89-9ab6-66088aafd002",
+      "title": "カラスのいる麦畑",
+      "catalogueTitle": "Wheatfield with Crows",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890年7月",
+      "start": 1890,
+      "end": 1890,
+      "medium": "キャンバスに油彩",
+      "accession": "s0149V1962",
+      "image": "https://artlines.org/assets/artworks/wikiart/69037a2c-bf50-4d89-9ab6-66088aafd002-f8543290c619e117.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/wheatfield-with-crows-1890",
+      "credit": "Vincent van Gogh. Wheatfield with Crows. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0149V1962",
+      "description": "複数の道が麦畑への異なる進路を示し、暗い鳥と強い筆跡が空を動かし続ける。これがゴッホ最後の絵だという物語に頼らなくても、緊張は保たれる。美術館はその根強い説を否定している。あらかじめ決まった別れとして読むと、風景を落ち着かないものにする、具体的な選択を見なくなるおそれがある。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "70dfc39d-3fb0-4e15-8509-6e0a61fec666",
+      "title": "黄色い家",
+      "catalogueTitle": "The Yellow House (The Street)",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888年9月",
+      "start": 1888,
+      "end": 1888,
+      "medium": "キャンバスに油彩",
+      "accession": "s0032V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/70dfc39d-3fb0-4e15-8509-6e0a61fec666-376df0bcec87d843.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_yellow_house_(%27The_street%27).jpg",
+      "credit": "Vincent van Gogh. The Yellow House (The Street). Image credit: Vincent van Gogh; Source credit: Van Gogh Museum. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0032V1962",
+      "description": "深い青空に黄色い建物は見つけやすいが、孤立してはいない。隣家、歩行者、開けた通りが、機能する町のなかにつなぎとめる。ゴッホは日常の周囲を片づけずに、一軒の住居を色で際立たせた。題名になる主役でありながら、家はより大きな通りの一部でもあり続ける。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "f2d80116-debe-44bb-a01d-a15f287e716c",
+      "title": "灰色のフェルト帽をかぶった自画像",
+      "catalogueTitle": "Self-Portrait with Grey Felt Hat",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1887年9月～10月",
+      "start": 1887,
+      "end": 1887,
+      "medium": "綿布に油彩",
+      "accession": "s0016V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/f2d80116-debe-44bb-a01d-a15f287e716c-eb659a28c3685d1f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Self-Portrait with Grey Felt Hat. Image credit: Vincent van Gogh; Source credit: PgEJ1hPIzqsM2w at Google Cultural Institute maximum zoom level. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0016V1962",
+      "description": "帽子、顔、服の周りで短い筆跡の方向が変わる。髭の橙色が近くの寒色に応じるため、似顔は顔立ちの外まで広がる対比によって成り立つ。ゴッホは周囲の空間にも、頭を描く仕事を担わせた。これは気質の単なる告白ではなく、絵具でどう顔を組み立てるかを試す肖像である。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "ae612a6b-48df-56fc-91ce-14527bcd0671",
+      "title": "ひまわりを描くゴッホ",
+      "catalogueTitle": "Van Gogh Painting Sunflowers",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ae612a6b-48df-56fc-91ce-14527bcd0671-0ac0cbe339ea8dd4.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/van-gogh-painting-sunflowers-1888",
+      "credit": "Paul Gauguin. Van Gogh Painting Sunflowers. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-gauguin/van-gogh-painting-sunflowers-1888",
+      "description": "ゴーギャンは作業に向かう画家を描き、曲がった腕でその仕事を隣の花へつなぐ。広い色面は、本人の自画像の落ち着かない筆跡とは異なる場を、このゴッホに与える。同じ画家仲間が描いても、それは一つの解釈だ。ゴッホの絵の裏側を、何も介さずに見せる記録と考えるべきではない。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "f4ba57ab-bb58-58a7-8f79-9685758c7831",
+      "title": "ゴーギャンの肘掛け椅子",
+      "catalogueTitle": "Paul Gauguin's Armchair",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f4ba57ab-bb58-58a7-8f79-9685758c7831-2fe888ad0abbf669.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/paul-gauguin-s-armchair-1888",
+      "credit": "Vincent van Gogh. Paul Gauguin's Armchair. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/paul-gauguin-s-armchair-1888",
+      "description": "空の座面には本と火のついた蝋燭があり、人を描かずに、その不在を具体的にする。曲線をもつ家具、緑の壁、模様の床が、形と色の関係をつくる。ゴッホは選ばれた物に、肖像の仕事の一部を任せた。椅子は題名の人物を思わせても、その性格をすべて説明するわけではない。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "d5e99e6e-64b8-5888-9ffa-88f2ac8fe832",
+      "title": "桃色の花をつけた桃の木",
+      "catalogueTitle": "The pink peach tree",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "s0025V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11751766-476aec6e39e5cb8a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_De_roze_perzikboom_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. The pink peach tree. Image credit: Vincent van Gogh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11751766",
+      "description": "花は一つの淡い傘のように塗られず、分散している。隙間が細い枝を空から見分けさせ、柵と小さな幹が果樹園の位置を示す。ゴッホは一本を細かく見る一方、孤立させないだけの周囲も残した。花を示す筆跡の集積と同じほど、開かれた構造が重要である。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "80a335b6-72d2-5ff3-91d7-5ef9d41fdcda",
+      "title": "アブサンのあるカフェのテーブル",
+      "catalogueTitle": "Café table with absinth",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "s0186V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10335778-fc2b8ba0f09bdcda.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Caf%C3%A9tafel_met_absint_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Café table with absinth. Image credit: Vincent van Gogh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10335778",
+      "description": "グラスとカラフェは、もう一つの透明な面である窓の前に立つ。反射とその向こうの通りが、近い物と遠い背景の単純な区別を複雑にする。ゴッホは、表面を見ることと、その向こうを見ることを同時に起こした。小さな卓上は、数少ない品を越える問題の場になる。透明なものは空間を見せながら、遮ることもできる。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "c6b1a083-3588-5ada-b83f-14daadd89e50",
+      "title": "フリュネ",
+      "catalogueTitle": "Phryne",
+      "artist": "Gustave Boulanger",
+      "artists": [
+        {
+          "name": "Gustave Boulanger",
+          "role": "primary",
+          "slug": "gustave-boulanger-q726564"
+        }
+      ],
+      "date": "1850",
+      "start": 1850,
+      "end": 1850,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q114440039-735cdaae1fcf5e5f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Phryne_by_Gustave_Boulanger.jpg",
+      "credit": "Gustave Boulanger. Phryne. Image credit: Gustave Boulanger. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q114440039",
+      "description": "ブーランジェの丁寧に陰影をつけた肌とクッションのある場は、ゴッホの人物とは別の仕上がりをつくる。上げた手と横たわる姿は、中断された家事でなく、演出された提示に属する。一方が自動的に他方の改良になると考えず、描き方を比べたい。それぞれ、異なる表現の理想のために絵具を使っている。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "6afc6ea8-f314-5e8e-85d5-eadfa26c6cd9",
+      "title": "セーヌ川、サン＝トゥアンの朝",
+      "catalogueTitle": "The Seine, Morning (Saint-Ouen)",
+      "artist": "Charles Angrand",
+      "artists": [
+        {
+          "name": "Charles Angrand",
+          "role": "primary",
+          "slug": "charles-angrand-nga-10653"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "s0524S2012",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19837988-e47c8feb4a890181.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_Seine,_ochtend_(Saint-Ouen)_-_s0524S2012_-_Van_Gogh_Museum.jpg",
+      "credit": "Charles Angrand. The Seine, Morning (Saint-Ouen). Image credit: Charles Angrand. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19837988",
+      "description": "広い川には、目を奪う出来事が少ない。アングランは代わりに、淡く近い色調の小さな変化を使い、静かでも空白ではない水面をつくる。木と建物は低い遠景を定める。強い色の対比と見比べるのに適した一枚だ。抑制した絵にも、違いを見極める数多くの判断が必要なのである。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "305dbed8-46e4-5772-8df3-36b9c44ef098",
+      "title": "ゴーギャンの肖像のある自画像",
+      "catalogueTitle": "Self-Portrait with Portrait of Gauguin",
+      "artist": "Émile Bernard",
+      "artists": [
+        {
+          "name": "Émile Bernard",
+          "role": "primary",
+          "slug": "emile-bernard-q264193"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/305dbed8-46e4-5772-8df3-36b9c44ef098-5e6d311496e7433b.jpg",
+      "imageSource": "https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "credit": "Émile Bernard. Self-Portrait with Portrait of Gauguin. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "description": "ベルナールは切り取られた自分の顔の隣に、小さなゴーギャンの像を置く。ただし両者を一続きの空間にいるようには見せない。淡い青が、その違いを越えて二つの肖像をつなぐ。自分を描くことには、別の画家の存在も含まれる。関係は二人が一緒にいる場面ではなく、画像の配置によってつくられている。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "b7f3d4be-7aae-5e76-ba5a-2fe51756552f",
+      "title": "エラニーの干し草作り",
+      "catalogueTitle": "The Harvest of Hay in Eragny",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b7f3d4be-7aae-5e76-ba5a-2fe51756552f-3db64dcce6be19dd.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/the-harvest-of-hay-in-eragny-1887",
+      "credit": "Camille Pissarro. The Harvest of Hay in Eragny. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/the-harvest-of-hay-in-eragny-1887",
+      "description": "干し草の山のあいだで働き手の動きが繰り返され、畑に反復する労働の模様をつくる。ピサロは人と地面に小さな色のタッチを行き渡らせ、仕事を風景の構成につなげた。まったく別の描き方をしなくても、人物は見分けられる。次の素描でゴッホが、かがむ身体と木々をどう区別するか比べたい。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "4ef221ef-771b-5140-b064-15f7474f4f83",
+      "title": "木々の前で枝を拾う女性",
+      "catalogueTitle": "A Woman Picking Up a Stick in Front of Trees",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "紙にチョーク",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/4ef221ef-771b-5140-b064-15f7474f4f83-0cf9f4171d45d913.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/a-woman-picking-up-a-stick-in-front-of-trees-1890",
+      "credit": "A Woman Picking Up a Stick in Front of Trees. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/a-woman-picking-up-a-stick-in-front-of-trees-1890",
+      "description": "身体の鋭い折れ曲がりから、周囲の葉を見分ける前に行為が分かる。続いて線の方向の違いが、服、幹、葉を区別する。ゴッホは描き込みすぎず、それでも作業が伝わるだけの情報を与えた。省略とは、どこでも線を減らすことではなく、必要な線を選ぶことである。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "ac64d07d-7219-5878-aeb4-0c287a27cd00",
+      "title": "ボリナージュの炭鉱",
+      "catalogueTitle": "Coalmine in the Borinage",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "紙に鉛筆、水彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ac64d07d-7219-5878-aeb4-0c287a27cd00-c0cba766b8b96e94.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/coalmine-in-the-borinage-1879",
+      "credit": "Coalmine in the Borinage. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/coalmine-in-the-borinage-1879",
+      "description": "簡素な風景に低い建物と煙を吐く煙突が広がる。小さな人物は、産業施設の前で人間の尺度を示す。この初期作は、後にゴッホと強く結びつく鮮やかな色を使わず、労働の環境に目を向ける。これを見ることで、画家の展開を色の変化だけに縮めず、仕事場という主題を残せる。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "5a214e8a-d1fc-4405-985e-9aab29c09720",
+      "title": "寝室",
+      "catalogueTitle": "The Bedroom",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888年10月",
+      "start": 1888,
+      "end": 1888,
+      "medium": "キャンバスに油彩",
+      "accession": "s0047V1962",
+      "image": "https://uploads1.wikiart.org/images/vincent-van-gogh/vincent-s-bedroom-in-arles-1888.jpg!Large.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/vincent-s-bedroom-in-arles-1888",
+      "credit": "Vincent van Gogh, The Bedroom, 1888. Reproduction via WikiArt; source label: Public domain.",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0047V1962",
+      "description": "大きなベッドと二脚の椅子が、部屋の空きをほとんど占める。斜めの家具と掛かった絵が、簡略化された幾何学を目立たせる。ゴッホは中立的な建築の測量ではなく、強い境界と色の関係から、住むための室内をつくった。アムステルダムのこの絵は1888年の版であり、後の油彩の版や、手紙に描いた関連素描と混同してはいけない。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "5877359e-9e5c-5034-b23a-6bc82a5efeb9",
+      "title": "アイリス",
+      "catalogueTitle": "Still Life with Irises",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/5877359e-9e5c-5034-b23a-6bc82a5efeb9-3113aa075790e9f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/still-life-with-irises-1890",
+      "credit": "Vincent van Gogh. Still Life with Irises. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/still-life-with-irises-1890",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0050V1962",
+      "description": "黄色に向かって花が張り出し、尖った葉と垂れた茎が花束の輪郭を破る。現在の青は、ゴッホが描いた色の関係と完全には一致しない。赤い顔料の退色で、花は紫から青へ変化した。対比はなお強いが、材料の歴史は重要だ。図版が記録するのは今の状態であり、変化していない当初の判断ではない。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "764da244-fc11-5990-9ab2-266d472ca5b5",
+      "title": "靴",
+      "catalogueTitle": "A Pair of Shoes",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/764da244-fc11-5990-9ab2-266d472ca5b5-e64c567bb99b3566.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/a-pair-of-shoes-1886",
+      "credit": "Vincent van Gogh. A Pair of Shoes. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/a-pair-of-shoes-1886",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0011V1962",
+      "description": "靴は異なる角度でこちらを向き、擦れた革、履き口、紐を見せる。ゴッホは持ち主を特定せず、挿話もつくらずに、靴だけで主題となる場所を与えた。使用の跡は見えるが、人生全体の物語は見えない。物は視線を返せなくても、向けられた注意の集中は肖像に匹敵する。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "c0d7c470-a49a-5c30-9ae5-accb2a7dfeff",
+      "title": "手前にアイリスのあるアルルの眺め",
+      "catalogueTitle": "View of Arles with Irises in the Foreground",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/c0d7c470-a49a-5c30-9ae5-accb2a7dfeff-9f513757eccebc0a.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "credit": "Vincent van Gogh. View of Arles with Irises in the Foreground. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "description": "近い花から耕地の帯へ、さらに遠い町へと目が進む。ゴッホは奥行きを示すために、前景の活発な模様を犠牲にしない。反復する色面が通り道をつくり、木々が遠い輪郭を区切る。アイリスは、植物を近くで調べる絵であると同時に、はるかに広い場所を描く絵にも属している。",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    }
+  ],
+  "context": {
+    "start": 1850,
+    "end": 1890
+  },
+  "closingSections": [
+    {
+      "title": "比較は具体的なままに",
+      "paragraphs": [
+        "枝の隙間、手の描き方、筆跡の方向など、一つの選択を数点で追ってみよう。伝記は、証拠から関連が分かるところで加えればよい。展示と公開については最新の美術館情報を確認したい。所蔵されていても、選んだ作品すべてを一度の訪問で見られるとは限らない。"
+      ]
+    }
+  ]
+}

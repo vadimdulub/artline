@@ -19,6 +19,7 @@ export function ArtworkFacts({ work, attribution = false }: { work: Artwork; att
     {medium && <div><dt>Medium</dt><dd>{medium}</dd></div>}
     {dimensions && <div><dt>Dimensions</dt><dd>{dimensions}</dd></div>}
     {displayMetadata(work.accession_number) && <div><dt>Collection no.</dt><dd>{work.accession_number}</dd></div>}
+    <div><dt>Exhibitions</dt><dd><Link href={`/exhibitions?artwork=${work.id}`} prefetch={false}>Search documented appearances</Link></dd></div>
     {attribution && work.attribution_role && <div><dt>Attribution</dt><dd>{({ primary: "By the artist", workshop: "Workshop", attributed_to: "Attributed to the artist", follower_of: "Follower of the artist", formerly_attributed_to: "Formerly attributed to the artist", circle_of: "Circle of the artist" } as Record<string, string>)[work.attribution_role] ?? work.attribution_role.replaceAll("_", " ")}</dd></div>}
     {(rights || license) && <div><dt>Image rights</dt><dd>{rights}{license && <a className="license-link" href={license} target="_blank" rel="noreferrer">License details</a>}</dd></div>}
   </dl>;

@@ -1,0 +1,1314 @@
+{
+  "verifiedAt": "2026-10-12T10:20:04.341991+00:00",
+  "site": "https://artlines.org/events?event=event-q689128",
+  "status": "deployed_and_verified",
+  "change": "70 event illustrations use current Artline artwork images and internal artwork links; unmatched and held illustrations remain visible.",
+  "services": {
+    "api": {
+      "baselineBuildId": "0e9cb51f-21dc-4f99-8197-410031f8560a",
+      "baselineRevision": "artline-api-all-performance-1012-v1",
+      "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:e6778a375b9a9129e2469c789b7576965a9b3952b0edef9ec8358bbb58f92e93",
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:event-artworks-20261012-v1",
+      "files": {
+        "internal/events/artwork-selection.json": "06a032635bb79ec67f4bc57882ae2d1927191c553a42b937e92be015f1d58261",
+        "internal/events/artwork_images.go": "0fb79556eaffbfa7f3f61f176bfbf7d16c532dcd6b66de0adc97308927d4370c",
+        "internal/events/artwork_images_test.go": "679e1e34d7361b80a15d462a95ef6431c6ddc12747ea0cfa1d8ebe38028ea94c",
+        "internal/events/images.go": "1513b33e8f7cd36f4efedbacd645dd6bcca4a21008080da6503047a36c6927f1",
+        "internal/events/repository.go": "72999a8bd39074d19a995ffa4357791bf602dae2259969fa4f41d239922f4344",
+        "internal/member/bookmarks.go": "f87d7cff50dd3947f07c943c09ac8a2970ff6494f0b2d1e39040f72efbb8b5d7",
+        "internal/member/bookmarks_store.go": "99dfcbfdbb5f8eaec087edae0d65fe9a803d45d9113f4e5d43e84156f6d28ffb",
+        "internal/member/studies_catalogue.go": "3bec6c05c6b9d1f8a8061bb7ceee13e125351b5aa9e8306325af15eea99664c7"
+      },
+      "preimages": {
+        "internal/events/artwork-selection.json": null,
+        "internal/events/artwork_images.go": null,
+        "internal/events/artwork_images_test.go": null,
+        "internal/events/images.go": "7ee61a2a02fbdea44e70fbc9ad289bf56eabcb03c13b2664b9ae6e8a0ac9b16f",
+        "internal/events/repository.go": "cf33b4a764f7f839d2202d6ccfdd8b5124ea6272e4302e367d959e644d864c14",
+        "internal/member/bookmarks.go": "16be9114186bbb938bc93ca930a6ebea632ba7ca2b12ae0a8f11d1f2f960df24",
+        "internal/member/bookmarks_store.go": "38ef83b0bb24b236758e2a2de442067c0f10780917da92d779316a5b990be690",
+        "internal/member/studies_catalogue.go": "3d057b6b9bcbd7ef883618ca5ffa39931f135ba05534448b65c652bec74ceff6"
+      },
+      "overlaySHA256": "3405b52ee1278ad80c0ef8d4efef2782004812ad5957694b3742f8b0a7b95b33",
+      "overlayURI": "gs://artline-508319-build-source/event-artworks-20261012/api-3405b52ee1278ad8.tar.xz",
+      "databaseWrites": false,
+      "overlayGeneration": "1791799253697889",
+      "buildId": "d686f917-4b2c-4478-99fc-1aa58609493a",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:0b93744500f882c382f2edeee542217cb0a451da01a4f9e58110eddba40e496d",
+      "revision": "artline-api-event-artworks-1012-v1",
+      "candidateURL": "https://event-artworks-1012-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-api-all-performance-1012-v1",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100,
+      "localImagePinUpdated": true
+    },
+    "web": {
+      "baselineBuildId": "9cc259b1-8ad3-4198-98cc-9c40b0016c86",
+      "baselineRevision": "artline-web-fullview-colors-1012-v1",
+      "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:f47e1310a5fbffad3068a7bd80c09fd3f7bf1e5a803f972159767d0ead613023",
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:event-artworks-20261012-v2",
+      "files": {
+        "components/BookmarkCollection.tsx": "fa4dfd046723cd319a3d617191a2bd99eebb4921be85023c885f277c6ee5c29d",
+        "components/EventDrawer.test.tsx": "d30fd9412d48de277b4e74a6f5550279834692311982715eabec278d344c8064",
+        "components/EventDrawer.tsx": "5c52d4cbf67d7f8df5f742e3bdf89c18aeca2a36d2128ff7a0bb5ec9668d8bf0",
+        "components/studies/StudyRecord.tsx": "c3f57b13c7bc1af854e79669ee638aeb32f0963a4a62515008f9fd14f3f94601",
+        "lib/bookmarks.ts": "1de6fd2d986f29276b9aae7ed5f87562c0c6e210685089c06407fb9d3fa51fd1",
+        "lib/events.ts": "532f7b4312e8fe60b870d07a164916f4d71a7892cf04e477c26481f4008107fa",
+        "lib/studies.ts": "e780f3002a9dcbc45e2ae63abddf6fa9c95d3ae89f436cc755d2a35b2e87ed47"
+      },
+      "preimages": {
+        "components/BookmarkCollection.tsx": "2c75ac1e0d0c52d30ba9274f31dea53b767c2ba283e3c6746f50b5823f7f11fd",
+        "components/EventDrawer.test.tsx": null,
+        "components/EventDrawer.tsx": "bafacbf18a88d78e4b891dc03056c0acb1506728aa8263e7f789fd640c8046f9",
+        "components/studies/StudyRecord.tsx": "da292ae25d73dceafe99e1259205baac538eeb304a1d4933495f79c0fa02eb95",
+        "lib/bookmarks.ts": "42f82c2f222fea76b172f7c78840373b31a561c85d9aaad1f413bdc89639b01d",
+        "lib/events.ts": "22634a509b2ef4c540a0d271703f720f8f2a64692a6ede86948cd1e961398739",
+        "lib/studies.ts": "8f009d10a633edf4ec2dab26cbcb05456d5e350f2b73c188472b78d1b74aff0f"
+      },
+      "overlaySHA256": "85b52c028c976dd7749d0e6fd2dc87cdabb942c6d3ac7f7b956139ce5d202e76",
+      "overlayURI": "gs://artline-508319-build-source/event-artworks-20261012/web-85b52c028c976dd7-v2.tar.xz",
+      "databaseWrites": false,
+      "revisionSuffix": "event-artworks-1012-v2",
+      "preservedConcurrentChanges": {
+        "components/ArtworkViewer.tsx": "cbf89e6473295188695a13931286472d17aeb2044784cf56634f901b96152ba5"
+      },
+      "overlayGeneration": "1791799839439161",
+      "buildId": "1e4208bd-f043-4f8a-8be5-e0f8add55338",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:194066a27e7f995d6f0e809b6583e91848751f475de5f1413bc0099e7c281ab8",
+      "revision": "artline-web-event-artworks-1012-v2",
+      "candidateURL": "https://event-artworks-1012-v2---artline-web-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-web-fullview-colors-1012-v1",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100,
+      "localImagePinUpdated": true
+    }
+  },
+  "validation": {
+    "frontendFocusedTests": "3 passed, TypeScript and focused ESLint passed before release",
+    "isolatedAPITests": "events/member/httpapi passed excluding one reproduced baseline-only failing book-list test",
+    "baselineFailure": "TestBooksAcceptLegacyParametersAndValidBounds expects limit=151 rejection; current production source returns BOOKS_UNAVAILABLE without a repository. Reproduced before and after this scoped overlay.",
+    "readOnlySQLFixtures": "passed before release; no fixtures written",
+    "productionBuilds": "passed",
+    "checks": {
+      "api": {
+        "candidate": {
+          "origin": "https://event-artworks-1012-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+          "matched": 70,
+          "distinctArtworks": 68,
+          "results": [
+            {
+              "eventId": "event-q1016104",
+              "artworkId": "161f7dc4-3db0-55a2-9e80-3a9c19769596",
+              "href": "/artists/peter-paul-rubens-q5599/works/161f7dc4-3db0-55a2-9e80-3a9c19769596",
+              "image": "/assets/artworks/imported/cesi-top100-20261010/161f7dc4-3db0-55a2-9e80-3a9c19769596-8d9a416a9496331a.jpg",
+              "milliseconds": 918,
+              "source": "https://www.wikiart.org/en/peter-paul-rubens/allegory-on-emperor-charles-as-ruler-of-vast-realms-1604"
+            },
+            {
+              "eventId": "event-q1049945",
+              "artworkId": "f084c019-c6ed-5924-955c-f1b58d1f1e2e",
+              "href": "/artists/wikiart-artist-david-morier/works/f084c019-c6ed-5924-955c-f1b58d1f1e2e",
+              "image": "/assets/artworks/wikiart/f084c019-c6ed-5924-955c-f1b58d1f1e2e-3801b6c9553749d2.jpg",
+              "milliseconds": 948,
+              "source": "https://www.wikiart.org/en/david-morier/the-battle-of-culloden-1746"
+            },
+            {
+              "eventId": "event-q1051804",
+              "artworkId": "29814ad3-46ac-4d63-996f-5ffdee5d11ce",
+              "href": "/artists/ernest-meissonier-q354786/works/29814ad3-46ac-4d63-996f-5ffdee5d11ce",
+              "image": "/assets/artworks/open-museums/night-joconde/50faee15-2eab-47d5-8324-5dc84f288725-57485c895f0ffe96.jpg",
+              "milliseconds": 939,
+              "source": "https://commons.wikimedia.org/wiki/File:Jean-Louis-Ernest_Meissonier-Campagne_de_France.jpg"
+            },
+            {
+              "eventId": "event-q1070342",
+              "artworkId": "a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "href": "/artists/wikimedia-painter-q2960457/works/a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q56365678-5eea42e73d405b74.jpg",
+              "milliseconds": 977,
+              "source": "https://commons.wikimedia.org/wiki/File:Frontenac_receiving_the_envoy_of_Sir_William_Phipps_demanding_the_surrender_of_Quebec,_1690.jpg"
+            },
+            {
+              "eventId": "event-q10871730",
+              "artworkId": "ba2363f6-7552-50d1-b913-a004304294a7",
+              "href": "/artists/vasily-vereshchagin-q127017/works/ba2363f6-7552-50d1-b913-a004304294a7",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/ba2363f6-7552-50d1-b913-a004304294a7-02a29dd91a3c4459.jpg",
+              "milliseconds": 725,
+              "source": "https://www.wikiart.org/en/vasily-vereshchagin/ruins-of-a-theater-in-chuguchak-1870"
+            },
+            {
+              "eventId": "event-q11011",
+              "artworkId": "b1a80a47-8ea4-51cc-9a89-e81c3a8df3f3",
+              "href": "/artists/spain-painter-q1345186/works/b1a80a47-8ea4-51cc-9a89-e81c3a8df3f3",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/b1a80a47-8ea4-51cc-9a89-e81c3a8df3f3-6043d4293a809a66.jpg",
+              "milliseconds": 774,
+              "source": "https://commons.wikimedia.org/wiki/File:Elgrancapitantrasbatalladeceri%C3%B1ola.jpg"
+            },
+            {
+              "eventId": "event-q1144988",
+              "artworkId": "fd9b540d-12af-45b5-8349-8ad5cad9c946",
+              "href": "/artists/eugene-delacroix-q33477/works/fd9b540d-12af-45b5-8349-8ad5cad9c946",
+              "image": "/assets/artworks/wikiart/e274404a-2d93-5d9c-a007-dbaebb026a69-3f45945e8fd7b3c8.jpg",
+              "milliseconds": 755,
+              "source": "https://www.wikiart.org/en/eugene-delacroix/scenes-from-the-massacre-of-chios-1822"
+            },
+            {
+              "eventId": "event-q1190696",
+              "artworkId": "448b9521-1f38-5a2c-b62e-953fd061906a",
+              "href": "/artists/francisco-goya-q5432/works/448b9521-1f38-5a2c-b62e-953fd061906a",
+              "image": "/assets/artworks/imported/random-200-painters-round5-20261007/448b9521-1f38-5a2c-b62e-953fd061906a-83ba8cdc5e62e53f.jpg",
+              "milliseconds": 779,
+              "source": "https://www.wikiart.org/en/francisco-goya/manuel-godoy-duke-of-alcudia-prince-of-peace-1801"
+            },
+            {
+              "eventId": "event-q1232633",
+              "artworkId": "bb5a43f3-9c77-5272-97f7-cba3e12e55d1",
+              "href": "/artists/anton-mauve-q591907/works/bb5a43f3-9c77-5272-97f7-cba3e12e55d1",
+              "image": "/assets/artworks/wikiart/bb5a43f3-9c77-5272-97f7-cba3e12e55d1-dafa2eaf4534afdb.jpg",
+              "milliseconds": 844,
+              "source": "https://www.wikiart.org/en/anton-mauve/morning-ride-on-the-beach-1876"
+            },
+            {
+              "eventId": "event-q124322999",
+              "artworkId": "1fcb2458-212f-5c91-b36a-4e6aa7dd5ce0",
+              "href": "/artists/jozef-brandt-q558489/works/1fcb2458-212f-5c91-b36a-4e6aa7dd5ce0",
+              "image": "/assets/artworks/imported/source-index-delivery-20261010/1fcb2458-212f-5c91-b36a-4e6aa7dd5ce0-4c981d8dfb7b07d8.jpg",
+              "milliseconds": 835,
+              "source": "https://zbiory.mnk.pl/pl/katalog/520905"
+            },
+            {
+              "eventId": "event-q126306",
+              "artworkId": "cd2ad2f6-5b51-515c-b53b-1f78b2fa1ddd",
+              "href": "/artists/wikimedia-painter-q2370524/works/cd2ad2f6-5b51-515c-b53b-1f78b2fa1ddd",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q21725171-8ff82a52b193b59f.jpg",
+              "milliseconds": 795,
+              "source": "https://commons.wikimedia.org/wiki/File:Georg_Wilhelm_Timm_-_Dekabristen-Aufstand.jpg"
+            },
+            {
+              "eventId": "event-q126876",
+              "artworkId": "aacd0ca0-a2ea-5aa0-9e94-54d712574742",
+              "href": "/artists/john-trumbull-nga-1936/works/aacd0ca0-a2ea-5aa0-9e94-54d712574742",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/aacd0ca0-a2ea-5aa0-9e94-54d712574742-856c83039b97efb8.jpg",
+              "milliseconds": 754,
+              "source": "https://www.wikiart.org/en/john-trumbull/the-surrender-of-general-burgoyne-1821"
+            },
+            {
+              "eventId": "event-q1268954",
+              "artworkId": "83f366a8-5068-53e1-8eb5-c0eee2d8f8fe",
+              "href": "/artists/raphael-q5597/works/83f366a8-5068-53e1-8eb5-c0eee2d8f8fe",
+              "image": "/assets/artworks/imported/cesi-top100-20261010/83f366a8-5068-53e1-8eb5-c0eee2d8f8fe-8433205ec0ed0bde.jpg",
+              "milliseconds": 764,
+              "source": "https://www.wikiart.org/en/raphael/the-battle-of-ostia-1514"
+            },
+            {
+              "eventId": "event-q1324198",
+              "artworkId": "a5a3123b-4a44-5722-b20f-382801eee6c5",
+              "href": "/artists/wikimedia-painter-q4749602/works/a5a3123b-4a44-5722-b20f-382801eee6c5",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q20540529-8a087efc862016c0.jpg",
+              "milliseconds": 806,
+              "source": "https://commons.wikimedia.org/wiki/File:The_Signing_of_the_Treaty_of_Ghent,_Christmas_Eve,_1814_SAAM-1922.5.2_1.jpg"
+            },
+            {
+              "eventId": "event-q134114",
+              "artworkId": "d22f58f4-2b24-51a6-8155-98a999895997",
+              "href": "/artists/francois-gerard-q163543/works/d22f58f4-2b24-51a6-8155-98a999895997",
+              "image": "/assets/artworks/wikiart/d22f58f4-2b24-51a6-8155-98a999895997-72ef0689793679bf.jpg",
+              "milliseconds": 740,
+              "source": "https://www.wikiart.org/en/francois-gerard/la-bataille-dausterlitz-1810"
+            },
+            {
+              "eventId": "event-q1364346",
+              "artworkId": "fb016ccb-468d-522a-a9b3-3f08b77369d4",
+              "href": "/artists/wikimedia-painter-q1403817/works/fb016ccb-468d-522a-a9b3-3f08b77369d4",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q17266462-58c47a7447e9697c.jpg",
+              "milliseconds": 757,
+              "source": "https://commons.wikimedia.org/wiki/File:La_Rendici%C3%B3n_de_Bail%C3%A9n_(Casado_del_Alisal).jpg"
+            },
+            {
+              "eventId": "event-q1401605",
+              "artworkId": "663324d3-3656-52e7-897e-d9ab2eda8bfa",
+              "href": "/artists/wassily-kandinsky-q61064/works/663324d3-3656-52e7-897e-d9ab2eda8bfa",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/663324d3-3656-52e7-897e-d9ab2eda8bfa-a52819b46d76addb.jpg",
+              "milliseconds": 788,
+              "source": "https://www.wikiart.org/en/wassily-kandinsky/untitled-first-abstract-watercolor-1910"
+            },
+            {
+              "eventId": "event-q1425138",
+              "artworkId": "7b3cb1e0-9535-43c8-ba66-60147aaae2e3",
+              "href": "/artists/boris-kustodiev-q313275/works/7b3cb1e0-9535-43c8-ba66-60147aaae2e3",
+              "image": "/assets/artworks/open-museums/dk-ru-commons/c7620d9f-591d-414c-8d59-53c0738d070d-5ee7bedf02e83961.jpg",
+              "milliseconds": 825,
+              "source": "https://commons.wikimedia.org/wiki/File:Group_portrait_of_the_Mir_Iskusstva_artists.jpg"
+            },
+            {
+              "eventId": "event-q1429256",
+              "artworkId": "3aa3638a-011b-5644-b717-71b8805fc97a",
+              "href": "/artists/wikimedia-painter-q1380081/works/3aa3638a-011b-5644-b717-71b8805fc97a",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/3aa3638a-011b-5644-b717-71b8805fc97a-5b72ed0681fffc6a.jpg",
+              "milliseconds": 880,
+              "source": "https://commons.wikimedia.org/wiki/File:The_Holy_Roman_Emperor_Charles_V_(1500%E2%80%931558),_by_Juan_Pantoja_de_la_Cruz_(Museo_del_Prado,_Madrid).jpg"
+            },
+            {
+              "eventId": "event-q14378",
+              "artworkId": "411a4dfb-ac3e-4dd1-a1d5-9576ce1508c9",
+              "href": "/artists/jacques-louis-david-q83155/works/411a4dfb-ac3e-4dd1-a1d5-9576ce1508c9",
+              "image": "/assets/artworks/imported/met-436105-7d8d840424e3747c.jpg",
+              "milliseconds": 733,
+              "source": "https://www.metmuseum.org/art/collection/search/436105"
+            },
+            {
+              "eventId": "event-q1478267",
+              "artworkId": "b33c4818-fe4e-57d6-ad22-278279e9ac18",
+              "href": "/artists/jan-matejko-q189117/works/b33c4818-fe4e-57d6-ad22-278279e9ac18",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/b33c4818-fe4e-57d6-ad22-278279e9ac18-f9b25c5c35615743.jpg",
+              "milliseconds": 817,
+              "source": "https://www.wikiart.org/en/jan-matejko/bathory-at-pskov-1872"
+            },
+            {
+              "eventId": "event-q150995",
+              "artworkId": "290922d0-6efa-4646-bb72-d2d1d5cda7c2",
+              "href": "/artists/gerard-ter-borch-q346808/works/290922d0-6efa-4646-bb72-d2d1d5cda7c2",
+              "image": "/assets/artworks/open-museums/night-rijks/78d81baa-a3a1-434a-907a-d63ef4c5afae-93d1ee15160bdf9d.jpg",
+              "milliseconds": 751,
+              "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1683--e60c0795fb382742305dce66375a935d"
+            },
+            {
+              "eventId": "event-q151616",
+              "artworkId": "80eee68f-9def-5b9b-8f74-157417b3d131",
+              "href": "/artists/gustaf-cederstrom-round2-033400a641db/works/80eee68f-9def-5b9b-8f74-157417b3d131",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q10665067-7260c7f1e9bf5de4.jpg",
+              "milliseconds": 737,
+              "source": "https://commons.wikimedia.org/wiki/File:Narva_(Gustaf_Cederstr%C3%B6m)_-_Nationalmuseum_-_18638.tif"
+            },
+            {
+              "eventId": "event-q152218",
+              "artworkId": "03bbe2a5-6fff-5f99-9513-84ee2adf5f13",
+              "href": "/artists/wikimedia-painter-q938108/works/03bbe2a5-6fff-5f99-9513-84ee2adf5f13",
+              "image": "/assets/artworks/imported/painter-key-artworks-20261008/q113652758-9522c22cb74d4b51.jpg",
+              "milliseconds": 745,
+              "source": "https://commons.wikimedia.org/wiki/File:Siege_of_Namur,_1692_(by_Jean-Baptiste_Martin_the_elder).jpg"
+            },
+            {
+              "eventId": "event-q152778",
+              "artworkId": "443ef58e-8de2-5c4b-b72b-c95d3c00c206",
+              "href": "/artists/ernst-ludwig-kirchner-q229272/works/443ef58e-8de2-5c4b-b72b-c95d3c00c206",
+              "image": "/assets/artworks/imported/wikiart-500-painters-20261011/443ef58e-8de2-5c4b-b72b-c95d3c00c206-d8e69f9035ce6b46.jpg",
+              "milliseconds": 851,
+              "source": "https://www.wikiart.org/en/ernst-ludwig-kirchner/kg-br%C3%BCcke"
+            },
+            {
+              "eventId": "event-q155726",
+              "artworkId": "80eee68f-9def-5b9b-8f74-157417b3d131",
+              "href": "/artists/gustaf-cederstrom-round2-033400a641db/works/80eee68f-9def-5b9b-8f74-157417b3d131",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q10665067-7260c7f1e9bf5de4.jpg",
+              "milliseconds": 815,
+              "source": "https://commons.wikimedia.org/wiki/File:Narva_(Gustaf_Cederstr%C3%B6m)_-_Nationalmuseum_-_18638.tif"
+            },
+            {
+              "eventId": "event-q1577800",
+              "artworkId": "8133dfe6-49fe-5642-8403-c131c3fb261f",
+              "href": "/artists/jan-matejko-q189117/works/8133dfe6-49fe-5642-8403-c131c3fb261f",
+              "image": "/assets/artworks/imported/poland-collections-20261008/poland/8133dfe6-49fe-5642-8403-c131c3fb261f-ea1e6beea778.jpg",
+              "milliseconds": 759,
+              "source": "https://zbiory.mnk.pl/pl/katalog/306743"
+            },
+            {
+              "eventId": "event-q161696",
+              "artworkId": "ef2cd034-9f9f-55b1-b45a-a2f2dc3cc8c1",
+              "href": "/artists/pedro-berruguete-q561783/works/ef2cd034-9f9f-55b1-b45a-a2f2dc3cc8c1",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/ef2cd034-9f9f-55b1-b45a-a2f2dc3cc8c1-cf3a7c2eb20e6ca7.jpg",
+              "milliseconds": 729,
+              "source": "https://commons.wikimedia.org/wiki/File:Berruguete_ordeal.jpg"
+            },
+            {
+              "eventId": "event-q1628039",
+              "artworkId": "ade2d648-7178-59f6-8bad-4b29536d6925",
+              "href": "/artists/gerard-van-honthorst-q314548/works/ade2d648-7178-59f6-8bad-4b29536d6925",
+              "image": "/assets/artworks/imported/random-200-painters-round2-20261006/ade2d648-7178-59f6-8bad-4b29536d6925-ad02b6f5bc30a493.jpg",
+              "milliseconds": 1051,
+              "source": "https://www.wikiart.org/en/gerard-van-honthorst/the-procuress-1625"
+            },
+            {
+              "eventId": "event-q1633167",
+              "artworkId": "229217ae-e832-5440-b898-c40ff4ad28c0",
+              "href": "/artists/nikolai-dmitriev-orenburgsky-q2030263/works/229217ae-e832-5440-b898-c40ff4ad28c0",
+              "image": "/assets/artworks/imported/painter-key-artworks-20261008/q105554305-3fdc9563cc6533a5.jpg",
+              "milliseconds": 786,
+              "source": "https://commons.wikimedia.org/wiki/File:Orenburgsky.jpg"
+            },
+            {
+              "eventId": "event-q1638031",
+              "artworkId": "1ae09e5e-6cc4-594d-9365-5e7261654395",
+              "href": "/artists/georg-von-rosen-research-a67682f060a8/works/1ae09e5e-6cc4-594d-9365-5e7261654395",
+              "image": "/assets/artworks/open-museums/followup-nationalmuseum-commons/1ae09e5e-6cc4-594d-9365-5e7261654395-6001ff430156fb85.jpg",
+              "milliseconds": 718,
+              "source": "https://commons.wikimedia.org/wiki/File:The_Entry_of_Sten_Sture_the_Elder_into_Stockholm_(Georg_von_Rosen)_-_Nationalmuseum_-_19214.tif"
+            },
+            {
+              "eventId": "event-q1642290",
+              "artworkId": "9988f799-42fd-5d42-a7bd-70026acf6428",
+              "href": "/all?itemType=artwork&item=9988f799-42fd-5d42-a7bd-70026acf6428",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/9988f799-42fd-5d42-a7bd-70026acf6428-71e0c90f433a01e2.jpg",
+              "milliseconds": 830,
+              "source": "https://commons.wikimedia.org/wiki/File:Batalla_Fleurus_(1622).jpg"
+            },
+            {
+              "eventId": "event-q164800",
+              "artworkId": "ace66c40-e239-52e0-be55-53fa2b1feebc",
+              "href": "/artists/pierre-puvis-de-chavannes-q216873/works/ace66c40-e239-52e0-be55-53fa2b1feebc",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/ace66c40-e239-52e0-be55-53fa2b1feebc-5870a8f5ac4f4da3.jpg",
+              "milliseconds": 851,
+              "source": "https://www.wikiart.org/en/pierre-puvis-de-chavannes/young-girls-on-the-edge-of-the-sea"
+            },
+            {
+              "eventId": "event-q166593",
+              "artworkId": "b4e005b6-9dc2-558b-8497-ec18defba5fc",
+              "href": "/artists/henri-matisse-q5589/works/b4e005b6-9dc2-558b-8497-ec18defba5fc",
+              "image": "/assets/artworks/wikiart/b4e005b6-9dc2-558b-8497-ec18defba5fc-e1beb918990b7b36.jpg",
+              "milliseconds": 781,
+              "source": "https://www.wikiart.org/en/henri-matisse/woman-with-hat-1905"
+            },
+            {
+              "eventId": "event-q167259",
+              "artworkId": "d0ebbfc5-f76b-5bda-9cce-9d0220047afa",
+              "href": "/artists/wikimedia-painter-q445022/works/d0ebbfc5-f76b-5bda-9cce-9d0220047afa",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q18573550-874f91f98fee54fd.jpg",
+              "milliseconds": 741,
+              "source": "https://commons.wikimedia.org/wiki/File:Death_of_King_Gustav_II_Adolf_of_Sweden_at_the_Battle_of_L%C3%BCtzen_(Carl_Wahlbom)_-_Nationalmuseum_-_18031.tif"
+            },
+            {
+              "eventId": "event-q168442",
+              "artworkId": "a97c2c06-33f7-5a67-8975-dc51388043f5",
+              "href": "/artists/francisco-de-zurbaran-q209615/works/a97c2c06-33f7-5a67-8975-dc51388043f5",
+              "image": "/assets/artworks/open-museums/spain-followup/q5801323-2df00907b7f02ee6.jpg",
+              "milliseconds": 741,
+              "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_014.jpg"
+            },
+            {
+              "eventId": "event-q16931679",
+              "artworkId": "df9f3f50-d38e-549d-9c70-02518ac8c044",
+              "href": "/artists/sandro-botticelli-q5669/works/df9f3f50-d38e-549d-9c70-02518ac8c044",
+              "image": "/assets/artworks/imported/random-200-painters-round6-20261007/df9f3f50-d38e-549d-9c70-02518ac8c044-45065fb2fa3bc88f.jpg",
+              "milliseconds": 875,
+              "source": "https://www.wikiart.org/en/sandro-botticelli/the-story-of-lucretia-1504"
+            },
+            {
+              "eventId": "event-q170531",
+              "artworkId": "1ba43b06-e5a0-4dc0-a00d-fb5430266c87",
+              "href": "/artists/vasily-surikov-q110228/works/1ba43b06-e5a0-4dc0-a00d-fb5430266c87",
+              "image": "/assets/artworks/wikiart/6d420d3a-ccbc-4092-be1d-9f55e3461f67-07400d008423ec08.jpg",
+              "milliseconds": 1005,
+              "source": "https://www.wikiart.org/ru/vasiliy-surikov/chetvertyy-vselenskiy-khalkidonskiy-sobor-1876"
+            },
+            {
+              "eventId": "event-q1708064",
+              "artworkId": "a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "href": "/artists/wikimedia-painter-q2960457/works/a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q56365678-5eea42e73d405b74.jpg",
+              "milliseconds": 1050,
+              "source": "https://commons.wikimedia.org/wiki/File:Frontenac_receiving_the_envoy_of_Sir_William_Phipps_demanding_the_surrender_of_Quebec,_1690.jpg"
+            },
+            {
+              "eventId": "event-q171374",
+              "artworkId": "55dcf513-0bfc-5589-9c42-c872d7f88b07",
+              "href": "/artists/benjamin-west-nga-1970/works/55dcf513-0bfc-5589-9c42-c872d7f88b07",
+              "image": "/assets/artworks/wikiart/55dcf513-0bfc-5589-9c42-c872d7f88b07-9e4f2593a7115126.jpg",
+              "milliseconds": 860,
+              "source": "https://www.wikiart.org/en/benjamin-west/the-treaty-of-penn-with-the-indians-1772"
+            },
+            {
+              "eventId": "event-q175447",
+              "artworkId": "9e688714-32c5-5b2c-a67a-700a701faa84",
+              "href": "/artists/james-tissot-q381248/works/9e688714-32c5-5b2c-a67a-700a701faa84",
+              "image": "/assets/artworks/imported/wikiart-500-painters-20261011/9e688714-32c5-5b2c-a67a-700a701faa84-c637d322acb344ac.jpg",
+              "milliseconds": 738,
+              "source": "https://www.wikiart.org/en/james-tissot/the-flight-of-the-prisoners"
+            },
+            {
+              "eventId": "event-q1779008",
+              "artworkId": "aac0133e-53db-53ae-9b3d-fc45bbf6928e",
+              "href": "/artists/peter-paul-rubens-q5599/works/aac0133e-53db-53ae-9b3d-fc45bbf6928e",
+              "image": "/assets/artworks/imported/cesi-top100-20261010/aac0133e-53db-53ae-9b3d-fc45bbf6928e-a8f279d4b973501d.jpg",
+              "milliseconds": 805,
+              "source": "https://www.wikiart.org/en/peter-paul-rubens/copy-of-battle-of-anghiari-the-lost-painting-by-leonardo-da-vinci"
+            },
+            {
+              "eventId": "event-q181146",
+              "artworkId": "69285ba7-af36-5d1a-a310-6593c35d5306",
+              "href": "/artists/francisco-goya-q5432/works/69285ba7-af36-5d1a-a310-6593c35d5306",
+              "image": "/assets/artworks/imported/prado-expansion-wikiart-20261006/69285ba7-af36-5d1a-a310-6593c35d5306-16739cc111a25171.jpg",
+              "milliseconds": 736,
+              "source": "https://www.wikiart.org/en/francisco-goya/the-second-of-may-1808-the-charge-of-the-mamelukes-1814"
+            },
+            {
+              "eventId": "event-q192769",
+              "artworkId": "7b4ab19f-d2a5-5758-8c2e-bccdee6efbe9",
+              "href": "/artists/john-trumbull-nga-1936/works/7b4ab19f-d2a5-5758-8c2e-bccdee6efbe9",
+              "image": "/assets/artworks/wikiart/7b4ab19f-d2a5-5758-8c2e-bccdee6efbe9-7a19bfecdecfc812.jpg",
+              "milliseconds": 725,
+              "source": "https://www.wikiart.org/en/john-trumbull/declaration-of-independence-1819"
+            },
+            {
+              "eventId": "event-q203225",
+              "artworkId": "4bd285a8-e173-5e94-8033-b5902db0cd7c",
+              "href": "/artists/peter-nicolai-arbo-q353014/works/4bd285a8-e173-5e94-8033-b5902db0cd7c",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/4bd285a8-e173-5e94-8033-b5902db0cd7c-d3b233b5d2a664ba.jpg",
+              "milliseconds": 730,
+              "source": "https://www.wikiart.org/en/peter-nicolai-arbo/battle-of-stamford-bridge-1870"
+            },
+            {
+              "eventId": "event-q2091915",
+              "artworkId": "fb2bea77-5920-5d2c-941b-33aa40cc82be",
+              "href": "/artists/wikiart-artist-william-simpson/works/fb2bea77-5920-5d2c-941b-33aa40cc82be",
+              "image": "/assets/artworks/imported/random-200-painters-20261006/fb2bea77-5920-5d2c-941b-33aa40cc82be-c57d3b12fd2acbed.jpg",
+              "milliseconds": 823,
+              "source": "https://www.wikiart.org/en/william-simpson/bombardment-of-bomarsund-1854"
+            },
+            {
+              "eventId": "event-q233417",
+              "artworkId": "d37ab882-b604-589e-8cf1-0c5f481ea9b4",
+              "href": "/artists/john-trumbull-nga-1936/works/d37ab882-b604-589e-8cf1-0c5f481ea9b4",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/d37ab882-b604-589e-8cf1-0c5f481ea9b4-8a13939705e65a2e.jpg",
+              "milliseconds": 804,
+              "source": "https://www.wikiart.org/en/john-trumbull/george-washington-before-the-battle-of-trenton-1792"
+            },
+            {
+              "eventId": "event-q233507",
+              "artworkId": "37aa3e93-4a9c-57d5-8006-d12811eefc90",
+              "href": "/artists/wikiart-artist-richard-caton-woodville-jr/works/37aa3e93-4a9c-57d5-8006-d12811eefc90",
+              "image": "/assets/artworks/wikiart/37aa3e93-4a9c-57d5-8006-d12811eefc90-9a4374d257abbffb.jpg",
+              "milliseconds": 769,
+              "source": "https://www.wikiart.org/en/richard-caton-woodville-jr/92nd-highlanders-and-2nd-gurkhas-storming-the-gaudi-mullah-sahibdad-at-kandahar-1-september-1880-1890"
+            },
+            {
+              "eventId": "event-q2342758",
+              "artworkId": "6365b0fe-89df-5f1b-a29c-e2cb1a3a24fd",
+              "href": "/artists/wikiart-artist-william-simpson/works/6365b0fe-89df-5f1b-a29c-e2cb1a3a24fd",
+              "image": "/assets/artworks/wikiart/6365b0fe-89df-5f1b-a29c-e2cb1a3a24fd-283a33ddf4814917.jpg",
+              "milliseconds": 684,
+              "source": "https://www.wikiart.org/en/william-simpson/battle-of-the-tchernaya-august-16th-1855-1856"
+            },
+            {
+              "eventId": "event-q23832735",
+              "artworkId": "b3d1f894-73c4-535a-8186-085ebadf86ea",
+              "href": "/artists/wikiart-artist-john-wilson-carmichael/works/b3d1f894-73c4-535a-8186-085ebadf86ea",
+              "image": "/assets/artworks/wikiart/b3d1f894-73c4-535a-8186-085ebadf86ea-448a1896ce262014.jpg",
+              "milliseconds": 722,
+              "source": "https://www.wikiart.org/en/john-wilson-carmichael/hms-erebus-and-terror-in-the-antarctic-1847"
+            },
+            {
+              "eventId": "event-q241108",
+              "artworkId": "689eef0e-be95-5cf4-9616-e5bb68fc8a7c",
+              "href": "/artists/horace-vernet-q161145/works/689eef0e-be95-5cf4-9616-e5bb68fc8a7c",
+              "image": "/assets/artworks/imported/random-200-painters-20261006/689eef0e-be95-5cf4-9616-e5bb68fc8a7c-70433e77e54b6679.jpg",
+              "milliseconds": 800,
+              "source": "https://www.wikiart.org/en/horace-vernet/napoleon-at-the-battle-of-friedland-1807"
+            },
+            {
+              "eventId": "event-q2634456",
+              "artworkId": "01fe4008-3c2a-5607-8964-b31df9b2f0d3",
+              "href": "/artists/wikimedia-painter-q3286980/works/01fe4008-3c2a-5607-8964-b31df9b2f0d3",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q20087514-33ffb49c920b9f63.jpg",
+              "milliseconds": 714,
+              "source": "https://commons.wikimedia.org/wiki/File:Robert_Gibb_-_The_Thin_Red_Line.jpg"
+            },
+            {
+              "eventId": "event-q2975371",
+              "artworkId": "e16e40fb-0a3e-51e5-8a44-1da614f666bf",
+              "href": "/artists/yoshitoshi-q467337/works/e16e40fb-0a3e-51e5-8a44-1da614f666bf",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/e16e40fb-0a3e-51e5-8a44-1da614f666bf-90c0fe4ec2cfe9c6.jpg",
+              "milliseconds": 844,
+              "source": "https://www.wikiart.org/en/tsukioka-yoshitoshi/shinp-ren-rebellion-1876"
+            },
+            {
+              "eventId": "event-q2976715",
+              "artworkId": "774cd038-a8c7-40d4-871e-3036e87cfbde",
+              "href": "/artists/george-catlin-nga-1113/works/774cd038-a8c7-40d4-871e-3036e87cfbde",
+              "image": "/assets/artworks/open-museums/night-saam/10573c31-9a73-450e-8209-01af7610a6eb-0bae9309f09794ab.jpg",
+              "milliseconds": 705,
+              "source": "https://americanart.si.edu/collections/search/artwork/?id=4307"
+            },
+            {
+              "eventId": "event-q3178783",
+              "artworkId": "6e11ad73-f08d-4ff8-813f-201ce2fa41da",
+              "href": "/artists/antoine-jean-gros-q216999/works/6e11ad73-f08d-4ff8-813f-201ce2fa41da",
+              "image": "/assets/artworks/wikiart-louvre-20261006/589c5342edc2cd40d4ab5511-6f4f1d8be4ebd2fd.jpg",
+              "milliseconds": 854,
+              "source": "https://www.wikiart.org/fr/antoine-jean-gros/bonaparte-visitant-les-pestiferes-de-jaffa-1804"
+            },
+            {
+              "eventId": "event-q3360281",
+              "artworkId": "24123bce-5b8d-5fd6-aa51-6f1baecb3582",
+              "href": "/all?itemType=artwork&item=24123bce-5b8d-5fd6-aa51-6f1baecb3582",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/24123bce-5b8d-5fd6-aa51-6f1baecb3582-9a622641f87c07e8.jpg",
+              "milliseconds": 822,
+              "source": "https://commons.wikimedia.org/wiki/File:Alhamar,_rey_de_Granada,_rinde_vasallaje_al_rey_de_Castilla,_Fernando_III_el_Santo_(Museo_del_Prado).jpg"
+            },
+            {
+              "eventId": "event-q3588",
+              "artworkId": "20a5d17f-90ec-5f36-af60-1a6dc88dab8c",
+              "href": "/artists/horace-vernet-q161145/works/20a5d17f-90ec-5f36-af60-1a6dc88dab8c",
+              "image": "/assets/artworks/imported/random-200-painters-20261006/20a5d17f-90ec-5f36-af60-1a6dc88dab8c-4086107101f23769.jpg",
+              "milliseconds": 864,
+              "source": "https://www.wikiart.org/en/horace-vernet/on-the-barricades-on-the-rue-soufflot-paris-25-june-1848-1849"
+            },
+            {
+              "eventId": "event-q402312",
+              "artworkId": "433a8d16-a35e-5304-9180-3da388fd2081",
+              "href": "/artists/john-wootton-research-34a37f0d5544/works/433a8d16-a35e-5304-9180-3da388fd2081",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q118998239-46d9dd98c7980172.jpg",
+              "milliseconds": 844,
+              "source": "https://commons.wikimedia.org/wiki/File:John_Wootton_(c.1682-1764)_-_George_II_at_the_Battle_of_Dettingen,_with_the_Duke_of_Cumberland_and_Robert,_4th_Earl_of_Holderness,_27_June_1743_-_NAM._1961-07-116_-_National_Army_Museum.jpg"
+            },
+            {
+              "eventId": "event-q426227",
+              "artworkId": "56cd486a-2daa-59c3-929d-bb1804fdd81d",
+              "href": "/artists/wikiart-artist-frank-hurley/works/56cd486a-2daa-59c3-929d-bb1804fdd81d",
+              "image": "/assets/artworks/wikiart/56cd486a-2daa-59c3-929d-bb1804fdd81d-77e7f93dee06422d.jpg",
+              "milliseconds": 773,
+              "source": "https://www.wikiart.org/en/frank-hurley/chateau-wood"
+            },
+            {
+              "eventId": "event-q505802",
+              "artworkId": "e8c51edc-c546-500d-96cd-34c092a8c4e6",
+              "href": "/artists/wikimedia-painter-q1065418/works/e8c51edc-c546-500d-96cd-34c092a8c4e6",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q108147022-0f34fa2717fd0c41.jpg",
+              "milliseconds": 712,
+              "source": "https://commons.wikimedia.org/wiki/File:Lewis_and_clark-expedition.jpg"
+            },
+            {
+              "eventId": "event-q579971",
+              "artworkId": "8598074f-3dd9-5f3f-ad04-d1c9b43ebfd6",
+              "href": "/artists/benjamin-west-nga-1970/works/8598074f-3dd9-5f3f-ad04-d1c9b43ebfd6",
+              "image": "/assets/artworks/imported/random-200-painters-round3-20261006/8598074f-3dd9-5f3f-ad04-d1c9b43ebfd6-53b3015e93b37772.jpg",
+              "milliseconds": 743,
+              "source": "https://www.wikiart.org/en/benjamin-west/general-johnson-1768"
+            },
+            {
+              "eventId": "event-q641479",
+              "artworkId": "a2855184-d9e8-5e80-98f2-8f9c0b071316",
+              "href": "/artists/jan-matejko-q189117/works/a2855184-d9e8-5e80-98f2-8f9c0b071316",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/a2855184-d9e8-5e80-98f2-8f9c0b071316-668e83598d747373.jpg",
+              "milliseconds": 920,
+              "source": "https://www.wikiart.org/en/jan-matejko/bohdan-khmelnytsky-with-tugai-bey-near-lviv-1885"
+            },
+            {
+              "eventId": "event-q650567",
+              "artworkId": "913a710e-94a6-4d29-acb9-6bbe45003f7c",
+              "href": "/artists/eugene-delacroix-q33477/works/913a710e-94a6-4d29-acb9-6bbe45003f7c",
+              "image": "/assets/artworks/imported/production-wikiart-images-20261006/913a710e-94a6-4d29-acb9-6bbe45003f7c-f3c3b3e6834e2b86.jpg",
+              "milliseconds": 837,
+              "source": "https://www.wikiart.org/en/eugene-delacroix/greece-expiring-on-the-ruins-of-missolonghi-1826"
+            },
+            {
+              "eventId": "event-q668811",
+              "artworkId": "f9db0a94-d028-5f78-a3b5-120f4c738fa5",
+              "href": "/artists/pavel-fedotov-q248597/works/f9db0a94-d028-5f78-a3b5-120f4c738fa5",
+              "image": "/assets/artworks/wikiart/f9db0a94-d028-5f78-a3b5-120f4c738fa5-1d4f780bcf174017.jpg",
+              "milliseconds": 665,
+              "source": "https://www.wikiart.org/en/pavel-fedotov/it-is-cholera-to-blame"
+            },
+            {
+              "eventId": "event-q6843829",
+              "artworkId": "b45e6ead-bc8f-5663-84d6-c55e3323feb1",
+              "href": "/artists/frederic-remington-nga-25060/works/b45e6ead-bc8f-5663-84d6-c55e3323feb1",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/b45e6ead-bc8f-5663-84d6-c55e3323feb1-5de4550601699407.jpg",
+              "milliseconds": 803,
+              "source": "https://www.wikiart.org/en/frederic-remington/the-mier-expedition-the-drawing-of-the-black-bean-1896"
+            },
+            {
+              "eventId": "event-q689128",
+              "artworkId": "31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "href": "/artists/january-suchodolski-q1259182/works/31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "image": "/assets/artworks/imported/event-artworks-20261012/battle-of-san-domingo-7b1fd2ec32407f80.jpg",
+              "milliseconds": 690,
+              "source": "https://commons.wikimedia.org/wiki/File:Battle_for_Palm_Tree_Hill.jpg"
+            },
+            {
+              "eventId": "event-q776609",
+              "artworkId": "4d4e9519-d14c-53db-bf6f-5ab61d851de6",
+              "href": "/artists/horace-vernet-q161145/works/4d4e9519-d14c-53db-bf6f-5ab61d851de6",
+              "image": "/assets/artworks/wikiart/4d4e9519-d14c-53db-bf6f-5ab61d851de6-52fd911dbe50e4d0.jpg",
+              "milliseconds": 712,
+              "source": "https://www.wikiart.org/en/horace-vernet/napoleon-bonaparte-leading-his-troops-over-the-bridge-of-arcol-1826"
+            },
+            {
+              "eventId": "event-q780921",
+              "artworkId": "c795abc5-2805-4603-a5d1-b844767e6ce1",
+              "href": "/artists/horace-vernet-q161145/works/c795abc5-2805-4603-a5d1-b844767e6ce1",
+              "image": "/assets/artworks/wikiart-louvre-20261006/577286aaedc2cb388004e4aa-5121412fedbdf6c7.jpg",
+              "milliseconds": 769,
+              "source": "https://www.wikiart.org/fr/horace-vernet/the-gate-at-clichy-1820"
+            },
+            {
+              "eventId": "event-q815146",
+              "artworkId": "b487355a-7bc3-535f-9e45-b75c0db67423",
+              "href": "/artists/january-suchodolski-q1259182/works/b487355a-7bc3-535f-9e45-b75c0db67423",
+              "image": "/assets/artworks/imported/poland-collections-20261008/poland/b487355a-7bc3-535f-9e45-b75c0db67423-1021a4242670.jpg",
+              "milliseconds": 736,
+              "source": "https://zbiory.mnk.pl/pl/katalog/271267"
+            },
+            {
+              "eventId": "event-q815160",
+              "artworkId": "097b2e84-5cd8-58cb-bb12-903eab6c937d",
+              "href": "/artists/sir-edward-john-poynter-nga-9861/works/097b2e84-5cd8-58cb-bb12-903eab6c937d",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q104814137-45d2a2a57e9bc0c7.jpg",
+              "milliseconds": 718,
+              "source": "https://commons.wikimedia.org/wiki/File:Catapulta_by_Edward_Poynter.jpg"
+            }
+          ],
+          "unmatchedRetained": [
+            "event-q1000158",
+            "event-q1001093",
+            "event-q3062437",
+            "event-q641989"
+          ],
+          "databaseWrites": false
+        },
+        "production": {
+          "origin": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+          "matched": 70,
+          "distinctArtworks": 68,
+          "results": [
+            {
+              "eventId": "event-q1016104",
+              "artworkId": "161f7dc4-3db0-55a2-9e80-3a9c19769596",
+              "href": "/artists/peter-paul-rubens-q5599/works/161f7dc4-3db0-55a2-9e80-3a9c19769596",
+              "image": "/assets/artworks/imported/cesi-top100-20261010/161f7dc4-3db0-55a2-9e80-3a9c19769596-8d9a416a9496331a.jpg",
+              "milliseconds": 750,
+              "source": "https://www.wikiart.org/en/peter-paul-rubens/allegory-on-emperor-charles-as-ruler-of-vast-realms-1604"
+            },
+            {
+              "eventId": "event-q1049945",
+              "artworkId": "f084c019-c6ed-5924-955c-f1b58d1f1e2e",
+              "href": "/artists/wikiart-artist-david-morier/works/f084c019-c6ed-5924-955c-f1b58d1f1e2e",
+              "image": "/assets/artworks/wikiart/f084c019-c6ed-5924-955c-f1b58d1f1e2e-3801b6c9553749d2.jpg",
+              "milliseconds": 798,
+              "source": "https://www.wikiart.org/en/david-morier/the-battle-of-culloden-1746"
+            },
+            {
+              "eventId": "event-q1051804",
+              "artworkId": "29814ad3-46ac-4d63-996f-5ffdee5d11ce",
+              "href": "/artists/ernest-meissonier-q354786/works/29814ad3-46ac-4d63-996f-5ffdee5d11ce",
+              "image": "/assets/artworks/open-museums/night-joconde/50faee15-2eab-47d5-8324-5dc84f288725-57485c895f0ffe96.jpg",
+              "milliseconds": 981,
+              "source": "https://commons.wikimedia.org/wiki/File:Jean-Louis-Ernest_Meissonier-Campagne_de_France.jpg"
+            },
+            {
+              "eventId": "event-q1070342",
+              "artworkId": "a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "href": "/artists/wikimedia-painter-q2960457/works/a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q56365678-5eea42e73d405b74.jpg",
+              "milliseconds": 999,
+              "source": "https://commons.wikimedia.org/wiki/File:Frontenac_receiving_the_envoy_of_Sir_William_Phipps_demanding_the_surrender_of_Quebec,_1690.jpg"
+            },
+            {
+              "eventId": "event-q10871730",
+              "artworkId": "ba2363f6-7552-50d1-b913-a004304294a7",
+              "href": "/artists/vasily-vereshchagin-q127017/works/ba2363f6-7552-50d1-b913-a004304294a7",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/ba2363f6-7552-50d1-b913-a004304294a7-02a29dd91a3c4459.jpg",
+              "milliseconds": 633,
+              "source": "https://www.wikiart.org/en/vasily-vereshchagin/ruins-of-a-theater-in-chuguchak-1870"
+            },
+            {
+              "eventId": "event-q11011",
+              "artworkId": "b1a80a47-8ea4-51cc-9a89-e81c3a8df3f3",
+              "href": "/artists/spain-painter-q1345186/works/b1a80a47-8ea4-51cc-9a89-e81c3a8df3f3",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/b1a80a47-8ea4-51cc-9a89-e81c3a8df3f3-6043d4293a809a66.jpg",
+              "milliseconds": 723,
+              "source": "https://commons.wikimedia.org/wiki/File:Elgrancapitantrasbatalladeceri%C3%B1ola.jpg"
+            },
+            {
+              "eventId": "event-q1144988",
+              "artworkId": "fd9b540d-12af-45b5-8349-8ad5cad9c946",
+              "href": "/artists/eugene-delacroix-q33477/works/fd9b540d-12af-45b5-8349-8ad5cad9c946",
+              "image": "/assets/artworks/wikiart/e274404a-2d93-5d9c-a007-dbaebb026a69-3f45945e8fd7b3c8.jpg",
+              "milliseconds": 712,
+              "source": "https://www.wikiart.org/en/eugene-delacroix/scenes-from-the-massacre-of-chios-1822"
+            },
+            {
+              "eventId": "event-q1190696",
+              "artworkId": "448b9521-1f38-5a2c-b62e-953fd061906a",
+              "href": "/artists/francisco-goya-q5432/works/448b9521-1f38-5a2c-b62e-953fd061906a",
+              "image": "/assets/artworks/imported/random-200-painters-round5-20261007/448b9521-1f38-5a2c-b62e-953fd061906a-83ba8cdc5e62e53f.jpg",
+              "milliseconds": 742,
+              "source": "https://www.wikiart.org/en/francisco-goya/manuel-godoy-duke-of-alcudia-prince-of-peace-1801"
+            },
+            {
+              "eventId": "event-q1232633",
+              "artworkId": "bb5a43f3-9c77-5272-97f7-cba3e12e55d1",
+              "href": "/artists/anton-mauve-q591907/works/bb5a43f3-9c77-5272-97f7-cba3e12e55d1",
+              "image": "/assets/artworks/wikiart/bb5a43f3-9c77-5272-97f7-cba3e12e55d1-dafa2eaf4534afdb.jpg",
+              "milliseconds": 719,
+              "source": "https://www.wikiart.org/en/anton-mauve/morning-ride-on-the-beach-1876"
+            },
+            {
+              "eventId": "event-q124322999",
+              "artworkId": "1fcb2458-212f-5c91-b36a-4e6aa7dd5ce0",
+              "href": "/artists/jozef-brandt-q558489/works/1fcb2458-212f-5c91-b36a-4e6aa7dd5ce0",
+              "image": "/assets/artworks/imported/source-index-delivery-20261010/1fcb2458-212f-5c91-b36a-4e6aa7dd5ce0-4c981d8dfb7b07d8.jpg",
+              "milliseconds": 700,
+              "source": "https://zbiory.mnk.pl/pl/katalog/520905"
+            },
+            {
+              "eventId": "event-q126306",
+              "artworkId": "cd2ad2f6-5b51-515c-b53b-1f78b2fa1ddd",
+              "href": "/artists/wikimedia-painter-q2370524/works/cd2ad2f6-5b51-515c-b53b-1f78b2fa1ddd",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q21725171-8ff82a52b193b59f.jpg",
+              "milliseconds": 860,
+              "source": "https://commons.wikimedia.org/wiki/File:Georg_Wilhelm_Timm_-_Dekabristen-Aufstand.jpg"
+            },
+            {
+              "eventId": "event-q126876",
+              "artworkId": "aacd0ca0-a2ea-5aa0-9e94-54d712574742",
+              "href": "/artists/john-trumbull-nga-1936/works/aacd0ca0-a2ea-5aa0-9e94-54d712574742",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/aacd0ca0-a2ea-5aa0-9e94-54d712574742-856c83039b97efb8.jpg",
+              "milliseconds": 797,
+              "source": "https://www.wikiart.org/en/john-trumbull/the-surrender-of-general-burgoyne-1821"
+            },
+            {
+              "eventId": "event-q1268954",
+              "artworkId": "83f366a8-5068-53e1-8eb5-c0eee2d8f8fe",
+              "href": "/artists/raphael-q5597/works/83f366a8-5068-53e1-8eb5-c0eee2d8f8fe",
+              "image": "/assets/artworks/imported/cesi-top100-20261010/83f366a8-5068-53e1-8eb5-c0eee2d8f8fe-8433205ec0ed0bde.jpg",
+              "milliseconds": 698,
+              "source": "https://www.wikiart.org/en/raphael/the-battle-of-ostia-1514"
+            },
+            {
+              "eventId": "event-q1324198",
+              "artworkId": "a5a3123b-4a44-5722-b20f-382801eee6c5",
+              "href": "/artists/wikimedia-painter-q4749602/works/a5a3123b-4a44-5722-b20f-382801eee6c5",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q20540529-8a087efc862016c0.jpg",
+              "milliseconds": 722,
+              "source": "https://commons.wikimedia.org/wiki/File:The_Signing_of_the_Treaty_of_Ghent,_Christmas_Eve,_1814_SAAM-1922.5.2_1.jpg"
+            },
+            {
+              "eventId": "event-q134114",
+              "artworkId": "d22f58f4-2b24-51a6-8155-98a999895997",
+              "href": "/artists/francois-gerard-q163543/works/d22f58f4-2b24-51a6-8155-98a999895997",
+              "image": "/assets/artworks/wikiart/d22f58f4-2b24-51a6-8155-98a999895997-72ef0689793679bf.jpg",
+              "milliseconds": 731,
+              "source": "https://www.wikiart.org/en/francois-gerard/la-bataille-dausterlitz-1810"
+            },
+            {
+              "eventId": "event-q1364346",
+              "artworkId": "fb016ccb-468d-522a-a9b3-3f08b77369d4",
+              "href": "/artists/wikimedia-painter-q1403817/works/fb016ccb-468d-522a-a9b3-3f08b77369d4",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q17266462-58c47a7447e9697c.jpg",
+              "milliseconds": 713,
+              "source": "https://commons.wikimedia.org/wiki/File:La_Rendici%C3%B3n_de_Bail%C3%A9n_(Casado_del_Alisal).jpg"
+            },
+            {
+              "eventId": "event-q1401605",
+              "artworkId": "663324d3-3656-52e7-897e-d9ab2eda8bfa",
+              "href": "/artists/wassily-kandinsky-q61064/works/663324d3-3656-52e7-897e-d9ab2eda8bfa",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/663324d3-3656-52e7-897e-d9ab2eda8bfa-a52819b46d76addb.jpg",
+              "milliseconds": 799,
+              "source": "https://www.wikiart.org/en/wassily-kandinsky/untitled-first-abstract-watercolor-1910"
+            },
+            {
+              "eventId": "event-q1425138",
+              "artworkId": "7b3cb1e0-9535-43c8-ba66-60147aaae2e3",
+              "href": "/artists/boris-kustodiev-q313275/works/7b3cb1e0-9535-43c8-ba66-60147aaae2e3",
+              "image": "/assets/artworks/open-museums/dk-ru-commons/c7620d9f-591d-414c-8d59-53c0738d070d-5ee7bedf02e83961.jpg",
+              "milliseconds": 718,
+              "source": "https://commons.wikimedia.org/wiki/File:Group_portrait_of_the_Mir_Iskusstva_artists.jpg"
+            },
+            {
+              "eventId": "event-q1429256",
+              "artworkId": "3aa3638a-011b-5644-b717-71b8805fc97a",
+              "href": "/artists/wikimedia-painter-q1380081/works/3aa3638a-011b-5644-b717-71b8805fc97a",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/3aa3638a-011b-5644-b717-71b8805fc97a-5b72ed0681fffc6a.jpg",
+              "milliseconds": 616,
+              "source": "https://commons.wikimedia.org/wiki/File:The_Holy_Roman_Emperor_Charles_V_(1500%E2%80%931558),_by_Juan_Pantoja_de_la_Cruz_(Museo_del_Prado,_Madrid).jpg"
+            },
+            {
+              "eventId": "event-q14378",
+              "artworkId": "411a4dfb-ac3e-4dd1-a1d5-9576ce1508c9",
+              "href": "/artists/jacques-louis-david-q83155/works/411a4dfb-ac3e-4dd1-a1d5-9576ce1508c9",
+              "image": "/assets/artworks/imported/met-436105-7d8d840424e3747c.jpg",
+              "milliseconds": 686,
+              "source": "https://www.metmuseum.org/art/collection/search/436105"
+            },
+            {
+              "eventId": "event-q1478267",
+              "artworkId": "b33c4818-fe4e-57d6-ad22-278279e9ac18",
+              "href": "/artists/jan-matejko-q189117/works/b33c4818-fe4e-57d6-ad22-278279e9ac18",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/b33c4818-fe4e-57d6-ad22-278279e9ac18-f9b25c5c35615743.jpg",
+              "milliseconds": 693,
+              "source": "https://www.wikiart.org/en/jan-matejko/bathory-at-pskov-1872"
+            },
+            {
+              "eventId": "event-q150995",
+              "artworkId": "290922d0-6efa-4646-bb72-d2d1d5cda7c2",
+              "href": "/artists/gerard-ter-borch-q346808/works/290922d0-6efa-4646-bb72-d2d1d5cda7c2",
+              "image": "/assets/artworks/open-museums/night-rijks/78d81baa-a3a1-434a-907a-d63ef4c5afae-93d1ee15160bdf9d.jpg",
+              "milliseconds": 660,
+              "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1683--e60c0795fb382742305dce66375a935d"
+            },
+            {
+              "eventId": "event-q151616",
+              "artworkId": "80eee68f-9def-5b9b-8f74-157417b3d131",
+              "href": "/artists/gustaf-cederstrom-round2-033400a641db/works/80eee68f-9def-5b9b-8f74-157417b3d131",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q10665067-7260c7f1e9bf5de4.jpg",
+              "milliseconds": 737,
+              "source": "https://commons.wikimedia.org/wiki/File:Narva_(Gustaf_Cederstr%C3%B6m)_-_Nationalmuseum_-_18638.tif"
+            },
+            {
+              "eventId": "event-q152218",
+              "artworkId": "03bbe2a5-6fff-5f99-9513-84ee2adf5f13",
+              "href": "/artists/wikimedia-painter-q938108/works/03bbe2a5-6fff-5f99-9513-84ee2adf5f13",
+              "image": "/assets/artworks/imported/painter-key-artworks-20261008/q113652758-9522c22cb74d4b51.jpg",
+              "milliseconds": 705,
+              "source": "https://commons.wikimedia.org/wiki/File:Siege_of_Namur,_1692_(by_Jean-Baptiste_Martin_the_elder).jpg"
+            },
+            {
+              "eventId": "event-q152778",
+              "artworkId": "443ef58e-8de2-5c4b-b72b-c95d3c00c206",
+              "href": "/artists/ernst-ludwig-kirchner-q229272/works/443ef58e-8de2-5c4b-b72b-c95d3c00c206",
+              "image": "/assets/artworks/imported/wikiart-500-painters-20261011/443ef58e-8de2-5c4b-b72b-c95d3c00c206-d8e69f9035ce6b46.jpg",
+              "milliseconds": 724,
+              "source": "https://www.wikiart.org/en/ernst-ludwig-kirchner/kg-br%C3%BCcke"
+            },
+            {
+              "eventId": "event-q155726",
+              "artworkId": "80eee68f-9def-5b9b-8f74-157417b3d131",
+              "href": "/artists/gustaf-cederstrom-round2-033400a641db/works/80eee68f-9def-5b9b-8f74-157417b3d131",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q10665067-7260c7f1e9bf5de4.jpg",
+              "milliseconds": 697,
+              "source": "https://commons.wikimedia.org/wiki/File:Narva_(Gustaf_Cederstr%C3%B6m)_-_Nationalmuseum_-_18638.tif"
+            },
+            {
+              "eventId": "event-q1577800",
+              "artworkId": "8133dfe6-49fe-5642-8403-c131c3fb261f",
+              "href": "/artists/jan-matejko-q189117/works/8133dfe6-49fe-5642-8403-c131c3fb261f",
+              "image": "/assets/artworks/imported/poland-collections-20261008/poland/8133dfe6-49fe-5642-8403-c131c3fb261f-ea1e6beea778.jpg",
+              "milliseconds": 582,
+              "source": "https://zbiory.mnk.pl/pl/katalog/306743"
+            },
+            {
+              "eventId": "event-q161696",
+              "artworkId": "ef2cd034-9f9f-55b1-b45a-a2f2dc3cc8c1",
+              "href": "/artists/pedro-berruguete-q561783/works/ef2cd034-9f9f-55b1-b45a-a2f2dc3cc8c1",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/ef2cd034-9f9f-55b1-b45a-a2f2dc3cc8c1-cf3a7c2eb20e6ca7.jpg",
+              "milliseconds": 686,
+              "source": "https://commons.wikimedia.org/wiki/File:Berruguete_ordeal.jpg"
+            },
+            {
+              "eventId": "event-q1628039",
+              "artworkId": "ade2d648-7178-59f6-8bad-4b29536d6925",
+              "href": "/artists/gerard-van-honthorst-q314548/works/ade2d648-7178-59f6-8bad-4b29536d6925",
+              "image": "/assets/artworks/imported/random-200-painters-round2-20261006/ade2d648-7178-59f6-8bad-4b29536d6925-ad02b6f5bc30a493.jpg",
+              "milliseconds": 697,
+              "source": "https://www.wikiart.org/en/gerard-van-honthorst/the-procuress-1625"
+            },
+            {
+              "eventId": "event-q1633167",
+              "artworkId": "229217ae-e832-5440-b898-c40ff4ad28c0",
+              "href": "/artists/nikolai-dmitriev-orenburgsky-q2030263/works/229217ae-e832-5440-b898-c40ff4ad28c0",
+              "image": "/assets/artworks/imported/painter-key-artworks-20261008/q105554305-3fdc9563cc6533a5.jpg",
+              "milliseconds": 706,
+              "source": "https://commons.wikimedia.org/wiki/File:Orenburgsky.jpg"
+            },
+            {
+              "eventId": "event-q1638031",
+              "artworkId": "1ae09e5e-6cc4-594d-9365-5e7261654395",
+              "href": "/artists/georg-von-rosen-research-a67682f060a8/works/1ae09e5e-6cc4-594d-9365-5e7261654395",
+              "image": "/assets/artworks/open-museums/followup-nationalmuseum-commons/1ae09e5e-6cc4-594d-9365-5e7261654395-6001ff430156fb85.jpg",
+              "milliseconds": 728,
+              "source": "https://commons.wikimedia.org/wiki/File:The_Entry_of_Sten_Sture_the_Elder_into_Stockholm_(Georg_von_Rosen)_-_Nationalmuseum_-_19214.tif"
+            },
+            {
+              "eventId": "event-q1642290",
+              "artworkId": "9988f799-42fd-5d42-a7bd-70026acf6428",
+              "href": "/all?itemType=artwork&item=9988f799-42fd-5d42-a7bd-70026acf6428",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/9988f799-42fd-5d42-a7bd-70026acf6428-71e0c90f433a01e2.jpg",
+              "milliseconds": 847,
+              "source": "https://commons.wikimedia.org/wiki/File:Batalla_Fleurus_(1622).jpg"
+            },
+            {
+              "eventId": "event-q164800",
+              "artworkId": "ace66c40-e239-52e0-be55-53fa2b1feebc",
+              "href": "/artists/pierre-puvis-de-chavannes-q216873/works/ace66c40-e239-52e0-be55-53fa2b1feebc",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/ace66c40-e239-52e0-be55-53fa2b1feebc-5870a8f5ac4f4da3.jpg",
+              "milliseconds": 724,
+              "source": "https://www.wikiart.org/en/pierre-puvis-de-chavannes/young-girls-on-the-edge-of-the-sea"
+            },
+            {
+              "eventId": "event-q166593",
+              "artworkId": "b4e005b6-9dc2-558b-8497-ec18defba5fc",
+              "href": "/artists/henri-matisse-q5589/works/b4e005b6-9dc2-558b-8497-ec18defba5fc",
+              "image": "/assets/artworks/wikiart/b4e005b6-9dc2-558b-8497-ec18defba5fc-e1beb918990b7b36.jpg",
+              "milliseconds": 667,
+              "source": "https://www.wikiart.org/en/henri-matisse/woman-with-hat-1905"
+            },
+            {
+              "eventId": "event-q167259",
+              "artworkId": "d0ebbfc5-f76b-5bda-9cce-9d0220047afa",
+              "href": "/artists/wikimedia-painter-q445022/works/d0ebbfc5-f76b-5bda-9cce-9d0220047afa",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q18573550-874f91f98fee54fd.jpg",
+              "milliseconds": 684,
+              "source": "https://commons.wikimedia.org/wiki/File:Death_of_King_Gustav_II_Adolf_of_Sweden_at_the_Battle_of_L%C3%BCtzen_(Carl_Wahlbom)_-_Nationalmuseum_-_18031.tif"
+            },
+            {
+              "eventId": "event-q168442",
+              "artworkId": "a97c2c06-33f7-5a67-8975-dc51388043f5",
+              "href": "/artists/francisco-de-zurbaran-q209615/works/a97c2c06-33f7-5a67-8975-dc51388043f5",
+              "image": "/assets/artworks/open-museums/spain-followup/q5801323-2df00907b7f02ee6.jpg",
+              "milliseconds": 708,
+              "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_014.jpg"
+            },
+            {
+              "eventId": "event-q16931679",
+              "artworkId": "df9f3f50-d38e-549d-9c70-02518ac8c044",
+              "href": "/artists/sandro-botticelli-q5669/works/df9f3f50-d38e-549d-9c70-02518ac8c044",
+              "image": "/assets/artworks/imported/random-200-painters-round6-20261007/df9f3f50-d38e-549d-9c70-02518ac8c044-45065fb2fa3bc88f.jpg",
+              "milliseconds": 654,
+              "source": "https://www.wikiart.org/en/sandro-botticelli/the-story-of-lucretia-1504"
+            },
+            {
+              "eventId": "event-q170531",
+              "artworkId": "1ba43b06-e5a0-4dc0-a00d-fb5430266c87",
+              "href": "/artists/vasily-surikov-q110228/works/1ba43b06-e5a0-4dc0-a00d-fb5430266c87",
+              "image": "/assets/artworks/wikiart/6d420d3a-ccbc-4092-be1d-9f55e3461f67-07400d008423ec08.jpg",
+              "milliseconds": 802,
+              "source": "https://www.wikiart.org/ru/vasiliy-surikov/chetvertyy-vselenskiy-khalkidonskiy-sobor-1876"
+            },
+            {
+              "eventId": "event-q1708064",
+              "artworkId": "a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "href": "/artists/wikimedia-painter-q2960457/works/a7f5d121-5e2d-5c97-adef-b8b809ce15a2",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q56365678-5eea42e73d405b74.jpg",
+              "milliseconds": 704,
+              "source": "https://commons.wikimedia.org/wiki/File:Frontenac_receiving_the_envoy_of_Sir_William_Phipps_demanding_the_surrender_of_Quebec,_1690.jpg"
+            },
+            {
+              "eventId": "event-q171374",
+              "artworkId": "55dcf513-0bfc-5589-9c42-c872d7f88b07",
+              "href": "/artists/benjamin-west-nga-1970/works/55dcf513-0bfc-5589-9c42-c872d7f88b07",
+              "image": "/assets/artworks/wikiart/55dcf513-0bfc-5589-9c42-c872d7f88b07-9e4f2593a7115126.jpg",
+              "milliseconds": 666,
+              "source": "https://www.wikiart.org/en/benjamin-west/the-treaty-of-penn-with-the-indians-1772"
+            },
+            {
+              "eventId": "event-q175447",
+              "artworkId": "9e688714-32c5-5b2c-a67a-700a701faa84",
+              "href": "/artists/james-tissot-q381248/works/9e688714-32c5-5b2c-a67a-700a701faa84",
+              "image": "/assets/artworks/imported/wikiart-500-painters-20261011/9e688714-32c5-5b2c-a67a-700a701faa84-c637d322acb344ac.jpg",
+              "milliseconds": 743,
+              "source": "https://www.wikiart.org/en/james-tissot/the-flight-of-the-prisoners"
+            },
+            {
+              "eventId": "event-q1779008",
+              "artworkId": "aac0133e-53db-53ae-9b3d-fc45bbf6928e",
+              "href": "/artists/peter-paul-rubens-q5599/works/aac0133e-53db-53ae-9b3d-fc45bbf6928e",
+              "image": "/assets/artworks/imported/cesi-top100-20261010/aac0133e-53db-53ae-9b3d-fc45bbf6928e-a8f279d4b973501d.jpg",
+              "milliseconds": 623,
+              "source": "https://www.wikiart.org/en/peter-paul-rubens/copy-of-battle-of-anghiari-the-lost-painting-by-leonardo-da-vinci"
+            },
+            {
+              "eventId": "event-q181146",
+              "artworkId": "69285ba7-af36-5d1a-a310-6593c35d5306",
+              "href": "/artists/francisco-goya-q5432/works/69285ba7-af36-5d1a-a310-6593c35d5306",
+              "image": "/assets/artworks/imported/prado-expansion-wikiart-20261006/69285ba7-af36-5d1a-a310-6593c35d5306-16739cc111a25171.jpg",
+              "milliseconds": 704,
+              "source": "https://www.wikiart.org/en/francisco-goya/the-second-of-may-1808-the-charge-of-the-mamelukes-1814"
+            },
+            {
+              "eventId": "event-q192769",
+              "artworkId": "7b4ab19f-d2a5-5758-8c2e-bccdee6efbe9",
+              "href": "/artists/john-trumbull-nga-1936/works/7b4ab19f-d2a5-5758-8c2e-bccdee6efbe9",
+              "image": "/assets/artworks/wikiart/7b4ab19f-d2a5-5758-8c2e-bccdee6efbe9-7a19bfecdecfc812.jpg",
+              "milliseconds": 885,
+              "source": "https://www.wikiart.org/en/john-trumbull/declaration-of-independence-1819"
+            },
+            {
+              "eventId": "event-q203225",
+              "artworkId": "4bd285a8-e173-5e94-8033-b5902db0cd7c",
+              "href": "/artists/peter-nicolai-arbo-q353014/works/4bd285a8-e173-5e94-8033-b5902db0cd7c",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/4bd285a8-e173-5e94-8033-b5902db0cd7c-d3b233b5d2a664ba.jpg",
+              "milliseconds": 708,
+              "source": "https://www.wikiart.org/en/peter-nicolai-arbo/battle-of-stamford-bridge-1870"
+            },
+            {
+              "eventId": "event-q2091915",
+              "artworkId": "fb2bea77-5920-5d2c-941b-33aa40cc82be",
+              "href": "/artists/wikiart-artist-william-simpson/works/fb2bea77-5920-5d2c-941b-33aa40cc82be",
+              "image": "/assets/artworks/imported/random-200-painters-20261006/fb2bea77-5920-5d2c-941b-33aa40cc82be-c57d3b12fd2acbed.jpg",
+              "milliseconds": 665,
+              "source": "https://www.wikiart.org/en/william-simpson/bombardment-of-bomarsund-1854"
+            },
+            {
+              "eventId": "event-q233417",
+              "artworkId": "d37ab882-b604-589e-8cf1-0c5f481ea9b4",
+              "href": "/artists/john-trumbull-nga-1936/works/d37ab882-b604-589e-8cf1-0c5f481ea9b4",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/d37ab882-b604-589e-8cf1-0c5f481ea9b4-8a13939705e65a2e.jpg",
+              "milliseconds": 652,
+              "source": "https://www.wikiart.org/en/john-trumbull/george-washington-before-the-battle-of-trenton-1792"
+            },
+            {
+              "eventId": "event-q233507",
+              "artworkId": "37aa3e93-4a9c-57d5-8006-d12811eefc90",
+              "href": "/artists/wikiart-artist-richard-caton-woodville-jr/works/37aa3e93-4a9c-57d5-8006-d12811eefc90",
+              "image": "/assets/artworks/wikiart/37aa3e93-4a9c-57d5-8006-d12811eefc90-9a4374d257abbffb.jpg",
+              "milliseconds": 734,
+              "source": "https://www.wikiart.org/en/richard-caton-woodville-jr/92nd-highlanders-and-2nd-gurkhas-storming-the-gaudi-mullah-sahibdad-at-kandahar-1-september-1880-1890"
+            },
+            {
+              "eventId": "event-q2342758",
+              "artworkId": "6365b0fe-89df-5f1b-a29c-e2cb1a3a24fd",
+              "href": "/artists/wikiart-artist-william-simpson/works/6365b0fe-89df-5f1b-a29c-e2cb1a3a24fd",
+              "image": "/assets/artworks/wikiart/6365b0fe-89df-5f1b-a29c-e2cb1a3a24fd-283a33ddf4814917.jpg",
+              "milliseconds": 689,
+              "source": "https://www.wikiart.org/en/william-simpson/battle-of-the-tchernaya-august-16th-1855-1856"
+            },
+            {
+              "eventId": "event-q23832735",
+              "artworkId": "b3d1f894-73c4-535a-8186-085ebadf86ea",
+              "href": "/artists/wikiart-artist-john-wilson-carmichael/works/b3d1f894-73c4-535a-8186-085ebadf86ea",
+              "image": "/assets/artworks/wikiart/b3d1f894-73c4-535a-8186-085ebadf86ea-448a1896ce262014.jpg",
+              "milliseconds": 690,
+              "source": "https://www.wikiart.org/en/john-wilson-carmichael/hms-erebus-and-terror-in-the-antarctic-1847"
+            },
+            {
+              "eventId": "event-q241108",
+              "artworkId": "689eef0e-be95-5cf4-9616-e5bb68fc8a7c",
+              "href": "/artists/horace-vernet-q161145/works/689eef0e-be95-5cf4-9616-e5bb68fc8a7c",
+              "image": "/assets/artworks/imported/random-200-painters-20261006/689eef0e-be95-5cf4-9616-e5bb68fc8a7c-70433e77e54b6679.jpg",
+              "milliseconds": 719,
+              "source": "https://www.wikiart.org/en/horace-vernet/napoleon-at-the-battle-of-friedland-1807"
+            },
+            {
+              "eventId": "event-q2634456",
+              "artworkId": "01fe4008-3c2a-5607-8964-b31df9b2f0d3",
+              "href": "/artists/wikimedia-painter-q3286980/works/01fe4008-3c2a-5607-8964-b31df9b2f0d3",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q20087514-33ffb49c920b9f63.jpg",
+              "milliseconds": 724,
+              "source": "https://commons.wikimedia.org/wiki/File:Robert_Gibb_-_The_Thin_Red_Line.jpg"
+            },
+            {
+              "eventId": "event-q2975371",
+              "artworkId": "e16e40fb-0a3e-51e5-8a44-1da614f666bf",
+              "href": "/artists/yoshitoshi-q467337/works/e16e40fb-0a3e-51e5-8a44-1da614f666bf",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/e16e40fb-0a3e-51e5-8a44-1da614f666bf-90c0fe4ec2cfe9c6.jpg",
+              "milliseconds": 724,
+              "source": "https://www.wikiart.org/en/tsukioka-yoshitoshi/shinp-ren-rebellion-1876"
+            },
+            {
+              "eventId": "event-q2976715",
+              "artworkId": "774cd038-a8c7-40d4-871e-3036e87cfbde",
+              "href": "/artists/george-catlin-nga-1113/works/774cd038-a8c7-40d4-871e-3036e87cfbde",
+              "image": "/assets/artworks/open-museums/night-saam/10573c31-9a73-450e-8209-01af7610a6eb-0bae9309f09794ab.jpg",
+              "milliseconds": 743,
+              "source": "https://americanart.si.edu/collections/search/artwork/?id=4307"
+            },
+            {
+              "eventId": "event-q3178783",
+              "artworkId": "6e11ad73-f08d-4ff8-813f-201ce2fa41da",
+              "href": "/artists/antoine-jean-gros-q216999/works/6e11ad73-f08d-4ff8-813f-201ce2fa41da",
+              "image": "/assets/artworks/wikiart-louvre-20261006/589c5342edc2cd40d4ab5511-6f4f1d8be4ebd2fd.jpg",
+              "milliseconds": 700,
+              "source": "https://www.wikiart.org/fr/antoine-jean-gros/bonaparte-visitant-les-pestiferes-de-jaffa-1804"
+            },
+            {
+              "eventId": "event-q3360281",
+              "artworkId": "24123bce-5b8d-5fd6-aa51-6f1baecb3582",
+              "href": "/all?itemType=artwork&item=24123bce-5b8d-5fd6-aa51-6f1baecb3582",
+              "image": "/assets/artworks/imported/prado-museum-images-20261006/24123bce-5b8d-5fd6-aa51-6f1baecb3582-9a622641f87c07e8.jpg",
+              "milliseconds": 802,
+              "source": "https://commons.wikimedia.org/wiki/File:Alhamar,_rey_de_Granada,_rinde_vasallaje_al_rey_de_Castilla,_Fernando_III_el_Santo_(Museo_del_Prado).jpg"
+            },
+            {
+              "eventId": "event-q3588",
+              "artworkId": "20a5d17f-90ec-5f36-af60-1a6dc88dab8c",
+              "href": "/artists/horace-vernet-q161145/works/20a5d17f-90ec-5f36-af60-1a6dc88dab8c",
+              "image": "/assets/artworks/imported/random-200-painters-20261006/20a5d17f-90ec-5f36-af60-1a6dc88dab8c-4086107101f23769.jpg",
+              "milliseconds": 741,
+              "source": "https://www.wikiart.org/en/horace-vernet/on-the-barricades-on-the-rue-soufflot-paris-25-june-1848-1849"
+            },
+            {
+              "eventId": "event-q402312",
+              "artworkId": "433a8d16-a35e-5304-9180-3da388fd2081",
+              "href": "/artists/john-wootton-research-34a37f0d5544/works/433a8d16-a35e-5304-9180-3da388fd2081",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q118998239-46d9dd98c7980172.jpg",
+              "milliseconds": 744,
+              "source": "https://commons.wikimedia.org/wiki/File:John_Wootton_(c.1682-1764)_-_George_II_at_the_Battle_of_Dettingen,_with_the_Duke_of_Cumberland_and_Robert,_4th_Earl_of_Holderness,_27_June_1743_-_NAM._1961-07-116_-_National_Army_Museum.jpg"
+            },
+            {
+              "eventId": "event-q426227",
+              "artworkId": "56cd486a-2daa-59c3-929d-bb1804fdd81d",
+              "href": "/artists/wikiart-artist-frank-hurley/works/56cd486a-2daa-59c3-929d-bb1804fdd81d",
+              "image": "/assets/artworks/wikiart/56cd486a-2daa-59c3-929d-bb1804fdd81d-77e7f93dee06422d.jpg",
+              "milliseconds": 920,
+              "source": "https://www.wikiart.org/en/frank-hurley/chateau-wood"
+            },
+            {
+              "eventId": "event-q505802",
+              "artworkId": "e8c51edc-c546-500d-96cd-34c092a8c4e6",
+              "href": "/artists/wikimedia-painter-q1065418/works/e8c51edc-c546-500d-96cd-34c092a8c4e6",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q108147022-0f34fa2717fd0c41.jpg",
+              "milliseconds": 785,
+              "source": "https://commons.wikimedia.org/wiki/File:Lewis_and_clark-expedition.jpg"
+            },
+            {
+              "eventId": "event-q579971",
+              "artworkId": "8598074f-3dd9-5f3f-ad04-d1c9b43ebfd6",
+              "href": "/artists/benjamin-west-nga-1970/works/8598074f-3dd9-5f3f-ad04-d1c9b43ebfd6",
+              "image": "/assets/artworks/imported/random-200-painters-round3-20261006/8598074f-3dd9-5f3f-ad04-d1c9b43ebfd6-53b3015e93b37772.jpg",
+              "milliseconds": 633,
+              "source": "https://www.wikiart.org/en/benjamin-west/general-johnson-1768"
+            },
+            {
+              "eventId": "event-q641479",
+              "artworkId": "a2855184-d9e8-5e80-98f2-8f9c0b071316",
+              "href": "/artists/jan-matejko-q189117/works/a2855184-d9e8-5e80-98f2-8f9c0b071316",
+              "image": "/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/a2855184-d9e8-5e80-98f2-8f9c0b071316-668e83598d747373.jpg",
+              "milliseconds": 770,
+              "source": "https://www.wikiart.org/en/jan-matejko/bohdan-khmelnytsky-with-tugai-bey-near-lviv-1885"
+            },
+            {
+              "eventId": "event-q650567",
+              "artworkId": "913a710e-94a6-4d29-acb9-6bbe45003f7c",
+              "href": "/artists/eugene-delacroix-q33477/works/913a710e-94a6-4d29-acb9-6bbe45003f7c",
+              "image": "/assets/artworks/imported/production-wikiart-images-20261006/913a710e-94a6-4d29-acb9-6bbe45003f7c-f3c3b3e6834e2b86.jpg",
+              "milliseconds": 629,
+              "source": "https://www.wikiart.org/en/eugene-delacroix/greece-expiring-on-the-ruins-of-missolonghi-1826"
+            },
+            {
+              "eventId": "event-q668811",
+              "artworkId": "f9db0a94-d028-5f78-a3b5-120f4c738fa5",
+              "href": "/artists/pavel-fedotov-q248597/works/f9db0a94-d028-5f78-a3b5-120f4c738fa5",
+              "image": "/assets/artworks/wikiart/f9db0a94-d028-5f78-a3b5-120f4c738fa5-1d4f780bcf174017.jpg",
+              "milliseconds": 800,
+              "source": "https://www.wikiart.org/en/pavel-fedotov/it-is-cholera-to-blame"
+            },
+            {
+              "eventId": "event-q6843829",
+              "artworkId": "b45e6ead-bc8f-5663-84d6-c55e3323feb1",
+              "href": "/artists/frederic-remington-nga-25060/works/b45e6ead-bc8f-5663-84d6-c55e3323feb1",
+              "image": "/assets/artworks/imported/random-200-painters-round4-20261006/b45e6ead-bc8f-5663-84d6-c55e3323feb1-5de4550601699407.jpg",
+              "milliseconds": 724,
+              "source": "https://www.wikiart.org/en/frederic-remington/the-mier-expedition-the-drawing-of-the-black-bean-1896"
+            },
+            {
+              "eventId": "event-q689128",
+              "artworkId": "31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "href": "/artists/january-suchodolski-q1259182/works/31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "image": "/assets/artworks/imported/event-artworks-20261012/battle-of-san-domingo-7b1fd2ec32407f80.jpg",
+              "milliseconds": 707,
+              "source": "https://commons.wikimedia.org/wiki/File:Battle_for_Palm_Tree_Hill.jpg"
+            },
+            {
+              "eventId": "event-q776609",
+              "artworkId": "4d4e9519-d14c-53db-bf6f-5ab61d851de6",
+              "href": "/artists/horace-vernet-q161145/works/4d4e9519-d14c-53db-bf6f-5ab61d851de6",
+              "image": "/assets/artworks/wikiart/4d4e9519-d14c-53db-bf6f-5ab61d851de6-52fd911dbe50e4d0.jpg",
+              "milliseconds": 839,
+              "source": "https://www.wikiart.org/en/horace-vernet/napoleon-bonaparte-leading-his-troops-over-the-bridge-of-arcol-1826"
+            },
+            {
+              "eventId": "event-q780921",
+              "artworkId": "c795abc5-2805-4603-a5d1-b844767e6ce1",
+              "href": "/artists/horace-vernet-q161145/works/c795abc5-2805-4603-a5d1-b844767e6ce1",
+              "image": "/assets/artworks/wikiart-louvre-20261006/577286aaedc2cb388004e4aa-5121412fedbdf6c7.jpg",
+              "milliseconds": 660,
+              "source": "https://www.wikiart.org/fr/horace-vernet/the-gate-at-clichy-1820"
+            },
+            {
+              "eventId": "event-q815146",
+              "artworkId": "b487355a-7bc3-535f-9e45-b75c0db67423",
+              "href": "/artists/january-suchodolski-q1259182/works/b487355a-7bc3-535f-9e45-b75c0db67423",
+              "image": "/assets/artworks/imported/poland-collections-20261008/poland/b487355a-7bc3-535f-9e45-b75c0db67423-1021a4242670.jpg",
+              "milliseconds": 630,
+              "source": "https://zbiory.mnk.pl/pl/katalog/271267"
+            },
+            {
+              "eventId": "event-q815160",
+              "artworkId": "097b2e84-5cd8-58cb-bb12-903eab6c937d",
+              "href": "/artists/sir-edward-john-poynter-nga-9861/works/097b2e84-5cd8-58cb-bb12-903eab6c937d",
+              "image": "/assets/artworks/imported/wikimedia-catalogue/q104814137-45d2a2a57e9bc0c7.jpg",
+              "milliseconds": 726,
+              "source": "https://commons.wikimedia.org/wiki/File:Catapulta_by_Edward_Poynter.jpg"
+            }
+          ],
+          "unmatchedRetained": [
+            "event-q1000158",
+            "event-q1001093",
+            "event-q3062437",
+            "event-q641989"
+          ],
+          "databaseWrites": false
+        }
+      },
+      "web": {
+        "candidate": {
+          "origin": "https://event-artworks-1012-v2---artline-web-lpuqqlugnq-ew.a.run.app",
+          "results": [
+            {
+              "name": "desktop",
+              "href": "/artists/january-suchodolski-q1259182/works/31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "keyboard": true,
+              "noOverflow": true,
+              "axeViolations": 0,
+              "errors": [],
+              "backRestoresEvent": true
+            },
+            {
+              "name": "mobile",
+              "href": "/artists/january-suchodolski-q1259182/works/31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "keyboard": false,
+              "noOverflow": true,
+              "axeViolations": 0,
+              "errors": [],
+              "backRestoresEvent": true
+            }
+          ],
+          "creatorlessArtworkDrawer": "https://event-artworks-1012-v2---artline-web-lpuqqlugnq-ew.a.run.app/all?itemType=artwork&item=9988f799-42fd-5d42-a7bd-70026acf6428",
+          "unmatchedPictureAndSourceRetained": true
+        },
+        "production": {
+          "origin": "https://artlines.org",
+          "results": [
+            {
+              "name": "desktop",
+              "href": "/artists/january-suchodolski-q1259182/works/31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "keyboard": true,
+              "noOverflow": true,
+              "axeViolations": 0,
+              "errors": [],
+              "backRestoresEvent": true
+            },
+            {
+              "name": "mobile",
+              "href": "/artists/january-suchodolski-q1259182/works/31b12ec9-2abf-5f56-9d20-531d1e178f2b",
+              "keyboard": false,
+              "noOverflow": true,
+              "axeViolations": 0,
+              "errors": [],
+              "backRestoresEvent": true
+            }
+          ],
+          "creatorlessArtworkDrawer": "https://artlines.org/all?itemType=artwork&item=9988f799-42fd-5d42-a7bd-70026acf6428",
+          "unmatchedPictureAndSourceRetained": true
+        }
+      }
+    }
+  },
+  "releaseErrorLogEntries": {
+    "api": 0,
+    "web": 0
+  },
+  "deploymentDatabaseWrites": false,
+  "realLocalDatabaseWrites": false,
+  "schemaMigrations": false,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "newPageRoutes": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/event-artworks-20261012/release",
+  "limitations": [
+    "Functional and responsive checks, not a capacity-scale load test.",
+    "No Google sign-in or account writes exercised.",
+    "Existing study snapshots are unchanged."
+  ],
+  "rollback": "Route each service back to its recorded rollbackRevision only if no later release has superseded it; otherwise revert this scoped change onto latest source. Restore matching local image pins. This application release requires no data rollback."
+}

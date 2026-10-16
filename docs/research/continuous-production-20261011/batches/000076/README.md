@@ -1,0 +1,15 @@
+# Batch 76 — verified Aichi delivery via SHŪZŌ
+
+Delivered and independently verified: **1 new painter, 6 new artworks, 6 newly illustrated works, 0 alternate images, and 6 documented museum holdings**. Kishida Ryūsei and Aichi Prefectural Museum of Art were globally reconciled; new records remain in review. The works include one drawing and five paintings, dated 1918–1929 with two circa-1929 labels preserved.
+
+All 188 French reserve prints already existed with their earlier campaign images and source-plan citations. Their original source captures, prepared files, prior actual visual approvals and live state were verified; none counts as a new programme addition. ColBase returned HTTP 403 requiring an API key; that route remains held. SHŪZŌ supplied 25 bounded metadata candidates, from which six were independently matched to native Aichi inventory pages. The other 19 remain explicit pending records.
+
+SHŪZŌ images were not downloaded. The six native museum files individually state Public Domain, and the museum permits commercial reuse. All six derivatives were actually viewed individually and fully decoded; each is at most 100,000 bytes. Complete supplied photographs, mounts, calibration cards and proportions were retained. Original Japanese custodian and Kimura Teizo Collection credits accompany the images. User authorization remains separate from source rights. Initial image errors were preserved; ordinary anonymous page-session initialization corrected delivery without accessing authentication or a held endpoint.
+
+Production uses the established helper, verified Cloud SQL target, shared ingestion lock, atomic writes, checksum-pinned plans and local schema/affected-row recovery evidence. Independent checks cover source and rights pins, empty transaction preimages, insert/update audit events, media relationships, storage checksums/generations, public API and public image bytes. Actual metadata and image replay caused zero changes. The previous five Athens records and all 188 French reserve rows remain unchanged. No local catalogue writes, Cloud SQL backups, commits, deployment or supervisor changes occurred.
+
+Queue updates changed only Yale reserve, ColBase and SHŪZŌ; all 108 other source entries were preserved. Measured batch runtime at checkpoint: 924.3 seconds. Programme elapsed time: 18.65 hours; this is wall-clock programme time, not claimed worker CPU time. Verified cumulative programme receipts now total 2 painters, 227 artworks, 634 newly illustrated works and 227 holdings.
+
+Next: Research MASP Brazil through the original registry after checking access holds, reconciling object-level holdings and eligible images. Preserve SHUZO’s 19 pending records and from=25 cursor; do not retry ColBase’s key-required endpoint or the exhausted French reserve without changed evidence.
+
+See `batch-verification-receipt.json`, `final-checkpoint-verification.json`, `CHECKPOINT.json` and `source-register-final.json`. The external supervisor owns continuation; no second worker or schedule was launched.

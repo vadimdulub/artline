@@ -1,0 +1,170 @@
+{
+  "checks": [
+    "Add artwork and immediate count",
+    "Search, empty results and reset",
+    "Year validation and Seurat 1887 interval gap",
+    "Morisot keeps displayed 1875–80 range",
+    "Notes and workflow persist; note text remains literal",
+    "CSV preserves dates, sources, notes and neutralizes formulas",
+    "Independent comparison selectors and return preserves filters",
+    "Artwork timeline keeps separate intervals",
+    "Dialog Escape and focus restoration",
+    "Five screens fit 1440, 1280, 1024, 768, 390 and 320px",
+    "First mobile visit uses gallery; record add/remove updates count",
+    "200% text size check at desktop width"
+  ],
+  "responsive": [
+    {
+      "width": 1440,
+      "screen": "workspace",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "add",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "workspace",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "add",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "workspace",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "add",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "workspace",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "add",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "workspace",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "add",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "record",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "workspace",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "compare",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "timeline",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "add",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "screen": "record",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated HTML design preview, not application integration"
+}

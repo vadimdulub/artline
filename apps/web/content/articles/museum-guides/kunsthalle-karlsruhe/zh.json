@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "kunsthalle-karlsruhe",
+  "museum": "Staatliche Kunsthalle Karlsruhe",
+  "city": "卡尔斯鲁厄",
+  "country": "德国",
+  "title": "卡尔斯鲁厄国立美术馆：杰作",
+  "subtitle": "二十幅画，看看障碍、边缘和遮挡怎样改变空间的读法。",
+  "introduction": "海景不一定把最多地方交给海。在塞尚的埃斯塔克风景里，前景树木和地面仍很突出，部分挡住期待中的远眺。其他作品也不肯轻易让开路：格吕内瓦尔德的十字架横过人群，恩斯特的森林难以穿越，贝克曼的静物则挤在浅窄空间里。\n\n另一些画提供更有秩序的路线。街道、花园和跨河通道，让我们比较开阔与拥塞。目的不是强行串成同一种历史发展，而是留意：在题材变得容易辨认之前，每幅画要求眼睛先做什么。",
+  "visitNote": "历史悠久的主楼目前正在进行翻新工程。橘园（Orangerie）已重新开放举办展览；博物馆官网的访客页面提供了当前开放的场馆及活动安排。本指南涵盖了馆藏的各类作品，并非当前展出画作的清单。",
+  "locale": "zh",
+  "website": "https://www.kunsthalle-karlsruhe.de/",
+  "officialGuide": "https://www.kunsthalle-karlsruhe.de/besuch/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基的著作阐述了他如何在色彩与非具象形式中探寻意义。《即兴之作13》（Improvisation 13）提供了一个可供直接验证这些观点的范例，而周围的其他画作则展示了色彩运用的不同方式。"
+    }
+  ],
+  "works": [
+    {
+      "id": "8a31416a-0de9-5055-819a-2306890e814f",
+      "title": "森林",
+      "catalogueTitle": "Forest",
+      "artist": "Max Ernst",
+      "artists": [
+        {
+          "name": "Max Ernst",
+          "role": "primary",
+          "slug": "max-ernst-q154842"
+        }
+      ],
+      "date": "1927",
+      "start": 1927,
+      "end": 1927,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/8a31416a-0de9-5055-819a-2306890e814f-7c6ec73f11bb6b9f.jpg",
+      "imageSource": "https://www.wikiart.org/en/max-ernst/forest-1927",
+      "credit": "Max Ernst. Forest. WikiArt source label: Max Ernst Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/max-ernst/forest-1927",
+      "license": "Max Ernst Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/max-ernst/forest-1927",
+      "description": "竖向形状可能使人想到树干，但密实、锯齿般的表面也像粗糙建筑。上方红弧引入另一种尺度。恩斯特保留足够的重复，让整体成为森林，却没有把每个部分都变得熟悉。整体可以辨认，单个形状却仍不肯给出明确答案。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "0fdf6450-1532-56af-87b7-c8e69e1220a5",
+      "title": "陶伯比绍夫斯海姆祭坛画：受难",
+      "catalogueTitle": "Tauberbischofsheim altarpiece: Christ on the Cross with Mary and Saint John",
+      "artist": "Matthias Grünewald",
+      "artists": [
+        {
+          "name": "Matthias Grünewald",
+          "role": "primary",
+          "slug": "matthias-grunewald-q154338"
+        }
+      ],
+      "date": "1523–1524",
+      "start": 1523,
+      "end": 1524,
+      "medium": "",
+      "accession": "994",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q124429029-4394bfaed10c9443.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mathis_Gothart_Gr%C3%BCnewald_058.jpg",
+      "credit": "Matthias Grünewald. Tauberbischofsheim altarpiece: Christ on the Cross with Mary and Saint John. Image credit: Matthias Grünewald; Source credit: 1. The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 . 2. Google Art Project. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q124429029",
+      "description": "基督紧绷的轮廓占据画板，周围几乎没有舒缓的空处。下方玛利亚和约翰以手势回应受刑身体，不需要复杂场所来说明。格吕内瓦尔德让身体细节传递严酷。狭暗空间没有解释痛苦，却使伸展双臂和哀悼姿势难以被忽略。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "2372530c-686d-52b5-a01a-c6d66019ee3f",
+      "title": "贫困与忧虑",
+      "catalogueTitle": "Armut und Sorge",
+      "artist": "Arnold Böcklin",
+      "artists": [
+        {
+          "name": "Arnold Böcklin",
+          "role": "primary",
+          "slug": "arnold-bocklin-q123071"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "958",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104525620-93b884646ea56572.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_-_Armut_und_Sorge_-_958_-_Staatliche_Kunsthalle_Karlsruhe.jpg",
+      "credit": "Arnold Böcklin. Armut und Sorge. Image credit: Arnold Böcklin; Source credit: Staatliche Kunsthalle Karlsruhe, Sammlung online. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104525620",
+      "description": "一人的手指举起，另一人双臂交抱，靠近的两名女子保持不同姿态。标题让我们把她们看作拟人形象，而不只是无名模特。勃克林给抽象处境以人的外形，但名称并未取消具体手势。画面值得看的，是一个概念与某种身体姿势之间并不完全重合的关系。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "8d040269-d613-5c4c-9ebc-7fca5ced2a21",
+      "title": "陶伯比绍夫斯海姆祭坛画：背负十字架",
+      "catalogueTitle": "Tauberbischofsheim altarpiece: Christ Carrying the Cross",
+      "artist": "Matthias Grünewald",
+      "artists": [
+        {
+          "name": "Matthias Grünewald",
+          "role": "primary",
+          "slug": "matthias-grunewald-q154338"
+        }
+      ],
+      "date": "1523–1524",
+      "start": 1523,
+      "end": 1524,
+      "medium": "",
+      "accession": "993",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104529524-bbcfb5db56eb9ba9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mathis_Gothart_Gr%C3%BCnewald_060.jpg",
+      "credit": "Matthias Grünewald. Tauberbischofsheim altarpiece: Christ Carrying the Cross. Image credit: Matthias Grünewald; Source credit: The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 .. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104529524",
+      "description": "十字架既是负担，也是障碍。斜木梁穿过建筑开口下的人群，使人物难以逐个分开。与《受难》相比，这里的痛苦发生在移动和拥挤之中。基督弯下的身体必须在早被其他身体和巨重木架占据的地方找到路径。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "1b69a115-5be5-57eb-9c5d-28c3458db473",
+      "title": "晨间梳妆",
+      "catalogueTitle": "At the morning toilet",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1752",
+      "start": 1752,
+      "end": 1752,
+      "medium": "",
+      "accession": "2506",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104525714-b1dd4fc0ed349815.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justus_Juncker_-_Bei_der_Morgentoilette_-_2506_-_Staatliche_Kunsthalle_Karlsruhe.jpg",
+      "credit": "Justus Juncker. At the morning toilet. Image credit: Justus Juncker; Source credit: Staatliche Kunsthalle Karlsruhe. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104525714",
+      "description": "镜子把梳妆放进一个已经充满其他图像的房间。瓷砖、家具和墙上画围绕普通日常安排室内。容克尔没有把坐着的女子从环境中抽离；她的动作属于这间有人生活的屋子。照看镜中的自己，只是房间允许的多种观看之一。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "7edb2b1b-80ac-5139-be6f-82733272652f",
+      "title": "即兴13",
+      "catalogueTitle": "Improvisation 13",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "2596",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104521953-bff16e8aed08d5ac.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kandinsky_-_Improvisation_13,_1910.jpg",
+      "credit": "Wassily Kandinsky. Improvisation 13. Image credit: Wassily Kandinsky. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104521953",
+      "description": "一些轮廓像身体或地形，却没有组成可靠的完整场景。康定斯基让色块与交叉黑线独立建立联系。辨认可以开始，也可以中断，画面并不因此失去组织。我们不必把每一块都转换成叫得出名字的物件。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "0f87a23a-3af4-596f-8451-1a24abb9738d",
+      "title": "有倒下蜡烛的静物",
+      "catalogueTitle": "Still life with fallen candle",
+      "artist": "Max Beckmann",
+      "artists": [
+        {
+          "name": "Max Beckmann",
+          "role": "primary",
+          "slug": "max-beckmann-q164683"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "",
+      "accession": "2435",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104527800-2cff35c96f56adb2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Stilleben_mit_gest%C3%BCrzter_Kerze_.PNG",
+      "credit": "Max Beckmann. Still life with fallen candle. Image credit: Max Beckmann; Source credit: https://www.kunsthalle-karlsruhe.de/kunstwerke/Max-Beckmann/Stilleben-mit-gest%C3%BCrzter-Kerze/A1C925EE4DA39411535E9298B95C5E13/. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104527800",
+      "description": "倒下的物件在狭窄聚集的东西之间引入一道横向打断。强轮廓使彼此紧邻格外明显。贝克曼的布料与带框表面增加层次，却没有真正留下很多空隙。静物名义上不动，这些关系却像秩序受到扰乱后的结果，而不是安然完成的摆放。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "9ee23b3b-be17-470f-9e99-557361f75f9a",
+      "title": "让托夫人",
+      "catalogueTitle": "Bildnis Madame Jeantaud",
+      "artist": "Edgar Degas",
+      "artists": [
+        {
+          "name": "Edgar Degas",
+          "role": "primary",
+          "slug": "edgar-degas-q46373"
+        }
+      ],
+      "date": "约 1877 年",
+      "start": 1877,
+      "end": 1877,
+      "medium": "布面油画",
+      "accession": "2493",
+      "image": "https://artlines.org/assets/artworks/imported/popular-karlsruhe-study-a892e96aaa9ff69fbadb88c6264b222d2c8d505f02942105e370c3f8fe738fff.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Edgar-Degas/Bildnis-Madame-Jeantaud/0147A51A406583D3FC38049178ABBB14/",
+      "credit": "Edgar Degas, Bildnis Madame Jeantaud, c.1877. Staatliche Kunsthalle Karlsruhe. CC0 1.0. Resized and JPEG-compressed; no crop or retouching. CC0 1.0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Edgar-Degas/Bildnis-Madame-Jeantaud/0147A51A406583D3FC38049178ABBB14/",
+      "description": "伸开的手臂使沙发成为姿势的一部分。深色衣服从浅色沙发表面升起，帽子和直立躯干又给出另一方向。德加靠不对称而非明显行动获得动势。家具不只是说明房间舒适，也决定模特怎样占据画面。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "cb413297-1ce4-5816-859b-5594625945e1",
+      "title": "尤利乌斯·约翰·冯·菲特与戈尔塞瑙的三个女儿",
+      "catalogueTitle": "Bildnis der drei Töchter von Julius Johann von Vieth und Golssenau",
+      "artist": "Anton Graff",
+      "artists": [
+        {
+          "name": "Anton Graff",
+          "role": "primary",
+          "slug": "anton-graff-q310213"
+        }
+      ],
+      "date": "约 1773 年",
+      "start": 1773,
+      "end": 1773,
+      "medium": "",
+      "accession": "Lg 1913",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104530035-311bb509dc14bab7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anton_Graff_-_Bildnis_der_drei_T%C3%B6chter_von_Julius_Johann_von_Vieth_und_Golssenau_-_Lg_1913_-_Staatliche_Kunsthalle_Karlsruhe.jpg",
+      "credit": "Anton Graff. Bildnis der drei Töchter von Julius Johann von Vieth und Golssenau. Image credit: Anton Graff; Source credit: Staatliche Kunsthalle Karlsruhe. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104530035",
+      "description": "姐妹们倾身靠成紧凑群体，手和歪斜头部连接各自不同的面貌。格拉夫避免把三张肖像整齐并排。转头和接触的细微差异保留个人区别，暗底则使浅色面孔共享一条紧密外轮廓。亲近不必靠精确对称建立。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "4226e552-9124-4802-bb54-5a8332a513d1",
+      "title": "海岸礁石",
+      "catalogueTitle": "Felsenriff am Meeresstrand",
+      "artist": "Caspar David Friedrich",
+      "artists": [
+        {
+          "name": "Caspar David Friedrich",
+          "role": "primary",
+          "slug": "caspar-david-friedrich-q104884"
+        }
+      ],
+      "date": "1824",
+      "start": 1824,
+      "end": 1824,
+      "medium": "布面油画",
+      "accession": "2261",
+      "image": "https://artlines.org/assets/artworks/imported/popular-karlsruhe-study-4c711a287b4e9e2b5305266ecc5684a58f6a387e7252df5b4f73cdef84938c10.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Caspar-David-Friedrich/Felsenriff-am-Meeresstrand/0C3519DA4BC388DB571C6A8C3849C9B6/",
+      "credit": "Caspar David Friedrich, Felsenriff am Meeresstrand, 1824. Staatliche Kunsthalle Karlsruhe. CC0 1.0. Resized and JPEG-compressed; no crop or retouching. CC0 1.0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Caspar-David-Friedrich/Felsenriff-am-Meeresstrand/0C3519DA4BC388DB571C6A8C3849C9B6/",
+      "description": "画里没有人替我们对海岸作出反应。远处尖锐轮廓高出低铺的岩石和水洼，风景自身形成竖向与横向的对照。弗里德里希让这些关系在紫蓝天空下充分显出。没有画中观者，我们便不能借别人的表情直接规定这幅画的情绪。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "8b38133d-0b83-5cf1-b538-80a12beae50a",
+      "title": "从南面看卡尔斯鲁厄",
+      "catalogueTitle": "Blick auf Karlsruhe von Süden",
+      "artist": "Carl Kuntz",
+      "artists": [
+        {
+          "name": "Carl Kuntz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q224203"
+        }
+      ],
+      "date": "1804",
+      "start": 1804,
+      "end": 1804,
+      "medium": "",
+      "accession": "1715",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104523137-6030b7f819758058.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Karl_Kuntz_-_Blick_auf_Karlsruhe_von_S%C3%BCden_-_1715_-_Staatliche_Kunsthalle_Karlsruhe.jpg",
+      "credit": "Carl Kuntz. Blick auf Karlsruhe von Süden. Image credit: Carl Kuntz; Source credit: 1. Staatliche Kunsthalle Karlsruhe 2. Google Arts & Culture. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104523137",
+      "description": "到达城市之前，视线先经过田地和动物，而非迎面看到一个建筑地标。高树与宽天使聚落成为更大耕作景观的一部分。昆茨选择远看，给农业留下重要前景。城市周围的土地也是主题，不是走近城市时可以忽略的空白。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "ee24a3e7-1db8-5594-8181-f11c70a9452d",
+      "title": "从宫苑看卡尔斯鲁厄宫",
+      "catalogueTitle": "Blick auf das Karlsruher Schloss vom Schlossgarten aus",
+      "artist": "Carl Kuntz",
+      "artists": [
+        {
+          "name": "Carl Kuntz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q224203"
+        }
+      ],
+      "date": "1804",
+      "start": 1804,
+      "end": 1804,
+      "medium": "",
+      "accession": "1964",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104526060-0fedfa1e6ecb1d5e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Karl_Kuntz_-_Blick_auf_das_Karlsruher_Schloss_vom_Schlossgarten_aus_-_1964_-_Staatliche_Kunsthalle_Karlsruhe.jpg",
+      "credit": "Carl Kuntz. Blick auf das Karlsruher Schloss vom Schlossgarten aus. Image credit: Carl Kuntz; Source credit: 1. Staatliche Kunsthalle Karlsruhe 2. Google Arts & Culture. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104526060",
+      "description": "草坪、树木和小群动物，使通往宫殿的路径显得柔和。正式建筑仍然清楚，却隔着开阔园地被看见，而非孤立展示。与昆茨的南面城市图并看，会发现同一地点的另一种呈现：宫殿组织远眺，却没有占满前景。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "500831df-c6f2-435f-b393-a9fccc8bbea0",
+      "title": "埃斯塔克的海景",
+      "catalogueTitle": "Blick auf das Meer bei L'Estaque",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1883-1885",
+      "start": 1883,
+      "end": 1885,
+      "medium": "布面油画",
+      "accession": "2450",
+      "image": "https://artlines.org/assets/artworks/imported/popular-karlsruhe-study-5e6a9e824756c1b7b357a1cd910440b8475d4563f48a38dd1ddffd6a29358168.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Paul-Cezanne/Blick-auf-das-Meer-bei-L-Estaque/662299E04C2A03FEAC450DB1CD0D0BD1/",
+      "credit": "Paul Cézanne, Blick auf das Meer bei L'Estaque, 1883–1885. Staatliche Kunsthalle Karlsruhe. CC0 1.0. Resized and JPEG-compressed; no crop or retouching. CC0 1.0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Paul-Cezanne/Blick-auf-das-Meer-bei-L-Estaque/662299E04C2A03FEAC450DB1CD0D0BD1/",
+      "description": "树木和斜坡挡住标题似乎许诺的海景。塞尚用相邻的绿、蓝、赭色区域，使这些近物在构图上不可缺少。海只是相互依存的一部分，不是越过可有可无的前景后才领取的奖赏。纵深既来自可辨认的物件，也来自颜色的关系。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "6a9bcee7-4752-40d7-8078-c21c368087c6",
+      "title": "雨天鲁昂的大桥",
+      "catalogueTitle": "Blick auf die Grosse Brücke zu Rouen bei Regenstimmung",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "布面油画",
+      "accession": "2488",
+      "image": "https://artlines.org/assets/artworks/imported/popular-karlsruhe-next-study-f8ce92117758cade2f03df77be01a0883d970530138324c957baf19d1d94b6ee.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Camille-Pissarro/Blick-auf-die-Grosse-Br%C3%BCcke-zu-Rouen-bei-Regenstimmung/8F81E0C1497EE8F69F83898D8C72C126/",
+      "credit": "Camille Pissarro, Blick auf die Grosse Brücke zu Rouen bei Regenstimmung, 1896. Staatliche Kunsthalle Karlsruhe. CC0 1.0. Resized and JPEG-compressed; no crop or retouching. CC0 1.0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Camille-Pissarro/Blick-auf-die-Grosse-Br%C3%BCcke-zu-Rouen-bei-Regenstimmung/8F81E0C1497EE8F69F83898D8C72C126/",
+      "description": "从高处看，桥展示了在街面上较难追踪的连接。小人物、车辆和河上交通在沉重天空下活动。毕沙罗让雨影响运转中的城市，却不抹掉道路。天气与有组织的移动，仍同时存在于视野里。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "f5019f46-829e-40c1-bd88-47441bbef0cd",
+      "title": "鲁昂的塞纳河",
+      "catalogueTitle": "Die Seine bei Rouen",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1874",
+      "start": 1874,
+      "end": 1874,
+      "medium": "布面油画",
+      "accession": "2502",
+      "image": "https://artlines.org/assets/artworks/imported/popular-karlsruhe-study-8b9d707c9114cf06e640d727135d2fba212fec3c756fe3ce2b44136f556c773e.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Claude-Monet/Die-Seine-bei-Rouen/E6F223D04821161F32098BB6AFFA6E2F/",
+      "credit": "Claude Monet, Die Seine bei Rouen, 1874. Staatliche Kunsthalle Karlsruhe. CC0 1.0. Resized and JPEG-compressed; no crop or retouching. CC0 1.0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Claude-Monet/Die-Seine-bei-Rouen/E6F223D04821161F32098BB6AFFA6E2F/",
+      "description": "桅杆在破碎的水色与天色前提供牢固竖线。下方短笔触使倒影比其对应的船更不稳定。莫奈通过这项区别保留港口的可辨认性。坚实结构与变化光线不必画得同样稳定，场景仍可成立。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "0a9d6238-f175-5618-942f-454bf3525eee",
+      "title": "偷蜂蜜的丘比特",
+      "catalogueTitle": "Cupid as Honey Thief",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1531",
+      "start": 1531,
+      "end": 1531,
+      "medium": "",
+      "accession": "811",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104525415-30e13abde4c9bf2b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_(1472)_-_Amor_als_Honigdieb_-_811_-_Staatliche_Kunsthalle_Karlsruhe.jpg",
+      "credit": "Lucas Cranach the Elder. Cupid as Honey Thief. Image credit: Workshop of Lucas Cranach the Elder / After Lucas Cranach the Elder; Source credit: 1./2. Staatliche Kunsthalle Karlsruhe, digitale Sammlung 3. Google Arts & Culture. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104525415",
+      "description": "蜂巢许诺甜味，蜜蜂则把代价显出来。丘比特抬起的手让小身体明显不适。克拉纳赫将事件集中在窄空间，几乎没有其他事干扰。关于欲望的教训由具体身体后果传达，不只是写在抽象训诫里。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "6774d5a2-f50c-57df-acc4-a2807b8e4209",
+      "title": "十日谈",
+      "catalogueTitle": "Der Decamerone",
+      "artist": "Franz Xaver Winterhalter",
+      "artists": [
+        {
+          "name": "Franz Xaver Winterhalter",
+          "role": "primary",
+          "slug": "franz-xaver-winterhalter-q168659"
+        }
+      ],
+      "date": "1837",
+      "start": 1837,
+      "end": 1837,
+      "medium": "",
+      "accession": "1217",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/karlsruhe/q104525741-c2ef17228b4ca837.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Franz-Xaver-Winterhalter/Der-Decamerone/DEC19469401B292CACBE3E98E57A183E/",
+      "credit": "Der Decamerone. Franz Xaver Winterhalter; Staatliche Kunsthalle Karlsruhe. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame resize and JPEG compression.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104525741",
+      "description": "文学标题引出讲故事，但温特哈尔特把大半画面给了围坐的同伴。姿势多样、衣装繁复，听者不比可能的讲述者低调。花园容纳这种共同闲暇。故事可以组织一群人，即使无法从画中聚会还原其具体措辞。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "8af7ff7a-a440-5105-95ce-2c9ca096f633",
+      "title": "有橙子、香蕉、柠檬和番茄的静物",
+      "catalogueTitle": "Stilleben mit Orangen, Bananen, Zitrone und Tomate",
+      "artist": "Paula Modersohn-Becker",
+      "artists": [
+        {
+          "name": "Paula Modersohn-Becker",
+          "role": "primary",
+          "slug": "paula-modersohn-becker-q234370"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "",
+      "accession": "2557",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104525282-4bdf7553bb96a1bd.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paula_Modersohn-Becker_-_Stilleben_mit_Orangen,_Bananen,_Zitrone_und_Tomate_-_2557_-_Staatliche_Kunsthalle_Karlsruhe.jpg",
+      "credit": "Paula Modersohn-Becker. Stilleben mit Orangen, Bananen, Zitrone und Tomate. Image credit: Paula Modersohn-Becker; Source credit: Staatliche Kunsthalle Karlsruhe. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104525282",
+      "description": "简化色彩赋予果实结实体积，不必列尽表皮细节。圆形物体与浅布、盘子在桌面紧密相接。莫德松-贝克尔用形状之间的关系表现重量。东西不必昂贵，也不必植物学般精细描绘，仅凭摆放就能让人继续看。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "43a06485-0e0a-4a32-92dd-d88bf9e6df8c",
+      "title": "君士坦丁堡的建立",
+      "catalogueTitle": "Die Gründung Konstantinopels",
+      "artist": "Peter Paul Rubens",
+      "artists": [
+        {
+          "name": "Peter Paul Rubens",
+          "role": "primary",
+          "slug": "peter-paul-rubens-q5599"
+        }
+      ],
+      "date": "约 1622–1623 年",
+      "start": 1622,
+      "end": 1623,
+      "medium": "橡木板油画",
+      "accession": "2759",
+      "image": "https://artlines.org/assets/artworks/imported/popular-karlsruhe-next-study-c743d234be96e765cf309824df5848051b76d9cbabd7815961aa0825b8063eee.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Peter-Paul-Rubens/Die-Gr%C3%BCndung-Konstantinopels/6336539F49C73E6486A6528246DD7026/",
+      "credit": "Peter Paul Rubens, Die Gründung Konstantinopels, c.1622–1623. Staatliche Kunsthalle Karlsruhe. CC0 1.0. Resized and JPEG-compressed; no crop or retouching. CC0 1.0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Peter-Paul-Rubens/Die-Gr%C3%BCndung-Konstantinopels/6336539F49C73E6486A6528246DD7026/",
+      "description": "统治者的手势把命令接到建造劳动上。广阔天空与鹰之下，其他身体将活动铺开。鲁本斯把一座城的建立浓缩为配合行动的人群，而不是交代全部施工过程。权力通过大家被引向何种工作而可见，不只来自中央人物的服装。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    },
+    {
+      "id": "cb16dad5-6a7c-4b61-a061-79f4c11fe083",
+      "title": "勒普尔迪的房屋",
+      "catalogueTitle": "Häuser in Le Pouldu",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "2503",
+      "image": "https://artlines.org/assets/artworks/imported/popular-karlsruhe-study-52d944e350fa9e80932d3c901386fecd64bdde9a9d359ffc149291169b06bde4.jpg",
+      "imageSource": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Paul-Gauguin/H%C3%A4user-in-Le-Pouldu/A80F0323437B4793605003B5612B2854/",
+      "credit": "Paul Gauguin, Häuser in Le Pouldu, 1890. Staatliche Kunsthalle Karlsruhe. CC0 1.0. Resized and JPEG-compressed; no crop or retouching. CC0 1.0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.kunsthalle-karlsruhe.de/kunstwerke/Paul-Gauguin/H%C3%A4user-in-Le-Pouldu/A80F0323437B4793605003B5612B2854/",
+      "description": "光秃树干遮住彩色房子，把小人物所在的狭窄间隔分开。高更让这些障碍参与互相嵌合的表面图案。村庄仍可识别，但深而连续的空间已经不是唯一目标。前景与建筑向同一套色彩安排靠拢。",
+      "importance": "",
+      "museum": "Staatliche Kunsthalle Karlsruhe"
+    }
+  ],
+  "context": {
+    "start": 1523,
+    "end": 1930
+  },
+  "closingSections": [
+    {
+      "title": "两组值得比较的画",
+      "paragraphs": [
+        "先把两幅鲁昂风景并看，再比较昆茨描绘卡尔斯鲁厄的两个位置。改变视点可能与改变题材同样重要。参观前请查询博物馆当前使用的场馆及作品可见状态；本组选品不是逐厅路线。"
+      ]
+    }
+  ]
+}

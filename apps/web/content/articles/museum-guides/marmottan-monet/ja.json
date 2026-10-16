@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "marmottan-monet",
+  "museum": "Musée Marmottan Monet",
+  "city": "パリ",
+  "country": "フランス",
+  "title": "マルモッタン・モネ美術館：名作",
+  "subtitle": "見分けられる主題と、その輪郭を揺らす筆触、光、反射との釣り合いを、20作品から見ます。",
+  "introduction": "《印象・日の出》の港は、遠くがぼやけていても認識できます。より詳細な絵なら多数の物に分担させる仕事を、オレンジの円と数隻の暗い舟が果たしています。マルモッタンの別の作品では、蒸気が駅の鉄骨を途切れさせ、反射がモネの庭の境目を複雑にします。\n\nこの選集は、確かな構造と不確かな輪郭の関係をたどりますが、モネだけのものではありません。モリゾは庭の光を家族の中にも通わせ、ルノワールは明るい紙を中心に読書する姿をまとめます。時代をさかのぼるアトリエの絵では、一人のモデルに大勢の学生が集まります。絵画は何を明瞭に描く必要があり、何を曖昧に残せるのか。20作品は、それぞれの答えを示しています。",
+  "visitNote": "ご来館を計画される際は、当館のコレクションおよび展覧会のページをご確認ください。ここに挙げた作品はコレクションの一部から選定されたものであり、展示が確約されている作品のリストではありません。",
+  "locale": "ja",
+  "website": "https://www.marmottan.fr",
+  "officialGuide": "https://www.marmottan.fr",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "オンラインで読む、またはダウンロード · 英語",
+      "note": "『印象派：100周年記念展（Impressionism: A Centenary Exhibition）』は、モネ、モリゾ、ルノワール、シスレーに関する歴史的背景を提示しています。印象派を一律の様式として捉えるのではなく、同展の解説などを活用して、彼らの主題や手法を比較検討してみてください。"
+    }
+  ],
+  "works": [
+    {
+      "id": "f219874d-94a6-58bb-8b58-166fab49ad27",
+      "title": "印象・日の出",
+      "catalogueTitle": "Impression, sunrise",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f219874d-94a6-58bb-8b58-166fab49ad27-9ccb4426dc3867ed.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-monet/impression-sunrise",
+      "credit": "Claude Monet. Impression, sunrise. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/claude-monet/impression-sunrise",
+      "description": "ル・アーヴル港の多くが蒸気の中で輪郭を失っても、オレンジの太陽ははっきりしています。暗い舟と短い反射が、水面を読み取るのに十分な構造を与えます。1874年の出品時、ルイ・ルロワはこの題名から言葉を取り、出品者たちを揶揄しました。歴史に残る呼び名は、この作品の細部を省く描き方から生まれています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "46037be8-79e5-5fe8-a646-2d1694946494",
+      "title": "建造中のボート",
+      "catalogueTitle": "Boats under Construction",
+      "artist": "Berthe Morisot",
+      "artists": [
+        {
+          "name": "Berthe Morisot",
+          "role": "primary",
+          "slug": "berthe-morisot-q105320"
+        }
+      ],
+      "date": "1874",
+      "start": 1874,
+      "end": 1874,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/46037be8-79e5-5fe8-a646-2d1694946494-6d75a8d124100ed8.jpg",
+      "imageSource": "https://www.wikiart.org/en/berthe-morisot/boats-under-construction",
+      "credit": "Berthe Morisot. Boats under Construction. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/berthe-morisot/boats-under-construction",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/berthe-morisot/boats-under-construction",
+      "description": "未完成の船体には、でき上がった舟なら通常は覆われる構造が見えます。索具や支えは岸辺を横切る斜線を加え、港をただの風光明媚な場所ではなく、働く場所にしています。モリゾは露出した部分の関係を通して、建造の過程を見せます。仕上がった表面がまだなくても、舟だとわかります。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "ef730ab1-a246-54e9-bc2f-5f64a0275c58",
+      "title": "ブージヴァルのウジェーヌ・マネと娘",
+      "catalogueTitle": "Eugene Manet with his daughter at Bougival",
+      "artist": "Berthe Morisot",
+      "artists": [
+        {
+          "name": "Berthe Morisot",
+          "role": "primary",
+          "slug": "berthe-morisot-q105320"
+        }
+      ],
+      "date": "1881年頃",
+      "start": 1881,
+      "end": 1881,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/ef730ab1-a246-54e9-bc2f-5f64a0275c58-6c889600ea09f00c.jpg",
+      "imageSource": "https://www.wikiart.org/en/berthe-morisot/eugene-manet-with-his-daughter-at-bougival",
+      "credit": "Berthe Morisot. Eugene Manet with his daughter at Bougival. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/berthe-morisot/eugene-manet-with-his-daughter-at-bougival",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/berthe-morisot/eugene-manet-with-his-daughter-at-bougival",
+      "description": "父と娘は庭のテーブルの周りの小さな場所を共有し、後ろには明るい葉が続きます。密接した筆触は服と植物の両方を通り、家族を周囲と同じ光の中へ置いています。二人がこちらを向いて正式にポーズを取らなくても、その場の活動が肖像をまとめています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "ff6fc6a1-ebe7-5a98-aab6-444f532bf535",
+      "title": "休息する羊飼いの娘",
+      "catalogueTitle": "Shepherdess Resting",
+      "artist": "Berthe Morisot",
+      "artists": [
+        {
+          "name": "Berthe Morisot",
+          "role": "primary",
+          "slug": "berthe-morisot-q105320"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/ff6fc6a1-ebe7-5a98-aab6-444f532bf535-dff5e7dbae607f12.jpg",
+      "imageSource": "https://www.wikiart.org/en/berthe-morisot/shepherdess-resting-1891",
+      "credit": "Berthe Morisot. Shepherdess Resting. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/berthe-morisot/shepherdess-resting-1891",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/berthe-morisot/shepherdess-resting-1891",
+      "description": "長いスカートが、横たわる身体を地面の緑や茶色の中へつなぎます。片腕が頭を支え、その簡単な身体の配置から休息だとわかります。周囲に似た筆触があっても人物は区別できるため、身体と草の境目を柔らかくしながら、形を失わずに済んでいます。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "ec158b5d-fbdc-4121-baa2-4ea29f236776",
+      "title": "睡蓮の池",
+      "catalogueTitle": "Bassin aux nymphéas",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1918–1919",
+      "start": 1918,
+      "end": 1919,
+      "medium": "キャンバスに油彩",
+      "accession": "5105",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/ec158b5d-fbdc-4121-baa2-4ea29f236776-32b981693aebce73.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:BASSIN_AUX_NYMPH%C3%89AS_(1918-1919)_Claude_Monet_-_Mus%C3%A9e_Marmottan_Monet_(W_1882).jpg",
+      "credit": "Claude Monet. Bassin aux nymphéas. Image credit: Claude Monet; https://www.marmottan.fr/notice/5105/?is=true. https://commons.wikimedia.org/wiki/File:BASSIN_AUX_NYMPH%C3%89AS_(1918-1919)_Claude_Monet_-_Mus%C3%A9e_Marmottan_Monet_(W_1882).jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/5105/",
+      "description": "岸と水の境界を、反射と密な色の筆触が何度も乱しています。赤、緑、淡色の印が、同じ活発な表面にあります。庭であることは認識できますが、一つの明確な水平線や輪郭に頼るのではなく、見ながら何度も確かめ直さなければなりません。その難しさ自体が、じっくり見る経験の一部になっています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "30dc0d50-2a17-4a90-85f0-9d4ec7efb62a",
+      "title": "オンフルール港のボート",
+      "catalogueTitle": "Bateaux dans le port de Honfleur",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "キャンバスに油彩",
+      "accession": "5022",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/30dc0d50-2a17-4a90-85f0-9d4ec7efb62a-bf04294f7c2e5a38.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Bateaux_dans_le_port_de_Honfleur,_Esquisse_(1917)_Monet_-_Mus%C3%A9e_Marmottan_Monet_-_W1846.jpg",
+      "credit": "Claude Monet. Bateaux dans le port de Honfleur. Image credit: Claude Monet; https://www.marmottan.fr/notice/5022/?is=true. https://commons.wikimedia.org/wiki/File:Bateaux_dans_le_port_de_Honfleur,_Esquisse_(1917)_Monet_-_Mus%C3%A9e_Marmottan_Monet_-_W1846.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/5022/",
+      "description": "舟と水際の家の上で、マストと教会の尖塔が低い空を分割します。細い垂直線は、ほかは広い帯でまとめられた眺めに細部を加えます。美術館のカタログはこの作品を1917年としています。モネの港の絵ならもっと早い時期のはずだという推測で、記録された年を黙って置き換えてはいけません。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "9fcb9647-22f1-49d4-856b-61f586c7b7ee",
+      "title": "花束",
+      "catalogueTitle": "Bouquet de fleurs",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "キャンバスに油彩",
+      "accession": "5333",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/9fcb9647-22f1-49d4-856b-61f586c7b7ee-a95cb4ecbbab7a08.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_Bouquet_de_fleurs_-_Mus%C3%A9e_Marmottan-Monet.jpg",
+      "credit": "Paul Gauguin. Bouquet de fleurs. Image credit: Paul Gauguin; musée Marmottan-Monet [1]. https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_Bouquet_de_fleurs_-_Mus%C3%A9e_Marmottan-Monet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/5333/",
+      "description": "花束は上方の詰まった塊を作り、花瓶、布、果物はそれより空間に余裕のある土台になります。赤と青の花は、一輪ごとの植物学的な細部ではなく、色によって全体に存在感を与えます。この二つの密度の釣り合いのおかげで、静物画の全面が同じように込み合うことはありません。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "a5565f69-3759-4a12-bdca-64854487e641",
+      "title": "読書するクロード・モネ",
+      "catalogueTitle": "Claude Monet lisant",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1873年頃",
+      "start": 1873,
+      "end": 1873,
+      "medium": "キャンバスに油彩",
+      "accession": "5013",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/a5565f69-3759-4a12-bdca-64854487e641-9951f9bd8cb42e1b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pierre_August_Renoir,_Claude_Monet_Reading.jpg",
+      "credit": "Pierre-Auguste Renoir. Claude Monet lisant. Image credit: Pierre-Auguste Renoir; Source credit: Own work , user:Rlbberlin. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/5013/",
+      "description": "モネの手の近くで紙が光を受け、帽子は顔を部分的に囲みます。ルノワールは、職業を示すパレットを持たせなくても、読書に没頭する画家を見せています。肖像の動作は紙面へ向かい、モデルに視線を返してもらわなくても、その集中する姿を観察できます。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "73d49e53-eb23-5697-a0a0-af3b4f480bb3",
+      "title": "グロのアトリエの内部",
+      "catalogueTitle": "Intérieur de l'atelier de Gros",
+      "artist": "Auguste Antoine Massé",
+      "artists": [
+        {
+          "name": "Auguste Antoine Massé",
+          "role": "primary",
+          "slug": "wikimedia-painter-q106862520"
+        }
+      ],
+      "date": "1824",
+      "start": 1824,
+      "end": 1824,
+      "medium": "",
+      "accession": "1591",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105099563-2b62972de18cfabb.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Atelier_Gros,_1824.jpg",
+      "credit": "Auguste Antoine Massé. Intérieur de l'atelier de Gros. Image credit: Auguste-Antoine Massé. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105099563",
+      "description": "多くの学生が一人の座るモデルを見つめ、高い室内の各所をイーゼルと上げた手が占めています。モデルが離れていることで、集団の配置の理由がわかります。込み合って見える場には目的があります。同じ身体を、同じには見えない異なる位置から、複数の人が学んでいるのです。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "2a8cfde7-0177-5aa9-a5e9-23ca6dc935bc",
+      "title": "ヴァロンブローザのパラディジーノから望むアルノ渓谷",
+      "catalogueTitle": "La vallée de l'Arno vue depuis le Paradisino de Vallombrosa",
+      "artist": "Louis Gauffier",
+      "artists": [
+        {
+          "name": "Louis Gauffier",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3262017"
+        }
+      ],
+      "date": "1799",
+      "start": 1799,
+      "end": 1799,
+      "medium": "",
+      "accession": "20",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105099558-a3d036f352268a36.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Louis_Gauffier_-_La_vall%C3%A9e_de_l%27Arno_2.jpg",
+      "credit": "Louis Gauffier. La vallée de l'Arno vue depuis le Paradisino de Vallombrosa. Image credit: Louis Gauffier. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105099558",
+      "description": "テラスの壁が、人々のすぐ近くの場所と、その先の広い谷を分けます。その境目は、遠くまで広がる風景を特定の場所から見ていると示します。庭、森、丘が後退していく規模は、手前の縁近くに立つ小さな集団の規模とは異なります。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "346e90c1-f775-4b7c-8ef5-589ef0457550",
+      "title": "外周大通り、雪の効果",
+      "catalogueTitle": "Les boulevards extérieurs. Effet de neige.",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "キャンバスに油彩",
+      "accession": "4021",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/346e90c1-f775-4b7c-8ef5-589ef0457550-33ca50c8b7b5ffc6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Camille_Pissarro_-_Les_boulevards_ext%C3%A9rieurs,_effet_de_neige_-_Mus%C3%A9e_Marmottan-Monet.jpg",
+      "credit": "Camille Pissarro. Les boulevards extérieurs. Effet de neige.. Image credit: Camille Pissarro; musée Marmottan-Monet [1]. https://commons.wikimedia.org/wiki/File:Camille_Pissarro_-_Les_boulevards_ext%C3%A9rieurs,_effet_de_neige_-_Mus%C3%A9e_Marmottan-Monet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/4021/",
+      "description": "雪は建物や往来の輪郭を柔らかくしても、大通りを止めません。葉のない木々の間で人と馬車は動き続け、暗い印となって、限られた淡色の幅の中に置かれています。天候は都市の見え方を変えても、その使われ方は読み取れます。日々の動きを取り去った風景とは違う釣り合いです。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "2231335b-1e22-4425-83ad-3cf40f2e64b3",
+      "title": "横たわるベルト・モリゾ",
+      "catalogueTitle": "Portrait de Berthe Morisot étendue",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "キャンバスに油彩",
+      "accession": "6086",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/2231335b-1e22-4425-83ad-3cf40f2e64b3-2f766281046d120b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Portrait_de_Berthe_Morisot_%C3%A9tendue,_1873.jpg",
+      "credit": "Édouard Manet. Portrait de Berthe Morisot étendue. Image credit: Édouard Manet; Source credit: Unknown source Unknown source. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/6086/",
+      "description": "赤を背に、衣服、髪、帽子の大きな暗い塊の中から、白い顔が現れます。この簡潔さによって、目や口の周囲のわずかな変化が特に重要になります。広い背景や、モデルの仕事の詳しい説明ではなく、少数の強い関係が肖像の存在感を作っています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "cf3bb4c5-de6d-4800-b47a-7c3a3f36f7f6",
+      "title": "ジュリー・マネの肖像",
+      "catalogueTitle": "Portrait de Julie Manet",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "キャンバスに油彩",
+      "accession": "6092",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/cf3bb4c5-de6d-4800-b47a-7c3a3f36f7f6-f158c830d92c82a3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Portrait_de_Julie_Manet_-_Mus%C3%A9e_Marmottan-Monet.jpg",
+      "credit": "Pierre-Auguste Renoir. Portrait de Julie Manet. Image credit: Pierre-Auguste Renoir; musée Marmottan-Monet [1]. https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Portrait_de_Julie_Manet_-_Mus%C3%A9e_Marmottan-Monet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/6092/",
+      "description": "長い髪と暗い服が下方に安定した形を作り、顔のわずかな向きが、左右対称の正面像になるのを防ぎます。柔らかく描かれた背景は、人物と競う情報をほとんど加えません。モデルの個性は、そばに置く象徴的な物ではなく、この顔と視線の向きから伝わります。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "5e2507ac-5fc9-4869-b9f8-a6cf1a7afe57",
+      "title": "マドモアゼル・ヴィクトリーヌ・ド・ベリオ",
+      "catalogueTitle": "Portrait de Mademoiselle Victorine de Bellio",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "キャンバスに油彩",
+      "accession": "4024",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/5e2507ac-5fc9-4869-b9f8-a6cf1a7afe57-869fffdd431014eb.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_Victorine_de_Bellio.jpg",
+      "credit": "Pierre-Auguste Renoir. Portrait de Mademoiselle Victorine de Bellio. Image credit: Pierre-Auguste Renoir; Source credit: Gianluca T.. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://www.marmottan.fr/notice/4024/",
+      "description": "赤いブラウスは、肖像で最も大きな暖色の部分です。その上の顔は、より小さく穏やかな色の変化で作られ、すべての縁を等しく鋭く区切らなくても見分けられます。淡い背景がその差を見せ、衣服を目立たせながら、人物に取って代わらせません。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "18805a28-c0a0-4aa9-a7b6-8893ac426cb7",
+      "title": "パリ近郊の春：花咲くリンゴの木",
+      "catalogueTitle": "Printemps aux environs de Paris. Pommiers en fleurs",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "キャンバスに油彩",
+      "accession": "4025",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/18805a28-c0a0-4aa9-a7b6-8893ac426cb7-b5ead90a432afeac.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Alfred_Sisley_-_Printemps_aux_environs_de_Paris,_pommiers_en_fleurs_-_Mus%C3%A9e_Marmottan-Monet.jpg",
+      "credit": "Alfred Sisley. Printemps aux environs de Paris. Pommiers en fleurs. Image credit: Alfred Sisley; musée Marmottan-Monet [1]. https://commons.wikimedia.org/wiki/File:Alfred_Sisley_-_Printemps_aux_environs_de_Paris,_pommiers_en_fleurs_-_Mus%C3%A9e_Marmottan-Monet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/4025/",
+      "description": "花の咲く木々は草地や耕作地に繰り返し立ち、淡い花が部分的にぼかす構造を作っています。背後の暗い丘のおかげで、明るい植物は遠景全体に溶け込みません。春は季節の逸話を付け足すのではなく、見慣れた木の形が変わることによって現れています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "d5ed6a16-555c-49a9-be28-b86f75b6d66f",
+      "title": "ヴォルテッラ：町から下る道",
+      "catalogueTitle": "Volterra. Route descendant de la ville",
+      "artist": "Jean-Baptiste-Camille Corot",
+      "artists": [
+        {
+          "name": "Jean-Baptiste-Camille Corot",
+          "role": "primary",
+          "slug": "jean-baptiste-camille-corot-q148475"
+        }
+      ],
+      "date": "1834年頃",
+      "start": 1834,
+      "end": 1834,
+      "medium": "キャンバスに油彩",
+      "accession": "6505",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/d5ed6a16-555c-49a9-be28-b86f75b6d66f-eaa6154602b8b903.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jean_Baptiste_Camille_Corot_-_Volterra._Route_descendant_de_la_ville_-_Mus%C3%A9e_Marmottan-Monet.jpg",
+      "credit": "Jean-Baptiste-Camille Corot. Volterra. Route descendant de la ville. Image credit: Jean-Baptiste Camille Corot; musée Marmottan-Monet [1]. https://commons.wikimedia.org/wiki/File:Jean_Baptiste_Camille_Corot_-_Volterra._Route_descendant_de_la_ville_-_Mus%C3%A9e_Marmottan-Monet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/6505/",
+      "description": "道の曲線が、人物や近くの木を遠い町へ結びます。簡単な明暗差と地面の重なりだけで、その経路に奥行きが生まれます。小さな人物は場所の規模を示すものの、別のドラマは加えません。土地を通っていく動きが、すでに眺めをたどる方向を与えています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "6cd637f3-bcbb-4020-a171-bc2a6e53d76b",
+      "title": "モレ＝シュル＝ロワン近郊の小春日和",
+      "catalogueTitle": "Été de la Saint-Martin, environs de Moret-sur-Loing",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "キャンバスに油彩",
+      "accession": "D.2018.1.12",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/6cd637f3-bcbb-4020-a171-bc2a6e53d76b-1cd9a31106214803.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Estate_di_San_Martino,_dintorni_di_Moret-sur-Loing.jpg",
+      "credit": "Alfred Sisley. Été de la Saint-Martin, environs de Moret-sur-Loing. Image credit: Alfred Sisley; Source credit: Gianluca T.. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://www.marmottan.fr/notice/D.2018.1.12/",
+      "description": "水路のそばで、高い木々が風景を狭い間隔に分けています。暖色の葉は遠くの冷たい色から目を引き、季節の色が距離を区別する手段になります。葉の色が変わっても、繰り返す垂直線は重要です。それがなければ暖色の斑点にばらけそうな眺めを、一つに保っています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "713158da-7ed4-461a-8355-391a46f7a840",
+      "title": "舞踏会にて",
+      "catalogueTitle": "Au bal",
+      "artist": "Berthe Morisot",
+      "artists": [
+        {
+          "name": "Berthe Morisot",
+          "role": "primary",
+          "slug": "berthe-morisot-q105320"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "キャンバスに油彩",
+      "accession": "4020",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/713158da-7ed4-461a-8355-391a46f7a840-42ba3680ad4be449.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Au_bal,_par_Berthe_Morisot.jpg",
+      "credit": "Berthe Morisot. Au bal. Image credit: Berthe Morisot; https://www.marmottan.fr/wp-content/themes/marmottan2019/collection/full/4020.jpg. https://commons.wikimedia.org/wiki/File:Au_bal,_par_Berthe_Morisot.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/4020/",
+      "description": "開いた扇はモデルの持物であると同時に、彼女を部分的に隠します。広がる形は肖像の輪郭を変え、顔へ目を引きつけながら、その顔への視線も遮ります。明るい服と肌は、暗い髪や植物から区別できます。日常の小物が、その人をどう見せるかに積極的に関わっています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "9d7f4625-0630-42a4-a9bc-601164f40f57",
+      "title": "サン・ラザール駅、ヨーロッパ橋",
+      "catalogueTitle": "Le pont de l'Europe. Gare Saint-Lazare.",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "キャンバスに油彩",
+      "accession": "4015",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/9d7f4625-0630-42a4-a9bc-601164f40f57-13bfc3ec977e9073.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_1877,_Pont_de_l%27Europe_(cropped).jpg",
+      "credit": "Claude Monet. Le pont de l'Europe. Gare Saint-Lazare.. Image credit: Claude Monet; Own work. https://commons.wikimedia.org/wiki/File:Claude_Monet,_1877,_Pont_de_l%27Europe_(cropped).jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/4015/",
+      "description": "鉄の構造が駅に確かな骨組みを与え、その一部を蒸気が見えにくくします。斜めの橋は、変わり続ける白い塊の上でも読み取れます。ここで産業と大気は別々の主題ではありません。機械が生むものも空気に混ざり、画家はその空気越しに建築を描かなければならないのです。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    },
+    {
+      "id": "d6762762-c26f-4104-a6b8-ee6be8a436bd",
+      "title": "ジヴェルニー近郊のセーヌ川の分流、日の出",
+      "catalogueTitle": "Bras de Seine près de Giverny, soleil levant",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "キャンバスに油彩",
+      "accession": "D.11-1993",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/d6762762-c26f-4104-a6b8-ee6be8a436bd-53da87e8ee05efc0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Bras_de_Seine_pr%C3%A8s_de_Giverny,_soleil_levant_-_Mus%C3%A9e_Marmottan-Monet.jpg",
+      "credit": "Claude Monet. Bras de Seine près de Giverny, soleil levant. Image credit: Claude Monet; musée Marmottan-Monet [1]. https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Bras_de_Seine_pr%C3%A8s_de_Giverny,_soleil_levant_-_Mus%C3%A9e_Marmottan-Monet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.marmottan.fr/notice/D.11-1993/",
+      "description": "岸と反射は青や紫の中で近づき、淡い開口部が川の最も明確な手がかりになります。水は一部、木が占めていない空間として理解できます。確かな境界を定めにくいことが、画面を一様な無区別の面へ変えずに、場面へ連続性を与えています。",
+      "importance": "",
+      "museum": "Musée Marmottan Monet"
+    }
+  ],
+  "context": {
+    "start": 1799,
+    "end": 1919
+  },
+  "closingSections": [
+    {
+      "title": "一つの境目から見る",
+      "paragraphs": [
+        "帽子に接する顔、鉄に重なる蒸気、反射と並ぶ木など、一つの縁を選んでください。どこではっきりし、どこで曖昧になるかを追うと、方法を同一視せずに複数の画家を比べられます。特定の作品を目当てに訪れる前に、美術館の現在の展示や貸出を確認しましょう。"
+      ]
+    }
+  ]
+}

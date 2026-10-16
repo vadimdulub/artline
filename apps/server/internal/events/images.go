@@ -9,14 +9,21 @@ import (
 	"strings"
 )
 
+type ArtworkLink struct {
+	ID    string `json:"id"`
+	Title string `json:"title"`
+	Href  string `json:"href"`
+}
+
 type Image struct {
-	ImageURL   string `json:"imageUrl"`
-	SourceURL  string `json:"sourceUrl"`
-	Label      string `json:"label"`
-	Credit     string `json:"credit"`
-	License    string `json:"license"`
-	LicenseURL string `json:"licenseUrl"`
-	CheckedAt  string `json:"checkedAt"`
+	Artwork    *ArtworkLink `json:"artwork,omitempty"`
+	ImageURL   string       `json:"imageUrl"`
+	SourceURL  string       `json:"sourceUrl"`
+	Label      string       `json:"label"`
+	Credit     string       `json:"credit"`
+	License    string       `json:"license"`
+	LicenseURL string       `json:"licenseUrl"`
+	CheckedAt  string       `json:"checkedAt"`
 }
 
 type imageSelection struct {

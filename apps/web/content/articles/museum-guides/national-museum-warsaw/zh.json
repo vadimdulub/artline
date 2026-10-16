@@ -1,0 +1,608 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "national-museum-warsaw",
+  "museum": "National Museum in Warsaw",
+  "city": "华沙",
+  "country": "波兰",
+  "title": "华沙国家博物馆：杰作",
+  "subtitle": "战争与寓意画之外，还有售货者、哀悼者，以及无人围观的等待者。",
+  "introduction": "马泰伊科的战场要求视线在相互竞争的动作之间移动。他画的坐着的斯坦契克恰好相反：宴乐仍在别处继续，弄臣却被单独分开。两幅画都让历史题材依赖于人物在画面上的分布。人群与孤身人物，以不同方式赋予责任和重要性。\n\n选目将问题扩大到街头售货者、丧亲的家庭、流放者和正在工作的艺术家。一个人不必担任正式的历史角色，才值得被持续关注。比较各处环境允许人物做什么，使其处境的哪些部分可见，又有哪些事情即使看似近在眼前，仍无从得知。",
+  "visitNote": "这些是华沙国家博物馆的精选馆藏。参观前，请查询该馆当前的展览及外借情况。此处展出的切乌莫尼斯基（Chełmoński）的《四马车》（Four）是1880年创作的较小版本；而1881年创作、尺寸大得多的《四马车》（Four-in-Hand）则属于克拉科夫国家博物馆。",
+  "locale": "zh",
+  "website": "https://www.mnw.art.pl/",
+  "officialGuide": "https://www.mnw.art.pl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）关于体量、线条和肖像构成的论述，为本指南中形态各异的面孔和拥挤的场景提供了实用的术语。他的审美偏好带有时代的印记；不妨将这些练习视为观察时的启发与引导。"
+    }
+  ],
+  "works": [
+    {
+      "id": "d7318471-dc42-57b3-b491-e71a52916c16",
+      "title": "格伦瓦尔德之战",
+      "catalogueTitle": "Battle of Grunwald",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1878",
+      "start": 1878,
+      "end": 1878,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d7318471-dc42-57b3-b491-e71a52916c16-b204657cab24939b.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-matejko/battle-of-grunwald-1878",
+      "credit": "Jan Matejko. Battle of Grunwald. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/446830",
+      "description": "武器、旗帜、马和人体挤满战场，彼此之间没有容易穿过的空路。马泰伊科用许多局部交锋构成胜利，而非让一个动作解释一切。较强的光区分部分人物，却没有清除周围拥挤。读懂场景所需的努力，也成为这幅画讲述集体历史的一部分。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "ef9f8c55-a6f6-58eb-b886-cca52a181cf6",
+      "title": "博娜王后宫廷舞会上的斯坦契克",
+      "catalogueTitle": "Stańczyk during a Ball at the Court of Queen",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1862",
+      "start": 1862,
+      "end": 1862,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ef9f8c55-a6f6-58eb-b886-cca52a181cf6-757fc2f27db705b1.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-matejko/sta%C5%84czyk-during-a-ball-at-the-court-of-queen-1862",
+      "credit": "Jan Matejko. Stańczyk during a Ball at the Court of Queen. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/446753",
+      "description": "门口把灯火明亮、宾客繁忙的宴乐，与弄臣合拢的双手、静止的坐姿隔开。附近一封信使信息而非眼前行动成为场景的一部分。马泰伊科颠倒了红衣通常带来的期待：逗人发笑者成了严肃的人。历史含义尚未解释，建筑就已使他与宫廷的分离清晰可辨。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "8306158c-2f27-5301-8fac-4c0182d7b2bc",
+      "title": "斯坦尼斯瓦夫·科斯特卡·波托茨基骑马像",
+      "catalogueTitle": "Equestrian Portrait of Stanislas Kostka Potocki",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1781",
+      "start": 1781,
+      "end": 1781,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/8306158c-2f27-5301-8fac-4c0182d7b2bc-6bb20bbaa2346baf.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacques-louis-david/equestrian-portrait-of-stanislas-kostka-potocki-1781",
+      "credit": "Jacques-Louis David. Equestrian Portrait of Stanislas Kostka Potocki. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jacques-louis-david/equestrian-portrait-of-stanislas-kostka-potocki-1781",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jacques-louis-david/equestrian-portrait-of-stanislas-kostka-potocki-1781",
+      "description": "举起的帽子使骑手的手势向观众打开，马抬起的一条腿则带来受控制的动势。大卫让运动服务于正式的权威展示。厚重石质环境帮助收束这一展示。马与骑手各有作用，配合的姿势却将肖像变成一次刻意安排的到来。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "80774095-7a1b-56a9-955f-897afd4c6684",
+      "title": "四匹马",
+      "catalogueTitle": "Four",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1880",
+      "start": 1880,
+      "end": 1880,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/80774095-7a1b-56a9-955f-897afd4c6684-891268a31253f1f8.jpg",
+      "imageSource": "https://www.wikiart.org/en/jozef-chelmonski/four",
+      "credit": "Józef Chełmoński. Four. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jozef-chelmonski/four",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jozef-chelmonski/four",
+      "description": "马车驶过湿地，马匹在低宽画幅中横向展开。切乌蒙斯基用腿和不齐的位置交代马队的速度，开阔天空几乎不形成阻碍。这幅华沙作品应与克拉科夫较大的相关作品《四马车》区分。题材相近、译名相似，并不能证明两个记录对应同一幅画布。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "b46b910d-41e7-512d-96fa-81ab7729a722",
+      "title": "雪中鹧鸪",
+      "catalogueTitle": "Partridges in the snow",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/b46b910d-41e7-512d-96fa-81ab7729a722-233ff30c57521d16.jpg",
+      "imageSource": "https://www.wikiart.org/en/jozef-chelmonski/partridges-in-the-snow",
+      "credit": "Józef Chełmoński. Partridges in the snow. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jozef-chelmonski/partridges-in-the-snow",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/446665",
+      "description": "紧凑的鸟身与散落足迹，打断一片近乎空白的雪地。切乌蒙斯基利用鸟群的微小，说明它们无遮蔽的处境。风景无须容纳一位人类观察者，也能让这种处境变得重要。淡淡地平线几乎不给鸟群视觉上的庇护，每个深色形状在浅色旷野前都格外显眼。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "29c4d93b-5c69-55b0-86f6-697f4127e7b5",
+      "title": "卖橙子的犹太妇女",
+      "catalogueTitle": "Żydówka z pomarańczami",
+      "artist": "Aleksander Gierymski",
+      "artists": [
+        {
+          "name": "Aleksander Gierymski",
+          "role": "primary",
+          "slug": "wikimedia-painter-q958927"
+        }
+      ],
+      "date": "约 1880–1881 年",
+      "start": 1880,
+      "end": 1881,
+      "medium": "布面油画",
+      "accession": "MP 5526 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/29c4d93b-5c69-55b0-86f6-697f4127e7b5-fd4d98664ef0.jpg",
+      "imageSource": "https://cyfrowe.mnw.art.pl/pl/zbiory/454885",
+      "credit": "Aleksander Gierymski; National Museum in Warsaw; Muzeum Narodowe w Warszawie. DOMENA PUBLICZNA (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "DOMENA PUBLICZNA",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/454885",
+      "description": "篮子表明谋生方式，但女子正面而立，没有让自己成为街景的附属。盖里姆斯基给予层叠衣服和面孔持续、近似肖像的关注。工作仍然可见，却没有穷尽她的身份。靠近的构图要求观看者先面对售货者，再把商品当作漂亮静物欣赏。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "93685ab6-3ca3-5469-9a49-30f7119c4714",
+      "title": "农民的棺材",
+      "catalogueTitle": "Trumna chłopska",
+      "artist": "Aleksander Gierymski",
+      "artists": [
+        {
+          "name": "Aleksander Gierymski",
+          "role": "primary",
+          "slug": "wikimedia-painter-q958927"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "布面油画",
+      "accession": "MP 964 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/93685ab6-3ca3-5469-9a49-30f7119c4714-04d0b0800068.jpg",
+      "imageSource": "https://cyfrowe.mnw.art.pl/pl/zbiory/448144",
+      "credit": "Aleksander Gierymski; National Museum in Warsaw; Muzeum Narodowe w Warszawie. DOMENA PUBLICZNA (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "DOMENA PUBLICZNA",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/448144",
+      "description": "小小蓝棺打断普通院落的日常。盖里姆斯基将坐着的人分开，让静止和距离承担哀痛，而不用明显的哭号姿势。房屋与休息的狗使日常环境继续在场。失去亲人发生在一个原本还有其他用途的地方，而不是专为哀悼搭建的布景中。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "810bbee1-97cf-5644-bad5-475f155a6293",
+      "title": "橘园温室中",
+      "catalogueTitle": "W Oranżerii",
+      "artist": "Olga Boznańska",
+      "artists": [
+        {
+          "name": "Olga Boznańska",
+          "slug": "olga-boznanska-q466639",
+          "role": "primary"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "MP 401 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/810bbee1-97cf-5644-bad5-475f155a6293-8c06301932d7.jpg",
+      "imageSource": "https://cyfrowe.mnw.art.pl/pl/zbiory/446515",
+      "credit": "Olga Boznańska [qualified attribution: malarka; ; ]; National Museum in Warsaw; Muzeum Narodowe w Warszawie. DOMENA PUBLICZNA (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "DOMENA PUBLICZNA",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/446515",
+      "description": "高大植物围住女子，但克制的姿态和浅色衣服让她保持独立、明确的人物形象。篮子为她的手提供实际可握之物，区别于周围供人观赏的栽植。博兹南斯卡让围合与生长共享环境。人物属于植物之间，却没有被简化成又一种装饰形状。",
+      "importance": "",
+      "museum": "National Museum in Warsaw",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "69666b67-ab69-5547-89df-538cd2f9fdfd",
+      "title": "黑人女子肖像",
+      "catalogueTitle": "Murzynka (tytuł historyczny, nadany przez artystkę)",
+      "artist": "Anna Bilińska",
+      "artists": [
+        {
+          "name": "Anna Bilińska",
+          "slug": "anna-bilinska-q273115",
+          "role": "primary"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "布面油画",
+      "accession": "MP 5531 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/69666b67-ab69-5547-89df-538cd2f9fdfd-107036d60c5f.jpg",
+      "imageSource": "https://cyfrowe.mnw.art.pl/pl/zbiory/454849",
+      "credit": "Anna Bilińska-Bohdanowiczowa [qualified attribution: malarka; ; ]; National Museum in Warsaw; Muzeum Narodowe w Warszawie. DOMENA PUBLICZNA (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "DOMENA PUBLICZNA",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/454849",
+      "description": "浅色披布与金饰围住转向一侧的脸，目光继续伸向画外。即使藏品名称没有提供模特姓名，比林斯卡仍使姿态十分具体。画室安排不应被误认为她生活的完整说明。恰在历史标签仍然概括之处，仔细关注这个人的脸尤为重要。",
+      "importance": "",
+      "museum": "National Museum in Warsaw",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "4a2aa8e2-5676-5f41-bb12-fb536ec6bf42",
+      "title": "未完成的自画像",
+      "catalogueTitle": "Autoportret niedokończony",
+      "artist": "Anna Bilińska",
+      "artists": [
+        {
+          "name": "Anna Bilińska",
+          "slug": "anna-bilinska-q273115",
+          "role": "primary"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "布面油画",
+      "accession": "MP 261 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/4a2aa8e2-5676-5f41-bb12-fb536ec6bf42-bd0551ef12b6.jpg",
+      "imageSource": "https://cyfrowe.mnw.art.pl/pl/zbiory/445584",
+      "credit": "Anna Bilińska-Bohdanowiczowa [qualified attribution: malarka; ; ]; National Museum in Warsaw; Muzeum Narodowe w Warszawie. DOMENA PUBLICZNA (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "DOMENA PUBLICZNA",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/445584",
+      "description": "面孔比部分衣服和周围环境完成得更充分。在这些不同进度中，比林斯卡稳固的站姿依然成立，使肖像未等每一处都画完就已成为整体。露出的准备阶段是建构过程的证据，不只是令人遗憾的缺失。它说明一幅画可以局部推进，而非各处以同样速度完成。",
+      "importance": "",
+      "museum": "National Museum in Warsaw",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "f9b5b079-b74d-5c28-94f1-340b0b281972",
+      "title": "波兰的哈姆雷特：亚历山大·维耶洛波尔斯基肖像",
+      "catalogueTitle": "Hamlet polski - Portret Aleksandra Wielopolskiego",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "布面油画",
+      "accession": "MP 369 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/f9b5b079-b74d-5c28-94f1-340b0b281972-147280d3de0e.jpg",
+      "imageSource": "https://cyfrowe.mnw.art.pl/pl/zbiory/446244",
+      "credit": "Jacek Malczewski; National Museum in Warsaw; Muzeum Narodowe w Warszawie. DOMENA PUBLICZNA (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "DOMENA PUBLICZNA",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/446244",
+      "description": "不能脱离两侧截然不同的女子来理解中心男子。年轻与年老、明亮衣服与受限姿态，使她们不只是偶然的背景。马尔切夫斯基为肖像加入寓意上的冲突：人物仿佛夹在画面并未调和的两种选择之间。他在构图中的位置，与相貌本身同样重要。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "b673be0a-916b-5383-8012-ff82678f3c4d",
+      "title": "洗脚：西伯利亚场景",
+      "catalogueTitle": "Foot washing (Siberian scene)",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "约 1886 年",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "MP 1198 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/polish/q104594577-f5cde6fbc4bc8b29.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jacek_Malczewski_-_Foot_washing_(Siberian_scene)_-_MP_1198_MNW_-_National_Museum_in_Warsaw.jpg",
+      "credit": "Foot washing (Siberian scene). Jacek Malczewski; Source credit: National Museum in Warsaw. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104594577",
+      "description": "伸出的手将目光聚在一只赤脚周围。马尔切夫斯基让一件小小的照料之事，通过身体接触表现流放题材，而没有铺开苦难全景。部分面孔和布料从暗室中浮出，保持近距离相遇。动作承认了人的脆弱，却不要求每位参与者都摆出相同的受苦表情。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "bb67f7ca-4715-5baf-845e-1dfc68ce08b8",
+      "title": "前往西伯利亚的囚犯",
+      "catalogueTitle": "On the way to exile (Convicts on the way to Siberia)",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "MP 1049 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/polish/q104599597-f21f64189b5974c2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jacek_Malczewski_-_On_the_way_to_exile_(Convicts_on_the_way_to_Siberia)_-_MP_1049_MNW_-_National_Museum_in_Warsaw.jpg",
+      "credit": "On the way to exile (Convicts on the way to Siberia). Jacek Malczewski; Source credit: National Museum in Warsaw. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104599597",
+      "description": "题名指向旅程，画面却将它暂停在拥挤房间里。坐着、躺着的身体，让疲惫呈现几种不同形态，站立者又打破低矮的排列。马尔切夫斯基把等待与禁闭纳入被迫移动的过程。共同磨难并没有抹去各人占用有限空间的不同方式。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "2c3c3ec2-0787-576b-9a0e-d27787c268aa",
+      "title": "画家的工作室",
+      "catalogueTitle": "In the painter's studio",
+      "artist": "Leon Wyczółkowski",
+      "artists": [
+        {
+          "name": "Leon Wyczółkowski",
+          "role": "primary",
+          "slug": "wikimedia-painter-q943537"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "MP 5530 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q104595275-759a751ffed678ad.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Leon_Wycz%C3%B3%C5%82kowski_-_In_the_painter%27s_studio_-_MP_5530_MNW_-_National_Museum_in_Warsaw.jpg",
+      "credit": "Leon Wyczółkowski. In the painter's studio. Image credit: Leon Wyczółkowski; Source credit: National Museum in Warsaw. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104595275",
+      "description": "女子站在一幅大尺寸带框画旁，室内还有更多图像。维丘乌科夫斯基把艺术放在人们日常遇到的事物之中，而不是只作为眼前这件已经完成的作品呈现。她的位置与家具，使画室成为社交空间。观看一幅画，也可以成为另一幅画的题材。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "36935ec1-4a4a-553f-a4d4-a3e30dd4aab2",
+      "title": "穿中国长袍的自画像",
+      "catalogueTitle": "Self-Portrait In Chinese Tailoring",
+      "artist": "Leon Wyczółkowski",
+      "artists": [
+        {
+          "name": "Leon Wyczółkowski",
+          "role": "primary",
+          "slug": "wikimedia-painter-q943537"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "柔和色调",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/36935ec1-4a4a-553f-a4d4-a3e30dd4aab2-f55104ecf17edaa8.jpg",
+      "imageSource": "https://www.wikiart.org/en/leon-wyczolkowski/self-portrait-in-chinese-tailoring",
+      "credit": "Leon Wyczółkowski. Self-Portrait In Chinese Tailoring. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/leon-wyczolkowski/self-portrait-in-chinese-tailoring",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/leon-wyczolkowski/self-portrait-in-chinese-tailoring",
+      "description": "带图案的长袍与蓝色织物都很活跃，几乎把人物和背景连接起来。面孔仍足够清楚，维系着自画像的中心。维丘乌科夫斯基让精心挑选的布料参与构造公开形象。服装说明的是再现上的选择，不能据此认定画家具有某种文化专长，或补出图像自身无法提供的个人经历。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "05481c1e-a000-5995-b7e9-3ebf210d99e6",
+      "title": "起义军巡逻队",
+      "catalogueTitle": "Patrol powstańczy",
+      "artist": "Maksymilian Gierymski",
+      "artists": [
+        {
+          "name": "Maksymilian Gierymski",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1886542"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "布面油画",
+      "accession": "MP 418 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/05481c1e-a000-5995-b7e9-3ebf210d99e6-a43566ce3a95.jpg",
+      "imageSource": "https://cyfrowe.mnw.art.pl/pl/zbiory/446597",
+      "credit": "Maksymilian Gierymski; National Museum in Warsaw; Muzeum Narodowe w Warszawie. DOMENA PUBLICZNA (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "DOMENA PUBLICZNA",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://cyfrowe.mnw.art.pl/pl/zbiory/446597",
+      "description": "骑马的一队人在地标稀少的乡野停下。他们的警觉让原本空旷的土地似乎潜藏意义，但尚未发生的遭遇还没有说明那是什么。马克西米利安·盖里姆斯基将军事行动放在等待状态。宽阔浅天和低平地势使人物暴露在外，没有将他们围进边界清楚的战场。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "7077d26b-2ff9-5826-bcf3-ce53c4f32db7",
+      "title": "日落时的沼泽",
+      "catalogueTitle": "View of marshes at sunset",
+      "artist": "Maksymilian Gierymski",
+      "artists": [
+        {
+          "name": "Maksymilian Gierymski",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1886542"
+        }
+      ],
+      "date": "约 1868–1869 年",
+      "start": 1868,
+      "end": 1869,
+      "medium": "",
+      "accession": "MP 1366 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/polish/q104586474-a6f7eb2665902803.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Maksymilian_Gierymski_-_View_of_marshes_at_sunset_-_MP_1366_MNW_-_National_Museum_in_Warsaw.jpg",
+      "credit": "View of marshes at sunset. Maksymilian Gierymski; Source credit: National Museum in Warsaw. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104586474",
+      "description": "水洼与深草在前景构成断续路径，远方狭窄光带则提供主要开口。盖里姆斯基让天气决定景物怎样被看见。低地平线使云占据相当大的主导地位。没有突出的建筑或旅人，将沼泽变成另一题材的背景。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "7c01b8c7-16dd-5da6-8f71-c35cc1e5076c",
+      "title": "有白桦林的风景",
+      "catalogueTitle": "Landscape with a birch grove",
+      "artist": "Maksymilian Gierymski",
+      "artists": [
+        {
+          "name": "Maksymilian Gierymski",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1886542"
+        }
+      ],
+      "date": "约 1868–1869 年",
+      "start": 1868,
+      "end": 1869,
+      "medium": "",
+      "accession": "MP 1367 MNW",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/polish/q104586465-565518634dcd8a2e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Maksymilian_Gierymski_-_Landscape_with_a_birch_grove_-_MP_1367_MNW_-_National_Museum_in_Warsaw.jpg",
+      "credit": "Landscape with a birch grove. Maksymilian Gierymski; Source credit: National Museum in Warsaw. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q104586465",
+      "description": "沙土小路弯过细树，即使没有旅人，也使风景像是可以走进去。浅色地面与细小植被笔迹，让近处地形保持具体。盖里姆斯基从路线、树林和空旷田野的关系中，找到足够的结构。没有事件发生，这些平常间隔便可以成为观看的理由。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "c279ab46-e314-56b5-b9d2-1bdd7cc31f47",
+      "title": "埃涅阿斯与狄多",
+      "catalogueTitle": "Aeneas and Dido.",
+      "artist": "Charles Alphonse Dufresnoy",
+      "artists": [
+        {
+          "name": "Charles Alphonse Dufresnoy",
+          "role": "primary",
+          "slug": "charles-alphonse-dufresnoy-research-f714b741e664"
+        }
+      ],
+      "date": "1650–1700",
+      "start": 1650,
+      "end": 1700,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q25796197-f5e98c66b53b056f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dufresnoy_Aeneas_and_Dido.jpg",
+      "credit": "Charles Alphonse du Fresnoy. Aeneas and Dido.. Image credit: Attributed to Charles Alphonse du Fresnoy. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q25796197",
+      "description": "颜色各异的长袍，帮助区分围坐在女子周围的人物。迪弗雷努瓦为文学中的相遇安排仪式性环境，但手势仍保留了秩序内部个人之间的交流。侍从与器皿扩大场合，却不冲散中心。画面拥挤，但组织方式使它比战场更容易读懂。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    },
+    {
+      "id": "cbacc296-dfce-5a8b-bfa5-7d43ab722ab5",
+      "title": "客栈里的吸烟者",
+      "catalogueTitle": "Smokers in an Inn",
+      "artist": "Adriaen Brouwer",
+      "artists": [
+        {
+          "name": "Adriaen Brouwer",
+          "role": "primary",
+          "slug": "adriaen-brouwer-q364139"
+        }
+      ],
+      "date": "1627 - 1630",
+      "start": 1627,
+      "end": 1630,
+      "medium": "铜板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/cbacc296-dfce-5a8b-bfa5-7d43ab722ab5-7528fe4aa7badc3d.jpg",
+      "imageSource": "https://www.wikiart.org/en/adriaen-brouwer/smokers-in-an-inn",
+      "credit": "Adriaen Brouwer. Smokers in an Inn. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/adriaen-brouwer/smokers-in-an-inn",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/adriaen-brouwer/smokers-in-an-inn",
+      "description": "一个男子举起烟斗，其他人以不同姿势围着小桌。布劳威尔让目光落在投入而随意的动作上，不要求协调一致的公开展示。暖光从暗室中显出衣服，却没有让每个细节都同样清晰。一起做事构成了交往，人物无须摆成一组和谐的合影。",
+      "importance": "",
+      "museum": "National Museum in Warsaw"
+    }
+  ],
+  "context": {
+    "start": 1627,
+    "end": 1911
+  },
+  "closingSections": [
+    {
+      "title": "给问题留一点余地",
+      "paragraphs": [
+        "将前景售货者或哀悼者，与有名有姓的历史主角比较：尺度、手势和环境发生了什么变化？画面可以交代处境，却不能解释一个人的全部。请查看博物馆当前展览计划及单件作品展出信息；本馆藏选目并非保证可行的展厅路线。"
+      ]
+    }
+  ]
+}

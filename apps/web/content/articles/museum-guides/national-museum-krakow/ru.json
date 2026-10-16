@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Компания Artline отобрала эти произведения из задокументированных музейных фондов. Данная подборка сформирована независимо от музея; отдельные работы могут находиться на временной выставке в другом месте или быть сняты с экспозиции. Датировка и атрибуция приводятся с учетом оговорок, содержащихся в соответствующих записях.",
+  "labels": {
+    "guides": "Все путеводители",
+    "download": "Скачать PDF",
+    "language": "Язык путеводителя",
+    "translation": "Перевод с помощью ИИ",
+    "explore": "Эта подборка в Artline",
+    "contextNote": "Посмотрите выбранные работы рядом с книгами и событиями их времени или сравните годы жизни художников. Книги и события дают исторический контекст, но не доказывают прямого влияния. Работы без подтверждённой даты остаются в путеводителе.",
+    "all": "Произведения искусства в контексте",
+    "allHint": "Избранные работы, связанные с книгами и историей их эпохи.",
+    "painters": "Кто когда жил?",
+    "paintersHint": "Узнайте, когда жили эти художники и чьи жизненные пути пересекались.",
+    "events": "Исторические события",
+    "eventsHint": "События за период, охваченный путеводителем",
+    "books": "Хронология книг",
+    "booksHint": "Значимые книги того же периода",
+    "contents": "Произведения",
+    "artworks": "Выбранные произведения",
+    "importance": "Почему это важно",
+    "artwork": "Открыть произведение",
+    "source": "Страница произведения в источнике",
+    "inventory": "Инвентарный номер",
+    "reading": "Что почитать",
+    "visit": "Перед посещением",
+    "website": "Сайт музея",
+    "officialGuide": "Материалы музея",
+    "updated": "Дата проверки источников и информации для посетителей"
+  },
+  "slug": "national-museum-krakow",
+  "museum": "National Museum in Kraków",
+  "city": "Краков",
+  "country": "Польша",
+  "title": "Национальный музей в Кракове: шедевры",
+  "subtitle": "От поворота головы Чечилии Галлерани до толп Матейко — тела организуют личный и общественный смысл.",
+  "introduction": "Протянутая рука может держать животное, возвещать пророчество, предлагать опасный напиток или заботиться о другом человеке. Сам жест — лишь начало. Его смысл зависит от окружающих тел, обращённого к нему внимания и пространства действия. Подборка делает эти отношения особенно заметными, переходя от сосредоточенных портретов к густонаселённым историческим сценам.\n\nВыспяньский предлагает ещё один масштаб сравнения: опёртые руки ребёнка и размашистый витражный проект требуют от человеческой фигуры совершенно разного. Рассматривайте произведения с учётом этих различий. Узнаваемый общественный сюжет не объясняет автоматически каждое выражение лица, а частная модель не обязана сообщать полную личную историю.",
+  "visitNote": "Национальный музей в Кракове располагается в нескольких зданиях. Картина «Дама с горностаем» принадлежит Музею князей Чарторыйских; другие экспонаты поступают из различных филиалов и могут перемещаться между ними или отправляться на выставки. Представленные здесь эскизы витражей работы Выспянского — это музейные экспонаты, а не фотографии витражей, установленных в церкви.",
+  "locale": "ru",
+  "website": "https://mnk.pl/",
+  "officialGuide": "https://mnk.pl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Читать бесплатно · Английский",
+      "note": "В своих записных книжках Леонардо рассматривает живопись через призму наблюдений за движением, светом и человеческим телом. Они служат отправной точкой для анализа первого портрета и позволяют провести плодотворное сопоставление с более выраженными контурами в работах Выспянского."
+    }
+  ],
+  "works": [
+    {
+      "id": "c9468bb3-37c4-5f33-af3c-05427d54c809",
+      "title": "Дама с горностаем",
+      "catalogueTitle": "The Lady with an Ermine (Cecilia Gallerani)",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "1489-1490",
+      "start": 1489,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c9468bb3-37c4-5f33-af3c-05427d54c809-e8fbb6b1b3b0c7fe.jpg",
+      "imageSource": "https://www.wikiart.org/en/leonardo-da-vinci/the-lady-with-the-ermine-cecilia-gallerani-1496",
+      "credit": "Leonardo da Vinci. The Lady with an Ermine (Cecilia Gallerani). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/157417",
+      "description": "Чечилия Галлерани и горностай смотрят в одну сторону, но не принимают одинаковой позы. Её длинная кисть следует спине зверька, физически соединяя отдельные движения. Леонардо придаёт значение невидимой точке за рамой. Поворот модели вводит встречу, которую картина подсказывает, но не завершает за зрителя.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "b335f9a7-a7be-5758-9a34-8083f3d979ee",
+      "title": "Девочка с хризантемами",
+      "catalogueTitle": "Girl with Chrysanthemums",
+      "artist": "Olga Boznańska",
+      "artists": [
+        {
+          "name": "Olga Boznańska",
+          "role": "primary",
+          "slug": "olga-boznanska-q466639"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b335f9a7-a7be-5758-9a34-8083f3d979ee-6c4d2fbbc300fdb7.jpg",
+      "imageSource": "https://www.wikiart.org/en/olga-boznanska/girl-with-chrysanthemums-1894",
+      "credit": "Olga Boznańska. Girl with Chrysanthemums. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/161259",
+      "description": "Белые цветы прерывают тесный диапазон серых, помогая различить сложенные руки под прямым взглядом тёмных глаз девочки. Бознаньская оставляет обстановку скупой, усиливая значение малых различий. Напряжённости портрета не нужно выдуманное объяснение детских чувств. Она возникает из длительной встречи с лицом, от которого почти ничто не отвлекает.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "991b35f8-89b0-5e35-985c-2cf7f21307fb",
+      "title": "Портрет Пауля Науэна",
+      "catalogueTitle": "Portrait of Paul Nauen",
+      "artist": "Olga Boznańska",
+      "artists": [
+        {
+          "name": "Olga Boznańska",
+          "role": "primary",
+          "slug": "olga-boznanska-q466639"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/991b35f8-89b0-5e35-985c-2cf7f21307fb-ff1d42762dcf3b0d.jpg",
+      "imageSource": "https://www.wikiart.org/en/olga-boznanska/portrait-of-paul-nauen-1893",
+      "credit": "Olga Boznańska. Portrait of Paul Nauen. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/35369",
+      "description": "Развёрнутое боком тело и ответный поворот головы намекают на паузу в обжитой комнате. Чашка рядом поддерживает ощущение прерванного визита, а густая чёрная одежда выделяет лицо и руки. Бознаньская создаёт официальный портрет через сравнительно неформальное расположение. Поза предлагает повод для встречи, не требуя подробной истории.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "24348dda-e4bd-5dd1-9fae-16c2d0daeed5",
+      "title": "Неистовство",
+      "catalogueTitle": "Szał",
+      "artist": "Władysław Podkowiński",
+      "artists": [
+        {
+          "name": "Władysław Podkowiński",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2065760"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "Холст, масло",
+      "accession": "MNK II-b-887",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/24348dda-e4bd-5dd1-9fae-16c2d0daeed5-8c958ec89a21.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/143955",
+      "credit": "Władysław Podkowiński; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/143955",
+      "description": "Хватка женщины соединяет её светлое тело с вздыбленной темнотой лошади. Подковиньский делает пару неразделимой и неустойчивой: сила, несущая одно тело вверх, угрожает равновесию другого. Неясная земля почти не даёт опоры. Неистовство названия становится физическим сочетанием сцепления и нестабильности, а не чувством, просто заявленным выражением лица.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "3335c1cd-e75d-5925-88a4-9177c6e3d14b",
+      "title": "Четвёрка",
+      "catalogueTitle": "Four-in-Hand",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/3335c1cd-e75d-5925-88a4-9177c6e3d14b-b2c7740cab3a97ba.jpg",
+      "imageSource": "https://www.wikiart.org/en/jozef-chelmonski/four-in-hand-1881",
+      "credit": "Józef Chełmoński. Four-in-Hand. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jozef-chelmonski/four-in-hand-1881",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/330685",
+      "description": "Лошади занимают ширину композиции, приближаясь к переднему плану. У Хелмоньского размах упряжки трудно охватить как один компактный предмет: ноги и тела распределяют энергию движения вперёд. Большой горизонтальный холст усиливает приближение. Краковскую работу следует отличать от меньшей родственной сцены с экипажем в варшавском собрании.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "86801694-c810-54ed-9fb3-32f5320e6b5a",
+      "title": "Буря",
+      "catalogueTitle": "Burza",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "Холст, масло",
+      "accession": "MNK II-a-237",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/86801694-c810-54ed-9fb3-32f5320e6b5a-9591de7ec168.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/326691",
+      "credit": "Józef Chełmoński; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/326691",
+      "description": "Согнутые тела и поспешные движения показывают действие непогоды ещё до замеченной молнии. Одежда и переносимые узлы сопротивляются продвижению фигур, превращая бурю в ряд практических затруднений. Хелмоньский связывает поле с трудом и открытостью стихии. Драма неба измеряется тем, что она заставляет делать людей на земле.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "c93b7b90-fce9-58f3-8a7f-262baaa2bfbc",
+      "title": "Вернигора",
+      "catalogueTitle": "Wernyhora",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "Холст, масло",
+      "accession": "MNK II-a-433",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/c93b7b90-fce9-58f3-8a7f-262baaa2bfbc-dee01189fe0f.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/372941",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/372941",
+      "description": "Поднятая рука обозначает источник пророческой власти, но слушатели отвечают ей не одинаково. Разные лица и направления внимания показывают, как неравномерно слово проходит через собрание. Матейко придаёт центральному жесту силу через восприятие окружающих. Они участвуют в его смысле, а не служат декоративной аудиторией.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "8133dfe6-49fe-5642-8403-c131c3fb261f",
+      "title": "Костюшко под Рацлавицами",
+      "catalogueTitle": "Kościuszko pod Racławicami",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Холст, масло",
+      "accession": "MNK II-a-151",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/8133dfe6-49fe-5642-8403-c131c3fb261f-ea1e6beea778.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/306743",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/306743",
+      "description": "Знамёна, всадники и поднятые руки организуют публичное собрание после битвы, а раненые тела на переднем плане сохраняют другой рассказ о событии. Матейко заставляет церемонию делить пейзаж с её ценой. Широкую историческую сцену нельзя понять по одной центральной конной фигуре. Менее заметные участники усложняют образ победы, представленный главным собранием.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "b5adf40f-c02e-5305-b10e-1ccb5b37427e",
+      "title": "Полония. 1863",
+      "catalogueTitle": "Polonia 1863 (Zakuwana Polska)",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "Холст, масло",
+      "accession": "MNK XII-453",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/b5adf40f-c02e-5305-b10e-1ccb5b37427e-8509aff96bef.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/325087",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/325087",
+      "description": "Олицетворение Польши находится в сжатом интерьере среди солдат и удерживаемых фигур. Протянутая светлая рука делает принуждение видимым вблизи, переводя политическое положение в контакт тел. Матейко не оставляет аллегорию в безопасной отвлечённости. Теснота участников показывает власть на расстоянии досягаемости уязвимой фигуры, а не в далёком историческом масштабе.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "07e58822-4f81-5b4b-be71-23eeffc227c9",
+      "title": "Отравление королевы Боны",
+      "catalogueTitle": "Otrucie królowej Bony",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1859",
+      "start": 1859,
+      "end": 1859,
+      "medium": "Холст, масло",
+      "accession": "MNK II-a-1321",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/07e58822-4f81-5b4b-be71-23eeffc227c9-d5a0b81bba79.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/521275",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/521275",
+      "description": "Сосуд ещё не достиг сидящей женщины. Матейко удерживает внимание вокруг ожидаемой передачи, а окружающие лица наделяют обычное подношение опасностью. Сюжет зависит от неравного знания. То, что в обставленной комнате могло бы выглядеть услугой, становится угрозой, когда историческое название меняет прочтение приближения.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "9b6f6334-7c19-507e-8ddc-a444d2c92d9e",
+      "title": "Аполлон. Солнечная система Коперника",
+      "catalogueTitle": "Apollo - Copernicus' Solar System",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Пастель на картоне",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/9b6f6334-7c19-507e-8ddc-a444d2c92d9e-ad7446b708f6205c.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "credit": "Stanisław Wyspiański. Apollo - Copernicus' Solar System. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "description": "Центральное жёлтое тело принадлежит сети изогнутых синих полос и меньших форм. Выспяньский организует фигуру для витражного проекта, где границы должны читаться между разделёнными участками. Астрономический порядок становится задачей зрительного расположения. Тело задаёт центр, а окружающие линии включают его в большую взаимосвязанную систему.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "d3b4b9cc-d511-538b-a591-1ecddb7c80db",
+      "title": "Материнство",
+      "catalogueTitle": "Motherhood",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "Пастель на картоне",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/d3b4b9cc-d511-538b-a591-1ecddb7c80db-27a727612a98da97.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "credit": "Stanisław Wyspiański. Motherhood. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "description": "Кормление грудью даёт группе практический центр. Наклонённые головы девочек обращают внимание к матери и младенцу, а узорная одежда и цветы сохраняют активность вокруг. У Выспяньского орнамент связывает фигуры, не заменяя их занятия. Повторяющиеся изгибы соединяют заботу о ребёнке с поверхностью картины, сохраняя интимное действие различимым среди декоративной плотности.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "205a3e5f-2f27-58ea-a06d-4833220eccff",
+      "title": "Автопортрет с женой",
+      "catalogueTitle": "Autoportret z żoną",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Пастель на бумаге верже",
+      "accession": "MNK III-r.a-10895",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/205a3e5f-2f27-58ea-a06d-4833220eccff-b68f693554b0.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/195852",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/195852",
+      "description": "Супруги вместе обращены наружу, но выражения и одежда не сливаются. Красные бусы и платок обозначают одну фигуру; положение плечом к плечу объединяет обе. Выспяньский делает партнёрство видимым через близость, сохраняя различия. Портрет предлагает созданный образ совместности, а не доказательство единого темперамента двух людей.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "d7a2a1f9-3b43-5fa3-b0bf-75ce5508e3df",
+      "title": "Автопортрет за месяц до смерти",
+      "catalogueTitle": "Autoportret na miesiąc przed śmiercią",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "Рисунок восковым мелком на бумаге",
+      "accession": "MNK III-r.a-4780",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/d7a2a1f9-3b43-5fa3-b0bf-75ce5508e3df-862b3d7cc079.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/374514",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/374514",
+      "description": "Название задаёт биографический предел, способный подавить рисунок, если позволить ему объяснять каждую линию. Выспяньский сосредоточивает самые тёмные следы у глаз, рта и растрёпанных волос, оставляя остальной лист сравнительно открытым. Лицо остаётся настойчиво конкретным. Экономная манера фиксирует телесное присутствие, не выдумывая последние мысли, которых работа раскрыть не может.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "88950739-4fa1-50dc-b10d-e7d8e60a0927",
+      "title": "Метек, опирающийся на руки",
+      "catalogueTitle": "Mietek oparty na rękach",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Пастель на бумаге",
+      "accession": "MNK III-r.a-10757",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/88950739-4fa1-50dc-b10d-e7d8e60a0927-a8d42f24b77d.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/187697",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/187697",
+      "description": "Подбородок покоится над сложенными руками, делая вес ребёнка частью портрета. Опущенный лоб меняет пространство вокруг глаз без театрального выражения. Выспяньский уделяет непарадной позе портретное внимание. Поддерживающие руки объясняют положение лица и придают физическую основу встрече, которая иначе могла бы стать только изучением черт.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "8b8e2016-7b1b-5c7f-ba40-e05988cb38d4",
+      "title": "Бог Отец: повторение витражного проекта",
+      "catalogueTitle": "Bóg Ojciec. Replika projektu witraża do okna zachodniego nawy kościoła Franciszkanów w Krakowie",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Пастель и темпера на холсте",
+      "accession": "MNK II-b-514",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/8b8e2016-7b1b-5c7f-ba40-e05988cb38d4-5922c1413017.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/98102",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/98102",
+      "description": "Высокая фигура в одеждах проходит через арочное поле, чьи светлые членения остаются видны. Синие и жёлтые формы пересекают границы широким движением. Музейный предмет — повторение проекта, а не сам установленный витраж. Тем не менее его построение ясно показывает, как фигуру можно задумать в связи с длинной, конструктивно разделённой поверхностью.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "3b73b81f-7519-53bc-bd34-75d4065c3354",
+      "title": "Автопортрет с палитрой",
+      "catalogueTitle": "Autoportret z paletą",
+      "artist": "Anna Bilińska",
+      "artists": [
+        {
+          "name": "Anna Bilińska",
+          "role": "primary",
+          "slug": "anna-bilinska-q273115"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "Холст, масло",
+      "accession": "MNK II-a-211",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/3b73b81f-7519-53bc-bd34-75d4065c3354-2a67acb886ed.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/321062",
+      "credit": "Anna Bilińska-Bohdanowicz; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/321062",
+      "description": "Живописные принадлежности и светлый фартук Билиньской обозначают художницу через практические обстоятельства труда. Прямое лицо остаётся спокойным над занятыми коленями. Сдержанная обстановка не конкурирует за внимание. Профессиональное присутствие устанавливается рабочим сочетанием тела и инструментов, а не добавлением величественной мастерской на заднем плане.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "176ca67e-6c36-50f1-98ef-cbc132eeeb88",
+      "title": "Автопортрет в белом",
+      "catalogueTitle": "Autoportret w białym stroju",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "Холст, масло",
+      "accession": "MNK II-b-1762",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/176ca67e-6c36-50f1-98ef-cbc132eeeb88-acb26dfa4ce7.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/249159",
+      "credit": "Jacek Malczewski; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/249159",
+      "description": "Сложный белый костюм и шляпа делают внешность Мальчевского явно выбранной. Руки у талии усиливают фронтальное представление, красные акценты прерывают светлую одежду. Это автопортрет как принятие видимой роли. Необычный наряд должен обращать внимание на способ самопредставления художника, а не убеждать, будто перед нами нечаянно подсмотренный момент.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "ca278aa9-a6fc-53a1-a932-264a613d7833",
+      "title": "Смерть Элленаи",
+      "catalogueTitle": "Śmierć Ellenai",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "Холст, масло",
+      "accession": "MNK II-b-1",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/ca278aa9-a6fc-53a1-a932-264a613d7833-c638072e346f.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/34570",
+      "credit": "Jacek Malczewski; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/34570",
+      "description": "Тяжёлые ткани окружают светлое горизонтальное тело, а сидящий рядом мужчина сохраняет вертикальное положение. Мальчевский переводит литературную смерть в отношения веса, позиций и неподвижности. Оставшийся в живых не может разделить состояние тела, хотя занимает ту же тесную комнату. Физическое различие передаёт сцену точнее общего заявления о скорби.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "59749767-f65d-5cc3-93a0-ba6c07a6894a",
+      "title": "Красный зонтик",
+      "catalogueTitle": "Czerwona parasolka",
+      "artist": "Józef Mehoffer",
+      "artists": [
+        {
+          "name": "Józef Mehoffer",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1354695"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "Холст, масло",
+      "accession": "MNK II-b-3845",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/59749767-f65d-5cc3-93a0-ba6c07a6894a-dda1a2d30b80.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/415094",
+      "credit": "Józef Mehoffer; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/415094",
+      "description": "Зонтик придаёт небольшой сидящей фигуре сосредоточенное присутствие в обширном саду. Мехоффер сохраняет собственное устройство дорожек, клумб и густых деревьев: женщина не становится единственной целью обстановки. Ярко-красный обозначает точку покоя среди возделанного изобилия. Досуг получает определённое место, а не просто привлекательный фон.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    }
+  ],
+  "context": {
+    "start": 1489,
+    "end": 1917
+  },
+  "closingSections": [
+    {
+      "title": "Один музей, несколько адресов",
+      "paragraphs": [
+        "Национальный музей в Кракове включает разные филиалы; подборка не является маршрутом по одному зданию. Уточняйте текущее местонахождение каждой работы и условия доступа. Между ними полезно проследить образ руки: поддерживающей, удерживающей, работающей или повелевающей. Она способна изменить масштаб, в котором сюжет становится понятным."
+      ]
+    }
+  ]
+}

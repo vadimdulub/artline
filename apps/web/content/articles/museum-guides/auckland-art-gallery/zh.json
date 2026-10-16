@@ -1,0 +1,587 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "auckland-art-gallery",
+  "museum": "Auckland Art Gallery Toi o Tāmaki",
+  "city": "奥克兰",
+  "country": "新西兰",
+  "title": "奥克兰美术馆Toi o Tāmaki：杰作",
+  "subtitle": "肖像、海岸风景与历史场景，显示取景如何突出一些事物，又将另一些留在画外。",
+  "introduction": "高草可能挡住海岸远景，并不一定为它让路。家居物品可以使肖像更具体，却不能解释人物生活的每一面。本选目中，从什么位置观看题材，常常与题材本身同样重要。丽塔·安格斯组织严整的图像，与那些通过较轻、较开放的笔迹逐渐显出远近的风景并置。\n\n历史场景需要另一种提问。这里克莱顿在事后描绘航行与殖民抵达的作品，都是重构，并非这些事件的目击记录。阅读它们怎样安排船只、人物与海岸线，有助于了解图像如何表现历史，而不只了解题名中的事件。",
+  "visitNote": "参观前请查看奥克兰美术馆当前的馆藏展出情况。纸本艺术品可能会轮换展出，且本指南的编排顺序与美术馆的展厅布局顺序并不一致。",
+  "locale": "zh",
+  "website": "https://www.aucklandartgallery.com/",
+  "officialGuide": "https://www.aucklandartgallery.com/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "哈罗德·斯皮德（Harold Speed）在《素描的实践与科学》（The Practice and Science of Drawing）一书中，将线条、体块与节奏等要素分门别类进行了探讨。这些章节提供了一种切实可行的方法，便于我们将安格斯（Angus）作品中坚实的形体与本指南中风格更为柔和的风景画进行比较。"
+    }
+  ],
+  "works": [
+    {
+      "id": "0fbbe4a3-f612-59f7-a272-08f50f5d2531",
+      "title": "贝蒂·科诺肖像",
+      "catalogueTitle": "Portrait of Betty Curnow",
+      "artist": "Rita Angus",
+      "artists": [
+        {
+          "name": "Rita Angus",
+          "role": "primary",
+          "slug": "wikiart-artist-rita-angus"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0fbbe4a3-f612-59f7-a272-08f50f5d2531-4a04b741def495ce.jpg",
+      "imageSource": "https://www.wikiart.org/en/rita-angus/portrait-of-betty-curnow-1942",
+      "credit": "Rita Angus. Portrait of Betty Curnow. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rita-angus/portrait-of-betty-curnow-1942",
+      "description": "书、画和带图案的织物之间，贝蒂·科诺直视前方的目光与安放妥帖的双手，使肖像保持稳定。安格斯让环境参与人物塑造，又没有让它淹没模特。在拥挤画面里，脸仍有明确位置。这些物品提供联想与具体的生活细节，却不意味着可以把每一样都变成固定的性格特征。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "85399cd2-a96c-51b5-b6bd-3f8671e95586",
+      "title": "芒格努伊",
+      "catalogueTitle": "Mangonui",
+      "artist": "Rita Angus",
+      "artists": [
+        {
+          "name": "Rita Angus",
+          "role": "primary",
+          "slug": "wikiart-artist-rita-angus"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/85399cd2-a96c-51b5-b6bd-3f8671e95586-c926fc53551734e2.jpg",
+      "imageSource": "https://www.wikiart.org/en/rita-angus/mangonui-1955",
+      "credit": "Rita Angus. Mangonui. WikiArt source label: Rita Angus Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/rita-angus/mangonui-1955",
+      "license": "Rita Angus Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rita-angus/mangonui-1955",
+      "description": "小船使浅色水面的尺度可以估量，低丘与大片云的笔迹则用不多的分区交代了港湾。安格斯在着色处之间留出间隔，让纸面也参与表现光。疏朗与密集同样需要安排：未填满的区域可以是风景中积极起作用的部分，而非等待补画的空缺。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "f1a7887d-ba2e-573d-b86b-d0c76b540414",
+      "title": "羽扇豆",
+      "catalogueTitle": "Lupin",
+      "artist": "Rita Angus",
+      "artists": [
+        {
+          "name": "Rita Angus",
+          "role": "primary",
+          "slug": "wikiart-artist-rita-angus"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/f1a7887d-ba2e-573d-b86b-d0c76b540414-303be84b64f7a8f0.jpg",
+      "imageSource": "https://www.wikiart.org/en/rita-angus/lupin-1953",
+      "credit": "Rita Angus. Lupin. WikiArt source label: Rita Angus Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/rita-angus/lupin-1953",
+      "license": "Rita Angus Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rita-angus/lupin-1953",
+      "description": "黄色花朵密集于前景附近，分开的笔迹却保留了生长中的差异。往上，笔法逐渐疏松，转为灌木和轻轻带出的天空。安格斯用间距的变化完成从植物到空气的过渡。这一平常题材提供了近看的例子：没有建筑般的直线，也能建立充分的结构。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "f4b562bd-ad50-56e1-a271-e6513c09dd4b",
+      "title": "霍克湾的雾",
+      "catalogueTitle": "Fog, Hawke's Bay",
+      "artist": "Rita Angus",
+      "artists": [
+        {
+          "name": "Rita Angus",
+          "role": "primary",
+          "slug": "wikiart-artist-rita-angus"
+        }
+      ],
+      "date": "1969",
+      "start": 1969,
+      "end": 1969,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/f4b562bd-ad50-56e1-a271-e6513c09dd4b-b58b86bb65408fd5.jpg",
+      "imageSource": "https://www.wikiart.org/en/rita-angus/fog-hawkes-bay-1969",
+      "credit": "Rita Angus. Fog, Hawke's Bay. WikiArt source label: Rita Angus Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/rita-angus/fog-hawkes-bay-1969",
+      "license": "Rita Angus Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rita-angus/fog-hawkes-bay-1969",
+      "description": "道路与电报杆坚持着清晰的方向，浅色云团却不受它们约束。安格斯让两种状态共存，没有让雾吞没整个景色。房屋仍保有锐利、明确的形状，空气的朦胧便有了坚实的参照。画中的不确定属于天气，而非画家无法组织场景。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "b01da620-7e4d-53cf-9192-d6c132b467e4",
+      "title": "公元1968年",
+      "catalogueTitle": "AD 1968",
+      "artist": "Rita Angus",
+      "artists": [
+        {
+          "name": "Rita Angus",
+          "role": "primary",
+          "slug": "wikiart-artist-rita-angus"
+        }
+      ],
+      "date": "1968",
+      "start": 1968,
+      "end": 1968,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/b01da620-7e4d-53cf-9192-d6c132b467e4-3213244f02b682f9.jpg",
+      "imageSource": "https://www.wikiart.org/en/rita-angus/ad-1968-1968",
+      "credit": "Rita Angus. AD 1968. WikiArt source label: Rita Angus Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/rita-angus/ad-1968-1968",
+      "license": "Rita Angus Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rita-angus/ad-1968-1968",
+      "description": "海马、圆环、字母和凸起般的圆形都可单独辨认，但它们的排列并不描述一个普通地点。安格斯把这组不寻常的组合画得清楚，却没有提供同样清楚的解释。首先可以观察这些元素如何共处。逐一命名是可能的，将它们的全部关系归结成一条信息，则没有那么可靠。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "5b368e81-91bc-5eff-af7d-17392a054193",
+      "title": "毛利男孩头像",
+      "catalogueTitle": "Head of a Maori Boy",
+      "artist": "Rita Angus",
+      "artists": [
+        {
+          "name": "Rita Angus",
+          "role": "primary",
+          "slug": "wikiart-artist-rita-angus"
+        }
+      ],
+      "date": "1938",
+      "start": 1938,
+      "end": 1938,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5b368e81-91bc-5eff-af7d-17392a054193-f23cd547887794de.jpg",
+      "imageSource": "https://www.wikiart.org/en/rita-angus/head-of-a-maori-boy-1938",
+      "credit": "Rita Angus. Head of a Maori Boy. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rita-angus/head-of-a-maori-boy-1938",
+      "description": "单纯的暖色背景，使轮廓明确的脸少有干扰。眼睛与嘴周围的细微差异打破正面的规整，敞开的领口则切开外套较深的色块。安格斯通过这些有限变化建立个体特征。题名中的概括性身份，不应使人把模特当成某一族群的典型，而忽视他是一个具体的被画者。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "79a2e613-7334-58aa-b48a-88da77ad0b11",
+      "title": "波胡图卡瓦树",
+      "catalogueTitle": "Pohutukawa",
+      "artist": "Clas Edvard Friström",
+      "artists": [
+        {
+          "name": "Clas Edvard Friström",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5127790"
+        }
+      ],
+      "date": "约 1905 年",
+      "start": 1905,
+      "end": 1905,
+      "medium": "",
+      "accession": "1967/9/1",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27881803-455273f7e0c30afc.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pohutukawa;_Edward_Fristr%C3%B6m;_1903-1915;_1967-9-1.jpg",
+      "credit": "Clas Edvard Friström. Pohutukawa. Image credit: Clas Edvard Friström; Source credit: https://ehive.com/collections/3236/objects/1351/pohutukawa. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27881803",
+      "description": "树沿海岸低低伸展，外形成为画面的主要结构。小小红花穿插于深色树冠，却不破坏整体。弗里斯特罗姆让大片蓝天大致保持连续，使树的每次弯折都能清楚辨认。画家通过某一棵树独特的生长形态接近这一树种。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "a9ae17b7-f786-5de4-bae3-dc2197cff4f5",
+      "title": "皮哈岬角",
+      "catalogueTitle": "Piha Heads",
+      "artist": "Clas Edvard Friström",
+      "artists": [
+        {
+          "name": "Clas Edvard Friström",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5127790"
+        }
+      ],
+      "date": "1903–1915",
+      "start": 1903,
+      "end": 1915,
+      "medium": "",
+      "accession": "1961/27/2",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/a9ae17b7-f786-5de4-bae3-dc2197cff4f5-9a067039fa6e6627.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Edward_Fristr%C3%B6m_-_Piha_Heads_-_1961-27-2_-_Auckland_Art_Gallery.jpg",
+      "credit": "Clas Edvard Friström. Piha Heads. Image credit: Clas Edvard Friström; http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/3004/piha-heads. https://commons.wikimedia.org/wiki/File:Edward_Fristr%C3%B6m_-_Piha_Heads_-_1961-27-2_-_Auckland_Art_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27884952",
+      "description": "前景草丛并未让出毫无遮挡的远景。它部分遮住岩石与海，使观看者置身近处植被中的位置变得重要。弗里斯特罗姆让人透过阻碍遇见风景。海岸依然可辨，却以片段出现，而非被整齐地隔离出来，供人一眼看尽。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "c6a592c6-01eb-5c64-aee1-1ead31c6170d",
+      "title": "格雷林大北路的桉树",
+      "catalogueTitle": "Gum Trees, Great North Road, Grey Lynn",
+      "artist": "Clas Edvard Friström",
+      "artists": [
+        {
+          "name": "Clas Edvard Friström",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5127790"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "1956/6/4",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/c6a592c6-01eb-5c64-aee1-1ead31c6170d-5d9e205ef148f6ac.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Edward_Fristr%C3%B6m_-_Gum_Trees,_Great_North_Road,_Grey_Lynn_-_1956-6-4_-_Auckland_Art_Gallery.jpg",
+      "credit": "Clas Edvard Friström. Gum Trees, Great North Road, Grey Lynn. Image credit: Clas Edvard Friström; http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/2756/gum-trees-great-north-road-grey-lynn. https://commons.wikimedia.org/wiki/File:Edward_Fristr%C3%B6m_-_Gum_Trees,_Great_North_Road,_Grey_Lynn_-_1956-6-4_-_Auckland_Art_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27882462",
+      "description": "高树为这段道路提供了不同于远处低矮建筑的尺度。光显出部分树干和粗糙地面，把街道与边缘较不规整的表面连起来。这片风景既不能简单说是人工建成，也不是未受触动的自然。它的具体面貌来自道路、聚落与原有树木之间的接触。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "2a08ad6c-005b-5938-b279-8c871e32a11a",
+      "title": "皮哈山谷",
+      "catalogueTitle": "Piha Valley",
+      "artist": "Clas Edvard Friström",
+      "artists": [
+        {
+          "name": "Clas Edvard Friström",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5127790"
+        }
+      ],
+      "date": "1903–1915",
+      "start": 1903,
+      "end": 1915,
+      "medium": "",
+      "accession": "1961/27/1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/2a08ad6c-005b-5938-b279-8c871e32a11a-530dc17df6009f7b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Edward_Fristr%C3%B6m_-_Piha_Valley_-_1961-27-1_-_Auckland_Art_Gallery.jpg",
+      "credit": "Clas Edvard Friström. Piha Valley. Image credit: Clas Edvard Friström; http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/3003/piha-valley. https://commons.wikimedia.org/wiki/File:Edward_Fristr%C3%B6m_-_Piha_Valley_-_1961-27-1_-_Auckland_Art_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27881801",
+      "description": "即使轮廓松散，树的冷蓝色也能把它从较暖的草地中分离。弗里斯特罗姆用冷暖区分相邻植被。山坡限制了景色的深度，没有打开壮阔的远眺。在这片围合空间中，色相的变化可以承担清晰边界通常起到的组织作用。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "6582a1b8-5a55-5fec-8000-def00ade8423",
+      "title": "卡雷卡雷湾的磨坊山谷",
+      "catalogueTitle": "The Mill Valley, Karekare Bay",
+      "artist": "Frank Wright",
+      "artists": [],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "1899/2/3",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27882021-c7e3f54fd587798d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Frank_Wright_-_The_Mill_Valley,_Karekare_Bay_-_1899-2-3_-_Auckland_Art_Gallery.jpg",
+      "credit": "Frank Wright. The Mill Valley, Karekare Bay. Image credit: Frank Wright; Source credit: http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/167/the-mill-valley-karekare-bay. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.aucklandartgallery.com/explore/art-and-artists/artwork/167/the-mill-valley-karekare-bay",
+      "description": "茂密植被原本可能使山谷难以读懂，但重叠山脊将它分成一层层距离。赖特让这些山脊越远越浅。视线从近处草木走向山峦轮廓，景色的尺度也随之改变。局部保留复杂性，整体结构却仍清楚。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "f508b395-f1b4-5812-bcfc-759a98fd872e",
+      "title": "雨后的早晨",
+      "catalogueTitle": "Morning after rain",
+      "artist": "Frank Wright",
+      "artists": [],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "1912/9/7",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27883449-ab4c19560e915d66.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Frank_Wright_-_Morning_after_rain_-_1912-9-7_-_Auckland_Art_Gallery.jpg",
+      "credit": "Frank Wright. Morning after rain. Image credit: Frank Wright; Source credit: http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/262/morning-after-rain. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.aucklandartgallery.com/explore/art-and-artists/artwork/262/morning-after-rain",
+      "description": "光只落在选定的几片区域，没有平均照亮所有植被。赖特借这种不均匀，使题名中雨后转晴的天气可见。小路和溪流提供穿过场景的路线，小人物则标出有人活动的开阔处。风景的变化既在人物行动中，也在不断转变的天气里。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "7464e43d-d6b8-5b73-be1c-e7e1b210ef47",
+      "title": "最后一抹光",
+      "catalogueTitle": "The Last Gleam",
+      "artist": "Frank Wright",
+      "artists": [],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "U/297",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27882018-c2720e1e6116d871.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Frank_Wright_-_The_Last_Gleam_-_U-297_-_Auckland_Art_Gallery.jpg",
+      "credit": "Frank Wright. The Last Gleam. Image credit: Frank Wright; Source credit: http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/11719/the-last-gleam. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.aucklandartgallery.com/explore/art-and-artists/artwork/11719/the-last-gleam",
+      "description": "近处水面和岸边已经进入偏冷的阴影，岬角却仍受到照明。这种分离使题名有了精确依据：最后的亮处只落在风景的某一部分，而不是布满天空。不同距离的表面处在不同光照状态，画面便让一段时间的推移可以被读出。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "bbe09db2-1311-572a-b9d0-dcaa757fcca6",
+      "title": "“决心”号与“冒险”号在帕利瑟角外海",
+      "catalogueTitle": "HMS Resolution, Captain Jas Cook, and HMS Adventure, Captain Furneaux, off Cape Palliser, New Zealand, in 1773",
+      "artist": "Matthew Thomas Clayton",
+      "artists": [
+        {
+          "name": "Matthew Thomas Clayton",
+          "role": "primary",
+          "slug": "wikimedia-painter-q27918959"
+        }
+      ],
+      "date": "1898",
+      "start": 1898,
+      "end": 1898,
+      "medium": "",
+      "accession": "1899/3",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27882054-1a6fad568796de97.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Matthew_Clayton_-_HMS_Resolution,_Captain_Jas_Cook,_and_HMS_Adventure,_Captain_Furneaux,_off_Cape_Palliser,_New_Zealand,_in_1773_-_1899-3_-_Auckland_Art_Gallery.jpg",
+      "credit": "Matthew Thomas Clayton. HMS Resolution, Captain Jas Cook, and HMS Adventure, Captain Furneaux, off Cape Palliser, New Zealand, in 1773. Image credit: Matthew Thomas Clayton; Source credit: http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/174/hms-resolution-captain-jas-cook-and-hms-adventure-captain-furneaux-off-cape-palliser-new-zealan. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27882054",
+      "description": "沉重天色下，倾斜桅杆只占很小空间。克莱顿事后作出的历史重构，让船只在海上显得脆弱；海并没有变成探险故事的中性舞台。这幅画不应被误认成航行的亲历记录。尺度与气氛说明的，是后来的人如何想象这一片段。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "0cadd86c-1797-5134-a943-829357bc5cf0",
+      "title": "霍布森副总督在怀唐伊登陆",
+      "catalogueTitle": "Landing of Lieutenant Governor Hobson at Waitangi",
+      "artist": "Matthew Thomas Clayton",
+      "artists": [
+        {
+          "name": "Matthew Thomas Clayton",
+          "role": "primary",
+          "slug": "wikimedia-painter-q27918959"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "",
+      "accession": "1953/18",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27882619-c129204047b8423d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Matthew_Clayton_-_Landing_of_Lieutenant_Governor_Hobson_at_Waitangi_-_1953-18_-_Auckland_Art_Gallery.jpg",
+      "credit": "Matthew Thomas Clayton. Landing of Lieutenant Governor Hobson at Waitangi. Image credit: Matthew Thomas Clayton; Source credit: http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/1955/landing-of-lieutenant-governor-hobson-at-waitangi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27882619",
+      "description": "小群人物与船沿岸聚集，在宽广港湾前显得微小。疏阔的排列使登陆看起来有条不紊，但构图有序并不能证明殖民事件本身没有复杂性。这幅后来的重构需要被看成一种经过选择的表现。可以问：远距离视点使什么容易看见，又使什么难以分清？",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "4f0b086e-92e4-58e5-aa85-1c1f6b8e8f4f",
+      "title": "奥克兰皇后街",
+      "catalogueTitle": "Queen Street, Auckland",
+      "artist": "Jacques Carabain",
+      "artists": [
+        {
+          "name": "Jacques Carabain",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1677924"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "",
+      "accession": "1986/5",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27877092-05c69fae7e708531.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jacques_Carabain_-_Queen_Street,_Auckland_-_Google_Art_Project.jpg",
+      "credit": "Jacques Carabain. Queen Street, Auckland. Image credit: Jacques Carabain; Source credit: OAHFvUTHUA75Sg at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27877092",
+      "description": "商业建筑的立面向远处汇拢，为街道交通提供清楚的结构。卡拉班把行人与车辆分配在这一建筑尺度中，没有让某件小事接管画面。城市既通过建筑呈现，也通过使用方式呈现。移动的小人物，使房屋的高度和延伸范围更容易估量。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "3650ce51-4975-52be-ae66-8160bb3289a8",
+      "title": "从码头看奥克兰",
+      "catalogueTitle": "Auckland from the Wharf",
+      "artist": "Edward Augustus Gifford",
+      "artists": [
+        {
+          "name": "Edward Augustus Gifford",
+          "role": "primary",
+          "slug": "wikimedia-painter-q21455848"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "1889/6",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27882754-7c715284d827fe4f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Edward_Gifford_-_Auckland_from_the_Wharf_-_1889-6_-_Auckland_Art_Gallery.jpg",
+      "credit": "Edward Augustus Gifford. Auckland from the Wharf. Image credit: Edward Augustus Gifford; Source credit: http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/144/auckland-from-the-wharf. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27882754",
+      "description": "桅杆与索具挡在观看者和城市建筑之间。吉福德为抵达与贸易的场所安排了忙碌的前景，使滨水地带不至于成为整齐的建筑立面图。通向城市的道路，是通过工作的船只呈现的。遮挡物与天际线一样，都在说明这个地方。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "584920ba-1352-53d0-b65e-aeb6fe1cf3aa",
+      "title": "奥普阿旺加的移民厨房",
+      "catalogueTitle": "A Settler’s Kitchen, Opua Whanga, New Zealand 1886",
+      "artist": "Robert Atkinson",
+      "artists": [
+        {
+          "name": "Robert Atkinson",
+          "role": "primary",
+          "slug": "wikimedia-painter-q21452828"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "1999/22",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27884931-30855d002ed9bc5f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Atkinson_-_A_Settler%E2%80%99s_Kitchen,_Opua_Whanga,_New_Zealand_1886_-_1999-22_-_Auckland_Art_Gallery.jpg",
+      "credit": "Robert Atkinson. A Settler’s Kitchen, Opua Whanga, New Zealand 1886. Image credit: Robert Atkinson; Source credit: http://www.aucklandartgallery.com/explore-art-and-ideas/artwork/8179/a-settlers-kitchen-opua-whanga-new-zealand-1886. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.aucklandartgallery.com/explore/art-and-artists/artwork/8179/a-settlers-kitchen-opua-whanga-new-zealand-1886",
+      "description": "即使没有居民在场，炉边也已是活动中心。水壶、器具和粗木板通过位置与组合，交代了日常工作。阿特金森使室内具体起来，这些细节是“家居生活艰苦”一类概括容易漏掉的。磨损可以说明使用，却不能为住过这间屋子的人提供虚构的传记。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "5e5f6a98-83e1-52f3-b88f-5ed30c62719c",
+      "title": "骑兵战",
+      "catalogueTitle": "A Cavalry Battle",
+      "artist": "Salvator Rosa",
+      "artists": [
+        {
+          "name": "Salvator Rosa",
+          "role": "primary",
+          "slug": "salvator-rosa-q359421"
+        }
+      ],
+      "date": "1652",
+      "start": 1652,
+      "end": 1652,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5e5f6a98-83e1-52f3-b88f-5ed30c62719c-e004556ef387af31.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvator-rosa/a-cavalry-battle-1652",
+      "credit": "Salvator Rosa. A Cavalry Battle. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/salvator-rosa/a-cavalry-battle-1652",
+      "description": "罗萨没有安排一个突出的英雄，来使战斗容易追踪。暗天下，马匹、武器与身体在一个个小动作中交叠。难以将它们分清，本身就成为题材的一部分。建筑只提供零碎环境，没有成为一座稳固舞台，让人能够安然俯瞰整场交锋。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    },
+    {
+      "id": "82c40d97-a7f9-5c8b-b186-cfcb59996f16",
+      "title": "埃及猫的葬礼",
+      "catalogueTitle": "The Obsequies of an Egyptian Cat",
+      "artist": "John Reinhard Weguelin",
+      "artists": [
+        {
+          "name": "John Reinhard Weguelin",
+          "role": "primary",
+          "slug": "wikimedia-painter-q6254583"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "MU/147",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q27877127-8e0b197147101775.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Weguelin_-_The_Obsequies_of_an_Egyptian_Cat_-_Google_Art_Project.jpg",
+      "credit": "John Reinhard Weguelin. The Obsequies of an Egyptian Cat. Image credit: John Weguelin (1849 - 1927) – Creator (Great Britain) Details on Google Art Project; Source credit: 9AECnKpwFVU2-A at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q27877127",
+      "description": "精心排列的器皿、供物和动物形棺椁，使仪式可以辨认。韦格林用布景般细致的陈设，重构一场想象中的古代仪式。描绘精确不应与考古上的确证混淆。这幅画呈现的是十九世纪对古代的重建；令人信服的物件，同时也是想象得以展开的手段。",
+      "importance": "",
+      "museum": "Auckland Art Gallery Toi o Tāmaki"
+    }
+  ],
+  "context": {
+    "start": 1652,
+    "end": 1969
+  },
+  "closingSections": [
+    {
+      "title": "始终追问观看位置",
+      "paragraphs": [
+        "比较被草部分遮挡的海岸，与从远处展开的历史场景。两种取景都不是中性的。这些条目依据奥克兰美术馆 Toi o Tāmaki 的部分藏品编选；若希望在展厅找到某件作品，请先确认当前展出信息。"
+      ]
+    }
+  ]
+}

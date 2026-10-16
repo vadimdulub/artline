@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "statens-museum-kunst",
+  "museum": "Statens Museum for Kunst",
+  "city": "コペンハーゲン",
+  "country": "デンマーク",
+  "title": "デンマーク国立美術館：名作",
+  "subtitle": "酒場の出会いから無人のアトリエ、緑に分かれた顔まで、20作品をたどります。",
+  "introduction": "カール・ブロックの酒場では、誰かがテーブルに近づいたかのように、男がこちらを向きます。ハンマースホイの部屋では、女性の顔は向こうを向いたままです。一方は出会いを生み、もう一方は人より部屋をよく見せる。二つの絵は、異なる近づき方を求めます。\n\nコペンハーゲンのSMKからの選集は、このような見ることの違いをたどります。画家はスケッチ、雲、建造中の船を調べ、マティスとドランは、顔や身体がわかるまま色をどれほど変えられるかを問います。20作品を結ぶのは一つの時代ではなく、こうした課題です。観察を主題にする絵も、見ている自分の位置を意識させる絵もあります。",
+  "visitNote": "これらはSMK（デンマーク国立美術館）の所蔵作品ですが、全20点が現在展示されているとは限りません。作品の貸出、展示室の変更、および個々の作品の展示状況については、同館のコレクションおよび展覧会情報をご確認ください。",
+  "locale": "ja",
+  "website": "https://www.smk.dk/",
+  "officialGuide": "https://www.smk.dk/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "無料で読む · 英語",
+      "note": "色彩に関するカンディンスキーの論考は、マティスやドランの絵画に対する歴史的な対照例となるものです。彼の主張はあくまで一人の芸術家の立場を示すものであり、それ以前の肖像画やハンマースホイの室内画を解釈するための定式ではありません。"
+    }
+  ],
+  "works": [
+    {
+      "id": "3d2e7f3f-e722-4e94-8669-b818c072e3ce",
+      "title": "ローマのオステリアにて",
+      "catalogueTitle": "In a Roman Osteria",
+      "artist": "Carl Bloch",
+      "artists": [
+        {
+          "name": "Carl Bloch",
+          "role": "primary",
+          "slug": "carl-bloch-q547055"
+        }
+      ],
+      "date": "1866",
+      "start": 1866,
+      "end": 1866,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS4087",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/3d2e7f3f-e722-4e94-8669-b818c072e3ce-34175367eb9f63bd.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS4087",
+      "credit": "Carl Bloch. In a Roman Osteria. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS4087",
+      "description": "こちらへ振り向いた頭によって、卓を囲む人々は画面外の誰かに気づいたように見えます。テーブルの近い縁がその出会いを引き寄せ、ほかの客は暗い室内の奥で過ごし続けています。ブロックは来た人を描かずに、中断をほのめかします。見る人は、ちょうどその中断が起きた側の位置に立つことになります。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "aa58e0d1-6bb5-42fe-aa04-accc5288a0a1",
+      "title": "ティタンたちの墜落",
+      "catalogueTitle": "The Fall of the Titans",
+      "artist": "Cornelis van Haarlem",
+      "artists": [
+        {
+          "name": "Cornelis van Haarlem",
+          "role": "primary",
+          "slug": "cornelis-van-haarlem-q442484"
+        }
+      ],
+      "date": "1588-1590",
+      "start": 1588,
+      "end": 1590,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS1",
+      "image": "https://artlines.org/assets/artworks/imported/smk-e36ee420543f48189cc2b7688a98a5b1bed5c4a1bf23b776d279a29a881c1652.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1",
+      "credit": "Cornelis van Haarlem. The Fall of the Titans. Statens Museum for Kunst, Copenhagen. Public domain; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1",
+      "description": "身体は反対方向へねじれ、落下の中で安定した場所を見つけるのは困難です。岩は接触する場所を与えても、安全な足場にはほとんどなりません。神話の敗北は、人体が取り得るひねりや伸びを見せる場にもなります。多くの者が被る破局を目に見えるものにする、主な手段が身体の構造なのです。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "300fe5c0-600d-476b-b9be-2ff67ede153a",
+      "title": "マティス夫人の肖像：緑の筋",
+      "catalogueTitle": "Portrait of Madame Matisse. The Green Line",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "キャンバスに油彩",
+      "accession": "KMSr171",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-a1900c660d92f8b8f843f9748386f0db75163e0ff3d30b52880843b9cd2e0463.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr171",
+      "credit": "Henri Matisse. Portrait of Madame Matisse. The Green Line. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMSr171",
+      "description": "緑の帯が顔を色の異なる左右へ分けても、アメリー・マティスの姿は認識できます。その強さは自然らしい肌色ではなく、対比から生まれます。また本作は約40.5×32.5センチという小さな絵です。色の強さが与える存在感は、画面上の複製では実際の大きさと混同されやすいことにも注意しましょう。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "43fe6ddd-6c92-57f0-915b-28d79746c78e",
+      "title": "ピエロ",
+      "catalogueTitle": "Pierrot (Self Portrait as Pierrot)",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "厚紙に油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/43fe6ddd-6c92-57f0-915b-28d79746c78e-470d289c5418c2bc.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/pierrot-self-portrait-as-pierrot-1915",
+      "credit": "Pierrot (Self Portrait as Pierrot). WikiArt; Amedeo Modigliani. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/pierrot-self-portrait-as-pierrot-1915",
+      "description": "襞襟と角張ったかぶり物が舞台の役柄を示し、長い顔は細い目鼻と緑がかった面で組み立てられています。仮面のように見えても、人物であることは失われません。衣装は単に題材を与えるだけでなく、顔をどこまで簡略にしても人として認識できるかを、肖像に近い画像の中で試す条件になります。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "df4e83a3-352c-5998-bb83-38c157f66cf9",
+      "title": "男性の肖像",
+      "catalogueTitle": "Portrait of a man (Andrea Palladio)",
+      "artist": "El Greco",
+      "artists": [
+        {
+          "name": "El Greco",
+          "role": "primary",
+          "slug": "el-greco-q301"
+        }
+      ],
+      "date": "1575",
+      "start": 1575,
+      "end": 1575,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/df4e83a3-352c-5998-bb83-38c157f66cf9-b30b5b0e8125db36.jpg",
+      "imageSource": "https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "credit": "El Greco. Portrait of a man (Andrea Palladio). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "description": "まとまった暗い衣服から明るい手が突き出し、顔以外にも動作が生まれています。袖口と髭は、控えめな背景からそれぞれ見分けられます。モデルをパッラーディオとする説もありますが、その同定には異論があります。提案された名前を確定事項に変えなくても、身ぶりと顔立ちを記述することはできます。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "5e163ea8-c717-43dc-a3fe-07818b68d55f",
+      "title": "傷ついたピロクテテス",
+      "catalogueTitle": "The Wounded Philoctetes",
+      "artist": "Nicolai Abildgaard",
+      "artists": [
+        {
+          "name": "Nicolai Abildgaard",
+          "role": "primary",
+          "slug": "nicolai-abildgaard-q319854"
+        }
+      ],
+      "date": "1775",
+      "start": 1775,
+      "end": 1775,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS586",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/5e163ea8-c717-43dc-a3fe-07818b68d55f-3510ab35611bfbfa.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS586",
+      "credit": "Nicolai Abildgaard. The Wounded Philoctetes. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS586",
+      "description": "両手が傷ついた足へ目を導き、背や手足はその周りへ折りたたまれています。痛みは表情だけでなく、全身の姿勢となって現れます。人物が一人でいるため、傷のある足を抱える動作が特にはっきりします。周囲に視線を分け合う集団はありません。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "edb2f080-d4fd-4191-b39c-eb6ccb1d6caa",
+      "title": "ローマのデンマーク人芸術家グループ",
+      "catalogueTitle": "A Group of Danish Artists in Rome",
+      "artist": "Constantin Hansen",
+      "artists": [
+        {
+          "name": "Constantin Hansen",
+          "role": "primary",
+          "slug": "constantin-hansen-q539474"
+        }
+      ],
+      "date": "1837",
+      "start": 1837,
+      "end": 1837,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS3236",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/edb2f080-d4fd-4191-b39c-eb6ccb1d6caa-5643da7647dc288d.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3236",
+      "credit": "Constantin Hansen. A Group of Danish Artists in Rome. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3236",
+      "description": "男たちは一室を共有していても、全員が同じことをしてはいません。座り、立ち、別々の方向を向く姿によって、芸術家たちの集まりは儀礼的な集合ではなく、時間の続いている場に見えます。個々の顔は集団肖像の一部として残り、奥に開ける眺めは、部屋を仕事仲間だけの閉ざされた世界にしません。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "f2787d23-5689-474e-8b9b-d8309575b833",
+      "title": "コロッセオの内部の眺め",
+      "catalogueTitle": "View of the Interior of the Colosseum",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1816",
+      "start": 1816,
+      "end": 1816,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS1776",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/f2787d23-5689-474e-8b9b-d8309575b833-8efa336fafd33296.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1776",
+      "credit": "Christoffer Wilhelm Eckersberg. View of the Interior of the Colosseum. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1776",
+      "description": "アーチも壊れた壁も、距離をたどれる建築の一部として残っています。小さな人々は身体の尺度を示すものの、遺跡を大事件の舞台にはしません。エッカースベルグは間隔と面の向きの変化を用い、失われた部分が見えていても、建築の組み立てを読み取れるようにしています。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "6f4bab54-b54e-40c0-8fb6-bedb2436bf5d",
+      "title": "ドッセリンゲンからノアブロを望む景色",
+      "catalogueTitle": "A View from Dosseringen near the Sortedam Lake Looking Towards Nørrebro",
+      "artist": "Christen Købke",
+      "artists": [
+        {
+          "name": "Christen Købke",
+          "role": "primary",
+          "slug": "christen-kobke-q381458"
+        }
+      ],
+      "date": "1838",
+      "start": 1838,
+      "end": 1838,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS359",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-ac6bdafe3d4beb4be6aabfbef36228d618aac4586003c37d35ac2c35fca8ac5b.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS359",
+      "credit": "Christen Købke. A View from Dosseringen near the Sortedam Lake Looking Towards Nørrebro. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS359",
+      "description": "旗竿が確かな垂直線を立て、水と空の広い水平の連続に対置されます。近くの二人と遠い舟は、その広がりのわずかな部分を占めるだけです。日常の活動には居場所がありますが、周囲のすべてを人の営みだけに照らして測る必要はない風景です。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "5b80c571-41e5-4ac1-a25d-4c3c927e7b66",
+      "title": "ストランゲーデの部屋と画家の妻",
+      "catalogueTitle": "A Room in the Artist's Home in Strandgade, Copenhagen, with the Artist's Wife",
+      "artist": "Vilhelm Hammershøi",
+      "artists": [
+        {
+          "name": "Vilhelm Hammershøi",
+          "role": "primary",
+          "slug": "vilhelm-hammershoi-q380706"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS3696",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-120cb5885f90392c87a020a00d6a42b6ebc853a1b2a694cbbe3cc7214749978f.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3696",
+      "credit": "Vilhelm Hammershøi. A Room in the Artist's Home in Strandgade, Copenhagen, with the Artist's Wife. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3696",
+      "description": "女性の顔は見えませんが、部屋の境界は非常にはっきりしています。床に落ちる小さな格子状の陽光が、大きな静けさの中に局所的な変化を作ります。この違いは重要です。絵は空間について精密に教えてくれても、そこにいる人について同じ程度に明かしてはくれません。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "668ee4ab-9597-4fe1-a034-bde0ee9d9363",
+      "title": "画家のイーゼルがある室内",
+      "catalogueTitle": "Interior with the Artist’s Easel",
+      "artist": "Vilhelm Hammershøi",
+      "artists": [
+        {
+          "name": "Vilhelm Hammershøi",
+          "role": "primary",
+          "slug": "vilhelm-hammershoi-q380706"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS7444",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/668ee4ab-9597-4fe1-a034-bde0ee9d9363-2a853c81370ad166.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS7444",
+      "credit": "Vilhelm Hammershøi. Interior with the Artist’s Easel. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMS7444",
+      "description": "イーゼルと額入りの絵が仕事場であることを示しますが、画家はいません。開いた戸口は部屋を別の場所へ延ばしても、目に見える活動を加えません。道具と環境によって、絵画制作そのものが主題になります。見たり作ったりする行為が止まっても、そのための場所は残るのです。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "c8425c81-ddc4-4fd6-9589-e4e148716554",
+      "title": "シュミーズ姿の女性",
+      "catalogueTitle": "Woman in a Chemise",
+      "artist": "André Derain",
+      "artists": [
+        {
+          "name": "André Derain",
+          "role": "primary",
+          "slug": "andre-derain-q156272"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "キャンバスに油彩",
+      "accession": "KMSr14",
+      "image": "https://artlines.org/assets/artworks/imported/smk-abb22cb1f47666607f76ed0dafdc1cbd2e671686add65042dcebc4cba29bffe9.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr14",
+      "credit": "André Derain. Woman in a Chemise. Statens Museum for Kunst, Copenhagen. Public domain; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMSr14",
+      "description": "手で顎を支える見慣れた姿勢によって身体は読み取れますが、ピンク、青、緑は肌、布、影の通常の区別を乱します。色は輪郭の内側を埋めるだけでなく、形を作っています。マティスの肖像と比べると、人の姿を保ちながら、それを認識させる色を変えるもう一つの方法が見えてきます。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "0426b441-5b87-4c8c-87ed-634679e71a89",
+      "title": "ライバーグ家",
+      "catalogueTitle": "The Ryberg Family",
+      "artist": "Jens Juel",
+      "artists": [
+        {
+          "name": "Jens Juel",
+          "role": "primary",
+          "slug": "jens-juel-q581361"
+        }
+      ],
+      "date": "1793〜1797年頃",
+      "start": 1793,
+      "end": 1797,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS2098",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/0426b441-5b87-4c8c-87ed-634679e71a89-6b0481f70eb3e385.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS2098",
+      "credit": "Jens Juel. The Ryberg Family. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS2098",
+      "description": "身ぶりが座る年長の男性と立つ二人を結び、風景は家族の集まりを広い社会的な場へ置いています。遠景は単なる景色ではなく、彼らの見せ方をすぐ手前の範囲から先へ延ばします。そのため肖像が示す社会的な位置には、顔の似姿とともに土地や周囲の環境も関わっています。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "8189aa13-c24c-490d-b7ea-18b5c5d0d209",
+      "title": "鏡でスケッチを検討するディトレフ・ブルンク",
+      "catalogueTitle": "En ung kunstner (Ditlev Blunck) betragter en skitse i et spejl",
+      "artist": "Wilhelm Bendz",
+      "artists": [
+        {
+          "name": "Wilhelm Bendz",
+          "role": "primary",
+          "slug": "wilhelm-bendz-research-55e639d17130"
+        }
+      ],
+      "date": "1826",
+      "start": 1826,
+      "end": 1826,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS280",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/7df15770-d8e1-43d7-af44-f1c4571d2426-9b1260ac85dc4db6.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS280",
+      "credit": "Wilhelm Bendz. En ung kunstner (Ditlev Blunck) betragter en skitse i et spejl. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS280",
+      "description": "鏡はスケッチの別の見え方を与え、作品を判断することを、視点を変える具体的な行為として示します。道具やキャンバスが画家の周りに集まり、その行為を仕事場の中に置きます。見ることも作ることの一部です。画家は手を止め、向きを変えれば何がわかるかを確かめています。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "8913b624-995a-4c00-b379-123a4a1b990d",
+      "title": "ヴァイオリンのある室内",
+      "catalogueTitle": "Interior with a Violin",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "キャンバスに油彩",
+      "accession": "KMSr83",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/8913b624-995a-4c00-b379-123a4a1b990d-cc04a6dd19742075.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr83",
+      "credit": "Henri Matisse. Interior with a Violin. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMSr83",
+      "description": "置かれたヴァイオリンは、演奏者がいなくても、部屋が使われていることを示します。開いた鎧戸は明るい外へつながり、暗い枠は隣り合う空間を分けています。楽器と家具は配色にも参加します。見慣れた物は、物語の中心にならなくても、目を留める対象になれるのです。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "2db45366-dbb2-4ac7-a898-417f364ce187",
+      "title": "コンサート：芸術家の子供たちと遊び友達",
+      "catalogueTitle": "\"Koncert\". Kunstnerens børn og deres legekammerater",
+      "artist": "Otto Haslund",
+      "artists": [
+        {
+          "name": "Otto Haslund",
+          "role": "primary",
+          "slug": "otto-haslund-research-644e17f06988"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS1306",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/ebb7f7fd-0bc0-4319-974a-0ab6cbcd95f5-1c7eee0862a30d79.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1306",
+      "credit": "Otto Haslund. \"Koncert\". Kunstnerens børn og deres legekammerater. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1306",
+      "description": "子どもたちのピアノへの注意の向け方はさまざまです。集中する子もいれば、最年少の子たちなど、完全に足並みのそろった演奏会という印象を崩す子もいます。その違いによって、集まりは家庭の調和を表すだけの図ではなくなります。年齢の異なる人が一室にいるときの、不揃いな参加の仕方も演奏の場に含まれます。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "cbb8ec1c-21fd-4412-a6b1-4ccc30cdf78e",
+      "title": "バルベリーニ広場で靴墨を売るいかさま師",
+      "catalogueTitle": "A Charlatan Selling Blacking in the Piazza Barberini in Rome",
+      "artist": "Wilhelm Marstrand",
+      "artists": [
+        {
+          "name": "Wilhelm Marstrand",
+          "role": "primary",
+          "slug": "wilhelm-marstrand-q358399"
+        }
+      ],
+      "date": "1840-1849",
+      "start": 1840,
+      "end": 1849,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS3770",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/cbb8ec1c-21fd-4412-a6b1-4ccc30cdf78e-b14f738932e6c4a4.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3770",
+      "credit": "Wilhelm Marstrand. A Charlatan Selling Blacking in the Piazza Barberini in Rome. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3770",
+      "description": "売り手の実演に観客が集まり、人物を結びつける行為は説得になります。相手によって異なる反応は、売り手の身ぶりと同じくらい重要です。建物と噴水はローマの広場だと示しますが、近くの人間関係を作るのは商売の実演です。売るためには、まず注意を引かなければなりません。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "1cc81c41-13e0-433e-92e7-0160ab7a0bfc",
+      "title": "雲の風景、習作",
+      "catalogueTitle": "A Cloudscape. Study",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1826",
+      "start": 1826,
+      "end": 1826,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS6433",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/1cc81c41-13e0-433e-92e7-0160ab7a0bfc-969b8253291f174e.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS6433",
+      "credit": "Christoffer Wilhelm Eckersberg. A Cloudscape. Study. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS6433",
+      "description": "重なる雲の下に、地面は細い帯としてしか残っていません。そのため空は、ひとまとめの背景ではなく、重い塊と淡い開口部によって内部を描き分ける必要があります。習作は、下にもっと目立つ題材を置かなくても、変わる大気の形を長く観察する対象にしています。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "e50a83f9-d7c5-452e-92f4-7bf45e3c6e0a",
+      "title": "造船台上のコルベット、コペンハーゲン",
+      "catalogueTitle": "A Corvette on the Stocks. Copenhagen",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1828",
+      "start": 1828,
+      "end": 1828,
+      "medium": "キャンバスに油彩",
+      "accession": "KMS6439",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/e50a83f9-d7c5-452e-92f4-7bf45e3c6e0a-e53972819376b8b2.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS6439",
+      "credit": "Christoffer Wilhelm Eckersberg. A Corvette on the Stocks. Copenhagen. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS6439",
+      "description": "木の支えに持ち上げられた船体は、通常なら水が隠す面を見せています。見慣れた浮かぶ船になる前の、それを可能にする条件が描かれています。したがって支持材は邪魔なものではなく不可欠なものです。大きな構造物が地面とどう接しているかを説明しています。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "14c7c9fe-6bb4-4457-82c1-77db89fb1bd1",
+      "title": "家の外にいる盲目の男性",
+      "catalogueTitle": "A Blind Man Outside his House",
+      "artist": "Michael Ancher",
+      "artists": [
+        {
+          "name": "Michael Ancher",
+          "role": "primary",
+          "slug": "michael-ancher-q468252"
+        }
+      ],
+      "date": "1881〜1884年頃",
+      "start": 1881,
+      "end": 1884,
+      "medium": "板に油彩",
+      "accession": "KMS3459",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/14c7c9fe-6bb4-4457-82c1-77db89fb1bd1-99d88ba6ee7efe2e.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3459",
+      "credit": "Michael Ancher. A Blind Man Outside his House. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3459",
+      "description": "下げた頭と身体を支える立ち方が、男性を建物のそばに位置づけ、周囲の地面には明るい光が広がります。題名は盲目であることを示しますが、それで人物のすべてを説明する必要はありません。肖像のように姿勢を丁寧に見ることで、彼は風景の一員になります。見える風景と見えない人という対比だけには収まりません。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    }
+  ],
+  "context": {
+    "start": 1575,
+    "end": 1918
+  },
+  "closingSections": [
+    {
+      "title": "距離を変える",
+      "paragraphs": [
+        "作品の寸法を念頭に、構図全体と、一つの細部を近くで見た場合を比べてください。マティスの小さな肖像と、身体が落下する大きな場面では効果が違います。SMKのカタログには有用な作品記録がありますが、現在の展示と来館条件は別途確認が必要です。"
+      ]
+    }
+  ]
+}

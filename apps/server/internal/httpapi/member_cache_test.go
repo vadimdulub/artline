@@ -26,7 +26,7 @@ func (*cacheMemberStore) Login(context.Context, member.Identity, string, string,
 func (*cacheMemberStore) Logout(context.Context, string) error { return nil }
 
 func TestMemberAccessPrecedesWarmCatalogueCache(t *testing.T) {
-	for _, path := range []string{"/api/v1/museums", "/api/v1/museums/the-met/works"} {
+	for _, path := range []string{"/api/v1/museums"} {
 		t.Run(path, func(t *testing.T) {
 			store := &cacheMemberStore{active: true}
 			members := member.New(member.Config{ClientID: "client", ClientSecret: "secret", CookieKey: strings.Repeat("k", 32), Origin: "https://artlines.org"}, store)
@@ -66,7 +66,7 @@ func TestMemberAccessPrecedesWarmCatalogueCache(t *testing.T) {
 
 func TestAnonymousProtectedRouterRequestsNeverReachDatabase(t *testing.T) {
 	handler := New(config.Config{}, nil)
-	for _, path := range []string{"/api/v1/museums", "/api/v1/museums/the-met", "/api/v1/museums/the-met/works", "/api/v1/museums/the-met/works/11111111-1111-4111-8111-111111111111"} {
+	for _, path := range []string{"/api/v1/museums"} {
 		for _, method := range []string{"GET", "HEAD"} {
 			w := httptest.NewRecorder()
 			handler.ServeHTTP(w, httptest.NewRequest(method, path, nil))
@@ -74,5 +74,26 @@ func TestAnonymousProtectedRouterRequestsNeverReachDatabase(t *testing.T) {
 				t.Fatalf("%s %s: %d", method, path, w.Code)
 			}
 		}
+	}
+}
+
+func TestPublicMuseumCacheNeedsNoAccount(t *testing.T) {
+	members := member.New(member.Config{}, nil)
+	cache := newCatalogueCache(func(context.Context) (string, error) { return "1", nil })
+	api := &API{}
+	count := 0
+	handler := members.CatalogueAccess(api.cacheCatalogue(cache, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		count++
+		writeJSON(w, 200, map[string]string{"record": "public museum"})
+	})))
+	for range 2 {
+		w := httptest.NewRecorder()
+		handler.ServeHTTP(w, httptest.NewRequest("GET", "/api/v1/museums/the-met/works", nil))
+		if w.Code != 200 {
+			t.Fatal(w.Code)
+		}
+	}
+	if count != 1 {
+		t.Fatal("public museum cache not reused")
 	}
 }

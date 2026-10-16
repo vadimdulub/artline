@@ -1,4 +1,4 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, screen, within } from "@testing-library/react";
 import { afterEach, expect, it } from "vitest";
 import { ArtistRecord, SourceList } from "./ArtistRecord";
 import { permittedImagePath } from "./ArtworkViewer";
@@ -57,6 +57,17 @@ it("shows a key work inline on the full painter page without opening a dialog", 
   expect(screen.getByRole("region", { name: "Key artwork" })).toBeVisible();
   expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Painter", level: 1 })).toBeVisible();
+});
+it("includes artistic connections directly in the artist record", () => {
+  render(<ArtistRecord artist={{ ...painter, connections: {
+    incoming: { total: 1, next_cursor: "", items: [{ id: "teacher", name: "Teacher", slug: "teacher", claims: [{ id: "claim", name: "Teacher", slug: "teacher", direction: "incoming", relationship_type: "teacher_of", evidence_level: "documented", evidence_note: "Source evidence", citations: [] }] }] },
+    outgoing: { total: 0, next_cursor: "", items: [] }
+  } }} gallery onSelectWork={() => {}} />);
+  const connections = screen.getByRole("region", { name: "Artistic connections" });
+  expect(connections).toBeVisible();
+  expect(within(connections).getByRole("link", { name: "Teacher" })).toHaveAttribute("href", "/artists/teacher");
+  expect(screen.getByRole("heading", { name: "Painter", level: 1 })).toBeVisible();
+  expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
 });
 it("keeps an explicit artwork link ahead of the painter's key work", () => {
   const key = { ...artwork, id: "key", title: "Key painting" };

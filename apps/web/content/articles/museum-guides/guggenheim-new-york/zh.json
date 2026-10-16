@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "guggenheim-new-york",
+  "museum": "Solomon R. Guggenheim Museum",
+  "city": "纽约",
+  "country": "美国",
+  "title": "所罗门·R.古根海姆博物馆：杰作",
+  "subtitle": "从认得出的事物，到不再需要给事物命名的画面安排。",
+  "introduction": "窗户、坐着的男人、自行车手，这些题材给了我们寻找的目标。找到它们，却只是开始。夏加尔把脸分成不相容的视角，塞尚用相邻色块构成人体，梅青格让自行车与赛道、人群共享空间。凯利的彩色板面则没有其他东西可辨认，只有颜色与比例。这些是关于画作能够容纳什么的不同选择，并不是一条通往抽象的单行道路。本组选择还横跨两家机构：纽约所罗门·R.古根海姆博物馆与威尼斯佩姬·古根海姆美术馆。属于威尼斯的作品会在下文注明；这不是纽约的参观路线。",
+  "visitNote": "这是馆藏精选，而非特定展览的参观路线。古根海姆博物馆会轮换展出作品，并向其他机构出借藏品。此处展出的培根三联画创作于1962年，与他1944年创作并由泰特美术馆收藏的《三项习作》（Three Studies）并非同一件作品。",
+  "locale": "zh",
+  "website": "https://www.guggenheim.org/",
+  "officialGuide": "https://www.guggenheim.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基的文字阐述了他关于色彩与形式的理念。在欣赏此处两幅画作的同时阅读这些文字，应将其视为一位艺术家的观点陈述，而非所有抽象作品都必须遵循的法则。"
+    }
+  ],
+  "works": [
+    {
+      "id": "6684a62a-ed2e-56b9-a1e2-0e05347971c5",
+      "title": "窗外的巴黎",
+      "catalogueTitle": "Paris Through the Window",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "布面油画",
+      "accession": "37.438",
+      "image": "https://artlines.org/assets/artworks/wikiart/6684a62a-ed2e-56b9-a1e2-0e05347971c5-816c3b4f41dcebd1.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/paris-through-the-window-1913",
+      "credit": "Marc Chagall. Paris Through the Window. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.guggenheim.org/audio/track/description-of-paris-through-the-window-paris-par-la-fenetre-1913",
+      "description": "窗户许诺一幅巴黎景色，窗框却无法把城市与周围虚构形体分开。猫占据窗台，双重面孔与漂浮人物打乱正常的比例和重力。夏加尔保留足够城市特征供人辨认，又让前景遵循自己的规则。隔窗看风景这件事，远比最初听起来复杂。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "4fc8f597-34d7-57aa-9fb7-19a0e11ccd2f",
+      "title": "蓝、绿、黄、橙、红",
+      "catalogueTitle": "Blue Green Yellow Orange Red",
+      "artist": "Ellsworth Kelly",
+      "artists": [
+        {
+          "name": "Ellsworth Kelly",
+          "role": "primary",
+          "slug": "ellsworth-kelly-nga-2592"
+        }
+      ],
+      "date": "1966",
+      "start": 1966,
+      "end": 1966,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/4fc8f597-34d7-57aa-9fb7-19a0e11ccd2f-c4aaea2b718de119.jpg",
+      "imageSource": "https://www.wikiart.org/en/ellsworth-kelly/blue-green-yellow-orange-red-1966",
+      "credit": "Ellsworth Kelly. Blue Green Yellow Orange Red. WikiArt source label: (c) Ellsworth Kelly, all rights reserved. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ellsworth-kelly/blue-green-yellow-orange-red-1966",
+      "license": "(c) Ellsworth Kelly, all rights reserved (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ellsworth-kelly/blue-green-yellow-orange-red-1966",
+      "description": "凯利把五块竖直彩色板并排放置。清楚的形式让比较无法避免：蓝与绿相遇于真实边缘，每种颜色都受相邻颜色影响，显得更强或更弱。没有画出来的房间或风景替这些关系定调。实体板块的分隔承担了别处可能由轮廓线承担的任务，使颜色获得明确的面积。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "f8233f8c-f519-5400-b14b-5700c27a66f4",
+      "title": "构图第2号",
+      "catalogueTitle": "Composition 2",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/f8233f8c-f519-5400-b14b-5700c27a66f4-2a8ab19fd78f0f58.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/composition-2-1922",
+      "credit": "Piet Mondrian. Composition 2. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/piet-mondrian/composition-2-1922",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piet-mondrian/composition-2-1922",
+      "description": "大小不等的矩形使蒙德里安的黑色网格无法安稳成为规则图案。正方形大部分保持白色，较小色区在边缘附近形成牵引。这里的平衡不是左右对应。顺着线条到画布边缘，再回到较大白区，就会发现分隔不断改变那些起初似乎空白的地方在构图中的分量。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "c24e0754-baed-5c38-a723-f6f7f595c95a",
+      "title": "魔法森林",
+      "catalogueTitle": "Enchanted Forest",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1947",
+      "start": 1947,
+      "end": 1947,
+      "medium": "Oil and alkyd enamel paint on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c24e0754-baed-5c38-a723-f6f7f595c95a-881a2d660b5c25cf.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/enchanted-forest-1947",
+      "credit": "Enchanted Forest. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/enchanted-forest-1947",
+      "description": "黑、白、金与红线相互重叠，却不拼成单一物体。空隙很重要，它们让各条线仍可在线网中辨认。追随一条线，最终会在另一条下面丢失它，因此观看不断重新开始，而非抵达中心人物。这幅波洛克属于威尼斯佩姬·古根海姆美术馆，不在纽约馆藏。",
+      "importance": "",
+      "museum": "Peggy Guggenheim Collection, Venice (Solomon R. Guggenheim Foundation, New York)"
+    },
+    {
+      "id": "64629220-962d-586c-bbaf-76e23f320292",
+      "title": "耕地",
+      "catalogueTitle": "The Tilled Field",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1923–1924",
+      "start": 1923,
+      "end": 1924,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/64629220-962d-586c-bbaf-76e23f320292-75fbe3ee8e9e54c3.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-miro/the-tilled-field-1924",
+      "credit": "Joan Miró. The Tilled Field. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joan-miro/the-tilled-field-1924",
+      "description": "动物、植物、房屋与旗帜提供了可辨认乡村的要素。变化的比例和不合常理的特征，又使辨认不再可靠。米罗的黄色土地把各项发明连起来，让目光从熟悉动物移向无法轻易命名的符号。田野仍是可居住的地方，居民却不再需要遵守一致的解剖规则。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "9c5fd4f0-f1ac-5c30-995a-ba15e0509770",
+      "title": "蓬图瓦兹的埃尔米塔日",
+      "catalogueTitle": "L'Hermitage at Pontoise",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1867",
+      "start": 1867,
+      "end": 1867,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/9c5fd4f0-f1ac-5c30-995a-ba15e0509770-d7cdd867c0aa572e.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/l-hermitage-at-pontoise",
+      "credit": "L'Hermitage at Pontoise. WikiArt; Camille Pissarro. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/l-hermitage-at-pontoise",
+      "description": "房屋散在坡上树间，穿过聚落的道路把它们连接起来。毕沙罗既不让建筑，也不让植物独自掌控景色。屋顶打断枝叶，树又遮住部分房屋，道路使分散布局可以理解。景观结构来自普通居住，而非一座占主导的纪念建筑；每个小部分都参与构成比自身更大的地方。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "4a3ec65a-5fbe-54a3-bd8c-c912775e0bb9",
+      "title": "野兔",
+      "catalogueTitle": "Landscape (The Hare)",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1927",
+      "start": 1927,
+      "end": 1927,
+      "medium": "",
+      "accession": "57.1459",
+      "image": "https://artlines.org/assets/artworks/wikiart/4a3ec65a-5fbe-54a3-bd8c-c912775e0bb9-ba47934e225646fe.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-miro/landscape-the-hare",
+      "credit": "Joan Miró. Landscape (The Hare). Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q8535304",
+      "description": "一只关节古怪的白色生物站在橙色之前，下方还有较深色带。能够印证标题的细节很少，却足够维持辨认。米罗让周围颜色占据大片画布，使动物稀疏的轮廓格外显露。相比《耕地》拥挤的发明，这幅画测试的是：主体究竟可以少到什么程度而依然存在。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "00b4fcaa-3a38-5daa-973b-d6c7d57dca8f",
+      "title": "雨中风景",
+      "catalogueTitle": "Landscape with Rain",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/00b4fcaa-3a38-5daa-973b-d6c7d57dca8f-31526a23ad3cc7a9.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/landscape-with-rain-1913",
+      "credit": "Wassily Kandinsky. Landscape with Rain. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/wassily-kandinsky/landscape-with-rain-1913",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/landscape-with-rain-1913",
+      "description": "斜线暗示降雨，较亮与较暗区域则隐约提示山丘、建筑。康定斯基没有给一个稳定视点，让我们据此把它们重建。对角线使天气成为穿过表面的运动，影响着本已难以分开的形体。标题提供立足点，但不要求每块颜色都被解释成地图的一部分。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "a1df0fe2-03ea-5a02-b5da-e92d31bdee1f",
+      "title": "双臂交叉的男子",
+      "catalogueTitle": "Man with Crossed Arms",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/a1df0fe2-03ea-5a02-b5da-e92d31bdee1f-72e8c9ac390c8e92.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-cezanne/man-with-crossed-arms",
+      "credit": "Man with Crossed Arms. WikiArt; Paul Cézanne. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-cezanne/man-with-crossed-arms",
+      "description": "交叉双臂让塞尚的模特形成紧凑形状，微倾的头又稍稍扰动这种稳固。色块构成蓝外套与面孔，却不消失在对布料和皮肤的光滑模仿中。男人依然结实在场，画家如何把他塑造出来也同样可见。他的表面静止，依靠相邻颜料区域之间许多小调整。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "ac556b24-fc01-55da-a09e-58c4af5de69c",
+      "title": "裸女",
+      "catalogueTitle": "Nude",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ac556b24-fc01-55da-a09e-58c4af5de69c-879fa6ec9ca7d7af.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/nude-1917",
+      "credit": "Nude. WikiArt; Amedeo Modigliani. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/nude-1917",
+      "description": "躺卧身体紧密占据画幅，周围室内几乎没有多少余地。莫迪利亚尼连续的轮廓把温暖肌肤与深色环境分开。家具减少，便少有东西分散我们对修长身体与画布边缘关系的关注。姿态一眼可读，但它如何被矩形画幅容纳，也始终显眼。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "e5854f01-6dbe-50d9-b0f7-5b11aecbae0f",
+      "title": "海洋的灰色",
+      "catalogueTitle": "Ocean Greyness",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/e5854f01-6dbe-50d9-b0f7-5b11aecbae0f-989244978bfc9169.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/ocean-greyness-1953",
+      "credit": "Ocean Greyness. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/ocean-greyness-1953",
+      "description": "黑色曲线把浅色形体从灰地中分开。有些地方像眼睛或身体碎片，却没有一处能把全画解释成单一人物。波洛克让辨认成为局部、暂时的事：一种形状可以像某物，却不决定旁边是什么。尽管标题提到海洋，画中没有可靠地平线分隔水与天，只有不断变化的局部相遇。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "2618c128-f53c-5949-9e0b-5d216e8390bf",
+      "title": "炮兵",
+      "catalogueTitle": "The Artillerymen",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/2618c128-f53c-5949-9e0b-5d216e8390bf-c2651e18725d2cfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-artillerymen-1893",
+      "credit": "Henri Rousseau. The Artillerymen. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/the-artillerymen-1893",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-artillerymen-1893",
+      "description": "制服男子聚在树下炮旁，身体排列重复，面孔却各有区别。卢梭呈现军事装备，却没有战斗动作。人群集结给场景秩序，大炮说明他们的职责，却不提供具体事件。这种悬停让目光落在一个微妙关系上：分开的个人如何被安排成看似一致的群体。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "7d31f929-903a-504e-b028-18f26b7f3b57",
+      "title": "士兵饮酒",
+      "catalogueTitle": "The Soldier Drinks",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1911–1912",
+      "start": 1911,
+      "end": 1912,
+      "medium": "布面油画",
+      "accession": "49.1211",
+      "image": "https://artlines.org/assets/artworks/wikiart/7d31f929-903a-504e-b028-18f26b7f3b57-f2ff7511d777f0a6.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/the-soldier-drinks-1912",
+      "credit": "Marc Chagall. The Soldier Drinks. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.guggenheim-bilbao.eus/en/exhibition/modernidad-y-tradicion",
+      "description": "士兵、饮器与桌子交代一项普通动作。周围倾斜形体和比例不同的人物，却使房间难以测量。夏加尔保持动作可读，同时松动通常用来解释动作的环境。饮器比一致透视更可靠地固定了题材：一个小小熟悉物件，把其他部分仿佛来自不同系统的空间暂时连起来。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "1da4dbf8-a1a4-5735-a3dd-710f67e55291",
+      "title": "受难三习作",
+      "catalogueTitle": "Three Studies for a Crucifixion",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "1962",
+      "start": 1962,
+      "end": 1962,
+      "medium": "布面油彩与沙",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/1da4dbf8-a1a4-5735-a3dd-710f67e55291-acb0ba1a482cd0b6.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/three-studies-for-a-crucifixion-1962",
+      "credit": "Francis Bacon. Three Studies for a Crucifixion. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/three-studies-for-a-crucifixion-1962",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/three-studies-for-a-crucifixion-1962",
+      "description": "三块画板把培根的身体与肉块般的形体分开，而非聚成连续场景。明亮橙红环境使苍白肉身难以忽略。房间碎片提供部分框架，标题却没有把图像解成普通宗教叙事。跨过间隙比较也是观看的一部分：不同安排反复表现身体的暴露，却不重复同一事件。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "0a2f4060-a49e-5db8-9d14-c91150052901",
+      "title": "新和谐",
+      "catalogueTitle": "New Harmony",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0a2f4060-a49e-5db8-9d14-c91150052901-09cc8695653d064b.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/new-harmony-1936",
+      "credit": "Paul Klee. New Harmony. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-klee/new-harmony-1936",
+      "description": "克利的矩形令人想到网格，不均匀比例却阻止机械重复。低调颜色与较暗分隔使每个单元有不同分量。标题中的和谐可以在这些调整中检验：不必每部分都相同，秩序也能成立。目光从小矩形移到大邻块时，速度会改变，如同不规则间隔扰动一段本来平稳的序列。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "ba97f62e-fdb9-52ea-9d92-992157a193d4",
+      "title": "向上",
+      "catalogueTitle": "Upward",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "October 1929",
+      "start": 1929,
+      "end": 1929,
+      "medium": "纸板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/ba97f62e-fdb9-52ea-9d92-992157a193d4-7b6898006006912c.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/upward-1929",
+      "credit": "Wassily Kandinsky. Upward. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/wassily-kandinsky/upward-1929",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/upward-1929",
+      "description": "细长竖线支撑半圆与棱角形状的组合。偏离中心的平衡既像一个搭成的人物，也像上升动作，却不完全选定任何一方。康定斯基留出蓝绿色背景，把各部分分开，让不稳定连接易于追随。这幅画属于威尼斯佩姬·古根海姆美术馆；基金会在纽约的地址不能被当作藏品所在地。",
+      "importance": "",
+      "museum": "Peggy Guggenheim Collection, Venice (Solomon R. Guggenheim Foundation, New York)"
+    },
+    {
+      "id": "460fcc93-69c0-5601-84dd-15df76a33db1",
+      "title": "猫",
+      "catalogueTitle": "Cats (rayist percep.[tion] in rose, black, and yellow)",
+      "artist": "Natalia Goncharova",
+      "artists": [
+        {
+          "name": "Natalia Goncharova",
+          "role": "primary",
+          "slug": "natalia-goncharova-q232391"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "57.1484",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19882576-61e96f6c06eacee9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Cats_(rayist_percep._in_rose,_black,_and_yellow)_(Goncharova,_1913).jpg",
+      "credit": "Natalia Goncharova. Cats (rayist percep.[tion] in rose, black, and yellow). Image credit: Natalia Goncharova. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19882576",
+      "description": "黄、粉红与深色斜线如此强烈地穿过表面，以至于猫很难被单独找出。冈察洛娃并非把动物简单放在背景前：交叉笔迹穿透了动物与背景的区别。标题鼓励寻找身体，线条却提供另一套构图方法。两种看法不必排除彼此，其间张力便可继续发挥作用。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "b46d2026-76c6-5695-84d0-3ee0f451bf73",
+      "title": "自行车赛道上",
+      "catalogueTitle": "At the Cycle-Race Track",
+      "artist": "Jean Metzinger",
+      "artists": [
+        {
+          "name": "Jean Metzinger",
+          "role": "primary",
+          "slug": "jean-metzinger-q313096"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b46d2026-76c6-5695-84d0-3ee0f451bf73-ccea66fa82f705cc.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-metzinger/at-the-cycle-race-track-1912",
+      "credit": "Jean Metzinger. At the Cycle-Race Track. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-metzinger/at-the-cycle-race-track-1912",
+      "description": "碎裂形体、文字与赛道片段之间，骑手和车轮仍可辨认。梅青格把赛事不同部分的信息拉近，减少骑手与周围环境的分离。速度由此成为“同一幅画能同时展示多少东西”的问题，而不是给稳定景象加一层模糊。这件作品属于威尼斯佩姬·古根海姆美术馆。",
+      "importance": "",
+      "museum": "Peggy Guggenheim Collection, Venice"
+    },
+    {
+      "id": "0af531cc-ce89-5883-9b1e-43ef8b03fe6e",
+      "title": "牛",
+      "catalogueTitle": "The Steer (The Bull)",
+      "artist": "Franz Marc",
+      "artists": [
+        {
+          "name": "Franz Marc",
+          "role": "primary",
+          "slug": "franz-marc-q44054"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0af531cc-ce89-5883-9b1e-43ef8b03fe6e-c9dee9cbdfd6a8c3.jpg",
+      "imageSource": "https://www.wikiart.org/en/franz-marc/the-steer-the-bull-1911",
+      "credit": "Franz Marc. The Steer (The Bull). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/franz-marc/the-steer-the-bull-1911",
+      "description": "浅色牛蜷卧在由绿、红、蓝形体构成的风景中。马尔克给身体与周围环境相近的曲线，使动物像是嵌进地形，而非摆在其上。颜色仍区分区域，共有形状却把它们接通。紧凑卧姿成了安排身边土地的一种方式。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "8dfc54e9-d7e8-54ec-aba8-1e6b0e06dcd3",
+      "title": "同时打开的窗",
+      "catalogueTitle": "Simultaneous Windows (2nd Motif, 1st Part)",
+      "artist": "Robert Delaunay",
+      "artists": [
+        {
+          "name": "Robert Delaunay",
+          "role": "primary",
+          "slug": "robert-delaunay-q33978"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/8dfc54e9-d7e8-54ec-aba8-1e6b0e06dcd3-c01d718c338917f1.jpg",
+      "imageSource": "https://www.wikiart.org/en/robert-delaunay/simultaneous-windows-2nd-motif-1st-part",
+      "credit": "Robert Delaunay. Simultaneous Windows (2nd Motif, 1st Part). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/robert-delaunay/simultaneous-windows-2nd-motif-1st-part",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/robert-delaunay/simultaneous-windows-2nd-motif-1st-part",
+      "description": "重叠的蓝、绿、黄、红区域保留窗户与城市的暗示，却不形成单一视野。德劳内让这些线索与色彩自主制造分隔、联系的能力相竞争。窗不再只是透明开口，它的边缘与透过它看到的事物，都成为可以朝多个方向阅读的绘画表面。",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    }
+  ],
+  "context": {
+    "start": 1867,
+    "end": 1966
+  },
+  "closingSections": [
+    {
+      "title": "先比较作品，再规划参观",
+      "paragraphs": [
+        "凯利的色板与夏加尔的窗提供两个有用端点：没有所画物体的颜色，以及不肯组成统一世界的物体。其他作品在两者之间各有位置。出行时请分别查询两馆最新记录。《魔法森林》《向上》《自行车赛道上》属于威尼斯馆藏；以上任何条目都不保证作品当前正在展出。"
+      ]
+    }
+  ]
+}

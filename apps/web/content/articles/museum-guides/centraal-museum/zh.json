@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "centraal-museum",
+  "museum": "Centraal Museum",
+  "city": "乌得勒支",
+  "country": "荷兰",
+  "title": "乌得勒支中央博物馆：杰作",
+  "subtitle": "乌得勒支庄重的城市形象，与街道、作坊和夜市上的活动相遇。",
+  "introduction": "城市风景画可以让建筑和官署显得长久不变。路过的一群行人，却呈现出另一种城市生活：他们只在同一条街上短暂相聚，画家需要决定留下什么。这组选画汇集了两种观看方式，从高处俯瞰乌得勒支的防御工事，到伊萨克·伊斯拉埃尔斯以迅疾笔触描绘的工作与休闲场面。\n\n值得比较的并不只是新与旧。精心布置的静物将丰盛的物品摆在人前，读书者或坐着的拳击手则让行动暂时停下。可以留意，画面何时要求人物摆好姿势，何时把目光转向一个本来就在忙自己事情的人。",
+  "visitNote": "该博物馆的馆藏远不止此处精选的这些画作。在前往参观之前，请查阅当前的展厅、展览及访客信息；馆藏记录并不保证相关作品目前正在展出。",
+  "locale": "zh",
+  "website": "https://www.centraalmuseum.nl/",
+  "officialGuide": "https://www.centraalmuseum.nl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "哈罗德·斯皮德（Harold Speed）的《素描的实践与科学》（The Practice and Science of Drawing）探讨了线条、体量以及人物造型的组织结构。书中提出的实用术语，在比较精心摆姿的肖像画与伊斯雷尔斯（Israëls）笔下那些运笔更为迅疾的人物形象时，颇具参考价值。"
+    }
+  ],
+  "works": [
+    {
+      "id": "99c2ea19-9038-560c-a85f-dc47c361f8ef",
+      "title": "年轻女子",
+      "catalogueTitle": "A young woman",
+      "artist": "Johannes Jansz Bronckhorst",
+      "artists": [
+        {
+          "name": "Johannes Jansz Bronckhorst",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3808962"
+        }
+      ],
+      "date": "1654",
+      "start": 1654,
+      "end": 1654,
+      "medium": "",
+      "accession": "15008",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24060672-c2afff03becbf96e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Young_Woman_by_Johannes_Jansz._van_Bronckhorst_Centraal_Museum_15008.jpg",
+      "credit": "Johannes Jansz Bronckhorst. A young woman. Image credit: Johannes Jansz Bronckhorst. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24060672",
+      "description": "横放在披巾上的手，帮助人辨认宽松衣料下面的身体。再往上，倾斜的头部延续着这一姿势，而不是一张孤立的脸。布龙克霍斯特无须安排多少背景，就能让姿态完整成立。手、衣服和头部之间的关系，起到了正式肖像中常由家具承担的构图作用。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "c58d28e8-2bb2-545c-99cd-3b33a4e1a8a3",
+      "title": "赫拉克利特",
+      "catalogueTitle": "Heraclitus",
+      "artist": "Johannes Moreelse",
+      "artists": [
+        {
+          "name": "Johannes Moreelse",
+          "role": "primary",
+          "slug": "wikiart-artist-johannes-moreelse"
+        }
+      ],
+      "date": "1630",
+      "start": 1630,
+      "end": 1630,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c58d28e8-2bb2-545c-99cd-3b33a4e1a8a3-76f9e4f567b47f6a.jpg",
+      "imageSource": "https://www.wikiart.org/en/johannes-moreelse/heraclitus-1630-0",
+      "credit": "Johannes Moreelse. Heraclitus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/johannes-moreelse/heraclitus-1630-0",
+      "description": "地球仪使这位俯身的老人有了一个超出自身处境的思考对象。莫雷尔塞着重描绘交握的手，以及光照下显出衰老痕迹的皮肤，让思考通过身体呈现。这是一位哲学家的想象性形象，并非画家观察古代本人所得的记录；他的表情也应放在这种人物塑造中理解。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "6fb0d9e6-f48a-5bab-96cd-6fea23fe1f89",
+      "title": "乌得勒支的弗雷登堡城堡",
+      "catalogueTitle": "Castle Vredenburg in Utrecht",
+      "artist": "Willem Cornelisz. van Swanenburgh",
+      "artists": [
+        {
+          "name": "Willem Cornelisz. van Swanenburgh",
+          "role": "primary",
+          "slug": "wikimedia-painter-q25768241"
+        }
+      ],
+      "date": "1660",
+      "start": 1660,
+      "end": 1660,
+      "medium": "",
+      "accession": "12645 a",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24066295-914d639a2032e18e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Het_Kasteel_Vredenburg_te_Utrecht_Centraal_Museum_12645_a.jpg",
+      "credit": "Willem Cornelisz. van Swanenburgh. Castle Vredenburg in Utrecht. Image credit: Willem Cornelisz. van Swanenburgh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24066295",
+      "description": "从这个高处看去，围墙、塔楼与周围水域的关系一目了然。若从地面走近，就无法如此轻易地把握整个建筑群。范·斯瓦嫩堡舍弃了抵达现场的视角，选择一种便于解释布局的观看位置。绘画可以重构城市的形态，但这种经过安排的呈现，并不等于毫无取舍的地图。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "c71d333a-cebf-5f4f-b771-2341f291d272",
+      "title": "乌得勒支的老运河",
+      "catalogueTitle": "De Oudegracht te Utrecht",
+      "artist": "Hendrik van Oort",
+      "artists": [
+        {
+          "name": "Hendrik van Oort",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3921322"
+        }
+      ],
+      "date": "1838",
+      "start": 1838,
+      "end": 1838,
+      "medium": "",
+      "accession": "2331",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24066322-567d75eb7c80b80e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Oudegracht_in_Utrecht_by_Hendrik_van_Oort_Centraal_Museum_2331.jpg",
+      "credit": "Hendrik van Oort. De Oudegracht te Utrecht. Image credit: Hendrik van Oort. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24066322",
+      "description": "桥将景色分出高低层次：有人站在运河上方，也有人在下面靠近水面。透过桥拱，还能看见下一座桥，路线因此向远处延伸。范·奥尔特通过人们如何使用城市，说明城市的工程结构。小人物的位置各不相同，使高低不平的建成空间中有哪些通行方式变得清楚。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "981b204a-631a-5d25-b9e4-5f420aeef755",
+      "title": "乌得勒支的保斯丹与大教堂后街",
+      "catalogueTitle": "De Pausdam and Achter de Dom in Utrecht",
+      "artist": "Hendrik van Oort",
+      "artists": [
+        {
+          "name": "Hendrik van Oort",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3921322"
+        }
+      ],
+      "date": "1820",
+      "start": 1820,
+      "end": 1820,
+      "medium": "",
+      "accession": "2333",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24066355-903b9921aafbdf2f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_Pausdam_en_Achter_de_Dom_in_Utrecht_Centraal_Museum_2333.jpg",
+      "credit": "Hendrik van Oort. De Pausdam and Achter de Dom in Utrecht. Image credit: Hendrik van Oort. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24066355",
+      "description": "高大的房屋立面下，马车和行人只占据一条较窄的地带。这样的大小关系让街道显得有人生活，同时保留了建筑本身的分量。参差的屋顶打破统一的节奏。范·奥尔特既画出了城市高耸、醒目的建筑，也留下每天从它们脚下经过的普通人车。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "05dc926c-9245-5450-8755-2791fbe09724",
+      "title": "乌得勒支的托尔斯特赫城门及周边",
+      "catalogueTitle": "De Tolsteegpoort en omgeving te Utrecht",
+      "artist": "Hendrik van Oort",
+      "artists": [
+        {
+          "name": "Hendrik van Oort",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3921322"
+        }
+      ],
+      "date": "约1830年",
+      "start": 1830,
+      "end": 1830,
+      "medium": "",
+      "accession": "2332",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24066315-3105d0b1f7f95f12.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_Tolsteegpoort_en_omgeving_te_Utrecht_Centraal_Museum_2332.jpg",
+      "credit": "Hendrik van Oort. De Tolsteegpoort en omgeving te Utrecht. Image credit: Hendrik van Oort. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24066315",
+      "description": "结冰的水面改变了城市可供活动的范围。平日隔开城门与周边地区的水，如今成了散步者和滑冰者脚下的地面。城墙、风车的坚实轮廓依旧，而下方的活动只属于这一暂时的天气状况。将人物与建筑对照着看，就能发现一道边界如何短暂地获得新用途。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "f03a173e-7586-52ca-8a43-b85badb0f800",
+      "title": "乌得勒支的韦尔德城门及周边",
+      "catalogueTitle": "De Weerdpoort met omgeving te Utrecht",
+      "artist": "Bruno van Straaten",
+      "artists": [
+        {
+          "name": "Bruno van Straaten",
+          "role": "primary",
+          "slug": "wikimedia-painter-q25711727"
+        }
+      ],
+      "date": "约1830年",
+      "start": 1830,
+      "end": 1830,
+      "medium": "",
+      "accession": "2304",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24066277-68d3f7c57b541f7a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_Weerdpoort_met_omgeving_te_Utrecht_Centraal_Museum_2204.jpg",
+      "credit": "Bruno van Straaten. De Weerdpoort met omgeving te Utrecht. Image credit: Bruno van Straaten. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24066277",
+      "description": "宽阔的水面通向建筑，船只大小的变化让这段距离可以辨认。视线尚未抵达岸边，就先被一面明亮的船帆吸引。范·斯特拉滕从行近城市的方向描绘城市。这与弗雷登堡城堡的高处俯瞰不同：后者让整个建筑群同时收入眼底。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "a432ca0e-2ac6-5e9d-9225-d5c1ec8324c0",
+      "title": "牧羊人的朝拜",
+      "catalogueTitle": "De aanbidding van de herders",
+      "artist": "Johan de Veer",
+      "artists": [
+        {
+          "name": "Johan de Veer",
+          "role": "primary",
+          "slug": "wikimedia-painter-q25706997"
+        }
+      ],
+      "date": "约 1650 年",
+      "start": 1650,
+      "end": 1650,
+      "medium": "",
+      "accession": "2280",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24066177-24d036480fdfa1a1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Adoration_of_the_Shepherds_by_Johan_de_Veer_Centraal_Museum_2280.jpg",
+      "credit": "Johan de Veer. De aanbidding van de herders. Image credit: Johan de Veer. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24066177",
+      "description": "婴儿占据的面积很小，却汇集了周围人的目光。头部与手的朝向，比体积大小更有效地确立中心。约翰·德·韦尔让人物靠得很近，边缘又受到暗影的限制。与市民群像相比，这里的人物依靠他人的举止成为构图中心，而非凭借官阶与衣着。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "1aae531c-67ef-5dc3-9812-1352f9fe6a5f",
+      "title": "乌得勒支市长与城市信使",
+      "catalogueTitle": "De burgemeesters van Utrecht met de stadsboden",
+      "artist": "Willem Cornelisz. van Swanenburgh",
+      "artists": [
+        {
+          "name": "Willem Cornelisz. van Swanenburgh",
+          "role": "primary",
+          "slug": "wikimedia-painter-q25768241"
+        }
+      ],
+      "date": "1658",
+      "start": 1658,
+      "end": 1658,
+      "medium": "",
+      "accession": "1537",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24063325-9b1df444b461fe9e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_burgemeesters_van_Utrecht_met_de_stadsboden_Centraal_Museum_1537.jpg",
+      "credit": "Willem Cornelisz. van Swanenburgh. De burgemeesters van Utrecht met de stadsboden. Image credit: Willem Cornelisz. van Swanenburgh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24063325",
+      "description": "尚未逐一辨认面孔，衣服就已区分出官员与信使。铺砖的空间为各人的位置提供共同秩序，敞开的出口又把这种秩序与外面的城市相连。范·斯瓦嫩堡将公共机构画成一群具体的人。肖像有意识地记录职务差别，也同样用心地记录人物相貌。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "e07a3b38-fad6-56b0-ac87-91bd66157e98",
+      "title": "拉撒路的复活",
+      "catalogueTitle": "De opwekking van Lazarus",
+      "artist": "Aert Jansz Marienhof",
+      "artists": [
+        {
+          "name": "Aert Jansz Marienhof",
+          "role": "primary",
+          "slug": "wikimedia-painter-q4688510"
+        }
+      ],
+      "date": "1648",
+      "start": 1648,
+      "end": 1648,
+      "medium": "",
+      "accession": "7288",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24064410-6c22f1121a660aab.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Resurrection_of_Lazarus_by_Aert_Jansz._Marienhof_Centraal_Museum_7288.jpg",
+      "credit": "Aert Jansz Marienhof. De opwekking van Lazarus. Image credit: Aert Jansz Marienhof. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24064410",
+      "description": "拉撒路走出墓穴的事件，需要有人在场见证。马里恩霍夫给周围人物留出足够空间，使各自的反应仍可区分，同时用岩石环境把他们围在同一场景中。因此，画中的行动并不止于复活的身体。基督、墓穴与聚集者之间的关系，共同使这个奇迹变得可理解。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "60648898-2640-5a19-a6cc-73c199063202",
+      "title": "乌得勒支市旗",
+      "catalogueTitle": "De stadsbanier van Utrecht",
+      "artist": "Willem Cornelisz. van Swanenburgh",
+      "artists": [
+        {
+          "name": "Willem Cornelisz. van Swanenburgh",
+          "role": "primary",
+          "slug": "wikimedia-painter-q25768241"
+        }
+      ],
+      "date": "1658",
+      "start": 1658,
+      "end": 1658,
+      "medium": "",
+      "accession": "1536",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24063190-4f0cca24ab6828f6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_stadsbanier_van_Utrecht_Centraal_Museum_1536.jpg",
+      "credit": "Willem Cornelisz. van Swanenburgh. De stadsbanier van Utrecht. Image credit: Willem Cornelisz. van Swanenburgh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24063190",
+      "description": "旗帜上大块的红白分区，比下方复杂的人体和武器更容易一眼看清。这一区别让城市标志首先进入视线。身穿盔甲的人物则把托举旗帜的力量表现得具体可见。范·斯瓦嫩堡将抽象的识别图案，与负责携带或保卫它的人连在一起，没有让它成为悬空的符号。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "33ecadc2-5aac-5740-82d9-eb3a7e20b2f6",
+      "title": "阿莱达·赫斯贝尔塔·范·奥赫特罗普—汉洛与五个孩子",
+      "catalogueTitle": "Portrait of Aleida Gijsberta Van Ogtrop Hanlo with Her Five Children",
+      "artist": "Thérèse Schwartze",
+      "artists": [
+        {
+          "name": "Thérèse Schwartze",
+          "role": "primary",
+          "slug": "therese-schwartze-round11-be20fe8e5948"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/33ecadc2-5aac-5740-82d9-eb3a7e20b2f6-79c0b2233318c083.jpg",
+      "imageSource": "https://www.wikiart.org/en/therese-schwartze/portrait-of-aleida-gijsberta-van-ogtrop-hanlo-with-her-five-children-1906",
+      "credit": "Thérèse Schwartze. Portrait of Aleida Gijsberta Van Ogtrop Hanlo with Her Five Children. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/therese-schwartze/portrait-of-aleida-gijsberta-van-ogtrop-hanlo-with-her-five-children-1906",
+      "description": "施瓦尔策要让六个人成为一个整体，又不能让他们只有同一种表情和姿势。紧密的排列把一家人聚在一起，高低与目光的差异则保留了孩子各自的特点。讲究的服装参与塑造家庭形象，但面孔没有变成重复的图案。正式展示的要求，与如何将一家人组织进画面的实际难题，都能在这里看到。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "436562fc-0e68-55a8-95e2-d83c9f1937dd",
+      "title": "缝纫学校",
+      "catalogueTitle": "Sewing school",
+      "artist": "Isaac Israëls",
+      "artists": [
+        {
+          "name": "Isaac Israëls",
+          "role": "primary",
+          "slug": "isaac-israels-q979534"
+        }
+      ],
+      "date": "c. 1905–c. 1906",
+      "start": 1905,
+      "end": 1906,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/436562fc-0e68-55a8-95e2-d83c9f1937dd-8992da3f84ec9678.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-israels/sewing-school-1906",
+      "credit": "Isaac Israëls. Sewing school. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/isaac-israels/sewing-school-1906",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-israels/sewing-school-1906",
+      "description": "这些女子做着同一种工作，却并未摆出统一姿势。低垂的头沿桌边反复出现，浅色布料将一处工作位置与下一处连起来。伊斯拉埃尔斯松动的笔触使这种重复仍有变化。画面可以被理解为集体劳动，而不必假定每个人都可互相替换，或专注只能有一种样子。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "ad17e49a-dbb8-5bc1-8d17-f377bf3280f4",
+      "title": "彩虹",
+      "catalogueTitle": "L'arc en ciel",
+      "artist": "William Degouve de Nuncques",
+      "artists": [
+        {
+          "name": "William Degouve de Nuncques",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1049510"
+        }
+      ],
+      "date": "约 1910 年",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "22147",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24062987-0d41b7aedb123d87.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:L%27arc_en_ciel_by_William_Degouve_de_Nuncques_Centraal_Museum_22147.jpg",
+      "credit": "William Degouve de Nuncques. L'arc en ciel. Image credit: William Degouve de Nuncques; Source credit: https://www.centraalmuseum.nl/nl/collectie/22147-larc-en-ciel-william-degouve-de-nuncques. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24062987",
+      "description": "田地与树列将大地分成相对持久的格局，彩虹横跨其上，却不属于这些分区。德古夫·德·农克把短暂的天气现象放在有秩序的风景前，让两种不同的时间尺度同时可见。乌云使彩虹的弧线更清楚，但没有必要因此认定天气一定暗含某种私人情绪。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "1b782aac-5e31-5109-8859-f32cb3d63b5f",
+      "title": "阿姆斯特丹王子运河边的女工",
+      "catalogueTitle": "Factory girls on the Prinsengracht in Amsterdam",
+      "artist": "Isaac Israëls",
+      "artists": [
+        {
+          "name": "Isaac Israëls",
+          "role": "primary",
+          "slug": "isaac-israels-q979534"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/1b782aac-5e31-5109-8859-f32cb3d63b5f-fa0512b79f3a87f0.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-israels/factory-girls-on-the-prinsengracht-in-amsterdam-1894",
+      "credit": "Isaac Israëls. Factory girls on the Prinsengracht in Amsterdam. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/isaac-israels/factory-girls-on-the-prinsengracht-in-amsterdam-1894",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-israels/factory-girls-on-the-prinsengracht-in-amsterdam-1894",
+      "description": "共同的步速与彼此靠近的位置，使这些女子成为一组；她们并没有朝画家看去。伊斯拉埃尔斯让街道周围的活动继续，同时把行人放在中心。与施瓦尔策的家庭肖像相比，这里人与人的联系必须在行进中捕捉。正式肖像留给停步者的关注，也被给予这些即将经过的人。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "62fec6cb-f161-59f9-860e-ce56b90484e7",
+      "title": "黑人拳击手",
+      "catalogueTitle": "The Black Boxer",
+      "artist": "Isaac Israëls",
+      "artists": [
+        {
+          "name": "Isaac Israëls",
+          "role": "primary",
+          "slug": "isaac-israels-q979534"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/62fec6cb-f161-59f9-860e-ce56b90484e7-1836a07cf7984da3.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-israels/the-black-boxer-1914",
+      "credit": "Isaac Israëls. The Black Boxer. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/isaac-israels/the-black-boxer-1914",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-israels/the-black-boxer-1914",
+      "description": "围绳说明了地点，但运动员坐着，并未出拳。光线与身体的转向，使他在拥挤的室内显得充实而有分量。伊斯拉埃尔斯让比赛场面暂时停下。这段间歇提供了胜败之外的题材：一个训练有素的身体正在休息；画面却不足以支持对他此刻私下想法的具体推断。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "afb7ac3f-b888-5373-aa5a-ceb4650f4074",
+      "title": "夜间的蒸汽旋转木马",
+      "catalogueTitle": "Steam carousel at night",
+      "artist": "Isaac Israëls",
+      "artists": [
+        {
+          "name": "Isaac Israëls",
+          "role": "primary",
+          "slug": "isaac-israels-q979534"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/afb7ac3f-b888-5373-aa5a-ceb4650f4074-3e8d674c5456ef70.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-israels/steam-carousel-at-night-1910",
+      "credit": "Isaac Israëls. Steam carousel at night. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/isaac-israels/steam-carousel-at-night-1910",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-israels/steam-carousel-at-night-1910",
+      "description": "明亮的机械与聚集的人群同时争取视线。伊斯拉埃尔斯用零星亮点显出人物的局部，并不把每一张脸都分离出来画成完整肖像。辨认是片段式的，如同身处拥挤游乐场时的观看。这样的笔法服务于场面的密集，并非只是为了更快地把一切描绘完。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "411d03df-3592-5713-afef-02d68d8a98f7",
+      "title": "水果与龙虾静物",
+      "catalogueTitle": "Still life with fruits and lobster",
+      "artist": "Michiel (II) Simons",
+      "artists": [
+        {
+          "name": "Michiel (II) Simons",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18608157"
+        }
+      ],
+      "date": "约 1670 年",
+      "start": 1670,
+      "end": 1670,
+      "medium": "",
+      "accession": "6570",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24064168-c50ea32e6ab10a82.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Still_Life_with_Fruit_and_Lobster_by_Michiel_Simons_Centraal_Museum_6570.jpg",
+      "credit": "Michiel (II) Simons. Still life with fruits and lobster. Image credit: Michiel (II) Simons. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24064168",
+      "description": "桌上的东西很丰盛，却经过仔细分配。果皮、龙虾外壳和深色器皿，对光的反应各不相同。米希尔·西蒙斯使视线有理由在各个表面停留，而不是把整桌东西看成不加区分的一堆。物品仿佛不断向外铺展，桌缘则为这份丰盛划出了限度。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "81cea31c-d012-5afb-950c-f9efa64eeee8",
+      "title": "鱼类静物与海景",
+      "catalogueTitle": "Visstilleven en zeegezicht",
+      "artist": "Willem Ormea",
+      "artists": [
+        {
+          "name": "Willem Ormea",
+          "role": "primary",
+          "slug": "wikimedia-painter-q15253786"
+        }
+      ],
+      "date": "1641",
+      "start": 1641,
+      "end": 1641,
+      "medium": "",
+      "accession": "2325",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q24066299-78233bb6c435a203.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Visstilleven_en_zeegezicht_Centraal_Museum_2325.jpg",
+      "credit": "Willem Ormea. Visstilleven en zeegezicht. Image credit: Willem Ormea. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q24066299",
+      "description": "大鱼摆在近处的台沿，小船位于远方水面。奥尔梅亚将渔获与海放进同一幅画，却没有给予二者相同的比例或同样的观看方式。前后之间骤然的转换，成为构图的关键。被近距离仔细观看的物体，可以与这类物体的来处同时呈现。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    },
+    {
+      "id": "4c940831-c91d-5fc7-bc1f-7e48a6c24901",
+      "title": "读书的女孩",
+      "catalogueTitle": "Reading girl",
+      "artist": "Isaac Israëls",
+      "artists": [
+        {
+          "name": "Isaac Israëls",
+          "role": "primary",
+          "slug": "isaac-israels-q979534"
+        }
+      ],
+      "date": "约 1920 年",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/4c940831-c91d-5fc7-bc1f-7e48a6c24901-c031205a668d3730.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-israels/reading-girl-1920",
+      "credit": "Isaac Israëls. Reading girl. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/isaac-israels/reading-girl-1920",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-israels/reading-girl-1920",
+      "description": "书只占画面很小一部分，却决定了读者整个身体的姿势。周围家具、挂画仍以松动的笔触呈现，因此人物的专注并不需要空无一物的环境。伊斯拉埃尔斯区分了人物和观看者所关注的东西：她停留在书页上，观看者的目光却可以游览这间超出她当下关心范围的房间。",
+      "importance": "",
+      "museum": "Centraal Museum"
+    }
+  ],
+  "context": {
+    "start": 1630,
+    "end": 1920
+  },
+  "closingSections": [
+    {
+      "title": "再看一次街道",
+      "paragraphs": [
+        "看过肖像之后，不妨回到一幅乌得勒支城市风景，留意小人物带来了什么。没有他们，距离与用途都会变得不那么清楚。本指南依据部分馆藏记录编选，并非固定展陈路线；若打算专程看某件作品，请先查询博物馆当前的展览安排。"
+      ]
+    }
+  ]
+}

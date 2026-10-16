@@ -8,7 +8,9 @@ import (
 
 // Role-qualified identities stay distinct until the catalogue reconciles them.
 func validateCreators(values []string) error {
-	if len(values) > 32 {
+	// Curated lenses can carry a compact school or workshop roster. Keep the
+	// shared URL bounded while allowing the 34 reviewed Danish Golden Age names.
+	if len(values) > 40 {
 		return ErrFilter
 	}
 	seen := map[string]bool{}

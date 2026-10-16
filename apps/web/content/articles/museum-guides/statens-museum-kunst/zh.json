@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "statens-museum-kunst",
+  "museum": "Statens Museum for Kunst",
+  "city": "哥本哈根",
+  "country": "丹麦",
+  "title": "丹麦国家美术馆：杰作",
+  "subtitle": "二十件作品，从酒馆里的相遇，到空画室，再到被绿色分开的面孔。",
+  "introduction": "卡尔·布洛赫的酒馆里，一个男人转向观众，仿佛有人走近了餐桌。哈默修伊的房间中，女子的面孔却始终背向我们。两幅画给出不同的接近方式：一幅让相遇发生，另一幅更愿意展示房间，而不是它的居住者。\n\n这份哥本哈根丹麦国家美术馆（SMK）选集，沿着这些观看差别展开。艺术家检查素描、云与在建船只；马蒂斯和德兰则问，颜色可以改变得多强烈，面孔或身体仍能被认出。连接二十件作品的是这些问题，而非同一时代。有些以观察为主题，有些则让观众格外清楚自己站在何处。",
+  "visitNote": "这些精选作品来自 SMK 馆藏，但这并不意味着全部二十件作品目前均在展出。请查阅博物馆的馆藏与展览信息，以了解作品外借、展厅变动及特定展品的展出情况。",
+  "locale": "zh",
+  "website": "https://www.smk.dk/",
+  "officialGuide": "https://www.smk.dk/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基关于色彩的论点，为马蒂斯和德兰的画作提供了一个历史性的参照。他的主张仅代表一位艺术家的立场，而非解读早期肖像画或哈默修伊室内画的既定公式。"
+    }
+  ],
+  "works": [
+    {
+      "id": "3d2e7f3f-e722-4e94-8669-b818c072e3ce",
+      "title": "在罗马小酒馆里",
+      "catalogueTitle": "In a Roman Osteria",
+      "artist": "Carl Bloch",
+      "artists": [
+        {
+          "name": "Carl Bloch",
+          "role": "primary",
+          "slug": "carl-bloch-q547055"
+        }
+      ],
+      "date": "1866",
+      "start": 1866,
+      "end": 1866,
+      "medium": "布面油画",
+      "accession": "KMS4087",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/3d2e7f3f-e722-4e94-8669-b818c072e3ce-34175367eb9f63bd.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS4087",
+      "credit": "Carl Bloch. In a Roman Osteria. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS4087",
+      "description": "转过来的头，让同桌人仿佛意识到画外有人。近处桌沿将相遇拉到眼前，其他食客则继续待在较远、较暗的室内。布洛赫暗示了有人打断这一场景，却没有画出来者是谁。观众恰好站在那个似乎引起打断的位置。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "aa58e0d1-6bb5-42fe-aa04-accc5288a0a1",
+      "title": "泰坦的陨落",
+      "catalogueTitle": "The Fall of the Titans",
+      "artist": "Cornelis van Haarlem",
+      "artists": [
+        {
+          "name": "Cornelis van Haarlem",
+          "role": "primary",
+          "slug": "cornelis-van-haarlem-q442484"
+        }
+      ],
+      "date": "1588-1590",
+      "start": 1588,
+      "end": 1590,
+      "medium": "布面油画",
+      "accession": "KMS1",
+      "image": "https://artlines.org/assets/artworks/imported/smk-e36ee420543f48189cc2b7688a98a5b1bed5c4a1bf23b776d279a29a881c1652.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1",
+      "credit": "Cornelis van Haarlem. The Fall of the Titans. Statens Museum for Kunst, Copenhagen. Public domain; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1",
+      "description": "身体向相反方向扭转，坠落中几乎找不到稳定姿势。岩石提供接触点，却少有安全支撑。神话中的失败也成了人体各种扭曲与伸展的展示；这场集体灾难，主要是通过身体结构被画得可见。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "300fe5c0-600d-476b-b9be-2ff67ede153a",
+      "title": "马蒂斯夫人肖像：绿线",
+      "catalogueTitle": "Portrait of Madame Matisse. The Green Line",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "布面油画",
+      "accession": "KMSr171",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-a1900c660d92f8b8f843f9748386f0db75163e0ff3d30b52880843b9cd2e0463.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr171",
+      "credit": "Henri Matisse. Portrait of Madame Matisse. The Green Line. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMSr171",
+      "description": "绿带把面孔分成颜色不同的两半，却不妨碍认出阿梅莉·马蒂斯。它的力量来自对比，而不是自然主义的肤色。这幅画其实很小，约40.5乘32.5厘米。强烈颜色给它的醒目感，在屏幕复制图上很容易被误认成实际尺寸的宏大。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "43fe6ddd-6c92-57f0-915b-28d79746c78e",
+      "title": "皮埃罗",
+      "catalogueTitle": "Pierrot (Self Portrait as Pierrot)",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "纸板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/43fe6ddd-6c92-57f0-915b-28d79746c78e-470d289c5418c2bc.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/pierrot-self-portrait-as-pierrot-1915",
+      "credit": "Pierrot (Self Portrait as Pierrot). WikiArt; Amedeo Modigliani. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/pierrot-self-portrait-as-pierrot-1915",
+      "description": "皱领与带棱角的帽饰表明戏剧角色，长脸则由细窄五官和偏绿区域拼成。虽有面具般的外观，人物仍保有人形。因此服装不只是一个题目；它让这幅近似肖像的画能够试探，面孔可以被简化到什么程度，而依然让人认出一个人。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "df4e83a3-352c-5998-bb83-38c157f66cf9",
+      "title": "男子肖像",
+      "catalogueTitle": "Portrait of a man (Andrea Palladio)",
+      "artist": "El Greco",
+      "artists": [
+        {
+          "name": "El Greco",
+          "role": "primary",
+          "slug": "el-greco-q301"
+        }
+      ],
+      "date": "1575",
+      "start": 1575,
+      "end": 1575,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/df4e83a3-352c-5998-bb83-38c157f66cf9-b30b5b0e8125db36.jpg",
+      "imageSource": "https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "credit": "El Greco. Portrait of a man (Andrea Palladio). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/el-greco/portrait-of-a-man-andrea-palladio-1575",
+      "description": "浅色手伸出紧凑的深色衣服，使肖像在面孔之外也有了动作。袖口与胡须在低调背景前仍然分明。有人曾将画中人认作帕拉第奥，但这一姓名存在争议。我们可以描述手势与容貌，而不必把身份推测说成定论。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "5e163ea8-c717-43dc-a3fe-07818b68d55f",
+      "title": "受伤的菲洛克忒忒斯",
+      "catalogueTitle": "The Wounded Philoctetes",
+      "artist": "Nicolai Abildgaard",
+      "artists": [
+        {
+          "name": "Nicolai Abildgaard",
+          "role": "primary",
+          "slug": "nicolai-abildgaard-q319854"
+        }
+      ],
+      "date": "1775",
+      "start": 1775,
+      "end": 1775,
+      "medium": "布面油画",
+      "accession": "KMS586",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/5e163ea8-c717-43dc-a3fe-07818b68d55f-3510ab35611bfbfa.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS586",
+      "credit": "Nicolai Abildgaard. The Wounded Philoctetes. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS586",
+      "description": "双手把目光带向受伤的脚，背与四肢也向它蜷曲。疼痛由此改变了整个身体的姿势，而不只限于表情。周围没有其他人物分散目光，因此他捂住伤处的动作尤其清楚。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "edb2f080-d4fd-4191-b39c-eb6ccb1d6caa",
+      "title": "在罗马的一群丹麦艺术家",
+      "catalogueTitle": "A Group of Danish Artists in Rome",
+      "artist": "Constantin Hansen",
+      "artists": [
+        {
+          "name": "Constantin Hansen",
+          "role": "primary",
+          "slug": "constantin-hansen-q539474"
+        }
+      ],
+      "date": "1837",
+      "start": 1837,
+      "end": 1837,
+      "medium": "布面油画",
+      "accession": "KMS3236",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/edb2f080-d4fd-4191-b39c-eb6ccb1d6caa-5643da7647dc288d.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3236",
+      "credit": "Constantin Hansen. A Group of Danish Artists in Rome. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3236",
+      "description": "这些男人共享房间，却不在做同一件事。他们或坐或立，朝向不同方向，使艺术家之间的聚集像是正在延续的日常相处，而非正式集会。个人面貌仍是群像的一部分；通向外面的开阔景色，也使房间不至于成为完全封闭的职业世界。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "f2787d23-5689-474e-8b9b-d8309575b833",
+      "title": "罗马斗兽场内部景观",
+      "catalogueTitle": "View of the Interior of the Colosseum",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1816",
+      "start": 1816,
+      "end": 1816,
+      "medium": "布面油画",
+      "accession": "KMS1776",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/f2787d23-5689-474e-8b9b-d8309575b833-8efa336fafd33296.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1776",
+      "credit": "Christoffer Wilhelm Eckersberg. View of the Interior of the Colosseum. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1776",
+      "description": "拱门与残墙依然属于一个可顺着远近关系阅读的结构。小人物提供身体尺度，却没有把废墟改成重大事件的背景。埃克斯贝格依靠间隔与不同朝向的平面来描绘，使建筑在明显残缺的同时，仍保留可理解的组织。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "6f4bab54-b54e-40c0-8fb6-bedb2436bf5d",
+      "title": "从 Dosseringen 望向 Nørrebro 的景色",
+      "catalogueTitle": "A View from Dosseringen near the Sortedam Lake Looking Towards Nørrebro",
+      "artist": "Christen Købke",
+      "artists": [
+        {
+          "name": "Christen Købke",
+          "role": "primary",
+          "slug": "christen-kobke-q381458"
+        }
+      ],
+      "date": "1838",
+      "start": 1838,
+      "end": 1838,
+      "medium": "布面油画",
+      "accession": "KMS359",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-ac6bdafe3d4beb4be6aabfbef36228d618aac4586003c37d35ac2c35fca8ac5b.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS359",
+      "credit": "Christen Købke. A View from Dosseringen near the Sortedam Lake Looking Towards Nørrebro. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS359",
+      "description": "旗杆竖起一条明确的直线，与水天宽阔而连续的横向延伸相对。近处两个人与远方一艘船，都只占这片空间很小部分。日常活动在风景中有容身之地，却不必成为衡量周围一切的最重要尺度。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "5b80c571-41e5-4ac1-a25d-4c3c927e7b66",
+      "title": "斯特兰德加德街的房间与画家的妻子",
+      "catalogueTitle": "A Room in the Artist's Home in Strandgade, Copenhagen, with the Artist's Wife",
+      "artist": "Vilhelm Hammershøi",
+      "artists": [
+        {
+          "name": "Vilhelm Hammershøi",
+          "role": "primary",
+          "slug": "vilhelm-hammershoi-q380706"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "布面油画",
+      "accession": "KMS3696",
+      "image": "https://artlines.org/assets/artworks/imported/smk-study-120cb5885f90392c87a020a00d6a42b6ebc853a1b2a694cbbe3cc7214749978f.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3696",
+      "credit": "Vilhelm Hammershøi. A Room in the Artist's Home in Strandgade, Copenhagen, with the Artist's Wife. SMK, Copenhagen. Public Domain Mark 1.0; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3696",
+      "description": "女子的面孔不向我们显露，房间的边界却异常清楚。小格状阳光落在地板上，在整体宁静中形成局部变化。这个反差很重要：画面准确交代了空间，却没有让我们以同样程度了解住在其中的人。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "668ee4ab-9597-4fe1-a034-bde0ee9d9363",
+      "title": "带有画家画架的室内景",
+      "catalogueTitle": "Interior with the Artist’s Easel",
+      "artist": "Vilhelm Hammershøi",
+      "artists": [
+        {
+          "name": "Vilhelm Hammershøi",
+          "role": "primary",
+          "slug": "vilhelm-hammershoi-q380706"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "布面油画",
+      "accession": "KMS7444",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/668ee4ab-9597-4fe1-a034-bde0ee9d9363-2a853c81370ad166.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS7444",
+      "credit": "Vilhelm Hammershøi. Interior with the Artist’s Easel. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMS7444",
+      "description": "画架与装框画表明这是工作场所，艺术家却不在。敞开的门将房间延伸到另一区域，也没有带来可见活动。绘画因此通过设备与所需条件成为主题：即使眼下没有人在观看或制作图像，为这两种行为准备的地方仍然存在。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "c8425c81-ddc4-4fd6-9589-e4e148716554",
+      "title": "身穿衬裙的女子",
+      "catalogueTitle": "Woman in a Chemise",
+      "artist": "André Derain",
+      "artists": [
+        {
+          "name": "André Derain",
+          "role": "primary",
+          "slug": "andre-derain-q156272"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "布面油画",
+      "accession": "KMSr14",
+      "image": "https://artlines.org/assets/artworks/imported/smk-abb22cb1f47666607f76ed0dafdc1cbd2e671686add65042dcebc4cba29bffe9.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr14",
+      "credit": "André Derain. Woman in a Chemise. Statens Museum for Kunst, Copenhagen. Public domain; compressed study reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMSr14",
+      "description": "用手托住下巴的熟悉姿势，让身体仍然可辨；粉、蓝、绿色却打乱了皮肤、布料与阴影的通常区分。颜色承担构造作用，并不只是填进轮廓。与马蒂斯的肖像并看，这幅画提供另一种办法：改变辨认人物所依靠的色调，却不失去人物本身。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "0426b441-5b87-4c8c-87ed-634679e71a89",
+      "title": "赖伯格一家",
+      "catalogueTitle": "The Ryberg Family",
+      "artist": "Jens Juel",
+      "artists": [
+        {
+          "name": "Jens Juel",
+          "role": "primary",
+          "slug": "jens-juel-q581361"
+        }
+      ],
+      "date": "约 1793–1797 年",
+      "start": 1793,
+      "end": 1797,
+      "medium": "布面油画",
+      "accession": "KMS2098",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/0426b441-5b87-4c8c-87ed-634679e71a89-6b0481f70eb3e385.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS2098",
+      "credit": "Jens Juel. The Ryberg Family. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS2098",
+      "description": "手势将坐着的长者与站着的两人连接起来，风景则把家庭组合放进更广的社会背景。远景并非随附风光，它让这家人的呈现超出眼前。肖像要说明其地位，因此既依靠面貌，也依靠土地与周围环境。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "8189aa13-c24c-490d-b7ea-18b5c5d0d209",
+      "title": "迪特列夫·布伦克在镜中审视一幅素描",
+      "catalogueTitle": "En ung kunstner (Ditlev Blunck) betragter en skitse i et spejl",
+      "artist": "Wilhelm Bendz",
+      "artists": [
+        {
+          "name": "Wilhelm Bendz",
+          "role": "primary",
+          "slug": "wilhelm-bendz-research-55e639d17130"
+        }
+      ],
+      "date": "1826",
+      "start": 1826,
+      "end": 1826,
+      "medium": "布面油画",
+      "accession": "KMS280",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/7df15770-d8e1-43d7-af44-f1c4571d2426-9b1260ac85dc4db6.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS280",
+      "credit": "Wilhelm Bendz. En ung kunstner (Ditlev Blunck) betragter en skitse i et spejl. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS280",
+      "description": "镜子提供素描的另一种视图，让“判断作品”体现为实际改变观看角度。工具和画布挤在画家周围，把这一行为放回工作室。图像显示观看也是制作的一部分：艺术家停下来，检查换个方向是否会显出不同问题。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "8913b624-995a-4c00-b379-123a4a1b990d",
+      "title": "有小提琴的室内景",
+      "catalogueTitle": "Interior with a Violin",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "布面油画",
+      "accession": "KMSr83",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/8913b624-995a-4c00-b379-123a4a1b990d-cc04a6dd19742075.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMSr83",
+      "credit": "Henri Matisse. Interior with a Violin. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/en/artwork/image/KMSr83",
+      "description": "搁下的小提琴说明房间曾被使用，却不要求乐手在场。敞开的百叶窗通向较亮的室外，深色框架区分相邻区域。乐器与家具共同参与颜色安排，于是一件熟悉物品可以吸引目光，而不必成为故事中心。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "2db45366-dbb2-4ac7-a898-417f364ce187",
+      "title": "音乐会：艺术家的孩子们与他们的玩伴",
+      "catalogueTitle": "\"Koncert\". Kunstnerens børn og deres legekammerater",
+      "artist": "Otto Haslund",
+      "artists": [
+        {
+          "name": "Otto Haslund",
+          "role": "primary",
+          "slug": "otto-haslund-research-644e17f06988"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "布面油画",
+      "accession": "KMS1306",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/ebb7f7fd-0bc0-4319-974a-0ab6cbcd95f5-1c7eee0862a30d79.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS1306",
+      "credit": "Otto Haslund. \"Koncert\". Kunstnerens børn og deres legekammerater. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS1306",
+      "description": "孩子们对钢琴的注意各不相同。有些很专注，另一些——包括最小的孩子——让“完美协调的音乐会”这一想象无法成立。这种差异使聚会比家庭和谐的符号更具体。不同年龄共处一室时，参与程度本就不齐，而这也是演奏场景的一部分。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "cbb8ec1c-21fd-4412-a6b1-4ccc30cdf78e",
+      "title": "巴贝里尼广场上卖鞋油的江湖骗子",
+      "catalogueTitle": "A Charlatan Selling Blacking in the Piazza Barberini in Rome",
+      "artist": "Wilhelm Marstrand",
+      "artists": [
+        {
+          "name": "Wilhelm Marstrand",
+          "role": "primary",
+          "slug": "wilhelm-marstrand-q358399"
+        }
+      ],
+      "date": "1840-1849",
+      "start": 1840,
+      "end": 1849,
+      "medium": "布面油画",
+      "accession": "KMS3770",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/cbb8ec1c-21fd-4412-a6b1-4ccc30cdf78e-b14f738932e6c4a4.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3770",
+      "credit": "Wilhelm Marstrand. A Charlatan Selling Blacking in the Piazza Barberini in Rome. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3770",
+      "description": "卖者的示范聚来观众，劝服因而成为连接众人的活动。他们不同的反应，与他的手势同样重要。建筑与喷泉把事件放在罗马广场，但近处人群如何组合，取决于这场销售表演：要做成买卖，得先赢得注意。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "1cc81c41-13e0-433e-92e7-0160ab7a0bfc",
+      "title": "云景习作",
+      "catalogueTitle": "A Cloudscape. Study",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1826",
+      "start": 1826,
+      "end": 1826,
+      "medium": "布面油画",
+      "accession": "KMS6433",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/1cc81c41-13e0-433e-92e7-0160ab7a0bfc-969b8253291f174e.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS6433",
+      "credit": "Christoffer Wilhelm Eckersberg. A Cloudscape. Study. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS6433",
+      "description": "只有狭窄地面托住层层云朵。因此，天空不能被当作一个笼统背景，而须通过较厚重的云团与较淡的开口，在内部划分清楚。作为习作，这幅画持续研究变化的天气形态，不需要在下方另找一个更醒目的主题。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "e50a83f9-d7c5-452e-92f4-7bf45e3c6e0a",
+      "title": "哥本哈根船台上的一艘护卫舰",
+      "catalogueTitle": "A Corvette on the Stocks. Copenhagen",
+      "artist": "Christoffer Wilhelm Eckersberg",
+      "artists": [
+        {
+          "name": "Christoffer Wilhelm Eckersberg",
+          "role": "primary",
+          "slug": "christoffer-wilhelm-eckersberg-q363823"
+        }
+      ],
+      "date": "1828",
+      "start": 1828,
+      "end": 1828,
+      "medium": "布面油画",
+      "accession": "KMS6439",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/e50a83f9-d7c5-452e-92f4-7bf45e3c6e0a-e53972819376b8b2.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS6439",
+      "credit": "Christoffer Wilhelm Eckersberg. A Corvette on the Stocks. Copenhagen. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS6439",
+      "description": "船壳被木架抬起，露出通常会被水遮住的表面。船还未成为我们熟悉的水上形象，画面先显示使它得以建成的条件。因此，框架不是碍眼的遮挡，而是关键部分：它说明这座庞大结构如何与地面发生实际联系。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    },
+    {
+      "id": "14c7c9fe-6bb4-4457-82c1-77db89fb1bd1",
+      "title": "屋外的盲人",
+      "catalogueTitle": "A Blind Man Outside his House",
+      "artist": "Michael Ancher",
+      "artists": [
+        {
+          "name": "Michael Ancher",
+          "role": "primary",
+          "slug": "michael-ancher-q468252"
+        }
+      ],
+      "date": "约 1881–1884 年",
+      "start": 1881,
+      "end": 1884,
+      "medium": "木板油画",
+      "accession": "KMS3459",
+      "image": "https://artlines.org/assets/artworks/open-museums/smk/14c7c9fe-6bb4-4457-82c1-77db89fb1bd1-99d88ba6ee7efe2e.jpg",
+      "imageSource": "https://open.smk.dk/artwork/image/KMS3459",
+      "credit": "Michael Ancher. A Blind Man Outside his House. Statens Museum for Kunst. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://open.smk.dk/artwork/image/KMS3459",
+      "description": "男子低着头、借支撑站在屋旁，明亮光线则铺向四周地面。标题说明他失明，但不必用这一点解释他的全部存在。对姿势近乎肖像般的仔细描绘，让他在风景中拥有具体位置，而不是仅仅拿他的看不见，与景物的可见作对照。",
+      "importance": "",
+      "museum": "Statens Museum for Kunst"
+    }
+  ],
+  "context": {
+    "start": 1575,
+    "end": 1918
+  },
+  "closingSections": [
+    {
+      "title": "换一个距离",
+      "paragraphs": [
+        "将整体构图与某个细部的近看相比较，同时记住作品尺寸。马蒂斯的小肖像，与身体纷纷坠落的大场面，不会产生相同效果。SMK 目录提供有用的作品记录；当前展出与参观安排，仍应另行查询。"
+      ]
+    }
+  ]
+}

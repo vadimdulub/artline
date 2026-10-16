@@ -30,6 +30,10 @@ func (r *Repository) artistInfluences(ctx context.Context, id string) ([]Influen
 	if err := rows.Err(); err != nil {
 		return nil, err
 	}
+	return r.enrichInfluenceCitations(ctx, result)
+}
+
+func (r *Repository) enrichInfluenceCitations(ctx context.Context, result []Influence) ([]Influence, error) {
 	if len(result) == 0 {
 		return result, nil
 	}
@@ -40,8 +44,8 @@ func (r *Repository) artistInfluences(ctx context.Context, id string) ([]Influen
 		positions[result[i].ID] = i
 		result[i].Citations = []Citation{}
 	}
-	// Scope every citation lookup to the at-most-40 returned claims in one query.
-	rows, err = r.db.Query(ctx, `SELECT selected.id::text,e.field_name,e.name,e.source_url,e.evidence_note
+	// Scope every citation lookup to the returned claims in one query.
+	rows, err := r.db.Query(ctx, `SELECT selected.id::text,e.field_name,e.name,e.source_url,e.evidence_note
  FROM unnest($1::uuid[]) WITH ORDINALITY selected(id,n)
  CROSS JOIN LATERAL (
   SELECT c.field_name,s.name,c.source_url,s.priority,

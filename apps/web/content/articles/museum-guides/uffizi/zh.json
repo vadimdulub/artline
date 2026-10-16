@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "uffizi",
+  "museum": "Uffizi Galleries",
+  "city": "佛罗伦萨",
+  "country": "意大利",
+  "title": "乌菲齐美术馆：杰作",
+  "subtitle": "从二十幅画看姿态、衣饰和比例如何构成画面的意思。",
+  "introduction": "波提切利的维纳斯正在抵岸，而非刚刚诞生：风将她送向岸边，那里有人张开披风迎接。分清这一点，画中运动的方向也就清楚了。在这组作品里，人物的身体同样承担着具体的作用：确立权威，拉近神圣事件与观看者的距离，让战斗停在某个瞬间，或交代一次杀戮如何发生。有时，弯曲的手肘比一个画派名称更能说明问题。\n\n反复出现的圣母像并非名画之间的插曲，恰好可以用来比较。宝座能将人物与周围世界隔开，天使的一瞥又能拉近双方的距离。沿着这些变化看下去，不必把每一处偏离日常人体比例的画法，都当作有待纠正的错误。",
+  "visitNote": "此处仅展示乌菲齐美术馆（Uffizi Galleries）馆藏的精选作品，并非涵盖所有展厅的逐室参观指南。馆藏作品的外借与陈列安排可能会有所变动。若您计划专程前往欣赏某件特定作品，请务必在行前查阅博物馆的参观须知及该作品的最新展出信息。",
+  "locale": "zh",
+  "website": "https://www.uffizi.it/en/",
+  "officialGuide": "https://www.uffizi.it/en/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "列奥纳多的文集探讨了比例、动态、光影以及人物布局等问题。这些内容提出了切实的思考角度，可供我们在欣赏此处的画作——包括他自己的《受胎告知》——时加以参照。"
+    }
+  ],
+  "works": [
+    {
+      "id": "e3c562fb-78d3-41c8-9527-fb0bc335bd42",
+      "title": "维纳斯的诞生",
+      "catalogueTitle": "The Birth of Venus",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "约 1485 年",
+      "start": 1485,
+      "end": 1485,
+      "medium": "布面蛋彩画",
+      "accession": "1890 n. 878",
+      "image": "https://artlines.org/assets/artworks/wikiart/e3c562fb-78d3-41c8-9527-fb0bc335bd42-7d24b1fb07f364d3.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/the-birth-of-venus-1485",
+      "credit": "Sandro Botticelli. The Birth of Venus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.uffizi.it/en/artworks/birth-of-venus",
+      "description": "贝壳已经到岸，运动却仍在维纳斯的头发和迎接她的披风中延续。波提切利几乎没有画出一个人稳稳站在这里所需的体重感。舒长的轮廓让她与风、织物连在一起，仿佛仍停在旅程与抵达之间，尚未真正落定。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "11ed7a6d-b9e5-590b-8ccc-0eeb4feb7048",
+      "title": "天使报喜",
+      "catalogueTitle": "Annunciation",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "1472",
+      "start": 1472,
+      "end": 1472,
+      "medium": "油彩、画板、蛋彩、木板",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/11ed7a6d-b9e5-590b-8ccc-0eeb4feb7048-2f2a1ebee7d96f0d.jpg",
+      "imageSource": "https://www.wikiart.org/en/leonardo-da-vinci/annunciation",
+      "credit": "Annunciation. WikiArt; Leonardo da Vinci. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/leonardo-da-vinci/annunciation",
+      "description": "书案和花园围墙为这次相遇划出明确的范围。再往远处，达·芬奇让水面和群山逐渐变得模糊。因此，玛利亚与天使相会的地方显得近在眼前、尺度清晰，背后的世界却渐渐失去这种明确感。远近的差别不仅靠物体大小表现，也来自不同的画法。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "2f0862cb-7ce7-58fb-928a-0582801d2eee",
+      "title": "美杜莎",
+      "catalogueTitle": "Medusa",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1597",
+      "start": 1597,
+      "end": 1597,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2f0862cb-7ce7-58fb-928a-0582801d2eee-81a4cf912e46f68a.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/medusa-1597-1",
+      "credit": "Caravaggio. Medusa. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/medusa-1597-1",
+      "description": "张开的嘴保留着一声叫喊的形状，但被斩下的头颅已无法继续发声。脸的下方是血，上方是蛇，几乎没有一处让视线稍作停留的空白。卡拉瓦乔将它画在凸面盾牌上：盾面朝观看者突出，画中的头颅却像被困在内部某个难以确定的空间。实物的形状让这层幻觉更为复杂。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "e1c7444a-510d-4e0d-8188-a6d1c67e1cef",
+      "title": "乌尔比诺的维纳斯",
+      "catalogueTitle": "Venus of Urbino",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1538",
+      "start": 1538,
+      "end": 1538,
+      "medium": "布面油画",
+      "accession": "1890 no.1437",
+      "image": "https://artlines.org/assets/artworks/wikiart/e1c7444a-510d-4e0d-8188-a6d1c67e1cef-0b41b3f5b7ac73c4.jpg",
+      "imageSource": "https://www.wikiart.org/en/titian/venus-of-urbino-1538",
+      "credit": "Titian. Venus of Urbino. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.uffizi.it/en/artworks/venus-urbino-titian",
+      "description": "提香为这位维纳斯安排了波提切利画中所没有的背景：她身后，家居生活仍在继续。女仆忙着查看箱子，狗在睡觉，斜卧的女子则望向画外。周围各有所顾，使她的注视格外直接。乌菲齐将这些家庭细节与婚姻联系起来解读，也由此把裸露的身体放回一种社会关系之中。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "b4d9966b-9faf-53d5-927f-a784f9dd29a2",
+      "title": "万圣教堂圣母",
+      "catalogueTitle": "Madonna in Maest (Ognissanti Madonna)",
+      "artist": "Giotto di Bondone",
+      "artists": [
+        {
+          "name": "Giotto di Bondone",
+          "role": "primary",
+          "slug": "giotto"
+        }
+      ],
+      "date": "1306-1310",
+      "start": 1306,
+      "end": 1310,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b4d9966b-9faf-53d5-927f-a784f9dd29a2-a86464531ad4d108.jpg",
+      "imageSource": "https://www.wikiart.org/en/giotto/madonna-in-maest-ognissanti-madonna-1310-1",
+      "credit": "Giotto di Bondone. Madonna in Maest (Ognissanti Madonna). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giotto/madonna-in-maest-ognissanti-madonna-1310-1",
+      "description": "玛利亚比其他人物大得多，无须借助手势，神圣等级已然明确。但乔托也让衣袍包裹着一个实实在在坐着的身体，身下宝座具有建筑般的纵深。这两种效果并不矛盾：画面既能强调尊卑，又能让中心人物以可以理解的体积和重量占据空间。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "30b3d64c-5a81-563f-b92d-a37a1871e622",
+      "title": "三王来拜",
+      "catalogueTitle": "Adoration of the Magi",
+      "artist": "Gentile da Fabriano",
+      "artists": [
+        {
+          "name": "Gentile da Fabriano",
+          "role": "primary",
+          "slug": "gentile-da-fabriano-q312393"
+        }
+      ],
+      "date": "1423",
+      "start": 1423,
+      "end": 1423,
+      "medium": "",
+      "accession": "8364",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1055117-6cecc69a33452396.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gentile_da_Fabriano_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg",
+      "credit": "Gentile da Fabriano. Adoration of the Magi. Image credit: Gentile da Fabriano. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1055117",
+      "description": "朝拜队伍在远山间就已展开，随后才来到圣婴面前。真蒂莱·达·法布里亚诺让视线横越画面的过程，也成为跟随队伍行进的过程。华服与马匹挤满了终点，但远处的风景使这场相会不只是孤立的仪式场面：这些访客走过了路途，才抵达这里。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "1fa6192d-d365-4962-8cc1-e0ffed975029",
+      "title": "朱迪思斩杀荷罗孚尼",
+      "catalogueTitle": "Judith Beheading Holofernes",
+      "artist": "Artemisia Gentileschi",
+      "artists": [
+        {
+          "name": "Artemisia Gentileschi",
+          "role": "primary",
+          "slug": "artemisia-gentileschi"
+        }
+      ],
+      "date": "约 1620 年",
+      "start": 1620,
+      "end": 1620,
+      "medium": "布面油画",
+      "accession": "1890 no. 1567",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/7c144e36-e815-4974-884f-784920828f4c-cf23bcc445ca0463.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Artemisia_Gentileschi_-_Giuditta_decapita_Oloferne_-_Google_Art_Project-Adjust.jpg",
+      "credit": "Artemisia Gentileschi, Judith Beheading Holofernes. Uffizi Galleries, Florence. Reproduction via Wikimedia Commons (PD-Art). Source reproduction has a levels adjustment. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.uffizi.it/en/artworks/judith-beheading-holofernes",
+      "description": "先沿着手臂看，再试着分清每个人。朱迪思和侍女各有任务，交叉的肢体说明行动如何紧密依赖两人的配合。阿尔泰米西娅的画面中，撑住、压紧的身体让抵抗与用力都清楚可见。这场暴力不只靠象征物或表情来说明，还包含一连串艰难的身体动作。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "e31488c9-2221-55dc-85f7-63298aa8c8f2",
+      "title": "鲁切拉圣母",
+      "catalogueTitle": "Madonna Rucellai",
+      "artist": "Duccio",
+      "artists": [
+        {
+          "name": "Duccio",
+          "role": "primary",
+          "slug": "duccio-q15792"
+        }
+      ],
+      "date": "1285",
+      "start": 1285,
+      "end": 1285,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e31488c9-2221-55dc-85f7-63298aa8c8f2-8d4ca58d7f067fdd.jpg",
+      "imageSource": "https://www.wikiart.org/en/duccio/madonna-rucellai-1285",
+      "credit": "Duccio. Madonna Rucellai. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/duccio/madonna-rucellai-1285",
+      "description": "玛利亚衣袍上的金边，在大片蓝色中引出一条可循的线。它的转折暗示身体如何转向，又不破坏人物庄重、清晰的整体形象。杜乔笔下的天使托举宝座，并非与座中人同处一间普通房屋。细腻的描绘与鲜明的等级秩序，在同一幅画中并存。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "3462883f-03ec-5f6d-84ca-e0409a62e593",
+      "title": "三王来拜",
+      "catalogueTitle": "Adoration of the Magi, central panel from the Altarpiece",
+      "artist": "Andrea Mantegna",
+      "artists": [
+        {
+          "name": "Andrea Mantegna",
+          "role": "primary",
+          "slug": "andrea-mantegna-q5681"
+        }
+      ],
+      "date": "1461",
+      "start": 1461,
+      "end": 1461,
+      "medium": "木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/3462883f-03ec-5f6d-84ca-e0409a62e593-e98a3b283ad95de9.jpg",
+      "imageSource": "https://www.wikiart.org/en/andrea-mantegna/adoration-of-the-magi-central-panel-from-the-altarpiece",
+      "credit": "Adoration of the Magi, central panel from the Altarpiece. WikiArt; Andrea Mantegna. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/andrea-mantegna/adoration-of-the-magi-central-panel-from-the-altarpiece",
+      "description": "曼特尼亚用岩石围出一个狭窄的入口，让来访者最终在此聚集。队伍必须穿过地形，才能走到玛利亚和圣婴面前。与真蒂莱那场人马拥挤、衣饰华丽的抵达相比，这里主要由岩石组织空间：岩壁围住相会之处，后方细长的路径则保留了行程的距离。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "0aef3908-a5d6-55f0-ae38-85258ee4af29",
+      "title": "春",
+      "catalogueTitle": "The Spring",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "1478-1482",
+      "start": 1478,
+      "end": 1482,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0aef3908-a5d6-55f0-ae38-85258ee4af29-65096156ff485aca.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/primavera-1478",
+      "credit": "Sandro Botticelli. The Spring. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sandro-botticelli/primavera-1478",
+      "description": "可以先辨认几种不同的动作：右侧的追逐，另一处的舞蹈，以及较为静止的中心人物。波提切利让各组人物保持区分，又用相似的轮廓将他们连在树下。画作更广泛的含义至今仍有争论。与其急着寻找一套能为每个人物给出定论的解释，不如先从这些手势与动作看起。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "06bc03f1-8937-5053-b27a-5283c47740ed",
+      "title": "巴蒂斯塔·斯福尔扎",
+      "catalogueTitle": "Portrait of Battista Sforza",
+      "artist": "Piero della Francesca",
+      "artists": [
+        {
+          "name": "Piero della Francesca",
+          "role": "primary",
+          "slug": "piero-della-francesca-q5822"
+        }
+      ],
+      "date": "1465",
+      "start": 1465,
+      "end": 1465,
+      "medium": "木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/06bc03f1-8937-5053-b27a-5283c47740ed-2b53ac818adbbaa3.jpg",
+      "imageSource": "https://www.wikiart.org/en/piero-della-francesca/portrait-of-battista-sforza-1465",
+      "credit": "Portrait of Battista Sforza. WikiArt; Piero della Francesca. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piero-della-francesca/portrait-of-battista-sforza-1465",
+      "description": "侧面像不提供提香《维纳斯》那样的目光交流。巴蒂斯塔的面部边缘十分清晰，身后的风景却一直伸向远处，超出她近身的范围。皮耶罗把静止的姿态处理成一种公开示人的形象。珠宝和带图案的上衣表明身份，而坚定、不受干扰的轮廓则使她在构图中占据主导。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "5632475d-e9d4-5ba9-909a-3a1e8f1306ac",
+      "title": "圣罗马诺之战：贝尔纳迪诺·德拉·恰尔达落马",
+      "catalogueTitle": "Victory over Bernardino della Ciarda",
+      "artist": "Paolo Uccello",
+      "artists": [
+        {
+          "name": "Paolo Uccello",
+          "role": "primary",
+          "slug": "paolo-uccello-q192488"
+        }
+      ],
+      "date": "1438",
+      "start": 1438,
+      "end": 1438,
+      "medium": "木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5632475d-e9d4-5ba9-909a-3a1e8f1306ac-330178ba3fb6e56d.jpg",
+      "imageSource": "https://www.wikiart.org/en/paolo-uccello/victory-over-bernardino-della-ciarda-1438",
+      "credit": "Victory over Bernardino della Ciarda. WikiArt; Paolo Uccello. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paolo-uccello/victory-over-bernardino-della-ciarda-1438",
+      "description": "倒落的兵器分割着相撞战马脚下的地面。兵器的方向明确，使观看者能够辨认空间的深浅；占据这片空间的人马却陷入暴力的混乱。乌切洛让两种秩序同时显现：战斗是身体的冲撞，绘画又是线条的安排。画面有条理，并不意味着场面不残酷。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "d91a6cc2-b6e5-5279-aa19-7a612109c45f",
+      "title": "刚毅",
+      "catalogueTitle": "Fortitude",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "约 1470 年",
+      "start": 1470,
+      "end": 1470,
+      "medium": "木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/d91a6cc2-b6e5-5279-aa19-7a612109c45f-749bf6ca4769b329.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/fortitude-1470-1",
+      "credit": "Sandro Botticelli. Fortitude. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/sandro-botticelli/fortitude-1470-1",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sandro-botticelli/fortitude-1470-1",
+      "description": "波提切利为一种美德安排了座位、盔甲和克制的手势。刚毅女神不必击打敌手来证明力量。坐姿有支撑，手握得坚定，力量体现在随时准备行动的状态中。大片红布与坚硬的铠甲形成不同的表面质感，使金属的硬度更容易辨认。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "75af8da9-590d-5107-836e-f734c82e0e44",
+      "title": "圣母子与两位天使",
+      "catalogueTitle": "Madonna and Child",
+      "artist": "Filippo Lippi",
+      "artists": [
+        {
+          "name": "Filippo Lippi",
+          "role": "primary",
+          "slug": "filippo-lippi-q205148"
+        }
+      ],
+      "date": "约 1460–1465 年",
+      "start": 1460,
+      "end": 1465,
+      "medium": "",
+      "accession": "1598",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1055111-ee59bcfd4b3e76c2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Madonna_and_Child_with_two_Angels_(by_Filippo_Lippi)_%E2%80%93_Galleria_degli_Uffizi,_Florence.jpg",
+      "credit": "Filippo Lippi. Madonna and Child. Image credit: Filippo Lippi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1055111",
+      "description": "一位天使从祈祷般的交流中转过脸，朝画外微笑。这个小小的偏离改变了整组人物与观看者的关系。玛利亚仍双手合十，圣婴仍被托着，神圣场景的安排并未瓦解；菲利波·利皮却留出一道开口，让日常交往中友好的目光越过画面边界。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "01c8259f-ffe6-5ff4-b57b-a5e81aa2b46e",
+      "title": "有美第奇别墅的海港",
+      "catalogueTitle": "Harbour with Villa Medici",
+      "artist": "Claude Lorrain",
+      "artists": [
+        {
+          "name": "Claude Lorrain",
+          "role": "primary",
+          "slug": "claude-lorrain-q214074"
+        }
+      ],
+      "date": "1637",
+      "start": 1637,
+      "end": 1637,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/01c8259f-ffe6-5ff4-b57b-a5e81aa2b46e-6efd7625cb3f6259.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-lorrain/harbour-with-villa-medici-1637",
+      "credit": "Claude Lorrain. Harbour with Villa Medici. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/claude-lorrain/harbour-with-villa-medici-1637",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/claude-lorrain/harbour-with-villa-medici-1637",
+      "description": "建筑和船只都有厚重的体积，它们的位置却让出一条通向港口亮处的视线。克洛德在前景画的小小劳作者提供了人的尺度，但没有让人物成为场景的中心。这座想象中的港口，恰好与前面的人物画形成对照：人生活在其中，空间的组织却主要围绕远近展开。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "891c16aa-aa9e-50d9-bc45-c9d60eae537b",
+      "title": "卢克蕾齐娅·潘恰蒂基",
+      "catalogueTitle": "Lucrezia Panciatichi",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "1540",
+      "start": 1540,
+      "end": 1540,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/891c16aa-aa9e-50d9-bc45-c9d60eae537b-e3696dd30685b44f.jpg",
+      "imageSource": "https://www.wikiart.org/en/agnolo-bronzino/lucrezia-panciatichi-1540",
+      "credit": "Bronzino. Lucrezia Panciatichi. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/agnolo-bronzino/lucrezia-panciatichi-1540",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/agnolo-bronzino/lucrezia-panciatichi-1540",
+      "description": "书让手有了安放之处，珠宝与深色镶边打断大片红色缎面。布龙齐诺把这些细节分布在一张异常平静的脸周围。精心处理的衣饰与仪态，使人物的社会形象清晰可辨。画面提供了关于穿着和举止的证据，却不等于让人毫无阻碍地了解她的私人性情。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "d26f1312-0d41-52dd-880e-b554eb2c4eb4",
+      "title": "圣母子与圣狄奥尼修斯、圣多米尼克、圣克莱孟和圣托马斯·阿奎那",
+      "catalogueTitle": "Madonna and Child enthroned with St. Dionysius, Aeropagita, Domenic, Clement and Thomas Aquinas",
+      "artist": "Domenico Ghirlandaio",
+      "artists": [
+        {
+          "name": "Domenico Ghirlandaio",
+          "role": "primary",
+          "slug": "domenico-ghirlandaio-q191423"
+        }
+      ],
+      "date": "1486",
+      "start": 1486,
+      "end": 1486,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/d26f1312-0d41-52dd-880e-b554eb2c4eb4-92e4faf5a945cc29.jpg",
+      "imageSource": "https://www.wikiart.org/en/domenico-ghirlandaio/madonna-and-child-enthroned-with-st-dionysius-aeropagita-domenic-clement-and-thomas-aquinas",
+      "credit": "Madonna and Child enthroned with St. Dionysius, Aeropagita, Domenic, Clement and Thomas Aquinas. WikiArt; Domenico Ghirlandaio. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/domenico-ghirlandaio/madonna-and-child-enthroned-with-st-dionysius-aeropagita-domenic-clement-and-thomas-aquinas",
+      "description": "建筑凹室确立了共同的中心，圣徒不必摆出同样的姿势也能围绕它聚集。吉兰达约以站姿、跪姿变化人物的高低，再由地面与拱门把他们连成整体。环境在这里作用明确：它让彼此独立的人物同处一个连贯空间，而非排成一列互不相干的圣像。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "57d9f520-e750-554b-a769-9d8f233eae63",
+      "title": "圣母子与六位圣徒",
+      "catalogueTitle": "Madonna and Child with Six Saints",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "约 1470 年",
+      "start": 1470,
+      "end": 1470,
+      "medium": "蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/57d9f520-e750-554b-a769-9d8f233eae63-2ba33e220fb76273.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-six-saints",
+      "credit": "Sandro Botticelli. Madonna and Child with Six Saints. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-six-saints",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-six-saints",
+      "description": "跪着的圣徒占据花纹地面最靠近观看者的部分，将视线逐步引向高处的圣母子；不同朝向的头部，又让目光在人物之间移动。波提切利用姿势的细小变化组织起一群静止的人。与《春》中更明显的动作相比，这里安静的姿态就足以支撑构图。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "91c045c4-17d7-5e59-859a-241ebf04b7d3",
+      "title": "圣母子与施洗者圣约翰及圣塞巴斯蒂安",
+      "catalogueTitle": "Madonna and Child with St. John the Baptist and St. Sebastian",
+      "artist": "Pietro Perugino",
+      "artists": [
+        {
+          "name": "Pietro Perugino",
+          "role": "primary",
+          "slug": "pietro-perugino-q5827"
+        }
+      ],
+      "date": "1493",
+      "start": 1493,
+      "end": 1493,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/91c045c4-17d7-5e59-859a-241ebf04b7d3-946882e6bb0ad049.jpg",
+      "imageSource": "https://www.wikiart.org/en/pietro-perugino/madonna-and-child-with-st-john-the-baptist-and-st-sebastian-1493",
+      "credit": "Madonna and Child with St. John the Baptist and St. Sebastian. WikiArt; Pietro Perugino. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pietro-perugino/madonna-and-child-with-st-john-the-baptist-and-st-sebastian-1493",
+      "description": "圣徒分别站立，身体周围留着敞开的间隔。佩鲁吉诺让这些空隙与人物本身一样清楚可辨。反复出现的拱门强化了区分，却没有把整组人物拆成互不相关的部分。有些祭坛画靠聚集人群集中视线，这幅画则让每个人都有空间，也使通向玛利亚的路径保持清晰。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "a7a2b946-5c81-52e5-8a1b-c0a0974d2312",
+      "title": "长颈圣母",
+      "catalogueTitle": "Madonna with the Long Neck",
+      "artist": "Parmigianino",
+      "artists": [
+        {
+          "name": "Parmigianino",
+          "role": "primary",
+          "slug": "parmigianino-q9348"
+        }
+      ],
+      "date": "1534 - 1540",
+      "start": 1534,
+      "end": 1540,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/a7a2b946-5c81-52e5-8a1b-c0a0974d2312-df36a43b18560bc2.jpg",
+      "imageSource": "https://www.wikiart.org/en/parmigianino/madonna-with-the-long-neck-1540",
+      "credit": "Parmigianino. Madonna with the Long Neck. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/parmigianino/madonna-with-the-long-neck-1540",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/parmigianino/madonna-with-the-long-neck-1540",
+      "description": "一边是拥挤的天使，另一边是柱旁的空处，两侧显然没有均衡分配。玛利亚拉长的颈部、修长的手指，以及比例不同寻常的圣婴，又将这种失衡延伸到身体内部。帕尔米贾尼诺没有给出一个能让万物安然归位的统一尺度。看过佩鲁吉诺井然的间隔，再看这幅画，就会发现稳定比例原本能起多大作用。",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    }
+  ],
+  "context": {
+    "start": 1285,
+    "end": 1637
+  },
+  "closingSections": [
+    {
+      "title": "选一个问题来比较",
+      "paragraphs": [
+        "不妨用三件作品追踪同一个问题：手怎样托住东西，衣服怎样勾勒身体，或宝座怎样制造距离。这份馆藏选目并非逐厅参观路线。如果某幅画是此行重点，请先查看乌菲齐的最新公告及该作品的展出信息。"
+      ]
+    }
+  ]
+}

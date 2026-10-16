@@ -1,0 +1,323 @@
+{
+  "verifiedAt": "2026-10-11T12:29:15.129072+00:00",
+  "site": "https://artlines.org/studies",
+  "change": "Deploy private research studies. Rename Your link to Your own, make source URLs optional, require dates, and support year intervals for personal records.",
+  "source": "Scoped Studies overlay on generation-pinned deployed source. No commit created.",
+  "services": {
+    "api": {
+      "buildId": "ecd0e533-1362-4ff0-a860-9b11ef6230f4",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:00e37fa968ff63b6dc4e6a9ae2d6c8a31ee5354b5c423474f43d2d218fb7b2ef",
+      "revision": "artline-api-studies-1011-v1",
+      "rollbackRevision": "artline-api-books-1011-0e0bd4ce",
+      "candidateURL": "https://studies-1011-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+      "overlayURI": "gs://artline-508319-build-source/studies-20261011/api-316334cef0fad99a.tar.xz",
+      "overlayGeneration": "1791721098582466",
+      "overlaySHA256": "316334cef0fad99aea9621e0dd156b9d468187c60f764eeaa20a5bc83ddd3aff",
+      "baselineSource": {
+        "storageSource": {
+          "bucket": "artline-508319-build-source",
+          "generation": "1791663655084769",
+          "object": "source/1791663653.495096-308476d1af534e4f9e3ec76dc48b2602.tgz"
+        }
+      },
+      "files": {
+        "db/migrations/0045_member_studies.sql": "b005d84b26c967c0f88b9588336fae3b2801f10bcdd85500e481815cdaa2a26e",
+        "internal/catalog/study_artworks.go": "4362e8021b793be7723d0b4b2f81862fd775dfb71dc10ebcb602256727b1201c",
+        "internal/httpapi/router.go": "0868bc406a2d7d120e3702fdf31d84cdca7b4e111636117dfb7a3ca0e98d00ac",
+        "internal/member/handler.go": "2dab7dc03d824e8758416c81b24c41f1be37e7fd20d5237b8021149ab3fa9e53",
+        "internal/member/studies.go": "88b98b77760742723d195b7ff180c4e824177baf1e53819676f42aac29c354af",
+        "internal/member/studies_catalogue.go": "3d057b6b9bcbd7ef883618ca5ffa39931f135ba05534448b65c652bec74ceff6",
+        "internal/member/studies_export.go": "5d3117b416fee851465544bfdb24b3662e7e07bb47ad650415e274a0d7b9285a",
+        "internal/member/studies_list.go": "e76af661c121005716e5878f97e82d6a9fc9b88870cb558a6e69595121a9f638",
+        "internal/member/studies_list_test.go": "7023bccb420b2ce4dd985b9f9d52c2bbfa31eeb7de69100024d7d4f85bfae5cd",
+        "internal/member/studies_readonly_test.go": "8bd5cbafc3eb6d6bd2005a2acd9c56180350676910582d4a8c5374fbe0a0e942",
+        "internal/member/studies_store.go": "a9ee11fac095136aafdc0bd72062f1e3dd9ffd11e1ea5e55b919112da0b56dac",
+        "internal/member/studies_test.go": "72101ac69470c5d6dc7fee06e17554e207793f15caceafa2a998923672d10e56"
+      },
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100
+    },
+    "web": {
+      "buildId": "88f210e8-3387-4180-aa71-461afa61efb5",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:871e02e143b970b311d4b9eae48311e5e2fa67bd903ffb6b64ccdf68826dadfd",
+      "revision": "artline-web-studies-1011-v1",
+      "rollbackRevision": "artline-web-analytics-1011-v1",
+      "candidateURL": "https://studies-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+      "overlayURI": "gs://artline-508319-build-source/studies-20261011/web-bf8075e0d26ccaee.tar.xz",
+      "overlayGeneration": "1791721108141156",
+      "overlaySHA256": "bf8075e0d26ccaee25b44112a41901493f77a0feebaaf1eb72066d06a237c282",
+      "baselineSource": {
+        "storageSource": {
+          "bucket": "artline-508319-build-source",
+          "generation": "1791660631448965",
+          "object": "source/1791660403.355356-c78ccaf5cf4745558df5aa0dbd3af7d8.tgz"
+        }
+      },
+      "files": {
+        "app/api/studies/[[...path]]/route.ts": "6297bb323ecf9d8ab86943498943736546aee982565e2a0506469d2f1627a828",
+        "app/studies/[id]/page.tsx": "56c8585e8b61673298ecdd9bb4c32a15ba105b1d796b9fb20ff829f68026c593",
+        "app/studies/page.tsx": "ea1fd4c5ea01d6d96698993cd41c680d3de3a7aae6bc45cf11c33d7ead44a536",
+        "components/MemberAccount.tsx": "c1f06bbf75d2bf6612c74eb41492755d247c4c6f82d01e481ec2ac6ede526ecd",
+        "components/MemberNavigation.tsx": "195fe2750338b03e2d4771236f52b901e555ceacf3887e7026d49e57c6925827",
+        "components/MobileNavigation.tsx": "9b911f8b9428b22a1e582c273ef651f744562f7a6dc8e9b36259654744caa76f",
+        "components/SiteHeader.tsx": "736954cc640f96d8faaae2fb9fdaf19c4e18f66e35e5c20d2a66106d7a0cdbab",
+        "components/studies/AddStudyRecords.tsx": "a3c96d8e60dfa16fde3b6423990ff62c44f0727fcad9e12d7a619dcb9f21b458",
+        "components/studies/Studies.module.css": "986f10a3e29d3c27594f8b9384c2c78d7c8ae6ebefab89fe2c97a765b7209f38",
+        "components/studies/StudyCollection.tsx": "458ada9f051a1b48961e63bdc06cb53412a2cc9490a9b5fc548bf2fcb5e451c7",
+        "components/studies/StudyCompare.tsx": "4c3175f25c8a6dde7b72752db701ef78dd57d8394d2263bf27e0768e31f88de5",
+        "components/studies/StudyDialog.tsx": "d81d2983421510215b87c0f051dd1f750a5c0e91485c0d113010474ffa644e70",
+        "components/studies/StudyRecord.tsx": "f3d17ee491f6375d019c82d6a2ca7f8f15a69e8777ae75fdeac68d968d4611ac",
+        "components/studies/StudyTimeline.tsx": "f6537e08ec8137334f832b8d94a8dae64886c591121096b3787b9b0e3f4dcb6c",
+        "components/studies/StudyWorkspace.tsx": "f5b7daca3fb93c6394bd0b835d4031ac2ed675e7231c7ba5b9c24c81f96d0c7f",
+        "e2e/studies.spec.ts": "3455144fbf9477df1594b28e730af7451362a590642f3b2a2b48006775b2b8dd",
+        "lib/__tests__/studies.test.ts": "d6292093c3c6a4f6f9e742c145d471d2663fbf0aaf6989d5fcfa50004000fd55",
+        "lib/member-return.ts": "65ea403360e1bee4ebc7e91d8bdacbf055afe482dd6b06eaa8f7455bcc40a289",
+        "lib/studies.ts": "115e8d546f5780d25ff3949c786098952652b8584ff202f6694ee06c7e2ad8b0"
+      },
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100
+    }
+  },
+  "database": {
+    "backupId": "1791721098281",
+    "backupStatus": "SUCCESSFUL",
+    "migration": "0045_member_studies.sql",
+    "migrationApplied": true,
+    "verification": {
+      "readonly": "on",
+      "lastMigrations": [
+        "0041_artwork_search_documents.sql",
+        "0042_artist_summary_read_indexes.sql",
+        "0043_member_bookmarks.sql",
+        "0044_member_book_event_bookmarks.sql",
+        "0045_member_studies.sql"
+      ],
+      "studiesTable": "member_studies",
+      "indexes": [
+        "CREATE UNIQUE INDEX member_studies_pkey ON public.member_studies USING btree (member_id, id)",
+        "CREATE INDEX member_studies_page_idx ON public.member_studies USING btree (member_id, updated_at DESC, id)",
+        "CREATE INDEX member_studies_title_idx ON public.member_studies USING btree (member_id, lower(title) COLLATE \"C\", id)"
+      ],
+      "studyCount": 0,
+      "scopedListQueries": "passed"
+    },
+    "catalogueRowsChanged": false,
+    "realLocalDatabaseWrites": false,
+    "accountOrSessionFixturesCreated": false
+  },
+  "validation": {
+    "browserScenariosPassed": 9,
+    "webUnitTestsPassed": 5,
+    "workspaceGoRacePackages": [
+      "member",
+      "httpapi",
+      "catalog"
+    ],
+    "releaseGoRacePackages": [
+      "member",
+      "catalog"
+    ],
+    "releaseHTTPRaceTests": "passed excluding inherited stale Books limit test",
+    "knownBaselineTestLimitation": "TestBooksAcceptLegacyParametersAndValidBounds expects limit=151 to be invalid; the already-deployed Books release accepts up to 300. Books runtime was preserved.",
+    "typeScript": "passed",
+    "focusedLint": "passed",
+    "productionBuilds": "passed",
+    "ownRecordForm": {
+      "checks": [
+        {
+          "width": 1440,
+          "accessibility": [],
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "accessibility": [],
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "accessibility": [],
+          "overflow": false
+        }
+      ],
+      "rangeExported": true,
+      "urlRequired": false
+    },
+    "apiCandidate": [
+      {
+        "path": "/health",
+        "status": 200
+      },
+      {
+        "path": "/ready",
+        "status": 200
+      },
+      {
+        "path": "/api/v1/auth/session",
+        "status": 200
+      },
+      {
+        "path": "/api/v1/member/studies",
+        "status": 401
+      },
+      {
+        "path": "/api/v1/member/studies/search?kind=book",
+        "status": 401
+      },
+      {
+        "path": "/api/v1/member/studies/11111111-1111-4111-8111-111111111111",
+        "status": 401
+      },
+      {
+        "path": "/api/v1/member/bookmarks",
+        "status": 401
+      },
+      {
+        "path": "/api/v1/books?limit=1",
+        "status": 200
+      }
+    ],
+    "webCandidate": [
+      {
+        "path": "/about",
+        "status": 200
+      },
+      {
+        "path": "/guides",
+        "status": 200
+      },
+      {
+        "path": "/guides/prado/pdf/en",
+        "status": 200,
+        "sha256": "2cea4c148a7b3a5e256ebfb627ae7ad33ed21cd3c400b037f89bcb219c9588f4"
+      },
+      {
+        "path": "/artists/gustave-caillebotte-q295144/works/95e6574a-8509-4c70-ad3b-d22ed2cc1e83",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200
+      },
+      {
+        "path": "/bookmarks",
+        "status": 307,
+        "returnToPreserved": true
+      },
+      {
+        "path": "/studies?q=Paris&sort=title",
+        "status": 307,
+        "returnToPreserved": true
+      },
+      {
+        "path": "/studies/11111111-1111-4111-8111-111111111111?from=1870&to=1890&view=timeline",
+        "status": 307,
+        "returnToPreserved": true
+      },
+      {
+        "path": "/api/studies",
+        "status": 401
+      },
+      {
+        "path": "/api/studies/search?kind=book",
+        "status": 401
+      }
+    ],
+    "browserCandidate": {
+      "cases": [
+        {
+          "width": 1440,
+          "signInRequired": true,
+          "returnToPreserved": true,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "signInRequired": true,
+          "returnToPreserved": true,
+          "overflow": false
+        }
+      ],
+      "publicArtwork": true,
+      "mobileStudiesLink": true,
+      "pageErrors": [],
+      "authenticatedWrites": false
+    },
+    "webLive": [
+      {
+        "path": "/about",
+        "status": 200
+      },
+      {
+        "path": "/guides",
+        "status": 200
+      },
+      {
+        "path": "/guides/prado/pdf/en",
+        "status": 200,
+        "sha256": "2cea4c148a7b3a5e256ebfb627ae7ad33ed21cd3c400b037f89bcb219c9588f4"
+      },
+      {
+        "path": "/artists/gustave-caillebotte-q295144/works/95e6574a-8509-4c70-ad3b-d22ed2cc1e83",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200
+      },
+      {
+        "path": "/bookmarks",
+        "status": 307,
+        "returnToPreserved": true
+      },
+      {
+        "path": "/studies?q=Paris&sort=title",
+        "status": 307,
+        "returnToPreserved": true
+      },
+      {
+        "path": "/studies/11111111-1111-4111-8111-111111111111?from=1870&to=1890&view=timeline",
+        "status": 307,
+        "returnToPreserved": true
+      },
+      {
+        "path": "/api/studies",
+        "status": 401
+      },
+      {
+        "path": "/api/studies/search?kind=book",
+        "status": 401
+      }
+    ],
+    "browserLive": {
+      "cases": [
+        {
+          "width": 1440,
+          "signInRequired": true,
+          "returnToPreserved": true,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "signInRequired": true,
+          "returnToPreserved": true,
+          "overflow": false
+        }
+      ],
+      "publicArtwork": true,
+      "mobileStudiesLink": true,
+      "pageErrors": [],
+      "authenticatedWrites": false
+    },
+    "releaseErrorLogEntries": 0,
+    "limitations": [
+      "No real Google sign-in or authenticated production study writes were performed.",
+      "No high-concurrency or million-row load test was performed."
+    ]
+  },
+  "terraformApply": false,
+  "localImagePinsUpdated": true,
+  "commitsCreated": false,
+  "privateEvidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/studies-20261011",
+  "rollback": "Restore the previous web revision, then the previous API revision. The additive private-study table can remain."
+}

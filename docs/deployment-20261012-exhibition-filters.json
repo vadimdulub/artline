@@ -1,0 +1,77 @@
+{
+  "site": "https://artlines.org/exhibitions",
+  "status": "deployed_and_verified",
+  "change": "Remove Source dropdown; four compact standard controls with year fields using shared atlas styling. Remove conflicting exhibition input rules.",
+  "deployment": {
+    "buildId": "b714d541-c70d-464f-9e9b-98ccaf0d3b1c",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:exhibition-filters-20261012-v3",
+    "baselineRevision": "artline-web-event-artworks-1012-v2",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:194066a27e7f995d6f0e809b6583e91848751f475de5f1413bc0099e7c281ab8",
+    "files": {
+      "components/ExhibitionFilters.tsx": "06a1a58992b577be7fab22091433f371d2699563f6f01ce88185409dbfc415cb",
+      "app/globals.css": "79ba7d258afe31be4d34acf79e630115e56f104ffd7f43484de288fbf5106e62",
+      "app/exhibitions/exhibitions.module.css": "0a54b100f47edb5f7b7476e9dffd4893a14d5b7b72aece1278cdfbdd38fcb57b"
+    },
+    "preimages": {
+      "components/ExhibitionFilters.tsx": "3e71413ad1b154e8d6bf83b8ae8bd71005b343fa69c8c79a9d91ce63ac3c3f75",
+      "app/globals.css": "175e2fdcd629ad0d643976fb0b69f90f5044b389c49b7c3e0d5edd6f530f6ed1",
+      "app/exhibitions/exhibitions.module.css": "fa29b435d0b68784f0f3cc1762b2286ae906bdf3e7ae258a3099516a5a5109da"
+    },
+    "overlaySHA256": "b6c4bb3f293b05436dcea53a2ccd09560e3dfc7a5f413bb451755a2101cd0f56",
+    "overlayURI": "gs://artline-508319-build-source/exhibition-filters-20261012/b6c4bb3f293b0543.tar.xz",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:ce5b7af75e1486aa9c6e1ea38bfef8ed6a62b7b4641a825b0a57a91bba1a3fb6",
+    "revision": "artline-web-exhibition-filters-1012-v3",
+    "candidateURL": "https://exhibition-filters-1012-v3---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-event-artworks-1012-v2",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100
+  },
+  "candidate": {
+    "at": "2026-10-12T18:38:49.492Z",
+    "checks": [
+      {
+        "width": 1440,
+        "fields": 4,
+        "inputFont": "13px",
+        "selectFont": "13px",
+        "inputBorder": "0px",
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "fields": 4,
+        "inputFont": "16px",
+        "selectFont": "16px",
+        "inputBorder": "0px",
+        "overflow": false
+      }
+    ],
+    "searchAndReset": true,
+    "url": "https://exhibition-filters-1012-v3---artline-web-lpuqqlugnq-ew.a.run.app/exhibitions"
+  },
+  "production": {
+    "at": "2026-10-12T18:39:31.120Z",
+    "checks": [
+      {
+        "width": 1440,
+        "fields": 4,
+        "inputFont": "13px",
+        "selectFont": "13px",
+        "inputBorder": "0px",
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "fields": 4,
+        "inputFont": "16px",
+        "selectFont": "16px",
+        "inputBorder": "0px",
+        "overflow": false
+      }
+    ],
+    "searchAndReset": true,
+    "url": "https://artlines.org/exhibitions"
+  },
+  "databaseWrites": false,
+  "verifiedAt": "2026-10-12T18:39:37.625893+00:00"
+}

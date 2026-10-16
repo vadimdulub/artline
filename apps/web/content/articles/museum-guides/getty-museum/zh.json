@@ -1,0 +1,613 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "getty-museum",
+  "museum": "J. Paul Getty Museum",
+  "city": "洛杉矶",
+  "country": "美国",
+  "title": "J.保罗·盖蒂博物馆：杰作",
+  "subtitle": "看人物外表如何被安排、被打断，以及如何经得起细察。",
+  "introduction": "大笑与打哈欠都是肖像中难以长久保持的表情。伦勃朗与迪克勒却让它们成为主题，把通常不会进入正式肖像的神态放到中心。在这份选择的其他作品里，宽大的红色礼服或精心布置的露台，又赋予人物一种从容，而那两幅自画像偏偏放弃了这种从容。\n\n区别并不只是诚实与伪装。看似自然流露的表情同样经过绘制与安排；礼仪服装也能相当准确地表明社会角色。盖蒂的这二十件作品，让我们区分人物本人、呈现方式与环境。风景和静物把问题继续展开：哪些东西被选出来展示，哪些又留在展示之外？",
+  "visitNote": "本精选集涵盖了保罗·盖蒂博物馆（J. Paul Getty Museum）馆藏的画作。请查阅盖蒂博物馆相关的藏品页面，以获取有关展出地点及借展情况的信息。复制品保留了原有的画框或校准边框（如有）；这些元素位于画作图像区域之外。",
+  "locale": "zh",
+  "website": "http://www.getty.edu/museum/",
+  "officialGuide": "http://www.getty.edu/museum/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "在线阅读或下载 · 英语",
+      "note": "大都会艺术博物馆出版的荷兰绘画图录（共两卷）对伦勃朗及其在人物面部、室内场景和静物描绘上的处理手法进行了详尽的比较分析。该图录现已提供在线阅读。"
+    }
+  ],
+  "works": [
+    {
+      "id": "017cc22a-dacc-58fb-93ab-719a5327f870",
+      "title": "大笑的伦勃朗",
+      "catalogueTitle": "Rembrandt Laughing",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "slug": "rembrandt",
+          "role": "primary"
+        }
+      ],
+      "date": "约 1628 年",
+      "start": 1628,
+      "end": 1628,
+      "medium": "铜板油画",
+      "accession": "2013.60",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/017cc22a-dacc-58fb-93ab-719a5327f870-68749695fb4e513a.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103QTM",
+      "credit": "Rembrandt Laughing. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103QTM",
+      "description": "伦勃朗仰起头，表情看起来很难持久。短而不均匀的笔触加强了运动感，金属护喉甲却又带来更正式的装束。这幅约1628年绘于小铜板上的自画像，把表演与观察结合起来。那个仿佛转瞬即逝的时刻，其实来自十分有意的绘画安排。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "d2fe79fa-36e9-5a03-8d5d-e7646fd3ab83",
+      "title": "基督于1889年进入布鲁塞尔",
+      "catalogueTitle": "Christ's Entry Into Brussels in 1889",
+      "artist": "James Ensor",
+      "artists": [
+        {
+          "name": "James Ensor",
+          "role": "primary",
+          "slug": "james-ensor-q158840"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d2fe79fa-36e9-5a03-8d5d-e7646fd3ab83-95dd3ec0b0d2c46a.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-ensor/christ-s-entry-into-brussels-in-1889-1888",
+      "credit": "James Ensor. Christ's Entry Into Brussels in 1889. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-ensor/christ-s-entry-into-brussels-in-1889-1888",
+      "description": "旗帜与夸张面孔向前拥来，直到标题中的主角变得难以寻找。恩索尔让一次公开的降临，与人群对自身热闹场面的渴望互相竞争。面具并未使伪装与普通面孔容易区分。画面提出的问题是：当每个人似乎都执意吸引目光，注意力究竟会落在哪里？",
+      "importance": "",
+      "museum": "J. Paul Getty Museum"
+    },
+    {
+      "id": "542411f3-d53b-58b3-b0de-72c31b0c50bd",
+      "title": "挂满旗帜的莫斯尼耶街",
+      "catalogueTitle": "The Rue Mosnier with Flags",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1878",
+      "start": 1878,
+      "end": 1878,
+      "medium": "布面油画",
+      "accession": "89.PA.71",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/542411f3-d53b-58b3-b0de-72c31b0c50bd-f46e051a3f590c6e.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RJM",
+      "credit": "The Rue Mosnier with Flags. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RJM",
+      "description": "旗帜标示公共庆典，但近处边缘拄拐的男子无法被纳入单纯的繁荣图景。盖蒂将这一场合确定为1878年6月30日的全国庆祝日。马奈把不同的生活处境放在同一条街上。这位截肢者可能曾是军人，但单凭图像无法确定他的经历。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "b41589f8-7080-5d7d-827f-ffaf86934cab",
+      "title": "麦垛，雪景，清晨",
+      "catalogueTitle": "Wheatstacks, Snow Effect, Morning (Meules, Effet de Neige, Le Matin)",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "95.PA.63",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/b41589f8-7080-5d7d-827f-ffaf86934cab-82f416540dde00c8.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RK8",
+      "credit": "Wheatstacks, Snow Effect, Morning (Meules, Effet de Neige, Le Matin). J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RK8",
+      "description": "麦垛给莫奈不断变化的光线提供了稳定的参照。暗色体块依然清晰，蓝色与粉色阴影则铺展在周围积雪上。一个乍看重复的乡村题材，由此成为辨别差异的方法。标题里的季节与时段并非装饰，它们说明了决定这一次景象的具体条件。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "51c7e77a-4cbd-5620-a70b-76093a3868a3",
+      "title": "乐手争斗",
+      "catalogueTitle": "The Musicians' Brawl",
+      "artist": "Georges de La Tour",
+      "artists": [
+        {
+          "name": "Georges de La Tour",
+          "role": "primary",
+          "slug": "georges-de-la-tour-q203371"
+        }
+      ],
+      "date": "约 1625 年",
+      "start": 1625,
+      "end": 1630,
+      "medium": "布面油画",
+      "accession": "72.PA.28",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/51c7e77a-4cbd-5620-a70b-76093a3868a3-bf161fbc94f14338.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RCX",
+      "credit": "The Musicians' Brawl. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RCX",
+      "description": "乐器原本属于一种协调活动，推搡的手与相撞的身体却转向了另一种。拉图尔把人群压得很紧，争斗周围几乎没有空隙。表情与手势必须说明演奏为何被打断。保留乐器很重要，因为它们让一场合作演奏被破坏的可能性，也成为这场冲突的一部分。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "3d1150f2-22a0-5504-b7ed-cc1bac3326fd",
+      "title": "泽奈德与夏洛特·波拿巴",
+      "catalogueTitle": "Portrait of the Sisters Zénaïde and Charlotte Bonaparte",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1821",
+      "start": 1821,
+      "end": 1821,
+      "medium": "布面油画",
+      "accession": "86.PA.740",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/3d1150f2-22a0-5504-b7ed-cc1bac3326fd-140018728984255c.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RHX",
+      "credit": "Portrait of the Sisters Zénaïde and Charlotte Bonaparte. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RHX",
+      "description": "信件让两人除了同坐一处，还分享着别的东西。大卫把身体靠近，又用不同衣着保持两人的区别。双人肖像恰好需要处理这种平衡：两位可辨认的人，以及一段看得见的关系。这里，一张小纸把摆好的双人姿态，与画外的某个人或某件事联系起来。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "4da3852f-ac4a-55ba-a714-39e502628bbd",
+      "title": "打哈欠的自画像",
+      "catalogueTitle": "Self-portrait, yawning",
+      "artist": "Joseph Ducreux",
+      "artists": [
+        {
+          "name": "Joseph Ducreux",
+          "role": "primary",
+          "slug": "joseph-ducreux-nga-6767"
+        }
+      ],
+      "date": "1783",
+      "start": 1783,
+      "end": 1783,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/4da3852f-ac4a-55ba-a714-39e502628bbd-8296ad5b01a1e580.jpg",
+      "imageSource": "https://www.wikiart.org/en/joseph-ducreux/self-portrait-yawning-1783",
+      "credit": "Joseph Ducreux. Self-portrait, yawning. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joseph-ducreux/self-portrait-yawning-1783",
+      "description": "迪克勒让一个哈欠牵动整个上身。伸展的双臂拉扯衣服，张开的嘴拒绝了正式肖像所期待的端庄神情。不过，这种身体反射也是画家选择的自我呈现方式。肖像显示，一位艺术家可以多么令人信服地安排出那个体面自持仿佛突然松脱的瞬间。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum"
+    },
+    {
+      "id": "c93bfcfe-e2b7-5b07-badc-a3f15ef0c16e",
+      "title": "赛恩—维特根斯坦—赛恩的莱奥尼拉公主",
+      "catalogueTitle": "Portrait of Leonilla, Princess of Sayn-Wittgenstein-Sayn",
+      "artist": "Franz Xaver Winterhalter",
+      "artists": [
+        {
+          "name": "Franz Xaver Winterhalter",
+          "role": "primary",
+          "slug": "franz-xaver-winterhalter-q168659"
+        }
+      ],
+      "date": "1843",
+      "start": 1843,
+      "end": 1843,
+      "medium": "布面油画",
+      "accession": "86.PA.534",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/c93bfcfe-e2b7-5b07-badc-a3f15ef0c16e-86313d35b4858722.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RHJ",
+      "credit": "Portrait of Leonilla, Princess of Sayn-Wittgenstein-Sayn. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RHJ",
+      "description": "斜倚的姿态不只是占据一把椅子，而像是把整个陈设齐全的露台都纳入人物身边。温特哈尔特让光铺在浅色衣裙上，又以帷幔、植物和远景围绕她。闲适由一整套财产与舒适条件具体表现出来。面孔只是这幅肖像确立身份等级的诸多依据之一。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "c6fb4d08-10e7-5141-9a45-83880d5c59d7",
+      "title": "七岁的玛丽亚·弗雷德里克·范·雷德—阿斯隆",
+      "catalogueTitle": "Portrait of Maria Frederike van Reede-Athlone at Seven Years of Age",
+      "artist": "Jean-Étienne Liotard",
+      "artists": [
+        {
+          "name": "Jean-Étienne Liotard",
+          "role": "primary",
+          "slug": "jean-etienne-liotard-q123757"
+        }
+      ],
+      "date": "约1755年—约1756年",
+      "start": 1755,
+      "end": 1756,
+      "medium": "柔和色调",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/c6fb4d08-10e7-5141-9a45-83880d5c59d7-2ec27e528daf5827.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-etienne-liotard/portrait-of-maria-frederike-van-reede-athlone-at-seven-years-of-age-1756",
+      "credit": "Jean-Étienne Liotard. Portrait of Maria Frederike van Reede-Athlone at Seven Years of Age. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-etienne-liotard/portrait-of-maria-frederike-van-reede-athlone-at-seven-years-of-age-1756",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-etienne-liotard/portrait-of-maria-frederike-van-reede-athlone-at-seven-years-of-age-1756",
+      "description": "在精心整理的缎带、帽子和皮毛之间，小狗让孩子的双手抱着一个活物。利奥塔尔区分这些质感，却不让服装盖过人物。转过去的脸仍具有独特面貌。正式衣着规定孩子如何被呈现，小动物则带来真实的重量和相互关系，这些都不是服装本身能够提供的。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum"
+    },
+    {
+      "id": "85aaa6d3-04c4-55ef-bbad-b2b2cd0c2f57",
+      "title": "身披盔甲的阿方索·达瓦洛斯与侍从",
+      "catalogueTitle": "Portrait of Alfonso d`Avalos , in Armor with a Page",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1533",
+      "start": 1533,
+      "end": 1533,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/85aaa6d3-04c4-55ef-bbad-b2b2cd0c2f57-1d577a5328e9c287.jpg",
+      "imageSource": "https://www.wikiart.org/en/titian/portrait-of-alfonso-d-avalos-in-armor-with-a-page",
+      "credit": "Portrait of Alfonso d`Avalos , in Armor with a Page. WikiArt; Titian. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/titian/portrait-of-alfonso-d-avalos-in-armor-with-a-page",
+      "description": "弧形金属反光的方式不同于人物的面孔，使盔甲成为有分量的存在，而非军事地位的简写。提香把较小的侍从放在旁边，让权威不仅体现在装备上，也体现在人与人的关系中。因此，尚未阅读生平便能看出等级：一人接受展示，另一人负责服侍他。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum"
+    },
+    {
+      "id": "5174c777-99f7-56a1-a7b2-28901aaee3dd",
+      "title": "阿戈斯蒂诺·帕拉维奇尼",
+      "catalogueTitle": "Portrait of Agostino Pallavicini",
+      "artist": "Anthony van Dyck",
+      "artists": [
+        {
+          "name": "Anthony van Dyck",
+          "role": "primary",
+          "slug": "anthony-van-dyck-q150679"
+        }
+      ],
+      "date": "约1621年",
+      "start": 1621,
+      "end": 1621,
+      "medium": "布面油画",
+      "accession": "68.PA.2",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/5174c777-99f7-56a1-a7b2-28901aaee3dd-3c3945e760e54242.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103R9N",
+      "credit": "Portrait of Agostino Pallavicini. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103R9N",
+      "description": "红色衣袍铺满画面下部的大部分，几乎成了围绕人物的一座建筑。凡·戴克让浅色面孔与双手从这份礼仪性的厚重之上显现。服装不只是给一幅本可独立成立的肖像添装饰。它决定身体怎样占据空间，也决定一个人如何以某项公职的承担者身份出现在我们面前。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "bee5047a-bacf-551c-ab74-165bb235e5dc",
+      "title": "森林里的野兔",
+      "catalogueTitle": "A Hare in the Forest",
+      "artist": "Hans Hoffmann",
+      "artists": [
+        {
+          "name": "Hans Hoffmann",
+          "slug": "hans-hoffmann-nga-6945",
+          "role": "primary"
+        }
+      ],
+      "date": "约 1585 年",
+      "start": 1585,
+      "end": 1585,
+      "medium": "木板油画",
+      "accession": "2001.12",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/bee5047a-bacf-551c-ab74-165bb235e5dc-968c981c9595b56d.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/108GY4",
+      "credit": "A Hare in the Forest. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/108GY4",
+      "description": "霍夫曼给野兔主角的位置，又把同样细致的观察延续到叶片、树皮和更小的生物。动物并没有站在刻意留空的背景前。周围细节使观看需要在不同尺度间移动：先看野兔的身体，再看这个身体被放置其中的具体事物。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "a0e26ea2-4cbe-57b6-9ce0-b8fb017ebaf3",
+      "title": "动物进入诺亚方舟",
+      "catalogueTitle": "The Entry of the Animals into Noah's Ark",
+      "artist": "Jan Brueghel the Elder",
+      "artists": [
+        {
+          "name": "Jan Brueghel the Elder",
+          "role": "primary",
+          "slug": "jan-brueghel-the-elder-q209050"
+        }
+      ],
+      "date": "1613",
+      "start": 1613,
+      "end": 1613,
+      "medium": "木板油画",
+      "accession": "92.PB.82",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/a0e26ea2-4cbe-57b6-9ce0-b8fb017ebaf3-7ecfc28d835dd2d9.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RJT",
+      "credit": "The Entry of the Animals into Noah's Ark. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RJT",
+      "description": "方舟为这场不可能在日常风景中见到的聚集提供目的地。勃鲁盖尔把不同物种散布在树木与空地之间，让各自的身体便于比较。《圣经》叙事解释了如此多样的生物为何共享一处。目光可以从一种动物移到另一种，同时不忘把它们联系起来的事件。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "536ec263-2adc-5d5d-9340-15de5a2fdaad",
+      "title": "永恒的女性",
+      "catalogueTitle": "The Eternal Feminine (L'Éternel Féminin)",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "约 1877 年",
+      "start": 1877,
+      "end": 1877,
+      "medium": "布面油画",
+      "accession": "87.PA.79",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/536ec263-2adc-5d5d-9340-15de5a2fdaad-6298e731b5deed0d.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RJ9",
+      "credit": "The Eternal Feminine (L'Éternel Féminin). J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RJ9",
+      "description": "躺卧女子被置于聚集的人群上方展示，众人的目光规定了她在场景中的角色。塞尚突兀的色彩与笨拙形体，使这种安排没有光洁优雅的外观。标题很宽泛，画中却是一个具体的不平衡：一人暴露在许多观看者面前。他们的观看，与被他们察看的身体一样，都是题材。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "3fc6be95-45de-564f-812f-801719241e0d",
+      "title": "泻湖狩猎",
+      "catalogueTitle": "Hunting on the Lagoon",
+      "artist": "Vittore Carpaccio",
+      "artists": [
+        {
+          "name": "Vittore Carpaccio",
+          "role": "primary",
+          "slug": "vittore-carpaccio-q5581"
+        }
+      ],
+      "date": "约 1490 年",
+      "start": 1490,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3fc6be95-45de-564f-812f-801719241e0d-f150446bd0e1e925.jpg",
+      "imageSource": "https://www.wikiart.org/en/vittore-carpaccio/hunting-on-the-lagoon",
+      "credit": "Vittore Carpaccio. Hunting on the Lagoon. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vittore-carpaccio/hunting-on-the-lagoon",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vittore-carpaccio/hunting-on-the-lagoon",
+      "description": "开阔水面让卡尔帕乔小船上的细小动作不至于彼此遮挡。人物站立、瞄准，鸟、杆柱与低低的地平线则点出远处的位置。狩猎通过分散的注意力展开，而非一次决定性的交锋。有条理的安排允许观看者逐一追随不同活动，整个场面却仍十分平静。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum"
+    },
+    {
+      "id": "b1f3b239-1faf-566b-879d-286c5c0d8aea",
+      "title": "让娜·凯费尔",
+      "catalogueTitle": "Jeanne Kéfer",
+      "artist": "Fernand Khnopff",
+      "artists": [
+        {
+          "name": "Fernand Khnopff",
+          "role": "primary",
+          "slug": "fernand-khnopff-q559559"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "布面油画",
+      "accession": "97.PA.35",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/b1f3b239-1faf-566b-879d-286c5c0d8aea-d59b6babecc5f829.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/107TN1",
+      "credit": "Jeanne Kéfer. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/107TN1",
+      "description": "还不知道女孩的年龄，高大的浅色门扇已显示她有多小。克诺普夫把她准确安置在几乎空白的门面前，一只手收到胸前。建筑使她的静止更加显眼，却不能解释她的感受。只看这个小小人物如何在大片未被占用的空间中吸引目光，便已足够。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "bf375d10-59d3-5c48-94e1-c79446dd790a",
+      "title": "圣地亚哥侯爵夫人",
+      "catalogueTitle": "Portrait of the Marquesa de Santiago",
+      "artist": "Francisco Goya",
+      "artists": [
+        {
+          "name": "Francisco Goya",
+          "role": "primary",
+          "slug": "francisco-goya-q5432"
+        }
+      ],
+      "date": "1804",
+      "start": 1804,
+      "end": 1804,
+      "medium": "布面油画",
+      "accession": "83.PA.12",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/bf375d10-59d3-5c48-94e1-c79446dd790a-f2e5868997817f4a.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RF3",
+      "credit": "Portrait of the Marquesa de Santiago. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RF3",
+      "description": "深色衣裙与浅色披纱建立了正式的公共形象，戈雅却没有让这种外观抹去人物独特的脸。全身姿态把她的存在延伸到身后的风景。社会地位很清楚，个性却不容易命名。肖像提供了可供细察的依据，而不是一份对这位女子的现成判词。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "74306c63-818c-58e1-b854-0d82dd890398",
+      "title": "模特约瑟夫习作",
+      "catalogueTitle": "Study of the Model Joseph",
+      "artist": "Théodore Géricault",
+      "artists": [
+        {
+          "name": "Théodore Géricault",
+          "slug": "theodore-gericault-q184212",
+          "role": "primary"
+        }
+      ],
+      "date": "约 1818–1819 年",
+      "start": 1818,
+      "end": 1819,
+      "medium": "布面油画",
+      "accession": "85.PA.407",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/74306c63-818c-58e1-b854-0d82dd890398-6fd4cc3ef83f47f6.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103QRX",
+      "credit": "Study of the Model Joseph. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103QRX",
+      "description": "标题保留模特的名字，没有让他成为匿名类型。席里柯把光集中在额头、面颊与敞开的领口，让转动的头部靠着黑暗显现。即使习作属于画家更大范围的工作过程，也可以把一个人当作独立个体认真描绘。这里，这张脸不需要更大的场景来证明它值得长久注视。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "2c8013cd-2571-5d0c-bb68-ec0c8dc75ddc",
+      "title": "抵御爱情的少女",
+      "catalogueTitle": "A Young Girl Defending Herself against Love",
+      "artist": "William-Adolphe Bouguereau",
+      "artists": [
+        {
+          "name": "William-Adolphe Bouguereau",
+          "role": "primary",
+          "slug": "william-adolphe-bouguereau-q483992"
+        }
+      ],
+      "date": "约 1880 年",
+      "start": 1880,
+      "end": 1880,
+      "medium": "布面油画",
+      "accession": "70.PA.3",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/2c8013cd-2571-5d0c-bb68-ec0c8dc75ddc-5baafa543c467332.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RAB",
+      "credit": "A Young Girl Defending Herself against Love. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RAB",
+      "description": "女子用双臂挡开带翅膀的孩子，使寓意拥有一眼可懂的动作。布格罗光滑的画法，让交错的四肢与衣褶容易追随。丘比特表明这是一则关于爱情的构想，而非亲眼记录的花园事件。场景的戏谑来自受控制的手势较量，不是来自对正在发生什么的疑惑。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "507c530a-f950-5f6c-933f-c83ca4a4f3a2",
+      "title": "静物：桃子、银高脚杯、葡萄与核桃",
+      "catalogueTitle": "Still Life with Peaches, a Silver Goblet, Grapes, and Walnuts",
+      "artist": "Jean-Siméon Chardin",
+      "artists": [],
+      "date": "约 1759–1760 年",
+      "start": 1759,
+      "end": 1760,
+      "medium": "布面油画",
+      "accession": "86.PA.544",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/507c530a-f950-5f6c-933f-c83ca4a4f3a2-0f8843c7ab2fb329.jpg",
+      "imageSource": "https://www.getty.edu/art/collection/object/103RHQ",
+      "credit": "Still Life with Peaches, a Silver Goblet, Grapes, and Walnuts. J. Paul Getty Museum; Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Images provided here are believed to be in the public domain and     are available under CC0 through Getty’s Open Content Program .     Texts provided here are © J. Paul Getty Trust, licensed under CC BY 4.0 .     Terms of use for the Getty logo can be found here .",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.getty.edu/art/collection/object/103RHQ",
+      "description": "夏尔丹把反光金属放在水果与硬壳旁，没有把台面变成丰盛物产的展示。克制的色调让细小材质差异也值得注意。葡萄垂向边缘，松动了排列，却没有将其破坏。看过这组作品中的繁复服装与公共场面之后，几件小物提供了一个更安静的机会，考察目光如何被引导。",
+      "importance": "",
+      "museum": "J. Paul Getty Museum"
+    }
+  ],
+  "context": {
+    "start": 1490,
+    "end": 1891
+  },
+  "closingSections": [
+    {
+      "title": "比较环境提供了什么",
+      "paragraphs": [
+        "把正式肖像与一幅表情鲜明的自画像并置。人物外观中，哪些部分依靠衣服、家具或所选的动作？再把同一问题用于静物。这些作品组成的是研究性的选择；在把其中任何一件当作实地参观的一站之前，请查阅盖蒂最新藏品记录与参观信息。"
+      ]
+    }
+  ]
+}

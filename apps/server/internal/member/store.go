@@ -12,12 +12,13 @@ import (
 var ErrNoSession = errors.New("no active session")
 
 type User struct {
-	ID    string `json:"id"`
-	Email string `json:"email"`
-	Name  string `json:"name"`
+	ID           string `json:"id"`
+	Email        string `json:"email"`
+	Name         string `json:"name"`
+	HostedDomain string `json:"-"`
 }
 
-type Identity struct{ Subject, Email, Name string }
+type Identity struct{ Subject, Email, Name, HostedDomain string }
 
 type Store interface {
 	Login(context.Context, Identity, string, string, time.Time) error
@@ -35,10 +36,10 @@ func (s PostgresStore) Login(ctx context.Context, identity Identity, hash, previ
 	defer tx.Rollback(ctx)
 	var id string
 	// Google sub is the identity key. Never merge accounts by email.
-	err = tx.QueryRow(ctx, `INSERT INTO member_accounts(google_subject,email,display_name)
- VALUES($1,$2,$3) ON CONFLICT(google_subject) DO UPDATE
- SET email=EXCLUDED.email, display_name=EXCLUDED.display_name, updated_at=now()
- RETURNING id::text`, identity.Subject, identity.Email, identity.Name).Scan(&id)
+	err = tx.QueryRow(ctx, `INSERT INTO member_accounts(google_subject,email,display_name,google_hosted_domain)
+ VALUES($1,$2,$3,$4) ON CONFLICT(google_subject) DO UPDATE
+ SET email=EXCLUDED.email, display_name=EXCLUDED.display_name, google_hosted_domain=EXCLUDED.google_hosted_domain, updated_at=now()
+ RETURNING id::text`, identity.Subject, identity.Email, identity.Name, identity.HostedDomain).Scan(&id)
 	if err != nil {
 		return err
 	}
@@ -53,8 +54,8 @@ func (s PostgresStore) Login(ctx context.Context, identity Identity, hash, previ
 
 func (s PostgresStore) Session(ctx context.Context, hash string) (User, error) {
 	var u User
-	err := s.DB.QueryRow(ctx, `SELECT m.id::text,m.email,m.display_name FROM member_sessions s
- JOIN member_accounts m ON m.id=s.member_id WHERE s.token_hash=$1 AND s.expires_at>now()`, hash).Scan(&u.ID, &u.Email, &u.Name)
+	err := s.DB.QueryRow(ctx, `SELECT m.id::text,m.email,m.display_name,m.google_hosted_domain FROM member_sessions s
+ JOIN member_accounts m ON m.id=s.member_id WHERE s.token_hash=$1 AND s.expires_at>now()`, hash).Scan(&u.ID, &u.Email, &u.Name, &u.HostedDomain)
 	if errors.Is(err, pgx.ErrNoRows) {
 		err = ErrNoSession
 	}

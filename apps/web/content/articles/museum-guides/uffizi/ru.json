@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Компания Artline отобрала эти произведения из задокументированных музейных фондов. Данная подборка сформирована независимо от музея; отдельные работы могут находиться на временной выставке в другом месте или быть сняты с экспозиции. Датировка и атрибуция приводятся с учетом оговорок, содержащихся в соответствующих записях.",
+  "labels": {
+    "guides": "Все путеводители",
+    "download": "Скачать PDF",
+    "language": "Язык путеводителя",
+    "translation": "Перевод с помощью ИИ",
+    "explore": "Эта подборка в Artline",
+    "contextNote": "Посмотрите выбранные работы рядом с книгами и событиями их времени или сравните годы жизни художников. Книги и события дают исторический контекст, но не доказывают прямого влияния. Работы без подтверждённой даты остаются в путеводителе.",
+    "all": "Произведения искусства в контексте",
+    "allHint": "Избранные работы, связанные с книгами и историей их эпохи.",
+    "painters": "Кто когда жил?",
+    "paintersHint": "Узнайте, когда жили эти художники и чьи жизненные пути пересекались.",
+    "events": "Исторические события",
+    "eventsHint": "События за период, охваченный путеводителем",
+    "books": "Хронология книг",
+    "booksHint": "Значимые книги того же периода",
+    "contents": "Произведения",
+    "artworks": "Выбранные произведения",
+    "importance": "Почему это важно",
+    "artwork": "Открыть произведение",
+    "source": "Страница произведения в источнике",
+    "inventory": "Инвентарный номер",
+    "reading": "Что почитать",
+    "visit": "Перед посещением",
+    "website": "Сайт музея",
+    "officialGuide": "Материалы музея",
+    "updated": "Дата проверки источников и информации для посетителей"
+  },
+  "slug": "uffizi",
+  "museum": "Uffizi Galleries",
+  "city": "Флоренция",
+  "country": "Италия",
+  "title": "Галереи Уффици: шедевры",
+  "subtitle": "Двадцать картин, в которых смысл держится на позе, одежде и пропорциях.",
+  "introduction": "Венера Боттичелли не рождается, а прибывает: ветры несут её к берегу, где уже приготовлен плащ. Это различие задаёт картине направление. Во всей подборке тела выполняют столь же конкретную работу. Они утверждают власть, приближают священное событие, останавливают битву или позволяют понять физическую сторону убийства. Согнутый локоть порой объясняет больше, чем название стиля на этикетке.\n\nПовторяющиеся Мадонны — возможность сравнения, а не паузы между знаменитыми картинами. Трон может отделять фигуру от окружающего мира; взгляд ангела — приближать этот мир. Проследите за переменами, не считая каждое отступление от привычной анатомии ошибкой, которую ещё предстоит исправить.",
+  "visitNote": "Здесь представлена лишь часть собрания галереи Уффици, а не пошаговый маршрут по всем ее залам. Состав экспозиции и местонахождение произведений могут меняться (в том числе из-за передачи работ на выставки в другие музеи). Прежде чем планировать визит ради конкретного произведения, ознакомьтесь с информацией для посетителей и данными о конкретном экспонате на сайте музея.",
+  "locale": "ru",
+  "website": "https://www.uffizi.it/en/",
+  "officialGuide": "https://www.uffizi.it/en/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Читать бесплатно · Английский",
+      "note": "В трудах Леонардо рассматриваются вопросы пропорций, движения, света и композиционного расположения фигур. Они позволяют сформулировать практические вопросы, которые можно применить к представленным здесь картинам, включая его собственное «Благовещение»."
+    }
+  ],
+  "works": [
+    {
+      "id": "e3c562fb-78d3-41c8-9527-fb0bc335bd42",
+      "title": "Рождение Венеры",
+      "catalogueTitle": "The Birth of Venus",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "ок. 1485 г.",
+      "start": 1485,
+      "end": 1485,
+      "medium": "Темпера на холсте",
+      "accession": "1890 n. 878",
+      "image": "https://artlines.org/assets/artworks/wikiart/e3c562fb-78d3-41c8-9527-fb0bc335bd42-7d24b1fb07f364d3.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/the-birth-of-venus-1485",
+      "credit": "Sandro Botticelli. The Birth of Venus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.uffizi.it/en/artworks/birth-of-venus",
+      "description": "Раковина достигла берега, но движение продолжается в волосах Венеры и в плаще, протянутом ей навстречу. Боттичелли почти лишает прибывшую фигуру веса, необходимого телу, чтобы уверенно стоять в таком положении. Длинные контуры связывают её с ветром и тканью: она словно задержалась между путешествием и его завершением.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "11ed7a6d-b9e5-590b-8ccc-0eeb4feb7048",
+      "title": "Благовещение",
+      "catalogueTitle": "Annunciation",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "1472",
+      "start": 1472,
+      "end": 1472,
+      "medium": "Масло, доска, темпера, дерево",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/11ed7a6d-b9e5-590b-8ccc-0eeb4feb7048-2f2a1ebee7d96f0d.jpg",
+      "imageSource": "https://www.wikiart.org/en/leonardo-da-vinci/annunciation",
+      "credit": "Annunciation. WikiArt; Leonardo da Vinci. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/leonardo-da-vinci/annunciation",
+      "description": "Пюпитр и садовая стена задают встрече твёрдые границы. За ними вода и горы у Леонардо постепенно теряют отчётливость. Мария и ангел встречаются в близком, соразмерном человеку пространстве, тогда как дальний мир ускользает от такой ясности. Близкое и далёкое здесь написаны по-разному, а не просто изображены в разных размерах.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "2f0862cb-7ce7-58fb-928a-0582801d2eee",
+      "title": "Медуза",
+      "catalogueTitle": "Medusa",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1597",
+      "start": 1597,
+      "end": 1597,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2f0862cb-7ce7-58fb-928a-0582801d2eee-81a4cf912e46f68a.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/medusa-1597-1",
+      "credit": "Caravaggio. Medusa. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/medusa-1597-1",
+      "description": "Открытый рот передаёт крик, который отсечённая голова уже не может продолжить. Кровь внизу и змеи наверху почти не оставляют вокруг лица нейтрального пространства. Караваджо писал на выпуклом щите: сама основа выступает к зрителю, хотя голова будто заключена в неопределённом пространстве внутри неё. Предмет усложняет создаваемую им иллюзию.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "e1c7444a-510d-4e0d-8188-a6d1c67e1cef",
+      "title": "Венера Урбинская",
+      "catalogueTitle": "Venus of Urbino",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1538",
+      "start": 1538,
+      "end": 1538,
+      "medium": "Холст, масло",
+      "accession": "1890 no.1437",
+      "image": "https://artlines.org/assets/artworks/wikiart/e1c7444a-510d-4e0d-8188-a6d1c67e1cef-0b41b3f5b7ac73c4.jpg",
+      "imageSource": "https://www.wikiart.org/en/titian/venus-of-urbino-1538",
+      "credit": "Titian. Venus of Urbino. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.uffizi.it/en/artworks/venus-urbino-titian",
+      "description": "У этой Венеры есть то, чего нет у Венеры Боттичелли: за её спиной продолжается домашняя жизнь. Служанки заняты сундуком, собака спит, а лежащая женщина смотрит наружу. Различия в направленности внимания делают её взгляд особенно прямым. Уффици связывает бытовые подробности с браком: обнажённое тело оказывается частью определённого общественного уклада.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "b4d9966b-9faf-53d5-927f-a784f9dd29a2",
+      "title": "Мадонна Оньиссанти",
+      "catalogueTitle": "Madonna in Maest (Ognissanti Madonna)",
+      "artist": "Giotto di Bondone",
+      "artists": [
+        {
+          "name": "Giotto di Bondone",
+          "role": "primary",
+          "slug": "giotto"
+        }
+      ],
+      "date": "1306-1310",
+      "start": 1306,
+      "end": 1310,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b4d9966b-9faf-53d5-927f-a784f9dd29a2-a86464531ad4d108.jpg",
+      "imageSource": "https://www.wikiart.org/en/giotto/madonna-in-maest-ognissanti-madonna-1310-1",
+      "credit": "Giotto di Bondone. Madonna in Maest (Ognissanti Madonna). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giotto/madonna-in-maest-ognissanti-madonna-1310-1",
+      "description": "Увеличенный масштаб Марии указывает на её священный статус ещё до любого жеста. При этом Джотто позволяет различить под одеждой сидящее тело, опирающееся на трон с архитектурной глубиной. Одно не отменяет другого. Образ утверждает иерархию и одновременно даёт центральной фигуре понятный физический вес в занимаемом ею пространстве.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "30b3d64c-5a81-563f-b92d-a37a1871e622",
+      "title": "Поклонение волхвов",
+      "catalogueTitle": "Adoration of the Magi",
+      "artist": "Gentile da Fabriano",
+      "artists": [
+        {
+          "name": "Gentile da Fabriano",
+          "role": "primary",
+          "slug": "gentile-da-fabriano-q312393"
+        }
+      ],
+      "date": "1423",
+      "start": 1423,
+      "end": 1423,
+      "medium": "",
+      "accession": "8364",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1055117-6cecc69a33452396.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gentile_da_Fabriano_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg",
+      "credit": "Gentile da Fabriano. Adoration of the Magi. Image credit: Gentile da Fabriano. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1055117",
+      "description": "Прежде чем приблизиться к младенцу, процессия уже движется среди дальних холмов. Джентиле да Фабриано превращает разглядывание картины в следование по этому пути. У места прибытия тесно от нарядных одежд и лошадей, но пейзаж не даёт встрече замкнуться в отдельной церемониальной группе: посетители пришли из другого места.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "1fa6192d-d365-4962-8cc1-e0ffed975029",
+      "title": "Юдифь, обезглавливающая Олоферна",
+      "catalogueTitle": "Judith Beheading Holofernes",
+      "artist": "Artemisia Gentileschi",
+      "artists": [
+        {
+          "name": "Artemisia Gentileschi",
+          "role": "primary",
+          "slug": "artemisia-gentileschi"
+        }
+      ],
+      "date": "ок. 1620 г.",
+      "start": 1620,
+      "end": 1620,
+      "medium": "Холст, масло",
+      "accession": "1890 no. 1567",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/7c144e36-e815-4974-884f-784920828f4c-cf23bcc445ca0463.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Artemisia_Gentileschi_-_Giuditta_decapita_Oloferne_-_Google_Art_Project-Adjust.jpg",
+      "credit": "Artemisia Gentileschi, Judith Beheading Holofernes. Uffizi Galleries, Florence. Reproduction via Wikimedia Commons (PD-Art). Source reproduction has a levels adjustment. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.uffizi.it/en/artworks/judith-beheading-holofernes",
+      "description": "Прежде чем разделить фигуры, проследите за руками. Юдифь и её служанка выполняют разные действия, а перекрещённые конечности показывают, насколько необходимы обе женщины. Артемизия делает сопротивление и усилие видимыми через напряжённые, упирающиеся тела. Насилие объясняется не одним символом или выражением лица: у него есть трудная физическая последовательность.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "e31488c9-2221-55dc-85f7-63298aa8c8f2",
+      "title": "Мадонна Ручеллаи",
+      "catalogueTitle": "Madonna Rucellai",
+      "artist": "Duccio",
+      "artists": [
+        {
+          "name": "Duccio",
+          "role": "primary",
+          "slug": "duccio-q15792"
+        }
+      ],
+      "date": "1285",
+      "start": 1285,
+      "end": 1285,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e31488c9-2221-55dc-85f7-63298aa8c8f2-8d4ca58d7f067fdd.jpg",
+      "imageSource": "https://www.wikiart.org/en/duccio/madonna-rucellai-1285",
+      "credit": "Duccio. Madonna Rucellai. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/duccio/madonna-rucellai-1285",
+      "description": "Золотая кайма одеяния Марии проводит взгляд по большой синей форме. Изгибы подсказывают повороты тела, сохраняя торжественную ясность фигуры. Ангелы Дуччо поддерживают трон, а не находятся с сидящей на нём Марией в обычной комнате. Тонкость исполнения и подчёркнутая иерархия здесь принадлежат одному образу.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "3462883f-03ec-5f6d-84ca-e0409a62e593",
+      "title": "Поклонение волхвов",
+      "catalogueTitle": "Adoration of the Magi, central panel from the Altarpiece",
+      "artist": "Andrea Mantegna",
+      "artists": [
+        {
+          "name": "Andrea Mantegna",
+          "role": "primary",
+          "slug": "andrea-mantegna-q5681"
+        }
+      ],
+      "date": "1461",
+      "start": 1461,
+      "end": 1461,
+      "medium": "Темпера на доске",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/3462883f-03ec-5f6d-84ca-e0409a62e593-e98a3b283ad95de9.jpg",
+      "imageSource": "https://www.wikiart.org/en/andrea-mantegna/adoration-of-the-magi-central-panel-from-the-altarpiece",
+      "credit": "Adoration of the Magi, central panel from the Altarpiece. WikiArt; Andrea Mantegna. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/andrea-mantegna/adoration-of-the-magi-central-panel-from-the-altarpiece",
+      "description": "Скалистое раскрытие у Мантеньи оставляет прибывающим тесное место назначения. Чтобы приблизиться к Марии и младенцу, процессия должна преодолеть рельеф. Сравните её с многолюдным, роскошным прибытием у Джентиле: здесь композицию во многом организует скала. Она окружает встречу, а узкая дорога позади сохраняет ощущение пройденного расстояния.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "0aef3908-a5d6-55f0-ae38-85258ee4af29",
+      "title": "Весна",
+      "catalogueTitle": "The Spring",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "1478-1482",
+      "start": 1478,
+      "end": 1482,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0aef3908-a5d6-55f0-ae38-85258ee4af29-65096156ff485aca.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/primavera-1478",
+      "credit": "Sandro Botticelli. The Spring. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sandro-botticelli/primavera-1478",
+      "description": "Начните с разных видов движения: справа — преследование, в другой части — танец, в центре — относительная неподвижность. Боттичелли сохраняет обособленность групп, хотя повторяющиеся контуры связывают их под деревьями. Общий смысл картины остаётся предметом споров. Жесты дают более надёжную отправную точку, чем ключ, обещающий свести каждую фигуру к единственному окончательному объяснению.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "06bc03f1-8937-5053-b27a-5283c47740ed",
+      "title": "Баттиста Сфорца",
+      "catalogueTitle": "Portrait of Battista Sforza",
+      "artist": "Piero della Francesca",
+      "artists": [
+        {
+          "name": "Piero della Francesca",
+          "role": "primary",
+          "slug": "piero-della-francesca-q5822"
+        }
+      ],
+      "date": "1465",
+      "start": 1465,
+      "end": 1465,
+      "medium": "Темпера на доске",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/06bc03f1-8937-5053-b27a-5283c47740ed-2b53ac818adbbaa3.jpg",
+      "imageSource": "https://www.wikiart.org/en/piero-della-francesca/portrait-of-battista-sforza-1465",
+      "credit": "Portrait of Battista Sforza. WikiArt; Piero della Francesca. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piero-della-francesca/portrait-of-battista-sforza-1465",
+      "description": "Профиль исключает обмен взглядами, который предлагает Венера Тициана. Лицо Баттисты очерчено резко, а пейзаж за ним продолжается далеко за пределами ближайшего пространства модели. Пьеро превращает неподвижность в форму публичного представления. Драгоценности и узорный лиф обозначают статус, но композиционную властность портрету придаёт непреклонный контур.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "5632475d-e9d4-5ba9-909a-3a1e8f1306ac",
+      "title": "Битва при Сан-Романо: низвержение Бернардино делла Чарда",
+      "catalogueTitle": "Victory over Bernardino della Ciarda",
+      "artist": "Paolo Uccello",
+      "artists": [
+        {
+          "name": "Paolo Uccello",
+          "role": "primary",
+          "slug": "paolo-uccello-q192488"
+        }
+      ],
+      "date": "1438",
+      "start": 1438,
+      "end": 1438,
+      "medium": "Темпера на дереве",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5632475d-e9d4-5ba9-909a-3a1e8f1306ac-330178ba3fb6e56d.jpg",
+      "imageSource": "https://www.wikiart.org/en/paolo-uccello/victory-over-bernardino-della-ciarda-1438",
+      "credit": "Victory over Bernardino della Ciarda. WikiArt; Paolo Uccello. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paolo-uccello/victory-over-bernardino-della-ciarda-1438",
+      "description": "Упавшее оружие расчленяет землю под сталкивающимися лошадьми. Его чёткие направления позволяют измерить пространство, участники которого погружены в жестокий беспорядок. Уччелло сохраняет обе системы: битву как смешение тел и картину как расположение линий. Упорядоченность поверхности нисколько не смягчает жестокость происходящего.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "d91a6cc2-b6e5-5279-aa19-7a612109c45f",
+      "title": "Сила",
+      "catalogueTitle": "Fortitude",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "ок. 1470 г.",
+      "start": 1470,
+      "end": 1470,
+      "medium": "Темпера на доске",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/d91a6cc2-b6e5-5279-aa19-7a612109c45f-749bf6ca4769b329.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/fortitude-1470-1",
+      "credit": "Sandro Botticelli. Fortitude. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/sandro-botticelli/fortitude-1470-1",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sandro-botticelli/fortitude-1470-1",
+      "description": "Боттичелли даёт добродетели сиденье, доспехи и сдержанный жест. Силе не требуется поражать противника, чтобы доказать своё качество. Опёртое тело и крепкий захват передают его через готовность, а не через действие. Широкая красная ткань создаёт поверхность другого рода, на фоне которой отчётливее ощущается твёрдость брони.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "75af8da9-590d-5107-836e-f734c82e0e44",
+      "title": "Мадонна с младенцем и двумя ангелами",
+      "catalogueTitle": "Madonna and Child",
+      "artist": "Filippo Lippi",
+      "artists": [
+        {
+          "name": "Filippo Lippi",
+          "role": "primary",
+          "slug": "filippo-lippi-q205148"
+        }
+      ],
+      "date": "ок. 1460–1465",
+      "start": 1460,
+      "end": 1465,
+      "medium": "",
+      "accession": "1598",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1055111-ee59bcfd4b3e76c2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Madonna_and_Child_with_two_Angels_(by_Filippo_Lippi)_%E2%80%93_Galleria_degli_Uffizi,_Florence.jpg",
+      "credit": "Filippo Lippi. Madonna and Child. Image credit: Filippo Lippi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1055111",
+      "description": "Один ангел отворачивается от молитвенного общения и улыбается за пределы картины. Это небольшое отклонение меняет отношения группы со зрителем. Руки Марии остаются сложенными, младенца по-прежнему поддерживают, священное построение сохраняется. И всё же Филиппо Липпи оставляет в нём место, где обычный, общительный взгляд пересекает границу изображения.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "01c8259f-ffe6-5ff4-b57b-a5e81aa2b46e",
+      "title": "Гавань с виллой Медичи",
+      "catalogueTitle": "Harbour with Villa Medici",
+      "artist": "Claude Lorrain",
+      "artists": [
+        {
+          "name": "Claude Lorrain",
+          "role": "primary",
+          "slug": "claude-lorrain-q214074"
+        }
+      ],
+      "date": "1637",
+      "start": 1637,
+      "end": 1637,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/01c8259f-ffe6-5ff4-b57b-a5e81aa2b46e-6efd7625cb3f6259.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-lorrain/harbour-with-villa-medici-1637",
+      "credit": "Claude Lorrain. Harbour with Villa Medici. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/claude-lorrain/harbour-with-villa-medici-1637",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/claude-lorrain/harbour-with-villa-medici-1637",
+      "description": "Здания и корабли обладают весомыми формами, но их расположение открывает проход к свету гавани. Маленькие работники на переднем плане Клода задают человеческий масштаб, не завладевая всей сценой. В этом воображаемом порту отношения фигур и мира перевёрнуты: люди находятся в пространстве, организованном прежде всего вокруг дали, а не вокруг них самих.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "891c16aa-aa9e-50d9-bc45-c9d60eae537b",
+      "title": "Лукреция Панчатичи",
+      "catalogueTitle": "Lucrezia Panciatichi",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "1540",
+      "start": 1540,
+      "end": 1540,
+      "medium": "Масло, дерево",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/891c16aa-aa9e-50d9-bc45-c9d60eae537b-e3696dd30685b44f.jpg",
+      "imageSource": "https://www.wikiart.org/en/agnolo-bronzino/lucrezia-panciatichi-1540",
+      "credit": "Bronzino. Lucrezia Panciatichi. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/agnolo-bronzino/lucrezia-panciatichi-1540",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/agnolo-bronzino/lucrezia-panciatichi-1540",
+      "description": "Книга даёт руке опору; украшения и тёмная отделка разделяют широкое поле красного атласа. Бронзино распределяет эти подробности вокруг удивительно неподвижного лица. Общественный облик читается через тщательно организованные поверхности. Портрет свидетельствует об одежде и манере держаться, но не открывает неограниченного доступа к личному характеру модели.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "d26f1312-0d41-52dd-880e-b554eb2c4eb4",
+      "title": "Мадонна с младенцем и святыми Дионисием, Домиником, Климентом и Фомой Аквинским",
+      "catalogueTitle": "Madonna and Child enthroned with St. Dionysius, Aeropagita, Domenic, Clement and Thomas Aquinas",
+      "artist": "Domenico Ghirlandaio",
+      "artists": [
+        {
+          "name": "Domenico Ghirlandaio",
+          "role": "primary",
+          "slug": "domenico-ghirlandaio-q191423"
+        }
+      ],
+      "date": "1486",
+      "start": 1486,
+      "end": 1486,
+      "medium": "Масло, дерево",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/d26f1312-0d41-52dd-880e-b554eb2c4eb4-92e4faf5a945cc29.jpg",
+      "imageSource": "https://www.wikiart.org/en/domenico-ghirlandaio/madonna-and-child-enthroned-with-st-dionysius-aeropagita-domenic-clement-and-thomas-aquinas",
+      "credit": "Madonna and Child enthroned with St. Dionysius, Aeropagita, Domenic, Clement and Thomas Aquinas. WikiArt; Domenico Ghirlandaio. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/domenico-ghirlandaio/madonna-and-child-enthroned-with-st-dionysius-aeropagita-domenic-clement-and-thomas-aquinas",
+      "description": "Архитектурная ниша создаёт общий центр для святых, не требуя от них одинаковых поз. У Гирландайо стоящие и коленопреклонённые фигуры оказываются на разной высоте, а пол и арки удерживают собрание вместе. Пространство выполняет важную задачу: отдельные фигуры становятся обитателями единого места, а не рядом обособленных священных портретов.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "57d9f520-e750-554b-a769-9d8f233eae63",
+      "title": "Мадонна с младенцем и шестью святыми",
+      "catalogueTitle": "Madonna and Child with Six Saints",
+      "artist": "Sandro Botticelli",
+      "artists": [
+        {
+          "name": "Sandro Botticelli",
+          "role": "primary",
+          "slug": "sandro-botticelli-q5669"
+        }
+      ],
+      "date": "ок. 1470 г.",
+      "start": 1470,
+      "end": 1470,
+      "medium": "Темпера",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/57d9f520-e750-554b-a769-9d8f233eae63-2ba33e220fb76273.jpg",
+      "imageSource": "https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-six-saints",
+      "credit": "Sandro Botticelli. Madonna and Child with Six Saints. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-six-saints",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/sandro-botticelli/madonna-and-child-with-six-saints",
+      "description": "Коленопреклонённые святые занимают ближнюю часть узорного пола. Через них взгляд приближается к возвышающимся Богоматери и младенцу, а затем, следуя поворотам голов, переходит от одной фигуры к другой. Боттичелли выстраивает священное собрание небольшими изменениями поз. Сравните их с более заметными движениями «Весны»: даже неподвижная поза может определять построение картины.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "91c045c4-17d7-5e59-859a-241ebf04b7d3",
+      "title": "Мадонна с младенцем, Иоанном Крестителем и святым Себастьяном",
+      "catalogueTitle": "Madonna and Child with St. John the Baptist and St. Sebastian",
+      "artist": "Pietro Perugino",
+      "artists": [
+        {
+          "name": "Pietro Perugino",
+          "role": "primary",
+          "slug": "pietro-perugino-q5827"
+        }
+      ],
+      "date": "1493",
+      "start": 1493,
+      "end": 1493,
+      "medium": "Масло, дерево",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/91c045c4-17d7-5e59-859a-241ebf04b7d3-946882e6bb0ad049.jpg",
+      "imageSource": "https://www.wikiart.org/en/pietro-perugino/madonna-and-child-with-st-john-the-baptist-and-st-sebastian-1493",
+      "credit": "Madonna and Child with St. John the Baptist and St. Sebastian. WikiArt; Pietro Perugino. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pietro-perugino/madonna-and-child-with-st-john-the-baptist-and-st-sebastian-1493",
+      "description": "Святые стоят поодаль друг от друга, и вокруг тел остаются свободные промежутки. Перуджино делает эти пустоты столь же ясными, как сами фигуры. Повторяющиеся арки подчёркивают разделение, но не распадаются вместе с группой на несвязанные части. Там, где другие алтарные образы собирают внимание толпой, здесь каждому присутствующему отведено место, а путь к Марии остаётся открытым.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    },
+    {
+      "id": "a7a2b946-5c81-52e5-8a1b-c0a0974d2312",
+      "title": "Мадонна с длинной шеей",
+      "catalogueTitle": "Madonna with the Long Neck",
+      "artist": "Parmigianino",
+      "artists": [
+        {
+          "name": "Parmigianino",
+          "role": "primary",
+          "slug": "parmigianino-q9348"
+        }
+      ],
+      "date": "1534 - 1540",
+      "start": 1534,
+      "end": 1540,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/a7a2b946-5c81-52e5-8a1b-c0a0974d2312-df36a43b18560bc2.jpg",
+      "imageSource": "https://www.wikiart.org/en/parmigianino/madonna-with-the-long-neck-1540",
+      "credit": "Parmigianino. Madonna with the Long Neck. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/parmigianino/madonna-with-the-long-neck-1540",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/parmigianino/madonna-with-the-long-neck-1540",
+      "description": "Теснящиеся ангелы и открытое пространство у колонны нарушают равномерность распределения. Вытянутая шея Марии, длинные пальцы и необычные пропорции младенца продолжают этот дисбаланс в самих телах. Пармиджанино не предлагает единого удобного масштаба для согласования деталей. После размеренных промежутков Перуджино картина показывает значение устойчивых пропорций именно тем, что лишает нас их.",
+      "importance": "",
+      "museum": "Uffizi Galleries"
+    }
+  ],
+  "context": {
+    "start": 1285,
+    "end": 1637
+  },
+  "closingSections": [
+    {
+      "title": "Выберите сравнение, а не список",
+      "paragraphs": [
+        "Попробуйте проследить одну задачу в трёх произведениях: как держит рука, как одежда описывает тело или как трон создаёт дистанцию. Эта подборка не является маршрутом по залам. Если вы планируете посещение ради конкретной картины, сначала проверьте актуальные объявления Уффици и сведения о её экспонировании."
+      ]
+    }
+  ]
+}

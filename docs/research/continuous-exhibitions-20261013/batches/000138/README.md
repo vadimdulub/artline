@@ -1,0 +1,11 @@
+# Batch138 — NGI8400 exact documentary-entry reconciliation
+
+Added one review main-catalogue painting, Harvesters at Rest (1888), native8400/accessionNGI.4255, and linked one previously unlinked entry in the Irish Impressionists1984–1985 tour. Existing artist Lhermitte, museum and source records were reused. The established artist participation link is unchanged and not counted again. One existing documentary entry was enriched; no documentary entry was created. No images were selected or downloaded. The1886 preparatory drawing is a separate object.
+
+A58-candidate duplicate audit covered the canonical creator, unlinked labels, title variants, accession and exact museum source/native identifiers. Chicago, Met and Toledo paintings and similarly titled works by other artists remain distinct. Official metadata and1950 presentation/provenance support the collection holding independently of exhibition participation; current display and exhibition lenders are not inferred.
+
+The pinned plan d0834f2b3fdd76d58935a6db6a8ca69ae08f47cee102e55aed7995e13c31ec6c is persisted in the artwork citation, holding evidence, entry reconciliation and six operation audit records. Null artwork preimages and the previously unlinked entry were saved under both ingestion locks after target verification. Schema and scoped rows are backed up outside Documents. Independent DB/public API checks and an actual no-op replay verified attribution and recovery. Other exhibition rows, venue scope, creator labels, dates, participant links and review states remain unchanged. The checklist remains partial.
+
+Two new NGI captures record pending8163 (tour-level1909 study) and8817 (Dublin-only,c.1885) evidence. Only the NGI queue row was changed; unrelated sources and access holds compare equal. The external supervisor and sole worker were verified; no new supervisor, schedule, deployment, local database write or artwork-programme change occurred.
+
+Next: Reconcile the captured NGI objects8163/NGI.4038 (1909 preparatory study; tour-level history) and8817/NGI.4641 (c.1885; Dublin-only history) against existing main works before adding exhibition connections. Use batch138 captures; do not conflate the O’Conor study with the private-collection finished painting. NGI8400 is completed; retain image-rights and provider access holds.

@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "smithsonian-american-art",
+  "museum": "Smithsonian American Art Museum",
+  "city": "ワシントンD.C.",
+  "country": "米国",
+  "title": "スミソニアン・アメリカ美術館：名作",
+  "subtitle": "よく観察された画像と、一つの人生の完全な説明とを区別する20作品。",
+  "introduction": "ホッパーの女性は画面の外へ身を乗り出す。何に注目しているかは不明だと、美術館の解説も認めている。ローレンスの図書館は、見ることと読むことに共通の公共空間を与える。カトリンの肖像と儀式の場面には別の問いがある。外部の人が作った画像は、描かれた人々についてどれだけ伝えられるのか。\n\nこの選集では、視線を画面上の配置として、また社会的な関係として考える。名前のある人を一般的な分類の中に消してはならず、小さな描かれた人物が共同体全体を代表できるわけでもない。風景と静物にも同じ問いが及ぶ。一見直接的な観察であっても、距離、選択、何を中心に置くかという判断によって形が決まる。",
+  "visitNote": "これらは所蔵品の一部です。ご来館を計画される際は、特に紙の作品や借用作品について、美術館の最新の情報を事前にご確認ください。ここに展示されているモランのイエローストーンを描いた作品は1893年から1901年にかけて制作されたものであり、1872年に描かれた別の作品ではありません。",
+  "locale": "ja",
+  "website": "https://americanart.si.edu/",
+  "officialGuide": "https://americanart.si.edu/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "無料で読む · 英語",
+      "note": "トーンと構成に関するスピードの論考は、これらの絵画を考察する上で実践的な問いを投げかけています。すなわち、最も強い光はどこにあるのか、どの輪郭がはっきりと保たれているのか、そして背景が変わるとポーズはどのように変化して見えるのか、といった点です。"
+    }
+  ],
+  "works": [
+    {
+      "id": "66c9832d-30e4-5ea0-b40d-bea74729dc53",
+      "title": "ケープコッドの朝",
+      "catalogueTitle": "Cape Cod Morning",
+      "artist": "Edward Hopper",
+      "artists": [
+        {
+          "name": "Edward Hopper",
+          "role": "primary",
+          "slug": "edward-hopper-q203401"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/66c9832d-30e4-5ea0-b40d-bea74729dc53-6523ef78f486f77b.jpg",
+      "imageSource": "https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "credit": "Edward Hopper. Cape Cod Morning. WikiArt source label: Edward Hopper Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "license": "Edward Hopper Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "description": "女性の前傾は注視していることを明らかにするが、その原因は枠の外にある。ホッパーは張り出す窓を明るい風景から分け、彼女が見ている光景を私たちには渡さない。この限界を守っておきたい。何かを待つ姿勢に見えても、訪問者を待つことや特定の出来事を恐れることの証明にはならない。確かに示されているのは、見る身体である。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "5cfb22a6-0423-5b50-a00d-d90a227e481b",
+      "title": "農家の台所",
+      "catalogueTitle": "The Farmer's Kitchen",
+      "artist": "Ivan Albright",
+      "artists": [
+        {
+          "name": "Ivan Albright",
+          "role": "primary",
+          "slug": "ivan-albright-nga-45"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/5cfb22a6-0423-5b50-a00d-d90a227e481b-f91d697aa5610086.jpg",
+      "imageSource": "https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "credit": "Ivan Albright. The Farmer's Kitchen. WikiArt source label: Ivan Albright Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "license": "Ivan Albright Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "description": "オルブライトは家事を、漠然とした家庭の温かさへ丸め込まない。女性の皮膚、野菜、使い込まれた台所の面が、どれも執拗に細かく描かれる。年月と使用の跡は顔だけでなく、場所全体に及ぶ。積み重なった印によって、労働は室内で行われる動作だけでなく、室内そのものに刻まれた条件になる。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "11715cfb-0174-574f-bdb1-bef0e05cddf6",
+      "title": "図書館",
+      "catalogueTitle": "The Library",
+      "artist": "Jacob Lawrence",
+      "artists": [
+        {
+          "name": "Jacob Lawrence",
+          "role": "primary",
+          "slug": "jacob-lawrence-nga-1468"
+        }
+      ],
+      "date": "1960",
+      "start": 1960,
+      "end": 1960,
+      "medium": "板にテンペラ",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/11715cfb-0174-574f-bdb1-bef0e05cddf6-3e3eb6c5dab9105b.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "credit": "Jacob Lawrence. The Library. WikiArt source label: Jacob Lawrence Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "license": "Jacob Lawrence Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "description": "ローレンスはテーブルの周りに読書する人々を集めるが、特別な一人を中心には選ばない。繰り返す形が書架、家具、身体をつなぎ、姿勢の違いが各人を区別する。読書は共通の場所と蔵書を利用する行為として描かれる。簡潔な色面はその共同の仕組みをつかみやすくしながら、一人一人の集中を消してしまわない。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "d6ce6f8c-8300-41ca-b551-6e1f0b214146",
+      "title": "オーロラ",
+      "catalogueTitle": "Aurora Borealis",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "キャンバスに油彩",
+      "accession": "1911.4.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e350251d-51a6-47bc-815b-81788e74e8c9-134204af72bea33e.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=4806",
+      "credit": "Frederic Edwin Church. Aurora Borealis. Frederic Edwin Church; Smithsonian American Art Museum, Gift of Eleanor Blodgett. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=4806",
+      "description": "極光の下の小さな船が、人の尺度を与える。チャーチの空はこの旅の印を圧倒するほど広く、下では氷と山が闇を区切る。航海は存在するが、詳しい冒険譚にはならない。その大きさだけで、広大な風景の中の人間の試みが、いかに無防備に見えるかが伝わる。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "1f0e1d6f-516c-535c-bd23-4ae8e696044c",
+      "title": "イエローストーンのグランド・キャニオン",
+      "catalogueTitle": "The Grand Canyon of the Yellowstone",
+      "artist": "Thomas Moran",
+      "artists": [
+        {
+          "name": "Thomas Moran",
+          "role": "primary",
+          "slug": "thomas-moran-nga-1730"
+        }
+      ],
+      "date": "1893-1901",
+      "start": 1893,
+      "end": 1901,
+      "medium": "キャンバスに油彩",
+      "accession": "1928.7.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/1f0e1d6f-516c-535c-bd23-4ae8e696044c-7b6e30af6a636547.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=17831",
+      "credit": "Thomas Moran. The Grand Canyon of the Yellowstone. Thomas Moran; Smithsonian American Art Museum, Gift of George D. Pratt. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=17831",
+      "description": "手前の人物は峡谷を測る一つの目安で、はるか下の水はもう一つの目安だ。モランは近い岩と草木を巨大な俯瞰につなぎ、その間の崖を光の変化で分ける。この壮観は、見る人のために注意深く構成されている。広いからといって、どのように風景を見せるかという選択がないわけではない。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "7d0563c0-4909-43f9-af08-af8348e308f8",
+      "title": "私が後に残してきた娘",
+      "catalogueTitle": "The Girl I Left Behind Me",
+      "artist": "Eastman Johnson",
+      "artists": [
+        {
+          "name": "Eastman Johnson",
+          "role": "primary",
+          "slug": "eastman-johnson-nga-1423"
+        }
+      ],
+      "date": "1872年頃",
+      "start": 1872,
+      "end": 1872,
+      "medium": "キャンバスに油彩",
+      "accession": "1986.79",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/eaa2899b-959d-415d-9f15-d4ae17e8f4b4-c739d7a808e88788.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11492",
+      "credit": "Eastman Johnson. The Girl I Left Behind Me. Eastman Johnson; Smithsonian American Art Museum, Museum purchase made possible in part by Mrs. Alexander Hamilton Rice in memory of her husband and by Ralph Cross Johnson. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11492",
+      "description": "本は身体にしっかり抱えられ、髪と服は風に反応する。ジョンソンは、立つ若い女性の姿勢を、その周囲で動く力と対比した。題名は別離を読み込ませるが、不在の人や場所を絵は特定しない。動かずに踏みとどまることと風に打たれることとの目に見える対立だけで、物語を完結させずとも場面は成り立つ。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "8a0f28fc-0e5d-45e9-a46e-08cb0678e201",
+      "title": "かつての女主人の訪問",
+      "catalogueTitle": "A Visit from the Old Mistress",
+      "artist": "Winslow Homer",
+      "artists": [
+        {
+          "name": "Winslow Homer",
+          "role": "primary",
+          "slug": "winslow-homer-q344838"
+        }
+      ],
+      "date": "1876",
+      "start": 1876,
+      "end": 1876,
+      "medium": "キャンバスに油彩",
+      "accession": "1909.7.28",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/2e87bc69-4d55-4c1b-8bc5-37708e93a831-921852f5a44636a1.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=10737",
+      "credit": "Winslow Homer. A Visit from the Old Mistress. Winslow Homer; Smithsonian American Art Museum, Gift of William T. Evans. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=10737",
+      "description": "訪ねて来たのは、かつて女性たちを奴隷として所有していた側である。黒人女性たちがその家へ戻ったのではない。ホーマーの題名はその点で重要だ。美術館は、一人が座ったままで、奴隷制の下で強要されていた敬意を示していないと説明する。空間と姿勢は解放後の変化を記すが、同室にいるだけで不平等な過去が消えたとは示さない。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "9d773dfa-81b1-4bb4-9f5b-5fcd6a126f1d",
+      "title": "主は私の羊飼い",
+      "catalogueTitle": "The Lord Is My Shepherd",
+      "artist": "Eastman Johnson",
+      "artists": [
+        {
+          "name": "Eastman Johnson",
+          "role": "primary",
+          "slug": "eastman-johnson-nga-1423"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "ファイバーボードに油彩",
+      "accession": "1979.5.13",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/7eb89ed6-f767-4478-aab2-6444be215a8b-de9182fc6b2c93cb.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11494",
+      "credit": "Eastman Johnson. The Lord Is My Shepherd. Eastman Johnson; Smithsonian American Art Museum, Gift of Mrs. Francis P. Garvan, Transfer from the National Museum of American History, Smithsonian Institution. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11494",
+      "description": "光が開いた本を男性の手と顔につなぎ、読むという身体の行為へ焦点を絞る。ジョンソンは南北戦争中の1863年に描いた。その時代を踏まえると、読書は単なる一般的な思索の象徴ではない。自由と教育へのアクセスが激しく争われていた時に、一人の黒人の読者へ長く目を向けた画像なのである。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3fc12022-f07a-4b45-bb30-a71bf5a5360d",
+      "title": "兄弟",
+      "catalogueTitle": "Brothers",
+      "artist": "Malvin Gray Johnson",
+      "artists": [
+        {
+          "name": "Malvin Gray Johnson",
+          "role": "primary",
+          "slug": "malvin-gray-johnson-round6-27f0a50e2037"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "キャンバスに油彩",
+      "accession": "1967.57.29",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/affcc9ce-9024-4710-b9ac-caeb0720d3af-ae5c7584e22413ba.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11518",
+      "credit": "Malvin Gray Johnson. Brothers. Malvin Gray Johnson; Smithsonian American Art Museum, Gift of the Harmon Foundation. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11518",
+      "description": "似た帽子とオーバーオールで、少年たちは初め揃いの二人に見えるかもしれない。マルヴィン・グレイ・ジョンソンは柵のそばに座る姿を、姿勢と表情で描き分けた。題名は関係を示すが、二人を交換可能にはしない。小さな差を探すことで、農村の背景が二人の具体的な人物を、匿名の田舎暮らしの挿絵へ変えてしまうのを避けられる。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "ed3b4cd2-ddd5-4b30-9a98-1b28406181e0",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Malvin Gray Johnson",
+      "artists": [
+        {
+          "name": "Malvin Gray Johnson",
+          "role": "primary",
+          "slug": "malvin-gray-johnson-round6-27f0a50e2037"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "キャンバスに油彩",
+      "accession": "1967.57.30",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/20703f5c-009e-4c52-82a5-2a4ef804c6cd-35139d1c6896ebe0.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11519",
+      "credit": "Malvin Gray Johnson. Self-Portrait. Malvin Gray Johnson; Smithsonian American Art Museum, Gift of the Harmon Foundation. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11519",
+      "description": "ジョンソンは自身の横にパレットと筆を置き、周囲に絵と彫られた形を配した。アトリエは装飾的な背景ではなく、働く者としての身元を示す。彼は制作し、使い、研究する物の間にいる。そのため、これは芸術家として自ら選び取る力の主張とも読める。描かれた人は、同時に表現を選び、生み出す人でもある。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3453fabc-19f3-461b-b33f-175416c7697e",
+      "title": "エリザベス・ウィンスロップ・チャンラー",
+      "catalogueTitle": "Elizabeth Winthrop Chanler (Mrs. John Jay Chapman)",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "キャンバスに油彩",
+      "accession": "1980.71",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/a2b812d3-f006-4e1f-bed4-bfbda94b47c2-2015dbed6f7b2273.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=21621",
+      "credit": "John Singer Sargent. Elizabeth Winthrop Chanler (Mrs. John Jay Chapman). John Singer Sargent; Smithsonian American Art Museum, Gift of Chanler A. Chapman. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=21621",
+      "description": "模様のある調度は手の込んだ社会的な環境を示すが、サージェントは明るい顔と手を周囲から分ける。保たれた姿勢は、高価な素材の一覧以上に、この対面を重要にする。装飾は見え続けるが、人物のすべてを説明しない。部屋の中身だけでなく、その部屋を占める一人に目を向けるよう求める肖像である。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3fd02b6b-918c-4761-9dc1-6651058c0d8d",
+      "title": "母：アニー・ウィリアムズ・ガンディ",
+      "catalogueTitle": "Mother (Annie Williams Gandy)",
+      "artist": "Thomas Eakins",
+      "artists": [
+        {
+          "name": "Thomas Eakins",
+          "role": "primary",
+          "slug": "thomas-eakins-q214905"
+        }
+      ],
+      "date": "1903年頃",
+      "start": 1903,
+      "end": 1903,
+      "medium": "キャンバスに油彩",
+      "accession": "1961.11.12",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e75187a4-224f-44af-a3bf-9f10b10457d7-ee4ec6129f54313a.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=7710",
+      "credit": "Thomas Eakins. Mother (Annie Williams Gandy). Thomas Eakins; Smithsonian American Art Museum, Bequest of Mrs. Lucy G. Rodman through her sister Miss Helen W. Gandy. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=7710",
+      "description": "題名の名前によって、「母」は完全に匿名の役割にはならない。イーキンズは抑えた色調の差で、暗い衣服から顔と手を浮かび上がらせた。座る存在と競うものは、周囲にほとんどない。母性について感傷的にまとめる必要はない。この女性の姿勢と外見だけで、画面は十分に満たされている。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "19c56141-a406-4ecc-bcba-5e5910749288",
+      "title": "メロンとアサガオ",
+      "catalogueTitle": "Melons and Morning Glories",
+      "artist": "Raphaelle Peale",
+      "artists": [
+        {
+          "name": "Raphaelle Peale",
+          "role": "primary",
+          "slug": "raphaelle-peale-nga-23551"
+        }
+      ],
+      "date": "1813",
+      "start": 1813,
+      "end": 1813,
+      "medium": "キャンバスに油彩",
+      "accession": "1967.39.2",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/60992f65-57ae-42f9-9f17-7963d231a03e-0064d463742e6544.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=19311",
+      "credit": "Raphaelle Peale. Melons and Morning Glories. Raphaelle Peale; Smithsonian American Art Museum, Gift of Paul Mellon. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=19311",
+      "description": "切ったメロンは、丸ごとの果実が内側に保つ種、果肉、皮と内部の関係を明かす。ピールはその違いを、闇を背景に曲がる茎や花の隣へ置いた。切ることは、観察からわかることを変える。この静物は心地よい配置以上のものを提供する。外側と内部の構造を一緒に考えられるからだ。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "8c1efaaa-2989-5b27-996a-3703e2b474f9",
+      "title": "老いた矢作り職人",
+      "catalogueTitle": "Old Arrow Maker",
+      "artist": "Edmonia Lewis",
+      "artists": [
+        {
+          "name": "Edmonia Lewis",
+          "role": "primary",
+          "slug": "wikiart-artist-edmonia-lewis"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8c1efaaa-2989-5b27-996a-3703e2b474f9-5f50e60c5e68199c.jpg",
+      "imageSource": "https://www.wikiart.org/en/edmonia-lewis/old-arrow-maker-1872",
+      "credit": "Edmonia Lewis. Old Arrow Maker. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edmonia-lewis/old-arrow-maker-1872",
+      "description": "座る男の仕事が、その手と身体を隣の若い女性へ関係づける。ルイスは文学上の主題に、大理石の人物群という触れられる形を与えた。見かけの具体性を先住民の生活の直接取材の証明とせず、解釈として読むべき彫刻だ。人物の配置は芸術上の選択の証拠であり、共同体についての完全な説明ではない。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "0c7fc12a-e8bd-4480-bdd4-57b0256a287b",
+      "title": "花嫁",
+      "catalogueTitle": "A Bride",
+      "artist": "Abbott Handerson Thayer",
+      "artists": [
+        {
+          "name": "Abbott Handerson Thayer",
+          "role": "primary",
+          "slug": "abbott-handerson-thayer-nga-38660"
+        }
+      ],
+      "date": "1895年頃",
+      "start": 1895,
+      "end": 1895,
+      "medium": "キャンバスに油彩",
+      "accession": "1929.6.111",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/eb863a50-296e-452c-a6c0-c8fc53d85865-e7f35ff7d0e3d80f.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=23925",
+      "credit": "Abbott Handerson Thayer. A Bride. Abbott Handerson Thayer; Smithsonian American Art Museum, Gift of John Gellatly. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=23925",
+      "description": "白い衣服は明るい周囲へ近づき、顔と暗い髪は区別されたまま残る。セイヤーは立つ人物の各部で、明確に描く程度を変えた。ドレスと光がほぼ溶け合う場所でも、身体の存在は保たれる。題名は役割を与えるが、描き方は別の問いを開く。どこまで曖昧にしても、なお一人の姿として認められるだろうか。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "5ec4f45b-fd21-4786-8ff2-632534f980ef",
+      "title": "目の不自由なスペイン人歌手",
+      "catalogueTitle": "Blind Spanish Singer",
+      "artist": "Robert Henri",
+      "artists": [
+        {
+          "name": "Robert Henri",
+          "role": "primary",
+          "slug": "robert-henri-nga-1391"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "キャンバスに油彩",
+      "accession": "1967.41",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/13496c71-12cb-40f2-a447-ecd0e4832695-df4e531832a0089e.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=10301",
+      "credit": "Robert Henri. Blind Spanish Singer. Robert Henri; Smithsonian American Art Museum, Gift of Mr. J.H. Smith. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=10301",
+      "description": "ギターが、手と座った身体に実際的な関係を与える。ヘンライは詳しい演奏会場を設けず、暗い環境からシャツ、顔、楽器を浮かび上がらせた。題名は視覚障害を示すが、絵は仕事をする音楽家も描いている。その仕事に注目すれば、身体の状態だけが人物を説明する唯一のものになるのを避けられる。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "7d1be2bb-22eb-4ecc-bd3f-cf45974112ac",
+      "title": "チョクトーの女性",
+      "catalogueTitle": "A Choctaw Woman",
+      "artist": "George Catlin",
+      "artists": [
+        {
+          "name": "George Catlin",
+          "role": "primary",
+          "slug": "george-catlin-nga-1113"
+        }
+      ],
+      "date": "1834",
+      "start": 1834,
+      "end": 1834,
+      "medium": "キャンバスに油彩",
+      "accession": "1985.66.297",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e462cf7a-e0c1-42b0-8e1a-088f646197b3-4c5ed8a441d86938.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=3997",
+      "credit": "George Catlin. A Choctaw Woman. George Catlin; Smithsonian American Art Museum, Gift of Mrs. Joseph Harrison, Jr.. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=3997",
+      "description": "横顔と開いた背景により、衣服や装身具が見分けやすい。カトリンは、女性の共同体の外にいる観客のために、それらの見える特徴を選んだ。歴史の資料として有用ではあるが、本人が自らを語ったものとは同じでない。何を残し、誰の選択で見せられているかの両方を認めることが、この肖像の個別性を尊重することになる。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "99a627a8-ca5b-44fb-b2de-ca3cb315c5b5",
+      "title": "馬を贈る儀式（Smoking Horses）",
+      "catalogueTitle": "\"Smoking Horses,\" a Curious Custom of the Sauk and Fox",
+      "artist": "George Catlin",
+      "artists": [
+        {
+          "name": "George Catlin",
+          "role": "primary",
+          "slug": "george-catlin-nga-1113"
+        }
+      ],
+      "date": "1835-1836",
+      "start": 1835,
+      "end": 1836,
+      "medium": "キャンバスに油彩",
+      "accession": "1985.66.463",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/3ffcaacd-1603-4556-805a-bbd897b877ea-e929dec117c1582f.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=4378",
+      "credit": "George Catlin. \"Smoking Horses,\" a Curious Custom of the Sauk and Fox. George Catlin; Smithsonian American Art Museum, Gift of Mrs. Joseph Harrison, Jr.. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=4378",
+      "description": "開いた円形の配置によって、外部の観察者は人と馬を一度に見渡せる。カトリンの間隔の取り方は集まりを明瞭にする一方、個々の参加者の立場から鑑賞者を遠ざける。見える配置だけでは、まだ儀式を説明したことにはならない。その意味には、描かれた身体の分布だけでは得られない先住民の知識と歴史的な文脈が必要である。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "d1fc9c9d-f729-4f8d-872f-bf69b450eda4",
+      "title": "ビタールート（レウィシア）",
+      "catalogueTitle": "Bitterroot (Lewisia redivivia)",
+      "artist": "Mary Vaux Walcott",
+      "artists": [
+        {
+          "name": "Mary Vaux Walcott",
+          "role": "primary",
+          "slug": "mary-vaux-walcott-round6-e5a8f3572970"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "紙に水彩",
+      "accession": "1970.355.196",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/be378fcb-e7e0-4525-a6d9-1353d094dd50-a9da892d09d5ddbe.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=25876",
+      "credit": "Mary Vaux Walcott. Bitterroot (Lewisia redivivia). Mary Vaux Walcott; Smithsonian American Art Museum, Gift of the artist. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=25876",
+      "description": "ウォルコットは、ほとんど塗られていない紙の上に蕾、開花した花、細い葉を分けて置く。周囲に生える植物と競わず、小さな構造を研究できる間隔だ。この明瞭さは配置がないことではなく、配置の一形式である。周囲を取り除くことで、広い眺めでは調べにくい差を明らかにできることを、植物画は示している。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "4337d75d-6904-4a79-8b2b-42da516cbc5c",
+      "title": "肖像画のある室内",
+      "catalogueTitle": "Interior with Portraits",
+      "artist": "Thomas Le Clear",
+      "artists": [
+        {
+          "name": "Thomas Le Clear",
+          "role": "primary",
+          "slug": "thomas-le-clear-round6-bb7390496ffc"
+        }
+      ],
+      "date": "1865年頃",
+      "start": 1865,
+      "end": 1865,
+      "medium": "キャンバスに油彩",
+      "accession": "1993.6",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/36376cea-604b-4266-aabc-dd75fbf5cdd1-e959f4779198017b.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=33492",
+      "credit": "Thomas Le Clear. Interior with Portraits. Thomas Le Clear; Smithsonian American Art Museum, Museum purchase made possible by the Pauline Edwards Bequest. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=33492",
+      "description": "写真家は機材の下で身体をかがめ、子どもたちはポーズを保つ。ル・クリアは、肖像が何の助けもなく生まれたかのように見せず、装置とスタジオの他の画像も含めた。肖像を作ることが、目に見える活動になる。描かれる人々とともに、表現が作られる条件へも目を向ける絵である。",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    }
+  ],
+  "context": {
+    "start": 1813,
+    "end": 1960
+  },
+  "closingSections": [
+    {
+      "title": "画像の限界を消さずに使う",
+      "paragraphs": [
+        "肖像は誰かが選んだ外見を残し、風景はどこかからの眺めを組み立てる。その限界があるから無用なのではない。問いをより正確にできるのだ。とくに共同体の歴史的な描写については、この文章とともに個々の所蔵品記録も読んでほしい。選集を目当てに訪れる前には、現在の展示状況を確認したい。"
+      ]
+    }
+  ]
+}

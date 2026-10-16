@@ -1,0 +1,120 @@
+{
+  "verifiedAt": "2026-10-11T11:19:01.176233+00:00",
+  "site": "https://artlines.org",
+  "change": "Enable Cloudflare Web Analytics using manual JS installation on the DNS-only domain, with SPA page measurement and a conditional privacy notice.",
+  "cloudflare": {
+    "setup": "Enable with JS Snippet installation",
+    "previousSetup": "Enable (automatic injection)",
+    "dashboardURL": "https://dash.cloudflare.com/e3b8f7ba8e1af13b43e459b7a4123ba4/web-analytics/overview?siteTag~in=6a6ba77aabac49f988179a7891ac2c9d&excludeBots=Yes",
+    "initialVisits": 0,
+    "initialPageViews": 0,
+    "observedVisits": 1,
+    "observedPageViews": 1,
+    "dashboardCheckedAt": "2026-10-11T11:18:20.302307+00:00",
+    "initialCountsIncludeVerificationVisit": true,
+    "chartsStillReportInsufficientData": true,
+    "dnsChanged": false,
+    "browserProfile": "Vadim (v-test)"
+  },
+  "build": {
+    "id": "a3284156-1c13-4e03-b52c-e8854ae8dea2",
+    "status": "SUCCESS",
+    "baselineBuildId": "d4abf90d-d74e-43ff-b07a-90281cd687bd",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:d641cd4e94de95f7a5d494dd4986e451911ca04b371c39d051374089de565d0e",
+    "overlayURI": "gs://artline-508319-build-source/cloudflare-analytics-20261011/analytics-81a1effe7cff2b5a.tar.xz#1791716831667764",
+    "overlaySHA256": "81a1effe7cff2b5a936a9ad1821db7bf803dc283f81dd72a0c773ce5db6b38a1",
+    "runtimeFiles": {
+      "app/layout.tsx": "49b056e206e1454195dc95356c9809deeecec6fe2ee8c6df46f93b6c3c45ffe7",
+      "app/privacy/page.tsx": "414389771b3c735f366b5d5ce8b72ee07611efbed1af9669fffd56e70decef72",
+      "lib/web-analytics.ts": "8f845a8c0ba78a3c8d401d390798d08548c6e3250a0c578632bbbb7362dc9cfb"
+    }
+  },
+  "deployment": {
+    "revision": "artline-web-analytics-1011-v1",
+    "trafficPercent": 100,
+    "rollbackRevision": "artline-web-guide-seo-1011-v1",
+    "runtimeSettingsPreserved": true,
+    "analyticsEnvironmentVariable": "ARTLINE_CLOUDFLARE_WEB_ANALYTICS_TOKEN",
+    "localImagePinAndAnalyticsTokenPersisted": true,
+    "terraformApply": false,
+    "commitsCreated": false,
+    "catalogueWrites": false
+  },
+  "validation": {
+    "eslint": "passed for changed runtime files",
+    "typescript": "passed",
+    "terraformFormat": "passed",
+    "terraformValidate": "passed",
+    "productionBuild": "passed",
+    "candidateChecks": [
+      {
+        "path": "/about",
+        "status": 200,
+        "analyticsConfigured": true
+      },
+      {
+        "path": "/privacy",
+        "status": 200,
+        "analyticsConfigured": true
+      },
+      {
+        "path": "/guides",
+        "status": 200,
+        "analyticsConfigured": true
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200,
+        "signInEnabled": true
+      }
+    ],
+    "liveChecks": [
+      {
+        "path": "/",
+        "status": 200,
+        "analyticsConfigured": true
+      },
+      {
+        "path": "/about",
+        "status": 200,
+        "analyticsConfigured": true
+      },
+      {
+        "path": "/privacy",
+        "status": 200,
+        "analyticsConfigured": true,
+        "analyticsNoticeVisible": true
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200,
+        "signInEnabled": true
+      }
+    ],
+    "browserPaths": [
+      "https://artlines.org/about",
+      "https://artlines.org/guides",
+      "https://artlines.org/privacy"
+    ],
+    "scriptInstancesPerPage": 1,
+    "scriptHTTPStatus": 200,
+    "measurementHTTPStatus": 204,
+    "spaDocumentTimeOriginUnchanged": true,
+    "privacyNoticeVisible": true,
+    "developmentAndTestAnalytics": "disabled"
+  },
+  "implementation": {
+    "enabledOnlyWhenProductionTokenConfigured": true,
+    "scriptType": "module",
+    "loadStrategy": "afterInteractive",
+    "spa": true,
+    "apiKeyStored": false,
+    "accountIdentityAddedToAnalytics": false
+  },
+  "privateEvidenceAndBackups": "/Users/vadimdulub/Library/Application Support/Artline/backups/cloudflare-analytics-20261011",
+  "sources": [
+    "https://developers.cloudflare.com/web-analytics/get-started/",
+    "https://developers.cloudflare.com/web-analytics/get-started/web-analytics-spa/",
+    "https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/"
+  ]
+}

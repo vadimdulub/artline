@@ -18,7 +18,7 @@ export function layersAfterFilter(layers: string[], updates: Record<string, stri
 }
 
 export const entityFields: Record<AtlasType, string[]> = {
-  artwork: ["q", "painter", "movement", "region", "country", "work_type", "women", "popular", "image_only"],
+  artwork: ["q", "id", "painter", "movement", "region", "country", "work_type", "women", "popular", "image_only"],
   book: ["q", "author", "region", "country", "language", "women", "top100"],
   event: ["q", "topic", "kind", "region", "country", "top100"],
 };

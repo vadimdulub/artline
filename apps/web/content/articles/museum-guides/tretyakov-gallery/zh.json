@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "tretyakov-gallery",
+  "museum": "State Tretyakov Gallery",
+  "city": "莫斯科",
+  "country": "俄罗斯",
+  "title": "国立特列季亚科夫画廊：杰作",
+  "subtitle": "肖像、想象中的生灵与政治寓意画，检验具体人物与象征形象之间的距离。",
+  "introduction": "桌边女孩的桃子、小刀和满室光线，使她所处的环境清楚而具体。库斯托季耶夫巨大的布尔什维克却跨过建筑，城市容纳不下他的身体。差异关乎尺度与目的，不能只用人体画得准不准来概括。一幅画给人物安排生活场景，另一幅画让身体代表政治力量。\n\n两端之间，有姓名明确的肖像，有身份尚未确定的女子，也有出自历史或传说的人物。风景画又使比较更复杂：人可能很小，或根本不在其中。《黑方块》则完全撤去了可以辨认的场景，同时仍是一件有物质形态的绘画。",
+  "visitNote": "特列季亚科夫画廊利用多栋建筑分别展示其馆藏。本导览路线不局限于单一建筑，且展出可能因借展或文物修复而中断。请在前往参观前确认具体作品的所在位置。本指南对描绘历史与传说题材的画作及基于亲眼所见的纪实性作品进行了区分。",
+  "locale": "zh",
+  "website": "https://www.tretyakovgallery.ru",
+  "officialGuide": "https://www.tretyakovgallery.ru",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基的这本书为超越具象描绘的绘画提供了当代的论证。在阅读时，应将其与《黑方块》并置，视其为早期现代艺术中的另一种立场，而非马列维奇本人艺术主张或信念的阐述。"
+    }
+  ],
+  "works": [
+    {
+      "id": "8414e828-5984-543d-99fb-dbdf58a4ec3c",
+      "title": "桃子女孩",
+      "catalogueTitle": "Girl with Peaches",
+      "artist": "Valentin Serov",
+      "artists": [
+        {
+          "name": "Valentin Serov",
+          "role": "primary",
+          "slug": "valentin-serov-q217128"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8414e828-5984-543d-99fb-dbdf58a4ec3c-25ca8dbfb1fbdb5b.jpg",
+      "imageSource": "https://www.wikiart.org/en/valentin-serov/girl-with-peaches-1887",
+      "credit": "Valentin Serov. Girl with Peaches. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/8394",
+      "description": "桃子和小刀使桌子仍可用于日常生活，而不只是正式肖像的道具。谢罗夫的光延伸到女孩肩膀之外，房间围绕她安定而不拘谨的姿态继续展开。画面造成日常生活某一瞬间的印象。但这种效果是绘画的成果，并不能证明这幅画只花了一瞬间完成。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "9edf9bb7-efb2-551a-9242-9c978935c588",
+      "title": "黑方块",
+      "catalogueTitle": "Black Square",
+      "artist": "Kazimir Malevich",
+      "artists": [
+        {
+          "name": "Kazimir Malevich",
+          "role": "primary",
+          "slug": "kazimir-malevich-q130777"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/9edf9bb7-efb2-551a-9242-9c978935c588-83a18e50a83986f3.jpg",
+      "imageSource": "https://www.wikiart.org/en/kazimir-malevich/black-square-1915",
+      "credit": "Kazimir Malevich. Black Square. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/kazimir-malevich/black-square-1915",
+      "description": "没有被描绘的人或风景，为这块深色四边形提供入口。马列维奇把它与浅色底面的关系，直接作为绘画的命题。但边缘并不机械般完美，老化表面也已有裂纹。看似绝对的形状，实际存在于具有历史的材料中。承认这一点，并不需要重新把它解释成某个隐藏的具象场景。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "35dba5d3-4546-516c-9e33-1a937650ca10",
+      "title": "坐着的恶魔",
+      "catalogueTitle": "Seated Demon",
+      "artist": "Mikhail Vrubel",
+      "artists": [
+        {
+          "name": "Mikhail Vrubel",
+          "role": "primary",
+          "slug": "mikhail-vrubel-q215100"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/35dba5d3-4546-516c-9e33-1a937650ca10-7be38e3fc86af936.jpg",
+      "imageSource": "https://www.wikiart.org/en/mikhail-vrubel/seated-demon-1890",
+      "credit": "Mikhail Vrubel. Seated Demon. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tretyakovgallery.ru/edu/o/mikhail-vrubel-psikhologiya-tvorchestva/",
+      "description": "低宽画幅里，强壮身体几乎没有伸展余地。交握的手与蜷曲姿态收束力量，棱角分明、近似花朵的形状，又把人物连到周围表面。弗鲁贝尔让想象中的生灵遭遇尺度上的冲突：他似乎有强大力量，当下的姿势却使力量无法自由展开为行动。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "c0137a52-3493-593b-9508-df5a11355be2",
+      "title": "三月",
+      "catalogueTitle": "March",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c0137a52-3493-593b-9508-df5a11355be2-9dfe4d4f2a961d51.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-levitan/march-1895",
+      "credit": "Isaac Levitan. March. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/20845",
+      "description": "融雪露出一条小路，既不是完整的冬日地面，也不是完全化开的泥土。木屋上的暖光，与树间蓝影形成对比。列维坦把季节变化画成几种状态同时存在，而非一种季节干净利落地替换另一种。等候的马在这场较长的转变中，提供一个日常停顿。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "c68334ff-c99a-5134-8571-699259cefe64",
+      "title": "浴红马",
+      "catalogueTitle": "Bathing of a Red Horse",
+      "artist": "Kuzma Petrov-Vodkin",
+      "artists": [
+        {
+          "name": "Kuzma Petrov-Vodkin",
+          "role": "primary",
+          "slug": "kuzma-petrov-vodkin-q364226"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c68334ff-c99a-5134-8571-699259cefe64-400ee9bd71b05636.jpg",
+      "imageSource": "https://www.wikiart.org/en/kuzma-petrov-vodkin/bathing-the-red-horse-1912",
+      "credit": "Kuzma Petrov-Vodkin. Bathing of a Red Horse. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/kuzma-petrov-vodkin/bathing-the-red-horse-1912",
+      "description": "马宽阔的红色身侧压过人物与水面，场景却仍能被认作给马洗浴。彼得罗夫—沃德金保留身体重量，同时偏离预期色彩和普通比例。这种结合使马超出单纯描写的作用，又不至于不可辨认。它的象征可能性首先来自可见的不相称，而不是某一种强制性的解释。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "d256e26f-c0a4-5030-bd9e-4c076b7b6f42",
+      "title": "伊凡雷帝与儿子伊凡",
+      "catalogueTitle": "Ivan the Terrible and His Son Ivan on November 16, 1581",
+      "artist": "Ilya Repin",
+      "artists": [
+        {
+          "name": "Ilya Repin",
+          "role": "primary",
+          "slug": "ilya-repin-q172911"
+        }
+      ],
+      "date": "1883-1885",
+      "start": 1883,
+      "end": 1885,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d256e26f-c0a4-5030-bd9e-4c076b7b6f42-e52d967a0296245f.jpg",
+      "imageSource": "https://www.wikiart.org/en/ilya-repin/ivan-the-terrible-and-his-son-ivan-on-november-16-1581-1885",
+      "credit": "Ilya Repin. Ivan the Terrible and His Son Ivan on November 16, 1581. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/8408",
+      "description": "老人的双手托住伤者，却无法逆转把两人连在一起的伤口。列宾安排的是暴力发生之后：拥抱已变得绝望，周围花纹地毯与华贵家具却依旧存在。这是历史重构，不是目击证据。画面最有力之处，在于保护的手势无法撤销此前发生的一切。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "8afe0f9c-c1ba-5f5a-91a7-8d4b7bee0411",
+      "title": "无名女郎",
+      "catalogueTitle": "Portrait of an Unknown Woman",
+      "artist": "Ivan Kramskoi",
+      "artists": [
+        {
+          "name": "Ivan Kramskoi",
+          "role": "primary",
+          "slug": "ivan-kramskoi-q207758"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "5893",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1217003-ca1c1d71c2617f63.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kramskoy_Portrait_of_a_Woman.jpg",
+      "credit": "Ivan Kramskoi. Portrait of an Unknown Woman. Image credit: Ivan Kramskoi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1217003",
+      "description": "抬高的车座使女子直视的目光位于雪街上方。时髦的深色衣服，参与塑造精心呈现的公开形象。克拉姆斯柯依让相遇具体，却没有解决身份问题。不宜根据衣服或表情补写传记：画面给出了可信的在场感，却没有足够证据支持一个姓名或个人故事。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "914326a4-e275-546b-a274-34aa606e7a38",
+      "title": "少年巴尔托洛缪的异象",
+      "catalogueTitle": "The Vision of the Young Bartholomew",
+      "artist": "Mikhail Nesterov",
+      "artists": [
+        {
+          "name": "Mikhail Nesterov",
+          "role": "primary",
+          "slug": "mikhail-nesterov-q318427"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/914326a4-e275-546b-a274-34aa606e7a38-2d3bdc0d95c1a395.jpg",
+      "imageSource": "https://www.wikiart.org/en/mikhail-nesterov/the-vision-of-the-young-bartholomew-1890",
+      "credit": "Mikhail Nesterov. The Vision of the Young Bartholomew. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/mikhail-nesterov/the-vision-of-the-young-bartholomew-1890",
+      "description": "男孩与戴兜帽的修士，在广阔、可以辨认的风景边缘相会。倾斜的头与小小手势，使神圣片段保持亲近的人的尺度。涅斯捷罗夫没有把相遇移出普通田野和树林。环境之所以重要，正因为非凡事件发生在仍能实际理解的地形中。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "1a237f08-30a5-5b99-b663-4527b6ad1e04",
+      "title": "伊戈尔王子战役之后",
+      "catalogueTitle": "After prince Igor’s battle",
+      "artist": "Viktor Vasnetsov",
+      "artists": [
+        {
+          "name": "Viktor Vasnetsov",
+          "role": "primary",
+          "slug": "viktor-vasnetsov-q204138"
+        }
+      ],
+      "date": "1880",
+      "start": 1880,
+      "end": 1880,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11819873-e20025a3e571c1a2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Igorsvyat.jpg",
+      "credit": "Viktor Vasnetsov. After prince Igor’s battle. Image credit: Viktor Vasnetsov. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11819873",
+      "description": "战士已无法在容纳他们的土地上行动。鸟、散落武器与盾牌为旷野提供细节，使战后的情形逐渐可读。瓦斯涅佐夫将文学与历史中的战役，从交战转为静止。没有活跃英雄，留下的身体便取代个人壮举，成为场景的实质。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "74edb35c-2639-56d2-a88f-45923d6254e9",
+      "title": "莫杰斯特·穆索尔斯基肖像",
+      "catalogueTitle": "Portrait of the Composer Modest Musorgsky",
+      "artist": "Ilya Repin",
+      "artists": [
+        {
+          "name": "Ilya Repin",
+          "role": "primary",
+          "slug": "ilya-repin-q172911"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/74edb35c-2639-56d2-a88f-45923d6254e9-d22d1a9e75c2a759.jpg",
+      "imageSource": "https://www.wikiart.org/en/ilya-repin/portrait-of-the-composer-modest-musorgsky-1881",
+      "credit": "Ilya Repin. Portrait of the Composer Modest Musorgsky. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ilya-repin/portrait-of-the-composer-modest-musorgsky-1881",
+      "description": "宽松睡袍并非人们期待杰出作曲家肖像采用的正式服饰。列宾让凌乱头发与发红面容清楚可见。画家对身体虚弱的关注，与对人物相貌的辨认同样持久。要保持描绘的严谨，无须把每个身体迹象都转成道德判断或医学诊断。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "422991a1-8078-5b99-be13-978b93abd74d",
+      "title": "列夫·托尔斯泰肖像",
+      "catalogueTitle": "Portrait of Leo Tolstoy",
+      "artist": "Ivan Kramskoi",
+      "artists": [
+        {
+          "name": "Ivan Kramskoi",
+          "role": "primary",
+          "slug": "ivan-kramskoi-q207758"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "",
+      "accession": "655",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q124326591-88b64aa74714ce96.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ivan_Nikolayevich_Kramskoi_-_Portrait_of_Leo_Tolstoy,_1873.jpg",
+      "credit": "Ivan Kramskoi. Portrait of Leo Tolstoy. Image credit: Ivan Kramskoi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q124326591",
+      "description": "深色宽衬衣与节制背景，几乎没有提供可用于识别著名作家的附件。克拉姆斯柯依将视线转向目光、胡须和低处合拢的手。肖像依靠具体身体的存在，而非书房或文学标志。简朴仍是一种呈现选择，并不是没有作出选择。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "55c62ebb-66e1-5d10-81f5-4ac64797af2c",
+      "title": "幽静的修道院",
+      "catalogueTitle": "Quiet cloister",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/55c62ebb-66e1-5d10-81f5-4ac64797af2c-65687d1d16537111.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-levitan/quiet-cloister-1890-3",
+      "credit": "Isaac Levitan. Quiet cloister. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-levitan/quiet-cloister-1890-3",
+      "description": "窄桥越过倒映景物的水面，通向修道院建筑。列维坦让远处宗教场所在风景中可以抵达，没有将它孤立成建筑圣像。树与水分出走近它的几个阶段。安静感依赖这些有分寸的间隔；即使没有醒目人物带路，人的通行仍然可能。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "22536cca-b2a3-5c93-abce-788c0025d11d",
+      "title": "晚钟",
+      "catalogueTitle": "Vesper chimes",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/22536cca-b2a3-5c93-abce-788c0025d11d-b35ae463b8ee2915.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-levitan/vesper-chimes-1892",
+      "credit": "Isaac Levitan. Vesper chimes. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/isaac-levitan/vesper-chimes-1892",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-levitan/vesper-chimes-1892",
+      "description": "题名引入了绘画本身无法发出的声音。宽水面与远方修道院，提供钟声可能传过的想象距离。列维坦用倒影、小船和暮云，为这层联想安排实际环境。视觉描绘仍足够精确，题名中的声音因此增加了一种联系，而没有取代风景的结构。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "58245480-35cf-5967-848f-e7e0730bf7e2",
+      "title": "海外来客",
+      "catalogueTitle": "Overseas Guests",
+      "artist": "Nicholas Roerich",
+      "artists": [
+        {
+          "name": "Nicholas Roerich",
+          "role": "primary",
+          "slug": "nicholas-roerich-q208993"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "",
+      "accession": "Ж-494",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q4185903-74c23a5eeafeeb20.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Nicholas_Roerich,_Guests_from_Overseas.jpg",
+      "credit": "Nicholas Roerich. Overseas Guests. Image credit: Nicholas Roerich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q4185903",
+      "description": "红帆与反复排列的盾牌，使船既是交通工具，也成为醒目的图案。罗里奇通过强烈色彩和装饰，构造遥远的历史世界。船与岩岸保留环境信息，船身表面却也要求独立的关注。这是想象中的过去，其外观明显经过设计。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "8ab505d6-1963-57d6-9e49-a62f66358962",
+      "title": "养蜂人",
+      "catalogueTitle": "Beekeeper",
+      "artist": "Ivan Kramskoi",
+      "artists": [
+        {
+          "name": "Ivan Kramskoi",
+          "role": "primary",
+          "slug": "ivan-kramskoi-q207758"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/8ab505d6-1963-57d6-9e49-a62f66358962-c99028113363f1ec.jpg",
+      "imageSource": "https://www.wikiart.org/en/ivan-kramskoy/beekeeper-1872",
+      "credit": "Ivan Kramskoi. Beekeeper. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ivan-kramskoy/beekeeper-1872",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ivan-kramskoy/beekeeper-1872",
+      "description": "手杖、浅色衬衣和低下的头，在植物与木蜂箱之间勾勒一位老人。克拉姆斯柯依让他留在工作的具体条件里，没有把他抽离成笼统的乡村象征。缓慢姿态与茂密生长相对。周围土地有自己的用途和劳作，并不只为衰老提供背景。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "b69597a6-ef67-58b4-97b8-23e430393e8b",
+      "title": "乡间道路",
+      "catalogueTitle": "Country road",
+      "artist": "Alexei Savrasov",
+      "artists": [
+        {
+          "name": "Alexei Savrasov",
+          "role": "primary",
+          "slug": "alexei-savrasov-q353008"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/b69597a6-ef67-58b4-97b8-23e430393e8b-7b0ad22d1e73bcb7.jpg",
+      "imageSource": "https://www.wikiart.org/en/aleksey-savrasov/country-road-1873",
+      "credit": "Alexei Savrasov. Country road. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/aleksey-savrasov/country-road-1873",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/aleksey-savrasov/country-road-1873",
+      "description": "车辙与水洼使进入风景的路并不平坦。萨夫拉索夫保留天气对地面的影响，没有让道路只成为顺滑的透视工具。破开的云与变化的光，将近处表面连接到天空。风景仿佛可以用身体走过，同时也包含实际通行的困难。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "8c7d8b99-bc6e-59f6-9136-baaed137f87a",
+      "title": "雪姑娘",
+      "catalogueTitle": "Snow Maiden",
+      "artist": "Viktor Vasnetsov",
+      "artists": [
+        {
+          "name": "Viktor Vasnetsov",
+          "role": "primary",
+          "slug": "viktor-vasnetsov-q204138"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19973621-d83e112da108307c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vasnetsov_Snegurochka.jpg",
+      "credit": "Viktor Vasnetsov. Snow Maiden. Image credit: Viktor Vasnetsov. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19973621",
+      "description": "浅色衣服把女孩从周围深林中分离。瓦斯涅佐夫让传说人物处在具体的无遮蔽位置：一边是亮雪，一边是围拢的树。这种对比已足以建立不安稳的处境，无须重述全部故事。环境参与说明她的状态，而不只是标明季节。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "43c64375-baf7-5434-9f47-ea7650a1542c",
+      "title": "布尔什维克",
+      "catalogueTitle": "The Bolshevik",
+      "artist": "Boris Kustodiev",
+      "artists": [
+        {
+          "name": "Boris Kustodiev",
+          "role": "primary",
+          "slug": "boris-kustodiev-q313275"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/43c64375-baf7-5434-9f47-ea7650a1542c-19538549ea0df041.jpg",
+      "imageSource": "https://www.wikiart.org/en/boris-kustodiev/the-bolshevik-1920",
+      "credit": "Boris Kustodiev. The Bolshevik. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/8891",
+      "description": "举旗者相对于脚下街道和屋顶大得不合常理。库斯托季耶夫以刻意的尺度失配，让政治力量可见。拥挤城市成为寓意性身体跨越的地面。绘画构造了革命权力的形象；不应把这个如此强调的巨人，误认成对所指历史事件的公允概括。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "04b12eba-0ca7-5d76-8b6e-562579c67225",
+      "title": "哲学家布尔加科夫与弗洛连斯基",
+      "catalogueTitle": "Portrait of the philosophers S.N. Bulgakov and P.A. Florensky",
+      "artist": "Mikhail Nesterov",
+      "artists": [
+        {
+          "name": "Mikhail Nesterov",
+          "role": "primary",
+          "slug": "mikhail-nesterov-q318427"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q101435277-9f9ca27b11e067da.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1917_Nesterow_Philosophen_anagoria.JPG",
+      "credit": "Mikhail Nesterov. Portrait of the philosophers S.N. Bulgakov and P.A. Florensky. Image credit: Mikhail Nesterov. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q101435277",
+      "description": "并肩行走为双人肖像提供普通的共同动作。尚未细看各自目光与手势，浅深衣服就已区分二人。涅斯捷罗夫无须添加抽象思想的标志，便能表现知识上的同道关系。在一起仍容得下不同关注：两人共用的是一条路，而不是同一种表情。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "2e57ec7e-2856-5756-8abf-959e42e2b217",
+      "title": "伊凡·莫罗佐夫",
+      "catalogueTitle": "Ivan Morozov",
+      "artist": "Valentin Serov",
+      "artists": [
+        {
+          "name": "Valentin Serov",
+          "role": "primary",
+          "slug": "valentin-serov-q217128"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "10872",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q112675615-99eaf8461ea8efc4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_Ivan_Morozov2.jpg",
+      "credit": "Valentin Serov. Ivan Morozov. Image credit: Unknown author Unknown author. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q112675615",
+      "description": "人物朴素深沉的衣服，与身后色彩明显更活跃的绘画形成对照。谢罗夫部分借由周围艺术，说明收藏家的身份。交握的手稳住近处人物，背景则记录他选择与之相伴的图像。因此，一幅肖像可以通过物品安排呈现品味，不必图解一生的每个细节。",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    }
+  ],
+  "context": {
+    "start": 1872,
+    "end": 1920
+  },
+  "closingSections": [
+    {
+      "title": "别忘了比较大小",
+      "paragraphs": [
+        "将常人尺度的肖像与放大的寓意人物比较，再回到几乎不见人的风景。尺度会改变一个身体能够代表什么。特列季亚科夫的作品分布于不同场馆，展陈也会调整；把本选目用于参观计划之前，请先查询最新位置信息。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "albertina",
+  "museum": "Albertina",
+  "city": "维也纳",
+  "country": "奥地利",
+  "title": "阿尔贝蒂娜博物馆：杰作",
+  "subtitle": "二十件作品让我们留意裸露的纸面、尚未画完的部分，以及一根线条能够表达什么。",
+  "introduction": "一张素描可以仔细画出面孔，却留下尚未处理的衣服。一幅城景可以从着色的建筑渐渐过渡到浅色纸面上的轮廓线。各处完成程度不同，是这组选作值得细看的地方：它们显露出画家的决定，而均匀润饰过的表面可能会将这些过程藏起来。\n\n这里既有正式肖像，也有着色松散的风景。勃鲁盖尔密集叙述的一则谚语，则展示了另一种精简：每条较小的鱼，都在延伸最大的鱼已经说明的道理。面对不同画法，可以问：哪里已经交代得足够清楚？画家停在这里，又让作品获得了什么？答案会随着题材、材料与观看尺度改变。",
+  "visitNote": "纸本艺术品对光线敏感，通常仅在临时展览中展出。本指南仅为馆藏精选，并非长期展出作品的清单。请查阅阿尔贝蒂娜博物馆（Albertina）的最新展览安排，并注意区分原作与展出的复制品。",
+  "locale": "zh",
+  "website": "https://www.albertina.at/home",
+  "officialGuide": "https://www.albertina.at/home",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "免费阅读 · 英语",
+      "note": "拉斯金关于观察边缘、色调和自然形态的练习，与这些画作所引发的细致观赏相得益彰。他提供的实用指导，让读者在研读这些图像之余，能够亲身尝试实践。"
+    }
+  ],
+  "works": [
+    {
+      "id": "fb091094-f0c4-580a-9a44-1b8669a0bee5",
+      "title": "玛丽亚·特蕾莎",
+      "catalogueTitle": "Portrait of Maria Theresa, Sovereign of Austria, Hungary and Bohemia",
+      "artist": "Jean-Étienne Liotard",
+      "artists": [
+        {
+          "name": "Jean-Étienne Liotard",
+          "role": "primary",
+          "slug": "jean-etienne-liotard-q123757"
+        }
+      ],
+      "date": "1762",
+      "start": 1762,
+      "end": 1762,
+      "medium": "柔和色调",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/fb091094-f0c4-580a-9a44-1b8669a0bee5-f021433c77539328.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-etienne-liotard/portrait-of-maria-theresa-sovereign-of-austria-hungary-and-bohemia-1762",
+      "credit": "Jean-Étienne Liotard. Portrait of Maria Theresa, Sovereign of Austria, Hungary and Bohemia. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-etienne-liotard/portrait-of-maria-theresa-sovereign-of-austria-hungary-and-bohemia-1762",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-etienne-liotard/portrait-of-maria-theresa-sovereign-of-austria-hungary-and-bohemia-1762",
+      "description": "安放的双手与精心描绘的浅色衣裙，为君主构成正式形象，周围却没有拥挤的盛大场面。利奥塔尔集中区分皮肤、蕾丝与厚重织物。柔和光线在克制的环境中分辨这些材质。肖像的庄严不仅来自人物沉着的姿态，也来自对各个表面从容、准确的描写。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "deabaad6-11cd-52ca-a998-3b421ee53cd2",
+      "title": "森林中的圣约翰",
+      "catalogueTitle": "St. John in the Forest",
+      "artist": "Matthias Grünewald",
+      "artists": [
+        {
+          "name": "Matthias Grünewald",
+          "role": "primary",
+          "slug": "matthias-grunewald-q154338"
+        }
+      ],
+      "date": "1515",
+      "start": 1515,
+      "end": 1515,
+      "medium": "粉笔",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/deabaad6-11cd-52ca-a998-3b421ee53cd2-285e46a9f3c56b76.jpg",
+      "imageSource": "https://www.wikiart.org/en/matthias-grunewald/st-john-in-the-forest-1515",
+      "credit": "Matthias Grünewald. St. John in the Forest. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/matthias-grunewald/st-john-in-the-forest-1515",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/matthias-grunewald/st-john-in-the-forest-1515",
+      "description": "浅袍人物从纷乱的树干与笔迹中显现。弯曲衣褶与扭转木干在他四周形成相近的走势，使森林不只是深色衬底。格吕内瓦尔德让环境始终与独处的圣徒相互作用。明暗对比使身体位置清楚，周围线条却不肯安静下来，围成一个平稳的空间。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "9056c83c-9cfb-55a7-99bf-1a0b75c104cf",
+      "title": "去田间劳作的孩子们",
+      "catalogueTitle": "Children on Their Way to Work in the Fields",
+      "artist": "Peter Fendi",
+      "artists": [
+        {
+          "name": "Peter Fendi",
+          "role": "primary",
+          "slug": "peter-fendi-q453650"
+        }
+      ],
+      "date": "1840",
+      "start": 1840,
+      "end": 1840,
+      "medium": "",
+      "accession": "30632",
+      "image": "https://artlines.org/assets/artworks/wikiart/9056c83c-9cfb-55a7-99bf-1a0b75c104cf-280f2ca32653d719.jpg",
+      "imageSource": "https://www.wikiart.org/en/peter-fendi/children-on-their-way-to-work-in-the-fields-1840",
+      "credit": "Peter Fendi. Children on Their Way to Work in the Fields. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q18688354",
+      "description": "孩子们带着容器，还要照顾更小的同伴，身上负担都是具体的。芬迪在紧凑人群中区分年龄与任务，赤脚和简单衣物也清晰可辨。场面即使显得可亲，也不应让人忘记画名指出的劳动。这些身体承担着义务，不能轻易将它们归入无忧无虑的童年景象。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "20508180-9979-5282-a3b3-4dfec4c379c0",
+      "title": "赫维特斯滕海岸风景",
+      "catalogueTitle": "Coastal Landscape at Hvitsten",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/20508180-9979-5282-a3b3-4dfec4c379c0-091ffc22e24d5da2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Wien-Innenstadt,_Albertina,_Edvard_Munch,_Winterlandschaft.JPG",
+      "credit": "Edvard Munch. Coastal Landscape at Hvitsten. Image credit: Dguendel; Own work. https://commons.wikimedia.org/wiki/File:Wien-Innenstadt,_Albertina,_Edvard_Munch,_Winterlandschaft.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q18889656",
+      "description": "低矮岩石与不规则岸线间，弧线反复出现，将彩色笔触引向水面和天空。蒙克赋予海岸连续的节奏，却没有把各个表面画成一样。画笔的运动将坚实土地与周围空气联系起来。顺着一道弯曲走向下一道，往往比逐一列出景物更能说明构图。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "b3101c10-ed92-56b5-9120-19e068ff3056",
+      "title": "愚人",
+      "catalogueTitle": "Der Narr",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1927",
+      "start": 1927,
+      "end": 1927,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/b3101c10-ed92-56b5-9120-19e068ff3056-eff2fa30295dc072.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Klee_1927_Der_Narr_2021-08.jpg",
+      "credit": "Paul Klee. Der Narr. Image credit: Paul Klee; Own work; Photographic credit: Wikisympathisant. https://commons.wikimedia.org/wiki/File:Klee_1927_Der_Narr_2021-08.jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q111717832",
+      "description": "有棱有角的彩色碎块在黑暗前聚成一个小人物。细长四肢与附近圆形使它的平衡显得暂时，仿佛随时还可以重新排列。克利提供了足以辨认身体的线索，却没有将人物完整塑形。形象是在这些形状之间逐渐被认出的，而不是先画好一个人，再给他填色。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "d20efd25-0966-5ee6-aa78-0f7d76c2bc79",
+      "title": "汉斯·路德",
+      "catalogueTitle": "Hans Luther",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "约 1527 年",
+      "start": 1527,
+      "end": 1527,
+      "medium": "",
+      "accession": "26156",
+      "image": "https://artlines.org/assets/artworks/imported/local-commons-priority-followup-20261006/d20efd25-0966-5ee6-aa78-0f7d76c2bc79-7c145f9cc5f0cf18.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d._%C3%84._-_Albertina_26156,_Hans_Luther_(1459-1530).jpg",
+      "credit": "Lucas Cranach the Elder. Hans Luther. Image credit: Lucas Cranach the Elder; https://sammlungenonline.albertina.at/?query=search=/record/objectnumbersearch= [26156]&showtype=record. https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d._%C3%84._-_Albertina_26156,_Hans_Luther_(1459-1530).jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q116962615",
+      "description": "细线与克制的颜色集中在眼睛、嘴和稀疏头发上，衣服则画得较少。克拉纳赫让人清楚看到，这张纸上的研究主要落在哪里。暖色纸面仍参与头部周围的构图，没有被完整涂满的背景遮住。观察最细致的地方，也正是人物面貌最鲜明的地方。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "854bde9f-46e3-53fe-903e-3448381251c7",
+      "title": "海滩野餐",
+      "catalogueTitle": "Picnic on the Beach",
+      "artist": "August Macke",
+      "artists": [
+        {
+          "name": "August Macke",
+          "role": "primary",
+          "slug": "august-macke-q33981"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "DL83",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/854bde9f-46e3-53fe-903e-3448381251c7-b0558cbf21fc0202.jpg",
+      "imageSource": "https://www.wikiart.org/en/august-macke/picnic-on-the-beach",
+      "credit": "August Macke. Picnic on the Beach. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q18683361",
+      "description": "透明的红、蓝、绿、黄在人物与环境之间相互延续，裸露的纸面留下一道道空隙。马克让颜色承担许多通常由轮廓完成的区分。聚会仍然看得明白，但各个部分同时也是彼此关联的形状。空白间隔帮助人物和色块这两种看法并存。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "ed84cf2e-ffaf-516e-a253-7d5803199d84",
+      "title": "穿灰条纹外套与红马甲的男子",
+      "catalogueTitle": "Portrait of a man in a grey-striped frock coat and a red waistcoat",
+      "artist": "Marie-Adélaïde Duvieux",
+      "artists": [
+        {
+          "name": "Marie-Adélaïde Duvieux",
+          "role": "primary",
+          "slug": "wikimedia-painter-q104197260"
+        }
+      ],
+      "date": "1794–1798",
+      "start": 1794,
+      "end": 1798,
+      "medium": "",
+      "accession": "29257",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107642836-1674a35dc148abd8.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Marie-Adelaide_Duvieux_-_Portrait_of_a_man_in_a_grey-striped_frock_coat_and_a_red_waistcoat_(Albertina_-_29257).jpg",
+      "credit": "Marie-Adélaïde Duvieux. Portrait of a man in a grey-striped frock coat and a red waistcoat. Image credit: Marie-Adélaïde Duvieux. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107642836",
+      "description": "椭圆画幅让微笑的脸靠得很近，几乎没有余地描写环境。外套细条纹连接起红马甲与白领巾较大的色彩对比。迪维厄让衣着成为肖像最主要的衬托。小幅作品值得近看：反复的细线怎样扶衬表情，而不与它争夺目光？",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "16c1094b-f8e7-5216-9c10-9f9772323b9c",
+      "title": "瓶子、面包与红色壁纸静物",
+      "catalogueTitle": "Still Life with Bottle, Bread and red Wallpaper with Swallows",
+      "artist": "Alexej von Jawlensky",
+      "artists": [
+        {
+          "name": "Alexej von Jawlensky",
+          "role": "primary",
+          "slug": "alexej-von-jawlensky-q156426"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "GE140DL",
+      "image": "https://artlines.org/assets/artworks/wikiart/16c1094b-f8e7-5216-9c10-9f9772323b9c-fc41fc1dbade63c5.jpg",
+      "imageSource": "https://www.wikiart.org/en/alexej-von-jawlensky/still-life-with-bottle-bread-and-red-wallpaper-with-swallows-1915",
+      "credit": "Alexej von Jawlensky. Still Life with Bottle, Bread and red Wallpaper with Swallows. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q18683082",
+      "description": "红壁纸上的鸟与圆形图案，和前方物品同样抢眼。亚夫连斯基削弱了墙壁通常退后的背景作用，让装饰向前进入静物的构图。瓶子、面包与纹样在画面上彼此接近。空间仍然存在，但强烈色彩使物体与环境的区分不再那么稳固。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "1d7ce8d2-262c-5b41-be78-3c8c93ca5c74",
+      "title": "晚祷",
+      "catalogueTitle": "The Evening Prayer",
+      "artist": "Peter Fendi",
+      "artists": [
+        {
+          "name": "Peter Fendi",
+          "role": "primary",
+          "slug": "peter-fendi-q453650"
+        }
+      ],
+      "date": "1839",
+      "start": 1839,
+      "end": 1839,
+      "medium": "",
+      "accession": "28334",
+      "image": "https://artlines.org/assets/artworks/wikiart/1d7ce8d2-262c-5b41-be78-3c8c93ca5c74-23624c60acb7b0ab.jpg",
+      "imageSource": "https://www.wikiart.org/en/peter-fendi/the-evening-prayer-1839",
+      "credit": "Peter Fendi. The Evening Prayer. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q18688353",
+      "description": "孩子们在一位成人近旁的照看下共同祈祷。挂画、家具与敞开的门，将这种学习放在一间井然有序的居室中。芬迪通过聚集的人物表现反复进行的日常仪式，而不是一次壮观宗教事件。周围秩序也参与说明：行为如何受到观察，又如何传给下一代。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "031763f8-283b-5890-8c27-16a8c6b0c3b7",
+      "title": "伊舍尔景色",
+      "catalogueTitle": "View of Ischl",
+      "artist": "Rudolf von Alt",
+      "artists": [
+        {
+          "name": "Rudolf von Alt",
+          "role": "primary",
+          "slug": "rudolf-von-alt-nga-26510"
+        }
+      ],
+      "date": "1830",
+      "start": 1830,
+      "end": 1830,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/031763f8-283b-5890-8c27-16a8c6b0c3b7-cc81daddb15a6501.jpg",
+      "imageSource": "https://www.wikiart.org/en/rudolf-von-alt/view-of-ischl-1830",
+      "credit": "Rudolf von Alt. View of Ischl. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q110071271",
+      "description": "着色建筑、仍停留在轮廓阶段的结构，以及大片浅色纸面同时出现。鲁道夫·冯·阿尔特在一张纸上留下了几种描绘程度。岩石山丘与城镇的位置仍然清楚，目光却可以沿着细致线描走向更充分的着色。未完成的区域帮助我们看见，这幅景象是怎样逐步组合出来的。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "fc03923f-90c5-5649-98fd-79be8f3d4b26",
+      "title": "戴花帽的少女",
+      "catalogueTitle": "Young Girl with a flowered hat",
+      "artist": "Alexej von Jawlensky",
+      "artists": [
+        {
+          "name": "Alexej von Jawlensky",
+          "role": "primary",
+          "slug": "alexej-von-jawlensky-q156426"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "GE52DL",
+      "image": "https://artlines.org/assets/artworks/wikiart/fc03923f-90c5-5649-98fd-79be8f3d4b26-a1bf78e93024c422.jpg",
+      "imageSource": "https://www.wikiart.org/en/alexej-von-jawlensky/young-girl-with-a-flowered-hat-1910",
+      "credit": "Alexej von Jawlensky. Young Girl with a flowered hat. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q18683083",
+      "description": "大大的绿帽与鲜花下，低垂的脸显得安静。红色挤在轮廓明确的头肩周围，使背景比人物姿态更强烈。亚夫连斯基不需要用自然光照解释这些对比。颜色可以鲜明有力，同时其中的人仍以低头与收敛的动作保持内向姿态。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "3c1d8bc3-3a93-5465-827d-bbc7356a0e40",
+      "title": "大鱼吃小鱼",
+      "catalogueTitle": "Big fishes eat small fishes",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1556",
+      "start": 1556,
+      "end": 1556,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/3c1d8bc3-3a93-5465-827d-bbc7356a0e40-b08ebe2effa709c6.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/big-fishes-eat-small-fishes-1556",
+      "credit": "Pieter Bruegel the Elder. Big fishes eat small fishes. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlungenonline.albertina.at/objects/28754/die-groen-fische-fressen-die-kleinen",
+      "description": "巨鱼吞下较小的鱼，小鱼又吞下更小的鱼。勃鲁盖尔让一句谚语在不同尺度上反复出现，将强弱不等的关系扩展到整个场面。这是1556年的素描。后来出版的版画是另一件作品；版画上归名于博斯，又为这幅设计增添了一层图像销售的历史。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "bc527d8f-b041-56fa-a46d-1f40c5f0ee7a",
+      "title": "花卉静物",
+      "catalogueTitle": "Floral still life",
+      "artist": "Paul Signac",
+      "artists": [
+        {
+          "name": "Paul Signac",
+          "role": "primary",
+          "slug": "paul-signac-q151573"
+        }
+      ],
+      "date": "1920-1924",
+      "start": 1920,
+      "end": 1924,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/bc527d8f-b041-56fa-a46d-1f40c5f0ee7a-824057b4f03b2606.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-signac/floral-still-life",
+      "credit": "Paul Signac. Floral still life. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-signac/floral-still-life",
+      "description": "纸面大半尚未着笔，花束却已经显得丰盛。松散颜色与轻线条交代花朵向外铺展的样子，花纹水壶和旁边书本则形成较紧凑的底部。西涅克让空隙也参与描绘。题材中的繁茂，并不意味着必须用颜料覆盖整张纸。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "7350dfc6-3024-54db-a5d1-7e21c3e57207",
+      "title": "雨云下的勒阿弗尔",
+      "catalogueTitle": "Le Havre with rain clouds",
+      "artist": "Paul Signac",
+      "artists": [
+        {
+          "name": "Paul Signac",
+          "role": "primary",
+          "slug": "paul-signac-q151573"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7350dfc6-3024-54db-a5d1-7e21c3e57207-17b0b11b92faeee6.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-signac/le-havre-with-rain-clouds-1922",
+      "credit": "Paul Signac. Le Havre with rain clouds. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-signac/le-havre-with-rain-clouds-1922",
+      "description": "倾斜笔迹使天空与下方港口一样活跃。细小色块标出船只和建筑立面，却没有固定每一道边缘。西涅克断续的画法适合这片正在变天的景象。建筑提供方位，但雨云决定了它们的轮廓还能保留多少清晰与稳定。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "2db28aa0-ab14-5267-8934-7547e94a76e7",
+      "title": "圣乌尔苏拉殉道",
+      "catalogueTitle": "Marter of St. Ursula",
+      "artist": "Martin Schongauer",
+      "artists": [
+        {
+          "name": "Martin Schongauer",
+          "role": "primary",
+          "slug": "martin-schongauer-q155575"
+        }
+      ],
+      "date": "1475-1490",
+      "start": 1475,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2db28aa0-ab14-5267-8934-7547e94a76e7-e009d5e74669d364.jpg",
+      "imageSource": "https://www.wikiart.org/en/martin-schongauer/marter-of-st-ursula",
+      "credit": "Martin Schongauer. Marter of St. Ursula. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/martin-schongauer/marter-of-st-ursula",
+      "description": "繁复线网中，船身明确的边界将拥挤人物聚在一起。船外建筑与地形向后退去，展开更大的环境。雄高尔让叙事人物组先被辨认，随后才轮到其中众多细节。当周围线描变得密集，这个包围人物的形状为目光提供了可以返回的地方。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "3c7d10eb-7fc7-52ff-9233-13da9fbc4121",
+      "title": "万湖花园",
+      "catalogueTitle": "Wannseegarten",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1921",
+      "start": 1921,
+      "end": 1921,
+      "medium": "Kohle",
+      "accession": "23129",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/3c7d10eb-7fc7-52ff-9233-13da9fbc4121-69dc69b9969f.jpg",
+      "imageSource": "https://sammlungenonline.albertina.at/objects/19247/wannseegarten",
+      "credit": "ALBERTINA, Wien. Public Domain — ALBERTINA free download up to 1200 pixels. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public Domain — ALBERTINA free download up to 1200 pixels",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlungenonline.albertina.at/objects/19247/wannseegarten",
+      "description": "小路与花坛为庭园提供基本布局，不均匀笔触却让枝叶不肯完全服从整齐边界。利伯曼把栽培与生长留在同一幅画里。笔迹虽活跃，有序的空间仍能让人辨明路径。先沿着一条路看，再看它的边缘如何没入植物，这种关系就尤其清楚。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "93b32b84-94e6-55bb-b719-a21a307efcf7",
+      "title": "罗德兹",
+      "catalogueTitle": "Rodez",
+      "artist": "Paul Signac",
+      "artists": [
+        {
+          "name": "Paul Signac",
+          "role": "primary",
+          "slug": "paul-signac-q151573"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/93b32b84-94e6-55bb-b719-a21a307efcf7-57242a593955aff1.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-signac/rodez",
+      "credit": "Paul Signac. Rodez. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-signac/rodez",
+      "description": "高耸教堂塔楼在松散的蓝、黄、粉红色晕染之间提供一道坚实竖线。正因为这项尺度参照稳住城市，西涅克可以让大部分天空保持空白。建筑立面与树木作为色彩点缀聚在周围。一个容易识别的地标，使其他轻淡部分可以只作暗示，不必处处勾出封闭轮廓。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "c8726450-087e-55bf-9a5a-67bf5cdd79d1",
+      "title": "斯普利特戴克里先宫遗址",
+      "catalogueTitle": "Ruins of Diocletian at Split",
+      "artist": "Rudolf von Alt",
+      "artists": [
+        {
+          "name": "Rudolf von Alt",
+          "role": "primary",
+          "slug": "rudolf-von-alt-nga-26510"
+        }
+      ],
+      "date": "1841",
+      "start": 1841,
+      "end": 1841,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c8726450-087e-55bf-9a5a-67bf5cdd79d1-ffcdb719724f415d.jpg",
+      "imageSource": "https://www.wikiart.org/en/rudolf-von-alt/ruins-of-diocletian-at-spalato-1841",
+      "credit": "Rudolf von Alt. Ruins of Diocletian at Split. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rudolf-von-alt/ruins-of-diocletian-at-spalato-1841",
+      "description": "一道拱门后又露出另一条通道，纵深成为连续的开口。视线向内推进时，暖色石面与阴影交替出现。小人物既提供尺度，也说明这里仍有人活动，使古老建筑留在正在使用的环境中。鲁道夫·冯·阿尔特让建筑的年代感与它容纳当下生活的能力并存。",
+      "importance": "",
+      "museum": "Albertina"
+    },
+    {
+      "id": "daa956cf-ac67-53e9-908b-242f597b9437",
+      "title": "虎",
+      "catalogueTitle": "Tiger",
+      "artist": "Anton Romako",
+      "artists": [
+        {
+          "name": "Anton Romako",
+          "role": "primary",
+          "slug": "anton-romako-round5-666ed2313c02"
+        }
+      ],
+      "date": "1870",
+      "start": 1870,
+      "end": 1870,
+      "medium": "水彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/daa956cf-ac67-53e9-908b-242f597b9437-531017ca48987919.jpg",
+      "imageSource": "https://www.wikiart.org/en/anton-romako/tiger-1870",
+      "credit": "Anton Romako. Tiger. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/anton-romako/tiger-1870",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anton-romako/tiger-1870",
+      "description": "休息的虎比浅色地面与附近植物画得更实。因此，无须完整铺陈栖息环境，身体也能保持沉甸甸的体量。向外转动的头，又让长长卧姿带上警觉。罗马科用各处完成程度的差别，将观看集中在这只静止却并未放松注意的动物身上。",
+      "importance": "",
+      "museum": "Albertina"
+    }
+  ],
+  "context": {
+    "start": 1475,
+    "end": 1927
+  },
+  "closingSections": [
+    {
+      "title": "也看看未着笔的地方",
+      "paragraphs": [
+        "将充分描绘的局部与旁边纸面或底色比较。它们之间的过渡，可能比再多一个细节更能说明画家的选择。本选集中不少作品对光线敏感；请查询阿尔贝蒂娜实际展览安排与作品信息，不要默认馆藏名作会永久陈列。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import datetime, hashlib, json, pathlib
+ROOT=pathlib.Path(__file__).resolve().parents[1];E=ROOT/'docs/research/museum-image-recovery-20261013/batches/000013';R=ROOT/'docs/research/museum-image-recovery-20261013/runtime/batches/000013'
+paths=[E/x for x in ['checked-artworks.json','source-queue.json','transaction-preimages.json','transaction-postimage.json','delivery-plan.json','plan-pin.json','independent-verification.json']]+[ROOT/'docs/research/continuous-production-20261011/batches/000107/CHECKPOINT.json']
+result={'outcome':'progress','summary':'Checked 10 distinct previously unchecked Cleveland Museum artworks. One exact CC0 full-frame museum reproduction (Qur’an Manuscript Folio (verso), accession 1933.480.b) was visually reviewed, compressed to 97,754 bytes, attached to the still-imageless production record under the shared ingestion lock, and independently verified in the database, Storage and public delivery. Nine copyrighted records expose no official image route and remain imageless. Batch 107 was reconciled first; local catalogue and both existing programmes were unchanged. Campaign evidence now contains 130 distinct checked IDs.','next_task':'Continue Cleveland after cursor 06d36227-c4cf-4335-b146-360f7e35037b or switch museums, excluding all 130 campaign IDs already checked.','blocker':'','verified_counts':{'artworks_checked':10,'newly_illustrated':1,'held_without_image':9},'evidence_paths':[str(x) for x in paths]}
+payload={'batch':13,'attempt':1,'finished_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'result':result};payload['result_sha256']=hashlib.sha256(json.dumps(result,sort_keys=True).encode()).hexdigest()
+for p in [E/'worker-result.json',R/'worker-result.json']:
+ p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
+print(json.dumps(result,ensure_ascii=False))

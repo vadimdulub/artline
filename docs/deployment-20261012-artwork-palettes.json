@@ -1,0 +1,162 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "Add on-demand browser palettes to artwork records and enlarged viewers: five to eight dominant image colors, approximate area shares, HEX copying, retry and clipboard fallback. Preserve existing releases and keep unrelated local exhibitions out of production.",
+  "deployment": {
+    "buildId": "9f114f12-35c0-4d3d-a2e8-6e197778f0a3",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:artwork-palettes-20261012-v1",
+    "baselineRevision": "artline-web-header-back-1012-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:e57433fb5be3d20ac7477a1e577bc7ed2c24efa990e52722c76f29bdd0ddaba7",
+    "files": {
+      "components/ArtworkViewer.tsx": "0c0243e1e0024ff4944012deb4ec0aef95e0b43da7ed36eeb3a433949a5e33f2",
+      "components/ArtworkPalette.tsx": "3db667693e0f5f30e8bf19c732b548157e12b7249dfa352af3574aecb9f26e38",
+      "components/ArtworkPalette.module.css": "ae4079ee57e3d903b88e612e571c8b1aafba3a910850ea37c8054bbc47c60943",
+      "lib/artwork-palette.ts": "8f45d995a9052703aed243770e568b6bddd28a4fcf046ffc0ebd6028bca97c8b"
+    },
+    "preimages": {
+      "components/ArtworkViewer.tsx": "75671971843f5b8ddbdb1ff9be92b93b8adb770888a966097de94c1e8217dc07",
+      "components/ArtworkPalette.tsx": null,
+      "components/ArtworkPalette.module.css": null,
+      "lib/artwork-palette.ts": null
+    },
+    "overlaySHA256": "9d0919dc2d57c467b5552f569f26b8084d0c27819b4e6a045f3778d125dead3d",
+    "overlayURI": "gs://artline-508319-build-source/artwork-palettes-20261012/palette-9d0919dc2d57c467.tar.xz",
+    "overlayGeneration": "1791789162313555",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:d6e01b8067615bc240d85ae5efa3110464ee842a667dbf7a3481f3ae3c74df03",
+    "revision": "artline-web-artwork-palettes-1012-v1",
+    "candidateURL": "https://artwork-palettes-1012-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-header-back-1012-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "localValidation": {
+    "unitTests": 10,
+    "typecheck": "passed",
+    "eslint": "passed",
+    "browserWidths": [
+      1440,
+      768,
+      390,
+      320,
+      844
+    ],
+    "databaseWrites": false,
+    "verifiedAt": "2026-10-12T07:14:12.850367+00:00"
+  },
+  "candidate": {
+    "stage": "candidate",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 492.8125
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 516.8125
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 324.8125
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 134.8125
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 176.8125
+      }
+    ],
+    "retry": true,
+    "clipboardFallback": true,
+    "aboutAndGuideSearchPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "production": {
+    "stage": "live",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 492.8125
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 516.8125
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 324.8125
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 134.8125
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "swatches5to8": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 176.8125
+      }
+    ],
+    "retry": true,
+    "clipboardFallback": true,
+    "aboutAndGuideSearchPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "errorLogs": 0,
+  "catalogueWrites": false,
+  "accountWrites": false,
+  "databaseMigrations": false,
+  "verifiedAt": "2026-10-12T07:21:19.725612+00:00"
+}

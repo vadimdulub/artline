@@ -1,0 +1,12 @@
+import importlib.util,fcntl
+s=importlib.util.spec_from_file_location('b','ops/continuous-khm-images-000103.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b);i=b.i;h=b.h
+with (b.R/'worker.lock').open('a+') as lock:
+ fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+ audit=b.load(i.folder(b.B)/'quality-audit.json');assert len(audit['prepared_images'])==1
+ im=audit['prepared_images'][0]
+ dec=dict(artwork_id=im['artwork_id'],sha256=im['sha256'],artist=im['artist'],decision='accept',viewed_individually=True,tool='functions tools.view_image',path=im['path'],original_separately_viewed=True,original_path=im['original_path'],original_sha256=im['source_sha256'],notes='Both archived WikiArt source and prepared JPEG actually viewed individually. Wide winter riverside scene: tall signpost at far left, horse and figures with dogs across near bank, skaters on frozen water and houses/trees at right beneath broad sky. Complete supplied painted rectangle, no detail crop or merchandise, source and derivative compositions identical. Width/height agrees within 1% with KHM 58/34 cm. Exact filename identifies museum inventory GG 6210; other WikiArt same-title image is not selected. Unknown WikiArt year remains explicit; museum signed 1627 source establishes eligibility. Manual-review flag resolved by this inspection.',flags_resolved=im['flags'])
+ rv=dict(at=h.now(),batch=b.B,batch_quality_decision='accept',decisions=[dec],review_scope='One original and one derivative actually viewed; contact sheet not separately viewed.',accepted_count=1,held_count=0)
+ b.save('batches/'+b.B+'/visual-review.json',rv);b.save('actual-visual-review.json',rv)
+ prior=b.load(b.E/'independent-reserve-evidence-verification.json')['records'][0]
+ b.save('reserve-actual-visual-sample.json',dict(at=h.now(),artwork_id=prior['artwork_id'],path=prior['local_path'],sha256=prior['derivative_sha256'],viewed=True,notes='One earlier reserve derivative actually viewed: complete sheet with margins, woman at keyboard, L ARTISTE heading and MISTRESS W G caption. Prior immutable checksum-bound reviews govern all 188; this session does not claim to view remaining 187.',new_additions=0))
+ stop=b.ROOT/'docs/research/illustrated-300k-20261011/workers-stopped.json';b.save('completed-campaign-stop-preservation.json',dict(path=str(stop.relative_to(b.ROOT)),sha256=h.sha(stop.read_bytes()),separate_campaign=i.OP,restarted=False))

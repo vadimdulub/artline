@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "ateneum",
+  "museum": "Ateneum Art Museum",
+  "city": "赫尔辛基",
+  "country": "芬兰",
+  "title": "阿黛浓美术馆：杰作",
+  "subtitle": "二十件作品，从辛贝里的受伤天使，到谢尔夫贝克寥寥数笔的面孔。",
+  "introduction": "受伤的天使需要被抬走。康复中的孩子专心看一小枝植物。这些画将异常或意味重大的题材，放在准确的身体关系中，让人能够理解图像，却不把它的含义封死。\n\n阿黛浓美术馆的这组选集，往来于芬兰文学题材、日常室内，以及在欧洲其他地方和太平洋地区完成的作品。图像提供的信息量也在改变：谢尔夫贝克晚期自画像只用少数笔痕描述面孔，拥挤的巴黎花园却容纳许多小活动。二十篇文字追随这些引导观看的选择。它们只是收藏的一个横截面，不是对芬兰艺术的完整定义。",
+  "visitNote": "阿特内姆美术馆（Ateneum）隶属于芬兰国家美术馆。本指南参考了两家机构的馆藏记录，但不保证相关作品目前正在展出。画作与习作可能会外借或进行轮换展出；请在参观前查阅博物馆当前的展览安排及具体藏品信息。",
+  "locale": "zh",
+  "website": "https://ateneum.fi/en/",
+  "officialGuide": "https://ateneum.fi/en/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Kalevala: The Epic Poem of Finland",
+      "author": "Elias Lönnrot; English translation by John Martin Crawford (1888)",
+      "url": "https://www.gutenberg.org/ebooks/5186",
+      "access": "古腾堡计划提供免费的英语文本和电子书。",
+      "note": "克劳福德（Crawford）于19世纪完成的英译本，讲述了加伦-卡莱拉（Gallen-Kallela）笔下《爱诺》（Aino）与《莱明凯宁》（Lemminkäinen）系列画作背后的故事。该译本所使用的时代语言风格迥异于现代译本，而这些画作本身仍应被视为画家个人的艺术选择来加以审视。"
+    }
+  ],
+  "works": [
+    {
+      "id": "fa554fbc-c24b-4a3a-8575-05695eb56957",
+      "title": "受伤的天使",
+      "catalogueTitle": "The Wounded Angel",
+      "artist": "Hugo Simberg",
+      "artists": [
+        {
+          "name": "Hugo Simberg",
+          "role": "primary",
+          "slug": "hugo-simberg-q263080"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "布面油画",
+      "accession": "A II 1703",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/111550c2-44ab-4807-b1c0-ac16ee2693f5-84ced29cb2745c97.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/396251",
+      "credit": "Hugo Simberg. The Wounded Angel. Hugo Simberg; Finnish National Gallery; photograph: Hannu Aaltonen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/396251",
+      "description": "男孩能抬起天使，是因为她被赋予身体的重量与脆弱：受伤的翅膀、蒙住眼睛的绷带，以及担架上的位置。背景是赫尔辛基的真实地点。但这些具体关系并未定下图像的意义。首次展出时，它以一道横线代替解释性的标题。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "002d4512-69a8-4a0c-8c3e-dc8636de1814",
+      "title": "莱明凯宁的母亲",
+      "catalogueTitle": "Lemminkäinen's Mother",
+      "artist": "Akseli Gallen-Kallela",
+      "artists": [
+        {
+          "name": "Akseli Gallen-Kallela",
+          "role": "primary",
+          "slug": "akseli-gallen-kallela-q170068"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "Canvas",
+      "accession": "A I 640",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/51386b66-b928-4c30-b201-58e025f2934a-ad69e2708504f6e7.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/398211",
+      "credit": "Akseli Gallen-Kallela. Lemminkäinen's Mother. Akseli Gallen-Kallela; Finnish National Gallery; photograph: Hannu Pakarinen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/398211",
+      "description": "母亲在苍白横卧的身体旁仍保持直立，将目光引向无法回应她姿态的儿子。暗水、骨骸与红石，让守候发生在一个冷酷环境里。这一情节出自《卡勒瓦拉》，但即使尚不了解整段故事，人物关系也已带来直接力量。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "75a2e4d4-69f1-4f13-9829-e5ea811829f7",
+      "title": "《爱诺神话》三联画",
+      "catalogueTitle": "Aino Myth, triptych",
+      "artist": "Akseli Gallen-Kallela",
+      "artists": [
+        {
+          "name": "Akseli Gallen-Kallela",
+          "role": "primary",
+          "slug": "akseli-gallen-kallela-q170068"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "A I 518",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/d2208568-c3d6-4aa9-945f-d54ea5414982-fd1caf2f83f36dc7.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/392351",
+      "credit": "Akseli Gallen-Kallela. Aino Myth, triptych. Akseli Gallen-Kallela; Finnish National Gallery; photograph: Aleks Talve. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/392351",
+      "description": "爱诺拒绝老贤者维纳莫宁的求婚；中央画板中，她化作鱼被捕获后，又一次逃离他。三幕并未组成连续风景，而是把故事分布在不同瞬间。艺术家雕刻的边框，以及其上的《卡勒瓦拉》文字，帮助把它们连接起来。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "30dd2b6f-c5aa-48f2-a483-c9adf5cfff98",
+      "title": "巴黎卢森堡公园",
+      "catalogueTitle": "The Luxembourg Gardens, Paris",
+      "artist": "Albert Edelfelt",
+      "artists": [
+        {
+          "name": "Albert Edelfelt",
+          "role": "primary",
+          "slug": "albert-edelfelt-q356644"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "布面油画",
+      "accession": "A II 835",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/bdccbf63-a673-42ce-849d-0bceccbcc8c3-602c0f4dfa7449e7.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/387173",
+      "credit": "Albert Edelfelt. The Luxembourg Gardens, Paris. Albert Edelfelt; Finnish National Gallery; photograph: Hannu Pakarinen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/387173",
+      "description": "滚圈、椅子与树下人群，让花园同时容纳数种活动。宽阔小径上，游戏、观看与休息仍各有区别。公共场所来自这种共处，而不是一件统领全场的事件。没有哪个人物必须代表整个下午。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "71ea9f69-8bb5-41e1-a787-7dde3e3e1cf8",
+      "title": "康复者",
+      "catalogueTitle": "The Convalescent",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "布面油画",
+      "accession": "A I 223",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/ea76cc85-f544-4473-aa89-7806ea33fab3-359c9fad3f7c5c45.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/624337",
+      "credit": "Helene Schjerfbeck. The Convalescent. Helene Schjerfbeck; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/624337",
+      "description": "藤椅围在孩子身边，显得很大；即使视线回到桌旁拿着的细枝，孩子身体的小仍然清楚。康复通过一件普通东西重新变得值得细察来呈现。画面不必重述病情，身体尚显脆弱、兴趣却已恢复，这层关系就足够。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "57ef3f6f-a914-4727-b467-c88ac3f30cc4",
+      "title": "自画像，1912年",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "Canvas",
+      "accession": "A-2016-51",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/9bd18ac8-b306-4a0f-9679-cb53dfff5da4-4c97048219a948c1.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/422394",
+      "credit": "Helene Schjerfbeck. Self-Portrait. Helene Schjerfbeck; Finnish National Gallery; photograph: Yehia Eweis. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/422394",
+      "description": "面孔从深色领口上方显露，与背后宽大的灰、黄色区域分开。各处描写的明确程度不同，肖像没有把自己伪装成均匀完成的表面。与后来那幅正面自画像并看，这份简省更清楚；后者进一步删去了描述性信息。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "a2282310-aa29-4cfd-9150-bc415d6d9c2a",
+      "title": "正面自画像 I",
+      "catalogueTitle": "Self-Portrait, en face I",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1945",
+      "start": 1945,
+      "end": 1945,
+      "medium": "",
+      "accession": "A-2005-131",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-fng/d2ddb3ee-ce87-4e96-ade6-8c4ecb4e8f73-6bf9de1d8c20c594.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/598510",
+      "credit": "Helene Schjerfbeck. Self-Portrait, en face I. Helene Schjerfbeck; Finnish National Gallery; photograph: Hannu Pakarinen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/598510",
+      "description": "少量笔痕让眼、鼻、口刚好分开到足以被认作面孔。正面角度使这些选择格外显露。与1912年的自画像比较，可以看到描述方式的改变，但不应把简化的五官转译成未经证实的艺术家内心独白。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "8526f958-e54d-4974-8dbe-280e44bb5ad0",
+      "title": "瓦兹河畔欧韦的街道",
+      "catalogueTitle": "Street in Auvers-sur-Oise",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "A I 755",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/a8d41514-5117-4392-a3ce-b84c804e7980-efb1684641d4f9a9.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/394702",
+      "credit": "Vincent van Gogh. Street in Auvers-sur-Oise. Image credit: Finnish National Gallery / Yehia Eweis. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/394702",
+      "description": "尽管周围笔触活跃，仍可以沿房屋之间的道路向前看。屋顶、植物与天空各有不同的落笔节奏，使建筑、自然生长与空气保持区别。镇中一条普通路线将场景连在一起，颜料则让每个部分都留下了鲜明的处理痕迹。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "01d346db-b27b-43db-ad66-575a00a6292b",
+      "title": "莱斯塔克的公路桥",
+      "catalogueTitle": "The Road Bridge at L'Estaque",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1879–1882",
+      "start": 1879,
+      "end": 1882,
+      "medium": "布面油画",
+      "accession": "A II 906",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/d4db0574-613a-43da-8f67-d6b0db36f38a-d87d14579ddfe8ed.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/401049",
+      "credit": "Paul Cézanne. The Road Bridge at L'Estaque. Image credit: Finnish National Gallery / Jenni Nurminen. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/401049",
+      "description": "桥给周围树木与坡地提供了一个坚实结构，可以与之对照。短小色块拼成平面，却未完全掩去彼此的独立。因此风景可被同时读成两件事：向内延伸的空间，以及相邻色面共同制造出的距离。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "11b6c82b-0bfa-51f0-9949-3512b69084df",
+      "title": "读书的女孩",
+      "catalogueTitle": "Girl Reading",
+      "artist": "Helene Schjerfbeck",
+      "artists": [
+        {
+          "name": "Helene Schjerfbeck",
+          "role": "primary",
+          "slug": "helene-schjerfbeck-q236985"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/11b6c82b-0bfa-51f0-9949-3512b69084df-690068441e6f799e.jpg",
+      "imageSource": "https://www.wikiart.org/en/helene-schjerfbeck/girl-reading-1904",
+      "credit": "Helene Schjerfbeck. Girl Reading. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/helene-schjerfbeck/girl-reading-1904",
+      "description": "椅子横档先挡在女孩身前，目光随后才到达倾斜的侧脸与书页。阅读通过入神的状态来呈现，而面孔只能看到一部分。家具并非随意陪衬；重复的分隔使身体轻微转动更明显，也将读者留在组织紧密的空间里。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "39abce3d-5e7a-4c50-8a48-4927dc1b7b33",
+      "title": "小提琴手",
+      "catalogueTitle": "The Violinist",
+      "artist": "Pekka Halonen",
+      "artists": [
+        {
+          "name": "Pekka Halonen",
+          "role": "primary",
+          "slug": "pekka-halonen-round2-04f298230d92"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "布面油画",
+      "accession": "A III 2071",
+      "image": "https://artlines.org/assets/artworks/wikiart/aabb0697-5be5-4227-aa7b-e8ba3ec726b3-a7b7a8f3669602e1.jpg",
+      "imageSource": "https://www.wikiart.org/en/halonen-pekka/the-violinist-1900",
+      "credit": "Pekka Halonen. The Violinist. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/438346",
+      "description": "小提琴由下巴、手与肩共同夹持，并非作为身份标记摆在人物身旁。裸露的上身让这种关系格外直接。对音乐的专注在这里体现为身体安排；即使听不到琴声，也能看见演奏所需的接触与位置。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "ba9001d0-3222-4094-8b23-b6ac103451fc",
+      "title": "基纳赫米的冬日风景",
+      "catalogueTitle": "Winter Landscape, Kinahmi",
+      "artist": "Pekka Halonen",
+      "artists": [
+        {
+          "name": "Pekka Halonen",
+          "role": "primary",
+          "slug": "pekka-halonen-round2-04f298230d92"
+        }
+      ],
+      "date": "1923",
+      "start": 1923,
+      "end": 1923,
+      "medium": "布面油画",
+      "accession": "A II 1546",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/e999d928-054a-4a3d-bc45-6a5aa2ce15ee-912e6571344d57cd.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/400442",
+      "credit": "Pekka Halonen. Winter Landscape, Kinahmi, 1923. Inventory A II 1546. Pekka Halonen; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/400442. Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/400442",
+      "description": "雪遮住了树木大部分熟悉的分枝，代之以圆润的浅色团块。蓝色远方与内部阴影，使这些团块不至于合成一整片白。冬季表现为结构的变化：树仍可认出，但我们据以辨认它们的形状已经改变。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "7eb7f388-78ac-4082-bb01-05e27a55eaf0",
+      "title": "海梅地区的道路：炎炎夏日",
+      "catalogueTitle": "Road in Häme (A Hot Summer Day)",
+      "artist": "Werner Holmberg",
+      "artists": [
+        {
+          "name": "Werner Holmberg",
+          "role": "primary",
+          "slug": "werner-holmberg-round2-6caf866f46d8"
+        }
+      ],
+      "date": "1860",
+      "start": 1860,
+      "end": 1860,
+      "medium": "布面油画",
+      "accession": "A II 1002",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/de347ee6-fd6c-4e06-9ef9-17de44d663fc-56db3f8bc30e374e.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/608901",
+      "credit": "Werner Holmberg. Road in Häme (A Hot Summer Day), 1860. Inventory A II 1002. Werner Holmberg; Finnish National Gallery; photograph: Yehia Eweis. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/608901. Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/608901",
+      "description": "小车说明有人沿路行进，却没有占据整片森林。高树干之间，阳光斑块与被遮蔽的部分交替出现，旅程于是有了可见次序。纵深来自视野开合与光线的变化，而不是一次毫无遮挡、直达道路终点的远眺。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "77039fe1-7c78-45a5-b0d5-c6400206da1e",
+      "title": "室内，夏季",
+      "catalogueTitle": "Interior, Summer",
+      "artist": "Elin Danielson-Gambogi",
+      "artists": [
+        {
+          "name": "Elin Danielson-Gambogi",
+          "role": "primary",
+          "slug": "elin-danielson-gambogi-q1827236"
+        }
+      ],
+      "date": "1900–1919",
+      "start": 1900,
+      "end": 1919,
+      "medium": "布面油画",
+      "accession": "A-2026-55",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/f430c2ae-c999-42db-8b4f-12a8723b22a4-1e10e867df65f784.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/6127043",
+      "credit": "Elin Danielson-Gambogi. Interior, Summer, 1900–1919. Inventory A-2026-55. Elin Danielson-Gambogi; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/6127043. Full-frame proportional resize and JPEG compression. The current museum record dates this work 1903–1913; the existing catalogue range 1900–1919 is retained for editorial review.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/6127043",
+      "description": "明亮窗户与窗边植物，让空屋并不沉寂。光照过浅色椅子和铺着桌布的桌面，较暖笔触则避免家具并成一团白。没有人在场，使用痕迹也仍然存在；不必把缺席改编成一段关于谁离开的象征性故事。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "9e43d9dd-609b-4e01-ba50-9d81748788d4",
+      "title": "塔希提风景：《Mahana Maà》",
+      "catalogueTitle": "Landscape in Tahiti (Mahana Maà)",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "布面油画",
+      "accession": "A II 986",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/e0eb70e7-9538-4dbf-813e-32cb5894b761-45d7ff11cc801921.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/427664",
+      "credit": "Paul Gauguin. Landscape in Tahiti (Mahana Maà). Image credit: Finnish National Gallery / Hannu Aaltonen. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/427664",
+      "description": "小小的坐者被棕榈、建筑与鲜明的橙绿色块环绕。颜色安排使景色连贯，却不能被误当作塔希提生活的完整说明。这是对一个地方有所选择、经过建构的图像；什么占多少空间、什么受到强调，都由画家决定。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "7ecbd578-7724-44bc-a852-67bc8c8e228c",
+      "title": "有猪和马的风景，希瓦瓦岛",
+      "catalogueTitle": "Landscape with a Pig and a Horse (Hiva Oa)",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "布面油画",
+      "accession": "A II 854",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/f9bc878c-0f32-44be-94be-bed7677c2382-330126690885fdb9.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/433175",
+      "credit": "Paul Gauguin. Landscape with a Pig and a Horse (Hiva Oa). Image credit: Finnish National Gallery / Hannu Aaltonen. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/433175",
+      "description": "猪和马给林间空地带来熟悉的大小参照，周围是颜色强烈的树干与枝叶。紫、红、绿连接景色，并不模仿通常表现户外光线的色调。动物仍可辨认，周围大部分空间却呈现为一片围拢的色彩图案。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "a19fd8f8-8ae8-4768-b669-16cc4dab4cb6",
+      "title": "沐浴的男子",
+      "catalogueTitle": "Bathing Men ; Middle Age",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1907–1908",
+      "start": 1907,
+      "end": 1908,
+      "medium": "布面油画",
+      "accession": "A II 908",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/37c4c090-f66f-4ab3-bf32-edeb9cb20679-9412a6f673e85906.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/399258",
+      "credit": "Edvard Munch. Bathing Men ; Middle Age. Image credit: Finnish National Gallery / Aleks Talve. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/399258",
+      "description": "沐浴者有的正面，有的侧转，位置差别因此成为题材的一部分。宽阔笔触同时掠过身体与岸边，将他们接入开敞环境。不必另加事件来组织人群；几具身体同时在场，已经提供足够具体的比较。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "f841fe4c-cd8e-4528-915d-3c1b8fcf270b",
+      "title": "神秘的风景",
+      "catalogueTitle": "Mysterious Landscape",
+      "artist": "Tove Jansson",
+      "artists": [
+        {
+          "name": "Tove Jansson",
+          "role": "primary",
+          "slug": "tove-jansson-round2-4926cc2e6aa4"
+        }
+      ],
+      "date": "约 1930–1939 年",
+      "start": 1930,
+      "end": 1939,
+      "medium": "胶合板油画",
+      "accession": "A-2006-155",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/f841fe4c-cd8e-4528-915d-3c1b8fcf270b-5efe5701407556bb.jpg",
+      "imageSource": "https://www.wikiart.org/en/tove-jansson/mysterious-landscape-1930",
+      "credit": "Tove Jansson. Mysterious Landscape. WikiArt source label: Tove Jansson Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/tove-jansson/mysterious-landscape-1930",
+      "license": "Tove Jansson Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/385007",
+      "description": "暗色山脉与浅色垂树，围住远方一个小小开口。路径暗示可能穿过的方向，却没有明确事件解释通向哪里。扬松给虚构地貌以连贯结构，未将故事补全。仅靠通道与阻隔，风景也能暗示叙事。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "07fb7a36-2fd0-40c0-b4e3-0056bdc48959",
+      "title": "《春天》——尤塞利乌斯陵墓壁画习作",
+      "catalogueTitle": "Spring, study for the Jusélius Mausoleum Frescoes",
+      "artist": "Akseli Gallen-Kallela",
+      "artists": [
+        {
+          "name": "Akseli Gallen-Kallela",
+          "role": "primary",
+          "slug": "akseli-gallen-kallela-q170068"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "Canvas",
+      "accession": "A IV 2962",
+      "image": "https://artlines.org/assets/artworks/imported/local-fng-native-images-20261006/f2e4b8ff-dcf1-47e6-b988-a8f19f3373cd-027d1308c9754d69.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/388496",
+      "credit": "Akseli Gallen-Kallela. Spring, study for the Jusélius Mausoleum Frescoes, 1903. Inventory A IV 2962. Akseli Gallen-Kallela; Finnish National Gallery; photograph: Jenni Nurminen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). https://kokoelma.kansallisgalleria.fi/en/object/388496. Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/388496",
+      "description": "高举的手臂在树枝下呼应着生长，把植物的伸展转为人体动作。聚集者身后水面展开，为少数姿势提供宽广环境。作为壁画习作，它也在思考人物如何组织更大的装饰空间：放到整面墙上，动作仍须让人看得清。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    },
+    {
+      "id": "81882547-6422-4766-b69c-523257867c90",
+      "title": "《玛莱娜公主》舞美设计",
+      "catalogueTitle": "Draft Set Design for Maurice Maeterlinck´s Play Princess Maleine",
+      "artist": "Nicholas Roerich",
+      "artists": [
+        {
+          "name": "Nicholas Roerich",
+          "role": "primary",
+          "slug": "nicholas-roerich-q208993"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "纸本水粉、炭笔与色粉",
+      "accession": "A II 1267",
+      "image": "https://artlines.org/assets/artworks/imported/top100-russian-greek-20260914/4fff4984-d989-4f26-ae52-9a17f49c682e-fd17586c4ace7ab8.jpg",
+      "imageSource": "https://kokoelma.kansallisgalleria.fi/en/object/393781",
+      "credit": "Nicholas Roerich. Draft Set Design for Maurice Maeterlinck´s Play Princess Maleine. Image credit: Hannu Aaltonen; Finnish National Gallery / Hannu Aaltonen. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://kokoelma.kansallisgalleria.fi/en/object/393781",
+      "description": "拱门与柱子造出接连的开口，橙色光线区分其后空间。这是供表演使用的场景设计，不是建筑测绘。纵深让人想到人物可能在哪里出现或穿行，因此设计可以预备一段故事，而不必图解其中某个确定瞬间。",
+      "importance": "",
+      "museum": "Ateneum Art Museum"
+    }
+  ],
+  "context": {
+    "start": 1860,
+    "end": 1945
+  },
+  "closingSections": [
+    {
+      "title": "让未解释之处保留下来",
+      "paragraphs": [
+        "标题或文学出处可以澄清动作，却未必决定所有解读。读完故事再回到图像，区分画面展示了什么、文字来源又补充了什么。到访请以博物馆最新信息为准；藏品可能外借，也可能暂不展出。"
+      ]
+    }
+  ]
+}

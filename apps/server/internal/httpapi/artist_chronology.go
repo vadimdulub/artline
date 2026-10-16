@@ -17,11 +17,23 @@ import (
 var artistSlugPattern = regexp.MustCompile(`^[a-z0-9]+(?:[-_][a-z0-9]+)*$`)
 
 func validArtistSlug(slug string) bool {
-	return len(slug) <= 100 && artistSlugPattern.MatchString(slug)
+	return len(slug) <= 100 && artistSlugPattern.MatchString(strings.ToLower(slug))
+}
+
+// Met imports retain Wikidata's uppercase Q in their stable database identity.
+// URL filters are lowercase; restore the source convention before indexed lookup.
+var metArtistSlugPattern = regexp.MustCompile(`^met-qid-q[0-9]+-`)
+
+func sourceArtistSlug(raw string) string {
+	slug := strings.ToLower(strings.TrimSpace(raw))
+	if metArtistSlugPattern.MatchString(slug) {
+		return "met-qid-Q" + slug[len("met-qid-q"):]
+	}
+	return slug
 }
 
 func artistLookupSlug(raw string) string {
-	slug := strings.ToLower(strings.TrimSpace(raw))
+	slug := sourceArtistSlug(raw)
 	if validArtistSlug(slug) {
 		return slug
 	}
@@ -76,7 +88,7 @@ func (api *API) artistWorks(w http.ResponseWriter, r *http.Request) {
 		api.artistChronologyError(w, err)
 		return
 	}
-	slug := r.PathValue("slug")
+	slug := sourceArtistSlug(r.PathValue("slug"))
 	if !validArtistSlug(slug) {
 		api.artistChronologyError(w, catalog.ErrNotFound)
 		return
@@ -92,7 +104,7 @@ func (api *API) artistWorks(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, 200, page)
 }
 func (api *API) artistArtwork(w http.ResponseWriter, r *http.Request) {
-	slug, id := r.PathValue("slug"), r.PathValue("id")
+	slug, id := sourceArtistSlug(r.PathValue("slug")), r.PathValue("id")
 	if !validArtistSlug(slug) || !museumIDPattern.MatchString(id) {
 		api.artistChronologyError(w, catalog.ErrNotFound)
 		return
@@ -109,7 +121,7 @@ func (api *API) artistArtwork(w http.ResponseWriter, r *http.Request) {
 }
 
 func (api *API) artistIdentity(w http.ResponseWriter, r *http.Request) {
-	slug := r.PathValue("slug")
+	slug := sourceArtistSlug(r.PathValue("slug"))
 	if !validArtistSlug(slug) {
 		api.artistChronologyError(w, catalog.ErrNotFound)
 		return

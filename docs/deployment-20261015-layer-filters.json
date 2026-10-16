@@ -1,0 +1,399 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verifiedAt": "2026-10-15T12:54:04.458385+00:00",
+  "change": "Hiding Artworks, Books, or Events changes layer visibility while preserving global and native filters, Highlights, and the selected year range. Restoring a layer restores its filtered view.",
+  "authorization": "User requested: ok, deploy",
+  "web": {
+    "kind": "web",
+    "sourceCommit": "02b63112d63d012f9437841c3a318ecf8d6c6dde",
+    "source": "Two approved filter-fix files over exact deployed guide-titles-v2 build",
+    "baselineRevision": "artline-web-guide-titles-1015-v2",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:32933134d9cce1c7fd5316cc739ab875e84de327357f5c894c56886906803555",
+    "baselineBuildId": "f971a955-e5e7-4a40-bf66-def66c0274dc",
+    "preimages": {
+      "components/AllAtlas.tsx": "7e465745f010934a39645c8c38355a821f3b187eff971ace743ae221b69f9e7a",
+      "components/AllAtlas.test.tsx": "1c0f5ba26bf9d9fafa757132a58903cf4b5c008f65f1db998a61247451e52376"
+    },
+    "files": {
+      "components/AllAtlas.tsx": "fadd1ee61945c7473423c521b5688f4c90ae2397d00663be67cbbbb0a2646af0",
+      "components/AllAtlas.test.tsx": "39e77f9b664948f2f14b397e1d725f40d57af180e3107536c34aaf00672e7149"
+    },
+    "overlaySHA256": "4b49c399ba6fab5ac77a767c42805f1de80317ef26aa83af31096f25e37f6e68",
+    "buildId": "d3e1cdc9-8058-4486-b479-fbe687423035",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:layer-filters-1015-4b49c399",
+    "overlayURI": "gs://artline-508319-build-source/layer-filters-20261015/web-4b49c399ba6fab5a.tar.xz",
+    "overlayGeneration": "1792067892486184",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:2efb46400b60d8093decc92d558d955cafce667c357c5ebc4325ca92aa1d7b8d",
+    "revision": "artline-web-layer-filters-1015-v1",
+    "candidateURL": "https://layer-filters-1015-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-guide-titles-1015-v2",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100
+  },
+  "validation": {
+    "workspaceTests": 61,
+    "releaseSourceTests": 11,
+    "typeScript": "passed",
+    "targetedESLint": "passed",
+    "fix": "Layer visibility preserves all native and global filters and does not refit years",
+    "scope": [
+      "components/AllAtlas.tsx",
+      "components/AllAtlas.test.tsx"
+    ],
+    "cancelledBuild": "adfd41b0-3f0c-4b07-830a-7fc8176266fa",
+    "cancelledBuildReason": "Corrected unsupported exact option on Testing Library role queries before release"
+  },
+  "candidateWebChecks": {
+    "stage": "candidate",
+    "base": "https://layer-filters-1015-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "verifiedAt": "2026-10-15T12:53:17.545Z",
+    "checks": [
+      {
+        "width": 1440,
+        "highlights": true,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 1440,
+        "highlights": false,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "highlights": true,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "highlights": false,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "path": "/guides",
+        "status": 200
+      },
+      {
+        "path": "/about",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200
+      }
+    ]
+  },
+  "liveWebChecks": {
+    "stage": "live",
+    "base": "https://artlines.org",
+    "verifiedAt": "2026-10-15T12:53:49.099Z",
+    "checks": [
+      {
+        "width": 1440,
+        "highlights": true,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 1440,
+        "highlights": false,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "highlights": true,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "width": 390,
+        "highlights": false,
+        "artworks": 150,
+        "actions": [
+          {
+            "category": "Books",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": false,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Books",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          },
+          {
+            "category": "Events",
+            "checked": true,
+            "filtersPreserved": true,
+            "yearsPreserved": true,
+            "artworksPreserved": true
+          }
+        ],
+        "reloadPreserved": true,
+        "errors": [],
+        "failedAPIReads": []
+      },
+      {
+        "path": "/guides",
+        "status": 200
+      },
+      {
+        "path": "/about",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/session",
+        "status": 200
+      }
+    ]
+  },
+  "releaseErrorLogEntries": 0,
+  "webImagePinUpdated": true,
+  "apiChanged": false,
+  "databaseChanged": false,
+  "runtimeSettingsPreserved": true,
+  "backgroundJobsChanged": false,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "unrelatedWorkspaceChangesPreserved": true,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/layer-filters-20261015"
+}

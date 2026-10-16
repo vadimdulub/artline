@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "national-museum-krakow",
+  "museum": "National Museum in Kraków",
+  "city": "Cracovie",
+  "country": "Pologne",
+  "title": "Musée national de Cracovie : chefs-d’œuvre",
+  "subtitle": "De la tête tournée de Cecilia Gallerani aux foules de Matejko, les corps donnent forme aux relations privées et aux événements publics.",
+  "introduction": "Une main tendue peut tenir un animal, annoncer une prophétie, offrir une boisson dangereuse ou accomplir un petit soin. Le geste n'est qu'un début. Son sens dépend des corps qui l'entourent, de l'attention qu'il reçoit et de l'espace où il se produit. Cette sélection rend ces rapports particulièrement visibles, entre portraits resserrés et scènes historiques peuplées.\n\nWyspiański propose une autre échelle de comparaison : les bras au repos d'un enfant et le vaste mouvement d'un projet de vitrail demandent des choses très différentes à la figure humaine. Il est utile de lire les œuvres à travers ces écarts. Un sujet public reconnaissable ne rend pas chaque expression évidente, et un modèle privé ne fournit pas nécessairement toute une histoire personnelle.",
+  "visitNote": "Le Musée national de Cracovie occupe plusieurs bâtiments. La Dame à l'hermine appartient au musée des Princes Czartoryski ; d'autres œuvres proviennent de différentes antennes et peuvent faire l'objet de rotations ou d'itinérances. Les projets de vitraux de Wyspiański présentés ici sont des pièces de musée, et non des photographies des vitraux installés dans les églises.",
+  "locale": "fr",
+  "website": "https://mnk.pl/",
+  "officialGuide": "https://mnk.pl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les carnets de Léonard abordent la peinture à travers l’observation du mouvement, de la lumière et du corps. Ils constituent un point de départ pour le premier portrait et offrent une comparaison fructueuse avec les contours plus marqués de l’œuvre de Wyspiański."
+    }
+  ],
+  "works": [
+    {
+      "id": "c9468bb3-37c4-5f33-af3c-05427d54c809",
+      "title": "La Dame à l'hermine",
+      "catalogueTitle": "The Lady with an Ermine (Cecilia Gallerani)",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "1489-1490",
+      "start": 1489,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c9468bb3-37c4-5f33-af3c-05427d54c809-e8fbb6b1b3b0c7fe.jpg",
+      "imageSource": "https://www.wikiart.org/en/leonardo-da-vinci/the-lady-with-the-ermine-cecilia-gallerani-1496",
+      "credit": "Leonardo da Vinci. The Lady with an Ermine (Cecilia Gallerani). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/157417",
+      "description": "Cecilia Gallerani et l'hermine regardent dans la même direction sans adopter une pose identique. Sa longue main suit le dos de l'animal, reliant physiquement leurs mouvements distincts. Léonard donne de l'importance à un point invisible hors du cadre. Le mouvement du modèle suggère une rencontre que le tableau ne complète pas pour le spectateur.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "b335f9a7-a7be-5758-9a34-8083f3d979ee",
+      "title": "Jeune fille aux chrysanthèmes",
+      "catalogueTitle": "Girl with Chrysanthemums",
+      "artist": "Olga Boznańska",
+      "artists": [
+        {
+          "name": "Olga Boznańska",
+          "role": "primary",
+          "slug": "olga-boznanska-q466639"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b335f9a7-a7be-5758-9a34-8083f3d979ee-6c4d2fbbc300fdb7.jpg",
+      "imageSource": "https://www.wikiart.org/en/olga-boznanska/girl-with-chrysanthemums-1894",
+      "credit": "Olga Boznańska. Girl with Chrysanthemums. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/161259",
+      "description": "Les fleurs blanches interrompent une gamme de gris proches et font ressortir les mains jointes sous le regard direct aux yeux sombres. Boznańska laisse le décor dépouillé : les petites différences comptent davantage. L'intensité du portrait n'a pas besoin d'une explication inventée des sentiments de l'enfant. Elle naît d'une rencontre prolongée avec un visage que peu de choses viennent distraire.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "991b35f8-89b0-5e35-985c-2cf7f21307fb",
+      "title": "Portrait de Paul Nauen",
+      "catalogueTitle": "Portrait of Paul Nauen",
+      "artist": "Olga Boznańska",
+      "artists": [
+        {
+          "name": "Olga Boznańska",
+          "role": "primary",
+          "slug": "olga-boznanska-q466639"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/991b35f8-89b0-5e35-985c-2cf7f21307fb-ff1d42762dcf3b0d.jpg",
+      "imageSource": "https://www.wikiart.org/en/olga-boznanska/portrait-of-paul-nauen-1893",
+      "credit": "Olga Boznańska. Portrait of Paul Nauen. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/35369",
+      "description": "Le corps de côté et la tête qui se retourne suggèrent une pause dans une pièce occupée. La tasse voisine renforce l'impression d'une visite interrompue, tandis que le noir dense du vêtement isole visage et mains. Boznańska construit une ressemblance formelle par une disposition relativement informelle. La pose fournit une occasion sans exiger d'anecdote détaillée.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "24348dda-e4bd-5dd1-9fae-16c2d0daeed5",
+      "title": "La Folie",
+      "catalogueTitle": "Szał",
+      "artist": "Władysław Podkowiński",
+      "artists": [
+        {
+          "name": "Władysław Podkowiński",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2065760"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-b-887",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/24348dda-e4bd-5dd1-9fae-16c2d0daeed5-8c958ec89a21.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/143955",
+      "credit": "Władysław Podkowiński; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/143955",
+      "description": "La prise de la femme relie son corps pâle à la masse sombre du cheval cabré. Podkowiński rend les deux inséparables et précaires : la force qui élève l'un menace l'équilibre de l'autre. Le sol indistinct n'offre guère de sécurité. L'excès du titre devient une relation physique d'attachement et d'instabilité, plutôt qu'un sentiment simplement déclaré par un visage.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "3335c1cd-e75d-5925-88a4-9177c6e3d14b",
+      "title": "L'Attelage à quatre",
+      "catalogueTitle": "Four-in-Hand",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/3335c1cd-e75d-5925-88a4-9177c6e3d14b-b2c7740cab3a97ba.jpg",
+      "imageSource": "https://www.wikiart.org/en/jozef-chelmonski/four-in-hand-1881",
+      "credit": "Józef Chełmoński. Four-in-Hand. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jozef-chelmonski/four-in-hand-1881",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://zbiory.mnk.pl/pl/katalog/330685",
+      "description": "Les chevaux occupent toute la largeur de la composition en avançant vers le premier plan. Chełmoński empêche de saisir l'attelage comme un objet compact : jambes et corps répartissent son énergie vers l'avant. La grande toile horizontale intensifie cette approche. Il faut distinguer l'œuvre de Cracovie de la scène d'attelage apparentée, plus petite, conservée à Varsovie.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "86801694-c810-54ed-9fb3-32f5320e6b5a",
+      "title": "L'Orage",
+      "catalogueTitle": "Burza",
+      "artist": "Józef Chełmoński",
+      "artists": [
+        {
+          "name": "Józef Chełmoński",
+          "role": "primary",
+          "slug": "wikiart-artist-jozef-chelmonski"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-a-237",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/86801694-c810-54ed-9fb3-32f5320e6b5a-9591de7ec168.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/326691",
+      "credit": "Józef Chełmoński; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/326691",
+      "description": "Les corps courbés et les mouvements pressés rendent le mauvais temps sensible avant même que l'on remarque l'éclair. Vêtements et ballots contrarient l'avancée des figures : l'orage a toute une série d'effets pratiques. Chełmoński maintient le champ dans le domaine du travail et de l'exposition aux éléments. Le drame du ciel se mesure à ce qu'il oblige les gens à faire au sol.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "c93b7b90-fce9-58f3-8a7f-262baaa2bfbc",
+      "title": "Wernyhora",
+      "catalogueTitle": "Wernyhora",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-a-433",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/c93b7b90-fce9-58f3-8a7f-262baaa2bfbc-dee01189fe0f.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/372941",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/372941",
+      "description": "La main levée désigne une autorité prophétique, mais les auditeurs ne lui répondent pas tous de la même manière. Visages et directions d'attention diffèrent : la parole se propage inégalement dans l'assemblée. Matejko donne sa force au geste central par sa réception. Les personnes alentour participent à son sens au lieu de former un public décoratif.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "8133dfe6-49fe-5642-8403-c131c3fb261f",
+      "title": "Kościuszko à Racławice",
+      "catalogueTitle": "Kościuszko pod Racławicami",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-a-151",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/8133dfe6-49fe-5642-8403-c131c3fb261f-ea1e6beea778.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/306743",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/306743",
+      "description": "Bannières, cavaliers et gestes levés organisent un rassemblement public après la bataille, tandis que les corps blessés du premier plan en conservent un autre récit. Matejko fait partager le paysage à la cérémonie et à son coût. La vaste scène historique ne se comprend pas par le seul cavalier central. Les participants secondaires compliquent la victoire présentée par le groupe principal.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "b5adf40f-c02e-5305-b10e-1ccb5b37427e",
+      "title": "Polonia 1863",
+      "catalogueTitle": "Polonia 1863 (Zakuwana Polska)",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "Huile sur toile",
+      "accession": "MNK XII-453",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/b5adf40f-c02e-5305-b10e-1ccb5b37427e-8509aff96bef.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/325087",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/325087",
+      "description": "La personnification de la Pologne occupe un intérieur resserré parmi soldats et figures entravées. Un bras pâle tendu rend la contrainte visible à un endroit précis, transformant une condition politique en contact entre les corps. Matejko ne laisse pas l'allégorie à l'abri dans l'abstraction. La proximité fait agir le pouvoir à portée de la figure vulnérable, plutôt qu'à une échelle historique lointaine.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "07e58822-4f81-5b4b-be71-23eeffc227c9",
+      "title": "L'Empoisonnement de la reine Bona",
+      "catalogueTitle": "Otrucie królowej Bony",
+      "artist": "Jan Matejko",
+      "artists": [
+        {
+          "name": "Jan Matejko",
+          "role": "primary",
+          "slug": "jan-matejko-q189117"
+        }
+      ],
+      "date": "1859",
+      "start": 1859,
+      "end": 1859,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-a-1321",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/07e58822-4f81-5b4b-be71-23eeffc227c9-d5a0b81bba79.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/521275",
+      "credit": "Jan Matejko; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/521275",
+      "description": "Le récipient n'a pas encore atteint la femme assise. Matejko retient l'attention autour de cet échange attendu ; les visages voisins donnent à l'offrande ordinaire son danger. Le sujet repose sur un savoir inégalement partagé. Ce qui pourrait passer pour un service dans une pièce meublée devient menaçant lorsque le titre historique transforme la lecture de l'approche.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "9b6f6334-7c19-507e-8ddc-a444d2c92d9e",
+      "title": "Apollon : le système solaire de Copernic",
+      "catalogueTitle": "Apollo - Copernicus' Solar System",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Pastel sur carton",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/9b6f6334-7c19-507e-8ddc-a444d2c92d9e-ad7446b708f6205c.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "credit": "Stanisław Wyspiański. Apollo - Copernicus' Solar System. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/stanislaw-wyspianski/apollowys",
+      "description": "Le corps jaune central appartient à un réseau de bandes bleues courbes et de formes plus petites. Wyspiański organise la figure pour un projet de vitrail, dont les limites doivent rester lisibles à travers des zones divisées. L'ordre astronomique devient un problème de disposition visuelle. Le corps fournit un centre, tandis que les lignes l'intègrent à un système plus vaste de formes imbriquées.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "d3b4b9cc-d511-538b-a591-1ecddb7c80db",
+      "title": "Maternité",
+      "catalogueTitle": "Motherhood",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "Pastel sur carton",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/d3b4b9cc-d511-538b-a591-1ecddb7c80db-27a727612a98da97.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "credit": "Stanisław Wyspiański. Motherhood. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/stanislaw-wyspianski/motherhood-1905",
+      "description": "L'allaitement donne au groupe un centre concret. Les têtes inclinées des fillettes prolongent l'attention vers la mère et le nourrisson, parmi les vêtements à motifs et les fleurs. Wyspiański laisse l'ornement relier les figures sans remplacer leur activité. Les courbes répétées associent le soin du corps au dessin de la surface, gardant le geste intime visible au sein de la densité décorative.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "205a3e5f-2f27-58ea-a06d-4833220eccff",
+      "title": "Autoportrait avec sa femme",
+      "catalogueTitle": "Autoportret z żoną",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Pastel sur papier vergé",
+      "accession": "MNK III-r.a-10895",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/205a3e5f-2f27-58ea-a06d-4833220eccff-b68f693554b0.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/195852",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/195852",
+      "description": "Le couple regarde ensemble vers l'extérieur, mais expressions et vêtements restent distincts. Perles rouges et foulard définissent une figure ; les épaules rapprochées constituent la disposition commune. Wyspiański rend l'union visible par la proximité tout en préservant les différences. Le portrait construit une image de la vie à deux, sans prouver que deux personnes possèdent le même tempérament.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "d7a2a1f9-3b43-5fa3-b0bf-75ce5508e3df",
+      "title": "Autoportrait un mois avant la mort",
+      "catalogueTitle": "Autoportret na miesiąc przed śmiercią",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "Dessin au crayon sur papier",
+      "accession": "MNK III-r.a-4780",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/d7a2a1f9-3b43-5fa3-b0bf-75ce5508e3df-862b3d7cc079.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/374514",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/374514",
+      "description": "Le titre donne une perspective biographique qui peut submerger le dessin si elle explique chaque ligne. Wyspiański concentre les marques sombres autour des yeux, de la bouche et des cheveux libres, laissant la feuille plus ouverte ailleurs. Le visage demeure singulier avec insistance. Cette économie enregistre une présence corporelle sans inventer les dernières pensées que l'œuvre ne peut livrer.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "88950739-4fa1-50dc-b10d-e7d8e60a0927",
+      "title": "Mietek appuyé sur ses bras",
+      "catalogueTitle": "Mietek oparty na rękach",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Pastel sur papier",
+      "accession": "MNK III-r.a-10757",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/88950739-4fa1-50dc-b10d-e7d8e60a0927-a8d42f24b77d.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/187697",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/187697",
+      "description": "Le menton repose au-dessus des mains repliées, faisant du poids de l'enfant une partie du portrait. Le front abaissé modifie l'espace autour des yeux sans expression théâtrale. Wyspiański accorde à une posture sans cérémonie l'attention d'un portrait. Les bras montrent comment la tête est soutenue et ancrent une rencontre qui pourrait autrement se limiter à une étude des traits.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "8b8e2016-7b1b-5c7f-ba40-e05988cb38d4",
+      "title": "Dieu le Père : réplique d'un projet de vitrail",
+      "catalogueTitle": "Bóg Ojciec. Replika projektu witraża do okna zachodniego nawy kościoła Franciszkanów w Krakowie",
+      "artist": "Stanisław Wyspiański",
+      "artists": [
+        {
+          "name": "Stanisław Wyspiański",
+          "role": "primary",
+          "slug": "wikiart-artist-stanislaw-wyspianski"
+        }
+      ],
+      "date": "1904",
+      "start": 1904,
+      "end": 1904,
+      "medium": "Pastel et tempera sur toile",
+      "accession": "MNK II-b-514",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/8b8e2016-7b1b-5c7f-ba40-e05988cb38d4-5922c1413017.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/98102",
+      "credit": "Stanisław Wyspiański; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/98102",
+      "description": "La haute figure drapée s'étend dans un champ arqué dont les divisions pâles restent visibles. Formes bleues et jaunes franchissent ces limites d'un ample mouvement. L'objet du musée est une réplique d'un projet, non le vitrail installé. Sa disposition montre néanmoins comment concevoir une figure en fonction d'une surface longue et structurellement divisée.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "3b73b81f-7519-53bc-bd34-75d4065c3354",
+      "title": "Autoportrait à la palette",
+      "catalogueTitle": "Autoportret z paletą",
+      "artist": "Anna Bilińska",
+      "artists": [
+        {
+          "name": "Anna Bilińska",
+          "role": "primary",
+          "slug": "anna-bilinska-q273115"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-a-211",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/3b73b81f-7519-53bc-bd34-75d4065c3354-2a67acb886ed.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/321062",
+      "credit": "Anna Bilińska-Bohdanowicz; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/321062",
+      "description": "Le matériel de peinture et le tablier clair identifient Bilińska comme artiste par les conditions pratiques du travail. Son visage de face reste posé au-dessus de ses genoux occupés. Le décor retenu évite de disperser l'attention. La présence professionnelle se construit par un agencement utilisable du corps et des outils, sans ajouter le fond imposant d'un grand atelier.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "176ca67e-6c36-50f1-98ef-cbc132eeeb88",
+      "title": "Autoportrait en blanc",
+      "catalogueTitle": "Autoportret w białym stroju",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-b-1762",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/176ca67e-6c36-50f1-98ef-cbc132eeeb88-acb26dfa4ce7.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/249159",
+      "credit": "Jacek Malczewski; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/249159",
+      "description": "Le costume blanc élaboré et le chapeau rendent le choix d'apparence de Malczewski manifeste. Les mains à la taille renforcent la présentation frontale, tandis que des accents rouges ponctuent l'habit pâle. L'autoportrait passe ici par l'adoption d'un rôle visible. La tenue inhabituelle invite à examiner cette présentation, non à supposer que l'image surprend l'artiste sans défense.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "ca278aa9-a6fc-53a1-a932-264a613d7833",
+      "title": "La Mort d'Ellenai",
+      "catalogueTitle": "Śmierć Ellenai",
+      "artist": "Jacek Malczewski",
+      "artists": [
+        {
+          "name": "Jacek Malczewski",
+          "role": "primary",
+          "slug": "jacek-malczewski-q448189"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-b-1",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/ca278aa9-a6fc-53a1-a932-264a613d7833-c638072e346f.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/34570",
+      "credit": "Jacek Malczewski; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/34570",
+      "description": "Des tissus lourds entourent le corps pâle allongé, tandis que l'homme assis reste droit à ses côtés. Malczewski traduit une mort littéraire en rapports de poids, de position et d'immobilité. Le survivant ne peut partager l'état du corps malgré la même pièce étroite. Cette séparation physique porte la scène plus précisément qu'une déclaration générale de chagrin.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    },
+    {
+      "id": "59749767-f65d-5cc3-93a0-ba6c07a6894a",
+      "title": "L'Ombrelle rouge",
+      "catalogueTitle": "Czerwona parasolka",
+      "artist": "Józef Mehoffer",
+      "artists": [
+        {
+          "name": "Józef Mehoffer",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1354695"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "Huile sur toile",
+      "accession": "MNK II-b-3845",
+      "image": "https://artlines.org/assets/artworks/imported/poland-collections-20261008/poland/59749767-f65d-5cc3-93a0-ba6c07a6894a-dda1a2d30b80.jpg",
+      "imageSource": "https://zbiory.mnk.pl/pl/katalog/415094",
+      "credit": "Józef Mehoffer; National Museum in Kraków; Muzeum Narodowe w Krakowie. Domena publiczna (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Domena publiczna",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://zbiory.mnk.pl/pl/katalog/415094",
+      "description": "L'ombrelle concentre la présence d'une petite figure assise dans le vaste jardin. Mehoffer laisse chemins, massifs et arbres denses conserver leur structure : la femme ne devient pas l'unique raison du décor. Le rouge vif établit un point de repos dans l'abondance cultivée. Le loisir reçoit un lieu, pas seulement un joli arrière-plan.",
+      "importance": "",
+      "museum": "National Museum in Kraków"
+    }
+  ],
+  "context": {
+    "start": 1489,
+    "end": 1917
+  },
+  "closingSections": [
+    {
+      "title": "Un musée, plusieurs lieux",
+      "paragraphs": [
+        "Le Musée national de Cracovie comprend plusieurs établissements ; cette sélection n'est pas un parcours dans un seul bâtiment. Vérifiez la localisation actuelle et les conditions d'accès de chaque œuvre. Entre les lieux, gardez la main comme point de comparaison : soutenir, retenir, travailler ou commander peut changer l'échelle à laquelle un sujet devient compréhensible."
+      ]
+    }
+  ]
+}

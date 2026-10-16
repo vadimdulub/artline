@@ -1,0 +1,610 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "rijksmuseum",
+  "museum": "Rijksmuseum",
+  "city": "アムステルダム",
+  "country": "オランダ",
+  "title": "アムステルダム国立美術館：名作",
+  "subtitle": "市民隊、家で働く人、通りすがりの歩行者は、それぞれ異なる方法で目を引く。",
+  "introduction": "《夜警》では、依頼された隊の肖像が、人の入り乱れる出来事になる。《牛乳を注ぐ女》では、一人の家事労働者が細い牛乳の流れに集中している。どちらも全員、すべてを平等には強調しない。光、大きさ、配置が、最初に何を読み取るかを決める。この違いを選集の出発点にしたい。\n\n公的な肖像は服装と身体の存在によって地位を示す。家庭の場面は作業や小さな衝突に重みを与える。後の時代の街景では、通行人が背後の都市を遮る。誰が場所を支配し、誰がそこで働き、誰の行為が見られているかを追ってみよう。壮大さと日常の単純な対比より、具体的な違いが見つかる。",
+  "visitNote": "ご来館の前に、アムステルダム国立美術館のウェブサイトで最新のコレクション情報や来館者向けページをご確認ください。展示内容、修復作業、あるいは作品の貸し出し状況によって、鑑賞できる作品が変わる場合があります。特に、マールテンとオープイェンの肖像画（対の作品）については、ルーヴル美術館との取り決めに基づいた運用が行われています。",
+  "locale": "ja",
+  "website": "https://www.rijksmuseum.nl",
+  "officialGuide": "https://www.rijksmuseum.nl",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "オンラインで読む、またはダウンロード · 英語",
+      "note": "ウォルター・リートケによる全2巻の『メトロポリタン美術館のオランダ絵画（Dutch Paintings in The Metropolitan Museum of Art）』は、ここに紹介されている多くの画家について詳細な解説を提供しています。同書における個々の作品の分析は、集団肖像画、室内画、静物画の相違を理解する助けとなります。"
+    }
+  ],
+  "works": [
+    {
+      "id": "0352ffac-a67a-484d-9fca-d18b71701f7f",
+      "title": "夜警",
+      "catalogueTitle": "Officers and other civic guardsmen of District II in Amsterdam, under the command of Captain Frans Banninck Cocq and Lieutenant Willem van Ruytenburch, known as ‘The Night Watch’",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1642",
+      "start": 1642,
+      "end": 1642,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-C-5",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/0352ffac-a67a-484d-9fca-d18b71701f7f-41ffdcbe7d85c3ea.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-5--3137deb45cd7765f9a76084a16c99544",
+      "credit": "Rembrandt van Rijn. Officers and other civic guardsmen of District II in Amsterdam, under the command of Captain Frans Banninck Cocq and Lieutenant Willem van Ruytenburch, known as ‘The Night Watch’. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-5--3137deb45cd7765f9a76084a16c99544",
+      "description": "前進する隊長と副官が隊の方向を示すが、周囲の手と武器は別の動きをつくる。レンブラントは不均等な照明で、群衆のなかの行為を区別した。全員が同じ面積をもらって並ぶ肖像には見えない。それぞれ異なることをする身体を通して、一つの組織としてまとまる必要がある。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "7e35ca8b-a4dc-4398-9eef-6a93c553dad6",
+      "title": "牛乳を注ぐ女",
+      "catalogueTitle": "The Milkmaid",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "1660年頃",
+      "start": 1660,
+      "end": 1660,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-2344",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/7e35ca8b-a4dc-4398-9eef-6a93c553dad6-570a33085304e548.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2344--42dd0e658c2979aec8e144d2357c55c0",
+      "credit": "Johannes Vermeer. The Milkmaid. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2344--42dd0e658c2979aec8e144d2357c55c0",
+      "description": "牛乳の流れは、急いで見れば見落とすほど小さい。それでも女性の姿勢は、その流れを保つために整っている。パン、籠、机の天板が、作業に物質的な場を与える。フェルメールは壁を比較的空白にし、集中を妨げるものを減らした。大きな騒ぎを起こさなくても、一つの活動は絵の中心になれる。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "1b51e729-e25b-4daa-8a0e-a08c8e47ef04",
+      "title": "織物商組合の幹部たち",
+      "catalogueTitle": "The Sampling Officials of the Amsterdam Drapers’ Guild, known as ‘The Syndics’",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1662",
+      "start": 1662,
+      "end": 1662,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-C-6",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/1b51e729-e25b-4daa-8a0e-a08c8e47ef04-cab7274e8baadfc2.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234",
+      "credit": "Rembrandt van Rijn. The Sampling Officials of the Amsterdam Drapers’ Guild, known as ‘The Syndics’. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234",
+      "description": "何人かが外へ目を向け、こちらの位置が机の仕事に関係するように見える。姿勢には違いがあり、一斉のポーズよりも中断を思わせる。レンブラントは公的な集団をまとめながら、反応を不揃いに残した。権威は、立派な顔を並べるだけでなく、人々が一緒に働く関係として表されている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "1c35425f-879a-4b5e-a42f-a11dc7f9ed34",
+      "title": "小路",
+      "catalogueTitle": "Gezicht op huizen in Delft, bekend als ‘Het straatje’",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "1658年頃",
+      "start": 1658,
+      "end": 1658,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-2860",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/90591bf7-2b65-4f52-8357-52f6db9700ee-43e7d0fdde9e685a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft,_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg",
+      "credit": "Johannes Vermeer. Gezicht op huizen in Delft, bekend als ‘Het straatje’. Image credit: Johannes Vermeer; Source credit: Google Arts & Culture — YAGJRuPz8yVuRQ. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2860--a7dbf937cbd6f7c30f66f8aca4a0207c",
+      "description": "建物の正面は、戸口や通路を使う人々より、はるかに大きな面積を占める。補修が煉瓦の規則性を中断し、劇的な物語なしに、建物が使われてきた時間を示す。フェルメールは建築と家事を異なる尺度で働かせた。小さな人物が使用を確かにし、壁は壁で、見る価値を保っている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "c81b12bf-774f-4bd8-8bac-06159aebd66d",
+      "title": "手紙を読む青衣の女",
+      "catalogueTitle": "Woman in Blue Reading a Letter",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "1663年頃",
+      "start": 1663,
+      "end": 1663,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-C-251",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/c81b12bf-774f-4bd8-8bac-06159aebd66d-bfc46219778be2fb.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba",
+      "credit": "Johannes Vermeer. Woman in Blue Reading a Letter. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba",
+      "description": "手紙は物として見えるが、情報としては読めない。フェルメールは文章を知らせる代わりに、読み手の没頭へ注意を向ける。壁の地図は部屋を広い世界につなぐが、手紙の内容を解決はしない。絵は個人的な集中を見せながら、読まれていることの私的な領域を守っている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "e0a68cc3-689e-4c77-8dfd-cb460cc891ee",
+      "title": "脅かされる白鳥",
+      "catalogueTitle": "De bedreigde zwaan",
+      "artist": "Jan Asselijn",
+      "artists": [
+        {
+          "name": "Jan Asselijn",
+          "role": "primary",
+          "slug": "jan-asselijn-q541976"
+        }
+      ],
+      "date": "1650年頃",
+      "start": 1650,
+      "end": 1650,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-4",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/bdafdea6-7ded-4f92-962a-26c5cf2c4b60-1c2fbb46e6494f4f.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4--22040f90565e730131983a44a85b989f",
+      "credit": "Jan Asselijn. De bedreigde zwaan. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4--22040f90565e730131983a44a85b989f",
+      "description": "近づく犬が、開いた翼と伸びた首の直接の原因となる。アセレインは暗い水に対して白い身体を大きく力強い形にし、巣によって何を守っているかを示した。象徴的な解釈を探す前から、侵入者、傷つきやすい場所、抵抗する動物の関係として場面を理解できる。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "2a9ab3b9-53e8-4bf1-abb5-6aaf880478d4",
+      "title": "陽気な家族",
+      "catalogueTitle": "Het vrolijke huisgezin",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1668",
+      "start": 1668,
+      "end": 1668,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-C-229",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/3ed7e71c-5375-49cb-a171-b36eccdfe7a7-93494c8b422bf34e.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-229--f6c4f4db1681a8704b372bda0183623b",
+      "credit": "Jan Steen. Het vrolijke huisgezin. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-229--f6c4f4db1681a8704b372bda0183623b",
+      "description": "食卓では音楽と飲酒が世代をまたぐ。ステーンは子どもに大人の振る舞いをまねさせ、楽しげな場面を、手本と模倣の絵にもした。散らかった物は活動が行儀よく収まるのを妨げる。家族は楽しみながら、年少者が仲間入りを学ぶ習慣も見せている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "688dbe2c-7f7d-438f-8631-3c04d50db8a4",
+      "title": "聖ニコラウスの祝日",
+      "catalogueTitle": "Het Sint-Nicolaasfeest",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1665 - 1668",
+      "start": 1665,
+      "end": 1668,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-385",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/3bd8bcd6-5c21-4237-8ac4-7224e77c5817-c4ea52962f0dc14f.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-385--b61f0c4c7cf5a503a2246ecde104fd28",
+      "credit": "Jan Steen. Het Sint-Nicolaasfeest. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-385--b61f0c4c7cf5a503a2246ecde104fd28",
+      "description": "祝いの日を、どの子も同じ気分で過ごしているわけではない。贈り物は一方に満足を、もう一方に落胆を与え、大人はその違いを見ている。ステーンは一つの代表的な感情を選ばず、小さなドラマを共存させた。同じ行事を共有しても、喜びと不満は一人ずつ異なる。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "5a56e1c5-9e86-4ee3-8d06-57b66d9f485d",
+      "title": "オープイェン・コッピット",
+      "catalogueTitle": "Portrait of Oopjen Coppit",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1634",
+      "start": 1634,
+      "end": 1634,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-C-1768",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/5a56e1c5-9e86-4ee3-8d06-57b66d9f485d-5e8610ac148ffe18.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1768--6b7d967cdf05b81c2416359e06adaf52",
+      "credit": "Rembrandt van Rijn. Portrait of Oopjen Coppit. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1768--6b7d967cdf05b81c2416359e06adaf52",
+      "description": "全身像という形式によって、オープイェンは服から顔だけを出すのでなく、身体全体で立つ場所を得る。襟と袖口は暗い衣装に明るい縁を引き、控えめな光の変化は高価な材質を区別する。レンブラントは抑制そのものを見せ方の一部にした。対作品のマールテンの、より外へ張り出す姿勢と比べたい。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "8a26546a-b912-454c-b841-ffe0cef9c640",
+      "title": "マールテン・ソールマンス",
+      "catalogueTitle": "Portrait of Marten Soolmans",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1634",
+      "start": 1634,
+      "end": 1634,
+      "medium": "",
+      "accession": "SK-A-5033",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/8a26546a-b912-454c-b841-ffe0cef9c640-a0a4acfb15053b0a.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-5033--8e1e37eae253bf0f528928483b8ca933",
+      "credit": "Rembrandt van Rijn. Portrait of Marten Soolmans. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-5033--8e1e37eae253bf0f528928483b8ca933",
+      "description": "曲げた腕がマールテンの輪郭を広げ、明るい靴下と凝った靴飾りが、目を全身の下方へ運ぶ。服はここで、公に自分を示す仕事をしている。オープイェンと対に見ても、どちらかが相手の添え物にはならない。共通の大きさと異なる姿勢が、結びつきと個人の社会的な存在を同時に示す。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "be099a9d-68c9-44fd-82a6-96318de5aa38",
+      "title": "町の近くで氷を楽しむ人々",
+      "catalogueTitle": "Enjoying the Ice near a Town",
+      "artist": "Hendrick Avercamp",
+      "artists": [
+        {
+          "name": "Hendrick Avercamp",
+          "role": "primary",
+          "slug": "hendrick-avercamp-q212593"
+        }
+      ],
+      "date": "1620年頃",
+      "start": 1620,
+      "end": 1620,
+      "medium": "油彩、木材、テキスタイル",
+      "accession": "SK-C-1705",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/329e1942-0e36-4a04-aeb1-53fb4244b300-c83fb91eddde2db0.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1705--368e399771917717acdad5c160dfe747",
+      "credit": "Hendrick Avercamp. Enjoying the Ice near a Town. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1705--368e399771917717acdad5c160dfe747",
+      "description": "氷は多くの活動を一続きの面に載せる。アーフェルカンプは姿勢と間隔で小集団を見分けさせ、淡い遠方では少しずつ溶け込ませた。細かく見る楽しみはあるが、すべての出来事が中心になる必要はない。冬が共通の公共空間を用意し、各集団はそれを別のように使っている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "49b98140-304f-44df-820d-1bcedee81388",
+      "title": "夫婦の肖像、おそらくイサーク・マッサとベアトリクス・ファン・デル・ラーン",
+      "catalogueTitle": "Portrait of a Married Couple, Likely Isaac Abrahamsz Massa and Beatrix van der Laen",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1622年頃",
+      "start": 1622,
+      "end": 1622,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-133",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/10b4b281-920e-466e-bb80-f8740b0038dd-4cc6ee391eaed059.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Frans_Hals_-_Portret_van_een_stel_in_een_landschap_-_Google_Art_Project.jpg",
+      "credit": "Frans Hals. Portrait of a Married Couple, Likely Isaac Abrahamsz Massa and Beatrix van der Laen. Image credit: Frans Hals; Source credit: Google Arts & Culture — TQGvNkNZ3MM17g. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-133--29d98c79eda4e9d954f80ce0bb0c8b17",
+      "description": "木の葉の下で、二人は近く、比較的くつろいだ配置に身を寄せる。ハルスは独立した公的なポーズを二つ並べず、近さとこちらへの笑顔によって結婚を示した。推定される名前は確定していないが、画面上の関係は明瞭だ。この表現の気安さは論じられても、夫婦の私生活全体を再構成する根拠にはならない。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "b7e0faa6-e056-5a8c-a36a-423897f310e8",
+      "title": "レイニール・レアル隊長の市民隊",
+      "catalogueTitle": "Militia Company of District XI under the Command of Captain Reynier Reael",
+      "artist": "Pieter Codde; Frans Hals",
+      "artists": [
+        {
+          "name": "Pieter Codde",
+          "role": "primary",
+          "slug": "austrian-research-painter-q655049"
+        },
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1637",
+      "start": 1637,
+      "end": 1637,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-C-374",
+      "image": "https://artlines.org/assets/artworks/imported/million-catalogue-20261010/b7e0faa6-e056-5a8c-a36a-423897f310e8-2be61352343baf19.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-374--39d1a561a0e487fe7f299dbaf6314d22",
+      "credit": "Pieter Codde; Frans Hals. Native museum collection image; source designation: Public Domain Mark 1.0. Rijksmuseum. Full source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-374--39d1a561a0e487fe7f299dbaf6314d22",
+      "description": "横に長い隊列は、個々の肖像と隊の一体性を同時に収めなくてはならない。帯、武器、旗、姿勢の変化が、切れ目のない列になりそうな配置を区切る。ハルスとコッデの絵では、違いが集団のリズムをつくる。《夜警》では、集合の姿が、もっとはっきりと進行中の出来事として組み立てられている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "36303c25-76fe-40d9-9974-4731e7e76f5b",
+      "title": "猫に踊りを教える子どもたち",
+      "catalogueTitle": "Children Teaching a Cat to Dance, Known as The Dancing Lesson",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1660 - 1679",
+      "start": 1660,
+      "end": 1679,
+      "medium": "板に油彩",
+      "accession": "SK-A-718",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/20a3d8e1-24ba-4aad-bebf-21171bf4d778-e1309f5581a76ba3.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-718--40acc398a86a306d05d286fa947cffcc",
+      "credit": "Jan Steen. Children Teaching a Cat to Dance, Known as The Dancing Lesson. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-718--40acc398a86a306d05d286fa947cffcc",
+      "description": "子どもたちは、自分から出演を選んだわけではない動物に集まる。ステーンの笑いは、子どもの遊びと猫の窮状のずれから生まれ、下の犬も別の反応を加える。にぎやかさだけが主題ではない。他の生き物の抵抗に気づかないことによって、楽しみが成り立つ場合もあると示している。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "f7a61eb2-5a9f-5b8f-a76b-554b24098967",
+      "title": "老婦人の肖像、エリサベト・バスの可能性",
+      "catalogueTitle": "Portrait of an Old Lady, Possibly Elisabeth Bas",
+      "artist": "Attributed to Ferdinand Bol",
+      "artists": [
+        {
+          "name": "Ferdinand Bol",
+          "role": "attributed",
+          "slug": "ferdinand-bol-q374039"
+        }
+      ],
+      "date": "c. 1640–c. 1645",
+      "start": 1640,
+      "end": 1645,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/f7a61eb2-5a9f-5b8f-a76b-554b24098967-fa767cc4d2f3230d.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "credit": "Ferdinand Bol. Portrait of Elisabeth Jacobsdr. Bas. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "description": "重ねた手が顔の下に第二の中心をつくり、白い襟が両者を暗い服から区別する。美術館はモデルの名前を確定せず、作品をフェルディナント・ボルに帰属させている。この不確かさは作品表示にも残すべきだ。それでも、静止、年齢、正式に座った姿によって人物の存在を示す描写の精密さは変わらない。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "2b57b6dd-9307-4efc-8624-20adbfedf0e2",
+      "title": "使徒パウロに扮した自画像",
+      "catalogueTitle": "Self Portrait as the Apostle Paul",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1661",
+      "start": 1661,
+      "end": 1661,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-4050",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/2b57b6dd-9307-4efc-8624-20adbfedf0e2-4988ce30403f760b.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d",
+      "credit": "Rembrandt van Rijn. Self Portrait as the Apostle Paul. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d",
+      "description": "本と頭に巻いた布が宗教的な役柄を示しても、顔はレンブラントと分かる。絵は、特定の画家と想像された使徒という、二通りの認識を同時に求める。暗い周囲によって、二つの人物像は同じ身体に集中する。ここで自画像を描くことには、意識して別人になる行為も含まれる。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "6487707a-10aa-56f7-b1dc-40bc5503d4d0",
+      "title": "アムステルダム、パレイス通り近くのシンゲル運河の橋",
+      "catalogueTitle": "De Singelbrug bij de Paleisstraat in Amsterdam",
+      "artist": "George Hendrik Breitner",
+      "artists": [
+        {
+          "name": "George Hendrik Breitner",
+          "role": "primary",
+          "slug": "george-hendrik-breitner-q289441"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-3580",
+      "image": "https://artlines.org/assets/artworks/imported/million-catalogue-20261010/6487707a-10aa-56f7-b1dc-40bc5503d4d0-44234a0204734f6e.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3580--596ea47fa3632feadb1469236bc9838f",
+      "credit": "George Hendrik Breitner. Native museum collection image; source designation: Public Domain Mark 1.0. Rijksmuseum. Full source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3580--596ea47fa3632feadb1469236bc9838f",
+      "description": "手前の歩行者は近すぎて、都市景観の小さな飾りではいられない。その大きさと身体の切り取りが、橋や建物の眺めを中断する。ブレイトナーは通りを、遮るもののない建築の場面ではなく、動いている他人との出会いにした。雪の場所は分かるが、最も近い空間は通行人が占めている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "4b6a09e0-e262-5745-9cf9-e8eea7c896e0",
+      "title": "ガラスの花瓶の花の静物",
+      "catalogueTitle": "Still Life with Flowers in a Glass Vase",
+      "artist": "Jan Davidsz. de Heem",
+      "artists": [
+        {
+          "name": "Jan Davidsz. de Heem",
+          "role": "primary",
+          "slug": "jan-davidsz-de-heem-q454656"
+        }
+      ],
+      "date": "1650 - 1683",
+      "start": 1650,
+      "end": 1683,
+      "medium": "",
+      "accession": "SK-C-214",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/4b6a09e0-e262-5745-9cf9-e8eea7c896e0-a4327be677f040f0.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-214--9f1ca72cf761e1764fe22a5516b46ecc",
+      "credit": "Jan Davidsz. de Heem. Still Life with Flowers in a Glass Vase. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-214--9f1ca72cf761e1764fe22a5516b46ecc",
+      "description": "花瓶に花がひしめきながら、色、形、向きの違いは失われない。巻いた茎や虫が外形を複雑にし、花束と空白をきれいには分けさせない。デ・ヘームは細部の観察と全体の豊かさを両立させる。まとまるために、どれか一輪が全体を支配する必要はない。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "a2bb2050-ab6f-417c-baf8-4ee972a68808",
+      "title": "冬景色",
+      "catalogueTitle": "Winter Landscape",
+      "artist": "Jacob van Ruisdael",
+      "artists": [
+        {
+          "name": "Jacob van Ruisdael",
+          "role": "primary",
+          "slug": "jacob-van-ruisdael-q213612"
+        }
+      ],
+      "date": "1665年頃",
+      "start": 1665,
+      "end": 1665,
+      "medium": "キャンバスに油彩",
+      "accession": "SK-A-349",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/86891d1f-6f54-4af8-a00f-5130c1e5cb3f-a717f7d33742b6e3.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-349--c8efd9ed1004685d2aa5096d061d184c",
+      "credit": "Jacob van Ruisdael. Winter Landscape. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-349--c8efd9ed1004685d2aa5096d061d184c",
+      "description": "雪は、厚い雲が通すわずかな光を受ける。ロイスダールはほかの部分を抑えることで、空の狭い切れ間に大きな役割を与えた。小さな人物は天候を物語の背景にはしない。むしろ、その場の活動より大きい自然の条件のなかに、人間の尺度を置いている。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "d0af1c93-5359-51f9-9378-f2a1a0b97b76",
+      "title": "武具職人",
+      "catalogueTitle": "The Armorer",
+      "artist": "Gabriël Metsu",
+      "artists": [
+        {
+          "name": "Gabriël Metsu",
+          "role": "primary",
+          "slug": "gabriel-metsu-q355213"
+        }
+      ],
+      "date": "1650年頃～1660年頃",
+      "start": 1650,
+      "end": 1660,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/d0af1c93-5359-51f9-9378-f2a1a0b97b76-0b6a6c7c8ad5c216.jpg",
+      "imageSource": "https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "credit": "Gabriël Metsu. The Armorer. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "description": "暗い部屋の一部を設備が占め、二人の働き手はその周囲の別々の位置にいる。小さな熱い光が、工具や金属のなかで作業の中心を示す。メツーは仕事を、身体、材料、使える場所の関係として描いた。個々の物が見分けにくくても、工房の雑然とした状態には用途がある。",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    }
+  ],
+  "context": {
+    "start": 1620,
+    "end": 1896
+  },
+  "closingSections": [
+    {
+      "title": "公の姿と私的な姿を比べる",
+      "paragraphs": [
+        "全身肖像を、働く人や読書する人の絵と並べ、人物がどれほどの場所を占め、なぜそうなるかを考えたい。この選集は所蔵品を扱い、展示方法が変わる作品も含む。最新の作品情報と見学案内を確認しよう。ここでの順序は見方の提案であり、歩くコースの保証ではない。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "detroit-institute-arts",
+  "museum": "Detroit Institute of Arts",
+  "city": "デトロイト",
+  "country": "米国",
+  "title": "デトロイト美術館：名作",
+  "subtitle": "人物とその周囲の関係が、はっきりと見えてくる20作品。",
+  "introduction": "リベラの工場では、一人の労働者にも巨大な仕組みの中で果たす仕事と居場所がある。フュースリの《悪夢》で眠る女性も明確な場所を占めるが、周囲の生き物たちは、その空間の法則を不確かなものにする。その両極の間に、酒場、書斎、書店があり、人々が日常の環境をどう形作るかが描かれている。\n\nこのデトロイト美術館の選集では、人物を囲む空間の違いをたどる。部屋は集中を守ることも、労働を組織することも、身体を閉じ込めることもある。色によって開かれ、壁が堅固に感じられなくなる場合もある。作品に共通の答えはない。人にどれだけの場所があり、それを誰が、あるいは何が支配するのかを考える手がかりがある。",
+  "visitNote": "展示の変更や作品の貸出状況については、最新のギャラリー情報をご確認ください。リベラの作品に関する記述は、『デトロイト・インダストリー』壁画連作全体ではなく、その北側の壁面を対象としています。作者や制作年代の特定は、当該作品に関する根拠に基づいています。なお、聖ヒエロニムスを描いた2枚のパネルは、それぞれ異なる帰属の経緯をたどっています。",
+  "locale": "ja",
+  "website": "http://www.dia.org/",
+  "officialGuide": "http://www.dia.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "無料で読む · 英語",
+      "note": "マース（量塊）、線、そしてトーン（色調）に関するスピードの論考は、小品から大規模な群像表現に至るまで、作品を理解する手がかりとなります。リベラの作品に見られる輪郭がはっきりと描かれた人体と、ホイッスラーの作品における輪郭が溶け合うような形態とを比較してみてください。"
+    }
+  ],
+  "works": [
+    {
+      "id": "78399197-0414-553c-ad7d-6ef3dd204b2e",
+      "title": "悪夢",
+      "catalogueTitle": "The Nightmare",
+      "artist": "Henry Fuseli",
+      "artists": [
+        {
+          "name": "Henry Fuseli",
+          "role": "primary",
+          "slug": "henry-fuseli-q122382"
+        }
+      ],
+      "date": "1781",
+      "start": 1781,
+      "end": 1781,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/78399197-0414-553c-ad7d-6ef3dd204b2e-69117f76388a9b12.jpg",
+      "imageSource": "https://www.wikiart.org/en/henry-fuseli/the-nightmare-1781",
+      "credit": "Henry Fuseli. The Nightmare. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henry-fuseli/the-nightmare-1781",
+      "description": "眠る女性の身体が寝台に横たわり、その胴の上に一体の生き物が腰を据えている。背後では、暗いカーテンの間から馬の頭が現れる。フュースリは、この侵入者たちに家具と同じほどの実在感を与えた。悪夢は部屋を占拠するものとして描かれる。女性は反応できず、ありえない生き物たちはすっかりくつろいで見える。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "2dfbe2ba-8168-5318-abb5-860b11161cbc",
+      "title": "デトロイトの産業：北壁",
+      "catalogueTitle": "Detroit Industry, North Wall",
+      "artist": "Diego Rivera",
+      "artists": [
+        {
+          "name": "Diego Rivera",
+          "role": "primary",
+          "slug": "diego-rivera-q171128"
+        }
+      ],
+      "date": "1932–1933",
+      "start": 1932,
+      "end": 1933,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2dfbe2ba-8168-5318-abb5-860b11161cbc-6c5be1155a21cf4a.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-rivera/detroit-industry-north-wall",
+      "credit": "Diego Rivera. Detroit Industry, North Wall. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-rivera/detroit-industry-north-wall",
+      "description": "繰り返される身体と配管が、リベラの工場の場面全体に活動を広げる。各労働者には個別の仕事があるが、壁画の大きさは、それらをつなぐ巨大な仕組みを意識させる。1932～1933年に制作された北壁は、周囲を囲むフレスコ画連作の一部だ。複製で一つ一つの動作は確かめられても、工業生産の情景が建築空間全体を占める経験までは再現できない。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "a8b18827-5ed5-5bc6-b5a0-dde6a8c52d78",
+      "title": "黒と金のノクターン：落下する花火",
+      "catalogueTitle": "Nocturne in Black and Gold – the Falling Rocket",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a8b18827-5ed5-5bc6-b5a0-dde6a8c52d78-f74bc5e9dc585794.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-mcneill-whistler/nocturne-in-black-and-gold-the-falling-rocket",
+      "credit": "James Abbott McNeill Whistler. Nocturne in Black and Gold – the Falling Rocket. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-mcneill-whistler/nocturne-in-black-and-gold-the-falling-rocket",
+      "description": "金色の点や線が闇の中を落ちてゆく。花火の軌道を一段階ずつ説明する描き方ではない。水、人物、奥行きも、部分的にしか定まらない。ホイッスラーは見世物と認めるだけの情報を置き、残りを色と散らばる光に任せる。細部が少ないのには理由がある。場所をくまなく描けば、一瞬だけ見える火花と注意を奪い合うだろう。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "778dc270-4c6a-59ff-947f-698e78ae4517",
+      "title": "マルタとマグダラのマリア",
+      "catalogueTitle": "Martha and Mary Magdalene",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1598",
+      "start": 1598,
+      "end": 1598,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/778dc270-4c6a-59ff-947f-698e78ae4517-49e2100ec2d137cb.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/martha-and-mary-magdalene",
+      "credit": "Martha and Mary Magdalene. WikiArt; Caravaggio. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/martha-and-mary-magdalene",
+      "description": "鏡があることで、外見そのものが会話の中の対象になる。一人の女性が語り、もう一人の手は自身の身体へと注意を向ける。カラヴァッジョは広い公的な舞台を設けず、この近い距離のやり取りに宗教的主題を託す。重要なのは壮観な場面より、二人の関係の変化だ。身ぶりは、部屋を詳しく描いても説明できない応答を示しうる。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "e0138511-153a-504d-979e-d694a73beaac",
+      "title": "窓",
+      "catalogueTitle": "The Window",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikiart-500-painters-20261011/e0138511-153a-504d-979e-d694a73beaac-800b5c554dd0f124.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/the-window-1916",
+      "credit": "Henri Matisse. The Window. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-matisse/the-window-1916",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/sites/default/files/2022-09/VG%20Brochure.pdf",
+      "description": "マティスは戸外の緑を室内の青の隣に強く置き、奥行きがほとんど必須ではないように見せる。テーブル、椅子、花は識別できるが、その輪郭は同時に画面を隣り合う色の領域へ分ける線でもある。窓には二つの働きがある。部屋の開口部であり、平らな画面上で色と色を隔てる境でもあるのだ。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "75f22749-1ce7-58ef-ad4e-e6aa76c87532",
+      "title": "コトパクシ",
+      "catalogueTitle": "Cotopaxi (Ecuador)",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1862",
+      "start": 1862,
+      "end": 1862,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/75f22749-1ce7-58ef-ad4e-e6aa76c87532-1c1ecdca5c6ed582.jpg",
+      "imageSource": "https://www.wikiart.org/en/frederic-edwin-church/cotopaxi-1862",
+      "credit": "Frederic Edwin Church. Cotopaxi (Ecuador). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frederic-edwin-church/cotopaxi-1862",
+      "description": "煙は火山を越えて広がり、噴火が眺め全体の光を変えている。チャーチは、細かく描き分けた手前の景色を、変わり続ける遠景と組み合わせた。風景の小さな細部が、出来事の大きさを測る基準になる。主要な動きは山の中だけに収まらず、赤みを帯びた空気を通して伝わってゆく。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "1f3f5782-25bd-548e-9545-aaf8ebf5974c",
+      "title": "書斎の聖ヒエロニムス",
+      "catalogueTitle": "St. Jerome in his Study",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1435年頃",
+      "start": 1435,
+      "end": 1435,
+      "medium": "オーク材パネル上のリネン紙に油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/1f3f5782-25bd-548e-9545-aaf8ebf5974c-d606136bc3a901c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-van-eyck/st-jerome-in-his-study-1432",
+      "credit": "Jan van Eyck. St. Jerome in his Study. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jan-van-eyck/st-jerome-in-his-study-1432",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/saint-jerome-his-study/44739",
+      "description": "書物と器具によって、ヒエロニムスの書斎は規律ある思索の場所になっている。足元のライオンが、その知的な環境に聖人の伝説を持ち込む。高さ約20センチのごく小さな板絵で、物を一つずつ近くで見たくなる。作者の帰属は歴史的に変化してきた。デトロイト美術館の現行記録では、ヤン・ファン・エイク、1435年頃とされている。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "af8b24ef-a2d5-5c4b-b2f2-3274583cda4d",
+      "title": "荒野の聖ヒエロニムス",
+      "catalogueTitle": "Saint Jerome and the Lion",
+      "artist": "ロヒール・ファン・デル・ウェイデンの工房",
+      "artists": [
+        {
+          "name": "Rogier van der Weyden",
+          "role": "workshop",
+          "slug": "rogier-van-der-weyden-q68631"
+        }
+      ],
+      "date": "1450–1465",
+      "start": 1450,
+      "end": 1465,
+      "medium": "オーク材パネルに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/af8b24ef-a2d5-5c4b-b2f2-3274583cda4d-e8c100fdea29dd0c.jpg",
+      "imageSource": "https://www.wikiart.org/en/rogier-van-der-weyden/saint-jerome-and-the-lion-1450",
+      "credit": "Saint Jerome and the Lion. WikiArt; Rogier van der Weyden. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/saint-jerome-desert/64849",
+      "description": "ここでヒエロニムスが向き合うのは、前の作品に並んでいた本ではなく、ライオンの足だ。角ばった岩が二者を囲み、戸外の一場面に小部屋のような集中した空間を与える。美術館はこの板絵をロヒール・ファン・デル・ウェイデンの工房に帰属させている。この区別は残しておきたい。巨匠の制作との関わりは、本人が描いた証明にはならない。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "6a5bb4e8-b8e2-5273-a404-a5dfa157287c",
+      "title": "マクソーリーズ・バー",
+      "catalogueTitle": "McSorley's Bar",
+      "artist": "John Sloan",
+      "artists": [
+        {
+          "name": "John Sloan",
+          "role": "primary",
+          "slug": "john-sloan-q861756"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6a5bb4e8-b8e2-5273-a404-a5dfa157287c-e8df7082d172ace9.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-french-sloan/mcsorley-s-bar-1912",
+      "credit": "John Sloan. McSorley's Bar. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-french-sloan/mcsorley-s-bar-1912",
+      "description": "寄りかかる、立つ、待つ。その姿勢がスローンの酒場の人間関係を形にする。白い服の働き手は暗い室内で目を引くが、他の全員を脇役に変えるような事件はない。男たちがカウンターを占めるのと同じように、絵や備品が壁を埋める。繰り返し使われることによって理解できる場所であり、特定の物語より身体の配置が重要になっている。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "2767df6a-98f7-5af1-ba75-112d4a40e161",
+      "title": "ピンクのキャンディ・ハートの愛の飛行",
+      "catalogueTitle": "Love Flight of a Pink Candy Heart",
+      "artist": "Florine Stettheimer",
+      "artists": [
+        {
+          "name": "Florine Stettheimer",
+          "role": "primary",
+          "slug": "florine-stettheimer-round2-8f62ae931f72"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2767df6a-98f7-5af1-ba75-112d4a40e161-5bb16cc5f4d1bd0c.jpg",
+      "imageSource": "https://www.wikiart.org/en/florine-stettheimer/love-flight-of-a-pink-candy-heart-1930",
+      "credit": "Florine Stettheimer. Love Flight of a Pink Candy Heart. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/florine-stettheimer/love-flight-of-a-pink-candy-heart-1930",
+      "description": "ステットハイマーは、すべての人物と装飾を同一の縮尺に従わせない。小さな人々、鮮やかな記号、ピンクのハート状の形は、物理的な大きさより画面上の重要さに応じて黄色い領域を分け合う。散在する出来事をたどればよい。普通の場面に期待するような連続した空間へ、無理にまとめる必要はない。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "73970e16-5aed-55a8-8eb7-8cf42aa0bea5",
+      "title": "書店：ヘブライ語の本、聖日の本",
+      "catalogueTitle": "Bookshop: Hebrew Books, Holy Day Books",
+      "artist": "Ben Shahn",
+      "artists": [
+        {
+          "name": "Ben Shahn",
+          "role": "primary",
+          "slug": "ben-shahn-nga-3030"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/73970e16-5aed-55a8-8eb7-8cf42aa0bea5-293891717b8e6067.jpg",
+      "imageSource": "https://www.wikiart.org/en/ben-shahn/bookshop-hebrew-books-holy-day-books-1953",
+      "credit": "Ben Shahn. Bookshop: Hebrew Books, Holy Day Books. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ben-shahn/bookshop-hebrew-books-holy-day-books-1953",
+      "description": "入口の人物からその日の出来事がわかるより先に、文字が店の種類を教える。シャーンは、一般的な店構えだけでは失われる文化的な情報を言葉に担わせた。細い線が戸口、看板、人をつなぐ。赤い入口によって、この小さく具体的な商いが街の中に位置づけられている。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "9d9166a5-454a-56b2-a356-84ef1808d2a1",
+      "title": "うずくまる裸像のための習作",
+      "catalogueTitle": "Study for Crouching Nude",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/9d9166a5-454a-56b2-a356-84ef1808d2a1-b6d47f2b8bef697e.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "credit": "Francis Bacon. Study for Crouching Nude. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "description": "ベーコンはうずくまる身体を檻のような線の構造で囲みながら、人体には同じように安定した形を与えない。囲いの境界が明確だからこそ、身体の不確かさが際立つ。背後の闇には縦の筋が走る。閉じ込められた感じは姿勢だけでなく、身体にごくわずかな余地しか残さない、寸法の定まった構造からも生まれる。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "41370b75-f3cd-5aca-86b3-49c1560d99b8",
+      "title": "パリ郊外の風景",
+      "catalogueTitle": "View of the Outskirts of Paris",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/41370b75-f3cd-5aca-86b3-49c1560d99b8-e2f282fc9969ad97.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "credit": "Henri Rousseau. View of the Outskirts of Paris. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "description": "ルソーの工場と煙突は、川向こうに明瞭な別々の形として立つ。リベラの壁画のような密集した活動がなくても、産業は風景に入ってくる。違いは主題だけでなく視点にもある。ここでは見る人が外の岸辺にとどまり、生産は労働ではなく建物として見える。静かな配置からは、内部で起こることまではわからない。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "12d94e28-a350-56cc-a70b-7e7fef605e97",
+      "title": "訴え（二人の女性と一人の男性）",
+      "catalogueTitle": "The Appeal (Two Women and a Man)",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "Early–mid 16th century",
+      "start": null,
+      "end": null,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/12d94e28-a350-56cc-a70b-7e7fef605e97-681c64b1e489999a.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/two-women-and-a-man-trio-1510",
+      "credit": "Two women and a man ( Trio). WikiArt; Giorgione. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/appeal/63584",
+      "description": "手と視線が近くに集まった三人をつなぐが、その関係から一義的な物語は読み取れない。この作品は作者の帰属も題名も変わってきた。デトロイト美術館は現在、ティツィアーノの《訴え》として、16世紀初頭から半ばに位置づけている。場面も作者も昔から確定していたかのように扱わず、それでも人物間のやり取りを丁寧に追うことはできる。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "4f616c0a-00f2-5397-9732-4f867df9b59a",
+      "title": "聖家族",
+      "catalogueTitle": "The Holy Family",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1641",
+      "start": 1641,
+      "end": 1641,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/4f616c0a-00f2-5397-9732-4f867df9b59a-5378c652da7cd7a5.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/the-holy-family-1641",
+      "credit": "Nicolas Poussin. The Holy Family. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/the-holy-family-1641",
+      "description": "マリアは子どもと揺りかごへ身をかがめ、ヨセフは少し離れた場所にいる。プッサンは、この異なる近さを堅固な建築の中に配置する。布と高い開口部が室内をまとめ、中央のささやかな世話の動作を隠さない。直接手をかける人と近くに控える人。その身近な役割の違いが、聖なる主題を支えている。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "397d02a6-c419-5ebc-8e9d-69ece61e30cc",
+      "title": "盲人が盲人を導く",
+      "catalogueTitle": "The Blind Leading the Blind",
+      "artist": "Louise Bourgeois",
+      "artists": [
+        {
+          "name": "Louise Bourgeois",
+          "role": "primary",
+          "slug": "louise-bourgeois-nga-9733"
+        }
+      ],
+      "date": "1949",
+      "start": 1949,
+      "end": 1949,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/397d02a6-c419-5ebc-8e9d-69ece61e30cc-bbbff817810a96d8.jpg",
+      "imageSource": "https://www.wikiart.org/en/louise-bourgeois/the-blind-leading-the-blind-1949",
+      "credit": "Louise Bourgeois. The Blind Leading the Blind. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/blind-leading-blind/35229",
+      "description": "ブルジョワはピンクの縦材を一本の横棒でつなぐが、下端が細くなるため、まとまった構造そのものが危うく見える。頭や完全な身体がなくても、題名は人の集団を思わせる。支え合うことや依存は、構造の中で確かめられる。繰り返される各部は全体に属するが、全体にも安心できる広い足場はない。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "fee262fa-7502-5b6f-b649-548bed53b710",
+      "title": "ドレスデン近郊のエルベ川",
+      "catalogueTitle": "The Elbe Near Dresden",
+      "artist": "Oskar Kokoschka",
+      "artists": [
+        {
+          "name": "Oskar Kokoschka",
+          "role": "primary",
+          "slug": "oskar-kokoschka-q154260"
+        }
+      ],
+      "date": "1921",
+      "start": 1921,
+      "end": 1921,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fee262fa-7502-5b6f-b649-548bed53b710-3e9f302258bcff92.jpg",
+      "imageSource": "https://www.wikiart.org/en/oskar-kokoschka/the-elbe-near-dresden",
+      "credit": "Oskar Kokoschka. The Elbe Near Dresden. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/oskar-kokoschka/the-elbe-near-dresden",
+      "description": "教会の塔と街は、ココシュカの激しく動く色の中でも見分けられる。青い水、赤や緑の帯が岸を活気づけ、その動きは空まで続く。固定した建物を変化する川の前に置くのではなく、眺め全体が揺れ動く筆触に包まれている。建築は動きを止めるのではなく、そこに加わる。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "eb2d4b63-bf1a-5061-a870-377c0e5ec983",
+      "title": "カンザス州ウルフ川",
+      "catalogueTitle": "The Wolf River, Kansas",
+      "artist": "Albert Bierstadt",
+      "artists": [
+        {
+          "name": "Albert Bierstadt",
+          "role": "primary",
+          "slug": "albert-bierstadt-q77132"
+        }
+      ],
+      "date": "1859",
+      "start": 1859,
+      "end": 1859,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/eb2d4b63-bf1a-5061-a870-377c0e5ec983-7209d1283e429210.jpg",
+      "imageSource": "https://www.wikiart.org/en/albert-bierstadt/the-wolf-river-kansas",
+      "credit": "Albert Bierstadt. The Wolf River, Kansas. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/albert-bierstadt/the-wolf-river-kansas",
+      "description": "高い木々の下の空き地に、テントと人々がいる。ビアスタットは離れた視点から、その活動をずっと大きな明暗の配置の中へ組み込んだ。この視点の限界も確かめたい。絵には人が暮らす場所が描かれているが、小さな人物像だけでは、そこで生きる人々の十分な説明にはならない。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "e4cab4ad-a5dc-572f-b2d7-f15042b77b64",
+      "title": "マンドリンを持つ少女",
+      "catalogueTitle": "Girl with a Mandolin",
+      "artist": "Giovanni Battista Tiepolo",
+      "artists": [
+        {
+          "name": "Giovanni Battista Tiepolo",
+          "role": "primary",
+          "slug": "giovanni-battista-tiepolo-q186202"
+        }
+      ],
+      "date": "1758-1760",
+      "start": 1758,
+      "end": 1760,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e4cab4ad-a5dc-572f-b2d7-f15042b77b64-d96bdf0ae2243107.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-battista-tiepolo/girl-with-a-mandolin",
+      "credit": "Giovanni Battista Tiepolo. Girl with a Mandolin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giovanni-battista-tiepolo/girl-with-a-mandolin",
+      "description": "楽器が両手に共通の動作を与え、身体を斜めに横切る。顔が別の方向へ向くため、姿勢は衣装を均等に見せるだけのものにならない。ティエポロは暗い背景から明るい肌と鮮やかな布を浮かび上がらせるが、絵を生き生きさせるのは、顔の方向と忙しい手の方向とのわずかなずれだ。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "4e92454b-f9fa-55ac-89e4-5747f3b46efe",
+      "title": "ヨブ",
+      "catalogueTitle": "Job",
+      "artist": "Jacob Jordaens",
+      "artists": [
+        {
+          "name": "Jacob Jordaens",
+          "role": "primary",
+          "slug": "jacob-jordaens-q270658"
+        }
+      ],
+      "date": "1620年頃",
+      "start": 1620,
+      "end": 1620,
+      "medium": "オーク材パネルに油彩",
+      "accession": "43.418",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-followup-20261010/4e92454b-f9fa-55ac-89e4-5747f3b46efe-8dde05a44b59e747.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacob-jordaens/job",
+      "credit": "Job. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/job-50280",
+      "description": "ヨルダーンスは、年齢を刻んだ顔と露出した胸によって、ヨブの訴えを具体的に描く。上を向く目は聖書の主題を伝えつつ、この男を忍耐の抽象的な象徴に変えてしまわない。光が横切る肌には、傷つきやすさと固有の姿がある。この選集の工場、風景、部屋を見た後では、一つの身体と見上げる両眼だけで十分なのだ。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts",
+      "catalogueArtistSlug": null
+    }
+  ],
+  "context": {
+    "start": 1435,
+    "end": 1953
+  },
+  "closingSections": [
+    {
+      "title": "身体の大きさに戻る",
+      "paragraphs": [
+        "リベラの労働者と、囲われたベーコンの人物を比べ、さらにファン・エイクの小さな板絵で読書する人物を見てほしい。環境が違えば、身体に許される自由も違う。これは所蔵作品の選集であり、展示を保証するルートではない。特に作者の帰属や展示状況が変わりうる作品については、来館前に最新の美術館記録を確認してほしい。"
+      ]
+    }
+  ]
+}

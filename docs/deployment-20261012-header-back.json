@@ -1,0 +1,219 @@
+{
+  "verifiedAt": "2026-10-12T06:53:32.395124+00:00",
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "One small header back arrow before the shifted logo on desktop and mobile. Removes page-level back links and return rows from artworks, artists, museums, guides and studies; preserves history, filters, direct-entry parents and member access.",
+  "deployment": {
+    "baselineBuildId": "9d872c37-44f4-473c-860f-98c5b0ddbce9",
+    "baselineRevision": "artline-web-mobile-1012-v2",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:7d75a0850c1ff9a7b66e92f84b7b0b0cedf62ea3859acf63950e044dcca5ee5e",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:header-back-20261012-v1",
+    "files": {
+      "app/mobile.css": "5690522d6ea696d4b0ffe260ca372170c9b24e9b18a22367bad99d63969af6b8",
+      "components/SiteHeader.tsx": "dcf90a9cc831ff4027c0b89dd8132e6179eb0512d91cd589e48472fa7e6f1e90",
+      "components/SiteNavigation.css": "6cc927d31b2052c7c5929fb5e0a5d72e1f355bb52f43d31e46fdcfd3c954b166",
+      "components/ArtworkPageRecord.tsx": "fab5ed0c4cd5d3a2a7ec2ff6b848940661ded44eed6b6c56f5146fdf964ea4a7",
+      "components/MuseumGuide.tsx": "7a68a896c5875173fc305e9ec49301d916cae9dd08d1c4317de479baa89fbbd2",
+      "components/ArtistProfile.tsx": "40419b138cba98dc20ca99639fe534160118e9545f6ce0e9fc45dd6c893340d6",
+      "components/BackNavigation.tsx": "1da03f5a11a635cbc1b1c9c72152cd66dda6674b7b831b37db9c7829f9e8fa78",
+      "components/MuseumDetail.tsx": "34f58a5d23a0b475e9b0e4ad68d7476be7761e9e7eca2734c1291efbfc3a5ade",
+      "components/BackNavigation.css": "b283519a46d3c78e64d26546c417f4ba002d6bad7bc46fb0f69c75d17e6a39a0",
+      "components/Museums.module.css": "972ecd142d41782e90e5a7d3fff8e050c0bf5b9e23bad084d3e61842621455bd",
+      "components/studies/StudyCompare.tsx": "8e62a7495fe22eef78a29f8ee19b1820c7a3f097cf7533ae6973223b5ca85501",
+      "components/studies/Studies.module.css": "135f4cbae6bdc24e21dc55fb356b1088cc2bdf672c038ee374465d0a860e95ca",
+      "components/studies/StudyWorkspace.tsx": "810ef9148d02e8cd5dbaeec13426d868fe02f2a437d809dd28cdc0f38db7c19b",
+      "app/art-history-timeline/page.tsx": "741d28a7166c2021388d7a2c1c1b888da24a4a00ab935676c58ba7e4fd08be4e",
+      "app/guides/museum-guide.module.css": "3601735d6ae94e05149ac860ce058b15d0fe8a3c68a51db5aff5e84b3a981a81",
+      "app/artists/[slug]/works/[artworkId]/page.tsx": "c86d251ca013bb414f448b4fbfeea26d4238ead8b23a30d7509d5b78a35874ed"
+    },
+    "preimages": {
+      "app/mobile.css": "a56d651284a7c4968c2aa91de8047fd3a43c8e0ad13c652a5531eb6b386bcfc2",
+      "components/SiteHeader.tsx": "09f52365d867d47cfc77df7c2184fea72fcd7ee6a1a06e3747c126b65da09cf9",
+      "components/SiteNavigation.css": "d6c427471b3b13b14d71342d5970f9687365fddffed454b9978ee9591f1255d3",
+      "components/ArtworkPageRecord.tsx": "54479a5c14a6932216f5226eee40f87cbdbbdb3399f345b4c239fe2dc0c2348f",
+      "components/ArtistProfile.tsx": "2085c6fd34e5f2d79b69cc3ab284a59d1f3ea6b8f01e55be3f1535e39d9a7e24",
+      "components/MuseumDetail.tsx": "88e650303b7640518f324ecf45d620a16b55af0f6da92c68d5c8d00991bae85a",
+      "components/Museums.module.css": "4b135e33b6a888e7b42f468e0c276f56b5c9cf070a0610041d66e32e97b3f074",
+      "app/art-history-timeline/page.tsx": "fb6f7a2a2cc501af3c84896c836965f279b770d8974d558bdbe095d469eadc62",
+      "app/artists/[slug]/works/[artworkId]/page.tsx": "be5f4b21e925805492e75e835df4335543ff02f4bc191937ef92827d850553ca",
+      "components/MuseumGuide.tsx": "9ed62190005e782f4498d3c7b70a006eddf2a8d34a61900a934dd117ac201e67",
+      "components/BackNavigation.tsx": "03d40919c3851497ddd6db53da7c8dae94256a3446d37309a1c8d92141f0085a",
+      "components/BackNavigation.css": "fd357d99583b523b1429259f05d880b3bcaf13033b7cad0923a7933ac0d484d4",
+      "components/studies/StudyCompare.tsx": "3693b010164362b5e96b0a75d483d638ebadcc7409e20936db5b17cd32da2a12",
+      "components/studies/Studies.module.css": "e7895edb06e639fd93b8c146de8c2fe357513ca0a311459cc9af7f72f3d3b62b",
+      "components/studies/StudyWorkspace.tsx": "cdeb1602d05d153c7751242a22b4f91b14f12a371250f834f6238cdebe770815",
+      "app/guides/museum-guide.module.css": "e9061cab3e33f66a8507a252bc6445958a6ed8e758b0aa5b04a7aa74036948db"
+    },
+    "overlaySHA256": "884ed14da364da1c2d7f8a761e4faf68569cba395b1a9d5ab31c95a12f2b654a",
+    "overlayURI": "gs://artline-508319-build-source/header-back-20261012/header-884ed14da364da1c.tar.xz",
+    "exclusions": [
+      "Local exhibition routes, navigation and data",
+      "Unrelated guide sidebar changes"
+    ],
+    "databaseWrites": false,
+    "overlayGeneration": "1791787267610964",
+    "buildId": "d965d1ee-63e8-4ef0-a48e-57a55e26593b",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:e57433fb5be3d20ac7477a1e577bc7ed2c24efa990e52722c76f29bdd0ddaba7",
+    "revision": "artline-web-header-back-1012-v1",
+    "candidateURL": "https://header-back-1012-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-mobile-1012-v2",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "validation": {
+    "targetedUnitTestsPassed": 29,
+    "localBrowser": {
+      "checks": [
+        {
+          "width": 1440,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1024,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 768,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        }
+      ],
+      "guideReturn": true,
+      "artworkReturn": true,
+      "filtersPreserved": true,
+      "directFallback": true,
+      "headerAccessibilityViolations": 0,
+      "pageErrors": [],
+      "databaseWrites": false,
+      "guideDirectoryData": "Read-only requests to live guide API; local API lacks guide endpoint"
+    },
+    "typecheck": "passed",
+    "targetedLint": "passed; four existing MuseumGuide image warnings",
+    "productionBuild": "passed",
+    "candidate": {
+      "checks": [
+        {
+          "width": 1440,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1024,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 768,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        }
+      ],
+      "guideReturn": true,
+      "artworkReturn": true,
+      "filtersPreserved": true,
+      "directFallback": true,
+      "memberReturn": true,
+      "keyboardReturn": true,
+      "headerAccessibilityViolations": 0,
+      "pageErrors": [],
+      "databaseWrites": false
+    },
+    "production": {
+      "checks": [
+        {
+          "width": 1440,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1024,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 768,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "arrowBeforeLogo": true,
+          "historyReturned": true,
+          "noDuplicateBackControls": true,
+          "noOverflow": true
+        }
+      ],
+      "guideReturn": true,
+      "artworkReturn": true,
+      "filtersPreserved": true,
+      "directFallback": true,
+      "memberReturn": true,
+      "keyboardReturn": true,
+      "headerAccessibilityViolations": 0,
+      "pageErrors": [],
+      "databaseWrites": false
+    }
+  },
+  "releaseErrorLogEntries": 0,
+  "catalogueWrites": false,
+  "realLocalDatabaseWrites": false,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/header-back-20261012"
+}

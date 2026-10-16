@@ -1,0 +1,599 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "musee-conde-chantilly",
+  "museum": "Musée Condé",
+  "city": "尚蒂伊",
+  "country": "法国",
+  "title": "孔代博物馆：杰作",
+  "subtitle": "孔代博物馆的二十幅画：手中的一件物品，也能改变人物的含义。",
+  "introduction": "玛丽·安托瓦内特拿着赫柏的标志物，看起来却仍像宫廷肖像中的人。本组选集里另一位传统上被认作西莫内塔·韦斯普奇的女子，画中有蛇，姓名却未完全坐实。面貌可以画得具体，与之相连的身份或角色却仍复杂。\n\n孔代博物馆的画作让这些区别值得保留。人物可以是圣徒、神话存在、军事领袖、乐手，也可以是有名有姓的个人。有时，小动作就足以组织图像：提起薄纱、把弓拿远，或举起一只手。二十篇文字沿着这些动作展开，同时区分独立画作、习作与未定的人物身份。",
+  "visitNote": "请查阅尚蒂伊城堡（Château de Chantilly）的访客页面，了解展厅开放情况及临时变动信息。本指南列出了馆藏作品，但不保证所有展品均在展出。",
+  "locale": "zh",
+  "website": "https://pop.culture.gouv.fr/notice/museo/M5052",
+  "officialGuide": "https://pop.culture.gouv.fr/notice/museo/M5052",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "在《论绘画》的英译本中，列奥纳多探讨了姿态、光线以及对人体的观察。这些议题为解读拉斐尔、皮耶罗·迪·科西莫和安格尔笔下的人物形象提供了有益的历史视角，但这并不意味着这些艺术家都遵循了该论著中的理论。"
+    }
+  ],
+  "works": [
+    {
+      "id": "d2a423be-93cb-4c0f-a19f-e906e12adc42",
+      "title": "洛雷托圣母",
+      "catalogueTitle": "LA VIERGE DE LORETTE",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "c. 1509–1510",
+      "start": 1509,
+      "end": 1510,
+      "medium": "杨木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/d2a423be-93cb-4c0f-a19f-e906e12adc42-7ccfe545aaed3cc7.jpg",
+      "imageSource": "https://www.wikiart.org/en/raphael/the-madonna-of-loreto-1509",
+      "credit": "Raphael. LA VIERGE DE LORETTE. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077327",
+      "description": "薄纱连接两个动作：玛利亚小心地将它提起，孩子伸臂去够。约瑟留在较后的暗处，看着这项把前景人物连在一起的动作。圣家围绕一件小小的实物建立关系；布料虽薄得近乎透明，仍可以是群像中最重要的连接。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "ebdcb49a-07d4-5159-bd84-aea90c03f2ca",
+      "title": "女子肖像（据传为西莫内塔·韦斯普奇）",
+      "catalogueTitle": "Portrait of a Woman, said to be of Simonetta Vespucci",
+      "artist": "Piero di Cosimo",
+      "artists": [
+        {
+          "name": "Piero di Cosimo",
+          "role": "primary",
+          "slug": "piero-di-cosimo-q280851"
+        }
+      ],
+      "date": "1490",
+      "start": 1490,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ebdcb49a-07d4-5159-bd84-aea90c03f2ca-1ed13278798e82fb.jpg",
+      "imageSource": "https://www.wikiart.org/en/piero-di-cosimo/portrait-of-simonetta-vespucci-as-cleopatra-1490",
+      "credit": "Piero di Cosimo. Portrait of a Woman, said to be of Simonetta Vespucci. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piero-di-cosimo/portrait-of-simonetta-vespucci-as-cleopatra-1490",
+      "description": "精确的侧脸似乎赋予人物稳定身份，蛇与暗云随后却让事情复杂起来。西莫内塔·韦斯普奇这一传统称呼仍有保留，不能借象征物使身份变成定论。肖像般的具体描绘，以及究竟画了谁的不确定，都属于观看这件作品时应保留的部分。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "95287b23-d8ea-57bc-9631-5ce83fa17f3d",
+      "title": "二十四岁时的自画像",
+      "catalogueTitle": "Self-Portrait at the Age of 24",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1804",
+      "start": 1804,
+      "end": 1804,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/95287b23-d8ea-57bc-9631-5ce83fa17f3d-5ffbfe642b9ec275.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/self-portrait-at-the-age-of-24",
+      "credit": "Jean-Auguste-Dominique Ingres. Self-Portrait at the Age of 24. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-auguste-dominique-ingres/self-portrait-at-the-age-of-24",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/self-portrait-at-the-age-of-24",
+      "description": "画家从工作中转过来，目光向外，将劳动与自我呈现合在同一姿势里。浅色衬衣使上身从深外套中分离出来。这次中断是在自画像里构造的：看似刚停下手的人，同时也是安排这次相遇的人。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "0359471e-cabd-59cc-866c-ace1d7ab7c13",
+      "title": "安东尼娅·德·沃赛夫人（原姓德·尼蒂斯）",
+      "catalogueTitle": "Portrait of Madame Antonia de Vaucay nee de Nittis",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1807",
+      "start": 1807,
+      "end": 1807,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/0359471e-cabd-59cc-866c-ace1d7ab7c13-e650837b8e12b303.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-antonia-de-vaucay-nee-de-nittis-1807",
+      "credit": "Jean-Auguste-Dominique Ingres. Portrait of Madame Antonia de Vaucay nee de Nittis. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-antonia-de-vaucay-nee-de-nittis-1807",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/portrait-of-madame-antonia-de-vaucay-nee-de-nittis-1807",
+      "description": "合拢的双手休息在衣裙、披肩与椅子构成的较大包围之中。红色家具给坐姿身体一个较明确的边界，双手则形成内部安静的中心。安格尔通过层层相套的曲线维持构图，让脸或姿态稍有变化，也能在严格安排中被察觉。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "3e17a41c-255e-49d9-8f63-f5db1984ce9e",
+      "title": "海中升起的维纳斯",
+      "catalogueTitle": "VENUS ANADYOMENE",
+      "artist": "Jean-Auguste-Dominique Ingres",
+      "artists": [
+        {
+          "name": "Jean-Auguste-Dominique Ingres",
+          "role": "primary",
+          "slug": "jean-auguste-dominique-ingres-q23380"
+        }
+      ],
+      "date": "1807-1848",
+      "start": 1807,
+      "end": 1848,
+      "medium": "布面油画",
+      "accession": "PE 433",
+      "image": "https://artlines.org/assets/artworks/wikiart/3e17a41c-255e-49d9-8f63-f5db1984ce9e-43267dfbfd0080d2.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-auguste-dominique-ingres/venus-anadyomene",
+      "credit": "Jean-Auguste-Dominique Ingres. VENUS ANADYOMENE. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076461",
+      "description": "修长浅色身体在远小于自己的有翼人物上方，保持着舒展姿势。画作漫长的形成过程同样重要：安格尔早年在罗马时开始构思，直到1848年才完成。看似静止的画面来自长时间工作，不能证明整个设计曾一次成形。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "28b01ddb-e01d-4e27-a91b-895480afd17f",
+      "title": "五位跳舞的天使",
+      "catalogueTitle": "CINQ ANGES DANSANT",
+      "artist": "Giovanni di Paolo",
+      "artists": [
+        {
+          "name": "Giovanni di Paolo",
+          "role": "primary",
+          "slug": "giovanni-di-paolo-q946420"
+        }
+      ],
+      "date": "约 1436 年",
+      "start": 1436,
+      "end": 1436,
+      "medium": "软木板上的油彩与金箔",
+      "accession": "PE 9",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/28b01ddb-e01d-4e27-a91b-895480afd17f-fc53f8e585acafab.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Angels_dancing_sun_Giovanni_di_Paolo_Cond%C3%A9_Chantilly.jpg",
+      "credit": "Giovanni di Paolo. CINQ ANGES DANSANT. Image credit: Giovanni di Paolo; Own work , Jebulon , 2011-07-03. https://commons.wikimedia.org/wiki/File:Angels_dancing_sun_Giovanni_di_Paolo_Cond%C3%A9_Chantilly.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077298",
+      "description": "相牵的手让五个身体连成一圈，其中也包括背向观众的人物。衣褶与交替的姿态使他们在金底前舞动，却没有可供向纵深走入的空间。舞蹈通过圆圈内部一次次方向变化来呈现。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "4cd00c09-dea2-5ebc-8572-ab0999f3d272",
+      "title": "小夜曲演唱者",
+      "catalogueTitle": "The Serenader",
+      "artist": "Jean-Antoine Watteau",
+      "artists": [
+        {
+          "name": "Jean-Antoine Watteau",
+          "role": "primary",
+          "slug": "jean-antoine-watteau-q183221"
+        }
+      ],
+      "date": "1715",
+      "start": 1715,
+      "end": 1715,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/4cd00c09-dea2-5ebc-8572-ab0999f3d272-9a1934e5751533ed.jpg",
+      "imageSource": "https://www.wikiart.org/en/antoine-watteau/the-serenader",
+      "credit": "The Serenader. WikiArt; Jean-Antoine Watteau. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/antoine-watteau/the-serenader",
+      "description": "交叉的双腿与斜向乐器，使乐手的姿态仿佛已经受到表演塑造。服装衬住面孔，但并不独自承担动作。华托让身体参与音乐，使一幅无声的画，也能通过站坐方式与方向说出几分演奏的状态。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "593b7ec6-8da1-4567-a180-f2d695926ac2",
+      "title": "被解除武装的爱神",
+      "catalogueTitle": "L'AMOUR DESARME",
+      "artist": "Jean-Antoine Watteau",
+      "artists": [
+        {
+          "name": "Jean-Antoine Watteau",
+          "role": "primary",
+          "slug": "jean-antoine-watteau-q183221"
+        }
+      ],
+      "date": "约 1715 年",
+      "start": 1715,
+      "end": 1715,
+      "medium": "布面油画",
+      "accession": "PE 369",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/593b7ec6-8da1-4567-a180-f2d695926ac2-e20e216c20da18f9.jpg",
+      "imageSource": "https://www.wikiart.org/en/antoine-watteau/cupid-disarmed",
+      "credit": "Antoine Watteau. L'AMOUR DESARME. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076654",
+      "description": "丘比特伸手去够被拿在远处的弓。手与物之间不大的空隙，提供了整个互动的动作，椭圆画幅则使两个身体保持亲近。“爱神被解除武装”的寓意，经由一种熟悉的不平衡而变得可懂：一人拥有另一人想要、暂时却够不到的东西。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "6797d090-432a-54c6-9ce0-240ac1b962b4",
+      "title": "马匹离开马厩",
+      "catalogueTitle": "Horse leaving a Stable",
+      "artist": "Théodore Géricault",
+      "artists": [
+        {
+          "name": "Théodore Géricault",
+          "role": "primary",
+          "slug": "theodore-gericault-q184212"
+        }
+      ],
+      "date": "1810",
+      "start": 1810,
+      "end": 1810,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/6797d090-432a-54c6-9ce0-240ac1b962b4-e0d30f95ecbbb3b1.jpg",
+      "imageSource": "https://www.wikiart.org/en/theodore-gericault/horse-leaving-a-stable",
+      "credit": "Horse leaving a Stable. WikiArt; Théodore Géricault. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/theodore-gericault/horse-leaving-a-stable",
+      "description": "抬起的前腿让马处在静立与走出马厩之间。旁边牵马的人也在狭窄门槛处，光线则把动物厚实的身躯与较暗门口区分开。场景有赖于这个尚未完成的过渡；若马已经走进开阔风景，画面便会大不相同。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "0a6c525d-c628-4319-8bcc-aff65f41097d",
+      "title": "比利牛斯山区的牧羊人",
+      "catalogueTitle": "Berger des Pyrénées",
+      "artist": "Rosa Bonheur",
+      "artists": [
+        {
+          "name": "Rosa Bonheur",
+          "role": "primary",
+          "slug": "rosa-bonheur-nga-15002"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "布面油画",
+      "accession": "PE 531",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/0a6c525d-c628-4319-8bcc-aff65f41097d-bdd10534f5b3dd22.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Rosa_Bonheur,_sheeps_in_the_Pyrenees.JPG",
+      "credit": "Rosa Bonheur. Berger des Pyrénées. Image credit: Rosa Bonheur; Own work; Photographic credit: Dguendel. https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Rosa_Bonheur,_sheeps_in_the_Pyrenees.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076555",
+      "description": "牧杖、动物与粗糙地面构成共同的劳动环境。牧羊人并不只是山景的装饰，动物也不是随时可替换的田园色块。姿态与质感的差异，使它们同地形的关系足够具体，无需戏剧事件，也能让人继续观看。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "393c4ef9-10e9-4551-8104-dd2133bb4de6",
+      "title": "巴克斯的童年",
+      "catalogueTitle": "L'ENFANCE DE BACCHUS",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "约 1630 年",
+      "start": 1630,
+      "end": 1630,
+      "medium": "布面油画",
+      "accession": "PE 298",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/393c4ef9-10e9-4551-8104-dd2133bb4de6-800e211863bf901b.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/nurture-of-bacchus-1635",
+      "credit": "Nicolas Poussin. Nurture of Bacchus. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/nurture-of-bacchus-1635",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077256",
+      "description": "婴儿身处一场聚集，周围人物与萨堤尔又分成更小的互动。手势在林地间连接这些局部情节，使人可以跟随神话，而不让所有身体混成一团。普桑先给予场景可理解的群体关系，观众不必已经确认每位参与者是谁。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "1174bb76-8a75-4eaa-8505-a1ecba90c623",
+      "title": "圣婴——世界的救主",
+      "catalogueTitle": "L'ENFANT JESUS, SAUVEUR DU MONDE",
+      "artist": "Bernardino Luini",
+      "artists": [
+        {
+          "name": "Bernardino Luini",
+          "role": "primary",
+          "slug": "bernardino-luini-q8537"
+        }
+      ],
+      "date": "约 1520 年",
+      "start": 1520,
+      "end": 1520,
+      "medium": "木板油画",
+      "accession": "PE 24",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/1174bb76-8a75-4eaa-8505-a1ecba90c623-d76204a0ad226256.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Bernardino_Luini,_Jesu_as_a_child.JPG",
+      "credit": "Bernardino Luini. L'ENFANT JESUS, SAUVEUR DU MONDE. Image credit: Bernardino Luini; Own work; Photographic credit: Dguendel. https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Bernardino_Luini,_Jesu_as_a_child.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077313",
+      "description": "孩子小小的身体伴随着举起的手、十字杖与宝球；这些标志宣示的意义，远超他的身体大小。各物彼此分开，让这种差异容易看清。图像把幼年与精神权威相接，而不是让一方取消另一方；清楚的剪影让两者同时存在。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "5474b0a7-628e-437d-9b30-2d3a835077de",
+      "title": "亚哈随鲁选中以斯帖",
+      "catalogueTitle": "Esther choisie par Assuérus",
+      "artist": "LIPPI Filippino",
+      "artists": [],
+      "date": "约 1480 年",
+      "start": 1480,
+      "end": 1480,
+      "medium": "木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/5474b0a7-628e-437d-9b30-2d3a835077de-73d4cc4c5ed00113.jpg",
+      "imageSource": "https://www.wikiart.org/en/filippino-lippi/esther-choisie-par-assuerus-1480",
+      "credit": "Filippino Lippi. Esther choisie par Assuérus. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077308",
+      "description": "拱廊把宽画板分成相通的空间，让宫廷故事不止在一处展开。明亮衣服在重复建筑之内区分人群。王座提供焦点，但画板的宽度仍允许目光在参与者之间移动，而不必永远停在单个中心人物身上。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "96d9300d-331f-4632-9f3d-cd7ffab9ab0e",
+      "title": "亨利·德·贝尔格伯爵",
+      "catalogueTitle": "PORTRAIT DU COMTE HENRI DE BERGHE",
+      "artist": "Anthony van Dyck",
+      "artists": [
+        {
+          "name": "Anthony van Dyck",
+          "role": "primary",
+          "slug": "anthony-van-dyck-q150679"
+        }
+      ],
+      "date": "1625-1629",
+      "start": 1625,
+      "end": 1629,
+      "medium": "布面油画",
+      "accession": "PE 126",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/96d9300d-331f-4632-9f3d-cd7ffab9ab0e-cc678bfabcabefd0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_du_comte_Henri_de_Berghe_-_Anton_van_Dyck_-_Mus%C3%A9e_Cond%C3%A9.jpg",
+      "credit": "Anthony van Dyck. PORTRAIT DU COMTE HENRI DE BERGHE. Image credit: Anthony van Dyck; Base Joconde. https://commons.wikimedia.org/wiki/File:Portrait_du_comte_Henri_de_Berghe_-_Anton_van_Dyck_-_Mus%C3%A9e_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076602",
+      "description": "铠甲让身体大部分显得封闭而坚硬，脸与手则相对裸露。靠近剑的手，把活人的肌肤与军事装备联系起来。凡·戴克通过端整安排表现等级，使穿戴者仍有个人面貌，同时不抹去服装所宣告的角色。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "9b7ac0b3-b8f3-4e19-844c-71a31d5029b9",
+      "title": "扮演赫柏的玛丽·安托瓦内特",
+      "catalogueTitle": "Madame la Dauphine Marie-Antoinette, en Hébé",
+      "artist": "François-Hubert Drouais",
+      "artists": [
+        {
+          "name": "François-Hubert Drouais",
+          "role": "primary",
+          "slug": "francois-hubert-drouais-nga-1242"
+        }
+      ],
+      "date": "1773",
+      "start": 1773,
+      "end": 1773,
+      "medium": "布面油画",
+      "accession": "PE 395",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/9b7ac0b3-b8f3-4e19-844c-71a31d5029b9-3daf12d8844b55a3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Marie_Antoinette_dauphine_H%C3%A9b%C3%A9_Drouais_Chantilly.jpg",
+      "credit": "François-Hubert Drouais. Madame la Dauphine Marie-Antoinette, en Hébé. Image credit: François-Hubert Drouais; Jebulon ( talk · contribs ) (2011). https://commons.wikimedia.org/wiki/File:Marie_Antoinette_dauphine_H%C3%A9b%C3%A9_Drouais_Chantilly.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000104677",
+      "description": "水壶与鹰标明赫柏，面孔和精心梳理的头发则保留王室肖像的惯例。因此，玛丽·安托瓦内特是在扮演角色，而非被一个无名神话人物替代。古典服饰提供框架，让一个具体的公共身份得以在其中亮相。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "df81cdfb-19e4-442b-8756-8b625ca8d128",
+      "title": "火腿午餐会",
+      "catalogueTitle": "LE DEJEUNER DE JAMBON",
+      "artist": "Nicolas Lancret",
+      "artists": [
+        {
+          "name": "Nicolas Lancret",
+          "role": "primary",
+          "slug": "nicolas-lancret-q188172"
+        }
+      ],
+      "date": "1735",
+      "start": 1735,
+      "end": 1735,
+      "medium": "布面油画",
+      "accession": "PE 383",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/df81cdfb-19e4-442b-8756-8b625ca8d128-74236c70b379806b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:D%C3%A9jeuner_de_jambon_-_Nicolas_Lancret_-_mus%C3%A9e_Cond%C3%A9.jpg",
+      "credit": "Nicolas Lancret. LE DEJEUNER DE JAMBON. Image credit: Nicolas Lancret; Joconde database :  entry 00000076666. https://commons.wikimedia.org/wiki/File:D%C3%A9jeuner_de_jambon_-_Nicolas_Lancret_-_mus%C3%A9e_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076666",
+      "description": "白桌布把餐食聚为一片亮区，但下方酒瓶与四周手势，使同席者没有定格成正式群像。公园为交往留出了展开的余地。数个小交流可以同时发生，不必把哪位食客立为这场聚会无可争议的中心。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "5ad39bc1-ed6d-4f7e-82bc-56ebc5d9b9e7",
+      "title": "拿破仑视察雅法鼠疫患者：尚蒂伊版本",
+      "catalogueTitle": "BONAPARTE, GENERAL EN CHEF DE L'ARMEE D'ORIENT, TOUCHE UNE TUMEUR PESTILENTIELLE, EN VISITANT LES PESTIFERES DANS L'HOPITAL DE JAFFA",
+      "artist": "Antoine-Jean Gros",
+      "artists": [
+        {
+          "name": "Antoine-Jean Gros",
+          "role": "primary",
+          "slug": "antoine-jean-gros-q216999"
+        }
+      ],
+      "date": "约 1802 年",
+      "start": 1802,
+      "end": 1802,
+      "medium": "布面油画",
+      "accession": "PE 428",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/5ad39bc1-ed6d-4f7e-82bc-56ebc5d9b9e7-1135df9e513cd64a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Chantilly_(60),_mus%C3%A9e_Cond%C3%A9,_Antoine_Jean_Baron_Gros,_Bonaparte_et_les_pestif%C3%A9r%C3%A9s_de_Jaffa,_1804.jpg",
+      "credit": "Antoine-Jean Gros. BONAPARTE, GENERAL EN CHEF DE L'ARMEE D'ORIENT, TOUCHE UNE TUMEUR PESTILENTIELLE, EN VISITANT LES PESTIFERES DANS L'HOPITAL DE JAFFA. Image credit: Antoine-Jean Gros; Own work , Pierre Poschadel , 2019-09-22. https://commons.wikimedia.org/wiki/File:Chantilly_(60),_mus%C3%A9e_Cond%C3%A9,_Antoine_Jean_Baron_Gros,_Bonaparte_et_les_pestif%C3%A9r%C3%A9s_de_Jaffa,_1804.jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076456",
+      "description": "拱廊围起的空间中，波拿巴接近病人的举动格外突出。光区分身体，并把动作转成一次公开的领袖形象展示。尚蒂伊这件作品在目录中被列为与卢浮宫大画相关的习作；应当把它当作独立物件来看，而非那一版本可随意替换的复制品。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "54fea717-ff3a-469a-ab94-e8cd775c299b",
+      "title": "在阿布鲁佐",
+      "catalogueTitle": "DANS LES ABRUZZES",
+      "artist": "Oswald Achenbach",
+      "artists": [
+        {
+          "name": "Oswald Achenbach",
+          "role": "primary",
+          "slug": "oswald-achenbach-q76415"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "布面油画",
+      "accession": "PE 606",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/54fea717-ff3a-469a-ab94-e8cd775c299b-a19fe58ac3818555.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Oswald_Achenbach,_in_the_Abruzzo.JPG",
+      "credit": "Oswald Achenbach. DANS LES ABRUZZES. Image credit: Oswald Achenbach; Own work , 2017-08-30, Dguendel. https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chantilly,_Oswald_Achenbach,_in_the_Abruzzo.JPG. CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/000PE018739",
+      "description": "路旁神龛给旅人一个停下的理由，道路却仍向远山继续。不同距离的人物，使风景中的停留与行进都有了参照。旅程靠可供短暂驻足的地点来组织，而不是一片脱离人的使用、毫无中断的远眺景观。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "ca87a44e-7b4c-4de6-bdae-283ae7628732",
+      "title": "阿尔及利亚的苍鹭狩猎",
+      "catalogueTitle": "LA CHASSE AU HERON (ALGERIE)",
+      "artist": "Eugène Fromentin",
+      "artists": [
+        {
+          "name": "Eugène Fromentin",
+          "role": "primary",
+          "slug": "eugene-fromentin-q353746"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "布面油画",
+      "accession": "PE 528",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/ca87a44e-7b4c-4de6-bdae-283ae7628732-af564c72167d31cd.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Chasse_au_h%C3%A9ron_Fromentin_Mus%C3%A9e_Cond%C3%A9.jpg",
+      "credit": "Eugène Fromentin. LA CHASSE AU HERON (ALGERIE). Image credit: Eugène Fromentin; Jebulon , Own work. https://commons.wikimedia.org/wiki/File:Chasse_au_h%C3%A9ron_Fromentin_Mus%C3%A9e_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000076552",
+      "description": "猎人在浅水里分得很开，鸟与骑者打断低低的地平线。间隔使距离成为动作的一部分，这场狩猎不能被压缩为一次近身相遇。广阔天空也将人物留在大环境中，不让他们的运动填满全画。",
+      "importance": "",
+      "museum": "Musée Condé"
+    },
+    {
+      "id": "e9c96b9f-cb66-4601-a8b4-2b07299e1691",
+      "title": "天使加百列与奏乐天使及小天使",
+      "catalogueTitle": "L'ANGE GABRIEL DANS UNE GLOIRE D'ANGES MUSICIENS ET DE CHERUBINS",
+      "artist": "Annibale Carracci",
+      "artists": [
+        {
+          "name": "Annibale Carracci",
+          "role": "primary",
+          "slug": "annibale-carracci-q7824"
+        }
+      ],
+      "date": "16世纪下半叶",
+      "start": 1550,
+      "end": 1600,
+      "medium": "布面油画",
+      "accession": "PE 62",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-joconde/e9c96b9f-cb66-4601-a8b4-2b07299e1691-4784dc4c811ddd19.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Annibale_Carracci,_Arcangelo_Gabriele,_Museo_Cond%C3%A9.jpg",
+      "credit": "Annibale Carracci. L'ANGE GABRIEL DANS UNE GLOIRE D'ANGES MUSICIENS ET DE CHERUBINS. Image credit: Annibale Carracci; Joconde database :  entry 00000077351. https://commons.wikimedia.org/wiki/File:Annibale_Carracci,_Arcangelo_Gabriele,_Museo_Cond%C3%A9.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/00000077351",
+      "description": "加百列张开的双臂，为四周上升的动势提供明确中心。蓝红衣服区分主要身体，小天使与云朵则继续周围的运动。天上聚集靠方向与颜色联结，而不是靠一块能让所有人物站立的地面。",
+      "importance": "",
+      "museum": "Musée Condé"
+    }
+  ],
+  "context": {
+    "start": 1436,
+    "end": 1865
+  },
+  "closingSections": [
+    {
+      "title": "区分作品本身与它的故事",
+      "paragraphs": [
+        "熟悉题材可能留存数个版本，传统姓名也可能没有面孔看上去那么确定。请用所附作品记录保留这些区别。城堡最新参观信息应另行查询；本选集不指定路线，也不保证每件作品都可见。"
+      ]
+    }
+  ]
+}

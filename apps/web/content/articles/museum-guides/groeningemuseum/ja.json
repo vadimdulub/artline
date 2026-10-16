@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "groeningemuseum",
+  "museum": "Groeningemuseum",
+  "city": "ブルージュ",
+  "country": "ベルギー",
+  "title": "グルーニング美術館：名作",
+  "subtitle": "肖像の近さから川の水平線の遠さまで、グルーニング美術館の20作品をたどります。",
+  "introduction": "マルガレータ・ファン・エイクの周りには、ほとんど空間がありません。顔が占めていない部分も、頭巾のひだが埋め尽くしそうです。一方、この選集の別の作品では、川や空がそこにいる人々をはるかに越えて広がります。その距離の違いを手がかりにすると、グルーニング美術館の多彩な収蔵品を見比べられます。\n\n宗教と裁判の場面には、もう一つの問いがあります。中心の出来事のそばに誰が立ち、誰がそれを見届けるのでしょうか。聖人の間に寄進者がひざまずき、寝台の周りに人々が集まり、告発された裁判官を証人たちが囲みます。時代別に分ける前に、こうした配置を比べる価値があります。以下は作品を読むための選集で、展示室を巡る順路ではありません。",
+  "visitNote": "本ガイドは、グルーニング美術館の所蔵作品（展示されていない可能性のある素描や作品を含む）に基づいています。ご来館の際は、事前にMusea Brugge（ブルージュ美術館群）の最新情報をご確認ください。掲載順序は編集上の選択によるものであり、館内の展示順序とは異なります。",
+  "locale": "ja",
+  "website": "https://www.museabrugge.be/",
+  "officialGuide": "https://www.museabrugge.be/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "無料で読む · 英語",
+      "note": "光、衣服のひだ、そして人物の配置に関するレオナルドの記述は、初期の絵画作品を考察する上で有益な問いを投げかけてくれます。それらは、当時の画家たちがレオナルドの助言に従ったことを示す証拠というよりは、ルネサンス期における並行的な議論のあり方を示すものと言えるでしょう。"
+    }
+  ],
+  "works": [
+    {
+      "id": "51c9538d-d2c2-40e6-9f4d-faaa192f80fa",
+      "title": "マルガレータ・ファン・エイク",
+      "catalogueTitle": "Portrait of Margareta van Eyck",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1439",
+      "start": 1439,
+      "end": 1439,
+      "medium": "オーク材に油彩",
+      "accession": "0000.GRO0162.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/51c9538d-d2c2-40e6-9f4d-faaa192f80fa-bf8ee12b69eb.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0162-I",
+      "credit": "Jan van Eyck; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collectie.museabrugge.be/collection/work/id/0000_GRO0162_I",
+      "description": "白い頭巾の鋭いひだが顔を囲み、下方では両手が構図を落ち着かせています。何も起こらなくても、人物の存在感は薄れません。布の細かな変化と、より穏やかに続く顔の面を比べてみてください。その人らしさは顔立ちの正確さだけでなく、周囲に何をどう置くかによっても生まれています。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "2575a1c6-6625-5f2f-880b-b081ca7598f7",
+      "title": "聖母の死",
+      "catalogueTitle": "Death of the Virgin",
+      "artist": "Hugo van der Goes",
+      "artists": [
+        {
+          "name": "Hugo van der Goes",
+          "role": "primary",
+          "slug": "hugo-van-der-goes-q215251"
+        }
+      ],
+      "date": "after 1475–1482",
+      "start": 1475,
+      "end": 1482,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2575a1c6-6625-5f2f-880b-b081ca7598f7-e52be3672d071de6.jpg",
+      "imageSource": "https://www.wikiart.org/en/hugo-van-der-goes/death-of-the-virgin",
+      "credit": "Hugo van der Goes. Death of the Virgin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hugo-van-der-goes/death-of-the-virgin",
+      "description": "使徒たちはマリアの寝台を囲んでいますが、その悲しみは一様ではありません。顔と手をたどると、視線は横たわる身体から離れ、また戻ってきます。美術館の近年の調査では、描かれたカーテンの痕跡や、以前に画面が切り詰められたことも確認されました。この集まりを見渡す画面の境界にも、歴史があるのです。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "5c0dd1b5-8193-5aaa-8263-e095871a2b92",
+      "title": "最後の審判",
+      "catalogueTitle": "Last Judgement",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "c. 1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "板に油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/5c0dd1b5-8193-5aaa-8263-e095871a2b92-9b487b1741ef64a0.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "credit": "Hieronymus Bosch. Last Judgement. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "description": "細かな出来事が多く、三連画の全体をつかみにくいかもしれません。まず左の楽園、中央の審判、右の地獄という大きな区分を確かめましょう。不穏なのは、中央の地上世界がすでに罰の場所のように見えることです。奇妙な生き物たちは単独で楽しむ珍奇な図像ではなく、この構想の一部になっています。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "2e3c043a-4ec0-5c66-9b9b-0d780263db2a",
+      "title": "フォンテーヌブロー、妖精の池",
+      "catalogueTitle": "'La Mare aux Fées' at Fontainebleau",
+      "artist": "Alphonse Asselbergs",
+      "artists": [
+        {
+          "name": "Alphonse Asselbergs",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-a5045c59d4610084"
+        }
+      ],
+      "date": "1876年頃",
+      "start": 1876,
+      "end": 1876,
+      "medium": "キャンバスに油彩",
+      "accession": "0000.GRO0008.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/2e3c043a-4ec0-5c66-9b9b-0d780263db2a-ec6c3a6f8983.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0008-I",
+      "credit": "Alphonse Asselbergs; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0008-I",
+      "description": "森の眺めをまとめる大きな山や目印はありません。代わりに、草や木の間で池の縁が何度も向きを変えています。その線をたどると、陸と水が不規則に接する様子が見えてきます。広い空は、このささやかな土地に余白を与えながら、壮大な眺望へと作り替えることはありません。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "b96f635b-52a6-5dce-9694-454be8324989",
+      "title": "シサムネスの逮捕",
+      "catalogueTitle": "Arrest of Sisamnes by Cambyses",
+      "artist": "Gerard David",
+      "artists": [
+        {
+          "name": "Gerard David",
+          "role": "primary",
+          "slug": "gerard-david-q333380"
+        }
+      ],
+      "date": "1498",
+      "start": 1498,
+      "end": 1498,
+      "medium": "板に油彩",
+      "accession": "0000.GRO0040.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/b96f635b-52a6-5dce-9694-454be8324989-28df8056da4e.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0040-I",
+      "credit": "Gerard David; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0040-I",
+      "description": "手は座った男を指し、周囲の人々の顔は彼を見定めています。ダーフィットは告発を二人だけのやりとりではなく、公の場の出来事として描きました。豪華な衣服も重要です。証人たちは秩序ある市民社会に属し、その近さによって、被告がその社会で占めていた立場が急に危うく見えます。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "6e974325-5a9d-5cfe-963f-e2d033b92455",
+      "title": "宴会",
+      "catalogueTitle": "Banquet",
+      "artist": "Antonius Claeissens",
+      "artists": [
+        {
+          "name": "Antonius Claeissens",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-b1587f45d71972b3"
+        }
+      ],
+      "date": "1574",
+      "start": 1574,
+      "end": 1574,
+      "medium": "板に油彩",
+      "accession": "0000.GRO0023.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/6e974325-5a9d-5cfe-963f-e2d033b92455-e868f9155008.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0023-I",
+      "credit": "Antonius Claeissens; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0023-I",
+      "description": "宴席では通常、客の周りに食べ物と話し相手がいます。ここでは正面を向いた配置によって、客たちは画面の外にいるもう一つの観衆にも姿を見せています。凝った衣服、器、装飾は豊かさの誇示となります。この整った見せ方を、ディルク・ハルスの宿屋の場面で交錯する、もっと不規則なやりとりと比べてください。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "e882dfa2-f70b-5822-a7cf-03ba01c4379d",
+      "title": "キリストの洗礼",
+      "catalogueTitle": "Baptism of Christ",
+      "artist": "Gerard David",
+      "artists": [
+        {
+          "name": "Gerard David",
+          "role": "primary",
+          "slug": "gerard-david-q333380"
+        }
+      ],
+      "date": "1502年頃～1508年頃",
+      "start": 1502,
+      "end": 1508,
+      "medium": "板に油彩",
+      "accession": "0000.GRO0035.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/e882dfa2-f70b-5822-a7cf-03ba01c4379d-483a353db001.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0035-I",
+      "credit": "Gerard David; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0035-I",
+      "description": "掲げられた器が中心の行為を示しますが、風景はその先まで続いています。主要な人物の周りに少しずつ空間があるため、多くのものが描かれていても洗礼の場面を読み取れます。ダーフィットは聖なる出来事を際立たせるために、世界を空にする必要がありません。人物の間隔と控えめな身ぶりが、その役割を果たしています。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "120ed406-68a2-5345-9f49-13499ed64ea3",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "James Ensor",
+      "artists": [
+        {
+          "name": "James Ensor",
+          "role": "primary",
+          "slug": "james-ensor-q158840"
+        }
+      ],
+      "date": "1885年頃",
+      "start": 1885,
+      "end": 1885,
+      "medium": "コンテ",
+      "accession": "0000.GRO1274r.II",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/120ed406-68a2-5345-9f49-13499ed64ea3-7d11dc2a5ef3.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO1274r-II",
+      "credit": "James Ensor; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO1274r-II",
+      "description": "傾いたアンソールの頭の周りには、描かれていない紙面が広く残っています。顔を認識するのに必要な場所では線が集まり、ほかでは緩み、紙そのものも像を形作っています。《マルガレータ・ファン・エイク》と並べて見ると、克明に描かれた絵肌だけでなく、線を選び取ることでも、一人の人物を伝えられるとわかります。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "20412d15-2363-5418-a829-4b2b5c7da3f0",
+      "title": "宿屋で音楽を奏で、酒を飲む人々",
+      "catalogueTitle": "Company making Music and drinking in an Inn",
+      "artist": "Dirck Hals",
+      "artists": [
+        {
+          "name": "Dirck Hals",
+          "role": "primary",
+          "slug": "dirck-hals-nga-38724"
+        }
+      ],
+      "date": "1627年頃",
+      "start": 1627,
+      "end": 1627,
+      "medium": "板に油彩",
+      "accession": "0000.GRO0252.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/20412d15-2363-5418-a829-4b2b5c7da3f0-30eccc5acdc9.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0252-I",
+      "credit": "Dirck Hals; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0252-I",
+      "description": "グラス、楽器、差し出された手が、それぞれ人と人を結んでいます。集まりを組み立てているのはこうした小さな行為で、全員を率いる人物はいりません。クライセンスの宴席と比べれば、違いは明らかです。ここで人々を一つにしているのは集合写真のようなポーズではなく、卓上を行き交うやりとりです。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "a8b4e801-449f-5c7e-99cb-371a6e71b3f1",
+      "title": "ヤン・ファン・アイウェルヴェ",
+      "catalogueTitle": "Portrait of Jan van Eyewerve",
+      "artist": "Pourbus Pieter",
+      "artists": [
+        {
+          "name": "Pourbus Pieter",
+          "role": "primary",
+          "slug": "pourbus-pieter-round2-2d4047d2dd68"
+        }
+      ],
+      "date": "1551",
+      "start": 1551,
+      "end": 1551,
+      "medium": "板に油彩",
+      "accession": "0000.GRO0108.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/a8b4e801-449f-5c7e-99cb-371a6e71b3f1-301252b551c5.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0108-I",
+      "credit": "Pieter Pourbus; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0108-I",
+      "description": "紋章と、開口部の向こうに見える都市が、顔だけではわからない人物の立場を示しています。それらは彼を公的な世界に位置づけ、一方で暗い衣服は身体をまとまった形に見せます。ジャクミン・ブークの肖像と比べてみましょう。別の板に描かれた彼女の配置が、こちらの構図に応じています。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "f191833e-d163-5152-a308-0cb835dc7be6",
+      "title": "ジャクミン・ブーク",
+      "catalogueTitle": "Portrait of Jacquemyne Buuck",
+      "artist": "Pourbus Pieter",
+      "artists": [
+        {
+          "name": "Pourbus Pieter",
+          "role": "primary",
+          "slug": "pourbus-pieter-round2-2d4047d2dd68"
+        }
+      ],
+      "date": "1551",
+      "start": 1551,
+      "end": 1551,
+      "medium": "板に油彩",
+      "accession": "0000.GRO0109.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/f191833e-d163-5152-a308-0cb835dc7be6-32627a496267.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0109-I",
+      "credit": "Pieter Pourbus; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0109-I",
+      "description": "白い襟が黒い服の上にくっきりとした形を作り、手から顔へと視線を上げます。下方の小さな犬は、人物とは異なる大きさで存在を示します。ヤン・ファン・アイウェルヴェの肖像と見ると、左右を反転させた配置によって二枚が対になりつつ、それぞれの人物の空間も保たれていることがわかります。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "a959577f-02a8-5718-903f-10ca3acda802",
+      "title": "市場の情景を描いたイタリア風の風景画",
+      "catalogueTitle": "Italianate Landscape with Market Scene",
+      "artist": "Peeter van Bredael",
+      "artists": [
+        {
+          "name": "Peeter van Bredael",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-6477745fb7fc28e5"
+        }
+      ],
+      "date": "1680年頃",
+      "start": 1680,
+      "end": 1680,
+      "medium": "キャンバスに油彩",
+      "accession": "0000.GRO0149.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/a959577f-02a8-5718-903f-10ca3acda802-50694171db40.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0149-I",
+      "credit": "Peeter van Bredael; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0149-I",
+      "description": "市場の仕事は、それを使う人々よりはるかに大きな建築の下で続いています。商人と動物が地面を占め、アーチはさらに遠い世界へ開いています。古代風の舞台は日常の取引に堂々とした枠組みを与えます。同時に、その活動があるため、遺構は建築の壮麗さだけを示す空虚な景色にはなりません。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "eba3699d-0894-5d3d-bd42-259d9c051279",
+      "title": "聖母を描く聖ルカ",
+      "catalogueTitle": "Saint Luke painting the Madonna",
+      "artist": "Lancelot Blondeel",
+      "artists": [
+        {
+          "name": "Lancelot Blondeel",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-47cf805f2a58262e"
+        }
+      ],
+      "date": "1545",
+      "start": 1545,
+      "end": 1545,
+      "medium": "キャンバスに油彩",
+      "accession": "0000.GRO0018.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/eba3699d-0894-5d3d-bd42-259d9c051279-c4228ba2bed4.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0018-I",
+      "credit": "Lancelot Blondeel; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0018-I",
+      "description": "画家でもある聖人と聖母の出会いは、装飾が目立つ画面の中で意外なほど小さく描かれています。柱とアーチが、その小さな中心へ至る複雑な道筋を作ります。背景そのものにも目を向ける必要があります。ここで聖なる主題を描くことは、その周囲に建築の世界を築くことでもあるのです。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "0be99f3c-a8eb-552c-8ca1-3f9da079d446",
+      "title": "冬の音楽",
+      "catalogueTitle": "Winter music",
+      "artist": "Léon Spilliaert",
+      "artists": [
+        {
+          "name": "Léon Spilliaert",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1394505"
+        }
+      ],
+      "date": "1943",
+      "start": 1943,
+      "end": 1943,
+      "medium": "インドールインクと水彩絵の具",
+      "accession": "1976.GRO0813.II",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/0be99f3c-a8eb-552c-8ca1-3f9da079d446-e86b1a1f402c.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/1976-GRO0813-II",
+      "credit": "Leon Spilliaert; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/1976-GRO0813-II",
+      "description": "曲線を描くヴァイオリン奏者の姿勢が、垂直な幹の反復を中断しています。雪に覆われた周囲の地面にはものが少なく、演奏する姿が際立って孤立しています。絵から音は聞こえません。それでも一人の人物と、一定の間隔で並ぶ木々の関係によって、題名は単に「楽器を持つ人」を説明する以上の意味を持ちます。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "7496ede4-fc26-5072-8a5a-d20006f34700",
+      "title": "川の風景",
+      "catalogueTitle": "River Landscape",
+      "artist": "Jan van Goyen",
+      "artists": [
+        {
+          "name": "Jan van Goyen",
+          "role": "primary",
+          "slug": "jan-van-goyen-q315996"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "板に油彩",
+      "accession": "0000.GRO0163.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/7496ede4-fc26-5072-8a5a-d20006f34700-3c94a1a1a145.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0163-I",
+      "credit": "Jan Josefsz. van Goyen; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0163-I",
+      "description": "茶色い帆が一枚あるだけで、灰色の川と空に強く映えます。奥行きの大半は穏やかな明暗の変化で作られているため、舟の位置を示すのに、色を鋭く分ける必要はありません。低い水平線の上に大きく空が広がり、この風景の印象を天候が大きく左右しています。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "f39218a8-81c0-5d28-b27f-62a1edc104a2",
+      "title": "聖エリザベートとポルトガルのイザベル",
+      "catalogueTitle": "Isabella Of Portugal With St. Elizabeth",
+      "artist": "Petrus Christus",
+      "artists": [
+        {
+          "name": "Petrus Christus",
+          "role": "primary",
+          "slug": "petrus-christus-q312616"
+        }
+      ],
+      "date": "1457-1460",
+      "start": 1457,
+      "end": 1460,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f39218a8-81c0-5d28-b27f-62a1edc104a2-99f589fbcdf19331.jpg",
+      "imageSource": "https://www.wikiart.org/en/petrus-christus/isabel-of-portugal-with-st-elizabeth",
+      "credit": "Petrus Christus. Isabella Of Portugal With St. Elizabeth. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/petrus-christus/isabel-of-portugal-with-st-elizabeth",
+      "description": "ひざまずく寄進者と付き添う聖人のいる空間は、アーチを通じて外へ続いています。この板は三連画の翼部であり、より大きな信仰のための構成に属していました。その全体を、この画像だけから理解するのは困難です。寄進者の祈りは個人の行為であると同時に、現存する場面の外へ向けられた身ぶりでもあります。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "35e5c9af-3116-46a3-80d6-347167bce247",
+      "title": "参事会員ヨリス・ファン・デル・パーレの聖母子",
+      "catalogueTitle": "Madonna with Canon Joris van der Paele",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1436",
+      "start": 1436,
+      "end": 1436,
+      "medium": "オーク材に油彩",
+      "accession": "0000.GRO0161.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/35e5c9af-3116-46a3-80d6-347167bce247-31393cd43152.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0161-I",
+      "credit": "Jan van Eyck; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collectie.museabrugge.be/collection/work/id/0000_GRO0161_I",
+      "description": "参事会員の白い衣服が、刺繍のある祭服、石、輝く甲冑の間に置かれています。素材の違いは人物を区別しながら、聖母子を囲む近接した集まりを崩しません。マルガレータの肖像と比べてみましょう。ここでは年齢を重ねた一人の顔が、肖像として切り離されず、聖なる出会いの中に組み込まれています。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "7a56a3f3-7dea-5107-9766-84ffcd9c5a64",
+      "title": "ヴォレップ近郊の山々",
+      "catalogueTitle": "Mountains at Voreppe, Dauphiné",
+      "artist": "Théodore Fourmois",
+      "artists": [
+        {
+          "name": "Théodore Fourmois",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-9b828052664a87df"
+        }
+      ],
+      "date": "1850",
+      "start": 1850,
+      "end": 1850,
+      "medium": "キャンバスに油彩",
+      "accession": "0000.GRO0058.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/7a56a3f3-7dea-5107-9766-84ffcd9c5a64-99a886d2d203.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0058-I",
+      "credit": "Théodore Fourmois; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0058-I",
+      "description": "水辺の人々は、谷を支配するのではなく、その大きさの目安となるほど小さく描かれています。人物の寸法によって、すぐ手前の土地と背後の山々が区別されます。風景にはいくつもの距離があり、人の活動から、その及ぶ範囲をはるかに超えて続く地形へと視線が移っていきます。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "8ed71c00-67c2-580d-8d69-7d1749f38797",
+      "title": "スヘルデ川の河口",
+      "catalogueTitle": "Mouth of the River Scheldt",
+      "artist": "Paul Jean Clays",
+      "artists": [
+        {
+          "name": "Paul Jean Clays",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-de6a7dd6e1bdef70"
+        }
+      ],
+      "date": "1852年頃～1875年頃",
+      "start": 1852,
+      "end": 1875,
+      "medium": "キャンバスに油彩",
+      "accession": "0000.GRO0026.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/8ed71c00-67c2-580d-8d69-7d1749f38797-05d2558b5fa3.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0026-I",
+      "credit": "Paul Jean Clays; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0026-I",
+      "description": "開けた水面で帆がさまざまな角度に傾き、川を閉ざすことなく動きのリズムを与えています。大きな黄褐色の帆が近景の基準となり、小さな船の距離を測らせます。ファン・ホイエンの川が抑えた色調に頼るのに対し、クレイスは船の往来そのものを、より目立つ要素にしています。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "63153f82-1b58-5595-a0ac-dc5d2a25cd17",
+      "title": "フランシスクス・ヨセフス・キンソエン",
+      "catalogueTitle": "Portrait of Franciscus Josephus Kinsoen",
+      "artist": "Jean Baptiste van Acker",
+      "artists": [
+        {
+          "name": "Jean Baptiste van Acker",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-0655b33f8a80c217"
+        }
+      ],
+      "date": "1825年頃～1830年頃",
+      "start": 1825,
+      "end": 1830,
+      "medium": "象牙への油彩",
+      "accession": "0000.GRO0076.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/63153f82-1b58-5595-a0ac-dc5d2a25cd17-437b8e5eb871.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0076-I",
+      "credit": "Jean Baptiste van Acker; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0076-I",
+      "description": "楕円形の画面に収まるのは、ほぼ頭、肩、明るい襟だけです。都市や紋章を伴うプールビュスの人物と違い、キンソエンには自分を説明する周囲のものがほとんどありません。襟と上着の対比が顔立ちへ視線を集め、背景を省くことで肖像がどれほど緊密に構成できるかを示します。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    }
+  ],
+  "context": {
+    "start": 1436,
+    "end": 1943
+  },
+  "closingSections": [
+    {
+      "title": "二つの距離を比べる",
+      "paragraphs": [
+        "読み終えたら肖像と風景を一つずつ選び、主題の周りに空間を与えているか、あるいは狭めているかを見直してください。来館にあたっては、美術館の最新情報を別途確認しましょう。収蔵記録があっても、すべての作品が展示されているとは限りません。"
+      ]
+    }
+  ]
+}

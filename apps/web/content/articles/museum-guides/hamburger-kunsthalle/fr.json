@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "hamburger-kunsthalle",
+  "museum": "Hamburger Kunsthalle",
+  "city": "Hambourg",
+  "country": "Allemagne",
+  "title": "Kunsthalle de Hambourg : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres sur l'accès à une figure, à un paysage ou à un espace public.",
+  "introduction": "Nana se détourne de son miroir et croise notre regard. Le voyageur de Friedrich fait l'inverse : tourné vers le paysage, il nous cache son visage. Ces figures célèbres établissent deux conditions différentes de l'observation. L'une reconnaît une présence hors du tableau ; l'autre propose une position pour aborder une vue sans livrer sa réaction personnelle.\n\nLa sélection prolonge cette question dans des jardins, des lieux de travail et de spectacle. Les gens peuvent être absorbés par leur tâche, identifiés par un uniforme ou serrés dans une représentation. Le paysage peut dissimuler autant qu'il révèle. Le guide suit ce que chaque tableau rend accessible et ce qui reste au-delà de ses indices visibles.",
+  "visitNote": "Les œuvres sélectionnées appartiennent à la collection de la Kunsthalle, mais les présentations et les prêts sont susceptibles d'évoluer. Certains dessins ne sont exposés que temporairement. Consultez les informations du musée sur la collection et les expositions en cours pour vérifier la présence d'une œuvre spécifique avant votre visite.",
+  "locale": "fr",
+  "website": "https://www.hamburger-kunsthalle.de/",
+  "officialGuide": "https://www.hamburger-kunsthalle.de/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les réflexions de Kandinsky sur la couleur et la forme offrent un contexte aux œuvres abstraites et expressionnistes présentées ici. Lisez-les comme l’argumentaire d’un artiste, puis comparez-les aux tableaux très différents de Baumeister, Beckmann et Modersohn-Becker."
+    }
+  ],
+  "works": [
+    {
+      "id": "5b784b01-0c0a-5671-97ef-4629e365b26b",
+      "title": "Nana",
+      "catalogueTitle": "Nana",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/5b784b01-0c0a-5671-97ef-4629e365b26b-0eb8c5f80a437bb0.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/nana-1877",
+      "credit": "Édouard Manet. Nana. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/nana-1877",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/nana-1877",
+      "description": "La femme ne regarde plus son miroir : elle se tourne vers nous. Sur le côté, l'homme assis n'entre qu'en partie dans le cadre. Manet donne aux deux personnages une visibilité inégale et fait du regard un événement de cette scène de toilette. Nana n'est pas seulement offerte à l'examen ; son regard extérieur interrompt cette situation confortable pour le spectateur.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "dff303d0-c085-5aba-baf9-666d7535dbc3",
+      "title": "Le Voyageur contemplant une mer de nuages",
+      "catalogueTitle": "The Wanderer Above the Sea of Fog",
+      "artist": "Caspar David Friedrich",
+      "artists": [
+        {
+          "name": "Caspar David Friedrich",
+          "role": "primary",
+          "slug": "caspar-david-friedrich-q104884"
+        }
+      ],
+      "date": "1818",
+      "start": 1818,
+      "end": 1818,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/dff303d0-c085-5aba-baf9-666d7535dbc3-b48b236eba47a77f.jpg",
+      "imageSource": "https://www.wikiart.org/en/caspar-david-friedrich/the-wanderer-above-the-sea-of-fog",
+      "credit": "Caspar David Friedrich. The Wanderer Above the Sea of Fog. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caspar-david-friedrich/the-wanderer-above-the-sea-of-fog",
+      "description": "L'appui ferme de l'homme contraste avec la brume qui cache une grande partie du terrain. Son dos fournit une position corporelle pour aborder la vue, mais son expression ne peut nous aider à l'interpréter. Friedrich associe une maîtrise apparente à une connaissance incomplète. Être placé en hauteur ne rend pas le paysage entièrement accessible.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "edeeef17-4a45-5ce4-8468-a8c72002eecb",
+      "title": "L'Adoration de l'Enfant",
+      "catalogueTitle": "Adoration of the Child",
+      "artist": "Master Francke",
+      "artists": [
+        {
+          "name": "Master Francke",
+          "role": "primary",
+          "slug": "master-francke-q701623"
+        }
+      ],
+      "date": "vers 1426",
+      "start": 1426,
+      "end": 1426,
+      "medium": "Détrempe sur chêne",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/edeeef17-4a45-5ce4-8468-a8c72002eecb-419c79e4bd0fbe81.jpg",
+      "imageSource": "https://www.wikiart.org/en/master-francke/adoration-of-the-child",
+      "credit": "Master Francke. Adoration of the Child. WikiArt source label: Master Francke Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/master-francke/adoration-of-the-child",
+      "license": "Master Francke Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/master-francke/adoration-of-the-child",
+      "description": "La richesse des couleurs et des motifs pourrait disperser le regard. Les figures agenouillées le ramènent vers le nouveau-né. Maître Francke organise par l'orientation des corps un cadre également très décoratif. Le petit groupe central n'a pas besoin d'occuper la majeure partie du panneau pour déterminer ce que font les personnages alentour.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "9f4a76d7-931d-523a-8a64-e8597fc27731",
+      "title": "Bluxao V",
+      "catalogueTitle": "Bluxao V",
+      "artist": "Willi Baumeister",
+      "artists": [
+        {
+          "name": "Willi Baumeister",
+          "role": "primary",
+          "slug": "willi-baumeister-nga-2988"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "Huile sur carton",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/9f4a76d7-931d-523a-8a64-e8597fc27731-fee0554603802de7.jpg",
+      "imageSource": "https://www.wikiart.org/en/willi-baumeister/bluxao-v-1955",
+      "credit": "Willi Baumeister. Bluxao V. WikiArt source label: Willi Baumeister Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/willi-baumeister/bluxao-v-1955",
+      "license": "Willi Baumeister Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/willi-baumeister/bluxao-v-1955",
+      "description": "Des prolongements vifs s'écartent des formes centrales sombres dans plusieurs directions. Leurs masses et leurs positions établissent sur le fond bleu un équilibre animé. Baumeister laisse deviner une figure sans demander à chaque partie de recevoir un nom anatomique. Les rapports entre les couleurs suffisent à faire tenir l'ensemble.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "3d9883e5-0f70-5b83-b877-21a2c86b55c0",
+      "title": "Ève",
+      "catalogueTitle": "Eve",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "vers 1906-1907",
+      "start": 1906,
+      "end": 1907,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3d9883e5-0f70-5b83-b877-21a2c86b55c0-5c4ba10cbf254ed6.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/eve-1907",
+      "credit": "Henri Rousseau. Eve. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/eve-1907",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/eve-1907",
+      "description": "Feuilles et fruits composent un écran enveloppant plutôt qu'un jardin lointain. Rousseau sépare clairement les formes végétales répétées ; leur ordre est aussi manifeste qu'Ève et le serpent. Le cadre biblique se construit par accumulation. La profondeur compte moins que la densité d'un monde dont chaque partie reste lisible.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "d747adb9-550e-54da-9f04-8dbde57c5823",
+      "title": "L'Espoir rapide",
+      "catalogueTitle": "Swift Hope",
+      "artist": "René Magritte",
+      "artists": [
+        {
+          "name": "René Magritte",
+          "role": "primary",
+          "slug": "rene-magritte-q7836"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/d747adb9-550e-54da-9f04-8dbde57c5823-67fddf880d5762ce.jpg",
+      "imageSource": "https://www.wikiart.org/en/rene-magritte/swift-hope-1928",
+      "credit": "René Magritte. Swift Hope. WikiArt source label: Rene Magritte Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/rene-magritte/swift-hope-1928",
+      "license": "Rene Magritte Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rene-magritte/swift-hope-1928",
+      "description": "Les mots proposent des noms, mais les formes voisines ne les illustrent pas docilement. Magritte interrompt l'accord habituel entre lire et voir. Une étiquette peut orienter le regard sans fournir une identification fiable. C'est précisément cet échec qui éclaire le tableau : il révèle l'interprétation supplémentaire que cache une dénomination apparemment simple.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "b49661a2-0c48-57b4-91f5-05951a9acdb0",
+      "title": "Orphelines d'Amsterdam dans le jardin",
+      "catalogueTitle": "Amsterdamer Waisenmädchen im Garten",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "Huile sur toile",
+      "accession": "HK-1584",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/b49661a2-0c48-57b4-91f5-05951a9acdb0-caa879c422f5.jpg",
+      "imageSource": "https://www.wikiart.org/en/max-liebermann/amsterdam-orphans-in-the-garden-1885",
+      "credit": "WikiArt. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://online-sammlung.hamburger-kunsthalle.de/de/objekt/HK-1584/amsterdamer-waisenmaedchen-im-garten",
+      "description": "Robes et tabliers uniformes rassemblent les jeunes filles en groupe, tandis que leurs mains s'occupent de travaux distincts. Au sol, les oiseaux ajoutent un mouvement moins réglé. Liebermann fait coexister routine institutionnelle et activité du jardin. Des vêtements semblables ne rendent identiques ni les gestes ni les préoccupations des figures.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "d751f909-9733-55e3-a51e-9815f12ff847",
+      "title": "Les Raccommodeuses de filets",
+      "catalogueTitle": "The Net Menders",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1887–1889",
+      "start": 1887,
+      "end": 1889,
+      "medium": "",
+      "accession": "1580",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/d751f909-9733-55e3-a51e-9815f12ff847-58447fe56fa5fa4d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1888_Liebermann_Die_Netzflickerinnen_anagoria.JPG",
+      "credit": "Max Liebermann. The Net Menders. Image credit: Max Liebermann; anagoria. https://commons.wikimedia.org/wiki/File:1888_Liebermann_Die_Netzflickerinnen_anagoria.JPG. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q101310453",
+      "description": "La tâche commune s'étend sur un terrain ouvert, au lieu de se concentrer autour d'un poste de travail central. Une figure debout au premier plan donne l'échelle ; les autres positions montrent différents aspects du labeur. Liebermann accorde un vaste cadre au travail répétitif sans le réduire à un geste emblématique. Les filets relient des actions qui restent distinctes.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "bdbec279-1896-5e44-b5cc-0d8948efe8cc",
+      "title": "Vue de Pimonte sur la baie de Naples",
+      "catalogueTitle": "Blick von Pimonte auf die Bucht von Neapel",
+      "artist": "Johan Christian Dahl",
+      "artists": [
+        {
+          "name": "Johan Christian Dahl",
+          "role": "primary",
+          "slug": "johan-christian-dahl-q164735"
+        }
+      ],
+      "date": "1821",
+      "start": 1821,
+      "end": 1821,
+      "medium": "",
+      "accession": "HK-5612",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110473132-4b95f32e6d063b8b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dahl_Joh._Chr._View_from_Pimonte_of_Neapel@Kunsthalle_Hamburg.JPG",
+      "credit": "Johan Christian Dahl. Blick von Pimonte auf die Bucht von Neapel. Image credit: Johan Christian Dahl; Source credit: Photographer and uploader was Hajotthu at de.wikipedia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110473132",
+      "description": "Rochers, arbres et voyageurs du premier plan permettent de mesurer la baie lointaine. La fumée du volcan anime ce qui pourrait autrement sembler une perspective immuable. Dahl relie le proche et le lointain sans leur accorder le même détail. Cette vaste vue contient une force dont on perçoit la présence à distance, sans pouvoir l'examiner pleinement.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "f7c457ad-3948-5c63-8ff3-38e09ff5f595",
+      "title": "Bateaux sur la plage",
+      "catalogueTitle": "Boats on the beach",
+      "artist": "Max Beckmann",
+      "artists": [
+        {
+          "name": "Max Beckmann",
+          "role": "primary",
+          "slug": "max-beckmann-q164683"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "HK-200626",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105561720-02d627084cf5d050.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Boote_am_Strand_(073153).jpg",
+      "credit": "Max Beckmann. Boats on the beach. Image credit: Max Beckmann. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105561720",
+      "description": "Les contours sombres affirment avec une force comparable voiles, coques et personnes. Beckmann comprime la plage en angles et en courbes sur de grandes zones de sable et d'eau. Les intervalles entre bateaux comptent autant que les embarcations : c'est là que doivent entrer les figures. Le rivage paraît construit par emboîtement, plutôt qu'ouvert librement vers le lointain.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "d4b98c8e-b0f1-597f-bba1-291d028b8648",
+      "title": "Le Chirurgien Ferdinand Sauerbruch",
+      "catalogueTitle": "Der Chirurg Ferdinand Sauerbruch",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1932",
+      "start": 1932,
+      "end": 1932,
+      "medium": "Huile sur toile",
+      "accession": "HK-2927",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/d4b98c8e-b0f1-597f-bba1-291d028b8648-323be116caf8.jpg",
+      "imageSource": "https://www.wikiart.org/en/max-liebermann/the-surgeon-ferdinand-sauerbruch-1932",
+      "credit": "WikiArt. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://online-sammlung.hamburger-kunsthalle.de/de/objekt/HK-2927/der-chirurg-ferdinand-sauerbruch",
+      "description": "La blouse blanche identifie une profession sans opération ni assortiment d'instruments. Dans un entourage clair, la tête tournée concentre le regard sur le modèle. Liebermann distingue rôle et ressemblance. La blouse indique le type d'autorité présenté ; le visage particulier ne se réduit pas à ce signe public.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "50822a72-0fab-5077-8782-0493e3ad3126",
+      "title": "La Terrasse de l'hôtel Louis C. Jacob",
+      "catalogueTitle": "Die Terrasse des Hotel Louis C. Jacob in Nienstedten an der Elbe",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1902",
+      "start": 1902,
+      "end": 1902,
+      "medium": "Huile ; toile (support de peinture)",
+      "accession": "HK-1597",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/50822a72-0fab-5077-8782-0493e3ad3126-ffd08ad68a2f.jpg",
+      "imageSource": "https://www.wikiart.org/en/max-liebermann/the-terrace-at-the-restaurant-jacob-in-nienstedten-on-the-elbe-1902",
+      "credit": "WikiArt. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://www.wikidata.org/wiki/Q114051114",
+      "description": "Tables, chaises et troncs donnent à la terrasse une structure répétée. Des taches d'ombre et de lumière l'assouplissent à mesure qu'elle s'éloigne le long du fleuve. Chez Liebermann, le loisir public dépend d'un espace ordonné capable d'accueillir des groupes séparés. L'aisance de la scène tient à cet agencement, sans qu'il faille inventer des conversations pour l'expliquer.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "c3a439b2-3b20-5a7a-a4d5-a9f8d1ef0af2",
+      "title": "Tête d'enfant",
+      "catalogueTitle": "Head of a child",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1520",
+      "start": 1520,
+      "end": 1520,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c3a439b2-3b20-5a7a-a4d5-a9f8d1ef0af2-c396f7202e3be263.jpg",
+      "imageSource": "https://www.wikiart.org/en/albrecht-durer/head-of-a-child",
+      "credit": "Head of a child. WikiArt; Albrecht Dürer. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/albrecht-durer/head-of-a-child",
+      "description": "Les yeux clos et les lèvres entrouvertes indiquent un état passager sans en expliquer la cause. Dürer emploie des marques différentes pour les boucles et les joues lisses : le dessin reste visible avec le visage. Cette tête isolée invite à l'observation rapprochée. Une histoire environnante ajouterait des renseignements, mais elle n'est pas nécessaire à la singularité de l'étude.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "0ce65bed-4821-58b3-bb16-04474c6f4188",
+      "title": "Hambourg après l'incendie de 1842",
+      "catalogueTitle": "Hamburg after the Fire of 1842",
+      "artist": "Jacob Gensler",
+      "artists": [
+        {
+          "name": "Jacob Gensler",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1679052"
+        }
+      ],
+      "date": "1842",
+      "start": 1842,
+      "end": 1842,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107738486-ec5b6f2e81584b3d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gensler,_G%C3%BCnther_-_Hamburg_nach_dem_Brande_von_1842_-_Hamburger_Kunsthalle.jpeg",
+      "credit": "Jacob Gensler. Hamburg after the Fire of 1842. Image credit: Jacob Gensler; Source credit: ~. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107738486",
+      "description": "La ville endommagée se décrit en partie par un espace nouvellement ouvert. Les maçonneries subsistantes et les débris encadrent une vue rendue possible par la destruction. Les petites figures de Gensler mesurent cette mise à nu. Au-delà des bâtiments ruinés, la scène montre comment la perte modifie les rapports entre premier plan, eau et lointain désormais visible.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "f5e88299-e345-5c27-b583-9fecaa542f1f",
+      "title": "Intérieur de la palmeraie de la Pfaueninsel",
+      "catalogueTitle": "Inside the Palm House on the Pfaueninsel near Potsdam",
+      "artist": "Carl Blechen",
+      "artists": [
+        {
+          "name": "Carl Blechen",
+          "role": "primary",
+          "slug": "carl-blechen-nga-13600"
+        }
+      ],
+      "date": "1832–1834",
+      "start": 1832,
+      "end": 1834,
+      "medium": "",
+      "accession": "1324",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105636118-bf0ef4ab0466f94c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Carl_Blechen_-_In_the_Palm_House_in_Potsdam_-_WGA2249.jpg",
+      "credit": "Carl Blechen. Inside the Palm House on the Pfaueninsel near Potsdam. Image credit: Carl Blechen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105636118",
+      "description": "Les palmes croisent l'ossature vitrée, opposant deux sortes de structures. Les petites figures sous les plantes en révèlent l'échelle. L'intérieur de Blechen réunit végétation cultivée et architecture élaborée. La serre ne disparaît pas derrière son contenu : sa construction visible aide à comprendre les conditions qui permettent cette abondance à l'intérieur.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "0fc71976-6b90-5bbb-8572-d5fb3b5f4edb",
+      "title": "Jésus à douze ans au Temple",
+      "catalogueTitle": "Der zwölfjährige Jesus im Tempel",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "Huile ; toile (support de peinture)",
+      "accession": "HK-5424",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/0fc71976-6b90-5bbb-8572-d5fb3b5f4edb-6ef32a8baea6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Max_Liebermann_-_Der_zw%C3%B6lfj%C3%A4hrige_Jesus_im_Tempel_(1879).jpg",
+      "credit": "Max Liebermann; Hamburger Kunsthalle, online Sammlung. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q108718081",
+      "description": "Un garçon s'adresse à des hommes dont l'âge, les livres et les vêtements suggèrent une autorité établie. Le groupe serré transforme le sujet religieux en échange visible de parole et d'écoute. Liebermann rend la différence d'âge importante par les positions et les réponses. La tension vient de celui qui retient l'attention, pas simplement du nombre de personnes présentes.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "db095044-e17d-5796-bf84-0d9778fe5440",
+      "title": "Mère et enfant",
+      "catalogueTitle": "Mother and Child",
+      "artist": "Paula Modersohn-Becker",
+      "artists": [
+        {
+          "name": "Paula Modersohn-Becker",
+          "role": "primary",
+          "slug": "paula-modersohn-becker-q234370"
+        }
+      ],
+      "date": "vers 1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111799323-790fc07ffe28cda0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paula_Modersohn-Becker_-_Mutter_mit_Kind_(ca._1903).jpg",
+      "credit": "Paula Modersohn-Becker. Mother and Child. Image credit: Paula Modersohn-Becker; Source credit: Hamburger Kunsthalle, Onlinesammlung. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111799323",
+      "description": "Les formes jointes font du geste de tenir l'enfant le fait central du tableau. De larges zones de couleur donnent du poids aux corps en limitant les indications du visage. Modersohn-Becker n'a pas besoin d'une expression ostensiblement attendrie pour montrer les soins maternels. Le rapport physique du corps plus grand au petit suffit à rendre la scène intelligible.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "069793ff-cc78-5293-8fc2-d17daf1fac21",
+      "title": "Paysage nordique",
+      "catalogueTitle": "Nordic Landscape",
+      "artist": "Johan Christian Dahl",
+      "artists": [
+        {
+          "name": "Johan Christian Dahl",
+          "role": "primary",
+          "slug": "johan-christian-dahl-q164735"
+        }
+      ],
+      "date": "1822",
+      "start": 1822,
+      "end": 1822,
+      "medium": "",
+      "accession": "HK-1063",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111603091-e00e263884e0b648.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dahl_Johan_Christian_Nordic_Landscape@Kunsthalle_Hamburg.JPG",
+      "credit": "Johan Christian Dahl. Nordic Landscape. Image credit: Johan Christian Dahl; Source credit: Photographer and uploader was Hajotthu at de.wikipedia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111603091",
+      "description": "Il faut atteindre le lointain lumineux à travers les bois proches, les troncs tombés et le sol accidenté. Dahl conserve ces obstacles dans la vue au lieu de les dégager pour offrir une agréable perspective. Les textures proches et la lumière éloignée demandent des regards différents. Le paysage propose une ouverture, mais le premier plan continue d'affirmer sa présence matérielle.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "b7b5ebaf-3dc0-5183-9c13-4141df9a6a47",
+      "title": "Vieille paysanne",
+      "catalogueTitle": "Old Peasant Woman",
+      "artist": "Paula Modersohn-Becker",
+      "artists": [
+        {
+          "name": "Paula Modersohn-Becker",
+          "role": "primary",
+          "slug": "paula-modersohn-becker-q234370"
+        }
+      ],
+      "date": "vers 1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q102422465-56b54ce792f5deec.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1903_Modersohn-Becker_Alte_Moorb%C3%A4uerin_anagoria.JPG",
+      "credit": "Paula Modersohn-Becker. Old Peasant Woman. Image credit: Paula Modersohn-Becker. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q102422465",
+      "description": "Une main soutient la tête ; l'autre bras traverse le corps. Ces formes solides organisent le portrait avant toute interprétation de l'expression. Modersohn-Becker garde les vêtements sombres et décrit le visage sans détour. On peut observer cette posture appuyée sans en tirer un diagnostic inventé de fatigue, de résignation ou de toute une vie.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "2651ee5b-69f5-5131-ae65-33538c0b961b",
+      "title": "Otaries au cirque",
+      "catalogueTitle": "Sea lions in the circus",
+      "artist": "Max Beckmann",
+      "artists": [
+        {
+          "name": "Max Beckmann",
+          "role": "primary",
+          "slug": "max-beckmann-q164683"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "",
+      "accession": "HK-5046",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105582466-e731de34713047d5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Beckmann_Seeloewen_im_Zirkus_web.jpg",
+      "credit": "Max Beckmann. Sea lions in the circus. Image credit: Max Beckmann. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105582466",
+      "description": "Cercles, animaux et structures colorées se disputent le format étroit. Les lourds contours de Beckmann les maintiennent lisibles tout en faisant paraître la piste serrée. Le spectacle devient un agencement de corps et d'équipements qui laisse peu de place libre. Son énergie est inséparable de ces contraintes, plutôt que l'image simple d'un mouvement sans limites.",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    }
+  ],
+  "context": {
+    "start": 1426,
+    "end": 1955
+  },
+  "closingSections": [
+    {
+      "title": "Observer ce qui nous est accessible",
+      "paragraphs": [
+        "Comparez le regard extérieur de Nana au visage caché du voyageur, puis voyez comment uniformes et vêtements professionnels modifient les autres portraits. Cette sélection ne garantit pas l'accrochage actuel. Vérifiez la disponibilité d'une œuvre si elle motive votre visite."
+      ]
+    }
+  ]
+}

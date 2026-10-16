@@ -16,8 +16,8 @@ import (
 )
 
 // Audit real catalogue entries in a stable read-only snapshot. The small picked
-// view spans every available medium, so pagination must cross priority groups
-// even when graphic works have earlier dates than the preceding paintings.
+// view spans every available medium, so pagination must preserve chronology
+// even when graphic works have earlier dates than paintings.
 func TestGalleryOrderReadOnly(t *testing.T) {
 	dsn := os.Getenv("ARTLINE_READONLY_DATABASE_URL")
 	if dsn == "" {
@@ -107,7 +107,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 		t.Fatal("gallery pages skipped, repeated, or reordered selected works")
 	}
 	for index, item := range got {
-		if index == 0 || item.galleryPriority == got[index-1].galleryPriority {
+		if index == 0 {
 			continue
 		}
 		nav := f
@@ -122,14 +122,14 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			}
 			out, err := repo.List(ctx, nav)
 			if err != nil || len(out.Lanes) != 1 || len(out.Lanes[0].Items) != 1 || out.Lanes[0].Items[0].ID != want {
-				t.Fatalf("%s failed across a medium group: %+v %v", direction, out, err)
+				t.Fatalf("%s failed between chronological neighbours: %+v %v", direction, out, err)
 			}
 		}
 	}
-	t.Logf("all %d works across %d media retained through group/page boundaries", len(got), len(media))
+	t.Logf("all %d works across %d media retained in chronological order through page boundaries", len(got), len(media))
 
-	// The real filters used by All and Painters must select the preferred works
-	// before the page limit, and an explicit Print filter must still show prints.
+	// All and Painters must select the oldest works before the page limit,
+	// and an explicit Print filter must still show prints.
 	for _, tc := range []struct {
 		name   string
 		filter Filter
@@ -146,13 +146,12 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			if err != nil || len(out.Lanes) != 1 || len(out.Lanes[0].Items) != tc.filter.Limit {
 				t.Fatalf("missing real gallery sample: %+v %v", out, err)
 			}
-			want := 0
-			if tc.name == "prints" {
-				want = 2
+			if !slices.IsSortedFunc(out.Lanes[0].Items, compareGalleryItems) {
+				t.Fatal("gallery is not ordered by creation year")
 			}
 			for _, item := range out.Lanes[0].Items {
-				if item.galleryPriority != want || item.MediaURL == "" {
-					t.Fatalf("unexpected first-page medium or missing image: %+v", item)
+				if item.MediaURL == "" || tc.name == "prints" && item.galleryPriority != 2 {
+					t.Fatalf("missing image or print filter ignored: %+v", item)
 				}
 			}
 			t.Logf("%d matching artworks; first page in %s", out.Total, time.Since(started))
@@ -164,7 +163,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			if err := tx.QueryRow(ctx, "EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) "+statement.query, statement.args...).Scan(&plan); err != nil {
 				t.Fatal(err)
 			}
-			if tc.name == "painter" && (!strings.Contains(string(plan), "artwork_artists_artist_work_idx") || !strings.Contains(string(plan), "artworks_pkey")) {
+			if tc.name == "painter" && (!strings.Contains(string(plan), "artwork_artists_artist_work_idx") || !strings.Contains(string(plan), "artwork_atlas_projection_pkey")) {
 				t.Fatal("painter gallery lost indexed creator/artwork lookups")
 			}
 			var decoded []struct {

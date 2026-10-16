@@ -50,8 +50,18 @@ func memberReturnTo(value string) string {
 	path, _, _ := strings.Cut(value, "?")
 	path, _, _ = strings.Cut(path, "#")
 	switch path {
-	case "/", "/artists", "/artworks", "/all", "/bookmarks", "/books", "/events":
+	case "/", "/artists", "/artworks", "/all", "/bookmarks", "/studies", "/books", "/events", "/account/museums":
 		return value
+	}
+	if strings.HasPrefix(path, "/studies/") && bookmarkID.MatchString(strings.TrimPrefix(path, "/studies/")) {
+		return value
+	}
+	if strings.HasPrefix(path, "/account/museums/") {
+		slug := strings.TrimPrefix(path, "/account/museums/")
+		if len(slug) <= 100 && bookmarkSlug.MatchString(slug) {
+			return value
+		}
+		return ""
 	}
 	match := painterRecordPath.FindStringSubmatch(path)
 	if match == nil {

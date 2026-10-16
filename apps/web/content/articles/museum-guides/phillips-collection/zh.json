@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "phillips-collection",
+  "museum": "The Phillips Collection",
+  "city": "华盛顿特区",
+  "country": "美国",
+  "title": "菲利普斯收藏馆：杰作",
+  "subtitle": "二十件作品中的用餐者、旅人、表演者与邻居，以及人群之间较安静的间歇。",
+  "introduction": "雷诺阿的游船伙伴们同时进行着几场谈话，没有一件事支配整桌人的注意。这种分散的关注值得带进其他画里。杜米埃的雕塑家面对共同物件，劳伦斯的旅人走向写明名称的目的地，小丑则为尚未出现的观众作准备。人们聚在一起的理由不同，绘画让差别可见。穿插其间的风景与静物改变节奏：蜡烛、河冰或棕榈叶，也能在没有人际交流的情况下组织画面。这组华盛顿菲利普斯收藏馆作品沿着这些变化展开。",
+  "visitNote": "请查阅菲利普斯收藏馆（Phillips Collection）关于展品借出及轮换情况的最新页面。《大迁徙系列》（Migration Series）的这一条目对应的是劳伦斯（Lawrence）该系列六十幅画作中的第一幅。菲利普斯收藏馆拥有其中的奇数编号画作，而现代艺术博物馆（MoMA）则收藏了偶数编号画作，因此不应将这一单幅作品视为整个系列。",
+  "locale": "zh",
+  "website": "https://www.phillipscollection.org/",
+  "officialGuide": "https://www.phillipscollection.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "在线阅读或下载 · 英语",
+      "note": "大都会艺术博物馆的图录为雷诺阿和马奈的作品提供了历史背景。它对于比较《游艇上的午餐》与《西班牙芭蕾》的社会背景尤为有益，同时又能避免将两者截然不同的画面质感视为可以互换的。"
+    }
+  ],
+  "works": [
+    {
+      "id": "34486fae-823b-5766-ba3e-6055577b1c6d",
+      "title": "船上的午宴",
+      "catalogueTitle": "The Luncheon of the Boating Party",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1880-1881",
+      "start": 1880,
+      "end": 1881,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/34486fae-823b-5766-ba3e-6055577b1c6d-dcc4f64e12bd9495.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/the-luncheon-of-the-boating-party-1881-1",
+      "credit": "Pierre-Auguste Renoir. The Luncheon of the Boating Party. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-auguste-renoir/the-luncheon-of-the-boating-party-1881-1",
+      "description": "酒瓶、杯子与水果摆满餐桌，桌边人的目光朝向各处。雷诺阿通过身体重叠与视线把用餐者接起来，却不让他们回应同一事件。遮阳篷把不同谈话收在一处。看似随意，实际依靠牢固布局：各人可以喝酒、说话，或留意近旁谈话之外的人，群体却仍保持整体。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "1748eba6-bac1-5055-aea3-eef18a01a3eb",
+      "title": "迁徙系列，第一幅",
+      "catalogueTitle": "The Migration of the Negro, Panel 1",
+      "artist": "Jacob Lawrence",
+      "artists": [
+        {
+          "name": "Jacob Lawrence",
+          "role": "primary",
+          "slug": "jacob-lawrence-nga-1468"
+        }
+      ],
+      "date": "1940–1941",
+      "start": 1940,
+      "end": 1941,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/1748eba6-bac1-5055-aea3-eef18a01a3eb-7fc00a3e62b39cdd.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacob-lawrence/the-migration-of-the-negro-panel-1-1941",
+      "credit": "Jacob Lawrence. The Migration of the Negro, Panel 1. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.phillipscollection.org/lesson-plan/journey-north-migrants-experience",
+      "description": "芝加哥、纽约和圣路易斯的地名出现在涌向出发口的人群上方。标牌给简化为暗形与亮衣的身体指明方向。劳伦斯用共同移动开启六十幅作品组成的非裔美国人离开南方的叙事，而非从某名旅人的生平开始。具体城市使它不只是一幅普通人群图：地理也是布局的一部分。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "415be23c-3ca8-5ba2-b30a-c7da6f3f3a81",
+      "title": "棕榈",
+      "catalogueTitle": "The Palm",
+      "artist": "Pierre Bonnard",
+      "artists": [
+        {
+          "name": "Pierre Bonnard",
+          "role": "primary",
+          "slug": "pierre-bonnard-q26408"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/415be23c-3ca8-5ba2-b30a-c7da6f3f3a81-6305f795a3c2185b.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-bonnard/the-palm-1926",
+      "credit": "Pierre Bonnard. The Palm. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pierre-bonnard/the-palm-1926",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-bonnard/the-palm-1926",
+      "description": "展开的叶片打断了建筑与植物的景色。博纳尔让近处植物占去一片空间，较规整的风景画可能会把那里空出来供人看远景。色彩互相覆盖，没有分成清楚的前后层次，小小前景人物也只提供部分比例参照。要寻找距离，目光必须绕过棕榈，而不能指望画家专留一个方便的缺口。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "f62fc2d1-45c1-5e40-b53a-2451a3718e06",
+      "title": "西班牙芭蕾舞团",
+      "catalogueTitle": "The spanish ballet",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1862",
+      "start": 1862,
+      "end": 1862,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/f62fc2d1-45c1-5e40-b53a-2451a3718e06-28346535c39c84ef.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/the-spanish-ballet-1862",
+      "credit": "Édouard Manet. The spanish ballet. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/the-spanish-ballet-1862",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/the-spanish-ballet-1862",
+      "description": "昏暗环境里的戏装演员之间，浅色裙子接住光。不同姿势保留动作暗示，却没有合成同一个舞步。马奈用散布的亮区聚拢整团人，也让个体在共同的公开身份中保持分别。即使群体仿佛暂时停在动作间隙，表演仍通过服装与姿态在场。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "98c82657-71de-5e7e-a77a-e22bf625ef56",
+      "title": "侧面像：坦南特夫人",
+      "catalogueTitle": "Woman in Profile (Portrait of Madame Tennent)",
+      "artist": "Chaim Soutine",
+      "artists": [
+        {
+          "name": "Chaim Soutine",
+          "role": "primary",
+          "slug": "chaim-soutine-q160141"
+        }
+      ],
+      "date": "约 1937 年",
+      "start": 1937,
+      "end": 1937,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/98c82657-71de-5e7e-a77a-e22bf625ef56-2f5f73399b5d9015.jpg",
+      "imageSource": "https://www.wikiart.org/en/chaim-soutine/woman-in-profile-portrait-of-madame-tennent",
+      "credit": "Chaim Soutine. Woman in Profile (Portrait of Madame Tennent). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/chaim-soutine/woman-in-profile-portrait-of-madame-tennent",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/chaim-soutine/woman-in-profile-portrait-of-madame-tennent",
+      "description": "头部的明显转向立刻给肖像确定方向。暖色块在深衣与粗放背景前描出面孔。苏丁不平整的表面没有把人物化成纯颜料，侧脸仍足够具体，能够稳住自己的位置。这里可以比较的是：可认出的姿态，与拒绝完成人像通常应有的光滑感的笔迹。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "c6f2efe5-d148-5f38-bbe5-f3f83bab929d",
+      "title": "粉红蜡烛",
+      "catalogueTitle": "The Pink Candle",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1909-1910",
+      "start": 1909,
+      "end": 1910,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c6f2efe5-d148-5f38-bbe5-f3f83bab929d-e2695667d29f8c28.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-pink-candle-1910",
+      "credit": "Henri Rousseau. The Pink Candle. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-pink-candle-1910",
+      "description": "蜡烛、瓶子、盘子与水果处在浅空间里，每件都有明确轮廓。卢梭使它们容易识别，却不易安置进一个平顺可测的空间。各自分立，与共同组成的排列同样重要。简单背景没有太多其他信息，因此高度、颜色和边界的差别，使朴素家用物件显得格外不容忽视。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "8e54723a-5fcd-53cb-bd9c-9a9bbe3a52ea",
+      "title": "根扎诺的山羊倌",
+      "catalogueTitle": "The goatherd of Genzano",
+      "artist": "Jean-Baptiste-Camille Corot",
+      "artists": [
+        {
+          "name": "Jean-Baptiste-Camille Corot",
+          "role": "primary",
+          "slug": "jean-baptiste-camille-corot-q148475"
+        }
+      ],
+      "date": "1843",
+      "start": 1843,
+      "end": 1843,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/8e54723a-5fcd-53cb-bd9c-9a9bbe3a52ea-bbc632e09f1ef036.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-corot/the-goat-herd-of-genzano-1843",
+      "credit": "The goatherd of Genzano. WikiArt; Jean-Baptiste-Camille Corot. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-corot/the-goat-herd-of-genzano-1843",
+      "description": "远处建筑下的小路上，牧人和山羊建立一个小而有人使用的尺度。柯罗的光把前景接到城镇，树与粗地则框住其间开口。不需要戏剧性相遇来解释人物为何在这里。普通行走已把远近相连，说明风景的用途，又不把它变成某件事件的插图。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "5f94ab9b-f419-503b-ae7b-edf61a5c83b8",
+      "title": "两位雕塑家",
+      "catalogueTitle": "Two Sculptors",
+      "artist": "Honoré Daumier",
+      "artists": [
+        {
+          "name": "Honoré Daumier",
+          "role": "primary",
+          "slug": "honore-daumier-q187506"
+        }
+      ],
+      "date": "1870-1873",
+      "start": 1870,
+      "end": 1873,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/5f94ab9b-f419-503b-ae7b-edf61a5c83b8-3c4d997f6d944af4.jpg",
+      "imageSource": "https://www.wikiart.org/en/honore-daumier/two-sculptors-1873",
+      "credit": "Honoré Daumier. Two Sculptors. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/honore-daumier/two-sculptors-1873",
+      "description": "两个男人倾向小雕塑，面孔与物件从暗室中显现。杜米埃让汇聚的姿势成为共同任务最清楚的证据。他们在看，并没有显露使用工具的动作，但观察本来也是制作的一部分。雕塑处于两人之间，等待判断，因此他们的靠近有了实际原因。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "58dc3084-1417-5b7d-97bb-cd73626e09ea",
+      "title": "足迹",
+      "catalogueTitle": "Footsteps",
+      "artist": "Kenzo Okada",
+      "artists": [
+        {
+          "name": "Kenzo Okada",
+          "role": "primary",
+          "slug": "kenzo-okada-nga-1755"
+        }
+      ],
+      "date": "1954",
+      "start": 1954,
+      "end": 1954,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/58dc3084-1417-5b7d-97bb-cd73626e09ea-1880d6c978ce94d7.jpg",
+      "imageSource": "https://www.wikiart.org/en/kenzo-okada/footsteps-1954",
+      "credit": "Kenzo Okada. Footsteps. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/kenzo-okada/footsteps-1954",
+      "description": "零散笔迹与低调几何区域分布于浅色画面。冈田的标题暗示穿行某地，表面却不提供连续道路或行走者。间距于是变得重要：我们可以连接分开的痕迹，而不必找出完整风景。这种与身体的联想是标题提供的一种可能，不是解释每个形状的钥匙。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "60539d6b-66f2-588f-b1ce-00d438055f48",
+      "title": "自画像",
+      "catalogueTitle": "Self Portrait",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "c. 1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/60539d6b-66f2-588f-b1ce-00d438055f48-3c4f0038e2c91fec.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/self-portrait-1900",
+      "credit": "Piet Mondrian. Self Portrait. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/piet-mondrian/self-portrait-1900",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piet-mondrian/self-portrait-1900",
+      "description": "蒙德里安蓄须的脸从敞开领口上方直视画外，暖光在深红背景前塑造面容。不必把这幅早期画作当作藏着后来网格的谜题。它所处理的是具体面孔、明暗过渡，以及目光建立的相遇。让它作为肖像成立，反而能使它与熟知抽象画的距离更清楚，也不因此减少趣味。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "a39f2843-f1e1-5a74-913f-f47d7818510d",
+      "title": "正在化妆的小丑",
+      "catalogueTitle": "Clown Making Up",
+      "artist": "John Sloan",
+      "artists": [
+        {
+          "name": "John Sloan",
+          "role": "primary",
+          "slug": "john-sloan-q861756"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/a39f2843-f1e1-5a74-913f-f47d7818510d-7cbcb0eba4673ee2.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-french-sloan/clown-making-up-1909",
+      "credit": "John Sloan. Clown Making Up. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/john-french-sloan/clown-making-up-1909",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-french-sloan/clown-making-up-1909",
+      "description": "表演者坐在帷幕旁的小桌前，光集中于脸和准备工作。斯隆画的是公开登场之前，服装与化妆还需要处理的时候。人物的专注属于实际任务，而非一个笑话。把准备与演出分开，便能让角色之下那个真正工作的人仍然可见。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "f2c4d127-2a07-5757-b701-cda362e9af18",
+      "title": "月光下的海湾",
+      "catalogueTitle": "Moonlit Cove",
+      "artist": "Albert Pinkham Ryder",
+      "artists": [
+        {
+          "name": "Albert Pinkham Ryder",
+          "role": "primary",
+          "slug": "albert-pinkham-ryder-nga-1851"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f2c4d127-2a07-5757-b701-cda362e9af18-763408eaf18470f2.jpg",
+      "imageSource": "https://www.wikiart.org/en/albert-pinkham-ryder/moonlit-cove-1885",
+      "credit": "Albert Pinkham Ryder. Moonlit Cove. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/albert-pinkham-ryder/moonlit-cove-1885",
+      "description": "月亮从长云间出现，倒影在暗水中标出一道窄口。赖德没有细画海岸线，不让人据此确定海湾位置。大片暗形给小亮区以力量，让可见程度本身成为比较对象。反光路径吸引目光，却不是任何人真的可以沿水面行走的路线。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "74568b5d-8e34-5bcc-973a-66dbc8f74a51",
+      "title": "河中冰",
+      "catalogueTitle": "Ice in the River",
+      "artist": "Ernest Lawson",
+      "artists": [
+        {
+          "name": "Ernest Lawson",
+          "role": "primary",
+          "slug": "ernest-lawson-nga-22244"
+        }
+      ],
+      "date": "约 1907 年",
+      "start": 1907,
+      "end": 1907,
+      "medium": "Oil on canvas mounted on wood panel",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/74568b5d-8e34-5bcc-973a-66dbc8f74a51-6ab2bb49e4b8967e.jpg",
+      "imageSource": "https://www.wikiart.org/en/ernest-lawson/ice-in-the-river-1907",
+      "credit": "Ernest Lawson. Ice in the River. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ernest-lawson/ice-in-the-river-1907",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ernest-lawson/ice-in-the-river-1907",
+      "description": "碎冰、水与冬日河岸共享接近的浅色。劳森变化的笔触区分表面，却不把它们分进轮廓鲜明的格子。河对岸建筑使场景不至于成为无人冬野。水面正在人们使用的地方变化；深色点缀与零散树木帮助衡量这片不稳定、半冻结的水域。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "3d26dd76-0562-55f9-a841-0ea1b51de901",
+      "title": "风暴将至",
+      "catalogueTitle": "Approaching Storm",
+      "artist": "Ernest Lawson",
+      "artists": [
+        {
+          "name": "Ernest Lawson",
+          "role": "primary",
+          "slug": "ernest-lawson-nga-22244"
+        }
+      ],
+      "date": "1919-1920",
+      "start": 1919,
+      "end": 1920,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/3d26dd76-0562-55f9-a841-0ea1b51de901-bf76aa3791a5e33b.jpg",
+      "imageSource": "https://www.wikiart.org/en/ernest-lawson/approaching-storm-1920",
+      "credit": "Ernest Lawson. Approaching Storm. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ernest-lawson/approaching-storm-1920",
+      "description": "暗云聚到山丘、房屋和水面之上，地面部分区域却仍受光。劳森使这种条件的不均匀成为关键。若风景统一变暗，就更难显示标题所说的变化。残存亮处让来临天气有了可以改变的对象，使同一景色同时容纳当前光照与对它的威胁。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "49b8bb89-5695-5c76-9b2a-1acc77e26ece",
+      "title": "卡尔卡松",
+      "catalogueTitle": "Carcassonne",
+      "artist": "Walter Griffin",
+      "artists": [
+        {
+          "name": "Walter Griffin",
+          "role": "primary",
+          "slug": "walter-griffin-nga-39574"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "0852",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23946161-ebc4aea496fc2c8d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Walter_Griffin_-_Carcassonne_-_Google_Art_Project.jpg",
+      "credit": "Walter Griffin. Carcassonne. Image credit: Walter Griffin (1861 - 1935)  (American) Details on Google Art Project; Source credit: ZgFuuMNTGlhcsw at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23946161",
+      "description": "设防建筑升起在沿树围墙之后，但格里芬没有专为建筑保留一种光洁画法。断续色彩同样描述石头、枝叶与空地。城镇可识别的轮廓仍在这种共同笔法中保持。雄伟感来自形状与位置，活跃的颜料表面却使建筑与旁边不那么宏大的植物接受同样光线。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "4cb6e64a-9dd6-52a9-ba19-80f6b6cd58d5",
+      "title": "铃鼓",
+      "catalogueTitle": "The Tambourine",
+      "artist": "Jerome Myers",
+      "artists": [
+        {
+          "name": "Jerome Myers",
+          "role": "primary",
+          "slug": "jerome-myers-nga-2657"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "",
+      "accession": "1413",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23939666-0fcfac68dbf62fb2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jerome_Myers_-_The_Tambourine_-_Google_Art_Project.jpg",
+      "credit": "Jerome Myers. The Tambourine. Image credit: Jerome Myers; Source credit: 7wHjwDKUfWrLaA at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23939666",
+      "description": "孩子聚在远比他们高大的建筑与店面下。浅裙与细小动作把他们从暗墙前分出。迈尔斯把街道同时画成建筑围合的场所，与暂时被游戏占据的地方。群体并不均匀，给个人动作留了余地；建筑提供共同尺度，却不决定每个孩子具体怎样使用下方空间。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "9e368bc2-5f67-5a9b-a9fd-854f7267e951",
+      "title": "码头之夜",
+      "catalogueTitle": "Evening on the Pier",
+      "artist": "Jerome Myers",
+      "artists": [
+        {
+          "name": "Jerome Myers",
+          "role": "primary",
+          "slug": "jerome-myers-nga-2657"
+        }
+      ],
+      "date": "1921",
+      "start": 1921,
+      "end": 1921,
+      "medium": "",
+      "accession": "1405",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23941327-eaad1f8715cf468c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jerome_Myers_-_Evening_on_the_Pier_-_Google_Art_Project.jpg",
+      "credit": "Jerome Myers. Evening on the Pier. Image credit: Jerome Myers; Source credit: ZAEVkDDWFhD1mA at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23941327",
+      "description": "妇女与孩子在水边靠近地坐着或站着，远处建筑沿地平线延展。迈尔斯给予聚会不同程度的休息，而非一个定义全场的事件。开阔远方与身体靠近形成反差。人们的使用方式使公共地点暂时变得具体；暖晚光接通不同位置，却没有把他们变成一场共同谈话。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "7c92440e-74bf-5097-80cc-c579b7030ea6",
+      "title": "福音传道者",
+      "catalogueTitle": "The Evangelist",
+      "artist": "Robert Spencer",
+      "artists": [
+        {
+          "name": "Robert Spencer",
+          "role": "primary",
+          "slug": "wikimedia-painter-q17557326"
+        }
+      ],
+      "date": "约 1918 年",
+      "start": 1918,
+      "end": 1918,
+      "medium": "",
+      "accession": "1791",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23941930-9713d3a4e7db133a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Spencer_-_The_Evangelist_-_Google_Art_Project.jpg",
+      "credit": "Robert Spencer. The Evangelist. Image credit: Robert Spencer; Source credit: fwHnMEF7DE48JQ at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23941930",
+      "description": "较高位置让讲话者比街上人群更容易被看见。下方脸、帽与姿态的差别，使听众不至于成为重复形状。斯宾塞用不同高度组织公开讲话，但布局不能证明每个人都赞同，甚至不能证明他们以相同方式聆听。集会可见，群体回应却不那么确定。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "bc70b139-1b57-5b3f-a696-43885103062a",
+      "title": "拍卖会",
+      "catalogueTitle": "The Auction",
+      "artist": "Robert Spencer",
+      "artists": [
+        {
+          "name": "Robert Spencer",
+          "role": "primary",
+          "slug": "wikimedia-painter-q17557326"
+        }
+      ],
+      "date": "约 1918 年",
+      "start": 1918,
+      "end": 1918,
+      "medium": "",
+      "accession": "1790",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23941928-0e77f34e51b1aa0e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Spencer_-_The_Auction_-_Google_Art_Project.jpg",
+      "credit": "Robert Spencer. The Auction. Image credit: Robert Spencer; Source credit: bAHfxH45l2plVg at Google Cultural Institute maximum zoom level. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23941928",
+      "description": "人们聚在敞开门口，注意物件与站得较高的人物。浅墙和百叶窗给聚集明确的建筑框架。斯宾塞把家庭门槛变成公开估价的地方：看与等都成为交易的一部分。人群朝向很清楚，画作却不要求我们知道每个人愿意出多少钱。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    },
+    {
+      "id": "cff7f300-3304-5bc1-b392-b779d6188325",
+      "title": "骑马归来",
+      "catalogueTitle": "After the Ride aka Visiting Neighbors",
+      "artist": "Julian Alden Weir",
+      "artists": [
+        {
+          "name": "Julian Alden Weir",
+          "role": "primary",
+          "slug": "julian-alden-weir-nga-1969"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cff7f300-3304-5bc1-b392-b779d6188325-293dbecfa42a3b2b.jpg",
+      "imageSource": "https://www.wikiart.org/en/julian-alden-weir/after-the-ride-aka-visiting-neighbors",
+      "credit": "Julian Alden Weir. After the Ride aka Visiting Neighbors. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/julian-alden-weir/after-the-ride-aka-visiting-neighbors",
+      "description": "备鞍的马表明一项活动刚刚暂停，女子在树下站在旁边。较深马身与她的浅裙形成清楚对照。韦尔把斑驳光分布到人物与地面，使肖像留在户外环境中。标题提供先前动作，画面却专注于运动停止之后留下的较安静安排。",
+      "importance": "",
+      "museum": "The Phillips Collection"
+    }
+  ],
+  "context": {
+    "start": 1843,
+    "end": 1954
+  },
+  "closingSections": [
+    {
+      "title": "比较聚在一起的理由",
+      "paragraphs": [
+        "雷诺阿的用餐者、杜米埃的雕塑家与斯宾塞的拍卖人群都共享空间，注意力却以不同方式相聚。回到这些区别，比把每个群体都当作社交图景更有用。这份独立选择不保证作品同时展出或目前可看。规划参观时，请以收藏馆最新记录为准。"
+      ]
+    }
+  ]
+}

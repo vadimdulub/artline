@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "staedel-museum",
+  "museum": "Städel Museum",
+  "city": "法兰克福",
+  "country": "德国",
+  "title": "施泰德博物馆：杰作",
+  "subtitle": "二十幅画，从一顿饭、一张脸、一件小物，到人们聚集的公共室内空间。",
+  "introduction": "莫奈的《午餐》用两米多高的画布来描绘一顿家庭饭食。容克尔则用另一种办法让水果显得重要：一只苹果或梨，配上昆虫和石座，在小小的静物组合中便格外醒目。这两种做法都说明，普通题材能否引人细看，与画家怎样呈现它有关。\n\n这组作品不断改变观看的尺度。一张做鬼脸的面孔可以占满画面，一群人也可以在教堂或交易所里显得很小。看看主体周围有什么，以及画家留给它多大地方，比给名作排座次更能说明一幅画的效果。这份选单保留了馆藏题材的差异，并不试图把它们串成一部连续的艺术史。",
+  "visitNote": "这些是精选的馆藏作品，而非固定的参观路线。部分作品可能处于外借或库藏状态。若计划专程参观某幅画作，请务必先查阅施泰德博物馆（Städel）最新的藏品信息及访客须知。",
+  "locale": "zh",
+  "website": "https://www.staedelmuseum.de",
+  "officialGuide": "https://www.staedelmuseum.de",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "在线阅读或下载 · 英语",
+      "note": "这本展览图录为莫奈描绘家居生活与河畔景色的作品提供了背景信息；其中的文章与插图有助于将这些作品对光线的处理方式，与本选集中的后期城市题材画作进行对比参照。"
+    }
+  ],
+  "works": [
+    {
+      "id": "f1e1df9b-d5fa-46eb-8dfe-00b2ca279b1d",
+      "title": "午餐",
+      "catalogueTitle": "The Luncheon",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1868-1869",
+      "start": 1868,
+      "end": 1869,
+      "medium": "",
+      "accession": "SG 170",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-staedel/f1e1df9b-d5fa-46eb-8dfe-00b2ca279b1d-cc3cd4532d20aef5.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/the-luncheon",
+      "credit": "Claude Monet. The Luncheon. Städel Museum, Frankfurt am Main. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/en/work/the-luncheon",
+      "description": "明亮的桌布延伸到前景，把各忙各事的人联系起来。画作高逾两米，让私人聚餐拥有了通常用于公共题材的规模。因此，莫奈画的碗碟、玻璃杯和室内家具不只是交代日常生活的配件；它们也将这幅大画的各个部分组织在一起，值得逐一细看。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "9587145b-13c5-5ffe-ab3f-35a7d7a71719",
+      "title": "卢卡圣母",
+      "catalogueTitle": "The Lucca Madonna",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1436",
+      "start": 1436,
+      "end": 1436,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/9587145b-13c5-5ffe-ab3f-35a7d7a71719-39a58d5337c1f391.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-van-eyck/the-lucca-madonna-1436",
+      "credit": "Jan van Eyck. The Lucca Madonna. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jan-van-eyck/the-lucca-madonna-1436",
+      "description": "红袍和宝座显示出圣母的尊贵，但这间狭窄的房间又有着具体可感的日常陈设。窗户和小件家具使它不至于变成一个没有现实细节的神圣空间。凡·艾克把两者放在一起：玛利亚既是受尊崇的形象，也在一个值得细看普通物件的室内，亲近地抱着孩子。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "7e69d657-83e2-5f61-a9f8-673cf3d3e304",
+      "title": "看哪，这个人",
+      "catalogueTitle": "Here is a Man (Ecce Homo)",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "1475-1480",
+      "start": 1475,
+      "end": 1480,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7e69d657-83e2-5f61-a9f8-673cf3d3e304-b5e0a8a165c5814e.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/this-is-a-human-ecce-homo",
+      "credit": "Hieronymus Bosch. Here is a Man (Ecce Homo). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/this-is-a-human-ecce-homo",
+      "description": "高台上的基督暴露在下方密集人群的目光中。建筑把被展示的人与仰望他的人分开，使公开审判成为一种清楚可见的位置关系。博斯把许多面孔和鲜艳衣服挤在一起，增强人群的压迫感。一方孤立无援，另一方集体围观，场面的敌意正体现在这种不对等之中。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "0fe8e3c6-fd35-534e-91da-b9699f1e5c42",
+      "title": "菲尔勒格家族披发少女肖像",
+      "catalogueTitle": "Portrait of a Young Fürleger with Loose Hair",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1497",
+      "start": 1497,
+      "end": 1497,
+      "medium": "",
+      "accession": "937",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/0fe8e3c6-fd35-534e-91da-b9699f1e5c42-b93c965b6d6a453d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_Young_Woman,_Albrecht_D%C3%BCrer_(1497).jpg",
+      "credit": "Albrecht Dürer. Portrait of a Young Fürleger with Loose Hair. Image credit: Albrecht Dürer; Own work; Photographic credit: Sima Farshid. https://commons.wikimedia.org/wiki/File:Portrait_of_a_Young_Woman,_Albrecht_D%C3%BCrer_(1497).jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q1112111",
+      "description": "低垂的双眼和合拢的双手显得内敛，精细描绘的卷发却在脸旁展开。丢勒把背景处理得很克制，让这些轮廓保持清晰。姿势安静，不等于画面没有变化。头发、手和面孔各有不同的质感与形状，需要以不同方式仔细描绘，也值得分别观看。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "b95b9a7a-ac23-5e95-ae91-40df1ee66584",
+      "title": "海伦娜·勒德施泰因",
+      "catalogueTitle": "Portrait of Helene Roederstein",
+      "artist": "Ottilie Roederstein",
+      "artists": [
+        {
+          "name": "Ottilie Roederstein",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2037804"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "2037",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q126125661-9ccb893eff8b5ac7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:2037-ottilie_w._roederstein-bildnis_helene_roederstein_schwester_der-1890.png",
+      "credit": "Ottilie Roederstein. Portrait of Helene Roederstein. Image credit: Ottilie Roederstein; Source credit: Städelmuseum, Frankfurt am Main. Wikimedia Commons. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://www.wikidata.org/wiki/Q126125661",
+      "description": "面孔相当平静，下方绿色衣裙的花纹却十分丰富。交叠的双手使坐姿显得明确，浅色帽子又把头部从柔和的背景中衬托出来。奥蒂莉·勒德施泰因让装饰保持醒目，却没有让它压过人物。整幅肖像的平衡，来自同一人物身上繁与简的不同安排。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "56277a89-c4af-5e4d-8723-1c144ce585bd",
+      "title": "苹果与昆虫静物",
+      "catalogueTitle": "Still Life with Apple and Insects",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1765",
+      "start": 1765,
+      "end": 1765,
+      "medium": "",
+      "accession": "1614",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64789266-44f2ddf127870643.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justus_Juncker_-_Stilleven_met_appel_en_insekten_-_1614_-_St%C3%A4del_Museum.jpg",
+      "credit": "Justus Juncker. Still Life with Apple and Insects. Image credit: Justus Juncker; Source credit: https://rkd.nl/nl/explore/images/281212. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64789266",
+      "description": "阶梯状石座让一只苹果有了正式陈列品的架势。旁边细小的昆虫提供了尺度上的对比，衬得果实圆润而饱满。容克尔没有采用水果静物常见的丰盛堆叠，而是把苹果单独摆出，让人能够一直看它的轮廓、表皮，以及周围那些微小的生命。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "f2fd41d4-2ed0-519d-affc-c4b4db35ed9e",
+      "title": "梨与昆虫静物",
+      "catalogueTitle": "Still Life with Pear and Insects",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1765",
+      "start": 1765,
+      "end": 1765,
+      "medium": "",
+      "accession": "1615",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64789633-d58275946c1fc352.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justus_Juncker_-_Stilleven_met_peer_en_insecten_-_1615_-_St%C3%A4del_Museum.jpg",
+      "credit": "Justus Juncker. Still Life with Pear and Insects. Image credit: Justus Juncker; Source credit: https://rkd.nl/nl/explore/images/281213. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64789633",
+      "description": "梨立在石台上，轮廓不像相邻那幅画中的苹果那样匀称。蝴蝶与昆虫的纤细形体，紧挨着果实和开裂的石头。把这两幅静物放在一起看，就能明白重复布置的用处：当周围的安排大致相同，果实外形的一点变化便会格外明显。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "674a9355-3f2b-5c21-bd69-239cb2b97d41",
+      "title": "书房中的学者",
+      "catalogueTitle": "A Scholar in his Study",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1754",
+      "start": 1754,
+      "end": 1754,
+      "medium": "",
+      "accession": "616",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64788671-d4ca5d6e908260b1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justus_Juncker_-_Geleerde_in_zijn_studeervertrek_-_616_-_St%C3%A4del_Museum.jpg",
+      "credit": "Justus Juncker. A Scholar in his Study. Image credit: Justus Juncker; Source credit: https://rkd.nl/nl/explore/images/254454. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64788671",
+      "description": "书籍与积聚的物件让读书研究成为一种有实际工具和环境的活动，而不只是看不见的思考。光集中在桌边，房间边缘则难以辨清。容克尔从拥挤的室内划出一块工作区域。画作能呈现专心研究所需的条件，却没有假装让观众知道学者究竟在想什么。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "723bbf1a-2d34-52fc-863b-71235674b3ba",
+      "title": "藤椅上的年轻女子",
+      "catalogueTitle": "Young Woman in a Wicker Chair",
+      "artist": "Hanns Katz",
+      "artists": [
+        {
+          "name": "Hanns Katz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q11973939"
+        }
+      ],
+      "date": "约 1933–1934 年",
+      "start": 1933,
+      "end": 1934,
+      "medium": "",
+      "accession": "2254",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q115131314-81f40e0d89cba877.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1933_Katz_Junge_Frau_im_Korbstuhl_anagoria.JPG",
+      "credit": "Hanns Katz. Young Woman in a Wicker Chair. Image credit: Hanns Ludwig Katz (1892-1940). Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q115131314",
+      "description": "弯曲的椅背围着纤细的身体，双手靠近膝盖。鲜明的红发与蓝衣使女子在这紧凑的构图中依然突出。卡茨区分了身体有支撑与姿态舒展这两件事：椅子可以稳稳容纳一个人，她的坐姿却未必放松开阔。观察到这一点，并不意味着可以据此判断她的情绪。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "e8749b41-c5c7-5bc5-9bd3-f6ae86780b20",
+      "title": "阿姆斯特丹孤儿院庭院",
+      "catalogueTitle": "The Courtyard of the Orphanage in Amsterdam: Free Period in the Amsterdam Orphanage",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1881 – 1882",
+      "start": 1881,
+      "end": 1882,
+      "medium": "布面油画",
+      "accession": "1351",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/e8749b41-c5c7-5bc5-9bd3-f6ae86780b20-d953e7459017.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/the-courtyard-of-the-orphanage-in-amsterdam",
+      "credit": "Städel Museum, Frankfurt am Main, Eigentum des Städelschen Museums-Vereins e.V.. Public Domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/en/work/the-courtyard-of-the-orphanage-in-amsterdam",
+      "description": "相同的制服说明这是一所集体机构，但女孩们的姿势并不一样。有的站着，有的坐着，各自在阴凉的建筑旁停留。利伯曼以树叶间洒落的阳光衬托这些差异。这是一处共同使用的庭院，属于同一个群体，并没有抹去每个人所在的位置和各自的活动。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "42816a51-7caf-5157-b9de-b785e385c6b6",
+      "title": "卡门西塔",
+      "catalogueTitle": "Carmencita",
+      "artist": "Lovis Corinth",
+      "artists": [
+        {
+          "name": "Lovis Corinth",
+          "role": "primary",
+          "slug": "lovis-corinth-q157610"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "",
+      "accession": "2064",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1043744-85891e6e89954b6a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lovis_Corinth_Carmencita_1924.jpg",
+      "credit": "Lovis Corinth. Carmencita. Image credit: Lovis Corinth. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1043744",
+      "description": "宽阔的笔触让衣裙和周围环境部分融在一起，画面比轮廓平滑封闭的肖像更显活跃。脸部附近几处明确的笔画，又使人物不至于消失其中。科林特只把部分位置画得清楚：凭这几个关键点，我们仍能辨认人物，而其他地方的颜料则可以打断原本稳定的轮廓。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "9b230422-6393-5eef-b9cd-5b098c167dd4",
+      "title": "夜间大火",
+      "catalogueTitle": "Conflagration at Night",
+      "artist": "Johann Georg Trautmann",
+      "artists": [
+        {
+          "name": "Johann Georg Trautmann",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1693976"
+        }
+      ],
+      "date": "1762–1769",
+      "start": 1762,
+      "end": 1769,
+      "medium": "",
+      "accession": "1339",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q64800008-d1b7eae960dfdac7.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johann_Georg_Trautmann_-_Nachtelijke_vuurzee_-_1339_-_St%C3%A4del_Museum.jpg",
+      "credit": "Johann Georg Trautmann. Conflagration at Night. Image credit: Johann Georg Trautmann; Source credit: https://rkd.nl/nl/explore/images/275260. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64800008",
+      "description": "火焰照亮了它正在造成的破坏。建筑和细小的人影出现在火光所及之处，周围的黑暗则遮住了更多情况。一棵树截断亮光，没有让它连成一整片。特劳特曼描绘的灾难有一种残酷的观看条件：正是毁坏现场的火，才让现场变得可见。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "e6b5d5cd-f3e6-5987-bdc0-15a76be5b759",
+      "title": "日本风景中的鹿",
+      "catalogueTitle": "Deer in Japanese Landscape",
+      "artist": "Jean-Bloé Niestlé",
+      "artists": [
+        {
+          "name": "Jean-Bloé Niestlé",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1648422"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "",
+      "accession": "SG 408",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/e6b5d5cd-f3e6-5987-bdc0-15a76be5b759-0cdfbcd9ece88843.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jean_Blo%C3%A9_Niestl%C3%A9,_Rehe_in_japanischer_Landschaft,_1918.jpg",
+      "credit": "Jean-Bloé Niestlé. Deer in Japanese Landscape. Image credit: Carl Ha; Own work. https://commons.wikimedia.org/wiki/File:Jean_Blo%C3%A9_Niestl%C3%A9,_Rehe_in_japanischer_Landschaft,_1918.jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.wikidata.org/wiki/Q130379839",
+      "description": "鹿的形象容易辨认，周围色彩强烈的植物与地形却难以纳入一个稳定的透视空间。尼斯特莱让动物与醒目的装饰性布局共处。题名并不能证明这是直接写生的日本地点。沿着色彩和弯曲形状看下去，更容易发现画家如何围绕这些动物组织出它们的环境。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "ee03fca2-6a74-5d25-9415-856b4026b192",
+      "title": "苦酒",
+      "catalogueTitle": "The Bitter Drunk",
+      "artist": "Adriaen Brouwer",
+      "artists": [
+        {
+          "name": "Adriaen Brouwer",
+          "role": "primary",
+          "slug": "adriaen-brouwer-q364139"
+        }
+      ],
+      "date": "1630-1638",
+      "start": 1630,
+      "end": 1638,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ee03fca2-6a74-5d25-9415-856b4026b192-76a6008227337192.jpg",
+      "imageSource": "https://www.wikiart.org/en/adriaen-brouwer/the-bitter-drunk",
+      "credit": "Adriaen Brouwer. The Bitter Drunk. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/adriaen-brouwer/the-bitter-drunk",
+      "description": "喝下去的东西引起了反应，打破了端正摆好的肖像姿势。眯起的眼、张开的嘴和握着杯子的手，把一种普通的味觉感受变成整幅画的主题。布劳威尔关注的是正在变化的表情，而不是一个固定的身份。这张特别的苦脸已经足够支撑画面，无须再补上一段复杂故事。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "8fe58792-ca49-48c4-bc77-4c948fb4ed95",
+      "title": "赞河畔的房屋",
+      "catalogueTitle": "Häuser am Ufer der Zaan",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1871-1872",
+      "start": 1871,
+      "end": 1872,
+      "medium": "",
+      "accession": "1385",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-staedel/8fe58792-ca49-48c4-bc77-4c948fb4ed95-d79a3947f20113e0.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/de/werk/haeuser-am-ufer-der-zaan",
+      "credit": "Claude Monet. Häuser am Ufer der Zaan. Städel Museum, Frankfurt am Main. Public Domain Mark (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/de/werk/haeuser-am-ufer-der-zaan",
+      "description": "接连出现的绿色立面为河岸形成清楚的节奏。到了水中，它们的倒影就碎成较短的笔触，边界也不再稳定。莫奈在同一景色中安排了对照：房屋仍足够坚实，让人看出倒影失去了哪些确定的形状。因此，河流不只是岸下一条有颜色的带子，而是以不断变化的方式再次描绘河岸。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "23bba4fc-f211-5fb0-91cc-1a0fcdc84d8d",
+      "title": "证券交易所内",
+      "catalogueTitle": "In the Stock Exchange",
+      "artist": "Ferdinand Brütt",
+      "artists": [
+        {
+          "name": "Ferdinand Brütt",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1405155"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "",
+      "accession": "SG 326",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64789723-34589ccdc74ac42a.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/in-the-stock-exchange",
+      "credit": "In the Stock Exchange. Ferdinand Brütt; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64789723",
+      "description": "人与人靠得多近、身体朝哪边转，以及小群体之间的交谈，呈现出金融活动的样子。布吕特把这些难以听清看明的交流放进高大的公共大厅，使它们超出了个别人物的范围。大厅显示出机构的规模，聚集的人物则显示它如何运作。画面无法交代每笔交易，却能描绘交易发生的环境。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "76c0cfc7-84d8-5cc0-821e-6e8735548469",
+      "title": "巴洛克教堂内部",
+      "catalogueTitle": "Interior of a Baroque Church",
+      "artist": "Johann Ludwig Ernst Morgenstern",
+      "artists": [
+        {
+          "name": "Johann Ludwig Ernst Morgenstern",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1695336"
+        }
+      ],
+      "date": "1792",
+      "start": 1792,
+      "end": 1792,
+      "medium": "",
+      "accession": "609",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64787075-f343d439f7c90f31.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/interior-of-a-baroque-church",
+      "credit": "Interior of a Baroque Church. Johann Ludwig Ernst Morgenstern; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64787075",
+      "description": "拱门、柱子和穹顶把室内一层层空间连接起来。细小的人物帮助说明建筑的尺度，却不是这里的主角。莫根施特恩借圆弧形构件与层叠开口，引导视线在不同方向移动。即使人物只占很小一部分，这个空间怎样供人行走、怎样供人观看，仍然十分清楚。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "d4bbff12-a700-539b-95ec-9dad8086f120",
+      "title": "哥特式教堂内部",
+      "catalogueTitle": "Interior of a Gothic Church",
+      "artist": "Johann Ludwig Ernst Morgenstern",
+      "artists": [
+        {
+          "name": "Johann Ludwig Ernst Morgenstern",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1695336"
+        }
+      ],
+      "date": "1793",
+      "start": 1793,
+      "end": 1793,
+      "medium": "",
+      "accession": "574",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64787079-ef2d8bf9886fb548.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/interior-of-a-gothic-church",
+      "credit": "Interior of a Gothic Church. Johann Ludwig Ernst Morgenstern; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64787079",
+      "description": "尖拱和细长的支柱一路重复，通向远处祭坛。它们向上延伸的趋势，与莫根施特恩那幅巴洛克教堂中宽阔的圆弧不同。无需先读完两种建筑风格的完整历史，就能借这两幅画比较空间是怎样组织的。留意哪些形状不断出现，以及它们把视线带向哪里。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "f7fafa4c-0d5e-5627-8f24-b2ecc940ba52",
+      "title": "阿姆斯特丹犹太街",
+      "catalogueTitle": "Jewish Street in Amsterdam",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "木板油画",
+      "accession": "SG 172",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/f7fafa4c-0d5e-5627-8f24-b2ecc940ba52-f8e792256db1.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/jewish-street-in-amsterdam",
+      "credit": "Städel Museum, Frankfurt am Main. Public Domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.staedelmuseum.de/en/work/jewish-street-in-amsterdam",
+      "description": "鲜亮的蔬果让暗处人群中的小笔买卖变得可辨。利伯曼通过摊位旁的聚集来描绘这个街区，而不是挑出一座孤立的标志建筑。砖砌立面在变化的人群活动之后保持连续。人们共同做的事情使公共空间有了具体面貌，但旁观者仍只能看懂他们之间的一部分交流。",
+      "importance": "",
+      "museum": "Städel Museum"
+    },
+    {
+      "id": "28868a52-5e01-5b9b-a822-a882e32d4326",
+      "title": "有三名女子的厨房内部",
+      "catalogueTitle": "Kitchen Interior with Three Women",
+      "artist": "Justus Juncker",
+      "artists": [
+        {
+          "name": "Justus Juncker",
+          "role": "primary",
+          "slug": "wikimedia-painter-q18600455"
+        }
+      ],
+      "date": "1750",
+      "start": 1750,
+      "end": 1750,
+      "medium": "",
+      "accession": "2006",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/staedel/q64787165-11565a974028fd6e.jpg",
+      "imageSource": "https://sammlung.staedelmuseum.de/en/work/kitchen-interior-with-three-women",
+      "credit": "Kitchen Interior with Three Women. Justus Juncker; Städel Museum, Frankfurt am Main. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q64787165",
+      "description": "衣袖、器具和食材占据厨房较亮的一侧，把视线引向桌边的劳动。容克尔让三个女人在同一件事情中各有动作。她们的位置由彼此配合决定，而不是为了摆出正式合影。房间的用途也由此变得清楚：备餐这项活动，把人物和物品一起安排了起来。",
+      "importance": "",
+      "museum": "Städel Museum"
+    }
+  ],
+  "context": {
+    "start": 1436,
+    "end": 1934
+  },
+  "closingSections": [
+    {
+      "title": "有意识地改变观看尺度",
+      "paragraphs": [
+        "在单独摆出的水果、布劳威尔的面孔和宽阔室内之间来回比较。留意周围空间如何使主体显得更重要或更微小。参观前请查阅施泰德美术馆最新馆藏展出信息；这份选单用于比较作品，并非固定的参观路线。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "verifiedAt": "2026-10-12T17:22:09.378674+00:00",
+  "status": "deployed_and_verified",
+  "api": {
+    "baselineRevision": "artline-api-atlas-browse-1012-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:3193f19d98e581ddb3537001e5cc9de1087c6f8c655bd11f39532cdc3d133722",
+    "baselineBuildId": "4464577d-e307-49ee-9567-34d1c0ff1c1f",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:geography-20261012-v1",
+    "preimages": {
+      "internal/atlas/geography.go": "90430a3598427de56754d1cc3f6e672ce2d3c959e081743885d4eb1cfd256ee0",
+      "internal/atlas/repository.go": "51fab212f952e597ed868a9b98b2cd2f30d4e1daeeabceb6b3e4ff5666386f68"
+    },
+    "files": {
+      "internal/atlas/geography.go": "5cfc97fd3574de43f2267dfbe43fc42c9a31cda31011279042bd2c041070ee1b",
+      "internal/atlas/repository.go": "94cfa00842e9e435e0b8e6d996cc149fb4ae0cc2ef24ef7181b33826cd3244ec"
+    },
+    "overlaySHA256": "08709cdd4f0237a7f9e721f38afab9e94f2ea465f88abacae519ad14f7b962f4",
+    "overlayURI": "gs://artline-508319-build-source/geography-20261012/api-08709cdd4f0237a7.tar.xz",
+    "overlayGeneration": "1791825187716952",
+    "buildId": "6f095e8e-687a-4134-9592-0a3a8738f522",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:3ba760726eb30847be67a019184f263bc7793ca3c016f64044795e0db0ab9a45",
+    "revision": "artline-api-geography-1012-v1",
+    "candidateURL": "https://geography-1012-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-api-atlas-browse-1012-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "candidateChecks": {
+    "verified_at": "2026-10-12T17:19:29.488564+00:00",
+    "exactHTTPResponsesEqual": true,
+    "paginationVerified": true,
+    "comparisonScenarios": 9,
+    "records": [
+      {
+        "name": "candidate-health",
+        "at": "2026-10-12T17:18:47.558298+00:00",
+        "status": 200,
+        "ttfb_ms": 396.1,
+        "total_ms": 397.9,
+        "cache": null,
+        "server_timing": null
+      },
+      {
+        "name": "baseline-japan",
+        "at": "2026-10-12T17:18:52.507360+00:00",
+        "status": 200,
+        "ttfb_ms": 4857.5,
+        "total_ms": 4915.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-japan",
+        "at": "2026-10-12T17:18:53.363408+00:00",
+        "status": 200,
+        "ttfb_ms": 804.3,
+        "total_ms": 837.4,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-japan-repeat",
+        "at": "2026-10-12T17:18:53.629719+00:00",
+        "status": 200,
+        "ttfb_ms": 182.7,
+        "total_ms": 245.7,
+        "cache": "HIT",
+        "server_timing": null
+      },
+      {
+        "name": "baseline-japan-next",
+        "at": "2026-10-12T17:18:55.629266+00:00",
+        "status": 200,
+        "ttfb_ms": 1919.1,
+        "total_ms": 1982.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-japan-next",
+        "at": "2026-10-12T17:18:56.125508+00:00",
+        "status": 200,
+        "ttfb_ms": 433.5,
+        "total_ms": 466.7,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-france",
+        "at": "2026-10-12T17:18:59.775258+00:00",
+        "status": 200,
+        "ttfb_ms": 3585.8,
+        "total_ms": 3618.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-france",
+        "at": "2026-10-12T17:19:01.707685+00:00",
+        "status": 200,
+        "ttfb_ms": 1869.4,
+        "total_ms": 1903.2,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-france-repeat",
+        "at": "2026-10-12T17:19:02.035756+00:00",
+        "status": 200,
+        "ttfb_ms": 216.5,
+        "total_ms": 288.6,
+        "cache": "HIT",
+        "server_timing": null
+      },
+      {
+        "name": "baseline-france-next",
+        "at": "2026-10-12T17:19:04.259424+00:00",
+        "status": 200,
+        "ttfb_ms": 2152.9,
+        "total_ms": 2187.8,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-france-next",
+        "at": "2026-10-12T17:19:04.818317+00:00",
+        "status": 200,
+        "ttfb_ms": 465.8,
+        "total_ms": 530.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-asia",
+        "at": "2026-10-12T17:19:08.176642+00:00",
+        "status": 200,
+        "ttfb_ms": 3242.7,
+        "total_ms": 3323.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-asia",
+        "at": "2026-10-12T17:19:08.997893+00:00",
+        "status": 200,
+        "ttfb_ms": 728.3,
+        "total_ms": 778.7,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-europe",
+        "at": "2026-10-12T17:19:12.711275+00:00",
+        "status": 200,
+        "ttfb_ms": 3615.0,
+        "total_ms": 3680.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-europe",
+        "at": "2026-10-12T17:19:14.736364+00:00",
+        "status": 200,
+        "ttfb_ms": 1984.0,
+        "total_ms": 2011.3,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-combined",
+        "at": "2026-10-12T17:19:18.234674+00:00",
+        "status": 200,
+        "ttfb_ms": 3422.7,
+        "total_ms": 3486.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-combined",
+        "at": "2026-10-12T17:19:19.059712+00:00",
+        "status": 200,
+        "ttfb_ms": 745.1,
+        "total_ms": 811.7,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-romanticism",
+        "at": "2026-10-12T17:19:21.754252+00:00",
+        "status": 200,
+        "ttfb_ms": 2607.0,
+        "total_ms": 2680.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-romanticism",
+        "at": "2026-10-12T17:19:22.573839+00:00",
+        "status": 200,
+        "ttfb_ms": 640.4,
+        "total_ms": 803.3,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-broad-all",
+        "at": "2026-10-12T17:19:23.666185+00:00",
+        "status": 200,
+        "ttfb_ms": 909.9,
+        "total_ms": 1077.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-broad-all",
+        "at": "2026-10-12T17:19:24.330951+00:00",
+        "status": 200,
+        "ttfb_ms": 490.9,
+        "total_ms": 624.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-monet",
+        "at": "2026-10-12T17:19:24.904920+00:00",
+        "status": 200,
+        "ttfb_ms": 475.5,
+        "total_ms": 538.4,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-monet",
+        "at": "2026-10-12T17:19:25.293329+00:00",
+        "status": 200,
+        "ttfb_ms": 287.3,
+        "total_ms": 352.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-empty",
+        "at": "2026-10-12T17:19:26.873953+00:00",
+        "status": 200,
+        "ttfb_ms": 1550.5,
+        "total_ms": 1551.4,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-empty",
+        "at": "2026-10-12T17:19:27.166316+00:00",
+        "status": 200,
+        "ttfb_ms": 254.4,
+        "total_ms": 255.4,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-painters",
+        "at": "2026-10-12T17:19:27.885782+00:00",
+        "status": 200,
+        "ttfb_ms": 671.2,
+        "total_ms": 698.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-books",
+        "at": "2026-10-12T17:19:28.391898+00:00",
+        "status": 200,
+        "ttfb_ms": 434.2,
+        "total_ms": 481.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-events",
+        "at": "2026-10-12T17:19:28.974336+00:00",
+        "status": 200,
+        "ttfb_ms": 347.0,
+        "total_ms": 552.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-museum-access",
+        "at": "2026-10-12T17:19:29.183876+00:00",
+        "status": 401,
+        "ttfb_ms": 179.4,
+        "total_ms": 180.4,
+        "cache": null,
+        "server_timing": null
+      },
+      {
+        "name": "candidate-invalid-range",
+        "at": "2026-10-12T17:19:29.486628+00:00",
+        "status": 400,
+        "ttfb_ms": 266.2,
+        "total_ms": 268.3,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      }
+    ]
+  },
+  "publicChecks": {
+    "verified_at": "2026-10-12T17:20:51.222750+00:00",
+    "paginationVerified": true,
+    "pageSize": 149,
+    "records": [
+      {
+        "name": "public-japan",
+        "at": "2026-10-12T17:20:44.897895+00:00",
+        "status": 200,
+        "ttfb_ms": 389.6,
+        "total_ms": 484.3,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-japan-next",
+        "at": "2026-10-12T17:20:45.419351+00:00",
+        "status": 200,
+        "ttfb_ms": 396.2,
+        "total_ms": 494.1,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-japan-repeat",
+        "at": "2026-10-12T17:20:45.605544+00:00",
+        "status": 200,
+        "ttfb_ms": 145.0,
+        "total_ms": 156.9,
+        "cache": "HIT",
+        "server_timing": null
+      },
+      {
+        "name": "public-france",
+        "at": "2026-10-12T17:20:46.222324+00:00",
+        "status": 200,
+        "ttfb_ms": 580.2,
+        "total_ms": 591.4,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-france-next",
+        "at": "2026-10-12T17:20:46.779463+00:00",
+        "status": 200,
+        "ttfb_ms": 514.7,
+        "total_ms": 528.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-france-repeat",
+        "at": "2026-10-12T17:20:46.988563+00:00",
+        "status": 200,
+        "ttfb_ms": 184.9,
+        "total_ms": 185.7,
+        "cache": "HIT",
+        "server_timing": null
+      },
+      {
+        "name": "public-asia",
+        "at": "2026-10-12T17:20:47.368869+00:00",
+        "status": 200,
+        "ttfb_ms": 345.1,
+        "total_ms": 362.6,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-europe",
+        "at": "2026-10-12T17:20:49.403735+00:00",
+        "status": 200,
+        "ttfb_ms": 1994.0,
+        "total_ms": 2006.2,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-combined",
+        "at": "2026-10-12T17:20:50.222322+00:00",
+        "status": 200,
+        "ttfb_ms": 785.9,
+        "total_ms": 788.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-romanticism",
+        "at": "2026-10-12T17:20:50.664477+00:00",
+        "status": 200,
+        "ttfb_ms": 409.6,
+        "total_ms": 411.8,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-broad-all",
+        "at": "2026-10-12T17:20:51.218952+00:00",
+        "status": 200,
+        "ttfb_ms": 497.8,
+        "total_ms": 525.6,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      }
+    ]
+  },
+  "errorLogEntries": 0,
+  "webRedeployed": false,
+  "schemaMigration": false,
+  "catalogueSourceRowsChanged": false,
+  "realLocalDatabaseAccess": false,
+  "terraformApply": false,
+  "commitsCreated": false
+}

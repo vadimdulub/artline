@@ -1,0 +1,610 @@
+{
+  "selectionNote": "A Artline selecionou estas obras a partir de acervos museológicos documentados. A seleção é independente do museu, e obras individuais podem estar em empréstimo ou fora de exposição. As datas e atribuições mantêm as ressalvas constantes nos registros vinculados.",
+  "labels": {
+    "guides": "Todos os guias",
+    "download": "Baixar PDF",
+    "language": "Idioma guia",
+    "translation": "Tradução assistida por IA",
+    "explore": "Explore esta seleção na Artline.",
+    "contextNote": "Veja as obras selecionadas ao lado de livros e eventos de sua época, ou compare os períodos em que os artistas viveram. Os livros e eventos fornecem contexto, não evidências de influência direta. Obras sem datas confirmadas permanecem neste guia.",
+    "all": "Obras de arte em contexto",
+    "allHint": "As obras selecionadas trabalham com livros e a história de sua época.",
+    "painters": "Quem viveu quando?",
+    "paintersHint": "Veja quando os artistas viveram e cujas vidas se sobrepuseram.",
+    "events": "Acontecimentos históricos",
+    "eventsHint": "Explore os eventos durante o período do guia.",
+    "books": "Linha do tempo dos livros",
+    "booksHint": "Explore livros notáveis ​​do mesmo período.",
+    "contents": "As obras selecionadas",
+    "artworks": "Obras de arte selecionadas",
+    "importance": "Por que isso importa",
+    "artwork": "Arte aberta",
+    "source": "Ficha da obra",
+    "inventory": "Inventário",
+    "reading": "Leituras recomendadas",
+    "visit": "Antes da sua visita",
+    "website": "Site do museu",
+    "officialGuide": "Guia oficial da coleção",
+    "updated": "Fontes e informações para visitantes verificadas"
+  },
+  "slug": "rijksmuseum",
+  "museum": "Rijksmuseum",
+  "city": "Amsterdã",
+  "country": "Países Baixos",
+  "title": "Rijksmuseum: obras-primas",
+  "subtitle": "Milicianos, trabalhadoras domésticas e pedestres atraem a atenção de maneiras diferentes.",
+  "introduction": "Em *A ronda noturna*, o retrato encomendado de uma companhia se torna um acontecimento cheio de gente. Em *A leiteira*, uma trabalhadora doméstica mantém sua atenção num fio estreito de leite. Nenhuma das pinturas distribui a ênfase por igual: luz, escala e posição determinam o que percebemos primeiro. Suas diferenças oferecem um bom começo para esta seleção.\n\nOs retratos públicos anunciam posição social por meio da roupa e da presença corporal. As cenas domésticas dão importância a uma atividade ou a um pequeno conflito; uma vista urbana posterior permite que uma pedestre obstrua a cidade atrás dela. Acompanhe quem domina um espaço, quem trabalha nele e quem tem suas ações observadas. As respostas são mais precisas do que um contraste geral entre grandeza e vida cotidiana.",
+  "visitNote": "Consulte as páginas sobre a coleção atual e as informações para visitantes do Rijksmuseum antes de sua visita. Exposições, trabalhos de conservação e empréstimos podem alterar o acesso; os retratos do par Marten e Oopjen também estão sujeitos a acordos que envolvem o Louvre.",
+  "locale": "pt",
+  "website": "https://www.rijksmuseum.nl",
+  "officialGuide": "https://www.rijksmuseum.nl",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "Leia online ou baixe · Inglês",
+      "note": "A obra em dois volumes de Walter Liedtke, Dutch Paintings in The Metropolitan Museum of Art, oferece verbetes detalhados sobre muitos dos artistas aqui representados. Seus estudos de obras específicas ajudam a explicar as diferenças entre um retrato de grupo, uma cena doméstica e uma natureza-morta."
+    }
+  ],
+  "works": [
+    {
+      "id": "0352ffac-a67a-484d-9fca-d18b71701f7f",
+      "title": "A ronda noturna",
+      "catalogueTitle": "Officers and other civic guardsmen of District II in Amsterdam, under the command of Captain Frans Banninck Cocq and Lieutenant Willem van Ruytenburch, known as ‘The Night Watch’",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1642",
+      "start": 1642,
+      "end": 1642,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-C-5",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/0352ffac-a67a-484d-9fca-d18b71701f7f-41ffdcbe7d85c3ea.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-5--3137deb45cd7765f9a76084a16c99544",
+      "credit": "Rembrandt van Rijn. Officers and other civic guardsmen of District II in Amsterdam, under the command of Captain Frans Banninck Cocq and Lieutenant Willem van Ruytenburch, known as ‘The Night Watch’. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-5--3137deb45cd7765f9a76084a16c99544",
+      "description": "O capitão e o tenente que avançam dão uma direção à companhia, mas mãos e armas ao redor criam movimentos concorrentes. Rembrandt usa uma iluminação desigual para distinguir as ações na multidão. O resultado não parece uma fileira em que cada retratado recebe o mesmo espaço. A identidade coletiva precisa se manter através de corpos que fazem coisas diferentes.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "7e35ca8b-a4dc-4398-9eef-6a93c553dad6",
+      "title": "A leiteira",
+      "catalogueTitle": "The Milkmaid",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "c. 1660",
+      "start": 1660,
+      "end": 1660,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-2344",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/7e35ca8b-a4dc-4398-9eef-6a93c553dad6-570a33085304e548.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2344--42dd0e658c2979aec8e144d2357c55c0",
+      "credit": "Johannes Vermeer. The Milkmaid. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2344--42dd0e658c2979aec8e144d2357c55c0",
+      "description": "O fio de leite é pequeno o suficiente para escapar a um olhar apressado, mas a pose da mulher se organiza para mantê-lo. Pão, cesto e tampo da mesa dão à tarefa um contexto material. Vermeer deixa a parede relativamente vazia, com pouca competição para aquela concentração. Uma atividade pode ser o centro de uma pintura sem provocar grande perturbação visível.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "1b51e729-e25b-4daa-8a0e-a08c8e47ef04",
+      "title": "Os síndicos",
+      "catalogueTitle": "The Sampling Officials of the Amsterdam Drapers’ Guild, known as ‘The Syndics’",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1662",
+      "start": 1662,
+      "end": 1662,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-C-6",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/1b51e729-e25b-4daa-8a0e-a08c8e47ef04-cab7274e8baadfc2.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234",
+      "credit": "Rembrandt van Rijn. The Sampling Officials of the Amsterdam Drapers’ Guild, known as ‘The Syndics’. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-6--575b43f479d021359fb5f63b32f7c234",
+      "description": "Vários homens olham para fora, como se nossa posição importasse para os negócios à mesa. As posturas diferem o suficiente para sugerir uma interrupção, não uma pose sincronizada. Rembrandt mantém o grupo oficial unido e suas respostas desiguais. A autoridade pública aparece como uma relação de trabalho entre pessoas, não apenas uma fileira de rostos distintos.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "1c35425f-879a-4b5e-a42f-a11dc7f9ed34",
+      "title": "A ruazinha",
+      "catalogueTitle": "Gezicht op huizen in Delft, bekend als ‘Het straatje’",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "c. 1658",
+      "start": 1658,
+      "end": 1658,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-2860",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/90591bf7-2b65-4f52-8357-52f6db9700ee-43e7d0fdde9e685a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft,_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg",
+      "credit": "Johannes Vermeer. Gezicht op huizen in Delft, bekend als ‘Het straatje’. Image credit: Johannes Vermeer; Source credit: Google Arts & Culture — YAGJRuPz8yVuRQ. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-2860--a7dbf937cbd6f7c30f66f8aca4a0207c",
+      "description": "A fachada ocupa muito mais espaço do que as pessoas que usam suas portas e passagem. Os reparos interrompem a regularidade dos tijolos e dão ao edifício uma história de desgaste sem exigir um enredo dramático. Vermeer faz a arquitetura e a atividade doméstica operar em escalas diferentes. As pequenas figuras confirmam o uso; a parede merece atenção por si mesma.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "c81b12bf-774f-4bd8-8bac-06159aebd66d",
+      "title": "Mulher de azul lendo uma carta",
+      "catalogueTitle": "Woman in Blue Reading a Letter",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "c. 1663",
+      "start": 1663,
+      "end": 1663,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-C-251",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/c81b12bf-774f-4bd8-8bac-06159aebd66d-bfc46219778be2fb.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba",
+      "credit": "Johannes Vermeer. Woman in Blue Reading a Letter. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-251--8e9e02c8045362ffb2171b2fb52953ba",
+      "description": "A carta é visível como objeto, mas inacessível como informação. Vermeer dirige a atenção à concentração da leitora, sem fornecer a mensagem que a provoca. O mapa na parede amplia as referências do cômodo para o mundo exterior, mas tampouco esclarece o conteúdo. A pintura permite observar uma atenção íntima e conserva a privacidade do que é lido.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "e0a68cc3-689e-4c77-8dfd-cb460cc891ee",
+      "title": "O cisne ameaçado",
+      "catalogueTitle": "De bedreigde zwaan",
+      "artist": "Jan Asselijn",
+      "artists": [
+        {
+          "name": "Jan Asselijn",
+          "role": "primary",
+          "slug": "jan-asselijn-q541976"
+        }
+      ],
+      "date": "c. 1650",
+      "start": 1650,
+      "end": 1650,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-4",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/bdafdea6-7ded-4f92-962a-26c5cf2c4b60-1c2fbb46e6494f4f.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4--22040f90565e730131983a44a85b989f",
+      "credit": "Jan Asselijn. De bedreigde zwaan. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4--22040f90565e730131983a44a85b989f",
+      "description": "A aproximação do cão dá uma causa imediata às asas abertas e ao pescoço estendido. Asselijn torna o corpo claro uma forma grande e vigorosa contra a água escura, enquanto o ninho explica o que está sendo defendido. Antes de buscar interpretações simbólicas, já podemos compreender a relação entre um intruso, um lugar vulnerável e um animal que resiste.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "2a9ab3b9-53e8-4bf1-abb5-6aaf880478d4",
+      "title": "A família alegre",
+      "catalogueTitle": "Het vrolijke huisgezin",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1668",
+      "start": 1668,
+      "end": 1668,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-C-229",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/3ed7e71c-5375-49cb-a171-b36eccdfe7a7-93494c8b422bf34e.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-229--f6c4f4db1681a8704b372bda0183623b",
+      "credit": "Jan Steen. Het vrolijke huisgezin. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-229--f6c4f4db1681a8704b372bda0183623b",
+      "description": "A música e a bebida atravessam gerações em torno da mesa. Steen dá às crianças versões do comportamento adulto: o prazer da cena também forma uma imagem do exemplo e da imitação. Objetos espalhados impedem que a atividade fique contida com ordem. A família se diverte enquanto expõe os hábitos pelos quais seus integrantes mais jovens aprendem a participar.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "688dbe2c-7f7d-438f-8631-3c04d50db8a4",
+      "title": "A festa de São Nicolau",
+      "catalogueTitle": "Het Sint-Nicolaasfeest",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1665 - 1668",
+      "start": 1665,
+      "end": 1668,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-385",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/3bd8bcd6-5c21-4237-8ac4-7224e77c5817-c4ea52962f0dc14f.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-385--b61f0c4c7cf5a503a2246ecde104fd28",
+      "credit": "Jan Steen. Het Sint-Nicolaasfeest. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-385--b61f0c4c7cf5a503a2246ecde104fd28",
+      "description": "A comemoração não tem o mesmo sabor para todas as crianças. Os presentes provocam satisfação num ponto e decepção em outro, enquanto os adultos acompanham os resultados desiguais. Steen faz coexistir vários pequenos dramas, sem escolher um único humor representativo. A sala reúne uma ocasião comum cujos prazeres e frustrações continuam distribuídos de forma individual.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "5a56e1c5-9e86-4ee3-8d06-57b66d9f485d",
+      "title": "Oopjen Coppit",
+      "catalogueTitle": "Portrait of Oopjen Coppit",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1634",
+      "start": 1634,
+      "end": 1634,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-C-1768",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/5a56e1c5-9e86-4ee3-8d06-57b66d9f485d-5e8610ac148ffe18.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1768--6b7d967cdf05b81c2416359e06adaf52",
+      "credit": "Rembrandt van Rijn. Portrait of Oopjen Coppit. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1768--6b7d967cdf05b81c2416359e06adaf52",
+      "description": "O formato de corpo inteiro dá a Oopjen espaço para se apresentar como presença completa, não apenas um rosto que surge de uma roupa. Gola e punhos traçam bordas claras no traje escuro; mudanças discretas de luz distinguem suas superfícies caras. Rembrandt incorpora a própria contenção à exibição. Compare a afirmação mais expansiva da postura de Marten no retrato que forma o par.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "8a26546a-b912-454c-b841-ffe0cef9c640",
+      "title": "Marten Soolmans",
+      "catalogueTitle": "Portrait of Marten Soolmans",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1634",
+      "start": 1634,
+      "end": 1634,
+      "medium": "",
+      "accession": "SK-A-5033",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/8a26546a-b912-454c-b841-ffe0cef9c640-a0a4acfb15053b0a.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-5033--8e1e37eae253bf0f528928483b8ca933",
+      "credit": "Rembrandt van Rijn. Portrait of Marten Soolmans. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-5033--8e1e37eae253bf0f528928483b8ca933",
+      "description": "O braço dobrado alarga o contorno de Marten, enquanto as meias claras e os enfeites elaborados dos sapatos conduzem o olhar por toda a figura. A roupa cumpre uma função pública. Visto com Oopjen, o retrato forma um par sem reduzir um dos retratados a acessório do outro. A escala comum e as poses distintas estabelecem vínculo e presença social individual.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "be099a9d-68c9-44fd-82a6-96318de5aa38",
+      "title": "Diversões no gelo perto de uma cidade",
+      "catalogueTitle": "Enjoying the Ice near a Town",
+      "artist": "Hendrick Avercamp",
+      "artists": [
+        {
+          "name": "Hendrick Avercamp",
+          "role": "primary",
+          "slug": "hendrick-avercamp-q212593"
+        }
+      ],
+      "date": "c. 1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "Óleo, madeira e tecido",
+      "accession": "SK-C-1705",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/329e1942-0e36-4a04-aeb1-53fb4244b300-c83fb91eddde2db0.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1705--368e399771917717acdad5c160dfe747",
+      "credit": "Hendrick Avercamp. Enjoying the Ice near a Town. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-1705--368e399771917717acdad5c160dfe747",
+      "description": "O gelo permite que muitas atividades ocupem uma superfície contínua. Avercamp distingue os pequenos grupos pela postura e pelo espaçamento, depois deixa a distância clara absorvê-los aos poucos. A cena recompensa a observação de cada trecho sem exigir que todo episódio seja o centro. O inverno oferece um espaço público comum, usado de maneira diferente por cada grupo.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "49b98140-304f-44df-820d-1bcedee81388",
+      "title": "Retrato de um casal, provavelmente Isaac Massa e Beatrix van der Laen",
+      "catalogueTitle": "Portrait of a Married Couple, Likely Isaac Abrahamsz Massa and Beatrix van der Laen",
+      "artist": "Frans Hals",
+      "artists": [
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "c. 1622",
+      "start": 1622,
+      "end": 1622,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-133",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/10b4b281-920e-466e-bb80-f8740b0038dd-4cc6ee391eaed059.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Frans_Hals_-_Portret_van_een_stel_in_een_landschap_-_Google_Art_Project.jpg",
+      "credit": "Frans Hals. Portrait of a Married Couple, Likely Isaac Abrahamsz Massa and Beatrix van der Laen. Image credit: Frans Hals; Source credit: Google Arts & Culture — TQGvNkNZ3MM17g. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-133--29d98c79eda4e9d954f80ce0bb0c8b17",
+      "description": "Os retratados se inclinam um para o outro num arranjo próximo e relativamente descontraído sob a folhagem. Hals apresenta o casamento pela proximidade e pelos sorrisos voltados para fora, não por duas poses públicas inteiramente separadas. As identidades propostas continuam incertas; a relação visual, não. Podemos discutir a naturalidade dessa representação, mas não reconstruir toda a vida íntima do casal.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "b7e0faa6-e056-5a8c-a36a-423897f310e8",
+      "title": "A companhia de milícia do capitão Reynier Reael",
+      "catalogueTitle": "Militia Company of District XI under the Command of Captain Reynier Reael",
+      "artist": "Pieter Codde; Frans Hals",
+      "artists": [
+        {
+          "name": "Pieter Codde",
+          "role": "primary",
+          "slug": "austrian-research-painter-q655049"
+        },
+        {
+          "name": "Frans Hals",
+          "role": "primary",
+          "slug": "frans-hals-q167654"
+        }
+      ],
+      "date": "1637",
+      "start": 1637,
+      "end": 1637,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-C-374",
+      "image": "https://artlines.org/assets/artworks/imported/million-catalogue-20261010/b7e0faa6-e056-5a8c-a36a-423897f310e8-2be61352343baf19.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-374--39d1a561a0e487fe7f299dbaf6314d22",
+      "credit": "Pieter Codde; Frans Hals. Native museum collection image; source designation: Public Domain Mark 1.0. Rijksmuseum. Full source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-374--39d1a561a0e487fe7f299dbaf6314d22",
+      "description": "A formação larga precisa acomodar, ao mesmo tempo, indivíduos e a identidade de uma companhia. Faixas, armas, estandarte e mudanças de postura interrompem o que poderia se tornar uma fileira contínua. Na pintura de Hals e Codde, a variação dá ritmo ao grupo. Compare *A ronda noturna*, onde a presença coletiva se organiza mais claramente como um acontecimento em curso.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "36303c25-76fe-40d9-9974-4731e7e76f5b",
+      "title": "Crianças ensinando um gato a dançar",
+      "catalogueTitle": "Children Teaching a Cat to Dance, Known as The Dancing Lesson",
+      "artist": "Jan Steen",
+      "artists": [
+        {
+          "name": "Jan Steen",
+          "role": "primary",
+          "slug": "jan-steen-q205863"
+        }
+      ],
+      "date": "1660 - 1679",
+      "start": 1660,
+      "end": 1679,
+      "medium": "Óleo sobre painel",
+      "accession": "SK-A-718",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/20a3d8e1-24ba-4aad-bebf-21171bf4d778-e1309f5581a76ba3.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-718--40acc398a86a306d05d286fa947cffcc",
+      "credit": "Jan Steen. Children Teaching a Cat to Dance, Known as The Dancing Lesson. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-718--40acc398a86a306d05d286fa947cffcc",
+      "description": "As crianças cercam um animal que não escolheu se apresentar. Steen faz a graça nascer da diferença entre a brincadeira delas e a situação do gato; o cão acrescenta outra reação embaixo. A cena é animada, mas a animação não é seu único assunto. Ela também mostra como o prazer pode depender de não reconhecer a resistência de outro ser.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "f7a61eb2-5a9f-5b8f-a76b-554b24098967",
+      "title": "Retrato de uma senhora idosa, possivelmente Elisabeth Bas",
+      "catalogueTitle": "Portrait of an Old Lady, Possibly Elisabeth Bas",
+      "artist": "Attributed to Ferdinand Bol",
+      "artists": [
+        {
+          "name": "Ferdinand Bol",
+          "role": "attributed",
+          "slug": "ferdinand-bol-q374039"
+        }
+      ],
+      "date": "c. 1640–c. 1645",
+      "start": 1640,
+      "end": 1645,
+      "medium": "Óleo sobre tela",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/f7a61eb2-5a9f-5b8f-a76b-554b24098967-fa767cc4d2f3230d.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "credit": "Ferdinand Bol. Portrait of Elisabeth Jacobsdr. Bas. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ferdinand-bol/portrait-of-elisabeth-jacobsdr-bas-1645",
+      "description": "As mãos unidas formam um segundo centro abaixo do rosto, enquanto a gola branca separa ambos do vestido escuro. O Rijksmuseum apresenta a identificação da retratada como incerta e atribui a pintura a Ferdinand Bol. Essas ressalvas precisam permanecer na legenda. Elas não diminuem a precisão com que a imobilidade, a idade e a pose formal sentada estabelecem sua presença.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "2b57b6dd-9307-4efc-8624-20adbfedf0e2",
+      "title": "Autorretrato como o apóstolo Paulo",
+      "catalogueTitle": "Self Portrait as the Apostle Paul",
+      "artist": "Rembrandt van Rijn",
+      "artists": [
+        {
+          "name": "Rembrandt van Rijn",
+          "role": "primary",
+          "slug": "rembrandt"
+        }
+      ],
+      "date": "1661",
+      "start": 1661,
+      "end": 1661,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-4050",
+      "image": "https://artlines.org/assets/artworks/open-museums/rijks/2b57b6dd-9307-4efc-8624-20adbfedf0e2-4988ce30403f760b.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d",
+      "credit": "Rembrandt van Rijn. Self Portrait as the Apostle Paul. Rijksmuseum. Public Domain Mark 1.0. Compressed full-frame reproduction.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-4050--4faa97ed774e6e3f81b76cf3aed6226d",
+      "description": "O rosto de Rembrandt continua reconhecível, embora o livro e o tecido enrolado na cabeça o situem num papel religioso. A imagem pede dois reconhecimentos ao mesmo tempo: um pintor específico e um apóstolo imaginado. O ambiente escuro concentra essas identidades na mesma figura. Aqui, o autorretrato inclui o ato deliberado de se tornar outra pessoa.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "6487707a-10aa-56f7-b1dc-40bc5503d4d0",
+      "title": "A ponte sobre o Singel perto da Paleisstraat, Amsterdã",
+      "catalogueTitle": "De Singelbrug bij de Paleisstraat in Amsterdam",
+      "artist": "George Hendrik Breitner",
+      "artists": [
+        {
+          "name": "George Hendrik Breitner",
+          "role": "primary",
+          "slug": "george-hendrik-breitner-q289441"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-3580",
+      "image": "https://artlines.org/assets/artworks/imported/million-catalogue-20261010/6487707a-10aa-56f7-b1dc-40bc5503d4d0-44234a0204734f6e.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3580--596ea47fa3632feadb1469236bc9838f",
+      "credit": "George Hendrik Breitner. Native museum collection image; source designation: Public Domain Mark 1.0. Rijksmuseum. Full source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-3580--596ea47fa3632feadb1469236bc9838f",
+      "description": "A pedestre em primeiro plano chega perto demais para continuar sendo um pequeno ornamento numa vista urbana. Seu tamanho e o corte da figura interrompem a visão da ponte e dos edifícios. Breitner faz da rua um encontro com outras pessoas em movimento, não uma cena arquitetônica desobstruída. O ambiente nevado continua reconhecível, mas a passante ocupa o espaço imediato.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "4b6a09e0-e262-5745-9cf9-e8eea7c896e0",
+      "title": "Natureza-morta com flores num vaso de vidro",
+      "catalogueTitle": "Still Life with Flowers in a Glass Vase",
+      "artist": "Jan Davidsz. de Heem",
+      "artists": [
+        {
+          "name": "Jan Davidsz. de Heem",
+          "role": "primary",
+          "slug": "jan-davidsz-de-heem-q454656"
+        }
+      ],
+      "date": "1650 - 1683",
+      "start": 1650,
+      "end": 1683,
+      "medium": "",
+      "accession": "SK-C-214",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/4b6a09e0-e262-5745-9cf9-e8eea7c896e0-a4327be677f040f0.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-214--9f1ca72cf761e1764fe22a5516b46ecc",
+      "credit": "Jan Davidsz. de Heem. Still Life with Flowers in a Glass Vase. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-C-214--9f1ca72cf761e1764fe22a5516b46ecc",
+      "description": "As flores se acumulam no vaso sem perder as diferenças de cor, forma e direção. Hastes curvas e insetos complicam seu contorno, impedindo uma divisão limpa entre buquê e fundo vazio. De Heem combina o exame de perto com a abundância do conjunto. Nenhuma flor precisa dominar para que o arranjo permaneça unido.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "a2bb2050-ab6f-417c-baf8-4ee972a68808",
+      "title": "Paisagem de inverno",
+      "catalogueTitle": "Winter Landscape",
+      "artist": "Jacob van Ruisdael",
+      "artists": [
+        {
+          "name": "Jacob van Ruisdael",
+          "role": "primary",
+          "slug": "jacob-van-ruisdael-q213612"
+        }
+      ],
+      "date": "c. 1665",
+      "start": 1665,
+      "end": 1665,
+      "medium": "Óleo sobre tela",
+      "accession": "SK-A-349",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-rijks/86891d1f-6f54-4af8-a00f-5130c1e5cb3f-a717f7d33742b6e3.jpg",
+      "imageSource": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-349--c8efd9ed1004685d2aa5096d061d184c",
+      "credit": "Jacob van Ruisdael. Winter Landscape. Rijksmuseum. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-349--c8efd9ed1004685d2aa5096d061d184c",
+      "description": "A neve recebe a pouca luz que as nuvens pesadas deixam passar. Ruisdael dá importância à abertura estreita no céu justamente porque o restante da cena está tão apagado. As pequenas figuras não transformam o tempo em pano de fundo de uma história. Sua presença oferece uma medida humana em condições maiores do que suas atividades imediatas.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    },
+    {
+      "id": "d0af1c93-5359-51f9-9378-f2a1a0b97b76",
+      "title": "O armeiro",
+      "catalogueTitle": "The Armorer",
+      "artist": "Gabriël Metsu",
+      "artists": [
+        {
+          "name": "Gabriël Metsu",
+          "role": "primary",
+          "slug": "gabriel-metsu-q355213"
+        }
+      ],
+      "date": "c. 1650 – c. 1660",
+      "start": 1650,
+      "end": 1660,
+      "medium": "Óleo sobre tela",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/d0af1c93-5359-51f9-9378-f2a1a0b97b76-0b6a6c7c8ad5c216.jpg",
+      "imageSource": "https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "credit": "Gabriël Metsu. The Armorer. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gabriel-metsu/the-armorer",
+      "description": "Os dois trabalhadores ocupam posições diferentes em torno do equipamento que preenche parte da sala escura. Um pequeno brilho quente identifica o centro da tarefa entre ferramentas e metal. Metsu descreve o trabalho como relação entre corpos, materiais e um lugar utilizável. A desordem da oficina tem uma finalidade, mesmo quando é difícil separar os objetos.",
+      "importance": "",
+      "museum": "Rijksmuseum"
+    }
+  ],
+  "context": {
+    "start": 1620,
+    "end": 1896
+  },
+  "closingSections": [
+    {
+      "title": "Compare a pose pública com a privada",
+      "paragraphs": [
+        "Coloque um retrato de corpo inteiro ao lado de um trabalhador ou leitor e pergunte quanto espaço a figura ocupa, e por quê. Esta seleção trata de obras do acervo, cujas condições de exposição podem mudar. Confira as informações atuais sobre cada objeto e sobre a visita; a sequência propõe uma maneira de olhar, não garante um percurso pelas salas."
+      ]
+    }
+  ]
+}

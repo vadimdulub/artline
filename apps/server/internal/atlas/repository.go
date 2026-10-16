@@ -55,9 +55,8 @@ const eventScope = ` FROM event_records e WHERE e.status<>'archived'  AND e.star
 
 type provider struct{ keys, details string }
 
-// Lead illustrated galleries with paintings (including painted icons), frescoes
-// and other painted works. Retain unclassified/material objects before graphic
-// works; never guess a medium from a title or an image's apparent colour.
+// Within the same creation year, retain the existing painted/other/graphic
+// preference. Creation chronology always takes precedence over medium.
 const artworkGalleryPriority = `CASE
  WHEN a.work_type IN ('painting','fresco','watercolor','manuscript_illumination') THEN 0
  WHEN a.work_type IN ('drawing','print','calligraphy') THEN 2
@@ -262,16 +261,16 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 		}
 		firstYear, lastYear := aggregate.FirstYear, aggregate.LastYear
 		c, _ := decodeCursor(f.After[definition.Key], f, definition.Key)
-		pageWhere := fmt.Sprintf("(gallery_priority,start_year,id)>($%d,$%d,$%d)", next+3, next, next+1)
-		pageOrder := "gallery_priority,start_year,id"
+		pageWhere := fmt.Sprintf("(start_year,gallery_priority,id)>($%d,$%d,$%d)", next, next+3, next+1)
+		pageOrder := "start_year,gallery_priority,id"
 		pageLimit := f.Limit + 1
 		if f.NeighborOf != "" {
 			op := ">"
 			if f.Direction == "previous" {
 				op = "<"
-				pageOrder = "gallery_priority DESC,start_year DESC,id DESC"
+				pageOrder = "start_year DESC,gallery_priority DESC,id DESC"
 			}
-			pageWhere = fmt.Sprintf("$%d::int IS NOT NULL AND $%d::int IS NOT NULL AND (gallery_priority,start_year,id) %s (SELECT gallery_priority,start_year,id FROM matching WHERE id=$%d)", next, next+3, op, next+1)
+			pageWhere = fmt.Sprintf("$%d::int IS NOT NULL AND $%d::int IS NOT NULL AND (start_year,gallery_priority,id) %s (SELECT start_year,gallery_priority,id FROM matching WHERE id=$%d)", next, next+3, op, next+1)
 			c.ID = f.NeighborOf
 			pageLimit = 1
 			lane.Density = []Period{}
@@ -280,7 +279,7 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 		// Only the bounded page reaches titles, creator labels and image details.
 		pageSQL := fmt.Sprintf(`WITH %smatching AS NOT MATERIALIZED (%s),
  page AS MATERIALIZED(SELECT * FROM matching WHERE %s ORDER BY %s LIMIT $%d)
- SELECT coalesce(jsonb_agg(details ORDER BY gallery_priority,"startYear",id),'[]'::jsonb)
+ SELECT coalesce(jsonb_agg(details ORDER BY "startYear",gallery_priority,id),'[]'::jsonb)
  FROM (%s) details(id,"startYear","endYear",title,context,years,approximate,gallery_priority)`, prefix, p.keys, pageWhere, pageOrder, next+2, p.details)
 		if splitBrowse && f.NeighborOf == "" {
 			pagePrefix, pageKeys := prefix, p.keys
@@ -297,7 +296,7 @@ func (r *Repository) list(ctx context.Context, f Filter, revision string) (Respo
 			}
 			pageSQL = fmt.Sprintf(`WITH page AS MATERIALIZED (
  SELECT * FROM (%s UNION ALL %s) candidates ORDER BY %s LIMIT $%d)
- SELECT coalesce(jsonb_agg(details ORDER BY gallery_priority,"startYear",id),'[]'::jsonb)
+ SELECT coalesce(jsonb_agg(details ORDER BY "startYear",gallery_priority,id),'[]'::jsonb)
  FROM (%s) details(id,"startYear","endYear",title,context,years,approximate,gallery_priority)`, branch(clean), branch(pending), pageOrder, next+2, p.details)
 		}
 		var items []byte

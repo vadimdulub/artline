@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Artlines — Back navigation concepts</title>
+<link rel="stylesheet" href="review.css">
+<header class="review-header"><div><h1>Back navigation</h1><p>Three local concepts for Artlines</p></div><span class="local-label">Local mockups</span></header>
+<main class="review-layout">
+<aside aria-label="Mockup controls">
+  <h2>Choose a direction</h2>
+  <div class="concepts" role="group" aria-label="Design direction">
+    <button data-concept="context" aria-pressed="true"><strong>Contextual link <small>Recommended</small></strong><span>A quiet text link that names the page you will return to.</span></button>
+    <button data-concept="breadcrumb" aria-pressed="false"><strong>Compact button</strong><span>A small outlined Back button beside the artist breadcrumb.</span></button>
+    <button data-concept="header" aria-pressed="false"><strong>Header arrow</strong><span>Return navigation lives in the existing dark header.</span></button>
+  </div>
+  <label for="screen">Page</label><select id="screen"><option value="artwork">Artwork detail</option><option value="guide">Louvre guide</option><option value="home">Main timeline — no Back</option></select>
+  <label for="origin">Arrived from</label><select id="origin"><option value="guide">Louvre guide</option><option value="artist">Leonardo’s profile</option><option value="direct">Direct link — no history</option></select>
+  <div class="rationale" aria-live="polite"><h2 id="reason-title"></h2><p id="reason"></p><p id="tradeoff"></p></div>
+  <p class="instructions">Try the return control, then open the artwork again. Direct links use a named parent destination. The controls look small; their touch area remains 44px.</p>
+</aside>
+<section class="preview-area" aria-label="Interactive preview">
+  <div class="preview-toolbar"><div role="group" aria-label="Preview width"><button data-size="desktop" aria-pressed="true">Desktop</button><button data-size="mobile" aria-pressed="false">Mobile</button></div><a id="open-preview" target="_blank" rel="noopener">Open full size ↗</a></div>
+  <div class="preview-stage"><iframe id="preview" title="Artlines navigation concept" src="preview.html?concept=context&amp;screen=artwork&amp;origin=guide"></iframe></div>
+  <p class="preview-note" id="preview-note">Click “Back to Louvre guide” in the preview to try the return journey.</p>
+</section>
+</main>
+<script src="review.js"></script>
+</html>

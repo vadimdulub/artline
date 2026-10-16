@@ -82,3 +82,9 @@ variable "bing_site_verification" {
   type        = string
   default     = ""
 }
+
+variable "cloudflare_web_analytics_token" {
+  description = "Public site token from Cloudflare Web Analytics JS snippet; empty disables analytics"
+  type        = string
+  default     = ""
+}

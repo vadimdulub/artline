@@ -1,0 +1,714 @@
+{
+  "verifiedAt": "2026-10-12T07:30:49.225467+00:00",
+  "site": "https://artlines.org/artists/jean-honore-fragonard-q127171",
+  "status": "deployed_and_verified",
+  "change": "Artistic connections on the existing artist page: first three people per direction, independent Show more (three at a time) and Show less, grouped evidence in an on-page drawer.",
+  "services": {
+    "api": {
+      "baselineBuildId": "3e50e1ed-7084-4d34-901d-c4ff81f01b16",
+      "baselineRevision": "artline-api-guide-search-1011-v1",
+      "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:27521192bcf7e0737770f871f986a76070eb638cdacfaa3e9666ce266cb1b85d",
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:connections-20261012-v1",
+      "files": {
+        "internal/catalog/influences.go": "3f2289c6f5d64293efb405cb2d551186feb3e604ad34d2ba5fb7a8337cd62d11",
+        "internal/catalog/repository.go": "ce669ded38ba30284759b8b580d070c48d695cb964fc01a61fb7a0548b2e4e3e",
+        "internal/catalog/types.go": "57ef640fab128282760f1b5e250f75b7c5bbcb2466d800113f0284ae1c8a0658",
+        "internal/catalog/artist_connections.go": "cc0992da01edc1471b7967b6a6f679b88042d1aa9c4b2d3c0e469712a4adaa7d",
+        "internal/httpapi/artist_connections_test.go": "307cca30db7d79f6747b28d0eec432ee0caab4d30aa6ea478eba259c7b3a3324",
+        "internal/httpapi/router.go": "fcba707d0ad611175a0c5d46f64ee1f2b0c38313b423deddd3be6106c10d3af8",
+        "internal/httpapi/artist_connections.go": "5e6c0a071827e455df8467b27f5d8e4760c99c7177eb465064c790d949d3ede4",
+        "internal/httpapi/catalogue_cache.go": "9165aef894e88c34818d451bedae8944feadea79702783978a7fc990692221a3",
+        "internal/catalog/artist_connections_test.go": "24cda10b8770ff7bfca81b5c989941e28d3930cebc6a213fe8c509ce7bcce663"
+      },
+      "preimages": {
+        "internal/catalog/influences.go": "aff85f9d1ab40b45d4b52bb6fd50c41510c4f9f0e8172e2e5088419a39cc81dd",
+        "internal/catalog/repository.go": "a660487f914cec4eebf947823f4272470c5989e4d8d7370fdd3f0b8680a505c7",
+        "internal/catalog/types.go": "9e1be4ee35017e6b76b7a5a59dbbe4da21151cda1f28556a77b3267c54817057",
+        "internal/catalog/artist_connections.go": null,
+        "internal/httpapi/artist_connections_test.go": null,
+        "internal/httpapi/router.go": "57476cc3eb8b1fdfd8ae8f0231cbf9187030518727138bdb4aef7f1b93d6e943",
+        "internal/httpapi/artist_connections.go": null,
+        "internal/httpapi/catalogue_cache.go": "c1450599ec7965f25c7899b311439b3dc8c35746b9749478d00e15fec84fe796",
+        "internal/catalog/artist_connections_test.go": null
+      },
+      "overlaySHA256": "daeb6b5178845868edeed221570ed0984f49080ba35609ee581467a0273c949d",
+      "overlayURI": "gs://artline-508319-build-source/artistic-connections-20261012/api-daeb6b5178845868.tar.xz",
+      "databaseWrites": false,
+      "overlayGeneration": "1791789343273826",
+      "buildId": "ebe6c2f1-1888-4d68-96fe-72c518c21c38",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:933f38d4e677b97cfe59b881a5a816122aabc7ca60facd8976c1abc13ade25a4",
+      "revision": "artline-api-connections-1012-v1",
+      "candidateURL": "https://connections-1012-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-api-guide-search-1011-v1",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100,
+      "localImagePinUpdated": true
+    },
+    "web": {
+      "baselineBuildId": "9f114f12-35c0-4d3d-a2e8-6e197778f0a3",
+      "baselineRevision": "artline-web-artwork-palettes-1012-v1",
+      "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:d6e01b8067615bc240d85ae5efa3110464ee842a667dbf7a3481f3ae3c74df03",
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:connections-20261012-v1",
+      "files": {
+        "components/ArtisticConnections.module.css": "ab21fbf91504b2f0f25724830076d915d8408cc1e9bbea5ae7b3fc718f734f4c",
+        "components/ArtistRecord.tsx": "757006aa355ca917594091d55bfc8dcdae6b1ee7fe4c4e32a96e735acc345638",
+        "components/ArtisticConnections.tsx": "25ea26e7c36a18caf8c3fab225519403c7ce5045c91bf8a377e7c47b4cccea1d",
+        "components/ArtistRecord.test.tsx": "25d7a6c469a9015a1ded669bbb9265ebe5f80b1e7f5c69480db6e65218254aed",
+        "components/ArtisticConnections.test.tsx": "e015d2f8bdab4baa88b6bc62753435e643de330c9eb45f55d7f2474ef93f9a1a",
+        "lib/types.ts": "46cff10f234f64c98298fd5dab79316da9e767f69c35cc22628e79a847fa49ab"
+      },
+      "preimages": {
+        "components/ArtisticConnections.module.css": null,
+        "components/ArtistRecord.tsx": "ba18c921efb48a94ee6b7f9e93df6cdfa6852b8707b8c1d85ef15b5173f1c279",
+        "components/ArtisticConnections.tsx": null,
+        "components/ArtistRecord.test.tsx": null,
+        "components/ArtisticConnections.test.tsx": null,
+        "lib/types.ts": "648927545900db4c1713be48915068016782afaf2502279dd67062961676eb44"
+      },
+      "overlaySHA256": "d86eade842e3dabb7fe260fd0ddd4336cebdf7cbf9a69ac86b31ea0c66f8b7d7",
+      "overlayURI": "gs://artline-508319-build-source/artistic-connections-20261012/web-d86eade842e3dabb.tar.xz",
+      "databaseWrites": false,
+      "overlayGeneration": "1791789714203678",
+      "buildId": "3302d031-8b5d-42f3-87b1-db05113bcdb7",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:80380c923b81c458047c9d02e4a184df04f98397de60ebf39d4c4de96b098a4c",
+      "revision": "artline-web-connections-1012-v1",
+      "candidateURL": "https://connections-1012-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-web-artwork-palettes-1012-v1",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100,
+      "localImagePinUpdated": true
+    }
+  },
+  "validation": {
+    "frontendFocusedTests": 18,
+    "typeScript": "passed",
+    "targetedESLint": "passed",
+    "isolatedAPICatalogueAndFocusedHTTPTests": "passed",
+    "readOnlySQLFixtures": "passed; no fixtures written",
+    "productionBuilds": "passed",
+    "checks": {
+      "api": {
+        "candidate": {
+          "origin": "https://connections-1012-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+          "artists": {
+            "jean-honore-fragonard-q127171": {
+              "incoming": {
+                "total": 2,
+                "pages": 1,
+                "claims": 2
+              },
+              "outgoing": {
+                "total": 5,
+                "pages": 2,
+                "claims": 6
+              }
+            },
+            "eugene-delacroix-q33477": {
+              "incoming": {
+                "total": 11,
+                "pages": 4,
+                "claims": 11
+              },
+              "outgoing": {
+                "total": 17,
+                "pages": 6,
+                "claims": 17
+              }
+            },
+            "paul-cezanne-q35548": {
+              "incoming": {
+                "total": 9,
+                "pages": 3,
+                "claims": 9
+              },
+              "outgoing": {
+                "total": 70,
+                "pages": 24,
+                "claims": 70
+              }
+            }
+          },
+          "requests": [
+            {
+              "path": "/health",
+              "status": 200,
+              "milliseconds": 293
+            },
+            {
+              "path": "/ready",
+              "status": 200,
+              "milliseconds": 229
+            },
+            {
+              "path": "/api/v1/auth/session",
+              "status": 200,
+              "milliseconds": 175
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171",
+              "status": 200,
+              "milliseconds": 362
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=outgoing&cursor=eyJhIjoiMThmMWM2YmEtNDE4NC00NTQ2LWI1YjgtZGRkY2VjMTFkZWQyIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ikp1bGVzIENow6lyZXQiLCJpIjoiMTQ2ZTUwMGMtNDQ4Yy00NzZmLWIzMTgtOGUyNzI4ZWQ5MzAxIn0",
+              "status": 200,
+              "milliseconds": 204
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477",
+              "status": 200,
+              "milliseconds": 475
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=incoming&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IkVsIEdyZWNvIiwiaSI6IjFlMGFmNzc5LTNkZTEtNDgxMS1hZGFiLTZlN2RjYWFhYmYyOSJ9",
+              "status": 200,
+              "milliseconds": 274
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=incoming&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IlBldGVyIFBhdWwgUnViZW5zIiwiaSI6ImUyM2MyNmYyLWQwMjItNGIwYy04MzE5LTEzOGVlN2ZmYjE2OSJ9",
+              "status": 200,
+              "milliseconds": 196
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=incoming&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IlJpY2hhcmQgUGFya2VzIEJvbmluZ3RvbiIsImkiOiIzYTdjNDA1MC1jNTA5LTQ1MmUtYTlkYy02MzM1YjM1ZGVmYWYifQ",
+              "status": 200,
+              "milliseconds": 196
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkFudG9uIHZvbiBXZXJuZXIiLCJpIjoiNjE0ODUxM2ItYWIxYS00ZmQ3LWFlYzEtZTFlZjBjMWI0YjJlIn0",
+              "status": 200,
+              "milliseconds": 227
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkVkZ2FyIERlZ2FzIiwiaSI6ImJiODQ5NTQ0LWY3YWMtNDE1OS1hMzRiLWI4NjFlMzlhN2YzOCJ9",
+              "status": 200,
+              "milliseconds": 192
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkplYW4tQmFwdGlzdGUtQ2FtaWxsZSBDb3JvdCIsImkiOiJmNDhkNDQ3My05MTU2LTQ3OGUtYjIwMi0zMTExNDA5ZjIzNWMifQ",
+              "status": 200,
+              "milliseconds": 236
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlBhdWwgQ8OpemFubmUiLCJpIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIn0",
+              "status": 200,
+              "milliseconds": 192
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlN0YW50b24gTWFjZG9uYWxkLVdyaWdodCIsImkiOiJjNGM4NGY5Ny1jYTc2LTQ1ZjAtODkxMi0yODI0ZWRmNjcyMTcifQ",
+              "status": 200,
+              "milliseconds": 188
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548",
+              "status": 200,
+              "milliseconds": 408
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=incoming&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IkNoYXJsZXMtRnJhbsOnb2lzIERhdWJpZ255IiwiaSI6IjRmYWY4OGEwLTc1N2YtNDgzMC04N2YwLTBmYjc3NDNmYTg3MCJ9",
+              "status": 200,
+              "milliseconds": 269
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=incoming&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IkplYW4tQmFwdGlzdGUtU2ltw6lvbiBDaGFyZGluIiwiaSI6IjQ5MGZiYjY5LTJlNGUtNDY5OS1hMDIzLTg3ZTU4OTE3M2NhNCJ9",
+              "status": 200,
+              "milliseconds": 193
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MCwibiI6IktvbnN0YW50aW5vcyBQYXJ0aGVuaXMiLCJpIjoiZDBiMjIwZGQtNjgxNy00YTJiLTkzYTctMDExOTNmMzhkZWYzIn0",
+              "status": 200,
+              "milliseconds": 199
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkFtZWRlbyBNb2RpZ2xpYW5pIiwiaSI6ImIwY2EyZDI4LWI5YzEtNDQyZC1iOWE0LTdmMDNkMzMyZjU0NyJ9",
+              "status": 200,
+              "milliseconds": 235
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkFuZHJldyBEYXNidXJnIiwiaSI6ImQzOWY0NzNkLWY4MmYtNDNlOC1hNmI5LTA0NTE3NzU4MGJlNyJ9",
+              "status": 200,
+              "milliseconds": 197
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkJlYXVmb3JkIERlbGFuZXkiLCJpIjoiNTVhNGViZGMtODkyMy00ZGRhLTkyMmQtYjFlOGVlMjc3ZWZmIn0",
+              "status": 200,
+              "milliseconds": 213
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkNoYXJsZXMgUm9zZW4iLCJpIjoiMWJiMjBiZDctMGNmMy00OGNhLThmOTMtMTdkMmYxMDZmNjkyIn0",
+              "status": 200,
+              "milliseconds": 201
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkVkdWFyZG8gVmlhbmEiLCJpIjoiZjQ3YjM1ZWMtYTVlZC01YTMwLWFhM2EtMjVhMzA2MDkwNWFlIn0",
+              "status": 200,
+              "milliseconds": 189
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkVtaWxlIE90aG9uIEZyaWVzeiIsImkiOiIyNWU2YmVhYi1iMTE2LTQyY2QtOTdhZS04NWY5ZjlmMzE4MGEifQ",
+              "status": 200,
+              "milliseconds": 246
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkZlcm5hbmQgTMOpZ2VyIiwiaSI6ImFmYzg2NjdlLTNmYTYtNDk0ZS05OWU5LTIyN2Q4YjA3ZGU4MSJ9",
+              "status": 200,
+              "milliseconds": 202
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ikdlb3JnZXMgQnJhcXVlIiwiaSI6ImQ0ODI1ZTkxLTA0ZGItNGYyNi04YWY1LTMxNTE2OGI4NjBmMCJ9",
+              "status": 200,
+              "milliseconds": 214
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkhhcnJ5IFBoZWxhbiBHaWJiIiwiaSI6ImNjYmRlMzU2LWJkY2YtNWI0ZS05ZmYwLTYxODc0NDI2NGVmYiJ9",
+              "status": 200,
+              "milliseconds": 187
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IklvbiBUaGVvZG9yZXNjdS1TaW9uIiwiaSI6Ijk2NjNiZDg0LTEyNmYtNWQ5Zi05NDE3LWI2ZjBlMGJlMjFjZSJ9",
+              "status": 200,
+              "milliseconds": 200
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkpvaG4gR29sZGluZyIsImkiOiI2MmM3ZThmNy00ZDMzLTVkNDctOTk3Ni04ZWRkZWQ2Njg2YjYifQ",
+              "status": 200,
+              "milliseconds": 257
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkxvdWlzIEJ1bmNlIiwiaSI6IjY0Y2I2ZTA2LTQ5Y2QtNGUyZC1iYzJiLTlhN2I5ZjE2YTE3NiJ9",
+              "status": 200,
+              "milliseconds": 191
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ik1hcmpvcmllIEFja2VyIFBoaWxsaXBzIiwiaSI6IjY3ZTIyOTY1LTNlZjgtNWFmMC05YTI4LTE3ZGFiNTFlNmM3YSJ9",
+              "status": 200,
+              "milliseconds": 209
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ik1vcnRvbiBMaXZpbmdzdG9uIFNjaGFtYmVyZyIsImkiOiI1MzIyOTAzOC1lODU1LTQ3YzQtOWMzYS03MjkyMjMyMjgxOWIifQ",
+              "status": 200,
+              "milliseconds": 193
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlBhdWwgR2F1Z3VpbiIsImkiOiIxOTRiMDYwZS02YzU0LTQ3ZTktOTU4ZC01MTUxNzY3OGQzNGYifQ",
+              "status": 200,
+              "milliseconds": 197
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlB5b3RyIEtvbmNoYWxvdnNreSIsImkiOiI0NjhiYzJmNi0wZTE1LTQ3MGItYWFkNC00ZmJjYjY3MmY1MjkifQ",
+              "status": 200,
+              "milliseconds": 242
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlJvbWFuIFNlbHNreSIsImkiOiI1ODg1NmY0MS0wODQ4LTUzNTEtYmFhMC1jMDA5MGVkNGY1NGYifQ",
+              "status": 200,
+              "milliseconds": 193
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlN0YW50b24gTWFjZG9uYWxkLVdyaWdodCIsImkiOiJjNGM4NGY5Ny1jYTc2LTQ1ZjAtODkxMi0yODI0ZWRmNjcyMTcifQ",
+              "status": 200,
+              "milliseconds": 225
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlRob21hcyBIYXJ0IEJlbnRvbiIsImkiOiJmZDg4Mzg5MC1mZjVhLTQ4ZGYtYjc2Ny02YzQzMmFjOGNiNGQifQ",
+              "status": 200,
+              "milliseconds": 188
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlZpbGhlbG0gTHVuZHN0csO4bSIsImkiOiJlNDAzYWU2YS0zM2YxLTRlMzktYjBhYi1kMzFhYWNlMzlkZmYifQ",
+              "status": 200,
+              "milliseconds": 203
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IldpbGxpIEJhdW1laXN0ZXIiLCJpIjoiYTRmNWQ4MGQtYjc2My00NDU0LWJhOTctMWE0ZDNiOTJkYTM5In0",
+              "status": 200,
+              "milliseconds": 227
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Illhc3VpIFNvdGFybyIsImkiOiIyNTFiNGI3Yy1hMjRlLTUxM2ItYTY5Zi01NDJiYmM4MzI1NGYifQ",
+              "status": 200,
+              "milliseconds": 195
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections",
+              "status": 400,
+              "milliseconds": 236
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=both",
+              "status": 400,
+              "milliseconds": 194
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=incoming&cursor=broken",
+              "status": 400,
+              "milliseconds": 189
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=incoming&direction=outgoing",
+              "status": 400,
+              "milliseconds": 236
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=incoming&cursor=eyJhIjoiMThmMWM2YmEtNDE4NC00NTQ2LWI1YjgtZGRkY2VjMTFkZWQyIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ikp1bGVzIENow6lyZXQiLCJpIjoiMTQ2ZTUwMGMtNDQ4Yy00NzZmLWIzMTgtOGUyNzI4ZWQ5MzAxIn0",
+              "status": 400,
+              "milliseconds": 203
+            },
+            {
+              "path": "/api/v1/artists/no-such-artist-connection-check/connections?direction=incoming",
+              "status": 404,
+              "milliseconds": 225
+            }
+          ],
+          "legacyClaimsPreserved": true,
+          "duplicatePeopleGrouped": true,
+          "cursorValidation": true,
+          "catalogueWrites": false
+        },
+        "production": {
+          "origin": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+          "artists": {
+            "jean-honore-fragonard-q127171": {
+              "incoming": {
+                "total": 2,
+                "pages": 1,
+                "claims": 2
+              },
+              "outgoing": {
+                "total": 5,
+                "pages": 2,
+                "claims": 6
+              }
+            },
+            "eugene-delacroix-q33477": {
+              "incoming": {
+                "total": 11,
+                "pages": 4,
+                "claims": 11
+              },
+              "outgoing": {
+                "total": 17,
+                "pages": 6,
+                "claims": 17
+              }
+            },
+            "paul-cezanne-q35548": {
+              "incoming": {
+                "total": 9,
+                "pages": 3,
+                "claims": 9
+              },
+              "outgoing": {
+                "total": 70,
+                "pages": 24,
+                "claims": 70
+              }
+            }
+          },
+          "requests": [
+            {
+              "path": "/health",
+              "status": 200,
+              "milliseconds": 187
+            },
+            {
+              "path": "/ready",
+              "status": 200,
+              "milliseconds": 180
+            },
+            {
+              "path": "/api/v1/auth/session",
+              "status": 200,
+              "milliseconds": 208
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171",
+              "status": 200,
+              "milliseconds": 217
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=outgoing&cursor=eyJhIjoiMThmMWM2YmEtNDE4NC00NTQ2LWI1YjgtZGRkY2VjMTFkZWQyIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ikp1bGVzIENow6lyZXQiLCJpIjoiMTQ2ZTUwMGMtNDQ4Yy00NzZmLWIzMTgtOGUyNzI4ZWQ5MzAxIn0",
+              "status": 200,
+              "milliseconds": 219
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477",
+              "status": 200,
+              "milliseconds": 242
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=incoming&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IkVsIEdyZWNvIiwiaSI6IjFlMGFmNzc5LTNkZTEtNDgxMS1hZGFiLTZlN2RjYWFhYmYyOSJ9",
+              "status": 200,
+              "milliseconds": 188
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=incoming&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IlBldGVyIFBhdWwgUnViZW5zIiwiaSI6ImUyM2MyNmYyLWQwMjItNGIwYy04MzE5LTEzOGVlN2ZmYjE2OSJ9",
+              "status": 200,
+              "milliseconds": 267
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=incoming&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IlJpY2hhcmQgUGFya2VzIEJvbmluZ3RvbiIsImkiOiIzYTdjNDA1MC1jNTA5LTQ1MmUtYTlkYy02MzM1YjM1ZGVmYWYifQ",
+              "status": 200,
+              "milliseconds": 183
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkFudG9uIHZvbiBXZXJuZXIiLCJpIjoiNjE0ODUxM2ItYWIxYS00ZmQ3LWFlYzEtZTFlZjBjMWI0YjJlIn0",
+              "status": 200,
+              "milliseconds": 256
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkVkZ2FyIERlZ2FzIiwiaSI6ImJiODQ5NTQ0LWY3YWMtNDE1OS1hMzRiLWI4NjFlMzlhN2YzOCJ9",
+              "status": 200,
+              "milliseconds": 185
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkplYW4tQmFwdGlzdGUtQ2FtaWxsZSBDb3JvdCIsImkiOiJmNDhkNDQ3My05MTU2LTQ3OGUtYjIwMi0zMTExNDA5ZjIzNWMifQ",
+              "status": 200,
+              "milliseconds": 251
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlBhdWwgQ8OpemFubmUiLCJpIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIn0",
+              "status": 200,
+              "milliseconds": 178
+            },
+            {
+              "path": "/api/v1/artists/eugene-delacroix-q33477/connections?direction=outgoing&cursor=eyJhIjoiMDI5NTI5NjYtNjJlZi00MjQ0LTk1NjUtNTdhZTFmYmQ1NGJjIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlN0YW50b24gTWFjZG9uYWxkLVdyaWdodCIsImkiOiJjNGM4NGY5Ny1jYTc2LTQ1ZjAtODkxMi0yODI0ZWRmNjcyMTcifQ",
+              "status": 200,
+              "milliseconds": 175
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548",
+              "status": 200,
+              "milliseconds": 312
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=incoming&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IkNoYXJsZXMtRnJhbsOnb2lzIERhdWJpZ255IiwiaSI6IjRmYWY4OGEwLTc1N2YtNDgzMC04N2YwLTBmYjc3NDNmYTg3MCJ9",
+              "status": 200,
+              "milliseconds": 184
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=incoming&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6ImluY29taW5nIiwiciI6MywibiI6IkplYW4tQmFwdGlzdGUtU2ltw6lvbiBDaGFyZGluIiwiaSI6IjQ5MGZiYjY5LTJlNGUtNDY5OS1hMDIzLTg3ZTU4OTE3M2NhNCJ9",
+              "status": 200,
+              "milliseconds": 384
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MCwibiI6IktvbnN0YW50aW5vcyBQYXJ0aGVuaXMiLCJpIjoiZDBiMjIwZGQtNjgxNy00YTJiLTkzYTctMDExOTNmMzhkZWYzIn0",
+              "status": 200,
+              "milliseconds": 184
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkFtZWRlbyBNb2RpZ2xpYW5pIiwiaSI6ImIwY2EyZDI4LWI5YzEtNDQyZC1iOWE0LTdmMDNkMzMyZjU0NyJ9",
+              "status": 200,
+              "milliseconds": 240
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkFuZHJldyBEYXNidXJnIiwiaSI6ImQzOWY0NzNkLWY4MmYtNDNlOC1hNmI5LTA0NTE3NzU4MGJlNyJ9",
+              "status": 200,
+              "milliseconds": 206
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkJlYXVmb3JkIERlbGFuZXkiLCJpIjoiNTVhNGViZGMtODkyMy00ZGRhLTkyMmQtYjFlOGVlMjc3ZWZmIn0",
+              "status": 200,
+              "milliseconds": 230
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkNoYXJsZXMgUm9zZW4iLCJpIjoiMWJiMjBiZDctMGNmMy00OGNhLThmOTMtMTdkMmYxMDZmNjkyIn0",
+              "status": 200,
+              "milliseconds": 194
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkVkdWFyZG8gVmlhbmEiLCJpIjoiZjQ3YjM1ZWMtYTVlZC01YTMwLWFhM2EtMjVhMzA2MDkwNWFlIn0",
+              "status": 200,
+              "milliseconds": 185
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkVtaWxlIE90aG9uIEZyaWVzeiIsImkiOiIyNWU2YmVhYi1iMTE2LTQyY2QtOTdhZS04NWY5ZjlmMzE4MGEifQ",
+              "status": 200,
+              "milliseconds": 228
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkZlcm5hbmQgTMOpZ2VyIiwiaSI6ImFmYzg2NjdlLTNmYTYtNDk0ZS05OWU5LTIyN2Q4YjA3ZGU4MSJ9",
+              "status": 200,
+              "milliseconds": 177
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ikdlb3JnZXMgQnJhcXVlIiwiaSI6ImQ0ODI1ZTkxLTA0ZGItNGYyNi04YWY1LTMxNTE2OGI4NjBmMCJ9",
+              "status": 200,
+              "milliseconds": 268
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkhhcnJ5IFBoZWxhbiBHaWJiIiwiaSI6ImNjYmRlMzU2LWJkY2YtNWI0ZS05ZmYwLTYxODc0NDI2NGVmYiJ9",
+              "status": 200,
+              "milliseconds": 178
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IklvbiBUaGVvZG9yZXNjdS1TaW9uIiwiaSI6Ijk2NjNiZDg0LTEyNmYtNWQ5Zi05NDE3LWI2ZjBlMGJlMjFjZSJ9",
+              "status": 200,
+              "milliseconds": 175
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkpvaG4gR29sZGluZyIsImkiOiI2MmM3ZThmNy00ZDMzLTVkNDctOTk3Ni04ZWRkZWQ2Njg2YjYifQ",
+              "status": 200,
+              "milliseconds": 261
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IkxvdWlzIEJ1bmNlIiwiaSI6IjY0Y2I2ZTA2LTQ5Y2QtNGUyZC1iYzJiLTlhN2I5ZjE2YTE3NiJ9",
+              "status": 200,
+              "milliseconds": 253
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ik1hcmpvcmllIEFja2VyIFBoaWxsaXBzIiwiaSI6IjY3ZTIyOTY1LTNlZjgtNWFmMC05YTI4LTE3ZGFiNTFlNmM3YSJ9",
+              "status": 200,
+              "milliseconds": 271
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ik1vcnRvbiBMaXZpbmdzdG9uIFNjaGFtYmVyZyIsImkiOiI1MzIyOTAzOC1lODU1LTQ3YzQtOWMzYS03MjkyMjMyMjgxOWIifQ",
+              "status": 200,
+              "milliseconds": 184
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlBhdWwgR2F1Z3VpbiIsImkiOiIxOTRiMDYwZS02YzU0LTQ3ZTktOTU4ZC01MTUxNzY3OGQzNGYifQ",
+              "status": 200,
+              "milliseconds": 248
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlB5b3RyIEtvbmNoYWxvdnNreSIsImkiOiI0NjhiYzJmNi0wZTE1LTQ3MGItYWFkNC00ZmJjYjY3MmY1MjkifQ",
+              "status": 200,
+              "milliseconds": 179
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlJvbWFuIFNlbHNreSIsImkiOiI1ODg1NmY0MS0wODQ4LTUzNTEtYmFhMC1jMDA5MGVkNGY1NGYifQ",
+              "status": 200,
+              "milliseconds": 200
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlN0YW50b24gTWFjZG9uYWxkLVdyaWdodCIsImkiOiJjNGM4NGY5Ny1jYTc2LTQ1ZjAtODkxMi0yODI0ZWRmNjcyMTcifQ",
+              "status": 200,
+              "milliseconds": 232
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlRob21hcyBIYXJ0IEJlbnRvbiIsImkiOiJmZDg4Mzg5MC1mZjVhLTQ4ZGYtYjc2Ny02YzQzMmFjOGNiNGQifQ",
+              "status": 200,
+              "milliseconds": 186
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IlZpbGhlbG0gTHVuZHN0csO4bSIsImkiOiJlNDAzYWU2YS0zM2YxLTRlMzktYjBhYi1kMzFhYWNlMzlkZmYifQ",
+              "status": 200,
+              "milliseconds": 249
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6IldpbGxpIEJhdW1laXN0ZXIiLCJpIjoiYTRmNWQ4MGQtYjc2My00NDU0LWJhOTctMWE0ZDNiOTJkYTM5In0",
+              "status": 200,
+              "milliseconds": 187
+            },
+            {
+              "path": "/api/v1/artists/paul-cezanne-q35548/connections?direction=outgoing&cursor=eyJhIjoiYTA2NGVmMzEtMDIwNy00NWY5LWEzNjUtOTcyNGI2ZWU2OWFiIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Illhc3VpIFNvdGFybyIsImkiOiIyNTFiNGI3Yy1hMjRlLTUxM2ItYTY5Zi01NDJiYmM4MzI1NGYifQ",
+              "status": 200,
+              "milliseconds": 177
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections",
+              "status": 400,
+              "milliseconds": 252
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=both",
+              "status": 400,
+              "milliseconds": 192
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=incoming&cursor=broken",
+              "status": 400,
+              "milliseconds": 242
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=incoming&direction=outgoing",
+              "status": 400,
+              "milliseconds": 183
+            },
+            {
+              "path": "/api/v1/artists/jean-honore-fragonard-q127171/connections?direction=incoming&cursor=eyJhIjoiMThmMWM2YmEtNDE4NC00NTQ2LWI1YjgtZGRkY2VjMTFkZWQyIiwiZCI6Im91dGdvaW5nIiwiciI6MywibiI6Ikp1bGVzIENow6lyZXQiLCJpIjoiMTQ2ZTUwMGMtNDQ4Yy00NzZmLWIzMTgtOGUyNzI4ZWQ5MzAxIn0",
+              "status": 400,
+              "milliseconds": 176
+            },
+            {
+              "path": "/api/v1/artists/no-such-artist-connection-check/connections?direction=incoming",
+              "status": 404,
+              "milliseconds": 257
+            }
+          ],
+          "legacyClaimsPreserved": true,
+          "duplicatePeopleGrouped": true,
+          "cursorValidation": true,
+          "catalogueWrites": false
+        }
+      },
+      "web": {
+        "candidate": {
+          "origin": "https://connections-1012-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+          "initialThreePerSide": true,
+          "independentPaging": true,
+          "collapse": true,
+          "groupedEvidence": true,
+          "escapeAndFocusReturn": true,
+          "desktopAccessibilityViolations": 0,
+          "mobile": [
+            {
+              "width": 390,
+              "overflow": false,
+              "accessibilityViolations": 0
+            },
+            {
+              "width": 320,
+              "overflow": false,
+              "accessibilityViolations": 0
+            }
+          ],
+          "pageErrors": [],
+          "actualCatalogueResponses": true,
+          "catalogueWrites": false
+        },
+        "production": {
+          "origin": "https://artlines.org",
+          "initialThreePerSide": true,
+          "independentPaging": true,
+          "collapse": true,
+          "groupedEvidence": true,
+          "escapeAndFocusReturn": true,
+          "desktopAccessibilityViolations": 0,
+          "mobile": [
+            {
+              "width": 390,
+              "overflow": false,
+              "accessibilityViolations": 0
+            },
+            {
+              "width": 320,
+              "overflow": false,
+              "accessibilityViolations": 0
+            }
+          ],
+          "pageErrors": [],
+          "actualCatalogueResponses": true,
+          "catalogueWrites": false
+        }
+      }
+    }
+  },
+  "releaseErrorLogEntries": {
+    "api": 0,
+    "web": 0
+  },
+  "catalogueWrites": false,
+  "realLocalDatabaseWrites": false,
+  "schemaMigrations": false,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "newPageRoutes": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/artistic-connections-20261012",
+  "limitations": [
+    "Functional and responsive checks, not a capacity-scale load test.",
+    "No Google sign-in or account writes were exercised."
+  ],
+  "rollback": "Route each service back to its recorded rollbackRevision only if no later release has superseded it; otherwise revert this scoped change onto the latest source. Restore the matching local image pins. No data rollback is needed."
+}

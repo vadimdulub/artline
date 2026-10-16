@@ -1,0 +1,180 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "Compact the artwork palette: fixed eight colors, no Swatches count selector, smaller 64 by 20 pixel color chips and shorter help text. Preserve HEX copying, proportions, retry, artwork navigation and image zoom.",
+  "deployment": {
+    "buildId": "369e023e-911f-4c53-b0e1-02e94806d7bc",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:compact-palettes-20261012-v2",
+    "baselineRevision": "artline-web-connections-1012-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:80380c923b81c458047c9d02e4a184df04f98397de60ebf39d4c4de96b098a4c",
+    "files": {
+      "components/ArtworkPalette.tsx": "b643b1cd401376560d1b56bdaea82536cd24c2358ed11aa68622c3178996553f",
+      "components/ArtworkPalette.module.css": "48da66f8dc319f4af96f8ffc1d31e64ebf7e2100d8d5fa0e72b00a6bc20d698c"
+    },
+    "preimages": {
+      "components/ArtworkPalette.tsx": "3db667693e0f5f30e8bf19c732b548157e12b7249dfa352af3574aecb9f26e38",
+      "components/ArtworkPalette.module.css": "ae4079ee57e3d903b88e612e571c8b1aafba3a910850ea37c8054bbc47c60943"
+    },
+    "overlaySHA256": "f6745183e9dcb464e28089427f6a3eab58553ac358563f627ef3b694be51b04d",
+    "overlayURI": "gs://artline-508319-build-source/compact-palettes-20261012/palette-f6745183e9dcb464.tar.xz",
+    "overlayGeneration": "1791790623027990",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:e027abc41daa6e9cc9755be73fb9f0d4d65f21530d29325d9ebd9b9472702c9c",
+    "revision": "artline-web-compact-palettes-1012-v2",
+    "candidateURL": "https://compact-palettes-1012-v2---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-connections-1012-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "localValidation": {
+    "unitTests": 10,
+    "typecheck": "passed",
+    "eslint": "passed",
+    "browserWidths": [
+      1440,
+      768,
+      390,
+      320,
+      844
+    ],
+    "databaseWrites": false,
+    "verifiedAt": "2026-10-12T07:27:03.840263+00:00"
+  },
+  "candidate": {
+    "stage": "candidate",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 514.8125
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 538.8125
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 346.8125
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 174.8125
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 198.8125
+      }
+    ],
+    "retry": true,
+    "clipboardFallback": true,
+    "aboutAndGuideSearchPreserved": true,
+    "artisticConnectionsPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "production": {
+    "stage": "live",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 514.8125
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 538.8125
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 346.8125
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 174.8125
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "eightColors": true,
+        "compactChips": true,
+        "noSelector": true,
+        "copy": true,
+        "zoom": true,
+        "noOverflow": true,
+        "imageHeight": 198.8125
+      }
+    ],
+    "retry": true,
+    "clipboardFallback": true,
+    "aboutAndGuideSearchPreserved": true,
+    "artisticConnectionsPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "errorLogs": 0,
+  "catalogueWrites": false,
+  "accountWrites": false,
+  "databaseMigrations": false,
+  "verifiedAt": "2026-10-12T07:45:48.480183+00:00"
+}

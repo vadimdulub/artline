@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "hamburger-kunsthalle",
+  "museum": "Hamburger Kunsthalle",
+  "city": "汉堡",
+  "country": "德国",
+  "title": "汉堡美术馆：杰作",
+  "subtitle": "二十件作品，讨论人物、风景和公共场所让我们看到什么，又留下什么。",
+  "introduction": "娜娜从镜子前转身，看向观众。弗里德里希的漫游者正好相反：他面朝风景，不让我们看到脸。这两个人物为观看设下不同条件。一位承认画外有人，另一位提供观看风景的立足点，却不告诉我们他本人对此有何反应。\n\n其余作品把问题带到花园、工作场所和娱乐场所。人可能专注于手头事务，被制服标明身份，或挤在一场演出里。风景也能遮蔽许多东西。本篇逐幅辨认画面让我们接近什么，以及哪些判断超出了眼前可见的依据。",
+  "visitNote": "这些精选作品属于美术馆（Kunsthalle）的馆藏，但展出安排及借展情况会发生变化；素描类作品可能仅作短期展出。建议您在参观前，利用美术馆最新的馆藏与展览信息查询特定作品的展出状态。",
+  "locale": "zh",
+  "website": "https://www.hamburger-kunsthalle.de/",
+  "officialGuide": "https://www.hamburger-kunsthalle.de/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基关于色彩与形式的论述，为展出的抽象派与表现主义作品提供了背景语境。不妨将其视为一位艺术家的观点阐述，并将其与鲍迈斯特、贝克曼及莫德松-贝克尔风格迥异的画作进行比较。"
+    }
+  ],
+  "works": [
+    {
+      "id": "5b784b01-0c0a-5671-97ef-4629e365b26b",
+      "title": "娜娜",
+      "catalogueTitle": "Nana",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/5b784b01-0c0a-5671-97ef-4629e365b26b-0eb8c5f80a437bb0.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/nana-1877",
+      "credit": "Édouard Manet. Nana. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/nana-1877",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/nana-1877",
+      "description": "女子不再专注于镜子，而是转向观众。旁边坐着的男子却只有一部分进入画框。马奈让两个人被看见的程度不同，并使观看本身成为梳妆场景中的事件。娜娜不是单方面供人打量的对象；她向外的目光打断了这种方便观众的安排。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "dff303d0-c085-5aba-baf9-666d7535dbc3",
+      "title": "雾海上的漫游者",
+      "catalogueTitle": "The Wanderer Above the Sea of Fog",
+      "artist": "Caspar David Friedrich",
+      "artists": [
+        {
+          "name": "Caspar David Friedrich",
+          "role": "primary",
+          "slug": "caspar-david-friedrich-q104884"
+        }
+      ],
+      "date": "1818",
+      "start": 1818,
+      "end": 1818,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/dff303d0-c085-5aba-baf9-666d7535dbc3-b48b236eba47a77f.jpg",
+      "imageSource": "https://www.wikiart.org/en/caspar-david-friedrich/the-wanderer-above-the-sea-of-fog",
+      "credit": "Caspar David Friedrich. The Wanderer Above the Sea of Fog. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caspar-david-friedrich/the-wanderer-above-the-sea-of-fog",
+      "description": "男子脚下站得稳，雾却遮住大片地形。他的背影给我们一个接近风景的身体位置，表情却无法提示该怎样理解它。弗里德里希把看似掌控全局的姿势，与不完整的认知放在一起。站得高，并不意味着一切尽收眼底。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "edeeef17-4a45-5ce4-8468-a8c72002eecb",
+      "title": "朝拜圣婴",
+      "catalogueTitle": "Adoration of the Child",
+      "artist": "Master Francke",
+      "artists": [
+        {
+          "name": "Master Francke",
+          "role": "primary",
+          "slug": "master-francke-q701623"
+        }
+      ],
+      "date": "约 1426 年",
+      "start": 1426,
+      "end": 1426,
+      "medium": "橡木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/edeeef17-4a45-5ce4-8468-a8c72002eecb-419c79e4bd0fbe81.jpg",
+      "imageSource": "https://www.wikiart.org/en/master-francke/adoration-of-the-child",
+      "credit": "Master Francke. Adoration of the Child. WikiArt source label: Master Francke Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/master-francke/adoration-of-the-child",
+      "license": "Master Francke Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/master-francke/adoration-of-the-child",
+      "description": "丰富色彩和纹样本可使注意四散，但跪着的人物又把它引回新生儿。弗兰克大师用身体朝向组织这个装饰性鲜明的环境。中央小群像不必占去木板画的大半，也能决定周围人物为何聚在这里。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "9f4a76d7-931d-523a-8a64-e8597fc27731",
+      "title": "Bluxao V",
+      "catalogueTitle": "Bluxao V",
+      "artist": "Willi Baumeister",
+      "artists": [
+        {
+          "name": "Willi Baumeister",
+          "role": "primary",
+          "slug": "willi-baumeister-nga-2988"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "纸板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/9f4a76d7-931d-523a-8a64-e8597fc27731-fee0554603802de7.jpg",
+      "imageSource": "https://www.wikiart.org/en/willi-baumeister/bluxao-v-1955",
+      "credit": "Willi Baumeister. Bluxao V. WikiArt source label: Willi Baumeister Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/willi-baumeister/bluxao-v-1955",
+      "license": "Willi Baumeister Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/willi-baumeister/bluxao-v-1955",
+      "description": "明亮的延伸部分从较暗的中央形体向多个方向伸出。它们的大小和位置在蓝底上形成仍带动势的平衡。鲍迈斯特允许人形的联想，却不要求每一部分都找到对应的身体名称。色彩之间的关系已经足以维系这套安排。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "3d9883e5-0f70-5b83-b877-21a2c86b55c0",
+      "title": "夏娃",
+      "catalogueTitle": "Eve",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "约 1906–1907 年",
+      "start": 1906,
+      "end": 1907,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3d9883e5-0f70-5b83-b877-21a2c86b55c0-5c4ba10cbf254ed6.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/eve-1907",
+      "credit": "Henri Rousseau. Eve. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/eve-1907",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/eve-1907",
+      "description": "叶与果实更像围住人物的屏障，而不是向远方展开的花园。卢梭清楚分开重复的植物形状，使它们的秩序与夏娃和蛇同样显眼。圣经场所由逐项累积而成。纵深不如密度重要；这个世界拥挤，却仍能逐一辨认各部分。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "d747adb9-550e-54da-9f04-8dbde57c5823",
+      "title": "迅疾的希望",
+      "catalogueTitle": "Swift Hope",
+      "artist": "René Magritte",
+      "artists": [
+        {
+          "name": "René Magritte",
+          "role": "primary",
+          "slug": "rene-magritte-q7836"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/d747adb9-550e-54da-9f04-8dbde57c5823-67fddf880d5762ce.jpg",
+      "imageSource": "https://www.wikiart.org/en/rene-magritte/swift-hope-1928",
+      "credit": "René Magritte. Swift Hope. WikiArt source label: Rene Magritte Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/rene-magritte/swift-hope-1928",
+      "license": "Rene Magritte Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rene-magritte/swift-hope-1928",
+      "description": "词语给出名称，旁边的形状却没有顺从地说明它们。马格利特打断阅读与观看之间的习惯配合。标签可以引导注意，却未必可靠地识别物件。两者失配之处尤其有用：它让我们发现，看似简单的命名其实还藏着一层解释工作。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "b49661a2-0c48-57b4-91f5-05951a9acdb0",
+      "title": "花园里的阿姆斯特丹孤儿院女孩",
+      "catalogueTitle": "Amsterdamer Waisenmädchen im Garten",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "布面油画",
+      "accession": "HK-1584",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/b49661a2-0c48-57b4-91f5-05951a9acdb0-caa879c422f5.jpg",
+      "imageSource": "https://www.wikiart.org/en/max-liebermann/amsterdam-orphans-in-the-garden-1885",
+      "credit": "WikiArt. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://online-sammlung.hamburger-kunsthalle.de/de/objekt/HK-1584/amsterdamer-waisenmaedchen-im-garten",
+      "description": "统一的裙子和围裙让女孩们形成一组，各人的手却忙着不同的一份活。地上的鸟增添不那么守规矩的移动。利伯曼让机构里的日常安排与花园活动共处。穿着相似，并不使她们的动作或专注方向完全一致。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "d751f909-9733-55e3-a51e-9815f12ff847",
+      "title": "补网的妇女",
+      "catalogueTitle": "The Net Menders",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1887–1889",
+      "start": 1887,
+      "end": 1889,
+      "medium": "",
+      "accession": "1580",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/d751f909-9733-55e3-a51e-9815f12ff847-58447fe56fa5fa4d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1888_Liebermann_Die_Netzflickerinnen_anagoria.JPG",
+      "credit": "Max Liebermann. The Net Menders. Image credit: Max Liebermann; anagoria. https://commons.wikimedia.org/wiki/File:1888_Liebermann_Die_Netzflickerinnen_anagoria.JPG. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q101310453",
+      "description": "共同任务铺展在空地上，没有集中到一个主要工作台周围。前景站立者给出尺度，其他姿势则展示劳动的不同部分。利伯曼把重复工作放进宽阔环境，并未将它缩成某个象征性手势。渔网连起各人的动作，又没有抹掉它们的区别。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "bdbec279-1896-5e44-b5cc-0d8948efe8cc",
+      "title": "从皮蒙特眺望那不勒斯湾",
+      "catalogueTitle": "Blick von Pimonte auf die Bucht von Neapel",
+      "artist": "Johan Christian Dahl",
+      "artists": [
+        {
+          "name": "Johan Christian Dahl",
+          "role": "primary",
+          "slug": "johan-christian-dahl-q164735"
+        }
+      ],
+      "date": "1821",
+      "start": 1821,
+      "end": 1821,
+      "medium": "",
+      "accession": "HK-5612",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110473132-4b95f32e6d063b8b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dahl_Joh._Chr._View_from_Pimonte_of_Neapel@Kunsthalle_Hamburg.JPG",
+      "credit": "Johan Christian Dahl. Blick von Pimonte auf die Bucht von Neapel. Image credit: Johan Christian Dahl; Source credit: Photographer and uploader was Hajotthu at de.wikipedia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110473132",
+      "description": "前景岩石、树木和旅人为远方海湾提供尺度。火山升起的烟，使原本仿佛安定的景色出现活动。达尔把近与远连接起来，却不赋予同等细节。这幅广景包含一种力量：我们能从远处确认它的存在，却无法完整查看它的作用。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "f7c457ad-3948-5c63-8ff3-38e09ff5f595",
+      "title": "海滩上的船",
+      "catalogueTitle": "Boats on the beach",
+      "artist": "Max Beckmann",
+      "artists": [
+        {
+          "name": "Max Beckmann",
+          "role": "primary",
+          "slug": "max-beckmann-q164683"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "HK-200626",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105561720-02d627084cf5d050.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Boote_am_Strand_(073153).jpg",
+      "credit": "Max Beckmann. Boats on the beach. Image credit: Max Beckmann. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105561720",
+      "description": "深轮廓使帆、船身和人物都同样有力地显出。贝克曼把海滩压缩成楔形与曲线，置于强烈的沙地、水面色块前。船间空隙与船本身一样重要，因为人必须挤进那里。海岸像由互相咬合的形状搭成，并不自由地通向远方。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "d4b98c8e-b0f1-597f-bba1-291d028b8648",
+      "title": "外科医生费迪南德·绍尔布鲁赫",
+      "catalogueTitle": "Der Chirurg Ferdinand Sauerbruch",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1932",
+      "start": 1932,
+      "end": 1932,
+      "medium": "布面油画",
+      "accession": "HK-2927",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/d4b98c8e-b0f1-597f-bba1-291d028b8648-323be116caf8.jpg",
+      "imageSource": "https://www.wikiart.org/en/max-liebermann/the-surgeon-ferdinand-sauerbruch-1932",
+      "credit": "WikiArt. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://online-sammlung.hamburger-kunsthalle.de/de/objekt/HK-2927/der-chirurg-ferdinand-sauerbruch",
+      "description": "白大褂已经说明职业，不需要手术场面或一排器械。浅色环境前，头部转向使目光集中到本人。利伯曼让角色与个人面貌保持区别。大褂告诉我们眼前是什么专业权威，但这张具体的脸并不能简化成职业标志。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "50822a72-0fab-5077-8782-0493e3ad3126",
+      "title": "路易斯·C.雅各布酒店的露台",
+      "catalogueTitle": "Die Terrasse des Hotel Louis C. Jacob in Nienstedten an der Elbe",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1902",
+      "start": 1902,
+      "end": 1902,
+      "medium": "油彩；画布（绘画底材）",
+      "accession": "HK-1597",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/50822a72-0fab-5077-8782-0493e3ad3126-ffd08ad68a2f.jpg",
+      "imageSource": "https://www.wikiart.org/en/max-liebermann/the-terrace-at-the-restaurant-jacob-in-nienstedten-on-the-elbe-1902",
+      "credit": "WikiArt. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://www.wikidata.org/wiki/Q114051114",
+      "description": "桌、椅和树干为露台排出重复结构。沿河向远处看，光影斑点又使这个框架松动。利伯曼的公共休闲依赖有秩序的空间，同时仍容得下各自成组的人。场景的自在感由位置安排支撑，无须靠想象中的谈话来解释。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "c3a439b2-3b20-5a7a-a4d5-a9f8d1ef0af2",
+      "title": "孩子头像",
+      "catalogueTitle": "Head of a child",
+      "artist": "Albrecht Dürer",
+      "artists": [
+        {
+          "name": "Albrecht Dürer",
+          "role": "primary",
+          "slug": "albrecht-durer-q5580"
+        }
+      ],
+      "date": "1520",
+      "start": 1520,
+      "end": 1520,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c3a439b2-3b20-5a7a-a4d5-a9f8d1ef0af2-c396f7202e3be263.jpg",
+      "imageSource": "https://www.wikiart.org/en/albrecht-durer/head-of-a-child",
+      "credit": "Head of a child. WikiArt; Albrecht Dürer. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/albrecht-durer/head-of-a-child",
+      "description": "闭眼和微张的嘴唇表明一时的身体状态，却没有说明原因。丢勒用不同笔痕表现卷发与光滑脸颊，让我们看见脸，也看见绘画过程。独立头像便于近看。周围故事固然能增加信息，但这幅习作的具体性并不依赖它。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "0ce65bed-4821-58b3-bb16-04474c6f4188",
+      "title": "1842年大火后的汉堡",
+      "catalogueTitle": "Hamburg after the Fire of 1842",
+      "artist": "Jacob Gensler",
+      "artists": [
+        {
+          "name": "Jacob Gensler",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1679052"
+        }
+      ],
+      "date": "1842",
+      "start": 1842,
+      "end": 1842,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107738486-ec5b6f2e81584b3d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gensler,_G%C3%BCnther_-_Hamburg_nach_dem_Brande_von_1842_-_Hamburger_Kunsthalle.jpeg",
+      "credit": "Jacob Gensler. Hamburg after the Fire of 1842. Image credit: Jacob Gensler; Source credit: ~. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107738486",
+      "description": "新出现的空地也在描述受损城市。残墙和散落废墟框住一片只有破坏之后才看得到的景色，根斯勒的小人物说明其尺度。画的不只是几栋毁坏房屋：失去建筑后，前景、水面，以及现在可以看见的后方，彼此关系都变了。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "f5e88299-e345-5c27-b583-9fecaa542f1f",
+      "title": "孔雀岛棕榈温室内部",
+      "catalogueTitle": "Inside the Palm House on the Pfaueninsel near Potsdam",
+      "artist": "Carl Blechen",
+      "artists": [
+        {
+          "name": "Carl Blechen",
+          "role": "primary",
+          "slug": "carl-blechen-nga-13600"
+        }
+      ],
+      "date": "1832–1834",
+      "start": 1832,
+      "end": 1834,
+      "medium": "",
+      "accession": "1324",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105636118-bf0ef4ab0466f94c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Carl_Blechen_-_In_the_Palm_House_in_Potsdam_-_WGA2249.jpg",
+      "credit": "Carl Blechen. Inside the Palm House on the Pfaueninsel near Potsdam. Image credit: Carl Blechen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105636118",
+      "description": "棕榈叶横过玻璃建筑的骨架，让两种结构相互对照。植物下的小人物说明它们有多大。布莱兴的室内既是人工栽培的植被，也是复杂建筑。温室没有被内容物遮没；可见的构造帮助解释，这么繁盛的生长何以能存在于室内。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "0fc71976-6b90-5bbb-8572-d5fb3b5f4edb",
+      "title": "十二岁的耶稣在圣殿",
+      "catalogueTitle": "Der zwölfjährige Jesus im Tempel",
+      "artist": "Max Liebermann",
+      "artists": [
+        {
+          "name": "Max Liebermann",
+          "role": "primary",
+          "slug": "max-liebermann-q158062"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "油彩；画布（绘画底材）",
+      "accession": "HK-5424",
+      "image": "https://artlines.org/assets/artworks/imported/max-liebermann-images-20261011/0fc71976-6b90-5bbb-8572-d5fb3b5f4edb-6ef32a8baea6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Max_Liebermann_-_Der_zw%C3%B6lfj%C3%A4hrige_Jesus_im_Tempel_(1879).jpg",
+      "credit": "Max Liebermann; Hamburger Kunsthalle, online Sammlung. Public domain. Full source frame preserved; proportional resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q108718081",
+      "description": "男孩对一群男子说话；他们的年龄、书本和服装暗示既有权威。紧密人群把宗教题材变成可见的说与听。利伯曼通过位置和反应，使年龄差发生作用。紧张感来自谁在得到倾听，不只是现场人数很多。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "db095044-e17d-5796-bf84-0d9778fe5440",
+      "title": "母与子",
+      "catalogueTitle": "Mother and Child",
+      "artist": "Paula Modersohn-Becker",
+      "artists": [
+        {
+          "name": "Paula Modersohn-Becker",
+          "role": "primary",
+          "slug": "paula-modersohn-becker-q234370"
+        }
+      ],
+      "date": "约 1903 年",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111799323-790fc07ffe28cda0.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paula_Modersohn-Becker_-_Mutter_mit_Kind_(ca._1903).jpg",
+      "credit": "Paula Modersohn-Becker. Mother and Child. Image credit: Paula Modersohn-Becker; Source credit: Hamburger Kunsthalle, Onlinesammlung. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111799323",
+      "description": "两人的外形连在一起，使母亲抱住孩子成为核心。宽阔色块让身体显得有重量，面部表情则不必承担太多解释。莫德松-贝克尔无需格外感伤的神情来表现照料。成人身体与孩子之间的实际关系，已经清楚说明他们怎样相依。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "069793ff-cc78-5293-8fc2-d17daf1fac21",
+      "title": "北方风景",
+      "catalogueTitle": "Nordic Landscape",
+      "artist": "Johan Christian Dahl",
+      "artists": [
+        {
+          "name": "Johan Christian Dahl",
+          "role": "primary",
+          "slug": "johan-christian-dahl-q164735"
+        }
+      ],
+      "date": "1822",
+      "start": 1822,
+      "end": 1822,
+      "medium": "",
+      "accession": "HK-1063",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111603091-e00e263884e0b648.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dahl_Johan_Christian_Nordic_Landscape@Kunsthalle_Hamburg.JPG",
+      "credit": "Johan Christian Dahl. Nordic Landscape. Image credit: Johan Christian Dahl; Source credit: Photographer and uploader was Hajotthu at de.wikipedia. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111603091",
+      "description": "视线要到明亮远处，先得穿过近树、倒木和崎岖地面。达尔把这些障碍保留为景色的一部分，没有为悦目全景将它们扫开。近处质感与远方光线需要不同注意。深处虽然留出开口，前景仍坚持让人看见它的实在存在。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "b7b5ebaf-3dc0-5183-9c13-4141df9a6a47",
+      "title": "老农妇",
+      "catalogueTitle": "Old Peasant Woman",
+      "artist": "Paula Modersohn-Becker",
+      "artists": [
+        {
+          "name": "Paula Modersohn-Becker",
+          "role": "primary",
+          "slug": "paula-modersohn-becker-q234370"
+        }
+      ],
+      "date": "约 1903 年",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q102422465-56b54ce792f5deec.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1903_Modersohn-Becker_Alte_Moorb%C3%A4uerin_anagoria.JPG",
+      "credit": "Paula Modersohn-Becker. Old Peasant Woman. Image credit: Paula Modersohn-Becker. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q102422465",
+      "description": "一手托头，另一条手臂横在身前。在解释表情之前，这些厚实形状已经组织了肖像。莫德松-贝克尔让服装保持深色，面孔直接清楚。我们可以观察头部有支撑的姿势，而不把它诊断成疲惫、认命，甚至据此编出模特的一生。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    },
+    {
+      "id": "2651ee5b-69f5-5131-ae65-33538c0b961b",
+      "title": "马戏团里的海狮",
+      "catalogueTitle": "Sea lions in the circus",
+      "artist": "Max Beckmann",
+      "artists": [
+        {
+          "name": "Max Beckmann",
+          "role": "primary",
+          "slug": "max-beckmann-q164683"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "",
+      "accession": "HK-5046",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105582466-e731de34713047d5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Beckmann_Seeloewen_im_Zirkus_web.jpg",
+      "credit": "Max Beckmann. Sea lions in the circus. Image credit: Max Beckmann. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105582466",
+      "description": "圆环、动物和彩色装置在窄画幅里争夺位置。贝克曼的粗重轮廓既让它们可辨，又使表演场地显得塞得满满。娱乐成了身体与设备的紧凑排列，几乎没有余地。活力与这些限制不可分，画的不是单纯不受阻碍的运动。",
+      "importance": "",
+      "museum": "Hamburger Kunsthalle"
+    }
+  ],
+  "context": {
+    "start": 1426,
+    "end": 1955
+  },
+  "closingSections": [
+    {
+      "title": "留意观看的条件",
+      "paragraphs": [
+        "把娜娜向外的眼神与漫游者隐藏的脸比较，再看制服和职业服装如何改变其他肖像。这是馆藏选读，不保证作品目前都在展出。若为某件作品安排参观，请先确认其可见状态。"
+      ]
+    }
+  ]
+}

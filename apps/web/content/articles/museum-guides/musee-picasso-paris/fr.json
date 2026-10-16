@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "musee-picasso-paris",
+  "museum": "Musée national Picasso-Paris",
+  "city": "Paris",
+  "country": "France",
+  "title": "Musée national Picasso-Paris : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres qui transforment l'anatomie, l'échelle et les matériaux sans rendre le sujet méconnaissable.",
+  "introduction": "Une selle et un guidon peuvent devenir un taureau sans cesser d'être des pièces de bicyclette. Cette double lecture offre une entrée dans la sélection. Les personnages peints de Picasso conservent eux aussi assez de signes familiers pour rester lisibles, alors que leurs proportions, leurs contours et leurs points de vue changent.\n\nOn ne suit pas ici une progression unique, d'une jeunesse réaliste à une maturité abstraite. Le poids observé d'une enfant assise, la masse d'une baigneuse et la courbe invraisemblable d'un acrobate répondent à des problèmes picturaux différents. Seurat et Courbet offrent des comparaisons, pas des étapes de l'évolution de Picasso. Suivez un sujet récurrent : qu'est-ce qui demeure, qu'est-ce qui change, et que permet cette modification ?",
+  "visitNote": "Le musée renouvelle ses présentations et prête des œuvres pour des expositions. Consultez la programmation en cours avant votre visite ; il s’agit d’une sélection issue de la collection plutôt que d’un parcours salle par salle.",
+  "locale": "fr",
+  "website": "https://pop.culture.gouv.fr/notice/museo/M5043",
+  "officialGuide": "https://pop.culture.gouv.fr/notice/museo/M5043",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Pablo Picasso: A Retrospective",
+      "author": "Edited by William Rubin",
+      "url": "https://www.moma.org/calendar/exhibitions/1818",
+      "access": "Catalogue numérisé dans la rubrique Publications · Anglais",
+      "note": "Le MoMA propose une version numérisée du catalogue de la rétrospective de 1980 de William Rubin dans la section « Publications ». Sa vaste étude chronologique permet de situer ces œuvres, aux caractéristiques très contrastées, au sein de la production globale de Picasso."
+    }
+  ],
+  "works": [
+    {
+      "id": "e92b2ebd-93c6-558c-ad68-af878641f2c4",
+      "title": "Baigneurs sur la plage",
+      "catalogueTitle": "Bathers on the beach",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/e92b2ebd-93c6-558c-ad68-af878641f2c4-6f391d27953a2572.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bathers-on-the-beach-1928",
+      "credit": "Pablo Picasso. Bathers on the beach. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bathers-on-the-beach-1928",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/bathers-on-the-beach-1928",
+      "description": "L'eau bleue indique le lieu avant que les formes orange anguleuses se précisent en baigneurs. Picasso a supprimé une grande partie de l'anatomie qui expliquerait normalement la pose. La position et l'échelle relative prennent le relais. Ces figures restent des corps parce que quelques signes se tiennent, non parce que chaque membre possède un équivalent plausible chez quelqu'un debout sur une plage.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "55aa6207-fee4-5512-87ae-52acc8089b59",
+      "title": "Jacqueline aux fleurs",
+      "catalogueTitle": "Jacqueline with flowers",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1954",
+      "start": 1954,
+      "end": 1954,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/55aa6207-fee4-5512-87ae-52acc8089b59-48fdd32d3cc1e7f7.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/jacqueline-with-flowers-1954",
+      "credit": "Pablo Picasso. Jacqueline with flowers. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/jacqueline-with-flowers-1954",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/jacqueline-with-flowers-1954",
+      "description": "Le profil de Jacqueline trace une limite ferme sur le fond bleu. Tiges fleuries et vêtements à motifs introduisent autour de lui des mouvements plus petits et irréguliers. Le long cou détache la tête de la zone plus animée du bas. Le portrait ne fond pas modèle et décor en une seule texture : son contour immobile résiste aux motifs environnants.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "35f19648-9250-52b4-a8ee-ad5260af19be",
+      "title": "Femme assise",
+      "catalogueTitle": "Seated Woman",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "Crayon sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/35f19648-9250-52b4-a8ee-ad5260af19be-f1dce6985ab4f764.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/seated-woman-1881",
+      "credit": "Seated Woman. WikiArt; Georges Seurat. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/seated-woman-1881",
+      "description": "Chez Seurat, la figure prend corps par l'accumulation de marques sombres. Là où celles-ci se raréfient, elle rejoint la clarté du papier plutôt qu'un contour continu. Le contraste avec les lignes affirmées de Picasso est utile : on peut donner une présence solide à un corps assis en variant la densité, sans commencer par l'enfermer dans un trait.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "82d2f660-1c36-5e1d-9d3a-87297394dcca",
+      "title": "La Fillette aux pieds nus",
+      "catalogueTitle": "The barefoot girl",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/82d2f660-1c36-5e1d-9d3a-87297394dcca-1e48c12c68aad905.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/the-barefoot-girl-1895",
+      "credit": "Pablo Picasso. The barefoot girl. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/the-barefoot-girl-1895",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/the-barefoot-girl-1895",
+      "description": "Les mains jointes et les pieds nus ancrent la jeune fille droite sur son siège. La robe rouge la détache du feuillage sombre, mais sa pose reste sans ostentation. Cette œuvre de jeunesse montre ce que Picasso pouvait obtenir d'un portrait attentif et relativement conventionnel. Les déformations ultérieures ne doivent pas être prises pour la fuite d'un artiste incapable de décrire le poids ou les proportions.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "17fea4af-4226-53aa-bd66-5b719c7ff4ca",
+      "title": "Tête de taureau",
+      "catalogueTitle": "Bull's Head",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "Assemblage, objet trouvé",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/17fea4af-4226-53aa-bd66-5b719c7ff4ca-24d04118a56fbe17.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bulls-head-1942",
+      "credit": "Pablo Picasso. Bull's Head. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bulls-head-1942",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/bulls-head-1942",
+      "description": "Le musée identifie les matériaux : une véritable selle de cuir et un guidon métallique. Leur usage antérieur reste évident : la selle étroite devient mufle, le guidon courbe devient cornes. Inutile de les dissimuler sous un pelage réaliste ou d'ajouter des yeux modelés. Dans ce petit assemblage, la sculpture maintient deux identités à la fois, bicyclette et taureau.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "f2bab2d0-3925-555a-873c-50980d6d41dc",
+      "title": "Tête de chèvre",
+      "catalogueTitle": "Head of a goat",
+      "artist": "Gustave Courbet",
+      "artists": [
+        {
+          "name": "Gustave Courbet",
+          "role": "primary",
+          "slug": "gustave-courbet-q34618"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107112135-b39e9e075bae5715.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:T%C3%AAte_de_chamois.jpg",
+      "credit": "Gustave Courbet. Head of a goat. Image credit: Gustave Courbet. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107112135",
+      "description": "Courbet aborde la tête animale en décrivant son anatomie particulière. Sous l'élan des cornes, la lumière accroche l'œil et le museau ; montagne et ciel situent la tête. La comparaison avec le taureau assemblé de Picasso est éclairante. L'un précise chair et texture, l'autre emploie des objets existants. Tous deux s'appuient sur quelques rapports de formes reconnaissables.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "db9b87ea-2ed4-4c62-be1c-90c6c7b4e190",
+      "title": "Buste de femme au chapeau rayé",
+      "catalogueTitle": "Buste de femme au chapeau rayé",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1939",
+      "start": 1939,
+      "end": 1939,
+      "medium": "",
+      "accession": "MP180 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/db9b87ea-2ed4-4c62-be1c-90c6c7b4e190-95cf61b8cd3912e9.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/bust-of-woman-1939",
+      "credit": "Pablo Picasso. Bust of woman. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/bust-of-woman-1939",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000628",
+      "description": "Les rayures ne s'arrêtent pas à la frontière entre le vêtement et la personne. Elles divisent visage et costume, tandis que le fond prolonge leur rythme vertical. Les traits restent identifiables sans occuper une surface lisse et continue. Picasso fait du motif un moyen de construire le corps, plutôt qu'une décoration ajoutée à un portrait déjà achevé.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "ff1864e2-38d8-4881-9e56-cdebbb20cbae",
+      "title": "Deux femmes nues sur la plage",
+      "catalogueTitle": "Deux Femmes nues sur la plage",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "MP163 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/ff1864e2-38d8-4881-9e56-cdebbb20cbae-fc6ac022a5fed709.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/two-naked-women-on-the-beach-1937",
+      "credit": "Pablo Picasso. Two naked women on the beach. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/two-naked-women-on-the-beach-1937",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000614",
+      "description": "Les femmes regardent vers le bas, mais leurs membres agrandis dominent l'espace peu profond. Une modeste activité commune prend l'ampleur d'un groupe monumental. Le contact serré des formes arrondies compte plus qu'un décor spacieux : le regard trouve peu de passages autour des corps. La proximité résulte de leur construction physique.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "cb96f264-77b3-485d-9aa2-9c9dd411c878",
+      "title": "Femme endormie aux persiennes",
+      "catalogueTitle": "Dormeuse aux persiennes",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "",
+      "accession": "MP152 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/cb96f264-77b3-485d-9aa2-9c9dd411c878-eaf1334322db4f58.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/sleeper-near-the-shutters-1936",
+      "credit": "Pablo Picasso. Sleeper near the shutters. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/sleeper-near-the-shutters-1936",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000608",
+      "description": "Tête, bras et épaule se replient en une suite compacte de courbes. Derrière eux, les persiennes proposent un système de lignes plus régulier. Ce contraste distingue la position relâchée de la dormeuse de la pièce qui l'accueille. L'anatomie n'a pas besoin d'être plausible dans tous ses détails pour que reste clair le geste familier de poser la tête sur un bras.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "3bde1d87-2e78-4a2e-bd49-666ae2407aae",
+      "title": "Enfant jouant avec un camion",
+      "catalogueTitle": "Enfant jouant avec un camion",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "Huile sur toile",
+      "accession": "MP1990-25",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/3bde1d87-2e78-4a2e-bd49-666ae2407aae-ebbea6873f7298fc.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/child-playing-in-camomilles-1953",
+      "credit": "Pablo Picasso. Child playing in camomilles. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/child-playing-in-camomilles-1953",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000830",
+      "description": "Le jouet occupe peu de place dans l'enchevêtrement des branches et des feuilles. Pourtant, le corps penché de l'enfant en fait le centre de son activité et conduit vers lui notre regard. Picasso entoure cette concentration de marques agitées. Le contraste préserve l'absorption familière du jeu sans imposer le même calme au reste du tableau.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "d6ce8036-06bf-40c3-8ed6-22ef101a6182",
+      "title": "Femmes dans un intérieur",
+      "catalogueTitle": "Femmes dans un intérieur",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "Huile sur toile",
+      "accession": "MP156 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/d6ce8036-06bf-40c3-8ed6-22ef101a6182-8d55731e980f3956.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/woman-in-the-interior-1936",
+      "credit": "Pablo Picasso. Woman in the interior. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/woman-in-the-interior-1936",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000612",
+      "description": "Les personnages n'entrent pas dans la pièce selon une mesure cohérente. L'un est assis avec un livre ; le plus grand corps rayé bute contre les meubles obliques et les murs. Au lieu de corriger cette différence pour rendre l'intérieur plausible, Picasso en tire plusieurs façons d'occuper l'espace. La familiarité domestique demeure, même lorsque les dimensions de la pièce deviennent difficiles à reconstituer.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "9ae7d5c5-76eb-4568-88b0-3647353ea53b",
+      "title": "Figure et profil",
+      "catalogueTitle": "Figure et profil",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "Huile sur toile",
+      "accession": "MP103 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/9ae7d5c5-76eb-4568-88b0-3647353ea53b-25ae66e96678dd09.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/figure-and-profile-1928",
+      "credit": "Pablo Picasso. Figure and profile. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/figure-and-profile-1928",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000560",
+      "description": "Plusieurs yeux compliquent la lecture du contour central comme un seul visage dans une seule position. La fenêtre ouverte voisine s'identifie beaucoup plus facilement. Cet objet ordinaire fournit un repère de lisibilité qui accentue l'étrangeté de la figure. Il n'est pas nécessaire de choisir définitivement entre ses visages possibles : leur coexistence appartient à la construction de l'image.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "74f219d5-49a3-4fae-8c07-d930eba79c16",
+      "title": "Grande Baigneuse au livre",
+      "catalogueTitle": "Grande Baigneuse au livre",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "MP160 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/74f219d5-49a3-4fae-8c07-d930eba79c16-3fd090f2c30e380b.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/great-bather-reading-1937",
+      "credit": "Pablo Picasso. Great bather reading. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/great-bather-reading-1937",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000613",
+      "description": "Le livre est petit auprès du corps qui se penche autour de lui. Les membres larges ont quelque chose de la compacité de la pierre, mais leur disposition exprime le geste quotidien de lire. La figure massive se rassemble autour de quelques pages et donne ainsi une forme physique à la concentration. La disproportion rend la lecture plus manifeste au lieu de la faire disparaître.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "09cd2249-52b2-4be9-ad9c-bd7dd18d7adc",
+      "title": "Grande Nature morte sur un guéridon",
+      "catalogueTitle": "Grande Nature morte au guéridon",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1931",
+      "start": 1931,
+      "end": 1931,
+      "medium": "Huile sur toile",
+      "accession": "MP134 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/09cd2249-52b2-4be9-ad9c-bd7dd18d7adc-24f7b4a4ccd9de3a.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/great-still-life-on-pedestal-1931",
+      "credit": "Pablo Picasso. Great Still life on pedestal. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/great-still-life-on-pedestal-1931",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000582",
+      "description": "Les objets réclament plus de place qu'une vue bien ordonnée du plateau ne leur en donnerait. Des contours courbes traversent les plages colorées, tantôt séparant les récipients, tantôt les reliant. On reconnaît une forme après l'autre, localement, sans disposer d'un point de vue fiable. Le guéridon fournit un sujet et une contrainte d'organisation, pas une petite scène stable pour des objets indépendants.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "e33103b3-2acf-4125-bcb7-2ddc34250f10",
+      "title": "L'Acrobate",
+      "catalogueTitle": "L'Acrobate",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Huile sur toile",
+      "accession": "MP120 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/e33103b3-2acf-4125-bcb7-2ddc34250f10-7003a1aaf6073044.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/female-acrobat-1930",
+      "credit": "Pablo Picasso. Female acrobat. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/female-acrobat-1930",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000576",
+      "description": "L'action passe avant la vraisemblance anatomique. Picasso étire le corps clair en une longue boucle, puis les mains et les pieds rendent cette courbe lisible comme une pose humaine. Le fond gris laisse le contour à découvert. Le suivre révèle un corps organisé selon la continuité du mouvement, plutôt que selon les limites ordinaires de ses articulations.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "da2ed4b8-9bed-4a6f-b252-8fefbc9d979a",
+      "title": "Enfant aux colombes",
+      "catalogueTitle": "L'Enfant aux colombes",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1943",
+      "start": 1943,
+      "end": 1943,
+      "medium": "Huile sur toile",
+      "accession": "MP192 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/da2ed4b8-9bed-4a6f-b252-8fefbc9d979a-fcc0eb6b15531904.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/a-child-with-pigeons-1943",
+      "credit": "Pablo Picasso. A child with pigeons. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/a-child-with-pigeons-1943",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000637",
+      "description": "Des meubles anguleux remplissent une grande partie de la pièce autour du petit enfant. Les oiseaux clairs entraînent le regard vers le haut, tandis que le corps arrondi reste bas dans ce cadre encombré. Les différences d'échelle empêchent une lecture domestique trop simple. L'espace resserré autour de l'enfant se voit dans la disposition même, sans qu'il faille inventer ses sentiments.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "00c59b2a-f353-42cb-8490-81a9e0ebffb3",
+      "title": "Chapeau de paille au feuillage bleu",
+      "catalogueTitle": "Le Chapeau de paille au feuillage bleu",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "Huile sur toile",
+      "accession": "MP155 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/00c59b2a-f353-42cb-8490-81a9e0ebffb3-069ef5c82c88b597.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/woman-in-a-straw-hat-1936",
+      "credit": "Pablo Picasso. The straw hat with blue leaves. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/woman-in-a-straw-hat-1936",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000611",
+      "description": "Le chapeau est plus riche en détails que le visage qu'il surmonte. Boucles et feuilles bleues se déploient au-dessus d'un profil défini par quelques zones de noir, de crème et de violet. Picasso répartit les détails de façon sélective. Le portrait reste reconnaissable sans que chaque partie renseigne autant ; l'économie du visage renforce l'extravagance de la coiffure.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "940f67c6-f801-4335-8dce-f90a5f2ccaf9",
+      "title": "Paul en Arlequin",
+      "catalogueTitle": "Paul en Arlequin",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "Huile sur toile",
+      "accession": "MP83 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/940f67c6-f801-4335-8dce-f90a5f2ccaf9-215f062260e608d0.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/paul-as-harlequin-1924",
+      "credit": "Pablo Picasso. Paul as harlequin. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/paul-as-harlequin-1924",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000554",
+      "description": "Le costume à losanges fait de Paul un acteur, mais le visage et les mains soigneusement décrits maintiennent la présence d'un enfant particulier. Les zones moins abouties autour du bas du mobilier montrent que toutes les parties n'ont pas reçu le même travail. Le rôle théâtral n'absorbe pas entièrement le modèle. Costume, ressemblance et degrés d'achèvement restent distincts.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "1b411480-207e-4b02-97a2-5310c9f6bfbb",
+      "title": "Massacre en Corée",
+      "catalogueTitle": "Massacre en Corée",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1951",
+      "start": 1951,
+      "end": 1951,
+      "medium": "Huile sur contreplaqué",
+      "accession": "MP203 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/1b411480-207e-4b02-97a2-5310c9f6bfbb-20a5a5f5f16b1606.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/massacre-in-korea-1951",
+      "credit": "Pablo Picasso. Massacre in Korea. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/massacre-in-korea-1951",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000647",
+      "description": "Une bande de terrain vide sépare femmes et enfants exposés des figures armées. Cet intervalle est essentiel : les deux groupes se font face sans disposer de moyens d'action comparables. Les armes d'aspect mécanique aggravent le déséquilibre. La protestation du tableau naît de cette répartition de la force et de la vulnérabilité, sans devoir ressembler au reportage photographique d'un instant précis.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    },
+    {
+      "id": "b56809ad-3510-4ace-b8d4-d6f2318bb972",
+      "title": "Maya à la poupée",
+      "catalogueTitle": "Maya à la poupée",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1938",
+      "start": 1938,
+      "end": 1938,
+      "medium": "Huile sur toile",
+      "accession": "MP170 ",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/b56809ad-3510-4ace-b8d4-d6f2318bb972-ec791028e5cefb8e.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/portrait-of-maya-with-her-doll-1938",
+      "credit": "Pablo Picasso. Portrait of Maya with her doll. WikiArt source label: Pablo Picasso Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/portrait-of-maya-with-her-doll-1938",
+      "license": "Pablo Picasso Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/50430000690",
+      "description": "La grande tête de Maya et ses traits orientés différemment compliquent le portrait ; la poupée rend son activité immédiatement familière. Des couleurs répétées relient jouet, robe et enfant. L'anatomie transformée ne supprime pas le rapport entre une enfant et l'objet serré contre elle. Elle change la place qu'occupe cette compagnie dans le tableau compact, sans la remplacer par une énigme abstraite.",
+      "importance": "",
+      "museum": "Musée national Picasso-Paris"
+    }
+  ],
+  "context": {
+    "start": 1875,
+    "end": 1954
+  },
+  "closingSections": [
+    {
+      "title": "Suivre une transformation",
+      "paragraphs": [
+        "Comparez les mains dans le portrait de jeunesse, les figures de plage et l'acrobate. Chacune remplit une fonction différente. Cette sélection n'est pas un parcours d'accrochage garanti : consultez les informations actuelles du musée pour préparer votre visite."
+      ]
+    }
+  ]
+}

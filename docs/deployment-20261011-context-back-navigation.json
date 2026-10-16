@@ -1,0 +1,509 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "Desktop Back above page content; mobile header return arrow; no Back on initial homepage; preserve existing named parent links and add artist parent for artwork pages.",
+  "commit": "9ca6e6992e1803875fbac5324231d6f217438a47",
+  "earlierCommit": "c8d23c87",
+  "validation": {
+    "typecheck": "passed",
+    "targetedLint": "passed",
+    "targetedUnitTests": 28,
+    "localBrowser": {
+      "viewports": [
+        {
+          "width": 1440,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 1024,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 768,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 390,
+          "backTarget": {
+            "x": 16,
+            "y": 4,
+            "width": 44,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "mobile header"
+        },
+        {
+          "width": 320,
+          "backTarget": {
+            "x": 16,
+            "y": 4,
+            "width": 44,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "mobile header"
+        }
+      ],
+      "initialHomeHidden": true,
+      "guideParentNotDuplicated": true,
+      "artworkParent": true,
+      "artworkRendered": false,
+      "mobileDirectFallback": true,
+      "noHistoryRenderWarnings": true
+    },
+    "localCatalogueLimitation": "The local artwork template returned the existing catalogue-unavailable state. Production candidate must render the selected artwork before promotion.",
+    "candidateBrowser": {
+      "viewports": [
+        {
+          "width": 1440,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 1024,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 768,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 390,
+          "backTarget": {
+            "x": 16,
+            "y": 4,
+            "width": 44,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "mobile header"
+        },
+        {
+          "width": 320,
+          "backTarget": {
+            "x": 16,
+            "y": 4,
+            "width": 44,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "mobile header"
+        }
+      ],
+      "initialHomeHidden": true,
+      "guideParentNotDuplicated": true,
+      "artworkParent": true,
+      "artworkRendered": true,
+      "mobileDirectFallback": true,
+      "noHistoryRenderWarnings": true
+    },
+    "productionBrowser": {
+      "viewports": [
+        {
+          "width": 1440,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 1024,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 768,
+          "backTarget": {
+            "x": 24,
+            "y": 76,
+            "width": 79.34375,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "above content"
+        },
+        {
+          "width": 390,
+          "backTarget": {
+            "x": 16,
+            "y": 4,
+            "width": 44,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "mobile header"
+        },
+        {
+          "width": 320,
+          "backTarget": {
+            "x": 16,
+            "y": 4,
+            "width": 44,
+            "height": 44
+          },
+          "historyReturned": true,
+          "placement": "mobile header"
+        }
+      ],
+      "initialHomeHidden": true,
+      "guideParentNotDuplicated": true,
+      "artworkParent": true,
+      "artworkRendered": true,
+      "mobileDirectFallback": true,
+      "noHistoryRenderWarnings": true
+    },
+    "candidateRoutes": [
+      {
+        "path": "/",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/"
+      },
+      {
+        "path": "/books",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/books"
+      },
+      {
+        "path": "/events",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/events"
+      },
+      {
+        "path": "/all",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/all"
+      },
+      {
+        "path": "/artists",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/artists"
+      },
+      {
+        "path": "/artworks",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/artworks"
+      },
+      {
+        "path": "/museums",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/account?return_to=%2Fmuseums"
+      },
+      {
+        "path": "/guides",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/guides"
+      },
+      {
+        "path": "/guides/louvre/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/guides/louvre"
+      },
+      {
+        "path": "/about",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/about"
+      },
+      {
+        "path": "/privacy",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/privacy"
+      },
+      {
+        "path": "/account",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/account"
+      },
+      {
+        "path": "/bookmarks",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/account?return_to=%2Fbookmarks"
+      },
+      {
+        "path": "/catalogue",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/catalogue"
+      },
+      {
+        "path": "/studies",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/account?return_to=%2Fstudies"
+      },
+      {
+        "path": "/art-history-timeline",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/art-history-timeline"
+      },
+      {
+        "path": "/imports",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/catalogue"
+      },
+      {
+        "path": "/guides/artemisia-gentileschi/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/guides/artemisia-gentileschi"
+      },
+      {
+        "path": "/guides/mary-cassatt/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/guides/mary-cassatt"
+      },
+      {
+        "path": "/guides/frida-kahlo/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app/guides/frida-kahlo"
+      }
+    ],
+    "productionRoutes": [
+      {
+        "path": "/",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/"
+      },
+      {
+        "path": "/books",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/books"
+      },
+      {
+        "path": "/events",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/events"
+      },
+      {
+        "path": "/all",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/all"
+      },
+      {
+        "path": "/artists",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/artists"
+      },
+      {
+        "path": "/artworks",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/artworks"
+      },
+      {
+        "path": "/museums",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/account?return_to=%2Fmuseums"
+      },
+      {
+        "path": "/guides",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/guides"
+      },
+      {
+        "path": "/guides/louvre/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/guides/louvre"
+      },
+      {
+        "path": "/about",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/about"
+      },
+      {
+        "path": "/privacy",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/privacy"
+      },
+      {
+        "path": "/account",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/account"
+      },
+      {
+        "path": "/bookmarks",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/account?return_to=%2Fbookmarks"
+      },
+      {
+        "path": "/catalogue",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/catalogue"
+      },
+      {
+        "path": "/studies",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/account?return_to=%2Fstudies"
+      },
+      {
+        "path": "/art-history-timeline",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/art-history-timeline"
+      },
+      {
+        "path": "/imports",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/catalogue"
+      },
+      {
+        "path": "/guides/artemisia-gentileschi/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/guides/artemisia-gentileschi"
+      },
+      {
+        "path": "/guides/mary-cassatt/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/guides/mary-cassatt"
+      },
+      {
+        "path": "/guides/frida-kahlo/en",
+        "status": 200,
+        "returnNavigationCorrect": true,
+        "finalURL": "https://artlines.org/guides/frida-kahlo"
+      }
+    ],
+    "candidateAssets": [
+      {
+        "path": "/guides/artemisia-gentileschi/pdf/en",
+        "status": 200,
+        "contentType": "application/pdf"
+      },
+      {
+        "path": "/guides/louvre/pdf/en",
+        "status": 200,
+        "contentType": "application/pdf"
+      },
+      {
+        "path": "/brand/artlines-wordmark.webp",
+        "status": 200,
+        "contentType": "image/webp"
+      }
+    ]
+  },
+  "scope": {
+    "runtimeFiles": [
+      "components/BackNavigation.tsx",
+      "components/BackNavigation.css",
+      "components/SiteHeader.tsx",
+      "components/SiteNavigation.css"
+    ],
+    "catalogueWrites": false,
+    "terraformApply": false,
+    "baseline": "Existing live Back-button release, including the museum guides, women-artist guides and private study sharing.",
+    "commitScope": "Four navigation files across three commits; unrelated pending workspace changes remain unstaged."
+  },
+  "privateEvidence": "/Users/vadimdulub/Library/Application Support/Artline/backups/context-back-navigation-20261011",
+  "deployment": {
+    "buildId": "3ff8eb4b-b1cf-407a-ab6a-003d97ed8fd5",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:context-back-20261011-v1",
+    "commit": "9ca6e6992e1803875fbac5324231d6f217438a47",
+    "files": {
+      "components/SiteHeader.tsx": "a4c604e8c5be9e0f3a0a9037e1050c75d266f3ea232700ceed05e7ae19621ad3",
+      "components/SiteNavigation.css": "f7806e49bd4f66de1a04b0d58ad2029164975f669eb82326d20b0826beaf3fc5",
+      "components/BackNavigation.tsx": "17abcb1352fccbb7dcaf72f2a41f0af4ae47f0ba8b3ad5d3cbf36c82743b59dc",
+      "components/BackNavigation.css": "eb24a09b27779011dd5dbb4a495fcf0efee1614311cf83396e5b36428dd413f3"
+    },
+    "preimages": {
+      "components/SiteHeader.tsx": "25af3764aaa070e0ac943b515f65ec8a3fead27fbfa2460bbb48aba3fa745816",
+      "components/SiteNavigation.css": "042553813b8a4a0c68f8862355a784fc4b944ea5cbe011620b8c043da254b399",
+      "components/BackNavigation.tsx": "87818c277ac225557dc20d0c5eb8f67740f1d8d437cd19f15faea9a0868c48a1",
+      "components/BackNavigation.css": null
+    },
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:b485a4d8ddea65b9f00c466deec2685952968102b00618354312a103cb42e8e4",
+    "baselineRevision": "artline-web-back-1011-v1",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:f1d032356c478807932b045fb8afa741419fb9d05b12f68920d1ac7f8171c9a9",
+    "revision": "artline-web-context-back-1011-v1",
+    "candidateURL": "https://context-back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-back-1011-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "verifiedAt": "2026-10-11T17:28:15.034141+00:00"
+}

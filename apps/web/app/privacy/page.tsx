@@ -1,13 +1,15 @@
 import { pageMetadata } from "@/lib/seo";
+import { cloudflareWebAnalyticsToken } from "@/lib/web-analytics";
 
 export function generateMetadata() {
   return pageMetadata("Privacy", "How Artline uses account information, sign-in cookies and technical service data, and how to contact its operator.", "/privacy");
 }
 
 export default function PrivacyPage() {
+  const analyticsEnabled = Boolean(cloudflareWebAnalyticsToken());
   return <main id="main-content" className="admin-page prose-page">
     <h1>Privacy</h1>
-    <p>Last updated: 10 October 2026.</p>
+    <p>Last updated: {analyticsEnabled ? "11 October 2026" : "10 October 2026"}.</p>
     <p>Artline is operated by Vadim Dulub. For privacy questions or requests about your information, contact <a href="mailto:vadim@alingva.com">vadim@alingva.com</a>.</p>
 
     <h2>Browsing and Google sign-in</h2>
@@ -25,6 +27,11 @@ export default function PrivacyPage() {
     <h2>Hosting and service information</h2>
     <p>Artline runs on Google Cloud, and Cloudflare provides its domain and DNS services. Hosting services may process technical information such as IP addresses, browser details, request times and errors to deliver, secure and troubleshoot the site. Artline uses account information to provide and protect your account, not for advertising, and does not sell Google account data.</p>
     <p>Google handles its own sign-in service under <a href="https://policies.google.com/privacy">Google’s privacy policy</a>. If you follow a link to a museum, archive or another website, that site has its own privacy practices.</p>
+
+    {analyticsEnabled && <>
+      <h2>Website analytics</h2>
+      <p>We use Cloudflare Web Analytics to measure visits, page views and page-load performance. Artline does not attach your name, email address or account identifier to these measurements. Read <a href="https://developers.cloudflare.com/web-analytics/about/">how Cloudflare Web Analytics works</a>.</p>
+    </>}
 
     <h2>Keeping and deleting information</h2>
     <p>Your account information remains stored while your Artline account exists. You can ask to access, correct or delete it by emailing <a href="mailto:vadim@alingva.com">vadim@alingva.com</a>. We may need to verify that the request concerns your account. There is currently no automatic account-deletion button.</p>

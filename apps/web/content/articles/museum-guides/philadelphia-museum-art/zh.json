@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "philadelphia-museum-art",
+  "museum": "Philadelphia Museum of Art",
+  "city": "费城",
+  "country": "美国",
+  "title": "费城艺术博物馆：杰作",
+  "subtitle": "这些作品把“能看见什么”也变成了题材。",
+  "introduction": "坦纳的天使以一束光出现，没有带翅膀的身体可供辨认。杜尚的《隐藏的声响》把某件东西放进线团里，目光无法抵达。德加让两个人待在一间有家具的房间，却不给出足以解释两人疏离的事件。\n\n这些是不同的保留方式，不是通向同一秘密的线索。作品可以藏起物件、让故事悬而未决，或让材料边界不再明确。这组费城作品关注画家如何在不解释一切的同时，仍保持图像的具体。选择中也有公开示范与表演：在那里，观众的存在从一开始就决定了什么会被展示。",
+  "visitNote": "参观前请确认展厅的当前位置。《格罗斯诊所》（The Gross Clinic）由本馆与宾夕法尼亚美术学院（Pennsylvania Academy of the Fine Arts）共同拥有，并轮流展出。纸本作品及其他馆藏品可能因外借或未在展出之列而无法观看。本指南中提到的透纳（Turner）作品是指费城馆藏的油画，与克利夫兰馆藏的描绘同一场火灾的作品有所不同。",
+  "locale": "zh",
+  "website": "https://www.philamuseum.org/",
+  "officialGuide": "https://www.philamuseum.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）关于素描与色调布局的论述，为坦纳（Tanner）、伊金斯（Eakins）和德加（Degas）的创作提供了一个切实的起点。而选集后半部分呈现的抽象作品与组合艺术作品，则能让你检验这一理论在何种情况下不再适用。"
+    }
+  ],
+  "works": [
+    {
+      "id": "132877fc-64fd-5a58-9cdc-32b6ea9e2a2f",
+      "title": "天使报喜",
+      "catalogueTitle": "The Annunciation",
+      "artist": "Henry Ossawa Tanner",
+      "artists": [
+        {
+          "name": "Henry Ossawa Tanner",
+          "role": "primary",
+          "slug": "henry-ossawa-tanner-nga-1919"
+        }
+      ],
+      "date": "1898",
+      "start": 1898,
+      "end": 1898,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/132877fc-64fd-5a58-9cdc-32b6ea9e2a2f-fbe70cf0aa142427.jpg",
+      "imageSource": "https://www.wikiart.org/en/henry-ossawa-tanner/the-annunciation-1898",
+      "credit": "Henry Ossawa Tanner. The Annunciation. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henry-ossawa-tanner/the-annunciation-1898",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.philamuseum.org/objects/104384",
+      "description": "加百列以光改变房间，而非以可辨认的有翼人物走进来。坦纳让玛利亚穿着皱衣坐在床上，没有常用来标明她身份的光环。粗糙墙面与普通家具，使超自然相会发生在具体的居住空间。她专注的神情，便是人对一个没有人形轮廓的存在所作的回应。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "b76b2a9f-0955-5a7d-9c59-6d07be385126",
+      "title": "格罗斯医生的诊所",
+      "catalogueTitle": "The Gross Clinic",
+      "artist": "Thomas Eakins",
+      "artists": [
+        {
+          "name": "Thomas Eakins",
+          "role": "primary",
+          "slug": "thomas-eakins-q214905"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b76b2a9f-0955-5a7d-9c59-6d07be385126-185c883d7530d0f2.jpg",
+      "imageSource": "https://www.wikiart.org/en/thomas-eakins/the-gross-clinic-1875",
+      "credit": "Thomas Eakins. The Gross Clinic. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/thomas-eakins/the-gross-clinic-1875",
+      "description": "站着的外科医生向阶梯教室里的观察者讲话，助手则继续手上的操作。埃金斯通过患者脆弱的身体，把医学知识公开展示。血液与高度专注属于同一场示范。这幅画由费城艺术博物馆与宾夕法尼亚美术学院共同拥有；收入这里，不表示保证能在某一固定地点看到它。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art and Pennsylvania Academy of the Fine Arts (joint ownership)"
+    },
+    {
+      "id": "6ff3c23a-f389-5e64-8964-d8c64dfc210c",
+      "title": "被单身汉们剥光衣服的新娘，甚至",
+      "catalogueTitle": "The Bride Stripped Bare by her Bachelors",
+      "artist": "Marcel Duchamp",
+      "artists": [
+        {
+          "name": "Marcel Duchamp",
+          "role": "primary",
+          "slug": "marcel-duchamp-round2-d0ed94237083"
+        }
+      ],
+      "date": "1915-1923",
+      "start": 1915,
+      "end": 1923,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6ff3c23a-f389-5e64-8964-d8c64dfc210c-5bf1d1fa8b85098d.jpg",
+      "imageSource": "https://www.wikiart.org/en/marcel-duchamp/the-bride-stripped-bare-by-her-bachelors-1923",
+      "credit": "Marcel Duchamp. The Bride Stripped Bare by her Bachelors. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/marcel-duchamp/the-bride-stripped-bare-by-her-bachelors-1923",
+      "description": "机械形体位于透明玻璃上，后方房间便无法完全被排除在图像之外。杜尚给结构一个暗示人物与事件的标题，却拒绝普通人物画的清晰叙事。裂纹也是实际可见表面的一部分。观看必须在装置、支撑它的玻璃，以及透明面从后方引入的景物之间来回移动。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "26d26cdd-f1e2-50b1-a48d-7f2d1c9428e1",
+      "title": "议会大厦大火",
+      "catalogueTitle": "The Burning of the Houses of Parliament",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1834–1835",
+      "start": 1834,
+      "end": 1835,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/26d26cdd-f1e2-50b1-a48d-7f2d1c9428e1-44d43b1f63618f0c.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/the-burning-of-the-houses-of-parliament-1",
+      "credit": "J. M. W. Turner. The Burning of the Houses of Parliament. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.philamuseum.org/objects/103831",
+      "description": "火灾在透纳画中扩散成河面上的光、天空中的烟，以及不断变化的建筑景象。人群与船只表明这是一场被共同观看的事件。博物馆将绘画定为1834至1835年，火灾本身则发生于1834年10月16日。区分两个日期，也是在区分灾难与后来表现灾难的工作。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "99dcf41c-997e-5103-b441-2ae2e98b0d26",
+      "title": "狂欢节之夜",
+      "catalogueTitle": "Carnival Evening",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1885-1886",
+      "start": 1885,
+      "end": 1886,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/99dcf41c-997e-5103-b441-2ae2e98b0d26-15d7146831a3d049.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/carnival-evening-1886",
+      "credit": "Henri Rousseau. Carnival Evening. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/carnival-evening-1886",
+      "description": "服装指向节庆，周围风景却几乎无法印证热闹。卢梭把两个浅色人物留在秃树与月亮下面，衬着广大的黑暗显得很小。庆祝只体现在衣着上，而不体现为人群或声响。这种落差带来不确定：标题提供了场合，可见环境却没有决定究竟发生着什么。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "f28d833e-8658-5c50-9322-66e966189ae9",
+      "title": "狗吠月亮",
+      "catalogueTitle": "Dog Barking at the Moon",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "",
+      "accession": "1952-61-82",
+      "image": "https://artlines.org/assets/artworks/wikiart/f28d833e-8658-5c50-9322-66e966189ae9-5b9c00391f38a491.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-miro/dog-barking-at-the-moon",
+      "credit": "Joan Miró. Dog Barking at the Moon. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joan-miro/dog-barking-at-the-moon",
+      "description": "狗与弯月在暗色画面中相隔甚远。米罗的长梯似乎提供连接，但比例又让这种可能显得古怪。形状如此之少，每一段间距都变得重要。画作可以暗示跨越无法掌握的距离的交流，却不必把梯子变成可走的路线，也不必把月亮变成日常目的地。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "f5e39ff2-6368-58a6-a113-b796b27b5931",
+      "title": "红磨坊：舞蹈",
+      "catalogueTitle": "At the Moulin Rouge, The Dance",
+      "artist": "Henri de Toulouse-Lautrec",
+      "artists": [
+        {
+          "name": "Henri de Toulouse-Lautrec",
+          "role": "primary",
+          "slug": "henri-de-toulouse-lautrec-q82445"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f5e39ff2-6368-58a6-a113-b796b27b5931-3c82849deeff161a.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-de-toulouse-lautrec/at-the-moulin-rouge-the-dance-1890",
+      "credit": "Henri de Toulouse-Lautrec. At the Moulin Rouge, The Dance. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-de-toulouse-lautrec/at-the-moulin-rouge-the-dance-1890",
+      "description": "舞者需要周围人群让出的那块空地。图卢兹—洛特雷克记录了不同程度的参与：表演、观看、交谈，以及站在边缘。因此，室内的人际分布也是舞蹈的一部分，不只是背景。明亮衣服帮助区分各个人物，而他们的注意力未必集中在同一动作上。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "3d4c7b4f-6aa0-56ca-abdb-c55ec861543a",
+      "title": "牛顿圆盘：《双色赋格》习作",
+      "catalogueTitle": "Disks of Newton, Study for Fugue in Two Colors",
+      "artist": "František Kupka",
+      "artists": [
+        {
+          "name": "František Kupka",
+          "role": "primary",
+          "slug": "frantisek-kupka-q167414"
+        }
+      ],
+      "date": "约 1911 年",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/3d4c7b4f-6aa0-56ca-abdb-c55ec861543a-026d414b79671d3f.jpg",
+      "imageSource": "https://www.wikiart.org/en/frantisek-kupka/disks-of-newton-study-for-fugue-in-two-colors",
+      "credit": "František Kupka. Disks of Newton, Study for Fugue in Two Colors. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/frantisek-kupka/disks-of-newton-study-for-fugue-in-two-colors",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frantisek-kupka/disks-of-newton-study-for-fugue-in-two-colors",
+      "description": "弧线互相穿过前后，却不归属于某台机器或某个身体。库普卡让颜色与弯曲条带的顺序承担运动感。标题里的音乐参照提供的是比较，而不是一段有待破译的曲调。目光追随表面上的关系与再现，不是跟着某个可辨认物体穿越风景。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "033d7b42-0f7d-54de-93b5-0882feabb0d3",
+      "title": "男性与女性",
+      "catalogueTitle": "Male and Female",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1942",
+      "start": 1942,
+      "end": 1942,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/033d7b42-0f7d-54de-93b5-0882feabb0d3-0afc2d70f4311a11.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/male-and-female",
+      "credit": "Male and Female. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/male-and-female",
+      "description": "数字、圈线与色块之间，两道竖直形体仍部分可辨为人物。波洛克没有把它们完全从周围活动中分出来。身体与独立笔迹可以在同一层面上竞争。不要只把它看成通向后期作品的一步；两种图像同时留在这里所产生的具体张力，也值得单独注意。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "35aaa386-6999-5fcb-ae73-0f4f3c02ef54",
+      "title": "化身俄耳甫斯的科西莫一世·德·美第奇",
+      "catalogueTitle": "Portrait of Cosimo I de' Medici as Orpheus",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "约 1538 年",
+      "start": 1538,
+      "end": 1538,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/35aaa386-6999-5fcb-ae73-0f4f3c02ef54-b6350cfe32d13b47.jpg",
+      "imageSource": "https://www.wikiart.org/en/agnolo-bronzino/portrait-of-cosimo-i-de-medici-as-orpheus",
+      "credit": "Bronzino. Portrait of Cosimo I de' Medici as Orpheus. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/agnolo-bronzino/portrait-of-cosimo-i-de-medici-as-orpheus",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/agnolo-bronzino/portrait-of-cosimo-i-de-medici-as-orpheus",
+      "description": "弦乐器与神话角色替代了通常的宫廷服装，成为介绍科西莫的方式。布龙齐诺把可识别的面孔与理想化裸体结合。这幅肖像不只是说明统治者长什么样，也说明画家如何把人物相貌与故事结合，塑造日常外貌之外的身份。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "184d14da-58b7-5aa6-b844-28c45926b698",
+      "title": "祝福的基督与祈祷的圣母",
+      "catalogueTitle": "Blessing Christ and Praying Virgin",
+      "artist": "Robert Campin",
+      "artists": [
+        {
+          "name": "Robert Campin",
+          "role": "primary",
+          "slug": "robert-campin-q80442"
+        }
+      ],
+      "date": "1424",
+      "start": 1424,
+      "end": 1424,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/184d14da-58b7-5aa6-b844-28c45926b698-54222584570dd766.jpg",
+      "imageSource": "https://www.wikiart.org/en/robert-campin/blessing-christ-and-praying-virgin",
+      "credit": "Robert Campin. Blessing Christ and Praying Virgin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/robert-campin/blessing-christ-and-praying-virgin",
+      "description": "一双手合起祈祷，另一只手抬起祝福。金地前的近距离呈现使两种动作直接对应，几乎没有叙事背景的余地。目光与手势的细小差别承担说明作用。图像要求我们持续面对两位神圣人物，而不是追索一个正在展开的单一事件。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "0654e2ea-74bf-5589-bdbf-11a57cb5a47a",
+      "title": "隐藏的声响",
+      "catalogueTitle": "With Hidden Noise",
+      "artist": "Marcel Duchamp",
+      "artists": [
+        {
+          "name": "Marcel Duchamp",
+          "role": "primary",
+          "slug": "marcel-duchamp-round2-d0ed94237083"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "现成的",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/0654e2ea-74bf-5589-bdbf-11a57cb5a47a-c1737a1667af3eda.jpg",
+      "imageSource": "https://www.wikiart.org/en/marcel-duchamp/with-hidden-noise-1916",
+      "credit": "Marcel Duchamp. With Hidden Noise. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/marcel-duchamp/with-hidden-noise-1916",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/marcel-duchamp/with-hidden-noise-1916",
+      "description": "金属板与长螺钉把线团固定成紧凑结构。标题指向眼睛无法清点的东西：藏在里面的物件，以及与这种隐藏相关的声音。杜尚为视觉检查设了界限。即使更加精确地了解外部构造，也不一定能知道里面是什么，所以描述不能穷尽这件作品。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "cbedfee9-74d5-551c-a087-552a942ea80b",
+      "title": "室内",
+      "catalogueTitle": "Interior (The Rape)",
+      "artist": "Edgar Degas",
+      "artists": [
+        {
+          "name": "Edgar Degas",
+          "role": "primary",
+          "slug": "edgar-degas-q46373"
+        }
+      ],
+      "date": "1868-1869",
+      "start": 1868,
+      "end": 1869,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cbedfee9-74d5-551c-a087-552a942ea80b-7aaeaed775282e54.jpg",
+      "imageSource": "https://www.wikiart.org/en/edgar-degas/interior-the-rape-1869",
+      "credit": "Edgar Degas. Interior (The Rape). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edgar-degas/interior-the-rape-1869",
+      "description": "男人站在门边，女子则在昏暗房间另一处俯身。家具与散物加大了两种不对等姿态之间的距离。德加提供足够的具体细节来暗示故事，却不足以将某个故事确定下来。我们可以讨论室内的紧张，而不把一套引人联想的安排当作某件事件的证据。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "eb24b617-d1a7-523e-98cd-550fdef48eef",
+      "title": "圣母怜子",
+      "catalogueTitle": "Pietà (The Lamentation of Christ)",
+      "artist": "El Greco",
+      "artists": [
+        {
+          "name": "El Greco",
+          "role": "primary",
+          "slug": "el-greco-q301"
+        }
+      ],
+      "date": "1575",
+      "start": 1575,
+      "end": 1575,
+      "medium": "木板蛋彩画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/greek-images-20260920/eb24b617-d1a7-523e-98cd-550fdef48eef-e9e07a3fce9e49e0.jpg",
+      "imageSource": "https://www.wikiart.org/en/el-greco/pieta-the-lamentation-of-christ-1575",
+      "credit": "El Greco; WikiArt; Public domain (WikiArt label). Source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/el-greco/pieta-the-lamentation-of-christ-1575",
+      "source": "https://www.wikiart.org/en/el-greco/pieta-the-lamentation-of-christ-1575",
+      "description": "玛利亚支撑基督苍白的身体，使这组棱角分明的人物在身体上彼此必要。格列柯拉长四肢、强化衣褶尖角，不让悲恸安稳地落成一幅平滑均衡的展示。破碎风景把不稳定继续延伸到人物之外。活人与死者身体相接的地方，仍是场景最直接的说明。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "ee2eeb6c-ea57-5823-b3b7-0e50526497f5",
+      "title": "小提琴与报纸",
+      "catalogueTitle": "Violin and Newspaper (Musical Forms)",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "约 1912 年",
+      "start": 1912,
+      "end": 1912,
+      "medium": "布面炭笔与油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/ee2eeb6c-ea57-5823-b3b7-0e50526497f5-c71ef93414bda5f8.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/violin-and-newspaper-musical-forms",
+      "credit": "Georges Braque. Violin and Newspaper (Musical Forms). WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/violin-and-newspaper-musical-forms",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/violin-and-newspaper-musical-forms",
+      "description": "即使没有完整轮廓，几道曲线也足以暗示小提琴。布拉克把这种不完整识别放在文字旁，让阅读与观看一同进行。重叠平面不承认唯一视点。乐器需要从线索中拼合，报纸上的符号则示范另一种熟悉的方式：由分散标记形成意义。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "47223221-02b0-5602-a4f2-db912a4c97d8",
+      "title": "威廉·拉什雕刻斯库尔基尔河寓意像",
+      "catalogueTitle": "William Rush Carving His Allegorical Figure of the Schuykill River",
+      "artist": "Thomas Eakins",
+      "artists": [
+        {
+          "name": "Thomas Eakins",
+          "role": "primary",
+          "slug": "thomas-eakins-q214905"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/47223221-02b0-5602-a4f2-db912a4c97d8-6bc47ac7f914648d.jpg",
+      "imageSource": "https://www.wikiart.org/en/thomas-eakins/william-rush-carving-his-allegorical-figure-of-the-schuykill-river-1877",
+      "credit": "Thomas Eakins. William Rush Carving His Allegorical Figure of the Schuykill River. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/thomas-eakins/william-rush-carving-his-allegorical-figure-of-the-schuykill-river-1877",
+      "description": "模特、雕塑家与正在成形的雕像，呈现公共形象制作中的不同阶段。埃金斯把衣服、工具和坐着的陪伴者都留在工作室，不让寓意像仿佛一开始就已完成。河流通过劳动与摆姿获得人形。理想化结果旁边，那些普通的制作条件仍然可见。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "0690e281-ef22-559e-b1d4-f2570e22a243",
+      "title": "教宗庇护七世与卡普拉拉枢机",
+      "catalogueTitle": "Pope Pius VII with the Cardinal Caprara",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1805",
+      "start": 1805,
+      "end": 1805,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/0690e281-ef22-559e-b1d4-f2570e22a243-7974f396ffbfae8d.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacques-louis-david/pope-pius-vii-with-the-cardinal-caprara-1805",
+      "credit": "Pope Pius VII with the Cardinal Caprara. WikiArt; Jacques-Louis David. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jacques-louis-david/pope-pius-vii-with-the-cardinal-caprara-1805",
+      "description": "重叠人物通过位置、对比鲜明的衣服和不同朝向的面孔彼此区分。大卫用紧凑布局表现制度性的等级。浅袍与红色点缀从暗背景中显现，却没有消去任何一人的个性。权威通过人与人的关系表现，而非孤立地依靠服装。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "09eef78a-9726-5ab4-8e19-d6474dcf03c4",
+      "title": "诗人，或三点半",
+      "catalogueTitle": "The Poet, or Half Past Three",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1911-1912",
+      "start": 1911,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/09eef78a-9726-5ab4-8e19-d6474dcf03c4-a1b87a5cc74b664e.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/the-poet-or-half-past-three-1912",
+      "credit": "Marc Chagall. The Poet, or Half Past Three. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/marc-chagall/the-poet-or-half-past-three-1912",
+      "description": "绿色头部的旋转扰乱了一个家具仍可识别的房间。夏加尔让明亮几何分区贯穿环境与身体，使两者共同失稳。异常朝向可以暗示错位，却不提供字面诊断，也不提供对思想的唯一解释。房间必须有一部分仍然普通，身体偏离常态才会显眼。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "59038f15-0ae7-5455-b417-94d934deddc2",
+      "title": "圣母与书写的圣婴",
+      "catalogueTitle": "Madonna with Writing Child",
+      "artist": "Pinturicchio",
+      "artists": [
+        {
+          "name": "Pinturicchio",
+          "role": "primary",
+          "slug": "pinturicchio-q5591"
+        }
+      ],
+      "date": "1498",
+      "start": 1498,
+      "end": 1498,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/59038f15-0ae7-5455-b417-94d934deddc2-ec64db8b57f5936a.jpg",
+      "imageSource": "https://www.wikiart.org/en/pinturicchio/madonna-with-writing-child-1498",
+      "credit": "Pinturicchio. Madonna with Writing Child. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pinturicchio/madonna-with-writing-child-1498",
+      "description": "在玛利亚的怀抱里，书本给孩子的双手安排了活动。平图里乔把身体亲近与书写动作保留在一起，后方风景则向外展开。手势使熟悉的母子布局更复杂：婴儿不仅接受照顾，也被表现为专注于知识。相靠的手让这两种角色在画面中保持连接。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    },
+    {
+      "id": "90f5dd51-b797-5755-9c49-db6d7abed8ff",
+      "title": "六种元素",
+      "catalogueTitle": "The six elements",
+      "artist": "René Magritte",
+      "artists": [
+        {
+          "name": "René Magritte",
+          "role": "primary",
+          "slug": "rene-magritte-q7836"
+        }
+      ],
+      "date": "1928",
+      "start": 1928,
+      "end": 1928,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/90f5dd51-b797-5755-9c49-db6d7abed8ff-f07e7a1d48b7315d.jpg",
+      "imageSource": "https://www.wikiart.org/en/rene-magritte/the-six-elements-1928",
+      "credit": "René Magritte. The six elements. WikiArt source label: Rene Magritte Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/rene-magritte/the-six-elements-1928",
+      "license": "Rene Magritte Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rene-magritte/the-six-elements-1928",
+      "description": "分开的格子许诺一种整齐分类，其中事物却不遵循统一规则。火、躯干、风景及其他形体的大小与性质各不相同。马格利特利用框格的规整，使错配更明显。把一个集合分得整齐，并不能说明成员之间有什么共同点，不论布局看起来多么权威。",
+      "importance": "",
+      "museum": "Philadelphia Museum of Art"
+    }
+  ],
+  "context": {
+    "start": 1424,
+    "end": 1942
+  },
+  "closingSections": [
+    {
+      "title": "给未解之处留下空间",
+      "paragraphs": [
+        "请区分被实际藏起的物件与尚不明确的故事。杜尚的结构和德加的房间以不同方式保留信息，也值得用不同问题来读。参观前另行核实当前展出情况；《格罗斯医生的诊所》由两家机构共有，整份选择也不能当作一栋建筑中的固定路线。"
+      ]
+    }
+  ]
+}

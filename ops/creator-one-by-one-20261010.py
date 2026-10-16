@@ -27,6 +27,7 @@ r.PORT = 55519
 b.RUN = m.RUN = q.RUN = r.RUN = s.RUN = RUN
 m.CACHE = {}
 ACTOR = 'local-european-research'
+EXISTING_RECORDS = 'existing-records.json.gz'
 
 
 def uid(value):
@@ -187,7 +188,15 @@ def validate(plan):
             assert 0 < w['creation_year_start'] <= w['creation_year_end'] <= 1970
         assert row['page']['metadata']['artistUrl'] == urlsplit(SOURCE).path
         assert row['page']['metadata']['_id'] == row['wikiart_artwork_id']
+        assert row.get('attribution_role','primary') in ('primary','workshop','attributed_to','circle_of')
+        if row.get('attribution_role','primary') != 'primary':
+            assert row.get('attribution_review') and row.get('native_sources')
+        if row.get('object_context'):
+            assert row['object_context']['object_form']=='icon'
+            assert row['object_context']['basis'] and row.get('native_sources')
+            assert 1 <= len(row['object_context']['cultural_context']) <= 500
         receipts.extend([row['source_receipt'], row['metadata_receipt'], row['page']['receipt']])
+        receipts.extend(v['receipt'] for v in row.get('native_sources',[]))
     unique = {rc['body_path']:rc for rc in receipts}
     for path, rc in unique.items():
         raw = (ROOT/path).read_bytes()
@@ -217,7 +226,7 @@ def preflight():
         db.execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ, READ ONLY')
         conflicts = collisions(db, plan['rows'])
         assert not any(conflicts.values()), conflicts
-        assert inventory(db) == r.load(RUN/'existing-records.json.gz'), 'Existing creator records changed; research again'
+        assert inventory(db) == r.load(RUN/EXISTING_RECORDS), 'Existing creator records changed; research again'
         before = s.snapshots(db, [x['artwork']['id'] for x in inventory(db)])
         collection = db.execute('SELECT curator_kind,institution_id FROM curated_collections WHERE id=%s', (m.COLLECTION,)).fetchone()
         assert collection == dict(curator_kind='owner', institution_id=None)
@@ -253,7 +262,7 @@ def apply():
             creator = db.execute('SELECT to_jsonb(a) a FROM artists a WHERE id=%s FOR SHARE', (AID,)).fetchone()['a']
             assert creator == plan['pair']['artist'], 'Creator changed since selection'
             existing = inventory(db)
-            assert existing == r.load(RUN/'existing-records.json.gz'), 'Existing artwork evidence changed'
+            assert existing == r.load(RUN/EXISTING_RECORDS), 'Existing artwork evidence changed'
             active_count = db.execute("SELECT count(DISTINCT a.id) n FROM artwork_artists aa JOIN artworks a ON a.id=aa.artwork_id WHERE aa.artist_id=%s AND a.status<>'archived'", (AID,)).fetchone()['n']
             assert active_count == plan['pair']['count_at_selection'] and 0 <= active_count <= 5
             conflicts = collisions(db, rows)
@@ -272,7 +281,10 @@ def apply():
                     keys = ['id','slug','title','alternate_title','normalized_title','date_display','creation_year_start','creation_year_end','date_precision','work_type','medium_text','dimensions_text']
                     db.execute("""INSERT INTO artworks(id,slug,title,alternate_title,normalized_title,date_display,creation_year_start,creation_year_end,date_precision,work_type,medium_text,dimensions_text,status,research_candidate,created_by,updated_by)
                       VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'review',true,%s,%s)""", tuple(w[k] for k in keys)+(ACTOR,ACTOR))
-                    db.execute("INSERT INTO artwork_artists(artwork_id,artist_id,attribution_role,attribution_note) VALUES(%s,%s,'primary',%s)", (wid,AID,row['identity_basis']))
+                    db.execute("INSERT INTO artwork_artists(artwork_id,artist_id,attribution_role,attribution_note) VALUES(%s,%s,%s,%s)", (wid,AID,row.get('attribution_role','primary'),row['identity_basis']+' '+row.get('attribution_review','')))
+                    if row.get('object_context'):
+                        context=row['object_context']
+                        db.execute('UPDATE artworks SET object_form=%s,cultural_context=%s WHERE id=%s',(context['object_form'],context['cultural_context'],wid))
                     for scheme, sid in [('wikiart-legacy-content-id',row['source_id']), ('wikiart-artwork',row['wikiart_artwork_id'])]:
                         db.execute("INSERT INTO external_identifiers(entity_type,entity_id,scheme,external_id,canonical_url,source_id,retrieved_at) VALUES('artwork',%s,%s,%s,%s,%s,%s)", (wid,scheme,sid,row['source_url'],source,row['page']['receipt']['retrieved_at']))
                     evidence = dict(operation=OP, plan_sha256=pin, editorial_confidence=row['confidence'], identity_basis=row['identity_basis'],
@@ -281,6 +293,7 @@ def apply():
                         date_review=row.get('date_review'), original_index_date=row['index']['source_date'],
                         source_receipts=[row['source_receipt'],row['metadata_receipt'],row['page']['receipt']],
                         translated_titles_checked=row['translated_titles_checked'], editorial_review=row.get('editorial_review'),
+                        attribution_role=row.get('attribution_role','primary'),attribution_review=row.get('attribution_review'),object_context=row.get('object_context'),
                         selection='Personal owner study selection. No museum holding, display or masterpiece assertion. No image downloaded or attached.')
                     db.execute("""INSERT INTO citations(id,entity_type,entity_id,source_id,field_name,source_record_id,source_url,evidence_note,retrieved_at,created_by)
                       VALUES(%s,'artwork',%s,%s,'creator_expansion_source_identity',%s,%s,%s,%s,%s)""", (uid('citation/'+wid),wid,source,row['source_id'],row['source_url'],json.dumps(evidence,ensure_ascii=False),row['page']['receipt']['retrieved_at'],ACTOR))
@@ -297,6 +310,10 @@ def apply():
                 assert artwork['primary_media_id'] is None and artwork['current_institution_id'] is None
                 assert not record['locations'] and not record['attachments']
                 assert len(record['creators']) == 1 and record['creators'][0]['artist_id'] == AID
+                assert record['creators'][0]['attribution_role']==row.get('attribution_role','primary')
+                if row.get('object_context'):
+                    assert artwork['object_form']==row['object_context']['object_form']
+                    assert artwork['cultural_context']==row['object_context']['cultural_context']
             assert s.snapshots(db, old_ids) == before
             r.save_gz(BACKUP/'transaction-postimages.json.gz', after)
             result = dict(at=r.now(), artist_id=AID, artist=creator['display_name'], slug=creator['slug'],

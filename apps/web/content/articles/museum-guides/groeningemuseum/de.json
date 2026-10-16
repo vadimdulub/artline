@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline hat diese Werke aus dokumentierten Museumsbeständen ausgewählt. Die Auswahl erfolgt unabhängig vom Museum; einzelne Werke können verliehen oder nicht ausgestellt sein. Datierungen und Zuschreibungen behalten die in den verlinkten Datensätzen enthaltenen Einschränkungen bei.",
+  "labels": {
+    "guides": "Alle Museumsführer",
+    "download": "PDF herunterladen",
+    "language": "Leitfadensprache",
+    "translation": "KI-gestützte Übersetzung",
+    "explore": "Entdecken Sie diese Auswahl in Artline",
+    "contextNote": "Betrachten Sie die ausgewählten Werke im Kontext von Büchern und Ereignissen ihrer Zeit oder vergleichen Sie die Lebensdaten der Künstler. Die Bücher und Ereignisse liefern den Kontext, nicht den Nachweis eines direkten Einflusses. Auch Werke ohne gesicherte Datierung sind in diesem Leitfaden enthalten.",
+    "all": "Kunstwerke im Kontext",
+    "allHint": "Die ausgewählten Arbeiten setzen sich mit Büchern und der Geschichte ihrer Zeit auseinander.",
+    "painters": "Wer lebte wann?",
+    "paintersHint": "Sehen Sie, wann die Künstler lebten und wessen Lebenszeiten sich überschnitten.",
+    "events": "Historische Ereignisse",
+    "eventsHint": "Erkunden Sie die Ereignisse während des im Reiseführer angegebenen Zeitraums",
+    "books": "Zeitleiste der Bücher",
+    "booksHint": "Entdecken Sie bemerkenswerte Bücher aus derselben Zeit.",
+    "contents": "Die Werkauswahl",
+    "artworks": "Ausgewählte Kunstwerke",
+    "importance": "Warum es wichtig ist",
+    "artwork": "Offene Kunstwerke",
+    "source": "Werkquelle",
+    "inventory": "Inventar",
+    "reading": "Weiterführende Lektüre",
+    "visit": "Vor Ihrem Besuch",
+    "website": "Museumswebsite",
+    "officialGuide": "Offizieller Sammlungsführer",
+    "updated": "Quellen und Besucherinformationen geprüft"
+  },
+  "slug": "groeningemuseum",
+  "museum": "Groeningemuseum",
+  "city": "Brügge",
+  "country": "Belgien",
+  "title": "Groeningemuseum: Meisterwerke",
+  "subtitle": "Zwanzig Werke im Groeningemuseum, von der Nähe eines Porträts bis zum fernen Flusshorizont.",
+  "introduction": "Margareta van Eyck hat kaum Platz um sich. Die Falten ihrer Kopfbedeckung scheinen fast alles auszufüllen, was das Gesicht freilässt. Anderswo in dieser Auswahl öffnen sich Flüsse und Himmel weit über die Menschen hinaus, die sie bewohnen. Der Unterschied der Entfernungen bietet einen Zugang zur vielfältigen Sammlung des Groeningemuseums.\n\nDie religiösen und gerichtlichen Szenen werfen eine weitere Frage auf: Wer steht nahe beim zentralen Ereignis, und wer beobachtet es? Ein Stifter kniet zwischen Heiligen; Trauernde versammeln sich an einem Bett; Zeugen umringen einen angeklagten Richter. Diese Anordnungen lohnen den Vergleich, bevor man die Bilder nach Epochen trennt. Die zwanzig Werke bilden eine Auswahl zum Betrachten, keinen Rundgang durch die Säle.",
+  "visitNote": "Der Führer stützt sich auf die Sammlung des Groeningemuseums, einschließlich Zeichnungen und Werken, die möglicherweise nicht ausgestellt sind. Bitte informieren Sie sich vor Ihrer Reise über die aktuellen Besucherinformationen von Musea Brugge. Die Abfolge basiert auf einer redaktionellen Auswahl und entspricht nicht der Anordnung der Räume im Museum.",
+  "locale": "de",
+  "website": "https://www.museabrugge.be/",
+  "officialGuide": "https://www.museabrugge.be/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Kostenlos lesen · Englisch",
+      "note": "Leonardos Aufzeichnungen zu Licht, Gewandfalten und Figurenkomposition werfen praktische Fragen auf, die sich auf die frühen Gemälde anwenden lassen. Sie spiegeln eine zeitgleiche Diskussion der Renaissance wider, anstatt zu belegen, dass diese Künstler seinen Ratschlägen tatsächlich folgten."
+    }
+  ],
+  "works": [
+    {
+      "id": "51c9538d-d2c2-40e6-9f4d-faaa192f80fa",
+      "title": "Margareta van Eyck",
+      "catalogueTitle": "Portrait of Margareta van Eyck",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1439",
+      "start": 1439,
+      "end": 1439,
+      "medium": "Öl auf Eichenholz",
+      "accession": "0000.GRO0162.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/51c9538d-d2c2-40e6-9f4d-faaa192f80fa-bf8ee12b69eb.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0162-I",
+      "credit": "Jan van Eyck; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collectie.museabrugge.be/collection/work/id/0000_GRO0162_I",
+      "description": "Die weiße Kopfbedeckung umgibt das Gesicht mit scharf gefalteten Kanten, während die Hände den unteren Bildrand beruhigen. Das Porträt braucht keine Handlung, um zu bestehen. Vergleicht man die wechselnden Stoffformen mit den ruhigeren Flächen des Gesichts, wird deutlich: Die Gegenwart der Dargestellten hängt auch von ihrer Umgebung ab, nicht nur von der Genauigkeit ihrer Züge.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "2575a1c6-6625-5f2f-880b-b081ca7598f7",
+      "title": "Marientod",
+      "catalogueTitle": "Death of the Virgin",
+      "artist": "Hugo van der Goes",
+      "artists": [
+        {
+          "name": "Hugo van der Goes",
+          "role": "primary",
+          "slug": "hugo-van-der-goes-q215251"
+        }
+      ],
+      "date": "after 1475–1482",
+      "start": 1475,
+      "end": 1482,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2575a1c6-6625-5f2f-880b-b081ca7598f7-e52be3672d071de6.jpg",
+      "imageSource": "https://www.wikiart.org/en/hugo-van-der-goes/death-of-the-virgin",
+      "credit": "Hugo van der Goes. Death of the Virgin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hugo-van-der-goes/death-of-the-virgin",
+      "description": "Die Apostel drängen sich um Marias Bett, gehen aber nicht in einem einheitlichen Ausdruck der Trauer auf. Gesichter und Hände lenken den Blick immer wieder vom Körper fort und zu ihm zurück. Jüngere Untersuchungen des Museums fanden zudem Spuren gemalter Vorhänge und früherer Beschneidungen: Auch die Grenzen, innerhalb deren die Versammlung sichtbar wird, haben eine Geschichte.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "5c0dd1b5-8193-5aaa-8263-e095871a2b92",
+      "title": "Das Jüngste Gericht",
+      "catalogueTitle": "Last Judgement",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "c. 1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "Öl auf Holztafel",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/5c0dd1b5-8193-5aaa-8263-e095871a2b92-9b487b1741ef64a0.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "credit": "Hieronymus Bosch. Last Judgement. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "description": "Die vielen kleinen Vorgänge können es erschweren, das Triptychon zu überblicken. Ein Ausgangspunkt sind die großen Bereiche: links das Paradies, in der Mitte das Gericht, rechts die Hölle. Beunruhigend ist, dass die irdische Welt in der Mitte bereits einem Ort der Strafe ähnelt. Die seltsamen Wesen gehören zu diesem Zusammenhang und sind keine herauslösbaren Kuriositäten.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "2e3c043a-4ec0-5c66-9b9b-0d780263db2a",
+      "title": "La Mare aux Fées, Fontainebleau",
+      "catalogueTitle": "'La Mare aux Fées' at Fontainebleau",
+      "artist": "Alphonse Asselbergs",
+      "artists": [
+        {
+          "name": "Alphonse Asselbergs",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-a5045c59d4610084"
+        }
+      ],
+      "date": "um 1876",
+      "start": 1876,
+      "end": 1876,
+      "medium": "Öl auf Leinwand",
+      "accession": "0000.GRO0008.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/2e3c043a-4ec0-5c66-9b9b-0d780263db2a-ec6c3a6f8983.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0008-I",
+      "credit": "Alphonse Asselbergs; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0008-I",
+      "description": "Kein beherrschender Berg und keine markante Landmarke ordnen diese Waldansicht. Stattdessen wechselt das Teichufer zwischen Gräsern und Bäumen ständig die Richtung. Wer ihm folgt, bemerkt das unregelmäßige Zusammentreffen von Land und Wasser. Der weite Himmel gibt dem bescheidenen Fleck Erde Raum, ohne daraus ein großartiges Panorama zu machen.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "b96f635b-52a6-5dce-9694-454be8324989",
+      "title": "Die Verhaftung des Sisamnes",
+      "catalogueTitle": "Arrest of Sisamnes by Cambyses",
+      "artist": "Gerard David",
+      "artists": [
+        {
+          "name": "Gerard David",
+          "role": "primary",
+          "slug": "gerard-david-q333380"
+        }
+      ],
+      "date": "1498",
+      "start": 1498,
+      "end": 1498,
+      "medium": "Öl auf Holztafel",
+      "accession": "0000.GRO0040.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/b96f635b-52a6-5dce-9694-454be8324989-28df8056da4e.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0040-I",
+      "credit": "Gerard David; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0040-I",
+      "description": "Hände weisen auf den sitzenden Mann, während die Gesichter ringsum ihn prüfend ansehen. David zeigt die Anklage als öffentliche Situation, nicht als privaten Austausch zweier Personen. Die kostbare Kleidung trägt dazu bei: Diese Zeugen gehören einer geordneten städtischen Welt an. Ihre Nähe macht den Platz des Angeklagten darin plötzlich unsicher.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "6e974325-5a9d-5cfe-963f-e2d033b92455",
+      "title": "Bankett",
+      "catalogueTitle": "Banquet",
+      "artist": "Antonius Claeissens",
+      "artists": [
+        {
+          "name": "Antonius Claeissens",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-b1587f45d71972b3"
+        }
+      ],
+      "date": "1574",
+      "start": 1574,
+      "end": 1574,
+      "medium": "Öl auf Holztafel",
+      "accession": "0000.GRO0023.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/6e974325-5a9d-5cfe-963f-e2d033b92455-e868f9155008.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0023-I",
+      "credit": "Antonius Claeissens; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0023-I",
+      "description": "Ein Festmahl umgibt seine Gäste gewöhnlich mit Speisen und Gesprächspartnern. Hier setzt die frontale Anordnung sie zugleich einem weiteren Publikum außerhalb des Bildes aus. Aufwendige Kleidung, Gefäße und Schmuck stellen Fülle zur Schau. Diese förmliche Präsentation lässt sich mit den überlappenden, weniger geordneten Begegnungen in Dirck Hals' Wirtshausszene vergleichen.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "e882dfa2-f70b-5822-a7cf-03ba01c4379d",
+      "title": "Die Taufe Christi",
+      "catalogueTitle": "Baptism of Christ",
+      "artist": "Gerard David",
+      "artists": [
+        {
+          "name": "Gerard David",
+          "role": "primary",
+          "slug": "gerard-david-q333380"
+        }
+      ],
+      "date": "ca. 1502 – circa 1508",
+      "start": 1502,
+      "end": 1508,
+      "medium": "Öl auf Holztafel",
+      "accession": "0000.GRO0035.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/e882dfa2-f70b-5822-a7cf-03ba01c4379d-483a353db001.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0035-I",
+      "credit": "Gerard David; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0035-I",
+      "description": "Das erhobene Gefäß bezeichnet die entscheidende Handlung, doch die Landschaft setzt sich weit darüber hinaus fort. Kleine Zwischenräume um die Hauptfiguren halten die Taufe in dieser Fülle erkennbar. David muss die Welt nicht leeren, um darin ein heiliges Ereignis hervorzuheben: Raum und maßvolle Gesten übernehmen diese Aufgabe.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "120ed406-68a2-5345-9f49-13499ed64ea3",
+      "title": "Selbstporträt",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "James Ensor",
+      "artists": [
+        {
+          "name": "James Ensor",
+          "role": "primary",
+          "slug": "james-ensor-q158840"
+        }
+      ],
+      "date": "um 1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "Conté",
+      "accession": "0000.GRO1274r.II",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/120ed406-68a2-5345-9f49-13499ed64ea3-7d11dc2a5ef3.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO1274r-II",
+      "credit": "James Ensor; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO1274r-II",
+      "description": "Um Ensors geneigten Kopf bleibt viel Papier frei. Die Striche verdichten sich dort, wo die Ähnlichkeit sie braucht, und lockern sich andernorts. So bleibt das Papier ein wirksamer Bestandteil des Bildes. Neben Margareta van Eyck zeigt sich: Eine erkennbare Person kann ebenso aus ausgewählten Linien entstehen wie aus einer genau ausgeführten gemalten Oberfläche.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "20412d15-2363-5418-a829-4b2b5c7da3f0",
+      "title": "Musizierende und trinkende Gesellschaft in einem Wirtshaus",
+      "catalogueTitle": "Company making Music and drinking in an Inn",
+      "artist": "Dirck Hals",
+      "artists": [
+        {
+          "name": "Dirck Hals",
+          "role": "primary",
+          "slug": "dirck-hals-nga-38724"
+        }
+      ],
+      "date": "um 1627",
+      "start": 1627,
+      "end": 1627,
+      "medium": "Öl auf Holztafel",
+      "accession": "0000.GRO0252.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/20412d15-2363-5418-a829-4b2b5c7da3f0-30eccc5acdc9.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0252-I",
+      "credit": "Dirck Hals; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0252-I",
+      "description": "Ein Glas, ein Instrument und eine ausgestreckte Hand verbinden jeweils eine Person mit einer anderen. Diese kleinen Handlungen gliedern die Gesellschaft; keine einzelne Figur muss sie beherrschen. Neben Claeissens' Bankett wird der Unterschied deutlich. Hier hält das Geschehen über den Tisch hinweg die Menschen zusammen, nicht eine gemeinsame Pose.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "a8b4e801-449f-5c7e-99cb-371a6e71b3f1",
+      "title": "Jan van Eyewerve",
+      "catalogueTitle": "Portrait of Jan van Eyewerve",
+      "artist": "Pourbus Pieter",
+      "artists": [
+        {
+          "name": "Pourbus Pieter",
+          "role": "primary",
+          "slug": "pourbus-pieter-round2-2d4047d2dd68"
+        }
+      ],
+      "date": "1551",
+      "start": 1551,
+      "end": 1551,
+      "medium": "Öl auf Holztafel",
+      "accession": "0000.GRO0108.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/a8b4e801-449f-5c7e-99cb-371a6e71b3f1-301252b551c5.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0108-I",
+      "credit": "Pieter Pourbus; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0108-I",
+      "description": "Das Wappen und die Stadt hinter der Öffnung beschreiben die Identität des Mannes umfassender als sein Gesicht allein. Sie verorten ihn im öffentlichen Leben, während die dunklen Kleider seine Figur zusammenfassen. Dazu gehört das benachbarte Porträt von Jacquemyne Buuck: Auf einer eigenen Tafel antwortet dessen Anordnung auf seine.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "f191833e-d163-5152-a308-0cb835dc7be6",
+      "title": "Jacquemyne Buuck",
+      "catalogueTitle": "Portrait of Jacquemyne Buuck",
+      "artist": "Pourbus Pieter",
+      "artists": [
+        {
+          "name": "Pourbus Pieter",
+          "role": "primary",
+          "slug": "pourbus-pieter-round2-2d4047d2dd68"
+        }
+      ],
+      "date": "1551",
+      "start": 1551,
+      "end": 1551,
+      "medium": "Öl auf Holztafel",
+      "accession": "0000.GRO0109.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/f191833e-d163-5152-a308-0cb835dc7be6-32627a496267.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0109-I",
+      "credit": "Pieter Pourbus; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0109-I",
+      "description": "Der weiße Kragen schneidet eine klare Form in das schwarze Kleid und führt den Blick von den Händen zum Gesicht. Unten bringt der kleine Hund eine weitere, anders bemessene lebendige Gestalt ins Bild. Mit dem Porträt Jan van Eyewerves verbindet die gegenläufige Anordnung beide Tafeln zu einem Paar, ohne den Dargestellten ihren eigenen Raum zu nehmen.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "a959577f-02a8-5718-903f-10ca3acda802",
+      "title": "Italienisierende Landschaft mit Marktszene",
+      "catalogueTitle": "Italianate Landscape with Market Scene",
+      "artist": "Peeter van Bredael",
+      "artists": [
+        {
+          "name": "Peeter van Bredael",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-6477745fb7fc28e5"
+        }
+      ],
+      "date": "um 1680",
+      "start": 1680,
+      "end": 1680,
+      "medium": "Öl auf Leinwand",
+      "accession": "0000.GRO0149.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/a959577f-02a8-5718-903f-10ca3acda802-50694171db40.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0149-I",
+      "credit": "Peeter van Bredael; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0149-I",
+      "description": "Der Markt geht unter einer Architektur weiter, die viel größer ist als ihre Nutzer. Händler und Tiere besetzen den Boden, während der Bogen eine fernere Welt öffnet. Die antike Umgebung gibt dem gewöhnlichen Handel einen mächtigen Rahmen; die Tätigkeit wiederum verhindert, dass die Ruinen zu einer leeren Vorführung architektonischer Größe werden.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "eba3699d-0894-5d3d-bd42-259d9c051279",
+      "title": "Der heilige Lukas malt die Madonna",
+      "catalogueTitle": "Saint Luke painting the Madonna",
+      "artist": "Lancelot Blondeel",
+      "artists": [
+        {
+          "name": "Lancelot Blondeel",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-47cf805f2a58262e"
+        }
+      ],
+      "date": "1545",
+      "start": 1545,
+      "end": 1545,
+      "medium": "Öl auf Leinwand",
+      "accession": "0000.GRO0018.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/eba3699d-0894-5d3d-bd42-259d9c051279-c4228ba2bed4.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0018-I",
+      "credit": "Lancelot Blondeel; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0018-I",
+      "description": "Die Begegnung des malenden Heiligen mit der Madonna beansprucht erstaunlich wenig von einem Bild, in dem das Ornament überwiegt. Säulen und Bögen schaffen einen aufwendigen Zugang zu diesem kleinen Zentrum. Die Umgebung fordert deshalb eigene Aufmerksamkeit: Ein heiliges Thema zu malen bedeutet hier auch, eine architektonische Welt darum zu bauen.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "0be99f3c-a8eb-552c-8ca1-3f9da079d446",
+      "title": "Wintermusik",
+      "catalogueTitle": "Winter music",
+      "artist": "Léon Spilliaert",
+      "artists": [
+        {
+          "name": "Léon Spilliaert",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1394505"
+        }
+      ],
+      "date": "1943",
+      "start": 1943,
+      "end": 1943,
+      "medium": "Tusche und Aquarellfarbe",
+      "accession": "1976.GRO0813.II",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/0be99f3c-a8eb-552c-8ca1-3f9da079d446-e86b1a1f402c.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/1976-GRO0813-II",
+      "credit": "Leon Spilliaert; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/1976-GRO0813-II",
+      "description": "Die gebogene Haltung der Geigerin unterbricht die wiederholten senkrechten Stämme. Schnee lässt den Boden karg erscheinen und isoliert ihre Tätigkeit ungewöhnlich stark. Musik ist im Gemälde nicht hörbar. Doch das Verhältnis zwischen der einzelnen Figur und den abgemessenen Baumabständen macht den Titel zu mehr als der Beschreibung einer Person mit Instrument.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "7496ede4-fc26-5072-8a5a-d20006f34700",
+      "title": "Flusslandschaft",
+      "catalogueTitle": "River Landscape",
+      "artist": "Jan van Goyen",
+      "artists": [
+        {
+          "name": "Jan van Goyen",
+          "role": "primary",
+          "slug": "jan-van-goyen-q315996"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "Öl auf Holztafel",
+      "accession": "0000.GRO0163.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/7496ede4-fc26-5072-8a5a-d20006f34700-3c94a1a1a145.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0163-I",
+      "credit": "Jan Josefsz. van Goyen; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0163-I",
+      "description": "Ein braunes Segel genügt, um sich kräftig von grauem Fluss und Himmel abzuheben. Die meiste Tiefe entsteht durch leisere Tonwechsel; die Boote brauchen deshalb keine scharf getrennten Farben, um ihren Ort zu behaupten. Bei so viel Raum über dem niedrigen Horizont wird der Charakter der Landschaft wesentlich vom Wetter bestimmt.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "f39218a8-81c0-5d28-b27f-62a1edc104a2",
+      "title": "Isabella von Portugal mit der heiligen Elisabeth",
+      "catalogueTitle": "Isabella Of Portugal With St. Elizabeth",
+      "artist": "Petrus Christus",
+      "artists": [
+        {
+          "name": "Petrus Christus",
+          "role": "primary",
+          "slug": "petrus-christus-q312616"
+        }
+      ],
+      "date": "1457-1460",
+      "start": 1457,
+      "end": 1460,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f39218a8-81c0-5d28-b27f-62a1edc104a2-99f589fbcdf19331.jpg",
+      "imageSource": "https://www.wikiart.org/en/petrus-christus/isabel-of-portugal-with-st-elizabeth",
+      "credit": "Petrus Christus. Isabella Of Portugal With St. Elizabeth. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/petrus-christus/isabel-of-portugal-with-st-elizabeth",
+      "description": "Die kniende Stifterin und ihre begleitende Heilige befinden sich in einem Raum, der durch einen Bogen nach außen führt. Als Triptychonflügel gehört die Tafel zu einem größeren Andachtszusammenhang, den dieses Bild allein heute schwer verständlich macht. Das Gebet ist damit eine persönliche Handlung und zugleich eine Geste über die Grenzen der erhaltenen Szene hinaus.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "35e5c9af-3116-46a3-80d6-347167bce247",
+      "title": "Madonna mit Kanonikus Joris van der Paele",
+      "catalogueTitle": "Madonna with Canon Joris van der Paele",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1436",
+      "start": 1436,
+      "end": 1436,
+      "medium": "Öl auf Eichenholz",
+      "accession": "0000.GRO0161.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/35e5c9af-3116-46a3-80d6-347167bce247-31393cd43152.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0161-I",
+      "credit": "Jan van Eyck; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collectie.museabrugge.be/collection/work/id/0000_GRO0161_I",
+      "description": "Das weiße Gewand des Kanonikers steht zwischen bestickten Kleidern, Stein und glänzender Rüstung. Die Materialien unterscheiden die Figuren, ohne ihre enge Versammlung um Maria und das Kind aufzulösen. Im Vergleich mit Margareta van Eyck fällt auf: Hier steht ein bestimmtes, alterndes Gesicht innerhalb einer heiligen Begegnung, statt für ein Porträt herausgelöst zu werden.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "7a56a3f3-7dea-5107-9766-84ffcd9c5a64",
+      "title": "Berge bei Voreppe",
+      "catalogueTitle": "Mountains at Voreppe, Dauphiné",
+      "artist": "Théodore Fourmois",
+      "artists": [
+        {
+          "name": "Théodore Fourmois",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-9b828052664a87df"
+        }
+      ],
+      "date": "1850",
+      "start": 1850,
+      "end": 1850,
+      "medium": "Öl auf Leinwand",
+      "accession": "0000.GRO0058.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/7a56a3f3-7dea-5107-9766-84ffcd9c5a64-99a886d2d203.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0058-I",
+      "credit": "Théodore Fourmois; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0058-I",
+      "description": "Die Menschen am Wasser bleiben klein genug, um die Größe des Tals verständlich zu machen, statt es zu beherrschen. Ihr Maßstab unterscheidet den nahen Vordergrund von den Bergen dahinter. Die Landschaft bietet mehrere Entfernungen zugleich und führt von menschlichen Tätigkeiten zu einem Gelände, das weit über deren Reichweite hinausgeht.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "8ed71c00-67c2-580d-8d69-7d1749f38797",
+      "title": "Mündung der Schelde",
+      "catalogueTitle": "Mouth of the River Scheldt",
+      "artist": "Paul Jean Clays",
+      "artists": [
+        {
+          "name": "Paul Jean Clays",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-de6a7dd6e1bdef70"
+        }
+      ],
+      "date": "ca. 1852 – circa 1875",
+      "start": 1852,
+      "end": 1875,
+      "medium": "Öl auf Leinwand",
+      "accession": "0000.GRO0026.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/8ed71c00-67c2-580d-8d69-7d1749f38797-05d2558b5fa3.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0026-I",
+      "credit": "Paul Jean Clays; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0026-I",
+      "description": "Die Segel neigen sich in verschiedenen Winkeln über dem offenen Wasser und geben dem Fluss ein Bewegungsmuster, ohne ihn einzuengen. Das größere hellbraune Segel setzt einen nahen Maßstab für die kleineren Schiffe. Während Van Goyens Fluss auf gedämpften Tönen beruht, macht Clays den Schiffsverkehr selbst zu einem auffälligeren Teil der Ansicht.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "63153f82-1b58-5595-a0ac-dc5d2a25cd17",
+      "title": "Franciscus Josephus Kinsoen",
+      "catalogueTitle": "Portrait of Franciscus Josephus Kinsoen",
+      "artist": "Jean Baptiste van Acker",
+      "artists": [
+        {
+          "name": "Jean Baptiste van Acker",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-0655b33f8a80c217"
+        }
+      ],
+      "date": "ca. 1825 – circa 1830",
+      "start": 1825,
+      "end": 1830,
+      "medium": "Öl auf Elfenbein",
+      "accession": "0000.GRO0076.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/63153f82-1b58-5595-a0ac-dc5d2a25cd17-437b8e5eb871.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0076-I",
+      "credit": "Jean Baptiste van Acker; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0076-I",
+      "description": "Das Oval lässt kaum mehr als Kopf, Schultern und hellen Kragen zu. Anders als Pourbus' Porträtierter mit Stadt und Wappen verfügt Kinsoen über wenig Umgebung, durch die er sich darstellen könnte. Der Gegensatz von Kragen und Rock konzentriert die Ähnlichkeit und zeigt, wie eng sich ein Porträt ohne ausgeführten Schauplatz fassen lässt.",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    }
+  ],
+  "context": {
+    "start": 1436,
+    "end": 1943
+  },
+  "closingSections": [
+    {
+      "title": "Zwei Entfernungen vergleichen",
+      "paragraphs": [
+        "Kehren Sie nach der Lektüre zu einem Porträt und einer Landschaft zurück. Achten Sie darauf, wie beide ihrem Gegenstand Raum geben oder ihn verweigern. Prüfen Sie für einen Besuch die aktuellen Museumsinformationen gesondert: Ein Sammlungseintrag garantiert nicht, dass jedes Werk ausgestellt ist."
+      ]
+    }
+  ]
+}

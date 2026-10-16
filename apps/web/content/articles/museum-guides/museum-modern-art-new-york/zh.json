@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "museum-modern-art-new-york",
+  "museum": "Museum of Modern Art",
+  "city": "纽约",
+  "country": "美国",
+  "title": "纽约现代艺术博物馆：杰作",
+  "subtitle": "二十件作品，改变身体、物件与绘画空间的规则。",
+  "introduction": "一罐汤重复了三十二次。一张床竖靠墙面。时钟软塌下来，橡胶手套与古典头像待在一起，沙发出现在丛林里。在这些改变之后，日常物件仍然可辨；事实上，正因为认得出来，变化才更加显眼。\n\n这组纽约现代艺术博物馆的作品，展示了多种扰动熟悉事物的方法。有些艺术家改变形状，有些改变搭配、大小或用途。还有人完全去掉可辨认的对象，只让颜色或颜料的轨迹安排观看。这些不是通向同一终点的连续步骤。把它们比较，便能看出“现代艺术”这个方便标签之下，容纳着多少不同的问题。",
+  "visitNote": "这批精选作品涵盖了馆藏的多个部分。请查阅 MoMA 官网上的藏品页面，以了解当前的展出地点及外借情况。马蒂斯于 1909 年创作的《舞蹈（I）》是较早的一幅；而色彩更为浓烈的 1910 年版本则由埃尔米塔日博物馆收藏。",
+  "locale": "zh",
+  "website": "https://www.moma.org/",
+  "officialGuide": "https://www.moma.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Pablo Picasso: A Retrospective",
+      "author": "Edited by William Rubin",
+      "url": "https://www.moma.org/calendar/exhibitions/1818",
+      "access": "数字化目录（“出版物”栏目 · 英文）",
+      "note": "现代艺术博物馆（MoMA）毕加索回顾展的数字化图录将《亚威农少女》与习作及后期作品并置呈现。通过对比，人们能更直观地看出这幅画作如何打破了传统人物画的常规。"
+    }
+  ],
+  "works": [
+    {
+      "id": "79e302c4-73f0-4264-a48d-9378ada06e7c",
+      "title": "星夜",
+      "catalogueTitle": "The Starry Night",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "圣雷米，1889年6月",
+      "start": 1889,
+      "end": 1889,
+      "medium": "布面油画",
+      "accession": "472.1941",
+      "image": "https://artlines.org/assets/artworks/wikiart/c66409a6-9da7-43b8-a60d-16b3da75dc97-d871d685c9d4e6b8.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889",
+      "credit": "Vincent van Gogh. The Starry Night. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79802",
+      "description": "旋转的天空下，小镇只占较小一块面积。梵高用反复的曲线与圆环连接分散星辰，让其间的黑暗也有了自己的动势。高大的柏树把前景与上方天空接通。我们可以从这种空间分配研究画作的力量，不必把每一笔都当作画家生平的症状。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "180786a9-bce9-41bd-8124-5c0247350dd4",
+      "title": "亚维农少女",
+      "catalogueTitle": "Les Demoiselles d'Avignon",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "巴黎，1907年6月至7月",
+      "start": 1907,
+      "end": 1907,
+      "medium": "布面油画",
+      "accession": "333.1939",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/180786a9-bce9-41bd-8124-5c0247350dd4-44ab5e6ae2e42bfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/the-girls-of-avignon-1907",
+      "credit": "Pablo Picasso. The girls of Avignon. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/the-girls-of-avignon-1907",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79766",
+      "description": "五个人物面对观看者，身体却没有安置在一个连续房间里，也不服从同一种表现方法。尖锐平面穿过肌肤与周围空间，各张脸的画法则明显不同。毕加索让人物始终以近乎对峙的姿态在场，即使统一空间已经崩解。认出这些女子是谁，也不能调和她们彼此不兼容的呈现方式。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "12c329d4-ee25-4ba3-bd19-f41514ee4ae1",
+      "title": "记忆的永恒",
+      "catalogueTitle": "The Persistence of Memory",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1931",
+      "start": 1931,
+      "end": 1931,
+      "medium": "布面油画",
+      "accession": "162.1934",
+      "image": "https://artlines.org/assets/artworks/wikiart/a2277e7a-09a7-4e5a-a2c5-5830b359e74a-f6c75b535175bb53.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/the-persistence-of-memory-1931",
+      "credit": "Salvador Dalí. The Persistence of Memory. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79018",
+      "description": "达利给软钟以精确边缘和可触的表面。它们容易辨认，却无法像普通钟表一样使用。远处岩壁保持着更坚硬的样子，使反差格外明确。画中的不确定并不来自模糊画法，而是来自可辨认之物失去了维系日常功能的物理性质。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "917d5d65-d66c-4b31-b6bd-823784ad7b89",
+      "title": "百老汇布吉伍吉",
+      "catalogueTitle": "Broadway Boogie Woogie",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1942–43",
+      "start": 1942,
+      "end": 1943,
+      "medium": "布面油画",
+      "accession": "73.1943",
+      "image": "https://artlines.org/assets/artworks/wikiart/6ec0ea73-5346-4054-b362-43c124e0982f-6b181b5c96bda99f.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/broadway-boogie-woogie-1943",
+      "credit": "Piet Mondrian. Broadway Boogie Woogie. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78682",
+      "description": "小色方块打断黄色网格，使线条无法成为不中断的边界。蒙德里安保留直角秩序，却在内部加入不安定的节拍。标题把作品与城市、音乐节奏联系起来，但两者都不要求画中出现真实街景。在一块静止表面上，中断位置的疏密便可以暗示运动。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "bae779a1-3800-4a56-bda6-120b3a3c48e6",
+      "title": "沉睡的吉普赛女郎",
+      "catalogueTitle": "The Sleeping Gypsy",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "布面油画",
+      "accession": "646.1939",
+      "image": "https://artlines.org/assets/artworks/wikiart/8e065bed-40d7-4867-907b-6d5ae5d4ae08-bf63aa6b892f6d8b.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-sleeping-gypsy-1897",
+      "credit": "Henri Rousseau. The Sleeping Gypsy. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/80172",
+      "description": "狮子俯向睡着的女子，却没有真正发动攻击。她的乐器与容器留在身边，在开阔景色中清楚可辨。卢梭让场景停在一种临界状态：靠近可能意味着危险、好奇，或画面没有解释的事情。标题沿用艺术家当时对睡眠者的称呼，并不能使这幅画成为民族志记录。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "e183c786-40c6-49ba-bbfa-2e7303587601",
+      "title": "梦",
+      "catalogueTitle": "The Dream",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "布面油画",
+      "accession": "252.1954",
+      "image": "https://artlines.org/assets/artworks/wikiart/0ce63345-7ca8-4bfd-84b2-ac23a419cb97-4705e803eeac949f.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-dream-1910",
+      "credit": "Henri Rousseau. The Dream. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79277",
+      "description": "沙发的存在，使这片丛林不可能被误认成未经安排的自然见闻。卢梭把熟悉的室内家具放进巨大叶片、动物与乐手之间。每个部分都可清楚细看，整体却拒绝普通解释。它作为虚构画面仍然令人信服，恰恰因为细节不必拼成可信的现实地理。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "f063e2c6-65b0-4503-9389-008b668dbd88",
+      "title": "金宝汤罐头",
+      "catalogueTitle": "Campbell's Soup Cans",
+      "artist": "Andy Warhol",
+      "artists": [
+        {
+          "name": "Andy Warhol",
+          "role": "primary",
+          "slug": "andy-warhol-nga-1966"
+        }
+      ],
+      "date": "1962",
+      "start": 1962,
+      "end": 1962,
+      "medium": "布面丙烯与金属质感瓷漆，32块画板",
+      "accession": "476.1996.1-32",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/f063e2c6-65b0-4503-9389-008b668dbd88-8f4527938b82f485.jpg",
+      "imageSource": "https://www.wikiart.org/en/andy-warhol/campbells-soup-cans-1962",
+      "credit": "Andy Warhol. Campbell's Soup Cans. WikiArt source label: Andy Warhol Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/andy-warhol/campbells-soup-cans-1962",
+      "license": "Andy Warhol Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79809",
+      "description": "重复的包装设计使不同汤品种类格外明显。尽管像印刷商业图像，这三十二幅画布实际上是手工绘制的。沃霍尔最初把它们像食品一样放在架子上展出。因此，重复不只产生图案，还把问题从“一只罐头如何被描绘”，转向“几乎相同的商品如何取得微小区别”。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "5b2452fe-0923-569b-beda-ab80c4de6fb6",
+      "title": "一：1950年第31号",
+      "catalogueTitle": "One: Number 31",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "布面瓷漆与油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5b2452fe-0923-569b-beda-ab80c4de6fb6-085da1cccc5006f0.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/one-number-31-1950",
+      "credit": "One: Number 31. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/one-number-31-1950",
+      "description": "颜料的环圈与细丝不汇聚到一个主角身上。波洛克把交叉、断裂和先后覆盖的层次分散在广阔画面。目光不再穿过笔迹去寻找所画的物体，而是沿它们在画布上的路径移动。没有传统题材并不等于没有结构；结构转移到了这些痕迹之间的关系中。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "ef467ddd-4a7f-4f01-aba1-36ea6fadce73",
+      "title": "我与村庄",
+      "catalogueTitle": "I and the Village",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "布面油画",
+      "accession": "146.1945",
+      "image": "https://artlines.org/assets/artworks/wikiart/26992f70-c738-43c7-80b0-30d6a0321447-a947303256c960fa.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/i-and-the-village-1911",
+      "credit": "Marc Chagall. I and the Village. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78984",
+      "description": "绿色面孔的男子与动物在小房屋和人物上方对视。夏加尔允许不同尺度同时存在，再用圆形和斜线连接那些无法纳入统一测量空间的部分。两张大面孔的交流，为这个错位世界提供了亲近的中心。村庄可以通过联想在场，不必被重建为全景。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "3b4f7340-31d1-5ccd-a61a-6b4ba2ce51ae",
+      "title": "爱之歌",
+      "catalogueTitle": "The Song of Love",
+      "artist": "Giorgio de Chirico",
+      "artists": [
+        {
+          "name": "Giorgio de Chirico",
+          "role": "primary",
+          "slug": "giorgio-de-chirico-q156622"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "布面油画",
+      "accession": "950.1979",
+      "image": "https://artlines.org/assets/artworks/imported/greek-images-20260920/3b4f7340-31d1-5ccd-a61a-6b4ba2ce51ae-c53bb93b0a1eb72b.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgio-de-chirico/the-song-of-love-1914",
+      "credit": "Giorgio de Chirico; WikiArt; Public domain (WikiArt label). Source frame preserved; proportionally resized and JPEG compressed.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/giorgio-de-chirico/the-song-of-love-1914",
+      "source": "https://www.wikidata.org/wiki/Q1154410",
+      "description": "古典头像、橡胶手套与绿球同处一景，空间透视比其中的物件组合更容易理解。德·基里科没有提供它们相遇的实际原因。远处火车属于另一种日常运动，却也不能解释前景。物件的清晰让谜题保持具体，没有散成笼统的梦幻气氛。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "91ff7bef-1db0-4260-bc47-204478d54e57",
+      "title": "城市的兴起",
+      "catalogueTitle": "The City Rises",
+      "artist": "Umberto Boccioni",
+      "artists": [
+        {
+          "name": "Umberto Boccioni",
+          "role": "primary",
+          "slug": "umberto-boccioni-q152797"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "布面油画",
+      "accession": "507.1951",
+      "image": "https://artlines.org/assets/artworks/wikiart/b185afea-af53-47a3-b883-9730818e6aea-94b10b1278d89727.jpg",
+      "imageSource": "https://www.wikiart.org/en/umberto-boccioni/the-city-rises-1910",
+      "credit": "Umberto Boccioni. The City Rises. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79865",
+      "description": "红马的用力扩散到围绕工人与建筑的笔触中。波丘尼使运动的身体难以从周围城市活动中分开。原本更具说明性的画法会区分每项任务，这里却让边缘互相混融。城市通过身体的劳作被表现，而非通过已完成的天际线：建设还是正在发生的动作。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "065c902f-70fa-5ad2-892b-93aea67fd36a",
+      "title": "唧唧喳喳的机器",
+      "catalogueTitle": "Twittering Machine",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/065c902f-70fa-5ad2-892b-93aea67fd36a-fa77918c871aa625.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/twittering-machine-1922",
+      "credit": "Paul Klee. Twittering Machine. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-klee/twittering-machine-1922",
+      "description": "手摇柄把克利那些像鸟的形体接到一个共同机制上，令人不安。它们细小而各自不同的身体仍带着滑稽与脆弱，装置却暗示声音或动作能够由外部操控。这幅图不需要成为真正可运转的发明。几条连接线，已足以把活物与机械控制放进同一个小结构。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "3a6769a0-2a45-45b6-ba5b-08715ad74a8e",
+      "title": "蓝色抽象画",
+      "catalogueTitle": "Abstract Painting (Blue)",
+      "artist": "Ad Reinhardt",
+      "artists": [
+        {
+          "name": "Ad Reinhardt",
+          "role": "primary",
+          "slug": "ad-reinhardt-nga-1821"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "布面油画",
+      "accession": "427.1981",
+      "image": "https://artlines.org/assets/artworks/wikiart/1c598fb2-fbaa-4cdf-8278-bb719d04464a-b1b1be8fbab3c8f3.jpg",
+      "imageSource": "https://www.wikiart.org/en/ad-reinhardt/abstract-painting-blue",
+      "credit": "Ad Reinhardt. Abstract Painting (Blue). Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79684",
+      "description": "乍看之下，蓝色似乎连成一片。低调的矩形逐渐把它分成较暗和略偏绿的区域，没有强调轮廓来宣告自身的重要。莱因哈特使寻找题材的习惯让位于辨别相邻颜色。复制图可能改变这些接近的色值，所以图像表面上的简单不能作为衡量原作的最终依据。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "1bc033f9-467c-406a-b657-6eb220444524",
+      "title": "舞蹈（一）",
+      "catalogueTitle": "Dance (I)",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "巴黎，荣军院大道，1909年初",
+      "start": 1909,
+      "end": 1909,
+      "medium": "布面油画",
+      "accession": "201.1963",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/7bb3b987-c4a3-4882-950e-da38a9bcecb7-09ac3d304f8a4d55.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Henri_Matisse,_1909,_La_danse_(I),_Museum_of_Modern_Art.jpg",
+      "credit": "Henri Matisse. Dance (I). Image credit: Henri Matisse; Source credit: MoMA. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.moma.org/collection/works/79124",
+      "description": "伸出的手几乎无法把圆圈接上。马蒂斯把背景简化到足够程度，使这个小缺口和身体间不均匀的距离都能传达动作。五个人物没有变成机械重复的图案。他们要花力气才能保持连接，所以圆圈像是在运动中勉力维持，而不是已完成的标志。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "6347d238-ae88-4ce5-8b99-5b931a2bb8d1",
+      "title": "演员的面具",
+      "catalogueTitle": "Actor's Mask",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1924",
+      "start": 1924,
+      "end": 1924,
+      "medium": "布面油画裱于板上",
+      "accession": "616.1967",
+      "image": "https://artlines.org/assets/artworks/wikiart/7c0a3502-7a45-41f7-b6b5-47b9504fd3c9-d4d97135c9a58ac8.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/actors-mask",
+      "credit": "Paul Klee. Actor's Mask. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/80094",
+      "description": "细细的分割线把绿色面孔变成拼合的表面。眼睛和嘴足够让人认出脸，却没有组成容易解读的表情。克利让这个近似人脸的图像处于两类事物之间：可以读懂表情的脸，以及可以佩戴的物件。标题保留了表演的意味，但没有提供角色或故事。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "b2d9802c-fdc7-4c98-a8d3-ba0742eff7b8",
+      "title": "百子莲",
+      "catalogueTitle": "Agapanthus",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1914-26",
+      "start": 1914,
+      "end": 1926,
+      "medium": "布面油画",
+      "accession": "527.1992",
+      "image": "https://artlines.org/assets/artworks/wikiart/db197f02-64a3-41f9-97d4-657e3749e69d-8791bc41eff8f214.jpg",
+      "imageSource": "https://www.wikiart.org/en/claude-monet/agapanthus-1917",
+      "credit": "Claude Monet. Agapanthus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79922",
+      "description": "近处花朵与倒映的植物共享莫奈长而重叠的笔迹。植物、水面和远处并不总由清楚轮廓分开。要辨认景色，必须跟随画法内部的变化，而不是替每片叶子寻找边界。重叠笔触使这番寻找始终贴近画面表层，花园不再像一处可统览的地点，而更像一片密集铺开的颜色。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "fd663d33-7cd2-4e0e-804d-2b7a3c3ec04f",
+      "title": "苦痛",
+      "catalogueTitle": "Agony",
+      "artist": "Arshile Gorky",
+      "artists": [
+        {
+          "name": "Arshile Gorky",
+          "role": "primary",
+          "slug": "arshile-gorky-q165648"
+        }
+      ],
+      "date": "1947",
+      "start": 1947,
+      "end": 1947,
+      "medium": "布面油画",
+      "accession": "88.1950",
+      "image": "https://artlines.org/assets/artworks/wikiart/41c29d36-1948-4c35-8295-6a31e8fc9e3f-e7f995a9d4d3b5a1.jpg",
+      "imageSource": "https://www.wikiart.org/en/arshile-gorky/agony",
+      "credit": "Arshile Gorky. Agony. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78740",
+      "description": "戈尔基细薄的轮廓接近可辨认的身体与碎片，却没有把它们完全固定。红与黑的形状在棕褐底色上不均匀地聚集。标题引出痛苦的联想，但不提供一件可被一次解码的具体事件。身体的暗示留在形体之中，形体也仍允许其他读法。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "ba953d19-0397-4503-b5e3-4305d6234674",
+      "title": "美国风景",
+      "catalogueTitle": "American Landscape",
+      "artist": "Charles Sheeler",
+      "artists": [
+        {
+          "name": "Charles Sheeler",
+          "role": "primary",
+          "slug": "charles-sheeler-nga-2745"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "布面油画",
+      "accession": "166.1934",
+      "image": "https://artlines.org/assets/artworks/wikiart/db781429-94c4-4b6d-8ead-a601eefff009-dfebd8683b48fdfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/charles-sheeler/american-landscape-1930",
+      "credit": "Charles Sheeler. American Landscape. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/79032",
+      "description": "静水与位置明确的建筑使希勒的工厂群显得异乎寻常地平稳。小船提供了与工业形体比较的尺度。不同于波丘尼的施工场景，这里压低了运作中的劳作感。机器像是已经安置在距离精心安排的风景中，由此可以区分：画出一个工作场所，并不等于画出其中进行的工作。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "4d267ebc-9b74-4e0a-a4c1-174769b9180b",
+      "title": "沐浴者",
+      "catalogueTitle": "Bather",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "卡瓦利耶尔，1909年夏季",
+      "start": 1909,
+      "end": 1909,
+      "medium": "布面油画",
+      "accession": "17.1936",
+      "image": "https://artlines.org/assets/artworks/wikiart/a029a998-1688-42af-8e6c-5292898cafb3-43dd50dabd30e0d1.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/nude",
+      "credit": "Henri Matisse. Bather. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78464",
+      "description": "转过去的背部与宽大的四肢保留身体重量，却没有精细的解剖明暗。马蒂斯把大部分任务交给有力轮廓和大片蓝绿。即使说明性细节减少，人物仍有实在的身体存在。这里的简化可以按它保留了什么来判断，而不只是数出省掉了什么。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    },
+    {
+      "id": "9d119008-d8c9-4906-84f9-25f0d490a8dd",
+      "title": "床",
+      "catalogueTitle": "Bed",
+      "artist": "Robert Rauschenberg",
+      "artists": [
+        {
+          "name": "Robert Rauschenberg",
+          "role": "primary",
+          "slug": "robert-rauschenberg-q164358"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "油彩与铅笔，绘于枕头、被子及床单上，并以木质结构支撑",
+      "accession": "79.1989",
+      "image": "https://artlines.org/assets/artworks/wikiart/0699b16e-f5e4-44c7-bbdb-6b21ce0092de-986cfc243a56cc42.jpg",
+      "imageSource": "https://www.wikiart.org/en/robert-rauschenberg/bed",
+      "credit": "Robert Rauschenberg. Bed. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.moma.org/collection/works/78712",
+      "description": "枕头、床单与被子是真正的寝具，不是画出来的仿品。劳申伯格在上面施加油彩和铅笔痕迹，并用木支撑将它们竖立。它们保留居家身份，新位置却使日常使用不再可能。作品不让人轻松判定这是家具还是绘画；两种类别始终互相干扰。",
+      "importance": "",
+      "museum": "Museum of Modern Art"
+    }
+  ],
+  "context": {
+    "start": 1889,
+    "end": 1962
+  },
+  "closingSections": [
+    {
+      "title": "保留不同做法之间的区别",
+      "paragraphs": [
+        "沃霍尔重复物件的图像，劳申伯格使用物件本身。达利改变物理行为，德·基里科改变相邻搭配。区分这些做法，比一概称为“奇怪”更有内容可谈。展出信息请查阅博物馆最新记录：这份选择联系的是观念与作品，并不保证它们构成某次陈列中的固定参观路线。"
+      ]
+    }
+  ]
+}

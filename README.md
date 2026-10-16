@@ -22,6 +22,9 @@ crossing-cutoff dates cannot be automatically accepted by the importer.
 
 ## Stack
 
+For frontend work, follow the [Artline design guidelines](docs/DESIGN_GUIDELINES.md),
+which document the existing palette, typography, icons, layouts and UI behavior.
+
 - Next.js App Router frontend in `apps/web`
 - Go HTTP API in `apps/server`
 - PostgreSQL for structured catalogue data
@@ -106,6 +109,15 @@ transaction, using VALUES as the not-yet-created bookmark relations. Real
 bookmark writes and representative load/query-plan measurements for the new
 indexes remain untested; unit and browser mocks do not establish PostgreSQL
 performance at the capacity-planning scale.
+
+Private research studies are available at `/studies` after sign-in. Members can
+manage up to 1,000 named studies with search and pagination, gather catalogue
+artworks/books/events, compare two artworks, save notes, and export references.
+The **Your own** tab adds a personal record with a required year or year range;
+a source URL is optional. These records stay private and never enter the shared
+catalogue. Production storage uses migration `0045_member_studies.sql`; local
+debug remains in memory and does not write to the real local database. See the
+[Studies release receipt](docs/deployment-20261011-studies.json).
 
 Review the sixteen interactive membership concepts at
 <http://localhost:3000/membership-preview> with `make web` running. This page is

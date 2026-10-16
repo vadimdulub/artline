@@ -1,0 +1,607 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "belvedere",
+  "museum": "Belvedere",
+  "city": "ウィーン",
+  "country": "オーストリア",
+  "title": "ベルヴェデーレ美術館：名作",
+  "subtitle": "抱擁、肖像、静物を通して、人物や物が周囲にどこまで溶け込み、どこで離れるのかを見る。",
+  "introduction": "シーレの抱き合う体は、皺の寄ったシーツを押す。布の折れは、二人の手足と同じほど落ち着かない。対してクリムトの恋人たちは、つながった衣服の装飾の中へほとんど消えかけている。どちらも接触が中心だが、周囲の表面が、その見え方と感じ方を変えている。\n\nこの比較は男女の組に限らない。扇は肖像の凝った服と釣り合い、戸口は女性を背後の部屋から分け、殺された動物は見慣れた静物の性質を変える。この選集は、人物と物が絵の地をどう占めるかを考える。よく知られた作品の隣には、より静かな絵も置きたい。同じ問題が、そちらでは見分けやすくなることがある。",
+  "visitNote": "このガイドはベルヴェデーレ美術館の所蔵作品を紹介するものであり、展示が確約された作品リストではありません。現在、『ユディト』は展示されていない旨が美術館から案内されています。ご来館の際は、作品の貸出や展示室の変更状況について、アッパー・ベルヴェデーレの最新の所蔵作品情報をご確認ください。",
+  "locale": "ja",
+  "website": "https://www.belvedere.at",
+  "officialGuide": "https://www.belvedere.at/en/permanent-collection",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "無料で読む · 英語",
+      "note": "カンディンスキーのこの小著は、色彩や形態が、それらが描き出す対象を超えた意味を帯びうることを論じています。本書は、それぞれ手法が大きく異なるクリムト、ゲルストル、シーレを比較検討する上で、同時代的な視点を提供しています。"
+    }
+  ],
+  "works": [
+    {
+      "id": "3d92504e-8a50-5721-9afb-024ca1f6acde",
+      "title": "抱擁",
+      "catalogueTitle": "The embrace",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "",
+      "accession": "4438",
+      "image": "https://artlines.org/assets/artworks/wikiart/3d92504e-8a50-5721-9afb-024ca1f6acde-9de9889e7a8b2f8a.jpg",
+      "imageSource": "https://www.wikiart.org/en/egon-schiele/the-embrace-1917",
+      "credit": "Egon Schiele. The embrace. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/3232/die-umarmung",
+      "description": "シーツは、絡む身体を安らかな休息の形へ和らげてはいない。皺は角張った輪郭を繰り返し、延長し、触れ合う圧力を肌の外まで伝える。シーレは黄色い周囲の中に二人を小さくまとめた。曲げた手足、体重、共に接する面の関係によって、抱擁そのものが見えるようになる。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "6e2d4958-abf7-565f-adc7-d9ea7446a821",
+      "title": "バルコニーにて",
+      "catalogueTitle": "On the Balcony",
+      "artist": "Anton Romako",
+      "artists": [
+        {
+          "name": "Anton Romako",
+          "role": "primary",
+          "slug": "anton-romako-round5-666ed2313c02"
+        }
+      ],
+      "date": "1878",
+      "start": 1878,
+      "end": 1878,
+      "medium": "板に油彩",
+      "accession": "1424",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-followup-20261010/6e2d4958-abf7-565f-adc7-d9ea7446a821-b58ac7d6e374aae1.jpg",
+      "imageSource": "https://www.wikiart.org/en/anton-romako/on-the-balcony-1878",
+      "credit": "On the Balcony. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/436/auf-dem-balkon",
+      "description": "女性は背を向けて外を見ているが、見る側は部屋に残る。淡い青の服が、その二つの位置の間にある細い戸口を占める。手すりの先には屋根や通りが見えるものの、限られた開口部も眺めと同じほど重要だ。ロマコは外を見ることを、単なる別の風景ではなく、身体が特定の位置にある状態として描く。",
+      "importance": "",
+      "museum": "Belvedere",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "3a9eb68e-9e3f-5c39-8327-6d84eaf2f1bf",
+      "title": "ヴォルフガング湖畔",
+      "catalogueTitle": "At the Wolfgangsee",
+      "artist": "Anton Romako",
+      "artists": [
+        {
+          "name": "Anton Romako",
+          "role": "primary",
+          "slug": "anton-romako-round5-666ed2313c02"
+        }
+      ],
+      "date": "1877",
+      "start": 1877,
+      "end": 1877,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3a9eb68e-9e3f-5c39-8327-6d84eaf2f1bf-745503cbe1a443ee.jpg",
+      "imageSource": "https://www.wikiart.org/en/anton-romako/evening-in-the-prossau-near-gastein-1877",
+      "credit": "Anton Romako. At the Wolfgangsee. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/anton-romako/evening-in-the-prossau-near-gastein-1877",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anton-romako/evening-in-the-prossau-near-gastein-1877",
+      "description": "低い船と高い道端の十字架が、水際で異なる方向をつくる。山々の前の近景を、実用と信仰のためのものが共有する。ロマコは宗教的な目印を孤立させずとも、存在をはっきりさせられる。移動や身を寄せる場所のために整えられた湖畔でも、その垂直の形が十字架を際立たせている。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "1bb99636-aded-5b27-ad2b-ab399fa74c51",
+      "title": "バベッテ・タペツィーラー",
+      "catalogueTitle": "Babette Tapecierer",
+      "artist": "Anton Romako",
+      "artists": [
+        {
+          "name": "Anton Romako",
+          "role": "primary",
+          "slug": "anton-romako-round5-666ed2313c02"
+        }
+      ],
+      "date": "1873年頃～1876年頃",
+      "start": 1873,
+      "end": 1876,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/1bb99636-aded-5b27-ad2b-ab399fa74c51-8c7002419bb97250.jpg",
+      "imageSource": "https://www.wikiart.org/en/anton-romako/babette-tapecierer-1876",
+      "credit": "Anton Romako. Babette Tapecierer. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/anton-romako/babette-tapecierer-1876",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anton-romako/babette-tapecierer-1876",
+      "description": "飾りの多い襟元の下で、開いた扇が幅広い明るい形をつくる。レース、リボン、青い服は暖かな赤の前で顔を囲み、ロマコに異なる素材の釣り合いを考えさせる。その凝った装いの中でも、人物は個人として見分けられる。扇から顔へ戻って見ると、服を切り離せる装飾と考えるより、肖像の構成がよくわかる。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "a330da9d-dff3-498c-bd72-a9115d16109f",
+      "title": "ユディト",
+      "catalogueTitle": "Judith",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "キャンバスに油彩、金箔",
+      "accession": "4737",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/4ffa42ca-0e81-57df-9553-3441cd49a29e-f662089fca1e8423.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustav-klimt/judith-and-holopherne-1901",
+      "credit": "Gustav Klimt. Judith and the Head of Holofernes. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/gustav-klimt/judith-and-holopherne-1901",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/3492/judith",
+      "description": "切り落とされたホロフェルネスの頭は、下の縁に一部だけ見える。宝飾、肌、金色が先に目を引くため、聖書の事件の結果だと気づくのは、肖像のような女性を認めた後かもしれない。クリムトはその偏りを意味のあるものにした。ユディトの姿が大半を占め、暴力の証拠は事件の全体像としてではなく、画面の端から入ってくる。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "2792e8d0-5794-5f80-9bf8-38504642aaed",
+      "title": "アザミの生える森の空き地",
+      "catalogueTitle": "Forest clearing with thistles",
+      "artist": "Anton Romako",
+      "artists": [
+        {
+          "name": "Anton Romako",
+          "role": "primary",
+          "slug": "anton-romako-round5-666ed2313c02"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "板に油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/2792e8d0-5794-5f80-9bf8-38504642aaed-23685348bc2a8f39.jpg",
+      "imageSource": "https://www.wikiart.org/en/anton-romako/forest-clearing-with-thistles-1885",
+      "credit": "Anton Romako. Forest clearing with thistles. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/anton-romako/forest-clearing-with-thistles-1885",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/anton-romako/forest-clearing-with-thistles-1885",
+      "description": "風景画なら人物や道に譲りそうな手前の場所を、アザミが占める。枝や重なり合う植物は奥行きを示すが、容易に奥へ入れる経路はない。小さな光の隙間も、密集を完全には解かない。ロマコは広い眺めなら見過ごされそうな植物に、全景を組織できるだけの大きな役割を与えた。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "3312d8af-293e-408d-ad3e-3e5659e44bd0",
+      "title": "接吻",
+      "catalogueTitle": "The Kiss (Lovers)",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1907–1909年頃",
+      "start": 1907,
+      "end": 1909,
+      "medium": "金箔、銀箔、プラチナ箔；下地処理を施したキャンバス上の樹脂油性絵具；背景にはコンポジション・ゴールド（真鍮）、グレーズ、金属箔の断片",
+      "accession": "912",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/3312d8af-293e-408d-ad3e-3e5659e44bd0-e67c6b8eb40ad573.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Interior_of_Belvedere_Palace_(8).jpg",
+      "credit": "Gustav Klimt. The Kiss (Lovers). Image credit: Joseolgon; Own work. https://commons.wikimedia.org/wiki/File:Interior_of_Belvedere_Palace_(8).jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://sammlung.belvedere.at/objects/6678/der-kuss-liebespaar",
+      "description": "模様は二人の服をほぼ一つの囲いにするが、露出した手や顔には各自の具体的な動作が残る。裸足と花の咲く岸辺が、下の縁で二人の接触を位置づける。クリムトは身体の認識と装飾の間を行き来する。抱擁を見分けられるのは、少数の模様のない部分が、周囲の広い金色よりも多くの動作を説明するからだ。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "c7185de6-2acc-5218-bb9a-bbbff25c7db3",
+      "title": "リンゴを摘む少女",
+      "catalogueTitle": "Girl Picking Apples",
+      "artist": "Anton Romako",
+      "artists": [
+        {
+          "name": "Anton Romako",
+          "role": "primary",
+          "slug": "anton-romako-round5-666ed2313c02"
+        }
+      ],
+      "date": "1882年頃",
+      "start": 1882,
+      "end": 1882,
+      "medium": "キャンバスに油彩",
+      "accession": "1280",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-followup-20261010/c7185de6-2acc-5218-bb9a-bbbff25c7db3-36f982d5d8b3ef90.jpg",
+      "imageSource": "https://www.wikiart.org/en/anton-romako/girl-picking-apples-1882",
+      "credit": "Girl Picking Apples. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/286/apfelpfluckendes-madchen",
+      "description": "上へ伸びる動作を決めるのは、正式な肖像のポーズではなく木である。つかんだ枝と伸ばした腕が、少女の身体を周囲のリンゴや葉に直接つなぐ。ロマコは小さな仕事から構図を生み出した。人物と環境の関係は、装飾的なものになる前に、実際に果実を採るための関係なのだ。",
+      "importance": "",
+      "museum": "Belvedere",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "44a5c706-a71d-5d07-a05b-af1be10ffa9a",
+      "title": "屠られた子羊のある静物",
+      "catalogueTitle": "Still life with a slaughtered lamb",
+      "artist": "Oskar Kokoschka",
+      "artists": [
+        {
+          "name": "Oskar Kokoschka",
+          "role": "primary",
+          "slug": "oskar-kokoschka-q154260"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/44a5c706-a71d-5d07-a05b-af1be10ffa9a-afc151a26ea477b5.jpg",
+      "imageSource": "https://www.wikiart.org/en/oskar-kokoschka/still-life-with-a-slaughtered-lamb",
+      "credit": "Oskar Kokoschka. Still life with a slaughtered lamb. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/oskar-kokoschka/still-life-with-a-slaughtered-lamb",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/oskar-kokoschka/still-life-with-a-slaughtered-lamb",
+      "description": "花と器はよくある卓上の組み合わせだが、死んだ子羊が場面の性質を変える。ココシュカはその体をほかの物から隔離せず、不均一な筆触で画面全体を落ち着かなくする。静物画が物を細かく見るまなざしは、ここで直視しにくいものも受け入れなければならない。対象が動かないからといって、その描写が中立になるわけではない。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "486e71ed-be81-5136-ace7-358573358483",
+      "title": "アダムとイヴ",
+      "catalogueTitle": "Adam and Eve",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1917–1918",
+      "start": 1917,
+      "end": 1918,
+      "medium": "キャンバスに油彩（未完）",
+      "accession": "4402",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/486e71ed-be81-5136-ace7-358573358483-b8b3f692a290e4b9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Adam_and_Eve_Gustav_Klimt.jpg",
+      "credit": "Gustav Klimt. Adam and Eve. Image credit: Gustav Klimt; Originally from it.wikipedia ; description page is/was here . Original uploader was Melancholyblues. https://commons.wikimedia.org/wiki/File:Adam_and_Eve_Gustav_Klimt.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q28002799",
+      "description": "明るい女性の立ち姿がもっともよく見え、暗い男性は一部が後ろに隠れる。模様は二人を均等に囲まず、身体の下へ集まる。クリムトは男女が見える程度に差をつけた。《接吻》で一つに重なる服と比べると、こちらは光と周囲の面に対する関係の違いによって、人物同士をより強く分けている。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "67f1550d-97ba-5105-a524-a3858029fddd",
+      "title": "女性の肖像",
+      "catalogueTitle": "Damenbildnis",
+      "artist": "Carola Nahowska",
+      "artists": [
+        {
+          "name": "Carola Nahowska",
+          "role": "primary",
+          "slug": "austrian-research-painter-q39781383"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "",
+      "accession": "9745",
+      "image": "https://artlines.org/assets/artworks/imported/painter-key-artworks-20261008/q28010893-e4575fd85727b85e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Carola_Nahowska_-_Damenbildnis_-_9745_-_Belvedere.jpg",
+      "credit": "Carola Nahowska · Belvedere · Public domain · Wikimedia Commons",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://www.wikidata.org/wiki/Q28010893",
+      "description": "高く明るい襟が、横顔を暗い部屋から際立たせる。壁の絵には近くに別の人物像があり、モデルはすでに画像を含む環境に置かれている。ナホフスカの近い切り取りは、室内の一部だけを残す。姿を示すために空の背景を与えられたのではなく、肖像が身の回りの物の間にあるように見える。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "efefb455-c810-57b4-94f5-b0deea15f874",
+      "title": "ウィーンの森の早春",
+      "catalogueTitle": "Early Spring in the Vienna Woods",
+      "artist": "Ferdinand Georg Waldmüller",
+      "artists": [
+        {
+          "name": "Ferdinand Georg Waldmüller",
+          "role": "primary",
+          "slug": "ferdinand-georg-waldmuller-q186816"
+        }
+      ],
+      "date": "1861",
+      "start": 1861,
+      "end": 1861,
+      "medium": "板に油彩",
+      "accession": "1501",
+      "image": "https://artlines.org/assets/artworks/wikiart/efefb455-c810-57b4-94f5-b0deea15f874-3d536a32bdb9f36e.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-georg-waldm-ller/early-spring-in-the-vienna-woods-1861",
+      "credit": "Ferdinand Georg Waldmüller. Early Spring in the Vienna Woods. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/513/vorfruhling-im-wienerwald",
+      "description": "新しい緑の上には裸の枝が残り、季節は複数の状態が混じるものとして現れる。子どもたちは森の斜面に集まり、近くの急な地形が活動の足場を具体的に決める。ヴァルトミュラーは春を、この不均一な地面につないだ。よくある主題も、身体がどこに立ち、どう動かなければならないかによって固有の場面になる。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "6facc171-9c52-55df-b9e8-71092b637bc9",
+      "title": "ルゴワ夫人",
+      "catalogueTitle": "Madame Legois",
+      "artist": "Jean-Baptiste-Camille Corot",
+      "artists": [
+        {
+          "name": "Jean-Baptiste-Camille Corot",
+          "role": "primary",
+          "slug": "jean-baptiste-camille-corot-q148475"
+        }
+      ],
+      "date": "1840〜1845年頃",
+      "start": 1840,
+      "end": 1845,
+      "medium": "",
+      "accession": "2413",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/6facc171-9c52-55df-b9e8-71092b637bc9-34aa8897141e989c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Corot_Madame_Legois.jpg",
+      "credit": "Jean-Baptiste-Camille Corot. Madame Legois. Image credit: Jean-Baptiste Camille Corot; Own work. https://commons.wikimedia.org/wiki/File:Corot_Madame_Legois.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q28008306",
+      "description": "白いスカートの上の赤が、座った人物を簡潔に区分する。休ませて合わせた手とまっすぐな姿勢は、控えめな背景の前で明瞭だ。コローは強い形の数を絞り、それぞれに肖像を成す重要な役割を与えた。この出会いを支えるのは多くの私物ではなく、保たれた身体の配置である。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "28a2b41b-a637-5779-89f3-50953fff794f",
+      "title": "グラン・サン・ベルナール峠のナポレオン",
+      "catalogueTitle": "Napoleon at the Great St. Bernard Pass",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1801",
+      "start": 1801,
+      "end": 1801,
+      "medium": "キャンバスに油彩",
+      "accession": "2089",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/28a2b41b-a637-5779-89f3-50953fff794f-18bc55926a2a8136.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Napoleon_by_David_DSC03022.JPG",
+      "credit": "Jacques-Louis David. Napoleon at the Great St. Bernard Pass. Image credit: Jacques-Louis David; Own work David Monniaux. https://commons.wikimedia.org/wiki/File:Napoleon_by_David_DSC03022.JPG. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://sammlung.belvedere.at/objects/7889/napoleon-am-groen-st-bernhard",
+      "description": "馬、マント、指す腕、急な地面が、関連する斜線に沿って動く。ダヴィッドは風景を、指揮者の公的な姿をつくる協力者にした。立ち上がる馬は力を示し、騎手はそれを導けるように見える。これは権威を組み立てた表現であり、峠越えの偶然の記録として扱うと、絵の中心的な仕組みを見落とす。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "d0432f97-7561-563a-80c3-3e371d61801e",
+      "title": "笑う自画像",
+      "catalogueTitle": "Self-Portrait, Laughing",
+      "artist": "Richard Gerstl",
+      "artists": [
+        {
+          "name": "Richard Gerstl",
+          "role": "primary",
+          "slug": "richard-gerstl-q129113"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "キャンバスに油彩",
+      "accession": "4035",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/d0432f97-7561-563a-80c3-3e371d61801e-2bf3f296a7358e27.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-gerstl/self-portrait-laughing-1908",
+      "credit": "Richard Gerstl. Self-Portrait, Laughing. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/2829/selbstbildnis-lachend",
+      "description": "明るい歯と開いた口が、荒く置かれた顔の色を中断する。周囲の絵具も同じ活動を続け、表情に静かな縁を与えない。ゲルストルは正式な自画像に期待される落ち着いた姿を、より不安定なものへ変えた。表情は意図的に見せられているが、それだけで画家の内面の状態を確実に知ることはできない。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "4e74f738-9abe-5861-84bb-94d540fd45ca",
+      "title": "ソーニャ・クニップス",
+      "catalogueTitle": "Sonja Knips",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1897/1898",
+      "start": 1897,
+      "end": 1898,
+      "medium": "キャンバスに油彩",
+      "accession": "4403",
+      "image": "https://artlines.org/assets/artworks/wikiart/4e74f738-9abe-5861-84bb-94d540fd45ca-237eb350bf0f6f1c.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustav-klimt/sonja-knips",
+      "credit": "Gustav Klimt. Sonja Knips. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/3197/sonja-knips",
+      "description": "ドレスは広く広がるが、上半身は椅子の縁近くで姿勢を整えている。小さな赤い本が淡いピンクの布を遮る。クリムトは広がりと、注意の向きを示す少数の部分を釣り合わせ、人物が衣装に吸収されないようにした。体を前に置くことで、周囲の柔らかな形の中でも、上半身の張りのある姿勢が際立つ。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "8f92b1b1-4ca9-58d2-806d-3b33e9c8611d",
+      "title": "菊とアマリリスのある静物",
+      "catalogueTitle": "Still Life with Chrysanthemums and Amaryllis",
+      "artist": "Lovis Corinth",
+      "artists": [
+        {
+          "name": "Lovis Corinth",
+          "role": "primary",
+          "slug": "lovis-corinth-q157610"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "キャンバスに油彩",
+      "accession": "2446",
+      "image": "https://artlines.org/assets/artworks/wikiart/8f92b1b1-4ca9-58d2-806d-3b33e9c8611d-80989b04ca72bf1d.jpg",
+      "imageSource": "https://www.wikiart.org/en/lovis-corinth/still-life-with-chrysanthemums-and-amaryllis-1922",
+      "credit": "Lovis Corinth. Still Life with Chrysanthemums and Amaryllis. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/8246/stillleben-mit-chrysanthemen-und-amaryllis",
+      "description": "花びらを認められる一方、色の筋は周囲の面へ続く。コリントは密集した花束を、花の集まりであると同時に筆触の堆積にもした。二つの見方は互いを支える。花の密度が筆遣いに題材を与え、筆遣いは題材が一輪ずつ整然と並べた目録になるのを防ぐ。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "b96ef263-44b2-5577-84d9-8ffe8c61084f",
+      "title": "五本の瓶のある静物",
+      "catalogueTitle": "Still Life with Five Bottles",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "",
+      "accession": "7762",
+      "image": "https://artlines.org/assets/artworks/wikiart/b96ef263-44b2-5577-84d9-8ffe8c61084f-92b4f5d5fbdb7ae7.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/still-life-with-five-bottles-1884",
+      "credit": "Vincent van Gogh. Still Life with Five Bottles. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q26220101",
+      "description": "緑と茶の範囲が限られるため、高さや外形の違いがとくに役立つ。立つ瓶は近づき合い、横たわる器がその底を遮る。ゴッホの小さな一群は、反射や形の差を丁寧に見るよう促す。場面をまとめる物語上の事件がないので、一つの容器が別の容器にどう接するかが絵を支えている。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "19be9637-c50b-4bc0-b841-d05915030003",
+      "title": "料理人、ポール親父",
+      "catalogueTitle": "The Chef (Le Père Paul)",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "キャンバスに油彩",
+      "accession": "540",
+      "image": "https://artlines.org/assets/artworks/open-museums/austria-commons/19be9637-c50b-4bc0-b841-d05915030003-1ae4d66f6efe3be4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Claude_Monet%27s_painting.jpg",
+      "credit": "Claude Monet. The Chef (Le Père Paul). Image credit: Kadı; Own work. https://commons.wikimedia.org/wiki/File:Claude_Monet%27s_painting.jpg. CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://sammlung.belvedere.at/objects/6289/der-koch-le-pere-paul",
+      "description": "白い帽子は職業を示し、近い切り取りは髭のある顔へ目を導く。モネは両方が明瞭になるよう背景を抑えた。仕事着は儀礼のために脱がされてもいなければ、個人の面影の代わりにもされていない。労働の場面を周囲に描かずとも、一人の働く人物に集中した存在感を与える肖像だ。",
+      "importance": "",
+      "museum": "Belvedere"
+    },
+    {
+      "id": "1383617e-eb0a-56ef-a588-d9e9daf7b10c",
+      "title": "しゃがむ男女、家族",
+      "catalogueTitle": "Squatting Couple (The Family)",
+      "artist": "Egon Schiele",
+      "artists": [
+        {
+          "name": "Egon Schiele",
+          "role": "primary",
+          "slug": "egon-schiele-q44032"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "キャンバスに油彩",
+      "accession": "4277",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/76997ec1-59de-5b66-90f0-e9e1c8de7003-d3b9a7659931ed0b.jpg",
+      "imageSource": "https://www.wikiart.org/en/egon-schiele/the-family-1918",
+      "credit": "The Family. WikiArt; Egon Schiele. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.belvedere.at/objects/3071/kauerndes-menschenpaar-die-familie",
+      "description": "しゃがむ男性、座る女性、低い位置の子どもが、それぞれの配置によって三角形をつくる。身体は同じ小さな領域を共有するが、同じ身振りを繰り返してはいない。シーレは家族を、別々の人々の間にできる見える配置にした。題名だけを根拠に、その構成を特定の家庭の一瞬の記録と考えるべきではない。",
+      "importance": "",
+      "museum": "Belvedere"
+    }
+  ],
+  "context": {
+    "start": 1801,
+    "end": 1922
+  },
+  "closingSections": [
+    {
+      "title": "抱擁の周囲を比べる",
+      "paragraphs": [
+        "シーレの皺のあるシーツと、クリムトの模様入りの金色へ戻ってみよう。身体だけでは二枚の違いを説明できず、周囲の面も接触の表現に加わっている。ここに挙げた作品は所蔵品の案内であり、固定された鑑賞経路ではない。とくに一点を目当てに訪れるなら、ベルヴェデーレの現在の展示情報を確認したい。"
+      ]
+    }
+  ]
+}

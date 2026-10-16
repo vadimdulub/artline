@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artline · Guide exploration concepts</title>
+  <link rel="stylesheet" href="mockups.css">
+</head>
+<body>
+  <header class="review-bar">
+    <div><strong>Artline</strong><span>Guide exploration · Design review</span></div>
+    <nav aria-label="Choose a mockup">
+      <button data-view="a" aria-pressed="true">A <span>Gallery pair</span></button>
+      <button data-view="b" aria-pressed="false">B <span>Exhibition spread</span></button>
+      <button data-view="c" aria-pressed="false">C <span>Compact invitations</span></button>
+      <button data-view="d" aria-pressed="false">D <span>Static imagery</span></button>
+    </nav>
+  </header>
+  <main>
+    <div class="review-context"><span>Within the Munich museum guide</span><span>30 works · 25 artists</span></div>
+    <div id="concepts"></div>
+    <p id="design-note" class="design-note"></p>
+  </main>
+  <footer class="review-footer"><p>Design concepts for review. The links open the guide’s existing filtered views in Artline.</p><details><summary>Artwork sources</summary><ul id="credits"></ul></details></footer>
+  <script src="data.js"></script><script src="static-context-data.js"></script><script src="mockups.js"></script>
+</body>
+</html>

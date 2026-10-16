@@ -13,7 +13,7 @@ beforeEach(() => {
 });
 afterEach(cleanup);
 
-it.each(["/museums", "/museums/the-met?artist=monet"])("opens sign-in and preserves destination %s", destination => {
+it.each(["/museums", "/account/museums/the-met"])("opens sign-in and preserves destination %s", destination => {
   render(<MemberAccessProvider><MemberLink href={destination}>Open record</MemberLink></MemberAccessProvider>);
   const link = screen.getByRole("link", { name: "Open record" });
   link.focus(); fireEvent.click(link);
@@ -33,13 +33,13 @@ it("dismisses on Escape without navigation", () => {
 });
 it("continues once a pending session check establishes membership", () => {
   vi.mocked(useMemberSession).mockReturnValue({ session: null, failed: false });
-  const children = <MemberLink href="/museums/the-met">Museum</MemberLink>;
+  const children = <MemberLink href="/account/museums/the-met">Museum</MemberLink>;
   const view = render(<MemberAccessProvider>{children}</MemberAccessProvider>);
   fireEvent.click(screen.getByRole("link"));
   expect(screen.getByRole("status")).toHaveTextContent("Loading");
   vi.mocked(useMemberSession).mockReturnValue({ session: { enabled: true, user: { id: "member", name: "Reader", email: "reader@example.org" } }, failed: false });
   view.rerender(<MemberAccessProvider>{children}</MemberAccessProvider>);
-  expect(push).toHaveBeenCalledWith("/museums/the-met");
+  expect(push).toHaveBeenCalledWith("/account/museums/the-met");
   expect(screen.queryByRole("dialog")).toBeNull();
 });
 it("fails closed and explains a session outage", () => {
@@ -48,4 +48,10 @@ it("fails closed and explains a session outage", () => {
   fireEvent.click(screen.getByRole("link"));
   expect(screen.getByRole("alert")).toHaveTextContent("temporarily unavailable");
   expect(screen.queryByRole("button", { name: "Sign in with Google" })).toBeNull();
+});
+
+it("leaves public museum pages accessible without sign-in", () => {
+ render(<MemberAccessProvider><MemberLink href="/museums/the-met">Museum</MemberLink></MemberAccessProvider>);
+ fireEvent.click(screen.getByRole("link"));
+ expect(screen.queryByRole("dialog")).toBeNull();
 });

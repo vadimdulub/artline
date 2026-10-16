@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "guggenheim-new-york",
+  "museum": "Solomon R. Guggenheim Museum",
+  "city": "New York",
+  "country": "États-Unis",
+  "title": "Musée Solomon R. Guggenheim : chefs-d’œuvre",
+  "subtitle": "Vingt peintures passent des choses reconnaissables à des arrangements qui n'ont plus besoin de les nommer.",
+  "introduction": "Une fenêtre, un homme assis, un cycliste : ces sujets nous donnent quelque chose à chercher. Les trouver n'est qu'un début. Chagall divise un visage en vues incompatibles ; Cézanne construit un corps par touches voisines ; Metzinger fait partager au vélo l'espace de la piste et de la foule. Ailleurs, les panneaux de Kelly n'offrent rien à identifier au-delà des couleurs et des proportions. Ce sont des choix différents sur ce qu'une peinture peut contenir, non les étapes d'une marche unique vers l'abstraction. La sélection traverse aussi deux institutions : le Solomon R. Guggenheim Museum de New York et la Peggy Guggenheim Collection de Venise. Les œuvres vénitiennes sont signalées ci-dessous ; il ne s'agit pas d'un parcours de visite new-yorkais.",
+  "visitNote": "Il s’agit d’une sélection issue de la collection, et non d’un parcours à travers une exposition spécifique. Le Guggenheim renouvelle régulièrement ses accrochages et prête des œuvres à d’autres institutions. Le triptyque de Bacon présenté ici date de 1962 ; il s’agit d’une œuvre distincte de ses Trois études de 1944, conservées à la Tate.",
+  "locale": "fr",
+  "website": "https://www.guggenheim.org/",
+  "officialGuide": "https://www.guggenheim.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les écrits de Kandinsky exposent ses idées sur la couleur et la forme. Lisez-les en regard des deux tableaux présentés ici comme l’argumentaire d’un artiste, plutôt que comme une règle à laquelle toute œuvre abstraite devrait se conformer."
+    }
+  ],
+  "works": [
+    {
+      "id": "6684a62a-ed2e-56b9-a1e2-0e05347971c5",
+      "title": "Paris par la fenêtre",
+      "catalogueTitle": "Paris Through the Window",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "Huile sur toile",
+      "accession": "37.438",
+      "image": "https://artlines.org/assets/artworks/wikiart/6684a62a-ed2e-56b9-a1e2-0e05347971c5-816c3b4f41dcebd1.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/paris-through-the-window-1913",
+      "credit": "Marc Chagall. Paris Through the Window. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.guggenheim.org/audio/track/description-of-paris-through-the-window-paris-par-la-fenetre-1913",
+      "description": "La fenêtre promet une vue de Paris, mais son cadre ne peut séparer la ville des inventions alentour. Un chat occupe le rebord ; un visage dédoublé et des figures flottantes dérèglent proportions et gravité. Chagall préserve assez de la ville pour qu'on la reconnaisse, puis donne au premier plan ses propres règles. Regarder par une fenêtre devient bien moins évident qu'il n'y paraît.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "4fc8f597-34d7-57aa-9fb7-19a0e11ccd2f",
+      "title": "Bleu, vert, jaune, orange, rouge",
+      "catalogueTitle": "Blue Green Yellow Orange Red",
+      "artist": "Ellsworth Kelly",
+      "artists": [
+        {
+          "name": "Ellsworth Kelly",
+          "role": "primary",
+          "slug": "ellsworth-kelly-nga-2592"
+        }
+      ],
+      "date": "1966",
+      "start": 1966,
+      "end": 1966,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/4fc8f597-34d7-57aa-9fb7-19a0e11ccd2f-c4aaea2b718de119.jpg",
+      "imageSource": "https://www.wikiart.org/en/ellsworth-kelly/blue-green-yellow-orange-red-1966",
+      "credit": "Ellsworth Kelly. Blue Green Yellow Orange Red. WikiArt source label: (c) Ellsworth Kelly, all rights reserved. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ellsworth-kelly/blue-green-yellow-orange-red-1966",
+      "license": "(c) Ellsworth Kelly, all rights reserved (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ellsworth-kelly/blue-green-yellow-orange-red-1966",
+      "description": "Kelly juxtapose cinq panneaux verticaux colorés. Leur clarté impose la comparaison : le bleu rencontre le vert sur un bord réel, et les voisines de chaque couleur modifient sa force apparente. Aucun paysage ni aucune pièce représentée ne fixe ces rapports. La séparation matérielle des panneaux accomplit ce qu'un contour dessiné ferait ailleurs, donnant à la couleur une étendue mesurée.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "f8233f8c-f519-5400-b14b-5700c27a66f4",
+      "title": "Composition n° 2",
+      "catalogueTitle": "Composition 2",
+      "artist": "Piet Mondrian",
+      "artists": [
+        {
+          "name": "Piet Mondrian",
+          "role": "primary",
+          "slug": "piet-mondrian-q151803"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/f8233f8c-f519-5400-b14b-5700c27a66f4-2a8ab19fd78f0f58.jpg",
+      "imageSource": "https://www.wikiart.org/en/piet-mondrian/composition-2-1922",
+      "credit": "Piet Mondrian. Composition 2. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/piet-mondrian/composition-2-1922",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/piet-mondrian/composition-2-1922",
+      "description": "Des rectangles inégaux empêchent la grille noire de Mondrian de se stabiliser en motif régulier. Une grande partie du carré reste blanche ; de petites zones colorées exercent leur effet près des bords. Équilibrer ne signifie pas faire correspondre les deux côtés. Suivez une ligne jusqu'au bord puis revenez aux grands blancs : les divisions modifient sans cesse l'importance de ce qui semblait d'abord vide.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "c24e0754-baed-5c38-a723-f6f7f595c95a",
+      "title": "Forêt enchantée",
+      "catalogueTitle": "Enchanted Forest",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1947",
+      "start": 1947,
+      "end": 1947,
+      "medium": "Oil and alkyd enamel paint on canvas",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c24e0754-baed-5c38-a723-f6f7f595c95a-881a2d660b5c25cf.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/enchanted-forest-1947",
+      "credit": "Enchanted Forest. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/enchanted-forest-1947",
+      "description": "Lignes noires, blanches, dorées et rouges se superposent sans former un objet unique. Les zones ouvertes comptent : elles maintiennent chaque fil lisible dans le réseau. Suivre une ligne finit par la perdre sous une autre ; regarder implique donc des recommencements plutôt que l'arrivée à une figure centrale. Ce Pollock appartient à la Peggy Guggenheim Collection de Venise, non au musée new-yorkais.",
+      "importance": "",
+      "museum": "Peggy Guggenheim Collection, Venice (Solomon R. Guggenheim Foundation, New York)"
+    },
+    {
+      "id": "64629220-962d-586c-bbaf-76e23f320292",
+      "title": "Le Champ labouré",
+      "catalogueTitle": "The Tilled Field",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1923–1924",
+      "start": 1923,
+      "end": 1924,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/64629220-962d-586c-bbaf-76e23f320292-75fbe3ee8e9e54c3.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-miro/the-tilled-field-1924",
+      "credit": "Joan Miró. The Tilled Field. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joan-miro/the-tilled-field-1924",
+      "description": "Animaux, plantes, maison et drapeaux fournissent les éléments d'un lieu rural reconnaissable. Leurs proportions modifiées et leurs caractères improbables rendent cette reconnaissance incertaine. Le sol jaune de Miró réunit les inventions séparées, laissant l'œil passer d'une créature familière à un signe difficile à nommer. Le champ demeure habitable, mais ses habitants n'ont plus à respecter une anatomie cohérente.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "9c5fd4f0-f1ac-5c30-995a-ba15e0509770",
+      "title": "L'Hermitage à Pontoise",
+      "catalogueTitle": "L'Hermitage at Pontoise",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1867",
+      "start": 1867,
+      "end": 1867,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/9c5fd4f0-f1ac-5c30-995a-ba15e0509770-d7cdd867c0aa572e.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/l-hermitage-at-pontoise",
+      "credit": "L'Hermitage at Pontoise. WikiArt; Camille Pissarro. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/l-hermitage-at-pontoise",
+      "description": "Des maisons se tiennent parmi les arbres d'un coteau, reliées par les chemins du village. Pissarro n'accorde la primauté ni à l'architecture ni à la végétation. Les toits interrompent le feuillage, les arbres cachent une partie des bâtiments ; la route rend leur dispersion intelligible. La structure vient de l'habitation ordinaire plutôt que d'un monument dominant, chaque élément contribuant à un lieu plus vaste que lui.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "4a3ec65a-5fbe-54a3-bd8c-c912775e0bb9",
+      "title": "Le Lièvre",
+      "catalogueTitle": "Landscape (The Hare)",
+      "artist": "Joan Miró",
+      "artists": [
+        {
+          "name": "Joan Miró",
+          "role": "primary",
+          "slug": "joan-miro-q152384"
+        }
+      ],
+      "date": "1927",
+      "start": 1927,
+      "end": 1927,
+      "medium": "",
+      "accession": "57.1459",
+      "image": "https://artlines.org/assets/artworks/wikiart/4a3ec65a-5fbe-54a3-bd8c-c912775e0bb9-ba47934e225646fe.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-miro/landscape-the-hare",
+      "credit": "Joan Miró. Landscape (The Hare). Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikidata.org/wiki/Q8535304",
+      "description": "Une créature blanche aux articulations étranges se détache sur l'orange, au-dessus d'une bande plus sombre. Peu de détails confirment le titre, mais assez pour maintenir la reconnaissance. Miró accorde beaucoup de toile à la couleur environnante, exposant particulièrement le contour sommaire de l'animal. Face aux inventions serrées du *Champ labouré*, cette peinture teste le minimum nécessaire à la persistance d'un sujet.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "00b4fcaa-3a38-5daa-973b-d6c7d57dca8f",
+      "title": "Paysage sous la pluie",
+      "catalogueTitle": "Landscape with Rain",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/00b4fcaa-3a38-5daa-973b-d6c7d57dca8f-31526a23ad3cc7a9.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/landscape-with-rain-1913",
+      "credit": "Wassily Kandinsky. Landscape with Rain. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/wassily-kandinsky/landscape-with-rain-1913",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/landscape-with-rain-1913",
+      "description": "Des marques obliques suggèrent la pluie ; des zones claires et sombres donnent des indices incertains de collines et de bâtiments. Kandinsky n'offre aucun point de vue stable pour les reconstruire. Les diagonales font du temps atmosphérique un mouvement de surface, touchant des formes déjà difficiles à séparer. Le titre fournit un appui sans obliger chaque tache à devenir un élément de carte.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "a1df0fe2-03ea-5a02-b5da-e92d31bdee1f",
+      "title": "Homme aux bras croisés",
+      "catalogueTitle": "Man with Crossed Arms",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/a1df0fe2-03ea-5a02-b5da-e92d31bdee1f-72e8c9ac390c8e92.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-cezanne/man-with-crossed-arms",
+      "credit": "Man with Crossed Arms. WikiArt; Paul Cézanne. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-cezanne/man-with-crossed-arms",
+      "description": "Les bras croisés donnent au modèle de Cézanne une forme compacte, dont la tête inclinée trouble légèrement la fermeté. Des touches construisent la veste bleue et le visage sans disparaître dans une imitation lisse du tissu et de la peau. L'homme reste solidement présent, mais les moyens de sa construction demeurent visibles. Son immobilité apparente dépend de nombreux petits ajustements entre zones voisines.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "ac556b24-fc01-55da-a09e-58c4af5de69c",
+      "title": "Nu",
+      "catalogueTitle": "Nude",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ac556b24-fc01-55da-a09e-58c4af5de69c-879fa6ec9ca7d7af.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/nude-1917",
+      "credit": "Nude. WikiArt; Amedeo Modigliani. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/nude-1917",
+      "description": "Le corps allongé remplit assez étroitement l'image pour laisser peu de place à un intérieur environnant. Les contours continus de Modigliani séparent la chair chaude du cadre plus sombre. Le mobilier réduit détourne moins l'attention du rapport entre la figure étendue et les bords de la toile. La pose se lit immédiatement, mais son inscription dans le rectangle demeure manifeste.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "e5854f01-6dbe-50d9-b0f7-5b11aecbae0f",
+      "title": "La Grisaille de l'océan",
+      "catalogueTitle": "Ocean Greyness",
+      "artist": "Jackson Pollock",
+      "artists": [
+        {
+          "name": "Jackson Pollock",
+          "role": "primary",
+          "slug": "jackson-pollock-q37571"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "Pétrole",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/e5854f01-6dbe-50d9-b0f7-5b11aecbae0f-989244978bfc9169.jpg",
+      "imageSource": "https://www.wikiart.org/en/jackson-pollock/ocean-greyness-1953",
+      "credit": "Ocean Greyness. WikiArt; Jackson Pollock. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Jackson Pollock",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jackson-pollock/ocean-greyness-1953",
+      "description": "Des courbes noires séparent des formes claires d'un champ gris. Certaines évoquent des yeux ou des fragments de corps, sans ramener l'ensemble à une seule figure. Pollock rend la reconnaissance locale et provisoire : une forme peut ressembler à quelque chose sans définir sa voisine. Malgré le titre, aucun horizon fiable ne sépare eau et ciel. La surface propose des rencontres changeantes plutôt qu'une vue lointaine.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "2618c128-f53c-5949-9e0b-5d216e8390bf",
+      "title": "Les Artilleurs",
+      "catalogueTitle": "The Artillerymen",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/2618c128-f53c-5949-9e0b-5d216e8390bf-c2651e18725d2cfe.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-artillerymen-1893",
+      "credit": "Henri Rousseau. The Artillerymen. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/the-artillerymen-1893",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-artillerymen-1893",
+      "description": "Des hommes en uniforme entourent un canon sous les arbres ; leurs visages restent distincts dans la disposition répétée des corps. Rousseau montre l'équipement militaire sans mouvement de bataille. Le rassemblement donne son ordre à la scène ; le canon précise une fonction, mais ne fournit pas d'événement. Cette suspension fait ressortir l'étrange rapport entre personnes séparées et groupe présenté comme cohérent.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "7d31f929-903a-504e-b028-18f26b7f3b57",
+      "title": "Le Soldat boit",
+      "catalogueTitle": "The Soldier Drinks",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1911–1912",
+      "start": 1911,
+      "end": 1912,
+      "medium": "Huile sur toile",
+      "accession": "49.1211",
+      "image": "https://artlines.org/assets/artworks/wikiart/7d31f929-903a-504e-b028-18f26b7f3b57-f2ff7511d777f0a6.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/the-soldier-drinks-1912",
+      "credit": "Marc Chagall. The Soldier Drinks. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.guggenheim-bilbao.eus/en/exhibition/modernidad-y-tradicion",
+      "description": "Soldat, récipient et table définissent une action ordinaire. Autour, formes inclinées et figures d'échelles différentes rendent la pièce difficile à mesurer. Chagall garde l'action lisible en desserrant le cadre qui l'expliquerait normalement. Le récipient ancre le sujet plus sûrement qu'une perspective cohérente : un petit objet familier fait tenir un espace dont les autres parties semblent relever de systèmes distincts.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "1da4dbf8-a1a4-5735-a3dd-710f67e55291",
+      "title": "Trois études pour une crucifixion",
+      "catalogueTitle": "Three Studies for a Crucifixion",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "1962",
+      "start": 1962,
+      "end": 1962,
+      "medium": "Huile et sable sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/1da4dbf8-a1a4-5735-a3dd-710f67e55291-acb0ba1a482cd0b6.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/three-studies-for-a-crucifixion-1962",
+      "credit": "Francis Bacon. Three Studies for a Crucifixion. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/three-studies-for-a-crucifixion-1962",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/three-studies-for-a-crucifixion-1962",
+      "description": "Les trois panneaux divisent les corps et formes charnelles de Bacon au lieu de les réunir en scène continue. Des fonds orange et rouge vif rendent la chair pâle difficile à ignorer. Des fragments de pièces offrent une structure partielle, sans que le titre résolve les images en récit religieux ordinaire. Comparer de part et d'autre des vides fait partie de l'expérience : les arrangements répètent l'exposition du corps, non un événement unique.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "0a2f4060-a49e-5db8-9d14-c91150052901",
+      "title": "Nouvelle Harmonie",
+      "catalogueTitle": "New Harmony",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1936",
+      "start": 1936,
+      "end": 1936,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0a2f4060-a49e-5db8-9d14-c91150052901-09cc8695653d064b.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/new-harmony-1936",
+      "credit": "Paul Klee. New Harmony. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-klee/new-harmony-1936",
+      "description": "Les rectangles de Klee suggèrent une grille, mais leurs proportions inégales empêchent la répétition mécanique. Couleurs sourdes et divisions sombres donnent aux unités des poids différents. L'harmonie du titre se vérifie dans ces ajustements : l'ordre subsiste sans imposer que tout concorde. Passer d'un petit rectangle à son grand voisin change le rythme du regard, comme un intervalle irrégulier modifie une suite autrement constante.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "ba97f62e-fdb9-52ea-9d92-992157a193d4",
+      "title": "Vers le haut",
+      "catalogueTitle": "Upward",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "October 1929",
+      "start": 1929,
+      "end": 1929,
+      "medium": "Huile sur carton",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/ba97f62e-fdb9-52ea-9d92-992157a193d4-7b6898006006912c.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/upward-1929",
+      "credit": "Wassily Kandinsky. Upward. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/wassily-kandinsky/upward-1929",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/upward-1929",
+      "description": "Une ligne verticale étroite soutient des ensembles de demi-cercles et de formes anguleuses. Leur équilibre décentré suggère à la fois une figure construite et un mouvement ascendant, sans choisir entièrement. Kandinsky laisse au champ vert turquoise la place de séparer les éléments, rendant leurs liens précaires faciles à suivre. L'œuvre appartient à la Peggy Guggenheim Collection de Venise ; l'adresse new-yorkaise de la Fondation n'est pas son lieu de collection.",
+      "importance": "",
+      "museum": "Peggy Guggenheim Collection, Venice (Solomon R. Guggenheim Foundation, New York)"
+    },
+    {
+      "id": "460fcc93-69c0-5601-84dd-15df76a33db1",
+      "title": "Chats",
+      "catalogueTitle": "Cats (rayist percep.[tion] in rose, black, and yellow)",
+      "artist": "Natalia Goncharova",
+      "artists": [
+        {
+          "name": "Natalia Goncharova",
+          "role": "primary",
+          "slug": "natalia-goncharova-q232391"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "57.1484",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19882576-61e96f6c06eacee9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Cats_(rayist_percep._in_rose,_black,_and_yellow)_(Goncharova,_1913).jpg",
+      "credit": "Natalia Goncharova. Cats (rayist percep.[tion] in rose, black, and yellow). Image credit: Natalia Goncharova. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19882576",
+      "description": "Des diagonales jaunes, roses et sombres traversent la surface avec tant d'insistance que les chats se laissent difficilement isoler. Gontcharova ne place pas simplement des animaux devant un fond : les traits croisés traversent leur distinction. Le titre encourage à chercher des corps ; les lignes proposent une organisation concurrente. Aucune lecture n'a besoin d'éliminer l'autre pour que la tension demeure féconde.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "b46d2026-76c6-5695-84d0-3ee0f451bf73",
+      "title": "Au vélodrome",
+      "catalogueTitle": "At the Cycle-Race Track",
+      "artist": "Jean Metzinger",
+      "artists": [
+        {
+          "name": "Jean Metzinger",
+          "role": "primary",
+          "slug": "jean-metzinger-q313096"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b46d2026-76c6-5695-84d0-3ee0f451bf73-ccea66fa82f705cc.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-metzinger/at-the-cycle-race-track-1912",
+      "credit": "Jean Metzinger. At the Cycle-Race Track. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-metzinger/at-the-cycle-race-track-1912",
+      "description": "Le cycliste et les roues restent identifiables parmi des formes fragmentées, des lettres et des aperçus de la piste. Metzinger rapproche les informations venues de différentes parties de l'événement, réduisant la séparation entre coureur et décor. La vitesse devient une question de simultanéité dans l'image, non un flou ajouté à une vue stable. Cette œuvre appartient à la Peggy Guggenheim Collection de Venise.",
+      "importance": "",
+      "museum": "Peggy Guggenheim Collection, Venice"
+    },
+    {
+      "id": "0af531cc-ce89-5883-9b1e-43ef8b03fe6e",
+      "title": "Le Bouvillon",
+      "catalogueTitle": "The Steer (The Bull)",
+      "artist": "Franz Marc",
+      "artists": [
+        {
+          "name": "Franz Marc",
+          "role": "primary",
+          "slug": "franz-marc-q44054"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0af531cc-ce89-5883-9b1e-43ef8b03fe6e-c9dee9cbdfd6a8c3.jpg",
+      "imageSource": "https://www.wikiart.org/en/franz-marc/the-steer-the-bull-1911",
+      "credit": "Franz Marc. The Steer (The Bull). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/franz-marc/the-steer-the-bull-1911",
+      "description": "L'animal clair se ramasse dans un paysage de formes vertes, rouges et bleues. Marc donne au corps et à son environnement des courbes apparentées : le bouvillon paraît s'ajuster au lieu plutôt que se poser dessus. La couleur distingue encore les zones, mais les formes communes les relient. La posture compacte devient une manière d'organiser le terrain immédiatement alentour.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    },
+    {
+      "id": "8dfc54e9-d7e8-54ec-aba8-1e6b0e06dcd3",
+      "title": "Fenêtres ouvertes simultanément",
+      "catalogueTitle": "Simultaneous Windows (2nd Motif, 1st Part)",
+      "artist": "Robert Delaunay",
+      "artists": [
+        {
+          "name": "Robert Delaunay",
+          "role": "primary",
+          "slug": "robert-delaunay-q33978"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/8dfc54e9-d7e8-54ec-aba8-1e6b0e06dcd3-c01d718c338917f1.jpg",
+      "imageSource": "https://www.wikiart.org/en/robert-delaunay/simultaneous-windows-2nd-motif-1st-part",
+      "credit": "Robert Delaunay. Simultaneous Windows (2nd Motif, 1st Part). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/robert-delaunay/simultaneous-windows-2nd-motif-1st-part",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/robert-delaunay/simultaneous-windows-2nd-motif-1st-part",
+      "description": "Des zones bleues, vertes, jaunes et rouges superposées gardent des évocations de fenêtres et de ville sans former une vue unique. Delaunay laisse ces indices rivaliser avec la capacité de la couleur à créer ses propres divisions et liens. La fenêtre ne sert plus seulement d'ouverture transparente. Ses bords et les choses aperçues deviennent matière d'une surface qui se lit dans plusieurs directions.",
+      "importance": "",
+      "museum": "Solomon R. Guggenheim Museum"
+    }
+  ],
+  "context": {
+    "start": 1867,
+    "end": 1966
+  },
+  "closingSections": [
+    {
+      "title": "Comparer les peintures avant de prévoir une visite",
+      "paragraphs": [
+        "Les panneaux de Kelly et la fenêtre de Chagall donnent deux pôles utiles : des couleurs sans objet représenté, et des objets qui refusent un monde cohérent. Les autres œuvres occupent diverses positions entre eux. Pour voyager, consultez séparément les informations actuelles des musées. *Forêt enchantée*, *Vers le haut* et *Au vélodrome* appartiennent à Venise ; aucune notice ne garantit une exposition en cours."
+      ]
+    }
+  ]
+}

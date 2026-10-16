@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "national-art-catalonia",
+  "museum": "Museu Nacional d’Art de Catalunya",
+  "city": "Barcelone",
+  "country": "Espagne",
+  "title": "Musée national d’art de Catalogne : chefs-d’œuvre",
+  "subtitle": "Vingt peintures modernes où le cadre quotidien compte autant que les personnages.",
+  "introduction": "La bicyclette qui ouvre cette sélection donne une bonne piste de lecture. Casas et Romeu sont deux individus reconnaissables, mais leur effort commun, leurs dos courbés et ce déplacement sans cérémonie contribuent pleinement au portrait. Ailleurs, un jardin dissimule presque son propriétaire ; une table de café sépare une femme du spectateur ; un train interrompt brièvement la vue d’une vallée. Ces peintures donnent aux gens une place dans le monde sans toujours en faire le centre.\n\nLa sélection provient des collections modernes du musée : elle ne résume pas l’ensemble du MNAC. Elle s’attache aux espaces entre vie publique et occupation privée — cafés, cours, pièces domestiques, champs et chemins qui en partent.",
+  "visitNote": "Ce guide porte sur vingt peintures modernes et non sur les galeries d'art roman, gothique ou de la Renaissance du musée. Certaines des œuvres sélectionnées peuvent être prêtées ou en réserve. Veuillez consulter le site Internet du musée pour connaître la présentation actuelle des collections et les informations pratiques avant votre visite.",
+  "locale": "fr",
+  "website": "https://www.museunacional.cat/en",
+  "officialGuide": "https://www.museunacional.cat/ca",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "Lire en ligne ou télécharger · Anglais",
+      "note": "Ce catalogue présente la peinture française qui a fait l'objet de débats et d'adaptations parmi les artistes de toute l'Europe à la fin du XIXe siècle. Il replace dans leur contexte les sujets de plein air abordés dans le guide, sans pour autant suggérer que tous les peintres catalans ont suivi la même voie."
+    }
+  ],
+  "works": [
+    {
+      "id": "51fd6c27-3ab0-5ac6-85d6-fa28f87acd56",
+      "title": "Ramon Casas et Pere Romeu sur un tandem",
+      "catalogueTitle": "Ramon Casas and Pere Romeu on a Tandem",
+      "artist": "Ramon Casas",
+      "artists": [
+        {
+          "name": "Ramon Casas",
+          "role": "primary",
+          "slug": "ramon-casas-q725681"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "069806-000",
+      "image": "https://artlines.org/assets/artworks/wikiart/51fd6c27-3ab0-5ac6-85d6-fa28f87acd56-fa96fa051e407fae.jpg",
+      "imageSource": "https://www.wikiart.org/en/ramon-casas/ramon-casas-and-pere-romeu-on-a-tandem-1897",
+      "credit": "Ramon Casas. Ramon Casas and Pere Romeu on a Tandem. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.museunacional.cat/en/colleccio/ramon-casas-and-pere-romeu-tandem/ramon-casas/069806-000",
+      "description": "Casas a peint ce double portrait pour la brasserie Els Quatre Gats, où il faisait partie du décor. Cette destination explique son effet direct, proche de celui d’une affiche. Le tandem rassemble les cyclistes en une silhouette comique : un portrait officiel distinguerait leurs identités, tandis que celui-ci repose sur la nécessité de pédaler ensemble.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "6002bdbd-d336-5a03-8fd4-2593e8025b9a",
+      "title": "Le jardin de M. Quer",
+      "catalogueTitle": "Mr.Quer in the Garden",
+      "artist": "Santiago Rusiñol",
+      "artists": [
+        {
+          "name": "Santiago Rusiñol",
+          "role": "primary",
+          "slug": "santiago-rusinol-q366930"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/6002bdbd-d336-5a03-8fd4-2593e8025b9a-9c21e949fc243797.jpg",
+      "imageSource": "https://www.wikiart.org/en/santiago-rusinol/senyor-quer-in-the-garden-1889",
+      "credit": "Santiago Rusiñol. Mr.Quer in the Garden. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/santiago-rusinol/senyor-quer-in-the-garden-1889",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/santiago-rusinol/senyor-quer-in-the-garden-1889",
+      "description": "Le jardin est trop présent pour servir de simple fond au portrait. Ses allées et son ombre donnent une place à la petite silhouette sombre, tout en reléguant le visage au second plan. Inversez la priorité habituelle : plutôt que de chercher à quoi ressemble l’homme, regardez combien le lieu contribue à le rendre présent.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "85c470f7-34a7-5267-80a3-d83e72b0c61f",
+      "title": "Romance",
+      "catalogueTitle": "A Romance",
+      "artist": "Santiago Rusiñol",
+      "artists": [
+        {
+          "name": "Santiago Rusiñol",
+          "role": "primary",
+          "slug": "santiago-rusinol-q366930"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "",
+      "accession": "011422-000",
+      "image": "https://artlines.org/assets/artworks/wikiart/85c470f7-34a7-5267-80a3-d83e72b0c61f-fe7b11cab0b7a2d4.jpg",
+      "imageSource": "https://www.wikiart.org/en/santiago-rusinol/a-romance-1894",
+      "credit": "Santiago Rusiñol. A Romance. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.museunacional.cat/en/colleccio/romance/santiago-rusinol/011422-000",
+      "description": "L’instrument occupe l’intervalle entre la femme en rouge et l’homme debout. Il indique une activité partagée sans expliquer leur relation privée. Elle est au clavier, lui près de la partition : chacun joue un rôle différent dans la scène. La romance suggérée par le titre reste moins certaine que l’acte visible de faire de la musique.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "062230a4-8da4-5020-88fd-06854c94acea",
+      "title": "Fête basque à El Antiguo, Saint-Sébastien",
+      "catalogueTitle": "Basque Celebration (dance at El Antiguo, San Sebastián)",
+      "artist": "Darío de Regoyos",
+      "artists": [
+        {
+          "name": "Darío de Regoyos",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1837855"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "065614-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23936176-acb3885d849c41c4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dar%C3%ADo_de_Regoyos_-_Basque_Celebration_(dance_at_El_Antiguo,_San_Sebasti%C3%A1n)_-_Google_Art_Project.jpg",
+      "credit": "Darío de Regoyos. Basque Celebration (dance at El Antiguo, San Sebastián). Image credit: Darío de Regoyos. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23936176",
+      "description": "Les danseurs dessinent une chaîne courbe sur le sol, frontière provisoire dans une vue beaucoup plus vaste sur la baie et les collines. Musiciens et spectateurs se tiennent aux abords plutôt que dans un seul centre encombré. Cette disposition laisse la fête s’étendre et maintient la différence entre participer et regarder.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "1f96df7d-cc1f-54b6-acde-1dcd78896982",
+      "title": "La Cour bleue",
+      "catalogueTitle": "Blue Courtyard",
+      "artist": "Santiago Rusiñol",
+      "artists": [
+        {
+          "name": "Santiago Rusiñol",
+          "role": "primary",
+          "slug": "santiago-rusinol-q366930"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "145243-000",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/1f96df7d-cc1f-54b6-acde-1dcd78896982-dad7894223f49a44.jpg",
+      "imageSource": "https://www.wikiart.org/en/santiago-rusinol/blue-courtyard-arenys-de-munt-1913",
+      "credit": "Santiago Rusinol. Blue Courtyard. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.museunacional.cat/en/colleccio/blue-courtyard/santiago-rusinol/145243-000",
+      "description": "La couleur la plus forte de ce jardin appartient aux murs. L’enceinte bleue fait ressortir pots et plantes ; un passage étroit laisse entrevoir un espace différent, plus lumineux. La profondeur est accordée avec parcimonie. L’essentiel retient le regard près de la surface, et l’ouverture agit d’autant plus qu’il existe peu d’autres échappées.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "3e5b8b88-0d70-53ee-98dd-bcf99ab18a1c",
+      "title": "Cala Forn",
+      "catalogueTitle": "Cala Forn",
+      "artist": "Joaquim Sunyer",
+      "artists": [
+        {
+          "name": "Joaquim Sunyer",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1392811"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "",
+      "accession": "011004-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q3815249-46f1a6b28e94dc57.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Joaquim_Sunyer_-_Cala_Forn_(1917).jpeg",
+      "credit": "Joaquim Sunyer. Cala Forn. Image credit: Joaquim Sunyer. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q3815249",
+      "description": "Femmes, enfants et paniers du premier plan possèdent une solidité arrondie à laquelle répond le paysage côtier. Ils forment un groupe soigneusement composé, non une foule fortuite. Cet ordre ne supprime pas le sujet quotidien, mais en déplace l’accent : les corps sont pensés par rapport à l’arbre, au village et à la baie autant qu’entre eux.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "655bad81-b38a-5edc-b138-862456803f3d",
+      "title": "Chlorose",
+      "catalogueTitle": "Chlorosis",
+      "artist": "Sebastià Junyent Sans",
+      "artists": [
+        {
+          "name": "Sebastià Junyent Sans",
+          "role": "primary",
+          "slug": "wikimedia-painter-q11947973"
+        }
+      ],
+      "date": "vers 1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "038927-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23933573-a4c8e15ede7aed67.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:(Barcelona)_Clorosi_-_Sebasti%C3%A0_Junyent_-_Museu_Nacional_d%27Art_de_Catalunya.jpg",
+      "credit": "Sebastià Junyent Sans. Chlorosis. Image credit: Didier Descouens. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23933573",
+      "description": "Le livre ouvert indique une activité, que la posture allongée suspend. La tête baissée et le corps appuyé sur le canapé donnent à observer une position précise, que le titre médical pourrait faire oublier. Celui-ci conserve une manière historique de nommer le sujet ; une attitude peinte ne suffit pas à diagnostiquer la femme.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "4c37e78a-87d5-5055-bd74-7ba429e62d04",
+      "title": "Plein air",
+      "catalogueTitle": "Plein air",
+      "artist": "Ramon Casas",
+      "artists": [
+        {
+          "name": "Ramon Casas",
+          "role": "primary",
+          "slug": "ramon-casas-q725681"
+        }
+      ],
+      "date": "vers 1890–1891",
+      "start": 1890,
+      "end": 1891,
+      "medium": "",
+      "accession": "010901-000",
+      "image": "https://artlines.org/assets/artworks/wikiart/4c37e78a-87d5-5055-bd74-7ba429e62d04-cd2c130898a9ca6f.jpg",
+      "imageSource": "https://www.wikiart.org/en/ramon-casas/plein-air-1891",
+      "credit": "Ramon Casas. Plein air. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.museunacional.cat/en/colleccio/plein-air/ramon-casas/010901-000",
+      "description": "Les tables pâles du café occupent davantage de place que son activité sociale apparente. Autour de la femme assise, les vides deviennent sensibles. Comparez-les à l’affluence que le lieu pourrait faire attendre : le tableau offre un cadre au loisir, mais en laisse une grande partie inoccupée et ne précise aucune conversation possible.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "deb73813-539a-55e1-abb0-61bbda477958",
+      "title": "Consuelo",
+      "catalogueTitle": "Consuelo",
+      "artist": "Isidre Nonell",
+      "artists": [
+        {
+          "name": "Isidre Nonell",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1393742"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "",
+      "accession": "069008-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23933566-105c470bcbfa25c3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Nonell_Consuelo_1905.jpg",
+      "credit": "Isidre Nonell. Consuelo. Image credit: Isidre Nonell. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23933566",
+      "description": "Le visage de Consuelo reste largement caché. Jupe rouge, corps plié, cheveux sombres et étoffe enveloppante forment les principales divisions du portrait. La posture donne ainsi des indications que l’on chercherait normalement dans une expression. Inutile de lui attribuer une tristesse précise : on peut constater le poids du corps assis et sa façon de se replier.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "7caa5d99-5865-5ffc-9676-2aa3b5769460",
+      "title": "Rêve",
+      "catalogueTitle": "Dream",
+      "artist": "Joan Brull",
+      "artists": [
+        {
+          "name": "Joan Brull",
+          "role": "primary",
+          "slug": "wikiart-artist-joan-brull"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/7caa5d99-5865-5ffc-9676-2aa3b5769460-607674804146d57c.jpg",
+      "imageSource": "https://www.wikiart.org/en/joan-brull/ensueno-1897",
+      "credit": "Joan Brull. Dream. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/joan-brull/ensueno-1897",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joan-brull/ensueno-1897",
+      "description": "La figure pâle se détache moins nettement de la berge et de l’eau que les personnages assis de Casas ou de Nonell. Branches pendantes et lointains adoucis empêchent de répartir aisément le décor en plans distincts. Le rêve du titre trouve donc un appui dans la vision elle-même : les contours restent incertains, malgré un paysage reconnaissable.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "e0d77fff-6b6b-5221-820d-e4e4aed13f33",
+      "title": "Flores",
+      "catalogueTitle": "Flores",
+      "artist": "Isidre Nonell",
+      "artists": [
+        {
+          "name": "Isidre Nonell",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1393742"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "065619-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23934483-b280736a82633ac9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Isidre_Nonell_-_Flores_-_Google_Art_Project.jpg",
+      "credit": "Isidre Nonell. Flores. Image credit: Isidre Nonell. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.museunacional.cat/en/colleccio/flores/isidre-nonell/065619-000",
+      "description": "Le titre nomme le modèle, non un bouquet. Sa blouse jaune-vert et son châle rayé donnent aux larges coups de pinceau quelque chose de précis à décrire. Les touches restent visibles sans dissoudre la personne. À côté de *Consuelo*, ce portrait distingue deux opérations : cacher un visage par la posture ou le simplifier par le maniement de la peinture.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "5f163b74-2ece-59ef-9eea-baa37c7ed47c",
+      "title": "L'aube du Vendredi saint à Orduña",
+      "catalogueTitle": "Good Friday Early Morning in Orduña",
+      "artist": "Darío de Regoyos",
+      "artists": [
+        {
+          "name": "Darío de Regoyos",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1837855"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "065615-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23936448-a2e390a3a8643f3f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:(Barcelona)_Matinada_del_Divendres_Santa_a_Ordu%C3%B1a_-_Dario_de_Regoyos_-_Museu_Nacional_d%27Art_de_Catalunya.jpg",
+      "credit": "Darío de Regoyos. Good Friday Early Morning in Orduña. Image credit: Didier Descouens. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23936448",
+      "description": "La procession partage le tableau avec la lumière matinale de la ville. Les fenêtres chaudes et éclairées se distinguent des bâtiments froids et des vêtements sombres : l’heure importe autant que l’événement. Regoyos n’isole pas le rite devant un fond vide ; il le rend visible à l’intérieur de la ville qui l’accueille.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "a5dbbef9-6561-5687-84ae-cf22c4437067",
+      "title": "La Sainte Famille",
+      "catalogueTitle": "Holy Family",
+      "artist": "Muter Mela",
+      "artists": [
+        {
+          "name": "Muter Mela",
+          "role": "primary",
+          "slug": "muter-mela-round2-5ffb58dbdb7e"
+        }
+      ],
+      "date": "vers 1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "",
+      "accession": "011187-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23933107-c1abf4d24f375d44.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mela_Muter,_Santa_Familia,_1909.jpg",
+      "credit": "Mela Muter. Holy Family. Image credit: [MNAC]; Source credit: { https://www.museunacional.cat/ca/colleccio/santa-familia/mela-muter/011187-000}. Wikimedia Commons. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://www.wikidata.org/wiki/Q23933107",
+      "description": "Le titre sacré accompagne un groupe d’apparence ordinaire, composé de femmes et d’enfants. L’allaitement et les corps rapprochés rendent les soins tangibles, sans le cadre élaboré d’une image religieuse cérémonielle. Gardons cet écart ouvert : le titre propose une lecture, tandis que les figures conservent la présence physique du quotidien.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "dd2baab9-fec3-5f69-9034-1e5ab9b0dc04",
+      "title": "Entrée du parc du Moulin de la Galette",
+      "catalogueTitle": "Entrance to the Park of the Moulin de la Galette",
+      "artist": "Santiago Rusiñol",
+      "artists": [
+        {
+          "name": "Santiago Rusiñol",
+          "role": "primary",
+          "slug": "santiago-rusinol-q366930"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "",
+      "accession": "045267-000",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-authoritative-20261006/dd2baab9-fec3-5f69-9034-1e5ab9b0dc04-e602553f0aecd374.jpg",
+      "imageSource": "https://www.wikiart.org/en/santiago-rusinol/moulin-de-la-galette-1891",
+      "credit": "Santiago Rusinol. Entrance to the Park of the Moulin de la Galette. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.museunacional.cat/en/colleccio/entrance-park-moulin-de-la-galette/santiago-rusinol/045267-000",
+      "description": "Le mur rouge et la grille ouverte invitent à entrer, mais les divertissements restent presque hors d’atteinte. De petites figures éloignées donnent seulement un indice de ce qui se trouve au bout du chemin. Rusiñol peint l’approche plutôt que l’attraction elle-même : un seuil et l’attente qu’il suscite suffisent à faire un tableau.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "583dba0c-cb32-5c93-917b-6e2251922c77",
+      "title": "Paysage",
+      "catalogueTitle": "Landscape",
+      "artist": "Francesc Torrescassana Sallarés",
+      "artists": [
+        {
+          "name": "Francesc Torrescassana Sallarés",
+          "role": "primary",
+          "slug": "wikimedia-painter-q11922859"
+        }
+      ],
+      "date": "1864",
+      "start": 1864,
+      "end": 1864,
+      "medium": "",
+      "accession": "010604-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23935394-3875acd8300d514a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Francesc_Torrescassana_-_Landscape_-_Google_Art_Project.jpg",
+      "credit": "Francesc Torrescassana Sallarés. Landscape. Image credit: Francesc Torrescassana (1845 - 1918) Born in Barcelona. Died in Barcelona. Details on Google Art Project. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23935394",
+      "description": "Les pierres brisées du premier plan imposent une succession d’arêtes avant que le regard n’atteigne les grandes pentes. Des plantes occupent les interstices, sans adoucir tout le terrain en une surface verte. On peut suivre les différences de consistance : roche solide à portée de main, terre moins distincte au loin, ciel qui réclame un autre traitement.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "89c0cf1c-9eb3-56e0-b42b-a8c7c1a6ff73",
+      "title": "Intérieur de salon",
+      "catalogueTitle": "Living Room Interior",
+      "artist": "Pere Tornè Esquius",
+      "artists": [
+        {
+          "name": "Pere Tornè Esquius",
+          "role": "primary",
+          "slug": "wikimedia-painter-q11941067"
+        }
+      ],
+      "date": "1913",
+      "start": 1913,
+      "end": 1913,
+      "medium": "",
+      "accession": "024668-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23935666-f650db3cc0992c8c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:(Barcelona)_Dining_Room_by_Pere_Torn%C3%A9_Esquius_-_Museu_Nacional_d%27Art_de_Catalunya.jpg",
+      "credit": "Pere Tornè Esquius. Living Room Interior. Image credit: Didier Descouens. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23935666",
+      "description": "Chaises, cheminée et étoffe à motifs sont reconnaissables sans description exhaustive de leurs surfaces. De larges plages de couleur voisines organisent la pièce. Comparé aux cours de Rusiñol, l’espace est peu profond, mais il ne manque pas de caractère : les distances entre les meubles et l’accent rouge du tissu suffisent à le préciser.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "86079219-d5c6-56f6-9c24-a3e02ff0ddba",
+      "title": "La roue hydraulique d'Onclet",
+      "catalogueTitle": "Onclet Waterwheel",
+      "artist": "Joaquín Mir Trinxet",
+      "artists": [
+        {
+          "name": "Joaquín Mir Trinxet",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1357729"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "",
+      "accession": "004632-000",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/1c27ef2e-2c14-5967-9dde-85f59f39afb5-89aac3103769f565.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Joaquim_Mir_Onclet_Waterwheel_1922.jpg",
+      "credit": "Joaquín Mir Trinxet. Onclet Waterwheel. Image credit: Joaquín Mir Trinxet; https://www.museunacional.cat/en/colleccio/onclet-waterwheel/joaquim-mir/004632-000. https://commons.wikimedia.org/wiki/File:Joaquim_Mir_Onclet_Waterwheel_1922.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23933583",
+      "description": "L’installation hydraulique montre que ce paysage est utilisé, même si personne ne le domine. Ses surfaces bâties claires se placent parmi champs et arbres, non en dehors de leur ordre. Deux lectures restent possibles ensemble : la répartition de la lumière sur le sol et les indices plus discrets du travail qui s’y inscrit.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "b0461067-a6d4-5bea-8aed-8a7fe0446eda",
+      "title": "Paysage",
+      "catalogueTitle": "Paisatge",
+      "artist": "Joaquín Mir Trinxet",
+      "artists": [
+        {
+          "name": "Joaquín Mir Trinxet",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1357729"
+        }
+      ],
+      "date": "vers 1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "207738-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21849446-10f7f2b367b6e233.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Joaquim_Mir_Landscape_1900-1903.jpg",
+      "credit": "Joaquín Mir Trinxet. Paisatge. Image credit: Joaquín Mir Trinxet. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21849446",
+      "description": "Des touches bleues, vertes et jaunes forment la végétation tout en restant des traces de pinceau. Des accents plus chauds empêchent le premier plan de devenir une masse indistincte. Comparez le *Paysage* rocheux de Torrescassana : là, les arêtes établissent le terrain ; ici, il apparaît progressivement par répétitions et changements de couleur.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "02245866-dba4-5475-947d-91b8a9fd8ee7",
+      "title": "Pancorbo : Un train de passage",
+      "catalogueTitle": "Pancorbo: Passing Train",
+      "artist": "Darío de Regoyos",
+      "artists": [
+        {
+          "name": "Darío de Regoyos",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1837855"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "",
+      "accession": "017453-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23935705-abd19a73904e29a6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dar%C3%ADo_de_Regoyos_-_Pancorbo-_Passing_Train_-_Google_Art_Project.jpg",
+      "credit": "Darío de Regoyos. Pancorbo: Passing Train. Image credit: Darío de Regoyos. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23935705",
+      "description": "Le train n’occupe qu’une partie de la vallée, mais sa vapeur introduit une forme manifestement passagère. Maisons, falaises et pentes paraissent plus stables autour. Le contraste donne au chemin de fer une échelle particulière : assez important pour interrompre la vue, mais petit devant le terrain que son mouvement doit traverser.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    },
+    {
+      "id": "49db4d85-c0b9-5061-9a9a-939a51a0f1ce",
+      "title": "Peñalara",
+      "catalogueTitle": "Peñalara (Sierra de Guadarrama)",
+      "artist": "Jaume Morera i Galícia",
+      "artists": [
+        {
+          "name": "Jaume Morera i Galícia",
+          "role": "primary",
+          "slug": "wikimedia-painter-q10857968"
+        }
+      ],
+      "date": "vers 1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "",
+      "accession": "024635-000",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q23933521-e2bf3cbcda20ed89.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:(Barcelona)_Pe%C3%B1alara_(Serra_de_Guadarrama)_-_Jaume_Morera_-_Museu_Nacional_d%27Art_de_Catalunya.jpg",
+      "credit": "Jaume Morera i Galícia. Peñalara (Sierra de Guadarrama). Image credit: Didier Descouens. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q23933521",
+      "description": "Les petites figures donnent une mesure des pentes, mais le premier plan accidenté demande aussi qu’on s’y arrête. Ce sol ne se franchirait pas aussi facilement que l’œil parcourt le lointain. La montagne ne se réduit donc pas à une ligne d’horizon : un terrain difficile sépare notre position des hauteurs.",
+      "importance": "",
+      "museum": "Museu Nacional d’Art de Catalunya"
+    }
+  ],
+  "context": {
+    "start": 1864,
+    "end": 1922
+  },
+  "closingSections": [
+    {
+      "title": "Suivre un type d’espace",
+      "paragraphs": [
+        "Pour une lecture plus courte, commencez par les deux cafés, passez par la cour et le jardin, puis terminez avec le train. Observez combien de fois une ouverture ou un vide organise l’image. Cette sélection n’est pas un itinéraire de salle en salle ; vérifiez auprès du musée quelles œuvres sont actuellement exposées."
+      ]
+    }
+  ]
+}

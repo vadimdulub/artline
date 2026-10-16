@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""Bounded batch 248: resume Getty Byzantine discovery at offset 250."""
+import copy,csv,datetime,fcntl,hashlib,importlib.util,json,os,subprocess,urllib.request
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];E=ROOT/'docs/research/continuous-production-20261011/batches/000248';R=Path.home()/'Library/Application Support/Artline/continuous-research/batches/000248';Q=E.parents[1]/'source-queue.json';REG=Path('/Users/vadimdulub/Downloads/GLOBAL_MUSEUM_SOURCE_REGISTRY.csv');TARGET='artline-508319:europe-west1:artline-postgres';URL='https://www.getty.edu/art/collection/api/search?q=Byzantine&size=50&from=250&include_deaccessioned=false'
+spec=importlib.util.spec_from_file_location('helper',ROOT/'ops/india-300-delivery-20261011.py');h=importlib.util.module_from_spec(spec);spec.loader.exec_module(h)
+def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def save(p,v):
+ p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);t=p.with_suffix(p.suffix+'.tmp');t.write_text(json.dumps(v,ensure_ascii=False,indent=2,default=str)+'\n');os.replace(t,p)
+def rel(p):return str(Path(p).relative_to(ROOT))
+E.mkdir(parents=True,exist_ok=True);R.mkdir(parents=True,exist_ok=True)
+with (R/'worker.lock').open('a+') as lk:
+ fcntl.flock(lk,fcntl.LOCK_EX|fcntl.LOCK_NB);started=now();counts=dict(new_painters=0,new_artworks=0,newly_illustrated=0,alternate_images=0,museum_links=0)
+ required=['AGENTS.md','docs/ARTLINE_IMAGE_USE.md','docs/DATA_AND_IMAGE_COLLECTION_PROMPT.md','docs/LOCAL_DATA_LOCATIONS.md','docs/research/continuous-production-20261011/CHECKPOINT.json','docs/research/continuous-production-20261011/source-queue.json']
+ registry=list(csv.DictReader(REG.open()));assert len(registry)==111;reg=next(x for x in registry if x['source_id']=='getty_museum')
+ holds=sorted(ROOT.glob('docs/research/continuous-production-20261011/batches/*/*hold*.json'),key=lambda p:p.stat().st_mtime,reverse=True)[:8]
+ save(E/'required-input-verification.json',dict(at=started,files=[dict(path=p,sha256=sha(ROOT/p)) for p in required],registry_path=str(REG),registry_sha256=sha(REG),registry_records=111,complete_registry_used=True,latest_hold_ledgers=[dict(path=rel(p),sha256=sha(p)) for p in holds]))
+ q=json.loads(Q.read_text());before=copy.deepcopy(q);assert len(q['sources'])==111;save(E/'source-queue-before.json',before)
+ actual=subprocess.check_output(['gcloud','sql','instances','describe','artline-postgres','--project=artline-508319','--account=vadim@alingva.com','--format=value(connectionName)'],text=True).strip();assert actual==TARGET
+ proxies=[x for x in subprocess.check_output(['ps','ax','-o','command='],text=True).splitlines() if x.startswith('/tmp/artline-cloud-sql-proxy ') and '--port 55519 ' in x and TARGET in x];assert len(proxies)==1
+ db=h.connect();assert db.execute('select current_database() db').fetchone()['db']=='artline'
+ save(E/'production-target-reconciliation.json',dict(at=now(),connection_name=actual,proxy_port=55519,proxy_command_inspected=True,database='artline',helper='ops/india-300-delivery-20261011.py',helper_sha256=sha(ROOT/'ops/india-300-delivery-20261011.py'),shared_ingestion_lock='artline-curated-ingestion',write=False,local_catalogue_connections=0))
+ prior=json.loads((E.parent/'000107/independent-production-verification.json').read_text());live=h.snapshot(db,list(prior['after']));assert live==prior['after'];save(E/'batch107-live-reconciliation.json',dict(at=now(),production_rows=len(live),matches_independent_postimage=True,increment=0))
+ req=urllib.request.Request(URL,headers={'User-Agent':'ArtlineResearch/1.0 (bounded source verification)'})
+ with urllib.request.urlopen(req,timeout=30) as z:body=z.read();status=z.status
+ cap=R/'getty-byzantine-offset-250.json';cap.write_bytes(body);data=json.loads(body);pool=data.get('data',[])
+ nonpic=('coin','medal','vessel','jewelry','jewellery','statuette','sculpture','textile','glass','bowl','cup','plate','spoon','cross','reliquary','binding','manuscript')
+ pict=('painting','illumination','drawing','print','icon','fresco','mosaic','panel')
+ rows=[]
+ for x in pool:
+  text=' '.join(str(x.get(k,'')) for k in ('title','primary_name','name','type','classification','medium','description')).lower();decision='pictorial_lead_requires_object_detail_review' if any(k in text for k in pict) and not any(k in text for k in nonpic) else 'excluded_nonpictorial_component_or_unresolved_index_lead';rows.append(dict(id=x.get('id'),slug=x.get('id_manager_slug') or x.get('slug'),title=x.get('primary_name') or x.get('title') or x.get('name'),classification_text=text,decision=decision))
+ selected=[x for x in rows if x['decision'].startswith('pictorial')]
+ save(E/'getty-offset250-source-verification.json',dict(at=now(),source_registry=reg,url=URL,status=status,body_sha256=hashlib.sha256(body).hexdigest(),runtime_capture=str(cap),offset=250,returned=len(pool),search_total=data.get('total'),classified=rows,pictorial_leads=selected,images_requested=0,production_writes=0,disposition='No existing Artline primary-image gap was established from this index page; object/detail identity and record-explicit image rights are required before selection.'))
+ save(E/'bounded-production-gap-cohort.json',dict(at=now(),route='Getty Byzantine offset250',index_rows=len(pool),eligible_existing_primary_image_gaps=0,rows=[],read_only=True))
+ save(E/'actual-visual-review.json',dict(at=now(),prepared_images=0,viewed_images=0,claim='No authentic candidate image was selected or prepared; therefore no visual-review claim is made.'))
+ own=[dict(x) for x in db.execute('select media_id::text from media_rights_evidence where adapter_version=%s',('continuous-primary-images-20261011-b000248',))];assert own==[];db.close()
+ save(E/'independent-production-verification.json',dict(at=now(),production_target=TARGET,current_campaign_rows=own,production_writes=0,verified_counts=counts,local_catalogue_connections=0))
+ entry=next(x for x in q['sources'] if x['source_id']=='getty_museum');old=list(entry.get('resume_cursor',{}).get('processed_slugs',[]));new=[x['slug'] for x in rows if x['slug']];entry.update(status='byzantine_offset250_researched_no_existing_image_gap_selected',last_checked_at=now(),last_batch=248,checkpoint=rel(E/'CHECKPOINT.json'),access_status='Official Getty collection search HTTP 200; index page contained no production-safe exact existing image-gap selection.',latest_batch_verified_counts=counts);entry['resume_cursor'].update(last_offset=250,next_offset=300,size=50,processed_slugs=list(dict.fromkeys(old+new)),last_page_evidence=rel(E/'getty-offset250-source-verification.json'),next_step='Continue only with an object-detail filter/crosswalk that proves an existing Artline primary-image gap and record-explicit open rights; otherwise rotate to a different undercovered Russian-icon or post-Byzantine registry museum.')
+ assert [x for x in q['sources'] if x['source_id']!='getty_museum']==[x for x in before['sources'] if x['source_id']!='getty_museum']
+ with open(str(Q)+'.lock','w') as ql:
+  fcntl.flock(ql,fcntl.LOCK_EX);t=Q.with_suffix('.000248.tmp');t.write_text(json.dumps(q,ensure_ascii=False,indent=2)+'\n');os.replace(t,Q)
+ save(E/'source-queue-update-verification.json',dict(at=now(),modified_source_ids=['getty_museum'],unrelated_entries_preserved=110,all_111_registry_routes_preserved=True,queue_sha256=sha(Q),resume_cursor=entry['resume_cursor']))
+ save(E/'batch-verification-receipt.json',dict(at=now(),verified_counts=counts,production_ids=[],production_writes=0,attribution='Fresh Getty offset-250 discovery and live production reconciliation; no prior additions counted.',production_target=TARGET,shared_ingestion_lock='artline-curated-ingestion',lock_not_acquired_because_no_write=True))
+ nxt='Rotate to an undercovered registry-backed Russian-icon or post-Byzantine museum with stable object identifiers and explicit open-image permission; do not replay Getty offset250 or the exhausted French reserve.'
+ evidence=['required-input-verification.json','production-target-reconciliation.json','batch107-live-reconciliation.json','bounded-production-gap-cohort.json','getty-offset250-source-verification.json','actual-visual-review.json','independent-production-verification.json','source-queue-update-verification.json','batch-verification-receipt.json']
+ cp=dict(at=now(),batch=248,stage='verified_no_eligible_candidates',outcome='no_eligible_candidates',researched=dict(source_id='getty_museum',offset=250,index_rows=len(pool),pictorial_index_leads=len(selected)),selected=0,prepared=0,imported=0,verified=0,verified_counts=counts,next_task=nxt,blocker='',evidence_paths=[rel(E/x) for x in evidence],external_supervisor_unchanged=True,production_writes=0,local_catalogue_connections=0);save(E/'CHECKPOINT.json',cp);save(R/'CHECKPOINT.json',cp)
+ save(E/'independent-final-artifact-verification.json',dict(at=now(),checkpoint_runtime_equal=json.loads((E/'CHECKPOINT.json').read_text())==json.loads((R/'CHECKPOINT.json').read_text()),evidence=[dict(path=rel(E/x),sha256=sha(E/x)) for x in evidence],all_evidence_exists=all((E/x).exists() for x in evidence),counts_match=True,source_queue_sha256=sha(Q)))
+ result=dict(outcome='no_eligible_candidates',summary=f'Batch 248 reconciled batch 107 and live production, then resumed the permitted Getty Byzantine route at offset 250. It classified {len(pool)} official index records, but established no exact existing Artline primary-image gap with object-level identity and record-explicit reusable image rights. No image was prepared or written.',next_task=nxt,blocker='',verified_counts=counts,evidence_paths=cp['evidence_paths']+[rel(E/'independent-final-artifact-verification.json'),rel(E/'CHECKPOINT.json')]);save(E/'worker-result.json',result);save(R/'result-001.json',result);print(json.dumps(result,ensure_ascii=False))

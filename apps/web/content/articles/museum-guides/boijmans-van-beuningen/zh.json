@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "boijmans-van-beuningen",
+  "museum": "Museum Boijmans Van Beuningen",
+  "city": "鹿特丹",
+  "country": "荷兰",
+  "title": "博伊曼斯·范伯宁恩博物馆：杰作",
+  "subtitle": "镜面、旅程与想象中的风景，检验画面怎样让人信服。",
+  "introduction": "马格利特的镜子犯了一个明显的错误，却又给出一处关键的正确倒影。人的面孔仍不可见，书的反射却很正常。一小部分可靠的空间，使更大的不可能更难被轻易忽略。本选目中，其他作品以较不突兀的方式扰动预期：巨塔令建造者显得微不足道，旅人回望而非前视，瀑布则从有限的明暗层次中成形。\n\n这些画共享的问题是：一幅图像需要多少信息，才能使人信服？素描可以留下大片空纸，肖像可以没有情节，风景只凭一小片聚落，就能交代整片地形的尺度。",
+  "visitNote": "博物馆主馆因翻新工程而关闭。请查阅博物馆关于馆藏库（Depot）及其他地点展览的最新资讯；本馆藏指南并未标明特定日期可供参观的具体展品。",
+  "locale": "zh",
+  "website": "https://www.boijmans.nl",
+  "officialGuide": "https://www.boijmans.nl/museum/renovatie",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Dutch Paintings in The Metropolitan Museum of Art, Volumes I and II",
+      "author": "Walter Liedtke",
+      "url": "https://www.metmuseum.org/met-publications/dutch-paintings-in-the-metropolitan-museum-of-art-2-vols-",
+      "access": "在线阅读或下载 · 英语",
+      "note": "沃尔特·利特克（Walter Liedtke）所著的《大都会艺术博物馆中的荷兰绘画》（Dutch Paintings in The Metropolitan Museum of Art）一书，为本选集中的风景画、肖像画及室内生活场景提供了详尽的背景资料。对于比较十七世纪不同绘画体裁的创作意图而言，该书尤为有益。"
+    }
+  ],
+  "works": [
+    {
+      "id": "674182e0-0218-5429-904d-d2b3ea94bbca",
+      "title": "旅人",
+      "catalogueTitle": "The wayfarer",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/674182e0-0218-5429-904d-d2b3ea94bbca-e4db05b1832e90d0.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/the-wayfarer",
+      "credit": "The wayfarer. WikiArt; Hieronymus Bosch. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/the-wayfarer",
+      "description": "旅人的身体继续向前，注意力却转向身后。博斯首先让这两个不同的方向成为画面的问题。行囊与手杖说明他正在旅途中，但建筑、狗和散落物件，又使眼前的环境变得复杂。在为每个细节规定道德寓意之前，可以先看这次回望如何打断原本直接的离去。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "e6fbf39e-68cf-525a-bac2-5d26e5ba13b9",
+      "title": "圣克里斯托弗",
+      "catalogueTitle": "Saint Christopher",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/e6fbf39e-68cf-525a-bac2-5d26e5ba13b9-582d0ff58e02e2ea.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/saint-christopher",
+      "credit": "Saint Christopher. WikiArt; Hieronymus Bosch. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/saint-christopher",
+      "description": "即使暂不考虑宗教含义，手杖和倾斜的身体也已说明克里斯托弗渡水的艰难。孩子占据的面积虽小，却给圣徒带来负担。博斯在这一明确行动周围铺开更难一眼看尽的风景。中心任务保持清楚，细小事件却使整个世界不只是它的简单图解。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "e9b106a6-39cb-5b6f-b81e-a87d5f99edd7",
+      "title": "禁止复制",
+      "catalogueTitle": "Not to be Reproduced",
+      "artist": "René Magritte",
+      "artists": [
+        {
+          "name": "René Magritte",
+          "role": "primary",
+          "slug": "rene-magritte-q7836"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e9b106a6-39cb-5b6f-b81e-a87d5f99edd7-25ae0ddfd9752399.jpg",
+      "imageSource": "https://www.wikiart.org/en/rene-magritte/not-to-be-reproduced-1937",
+      "credit": "René Magritte. Not to be Reproduced. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rene-magritte/not-to-be-reproduced-1937",
+      "description": "镜子重复了爱德华·詹姆斯的后脑，而没有映出他的脸。然而，书的反射正常，这个房间并不遵循一种统一的“不可能”规则。马格利特给出可以辨认的肖像环境，又取消了观看者通常期待得到的面孔。继续看也不会使脸出现，因为遮断早已写进画面的安排中。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "ca433444-2efe-58e5-910b-4beecfdf5f79",
+      "title": "海滩风景",
+      "catalogueTitle": "Beach view",
+      "artist": "Johan Hendrik Weissenbruch",
+      "artists": [
+        {
+          "name": "Johan Hendrik Weissenbruch",
+          "role": "primary",
+          "slug": "johan-hendrik-weissenbruch-round7-1b4d1f52e950"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/ca433444-2efe-58e5-910b-4beecfdf5f79-031073a6d1a0158f.jpg",
+      "imageSource": "https://www.wikiart.org/en/johan-hendrik-weissenbruch/beach-view-1891",
+      "credit": "Johan Hendrik Weissenbruch. Beach view. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/johan-hendrik-weissenbruch/beach-view-1891",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/johan-hendrik-weissenbruch/beach-view-1891",
+      "description": "海滩上固定地标很少，车辆便成了判断距离的尺度。一辆在近处湿沙上，另一辆向水边远去，使中间的空旷更容易估量。魏森布鲁赫给浅色天空留下很大面积，同时仍保留了脚下地面的明确感。一个普通的移动物体，有时比详尽的建筑边界更能有效交代大小远近。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "5ce56fa1-ab16-561a-a384-f0c75816daf5",
+      "title": "抒情",
+      "catalogueTitle": "Lyrical (Lyrics)",
+      "artist": "Wassily Kandinsky",
+      "artists": [
+        {
+          "name": "Wassily Kandinsky",
+          "role": "primary",
+          "slug": "wassily-kandinsky-q61064"
+        }
+      ],
+      "date": "1911",
+      "start": 1911,
+      "end": 1911,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/5ce56fa1-ab16-561a-a384-f0c75816daf5-58efa3975e77cfc9.jpg",
+      "imageSource": "https://www.wikiart.org/en/wassily-kandinsky/lyrical-lyrics-1911",
+      "credit": "Wassily Kandinsky. Lyrical (Lyrics). WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/wassily-kandinsky/lyrical-lyrics-1911",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/wassily-kandinsky/lyrical-lyrics-1911",
+      "description": "虽然大部分环境已被省略，马与骑手仍依稀可辨。长线穿过零散色块，将行动带过画面。康定斯基让题材停在将要认出的边缘：这些笔迹既可以被看成在某个地方发生的移动，也可以被看成绘画表面自身的运动。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "c2299686-3905-5c2b-9c11-2d5aa48afd8c",
+      "title": "雅韦尔港",
+      "catalogueTitle": "Port de Javel",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1876",
+      "start": 1876,
+      "end": 1876,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c2299686-3905-5c2b-9c11-2d5aa48afd8c-3b69f17230054652.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/port-de-javel-1876",
+      "credit": "Port de Javel. WikiArt; Paul Gauguin. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-gauguin/port-de-javel-1876",
+      "description": "船只、低矮建筑和烟属于忙碌的河岸，大面积云层则使天气同样成为风景的重要部分。高更把工业活动放在可以理解的环境里，并未将它单独提炼成现代性的标志。这幅画本身就值得观看，不必只把它当作画家后来作品的准备阶段。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "d98457ae-2473-55dd-b69c-1ffd8d4b64e4",
+      "title": "鹿特丹港",
+      "catalogueTitle": "Rotterdam Harbour",
+      "artist": "Paul Signac",
+      "artists": [
+        {
+          "name": "Paul Signac",
+          "role": "primary",
+          "slug": "paul-signac-q151573"
+        }
+      ],
+      "date": "1907",
+      "start": 1907,
+      "end": 1907,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/d98457ae-2473-55dd-b69c-1ffd8d4b64e4-d52f6f966fcd1227.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-signac/rotterdam-harbour-1907",
+      "credit": "Rotterdam Harbour. WikiArt; Paul Signac. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-signac/rotterdam-harbour-1907",
+      "description": "需要透过细小彩色笔触，才能认出起重机和船帆。西涅克以相同画法处理机械与水，却没有假装它们是同一种材料。远岸因距离而变得柔和，活跃的色彩则始终贴近视线。港口转化为明亮的色彩图案后，仍保留着工业场所的身份。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "37380e54-77e3-545c-8f77-b89fcfb86963",
+      "title": "两个男性头像",
+      "catalogueTitle": "Two Male Heads",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "约 1480 年",
+      "start": 1480,
+      "end": 1480,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/37380e54-77e3-545c-8f77-b89fcfb86963-eb23f5ec5719383b.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/two-male-heads",
+      "credit": "Hieronymus Bosch. Two Male Heads. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hieronymus-bosch/two-male-heads",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/two-male-heads",
+      "description": "两颗头靠得很近，目光与表情的差别因此成了主要看点。精细的头饰又在有限画面内增加一组可比较之处。周围几乎没有故事来解释他们，面孔仍然具体，却无法被完全说明。彼此靠近建立了关系，但并未确定两人究竟怎样看待对方。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "16da16ab-4395-51ae-9540-4485ac1cca5c",
+      "title": "内格勒佩利斯城堡",
+      "catalogueTitle": "Castle Nègrepeliss",
+      "artist": "Jean-Honoré Fragonard",
+      "artists": [
+        {
+          "name": "Jean-Honoré Fragonard",
+          "role": "primary",
+          "slug": "jean-honore-fragonard-q127171"
+        }
+      ],
+      "date": "1773",
+      "start": 1773,
+      "end": 1773,
+      "medium": "粉笔",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/16da16ab-4395-51ae-9540-4485ac1cca5c-793aa20a11d29b64.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-honore-fragonard/castle-n%C3%A8grepeliss",
+      "credit": "Castle Nègrepeliss. WikiArt; Jean-Honoré Fragonard. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-honore-fragonard/castle-n%C3%A8grepeliss",
+      "description": "暖色线迹周围保留了大片空纸。因此，弗拉戈纳尔无须给每一面墙封上同样完整的边界，也能暗示一座体量可观的建筑。塔楼和地势通过选择性描绘显现。这种节省很有启发：图像可以让地点变得可理解，同时保留初次看见它时尚未穷尽细节的开放感。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "db619532-2d0a-5905-b1c2-f0001d41670d",
+      "title": "基督复活",
+      "catalogueTitle": "The Resurrection of Christ",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "约 1560 年",
+      "start": 1560,
+      "end": 1560,
+      "medium": "纸上粉笔画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/db619532-2d0a-5905-b1c2-f0001d41670d-4bb065c4d7014eea.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-resurrection-of-christ",
+      "credit": "Pieter Bruegel the Elder. The Resurrection of Christ. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pieter-bruegel-the-elder/the-resurrection-of-christ",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-resurrection-of-christ",
+      "description": "直立的基督，与墓边士兵凌乱的姿势形成对照。勃鲁盖尔通过身体的不同方向组织宗教事件，将密集的描绘集中在下方，同时让升起的人物保持清楚。这样的分离使题材在繁多细节中仍然可辨。稳定与惊乱，被安排在同一场景的不同部分。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "38b29385-90de-520e-82f8-5f68e24b0424",
+      "title": "小巴别塔",
+      "catalogueTitle": "The \"Little\" Tower of Babel",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1563",
+      "start": 1563,
+      "end": 1563,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/38b29385-90de-520e-82f8-5f68e24b0424-0b4dd2688c9434c8.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-little-tower-of-babel-1563",
+      "credit": "Pieter Bruegel the Elder. The \"Little\" Tower of Babel. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pieter-bruegel-the-elder/the-little-tower-of-babel-1563",
+      "description": "起初，塔像是一组反复排列的拱门；随后，旁边的小城市和河流才让它惊人的体量充分显现。勃鲁盖尔把上层留在未完工的状态，因此这座建筑也是一项仍在进行的活动。结构看起来井然有序，却不能保证整个工程最终成功。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "3ca2ceb8-2f55-5666-92b6-c35e5f15acdf",
+      "title": "亚伯拉罕与三位天使",
+      "catalogueTitle": "Abraham and three Angels",
+      "artist": "Aert de Gelder",
+      "artists": [
+        {
+          "name": "Aert de Gelder",
+          "role": "primary",
+          "slug": "aert-de-gelder-q19034"
+        }
+      ],
+      "date": "1680–1685",
+      "start": 1680,
+      "end": 1685,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111497746-38cf0bae5d7d4172.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Aert_de_gelder,_abramo_e_gli_angeli,_1680-85_ca.jpg",
+      "credit": "Arent de Gelder. Abraham and three Angels. Image credit: Sailko. Wikimedia Commons. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://www.wikidata.org/wiki/Q111497746",
+      "description": "来客与主人围着食物相会，使神圣相遇呈现出待客的形式。德·赫尔德让面孔和衣料从低调的背景中浮出，没有用铺张的场面宣布事件。共用的桌子连接人物，各自不同的反应又使这场聚会不至于成为一种毫无区别的敬畏表情。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "49d695c9-2e2c-5e0d-b583-07f05a0bf69e",
+      "title": "小木桥上的垂钓者",
+      "catalogueTitle": "Anglers on a Small Wooden Bridge",
+      "artist": "Maerten Fransz. van der Hulst",
+      "artists": [
+        {
+          "name": "Maerten Fransz. van der Hulst",
+          "role": "primary",
+          "slug": "wikimedia-painter-q21289434"
+        }
+      ],
+      "date": "1640–1645",
+      "start": 1640,
+      "end": 1645,
+      "medium": "",
+      "accession": "2523 (OK)",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q29856014-df7771db1f06427d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Maerten_Fransz._van_der_Hulst_-_Hengelaars_op_een_houten_bruggetje_-_2523_(OK)_-_Museum_Boijmans_Van_Beuningen.jpg",
+      "credit": "Maerten Fransz. van der Hulst. Anglers on a Small Wooden Bridge. Image credit: Maerten Fransz. van der Hulst. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q29856014",
+      "description": "在较柔和的风景中，桥提供了一组坚实的角度。垂钓者从桥上探身，以人的尺度说明它的实际用途。范·德·许尔斯特让小小的消遣组织起宽阔景色。水、远地和天空得以保持开阔，因为近处的桥已先确立了一个可供观看的位置。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "f75ca785-3bc3-58f0-8628-dfd59886f959",
+      "title": "小庭院",
+      "catalogueTitle": "Binnenplaatsje",
+      "artist": "Esaias Boursse",
+      "artists": [
+        {
+          "name": "Esaias Boursse",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2354154"
+        }
+      ],
+      "date": "约 1660 年",
+      "start": 1660,
+      "end": 1660,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q114557326-e0c5369c49f0964d.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Esaias_boursse,_un_cortile,_1660_ca.jpg",
+      "credit": "Esaias Boursse. Binnenplaatsje. Image credit: Sailko. Wikimedia Commons. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://www.wikidata.org/wiki/Q114557326",
+      "description": "砖墙围出有限的劳动空间，但布尔塞仔细区分各处表面，没有将围墙都处理成单调背景。布、木头与砖石对光的反应不同。俯身劳作的人处在这些实用环境之中。庭院因用途和材料而具体，无须发生异常事件才值得被画。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "80941e24-e368-5980-83eb-914c4dac765c",
+      "title": "纺线的女子",
+      "catalogueTitle": "A Woman Spinning",
+      "artist": "Gerard ter Borch",
+      "artists": [
+        {
+          "name": "Gerard ter Borch",
+          "role": "primary",
+          "slug": "gerard-ter-borch-q346808"
+        }
+      ],
+      "date": "1652-1653",
+      "start": 1652,
+      "end": 1653,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/80941e24-e368-5980-83eb-914c4dac765c-daabae41254366ff.jpg",
+      "imageSource": "https://www.wikiart.org/en/gerard-terborch/a-woman-spinning",
+      "credit": "Gerard ter Borch. A Woman Spinning. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gerard-terborch/a-woman-spinning",
+      "description": "双手间的距离很小，却足以说明她在做什么。浅色袖口和衣领把劳动者从暗室中显出来，关系较小的周围环境则保持模糊。特尔·博赫根据活动的重要处安排描绘：线的一点移动，比恰好容纳它的大片空间更值得细看。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "9630e2a8-df06-5f46-a345-1ac5ba0b5b48",
+      "title": "牛头",
+      "catalogueTitle": "Head of a Cow",
+      "artist": "Dirck Govertsz",
+      "artists": [
+        {
+          "name": "Dirck Govertsz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5280187"
+        }
+      ],
+      "date": "1626–1629",
+      "start": 1626,
+      "end": 1629,
+      "medium": "",
+      "accession": "3243 (OK)",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q29856254-3965582cc392e5d6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dirck_Govertsz._-_Portret_van_een_koe_-_3243_(OK)_-_Museum_Boijmans_Van_Beuningen.jpg",
+      "credit": "Dirck Govertsz. Head of a Cow. Image credit: Dirck Govertsz. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q29856254",
+      "description": "正面头部采用了人像画中熟悉的形式，牛角与卷曲额毛却让其动物比例明确无疑。两侧光线不等，使对称没有变得僵硬。近距离观看放大了毛发质感与细小的不对称。在这里，一个独特个体的存在并不依赖富于表现力的手势，也不需要故事背景。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "1d6a85cf-0827-5e35-918b-3d959abd549f",
+      "title": "基督头像",
+      "catalogueTitle": "Head of Christ",
+      "artist": "Dieric Bouts",
+      "artists": [
+        {
+          "name": "Dieric Bouts",
+          "role": "primary",
+          "slug": "dieric-bouts-q313561"
+        }
+      ],
+      "date": "约 1464 年",
+      "start": 1464,
+      "end": 1464,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/1d6a85cf-0827-5e35-918b-3d959abd549f-9a038c9ef84965f8.jpg",
+      "imageSource": "https://www.wikiart.org/en/dirk-bouts/head-of-christ",
+      "credit": "Dieric Bouts. Head of Christ. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/dirk-bouts/head-of-christ",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dirk-bouts/head-of-christ",
+      "description": "这里没有人群或事件可供追踪。正面的脸与近乎对称的安排，使宗教形象像是持续面向观看者；深色头发和背景围住浅色五官。鲍茨限制了可能分散视线的元素。画面的直接感由这种限制而来，与本选目中拥挤的宗教叙事场景很不相同。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "73936ab8-d392-519a-b4ef-1c4bd473aacc",
+      "title": "尤坎瀑布",
+      "catalogueTitle": "Rjukanfossen",
+      "artist": "Peder Balke",
+      "artists": [
+        {
+          "name": "Peder Balke",
+          "role": "primary",
+          "slug": "peder-balke-research-1c8dae003685"
+        }
+      ],
+      "date": "约 1860 年",
+      "start": 1860,
+      "end": 1860,
+      "medium": "",
+      "accession": "3855 (OK)",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q114805675-b91daa8ea16fc267.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Peder_Balke_-_Rjukanfossen_-_3855_(OK)_-_Museum_Boijmans_Van_Beuningen.jpg",
+      "credit": "Peder Balke. Rjukanfossen. Image credit: Peder Balke; Source credit: Museum Boijmans Van Beuningen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q114805675",
+      "description": "深色岩石使浅色瀑流显出力量。巴尔克只用有限的明暗范围，就区分了坚硬表面、雾气与散开的水花。这种对比让壮阔风景不必穷尽细节也能读懂。可以留意某道笔迹从哪里开始不再描绘特定石块，而转为表现邻近水流整体的不稳定。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "cb074ca2-c165-5680-87fd-56d762896533",
+      "title": "有房屋群的河谷",
+      "catalogueTitle": "A River Valley with a Group of Houses",
+      "artist": "Hercules Seghers",
+      "artists": [
+        {
+          "name": "Hercules Seghers",
+          "role": "primary",
+          "slug": "hercules-seghers-q931846"
+        }
+      ],
+      "date": "1625",
+      "start": 1625,
+      "end": 1625,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cb074ca2-c165-5680-87fd-56d762896533-38bb1348e3975020.jpg",
+      "imageSource": "https://www.wikiart.org/en/hercules-seghers/a-river-valley-with-a-group-of-houses-1625",
+      "credit": "Hercules Seghers. A River Valley with a Group of Houses. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hercules-seghers/a-river-valley-with-a-group-of-houses-1625",
+      "description": "高高的岩壁下，房屋提供了一把熟悉的尺度。深色前景与浅淡远方差别强烈，让山谷伸向这片小聚落之外。塞赫斯借人居建筑为观看者提供参照，否则地形可能难以估量。房屋没有支配风景，却使风景的巨大可以理解。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    },
+    {
+      "id": "04b55b63-523f-5ac0-8ea4-70291012ebc2",
+      "title": "朱迪思与荷罗孚尼的头颅",
+      "catalogueTitle": "Judith with the Head of Holofernes",
+      "artist": "Gerrit Pietersz Sweelinck",
+      "artists": [
+        {
+          "name": "Gerrit Pietersz Sweelinck",
+          "role": "primary",
+          "slug": "gerrit-pietersz-sweelinck-nga-2770"
+        }
+      ],
+      "date": "1605",
+      "start": 1605,
+      "end": 1605,
+      "medium": "",
+      "accession": "St 160",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19925957-4c73071588c2d7d1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gerrit_Pietersz._-_Judith_met_het_hoofd_van_Holofernes_-_St_160_-_Museum_Boijmans_Van_Beuningen.jpg",
+      "credit": "Gerrit Pietersz Sweelink. Judith with the Head of Holofernes. Image credit: Gerrit Pietersz Sweelink. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19925957",
+      "description": "被斩下的头颅拿得较低，让两位女子的面孔和年龄差异占据更多空间。斯韦林克将事后时刻本身作为题材，没有重演杀戮。衣褶和阴影使视线集中于两人，但不必把她们的表情归结为一种确定情绪。完成的行动，仍以两人之间那个具体物体的形式存在。",
+      "importance": "",
+      "museum": "Museum Boijmans Van Beuningen"
+    }
+  ],
+  "context": {
+    "start": 1464,
+    "end": 1937
+  },
+  "closingSections": [
+    {
+      "title": "另行确认作品位置",
+      "paragraphs": [
+        "博伊曼斯的馆藏记录、典藏库展陈和外借作品，不能一概视为同一套常设展。想看某件作品，请先查看博物馆当前提供的位置与开放信息。在线阅读时，可以比较马格利特遮住的面孔与《基督头像》的直接注视：两者都让“能看见什么”成为画面的关键。"
+      ]
+    }
+  ]
+}

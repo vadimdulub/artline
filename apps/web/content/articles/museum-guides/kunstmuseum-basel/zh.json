@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "kunstmuseum-basel",
+  "museum": "Kunstmuseum Basel",
+  "city": "巴塞尔",
+  "country": "瑞士",
+  "title": "巴塞尔艺术博物馆：杰作",
+  "subtitle": "二十幅作品，看看人物与物体在怎样的变化下仍然可以辨认。",
+  "introduction": "霍尔拜因为基督留下的空间，几乎只够容纳身体本身。克利则用少量分开的颜色与符号，就能组成一张脸。这两个极端之间有一个值得追问的问题：图像必须保留什么，才能让身体仍然在场？答案可以是重量、五官的排列、一种手势，或者物体被拆开后留下的少数线索。\n\n这组作品不提出一条从写实走向抽象的直线。仅布拉克早期的港口与后来的静物，就足以让这条线变得复杂。我们把不同方法放在近旁，观察各自让什么变得可见，又有意留下什么。",
+  "visitNote": "此处所列作品属于巴塞尔美术馆（Kunstmuseum Basel）的馆藏，并不保证会在特定展馆内展出。素描作品会轮换展出，油画作品也可能外借或移位。如需了解具体作品的展出情况，请查阅美术馆最新的馆藏记录及访客信息。",
+  "locale": "zh",
+  "website": "https://kunstmuseumbasel.ch/",
+  "officialGuide": "https://kunstmuseumbasel.ch/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "免费阅读 · 英语",
+      "note": "康定斯基关于色彩与形式的论述，产生于此处展出的几件现代作品的创作时期。它提供了一个可供参照的论点，借此可以审视克利、夏加尔和布拉克截然不同的创作手法。"
+    }
+  ],
+  "works": [
+    {
+      "id": "6205313a-1a03-5d16-b2aa-df8c0315cb40",
+      "title": "墓中的基督遗体",
+      "catalogueTitle": "The Body of the Dead Christ in the Tomb",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "1521–1522",
+      "start": 1521,
+      "end": 1522,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6205313a-1a03-5d16-b2aa-df8c0315cb40-01ee3883ff808761.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/the-body-of-the-dead-christ-in-the-tomb-1521",
+      "credit": "Hans Holbein the Younger. The Body of the Dead Christ in the Tomb. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hans-holbein-the-younger/the-body-of-the-dead-christ-in-the-tomb-1521",
+      "description": "墓穴几乎不给身体余地，也没有活着的哀悼者居中缓和这次相遇。嘴、手和脚暴露在狭长画幅内。连看似确定的日期也有历史：博物馆的技术研究发现，霍尔拜因在完成作品时，把1522改成了1521。作品如今定年为1521—1522年。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "90264146-a41d-54d5-a395-9d7f65ccd0a0",
+      "title": "托马斯·莫尔全家肖像画习作",
+      "catalogueTitle": "Study for the Family Portrait of Thomas More",
+      "artist": "Hans Holbein the Younger",
+      "artists": [
+        {
+          "name": "Hans Holbein the Younger",
+          "role": "primary",
+          "slug": "hans-holbein-the-younger-nga-1400"
+        }
+      ],
+      "date": "约 1527 年",
+      "start": 1527,
+      "end": 1527,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/90264146-a41d-54d5-a395-9d7f65ccd0a0-ff35881b8bcfd635.jpg",
+      "imageSource": "https://www.wikiart.org/en/hans-holbein-the-younger/study-for-the-family-portrait-of-thomas-more",
+      "credit": "Hans Holbein the Younger. Study for the Family Portrait of Thomas More. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hans-holbein-the-younger/study-for-the-family-portrait-of-thomas-more",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hans-holbein-the-younger/study-for-the-family-portrait-of-thomas-more",
+      "description": "一家人要组成一个群体，又不能失去各自的特征。轻轻勾画的细节与注记，显示画家在起稿时就在处理这一难题。坐姿与站姿人物之间的空隙，和各人的轮廓同样重要：既要把每个人画得像，又要让他们在整体布局中彼此联系。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "48a51ee4-75b5-558a-9633-d31f64dddd8d",
+      "title": "犹太教的拟人形象（Synagoga）",
+      "catalogueTitle": "The Synagogue",
+      "artist": "Konrad Witz",
+      "artists": [
+        {
+          "name": "Konrad Witz",
+          "role": "primary",
+          "slug": "konrad-witz-q313183"
+        }
+      ],
+      "date": "1435",
+      "start": 1435,
+      "end": 1435,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/48a51ee4-75b5-558a-9633-d31f64dddd8d-f30b56c96fbd1280.jpg",
+      "imageSource": "https://www.wikiart.org/en/konrad-witz/the-synagoge",
+      "credit": "Konrad Witz. The Synagogue. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/konrad-witz/the-synagoge",
+      "description": "金色长袍赋予人物物质上的华美，但蒙眼布、折断的权杖和石板，把她置于基督教对犹太教的寓意体系中。这不是对犹太信仰的中性说明。维茨既把拟人形象画成可信的身体，也参与了一套要求观者接受的宗教等级观。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "57f6cfc4-f10a-5041-99f7-f000a8784457",
+      "title": "圣克里斯托弗",
+      "catalogueTitle": "St. Christopher",
+      "artist": "Konrad Witz",
+      "artists": [
+        {
+          "name": "Konrad Witz",
+          "role": "primary",
+          "slug": "konrad-witz-q313183"
+        }
+      ],
+      "date": "1435",
+      "start": 1435,
+      "end": 1435,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/57f6cfc4-f10a-5041-99f7-f000a8784457-05dc65a96aeabe21.jpg",
+      "imageSource": "https://www.wikiart.org/en/konrad-witz/st-christopher",
+      "credit": "Konrad Witz. St. Christopher. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/konrad-witz/st-christopher",
+      "description": "高大的背负者在孩子身下弯腰，但孩子可见的体量不足以解释这种吃力。手杖、落脚方式和衣褶，使不平衡落实在身体上，而非只存在于标题信息中。渡河成为一次负重考验：圣徒承担的重量，比日常外观所暗示的更大。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "2c0e9d82-0a3f-50c2-b39c-4459b7ff5744",
+      "title": "塞内西奥（Senecio）",
+      "catalogueTitle": "Senecio",
+      "artist": "Paul Klee",
+      "artists": [
+        {
+          "name": "Paul Klee",
+          "role": "primary",
+          "slug": "paul-klee-q44007"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/2c0e9d82-0a3f-50c2-b39c-4459b7ff5744-c86a74496c97360f.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-klee/senecio-1922",
+      "credit": "Senecio. WikiArt; Paul Klee. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-klee/senecio-1922",
+      "description": "红眼睛与不对称的几何五官，足以在分割的圆内形成一张脸。辨认很快发生，色块却继续提供另一种结构。克利没有彻底抹去人物，而是让观者在完整头部与组成它的独立部分之间来回切换。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "02abc0f8-e7fa-530a-8979-d3d08b09e0d2",
+      "title": "燃烧的长颈鹿",
+      "catalogueTitle": "The Burning Giraffe",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/02abc0f8-e7fa-530a-8979-d3d08b09e0d2-84789ce2ac4c402f.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/flaming-giraffe",
+      "credit": "Salvador Dalí. The Burning Giraffe. WikiArt source label: Salvador Dali Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/salvador-dali/flaming-giraffe",
+      "license": "Salvador Dali Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/salvador-dali/flaming-giraffe",
+      "description": "高高的蓝色人物身上开出抽屉，背后伸出支撑物。远方燃烧的动物，比标题可能让人预想的小得多。不可能的解剖结构却被描述得很清楚：各部分都能读懂，但不能拼成一个正常运作的身体，难处正在这里。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "0bcada81-ab1d-5cb8-92b5-d38132436915",
+      "title": "静物：巴赫",
+      "catalogueTitle": "Still life BACH",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "纸本炭笔、拼贴与水粉",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/0bcada81-ab1d-5cb8-92b5-d38132436915-66c4aa32a33527cf.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/still-life-bach-1912",
+      "credit": "Georges Braque. Still life BACH. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/still-life-bach-1912",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/still-life-bach-1912",
+      "description": "字母、画出的碎片和贴上的纸共同提示静物，却不统一服从某种连续景深。每种材料都能提供不同线索。纸并没有被当成对物体的失败模仿；它可以仍然显得是纸，同时在图像的建构中占有位置。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "91e7d47e-e276-56e4-8702-22a7baa9099d",
+      "title": "小提琴与水罐",
+      "catalogueTitle": "Violin and pitcher",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/91e7d47e-e276-56e4-8702-22a7baa9099d-dfd857315b03e9e9.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/violin-and-pitcher-1910",
+      "credit": "Georges Braque. Violin and pitcher. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/violin-and-pitcher-1910",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/violin-and-pitcher-1910",
+      "description": "小提琴与水罐不是从单一可靠视点完整呈现的。碎片在棕灰色平面中浮现，又回到更大的组织里。标题帮助我们知道在寻找什么，却没有免除辨认的工作。物体与画面分割同时争取目光。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "e0842abe-2190-5702-a37f-b924977c6585",
+      "title": "底座",
+      "catalogueTitle": "Pedestal",
+      "artist": "Pablo Picasso",
+      "artists": [
+        {
+          "name": "Pablo Picasso",
+          "role": "primary",
+          "slug": "pablo-picasso-q5593"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/e0842abe-2190-5702-a37f-b924977c6585-b5de86ac3339b184.jpg",
+      "imageSource": "https://www.wikiart.org/en/pablo-picasso/pedestal-1914",
+      "credit": "Pablo Picasso. Pedestal. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pablo-picasso/pedestal-1914",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pablo-picasso/pedestal-1914",
+      "description": "浅色矩形打断了一组狭窄聚集的线、字母和花纹形状。它们不必逐一成为完整有体积的物体，整体也能让人想到静物。关键是可辨线索与平面区域之间的张力；不要因此认定每一块花纹都是实际贴上的拼贴材料。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "57c8732e-9cb1-5e2f-a382-2dedb792750c",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "油画（纸板裱于画布）",
+      "accession": "Im 1081",
+      "image": "https://artlines.org/assets/artworks/wikiart/57c8732e-9cb1-5e2f-a382-2dedb792750c-3ed6bc8798f23528.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/self-portrait-1914",
+      "credit": "Marc Chagall. Self-Portrait. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.guggenheim-bilbao.eus/en/press-room/images/chagall-the-breakthrough-years-1911-1919",
+      "description": "脸离得很近，也较容易辨认，虽然冷暖区域分开了阴影。类似叶片的形态挤在头旁。与《牲畜商》并看，这幅自画像可以防止我们用一种方法概括夏加尔的一切作品。想象介入到什么程度，要看具体图像。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "518e3c67-5f6a-5567-854b-880b40e3cd90",
+      "title": "牲畜商",
+      "catalogueTitle": "The Cattle Dealer",
+      "artist": "Marc Chagall",
+      "artists": [
+        {
+          "name": "Marc Chagall",
+          "role": "primary",
+          "slug": "marc-chagall-q93284"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "布面油画",
+      "accession": "2213",
+      "image": "https://artlines.org/assets/artworks/wikiart/518e3c67-5f6a-5567-854b-880b40e3cd90-19f1f26aef4894a4.jpg",
+      "imageSource": "https://www.wikiart.org/en/marc-chagall/the-cattle-dealer-1912",
+      "credit": "Marc Chagall. The Cattle Dealer. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.guggenheim-bilbao.eus/en/press-room/images/chagall-the-breakthrough-years-1911-1919",
+      "description": "画中既出现动物的外形，也显露出通常看不见的内部。马车和马周围，人物以不寻常的角度分布在彩色地形上。画家没有始终遵守同一套观看规则：眼睛能观察到的，与靠想象补出的，被一同画了出来。这趟行程因而不是从单一位置所见的连贯景象。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "ea49ca93-336d-572e-a964-f0481f4d512c",
+      "title": "激发诗人灵感的缪斯",
+      "catalogueTitle": "The Muse Inspiring the Poet",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ea49ca93-336d-572e-a964-f0481f4d512c-102398980c2360c6.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/the-muse-inspiring-the-poet-1909-1",
+      "credit": "The Muse Inspiring the Poet. WikiArt; Henri Rousseau. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/the-muse-inspiring-the-poet-1909-1",
+      "description": "人物站得像正式肖像一样安静，过大的花朵却让他们与花园的关系不再简单。重复轮廓把人与植物连接起来。不必在心里纠正比例，把这里改成可信地点；恰是尺度不等，让这对文学人物属于一处虚构环境。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "4151f669-fcba-5e0b-ada3-ff30a14979f7",
+      "title": "从谢西耶尔（Chesières）眺望当迪米迪山（Dents du Midi）",
+      "catalogueTitle": "The Dents du Midi from Chesieres",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/4151f669-fcba-5e0b-ada3-ff30a14979f7-d98bb374665ce37c.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/the-dents-du-midi-from-chesieres-1912",
+      "credit": "Ferdinand Hodler. The Dents du Midi from Chesieres. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/the-dents-du-midi-from-chesieres-1912",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://sammlung.kunstmuseumbasel.ch/en/collection/item/2032",
+      "description": "大多数小细节被省去后，山的轮廓仍然存在。蓝色山坡、浅云和较暖天空通过大片分区确定它的位置。与其他作品里拥挤的身体相比，这里很少需要逐件认物。整道山脊的外形承担了主要辨认任务。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "92c99f27-363a-58fd-aa39-68037a66b18e",
+      "title": "从谢布尔（Chexbres）眺望日内瓦湖",
+      "catalogueTitle": "View of Lake Leman from Chexbres",
+      "artist": "Ferdinand Hodler",
+      "artists": [
+        {
+          "name": "Ferdinand Hodler",
+          "role": "primary",
+          "slug": "ferdinand-hodler-q214564"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/92c99f27-363a-58fd-aa39-68037a66b18e-925874b16e6f54cc.jpg",
+      "imageSource": "https://www.wikiart.org/en/ferdinand-hodler/view-of-lake-leman-from-chexbres-1905",
+      "credit": "Ferdinand Hodler. View of Lake Leman from Chexbres. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ferdinand-hodler/view-of-lake-leman-from-chexbres-1905",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ferdinand-hodler/view-of-lake-leman-from-chexbres-1905",
+      "description": "云的形状在水平倒影上方重复，使天空与水面形成可见联系。树木和狭窄近岸确定观者的位置，却不在尺度上与湖竞争。风景仍是一个地点，同时也因这些重复，显出有秩序的平面结构。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "fe5fb430-6a1b-5351-857b-2c153a2c1d2d",
+      "title": "安特卫普港",
+      "catalogueTitle": "Antwerp Harbor",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/fe5fb430-6a1b-5351-857b-2c153a2c1d2d-47fb48eb9788c652.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/antwerp-harbor-1905",
+      "credit": "Georges Braque. Antwerp Harbor. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/antwerp-harbor-1905",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/antwerp-harbor-1905",
+      "description": "港口由分开的明亮笔触构成，其间露出浅色底子。船、建筑和烟囱都能辨认，而环境并未被连续填满。与布拉克后来的《小提琴与水罐》相比，这里是分散的色彩，那里是破碎的平面；两种方法都松动了看似稳定的景象。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "b23e1d41-82c1-5a85-843d-c4aa7c88be7e",
+      "title": "穿黑围裙的小女孩",
+      "catalogueTitle": "Little Girl in Black Apron",
+      "artist": "Amedeo Modigliani",
+      "artists": [
+        {
+          "name": "Amedeo Modigliani",
+          "role": "primary",
+          "slug": "amedeo-modigliani-q120993"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/b23e1d41-82c1-5a85-843d-c4aa7c88be7e-c7ee1dcf3fd8bed1.jpg",
+      "imageSource": "https://www.wikiart.org/en/amedeo-modigliani/little-girl-in-black-apron-1918",
+      "credit": "Amedeo Modigliani. Little Girl in Black Apron. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/amedeo-modigliani/little-girl-in-black-apron-1918",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/amedeo-modigliani/little-girl-in-black-apron-1918",
+      "description": "女孩的头微微倾斜，脖颈细长，双臂垂在正面朝向观者的身体两侧。与其猜测她的心情，不如留意这点打破对称的变化。莫迪利亚尼虽然简化了脸和身体，这一个小小的姿势调整，仍使她区别于其他人物。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "d0db7c0e-38fc-5faf-97b0-ba41c46e7c5b",
+      "title": "一名受了致命伤的强盗解渴",
+      "catalogueTitle": "A Mortally Wounded Brigand Quenches his Thirst",
+      "artist": "Eugène Delacroix",
+      "artists": [
+        {
+          "name": "Eugène Delacroix",
+          "role": "primary",
+          "slug": "eugene-delacroix-q33477"
+        }
+      ],
+      "date": "1825",
+      "start": 1825,
+      "end": 1825,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/d0db7c0e-38fc-5faf-97b0-ba41c46e7c5b-d07a717542f7a40a.jpg",
+      "imageSource": "https://www.wikiart.org/en/eugene-delacroix/a-mortally-wounded-brigand-quenches-his-thirst-1825",
+      "credit": "Eugène Delacroix. A Mortally Wounded Brigand Quenches his Thirst. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/eugene-delacroix/a-mortally-wounded-brigand-quenches-his-thirst-1825",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/eugene-delacroix/a-mortally-wounded-brigand-quenches-his-thirst-1825",
+      "description": "喝水成为伤者眼前最急迫的事。苍白面孔与衣袖把他从粗粝地面上区分出来，却没有将他移离那里。戏剧性的标题交代了图像自身无法完全说明的伤情；可见动作则集中于身体需求，无论怎样的故事把他带到这里，这种需求都仍然存在。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "bf6f0df7-53a1-5d4e-bfd7-9e2784703474",
+      "title": "斯塔费尔阿尔普：动物归来",
+      "catalogueTitle": "Stafelalp, Rückkehr der Tiere",
+      "artist": "Ernst Ludwig Kirchner",
+      "artists": [
+        {
+          "name": "Ernst Ludwig Kirchner",
+          "role": "primary",
+          "slug": "ernst-ludwig-kirchner-q229272"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "布面油画",
+      "accession": "G 2017.10",
+      "image": "https://artlines.org/assets/artworks/imported/denmark-switzerland-followup-study-6249453471a0fed2f09c74261213ea56ba1fc01921542de70792bd33dbcb30a9.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kirchner_-_Stafelalp%2C_R%C3%BCckkehr_der_Tiere%2C_1919%2C_Inv._G_2017.10.jpg",
+      "credit": "Ernst Ludwig Kirchner. Stafelalp, Rückkehr der Tiere (1919). Kunstmuseum Basel; Schenkung Eberhard W. Kornfeld. Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). https://commons.wikimedia.org/wiki/File:Kirchner_-_Stafelalp%2C_R%C3%BCckkehr_der_Tiere%2C_1919%2C_Inv._G_2017.10.jpg. Accessed 2026-09-18T07:59:53Z. Full-frame proportional resize and JPEG compression; no crop or generated content.",
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://sammlung.kunstmuseumbasel.ch/en/collection/item/40269",
+      "description": "归来的动物和人物，穿过被强烈色块分割的风景。房屋与山体造成显著方向变化，而非作为中性背景。日常乡村活动仍可追踪，但它的路线已无法与基希纳重新组织山坡的方式分开。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "daf75476-73d4-508a-ae8b-9d7c9ea7fa60",
+      "title": "半人马之战",
+      "catalogueTitle": "Battle of the Centaurs",
+      "artist": "Arnold Böcklin",
+      "artists": [
+        {
+          "name": "Arnold Böcklin",
+          "role": "primary",
+          "slug": "arnold-bocklin-q123071"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/daf75476-73d4-508a-ae8b-9d7c9ea7fa60-06d317ced2829d68.jpg",
+      "imageSource": "https://www.wikiart.org/en/arnold-bocklin/centaurs-1873",
+      "credit": "Arnold Böcklin. Battle of the Centaurs. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/arnold-bocklin/centaurs-1873",
+      "description": "半人马组合式的解剖结构，使冲撞发生在更多部位：举起的石头、弯曲的人类肢体和沉重马身汇在一起。神话提供这些生物，暴力却依赖具体身体关系。即使场景中的参与者并不存在，身体仍需要空间，也会遇到阻力。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    },
+    {
+      "id": "fcbf8e72-3fff-593f-8c81-efaebfdaf985",
+      "title": "抱着猫的男孩",
+      "catalogueTitle": "Boy with Cat",
+      "artist": "Paula Modersohn-Becker",
+      "artists": [
+        {
+          "name": "Paula Modersohn-Becker",
+          "role": "primary",
+          "slug": "paula-modersohn-becker-q234370"
+        }
+      ],
+      "date": "约 1903 年",
+      "start": 1903,
+      "end": 1903,
+      "medium": "",
+      "accession": "1749",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111799329-5805c2edc18b3c6c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paula_Modersohn-Becker_-_Knabe_mit_Katze.jpg",
+      "credit": "Paula Modersohn-Becker. Boy with Cat. Image credit: Paula Modersohn-Becker; Source credit: Kunstmuseum Basel. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111799329",
+      "description": "孩子双臂抱着浅色猫，猫身衬在深色衣服前。周围细节很少，目光自然落到他怎样把猫抱稳这件事上。宽大的色块使孩子与猫都显得结实，脸上却不必刻意露出亲昵。照料可以从相接与承托的动作中看出，不一定需要笑容。",
+      "importance": "",
+      "museum": "Kunstmuseum Basel"
+    }
+  ],
+  "context": {
+    "start": 1435,
+    "end": 1937
+  },
+  "closingSections": [
+    {
+      "title": "比较方法，而不是排列进步阶梯",
+      "paragraphs": [
+        "三幅布拉克可形成一条小线索；霍尔拜因、克利与莫德松-贝克尔则提供三种很不同的身体呈现。跟随差异，不必把细节排在简化之上。作品当前是否展出，请查阅美术馆信息；这里的次序是编辑安排，并非馆舍之间的参观路线。"
+      ]
+    }
+  ]
+}

@@ -8,11 +8,14 @@ crossbar and terracotta dot are retained.
 ## Assets
 
 - `artlines-wordmark.webp`: transparent 576 × 138 px lossless WebP, 28,230 bytes.
-  Displayed at 144 px wide in the desktop header and 132 px on smaller screens.
+  Displayed at 144 px wide in the desktop header. The mobile header uses the
+  small “A” mark instead of the full wordmark.
   CSS inversion with a 180° hue rotation supplies light lettering and a warm
   red dot for the dark header.
 - `../../app/icon.svg`: hand-drawn vector “A” adapted for small sizes, with
   stronger hairlines and a cream background for light and dark browser chrome.
+  `SiteHeader` reuses its letter, timeline crossbar and red dot at 30 px on
+  phones, without the background, inside a 44 px home link.
 - `../../app/favicon.ico`: 16, 32 and 48 px PNG frames rasterized from the SVG.
 - `../../app/apple-icon.png`: 180 px rasterization of the same SVG.
 

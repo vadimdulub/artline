@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline hat diese Werke aus dokumentierten Museumsbeständen ausgewählt. Die Auswahl erfolgt unabhängig vom Museum; einzelne Werke können verliehen oder nicht ausgestellt sein. Datierungen und Zuschreibungen behalten die in den verlinkten Datensätzen enthaltenen Einschränkungen bei.",
+  "labels": {
+    "guides": "Alle Museumsführer",
+    "download": "PDF herunterladen",
+    "language": "Leitfadensprache",
+    "translation": "KI-gestützte Übersetzung",
+    "explore": "Entdecken Sie diese Auswahl in Artline",
+    "contextNote": "Betrachten Sie die ausgewählten Werke im Kontext von Büchern und Ereignissen ihrer Zeit oder vergleichen Sie die Lebensdaten der Künstler. Die Bücher und Ereignisse liefern den Kontext, nicht den Nachweis eines direkten Einflusses. Auch Werke ohne gesicherte Datierung sind in diesem Leitfaden enthalten.",
+    "all": "Kunstwerke im Kontext",
+    "allHint": "Die ausgewählten Arbeiten setzen sich mit Büchern und der Geschichte ihrer Zeit auseinander.",
+    "painters": "Wer lebte wann?",
+    "paintersHint": "Sehen Sie, wann die Künstler lebten und wessen Lebenszeiten sich überschnitten.",
+    "events": "Historische Ereignisse",
+    "eventsHint": "Erkunden Sie die Ereignisse während des im Reiseführer angegebenen Zeitraums",
+    "books": "Zeitleiste der Bücher",
+    "booksHint": "Entdecken Sie bemerkenswerte Bücher aus derselben Zeit.",
+    "contents": "Die Werkauswahl",
+    "artworks": "Ausgewählte Kunstwerke",
+    "importance": "Warum es wichtig ist",
+    "artwork": "Offene Kunstwerke",
+    "source": "Werkquelle",
+    "inventory": "Inventar",
+    "reading": "Weiterführende Lektüre",
+    "visit": "Vor Ihrem Besuch",
+    "website": "Museumswebsite",
+    "officialGuide": "Offizieller Sammlungsführer",
+    "updated": "Quellen und Besucherinformationen geprüft"
+  },
+  "slug": "tate",
+  "museum": "Tate",
+  "city": "London und andere Standorte",
+  "country": "Vereinigtes Königreich",
+  "title": "Tate: Meisterwerke",
+  "subtitle": "Zwanzig Werke geben Erfahrung durch Genauigkeit, Atmosphäre und Verformung unterschiedliche Gestalt.",
+  "introduction": "Die Pflanzen um Millais’ Ophelia bleiben beharrlich genau beschrieben, während ein Körper zwischen ihnen treibt. In Turners Sturm liegt die Schwierigkeit beinahe umgekehrt: Die Umgebung macht es schwer, das Boot zu finden. Keine der beiden Methoden ist einfach realistischer. Die eine hält die sichtbare Welt im Augenblick des Todes scharf präsent, die andere lässt das Wetter das Sehen selbst stören.\n\nDie Auswahl folgt diesem Gegensatz durch literarische Motive, Stadtansichten und erfundene Körper. Manche Bilder werden dichter, je länger man sie betrachtet. Andere leben von den wenigen Details, die erkennbar bleiben. Das ist ein ergiebigerer Anfang, als jede Lockerheit für spontan und jede Präzision für Gewissheit zu halten.",
+  "visitNote": "Die Tate präsentiert ihre Werke an mehreren Standorten, darunter Tate Britain und Tate Modern. Diese Auswahl dient als Wegweiser durch die Sammlung und nicht als Rundgang durch ein einzelnes Gebäude. Bitte prüfen Sie vor Ihrem Besuch den aktuellen Ausstellungsort der jeweiligen Werke, da sich Leihgaben und Installationen ändern können.",
+  "locale": "de",
+  "website": "https://www.tate.org.uk",
+  "officialGuide": "https://www.tate.org.uk",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "Kostenlos lesen · Englisch",
+      "note": "Ruskins Übungen zur Betrachtung natürlicher Formen bieten eine nützliche Ergänzung zu den Gemälden der Präraffaeliten. Sein Augenmerk auf Konturen und Licht liefert zudem einen Ansatzpunkt für die Erörterung der Frage, warum es schwieriger ist, Turners Bildflächen in einzelne Objekte zu gliedern."
+    }
+  ],
+  "works": [
+    {
+      "id": "1f837242-93a2-444b-8cba-797370c69a61",
+      "title": "Ophelia",
+      "catalogueTitle": "Ophelia",
+      "artist": "John Everett Millais",
+      "artists": [
+        {
+          "name": "John Everett Millais",
+          "role": "primary",
+          "slug": "john-everett-millais-q159606"
+        }
+      ],
+      "date": "1851–2",
+      "start": 1851,
+      "end": 1852,
+      "medium": "Öl auf Leinwand",
+      "accession": "N01506",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1065493-65065788ca59e1e4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Ophelia_-_Google_Art_Project.jpg",
+      "credit": "John Everett Millais. Ophelia. Image credit: John Everett Millais. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/millais-ophelia-n01506",
+      "description": "Ophelias offene Hände und treibender Körper liegen in einem Bach, dessen Pflanzen mit anhaltender Aufmerksamkeit beschrieben sind. Die Umgebung wird um das menschliche Ereignis nicht unscharf. Diese Gleichheit im Detail schafft eine schwierige Beziehung: Die Pflanzen beanspruchen weiterhin den Blick, während die Figur demselben Ort eine tödliche Bedeutung gibt.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0cee5bd6-5dbd-4e8b-964f-7dc95f078e8c",
+      "title": "Die Dame von Shalott",
+      "catalogueTitle": "The Lady of Shalott",
+      "artist": "John William Waterhouse",
+      "artists": [
+        {
+          "name": "John William Waterhouse",
+          "role": "primary",
+          "slug": "john-william-waterhouse-q212754"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Öl auf Leinwand",
+      "accession": "N01543",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/0cee5bd6-5dbd-4e8b-964f-7dc95f078e8c-4afd773f4331a638.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-william-waterhouse/the-lady-of-shalott-1888",
+      "credit": "John William Waterhouse. The Lady of Shalott. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/waterhouse-the-lady-of-shalott-n01543",
+      "description": "Die Kette verbindet das Boot noch mit dem Ufer. Kerzen, gemusterter Stoff und das weiße Kleid machen die Abfahrt materiell genau; das erhobene Gesicht richtet den Blick über die unmittelbare Handlung hinaus. Waterhouse hält die Szene kurz vor dem Aufbruch. Die Folgen des literarischen Geschehens sind noch nicht dargestellt.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "440188db-4dd4-4f7c-a842-5d2da5a204b1",
+      "title": "Das erwachende Gewissen",
+      "catalogueTitle": "The Awakening Conscience",
+      "artist": "William Holman Hunt",
+      "artists": [
+        {
+          "name": "William Holman Hunt",
+          "role": "primary",
+          "slug": "william-holman-hunt-q211763"
+        }
+      ],
+      "date": "1853",
+      "start": 1853,
+      "end": 1853,
+      "medium": "Öl auf Leinwand",
+      "accession": "T02075",
+      "image": "https://artlines.org/assets/artworks/wikiart/92250598-69ee-441d-86c8-3f72f408f71d-2b2772b6099e3622.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-holman-hunt/the-awakening-conscience-1853",
+      "credit": "William Holman Hunt. The Awakening Conscience. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/hunt-the-awakening-conscience-t02075",
+      "description": "Die Frau beginnt sich zu erheben und verändert damit das Verhältnis zweier Körper im dicht möblierten Raum. Der Spiegel öffnet ihn auf andere Weise, zum Garten und zum Tageslicht. Hunt legt die erzählerische Wendung in diese kleine Haltungsänderung. Der einschließende Innenraum und eine mögliche Richtung darüber hinaus bleiben zugleich sichtbar.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "301e4ad1-cd90-4a81-b96e-f0323374137a",
+      "title": "Nelke, Lilie, Lilie, Rose",
+      "catalogueTitle": "Carnation, Lily, Lily, Rose",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1885–6",
+      "start": 1885,
+      "end": 1886,
+      "medium": "Öl auf Leinwand",
+      "accession": "N01615",
+      "image": "https://artlines.org/assets/artworks/wikiart/7f44771b-bf66-4422-b344-da9ca30e994a-89f93bdfd7617773.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-singer-sargent/carnation-lily-lily-rose-from-the-world-s-greatest-paintings-published-by-oldham-s-press-in-1886",
+      "credit": "John Singer Sargent. Carnation, Lily, Lily, Rose. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/sargent-carnation-lily-lily-rose-n01615",
+      "description": "Das warme Laternenlicht reicht nur begrenzt in den kühleren Garten. Die hellen Kleider der Kinder und die Blumen gehören sowohl zu diesem örtlichen Schein als auch zum verbleibenden Tageslicht. Sargents besondere Aufgabe liegt darin, beide Beleuchtungen nebeneinander bestehen zu lassen, ohne dass eine die andere aufhebt.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "ac4c9adb-ae17-44e1-bc1c-d4f8becd59b8",
+      "title": "Frieden: Seebestattung",
+      "catalogueTitle": "Peace - Burial at Sea",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "exhibited 1842",
+      "start": null,
+      "end": null,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-source-date-review-20261006/ac4c9adb-ae17-44e1-bc1c-d4f8becd59b8-7c401fc89615e6c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/peace",
+      "credit": "J.M.W. Turner. Peace - Burial at Sea. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/turner-peace-burial-at-sea-n00528",
+      "description": "Die dunklen Segel wirken schwer zwischen Wasser und Himmel, die sich sonst beinahe auflösen. Das 1842 ausgestellte Gemälde erinnert an die Seebestattung von Turners Malerkollegen David Wilkie. Dieser Zusammenhang gibt dem Schwarz eine besondere Aufgabe: Trauer konzentriert sich im Aussehen der Schiffe, statt durch eine klar lesbare Bestattungszeremonie beschrieben zu werden.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "f9bac7bc-1e5f-4561-be97-5046b3d6cf8d",
+      "title": "Norham Castle, Sonnenaufgang",
+      "catalogueTitle": "Norham Castle, Sunrise",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "um 1845",
+      "start": 1845,
+      "end": 1845,
+      "medium": "Öl auf Leinwand",
+      "accession": "N01981",
+      "image": "https://artlines.org/assets/artworks/wikiart/a4773b79-d764-40c7-9cf7-368bb50409dd-9a7a26e2bcbe999d.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/norham-castle-sunrise-1845",
+      "credit": "J. M. W. Turner. Norham Castle, Sunrise. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/turner-norham-castle-sunrise-n01981",
+      "description": "Burg, niedriger Boden und Fluss bleiben mit wenigen festen Kanten erkennbar. In diesem unvollendeten Gemälde übernehmen hellblaue und gelbe Partien Beziehungen, die sonst detaillierte Architektur erklären könnte. Der erhaltene Zustand sollte von Vermutungen darüber unterschieden werden, was Turner aus jeder Partie machen wollte. Untersuchen lässt sich die heutige Oberfläche.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "61f5ce42-83c9-5550-a672-f31cb6c3fdb2",
+      "title": "Schneesturm: Dampfschiff vor der Hafeneinfahrt",
+      "catalogueTitle": "Snow Storm - Steamboat off a Harbour's Mouth",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1842",
+      "start": 1842,
+      "end": 1842,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/61f5ce42-83c9-5550-a672-f31cb6c3fdb2-f31b73e5ea905ef9.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-turner/snow-storm-steam-boat-off-a-harbours-mouth-1842",
+      "credit": "J. M. W. Turner. Snow Storm - Steamboat off a Harbour's Mouth. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/william-turner/snow-storm-steam-boat-off-a-harbours-mouth-1842",
+      "description": "Das Schiff lässt sich in den kreisenden Spuren schwer festmachen. Meer und Himmel bieten nicht länger die stabile Trennung einer herkömmlichen Marine. Turner macht die Suche nach dem Boot zum Teil der Schwierigkeit des Bildes. Der Sturm wird durch diese Störung ebenso beschrieben wie durch einzelne erkennbare Wellen.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "101a93b3-0b1d-42d4-b39f-63a4f575f132",
+      "title": "Beata Beatrix",
+      "catalogueTitle": "Beata Beatrix",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "ca. 1864–70",
+      "start": 1864,
+      "end": 1870,
+      "medium": "Öl auf Leinwand",
+      "accession": "N01279",
+      "image": "https://artlines.org/assets/artworks/wikiart/6f37c717-dcc1-487a-b86d-459c5393131c-4d5b687c2aa300e7.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/beata-beatrix-1880",
+      "credit": "Dante Gabriel Rossetti. Beata Beatrix. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/rossetti-beata-beatrix-n01279",
+      "description": "Geschlossene Augen und stille Hände unterbrechen den gewöhnlichen Austausch zwischen dargestellter Figur und Betrachter. Ein roter Vogel nähert sich; der wärmere Raum dahinter bleibt undeutlicher. Ein innerer Zustand erscheint durch Zeichen um den Körper. Er wird weder buchstäblich zur Besichtigung geöffnet noch auf einen einzigen sichtbaren Gedanken reduziert.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "d3f140ee-f449-415b-a59e-3469dba3ae89",
+      "title": "Das Schlammbad",
+      "catalogueTitle": "The Mud Bath",
+      "artist": "David Bomberg",
+      "artists": [
+        {
+          "name": "David Bomberg",
+          "role": "primary",
+          "slug": "david-bomberg-research-13411b574394"
+        }
+      ],
+      "date": "1914",
+      "start": 1914,
+      "end": 1914,
+      "medium": "Öl auf Leinwand",
+      "accession": "T00656",
+      "image": "https://artlines.org/assets/artworks/wikiart/62790e78-ca33-49f3-a6ed-1f3d522d212d-e57ec59d902e2de0.jpg",
+      "imageSource": "https://www.wikiart.org/en/david-bomberg/the-mud-bath-1914",
+      "credit": "David Bomberg. The Mud Bath. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/bomberg-the-mud-bath-t00656",
+      "description": "Kantige blaue und weiße Formen durchqueren das rote Feld. Sie erinnern an Körper, besitzen aber keine durchgehende Anatomie. Die Gruppenhandlung bleibt in Richtungen und Kreuzungen erhalten, nicht in einzelnen Gesichtern. Bomberg verändert den Maßstab des Erkennens: erst eine gemeinsame Anordnung, dann Fragmente, aus denen Figuren wiedergewonnen werden können.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "15d3bae9-5877-42c0-9b02-899aeaf129c0",
+      "title": "Der Meisterstreich des Feenfällers",
+      "catalogueTitle": "The Fairy Feller’s Master-Stroke",
+      "artist": "Richard Dadd",
+      "artists": [
+        {
+          "name": "Richard Dadd",
+          "role": "primary",
+          "slug": "richard-dadd-research-a4c07e844c78"
+        }
+      ],
+      "date": "1855–64",
+      "start": 1855,
+      "end": 1864,
+      "medium": "Öl auf Leinwand",
+      "accession": "T00598",
+      "image": "https://artlines.org/assets/artworks/wikiart/9e82f6de-49da-473b-a89a-0b2aeeac3ad2-4141ba1af4568a78.jpg",
+      "imageSource": "https://www.wikiart.org/en/richard-dadd/the-fairy-feller-s-master-stroke-1864",
+      "credit": "Richard Dadd. The Fairy Feller’s Master-Stroke. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/dadd-the-fairy-fellers-master-stroke-t00598",
+      "description": "Der Holzfäller steht in einer so dicht bevölkerten Gesellschaft, dass die Zeugen ringsum mit der Haupthandlung konkurrieren. Gräser, Blätter und winzige Figuren überlagern sich in flachem Raum. Dadds Genauigkeit macht das Ganze nicht sofort klar. Sie führt zu wiederholten Einzelbegegnungen, die jeweils zeigen, wie viel noch außerhalb des aktuellen Blickfelds bleibt.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "7a70f4ed-d854-4f3c-b625-7edf3028eab5",
+      "title": "Der Geist eines Flohs",
+      "catalogueTitle": "The Ghost of a Flea",
+      "artist": "William Blake",
+      "artists": [
+        {
+          "name": "William Blake",
+          "role": "primary",
+          "slug": "william-blake-nga-970"
+        }
+      ],
+      "date": "ca. 1819–20",
+      "start": 1819,
+      "end": 1820,
+      "medium": "Tempera und Gold auf Mahagoni",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fe441cc7-6f18-434c-bc66-647a9e3a60ff-16895d3b456af47c.jpg",
+      "imageSource": "https://www.wikiart.org/en/william-blake/the-ghost-of-a-flea-1820",
+      "credit": "William Blake. The Ghost of a Flea. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/blake-the-ghost-of-a-flea-n05889",
+      "description": "Das Wesen besitzt muskuläres Gewicht und eine schreitende Haltung, doch sein teilweise tierischer Körper verweigert eine gewöhnliche menschliche Identität. Vorhänge geben der Bewegung eine Bühne, das getragene Gefäß eine kleine Handlung. Blakes Erfindung beruht auf erkennbarer Anatomie. Die Abweichungen werden deutlicher, weil genügend vertrauter Aufbau erhalten bleibt.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "5d4921d7-71c8-4415-a75a-164b1168a650",
+      "title": "Nocturne: Blau und Gold – Old Battersea Bridge",
+      "catalogueTitle": "Nocturne: Blue and Gold - Old Battersea Bridge",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "ca. 1872–1875",
+      "start": 1872,
+      "end": 1875,
+      "medium": "Öl auf Leinwand",
+      "accession": "N01959",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/9ab192e7-630d-42c5-ab6a-f0c7b8ba1520-93f6015de6f25ed3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:James_Abbot_McNeill_Whistler_006.jpg",
+      "credit": "James Abbott McNeill Whistler. Nocturne: Blue and Gold - Old Battersea Bridge. Image credit: James McNeill Whistler; Source credit: The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN : 3936122202 .. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-battersea-bridge-n01959",
+      "description": "Die Brücke steht als große dunkle Form über dem Wasser, dessen Entfernungen wenige Lichter und ein kleines Boot angeben. Blau und Gold verbinden unterschiedlich genau beschriebene Elemente. Whistler macht den Ort mit wenigen Anhaltspunkten lesbar. Die zurückgehaltenen Details bleiben Teil der Nacht, statt zu Lücken zu werden, die wir schließen müssten.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "1294f855-7c06-4f8a-97db-26c49d5d8539",
+      "title": "Industrielandschaft",
+      "catalogueTitle": "Industrial Landscape",
+      "artist": "L.S. Lowry",
+      "artists": [
+        {
+          "name": "L.S. Lowry",
+          "role": "primary",
+          "slug": "l-s-lowry-research-8d1765d6d2be"
+        }
+      ],
+      "date": "1955",
+      "start": 1955,
+      "end": 1955,
+      "medium": "Öl auf Leinwand",
+      "accession": "T00111",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/1294f855-7c06-4f8a-97db-26c49d5d8539-bc4270a0ece7efc7.jpg",
+      "imageSource": "https://www.wikiart.org/en/l-s-lowry/industrial-landscape-1955",
+      "credit": "L.S. Lowry. Industrial Landscape. WikiArt source label: L. S. Lowry Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/l-s-lowry/industrial-landscape-1955",
+      "license": "L. S. Lowry Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/lowry-industrial-landscape-t00111",
+      "description": "Schornsteine und Gebäude reichen weit über einen einzelnen Arbeitsplatz hinaus. Kleine Figuren geben ihren Wiederholungen einen menschlichen Maßstab; Straßen verbinden Teile der bebauten Umgebung. Lowry behandelt Industrie als bewohnten Ort, nicht bloß als Maschinensammlung oder einzelne Fabrik von außen.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "f20b8936-ff89-4c1f-a753-9e212a7b3911",
+      "title": "Drei Studien zu Figuren am Fuß einer Kreuzigung",
+      "catalogueTitle": "Three Studies for Figures at the Base of a Crucifixion",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "um 1944",
+      "start": 1944,
+      "end": 1944,
+      "medium": "Öl auf 3 Holztafeln",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/f20b8936-ff89-4c1f-a753-9e212a7b3911-dfd234e3a9588f1f.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "credit": "Francis Bacon. Three Studies for Figures at the Base of a Crucifixion. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/three-studies-for-figures-at-the-base-of-a-crucifixion-1944",
+      "description": "Die drei Tafeln geben den Kreaturen getrennte Räume, aber vergleichbare orangefarbene Gründe. Lange Hälse, Münder und Stützen bewahren genug körperliche Information, um Verformung deutlich zu machen. Sie teilen keinen durchgehenden Raum und müssen nicht zu einer zeitlichen Abfolge gezwungen werden. Wiederholung verbindet sie, während ihre einzelnen Zustände verschieden bleiben.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "a3b17062-1de8-40ab-85f5-e379f76b9d44",
+      "title": "Hampstead Heath mit einem Regenbogen",
+      "catalogueTitle": "Hampstead Heath with a Rainbow",
+      "artist": "John Constable",
+      "artists": [
+        {
+          "name": "John Constable",
+          "role": "primary",
+          "slug": "john-constable-q159297"
+        }
+      ],
+      "date": "1836",
+      "start": 1836,
+      "end": 1836,
+      "medium": "Öl auf Leinwand",
+      "accession": "N01275",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/a3b17062-1de8-40ab-85f5-e379f76b9d44-b1f881346127d92b.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-constable/hampstead-heath-with-a-rainbow-1836-1",
+      "credit": "John Constable. Hampstead Heath with a Rainbow. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/constable-hampstead-heath-with-a-rainbow-n01275",
+      "description": "Die klare Kurve des Regenbogens durchquert einen Himmel, der sonst in unbeständige Wolken und Dunkelheit zerfällt. Licht hebt Teile der Heide hervor, ohne sie gleichmäßig zu beleuchten. Constable verbindet getrennte Bereiche durch den kurzlebigen Bogen. Wetter verteilt die Sichtbarkeit der Landschaft aktiv neu, statt bloßer Hintergrundzustand zu sein.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "58aa6a84-cd00-4932-83b3-c5768e1e4a79",
+      "title": "Selbstporträt mit Anstecknadeln",
+      "catalogueTitle": "Self-Portrait with Badges",
+      "artist": "Peter Blake",
+      "artists": [
+        {
+          "name": "Peter Blake",
+          "role": "primary",
+          "slug": "peter-blake-research-624508d6e0f9"
+        }
+      ],
+      "date": "1961",
+      "start": 1961,
+      "end": 1961,
+      "medium": "Öl auf Holztafel",
+      "accession": "T02406",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/58aa6a84-cd00-4932-83b3-c5768e1e4a79-3945f47d134e50e5.jpg",
+      "imageSource": "https://www.wikiart.org/en/peter-blake/self-portrait-with-badges-1961",
+      "credit": "Peter Blake. Self-Portrait with Badges. WikiArt source label: Peter Blake Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/peter-blake/self-portrait-with-badges-1961",
+      "license": "Peter Blake Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/blake-self-portrait-with-badges-t02406",
+      "description": "Die Anstecknadeln machen ausgewählte Bilder zum Teil der äußeren Erscheinung. Sie unterbrechen die Jacke und tragen zugleich zur Selbstdarstellung bei. Gesicht und Haltung bleiben wichtig, aber Ähnlichkeit ist nicht der einzige Hinweis auf Identität. Was jemand trägt und zeigt, kann im Bild denselben Raum beanspruchen wie angeborene Gesichtszüge.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0aa6ee50-b83a-4033-9417-84dc9e1cf491",
+      "title": "Die Entkleidung Christi",
+      "catalogueTitle": "The Disrobing of Christ",
+      "artist": "Sir Stanley Spencer",
+      "artists": [
+        {
+          "name": "Sir Stanley Spencer",
+          "role": "primary",
+          "slug": "sir-stanley-spencer-research-32d71e89bf61"
+        }
+      ],
+      "date": "1922",
+      "start": 1922,
+      "end": 1922,
+      "medium": "Öl auf Holz",
+      "accession": "N04926",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-delivery-20261010/0aa6ee50-b83a-4033-9417-84dc9e1cf491-cfaecced6694527e.jpg",
+      "imageSource": "https://www.wikiart.org/en/stanley-spencer/the-disrobing-of-christ-1922",
+      "credit": "The Disrobing of Christ. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain US",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/spencer-the-disrobing-of-christ-n04926",
+      "description": "Das Entfernen des Stoffs verlangt das Zusammenwirken mehrerer Körper in einem engen, kantigen Raum. Die fast nackte Figur wird durch ihren Zugriff entblößt, nicht isoliert präsentiert. Spencer hält die heilige Episode an unbequeme körperliche Beziehungen gebunden. Stoff kann verdecken, verbinden und den Menschen, die daran ziehen, Widerstand leisten.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "45567dbf-c1a3-4126-88dd-4cb0508576cc",
+      "title": "Berstende Granate",
+      "catalogueTitle": "Bursting Shell",
+      "artist": "Christopher Richard Wynne Nevinson",
+      "artists": [
+        {
+          "name": "Christopher Richard Wynne Nevinson",
+          "role": "primary",
+          "slug": "christopher-richard-wynne-nevinson-research-f26218068698"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "Öl auf Leinwand",
+      "accession": "T03676",
+      "image": "https://artlines.org/assets/artworks/wikiart/68b3134b-0cb0-4bce-933a-2f5698f148a0-9294900cb57efda6.jpg",
+      "imageSource": "https://www.wikiart.org/en/c-r-w-nevinson/bursting-shell-1915",
+      "credit": "Christopher Richard Wynne Nevinson. Bursting Shell. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/nevinson-bursting-shell-t03676",
+      "description": "Es gibt keinen angenehm entfernten Standort, von dem aus man die Explosion betrachten könnte. Keile und Linien strahlen durch die gesamte Anordnung und tragen die Kraft über einen einzelnen Gegenstand hinaus. Nevinson gibt der Gewalt eine gerichtete Struktur. Auch ohne detailliert verletzten Körper bleibt das Ereignis nah, wenn der Raum selbst auseinanderbricht.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "763936e6-057e-4280-91b0-31d08f682ee8",
+      "title": "Dorelia im schwarzen Kleid",
+      "catalogueTitle": "Dorelia in a Black Dress",
+      "artist": "Gwen John",
+      "artists": [
+        {
+          "name": "Gwen John",
+          "role": "primary",
+          "slug": "wikimedia-painter-q274339"
+        }
+      ],
+      "date": "ca. 1903–1904",
+      "start": 1903,
+      "end": 1904,
+      "medium": "Öl auf Leinwand",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/763936e6-057e-4280-91b0-31d08f682ee8-7c34c691c0423ad0.jpg",
+      "imageSource": "https://www.wikiart.org/en/gwen-john/dorelia-in-a-black-dres",
+      "credit": "Gwen John. Dorelia in a Black Dress. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tate.org.uk/art/artworks/john-dorelia-in-a-black-dress-n05910",
+      "description": "Die locker verschränkten Arme halten die stehende Pose gefasst, ohne sie in starre Symmetrie zu zwingen. Ein rosa Akzent und kleine Lichtwechsel unterscheiden die Figur innerhalb einer engen Farbskala. Gwen John lässt die schlichte Wand schlicht. Das Gegenüber konzentriert sich auf Gesicht, Hände und kleine Veränderungen der Haltung.",
+      "importance": "",
+      "museum": "Tate"
+    },
+    {
+      "id": "0133b673-eff9-4bbb-808e-2a0e299fb1e1",
+      "title": "Bauernhöfe bei Auvers",
+      "catalogueTitle": "Farms near Auvers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Öl auf Leinwand",
+      "accession": "N04713",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/0018416e-7cd4-4fe5-b27c-d7c8835f6942-51f05ab001f77d8a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:VanGoghThatchedCottagesByAHill.jpg",
+      "credit": "Vincent van Gogh. Farms near Auvers. Image credit: Vincent van Gogh; Source credit: 1. vangoghgallery.com 2. Tate Online , image. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.tate.org.uk/art/artworks/gogh-farms-near-auvers-n04713",
+      "description": "Strohdächer, Bäume, Mauern und geneigter Boden erhalten Pinselspuren in verschiedenen Richtungen. Die Oberfläche bleibt bewegt, ohne alle Materialien gleichzumachen. Durch diese Wechsel lassen sich die gedrängten Gebäude verfolgen. Eine Landschaft kann lesbar bleiben, auch wenn sich kaum eine Farbpartie zu einem ununterbrochenen Feld beruhigt.",
+      "importance": "",
+      "museum": "Tate"
+    }
+  ],
+  "context": {
+    "start": 1819,
+    "end": 1961
+  },
+  "closingSections": [
+    {
+      "title": "Schwierige Bilder von unklaren Texten unterscheiden",
+      "paragraphs": [
+        "Dadds Dichte und Turners gestörte Sichtbarkeit verlangen verschiedene Arten des Betrachtens. Vages Lob braucht keines der beiden Verfahren anstelle von Beschreibung. Vergleichen Sie, was jeweils deutlich bleibt. Die Tate zeigt ihre Sammlung an mehreren Orten und in wechselnden Präsentationen. Prüfen Sie den aktuellen Standort eines Werks vor der Reise."
+      ]
+    }
+  ]
+}

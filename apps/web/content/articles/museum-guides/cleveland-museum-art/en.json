@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline selected these works from documented museum holdings. The selection is independent of the museum, and individual works may be on loan or off display. Dates and attributions retain the qualifications in the linked records.",
+  "labels": {
+    "guides": "All guides",
+    "download": "Download PDF",
+    "language": "Guide language",
+    "translation": "AI-assisted translation",
+    "explore": "Explore this selection in Artline",
+    "contextNote": "See the selected works alongside books and events from their period, or compare when the artists lived. The books and events provide context, not evidence of direct influence. Works without confirmed dates remain in this guide.",
+    "all": "Artworks in context",
+    "allHint": "The selected works with books and history from their time.",
+    "painters": "Who lived when?",
+    "paintersHint": "See when the artists lived and whose lives overlapped.",
+    "events": "Historical events",
+    "eventsHint": "Explore events during the guide’s period",
+    "books": "Books timeline",
+    "booksHint": "Explore notable books from the same period",
+    "contents": "The selection",
+    "artworks": "Selected artworks",
+    "importance": "Why it matters",
+    "artwork": "Open artwork",
+    "source": "Object source",
+    "inventory": "Inventory",
+    "reading": "Further reading",
+    "visit": "Before your visit",
+    "website": "Museum website",
+    "officialGuide": "Official collection guide",
+    "updated": "Sources and visitor information checked"
+  },
+  "slug": "cleveland-museum-art",
+  "museum": "Cleveland Museum of Art",
+  "city": "Cleveland",
+  "country": "United States",
+  "title": "Cleveland Museum of Art: Masterpieces",
+  "subtitle": "Twenty works seen from a riverbank, a doorway, a boxing crowd and other revealing positions.",
+  "introduction": "Turner's burning Parliament can be watched from a safe distance, across the Thames. Caravaggio allows much less room around a dying saint. In Monet's *The Red Kerchief*, the glass doors remain between the viewer and Camille, outside in the snow. These are choices about access: how close a painting lets someone come, and what it places in the way.\n\nThat question connects this selection from the Cleveland Museum of Art without making the works tell a single story. Some offer an expansive survey; others narrow the field to a face, a body or a flower. Notice the implied position of the observer before deciding what the scene means. Sometimes the most consequential detail is the place left for you outside it.",
+  "visitNote": "This collection selection includes a drawing as well as paintings. Works on paper rotate, and other objects may be on loan or outside current displays. Turner’s Cleveland painting is a different canvas from the Philadelphia view of the same Parliament fire.",
+  "locale": "en",
+  "website": "https://www.clevelandart.org",
+  "officialGuide": "https://www.clevelandart.org",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Read free · English",
+      "note": "Speed’s account of line, mass and composition offers practical ways to compare the crowded and sparsely arranged works here. His drawing exercises are especially relevant to the difference between Pesne’s worked sheet and more fully modelled paintings."
+    }
+  ],
+  "works": [
+    {
+      "id": "594dbf09-1519-4408-8282-3b8ae0159be2",
+      "title": "The Burning of the Houses of Lords and Commons",
+      "catalogueTitle": "The Burning of the Houses of Lords and Commons, 16 October 1834",
+      "artist": "J. M. W. Turner",
+      "artists": [
+        {
+          "name": "J. M. W. Turner",
+          "role": "primary",
+          "slug": "j-m-w-turner-q159758"
+        }
+      ],
+      "date": "1835",
+      "start": 1835,
+      "end": 1835,
+      "medium": "Oil on canvas",
+      "accession": "1942.647",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-302bd448f113e0e6e147d878ad745996be13a80847759a5e9de83d81f402b113.jpg",
+      "imageSource": "https://clevelandart.org/art/1942.647",
+      "credit": "Bequest of John L. Severance. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1942.647",
+      "description": "The river carries the fire's reflection towards the watching crowd. Turner painted this version after the destruction of Parliament in October 1834, exaggerating the flames rather than producing a neutral record. The buildings become difficult to distinguish from their own burning. Across the water there is distance enough to watch, but no escape from the orange light.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "cf1bff5c-2d86-4b2b-9c07-53eb0bf07fe4",
+      "title": "The Red Kerchief",
+      "catalogueTitle": "The Red Kerchief",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "c. 1868–73",
+      "start": 1868,
+      "end": 1873,
+      "medium": "Oil on fabric",
+      "accession": "1958.39",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/0709c8aa-a20e-4e0d-8863-8c1b5576ce65-e54d50ce42708554.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.39",
+      "credit": "Bequest of Leonard C. Hanna Jr.. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1958.39",
+      "description": "Camille Monet looks through the French doors from outside. Her red covering draws attention through the pale curtains and snowy setting, while the panes keep the two spaces apart. A portrait need not give a sitter an unobstructed place before us: here, recognition occurs in passing, through the frame and glass of an ordinary house.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "a1a353a3-8f2b-4289-be53-1ac60adb57aa",
+      "title": "The Crucifixion of Saint Andrew",
+      "catalogueTitle": "The Crucifixion of Saint Andrew",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1606–7",
+      "start": 1606,
+      "end": 1607,
+      "medium": "Oil on canvas",
+      "accession": "1976.2",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/35fa786b-377f-44fd-8725-2137cb1fb9a6-7659097e3195bc5f.jpg",
+      "imageSource": "https://clevelandart.org/art/1976.2",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1976.2",
+      "description": "Caravaggio leaves little space in which to stand back from the martyrdom. Andrew's aging body, the people around him and their rough clothes emerge from a darkness that hides much of the setting. Instead of surveying an entire sacred event, the viewer must attend to its physical business: bodies held up, hands reaching, faces close enough to register suffering.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "62c07fda-7452-4933-9861-1ba687aee9c6",
+      "title": "The Holy Family with Saints John and Margaret",
+      "catalogueTitle": "The Holy Family with Saint John the Baptist and Saint Margaret",
+      "artist": "Filippino Lippi",
+      "artists": [
+        {
+          "name": "Filippino Lippi",
+          "role": "primary",
+          "slug": "filippino-lippi-q296265"
+        }
+      ],
+      "date": "c. 1488–93",
+      "start": 1488,
+      "end": 1493,
+      "medium": "Tempera and oil on wood",
+      "accession": "1932.227",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/937d59ef-fb69-4d3b-b453-0a365854ec3d-498955438d6f8def.jpg",
+      "imageSource": "https://clevelandart.org/art/1932.227",
+      "credit": "The Delia E. Holden Fund and a fund donated as a memorial to Mrs. Holden by her children: Guerdon S. Holden, Delia Holden White, Roberta Holden Bole, Emery Holden Greenough, Gertrude Holden McGinley. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1932.227",
+      "description": "A round frame gives Filippino Lippi no neutral corners in which to leave spare space. Companions gather around Mary and the infant, their gestures overlapping within the curve. The glimpses of landscape offer relief from this close grouping. Follow the hands and turns of the heads: the company acquires its order through relationships, not simply through symmetry.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "90ae6dcf-8694-4259-a5c1-4c711c1a9e29",
+      "title": "The Large Plane Trees",
+      "catalogueTitle": "The Large Plane Trees (Road Menders at Saint-Rémy)",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Oil on fabric",
+      "accession": "1947.209",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/a9631396-b534-4e29-96db-7812c4c192ad-3e2cad7ce75e5a84.jpg",
+      "imageSource": "https://clevelandart.org/art/1947.209",
+      "credit": "Gift of the Hanna Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1947.209",
+      "description": "The road workers are small beside the trunks, yet their task keeps this from becoming a view of trees alone. Van Gogh distinguishes paving, bark and foliage through changes in his short strokes. Street repair and seasonal growth occupy the same piece of ground; the painted surface gives as much activity to the trees as to the people working beneath them.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "3070518e-e47a-4407-b524-2470f4a50e9b",
+      "title": "Lot and His Daughters",
+      "catalogueTitle": "Lot and His Daughters",
+      "artist": "Antoine Pesne",
+      "artists": [
+        {
+          "name": "Antoine Pesne",
+          "role": "primary",
+          "slug": "antoine-pesne-q203758"
+        }
+      ],
+      "date": "1756",
+      "start": 1756,
+      "end": 1756,
+      "medium": "Black and red chalk wash, gray wash, heightened with white gouache; framing lines in black ink",
+      "accession": "1975.15",
+      "image": "https://artlines.org/assets/artworks/open-museums/cleveland/3070518e-e47a-4407-b524-2470f4a50e9b-37d4b70160c2875c.jpg",
+      "imageSource": "https://clevelandart.org/art/1975.15",
+      "credit": "Antoine Pesne. Lot and His Daughters. The Cleveland Museum of Art. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.clevelandart.org/open-access",
+      "source": "https://clevelandart.org/art/1975.15",
+      "description": "Pesne's drawing concentrates on how three bodies fit together on uneven ground. Warm washes suggest their volume without closing every contour, while darker touches give faces and clothing more weight. The biblical subject supplies a narrative, but the sheet also permits a more practical reading: a group being assembled through adjustments of pose, overlap and emphasis.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "9357e06d-dff1-43c8-bd0c-f1e852162d2f",
+      "title": "The Dream",
+      "catalogueTitle": "The Dream",
+      "artist": "Salvador Dalí",
+      "artists": [
+        {
+          "name": "Salvador Dalí",
+          "role": "primary",
+          "slug": "salvador-dali-q5577"
+        }
+      ],
+      "date": "1931",
+      "start": 1931,
+      "end": 1931,
+      "medium": "Oil on canvas",
+      "accession": "2001.34",
+      "image": "https://artlines.org/assets/artworks/wikiart/9357e06d-dff1-43c8-bd0c-f1e852162d2f-e90885dcba1d948d.jpg",
+      "imageSource": "https://www.wikiart.org/en/salvador-dali/the-dream",
+      "credit": "Salvador Dalí. The Dream. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://clevelandart.org/art/2001.34",
+      "description": "Dalí does not make a dream by leaving everything vague. The head, the distant column and the streaming, hair-like forms have a disconcerting clarity. What becomes unstable is their relationship: scale and substance no longer behave as expected. Naming each component therefore does little to settle the image. Its difficulty lies between the things rather than inside their outlines.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "5ddf5171-0ec5-44ba-b05c-d529c7e9badf",
+      "title": "The Power of Music",
+      "catalogueTitle": "The Power of Music",
+      "artist": "William Sidney Mount",
+      "artists": [
+        {
+          "name": "William Sidney Mount",
+          "role": "primary",
+          "slug": "william-sidney-mount-nga-1741"
+        }
+      ],
+      "date": "1847",
+      "start": 1847,
+      "end": 1847,
+      "medium": "Oil on canvas",
+      "accession": "1991.110",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-72fb3de87385085ea3398523da1707527b35ef62079aabf885ac99e75a7f9a43.jpg",
+      "imageSource": "https://clevelandart.org/art/1991.110",
+      "credit": "Leonard C. Hanna Jr. Fund. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1991.110",
+      "description": "Music passes through a doorway that the Black listener does not cross. His resting posture connects him to the performance inside, yet the wall keeps his body separate from the musicians. Mount's scene holds pleasure and exclusion together. To describe it only as music bringing people together would overlook the boundary on which the whole composition depends.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "c380e469-0ed3-42f8-b3da-9c3af29a4a3d",
+      "title": "The Brook",
+      "catalogueTitle": "The Brook",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "c. 1895–1900",
+      "start": 1895,
+      "end": 1900,
+      "medium": "Oil on fabric",
+      "accession": "1958.20",
+      "image": "https://artlines.org/assets/artworks/open-museums/cleveland/c380e469-0ed3-42f8-b3da-9c3af29a4a3d-fcb6b696f17f69ec.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.20",
+      "credit": "Paul Cézanne. The Brook. The Cleveland Museum of Art. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.clevelandart.org/open-access",
+      "source": "https://clevelandart.org/art/1958.20",
+      "description": "The stream offers a way into Cézanne's wooded scene, though its banks are not drawn as continuous, tidy edges. Blue, green and ochre patches meet, overlap and separate to suggest water and vegetation. Space has to be gathered from these changing relationships. The brook remains recognisable without requiring every stroke to dissolve into a named object.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "b3abe3bd-ab68-4787-92e3-21c2d9df4ba4",
+      "title": "The Crucifixion",
+      "catalogueTitle": "The Crucifixion",
+      "artist": "Matteo di Giovanni",
+      "artists": [
+        {
+          "name": "Matteo di Giovanni",
+          "role": "primary",
+          "slug": "matteo-di-giovanni-nga-1708"
+        }
+      ],
+      "date": "1470s",
+      "start": 1470,
+      "end": 1479,
+      "medium": "Tempera and oil with gold on wood panel",
+      "accession": "1940.535",
+      "image": "https://artlines.org/assets/artworks/open-museums/cleveland/b3abe3bd-ab68-4787-92e3-21c2d9df4ba4-d3f9c37b756632a8.jpg",
+      "imageSource": "https://clevelandart.org/art/1940.535",
+      "credit": "Matteo di Giovanni. The Crucifixion. The Cleveland Museum of Art. CC0 1.0. Compressed full-frame reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://www.clevelandart.org/open-access",
+      "source": "https://clevelandart.org/art/1940.535",
+      "description": "Matteo di Giovanni gives the witnesses distinct places beneath the tall cross. Firm contours and separate colours make their gestures available for close reading within the small field. Compared with Caravaggio's crowded darkness, this Crucifixion offers a more ordered encounter: the event is severe, but the arrangement allows attention to move deliberately from one participant to another.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "f0b9a2d0-e99b-4b12-8293-68f507fbaaf6",
+      "title": "Twilight in the Wilderness",
+      "catalogueTitle": "Twilight in the Wilderness",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1860",
+      "start": 1860,
+      "end": 1860,
+      "medium": "Oil on canvas",
+      "accession": "1965.233",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-59b7a4cc71ffaf194eee0aad1fbc46819815cd059ebdb161718fcd5a86b6bfae.jpg",
+      "imageSource": "https://clevelandart.org/art/1965.233",
+      "credit": "Mr. and Mrs. William H. Marlatt Fund. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1965.233",
+      "description": "Church puts the greatest blaze of colour above an unpeopled valley. The dark foreground trees establish a near position from which the water and distant hills can be followed towards the red clouds. Nothing needs to happen on the ground to give the picture drama. A change of light is large enough to organise the whole landscape.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "b8ca44d8-7782-5e17-a3ab-d78fafe412dd",
+      "title": "Stag at Sharkey's",
+      "catalogueTitle": "Stag at Sharkey's",
+      "artist": "George Bellows",
+      "artists": [
+        {
+          "name": "George Bellows",
+          "role": "primary",
+          "slug": "george-bellows-nga-940"
+        }
+      ],
+      "date": "1909",
+      "start": 1909,
+      "end": 1909,
+      "medium": "Oil on canvas",
+      "accession": "1922.1133",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-cleveland/b8ca44d8-7782-5e17-a3ab-d78fafe412dd-4c7ea36e9f52cf9d.jpg",
+      "imageSource": "https://clevelandart.org/art/1922.1133",
+      "credit": "George Bellows. Stag at Sharkey's. George Bellows; The Cleveland Museum of Art; Hinman B. Hurlbut Collection. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1922.1133",
+      "description": "The spectators press up below the ring while the boxers collide above them. Bellows's rough handling keeps arms, faces and bodies from settling into polished separate forms. Watching is part of the picture's action: the crowd's proximity gives the contest its cramped social space. This is a very different spectator's position from the distant riverbank in Turner.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "306924eb-4dd5-4e13-9804-5580924c23e4",
+      "title": "Christ and the Virgin in the House at Nazareth",
+      "catalogueTitle": "Christ and the Virgin in the House at Nazareth",
+      "artist": "Francisco de Zurbarán",
+      "artists": [
+        {
+          "name": "Francisco de Zurbarán",
+          "role": "primary",
+          "slug": "francisco-de-zurbaran-q209615"
+        }
+      ],
+      "date": "c. 1640",
+      "start": 1635,
+      "end": 1645,
+      "medium": "Oil on canvas",
+      "accession": "1960.117",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/7e5f5e8e-a01e-4d9b-a786-4ae6639f064c-64d4ab4ac2b46e06.jpg",
+      "imageSource": "https://clevelandart.org/art/1960.117",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1960.117",
+      "description": "Zurbarán leaves room between the boy and the woman, making their separate poses noticeable in the sparse household. Small objects, flowers and birds reward a slower inspection than the broad arrangement initially requires. The title identifies a sacred family, but their setting brings attention down to the scale of a table, a task and time spent together indoors.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "79263a17-6628-4509-b104-6316060e3c0b",
+      "title": "Church Street El",
+      "catalogueTitle": "Church Street El",
+      "artist": "Charles Sheeler",
+      "artists": [
+        {
+          "name": "Charles Sheeler",
+          "role": "primary",
+          "slug": "charles-sheeler-nga-2745"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "Oil on canvas",
+      "accession": "1977.43",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-4c6dab04808d71d8e932599be88bc9aabb6851d22d6dbe2f47ad3d81fda78ad8.jpg",
+      "imageSource": "https://clevelandart.org/art/1977.43",
+      "credit": "Mr. and Mrs. William H. Marlatt Fund. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1977.43",
+      "description": "Seen steeply from above, the elevated railway and buildings become interlocking planes. Sheeler reduces the incidental details that might turn the view into a busy street anecdote. The practical city remains identifiable, but its edges begin to compete with that identity: a track is also a line, and a shadow can be as substantial as the structure casting it.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "d0d815ce-f1cd-412d-9a25-317cd306ce02",
+      "title": "Cupid and Psyche",
+      "catalogueTitle": "Cupid and Psyche",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1817",
+      "start": 1817,
+      "end": 1817,
+      "medium": "Oil on canvas",
+      "accession": "1962.37",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/d57662f7-5981-4286-957d-ad66f525af75-f5eaff6d842ca23f.jpg",
+      "imageSource": "https://clevelandart.org/art/1962.37",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1962.37",
+      "description": "Cupid turns outwards while Psyche sleeps, making the two figures unequally aware of being seen. David's elaborate bed and opened landscape give the myth a sumptuous setting, but the youth's direct glance unsettles its distance from the viewer. Attention moves from the sleeping body to the person who seems to have caught someone looking at it.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "1d0bf35c-a5c4-4c1c-8261-40f9320dccbd",
+      "title": "Danaë",
+      "catalogueTitle": "Danaë",
+      "artist": "Orazio Gentileschi",
+      "artists": [
+        {
+          "name": "Orazio Gentileschi",
+          "role": "primary",
+          "slug": "orazio-gentileschi-q367360"
+        }
+      ],
+      "date": "c. 1623",
+      "start": 1618,
+      "end": 1628,
+      "medium": "Oil on canvas",
+      "accession": "1971.101",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/4fb34858-2c34-4534-9491-9346aa16574a-de994c4799bebe01.jpg",
+      "imageSource": "https://clevelandart.org/art/1971.101",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1971.101",
+      "description": "The falling gold sets hands and arms in motion above the pale bed. Gentileschi makes a supernatural visitation occur among fabrics whose weight and folds seem insistently tangible. Dark curtains enclose the action, limiting the world to this exchange between the reclining figure and what arrives from above. The myth is explained through reach and response rather than a crowded setting.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "438a5950-521c-497f-bf93-44d5d55c5a14",
+      "title": "Elizabeth Shewell West and Her Son Raphael",
+      "catalogueTitle": "Elizabeth Shewell West and Her Son, Raphael",
+      "artist": "Benjamin West",
+      "artists": [
+        {
+          "name": "Benjamin West",
+          "role": "primary",
+          "slug": "benjamin-west-nga-1970"
+        }
+      ],
+      "date": "c. 1770",
+      "start": 1765,
+      "end": 1775,
+      "medium": "Oil on canvas",
+      "accession": "1927.393",
+      "image": "https://artlines.org/assets/artworks/imported/cleveland-study-eed3e889356a29f0e6a34516ed7dc2836358d7e10569ba4051ae5547ba6dcb4a.jpg",
+      "imageSource": "https://clevelandart.org/art/1927.393",
+      "credit": "The Charles W. Harkness Gift. Cleveland Museum of Art. CC0; compressed study reproduction.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1927.393",
+      "description": "Benjamin West brings the child's face close to his mother's cheek and gathers the pair within her arms. There is little surrounding furniture to explain their household or status. Light joins the faces against the darkness. The portrait's intimacy has a clear physical basis: the reduced interval between two heads, and the enclosure created by an adult holding a child.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "d9fc5017-a624-5025-a370-09644b08652d",
+      "title": "Hunting near Hartenfels Castle",
+      "catalogueTitle": "Hunting near Hartenfels Castle",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1540",
+      "start": 1540,
+      "end": 1540,
+      "medium": "Oil, originally on wood, transferred to masonite",
+      "accession": "1958.425",
+      "image": "https://artlines.org/assets/artworks/imported/period-images-20260926/cleveland-135428-fff0e996e2b7b977.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.425",
+      "credit": "Hunting near Hartenfels Castle. The Cleveland Museum of Art; John L. Severance Fund. CC0 1.0. Full-frame resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1958.425",
+      "description": "No hunter on the ground could possess this extensive view of the chase. Cranach distributes riders, dogs and deer across woods, water and open land so that separate incidents can be examined one after another. The high viewpoint makes the hunt available as an organised spectacle, with the observer enjoying a command of the scene denied to its participants.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "3efea461-6783-4636-9ccf-58fa241c5b74",
+      "title": "La Cervara, the Roman Campagna",
+      "catalogueTitle": "La Cervara, the Roman Campagna",
+      "artist": "Jean-Baptiste-Camille Corot",
+      "artists": [
+        {
+          "name": "Jean-Baptiste-Camille Corot",
+          "role": "primary",
+          "slug": "jean-baptiste-camille-corot-q148475"
+        }
+      ],
+      "date": "c. 1830–31",
+      "start": 1830,
+      "end": 1831,
+      "medium": "Oil on fabric",
+      "accession": "1963.91",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/1fe50913-fc47-4813-a6d2-ba6f39ddf5a8-f55da24dfb6cd701.jpg",
+      "imageSource": "https://clevelandart.org/art/1963.91",
+      "credit": "Leonard C. Hanna Jr. Fund. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1963.91",
+      "description": "Pale, uneven ground takes up the space between the sparse trees. Corot holds the view together with broad divisions of earth and sky rather than a dramatic central incident. The figures and animals establish the size of the terrain. Their modest presence also leaves the rough country available to attention on its own terms, beyond whatever errand brings them there.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    },
+    {
+      "id": "79047ed7-b419-415d-b26e-45e54b58e02e",
+      "title": "Morning Glory with Black",
+      "catalogueTitle": "Morning Glory with Black",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1926",
+      "start": 1926,
+      "end": 1926,
+      "medium": "Oil on canvas",
+      "accession": "1958.42",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/5d5ed580-787a-4d03-9925-bb685e9091e8-279f6696cb1c045f.jpg",
+      "imageSource": "https://clevelandart.org/art/1958.42",
+      "credit": "Bequest of Leonard C. Hanna Jr.. The Cleveland Museum of Art. CC0. Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://clevelandart.org/art/1958.42",
+      "description": "Enlarged petals leave almost no room around the flower. O'Keeffe moves the observer so close that the folds can be read as a surrounding space rather than a small botanical detail. The dark curve at the bottom interrupts the pale surfaces. That interruption matters: it gives the soft folds an edge against which their changes of light become easier to see.",
+      "importance": "",
+      "museum": "Cleveland Museum of Art"
+    }
+  ],
+  "context": {
+    "start": 1470,
+    "end": 1931
+  },
+  "closingSections": [
+    {
+      "title": "Choose a position, then compare",
+      "paragraphs": [
+        "Try pairing a work that admits the viewer closely with one that keeps its subject at a distance. The comparison need not follow dates: Caravaggio and O'Keeffe both restrict the available space, for very different ends. This selection is not a room-by-room route. Check the museum's current object records and visiting information before planning around a particular work."
+      ]
+    }
+  ]
+}

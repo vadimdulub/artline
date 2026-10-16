@@ -9,6 +9,8 @@ import (
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/vadimdulub/artline/apps/server/internal/events"
 )
 
 var bookmarkID = regexp.MustCompile(`^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$`)
@@ -22,6 +24,7 @@ type BookmarkRef struct {
 	ID   string `json:"id"`
 }
 type Bookmark struct {
+	sourceID string
 	BookmarkRef
 	Title        string         `json:"title"`
 	Subtitle     string         `json:"subtitle"`
@@ -36,12 +39,13 @@ type Bookmark struct {
 // Preserve the selected reproduction's own label and credit, separately from
 // artwork rights statuses and from the date of the book or historical event.
 type BookmarkImage struct {
-	ImageURL   string `json:"imageUrl"`
-	SourceURL  string `json:"sourceUrl"`
-	Label      string `json:"label"`
-	Credit     string `json:"credit"`
-	License    string `json:"license"`
-	LicenseURL string `json:"licenseUrl"`
+	Artwork    *events.ArtworkLink `json:"artwork,omitempty"`
+	ImageURL   string              `json:"imageUrl"`
+	SourceURL  string              `json:"sourceUrl"`
+	Label      string              `json:"label"`
+	Credit     string              `json:"credit"`
+	License    string              `json:"license"`
+	LicenseURL string              `json:"licenseUrl"`
 }
 type BookmarkCursor struct {
 	SavedAt time.Time `json:"t"`

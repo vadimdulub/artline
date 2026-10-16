@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "national-museum-oslo",
+  "museum": "National Museum",
+  "city": "Oslo",
+  "country": "Norvège",
+  "title": "Musée national d’Oslo : chefs-d’œuvre",
+  "subtitle": "Fenêtres, garde-corps, rivages et jardins imaginés séparent des espaces de nature différente.",
+  "introduction": "Dans *Le Cri*, le garde-corps trace une diagonale ferme à travers un monde aux contours ondoyants. Ailleurs, un balcon encadre une calme vue d'hiver, et une porte d'église relie la pénombre intérieure au jour. Ces limites ne sont pas de simples commodités du décor. Elles établissent où se tient une figure, ce qui est accessible et comment le monde extérieur entre dans un tableau.\n\nCette sélection passe de Munch à Backer, aux Krohg et à Kielland, parmi des paysages et des sujets de contes. Elle ne demande pas à chaque image d'illustrer l'angoisse. Un seuil peut organiser le travail ordinaire ou la vie collective aussi bien qu'accentuer l'éloignement. Les différences méritent autant d'attention que les formes récurrentes.",
+  "visitNote": "Il s’agit d’une sélection d’œuvres issues de la collection du Musée national. Elles sont distinctes des œuvres conservées au musée MUNCH d’Oslo, qui est une institution indépendante. Veuillez consulter les informations actualisées sur la collection du Musée national concernant l’exposition, les prêts et tout changement éventuel avant de planifier votre visite.",
+  "locale": "fr",
+  "website": "https://www.nasjonalmuseet.no/en/",
+  "officialGuide": "https://www.nasjonalmuseet.no/en/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les chapitres de Speed consacrés à la tonalité, au trait et à la composition fournissent un vocabulaire pratique pour comparer les intérieurs baignés de lumière de Backer et les paysages denses de Balke. L’ouvrage offre une porte d’entrée vers ces différences, sans pour autant constituer la preuve d’une influence directe."
+    }
+  ],
+  "works": [
+    {
+      "id": "3b27f10e-6b48-45cf-8004-d6bc7ec499fc",
+      "title": "Le Cri",
+      "catalogueTitle": "The Scream",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "Détrempe et crayon de cire sur carton",
+      "accession": "NG.M.00939",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/c6909208-ec12-45d4-8a22-ddd029afd397-3c37b0a1092a21a2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:The_Scream_by_Edvard_Munch,_1893_-_Nasjonalgalleriet.png",
+      "credit": "Edvard Munch, The Scream. National Museum, Oslo. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00939",
+      "description": "La ligne droite du garde-corps offre une voie dans la scène, mais le ciel et l'eau refusent sa stabilité. Munch rapproche leurs courbes de la figure bouche ouverte qui se tient la tête. La détresse ne semble plus confinée à un seul corps. La composition y associe l'environnement, sans obliger à prétendre que le paysage émet littéralement un son audible.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "bf70337f-e950-4958-8c3a-e831c0c18e13",
+      "title": "Madonna",
+      "catalogueTitle": "Madonna",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1894",
+      "start": 1894,
+      "end": 1894,
+      "medium": "Huile sur toile",
+      "accession": "NG.M.00841",
+      "image": "https://artlines.org/assets/artworks/wikiart/bf70337f-e950-4958-8c3a-e831c0c18e13-54ea040f64815679.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/madonna-1894",
+      "credit": "Edvard Munch. Madonna. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00841",
+      "description": "Le titre sacré rencontre un corps partiellement dénudé, entouré de cheveux sombres et d'ombre. Une forme rouge évoquant une auréole complique encore le rapport non résolu entre référence dévotionnelle et chair. La tête inclinée et la pose suspendue de Munch n'entrent dans aucune catégorie familière unique. L'ambiguïté vient des éléments réunis dans l'image, non d'une anecdote explicative manquante.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "6f30b012-9e05-5235-a82b-57f3925821b8",
+      "title": "Rue Lafayette",
+      "catalogueTitle": "Street Lafayette",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1891",
+      "start": 1891,
+      "end": 1891,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/6f30b012-9e05-5235-a82b-57f3925821b8-8ed45118124ed49a.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/street-lafayette-1891",
+      "credit": "Edvard Munch. Street Lafayette. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edvard-munch/street-lafayette-1891",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edvard-munch/street-lafayette-1891",
+      "description": "L'homme au balcon voit une activité urbaine dont il reste physiquement séparé. Très bas, de courtes touches colorées animent la rue tout en empêchant de décrire distinctement chaque passant. Munch fait de la distance une condition du regard. La ville devient un champ de mouvements sous un observateur relativement immobile.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "8c082244-d84d-5381-bc1c-a1f19b6a0d66",
+      "title": "Printemps",
+      "catalogueTitle": "Spring",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8c082244-d84d-5381-bc1c-a1f19b6a0d66-aa89cff8d660e950.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/spring-1889",
+      "credit": "Edvard Munch. Spring. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edvard-munch/spring-1889",
+      "description": "La fenêtre lumineuse et le rideau en mouvement rapprochent l'extérieur de la jeune femme pâle et de sa compagne plus âgée. Munch fait cohabiter maladie, soins et signes d'un air renouvelé. Le contraste ne garantit pas la guérison. La clarté peut modifier l'environnement d'une personne vulnérable sans résoudre son état.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "6af8a531-6013-5c88-baba-72ba9c46328e",
+      "title": "Sœur Inger",
+      "catalogueTitle": "Sister Inger",
+      "artist": "Edvard Munch",
+      "artists": [
+        {
+          "name": "Edvard Munch",
+          "role": "primary",
+          "slug": "edvard-munch"
+        }
+      ],
+      "date": "1884",
+      "start": 1884,
+      "end": 1884,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6af8a531-6013-5c88-baba-72ba9c46328e-551f813359310cde.jpg",
+      "imageSource": "https://www.wikiart.org/en/edvard-munch/sister-inger-1884",
+      "credit": "Edvard Munch. Sister Inger. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edvard-munch/sister-inger-1884",
+      "description": "La robe sombre rejoint presque le fond, laissant au visage et aux mains le soin de situer la figure. Leurs positions inégales empêchent ces zones claires de former un emblème symétrique. Munch construit un portrait par des différences mesurées au sein de l'obscurité. Le décor limité concentre la présence du modèle sans autoriser à lui attribuer une humeur intime précise.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "8389ba60-8804-5a6f-8be0-52c88ad50d6e",
+      "title": "Intérieur bleu",
+      "catalogueTitle": "Blue Interior",
+      "artist": "Harriet Backer",
+      "artists": [
+        {
+          "name": "Harriet Backer",
+          "role": "primary",
+          "slug": "harriet-backer-q263025"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "NG.M.02582",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q22303213-a8438aec2ff0e481.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harriet_Backer_-_Blue_Interior_-_Google_Art_Project.jpg",
+      "credit": "Harriet Backer. Blue Interior. Image credit: Harriet Backer; Source credit: hgEgkxpd_4iyCA at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q22303213",
+      "description": "Le secrétaire rouge introduit un contraste net dans la pièce froide, mais Backer ne réserve pas l'attention à la femme assise. Meubles, tableaux et intervalles lumineux restent des sujets à part entière. La figure appartient à l'organisation de la pièce. La couleur la relie à un espace dont l'intérêt ne dépend pas exclusivement de ce qu'elle pourrait penser.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "bddc4aaa-e5a9-59ca-8d93-6963fcc8894d",
+      "title": "Baptême dans l'église de Tanum",
+      "catalogueTitle": "Christening in Tanum Church",
+      "artist": "Harriet Backer",
+      "artists": [
+        {
+          "name": "Harriet Backer",
+          "role": "primary",
+          "slug": "harriet-backer-q263025"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "",
+      "accession": "NG.M.02465",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q21177097-1985d2149b910d7e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harriet_Backer_-_Christening_in_Tanum_Church_-_Google_Art_Project.jpg",
+      "credit": "Harriet Backer. Christening in Tanum Church. Image credit: Harriet Backer; Source credit: HwFRac5hmtoV0w at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q21177097",
+      "description": "La porte relie les figures éclairées de l'extérieur aux personnes déjà assises dans la pénombre de l'église. Backer décrit un événement collectif par l'espace qui l'accueille. Les ouvertures successives font circuler le regard vers l'intérieur et le dehors, sans le fixer uniquement sur la cérémonie du titre. L'architecture donne à l'assemblée des voies d'approche et des lieux d'attente.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "61cad4b0-a9bf-5137-a614-63a4f92ea650",
+      "title": "À la lumière de la lampe",
+      "catalogueTitle": "By Lamp Light",
+      "artist": "Harriet Backer",
+      "artists": [
+        {
+          "name": "Harriet Backer",
+          "role": "primary",
+          "slug": "harriet-backer-q263025"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "NG.M.02323",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q22304362-ce77dae1baf5e8f5.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harriet_Backer_-_By_Lamp_Light_-_Google_Art_Project.jpg",
+      "credit": "Harriet Backer. By Lamp Light. Image credit: Harriet Backer; Source credit: OgEFw8dGHdBwQw at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q22304362",
+      "description": "La portée de la lampe et l'attention de la femme se rejoignent sur son ouvrage. Mains et profil reçoivent assez de lumière chaude pour préciser la posture de travail, tandis que la pièce reste largement assourdie. Backer donne à la concentration une limite visible. L'obscurité n'implique pas nécessairement l'isolement : elle distingue aussi la lumière utile de l'espace dont l'activité n'a pas immédiatement besoin.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "5a250437-bd75-56ce-8305-654fb891ce66",
+      "title": "Une lanterne japonaise",
+      "catalogueTitle": "A Japanese Lantern",
+      "artist": "Oda Krohg",
+      "artists": [
+        {
+          "name": "Oda Krohg",
+          "role": "primary",
+          "slug": "oda-krohg-q271470"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "NG.M.00879",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55423005-b4d84915bcf114d6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Oda_Krohg_-_A_Japanese_Lantern_-_Google_Art_Project.jpg",
+      "credit": "Oda Krohg. A Japanese Lantern. Image credit: Oda Krohg; Source credit: fwGBNpCfAiI86w at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55423005",
+      "description": "Une lumière artificielle chaude est suspendue devant l'eau et les arbres plus froids, au-delà de l'ouverture. Oda Krohg fait coexister ces deux éclairages sans les fondre dans une atmosphère unique. La femme assise reste à leur rencontre. Le seuil établit un rapport entre intérieur et soir au lieu de simplement séparer une pièce de sa vue.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "0e591988-11da-5c55-a44a-cf7a5b76b56d",
+      "title": "Christian Krohg au chevalet",
+      "catalogueTitle": "Christian Krohg at the Easel",
+      "artist": "Oda Krohg",
+      "artists": [
+        {
+          "name": "Oda Krohg",
+          "role": "primary",
+          "slug": "oda-krohg-q271470"
+        }
+      ],
+      "date": "1885–1890",
+      "start": 1885,
+      "end": 1890,
+      "medium": "",
+      "accession": "NMK.2020.0293",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106470890-be130cb7e40846e3.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Oda_Krohg_-_Christian_Krohg_at_the_Easel_-_NMK.2020.0293_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Oda Krohg. Christian Krohg at the Easel. Image credit: Oda Krohg. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q106470890",
+      "description": "L'attention du modèle reste sur la toile ; le spectateur le voit donc de côté. Palette, chaise et posture identifient le travail artistique sans la solennité d'un portrait d'atelier public. Oda Krohg traite librement les alentours en plein air. L'installation pratique suffit à donner au corps occupé une place et un but clairs.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "b1ae11ed-ec7d-554e-a6ca-3ba7ff2c78b5",
+      "title": "Le palais de Soria Moria",
+      "catalogueTitle": "Soria Moria Palace",
+      "artist": "Theodor Kittelsen",
+      "artists": [
+        {
+          "name": "Theodor Kittelsen",
+          "role": "primary",
+          "slug": "theodor-kittelsen-q380085"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "NG.M.00551",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55421468-f236f1fce06d622c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Theodor_Kittelsen_-_Soria_Moria_Palace_-_NG.M.00551_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Theodor Kittelsen. Soria Moria Palace. Image credit: Theodor Kittelsen; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55421468",
+      "description": "Les tours dorées sont nettement visibles, mais la brume cache la structure qui les rattacherait à un lieu accessible. Kittelsen rend la destination visible et inaccessible à la fois. Son caractère merveilleux tient en partie à cette approche manquante. L'éclat permet de reconnaître le palais, tandis que la base dissimulée empêche de comprendre simplement comment s'y rendre.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "0cf2b1a8-e47d-5fd5-833c-949aae41fdca",
+      "title": "Askeladden et le renard",
+      "catalogueTitle": "The Ash Lad and the Fox",
+      "artist": "Theodor Kittelsen",
+      "artists": [
+        {
+          "name": "Theodor Kittelsen",
+          "role": "primary",
+          "slug": "theodor-kittelsen-q380085"
+        }
+      ],
+      "date": "1900",
+      "start": 1900,
+      "end": 1900,
+      "medium": "",
+      "accession": "NG.M.00547",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55421461-9b82bf704ec0da34.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Theodor_Kittelsen_-_The_Ash_Lad_and_the_Fox_-_NG.M.00547_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Theodor Kittelsen. The Ash Lad and the Fox. Image credit: Theodor Kittelsen; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55421461",
+      "description": "Le garçon et le renard dressé se font face dans une clairière ; leur pause donne à la rencontre une forme sociale familière. Kittelsen n'a guère besoin d'un décor spectaculaire pour introduire l'impossible du conte. Un chemin reconnaissable et la distance entre deux figures suffisent. Le participant inhabituel entre dans un cadre dont l'échelle reste par ailleurs plausible.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "b982d693-9771-5965-80e8-4991b2326b13",
+      "title": "L'hiver au balcon",
+      "catalogueTitle": "Winter on the Balcony",
+      "artist": "Harald Sohlberg",
+      "artists": [
+        {
+          "name": "Harald Sohlberg",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1367020"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "NMK.2021.0434",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111496870-e4513948e41006c2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Harald_Sohlberg_-_Winter_on_the_Balcony_-_NMK.2021.0434_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Harald Sohlberg. Winter on the Balcony. Image credit: Harald Sohlberg; Source credit: Nasjonalmuseet for kunst, arkitektur og design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111496870",
+      "description": "Le garde-corps demeure proche et précis, alors que l'eau et le terrain au-delà offrent peu d'activité. Sohlberg inclut le poste d'observation abrité dans le paysage au lieu de l'effacer pour dégager la vue. Celle-ci appartient à quelqu'un situé sur une limite, non à un œil flottant librement dehors. Les couleurs assourdies renforcent la séparation sans lui assigner une émotion unique.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "7917e329-eb24-5cc6-a12f-c04d350433c4",
+      "title": "Stetind dans la brume",
+      "catalogueTitle": "Stetind in Mist",
+      "artist": "Peder Balke",
+      "artists": [
+        {
+          "name": "Peder Balke",
+          "role": "primary",
+          "slug": "peder-balke-research-1c8dae003685"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7917e329-eb24-5cc6-a12f-c04d350433c4-b63b7ed5f2a2d454.jpg",
+      "imageSource": "https://www.wikiart.org/en/peder-balke/stetind-in-mist-1865",
+      "credit": "Peder Balke. Stetind in Mist. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/peder-balke/stetind-in-mist-1865",
+      "description": "La pointe du sommet est plus nette que l'essentiel du terrain qui la porte. Balke laisse la brume retirer des informations, afin qu'un contour décisif établisse la montagne. Rivage sombre et lointain pâle lui donnent une échelle par contraste. La force de la scène vient de cette définition sélective, non d'un relevé également détaillé de chaque partie du vaste site.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "b8bbf977-aaae-5c24-9404-f853beb0efd0",
+      "title": "Phare sur la côte norvégienne",
+      "catalogueTitle": "Lighthouse on the Norwegian Coast",
+      "artist": "Peder Balke",
+      "artists": [
+        {
+          "name": "Peder Balke",
+          "role": "primary",
+          "slug": "peder-balke-research-1c8dae003685"
+        }
+      ],
+      "date": "1850–1860",
+      "start": 1850,
+      "end": 1860,
+      "medium": "",
+      "accession": "NG.M.01320",
+      "image": "https://artlines.org/assets/artworks/imported/country-expansion-20260914/norwegian/q20113250-b4e6b507eb68360c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Peder_Balke_-_Lighthouse_on_the_Norwegian_Coast_-_NG.M.01320_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Lighthouse on the Norwegian Coast. Peder Balke; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q20113250",
+      "description": "Le phare oppose une mince verticale aux vastes mouvements de l'eau et des nuages. Sa petitesse aide à mesurer la turbulence de la côte. Balke lui donne une forme pâle lisible, mais peu de pouvoir sur l'environnement. Une construction destinée à faciliter la navigation apparaît dans des conditions manifestement plus vastes que sa portée.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "5eae5fb4-54db-5edc-aa41-984f2f48aec1",
+      "title": "Nuit d'été",
+      "catalogueTitle": "Summer Night",
+      "artist": "Kitty Lange Kielland",
+      "artists": [
+        {
+          "name": "Kitty Lange Kielland",
+          "role": "primary",
+          "slug": "kitty-lange-kielland-q2596759"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "NG.M.00357",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55424945-375df761dc462020.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kitty_Kielland_-_Summer_Night_-_Google_Art_Project.jpg",
+      "credit": "Kitty Lange Kielland. Summer Night. Image credit: Kitty Lange Kielland; Source credit: PwGtQgwyhKNSTw at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55424945",
+      "description": "Kielland maintient le soir par des rapports de tons proches plutôt que par un point lumineux spectaculaire. Roseaux, nénuphars et reflets introduisent de petites différences au bord de l'eau. La scène demande de suivre ces variations, non un événement dramatique. Le calme n'est pas un manque d'information : il change l'échelle à laquelle celle-ci mérite d'être observée.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "f18ea841-fd13-5a87-aebd-9a44ccb76a54",
+      "title": "Vue sur la mer depuis Ogna, Jæren",
+      "catalogueTitle": "View over the Sea from Ogna, Jæren",
+      "artist": "Kitty Lange Kielland",
+      "artists": [
+        {
+          "name": "Kitty Lange Kielland",
+          "role": "primary",
+          "slug": "kitty-lange-kielland-q2596759"
+        }
+      ],
+      "date": "1878",
+      "start": 1878,
+      "end": 1878,
+      "medium": "",
+      "accession": "NG.M.00975",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55425166-e4df9d2b6ef89223.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kitty_Kielland_-_View_over_the_Sea_from_Ogna,_J%C3%A6ren_-_NG.M.00975_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Kitty Lange Kielland. View over the Sea from Ogna, Jæren. Image credit: Kitty Lange Kielland; Source credit: National Museum of Art, Architecture and Design. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55425166",
+      "description": "Rochers arrondis et chenaux peu profonds compliquent le terrain proche avant que le regard n'atteigne la pleine mer. Kielland rend cette approche tangible par les surfaces irrégulières et la végétation basse. L'horizon est relativement simple, mais le premier plan refuse un passage rapide. Une côte se comprend aussi par ce qui se trouve près des pieds, et pas seulement par le panorama lointain.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "2c75da72-0951-5e7f-87bb-a5f7f0203819",
+      "title": "Balestrand",
+      "catalogueTitle": "Balestrand",
+      "artist": "Hans Gude",
+      "artists": [
+        {
+          "name": "Hans Gude",
+          "role": "primary",
+          "slug": "hans-gude-q701669"
+        }
+      ],
+      "date": "1848",
+      "start": 1848,
+      "end": 1848,
+      "medium": "",
+      "accession": "NMK.2021.0108",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q106019345-09cd4feb8f4272a2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hans_Gude_-_Balestrand_-_NMK.2021.0108_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "credit": "Hans Gude. Balestrand. Image credit: Hans Gude. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q106019345",
+      "description": "Les petites figures et les bâtiments fixent une échelle familière sur la rive avant que les montagnes ne l'élargissent. Gude sépare rocher proche, eau et pentes en distances lisibles, la lumière distinguant certaines zones. Le fjord reste imposant sans devenir une grandeur informe. L'habitat fournit un repère pour apprécier la longue traversée du paysage.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "974df0f1-a12c-53b6-ab70-d590af47d167",
+      "title": "Une forêt",
+      "catalogueTitle": "A Forest",
+      "artist": "Lars Hertervig",
+      "artists": [
+        {
+          "name": "Lars Hertervig",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1346539"
+        }
+      ],
+      "date": "1853",
+      "start": 1853,
+      "end": 1853,
+      "medium": "",
+      "accession": "NG.M.02009",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q55424736-548af4d03863de35.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lars_Hertervig_-_A_Forest_-_Google_Art_Project.jpg",
+      "credit": "Lars Hertervig. A Forest. Image credit: Lars Hertervig; Source credit: EwG0W3HsCM_1KA at Google Cultural Institute , zoom level maximum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q55424736",
+      "description": "Les arbres du premier plan ferment une grande partie de la vue, mais une ouverture lointaine et une bande pâle de nuages empêchent la clôture totale. Hertervig répartit inégalement la visibilité. Le regard doit négocier des masses denses avant de trouver la clarté derrière elles : la tension vient de l'arrangement lui-même. Aucun événement inventé dans les bois n'est nécessaire pour expliquer cet accès difficile.",
+      "importance": "",
+      "museum": "National Museum"
+    },
+    {
+      "id": "237f313c-1752-5127-8c2e-6dd6dcba025a",
+      "title": "L'Âge d'or",
+      "catalogueTitle": "The Golden Age",
+      "artist": "Lucas Cranach the Elder",
+      "artists": [
+        {
+          "name": "Lucas Cranach the Elder",
+          "role": "primary",
+          "slug": "lucas-cranach-the-elder-q191748"
+        }
+      ],
+      "date": "1530",
+      "start": 1530,
+      "end": 1530,
+      "medium": "Huile sur bois",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/237f313c-1752-5127-8c2e-6dd6dcba025a-85157d715a672658.jpg",
+      "imageSource": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-golden-age",
+      "credit": "The Golden Age. WikiArt; Lucas Cranach the Elder. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lucas-cranach-the-elder/the-golden-age",
+      "description": "Des figures au repos, dansantes ou au bain partagent un jardin avec des animaux et des arbres fruitiers. Cranach rend l'harmonie imaginée concrète par diverses activités sans inquiétude, puis l'entoure d'un mur. Cette limite mérite attention : le monde idéal est visiblement tenu à part. Son aisance dépend d'un enclos organisé, non d'une prétention à décrire la vie ordinaire au-dehors.",
+      "importance": "",
+      "museum": "National Museum"
+    }
+  ],
+  "context": {
+    "start": 1530,
+    "end": 1900
+  },
+  "closingSections": [
+    {
+      "title": "Suivre une limite",
+      "paragraphs": [
+        "Choisissez une fenêtre, un rivage ou un garde-corps et observez ce qui change de part et d'autre. L'exercice relie ces œuvres sans les réduire à une seule humeur nationale. Cette sélection concerne le Musée national, non la collection distincte du MUNCH ni un accrochage actuel fixe. Confirmez auprès du musée la présence des œuvres et les conditions d'accès avant votre visite."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Компания Artline отобрала эти произведения из задокументированных музейных фондов. Данная подборка сформирована независимо от музея; отдельные работы могут находиться на временной выставке в другом месте или быть сняты с экспозиции. Датировка и атрибуция приводятся с учетом оговорок, содержащихся в соответствующих записях.",
+  "labels": {
+    "guides": "Все путеводители",
+    "download": "Скачать PDF",
+    "language": "Язык путеводителя",
+    "translation": "Перевод с помощью ИИ",
+    "explore": "Эта подборка в Artline",
+    "contextNote": "Посмотрите выбранные работы рядом с книгами и событиями их времени или сравните годы жизни художников. Книги и события дают исторический контекст, но не доказывают прямого влияния. Работы без подтверждённой даты остаются в путеводителе.",
+    "all": "Произведения искусства в контексте",
+    "allHint": "Избранные работы, связанные с книгами и историей их эпохи.",
+    "painters": "Кто когда жил?",
+    "paintersHint": "Узнайте, когда жили эти художники и чьи жизненные пути пересекались.",
+    "events": "Исторические события",
+    "eventsHint": "События за период, охваченный путеводителем",
+    "books": "Хронология книг",
+    "booksHint": "Значимые книги того же периода",
+    "contents": "Произведения",
+    "artworks": "Выбранные произведения",
+    "importance": "Почему это важно",
+    "artwork": "Открыть произведение",
+    "source": "Страница произведения в источнике",
+    "inventory": "Инвентарный номер",
+    "reading": "Что почитать",
+    "visit": "Перед посещением",
+    "website": "Сайт музея",
+    "officialGuide": "Материалы музея",
+    "updated": "Дата проверки источников и информации для посетителей"
+  },
+  "slug": "van-gogh-museum",
+  "museum": "Van Gogh Museum",
+  "city": "Амстердам",
+  "country": "Нидерланды",
+  "title": "Музей Ван Гога: шедевры",
+  "subtitle": "Двадцать работ, в которых цвет, кадрирование и внимательное наблюдение важнее привычных биографических историй.",
+  "introduction": "В «Подсолнухах» лепестки, ваза и окружающее пространство различаются внутри близких оттенков жёлтого. Голубые промежутки «Цветущего миндаля» выполняют другую задачу: среди подробно написанных ветвей остаётся виден воздух. Это практические живописные решения. Они позволяют подойти к Ван Гогу, не начиная с попытки прочитать каждый мазок как симптом.\n\nРаботы Гогена, Бернара, Анграна и других расширяют сравнение. Ван Гог оказывается среди людей, делавших иной выбор, а не вне художественного обмена. В подборку также входят рисунки и ранние сюжеты, чья более тихая манера нарушает ожидание, что его произведения всегда должны заявлять о себе ярким цветом.",
+  "visitNote": "Перед посещением ознакомьтесь с информацией о билетах и коллекции музея. Некоторые произведения могут быть временно переданы на другие выставки или отсутствовать в текущей экспозиции, а графические работы особенно чувствительны к длительному воздействию света.",
+  "locale": "ru",
+  "website": "https://www.vangoghmuseum.nl/",
+  "officialGuide": "https://www.vangoghmuseum.nl/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Vincent van Gogh: The Letters",
+      "author": "Vincent van Gogh; edited by Leo Jansen, Hans Luijten and Nienke Bakker",
+      "url": "https://vangoghletters.org/",
+      "access": "Читайте бесплатно — переводы на английский и оригинальные тексты",
+      "note": "Издание писем, подготовленное Музеем Ван Гога и Институтом Гюйгенса, включает оригинальные тексты, переводы на английский язык, изображения и научные комментарии. Воспользуйтесь поиском по произведениям искусства, чтобы сравнить то, что на самом деле писал Ван Гог, с более поздними интерпретациями его картин."
+    }
+  ],
+  "works": [
+    {
+      "id": "286a736a-700b-53b9-9e62-3e49ed28a96f",
+      "title": "Едоки картофеля",
+      "catalogueTitle": "The Potato Eaters",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/286a736a-700b-53b9-9e62-3e49ed28a96f-c55f92f849e13db7.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-potato-eaters-1885-1",
+      "credit": "Vincent van Gogh. The Potato Eaters. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/the-potato-eaters-1885-1",
+      "description": "Лампа собирает пятерых людей в небольшом круге общего света. Угловатые руки связывают лица с блюдом, превращая трапезу в физическое занятие, а не постановочный семейный портрет. Коричнево-зелёный интерьер Ван Гога удерживает фигуры в связи с окружением. Грубоватость распределена по всей сцене, а не выделена как черта одного человека.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "153ccea9-bef6-4b1e-ba20-3ebd31a08915",
+      "title": "Подсолнухи",
+      "catalogueTitle": "Sunflowers",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Январь 1889 года",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Холст, масло",
+      "accession": "s0031V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/153ccea9-bef6-4b1e-ba20-3ebd31a08915-ad8ad3399ed7937b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Zonnebloemen_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Sunflowers. Image credit: Vincent van Gogh; Source credit: Google Arts & Culture — hwEGmsM-FoHAwA. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0031V1962",
+      "description": "В букете есть поднятые и поникшие цветы; тёмные семенные головки прерывают жёлтый. Благодаря этим различиям ограниченная палитра не становится однообразной. Ван Гог находит место каждой стадии роста и каждому направлению. Привычность сюжета может скрывать трудную задачу картины: сделать множество разных форм ясными с помощью близких цветов.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "7c5b8360-fd4f-4ca5-9dc0-8f26aecca79c",
+      "title": "Цветущий миндаль",
+      "catalogueTitle": "Almond Blossom",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Февраль 1890 года",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Холст, масло",
+      "accession": "s0176V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/7c5b8360-fd4f-4ca5-9dc0-8f26aecca79c-1bcaa5fa36a49865.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Almond Blossom. Image credit: Vincent van Gogh; Source credit: dAFXSL9sZ1ulDw at Google Cultural Institute maximum zoom level. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0176V1962",
+      "description": "Ствол и широкое окружение дерева исключены: изображение организуют ветви и промежутки между ними. Музей сообщает, что картина была подарком новорождённому племяннику Ван Гога. Повод важен, но не заменяет зрительного построения: светлые цветы остаются различимыми благодаря голубому фону, дающему пространство их сложной сети.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "69037a2c-bf50-4d89-9ab6-66088aafd002",
+      "title": "Пшеничное поле с воронами",
+      "catalogueTitle": "Wheatfield with Crows",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Июль 1890 года",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Холст, масло",
+      "accession": "s0149V1962",
+      "image": "https://artlines.org/assets/artworks/wikiart/69037a2c-bf50-4d89-9ab6-66088aafd002-f8543290c619e117.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/wheatfield-with-crows-1890",
+      "credit": "Vincent van Gogh. Wheatfield with Crows. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0149V1962",
+      "description": "Тропы предлагают соперничающие пути в пшеницу, а тёмные птицы и сильные мазки сохраняют активность неба. Напряжение возникает без истории о том, что это последняя картина Ван Гога. Музей опровергает устойчивое утверждение. Чтение работы как заранее определённого прощания может заслонить конкретные решения, из-за которых пейзаж не удаётся привести к спокойному равновесию.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "70dfc39d-3fb0-4e15-8509-6e0a61fec666",
+      "title": "Жёлтый дом",
+      "catalogueTitle": "The Yellow House (The Street)",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Сентябрь 1888 года",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Холст, масло",
+      "accession": "s0032V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/70dfc39d-3fb0-4e15-8509-6e0a61fec666-376df0bcec87d843.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_yellow_house_(%27The_street%27).jpg",
+      "credit": "Vincent van Gogh. The Yellow House (The Street). Image credit: Vincent van Gogh; Source credit: Van Gogh Museum. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0032V1962",
+      "description": "Жёлтое здание легко узнать на фоне глубокого синего неба, но оно не одиноко. Соседние дома, прохожие и открытая улица сохраняют его внутри действующего города. Ван Гог даёт определённому жилищу сильную цветовую узнаваемость, не убирая обычное окружение. Даже став названным сюжетом картины, дом остаётся частью более широкой улицы.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "f2d80116-debe-44bb-a01d-a15f287e716c",
+      "title": "Автопортрет в серой фетровой шляпе",
+      "catalogueTitle": "Self-Portrait with Grey Felt Hat",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Сентябрь–октябрь 1887 года",
+      "start": 1887,
+      "end": 1887,
+      "medium": "Холст (хлопок), масло",
+      "accession": "s0016V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/f2d80116-debe-44bb-a01d-a15f287e716c-eb659a28c3685d1f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Self-Portrait with Grey Felt Hat. Image credit: Vincent van Gogh; Source credit: PgEJ1hPIzqsM2w at Google Cultural Institute maximum zoom level. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0016V1962",
+      "description": "Короткие мазки меняют направление вокруг шляпы, лица и одежды. Оранжевое в бороде перекликается с соседними холодными участками: в портретном сходстве участвуют контрасты за пределами самих черт. Ван Гог пишет голову вместе с окружающим пространством. Он испытывает возможности мазка и цвета в изображении лица, а не просто раскрывает свой темперамент.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "ae612a6b-48df-56fc-91ce-14527bcd0671",
+      "title": "Ван Гог, пишущий подсолнухи",
+      "catalogueTitle": "Van Gogh Painting Sunflowers",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ae612a6b-48df-56fc-91ce-14527bcd0671-0ac0cbe339ea8dd4.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/van-gogh-painting-sunflowers-1888",
+      "credit": "Paul Gauguin. Van Gogh Painting Sunflowers. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-gauguin/van-gogh-painting-sunflowers-1888",
+      "description": "Гоген показывает художника за делом: согнутая рука связывает занятие с цветами рядом. Крупные цветовые участки дают этому Ван Гогу окружение, отличное от беспокойных мазков его собственных автопортретов. Изображение, созданное коллегой, тоже является интерпретацией. Его не следует принимать за ничем не опосредованный взгляд за кулисы живописи Ван Гога.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "f4ba57ab-bb58-58a7-8f79-9685758c7831",
+      "title": "Кресло Гогена",
+      "catalogueTitle": "Paul Gauguin's Armchair",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f4ba57ab-bb58-58a7-8f79-9685758c7831-2fe888ad0abbf669.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/paul-gauguin-s-armchair-1888",
+      "credit": "Vincent van Gogh. Paul Gauguin's Armchair. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/paul-gauguin-s-armchair-1888",
+      "description": "Книги и горящая свеча занимают пустое сиденье, делая отсутствие конкретным без изображения человека. Изогнутая мебель, зелёная стена и узорный пол задают отношения форм и цветов. Ван Гог поручает выбранным предметам часть задач портрета. Кресло может напоминать о названном владельце, не становясь полным рассказом о его личности.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "d5e99e6e-64b8-5888-9ffa-88f2ac8fe832",
+      "title": "Розовое персиковое дерево",
+      "catalogueTitle": "The pink peach tree",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "s0025V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11751766-476aec6e39e5cb8a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_De_roze_perzikboom_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. The pink peach tree. Image credit: Vincent van Gogh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11751766",
+      "description": "Цветы рассеяны, а не собраны в единую светлую крону. Промежутки сохраняют тонкие ветки различимыми на фоне неба; ограда и меньшие стволы помещают дерево в сад. Ван Гог сочетает близкое внимание к отдельному растению с достаточным окружением, чтобы оно не оказалось изолированным. Открытая структура важна не меньше множества цветочных мазков.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "80a335b6-72d2-5ff3-91d7-5ef9d41fdcda",
+      "title": "Столик в кафе с абсентом",
+      "catalogueTitle": "Café table with absinth",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "s0186V1962",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q10335778-fc2b8ba0f09bdcda.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Caf%C3%A9tafel_met_absint_-_Google_Art_Project.jpg",
+      "credit": "Vincent van Gogh. Café table with absinth. Image credit: Vincent van Gogh. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q10335778",
+      "description": "Стакан и графин стоят перед другой прозрачной поверхностью — окном. Отражения и улица за ним усложняют простое деление на ближние предметы и дальний фон. У Ван Гога мы одновременно смотрим сквозь стекло и на него. Столик предлагает компактную обстановку для задачи, выходящей за пределы немногих вещей: прозрачность открывает пространство и одновременно прерывает его.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "c6b1a083-3588-5ada-b83f-14daadd89e50",
+      "title": "Фрина",
+      "catalogueTitle": "Phryne",
+      "artist": "Gustave Boulanger",
+      "artists": [
+        {
+          "name": "Gustave Boulanger",
+          "role": "primary",
+          "slug": "gustave-boulanger-q726564"
+        }
+      ],
+      "date": "1850",
+      "start": 1850,
+      "end": 1850,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q114440039-735cdaae1fcf5e5f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Phryne_by_Gustave_Boulanger.jpg",
+      "credit": "Gustave Boulanger. Phryne. Image credit: Gustave Boulanger. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q114440039",
+      "description": "Тщательно моделированная кожа и мягкая обстановка Буланже создают тело иной отделки, чем фигуры Ван Гога. Поднятая рука и полулежащая поза принадлежат постановочному показу, а не прерванному домашнему занятию. Сравните манеру, не считая один подход заведомым улучшением другого. Каждый поручает живописи служить своему представлению об изображении.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "6afc6ea8-f314-5e8e-85d5-eadfa26c6cd9",
+      "title": "Сена. Утро в Сент-Уане",
+      "catalogueTitle": "The Seine, Morning (Saint-Ouen)",
+      "artist": "Charles Angrand",
+      "artists": [
+        {
+          "name": "Charles Angrand",
+          "role": "primary",
+          "slug": "charles-angrand-nga-10653"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "s0524S2012",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19837988-e47c8feb4a890181.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:De_Seine,_ochtend_(Saint-Ouen)_-_s0524S2012_-_Van_Gogh_Museum.jpg",
+      "credit": "Charles Angrand. The Seine, Morning (Saint-Ouen). Image credit: Charles Angrand. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19837988",
+      "description": "На широкой реке мало событий, способных сразу захватить внимание. Ангран работает с небольшими сдвигами светлых, близких тонов, придавая воде тихую, но не пустую поверхность. Деревья и здания обозначают невысокую даль. Картина уравновешивает примеры сильных цветовых контрастов: сдержанность тоже требует множества тонких решений.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "305dbed8-46e4-5772-8df3-36b9c44ef098",
+      "title": "Автопортрет с портретом Гогена",
+      "catalogueTitle": "Self-Portrait with Portrait of Gauguin",
+      "artist": "Émile Bernard",
+      "artists": [
+        {
+          "name": "Émile Bernard",
+          "role": "primary",
+          "slug": "emile-bernard-q264193"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/305dbed8-46e4-5772-8df3-36b9c44ef098-5e6d311496e7433b.jpg",
+      "imageSource": "https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "credit": "Émile Bernard. Self-Portrait with Portrait of Gauguin. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/emile-bernard/self-portrait-with-portrait-of-gauguin-1888",
+      "description": "Бернар помещает своё обрезанное краем лицо рядом с меньшим изображением Гогена, но два портрета не притворяются частями единого пространства. Светло-голубой связывает их поверх этого различия. Самоописание включает присутствие другого художника. Отношения создаются расположением изображений, а не сценой совместного пребывания мужчин.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "b7f3d4be-7aae-5e76-ba5a-2fe51756552f",
+      "title": "Сенокос в Эраньи",
+      "catalogueTitle": "The Harvest of Hay in Eragny",
+      "artist": "Camille Pissarro",
+      "artists": [
+        {
+          "name": "Camille Pissarro",
+          "role": "primary",
+          "slug": "camille-pissarro-q134741"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/b7f3d4be-7aae-5e76-ba5a-2fe51756552f-3db64dcce6be19dd.jpg",
+      "imageSource": "https://www.wikiart.org/en/camille-pissarro/the-harvest-of-hay-in-eragny-1887",
+      "credit": "Camille Pissarro. The Harvest of Hay in Eragny. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/camille-pissarro/the-harvest-of-hay-in-eragny-1887",
+      "description": "Движения работников повторяются среди стогов, задавая полю рисунок повторяющегося труда. Писсарро проводит маленькие цветные мазки по людям и земле, связывая занятия с построением пейзажа. Фигуры остаются узнаваемыми без совершенно отдельной манеры письма. Сравните, как в следующем рисунке Ван Гог отделяет согнутое тело от деревьев.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "4ef221ef-771b-5140-b064-15f7474f4f83",
+      "title": "Женщина, подбирающая палку перед деревьями",
+      "catalogueTitle": "A Woman Picking Up a Stick in Front of Trees",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Мел на бумаге",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/4ef221ef-771b-5140-b064-15f7474f4f83-0cf9f4171d45d913.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/a-woman-picking-up-a-stick-in-front-of-trees-1890",
+      "credit": "A Woman Picking Up a Stick in Front of Trees. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/a-woman-picking-up-a-stick-in-front-of-trees-1890",
+      "description": "Резкий сгиб тела делает действие ясным раньше, чем удаётся разобраться в окружающей листве. Затем разные направления штрихов различают одежду, стволы и листья. Ван Гог сохраняет открытость рисунка, сообщая достаточно для понимания занятия. Экономия заключается в выборе необходимых следов, а не просто в уменьшении их числа повсюду.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "ac64d07d-7219-5878-aeb4-0c287a27cd00",
+      "title": "Угольная шахта в Боринаже",
+      "catalogueTitle": "Coalmine in the Borinage",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1879",
+      "start": 1879,
+      "end": 1879,
+      "medium": "Карандаш и акварель на бумаге",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/ac64d07d-7219-5878-aeb4-0c287a27cd00-c0cba766b8b96e94.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/coalmine-in-the-borinage-1879",
+      "credit": "Coalmine in the Borinage. WikiArt; Vincent van Gogh. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/coalmine-in-the-borinage-1879",
+      "description": "Низкие здания и дымящие трубы тянутся по скупому пейзажу. Маленькие фигуры задают человеческий масштаб перед промышленными сооружениями. Ранняя работа обращается к среде труда без яркой палитры, позднее тесно связанной с Ван Гогом. Её присутствие в подборке сохраняет рабочую среду как самостоятельный сюжет и не сводит развитие художника к смене цвета.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "5a214e8a-d1fc-4405-985e-9aab29c09720",
+      "title": "Спальня",
+      "catalogueTitle": "The Bedroom",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "Октябрь 1888 года",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Холст, масло",
+      "accession": "s0047V1962",
+      "image": "https://uploads1.wikiart.org/images/vincent-van-gogh/vincent-s-bedroom-in-arles-1888.jpg!Large.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/vincent-s-bedroom-in-arles-1888",
+      "credit": "Vincent van Gogh, The Bedroom, 1888. Reproduction via WikiArt; source label: Public domain.",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0047V1962",
+      "description": "Большая кровать и два стула оставляют в комнате мало незанятого места. Наклонённая мебель и висящие картины подчёркивают упрощённую геометрию. Ван Гог создаёт жилой интерьер чёткими границами и цветовыми отношениями, а не нейтральным архитектурным измерением. Амстердамская картина — вариант 1888 года; её не следует смешивать с позднейшими версиями и соответствующими рисунками в письмах.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "5877359e-9e5c-5034-b23a-6bc82a5efeb9",
+      "title": "Ирисы",
+      "catalogueTitle": "Still Life with Irises",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/5877359e-9e5c-5034-b23a-6bc82a5efeb9-3113aa075790e9f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/still-life-with-irises-1890",
+      "credit": "Vincent van Gogh. Still Life with Irises. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/still-life-with-irises-1890",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0050V1962",
+      "description": "Цветы выступают на фоне жёлтого, а острые листья и падающие стебли нарушают границу букета. Нынешняя синева не вполне соответствует сочетанию, написанному Ван Гогом: выцветший красный пигмент сдвинул ирисы от фиолетового к синему. Контраст остаётся сильным, но история материалов важна. Репродукция фиксирует сегодняшнее состояние картины, а не неизменное первоначальное решение.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "764da244-fc11-5990-9ab2-266d472ca5b5",
+      "title": "Башмаки",
+      "catalogueTitle": "A Pair of Shoes",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/764da244-fc11-5990-9ab2-266d472ca5b5-e64c567bb99b3566.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/a-pair-of-shoes-1886",
+      "credit": "Vincent van Gogh. A Pair of Shoes. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/a-pair-of-shoes-1886",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.vangoghmuseum.nl/en/collection/s0011V1962",
+      "description": "Башмаки обращены к зрителю под разными углами, открывая потёртую кожу, отверстия и шнурки. Ван Гог даёт им достаточно пространства, чтобы стать сюжетом без установленного владельца или придуманного эпизода. Следы использования видны; полная история жизни — нет. Сосредоточенность внимания сопоставима с портретом, хотя предметы не могут ответить взглядом.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    },
+    {
+      "id": "c0d7c470-a49a-5c30-9ae5-accb2a7dfeff",
+      "title": "Вид Арля с ирисами на переднем плане",
+      "catalogueTitle": "View of Arles with Irises in the Foreground",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "Холст, масло",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-ten-twenty-batches-round2-20261011/c0d7c470-a49a-5c30-9ae5-accb2a7dfeff-9f513757eccebc0a.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "credit": "Vincent van Gogh. View of Arles with Irises in the Foreground. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/view-of-arles-with-irises-in-the-foreground-1888",
+      "description": "Ближние цветы ведут к полосам обработанной земли, затем — к далёкому городу. Ради ясности глубины Ван Гог не жертвует активным узором переднего плана. Повторяющиеся цветовые области создают переход, а деревья прерывают дальнюю линию. Ирисы одновременно принадлежат близкому изучению растений и гораздо более широкому изображению места.",
+      "importance": "",
+      "museum": "Van Gogh Museum"
+    }
+  ],
+  "context": {
+    "start": 1850,
+    "end": 1890
+  },
+  "closingSections": [
+    {
+      "title": "Сохраняйте конкретность сравнения",
+      "paragraphs": [
+        "Проследите одно решение в нескольких работах: промежутки между ветвями, изображение рук или направление мазков. Биография может появиться там, где её уместность подтверждена. Сверяйтесь с актуальными музейными сведениями о показе и доступе: принадлежность коллекции не гарантирует, что все выбранные работы удастся увидеть за один визит."
+      ]
+    }
+  ]
+}

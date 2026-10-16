@@ -1,0 +1,210 @@
+{
+  "status": "deployed_and_verified",
+  "site": "https://artlines.org",
+  "change": "Shared Back navigation on every page, with internal history preservation, parent-route fallback, 44px targets and responsive icon-only presentation.",
+  "review": {
+    "pageRouteFiles": 24,
+    "existingOverlayExitControls": "RecordDrawer, ArtworkViewer, ExplorerFrame and StudyDialog retain their existing close/exit behavior.",
+    "directEntryFallbacks": {
+      "artwork": "artist record",
+      "artist": "artist directory",
+      "museum": "museum directory",
+      "guideEdition": "guide directory",
+      "study": "study list",
+      "other": "painter timeline"
+    },
+    "history": "Actual pushState entries are marked; replaceState preserves the marker. Back/forward traversal retains each entry state; Next internal state is preserved."
+  },
+  "validation": {
+    "targetedTests": 19,
+    "targetedLint": "passed",
+    "fullSuiteBeforeFinalHistoryFix": {
+      "passed": 514,
+      "failed": 1,
+      "failure": "Existing sitemap test expects 60 guide editions; actual content contains 860."
+    },
+    "localBrowser": {
+      "viewports": [
+        1440,
+        1024,
+        768,
+        390,
+        320
+      ],
+      "passed": true,
+      "checks": [
+        "44px minimum target",
+        "No horizontal overflow",
+        "Internal navigation return",
+        "Return after replacement of filter URL",
+        "Direct-entry guide fallback"
+      ],
+      "screenshotsViewed": [
+        1440,
+        320
+      ]
+    },
+    "inAppBrowser": "Connection failed with missing sandboxPolicy; standalone Playwright used.",
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "candidateHTTPRoutes": 20,
+    "publicHTTPRoutes": 20,
+    "candidateBrowser": [
+      {
+        "width": 1440,
+        "backTarget": {
+          "x": 24,
+          "y": 8.25,
+          "width": 70.34375,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 1024,
+        "backTarget": {
+          "x": 24,
+          "y": 8.25,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 768,
+        "backTarget": {
+          "x": 24,
+          "y": 8.25,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 390,
+        "backTarget": {
+          "x": 16,
+          "y": 4,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 320,
+        "backTarget": {
+          "x": 16,
+          "y": 4,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      }
+    ],
+    "publicBrowser": [
+      {
+        "width": 1440,
+        "backTarget": {
+          "x": 24,
+          "y": 8.25,
+          "width": 70.34375,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 1024,
+        "backTarget": {
+          "x": 24,
+          "y": 8.25,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 768,
+        "backTarget": {
+          "x": 24,
+          "y": 8.25,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 390,
+        "backTarget": {
+          "x": 16,
+          "y": 4,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      },
+      {
+        "width": 320,
+        "backTarget": {
+          "x": 16,
+          "y": 4,
+          "width": 44,
+          "height": 44
+        },
+        "historyReturned": true
+      }
+    ],
+    "assetChecks": [
+      {
+        "path": "/guides/artemisia-gentileschi/pdf/en",
+        "status": 200,
+        "contentType": "application/pdf"
+      },
+      {
+        "path": "/guides/louvre/pdf/en",
+        "status": 200,
+        "contentType": "application/pdf"
+      },
+      {
+        "path": "/brand/artlines-wordmark.webp",
+        "status": 200,
+        "contentType": "image/webp"
+      }
+    ]
+  },
+  "scope": {
+    "runtimeFiles": [
+      "components/BackNavigation.tsx",
+      "components/SiteHeader.tsx",
+      "components/SiteNavigation.css"
+    ],
+    "source": "Exact women-artist guide release source, with existing museum guides and study sharing, plus the three reviewed Back navigation files. Pending local guide-sidebar changes remain excluded.",
+    "catalogueWrites": false,
+    "commits": false,
+    "terraformApply": false,
+    "packaging": "Final image inherits the live women-guide image asset layers; freshly compiled standalone application and static bundles overlay them. Build-only Dockerfile and dockerignore adjustments exclude duplicated public assets and PDFs from the compiler context; workspace Dockerfile unchanged."
+  },
+  "privateEvidence": "/Users/vadimdulub/Library/Application Support/Artline/backups/back-navigation-20261011",
+  "buildCorrections": "Missing History receiver annotations fixed before deployment; targeted tests, lint and TypeScript passed.",
+  "verifiedAt": "2026-10-11T16:44:27.244102+00:00",
+  "deployment": {
+    "buildId": "cf074e5f-454f-475d-b925-0f73ba7aa066",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:back-20261011-v1",
+    "files": {
+      "components/SiteHeader.tsx": "25af3764aaa070e0ac943b515f65ec8a3fead27fbfa2460bbb48aba3fa745816",
+      "components/SiteNavigation.css": "042553813b8a4a0c68f8862355a784fc4b944ea5cbe011620b8c043da254b399",
+      "components/BackNavigation.tsx": "87818c277ac225557dc20d0c5eb8f67740f1d8d437cd19f15faea9a0868c48a1"
+    },
+    "preimages": {
+      "components/SiteHeader.tsx": "736954cc640f96d8faaae2fb9fdaf19c4e18f66e35e5c20d2a66106d7a0cdbab",
+      "components/SiteNavigation.css": "f7806e49bd4f66de1a04b0d58ad2029164975f669eb82326d20b0826beaf3fc5",
+      "components/BackNavigation.tsx": null
+    },
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:b485a4d8ddea65b9f00c466deec2685952968102b00618354312a103cb42e8e4",
+    "revision": "artline-web-back-1011-v1",
+    "candidateURL": "https://back-1011-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-women-guides-1011-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  }
+}

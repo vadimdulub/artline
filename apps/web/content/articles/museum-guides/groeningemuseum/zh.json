@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "groeningemuseum",
+  "museum": "Groeningemuseum",
+  "city": "布鲁日",
+  "country": "比利时",
+  "title": "格罗宁格博物馆：杰作",
+  "subtitle": "格罗宁格博物馆的二十件作品，从近在眼前的肖像，到河流天际线的远处。",
+  "introduction": "玛格丽塔·凡·艾克身边几乎没有空余。头巾的褶皱仿佛填满了面孔之外的画幅。而在这份选集的另一些作品里，河流与天空远远超出了人物所占的范围。距离的这种差异，提供了一条理解格罗宁格博物馆多样收藏的线索。\n\n宗教场景与司法场景还带来另一个问题：谁靠近事件的中心，又是谁在见证它？捐赠者跪在圣徒之间，哀悼者围在床边，证人环绕着被指控的法官。在按年代给画作分类之前，这些人物安排值得先作比较。以下二十件作品是一组阅读与观看的选择，并非展厅参观路线。",
+  "visitNote": "本指南取材于格罗宁格博物馆（Groeningemuseum）的馆藏，其中包括素描及未公开展出的作品。出行前，请查阅布鲁日博物馆群（Musea Brugge）的最新参观资讯。内容编排基于编辑选择，并非博物馆实际的展厅参观顺序。",
+  "locale": "zh",
+  "website": "https://www.museabrugge.be/",
+  "officialGuide": "https://www.museabrugge.be/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "免费阅读 · 英语",
+      "note": "列奥纳多关于光线、衣褶和人物布局的笔记，为审视那些早期画作提供了切实的探讨视角。这些笔记呈现的是文艺复兴时期的一种平行探讨，而非证明这些艺术家遵循了他建议的证据。"
+    }
+  ],
+  "works": [
+    {
+      "id": "51c9538d-d2c2-40e6-9f4d-faaa192f80fa",
+      "title": "玛格丽塔·凡·艾克",
+      "catalogueTitle": "Portrait of Margareta van Eyck",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1439",
+      "start": 1439,
+      "end": 1439,
+      "medium": "橡木板油画",
+      "accession": "0000.GRO0162.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/51c9538d-d2c2-40e6-9f4d-faaa192f80fa-bf8ee12b69eb.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0162-I",
+      "credit": "Jan van Eyck; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collectie.museabrugge.be/collection/work/id/0000_GRO0162_I",
+      "description": "白色头巾以棱角分明的褶皱围住面孔，双手则稳住画面的下缘。没有任何事件发生，肖像依然自有分量。不妨比较布料内部起伏的变化与面部较平稳的表面：人物的在场感不只来自五官画得准确，也有赖于周围的安排。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "2575a1c6-6625-5f2f-880b-b081ca7598f7",
+      "title": "圣母之死",
+      "catalogueTitle": "Death of the Virgin",
+      "artist": "Hugo van der Goes",
+      "artists": [
+        {
+          "name": "Hugo van der Goes",
+          "role": "primary",
+          "slug": "hugo-van-der-goes-q215251"
+        }
+      ],
+      "date": "after 1475–1482",
+      "start": 1475,
+      "end": 1482,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2575a1c6-6625-5f2f-880b-b081ca7598f7-e52be3672d071de6.jpg",
+      "imageSource": "https://www.wikiart.org/en/hugo-van-der-goes/death-of-the-virgin",
+      "credit": "Hugo van der Goes. Death of the Virgin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hugo-van-der-goes/death-of-the-virgin",
+      "description": "使徒围在玛利亚的床边，却没有汇成一种整齐划一的悲痛表情。面孔和双手不断把目光从她的身体引开，又带回来。博物馆近期的研究还发现了曾绘有帷幔以及画面早年被裁切的证据。就连我们如今借以观看这场聚集的边界，也经历过变化。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "5c0dd1b5-8193-5aaa-8263-e095871a2b92",
+      "title": "最后的审判",
+      "catalogueTitle": "Last Judgement",
+      "artist": "Hieronymus Bosch",
+      "artists": [
+        {
+          "name": "Hieronymus Bosch",
+          "role": "primary",
+          "slug": "hieronymus-bosch-q130531"
+        }
+      ],
+      "date": "c. 1500",
+      "start": 1500,
+      "end": 1500,
+      "medium": "木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/5c0dd1b5-8193-5aaa-8263-e095871a2b92-9b487b1741ef64a0.jpg",
+      "imageSource": "https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "credit": "Hieronymus Bosch. Last Judgement. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/hieronymus-bosch/last-judgement",
+      "description": "众多细小情节让这幅三联画难以一眼看清。可以先看大的分区：左侧是天堂，中央是审判，右侧是地狱。令人不安的是，中央的尘世已经近似一个受罚之地。那些奇异生物属于这层表达，而不是可以从中单独摘出的猎奇细节。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "2e3c043a-4ec0-5c66-9b9b-0d780263db2a",
+      "title": "枫丹白露，仙女池",
+      "catalogueTitle": "'La Mare aux Fées' at Fontainebleau",
+      "artist": "Alphonse Asselbergs",
+      "artists": [
+        {
+          "name": "Alphonse Asselbergs",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-a5045c59d4610084"
+        }
+      ],
+      "date": "约 1876 年",
+      "start": 1876,
+      "end": 1876,
+      "medium": "布面油画",
+      "accession": "0000.GRO0008.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/2e3c043a-4ec0-5c66-9b9b-0d780263db2a-ec6c3a6f8983.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0008-I",
+      "credit": "Alphonse Asselbergs; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0008-I",
+      "description": "这片林地没有高山或醒目地标来统领画面。池边在草丛与树木间不断转折，沿着它看，便会注意到陆地与水面参差不齐的交界。宽阔的天空为这小片土地留出了余地，却没有将它改造成壮丽的远景。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "b96f635b-52a6-5dce-9694-454be8324989",
+      "title": "西萨姆内斯的逮捕",
+      "catalogueTitle": "Arrest of Sisamnes by Cambyses",
+      "artist": "Gerard David",
+      "artists": [
+        {
+          "name": "Gerard David",
+          "role": "primary",
+          "slug": "gerard-david-q333380"
+        }
+      ],
+      "date": "1498",
+      "start": 1498,
+      "end": 1498,
+      "medium": "木板油画",
+      "accession": "0000.GRO0040.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/b96f635b-52a6-5dce-9694-454be8324989-28df8056da4e.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0040-I",
+      "credit": "Gerard David; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0040-I",
+      "description": "手指向坐着的男人，四周的面孔也将他置于审视之下。大卫把指控画成一场公共事件，而非两个人之间的私下交涉。华贵的衣着在这里十分重要：见证者属于一个秩序井然的城市社会。如今他们逼近，被指控者在这个社会中的位置便突然变得岌岌可危。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "6e974325-5a9d-5cfe-963f-e2d033b92455",
+      "title": "宴会",
+      "catalogueTitle": "Banquet",
+      "artist": "Antonius Claeissens",
+      "artists": [
+        {
+          "name": "Antonius Claeissens",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-b1587f45d71972b3"
+        }
+      ],
+      "date": "1574",
+      "start": 1574,
+      "end": 1574,
+      "medium": "木板油画",
+      "accession": "0000.GRO0023.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/6e974325-5a9d-5cfe-963f-e2d033b92455-e868f9155008.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0023-I",
+      "credit": "Antonius Claeissens; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0023-I",
+      "description": "宴席通常让宾客面对食物，也面对可以交谈的人。这里，朝向观众的安排还让他们暴露在画外另一群人面前。讲究的服装、器皿与装饰成为丰裕生活的展示。可以将这种正式亮相，与迪尔克·哈尔斯客栈场景中彼此交错、较不规整的交流相比较。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "e882dfa2-f70b-5822-a7cf-03ba01c4379d",
+      "title": "基督受洗",
+      "catalogueTitle": "Baptism of Christ",
+      "artist": "Gerard David",
+      "artists": [
+        {
+          "name": "Gerard David",
+          "role": "primary",
+          "slug": "gerard-david-q333380"
+        }
+      ],
+      "date": "约 1502 年 – 约 1508 年",
+      "start": 1502,
+      "end": 1508,
+      "medium": "木板油画",
+      "accession": "0000.GRO0035.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/e882dfa2-f70b-5822-a7cf-03ba01c4379d-483a353db001.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0035-I",
+      "credit": "Gerard David; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0035-I",
+      "description": "举起的容器点明了关键动作，风景却在它之外延伸很远。主要人物周围留出的少量空隙，让受洗仪式在丰富的环境中仍然清楚。大卫不必清空世界，才能突出其中的神圣事件；空间与克制的动作已经足够。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "120ed406-68a2-5345-9f49-13499ed64ea3",
+      "title": "自画像",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "James Ensor",
+      "artists": [
+        {
+          "name": "James Ensor",
+          "role": "primary",
+          "slug": "james-ensor-q158840"
+        }
+      ],
+      "date": "约 1885 年",
+      "start": 1885,
+      "end": 1885,
+      "medium": "康特（Conté）",
+      "accession": "0000.GRO1274r.II",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/120ed406-68a2-5345-9f49-13499ed64ea3-7d11dc2a5ef3.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO1274r-II",
+      "credit": "James Ensor; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO1274r-II",
+      "description": "恩索尔倾斜的头部周围，大片纸面仍是空白。笔触聚集在辨认人物所需的地方，到别处便松开，让纸本身也参与成像。把它与《玛格丽塔·凡·艾克》并看：呈现一个可辨认的人，既可以依靠细密的油画描绘，也可以依靠有所取舍的线条。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "20412d15-2363-5418-a829-4b2b5c7da3f0",
+      "title": "客栈中饮酒作乐的人群",
+      "catalogueTitle": "Company making Music and drinking in an Inn",
+      "artist": "Dirck Hals",
+      "artists": [
+        {
+          "name": "Dirck Hals",
+          "role": "primary",
+          "slug": "dirck-hals-nga-38724"
+        }
+      ],
+      "date": "约 1627 年",
+      "start": 1627,
+      "end": 1627,
+      "medium": "木板油画",
+      "accession": "0000.GRO0252.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/20412d15-2363-5418-a829-4b2b5c7da3f0-30eccc5acdc9.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0252-I",
+      "credit": "Dirck Hals; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0252-I",
+      "description": "酒杯、乐器和伸出的手，各自将一个人连向另一个人。这些小动作构成聚会的秩序，不需要某个主角来支配全场。与克莱森斯的宴会相比，差别很清楚：这群人的联系来自桌边不断发生的交流，而不是共同摆出的姿势。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "a8b4e801-449f-5c7e-99cb-371a6e71b3f1",
+      "title": "扬·范·艾韦尔韦",
+      "catalogueTitle": "Portrait of Jan van Eyewerve",
+      "artist": "Pourbus Pieter",
+      "artists": [
+        {
+          "name": "Pourbus Pieter",
+          "role": "primary",
+          "slug": "pourbus-pieter-round2-2d4047d2dd68"
+        }
+      ],
+      "date": "1551",
+      "start": 1551,
+      "end": 1551,
+      "medium": "木板油画",
+      "accession": "0000.GRO0108.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/a8b4e801-449f-5c7e-99cb-371a6e71b3f1-301252b551c5.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0108-I",
+      "credit": "Pieter Pourbus; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0108-I",
+      "description": "纹章与开口外的城市，使人物的身份超出了面孔所能说明的范围。它们把他放进一个公共世界，深色衣服则让身形保持紧凑。可以结合相邻的雅克米娜·布克肖像观看：另一块画板上的安排与这里相互呼应。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "f191833e-d163-5152-a308-0cb835dc7be6",
+      "title": "雅克米娜·布克（Jacquemyne Buuck）",
+      "catalogueTitle": "Portrait of Jacquemyne Buuck",
+      "artist": "Pourbus Pieter",
+      "artists": [
+        {
+          "name": "Pourbus Pieter",
+          "role": "primary",
+          "slug": "pourbus-pieter-round2-2d4047d2dd68"
+        }
+      ],
+      "date": "1551",
+      "start": 1551,
+      "end": 1551,
+      "medium": "木板油画",
+      "accession": "0000.GRO0109.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/f191833e-d163-5152-a308-0cb835dc7be6-32627a496267.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0109-I",
+      "credit": "Pieter Pourbus; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0109-I",
+      "description": "白领在黑裙上切出鲜明的形状，将目光从双手引向面孔。下方的小狗带来另一种大小不同的生命形体。与扬·范·艾韦尔韦的肖像并看，两幅画反向呼应的布局使它们构成一对，同时又为每个人保留了各自的空间。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "a959577f-02a8-5718-903f-10ca3acda802",
+      "title": "意大利风格风景与集市场景",
+      "catalogueTitle": "Italianate Landscape with Market Scene",
+      "artist": "Peeter van Bredael",
+      "artists": [
+        {
+          "name": "Peeter van Bredael",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-6477745fb7fc28e5"
+        }
+      ],
+      "date": "约 1680 年",
+      "start": 1680,
+      "end": 1680,
+      "medium": "布面油画",
+      "accession": "0000.GRO0149.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/a959577f-02a8-5718-903f-10ca3acda802-50694171db40.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0149-I",
+      "credit": "Peeter van Bredael; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0149-I",
+      "description": "集市买卖在远大于使用者的建筑下进行。商贩和动物占据地面，拱门则通向更远的世界。古典建筑为日常交易提供了宏伟框架；反过来，这些活动也使废墟不至于沦为一场空无一人的建筑壮观。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "eba3699d-0894-5d3d-bd42-259d9c051279",
+      "title": "圣路加绘制圣母像",
+      "catalogueTitle": "Saint Luke painting the Madonna",
+      "artist": "Lancelot Blondeel",
+      "artists": [
+        {
+          "name": "Lancelot Blondeel",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-47cf805f2a58262e"
+        }
+      ],
+      "date": "1545",
+      "start": 1545,
+      "end": 1545,
+      "medium": "布面油画",
+      "accession": "0000.GRO0018.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/eba3699d-0894-5d3d-bd42-259d9c051279-c4228ba2bed4.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0018-I",
+      "credit": "Lancelot Blondeel; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0018-I",
+      "description": "身为画家的圣徒与圣母相遇，在这幅被装饰占据的画中竟只占很小部分。柱子与拱门构成繁复的路径，将视线引向那个小小的中心。环境因此也值得单独细看：在这里，描绘一个宗教题材，还意味着为它建构周围的建筑世界。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "0be99f3c-a8eb-552c-8ca1-3f9da079d446",
+      "title": "冬日音乐",
+      "catalogueTitle": "Winter music",
+      "artist": "Léon Spilliaert",
+      "artists": [
+        {
+          "name": "Léon Spilliaert",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1394505"
+        }
+      ],
+      "date": "1943",
+      "start": 1943,
+      "end": 1943,
+      "medium": "印度墨与水彩",
+      "accession": "1976.GRO0813.II",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/0be99f3c-a8eb-552c-8ca1-3f9da079d446-e86b1a1f402c.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/1976-GRO0813-II",
+      "credit": "Leon Spilliaert; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/1976-GRO0813-II",
+      "description": "小提琴手弯曲的姿态打断了树干反复出现的竖线。白雪让周围地面显得空疏，也让她的动作格外孤立。画里听不见音乐，但单个人物与树木有节奏的间隔彼此作用，使标题不只是“有人拿着乐器”的说明。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "7496ede4-fc26-5072-8a5a-d20006f34700",
+      "title": "河流风景",
+      "catalogueTitle": "River Landscape",
+      "artist": "Jan van Goyen",
+      "artists": [
+        {
+          "name": "Jan van Goyen",
+          "role": "primary",
+          "slug": "jan-van-goyen-q315996"
+        }
+      ],
+      "date": "1644",
+      "start": 1644,
+      "end": 1644,
+      "medium": "木板油画",
+      "accession": "0000.GRO0163.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/7496ede4-fc26-5072-8a5a-d20006f34700-3c94a1a1a145.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0163-I",
+      "credit": "Jan Josefsz. van Goyen; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0163-I",
+      "description": "一片棕色船帆，就足以在灰色河水与天空之间鲜明地显现。远处的大部分空间由更细微的明暗变化构成，因此船只不必拥有截然分开的颜色，也能表明各自的位置。低低的地平线上方留出如此多空间，天气便在很大程度上决定了风景的面貌。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "f39218a8-81c0-5d28-b27f-62a1edc104a2",
+      "title": "葡萄牙的伊莎贝拉与圣伊丽莎白",
+      "catalogueTitle": "Isabella Of Portugal With St. Elizabeth",
+      "artist": "Petrus Christus",
+      "artists": [
+        {
+          "name": "Petrus Christus",
+          "role": "primary",
+          "slug": "petrus-christus-q312616"
+        }
+      ],
+      "date": "1457-1460",
+      "start": 1457,
+      "end": 1460,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f39218a8-81c0-5d28-b27f-62a1edc104a2-99f589fbcdf19331.jpg",
+      "imageSource": "https://www.wikiart.org/en/petrus-christus/isabel-of-portugal-with-st-elizabeth",
+      "credit": "Petrus Christus. Isabella Of Portugal With St. Elizabeth. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/petrus-christus/isabel-of-portugal-with-st-elizabeth",
+      "description": "跪着的捐赠者与陪伴她的圣徒身处一个经拱门向外延伸的空间。这块画板原属三联画侧翼，是更大祈祷图像的一部分，仅凭眼前这一幅已难理解其全貌。捐赠者的祈祷因此既是个人举动，也朝向了现存画面边界之外。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "35e5c9af-3116-46a3-80d6-347167bce247",
+      "title": "圣母与乔里斯·范·德·帕勒教士",
+      "catalogueTitle": "Madonna with Canon Joris van der Paele",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "1436",
+      "start": 1436,
+      "end": 1436,
+      "medium": "橡木板油画",
+      "accession": "0000.GRO0161.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/35e5c9af-3116-46a3-80d6-347167bce247-31393cd43152.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0161-I",
+      "credit": "Jan van Eyck; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://collectie.museabrugge.be/collection/work/id/0000_GRO0161_I",
+      "description": "教士的白衣处在刺绣长袍、石材与发亮铠甲之间。不同材质区分了人物，却没有拆散他们围绕圣母与圣婴形成的紧密聚集。可将教士与玛格丽塔·凡·艾克比较：这里，一张具体而衰老的面孔被置于神圣的相遇中，而不是单独成为一幅肖像。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "7a56a3f3-7dea-5107-9766-84ffcd9c5a64",
+      "title": "沃雷普附近的山脉",
+      "catalogueTitle": "Mountains at Voreppe, Dauphiné",
+      "artist": "Théodore Fourmois",
+      "artists": [
+        {
+          "name": "Théodore Fourmois",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-9b828052664a87df"
+        }
+      ],
+      "date": "1850",
+      "start": 1850,
+      "end": 1850,
+      "medium": "布面油画",
+      "accession": "0000.GRO0058.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/7a56a3f3-7dea-5107-9766-84ffcd9c5a64-99a886d2d203.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0058-I",
+      "credit": "Théodore Fourmois; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0058-I",
+      "description": "水边的人物足够小，可以帮助衡量山谷，而不至于支配它。他们的大小让眼前的近景与后方山峦区分开来。风景同时展开数重距离，视线从人的活动出发，逐渐移向远远超出其活动范围的地形。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "8ed71c00-67c2-580d-8d69-7d1749f38797",
+      "title": "斯海尔德河口",
+      "catalogueTitle": "Mouth of the River Scheldt",
+      "artist": "Paul Jean Clays",
+      "artists": [
+        {
+          "name": "Paul Jean Clays",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-de6a7dd6e1bdef70"
+        }
+      ],
+      "date": "约 1852 年 – 约 1875 年",
+      "start": 1852,
+      "end": 1875,
+      "medium": "布面油画",
+      "accession": "0000.GRO0026.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/8ed71c00-67c2-580d-8d69-7d1749f38797-05d2558b5fa3.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0026-I",
+      "credit": "Paul Jean Clays; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0026-I",
+      "description": "船帆以不同角度倾斜在开阔水面上，为河流带来运动的节奏，却不把它围拢起来。较大的棕黄色船帆为远处小船建立了近处的尺度。范霍延的河景依靠低调的色调，克莱斯则让船舶往来本身成为景中更醒目的部分。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    },
+    {
+      "id": "63153f82-1b58-5595-a0ac-dc5d2a25cd17",
+      "title": "弗朗西斯库斯·约瑟夫斯·金索恩",
+      "catalogueTitle": "Portrait of Franciscus Josephus Kinsoen",
+      "artist": "Jean Baptiste van Acker",
+      "artists": [
+        {
+          "name": "Jean Baptiste van Acker",
+          "role": "primary",
+          "slug": "random-country-collections-20261010-be-artist-0655b33f8a80c217"
+        }
+      ],
+      "date": "约 1825 年至约 1830 年",
+      "start": 1825,
+      "end": 1830,
+      "medium": "象牙油画",
+      "accession": "0000.GRO0076.I",
+      "image": "https://artlines.org/assets/artworks/imported/random-country-collections-20261010/BE/63153f82-1b58-5595-a0ac-dc5d2a25cd17-437b8e5eb871.jpg",
+      "imageSource": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0076-I",
+      "credit": "Jean Baptiste van Acker; Groeningemuseum — Musea Brugge. Public domain / CC-PDM (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression of the source reproduction.",
+      "license": "Public domain / CC-PDM",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://vlaamsekunstcollectie.be/en/collection/0000-GRO0076-I",
+      "description": "椭圆画幅几乎只容得下头部、肩膀与浅色衣领。与波尔布斯笔下有城市和纹章相伴的人物不同，金索恩几乎没有可以借来表明身份的环境。衣领与外套的对比将注意力集中在人物身上，也显示出背景被省略后，肖像能组织得多么紧凑。",
+      "importance": "",
+      "museum": "Groeningemuseum"
+    }
+  ],
+  "context": {
+    "start": 1436,
+    "end": 1943
+  },
+  "closingSections": [
+    {
+      "title": "比较两种距离",
+      "paragraphs": [
+        "读完后，重新看一幅肖像和一幅风景，留意各自如何为主体留出周围空间，或将其压缩。若计划到访，请另查博物馆的最新信息；作品有收藏记录，并不意味着当下正在展出。"
+      ]
+    }
+  ]
+}

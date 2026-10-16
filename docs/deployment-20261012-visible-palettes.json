@@ -1,0 +1,161 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "change": "Always show the eight-color artwork palette with no disclosure or explanatory paragraph. Reserve stable space for loading and copy feedback, and use an overlay for manual copying so copying colors never resizes, recenters or scrolls the artwork.",
+  "deployment": {
+    "buildId": "d35bbd51-5a00-4bcd-8f0a-c0f4ad14200c",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:visible-palettes-20261012-v2",
+    "baselineRevision": "artline-web-historical-exhibitions-1012-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:500a1eb5a0d7abb9d1e1016697d31cea175528fd3830d251c9e23c1a9f164a45",
+    "files": {
+      "components/ArtworkPalette.tsx": "710e96d7ce35407e0dbc7e87870c12b1c1cab35db1adc2882ccbe46cc34f2a0a",
+      "components/ArtworkPalette.module.css": "536f9a46a73682a4ecf8c26db312b048e16a1adc6cfa78b78086ec54d6c7a767"
+    },
+    "preimages": {
+      "components/ArtworkPalette.tsx": "b643b1cd401376560d1b56bdaea82536cd24c2358ed11aa68622c3178996553f",
+      "components/ArtworkPalette.module.css": "48da66f8dc319f4af96f8ffc1d31e64ebf7e2100d8d5fa0e72b00a6bc20d698c"
+    },
+    "overlaySHA256": "b77e1ac567f8cca82de42bcdb20ae47ff214d7182a052b32bf55e193b217fc27",
+    "overlayURI": "gs://artline-508319-build-source/visible-palettes-20261012/palette-b77e1ac567f8cca8.tar.xz",
+    "overlayGeneration": "1791793623610335",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:5a117b14b67ce8a4f21d4143a35577d4e17f40cc8e53a8e595c6c57003f83727",
+    "revision": "artline-web-visible-palettes-1012-v2",
+    "candidateURL": "https://visible-palettes-1012-v2---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-historical-exhibitions-1012-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "previousLocalImagePin": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:e027abc41daa6e9cc9755be73fb9f0d4d65f21530d29325d9ebd9b9472702c9c",
+    "localImagePinUpdated": true
+  },
+  "localValidation": {
+    "unitTests": 10,
+    "typecheck": "passed",
+    "eslint": "passed",
+    "browserWidths": [
+      1440,
+      768,
+      390,
+      320,
+      844
+    ],
+    "imageGeometryAndScrollStability": "passed for initial loading, retry, success copy, zoomed copy and manual fallback",
+    "databaseWrites": false,
+    "verifiedAt": "2026-10-12T08:17:32.250124+00:00",
+    "browserRegressionTests": 2
+  },
+  "candidate": {
+    "stage": "candidate",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      }
+    ],
+    "loadingAndRetryStable": true,
+    "aboutGuidesAndConnectionsPreserved": true,
+    "historicalExhibitionsPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "production": {
+    "stage": "live",
+    "checks": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 320,
+        "height": 640,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "alwaysEight": true,
+        "noToggleOrHelpText": true,
+        "copyKeepsPageImageStable": true,
+        "copyKeepsFitAndZoomStable": true,
+        "fallbackKeepsImageAndScrollStable": true
+      }
+    ],
+    "loadingAndRetryStable": true,
+    "aboutGuidesAndConnectionsPreserved": true,
+    "historicalExhibitionsPreserved": true,
+    "accessibilityViolations": 0,
+    "pageErrors": []
+  },
+  "errorLogs": 0,
+  "catalogueWrites": false,
+  "accountWrites": false,
+  "databaseMigrations": false,
+  "verifiedAt": "2026-10-12T08:40:20.620424+00:00"
+}

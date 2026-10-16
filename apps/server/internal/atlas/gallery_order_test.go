@@ -11,7 +11,7 @@ import (
 )
 
 func compareGalleryItems(a, b Item) int {
-	return cmp.Or(cmp.Compare(a.galleryPriority, b.galleryPriority), cmp.Compare(a.StartYear, b.StartYear), strings.Compare(a.ID, b.ID))
+	return cmp.Or(cmp.Compare(a.StartYear, b.StartYear), cmp.Compare(a.galleryPriority, b.galleryPriority), strings.Compare(a.ID, b.ID))
 }
 
 func TestGalleryCursor(t *testing.T) {
@@ -35,19 +35,21 @@ func TestGalleryCursor(t *testing.T) {
 			t.Fatal("internal gallery priority leaked into public artwork metadata")
 		}
 	}
-	// A chronological-only cursor must be rejected, rather than skip or repeat
-	// records after changing sort order. Its old scope did not include a version.
-	legacy := []any{f.Range, "", f.Types, false, false, "", f.Limit, "artwork", false, map[string][]string{}, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, "", presetFocus("")}
-	raw, _ := json.Marshal(legacy)
-	old := cursor{Year: 1600, ID: "00000000-0000-0000-0000-000000000001", Scope: fmt.Sprintf("%x", sha256.Sum256(raw))[:24]}
-	raw, _ = json.Marshal(old)
-	if _, err := decodeCursor(base64.RawURLEncoding.EncodeToString(raw), f, "artwork"); err == nil {
-		t.Fatal("old gallery cursor was accepted")
+	// Both unversioned and medium-first cursors must be rejected, rather than
+	// skip or repeat records after changing the gallery order.
+	legacy := []any{f.Range, "", f.Types, false, "", f.Limit, "artwork", false, map[string][]string{}, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, "", presetFocus("")}
+	for _, values := range [][]any{legacy, append(legacy, "painted-first-v1")} {
+		raw, _ := json.Marshal(values)
+		old := cursor{Year: 1600, ID: "00000000-0000-0000-0000-000000000001", Scope: fmt.Sprintf("%x", sha256.Sum256(raw))[:24]}
+		raw, _ = json.Marshal(old)
+		if _, err := decodeCursor(base64.RawURLEncoding.EncodeToString(raw), f, "artwork"); err == nil {
+			t.Fatal("old gallery cursor was accepted")
+		}
 	}
 	book := Item{ID: "book-one", StartYear: 1600}
 	c, _ := decodeCursor(encodeCursor(book, f, "book"), f, "book")
 	c.Priority = 1
-	raw, _ = json.Marshal(c)
+	raw, _ := json.Marshal(c)
 	if _, err := decodeCursor(base64.RawURLEncoding.EncodeToString(raw), f, "book"); err == nil {
 		t.Fatal("book cursor accepted artwork ordering")
 	}

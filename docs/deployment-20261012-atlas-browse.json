@@ -1,0 +1,314 @@
+{
+  "verifiedAt": "2026-10-12T13:50:08.948707+00:00",
+  "status": "deployed_and_verified",
+  "api": {
+    "baselineRevision": "artline-api-event-artworks-expansion-1012-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:ba5c87dfa140e1d5f18ed04ed6daf7c08ca1486ccfe171dd344afa614f915a08",
+    "baselineBuildId": "883e970a-4abf-4ef9-9d6c-019976fbb678",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:atlas-browse-20261012-v2",
+    "preimages": {
+      "internal/atlas/repository.go": "2258b51ca3c4a260799e7899775293daca73d92068b938f12dfd31eccc058f5c",
+      "internal/atlas/artwork_scope.go": "6c50cff378c5f4706efc195042b494e3626ec1d05375f791ba7bf98f8c839791",
+      "internal/atlas/aggregate_cache.go": null,
+      "internal/atlas/browse_refresh.go": null,
+      "cmd/api/main.go": "54badbc919f6c2d5ee03274df50c528838a14580d22db69742c7a03ffb508ba9",
+      "db/migrations/0053_atlas_illustrated_identity_index.sql": null,
+      "db/migrations/0054_atlas_browse_projection.sql": null
+    },
+    "files": {
+      "internal/atlas/repository.go": "51fab212f952e597ed868a9b98b2cd2f30d4e1daeeabceb6b3e4ff5666386f68",
+      "internal/atlas/artwork_scope.go": "df748b2af855b19d4c485a7d2304ed559f47a9b4f065dd016c86acf24aaedb9b",
+      "internal/atlas/aggregate_cache.go": "35877ad98880e9a93f622ad918780fcee730d8e064908a336a16af77d9b2eaba",
+      "internal/atlas/browse_refresh.go": "68f7d5cc8f4a94db356f28a851511f79814e5b6ba009123a9ade67e3c3e3cf38",
+      "cmd/api/main.go": "d41c940fe238c8000140ec2b5a2126e7a148bec2b07a4a0f053efc7718069980",
+      "db/migrations/0053_atlas_illustrated_identity_index.sql": "8d38df885b1dbeab22562653d3c9421e31ed8c8d37d88846bf796e9232fb774f",
+      "db/migrations/0054_atlas_browse_projection.sql": "6c58b172b489d3e9054088550a40754d81fa21aa0cdfc748d761bb737ed83c22"
+    },
+    "overlaySHA256": "ba83e2eeed97a7c1ba195bcee3c22e4944f0b547336407d31c7fc8fd61f2aa56",
+    "overlayURI": "gs://artline-508319-build-source/atlas-browse-20261012/api-ba83e2eeed97a7c1.tar.xz",
+    "overlayGeneration": "1791812395527472",
+    "buildId": "4464577d-e307-49ee-9567-34d1c0ff1c1f",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:3193f19d98e581ddb3537001e5cc9de1087c6f8c655bd11f39532cdc3d133722",
+    "revision": "artline-api-atlas-browse-1012-v1",
+    "candidateURL": "https://atlas-browse-1012-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-api-event-artworks-expansion-1012-v1",
+    "runtimeSettingsPreserved": true,
+    "trafficPercent": 100,
+    "localImagePinUpdated": true
+  },
+  "webRedeployed": false,
+  "databaseMigration": {
+    "migration": "0054_atlas_browse_projection.sql",
+    "sha256": "6c58b172b489d3e9054088550a40754d81fa21aa0cdfc748d761bb737ed83c22",
+    "operations": [
+      {
+        "index": {
+          "indisvalid": true,
+          "definition": "CREATE INDEX artworks_primary_media_lookup_idx ON public.artworks USING btree (primary_media_id, id) WHERE (primary_media_id IS NOT NULL)"
+        },
+        "seconds": 4.560180333995959
+      },
+      {
+        "migrationSeconds": 2.0180865840084152
+      }
+    ],
+    "catalogueRowsChanged": false,
+    "realLocalDatabaseWrites": false,
+    "pending": 302407
+  },
+  "initialBackfill": {
+    "projected": 302149,
+    "pending": 0,
+    "bytes": 97312768,
+    "processed": 302407,
+    "seconds": 73.6308667500125
+  },
+  "databaseAfter": {
+    "projected": 302162,
+    "pending": 0,
+    "work_mem": "4MB",
+    "projection_bytes": 97312768
+  },
+  "candidateChecks": {
+    "verified_at": "2026-10-12T13:44:24.367451+00:00",
+    "exactHTTPResponsesEqual": true,
+    "pagination": "No repeated IDs; totals and density preserved",
+    "records": [
+      {
+        "name": "candidate-health",
+        "status": 200,
+        "ttfb_ms": 345.6,
+        "total_ms": 346.0,
+        "cache": null,
+        "server_timing": null
+      },
+      {
+        "name": "baseline-broad-artwork",
+        "status": 200,
+        "ttfb_ms": 7925.7,
+        "total_ms": 7930.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-broad-artwork",
+        "status": 200,
+        "ttfb_ms": 514.0,
+        "total_ms": 514.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-broad-artwork-warm",
+        "status": 200,
+        "ttfb_ms": 259.5,
+        "total_ms": 265.2,
+        "cache": "HIT",
+        "server_timing": null
+      },
+      {
+        "name": "candidate-broad-artwork-page",
+        "status": 200,
+        "ttfb_ms": 243.6,
+        "total_ms": 246.1,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-broad-all",
+        "status": 200,
+        "ttfb_ms": 3938.5,
+        "total_ms": 3959.7,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-broad-all",
+        "status": 200,
+        "ttfb_ms": 383.0,
+        "total_ms": 384.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-broad-all-warm",
+        "status": 200,
+        "ttfb_ms": 199.8,
+        "total_ms": 215.3,
+        "cache": "HIT",
+        "server_timing": null
+      },
+      {
+        "name": "candidate-broad-all-page",
+        "status": 200,
+        "ttfb_ms": 299.3,
+        "total_ms": 310.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-romanticism",
+        "status": 200,
+        "ttfb_ms": 1026.8,
+        "total_ms": 1098.3,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-romanticism",
+        "status": 200,
+        "ttfb_ms": 615.4,
+        "total_ms": 694.3,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-romanticism-warm",
+        "status": 200,
+        "ttfb_ms": 237.1,
+        "total_ms": 299.4,
+        "cache": "HIT",
+        "server_timing": null
+      },
+      {
+        "name": "candidate-romanticism-page",
+        "status": 200,
+        "ttfb_ms": 467.3,
+        "total_ms": 525.1,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-country",
+        "status": 200,
+        "ttfb_ms": 2535.8,
+        "total_ms": 2536.3,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-country",
+        "status": 200,
+        "ttfb_ms": 2984.7,
+        "total_ms": 2990.1,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "baseline-search",
+        "status": 200,
+        "ttfb_ms": 656.8,
+        "total_ms": 657.2,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-search",
+        "status": 200,
+        "ttfb_ms": 506.3,
+        "total_ms": 507.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-painters",
+        "status": 200,
+        "ttfb_ms": 690.4,
+        "total_ms": 707.4,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-books",
+        "status": 200,
+        "ttfb_ms": 314.0,
+        "total_ms": 343.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-events",
+        "status": 200,
+        "ttfb_ms": 337.6,
+        "total_ms": 491.8,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "candidate-museum-access",
+        "status": 401,
+        "ttfb_ms": 188.0,
+        "total_ms": 188.3,
+        "cache": null,
+        "server_timing": null
+      },
+      {
+        "name": "candidate-invalid-range",
+        "status": 400,
+        "ttfb_ms": 186.2,
+        "total_ms": 186.5,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      }
+    ]
+  },
+  "publicChecks": {
+    "verified_at": "2026-10-12T13:47:09.444763+00:00",
+    "records": [
+      {
+        "name": "public-romanticism",
+        "status": 200,
+        "ttfb_ms": 588.3,
+        "total_ms": 588.9,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-all-cold",
+        "status": 200,
+        "ttfb_ms": 605.9,
+        "total_ms": 606.4,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-all-next",
+        "status": 200,
+        "ttfb_ms": 266.7,
+        "total_ms": 268.0,
+        "cache": "MISS",
+        "server_timing": "catalogue_queue;dur=0.00"
+      },
+      {
+        "name": "public-all-warm",
+        "status": 200,
+        "ttfb_ms": 243.3,
+        "total_ms": 253.2,
+        "cache": "HIT",
+        "server_timing": null
+      }
+    ],
+    "paginationVerified": true
+  },
+  "validation": {
+    "goRaceTests": "atlas, httpapi, cmd/api passed",
+    "isolatedPostgres": "all migrations; concurrent invalidation, refresh, snapshots and cache reuse passed",
+    "productionReadOnly": "12 same-snapshot A/B scenarios; additional search A/B; discovery, navigation, picked-entry and gallery checks passed",
+    "realLocalDatabaseWrites": false,
+    "capacityScaleTest": false,
+    "releaseErrorLogEntries": 0,
+    "expectedWarningStatuses": [
+      400,
+      401
+    ]
+  },
+  "catalogueSourceRowsChanged": false,
+  "derivedDatabaseWrites": true,
+  "terraformApply": false,
+  "commitsCreated": false,
+  "limitations": [
+    "Broad country-only filtering remained about three seconds (2.536 s baseline / 2.990 s candidate in this sample).",
+    "Observed current-data requests, not p95 or ten-million-row load testing.",
+    "Large dirty queues and CPU-throttled background refresh can temporarily increase query cost."
+  ]
+}

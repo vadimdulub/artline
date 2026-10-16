@@ -1,0 +1,114 @@
+Artline: artistic connections, four local review concepts
+
+Current selection and implementation (12 October 2026)
+
+The user selected B, then requested three initial connections on each side and
+integration directly into the existing artist page. ArtistRecord now renders
+ArtisticConnections beneath the biography, including its embedded artist view.
+There is no new application page. Show more loads three further people on that
+side; Show less returns that side to its initial three. Evidence opens in the
+existing RecordDrawer. Known artist IDs group separate claims into one card;
+unresolved source labels retain their individual claim identities.
+
+Go/PostgreSQL own grouping, active-source checks, archived exclusions, evidence
+ordering, total counts and direction-scoped keyset pages. The existing artist
+response includes the initial pages. GET /api/v1/artists/{slug}/connections
+provides subsequent pages through the existing catalogue cache and read budget.
+The legacy influences field remains available for compatibility.
+
+Verification: 18 focused frontend tests; TypeScript and targeted ESLint; catalogue
+and HTTP unit tests; read-only PostgreSQL SELECT fixtures for grouped claims,
+paging, both directions, unresolved names, source visibility and cursor scope.
+Browser checks cover desktop, 390px and 320px widths, independent expansion,
+collapse, keyboard focus, evidence sources and Escape. Automated checks report
+zero accessibility violations in the connection section. Visual checks use the
+saved research data in an in-memory HTTP adapter because the real local database
+has no influence claims. They do not certify current production content.
+
+Read-only EXPLAIN checks confirm artist-scoped influence FK index access in
+both directions. Empty-local-table plans and SELECT correctness fixtures are
+not representative high-volume performance measurements. Remaining load work:
+evaluate production-shaped influence and citation distributions, high-degree
+artists, concurrent readers and the combined artist response at capacity.
+Following the user's explicit deployment approval, the API and web revisions
+connections-1012-v1 were deployed and verified on artlines.org on 12 October.
+Both serve 100% of traffic. Real-catalogue candidate and production checks cover
+Fragonard, Delacroix and Cézanne, including all 70 later connections for Cézanne.
+The latest artwork-palette release is preserved. No migration, catalogue writes
+or commit was performed. See docs/deployment-20261012-artistic-connections.json.
+
+The following records the original, superseded design exploration.
+
+Brief: rethink the two influence columns in the supplied Fragonard screenshot.
+Deliver four working mockups, desktop images and a mobile check. This is design
+work only. Existing application files, catalogue and production are untouched.
+
+Tokens: paper #f2efe8, surface #faf8f3, ink #1b1916, muted #625d55,
+rule #d0c9be, existing Artline accent #8f3a29. Documented evidence #345c46.
+Georgia headings; Avenir Next / system sans controls and labels. Left aligned.
+
+A. Paired lists (recommended)
+[ biography, readable width                    ]
+[ Artistic connections                         ]
+[ Teachers & influences ][ Influence & legacy  ]
+[ 2 artist rows         ][ 5 artist rows       ]
+
+B. Relationship map
+[ biography                                   ]
+[ 2 teachers ] -> [ Fragonard ] -> [ 5 later artists ]
+Select a node for evidence. Dashed links express inference; solid links express
+only documented admiration. Direction is conceptual, not a dated timeline.
+
+C. Tabbed sidebar
+[ biography                     ][ Artistic connections ]
+[                               ][ Teachers | Legacy   ]
+[                               ][ 5 compact rows      ]
+
+D. Evidence explorer
+[ biography                                           ]
+[ grouped artist selector ][ selected artist's claims  ]
+[                         ][ notes + source links      ]
+
+Review: retain cream/Georgia because these are established Artline tokens.
+Differentiate spatial organization and evidence interaction, not color themes.
+Remove full-height dividers and repeated standalone Evidence buttons.
+No invented portraits, dates, relationship narratives or source counts.
+Do not label teaching as established artistic influence. Morisot has one artist
+entry with two separate claims: documented admiration and editorial influence.
+Both types and evidence levels remain visible. No claims are deleted or upgraded.
+No timeline years are assigned to relationships.
+
+Content: supplied screenshot plus the existing research snapshot dated 2026-10-09
+and reviewed-source-notes dated 2026-10-08. These are frozen design examples,
+not a new historical verification. Source links are preserved in content.js.
+All eight underlying claims are represented across seven artist entries.
+
+Browser: in-app connection failed twice before initialization. Use isolated
+headless Chromium for rendering; keep disposable verification scripts in /tmp.
+
+Delivery and verification
+
+Open index.html directly or run a static server over this folder. A local review
+server was started at http://127.0.0.1:3146/ . compare.html shows all four concepts.
+The previews load only local code/data and use ordinary links for external sources.
+
+Mockup screenshots: mockup-{a,b,c,d}-desktop.png and corresponding -mobile.png.
+comparison.png is the four-way component overview. Additional screenshots show
+A's expanded Morisot evidence and B's evidence dialog.
+
+Checked on 12 October 2026:
+- Desktop and mobile visual review of all four directions.
+- No document overflow at 320, 390, 768 and 1440 pixels.
+- A: seven artist entries; Morisot opens two separately labelled claims.
+- B: Morisot opens two claims in a dialog, closed with Escape.
+- C: teachers/legacy selection and keyboard arrow navigation.
+- D: artist selection, separate claims, mobile dropdown and selected artist sync.
+- No JavaScript page errors across the four previews.
+- Automated WCAG 2 A/AA and 2.1 AA desktop checks: zero reported violations.
+  This automated check does not certify accessibility; it supplements the checks
+  above. Disposable scripts and detailed results remain under /tmp.
+- Every displayed claim-source URL reconciled to its saved ingestion citation.
+
+Recommendation: A for the default artist page, B for an optional exploratory view.
+C is the strongest option if keeping the biography beside the connections is the
+priority; D serves readers who want to assess evidence in depth.

@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline seleccionó estas obras a partir de los fondos documentados del museo. La selección es independiente del museo, y es posible que algunas obras estén prestadas o no se encuentren en exhibición. Las fechas y atribuciones conservan las precisiones que figuran en los registros vinculados.",
+  "labels": {
+    "guides": "Todas las guías",
+    "download": "Descargar PDF",
+    "language": "Idioma de la guía",
+    "translation": "Traducción asistida por IA",
+    "explore": "Explora esta selección en Artline.",
+    "contextNote": "Consulte las obras seleccionadas junto a libros y acontecimientos de su época, o compare las fechas en que vivieron los artistas. Los libros y acontecimientos aportan contexto, no pruebas de una influencia directa. Las obras sin fechas confirmadas también se incluyen en esta guía.",
+    "all": "Obras de arte en contexto",
+    "allHint": "Las obras seleccionadas trabajan con libros y la historia de su época.",
+    "painters": "¿Quién vivió y cuándo?",
+    "paintersHint": "Vea cuándo vivieron los artistas y cuyas vidas se solaparon.",
+    "events": "Acontecimientos históricos",
+    "eventsHint": "Explora los eventos que tendrán lugar durante el período de vigencia de la guía.",
+    "books": "Cronología de los libros",
+    "booksHint": "Explora libros notables del mismo período.",
+    "contents": "Las obras seleccionadas",
+    "artworks": "Obras de arte seleccionadas",
+    "importance": "Por qué es importante",
+    "artwork": "Obra de arte abierta",
+    "source": "Ficha de la obra",
+    "inventory": "Inventario",
+    "reading": "Lecturas recomendadas",
+    "visit": "Antes de su visita",
+    "website": "Sitio web del museo",
+    "officialGuide": "Guía oficial de la colección",
+    "updated": "Fuentes e información de visitantes verificadas"
+  },
+  "slug": "courtauld-gallery",
+  "museum": "The Courtauld Gallery",
+  "city": "Londres",
+  "country": "Reino Unido",
+  "title": "Galería Courtauld: obras maestras",
+  "subtitle": "Veinte obras convierten mirada, reflejo y desigual conocimiento en parte del tema.",
+  "introduction": "La camarera está cerca, pero el espejo detrás vuelve difícil situar ese encuentro aparentemente directo. En otro cuadro alguien se inclina sobre una figura dormida; en un paisaje, los viajeros casi desaparecen en el terreno que deben cruzar. La selección cambia continuamente quién tiene acceso a una escena y cuánto puede saber de ella.\n\nLa cuestión alcanza a las propias imágenes. Un dibujo del Coloso reconstruye un monumento perdido sin demostrar su aspecto original. Un estudio de baile aísla movimientos, no registra toda una función. Mirar requiere atención al tipo de imagen que tenemos delante, además de a su asunto.",
+  "visitNote": "Esta selección incluye pinturas y obras sobre papel de la colección Courtauld. Los dibujos y las acuarelas se rotan por motivos de conservación, y es posible que algunas obras estén cedidas en préstamo. Consulte la información sobre la exposición actual de la galería antes de esperar ver las veinte obras en una sola visita.",
+  "locale": "es",
+  "website": "https://courtauld.ac.uk/gallery/",
+  "officialGuide": "https://courtauld.ac.uk/gallery/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "Leer en línea o descargar · Inglés",
+      "note": "El catálogo de la exposición sitúa a Manet, a Seurat y a los pintores de su entorno en el contexto de los debates artísticos del siglo XIX. Sus ilustraciones permiten comparar los espectáculos públicos, los interiores privados y los trazos cambiantes empleados para representarlos."
+    }
+  ],
+  "works": [
+    {
+      "id": "8ee95936-646e-4832-869c-2e22b2881de4",
+      "title": "Un bar en el Folies-Bergère",
+      "catalogueTitle": "A Bar at the Folies-Bergère",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "Lienzo; técnica pictórica no especificada",
+      "accession": "P.1934.SC.234",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/8ee95936-646e-4832-869c-2e22b2881de4-8301072cb91c410a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Un_bar_aux_Folies-Berg%C3%A8re_d%27E._Manet_(Fondation_Vuitton,_Paris)_(33539037428).jpg",
+      "credit": "Édouard Manet. A Bar at the Folies-Bergère. Image credit: Édouard Manet; Source credit: Un bar aux Folies-Bergère d'E. Manet (Fondation Vuitton, Paris); Photograph: Jean-Pierre Dalbéra (https://www.flickr.com/people/72746018@N00), explicitly credited in the Commons file Author field.. CC BY 2.0 (https://creativecommons.org/licenses/by/2.0). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://gallerycollections.courtauld.ac.uk/object-p-1934-sc-234",
+      "description": "El mostrador ofrece una posición cercana y aparentemente segura frente a la camarera. El reflejo desplazado a la derecha la desestabiliza. El Courtauld identifica a la modelo como Suzon, que posó en el estudio después de que Manet dibujara en el local. La pintura terminada construye un encuentro, no ofrece una instantánea transparente del music-hall.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "ee402c11-ce7c-5993-b453-70461f992da8",
+      "title": "Nunca más",
+      "catalogueTitle": "Nevermore",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1897",
+      "start": 1897,
+      "end": 1897,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ee402c11-ce7c-5993-b453-70461f992da8-a9d47464d68394d2.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/nevermore-1897",
+      "credit": "Paul Gauguin. Nevermore. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-gauguin/nevermore-1897",
+      "description": "La mujer recostada gira la cabeza hacia una habitación con otras figuras y un pájaro. El título pintado añade un signo sin aclarar sus relaciones. El ambiente de Gauguin no debe tomarse por documentación directa de la vida tahitiana. Miradas y conversaciones pertenecen a una imagen cuyo orden mantiene incierto el significado.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "a943a0c4-69e5-5fc8-8359-6c4f11c9aecc",
+      "title": "Autorretrato con la oreja vendada",
+      "catalogueTitle": "Self Portrait with Bandaged Ear",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a943a0c4-69e5-5fc8-8359-6c4f11c9aecc-76b1d4d8ce5202e4.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/self-portrait-with-bandaged-ear-1889",
+      "credit": "Vincent van Gogh. Self Portrait with Bandaged Ear. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/vincent-van-gogh/self-portrait-with-bandaged-ear-1889",
+      "description": "La venda es llamativa, pero no es la única información. Abrigo, gorra, estudio y estampa del fondo siguen presentes mediante contornos firmes y trazos diferenciados. La herida de Van Gogh pertenece a un trabajo de representación que continúa. La biografía identifica el estado sin explicar todas las decisiones pictóricas.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "7fef22fd-4cc4-5efd-90a5-bb334b6feeb3",
+      "title": "Joven empolvándose",
+      "catalogueTitle": "Young Woman Powdering Herself",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1889-1890",
+      "start": 1889,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7fef22fd-4cc4-5efd-90a5-bb334b6feeb3-85066c26722d251e.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/young-woman-powdering-herself-1890",
+      "credit": "Georges Seurat. Young Woman Powdering Herself. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/young-woman-powdering-herself-1890",
+      "description": "La borla acerca la mano al rostro y da una finalidad práctica a la pose sentada. Formas redondeadas se repiten en pelo, brazo, corpiño y tocador. Sobre ellas, las marcas divididas de color conservan su propia superficie. La rutina privada se reconoce por una acción y por un conjunto de curvas cuidadosamente relacionadas.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "53d839bf-eb06-5410-81db-9e6f1fe1e0f6",
+      "title": "Estudio para Le Chahut",
+      "catalogueTitle": "Study for The Chahut",
+      "artist": "Georges Seurat",
+      "artists": [
+        {
+          "name": "Georges Seurat",
+          "role": "primary",
+          "slug": "georges-seurat-q34013"
+        }
+      ],
+      "date": "1889-1890",
+      "start": 1889,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/53d839bf-eb06-5410-81db-9e6f1fe1e0f6-ad78c52ac5b1e75e.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-seurat/study-for-the-chahut-1890",
+      "credit": "Georges Seurat. Study for The Chahut. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-seurat/study-for-the-chahut-1890",
+      "description": "La pierna elevada y la curva vecina establecen un baile mediante direcciones repetidas. Es un estudio: la selección estrecha no necesita explicar una función completa. Los trazos ensayan cómo mantener legible el movimiento coordinado cuando el intérprete individual se reduce a una parte de un patrón mayor.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "826b27bd-cf19-52fe-b509-9f49f0e1ba85",
+      "title": "Paisaje con la Huida a Egipto",
+      "catalogueTitle": "Landscape with the Flight into Egypt",
+      "artist": "Pieter Bruegel the Elder",
+      "artists": [
+        {
+          "name": "Pieter Bruegel the Elder",
+          "role": "primary",
+          "slug": "pieter-bruegel-the-elder-q43270"
+        }
+      ],
+      "date": "1563",
+      "start": 1563,
+      "end": 1563,
+      "medium": "Óleo sobre tabla",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/826b27bd-cf19-52fe-b509-9f49f0e1ba85-dc1e23370850324c.jpg",
+      "imageSource": "https://www.wikiart.org/en/pieter-bruegel-the-elder/landscape-with-the-flight-into-egypt-1563",
+      "credit": "Pieter Bruegel the Elder. Landscape with the Flight into Egypt. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pieter-bruegel-the-elder/landscape-with-the-flight-into-egypt-1563",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pieter-bruegel-the-elder/landscape-with-the-flight-into-egypt-1563",
+      "description": "Los viajeros son pequeños junto a río, montañas y poblaciones. Hay que encontrar su ruta dentro de una vista que al principio puede parecer solo un paisaje extenso. Reconocer el grupo cambia lo que miramos. Ese mundo grande es también un terreno por el que personas vulnerables deben abrirse paso.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "64e2ad4c-6d5b-5f03-b595-8cad49f0187a",
+      "title": "El sueño de la vida humana",
+      "catalogueTitle": "The Dream of Human Life",
+      "artist": "Michelangelo",
+      "artists": [
+        {
+          "name": "Michelangelo",
+          "role": "primary",
+          "slug": "michelangelo-q5592"
+        }
+      ],
+      "date": "1533",
+      "start": 1533,
+      "end": 1533,
+      "medium": "Tiza sobre papel",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/64e2ad4c-6d5b-5f03-b595-8cad49f0187a-2f26d7afd05faf27.jpg",
+      "imageSource": "https://www.wikiart.org/en/michelangelo/the-dream-of-human-life",
+      "credit": "The Dream of Human Life. WikiArt; Michelangelo. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/michelangelo/the-dream-of-human-life",
+      "description": "El desnudo central tiene una solidez que no comparten las escenas menores. Una figura alada se acerca arriba; máscaras y otras imágenes complican la aparente autonomía del cuerpo. El dibujo relaciona a la persona con papeles y visiones alrededor, sin convertirlos en un único ambiente cotidiano continuo.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "852cd221-9abb-5c32-bfa3-bb736f2ae709",
+      "title": "La conversión de San Pablo",
+      "catalogueTitle": "Conversion of Saint Paul",
+      "artist": "Peter Paul Rubens",
+      "artists": [
+        {
+          "name": "Peter Paul Rubens",
+          "role": "primary",
+          "slug": "peter-paul-rubens-q5599"
+        }
+      ],
+      "date": "h. 1612",
+      "start": 1612,
+      "end": 1612,
+      "medium": "",
+      "accession": "P.1978.PG.356",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111218538-8d04a5b9ac4c16bc.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rubens_-_RKDimages,_266109.jpg",
+      "credit": "Peter Paul Rubens. Conversion of Saint Paul. Image credit: Peter Paul Rubens. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111218538",
+      "description": "Jinetes y caballos pierden su movimiento coordinado cuando entra luz en la escena llena. Caídas y direcciones opuestas hacen visible la conversión como interrupción del control. Rubens da al acontecimiento consecuencias físicas antes de distinguir a cada persona. El orden anterior del grupo ya no puede mantenerse.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "fc32bd4b-dd27-59c2-993b-98cdf3445410",
+      "title": "La Coronación de la Virgen",
+      "catalogueTitle": "Coronation of the Virgin",
+      "artist": "Peter Paul Rubens",
+      "artists": [
+        {
+          "name": "Peter Paul Rubens",
+          "role": "primary",
+          "slug": "peter-paul-rubens-q5599"
+        }
+      ],
+      "date": "h. 1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "",
+      "accession": "P.1978.PG.363",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111285439-4df1210450bd492f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rubens_-_RKDimages,_24647.jpg",
+      "credit": "Peter Paul Rubens. Coronation of the Virgin. Image credit: Peter Paul Rubens. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111285439",
+      "description": "María arrodillada sigue identificable entre nubes, ángeles y movimiento porque grandes áreas rojas, azules y claras separan los cuerpos principales. La composición conduce hacia arriba sin dar igual importancia a todos. La ceremonia necesita esa jerarquía; de otro modo, la actividad periférica podría desbordar el acto central.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "c257d742-0672-58c7-bd0f-caf88283100f",
+      "title": "David matando a Goliat",
+      "catalogueTitle": "David Slaying Goliath",
+      "artist": "Peter Paul Rubens",
+      "artists": [
+        {
+          "name": "Peter Paul Rubens",
+          "role": "primary",
+          "slug": "peter-paul-rubens-q5599"
+        }
+      ],
+      "date": "h. 1620",
+      "start": 1620,
+      "end": 1620,
+      "medium": "",
+      "accession": "P.1978.PG.366",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111285382-4f99c7df2c3c40a1.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rubens_-_RKDimages,_24598.jpg",
+      "credit": "Peter Paul Rubens. David Slaying Goliath. Image credit: Peter Paul Rubens. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111285382",
+      "description": "El brazo alzado y el cuerpo doblado dan a David una posición desde la que actuar sobre el gigante caído. En este momento, ser menor no impide dominar el encuentro. La gama reducida de marrones concentra la vista en direcciones corporales cruzadas y acerca la narración al mecanismo de un golpe inminente.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "c9be4a44-f288-5b06-9afa-7bc3b6fddfd3",
+      "title": "Paisaje con una vista imaginaria de Tívoli",
+      "catalogueTitle": "Landscape with an Imaginary View of Tivoli",
+      "artist": "Claude Lorrain",
+      "artists": [
+        {
+          "name": "Claude Lorrain",
+          "role": "primary",
+          "slug": "claude-lorrain-q214074"
+        }
+      ],
+      "date": "1642",
+      "start": 1642,
+      "end": 1642,
+      "medium": "",
+      "accession": "P.1978.PG.64",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110619780-13f6dc8f75f9ce29.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lorrain,_Claude_-_Landscape_with_an_Imaginary_View_of_Tivoli_-_P.1978.PG.64_c.jpg",
+      "credit": "Claude Lorrain. Landscape with an Imaginary View of Tivoli. Image credit: Claude Lorrain. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110619780",
+      "description": "El título admite una vista imaginaria sin hacerla arbitraria. Puente, colina, agua y sombra delantera ocupan planos conectados; la luz abre el fondo. Claude construye un lugar coherente mediante esas relaciones. Un espacio verosímil no equivale necesariamente a un informe topográfico exacto.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "791e5e84-27da-5ed2-9759-4901ee27521a",
+      "title": "Retrato de un hombre",
+      "catalogueTitle": "Portrait of a Man",
+      "artist": "Gerolamo Forabosco",
+      "artists": [
+        {
+          "name": "Gerolamo Forabosco",
+          "role": "primary",
+          "slug": "wikimedia-painter-q1433129"
+        }
+      ],
+      "date": "h. 1650",
+      "start": 1650,
+      "end": 1650,
+      "medium": "",
+      "accession": "P.1947.LF.133",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/791e5e84-27da-5ed2-9759-4901ee27521a-49ee4b22bd866073.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Girolamo_Forabosco_(c.1605-1679)_(attributed_to)_-_Portrait_of_a_Man_-_P.1947.LF.133_-_Courtauld_Gallery.jpg",
+      "credit": "Gerolamo Forabosco. Portrait of a Man. Image credit: Gerolamo Forabosco; Art UK. https://commons.wikimedia.org/wiki/File:Girolamo_Forabosco_(c.1605-1679)_(attributed_to)_-_Portrait_of_a_Man_-_P.1947.LF.133_-_Courtauld_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q118893985",
+      "description": "La prenda con piel ocupa una zona amplia alrededor de una cara más definida. Una abertura arquitectónica clara ofrece un límite opuesto y la mano da al área inferior un punto de contacto. El modelo adquiere sustancia mediante semejanza y materia, sin necesitar una colección extensa de posesiones explicativas.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "ec9a99d1-e7bc-5cbb-99e3-2a71bcfc0cc1",
+      "title": "San Lorenzo",
+      "catalogueTitle": "Saint Lawrence",
+      "artist": "Girolamo da Santacroce",
+      "artists": [
+        {
+          "name": "Girolamo da Santacroce",
+          "role": "primary",
+          "slug": "wikimedia-painter-q13518302"
+        }
+      ],
+      "date": "c. 1520–1530",
+      "start": 1520,
+      "end": 1530,
+      "medium": "",
+      "accession": "P.1947.LF.388",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/ec9a99d1-e7bc-5cbb-99e3-2a71bcfc0cc1-ceadf6bf81566740.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Girolamo_da_Santacroce_(1480-1485-1556)_-_Saint_Lawrence_-_P.1947.LF.388_-_Courtauld_Gallery.jpg",
+      "credit": "Girolamo da Santacroce. Saint Lawrence. Image credit: Girolamo da Santacroce; Art UK. https://commons.wikimedia.org/wiki/File:Girolamo_da_Santacroce_(1480-1485-1556)_-_Saint_Lawrence_-_P.1947.LF.388_-_Courtauld_Gallery.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q118680681",
+      "description": "Palma y parrilla identifican a Lorenzo sin representar la violencia del martirio. Su figura vertical reúne los atributos en una presentación legible; arriba aparecen ángeles. Reconocemos mediante signos sostenidos o colocados junto a una persona. La historia sigue disponible aunque no se escenifique.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "a315beee-7cdd-598d-a386-42ba7002769b",
+      "title": "San Sebastián en un paisaje rocoso con los santos Jerónimo, Antonio Abad y Cristóbal",
+      "catalogueTitle": "Saint Sebastian in a Rocky Landscape with Saints Jerome, Anthony Abbot and Christopher",
+      "artist": "Marco Zoppo",
+      "artists": [
+        {
+          "name": "Marco Zoppo",
+          "role": "primary",
+          "slug": "marco-zoppo-nga-1989"
+        }
+      ],
+      "date": "c. 1475–1478",
+      "start": 1475,
+      "end": 1478,
+      "medium": "",
+      "accession": "P.1978.PG.489",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q118630781-b8691097ea3408ff.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Marco_zoppo,_san_sebastiano,_1475-78_ca._2.JPG",
+      "credit": "Marco Zoppo. Saint Sebastian in a Rocky Landscape with Saints Jerome, Anthony Abbot and Christopher. Image credit: Sailko. Wikimedia Commons. CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Resized and JPEG-compressed; selected source frame preserved. Additional source attribution: Sailko; Required attribution: I, Sailko. File page: https://commons.wikimedia.org/wiki/File:Marco_zoppo,_san_sebastiano,_1475-78_ca._2.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://www.wikidata.org/wiki/Q118630781",
+      "description": "El cuerpo expuesto de Sebastián es mayor y más destacado que los otros santos del paisaje rocoso. El brazo elevado prolonga el contorno retorcido. El lugar común conecta una reunión devota, no un incidente histórico simultáneo. Las diferencias de tamaño indican qué atención conceder a cada figura.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "ddb06082-bb8e-5c38-8041-e18b01ca3513",
+      "title": "Un macho de pato mandarín",
+      "catalogueTitle": "A Mandarin drake",
+      "artist": "Eugène Delacroix",
+      "artists": [
+        {
+          "name": "Eugène Delacroix",
+          "role": "primary",
+          "slug": "eugene-delacroix-q33477"
+        }
+      ],
+      "date": "c. 1825",
+      "start": 1825,
+      "end": 1825,
+      "medium": "Acuarela sobre papel",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round6-20261007/ddb06082-bb8e-5c38-8041-e18b01ca3513-23cb2bfc646f068e.jpg",
+      "imageSource": "https://www.wikiart.org/en/eugene-delacroix/a-mandarin-drake",
+      "credit": "Eugène Delacroix. A Mandarin drake. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/eugene-delacroix/a-mandarin-drake",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/eugene-delacroix/a-mandarin-drake",
+      "description": "El papel liso deja que perfil y plumaje plegado del ave se distingan. El color divide su construcción sin disolverla en adorno. Este estudio cercano invita a seguir cómo plumas marcadas de distintas maneras pertenecen a un solo cuerpo, en vez de reducir la imagen a una vivacidad genérica.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "548d2b77-194d-5651-8376-12ad03931e30",
+      "title": "Barcos en Martigues",
+      "catalogueTitle": "Boats at Martigues",
+      "artist": "Raoul Dufy",
+      "artists": [
+        {
+          "name": "Raoul Dufy",
+          "role": "primary",
+          "slug": "raoul-dufy-q45205"
+        }
+      ],
+      "date": "1908",
+      "start": 1908,
+      "end": 1908,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/548d2b77-194d-5651-8376-12ad03931e30-f24f436122cb2746.jpg",
+      "imageSource": "https://www.wikiart.org/en/raoul-dufy/boats-at-martigues-1908",
+      "credit": "Raoul Dufy. Boats at Martigues. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/raoul-dufy/boats-at-martigues-1908",
+      "description": "Los cascos se apiñan como formas rojas, verdes y azules, con mástiles que suben por el puerto. Los reflejos añaden otro conjunto de marcas vecinas. Dufy mantiene identificables los barcos y hace especialmente fuerte su relación sobre la superficie pintada. Podemos seguir embarcaciones y colores entrelazados sin escoger solo una lectura.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "1e497a97-19c9-591d-b577-6dae71b08ec6",
+      "title": "El Coloso de Rodas",
+      "catalogueTitle": "Colossus of Rhodes",
+      "artist": "Maarten van Heemskerck",
+      "artists": [
+        {
+          "name": "Maarten van Heemskerck",
+          "role": "primary",
+          "slug": "maarten-van-heemskerck-q538350"
+        }
+      ],
+      "date": "1570",
+      "start": 1570,
+      "end": 1570,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/1e497a97-19c9-591d-b577-6dae71b08ec6-bea903664ae2549a.jpg",
+      "imageSource": "https://www.wikiart.org/en/maerten-van-heemskerck/colossus-of-rhodes-1570",
+      "credit": "Maarten van Heemskerck. Colossus of Rhodes. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/maerten-van-heemskerck/colossus-of-rhodes-1570",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/maerten-van-heemskerck/colossus-of-rhodes-1570",
+      "description": "Las piernas del gigante abarcan un puerto cuyas naves y personas miden su tamaño propuesto. La arquitectura detallada vuelve convincente la reconstrucción, pero no la convierte en testimonio presencial. Heemskerck da forma visible a una maravilla perdida. La seguridad del dibujo debe distinguirse de la certeza sobre el monumento antiguo.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "598f1dfe-4513-5e91-b45d-65547378976a",
+      "title": "Cupido y Psique",
+      "catalogueTitle": "Cupid and Psyche",
+      "artist": "Joshua Reynolds",
+      "artists": [
+        {
+          "name": "Joshua Reynolds",
+          "role": "primary",
+          "slug": "joshua-reynolds-q194402"
+        }
+      ],
+      "date": "1789",
+      "start": 1789,
+      "end": 1789,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/598f1dfe-4513-5e91-b45d-65547378976a-c8b4b6951dbd9029.jpg",
+      "imageSource": "https://www.wikiart.org/en/joshua-reynolds/cupid-and-psyche",
+      "credit": "Joshua Reynolds. Cupid and Psyche. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/joshua-reynolds/cupid-and-psyche",
+      "description": "La luz que Psique alza le permite mirar al Cupido dormido. Él permanece indefenso; la inclinación de ella y su brazo muestran una búsqueda activa. El encuentro mitológico depende de una conciencia desigual. La iluminación hace más que modelar carne: deja ver a alguien que no puede devolver la mirada.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "cc8a3494-2069-569a-9dcb-ce2ea1207c37",
+      "title": "Sagrada Familia con el Niño San Juan y Santa Isabel",
+      "catalogueTitle": "Holy Family with the Infant Saint John and Saint Elizabeth",
+      "artist": "Benvenuto Tisi",
+      "artists": [
+        {
+          "name": "Benvenuto Tisi",
+          "role": "primary",
+          "slug": "benvenuto-tisi-q728512"
+        }
+      ],
+      "date": "1520",
+      "start": 1520,
+      "end": 1520,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/cc8a3494-2069-569a-9dcb-ce2ea1207c37-3935dfb1320f64c8.jpg",
+      "imageSource": "https://www.wikiart.org/en/benvenuto-tisi/holy-family-with-the-infant-saint-john-and-saint-elizabeth",
+      "credit": "Benvenuto Tisi. Holy Family with the Infant Saint John and Saint Elizabeth. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/benvenuto-tisi/holy-family-with-the-infant-saint-john-and-saint-elizabeth",
+      "description": "La cortina abre un hueco sobre un grupo estrecho. Adultos inclinados y niños a distintas alturas se unen por contacto, no como figuras frontales independientes. Garofalo utiliza el espacio reducido para mantener íntima la reunión devota. La tela apartada da un marco visible a esa cercanía.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    },
+    {
+      "id": "bd686963-e449-54d9-b059-4e294b9fcfd6",
+      "title": "Hombre sosteniendo un libro",
+      "catalogueTitle": "Man holding book",
+      "artist": "Rogier van der Weyden",
+      "artists": [
+        {
+          "name": "Rogier van der Weyden",
+          "role": "primary",
+          "slug": "rogier-van-der-weyden-q68631"
+        }
+      ],
+      "date": "1440-1449",
+      "start": 1440,
+      "end": 1449,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/bd686963-e449-54d9-b059-4e294b9fcfd6-d31fb86940df298a.jpg",
+      "imageSource": "https://www.wikiart.org/en/rogier-van-der-weyden/man-holding-book",
+      "credit": "Rogier van der Weyden. Man holding book. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/rogier-van-der-weyden/man-holding-book",
+      "description": "El libro abierto crea un primer plano claro alrededor de las manos; tocado y fondo oscuros concentran el rostro. Leer aporta actividad sin gesto dramático. El retrato enlaza una semejanza particular con la disposición cuidadosa de dedos y páginas. La quietud tiene así suficiente estructura para seguir siendo concreta.",
+      "importance": "",
+      "museum": "The Courtauld Gallery"
+    }
+  ],
+  "context": {
+    "start": 1440,
+    "end": 1908
+  },
+  "closingSections": [
+    {
+      "title": "Separar acceso y certeza",
+      "paragraphs": [
+        "El espejo de Manet, la luz levantada de Reynolds y los viajeros de Bruegel determinan de forma distinta qué podemos ver. La reconstrucción de Heemskerck pregunta algo más: ¿qué permite saber el hecho de ver? Consulte las fichas para detalles de las obras y la información actual para su exposición. Esta secuencia no es una disposición comprobada."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "selectionNote": "Artlineは、記録された美術館の所蔵品の中からこれらの作品を選定しました。この選定は美術館とは独立して行われており、個々の作品は貸出中であったり、展示されていなかったりする場合があります。制作年代や作者の帰属については、リンク先の記録にある注記や留保事項がそのまま適用されます。",
+  "labels": {
+    "guides": "ガイド一覧",
+    "download": "PDFをダウンロード",
+    "language": "ガイド言語",
+    "translation": "AI翻訳を使用",
+    "explore": "アートラインでこのセレクションをご覧ください",
+    "contextNote": "選定された作品を、同時代の書籍や出来事と並べてご覧いただけるほか、アーティストの生きた時代を比較することも可能です。ここで紹介する書籍や出来事は、あくまで背景情報を示すものであり、直接的な影響の証拠ではありません。制作年代が特定されていない作品も、本ガイドに含まれています。",
+    "all": "文脈の中の芸術作品",
+    "allHint": "当時の書物や歴史と関わりのある選りすぐりの作品。",
+    "painters": "誰がいつ生きたのか？",
+    "paintersHint": "アーティストの生きた時代や、誰と誰の生涯が重なっていたかを確認できます。",
+    "events": "歴史上の出来事",
+    "eventsHint": "ガイドの期間中に開催されるイベントを探索する",
+    "books": "書籍のタイムライン",
+    "booksHint": "同時代の注目すべき書籍を探ってみよう",
+    "contents": "作品一覧",
+    "artworks": "厳選された作品",
+    "importance": "なぜそれが重要なのか",
+    "artwork": "オープンアート",
+    "source": "作品情報の出典",
+    "inventory": "在庫",
+    "reading": "関連書籍",
+    "visit": "ご来訪前に",
+    "website": "博物館のウェブサイト",
+    "officialGuide": "公式コレクションガイド",
+    "updated": "情報源と訪問者情報は確認済みです。"
+  },
+  "slug": "ashmolean-museum",
+  "museum": "Ashmolean Museum",
+  "city": "オックスフォード",
+  "country": "英国",
+  "title": "アシュモレアン博物館：名作",
+  "subtitle": "画家がどこに力を注いだかを示す絵画と素描20点。",
+  "introduction": "顔は丹念に仕上げても、肩はわずかな線で済ませられる。運河は数本のインクの線から奥行きを得る。一本だけの腕が、多人数の物語画より、身体の成り立ちをよく示す場合もある。この選集ではアシュモレアンの絵画と素描を一緒に見て、仕上がりの差を完成と未完成の区別だけでなく、読み取るべきものとして扱う。\n\n厳密に組み立てたウッチェロの狩りが一つの入口なら、大きな筆触のマネの肖像も別の入口になる。そのあいだにある風景、文学的な場面、肖像では、細部の配分が、何を知ることができ、何が未決定で残るかを定めている。",
+  "visitNote": "アシュモレアン博物館のコレクションは、ここで紹介した絵画や素描にとどまらず、多岐にわたります。紙の作品は光に敏感なため、収蔵庫に保管されていたり、期間限定で展示されたりすることがあります。特定の作品を目当てに訪問を計画される際は、現在の展示状況や貸出状況を事前にご確認ください。",
+  "locale": "ja",
+  "website": "https://www.ashmolean.org/",
+  "officialGuide": "https://www.ashmolean.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "無料で読む · 英語",
+      "note": "線やトーンに関するスピードの論考は、ラファエロ、ミケランジェロ、カナレット、グリューネヴァルトの素描を語る上で実践的な言葉を提供してくれます。それらは、描線の特徴や仕上げの度合いに見られる実際の差異と照らし合わせながら読むと、最も有益です。"
+    }
+  ],
+  "works": [
+    {
+      "id": "fc4ada37-bf73-500f-b9c2-e1114ad47582",
+      "title": "森での狩り",
+      "catalogueTitle": "The Hunt in the Forest",
+      "artist": "Paolo Uccello",
+      "artists": [
+        {
+          "name": "Paolo Uccello",
+          "role": "primary",
+          "slug": "paolo-uccello-q192488"
+        }
+      ],
+      "date": "c. 1465–1470",
+      "start": 1465,
+      "end": 1470,
+      "medium": "板にテンペラ・油彩、金箔の痕跡あり",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fc4ada37-bf73-500f-b9c2-e1114ad47582-680254ba47f0bc65.jpg",
+      "imageSource": "https://www.wikiart.org/en/paolo-uccello/the-hunt-in-the-forest",
+      "credit": "Paolo Uccello. The Hunt in the Forest. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://ashmolean.web.ox.ac.uk/hunt-forest",
+      "description": "騎手と猟犬が、繰り返される木の幹のあいだを森の中心へ後退する。ウッチェロは遠近法の格子で空間を設計したが、夜という条件が、その秩序から期待される明快な見通しを妨げる。美術館は夜の狩りを現実の報告ではなく、遊戯的、あるいは象徴的なものと説明する。精密さと創作は両立している。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "47b4204a-273e-5182-bea2-b1582729972b",
+      "title": "若者の肖像（自画像の可能性）",
+      "catalogueTitle": "Self Portrait",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "1498–1499年頃",
+      "start": 1498,
+      "end": 1499,
+      "medium": "黒チョーク、白によるハイライト",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/47b4204a-273e-5182-bea2-b1582729972b-48507a1cbe3d0242.jpg",
+      "imageSource": "https://www.wikiart.org/en/raphael/self-portrait",
+      "credit": "Raphael. Self Portrait. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.ox.ac.uk/sites/files/oxford/field/field_document/Oxford%20and%20the%20World%20brochure%202021.WEB_compact.pdf",
+      "description": "若者の目と頬には影が集中し、髪と帽子はより少ない線で示される。自画像かもしれないという見解は可能性にとどまり、まっすぐな顔つきだけで結論にはできない。モデルの名が定まらなくても、容貌としての具体性はある。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "5fbede2b-abc3-50d0-930c-266ca4af7863",
+      "title": "アンドレア・クアラテージ",
+      "catalogueTitle": "Portrait of Andrea Quaratesi",
+      "artist": "Michelangelo",
+      "artists": [
+        {
+          "name": "Michelangelo",
+          "role": "primary",
+          "slug": "michelangelo-q5592"
+        }
+      ],
+      "date": "1532",
+      "start": 1532,
+      "end": 1532,
+      "medium": "紙にチョーク",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/5fbede2b-abc3-50d0-930c-266ca4af7863-6504440ae183de69.jpg",
+      "imageSource": "https://www.wikiart.org/en/michelangelo/portrait-of-andrea-quaratesi",
+      "credit": "Portrait of Andrea Quaratesi. WikiArt; Michelangelo. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/michelangelo/portrait-of-andrea-quaratesi",
+      "description": "丁寧に立体をつけた頭と、薄く示した肩では、見る側に求められる注意が異なる。陰影は顔を連続した形にし、衣服は完成面としての主張を控える。ミケランジェロは主要な対面を中心に素描を進め、未確定の部分がその集中の場所を明らかにする。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "c41228df-7222-5d1a-9f0f-ba2bf0420907",
+      "title": "モーセの遺棄",
+      "catalogueTitle": "The Exposure of Moses",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1650年頃",
+      "start": 1650,
+      "end": 1650,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/c41228df-7222-5d1a-9f0f-ba2bf0420907-d833a050b42ce111.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/the-exposition-of-moses",
+      "credit": "Nicolas Poussin. The Exposure of Moses. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/nicolas-poussin/the-exposition-of-moses",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/the-exposition-of-moses",
+      "description": "水辺に置かれた子どもに対し、複数の人物が反応するが、その身振りは一つの動作にまとめられない。木と遠い建物が、集団の外へ舞台を広げる。プッサンはその余地を使って反応を分け、聖書の出来事を、人と場所の関係から読めるようにしている。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "3ac970f7-8ee8-577b-8a59-7b8e7aeaf774",
+      "title": "オフィーリア",
+      "catalogueTitle": "Ophelia",
+      "artist": "Arthur Hughes",
+      "artists": [
+        {
+          "name": "Arthur Hughes",
+          "role": "primary",
+          "slug": "arthur-hughes-research-e525f9e3fab0"
+        }
+      ],
+      "date": "1863年頃",
+      "start": 1863,
+      "end": 1863,
+      "medium": "",
+      "accession": "WA1977.23",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119083070-4bab1c3cd10deb91.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Arthur_Hughes_(1832-1915)_-_Ophelia_-_WA1977.23_-_Ashmolean_Museum.jpg",
+      "credit": "Arthur Hughes. Ophelia. Image credit: Arthur Hughes; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/5da0601e-0ad8-33d8-849a-1b31b5405d72",
+      "description": "ヒューズのオフィーリアは木のそばに立ち、草木に囲まれて花を持つ。ミレイの浮かぶ人物や、ヒューズ自身の先行する座像とは区別したい。ここでは明るい立像が植物に包まれる。主題と結びつく水は、すでに起きた出来事ではなく、周囲にある脅威のままだ。",
+      "importance": "",
+      "museum": "Ashmolean Museum",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "2c40cd7e-4d87-5ec2-8be8-d9d45ec587df",
+      "title": "白昼夢",
+      "catalogueTitle": "The Daydream",
+      "artist": "Dante Gabriel Rossetti",
+      "artists": [
+        {
+          "name": "Dante Gabriel Rossetti",
+          "role": "primary",
+          "slug": "dante-gabriel-rossetti-nga-6578"
+        }
+      ],
+      "date": "1872 - 1878",
+      "start": 1872,
+      "end": 1878,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/2c40cd7e-4d87-5ec2-8be8-d9d45ec587df-ef60857dd86f42b8.jpg",
+      "imageSource": "https://www.wikiart.org/en/dante-gabriel-rossetti/the-daydream-1878",
+      "credit": "Dante Gabriel Rossetti. The Daydream. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/dante-gabriel-rossetti/the-daydream-1878",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dante-gabriel-rossetti/the-daydream-1878",
+      "description": "本は開かれているが、女性の注意はもう頁を追っていない。手の近くに上げた小枝が、別の焦点になる。薄く描かれた周囲は、この休止に場所を与えても説明はしない。読書が中断されたことは見えるが、空想の内容は見えない。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "2a152dd2-71fb-5dcb-a3ae-d9d9e099b7aa",
+      "title": "青い枕に頭をのせた、ボネットをかぶった少女",
+      "catalogueTitle": "Girl in a Bonnet with her Head on a Blue Pillow",
+      "artist": "Anna Alma-Tadema",
+      "artists": [
+        {
+          "name": "Anna Alma-Tadema",
+          "role": "primary",
+          "slug": "wikimedia-painter-q2770619"
+        }
+      ],
+      "date": "1902",
+      "start": 1902,
+      "end": 1902,
+      "medium": "",
+      "accession": "WA1964.81",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q125983339-f767624dfb5f0248.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Anna_Alma-Tadema_-_Girl_in_a_Bonnet_with_her_Head_on_a_Blue_Pillow.jpg",
+      "credit": "Anna Alma-Tadema. Girl in a Bonnet with her Head on a Blue Pillow. Image credit: Anna Alma-Tadema; Source credit: https://wsimag.com/art/12787-great-british-drawings. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q125983339",
+      "description": "頬が青い枕に触れ、顔と布の接触が画像の中心となる。帽子のひだやほかの明るい素材は、柔らかな面が別の柔らかな面を押す箇所を取り囲む。青が十分に強いため、支える枕も、支えられる人とともに目を引く。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "96637724-0e6c-56f8-a6dc-43b01730a577",
+      "title": "アゾロ",
+      "catalogueTitle": "Asolo",
+      "artist": "Edith Corbet",
+      "artists": [
+        {
+          "name": "Edith Corbet",
+          "role": "primary",
+          "slug": "wikimedia-painter-q5338520"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "WA1969.20",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119148853-28bf728891d14f0c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Edith_Corbet_(c.1850-1920)_-_Asolo_-_WA1969.20_-_Ashmolean_Museum.jpg",
+      "credit": "Edith Corbet. Asolo. Image credit: Edith Corbet; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/e12ca6bd-93c9-3d22-842b-0018dec48edc",
+      "description": "建物は孤立した名所として眺めを占めない。畑と長い土地の広がりが、それらをより大きな人の住む地形へ結ぶ。コーベットの広い空は、その間隔の重要さを保つ。町は周囲の土地を通して近づく対象であり、点検できる完成品として差し出されない。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "45a58630-edec-51a7-9864-3555c549836f",
+      "title": "ブレンタ川沿いのドーロ",
+      "catalogueTitle": "Dolo on the Brenta",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "1728",
+      "start": 1728,
+      "end": 1728,
+      "medium": "キャンバスに油彩",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/45a58630-edec-51a7-9864-3555c549836f-17dc31d010258b21.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/dolo-on-the-brenta",
+      "credit": "Canaletto. Dolo on the Brenta. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/canaletto/dolo-on-the-brenta",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/dolo-on-the-brenta",
+      "description": "水路は建築と利用を結ぶ。建物が沿いに並び、小さな人物や仕事の設備が水際にある。鐘楼は低い屋根の中に明確な垂直を立てる。カナレットは距離を十分に分け、小さな行為を町全体と競わせずに見えるものにする。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "17bafeb0-cc83-5110-be45-d0e06cbe1ec1",
+      "title": "リアルト橋付近のグラン・カナル",
+      "catalogueTitle": "The Grand Canal near the Ponte del Rialto",
+      "artist": "Canaletto",
+      "artists": [
+        {
+          "name": "Canaletto",
+          "role": "primary",
+          "slug": "canaletto-q182664"
+        }
+      ],
+      "date": "1725",
+      "start": 1725,
+      "end": 1725,
+      "medium": "紙にインク",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/17bafeb0-cc83-5110-be45-d0e06cbe1ec1-8b4535cdf838f60a.jpg",
+      "imageSource": "https://www.wikiart.org/en/canaletto/the-grand-canal-nethe-ponte-del-rialto",
+      "credit": "The Grand Canal near the Ponte del Rialto. WikiArt; Canaletto. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/canaletto/the-grand-canal-nethe-ponte-del-rialto",
+      "description": "繰り返すインクの線で強めた縁もあれば、閉じずに残した縁もある。完成した絵画の連続面がなくても、船、ファサード、運河の方向はわかる。選択が目立つ素描だ。少数の決定的な線が空間を定め、最も役立つ場所に細部が集まる。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "1f9023fd-8f59-5577-a5c4-ec5c5727775f",
+      "title": "ヘスター・トラデスカントと義理の息子ジョン",
+      "catalogueTitle": "Hester Tradescant and her Stepson, John",
+      "artist": "Thomas de Critz",
+      "artists": [
+        {
+          "name": "Thomas de Critz",
+          "role": "primary",
+          "slug": "wikimedia-painter-q7795470"
+        }
+      ],
+      "date": "1645",
+      "start": 1645,
+      "end": 1645,
+      "medium": "",
+      "accession": "WA1898.14",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q118894135-4f1c848f84ae9b76.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Thomas_de_Critz_(1607-1653)_(attributed_to)_-_Hester_Tradescant_and_her_Stepson,_John_-_WA1898.14_-_Ashmolean_Museum.jpg",
+      "credit": "Thomas de Critz. Hester Tradescant and her Stepson, John. Image credit: Thomas de Critz; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/dc749da0-3ae2-31d3-88f0-f16cd054c590",
+      "description": "触れ合う手が、女性と少年に手前の共通点を与える。その周囲では身長と服装の違いが保たれる。二人の肖像は、容貌を横に置いただけのものではない。小さなつながりが、家族関係を見えるままにしている。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "662a014a-e453-5ffc-9fc9-ec938f3d1b7b",
+      "title": "クルディスタンの丘を越えて：キルクーク上空の飛行",
+      "catalogueTitle": "Over the Hills of Kurdistan: Flying above Kirkuk",
+      "artist": "Sydney Carline",
+      "artists": [
+        {
+          "name": "Sydney Carline",
+          "role": "primary",
+          "slug": "sydney-carline-research-2eef5573cb6e"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "",
+      "accession": "WA1929.30",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119182102-a521d90c7f0c679c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sydney_William_Carline_(1888-1929)_-_Over_the_Hills_of_Kurdistan,_Flying_above_Kirkuk_-_WA1929.30_-_Ashmolean_Museum.jpg",
+      "credit": "Sydney Carline. Over the Hills of Kurdistan: Flying above Kirkuk. Image credit: Sydney Carline; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q119182102",
+      "description": "飛行機の翼が下の土地を遮り、この高い眺めが特定の機械からのものだと主張する。丘と畑の上にはほかの航空機もいる。カーラインは遮るもののないパノラマを与えない。飛行は見えるものを変え、その視覚を可能にする手段も画面内に残る。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "48ade287-3d44-5d87-bca6-dbc68d470cc0",
+      "title": "貧しい女優のクリスマス・ディナー",
+      "catalogueTitle": "The poor Actress's Christmas Dinner",
+      "artist": "Robert Braithwaite Martineau",
+      "artists": [
+        {
+          "name": "Robert Braithwaite Martineau",
+          "role": "primary",
+          "slug": "robert-braithwaite-martineau-research-dee15679878d"
+        }
+      ],
+      "date": "1860年頃",
+      "start": 1860,
+      "end": 1860,
+      "medium": "",
+      "accession": "WA1941.61",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119082123-1034af75baaff8c4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Braithwaite_Martineau_(1826-1869)_-_The_poor_Actress%27s_Christmas_Dinner_-_WA1941.61_-_Ashmolean_Museum.jpg",
+      "credit": "Robert Braithwaite Martineau. The poor Actress's Christmas Dinner. Image credit: Robert Braithwaite Martineau; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/446b8254-8e5f-3027-97ef-bd5d3a965aac",
+      "description": "小さな皿が大きさ以上に目を引くのは、ほかに十分描かれたものが少ないからだ。食べる動作の周囲で、女性の身体の多くは薄く示される。題名が貧しさを場面の条件として示し、素描は欠けた所有物を列挙するのでなく、食事の小ささからその条件を身近にする。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "144260a3-7d03-5927-bd05-1add0a5aad52",
+      "title": "キャサリンとペトルーキオ",
+      "catalogueTitle": "Katherine and Petruchio",
+      "artist": "Robert Braithwaite Martineau",
+      "artists": [
+        {
+          "name": "Robert Braithwaite Martineau",
+          "role": "primary",
+          "slug": "robert-braithwaite-martineau-research-dee15679878d"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "",
+      "accession": "WA1950.197",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119082115-5d91d31eeab8a8f6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Braithwaite_Martineau_(1826-1869)_-_Katherine_and_Petruchio_-_WA1950.197_-_Ashmolean_Museum.jpg",
+      "credit": "Robert Braithwaite Martineau. Katherine and Petruchio. Image credit: Robert Braithwaite Martineau; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/d8c38e98-d4a3-340c-a5ae-ec44fb409692",
+      "description": "持ち上げた器と対立する姿勢が、家具のある部屋を衝突の場に変える。衣装と舞台は演じられる社会的役割を示すが、文学的な参照をすべて知らなくても身振りは読める。題名の人物名だけでなく、言い争いが身体でどう行われるかに目を向けたい。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "27156a84-c7b5-5571-9d6e-16ac26593152",
+      "title": "トーマス・バルストン",
+      "catalogueTitle": "Thomas Balston",
+      "artist": "Mark Gertler",
+      "artists": [
+        {
+          "name": "Mark Gertler",
+          "role": "primary",
+          "slug": "mark-gertler-research-3447dbfef583"
+        }
+      ],
+      "date": "1921",
+      "start": 1921,
+      "end": 1921,
+      "medium": "",
+      "accession": "WA1968.21",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119190381-d54af57863ba8783.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Mark_Gertler_(1891-1939)_-_Thomas_Balston_-_WA1968.21_-_Ashmolean_Museum.jpg",
+      "credit": "Mark Gertler. Thomas Balston. Image credit: Mark Gertler; Source credit: Ashmolean Museum. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/a299bd71-d90e-3dbb-aef2-04f9f6c935c0",
+      "description": "薄紫の上着と緑がかった背景が、人物と周囲を色で分ける。その広い面に対し、頭はより精密で、下の明るいネクタイが小さなアクセントとなる。描き方の差によって、スポットライトや職業の詳しい説明なしに、顔が優先される。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "cccc75cb-9ed0-5ab7-9d2c-290c726add02",
+      "title": "秋の湖畔の木立",
+      "catalogueTitle": "Copse by a Lake (Autumn)",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1898",
+      "start": 1898,
+      "end": 1898,
+      "medium": "",
+      "accession": "WA1949.313",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/cccc75cb-9ed0-5ab7-9d2c-290c726add02-ce91a27906552a2b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Isaak_Il%27ich_Levitan_(1860-1900)_-_Copse_by_a_Lake_(Autumn)_-_WA1949.313_-_Ashmolean_Museum.jpg",
+      "credit": "Isaac Levitan. Copse by a Lake (Autumn). Image credit: Isaac Levitan; Source credit: Art UK. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q119148329",
+      "description": "低い岸が、木々、葦、暗い反射を通って続く。秋は劇的な事件や特別な目印でなく、色の調整によって現れる。連続する縁に沿って小さな変化が積み重なり、季節はありふれた場所全体に広がる条件として描かれる。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "696f20df-bf09-5ad3-adc6-aa985ae953a6",
+      "title": "ナイル川の眺め",
+      "catalogueTitle": "View on the Nile",
+      "artist": "Thomas Seddon",
+      "artists": [
+        {
+          "name": "Thomas Seddon",
+          "role": "primary",
+          "slug": "wikimedia-painter-q681041"
+        }
+      ],
+      "date": "1855",
+      "start": 1855,
+      "end": 1855,
+      "medium": "",
+      "accession": "WA1944.31",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119082075-215980a3bc91a27a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Thomas_Seddon_(1821-1856)_-_View_on_the_Nile_-_WA1944.31_-_Ashmolean_Museum.jpg",
+      "credit": "Thomas Seddon. View on the Nile. Image credit: Thomas Seddon; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://museumdata.uk/objects/b4c46463-0652-3a4b-b663-aad9df98f5bc",
+      "description": "岸、水、夕空の長い接点が支配する眺めに、明るい帆が斜線を入れる。反射は川を遠い光につなぎとめる。船は具体的な物であり続けるが、構図を自分たちの周囲で閉じない。横への広がりは、その先にも続いている。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "30c11a62-48c2-5b81-a4d9-9dd63173e523",
+      "title": "ケンジントン・ガーデンズ、夕暮れのブナの木",
+      "catalogueTitle": "Beech Trees at Sunset, Kensington Gardens",
+      "artist": "Paul Maitland",
+      "artists": [
+        {
+          "name": "Paul Maitland",
+          "role": "primary",
+          "slug": "wikimedia-painter-q19569687"
+        }
+      ],
+      "date": "1905",
+      "start": 1905,
+      "end": 1905,
+      "medium": "",
+      "accession": "WA1961.31",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q119156300-c479f3f4ae7b3aad.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_Fordyce_Maitland_(1863-1909)_-_Beech_Trees_at_Sunset,_Kensington_Gardens_-_WA1961.31_-_Ashmolean_Museum.jpg",
+      "credit": "Paul Maitland. Beech Trees at Sunset, Kensington Gardens. Image credit: Paul Maitland; Source credit: Art UK. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q119156300",
+      "description": "木の幹が密に反復して遠景を制限する。奥行きは大きな開口部ではなく、幹のあいだの小さな明るい隙間に見つける必要がある。メイトランドは一本の目立つ木や壮大な眺望ではなく、反復と透過する光から、庭の囲まれた空間をつくる。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "2204d368-a0e8-5548-826d-a7f13e83918c",
+      "title": "マドモアゼル・クラウスの肖像",
+      "catalogueTitle": "Portrait of Mademoiselle Claus",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2204d368-a0e8-5548-826d-a7f13e83918c-6e2e1a6a761d7b95.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/portrait-of-mademoiselle-claus-1868",
+      "credit": "Édouard Manet. Portrait of Mademoiselle Claus. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/portrait-of-mademoiselle-claus-1868",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://ashmolean.org/portrait-mademoiselle-claus",
+      "description": "顔は衣服や隣の描きかけの人物より完成に近い。緑の手すりが、仕上げの不均等な配置をつなぐ。マネの肖像は二つの水準で読める。ある人の容貌であると同時に、同じ表面上で異なる程度に見えている、制作上の判断の跡でもある。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    },
+    {
+      "id": "284928cc-02f9-5ede-baeb-0ccbfccdc2e6",
+      "title": "上腕の習作",
+      "catalogueTitle": "Upper arm Study",
+      "artist": "Matthias Grünewald",
+      "artists": [
+        {
+          "name": "Matthias Grünewald",
+          "role": "primary",
+          "slug": "matthias-grunewald-q154338"
+        }
+      ],
+      "date": "1512 - 1514",
+      "start": 1512,
+      "end": 1514,
+      "medium": "チョーク",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/284928cc-02f9-5ede-baeb-0ccbfccdc2e6-d97711ffe8ee6b2d.jpg",
+      "imageSource": "https://www.wikiart.org/en/matthias-grunewald/forearm-study-1514",
+      "credit": "Matthias Grünewald. Upper arm Study. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/matthias-grunewald/forearm-study-1514",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/matthias-grunewald/forearm-study-1514",
+      "description": "腕は、やがて担うかもしれない大きな動作から切り離されている。チョークと明るい箇所だけで湾曲が立体化され、身体の断片を近くで調べられる。孤立によって見る仕事が変わる。物語を追わず、輪郭と陰影が身体の一部にどう力を与えるかにとどまれる。",
+      "importance": "",
+      "museum": "Ashmolean Museum"
+    }
+  ],
+  "context": {
+    "start": 1470,
+    "end": 1921
+  },
+  "closingSections": [
+    {
+      "title": "仕上がりが変わる場所を見る",
+      "paragraphs": [
+        "初めの三点の人物素描を、マネの肖像とカナレットのインクによる眺めに比べたい。何が先に定まり、何は省略されても失われないのか。紙の作品と絵画では展示条件が異なることがある。固定の旅程と考えず、美術館の最新記録で展示を確認してほしい。"
+      ]
+    }
+  ]
+}

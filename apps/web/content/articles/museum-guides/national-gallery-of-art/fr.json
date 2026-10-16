@@ -1,0 +1,610 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "national-gallery-of-art",
+  "museum": "National Gallery of Art",
+  "city": "Washington, D.C.",
+  "country": "États-Unis",
+  "title": "National Gallery of Art de Washington : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres où une plume, une horloge, un bateau ou une fleur change le sens de l’ensemble.",
+  "introduction": "La femme qui écrit chez Vermeer s’est arrêtée, mais sa plume reste prête au-dessus du papier. Le Napoléon de David se tient parmi des objets disposés pour suggérer un travail poursuivi tard dans la nuit. Ces détails font des affirmations sur les personnes représentées. Une affirmation peinte n’est pourtant pas un témoignage indépendant sur une vie.\n\nCette sélection de la National Gallery of Art examine ce que font des objets et des gestes apparemment secondaires. Certains identifient un sujet ; d’autres organisent l’espace ou invitent à croire à une image du devoir, de l’intimité ou du danger. Regarder de près, c’est distinguer ces fonctions. Un détail important n’est pas nécessairement un symbole caché, pas plus qu’une apparence convaincante n’est un document pris sur le vif.",
+  "visitNote": "Cette sélection d'œuvres couvre plusieurs époques et espaces d'exposition. Veuillez consulter les notices actuelles de la National Gallery of Art pour connaître les lieux d'exposition et les prêts en cours. Le portrait de Léonard est présenté de face ; le revers constitue une surface peinte distincte du même objet.",
+  "locale": "fr",
+  "website": "https://www.nga.gov/",
+  "officialGuide": "https://www.nga.gov/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les notes de Léonard examinent les visages, les gestes, la lumière et le paysage. Elles permettent de mieux appréhender les problématiques sous-jacentes au premier portrait et soulèvent des questions à poser aux artistes ultérieurs, qui ont résolu des problèmes similaires de manière différente."
+    }
+  ],
+  "works": [
+    {
+      "id": "1aae4f1a-3b50-4424-adfb-f59a734dfc36",
+      "title": "Ginevra de’ Benci",
+      "catalogueTitle": "Ginevra de’ Benci (obverse)",
+      "artist": "Leonardo da Vinci",
+      "artists": [
+        {
+          "name": "Leonardo da Vinci",
+          "role": "primary",
+          "slug": "leonardo-da-vinci"
+        }
+      ],
+      "date": "vers 1474–1478",
+      "start": 1474,
+      "end": 1478,
+      "medium": "Huile sur panneau",
+      "accession": "1967.6.1.a",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/447765ab-4c2f-4b97-842b-16cf11f4d29d-76b8521a849e5023.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Ginevra_de%27_Benci_-_Google_Art_Project.jpg",
+      "credit": "Leonardo da Vinci, Ginevra de’ Benci (obverse). National Gallery of Art, Washington, DC. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nga.gov/artworks/50724-ginevra-de-benci-obverse",
+      "description": "Un genévrier dense se presse derrière Ginevra, tandis que l’eau et les arbres au-delà de son épaule ouvrent un espace lointain. Léonard donne simultanément ces deux cadres au visage retenu. Leur contraste renforce sa présence sans demander de geste expressif. Un portrait peut ainsi gagner en profondeur par les relations entre ses alentours, plutôt que par la seule complexité d’une pose.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "833366ed-a526-4cc9-8545-ca53f02640b7",
+      "title": "Une dame écrivant",
+      "catalogueTitle": "A Lady Writing",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "vers 1665",
+      "start": 1665,
+      "end": 1665,
+      "medium": "Huile sur toile",
+      "accession": "1962.10.1",
+      "image": "https://artlines.org/assets/artworks/imported/nga-study-a58a5b5389d1f211358d79db13fe3fab4921db694db78aa0e64f5640629fdd15.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46437.html",
+      "credit": "Johannes Vermeer. A Lady Writing. National Gallery of Art, Washington, 1962.10.1. NGA Open Access — unrestricted reuse; compressed study reproduction.",
+      "license": "NGA Open Access — unrestricted reuse",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46437.html",
+      "description": "La femme se tourne vers nous tout en gardant sa plume prête. Vermeer donne à la rencontre l’allure d’une interruption parce que les conditions pratiques de l’écriture restent intactes. La lumière accroche la veste jaune devant le mur sombre. Mais c’est le lien maintenu avec la page qui inscrit la pose dans le temps. Rien n’indique combien durera cette pause.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "f94101f1-01c4-454b-887f-6c31686a6100",
+      "title": "Femme tenant une balance",
+      "catalogueTitle": "Woman Holding a Balance",
+      "artist": "Johannes Vermeer",
+      "artists": [
+        {
+          "name": "Johannes Vermeer",
+          "role": "primary",
+          "slug": "johannes-vermeer-q41264"
+        }
+      ],
+      "date": "vers 1664",
+      "start": 1664,
+      "end": 1664,
+      "medium": "Huile sur toile",
+      "accession": "1942.9.97",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/f94101f1-01c4-454b-887f-6c31686a6100-f84130f35cb37fb9.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.1236.html",
+      "credit": "Johannes Vermeer. Woman Holding a Balance. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.1236.html",
+      "description": "La petite balance pend presque sans poids au-dessus des objets précieux sur la table. Derrière la femme, le Jugement dernier élargit la question de la pesée à celle de l’évaluation morale. Vermeer rapproche ces sens sans faire de chaque objet la légende du suivant. La délicatesse du geste reste digne d’examen avant même que l’on considère ses implications possibles.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "4031b7b7-c13f-4540-84ea-70b288937e05",
+      "title": "L’Annonciation",
+      "catalogueTitle": "The Annunciation",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "vers 1434–1436",
+      "start": 1434,
+      "end": 1436,
+      "medium": "Huile sur toile transposée depuis un panneau",
+      "accession": "1937.1.39",
+      "image": "https://artlines.org/assets/artworks/size-limit-20260920/ae43ffb2-e016-40cf-9cb1-020f3c89a2b0-69bfc8bb33022265.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Annunciation_-_Jan_van_Eyck_-_1434_-_NG_Wash_DC.jpg",
+      "credit": "Jan van Eyck, The Annunciation. National Gallery of Art, Washington, DC. Reproduction via Wikimedia Commons (PD-Art). Full-frame proportional resize and JPEG compression to at most 100,000 bytes; no crop or generated content.",
+      "license": "Public Domain Mark 1.0 / PD-Art",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.nga.gov/artworks/46-annunciation",
+      "description": "L’ange et Marie occupent une église dont le sol, les inscriptions et l’architecture lointaine donnent plus d’informations que leur seule rencontre. Van Eyck fait de la lecture attentive une part de la dévotion : de petits éléments relient l’annonce à une histoire chrétienne plus vaste. Le format étroit encourage le regard à parcourir l’édifice, plutôt qu’à s’arrêter à l’échange entre les figures.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "77cc2faf-d049-4fc9-94f5-f127905bb5c3",
+      "title": "Autoportrait",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur toile",
+      "accession": "1998.74.5",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/77cc2faf-d049-4fc9-94f5-f127905bb5c3-380494bdbc53d9fd.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.106382.html",
+      "credit": "Vincent van Gogh. Self-Portrait. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.106382.html",
+      "description": "Palette et pinceaux identifient Van Gogh au travail, tandis que les touches autour de son visage et sur ses traits montrent le résultat de ce travail. Outils et facture se renforcent sans constituer le même type d’indice. Le visage demeure lisible parmi des marques qui n’imitent pas une peau lisse. L’image professionnelle de soi se construit par ce qui est représenté autant que par la manière de peindre.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "a373b1a6-eba6-4419-b56f-f8d26986fc18",
+      "title": "Breezing Up : un vent favorable",
+      "catalogueTitle": "Breezing Up (A Fair Wind)",
+      "artist": "Winslow Homer",
+      "artists": [
+        {
+          "name": "Winslow Homer",
+          "role": "primary",
+          "slug": "winslow-homer-q344838"
+        }
+      ],
+      "date": "1873-1876",
+      "start": 1873,
+      "end": 1876,
+      "medium": "Huile sur toile",
+      "accession": "1943.13.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/a373b1a6-eba6-4419-b56f-f8d26986fc18-8cfb0174afafd006.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.30228.html",
+      "credit": "Winslow Homer. Breezing Up (A Fair Wind). National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.30228.html",
+      "description": "Le bateau s’incline, et les positions différentes de l’homme et des garçons montrent comment ils s’adaptent au mouvement. Homer donne au plaisir apparent de naviguer une base pratique faite d’équilibre et d’attention. L’eau agitée empêche l’embarcation de devenir la plateforme immobile d’un portrait de groupe. Leur façon de l’occuper ne se sépare pas de ce que le vent lui fait.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "c8fecc43-d3c1-4926-9e4c-7a6c96bb6dd4",
+      "title": "Watson et le requin",
+      "catalogueTitle": "Watson and the Shark",
+      "artist": "John Singleton Copley",
+      "artists": [
+        {
+          "name": "John Singleton Copley",
+          "role": "primary",
+          "slug": "john-singleton-copley-nga-1162"
+        }
+      ],
+      "date": "1778",
+      "start": 1778,
+      "end": 1778,
+      "medium": "Huile sur toile",
+      "accession": "1963.6.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/c8fecc43-d3c1-4926-9e4c-7a6c96bb6dd4-1b60779e93698b1b.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46471.html",
+      "credit": "John Singleton Copley. Watson and the Shark. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46471.html",
+      "description": "Le sauvetage dépend de plusieurs actions réunies au bon moment : tendre les bras vers le nageur, placer le bateau et affronter le requin. Copley coordonne ces efforts par les corps des hommes. Le front de mer lointain situe l’épisode, mais n’apporte aucun secours immédiat. L’attention reste au point où des gestes séparés doivent devenir une action collective réussie.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "e14233bb-33f2-4a5d-b079-4c79651cf8b0",
+      "title": "Le Patineur : William Grant",
+      "catalogueTitle": "The Skater (Portrait of William Grant)",
+      "artist": "Gilbert Stuart",
+      "artists": [
+        {
+          "name": "Gilbert Stuart",
+          "role": "primary",
+          "slug": "gilbert-stuart-q41402"
+        }
+      ],
+      "date": "1782",
+      "start": 1782,
+      "end": 1782,
+      "medium": "Huile sur toile",
+      "accession": "1950.18.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/e14233bb-33f2-4a5d-b079-4c79651cf8b0-63f89f6299d2807d.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.39729.html",
+      "credit": "Gilbert Stuart. The Skater (Portrait of William Grant). National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.39729.html",
+      "description": "Les bras croisés de Grant donnent de l’assurance au haut du corps, tandis que la jambe oblique révèle l’équilibre nécessaire en dessous. Stuart adapte le portrait en pied à une habileté exercée en mouvement. Les patineurs lointains établissent l’activité partagée sans rivaliser avec le modèle principal. Sa dignité dépend d’un mouvement maîtrisé, non de l’immobilité de quelqu’un qui se tient là pour être examiné.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "0a56e524-4233-4273-aa30-d17701db4bfe",
+      "title": "Le Voyage de la vie : l’enfance",
+      "catalogueTitle": "The Voyage of Life: Childhood",
+      "artist": "Thomas Cole",
+      "artists": [
+        {
+          "name": "Thomas Cole",
+          "role": "primary",
+          "slug": "thomas-cole-q334001"
+        }
+      ],
+      "date": "1842",
+      "start": 1842,
+      "end": 1842,
+      "medium": "Huile sur toile",
+      "accession": "1971.16.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/0a56e524-4233-4273-aa30-d17701db4bfe-2caad65606d74baf.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.52450.html",
+      "credit": "Thomas Cole. The Voyage of Life: Childhood. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.52450.html",
+      "description": "L’enfant voyage dans le bateau d’or sans le diriger. Cole transforme la rivière en chemin à travers une vie allégorique, dont l’ange accompagne le début. L’ouverture sombre derrière et le monde luxuriant et clair devant donnent à la direction un sens temporel. Un élément du paysage accomplit un travail narratif : le déplacement sur l’eau représente le passage des années.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "ebfed71f-664e-5f17-ba32-2b4450eaa613",
+      "title": "Le Festin des dieux",
+      "catalogueTitle": "The Feast of the Gods",
+      "artist": "Giovanni Bellini, with later landscape alterations by Titian",
+      "artists": [
+        {
+          "name": "Giovanni Bellini",
+          "role": "primary",
+          "slug": "giovanni-bellini-q17169"
+        },
+        {
+          "name": "Titian",
+          "role": "later landscape alterations",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1514; landscape reworked 1529",
+      "start": 1514,
+      "end": 1529,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ebfed71f-664e-5f17-ba32-2b4450eaa613-4997fd19e8d10e06.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-bellini/the-feast-of-the-gods-1514",
+      "credit": "Giovanni Bellini. The Feast of the Gods. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nga.gov/collection/art-object-page.1138.html",
+      "description": "Nourriture, récipients et corps librement rassemblés font ressembler la compagnie des dieux à un repas en plein air. Le paysage a sa propre histoire de révision : Bellini peint l’œuvre en 1514, puis Titien en remanie le cadre en 1529. L’unité apparente vient donc de plusieurs moments et de plusieurs mains. Une surface achevée ne doit pas être imaginée comme le résultat d’une décision unique.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "e6e03333-fe17-52d6-9ee7-caa38d8b26be",
+      "title": "Laocoon",
+      "catalogueTitle": "Laocoon",
+      "artist": "El Greco",
+      "artists": [
+        {
+          "name": "El Greco",
+          "role": "primary",
+          "slug": "el-greco-q301"
+        }
+      ],
+      "date": "vers 1610",
+      "start": 1610,
+      "end": 1610,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/e6e03333-fe17-52d6-9ee7-caa38d8b26be-ce85a1fb36f2ac6c.jpg",
+      "imageSource": "https://www.wikiart.org/en/el-greco/laocoon",
+      "credit": "El Greco. Laocoon. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/el-greco/laocoon",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/el-greco/laocoon",
+      "description": "Les corps en lutte tirent dans plusieurs directions contre les serpents. Le Greco place le sujet antique devant une ville ressemblant à Tolède, refusant la distance confortable d’un cadre classiquement convenu. Au-dessus des figures, les nuages turbulents prolongent l’instabilité des membres. L’équilibre menacé n’appartient pas seulement à l’épisode : il devient une propriété de tout l’environnement peint.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "aa1106bb-ce76-4c67-8dbe-f9fcb669340d",
+      "title": "Napoléon dans son cabinet de travail aux Tuileries",
+      "catalogueTitle": "The Emperor Napoleon in His Study at the Tuileries",
+      "artist": "Jacques-Louis David",
+      "artists": [
+        {
+          "name": "Jacques-Louis David",
+          "role": "primary",
+          "slug": "jacques-louis-david-q83155"
+        }
+      ],
+      "date": "1812",
+      "start": 1812,
+      "end": 1812,
+      "medium": "Huile sur toile",
+      "accession": "1961.9.15",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/aa1106bb-ce76-4c67-8dbe-f9fcb669340d-14b585a120c40034.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46114.html",
+      "credit": "Jacques-Louis David. The Emperor Napoleon in His Study at the Tuileries. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46114.html",
+      "description": "Papiers, horloge et bougie sont mobilisés pour montrer un souverain absorbé par les tâches administratives. Même le léger désordre de l’uniforme de Napoléon participe à ce récit soigneusement construit. David ne livre pas un aperçu accidentel du cabinet. Les objets étayent le discours du portrait sur le dévouement au travail ; ils ne prouvent pas indépendamment que l’instant s’est produit exactement ainsi.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "be33c714-660e-4198-877c-96b874051852",
+      "title": "La Passerelle japonaise",
+      "catalogueTitle": "The Japanese Footbridge",
+      "artist": "Claude Monet",
+      "artists": [
+        {
+          "name": "Claude Monet",
+          "role": "primary",
+          "slug": "claude-monet"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "Huile sur toile",
+      "accession": "1992.9.1",
+      "image": "https://artlines.org/assets/artworks/imported/nga-study-7bea36345c76e6d81ad10cb366d426152f0c0efcbbfbb88c4d7db3cb04bee420.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.74796.html",
+      "credit": "Claude Monet. The Japanese Footbridge. National Gallery of Art, Washington, 1992.9.1. NGA Open Access — unrestricted reuse; compressed study reproduction.",
+      "license": "NGA Open Access — unrestricted reuse",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.74796.html",
+      "description": "Le pont traverse le haut du bassin sans ouvrir de voie vers un horizon lointain. Monet garde l’attention dans le jardin, où feuilles de nénuphars, végétation et reflets se recouvrent sans cesse. La profondeur reste accessible, mais les touches ramènent continuellement l’œil à la surface. Le pont ordonne cette hésitation en donnant au champ dense une forme clairement déployée d’un bord à l’autre.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "3a11adb9-480e-4fe7-becb-b740daf99e3e",
+      "title": "Fillette au cerceau",
+      "catalogueTitle": "Girl with a Hoop",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1885",
+      "start": 1885,
+      "end": 1885,
+      "medium": "Huile sur toile",
+      "accession": "1963.10.58",
+      "image": "https://artlines.org/assets/artworks/imported/nga-study-6800c88a5d0071451699a3c2a21669cd25935f1add1f2bf5ce3f8257062165ef.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46533.html",
+      "credit": "Pierre-Auguste Renoir. Girl with a Hoop. National Gallery of Art, Washington, 1963.10.58. NGA Open Access — unrestricted reuse; compressed study reproduction.",
+      "license": "NGA Open Access — unrestricted reuse",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46533.html",
+      "description": "Le cerceau relie la main de la fillette au sol et associe à sa pose une activité possible. Renoir n’a pas besoin de montrer un jeu en cours. La lumière morcelée du jardin entoure une figure assez immobile pour être portraiturée. Le jouet fait le lien : elle apparaît comme une enfant particulière dehors, sans que l’image doive devenir une anecdote complète.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "380cf35b-5cb6-40c4-8b20-3792c564c809",
+      "title": "Autoportrait",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1889",
+      "start": 1889,
+      "end": 1889,
+      "medium": "Huile sur bois",
+      "accession": "1963.10.150",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/380cf35b-5cb6-40c4-8b20-3792c564c809-1a11744a757ca0be.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.46625.html",
+      "credit": "Paul Gauguin. Self-Portrait. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.46625.html",
+      "description": "L’auréole, le serpent et les pommes réunissent des associations religieuses concurrentes autour de la tête de Gauguin. Des champs rouges et jaunes privent l’autoportrait d’une pièce ordinaire où prendre place. Ces signes relèvent de la construction de soi, pas d’un aveu transparent. Le tableau montre comment l’artiste choisit de compliquer son image publique, non son caractère moral livré sans intermédiaire.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "bb6f7a67-359f-482a-a6b2-efdb91cd8785",
+      "title": "Le Chemin de fer",
+      "catalogueTitle": "The Railway",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "Huile sur toile",
+      "accession": "1956.10.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/bb6f7a67-359f-482a-a6b2-efdb91cd8785-eb03dae704181827.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.43624.html",
+      "credit": "Édouard Manet. The Railway. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.43624.html",
+      "description": "La femme regarde vers nous tandis que l’enfant se tourne vers la grille et la vapeur. Manet partage l’attention entre une rencontre offerte au spectateur et une activité soustraite à la vue au-delà des barreaux. Le livre et le chien occupent la figure assise sur un mode plus calme. Le chemin de fer importe par ce qu’il empêche de voir ; la scène n’a pas besoin d’une locomotive clairement montrée.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "bf420f51-62db-42a0-b062-c55a3866923c",
+      "title": "Magnolias géants sur un tissu de velours bleu",
+      "catalogueTitle": "Giant Magnolias on a Blue Velvet Cloth",
+      "artist": "Martin Johnson Heade",
+      "artists": [
+        {
+          "name": "Martin Johnson Heade",
+          "role": "primary",
+          "slug": "martin-johnson-heade-nga-1381"
+        }
+      ],
+      "date": "vers 1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "1996.14.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/bf420f51-62db-42a0-b062-c55a3866923c-a73c65988d65d83e.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.93464.html",
+      "credit": "Martin Johnson Heade. Giant Magnolias on a Blue Velvet Cloth. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.93464.html",
+      "description": "Les magnolias reposent sur une lourde étoffe au lieu de pousser dans un jardin. Heade donne de la consistance aux pétales blancs en les opposant aux plis bleu profond. Feuilles et tiges sombres séparent les fleurs tout en resserrant l’ensemble. Le changement de cadre permet de les considérer comme des objets dotés d’un poids et de surfaces, au-delà de leur rôle dans un paysage.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "e000e90d-89b1-4442-bb2f-7524e903bc00",
+      "title": "Fillette dans un fauteuil bleu",
+      "catalogueTitle": "Little Girl in a Blue Armchair",
+      "artist": "Mary Cassatt",
+      "artists": [
+        {
+          "name": "Mary Cassatt",
+          "role": "primary",
+          "slug": "mary-cassatt-q173223"
+        }
+      ],
+      "date": "1878",
+      "start": 1878,
+      "end": 1878,
+      "medium": "Huile sur toile",
+      "accession": "1983.1.18",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/e000e90d-89b1-4442-bb2f-7524e903bc00-84ccee49b95009bf.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.61368.html",
+      "credit": "Mary Cassatt. Little Girl in a Blue Armchair. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.61368.html",
+      "description": "L’enfant s’étale sur un meuble assez grand pour rendre manifeste son occupation provisoire. Cassatt ne corrige pas cette aisance maladroite du corps pour en faire une pose formelle. Le tissu bleu à motifs remplit une grande partie de la pièce et concurrence le petit modèle. Ce déséquilibre donne à l’enfance une mesure physique : le cadre des adultes continue de dépasser le corps qui s’y repose.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "74dd8036-8ed0-4893-bf13-9cd15edf5529",
+      "title": "Le Vieux Violon",
+      "catalogueTitle": "The Old Violin",
+      "artist": "John Frederick Peto",
+      "artists": [
+        {
+          "name": "John Frederick Peto",
+          "role": "primary",
+          "slug": "john-frederick-peto-nga-1780"
+        }
+      ],
+      "date": "vers 1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "Huile sur toile",
+      "accession": "1974.19.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/nga/74dd8036-8ed0-4893-bf13-9cd15edf5529-7ca79f15d32c98fe.jpg",
+      "imageSource": "https://www.nga.gov/collection/art-object-page.54191.html",
+      "credit": "John Frederick Peto. The Old Violin. National Gallery of Art. NGA Open Access — public domain. Compressed full-frame reproduction.",
+      "license": "NGA Open Access — public domain",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "source": "https://www.nga.gov/collection/art-object-page.54191.html",
+      "description": "Peto peint l’usure aussi soigneusement que l’épaisseur apparente du violon. Partition déchirée, bois marqué et ombres aident le pigment plat à imiter des objets distincts sur une porte. La tromperie dépend de traces d’usage ordinaires, non de surfaces impeccables. On peut parfaitement savoir qu’il s’agit d’une peinture et continuer à examiner ce qui lui donne l’air d’être autre chose.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    },
+    {
+      "id": "63b7c043-6395-4281-84df-64aeb0d35d2c",
+      "title": "Arisème petit-prêcheur n° IV",
+      "catalogueTitle": "Jack-in-the-Pulpit No. IV",
+      "artist": "Georgia O'Keeffe",
+      "artists": [
+        {
+          "name": "Georgia O'Keeffe",
+          "role": "primary",
+          "slug": "georgia-o-keeffe-q46408"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "Huile sur toile",
+      "accession": "1987.58.3",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/63b7c043-6395-4281-84df-64aeb0d35d2c-3b24697db1db4463.jpg",
+      "imageSource": "https://www.wikiart.org/en/georgia-o-keeffe/jack-in-the-pulpit-no-iv",
+      "credit": "Georgia O'Keeffe. Jack-in-the-Pulpit No. IV. WikiArt source label: Georgia O'Keeffe Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georgia-o-keeffe/jack-in-the-pulpit-no-iv",
+      "license": "Georgia O'Keeffe Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.nga.gov/collection/art-object-page.70179.html",
+      "description": "O’Keeffe agrandit la fleur jusqu’à ce que des plis sombres et une mince forme claire remplissent presque l’espace disponible. Des bandes courbes conduisent vers l’ouverture centrale, donnant à la structure botanique une échelle proche de l’abstraction. La plante n’a pas besoin de disparaître pour que les formes gagnent en indépendance. Reconnaissance et attention à la couleur peuvent rester actives ensemble.",
+      "importance": "",
+      "museum": "National Gallery of Art"
+    }
+  ],
+  "context": {
+    "start": 1434,
+    "end": 1930
+  },
+  "closingSections": [
+    {
+      "title": "Demander ce que le détail établit réellement",
+      "paragraphs": [
+        "Une plume peut désigner une activité ; une horloge peut contribuer à construire une image de diligence. Ni l’une ni l’autre ne révèle automatiquement un état intérieur. Gardez cette distinction dans vos comparaisons. La sélection n’est pas un itinéraire d’exposition actuel : consultez les notices du musée pour les mises à jour d’attribution, la présence des œuvres et les renseignements pratiques."
+      ]
+    }
+  ]
+}

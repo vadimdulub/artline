@@ -23,6 +23,34 @@ func TestMultipleChoices(t *testing.T) {
 	}
 }
 
+func TestSourceArtistIdentitiesSurviveFilters(t *testing.T) {
+	const canonical = "met-qid-Q2029414-mei-qing"
+	for _, raw := range []string{canonical, strings.ToLower(canonical), " " + canonical + " "} {
+		if got := artistLookupSlug(raw); got != canonical {
+			t.Fatalf("source artist lookup changed: %q", got)
+		}
+		if !validArtistSlug(sourceArtistSlug(raw)) {
+			t.Fatalf("source artist cannot open an artwork: %q", raw)
+		}
+	}
+	got, err := parseArtistChoices([]string{canonical, strings.ToLower(canonical), "rembrandt"})
+	if err != nil || !reflect.DeepEqual(got, []string{canonical, "rembrandt"}) {
+		t.Fatalf("painter choices lost source identity or deduplication: %v %v", got, err)
+	}
+	f, err := museumFilter(httptest.NewRequest("GET", "/api/v1/museums/x/works?artist="+strings.ToLower(canonical), nil))
+	if err != nil || !reflect.DeepEqual(f.Artists, []string{canonical}) {
+		t.Fatalf("museum artist filter lost source identity: %+v %v", f, err)
+	}
+	for _, raw := range []string{"met-qid-Q123-painter/other", "met-qid-Q123-painter'--", strings.Repeat(canonical+",", 33), strings.Repeat("a", 101)} {
+		if _, err := parseArtistChoices([]string{raw}); err == nil {
+			t.Fatalf("accepted malformed or unbounded artist selection: %q", raw)
+		}
+	}
+	if got := sourceArtistSlug("met-qid-q-not-a-number"); got != "met-qid-q-not-a-number" {
+		t.Fatalf("unrelated slug was rewritten: %q", got)
+	}
+}
+
 func TestDecorativeArtFilters(t *testing.T) {
 	for _, kind := range []string{"ceramic", "metalwork", "sculpture", "calligraphy"} {
 		f, err := museumFilter(httptest.NewRequest("GET", "/api/v1/museums/x/works?work_type="+kind, nil))

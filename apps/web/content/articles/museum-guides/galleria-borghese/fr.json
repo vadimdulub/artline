@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "galleria-borghese",
+  "museum": "Galleria Borghese",
+  "city": "Rome",
+  "country": "Italie",
+  "title": "Galerie Borghèse : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres où le contact physique raconte une grande partie de l'histoire.",
+  "introduction": "La Proserpine du Bernin se tord pour échapper aux bras qui la soulèvent. Les porteurs de Raphaël coordonnent leurs mouvements autour du poids du Christ mort. Dans les deux œuvres, les rapports entre les corps expliquent l'action avant que chaque participant soit nommé. Observer le contact donne un accès immédiat à des sujets qui arrivent parfois chargés de mythologie ou de doctrine.\n\nLa sélection comprend aussi des portraits, un concert et des figures assumant des rôles antiques. Le corps peut alors se présenter plutôt que lutter. Distinguez bien les objets : l'*Apollon et Daphné* ci-dessous est le tableau de Dosso Dossi, non la sculpture du Bernin. Titres communs et histoires familières peuvent cacher des différences importantes de médium, d'épisode et de point de vue.",
+  "visitNote": "Ces œuvres sélectionnées appartiennent à la collection Borghèse ; les prêts et la disposition des salles sont susceptibles d’évoluer. Veuillez consulter les pages officielles du musée consacrées à la réservation et à la collection avant votre visite. L’œuvre de Dosso Dossi intitulée Apollon et Daphné présentée dans ce guide est une peinture, distincte de la sculpture du Bernin traitant du même sujet.",
+  "locale": "fr",
+  "website": "https://galleriaborghese.beniculturali.it/en/",
+  "officialGuide": "https://galleriaborghese.cultura.gov.it/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "A Treatise on Painting",
+      "author": "Leonardo da Vinci; translated by John Francis Rigaud",
+      "url": "https://www.gutenberg.org/ebooks/46915",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les sections consacrées au mouvement et à la disposition des figures offrent un point de départ pour comparer l’effort des porteurs chez Raphaël aux corps soutenus et aux torsions caractéristiques de la sculpture du Bernin."
+    }
+  ],
+  "works": [
+    {
+      "id": "c59ea748-224e-5a39-9648-2a922bcd1262",
+      "title": "Apollon et Daphné",
+      "catalogueTitle": "Apollo and Daphne",
+      "artist": "Dosso Dossi",
+      "artists": [
+        {
+          "name": "Dosso Dossi",
+          "role": "primary",
+          "slug": "dosso-dossi-q356777"
+        }
+      ],
+      "date": "1524",
+      "start": 1524,
+      "end": 1524,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c59ea748-224e-5a39-9648-2a922bcd1262-74210d9d18464642.jpg",
+      "imageSource": "https://www.wikiart.org/en/dosso-dossi/apollo-and-daphne-1524",
+      "credit": "Dosso Dossi. Apollo and Daphne. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/dosso-dossi/apollo-and-daphne-1524",
+      "description": "Dosso Dossi place Apollon musicien près du spectateur, tandis que la poursuite impliquant Daphné se déroule plus loin. Le tableau sépare des activités que le titre pourrait nous faire attendre dans une seule rencontre immédiate. Le regard doit voyager entre le jeu musical au premier plan et le récit distant. Le paysage participe à cette séparation, au lieu de servir de décor à une action unique.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "867dd376-6e40-5559-b0ae-b09650fe5d91",
+      "title": "L'Enlèvement de Proserpine",
+      "catalogueTitle": "The Rape of Proserpina",
+      "artist": "Gian Lorenzo Bernini",
+      "artists": [
+        {
+          "name": "Gian Lorenzo Bernini",
+          "role": "primary",
+          "slug": "gian-lorenzo-bernini-nga-2025"
+        }
+      ],
+      "date": "1621-1622",
+      "start": 1621,
+      "end": 1622,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/867dd376-6e40-5559-b0ae-b09650fe5d91-013297c696c8e09c.jpg",
+      "imageSource": "https://www.wikiart.org/en/gian-lorenzo-bernini/rape-of-proserpine-1622",
+      "credit": "Gian Lorenzo Bernini. The Rape of Proserpina. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gian-lorenzo-bernini/rape-of-proserpine-1622",
+      "description": "À la prise ascendante de Pluton répondent la torsion de Proserpine et sa main contre son visage. Le Bernin réunit des forces opposées dans un groupe. La cuisse apparemment enfoncée sous les doigts ajoute une contradiction : le marbre dur décrit une chair souple. La virtuosité ne doit pas éclipser la contrainte du sujet ; l'effet matériel rend la pression physique plus lisible.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "920f73ba-cb08-42b8-8e96-7308f53f349d",
+      "title": "L'Amour sacré et l'Amour profane",
+      "catalogueTitle": "Sacred and Profane Love",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "1515–1516",
+      "start": 1515,
+      "end": 1516,
+      "medium": "Huile sur toile",
+      "accession": "147",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/920f73ba-cb08-42b8-8e96-7308f53f349d-9d2d4654f3a8798b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vecellio_Tiziano_(Pieve_di_Cadore_1488-90_-_Venezia_1576)_-_Amor_sacro_e_Amor_profano_-_147_-_Galleria_Borghese.jpg",
+      "credit": "Titian. Sacred and Profane Love. Image credit: Titian; Source credit: Galleria Borghese. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/sacred-and-profane-love",
+      "description": "Des visages semblables et des degrés de nudité différents relient les deux femmes tout en les distinguant. Entre elles, Cupidon plonge la main dans l'eau. Le titre familier ne clôt pas l'interprétation : le musée présente plusieurs lectures et privilégie un contexte matrimonial. Commencez par cette paire avant d'attribuer à l'une une supériorité morale simple sur l'autre.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "63ee2183-ed2c-5278-9bde-ccfefa150e3c",
+      "title": "Garçon à la corbeille de fruits",
+      "catalogueTitle": "Boy with a Basket of Fruit",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1593",
+      "start": 1593,
+      "end": 1593,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/63ee2183-ed2c-5278-9bde-ccfefa150e3c-5209d0d8023246e3.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/boy-with-a-basket-of-fruit-1593-1",
+      "credit": "Caravaggio. Boy with a Basket of Fruit. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/boy-with-a-basket-of-fruit-1593-1",
+      "description": "La corbeille s'avance, donnant fruits, feuilles et visage également à regarder. Caravage ne laisse pas la nature morte devenir un accessoire mineur du portrait. Le corps tourné et la chemise glissante du jeune homme établissent une rencontre où les objets tenus occupent une grande part de l'espace disponible entre figure et spectateur.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "c9215c61-64f7-51e9-acc0-42f204b584a8",
+      "title": "Le Jeune Bacchus malade",
+      "catalogueTitle": "Young Sick Bacchus",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1593",
+      "start": 1593,
+      "end": 1593,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c9215c61-64f7-51e9-acc0-42f204b584a8-72b9fbe33e4954a8.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/young-sick-bacchus",
+      "credit": "Caravaggio. Young Sick Bacchus. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/young-sick-bacchus",
+      "description": "Lierre et raisins identifient un rôle antique porté par un jeune corps non idéalisé. Le retournement par-dessus l'épaule nue le place dans un rapport contraint à la table et aux fruits. La chair pâle peut être observée, mais une apparence peinte ne permet pas de diagnostic médical. Le titre familier ne doit pas remplacer des preuves de maladie.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "c5522d8a-f549-5e4b-8f62-67411c20dbac",
+      "title": "La Madone des palefreniers",
+      "catalogueTitle": "Madonna and Child with St. Anne",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1606",
+      "start": 1606,
+      "end": 1606,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/c5522d8a-f549-5e4b-8f62-67411c20dbac-7c7941ae73f65aa3.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/madonna-and-child-with-st-anne-1606",
+      "credit": "Madonna and Child with St. Anne. WikiArt; Caravaggio. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/madonna-and-child-with-st-anne-1606",
+      "description": "Marie stabilise l'enfant dont le petit pied presse le serpent ; la femme âgée regarde. Caravage fait dépendre l'action religieuse d'un équilibre et d'une pression partagés. Trois générations occupent le cadre sombre, distinguées par la forte lumière et la taille des corps. La plus petite figure accomplit le geste décisif tout en restant physiquement dépendante d'un soutien.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "29018a14-c627-53f3-815b-96ee3bef40ca",
+      "title": "Marcello Sacchetti",
+      "catalogueTitle": "Marcello Sacchetti",
+      "artist": "Pietro da Cortona",
+      "artists": [
+        {
+          "name": "Pietro da Cortona",
+          "role": "primary",
+          "slug": "pietro-da-cortona-q333323"
+        }
+      ],
+      "date": "vers 1626",
+      "start": 1626,
+      "end": 1626,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/29018a14-c627-53f3-815b-96ee3bef40ca-ad6ddff37ddbd882.jpg",
+      "imageSource": "https://www.wikiart.org/en/pietro-da-cortona/marcello-sacchetti",
+      "credit": "Pietro da Cortona. Marcello Sacchetti. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/pietro-da-cortona/marcello-sacchetti",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pietro-da-cortona/marcello-sacchetti",
+      "description": "La dentelle blanche interrompt le noir au col et au poignet, dirigeant le regard vers le visage et la main. Un support architectural donne à la figure debout un cadre officiel. Pierre de Cortone construit la présentation publique par le maintien contrôlé et les distinctions matérielles. L'apparat se répartit entre costume et pose, plutôt que de se concentrer dans un geste théâtral.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "b0a8d5cc-9e19-4dd0-a96b-bc00ac5c5fea",
+      "title": "Saint Jérôme écrivant",
+      "catalogueTitle": "Saint Jerome",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "vers 1606",
+      "start": 1606,
+      "end": 1606,
+      "medium": "Huile sur toile",
+      "accession": "056",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/b0a8d5cc-9e19-4dd0-a96b-bc00ac5c5fea-d1cbb75031ffacd2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Saint_Jerome_Writing-Caravaggio_(1605-6).jpg",
+      "credit": "Caravaggio. Saint Jerome. Image credit: Caravaggio; Source credit: Self-scanned. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/saint-jerome",
+      "description": "Le bras nu traverse la table vers le travail et forme une longue liaison éclairée dans l'obscurité. À l'autre bout, le crâne introduit la mortalité dans le même espace. Caravage ne sépare pas le travail intellectuel du corps vulnérable qui l'accomplit. L'écriture devient un effort visible, soutenu par une personne vieillissante.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "d1d24f73-6abf-585f-af84-d5ce20ed7581",
+      "title": "Minerve s'habillant",
+      "catalogueTitle": "Minerva Dressing",
+      "artist": "Lavinia Fontana",
+      "artists": [
+        {
+          "name": "Lavinia Fontana",
+          "role": "primary",
+          "slug": "lavinia-fontana-q236050"
+        }
+      ],
+      "date": "1613",
+      "start": 1613,
+      "end": 1613,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d1d24f73-6abf-585f-af84-d5ce20ed7581-57daa6ddea016d39.jpg",
+      "imageSource": "https://www.wikiart.org/en/lavinia-fontana/minerva-dressing-1613",
+      "credit": "Lavinia Fontana. Minerva Dressing. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lavinia-fontana/minerva-dressing-1613",
+      "description": "Armure et casque identifient Minerve même lorsqu'elle ne les porte pas. Lavinia Fontana présente la déesse pendant l'habillage, le corps tourné vers les vêtements. Rôle et costume sont brièvement séparés. Les objets environnants préservent l'identité mythologique, tandis que l'action montre le passage concret vers son apparence familière.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "717dae4b-e12d-594c-94a1-5b5e60bd01ac",
+      "title": "Cupidon et Psyché",
+      "catalogueTitle": "Amor and Psyche",
+      "artist": "Jacopo Zucchi",
+      "artists": [
+        {
+          "name": "Jacopo Zucchi",
+          "role": "primary",
+          "slug": "wikimedia-painter-q528968"
+        }
+      ],
+      "date": "1589",
+      "start": 1589,
+      "end": 1589,
+      "medium": "",
+      "accession": "010",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q107250653-d3ad9efb7e287c93.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jacopo_Zucchi_-_Amor_and_Psyche.jpg",
+      "credit": "Jacopo Zucchi. Amor and Psyche. Image credit: Jacopo Zucchi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q107250653",
+      "description": "La lampe levée fait du regard l'action décisive. Psyché approche Cupidon endormi parmi les fleurs, les tissus et les corps pâles serrés. Zucchi donne à l'éclairage une fonction narrative : il permet une découverte tout en exposant le geste qui la produit. La lumière vient d'une décision prise dans la scène, non d'un effet théâtral inexpliqué.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "10569bb7-b45b-429c-b68e-850da953b5ed",
+      "title": "La Mise au tombeau",
+      "catalogueTitle": "Deposition (The Carrying of the Dead Christ to the Sepulchre)",
+      "artist": "Raphael",
+      "artists": [
+        {
+          "name": "Raphael",
+          "role": "primary",
+          "slug": "raphael-q5597"
+        }
+      ],
+      "date": "1507",
+      "start": 1507,
+      "end": 1507,
+      "medium": "Huile sur panneau",
+      "accession": "369",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/10569bb7-b45b-429c-b68e-850da953b5ed-8448d27f2dbafa3b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Raffaello,_pala_baglioni,_deposizione.jpg",
+      "credit": "Raphael. Deposition (The Carrying of the Dead Christ to the Sepulchre). Image credit: Raphael; Source credit: aiwaz.net. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/deposition-the-carrying-of-the-dead-christ-to-the-sepulchre",
+      "description": "Les porteurs doivent coordonner des pas opposés autour du poids du Christ. À côté, une femme endeuillée qui s'affaisse crée un autre besoin de soutien. Raphaël réunit ces actions dans un groupe dont le chagrin est inséparable de l'effort physique. Mort et vivante défaillante exigent des réponses différentes, donnant à la composition plusieurs centres de dépendance corporelle.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "a99c0b0a-e6fd-5394-b6d6-8653101f20f7",
+      "title": "Saint Jean-Baptiste",
+      "catalogueTitle": "Saint John the Baptist",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "vers 1560",
+      "start": 1560,
+      "end": 1560,
+      "medium": "",
+      "accession": "444",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q110015681-360b1dd562e90b75.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Agnolo_di_Cosimo_detto_Bronzino_(Firenze_1503_-_1572)_-_San_Giovanni_Battista_(Ritratto_di_Giovanni_de%E2%80%99_Medici)_-_444_-_Galleria_Borghese.jpg",
+      "credit": "Bronzino. Saint John the Baptist. Image credit: Bronzino. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q110015681",
+      "description": "Bronzino tord le torse sur le siège rocheux, tandis que le bras pointé établit une autre direction. L'étoffe bleue distingue le corps découvert sans simplifier sa pose. Le saint se présente par l'organisation corporelle, non par un épisode entièrement narré. Suivre les axes différents du bras et du torse explique son activité avant d'ajouter la signification religieuse du geste.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "b42cc00f-5aeb-574a-ae8e-8e4c409d3e3e",
+      "title": "Autoportrait à l'âge mûr",
+      "catalogueTitle": "Self Portrait of Gianlorenzo Bernini as a Mature Man (1638-40)",
+      "artist": "Gian Lorenzo Bernini",
+      "artists": [
+        {
+          "name": "Gian Lorenzo Bernini",
+          "role": "primary",
+          "slug": "gian-lorenzo-bernini-nga-2025"
+        }
+      ],
+      "date": "vers 1635–1640",
+      "start": 1635,
+      "end": 1640,
+      "medium": "",
+      "accession": "545",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19904754-789c4f57d018aa56.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gian_lorenzo_bernini_selfportrait.jpg",
+      "credit": "Gian Lorenzo Bernini. Self Portrait of Gianlorenzo Bernini as a Mature Man (1638-40). Image credit: Gian Lorenzo Bernini. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19904754",
+      "description": "La lumière se rassemble autour des yeux et de la joue du Bernin ; un petit col blanc interrompt le vêtement sombre. Les marques voisines sont assez économes pour laisser le visage dominer. Comparée à ses groupes sculptés, cette présentation peinte requiert peu d'action manifeste. Son immédiateté se construit par des accents choisis, non par un événement narratif.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "0860ceab-e287-5f5e-9c4e-b1e72941ee1a",
+      "title": "Autoportrait de jeunesse",
+      "catalogueTitle": "Self Portrait of Gianlorenzo Bernini as young man (1623)",
+      "artist": "Gian Lorenzo Bernini",
+      "artists": [
+        {
+          "name": "Gian Lorenzo Bernini",
+          "role": "primary",
+          "slug": "gian-lorenzo-bernini-nga-2025"
+        }
+      ],
+      "date": "1623",
+      "start": 1623,
+      "end": 1623,
+      "medium": "",
+      "accession": "554",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19882428-8f0ef73474f19c9f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gian_Lorenzo_Bernini,_self-portrait,_c1623.jpg",
+      "credit": "Gian Lorenzo Bernini. Self Portrait of Gianlorenzo Bernini as young man (1623). Image credit: Gian Lorenzo Bernini. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19882428",
+      "description": "La tête tournée oriente le regard autrement que le corps sous son large col. Cheveux sombres et ombre encadrent les yeux, rendant leur direction manifeste. La comparaison des deux autoportraits du Bernin peut commencer par ces modestes changements de pose et d'éclairage. Inutile de lire dans chaque expression tout un récit de la jeunesse ou de la maturité.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "5a1ee38f-7cf5-5f75-b46c-16d3392d360f",
+      "title": "L'Arrestation du Christ",
+      "catalogueTitle": "The Capture of Jesus Christ",
+      "artist": "Dirck van Baburen",
+      "artists": [
+        {
+          "name": "Dirck van Baburen",
+          "role": "primary",
+          "slug": "dirck-van-baburen-q380708"
+        }
+      ],
+      "date": "vers 1619",
+      "start": 1619,
+      "end": 1619,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111232767-e55f51c08be9c33a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Baburen,_Dirck_van_-_Gefangennahme_Christi_-_1619.jpg",
+      "credit": "Dirck van Baburen. The Capture of Jesus Christ. Image credit: Dirck van Baburen. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111232767",
+      "description": "L'espace sombre et étroit semble faire se gêner visages et armures. Baburen sélectionne des fragments de l'arrestation par les reflets, laissant d'autres contacts difficiles à démêler. Le manque de place a une conséquence précise : l'événement devient une rencontre physique rapprochée, au lieu de permettre une vue détachée de participants bien séparés.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "be6bb1fb-66e1-50bc-9add-c22b5f625236",
+      "title": "Le Concert",
+      "catalogueTitle": "The Concert",
+      "artist": "Gerard van Honthorst",
+      "artists": [
+        {
+          "name": "Gerard van Honthorst",
+          "role": "primary",
+          "slug": "gerard-van-honthorst-q314548"
+        }
+      ],
+      "date": "1626–1630",
+      "start": 1626,
+      "end": 1630,
+      "medium": "",
+      "accession": "31",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105979064-83d38530d79db68a.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gerrit_van_Honthorst_cat02.jpg",
+      "credit": "Gerard van Honthorst. The Concert. Image credit: Gerard van Honthorst. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105979064",
+      "description": "La partition ouverte fournit un repère commun à la compagnie serrée, mais les regards passent de la page aux compagnons. Honthorst distingue les tâches de jouer, lire et écouter dans le groupe compact. Les chapeaux à plumes en prolongent la silhouette au-dessus de la table. Le concert se voit comme une coordination d'actions différentes, non comme une pose de musicien répétée.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "eea5682e-b053-44c8-8a7a-0a81e41d665d",
+      "title": "Saint Jean-Baptiste",
+      "catalogueTitle": "Saint John the Baptist",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1609–1610",
+      "start": 1609,
+      "end": 1610,
+      "medium": "Huile sur toile",
+      "accession": "267",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/eea5682e-b053-44c8-8a7a-0a81e41d665d-807658850337856f.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_the_Baptist_(Galleria_Borghese)-Caravaggio_(1610).jpg",
+      "credit": "Caravaggio. Saint John the Baptist. Image credit: Caravaggio; Source credit: Self-scanned. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.collezionegalleriaborghese.it/en/opere/saint-john-the-baptist",
+      "description": "La figure assise de Caravage contraste fortement avec le saint tordu de Bronzino. Épaules tombantes et jambes en partie étendues soulignent l'inaction près du drapé rouge et du bélier. Les signes traditionnels identifient Jean sans imposer une pose prophétique énergique. Le corps exposé et son relâchement méritent l'observation avant d'attribuer une émotion au jeune visage.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "5a0377a0-c577-5d61-9e51-0c563589d5fd",
+      "title": "Vierge à l'Enfant avec le petit saint Jean",
+      "catalogueTitle": "Virgin and Child with the Infant Saint John the Baptist",
+      "artist": "Lorenzo di Credi",
+      "artists": [
+        {
+          "name": "Lorenzo di Credi",
+          "role": "primary",
+          "slug": "lorenzo-di-credi-q8511"
+        }
+      ],
+      "date": "1488–1490",
+      "start": 1488,
+      "end": 1490,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q111663498-6e1895dba23bf09c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Lorenzo_di_Credi_-_Madonna_col_Bambino_con_San_Giovanni_Battista_(Galleria_Borghese).jpg",
+      "credit": "Lorenzo di Credi. Virgin and Child with the Infant Saint John the Baptist. Image credit: Lorenzo di Credi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q111663498",
+      "description": "La limite circulaire réunit plusieurs directions du regard autour de Marie droite. Lorenzo di Credi laisse les poses différentes des enfants animer cet espace clos sans rompre la proximité du groupe. Le paysage offre un autre espace derrière eux. Le format rond contraint activement la manière dont corps et gestes peuvent s'ajuster.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "0a841020-3cec-5308-b4c4-76cc608ac6ff",
+      "title": "L'Adoration de l'Enfant",
+      "catalogueTitle": "Adoration of the Child",
+      "artist": "Fra Bartolomeo",
+      "artists": [
+        {
+          "name": "Fra Bartolomeo",
+          "role": "primary",
+          "slug": "fra-bartolomeo-q7780"
+        }
+      ],
+      "date": "1499",
+      "start": 1499,
+      "end": 1499,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0a841020-3cec-5308-b4c4-76cc608ac6ff-ae9d97d2589ff2ce.jpg",
+      "imageSource": "https://www.wikiart.org/en/fra-bartolomeo/adoration-of-the-child",
+      "credit": "Fra Bartolomeo. Adoration of the Child. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/fra-bartolomeo/adoration-of-the-child",
+      "description": "L'enfant repose bas, obligeant les adultes à se pencher vers le sol. Fra Bartolomeo organise leurs regards dans un large triangle à l'intérieur du panneau circulaire. Ruines et paysage restent derrière le groupe, mais l'action immédiate est un abaissement des corps. La plus petite figure détermine la posture des autres malgré le peu d'espace qu'elle occupe.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    },
+    {
+      "id": "c5d17be3-185a-5039-812d-9b2743535770",
+      "title": "David avec la tête de Goliath",
+      "catalogueTitle": "David Contemplating the Head of Goliath",
+      "artist": "Orazio Gentileschi",
+      "artists": [
+        {
+          "name": "Orazio Gentileschi",
+          "role": "primary",
+          "slug": "orazio-gentileschi-q367360"
+        }
+      ],
+      "date": "1610",
+      "start": 1610,
+      "end": 1610,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c5d17be3-185a-5039-812d-9b2743535770-9ce6a8dd5541a1f6.jpg",
+      "imageSource": "https://www.wikiart.org/en/orazio-gentileschi/david-contemplating-the-head-of-goliath-1612",
+      "credit": "Orazio Gentileschi. David Contemplating the Head of Goliath. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/orazio-gentileschi/david-contemplating-the-head-of-goliath-1612",
+      "description": "Orazio Gentileschi choisit un intervalle après le combat. David regarde la tête coupée ; son corps est désormais relativement posé devant l'arbre sombre. Étoffe et membres clairs le distinguent sans rejouer la lutte. Le tableau présente un résultat et un acte d'observation, laissant reconstituer la violence précédente à partir de ce qui demeure.",
+      "importance": "",
+      "museum": "Galleria Borghese"
+    }
+  ],
+  "context": {
+    "start": 1488,
+    "end": 1640
+  },
+  "closingSections": [
+    {
+      "title": "Comparer avant de nommer une humeur",
+      "paragraphs": [
+        "Les deux Saint Jean et les deux autoportraits du Bernin permettent des comparaisons de posture particulièrement utiles. Gardez les artistes et l'identité des objets associés à leurs titres. Vérifiez l'accès et les accrochages auprès de la galerie : cette sélection n'est pas un parcours chronométré dans ses salles."
+      ]
+    }
+  ]
+}

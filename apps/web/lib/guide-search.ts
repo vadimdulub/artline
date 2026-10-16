@@ -10,7 +10,7 @@ export type GuideSearchPage = {
 
 export function guideFilters(raw: Record<string, string | string[] | undefined>) {
   const result = new URLSearchParams();
-  for (const key of ["q", "kind", "cursor"]) {
+  for (const key of ["q", "kind", "cursor", "institution"]) {
     const value = raw[key];
     if (typeof value === "string" && value) result.set(key, value);
     else if (Array.isArray(value)) value.forEach(item => result.append(key, item));

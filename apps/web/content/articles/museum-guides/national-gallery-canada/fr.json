@@ -1,0 +1,599 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "national-gallery-canada",
+  "museum": "National Gallery of Canada",
+  "city": "Ottawa",
+  "country": "Canada",
+  "title": "Musée des beaux-arts du Canada : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres envisagées à travers ce qu'elles agrandissent, entourent ou dissimulent presque.",
+  "introduction": "Un navire rayé se dresse au-dessus de ceux qui le peignent ; un pin étend ses branches devant des bandes d'eau et de ciel. L'un est un objet industriel modifié pour la guerre, l'autre un motif paysager. Tous deux dominent pourtant par une structure forte que les petits détails ne défont pas. Les rapprocher offre un autre point de départ que la recherche d'un style national continu dans une collection nationale.\n\nCette sélection du Musée des beaux-arts du Canada comprend des œuvres canadiennes et internationales, des portraits, des paysages et des images qui s'éloignent des objets reconnaissables. Une question d'échelle revient : qu'agrandit-on, qu'est-ce qui reste petit, et où le regard est-il invité à se poser ? Il s'agit d'un choix partiel, non d'un résumé de toute la collection.",
+  "visitNote": "Il s’agit d’une sélection ciblée issue d’une collection beaucoup plus vaste, et non d’un panorama de l’ensemble de l’art canadien. Veuillez consulter les fiches des œuvres pour connaître les lieux d’exposition et les prêts en cours. Les dates indiquées correspondent à la création des œuvres ; les événements historiques et les sujets littéraires peuvent se rapporter à une autre époque.",
+  "locale": "fr",
+  "website": "https://www.gallery.ca/",
+  "officialGuide": "https://www.gallery.ca/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Elements of Drawing",
+      "author": "John Ruskin",
+      "url": "https://www.gutenberg.org/ebooks/30325",
+      "access": "Lecture gratuite · Anglais",
+      "note": "Les exercices d’observation des formes naturelles proposés par Ruskin constituent un point de départ utile pour Thomson, MacDonald et les peintures de paysages. Il convient d’examiner ses jugements d’un œil critique en les confrontant à la démarche d’artistes ultérieurs, qui simplifient ou recomposent ces formes au lieu de les décrire de manière continue."
+    }
+  ],
+  "works": [
+    {
+      "id": "f9be1f6b-805a-5d2f-8560-0d04640e4b04",
+      "title": "Le pin gris",
+      "catalogueTitle": "The Jack Pine",
+      "artist": "Tom Thomson",
+      "artists": [
+        {
+          "name": "Tom Thomson",
+          "role": "primary",
+          "slug": "wikiart-artist-tom-thomson"
+        }
+      ],
+      "date": "1916–1917",
+      "start": 1916,
+      "end": 1917,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/f9be1f6b-805a-5d2f-8560-0d04640e4b04-db98e0fe0251d510.jpg",
+      "imageSource": "https://www.wikiart.org/en/tom-thomson/the-jack-pine-1917",
+      "credit": "Tom Thomson. The Jack Pine. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/tom-thomson/the-jack-pine-1917",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/tom-thomson/the-jack-pine-1917",
+      "description": "Les branches irrégulières du pin traversent un fond organisé en larges bandes horizontales. L'arbre et le lointain jouent donc des rôles différents : l'un interrompt, l'autre relie. La clarté de l'image vient de leur maintien ensemble. Loin de perdre sa forme particulière dans une idée générale de nature sauvage, cet arbre unique devient le moyen d'organiser tout un paysage.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "d2e4f3e5-995c-5dfa-a091-46e546d829ac",
+      "title": "La Mort du général Wolfe",
+      "catalogueTitle": "The Death of General Wolfe",
+      "artist": "Benjamin West",
+      "artists": [
+        {
+          "name": "Benjamin West",
+          "role": "primary",
+          "slug": "benjamin-west-nga-1970"
+        }
+      ],
+      "date": "1770",
+      "start": 1770,
+      "end": 1770,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d2e4f3e5-995c-5dfa-a091-46e546d829ac-7f3c7088967c4701.jpg",
+      "imageSource": "https://www.wikiart.org/en/benjamin-west/the-death-of-general-wolfe-1770",
+      "credit": "Benjamin West. The Death of General Wolfe. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/benjamin-west/the-death-of-general-wolfe-1770",
+      "description": "Les hommes alentour dirigent gestes et regards vers le corps pâle de Wolfe. Cette disposition transforme une mort sur le champ de bataille en scène de témoignage collectif. Peint après l'événement, le tableau en construit le sens. Des uniformes et des visages convaincants ne font pas de lui un relevé exact des personnes présentes à un instant donné.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "ee5312cf-3062-5413-97af-ae2fd2ed4f2b",
+      "title": "Le jardin enchevêtré",
+      "catalogueTitle": "The Tangled Garden",
+      "artist": "J. E. H. MacDonald",
+      "artists": [
+        {
+          "name": "J. E. H. MacDonald",
+          "role": "primary",
+          "slug": "wikiart-artist-j-e-h-macdonald"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/ee5312cf-3062-5413-97af-ae2fd2ed4f2b-255af8578f481894.jpg",
+      "imageSource": "https://www.wikiart.org/en/j-e-h-macdonald/the-tangled-garden-1916",
+      "credit": "J. E. H. MacDonald. The Tangled Garden. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/j-e-h-macdonald/the-tangled-garden-1916",
+      "description": "Les plantes retombantes n'offrent aucun passage unique et net à travers le jardin. Feuilles, fleurs et taches claires se superposent ; il faut les distinguer par petites étapes. MacDonald donne aux plantations une densité qui résiste à un ordre trop simple. L'intérêt est de séparer les formes voisines sans attendre que tout le jardin se résolve en un motif facile à saisir.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "aa14bfbc-fff5-518c-a64a-0c9337472a23",
+      "title": "L'Espoir I",
+      "catalogueTitle": "Hope I",
+      "artist": "Gustav Klimt",
+      "artists": [
+        {
+          "name": "Gustav Klimt",
+          "role": "primary",
+          "slug": "gustav-klimt-q34661"
+        }
+      ],
+      "date": "1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/aa14bfbc-fff5-518c-a64a-0c9337472a23-aa4e44f5ddbe60c6.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustav-klimt/hope-i",
+      "credit": "Gustav Klimt. Hope I. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/gustav-klimt/hope-i",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/gustav-klimt/hope-i",
+      "description": "La femme enceinte se distingue nettement des formes sombres derrière elle. Ce contraste empêche le malaise environnant de rendre le corps lui-même indécis. L'espoir du titre se trouve ainsi nuancé par ce qui l'accompagne. Grossesse et images inquiétantes partagent le même espace sans se résoudre en célébration sans réserve ni en prédiction unique.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "e28fbb96-24b7-5d36-9ef7-0e4f50e68ac9",
+      "title": "Pavane",
+      "catalogueTitle": "Pavane",
+      "artist": "Jean-Paul Riopelle",
+      "artists": [
+        {
+          "name": "Jean-Paul Riopelle",
+          "role": "primary",
+          "slug": "wikiart-artist-jean-paul-riopelle"
+        }
+      ],
+      "date": "1954",
+      "start": 1954,
+      "end": 1954,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e28fbb96-24b7-5d36-9ef7-0e4f50e68ac9-2ee556f7ead51dd8.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-paul-riopelle/pavane-1954",
+      "credit": "Jean-Paul Riopelle. Pavane. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-paul-riopelle/pavane-1954",
+      "description": "Aucun objet représenté ne dit à l'œil où s'arrêter. Les trois parties et les concentrations variables de couleur organisent plutôt l'œuvre à plusieurs échelles. Chaque trace reste distincte au sein de la vaste surface. La répétition fait circuler le regard, mais les différences de densité empêchent l'ensemble de fonctionner comme un motif uniformément reproduit.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "9ff32104-41e1-5b40-ad51-86e6bfa6684a",
+      "title": "Navires à camouflage « Dazzle » en cale sèche à Liverpool",
+      "catalogueTitle": "Dazzle-ships in Drydock at Liverpool",
+      "artist": "Edward Wadsworth",
+      "artists": [
+        {
+          "name": "Edward Wadsworth",
+          "role": "primary",
+          "slug": "wikiart-artist-edward-wadsworth"
+        }
+      ],
+      "date": "1919",
+      "start": 1919,
+      "end": 1919,
+      "medium": "",
+      "accession": "8925",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q29561294-2e02fc2900ae327e.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dazzle-ships_in_Drydock_at_Liverpool.jpg",
+      "credit": "Edward Wadsworth. Dazzle-ships in Drydock at Liverpool. Image credit: Edward Wadsworth; Source credit: Self-photographed by Mzajac of original painting.. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.gallery.ca/collection/artwork/dazzleships-in-dry-dock-at-liverpool",
+      "description": "La coque rayée domine les personnes qui achèvent sa peinture. Le camouflage « dazzle » devait brouiller l'estimation du cap d'un navire, non simplement le faire disparaître. Wadsworth transforme cette perturbation optique volontaire en tableau clairement organisé. Il préserve à la fois le motif géométrique et l'objet immense sur lequel celui-ci a été appliqué.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "255d0991-6bb0-593a-9254-268ae2464c3d",
+      "title": "Un emplacement de pièce d'artillerie canadien",
+      "catalogueTitle": "A Canadian Gun-pit",
+      "artist": "Wyndham Lewis",
+      "artists": [
+        {
+          "name": "Wyndham Lewis",
+          "role": "primary",
+          "slug": "wyndham-lewis-nga-18405"
+        }
+      ],
+      "date": "1918",
+      "start": 1918,
+      "end": 1918,
+      "medium": "",
+      "accession": "8356",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59523212-f70f92aedb949af6.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Wyndham_Lewis-A_Canadian_Gun-pit.jpg",
+      "credit": "Wyndham Lewis. A Canadian Gun-pit. Image credit: Wyndham Lewis; Source credit: https://www.gallery.ca/collection/artwork/a-canadian-gun-pit. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.gallery.ca/collection/artwork/a-canadian-gun-pit",
+      "description": "Les tâches des soldats prennent place en fonction du canon et de ses supports. Des formes anguleuses traversent corps, équipement et sol, reliant les hommes à la machine qu'ils servent. On reconnaît encore le travail d'individus, mais c'est l'arme qui détermine l'espace commun dans lequel ce travail peut s'accomplir.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "d3ab6ffb-5274-5f19-8acc-b0bcb77b1806",
+      "title": "Port d'Anvers",
+      "catalogueTitle": "Port of Antwerp",
+      "artist": "Georges Braque",
+      "artists": [
+        {
+          "name": "Georges Braque",
+          "role": "primary",
+          "slug": "georges-braque-q153793"
+        }
+      ],
+      "date": "1906",
+      "start": 1906,
+      "end": 1906,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/d3ab6ffb-5274-5f19-8acc-b0bcb77b1806-bca3b9ec4bb55ebb.jpg",
+      "imageSource": "https://www.wikiart.org/en/georges-braque/port-of-antwerp-1906",
+      "credit": "Georges Braque. Port of Antwerp. WikiArt source label: Public domain US. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/georges-braque/port-of-antwerp-1906",
+      "license": "Public domain US (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/georges-braque/port-of-antwerp-1906",
+      "description": "La rambarde courbe du premier plan donne au port une limite proche, tandis que bateaux et bâtiments lointains occupent des plages de couleur plus fortes. Ces couleurs n'ont pas besoin d'imiter la lumière ordinaire du jour pour que le lieu reste lisible. Les rapports entre formes maintiennent la structure de la vue, même lorsque les teintes dépassent une description sobre du rivage.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "7e89818e-acd4-54de-bbf1-cbb1648d2b84",
+      "title": "Mer du Nord I : Orage",
+      "catalogueTitle": "North Sea I (Thunderstorm)",
+      "artist": "Max Beckmann",
+      "artists": [
+        {
+          "name": "Max Beckmann",
+          "role": "primary",
+          "slug": "max-beckmann-q164683"
+        }
+      ],
+      "date": "1937",
+      "start": 1937,
+      "end": 1937,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q105560194-464af11e69600db4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:NORDSEELANDSCHAFT_I_(GEWITTER)_NORTH_SEA_I_(THUNDERSTORM)_.jpg",
+      "credit": "Max Beckmann. North Sea I (Thunderstorm). Image credit: Max Beckmann; Source credit: https://www.sothebys.com/en/auctions/ecatalogue/2010/impressionist-modern-art-evening-sale-n08675/lot.57.html. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q105560194",
+      "description": "L'horizon étroit laisse le ciel pesant se presser contre l'eau brisée. Des traits jaunâtres descendent à travers les nuages, introduisant une direction différente du roulement de la mer. Les divisions affirmées de Beckmann conservent à l'orage une structure résistante. Le temps ne dissout pas le monde dans une brume douce et continue.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "9e56ca25-3507-5e89-8ca5-653c52345b9d",
+      "title": "Solstice du tournesol",
+      "catalogueTitle": "Solstice of the Sunflower",
+      "artist": "Paul Nash",
+      "artists": [
+        {
+          "name": "Paul Nash",
+          "role": "primary",
+          "slug": "paul-nash-nga-5074"
+        }
+      ],
+      "date": "1945",
+      "start": 1945,
+      "end": 1945,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/9e56ca25-3507-5e89-8ca5-653c52345b9d-9aa45c70c6bcd2fa.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-nash/solstice-of-the-sunflower-1945",
+      "credit": "Paul Nash. Solstice of the Sunflower. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/paul-nash/solstice-of-the-sunflower-1945",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/paul-nash/solstice-of-the-sunflower-1945",
+      "description": "La tête agrandie du tournesol et le soleil répètent une forme circulaire à des endroits différents du paysage. Leur ressemblance organise le tableau, mais leurs tailles ne peuvent s'accorder comme dans une vue ordinaire. Nash établit ce lien par l'invention picturale : la plante et l'astre entrent dans une relation que l'exactitude botanique seule ne produirait pas.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "096446c9-b04e-5bc6-8aa0-9d50621e675a",
+      "title": "Portrait d'homme au chapeau de feutre",
+      "catalogueTitle": "Portrait of a Man with a Felt Hat",
+      "artist": "Lorenzo Lotto",
+      "artists": [
+        {
+          "name": "Lorenzo Lotto",
+          "role": "primary",
+          "slug": "lorenzo-lotto-q310973"
+        }
+      ],
+      "date": "1541",
+      "start": 1541,
+      "end": 1541,
+      "medium": "Huile sur papier",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round4-20261006/096446c9-b04e-5bc6-8aa0-9d50621e675a-22a35c5c8e31b7c2.jpg",
+      "imageSource": "https://www.wikiart.org/en/lorenzo-lotto/portrait-of-a-man-with-a-felt-hat-1541",
+      "credit": "Lorenzo Lotto. Portrait of a Man with a Felt Hat. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/lorenzo-lotto/portrait-of-a-man-with-a-felt-hat-1541",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/lorenzo-lotto/portrait-of-a-man-with-a-felt-hat-1541",
+      "description": "Le chapeau tenu donne une tâche à une main, tandis que le regard direct établit un autre contact. De larges vêtements sombres encadrent le visage, sans décor élaboré pour expliquer le rang du modèle. L'objet participe à la pose au lieu de simplement l'accompagner : le retirer changerait la manière dont le corps se présente.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "859c2dc5-8162-56a8-a3d0-d8c976b54262",
+      "title": "Portrait d'un gentilhomme",
+      "catalogueTitle": "Portrait of a gentleman",
+      "artist": "Bronzino",
+      "artists": [
+        {
+          "name": "Bronzino",
+          "role": "primary",
+          "slug": "bronzino-q7803"
+        }
+      ],
+      "date": "vers 1552",
+      "start": 1552,
+      "end": 1552,
+      "medium": "Huile sur bois",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/859c2dc5-8162-56a8-a3d0-d8c976b54262-7cc1342b9aea49c2.jpg",
+      "imageSource": "https://www.wikiart.org/en/agnolo-bronzino/portrait-of-a-gentleman",
+      "credit": "Bronzino. Portrait of a gentleman. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/agnolo-bronzino/portrait-of-a-gentleman",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/agnolo-bronzino/portrait-of-a-gentleman",
+      "description": "La petite sculpture introduit une seconde sorte de figure auprès du modèle vivant. Elle rattache le portrait à la possession et à l'affichage d'une culture, sans pouvoir dire à elle seule tout ce que l'homme savait ou estimait. Bronzino fait de cette juxtaposition une composante de la présentation sociale, plutôt que d'en laisser toute la charge au visage.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "dc8dd2c1-2c16-58c4-9029-e61b9962126e",
+      "title": "Anna Ivanovna Tolstaïa",
+      "catalogueTitle": "Anna Ivanovna Tolstaya",
+      "artist": "Élisabeth Vigée Le Brun",
+      "artists": [
+        {
+          "name": "Élisabeth Vigée Le Brun",
+          "role": "primary",
+          "slug": "elisabeth-vigee-le-brun-q213163"
+        }
+      ],
+      "date": "1796",
+      "start": 1796,
+      "end": 1796,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/dc8dd2c1-2c16-58c4-9029-e61b9962126e-358b1a56c1144909.jpg",
+      "imageSource": "https://www.wikiart.org/en/louise-elisabeth-vigee-le-brun/anna-ivanovna-tolstaya-1796",
+      "credit": "Élisabeth Vigée Le Brun. Anna Ivanovna Tolstaya. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/louise-elisabeth-vigee-le-brun/anna-ivanovna-tolstaya-1796",
+      "description": "La tête appuyée et le drapé souple suggèrent une certaine liberté, mais appartiennent tous deux à une pose soigneusement réglée. Rochers et arbres remplacent l'intérieur officiel sans abolir le contrôle de l'apparence. L'aisance est construite par les rapports entre vêtement, geste et décor ; elle ne prouve pas qu'un instant sans apprêt ait été surpris.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "7f6817b1-eb30-5bc8-a047-d3676b73724a",
+      "title": "Pommiers en fleurs",
+      "catalogueTitle": "Apple Trees in Bloom",
+      "artist": "Alfred Sisley",
+      "artists": [
+        {
+          "name": "Alfred Sisley",
+          "role": "primary",
+          "slug": "alfred-sisley-q175130"
+        }
+      ],
+      "date": "1880",
+      "start": 1880,
+      "end": 1880,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/7f6817b1-eb30-5bc8-a047-d3676b73724a-6656c1945787f1b4.jpg",
+      "imageSource": "https://www.wikiart.org/en/alfred-sisley/apple-trees-in-bloom-1880",
+      "credit": "Alfred Sisley. Apple Trees in Bloom. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/alfred-sisley/apple-trees-in-bloom-1880",
+      "description": "Les troncs jalonnent le verger de positions répétées, tandis que les fleurs en fragmentent les contours en zones plus claires et moins fixes. Aucun arbre n'a besoin de dominer. Les intervalles et de petites différences de couleur produisent la profondeur, permettant au tableau de conserver un espace cohérent sans événement central remarquable.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "9ef36240-c3d7-5462-bd73-c06369c9b016",
+      "title": "Après-midi de septembre, Cantons-de-l'Est",
+      "catalogueTitle": "September Afternoon, Eastern Townships",
+      "artist": "John Arthur Fraser",
+      "artists": [
+        {
+          "name": "John Arthur Fraser",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3180935"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "",
+      "accession": "18159",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59543324-f037c00470ba798c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Arthur_Fraser_-_September_Afternoon,_Eastern_Townships.jpg",
+      "credit": "John Arthur Fraser. September Afternoon, Eastern Townships. Image credit: John Arthur Fraser; Source credit: The AMICA Library. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59543324",
+      "description": "Les moutons au repos donnent à la rive proche une échelle familière et habitée. Derrière eux, eau et montagnes se prolongent dans des lointains plus pâles : le regard passe des détails ruraux à un territoire bien plus vaste. Le troupeau compte aussi parce qu'il ne s'impose pas à tout le paysage ; il sert à mesurer ce qui le dépasse.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "dfbe867f-8194-5729-a777-6fe022968742",
+      "title": "Un coup de feu à l'aube, lac Scugog",
+      "catalogueTitle": "A Shot in the Dawn, Lake Scugog",
+      "artist": "John Arthur Fraser",
+      "artists": [
+        {
+          "name": "John Arthur Fraser",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3180935"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "",
+      "accession": "6938",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59522632-7e8a159cf366cd26.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Arthur_Fraser_-_A_Shot_in_the_Dawn,_Lake_Scugog.jpg",
+      "credit": "John Arthur Fraser. A Shot in the Dawn, Lake Scugog. Image credit: John Arthur Fraser; Source credit: The AMICA Library. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59522632",
+      "description": "La figure et le chien sont petits devant l'eau et le vaste ciel de l'aube. Sans le titre, leur activité pourrait rester secondaire par rapport aux changements de lumière. La mention d'un coup de feu ramène le regard vers un événement du paysage. Elle distingue ce qui occupe le plus de surface peinte de ce que les mots désignent comme sujet.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "ffbc5f0e-6f4d-5c2c-9b5f-5e38c6c2093d",
+      "title": "Au col Rogers",
+      "catalogueTitle": "At the Rogers Pass, Summit of the Selkirk Range, B.C.",
+      "artist": "John Arthur Fraser",
+      "artists": [
+        {
+          "name": "John Arthur Fraser",
+          "role": "primary",
+          "slug": "wikimedia-painter-q3180935"
+        }
+      ],
+      "date": "1886",
+      "start": 1886,
+      "end": 1886,
+      "medium": "",
+      "accession": "4227",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59503594-210f7ff8254bfa89.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Arthur_Fraser_-_At_the_Rogers_Pass,_Summit_of_the_Selkirk_Range,_B.C..jpg",
+      "credit": "John Arthur Fraser. At the Rogers Pass, Summit of the Selkirk Range, B.C.. Image credit: John Arthur Fraser; Source credit: 1. The AMICA Library 2. Musée des beaux-arts du Canada, Ottawa. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59503594",
+      "description": "Les conifères sombres établissent la vallée proche avant que l'œil atteigne les montagnes dénudées et ensoleillées. Le passage entre ces bandes donne l'échelle sans exiger une grande figure au premier plan. Fraser éloigne les sommets par le terrain qu'il faut parcourir du regard pour les atteindre, plutôt qu'en s'appuyant sur leur seul contour.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "41273d88-6199-5382-9d70-e1bb6b249ad9",
+      "title": "Edmond Dyonnet",
+      "catalogueTitle": "Edmond Dyonnet",
+      "artist": "George Horne Russell",
+      "artists": [],
+      "date": "vers 1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "17947",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q59542796-9d828b667f380c80.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Dyonnet_par_Russell.jpg",
+      "credit": "George Horne Russell. Edmond Dyonnet. Image credit: George Horne Russell; Source credit: Cybermuse des beaux arts du Canada. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q59542796",
+      "description": "Les vêtements sombres et le fond discret font du visage et du col les principales zones claires. De petites variations de tons doivent distinguer les traits, car peu d'objets renseignent davantage sur le modèle. Cette économie diffère du portrait de Bronzino avec une sculpture : l'identité se présente ici avec beaucoup moins d'éléments de représentation autour d'elle.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "971c0a20-c88f-5d7b-b615-e1b03f1262ef",
+      "title": "Le Corbeau",
+      "catalogueTitle": "The Raven",
+      "artist": "Odilon Redon",
+      "artists": [
+        {
+          "name": "Odilon Redon",
+          "role": "primary",
+          "slug": "odilon-redon-q154349"
+        }
+      ],
+      "date": "1882",
+      "start": 1882,
+      "end": 1882,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/971c0a20-c88f-5d7b-b615-e1b03f1262ef-59ccc65d5e02bca4.jpg",
+      "imageSource": "https://www.wikiart.org/en/odilon-redon/the-raven-1882",
+      "credit": "Odilon Redon. The Raven. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/odilon-redon/the-raven-1882",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/odilon-redon/the-raven-1882",
+      "description": "L'oiseau sombre occupe un intérieur resserré près d'une fenêtre ouverte. Tête et bec restent distincts, concentrant le regard sur une petite présence vigilante. Le titre porte une association littéraire, mais l'image n'a pas à illustrer un récit entier. L'enfermement et la position de l'oiseau suffisent à créer une situation plus limitée, sur laquelle on peut s'attarder.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    },
+    {
+      "id": "f05de41f-03c3-5083-93c2-eb3b40bb8c89",
+      "title": "Œdipe décroché de l'arbre",
+      "catalogueTitle": "Oedipus Taken Down from the Tree",
+      "artist": "Jean-François Millet",
+      "artists": [
+        {
+          "name": "Jean-François Millet",
+          "role": "primary",
+          "slug": "jean-francois-millet-q148458"
+        }
+      ],
+      "date": "1847",
+      "start": 1847,
+      "end": 1847,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/f05de41f-03c3-5083-93c2-eb3b40bb8c89-69dd0905a5d42e38.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-francois-millet/oedipus-taken-down-from-the-tree-1847",
+      "credit": "Jean-François Millet. Oedipus Taken Down from the Tree. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jean-francois-millet/oedipus-taken-down-from-the-tree-1847",
+      "description": "Le corps exposé d'un petit enfant devient le centre autour duquel les figures se réunissent. Des branches sombres entourent le groupe, tandis que la lumière précise comment l'enfant fragile est tenu et soutenu. Millet rend le sujet antique compréhensible par les relations entre les corps, avant même que tous les détails de l'histoire d'Œdipe soient reconnus.",
+      "importance": "",
+      "museum": "National Gallery of Canada"
+    }
+  ],
+  "context": {
+    "start": 1541,
+    "end": 1954
+  },
+  "closingSections": [
+    {
+      "title": "Ce qu'une petite reproduction ne peut mesurer",
+      "paragraphs": [
+        "Comparez ces œuvres dans Artline, mais gardez leurs dimensions à portée de main : un écran peut rendre équivalents un petit portrait et un grand triptyque. Pour une visite sur place, confirmez auprès du musée les œuvres visibles. L'appartenance à une collection et l'existence d'une notice ne signifient pas nécessairement qu'une œuvre soit accrochée."
+      ]
+    }
+  ]
+}

@@ -43,7 +43,12 @@ it("restarts legacy pagination while retaining the artwork selection", () => {
 it("retains repeated museum filters while normalizing obsolete visibility options", () => {
   expect(museumRecordPath("the-met", { artist: ["monet", "giotto"], catalogue: "all", image_only: "true" })).toBe("/museums/the-met?artist=monet&artist=giotto&image_only=true");
 });
-it("gates museums while preserving public painter, artwork and directory links", () => {
-  for (const path of ["/museums", "/museums/the-met?artist=monet"]) expect(requiresMember(path)).toBe(true);
-  for (const path of ["/artists", "/", "/artists/monet?art_year=1900", "/artists/monet/works/11111111-1111-4111-8111-111111111111"]) expect(requiresMember(path)).toBe(false);
+it("gates the museum directory and studio while preserving public museum pages", () => {
+  for (const path of ["/museums", "/account/museums", "/account/museums/the-met"]) expect(requiresMember(path)).toBe(true);
+  for (const path of ["/museums/the-met?artist=monet", "/museums/the-met/publications", "/artists", "/", "/artists/monet?art_year=1900", "/artists/monet/works/11111111-1111-4111-8111-111111111111"]) expect(requiresMember(path)).toBe(false);
+});
+
+it("preserves bounded museum studio destinations", () => {
+ for (const path of ["/account/museums", "/account/museums/the-met"]) expect(memberReturnTo(path)).toBe(path);
+ for (const path of ["/account/museums/../account", "/account/museums/" + "x".repeat(101)]) expect(memberReturnTo(path)).toBeNull();
 });

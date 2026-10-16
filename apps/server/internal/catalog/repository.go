@@ -69,6 +69,14 @@ func (r *Repository) ArtistBySlug(ctx context.Context, slug string) (ArtistDetai
 	if err != nil {
 		return artist, err
 	}
+	artist.Connections.Incoming, err = r.artistConnectionPage(ctx, artist.ID, "incoming", "")
+	if err != nil {
+		return artist, err
+	}
+	artist.Connections.Outgoing, err = r.artistConnectionPage(ctx, artist.ID, "outgoing", "")
+	if err != nil {
+		return artist, err
+	}
 	if err = r.artistCollectionSummary(ctx, &artist); err != nil {
 		return artist, err
 	}

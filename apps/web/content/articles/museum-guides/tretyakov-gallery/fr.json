@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "tretyakov-gallery",
+  "museum": "State Tretyakov Gallery",
+  "city": "Moscou",
+  "country": "Russie",
+  "title": "Galerie nationale Tretiakov : chefs-d’œuvre",
+  "subtitle": "Portraits, êtres imaginaires et allégories politiques interrogent la distance entre une personne et un emblème.",
+  "introduction": "Une jeune fille à table a besoin de pêches, d'un couteau et d'une pièce lumineuse pour préciser son cadre particulier. L'immense bolchevik de Koustodiev, lui, enjambe des bâtiments incapables de le contenir. L'écart relève de l'échelle et du but, pas simplement de corps justes ou faux. Un tableau donne au modèle un lieu vécu ; l'autre fait porter une force politique à un corps.\n\nEntre ces extrêmes figurent des modèles nommés, une femme à l'identité non résolue et des personnages issus de l'histoire ou de la légende. Les paysages compliquent la comparaison en rapetissant les gens ou en se passant d'eux. *Carré noir* retire entièrement la scène reconnaissable, tout en demeurant un objet peint matériel.",
+  "visitNote": "La Galerie Tretiakov répartit les différentes sections de sa collection entre plusieurs bâtiments. Ce parcours ne se limite pas à un seul édifice, et l'exposition des œuvres peut être interrompue pour des raisons de prêt ou de conservation. Vérifiez l'emplacement des œuvres spécifiques avant de vous déplacer. Le guide distingue les représentations peintes de sujets historiques et légendaires des témoignages visuels directs.",
+  "locale": "fr",
+  "website": "https://www.tretyakovgallery.ru",
+  "officialGuide": "https://www.tretyakovgallery.ru",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Concerning the Spiritual in Art",
+      "author": "Wassily Kandinsky; translated by Michael Sadleir",
+      "url": "https://www.gutenberg.org/ebooks/5321",
+      "access": "Lecture gratuite · Anglais",
+      "note": "L’ouvrage de Kandinsky propose un argumentaire contemporain en faveur d’une peinture dépassant la représentation littérale. Il convient de le lire en parallèle du Carré noir comme une autre position au sein de l’art moderne naissant, et non comme l’exposé du programme ou des convictions de Malevitch lui-même."
+    }
+  ],
+  "works": [
+    {
+      "id": "8414e828-5984-543d-99fb-dbdf58a4ec3c",
+      "title": "La Jeune Fille aux pêches",
+      "catalogueTitle": "Girl with Peaches",
+      "artist": "Valentin Serov",
+      "artists": [
+        {
+          "name": "Valentin Serov",
+          "role": "primary",
+          "slug": "valentin-serov-q217128"
+        }
+      ],
+      "date": "1887",
+      "start": 1887,
+      "end": 1887,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8414e828-5984-543d-99fb-dbdf58a4ec3c-25ca8dbfb1fbdb5b.jpg",
+      "imageSource": "https://www.wikiart.org/en/valentin-serov/girl-with-peaches-1887",
+      "credit": "Valentin Serov. Girl with Peaches. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/8394",
+      "description": "Les pêches et le couteau maintiennent la table dans l'usage quotidien, sans en faire un accessoire cérémoniel de portrait. La lumière de Serov dépasse les épaules de la jeune fille : la pièce se poursuit autour de sa pose à la fois stable et libre. L'image donne l'impression d'un instant de vie. Cet effet est une réussite picturale, non la preuve que peindre n'a pris qu'un instant.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "9edf9bb7-efb2-551a-9242-9c978935c588",
+      "title": "Carré noir",
+      "catalogueTitle": "Black Square",
+      "artist": "Kazimir Malevich",
+      "artists": [
+        {
+          "name": "Kazimir Malevich",
+          "role": "primary",
+          "slug": "kazimir-malevich-q130777"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/9edf9bb7-efb2-551a-9242-9c978935c588-83a18e50a83986f3.jpg",
+      "imageSource": "https://www.wikiart.org/en/kazimir-malevich/black-square-1915",
+      "credit": "Kazimir Malevich. Black Square. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/kazimir-malevich/black-square-1915",
+      "description": "Aucun personnage ni paysage représenté n'offre d'entrée dans le quadrilatère sombre. Malevitch fait de son rapport au champ pâle la proposition explicite du tableau. Pourtant, les bords n'ont pas une perfection mécanique, et la surface vieillie présente des craquelures. Une forme apparemment absolue existe dans une matière qui a une histoire. Le reconnaître n'oblige pas à y retrouver une scène figurative cachée.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "35dba5d3-4546-516c-9e33-1a937650ca10",
+      "title": "Le Démon assis",
+      "catalogueTitle": "Seated Demon",
+      "artist": "Mikhail Vrubel",
+      "artists": [
+        {
+          "name": "Mikhail Vrubel",
+          "role": "primary",
+          "slug": "mikhail-vrubel-q215100"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/35dba5d3-4546-516c-9e33-1a937650ca10-7be38e3fc86af936.jpg",
+      "imageSource": "https://www.wikiart.org/en/mikhail-vrubel/seated-demon-1890",
+      "credit": "Mikhail Vrubel. Seated Demon. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.tretyakovgallery.ru/edu/o/mikhail-vrubel-psikhologiya-tvorchestva/",
+      "description": "Le corps puissant a peu de place pour se déployer dans le format bas. Les mains jointes et la posture repliée contiennent sa force, tandis que des formes anguleuses évoquant des fleurs le rattachent à la surface alentour. Vroubel donne à un être imaginaire un conflit d'échelle : sa puissance paraît considérable, mais sa position l'empêche de la déployer librement dans l'action.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "c0137a52-3493-593b-9508-df5a11355be2",
+      "title": "Mars",
+      "catalogueTitle": "March",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c0137a52-3493-593b-9508-df5a11355be2-9dfe4d4f2a961d51.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-levitan/march-1895",
+      "credit": "Isaac Levitan. March. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/20845",
+      "description": "La neige fondante découvre un chemin qui n'est plus tout à fait hivernal, sans être une terre entièrement dégagée. La lumière chaude du bâtiment en bois contraste avec les ombres bleues entre les arbres. Levitan rend le changement saisonnier visible par des états simultanés, non par le remplacement net d'une saison. Le cheval à l'arrêt offre une pause ordinaire dans cette transformation plus longue.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "c68334ff-c99a-5134-8571-699259cefe64",
+      "title": "Le Bain du cheval rouge",
+      "catalogueTitle": "Bathing of a Red Horse",
+      "artist": "Kuzma Petrov-Vodkin",
+      "artists": [
+        {
+          "name": "Kuzma Petrov-Vodkin",
+          "role": "primary",
+          "slug": "kuzma-petrov-vodkin-q364226"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/c68334ff-c99a-5134-8571-699259cefe64-400ee9bd71b05636.jpg",
+      "imageSource": "https://www.wikiart.org/en/kuzma-petrov-vodkin/bathing-the-red-horse-1912",
+      "credit": "Kuzma Petrov-Vodkin. Bathing of a Red Horse. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/kuzma-petrov-vodkin/bathing-the-red-horse-1912",
+      "description": "Le large flanc rouge du cheval domine les figures et l'eau, qui restent reconnaissables comme une scène de bain. Petrov-Vodkine conserve le poids corporel tout en quittant la couleur attendue et l'échelle ordinaire. L'animal dépasse ainsi la simple description sans devenir illisible. Ses possibilités symboliques commencent dans la disproportion visible, non dans une explication obligatoire.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "d256e26f-c0a4-5030-bd9e-4c076b7b6f42",
+      "title": "Ivan le Terrible et son fils Ivan",
+      "catalogueTitle": "Ivan the Terrible and His Son Ivan on November 16, 1581",
+      "artist": "Ilya Repin",
+      "artists": [
+        {
+          "name": "Ilya Repin",
+          "role": "primary",
+          "slug": "ilya-repin-q172911"
+        }
+      ],
+      "date": "1883-1885",
+      "start": 1883,
+      "end": 1885,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/d256e26f-c0a4-5030-bd9e-4c076b7b6f42-e52d967a0296245f.jpg",
+      "imageSource": "https://www.wikiart.org/en/ilya-repin/ivan-the-terrible-and-his-son-ivan-on-november-16-1581-1885",
+      "credit": "Ilya Repin. Ivan the Terrible and His Son Ivan on November 16, 1581. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/8408",
+      "description": "Les mains de l'homme âgé soutiennent le corps sans pouvoir annuler la blessure autour de laquelle ils sont réunis. Répine met en scène l'après-coup de la violence ; tapis à motifs et riche mobilier entourent toujours une étreinte devenue désespérée. L'image est une reconstitution historique, non un témoignage oculaire. Son argument le plus fort tient à l'échec du geste protecteur pour défaire ce qui l'a précédé.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "8afe0f9c-c1ba-5f5a-91a7-8d4b7bee0411",
+      "title": "L'Inconnue",
+      "catalogueTitle": "Portrait of an Unknown Woman",
+      "artist": "Ivan Kramskoi",
+      "artists": [
+        {
+          "name": "Ivan Kramskoi",
+          "role": "primary",
+          "slug": "ivan-kramskoi-q207758"
+        }
+      ],
+      "date": "1883",
+      "start": 1883,
+      "end": 1883,
+      "medium": "",
+      "accession": "5893",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q1217003-ca1c1d71c2617f63.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Kramskoy_Portrait_of_a_Woman.jpg",
+      "credit": "Ivan Kramskoi. Portrait of an Unknown Woman. Image credit: Ivan Kramskoi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q1217003",
+      "description": "Le siège surélevé de la voiture place le regard direct de la femme au-dessus de la rue enneigée. Les vêtements sombres à la mode contribuent à une apparence publique soigneusement composée. Kramskoï précise la rencontre sans résoudre l'identité. Il faut résister à la tentation de tirer une biographie du costume ou de l'expression : la présence convainc, mais les preuves manquent pour donner un nom ou une histoire.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "914326a4-e275-546b-a274-34aa606e7a38",
+      "title": "La Vision du jeune Barthélemy",
+      "catalogueTitle": "The Vision of the Young Bartholomew",
+      "artist": "Mikhail Nesterov",
+      "artists": [
+        {
+          "name": "Mikhail Nesterov",
+          "role": "primary",
+          "slug": "mikhail-nesterov-q318427"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/914326a4-e275-546b-a274-34aa606e7a38-2d3bdc0d95c1a395.jpg",
+      "imageSource": "https://www.wikiart.org/en/mikhail-nesterov/the-vision-of-the-young-bartholomew-1890",
+      "credit": "Mikhail Nesterov. The Vision of the Young Bartholomew. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/mikhail-nesterov/the-vision-of-the-young-bartholomew-1890",
+      "description": "Le garçon et le moine encapuchonné se rencontrent au bord d'un vaste paysage reconnaissable. Têtes inclinées et petits gestes donnent à l'épisode sacré une échelle humaine proche. Nesterov ne le soustrait pas aux champs et aux bois ordinaires. Le cadre importe parce qu'il permet à l'extraordinaire d'habiter un terrain qui demeure physiquement compréhensible.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "1a237f08-30a5-5b99-b663-4527b6ad1e04",
+      "title": "Après la bataille du prince Igor",
+      "catalogueTitle": "After prince Igor’s battle",
+      "artist": "Viktor Vasnetsov",
+      "artists": [
+        {
+          "name": "Viktor Vasnetsov",
+          "role": "primary",
+          "slug": "viktor-vasnetsov-q204138"
+        }
+      ],
+      "date": "1880",
+      "start": 1880,
+      "end": 1880,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q11819873-e20025a3e571c1a2.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Igorsvyat.jpg",
+      "credit": "Viktor Vasnetsov. After prince Igor’s battle. Image credit: Viktor Vasnetsov. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q11819873",
+      "description": "Les guerriers ne peuvent plus agir dans le paysage qui les contient. Oiseaux, armes et boucliers dispersés donnent au terrain des détails qui rendent l'après-bataille lisible. Vasnetsov fait passer le sujet littéraire et historique du combat à l'immobilité. L'absence d'un héros actif donne pour substance à la scène les corps abandonnés, plutôt qu'un exploit individuel culminant.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "74edb35c-2639-56d2-a88f-45923d6254e9",
+      "title": "Portrait de Modeste Moussorgski",
+      "catalogueTitle": "Portrait of the Composer Modest Musorgsky",
+      "artist": "Ilya Repin",
+      "artists": [
+        {
+          "name": "Ilya Repin",
+          "role": "primary",
+          "slug": "ilya-repin-q172911"
+        }
+      ],
+      "date": "1881",
+      "start": 1881,
+      "end": 1881,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/74edb35c-2639-56d2-a88f-45923d6254e9-d22d1a9e75c2a759.jpg",
+      "imageSource": "https://www.wikiart.org/en/ilya-repin/portrait-of-the-composer-modest-musorgsky-1881",
+      "credit": "Ilya Repin. Portrait of the Composer Modest Musorgsky. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ilya-repin/portrait-of-the-composer-modest-musorgsky-1881",
+      "description": "La robe de chambre ample ne fournit pas l'habit public attendu dans le portrait d'un compositeur célèbre. Répine laisse cheveux en désordre et traits rougis à l'examen. La ressemblance accorde à la fragilité physique la même attention soutenue qu'à l'identification. Pour rester exigeante, elle n'a pas besoin de transformer chaque signe de l'état du modèle en jugement moral ou en diagnostic.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "422991a1-8078-5b99-be13-978b93abd74d",
+      "title": "Portrait de Léon Tolstoï",
+      "catalogueTitle": "Portrait of Leo Tolstoy",
+      "artist": "Ivan Kramskoi",
+      "artists": [
+        {
+          "name": "Ivan Kramskoi",
+          "role": "primary",
+          "slug": "ivan-kramskoi-q207758"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "",
+      "accession": "655",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q124326591-88b64aa74714ce96.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Ivan_Nikolayevich_Kramskoi_-_Portrait_of_Leo_Tolstoy,_1873.jpg",
+      "credit": "Ivan Kramskoi. Portrait of Leo Tolstoy. Image credit: Ivan Kramskoi. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q124326591",
+      "description": "La chemise sombre et ample et le fond retenu offrent peu d'accessoires permettant d'identifier un écrivain célèbre. Kramskoï dirige plutôt l'attention vers le regard, la barbe et les mains réunies bas. Le portrait repose sur la présence d'un corps particulier, non sur une bibliothèque ou un emblème littéraire. La simplicité reste un choix de présentation, pas l'absence de choix.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "55c62ebb-66e1-5d10-81f5-4ac64797af2c",
+      "title": "Le Monastère paisible",
+      "catalogueTitle": "Quiet cloister",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/55c62ebb-66e1-5d10-81f5-4ac64797af2c-65687d1d16537111.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-levitan/quiet-cloister-1890-3",
+      "credit": "Isaac Levitan. Quiet cloister. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-levitan/quiet-cloister-1890-3",
+      "description": "Le pont étroit propose de traverser l'eau réfléchissante vers les bâtiments du monastère. Levitan rend le site religieux lointain accessible dans le paysage, au lieu de l'isoler en icône architecturale. Arbres et eau séparent les étapes de l'approche. Le calme dépend de ces intervalles mesurés ; un passage humain reste possible même sans grande figure pour le diriger.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "22536cca-b2a3-5c93-abce-788c0025d11d",
+      "title": "Les Cloches du soir",
+      "catalogueTitle": "Vesper chimes",
+      "artist": "Isaac Levitan",
+      "artists": [
+        {
+          "name": "Isaac Levitan",
+          "role": "primary",
+          "slug": "isaac-levitan-q211356"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/22536cca-b2a3-5c93-abce-788c0025d11d-b35ae463b8ee2915.jpg",
+      "imageSource": "https://www.wikiart.org/en/isaac-levitan/vesper-chimes-1892",
+      "credit": "Isaac Levitan. Vesper chimes. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/isaac-levitan/vesper-chimes-1892",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/isaac-levitan/vesper-chimes-1892",
+      "description": "Le titre introduit un son que le tableau ne peut littéralement produire. L'eau large et les bâtiments lointains du monastère fournissent la distance imaginée qu'il pourrait parcourir. Levitan donne à cette suggestion un cadre physique par les reflets, les barques et les nuages du soir. La description visuelle reste assez précise pour que le son ajoute une association sans remplacer la structure du paysage.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "58245480-35cf-5967-848f-e7e0730bf7e2",
+      "title": "Les Visiteurs d'outre-mer",
+      "catalogueTitle": "Overseas Guests",
+      "artist": "Nicholas Roerich",
+      "artists": [
+        {
+          "name": "Nicholas Roerich",
+          "role": "primary",
+          "slug": "nicholas-roerich-q208993"
+        }
+      ],
+      "date": "1901",
+      "start": 1901,
+      "end": 1901,
+      "medium": "",
+      "accession": "Ж-494",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q4185903-74c23a5eeafeeb20.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Nicholas_Roerich,_Guests_from_Overseas.jpg",
+      "credit": "Nicholas Roerich. Overseas Guests. Image credit: Nicholas Roerich. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q4185903",
+      "description": "Voiles rouges et boucliers répétés font du navire un motif remarquable autant qu'un moyen de transport. Roerich construit un monde historique lointain par la couleur forte et l'ornement. Bateaux et rives rocheuses préservent le cadre, mais la surface du navire réclame aussi une attention propre. Ce passé imaginé a une apparence visiblement conçue.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "8ab505d6-1963-57d6-9e49-a62f66358962",
+      "title": "L'Apiculteur",
+      "catalogueTitle": "Beekeeper",
+      "artist": "Ivan Kramskoi",
+      "artists": [
+        {
+          "name": "Ivan Kramskoi",
+          "role": "primary",
+          "slug": "ivan-kramskoi-q207758"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/8ab505d6-1963-57d6-9e49-a62f66358962-c99028113363f1ec.jpg",
+      "imageSource": "https://www.wikiart.org/en/ivan-kramskoy/beekeeper-1872",
+      "credit": "Ivan Kramskoi. Beekeeper. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ivan-kramskoy/beekeeper-1872",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ivan-kramskoy/beekeeper-1872",
+      "description": "Le bâton, la chemise pâle et la tête baissée définissent un vieil homme parmi les plantes et les ruches de bois. Kramskoï garde la figure dans ses conditions de travail, au lieu d'en faire un emblème général de la campagne. Sa posture lente contraste avec la végétation dense. Le sol alentour a d'autres usages et occupations que de servir de fond à la vieillesse.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "b69597a6-ef67-58b4-97b8-23e430393e8b",
+      "title": "Route de campagne",
+      "catalogueTitle": "Country road",
+      "artist": "Alexei Savrasov",
+      "artists": [
+        {
+          "name": "Alexei Savrasov",
+          "role": "primary",
+          "slug": "alexei-savrasov-q353008"
+        }
+      ],
+      "date": "1873",
+      "start": 1873,
+      "end": 1873,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/b69597a6-ef67-58b4-97b8-23e430393e8b-7b0ad22d1e73bcb7.jpg",
+      "imageSource": "https://www.wikiart.org/en/aleksey-savrasov/country-road-1873",
+      "credit": "Alexei Savrasov. Country road. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/aleksey-savrasov/country-road-1873",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/aleksey-savrasov/country-road-1873",
+      "description": "Ornières et flaques font de la route une voie irrégulière dans la vue. Savrassov conserve les effets du temps sur un sol qui pourrait autrement servir de dispositif perspectif lisse. Nuages fragmentés et lumière changeante relient la surface proche au ciel. Le paysage devient parcourable au sens physique, y compris avec les difficultés que ce passage impose.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "8c7d8b99-bc6e-59f6-9136-baaed137f87a",
+      "title": "La Fille des neiges",
+      "catalogueTitle": "Snow Maiden",
+      "artist": "Viktor Vasnetsov",
+      "artists": [
+        {
+          "name": "Viktor Vasnetsov",
+          "role": "primary",
+          "slug": "viktor-vasnetsov-q204138"
+        }
+      ],
+      "date": "1899",
+      "start": 1899,
+      "end": 1899,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q19973621-d83e112da108307c.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vasnetsov_Snegurochka.jpg",
+      "credit": "Viktor Vasnetsov. Snow Maiden. Image credit: Viktor Vasnetsov. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q19973621",
+      "description": "Le costume pâle sépare la jeune fille de la forêt sombre qui l'entoure. Vasnetsov donne à la figure légendaire une place d'exposition précise, entre neige éclairée et arbres enveloppants. Le contraste suffit à établir une présence précaire sans raconter tout le conte. Le décor contribue à sa condition au lieu de simplement désigner une saison.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "43c64375-baf7-5434-9f47-ea7650a1542c",
+      "title": "Le Bolchevik",
+      "catalogueTitle": "The Bolshevik",
+      "artist": "Boris Kustodiev",
+      "artists": [
+        {
+          "name": "Boris Kustodiev",
+          "role": "primary",
+          "slug": "boris-kustodiev-q313275"
+        }
+      ],
+      "date": "1920",
+      "start": 1920,
+      "end": 1920,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/43c64375-baf7-5434-9f47-ea7650a1542c-19538549ea0df041.jpg",
+      "imageSource": "https://www.wikiart.org/en/boris-kustodiev/the-bolshevik-1920",
+      "credit": "Boris Kustodiev. The Bolshevik. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://my.tretyakov.ru/app/masterpiece/8891",
+      "description": "Le porteur de bannière est trop grand pour les rues et les toits sous ses pieds. Koustodiev rend la force politique visible par cet écart d'échelle volontaire. La ville encombrée devient le sol qu'enjambe un corps allégorique. Le tableau construit une image de la puissance révolutionnaire ; sa figure insistante ne doit pas passer pour un résumé impartial des événements qu'elle évoque.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "04b12eba-0ca7-5d76-8b6e-562579c67225",
+      "title": "Les Philosophes Boulgakov et Florenski",
+      "catalogueTitle": "Portrait of the philosophers S.N. Bulgakov and P.A. Florensky",
+      "artist": "Mikhail Nesterov",
+      "artists": [
+        {
+          "name": "Mikhail Nesterov",
+          "role": "primary",
+          "slug": "mikhail-nesterov-q318427"
+        }
+      ],
+      "date": "1917",
+      "start": 1917,
+      "end": 1917,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q101435277-9f9ca27b11e067da.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1917_Nesterow_Philosophen_anagoria.JPG",
+      "credit": "Mikhail Nesterov. Portrait of the philosophers S.N. Bulgakov and P.A. Florensky. Image credit: Mikhail Nesterov. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q101435277",
+      "description": "Marcher côte à côte donne au double portrait une action commune ordinaire. Vêtements clairs et sombres distinguent les hommes avant l'examen de leurs regards et gestes. Nesterov rend la compagnie intellectuelle visible sans emblème de pensée abstraite. Être ensemble reste compatible avec des attentions différentes, réunies sur le même chemin plutôt que dans une même expression.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    },
+    {
+      "id": "2e57ec7e-2856-5756-8abf-959e42e2b217",
+      "title": "Ivan Morozov",
+      "catalogueTitle": "Ivan Morozov",
+      "artist": "Valentin Serov",
+      "artists": [
+        {
+          "name": "Valentin Serov",
+          "role": "primary",
+          "slug": "valentin-serov-q217128"
+        }
+      ],
+      "date": "1910",
+      "start": 1910,
+      "end": 1910,
+      "medium": "",
+      "accession": "10872",
+      "image": "https://artlines.org/assets/artworks/imported/wikimedia-catalogue/q112675615-99eaf8461ea8efc4.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Portrait_of_Ivan_Morozov2.jpg",
+      "credit": "Valentin Serov. Ivan Morozov. Image credit: Unknown author Unknown author. Wikimedia Commons. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Resized and JPEG-compressed; selected source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.wikidata.org/wiki/Q112675615",
+      "description": "Le vêtement sobre du modèle se détache devant des tableaux aux couleurs nettement plus actives. Serov définit en partie le collectionneur par l'art qui l'entoure. Les mains jointes ancrent la figure proche, tandis que le fond enregistre une compagnie visuelle choisie. Un portrait peut donc décrire le goût par la disposition des choses sans illustrer tous les détails d'une vie.",
+      "importance": "",
+      "museum": "State Tretyakov Gallery"
+    }
+  ],
+  "context": {
+    "start": 1872,
+    "end": 1920
+  },
+  "closingSections": [
+    {
+      "title": "Garder l'échelle en vue",
+      "paragraphs": [
+        "Comparez le modèle de taille ordinaire à la figure allégorique agrandie, puis revenez à un paysage où les gens apparaissent à peine. L'échelle change ce qu'un corps peut représenter. Les œuvres de la galerie Tretiakov sont réparties entre des sites et des présentations changeantes ; vérifiez leur localisation actuelle avant de faire de la sélection un programme de visite."
+      ]
+    }
+  ]
+}

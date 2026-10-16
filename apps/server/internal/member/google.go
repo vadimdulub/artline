@@ -53,6 +53,7 @@ func (g *googleClient) Exchange(ctx context.Context, code, verifier, nonce strin
 		return Identity{}, err
 	}
 	var claims struct {
+		HostedDomain    string `json:"hd"`
 		Email           string `json:"email"`
 		Verified        bool   `json:"email_verified"`
 		Name            string `json:"name"`
@@ -64,5 +65,5 @@ func (g *googleClient) Exchange(ctx context.Context, code, verifier, nonce strin
 	if id.Subject == "" || claims.Email == "" || !claims.Verified || subtle.ConstantTimeCompare([]byte(id.Nonce), []byte(nonce)) != 1 || (claims.AuthorizedParty != "" && claims.AuthorizedParty != g.oauth.ClientID) {
 		return Identity{}, errors.New("invalid identity claims")
 	}
-	return Identity{Subject: id.Subject, Email: claims.Email, Name: claims.Name}, nil
+	return Identity{Subject: id.Subject, Email: claims.Email, Name: claims.Name, HostedDomain: claims.HostedDomain}, nil
 }

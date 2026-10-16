@@ -17,6 +17,5 @@ export default async function ArtworkPage({ params, searchParams }: Props) {
   const [artist, work] = await Promise.all([getArtistIdentity(slug), getArtistArtwork(slug, artworkId)]);
   if (!artist || !work) notFound();
   if (slug !== artist.slug || artworkId !== work.id || query.catalogue !== undefined || query.preview !== undefined) permanentRedirect(painterRecordPath(artist.slug, query, work.id));
-  const browsePath = painterRecordPath(artist.slug, { ...query, work: undefined });
-  return <><StructuredData data={artworkStructuredData(work, artist)} /><StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: artist.display_name, path: `/artists/${artist.slug}` }, { name: work.title, path: `/artists/${artist.slug}/works/${work.id}` }])} /><ArtworkPageRecord artist={artist} work={work} browsePath={browsePath} /></>;
+  return <><StructuredData data={artworkStructuredData(work, artist)} /><StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: artist.display_name, path: `/artists/${artist.slug}` }, { name: work.title, path: `/artists/${artist.slug}/works/${work.id}` }])} /><ArtworkPageRecord artist={artist} work={work} /></>;
 }

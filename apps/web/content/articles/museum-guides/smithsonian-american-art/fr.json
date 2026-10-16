@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline a sélectionné ces œuvres à partir de collections muséales documentées. Cette sélection est indépendante du musée ; certaines œuvres peuvent faire l'objet d'un prêt ou ne pas être exposées. Les dates et les attributions conservent les nuances indiquées dans les notices associées.",
+  "labels": {
+    "guides": "Tous les guides",
+    "download": "Télécharger le PDF",
+    "language": "Langue guide",
+    "translation": "Traduction assistée par IA",
+    "explore": "Explorez cette sélection dans Artline",
+    "contextNote": "Découvrez les œuvres sélectionnées en parallèle d'ouvrages et d'événements de leur époque, ou comparez les périodes de vie des artistes. Ces livres et événements apportent un contexte, sans pour autant attester d'une influence directe. Les œuvres dont la date n'est pas confirmée figurent également dans ce guide.",
+    "all": "Les œuvres d'art en contexte",
+    "allHint": "Les œuvres sélectionnées interagissent avec les livres et l'histoire de leur époque.",
+    "painters": "Qui a vécu à quelle époque ?",
+    "paintersHint": "Découvrez à quelle époque les artistes ont vécu et quelles vies se sont chevauchées.",
+    "events": "Événements historiques",
+    "eventsHint": "Explorez les événements survenus pendant la période couverte par le guide",
+    "books": "Chronologie des livres",
+    "booksHint": "Explorez des ouvrages marquants de la même période.",
+    "contents": "La sélection",
+    "artworks": "Œuvres d'art sélectionnées",
+    "importance": "Pourquoi c'est important",
+    "artwork": "Œuvre d'art ouverte",
+    "source": "Notice de l’œuvre",
+    "inventory": "Inventaire",
+    "reading": "Pour aller plus loin",
+    "visit": "Avant votre visite",
+    "website": "Site web du musée",
+    "officialGuide": "Guide officiel de la collection",
+    "updated": "Sources et informations sur les visiteurs vérifiées"
+  },
+  "slug": "smithsonian-american-art",
+  "museum": "Smithsonian American Art Museum",
+  "city": "Washington, D.C.",
+  "country": "États-Unis",
+  "title": "Musée d’art américain du Smithsonian : chefs-d’œuvre",
+  "subtitle": "Vingt œuvres distinguent une image attentive d'un récit complet d'une vie.",
+  "introduction": "La femme de Hopper se penche vers quelque chose hors du tableau ; le commentaire du musée reconnaît que l'objet de son attention reste inconnu. La bibliothèque de Lawrence donne au regard et à la lecture un cadre public partagé. Les portraits et cérémonies de Catlin soulèvent une autre question : que peut nous apprendre sur des personnes une image réalisée par quelqu'un d'extérieur à leur communauté ?\n\nCette sélection aborde l'attention comme organisation picturale et comme relation sociale. Un modèle nommé ne devrait pas disparaître dans une catégorie générale, et une petite figure peinte ne peut parler pour toute une communauté. Paysages et natures mortes participent aussi à cette réflexion. Leurs observations apparemment directes sont façonnées par des décisions de distance, de sélection et de place accordée au centre.",
+  "visitNote": "Il s’agit d’une sélection d’œuvres issues de la collection. Consultez les registres actuels du musée avant de planifier votre visite, en particulier pour les œuvres sur papier et les objets en prêt. La peinture de Yellowstone de Moran présentée ici a été réalisée entre 1893 et 1901 ; il ne s’agit pas de la toile distincte datant de 1872.",
+  "locale": "fr",
+  "website": "https://americanart.si.edu/",
+  "officialGuide": "https://americanart.si.edu/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "Lecture gratuite · Anglais",
+      "note": "L’analyse que fait Speed de la tonalité et de la composition soulève des questions pratiques concernant ces images : où se situe la lumière la plus intense, quels contours demeurent nets et comment une pose se trouve-t-elle modifiée lorsqu’elle est perçue sur un arrière-plan différent ?"
+    }
+  ],
+  "works": [
+    {
+      "id": "66c9832d-30e4-5ea0-b40d-bea74729dc53",
+      "title": "Matin à Cape Cod",
+      "catalogueTitle": "Cape Cod Morning",
+      "artist": "Edward Hopper",
+      "artists": [
+        {
+          "name": "Edward Hopper",
+          "role": "primary",
+          "slug": "edward-hopper-q203401"
+        }
+      ],
+      "date": "1950",
+      "start": 1950,
+      "end": 1950,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/66c9832d-30e4-5ea0-b40d-bea74729dc53-6523ef78f486f77b.jpg",
+      "imageSource": "https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "credit": "Edward Hopper. Cape Cod Morning. WikiArt source label: Edward Hopper Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "license": "Edward Hopper Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edward-hopper/cape-cod-morning",
+      "description": "Le buste penché de la femme rend son attention évidente, mais sa cause reste hors cadre. Hopper distingue la fenêtre en saillie du paysage lumineux sans nous accorder la vue du personnage. Cette limite compte : la pose peut sembler dans l'attente sans prouver qu'elle espère un visiteur ou redoute un événement précis. Le corps qui regarde constitue le seul indice disponible.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "5cfb22a6-0423-5b50-a00d-d90a227e481b",
+      "title": "La Cuisine du fermier",
+      "catalogueTitle": "The Farmer's Kitchen",
+      "artist": "Ivan Albright",
+      "artists": [
+        {
+          "name": "Ivan Albright",
+          "role": "primary",
+          "slug": "ivan-albright-nga-45"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "Huile sur toile",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/5cfb22a6-0423-5b50-a00d-d90a227e481b-f91d697aa5610086.jpg",
+      "imageSource": "https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "credit": "Ivan Albright. The Farmer's Kitchen. WikiArt source label: Ivan Albright Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "license": "Ivan Albright Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ivan-albright/the-farmer-s-kitchen",
+      "description": "Albright refuse de laisser le travail domestique se fondre dans une image vaguement douce du foyer. La peau de la femme, les légumes et les surfaces usées de la cuisine reçoivent tous une description insistante. L'âge et l'usage gagnent le décor, au lieu de concerner son seul visage. L'accumulation des marques fait du labeur un état matériel de la pièce, pas seulement une activité qui s'y déroule.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "11715cfb-0174-574f-bdb1-bef0e05cddf6",
+      "title": "La Bibliothèque",
+      "catalogueTitle": "The Library",
+      "artist": "Jacob Lawrence",
+      "artists": [
+        {
+          "name": "Jacob Lawrence",
+          "role": "primary",
+          "slug": "jacob-lawrence-nga-1468"
+        }
+      ],
+      "date": "1960",
+      "start": 1960,
+      "end": 1960,
+      "medium": "Détrempe sur panneau",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round3-20261006/11715cfb-0174-574f-bdb1-bef0e05cddf6-3e3eb6c5dab9105b.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "credit": "Jacob Lawrence. The Library. WikiArt source label: Jacob Lawrence Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "license": "Jacob Lawrence Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/jacob-lawrence/the-library-1960",
+      "description": "Lawrence réunit les lecteurs autour de tables sans choisir une personne éminente pour centre. Des formes répétées relient rayonnages, meubles et corps, tandis que les poses différencient les participants. Lire signifie accéder à un lieu et à des ressources partagés. Les plages colorées simplifiées rendent cette organisation collective plus claire sans effacer les actes individuels d'attention qu'elle contient.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "d6ce6f8c-8300-41ca-b551-6e1f0b214146",
+      "title": "Aurore boréale",
+      "catalogueTitle": "Aurora Borealis",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "Huile sur toile",
+      "accession": "1911.4.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e350251d-51a6-47bc-815b-81788e74e8c9-134204af72bea33e.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=4806",
+      "credit": "Frederic Edwin Church. Aurora Borealis. Frederic Edwin Church; Smithsonian American Art Museum, Gift of Eleanor Blodgett. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=4806",
+      "description": "Le petit navire fournit une mesure humaine sous les lumières polaires. Church donne au ciel une étendue qui réduit ce signe de voyage à presque rien, tandis que glace et montagnes divisent l'obscurité inférieure. Le trajet est présent sans devenir un récit d'aventures détaillé. Son échelle suffit à montrer combien une entreprise humaine peut sembler exposée dans un paysage aussi vaste.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "1f0e1d6f-516c-535c-bd23-4ae8e696044c",
+      "title": "Le Grand Canyon de la Yellowstone",
+      "catalogueTitle": "The Grand Canyon of the Yellowstone",
+      "artist": "Thomas Moran",
+      "artists": [
+        {
+          "name": "Thomas Moran",
+          "role": "primary",
+          "slug": "thomas-moran-nga-1730"
+        }
+      ],
+      "date": "1893-1901",
+      "start": 1893,
+      "end": 1901,
+      "medium": "Huile sur toile",
+      "accession": "1928.7.1",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/1f0e1d6f-516c-535c-bd23-4ae8e696044c-7b6e30af6a636547.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=17831",
+      "credit": "Thomas Moran. The Grand Canyon of the Yellowstone. Thomas Moran; Smithsonian American Art Museum, Gift of George D. Pratt. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=17831",
+      "description": "Les figures du premier plan donnent une mesure du canyon ; l'eau tout en bas en offre une autre. Moran relie rochers et végétation proches à une immense vue plongeante, séparant les falaises intermédiaires par les changements de lumière. Le spectacle est soigneusement organisé pour un observateur. Son ampleur ne doit pas être confondue avec une absence de sélection dans la présentation du paysage.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "7d0563c0-4909-43f9-af08-af8348e308f8",
+      "title": "La Fille que j'ai laissée derrière moi",
+      "catalogueTitle": "The Girl I Left Behind Me",
+      "artist": "Eastman Johnson",
+      "artists": [
+        {
+          "name": "Eastman Johnson",
+          "role": "primary",
+          "slug": "eastman-johnson-nga-1423"
+        }
+      ],
+      "date": "vers 1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "Huile sur toile",
+      "accession": "1986.79",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/eaa2899b-959d-415d-9f15-d4ae17e8f4b4-c739d7a808e88788.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11492",
+      "credit": "Eastman Johnson. The Girl I Left Behind Me. Eastman Johnson; Smithsonian American Art Museum, Museum purchase made possible in part by Mrs. Alexander Hamilton Rice in memory of her husband and by Ralph Cross Johnson. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11492",
+      "description": "Les livres sont serrés contre le corps, tandis que cheveux et vêtements réagissent au vent. Johnson oppose la pose debout de la jeune femme aux forces qui l'entourent. Le titre introduit une séparation, mais l'image n'identifie ni la personne ni le lieu absents. Le contraste visible entre tenir bon et être ballottée suffit à porter la scène sans compléter cette histoire.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "8a0f28fc-0e5d-45e9-a46e-08cb0678e201",
+      "title": "Une visite de l'ancienne maîtresse",
+      "catalogueTitle": "A Visit from the Old Mistress",
+      "artist": "Winslow Homer",
+      "artists": [
+        {
+          "name": "Winslow Homer",
+          "role": "primary",
+          "slug": "winslow-homer-q344838"
+        }
+      ],
+      "date": "1876",
+      "start": 1876,
+      "end": 1876,
+      "medium": "Huile sur toile",
+      "accession": "1909.7.28",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/2e87bc69-4d55-4c1b-8bc5-37708e93a831-921852f5a44636a1.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=10737",
+      "credit": "Winslow Homer. A Visit from the Old Mistress. Winslow Homer; Smithsonian American Art Museum, Gift of William T. Evans. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=10737",
+      "description": "C'est l'ancienne esclavagiste qui vient en visite, non les femmes noires qui retournent chez elle. Le titre de Homer est donc déterminant. Le musée relève qu'une femme reste assise, refusant une déférence jadis imposée par l'esclavage. Espace et postures signalent une rencontre transformée après l'émancipation, sans suggérer que le partage d'une pièce ait effacé leur histoire inégale.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "9d773dfa-81b1-4bb4-9f5b-5fcd6a126f1d",
+      "title": "L'Éternel est mon berger",
+      "catalogueTitle": "The Lord Is My Shepherd",
+      "artist": "Eastman Johnson",
+      "artists": [
+        {
+          "name": "Eastman Johnson",
+          "role": "primary",
+          "slug": "eastman-johnson-nga-1423"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "Huile sur panneau de fibres",
+      "accession": "1979.5.13",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/7eb89ed6-f767-4478-aab2-6444be215a8b-de9182fc6b2c93cb.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11494",
+      "credit": "Eastman Johnson. The Lord Is My Shepherd. Eastman Johnson; Smithsonian American Art Museum, Gift of Mrs. Francis P. Garvan, Transfer from the National Museum of American History, Smithsonian Institution. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11494",
+      "description": "La lumière relie le livre ouvert aux mains et au visage de l'homme, donnant à la lecture une présence physique concentrée. Johnson peint l'œuvre en 1863, pendant la guerre de Sécession. Ce contexte empêche d'y voir seulement un symbole général de contemplation. Le tableau s'attarde sur un lecteur noir à une époque où liberté et accès à l'instruction étaient profondément contestés.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3fc12022-f07a-4b45-bb30-a71bf5a5360d",
+      "title": "Frères",
+      "catalogueTitle": "Brothers",
+      "artist": "Malvin Gray Johnson",
+      "artists": [
+        {
+          "name": "Malvin Gray Johnson",
+          "role": "primary",
+          "slug": "malvin-gray-johnson-round6-27f0a50e2037"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "Huile sur toile",
+      "accession": "1967.57.29",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/affcc9ce-9024-4710-b9ac-caeb0720d3af-ae5c7584e22413ba.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11518",
+      "credit": "Malvin Gray Johnson. Brothers. Malvin Gray Johnson; Smithsonian American Art Museum, Gift of the Harmon Foundation. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11518",
+      "description": "Chapeaux et salopettes semblables pourraient d'abord faire des garçons une paire assortie. Malvin Gray Johnson les distingue par la posture et l'expression, assis près de la clôture. Le titre établit un lien sans rendre les personnes interchangeables. Chercher ces petites différences empêche le cadre rural de transformer deux individus précis en illustration anonyme de la vie à la campagne.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "ed3b4cd2-ddd5-4b30-9a98-1b28406181e0",
+      "title": "Autoportrait",
+      "catalogueTitle": "Self-Portrait",
+      "artist": "Malvin Gray Johnson",
+      "artists": [
+        {
+          "name": "Malvin Gray Johnson",
+          "role": "primary",
+          "slug": "malvin-gray-johnson-round6-27f0a50e2037"
+        }
+      ],
+      "date": "1934",
+      "start": 1934,
+      "end": 1934,
+      "medium": "Huile sur toile",
+      "accession": "1967.57.30",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/20703f5c-009e-4c52-82a5-2a4ef804c6cd-35139d1c6896ebe0.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=11519",
+      "credit": "Malvin Gray Johnson. Self-Portrait. Malvin Gray Johnson; Smithsonian American Art Museum, Gift of the Harmon Foundation. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=11519",
+      "description": "Johnson place palette et pinceaux près de son image, avec tableaux et formes sculptées autour de lui. L'atelier affirme une identité de travail plutôt qu'un décor ornemental. Il apparaît parmi des choses fabriquées, utilisées et étudiées. Le portrait peut ainsi revendiquer une autonomie artistique : la personne représentée est aussi celle qui choisit et produit des représentations.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3453fabc-19f3-461b-b33f-175416c7697e",
+      "title": "Elizabeth Winthrop Chanler",
+      "catalogueTitle": "Elizabeth Winthrop Chanler (Mrs. John Jay Chapman)",
+      "artist": "John Singer Sargent",
+      "artists": [
+        {
+          "name": "John Singer Sargent",
+          "role": "primary",
+          "slug": "john-singer-sargent-q155626"
+        }
+      ],
+      "date": "1893",
+      "start": 1893,
+      "end": 1893,
+      "medium": "Huile sur toile",
+      "accession": "1980.71",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/a2b812d3-f006-4e1f-bed4-bfbda94b47c2-2015dbed6f7b2273.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=21621",
+      "credit": "John Singer Sargent. Elizabeth Winthrop Chanler (Mrs. John Jay Chapman). John Singer Sargent; Smithsonian American Art Museum, Gift of Chanler A. Chapman. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=21621",
+      "description": "Le mobilier à motifs établit un cadre social élaboré, mais Sargent garde le visage et les mains clairs distincts de leur environnement. La posture tenue donne à la rencontre plus de poids qu'un inventaire de matières coûteuses. La décoration reste visible sans fournir toute son identité. Le portrait demande de s'attarder sur la personne qui occupe la pièce, non seulement sur ce que celle-ci contient.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "3fd02b6b-918c-4761-9dc1-6651058c0d8d",
+      "title": "Mère : Annie Williams Gandy",
+      "catalogueTitle": "Mother (Annie Williams Gandy)",
+      "artist": "Thomas Eakins",
+      "artists": [
+        {
+          "name": "Thomas Eakins",
+          "role": "primary",
+          "slug": "thomas-eakins-q214905"
+        }
+      ],
+      "date": "vers 1903",
+      "start": 1903,
+      "end": 1903,
+      "medium": "Huile sur toile",
+      "accession": "1961.11.12",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e75187a4-224f-44af-a3bf-9f10b10457d7-ee4ec6129f54313a.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=7710",
+      "credit": "Thomas Eakins. Mother (Annie Williams Gandy). Thomas Eakins; Smithsonian American Art Museum, Bequest of Mrs. Lucy G. Rodman through her sister Miss Helen W. Gandy. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=7710",
+      "description": "Le nom du titre empêche « Mère » de devenir un rôle entièrement anonyme. Eakins fait sortir visage et mains du vêtement sombre par des différences de ton mesurées. Peu d'éléments alentour rivalisent avec la figure assise. L'image n'exige pas de résumé sentimental de la maternité : la posture et l'apparence de cette femme précise suffisent à l'occuper.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "19c56141-a406-4ecc-bcba-5e5910749288",
+      "title": "Melons et ipomées",
+      "catalogueTitle": "Melons and Morning Glories",
+      "artist": "Raphaelle Peale",
+      "artists": [
+        {
+          "name": "Raphaelle Peale",
+          "role": "primary",
+          "slug": "raphaelle-peale-nga-23551"
+        }
+      ],
+      "date": "1813",
+      "start": 1813,
+      "end": 1813,
+      "medium": "Huile sur toile",
+      "accession": "1967.39.2",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/60992f65-57ae-42f9-9f17-7963d231a03e-0064d463742e6544.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=19311",
+      "credit": "Raphaelle Peale. Melons and Morning Glories. Raphaelle Peale; Smithsonian American Art Museum, Gift of Paul Mellon. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=19311",
+      "description": "Le melon coupé révèle ce que le fruit entier garde en lui : graines, chair et rapport entre écorce et intérieur. Peale place ces différences près des tiges recourbées et des fleurs sur fond sombre. La coupe change ce que l'observation permet d'établir. La nature morte dépasse l'agrément d'un arrangement parce qu'elle permet de considérer ensemble aspect extérieur et structure interne.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "8c1efaaa-2989-5b27-996a-3703e2b474f9",
+      "title": "Le Vieux Fabricant de flèches",
+      "catalogueTitle": "Old Arrow Maker",
+      "artist": "Edmonia Lewis",
+      "artists": [
+        {
+          "name": "Edmonia Lewis",
+          "role": "primary",
+          "slug": "wikiart-artist-edmonia-lewis"
+        }
+      ],
+      "date": "1872",
+      "start": 1872,
+      "end": 1872,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/8c1efaaa-2989-5b27-996a-3703e2b474f9-5f50e60c5e68199c.jpg",
+      "imageSource": "https://www.wikiart.org/en/edmonia-lewis/old-arrow-maker-1872",
+      "credit": "Edmonia Lewis. Old Arrow Maker. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edmonia-lewis/old-arrow-maker-1872",
+      "description": "Le travail de l'homme assis relie ses mains et son corps à la jeune femme près de lui. Lewis donne à un sujet littéraire la forme tangible d'un groupe de marbre. La sculpture doit se lire comme une interprétation, non comme une scène dont la précision apparente prouverait une documentation directe de la vie autochtone. L'agencement témoigne de choix artistiques, pas d'un récit complet d'une communauté.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "0c7fc12a-e8bd-4480-bdd4-57b0256a287b",
+      "title": "La Mariée",
+      "catalogueTitle": "A Bride",
+      "artist": "Abbott Handerson Thayer",
+      "artists": [
+        {
+          "name": "Abbott Handerson Thayer",
+          "role": "primary",
+          "slug": "abbott-handerson-thayer-nga-38660"
+        }
+      ],
+      "date": "vers 1895",
+      "start": 1895,
+      "end": 1895,
+      "medium": "Huile sur toile",
+      "accession": "1929.6.111",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/eb863a50-296e-452c-a6c0-c8fc53d85865-e7f35ff7d0e3d80f.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=23925",
+      "credit": "Abbott Handerson Thayer. A Bride. Abbott Handerson Thayer; Smithsonian American Art Museum, Gift of John Gellatly. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=23925",
+      "description": "Le vêtement blanc se rapproche du cadre clair, tandis que visage et cheveux sombres restent distincts. Thayer varie le degré de définition de la figure debout. Le corps demeure présent même là où robe et lumière se confondent presque. Le titre attribue un rôle, mais la facture propose une autre question : combien peut-on laisser indéterminé avant qu'un visage perde sa lisibilité ?",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "5ec4f45b-fd21-4786-8ff2-632534f980ef",
+      "title": "Chanteur espagnol aveugle",
+      "catalogueTitle": "Blind Spanish Singer",
+      "artist": "Robert Henri",
+      "artists": [
+        {
+          "name": "Robert Henri",
+          "role": "primary",
+          "slug": "robert-henri-nga-1391"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "Huile sur toile",
+      "accession": "1967.41",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/13496c71-12cb-40f2-a447-ecd0e4832695-df4e531832a0089e.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=10301",
+      "credit": "Robert Henri. Blind Spanish Singer. Robert Henri; Smithsonian American Art Museum, Gift of Mr. J.H. Smith. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=10301",
+      "description": "La guitare donne aux mains une relation pratique avec le corps assis. Henri fait émerger chemise, visage et instrument de l'obscurité sans décrire un lieu de spectacle élaboré. Le titre nomme la cécité, mais la peinture représente aussi un musicien au travail. Prêter attention à cette activité empêche une condition physique de devenir sa seule identité disponible.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "7d1be2bb-22eb-4ecc-bd3f-cf45974112ac",
+      "title": "Femme choctaw",
+      "catalogueTitle": "A Choctaw Woman",
+      "artist": "George Catlin",
+      "artists": [
+        {
+          "name": "George Catlin",
+          "role": "primary",
+          "slug": "george-catlin-nga-1113"
+        }
+      ],
+      "date": "1834",
+      "start": 1834,
+      "end": 1834,
+      "medium": "Huile sur toile",
+      "accession": "1985.66.297",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/e462cf7a-e0c1-42b0-8e1a-088f646197b3-4c5ed8a441d86938.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=3997",
+      "credit": "George Catlin. A Choctaw Woman. George Catlin; Smithsonian American Art Museum, Gift of Mrs. Joseph Harrison, Jr.. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=3997",
+      "description": "Le profil et le fond dégagé rendent vêtements et ornements faciles à distinguer. Catlin sélectionne ces traits visibles pour un public extérieur à la communauté du modèle. Ils restent des témoignages historiques utiles, mais ne constituent pas son propre récit d'elle-même. Respecter la particularité du portrait demande de reconnaître à la fois ce qu'il conserve et qui décide de sa présentation.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "99a627a8-ca5b-44fb-b2de-ca3cb315c5b5",
+      "title": "Cérémonie du don des chevaux (« Smoking Horses »)",
+      "catalogueTitle": "\"Smoking Horses,\" a Curious Custom of the Sauk and Fox",
+      "artist": "George Catlin",
+      "artists": [
+        {
+          "name": "George Catlin",
+          "role": "primary",
+          "slug": "george-catlin-nga-1113"
+        }
+      ],
+      "date": "1835-1836",
+      "start": 1835,
+      "end": 1836,
+      "medium": "Huile sur toile",
+      "accession": "1985.66.463",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/3ffcaacd-1603-4556-805a-bbd897b877ea-e929dec117c1582f.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=4378",
+      "credit": "George Catlin. \"Smoking Horses,\" a Curious Custom of the Sauk and Fox. George Catlin; Smithsonian American Art Museum, Gift of Mrs. Joseph Harrison, Jr.. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=4378",
+      "description": "La disposition circulaire ouverte permet à un observateur extérieur d'embrasser personnes et chevaux d'un seul regard. Les espacements de Catlin clarifient le rassemblement, mais éloignent le spectateur de la position de chaque participant. Voir l'agencement n'explique pas encore la cérémonie. Son sens exige des savoirs autochtones et un contexte historique que la répartition peinte des corps ne peut fournir seule.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "d1fc9c9d-f729-4f8d-872f-bf69b450eda4",
+      "title": "Lewisia, ou racine amère",
+      "catalogueTitle": "Bitterroot (Lewisia redivivia)",
+      "artist": "Mary Vaux Walcott",
+      "artists": [
+        {
+          "name": "Mary Vaux Walcott",
+          "role": "primary",
+          "slug": "mary-vaux-walcott-round6-e5a8f3572970"
+        }
+      ],
+      "date": "1915",
+      "start": 1915,
+      "end": 1915,
+      "medium": "Aquarelle sur papier",
+      "accession": "1970.355.196",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/be378fcb-e7e0-4525-a6d9-1353d094dd50-a9da892d09d5ddbe.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=25876",
+      "credit": "Mary Vaux Walcott. Bitterroot (Lewisia redivivia). Mary Vaux Walcott; Smithsonian American Art Museum, Gift of the artist. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=25876",
+      "description": "Walcott sépare boutons, fleurs ouvertes et feuilles étroites sur un papier largement laissé vierge. L'espacement rend les petites structures disponibles à l'étude, sans la végétation concurrente d'un cadre extérieur. Cette clarté est une forme d'arrangement, non son absence. L'image botanique montre comment retirer l'environnement peut révéler des différences difficiles à examiner dans une vue plus large.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    },
+    {
+      "id": "4337d75d-6904-4a79-8b2b-42da516cbc5c",
+      "title": "Intérieur avec portraits",
+      "catalogueTitle": "Interior with Portraits",
+      "artist": "Thomas Le Clear",
+      "artists": [
+        {
+          "name": "Thomas Le Clear",
+          "role": "primary",
+          "slug": "thomas-le-clear-round6-bb7390496ffc"
+        }
+      ],
+      "date": "vers 1865",
+      "start": 1865,
+      "end": 1865,
+      "medium": "Huile sur toile",
+      "accession": "1993.6",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-saam/36376cea-604b-4266-aabc-dd75fbf5cdd1-e959f4779198017b.jpg",
+      "imageSource": "https://americanart.si.edu/collections/search/artwork/?id=33492",
+      "credit": "Thomas Le Clear. Interior with Portraits. Thomas Le Clear; Smithsonian American Art Museum, Museum purchase made possible by the Pauline Edwards Bequest. CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Full-frame proportional resize and JPEG compression.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://americanart.si.edu/collections/search/artwork/?id=33492",
+      "description": "Le photographe se penche sous son appareil tandis que les enfants gardent la pose. Le Clear inclut l'équipement et les autres images de l'atelier au lieu de présenter les portraits comme s'ils étaient apparus sans aide. Faire un portrait devient une activité visible. Le tableau s'attarde sur les conditions de la représentation autant que sur les personnes représentées.",
+      "importance": "",
+      "museum": "Smithsonian American Art Museum"
+    }
+  ],
+  "context": {
+    "start": 1813,
+    "end": 1960
+  },
+  "closingSections": [
+    {
+      "title": "Utiliser l'image sans effacer ses limites",
+      "paragraphs": [
+        "Un portrait conserve une apparence sélectionnée par quelqu'un ; un paysage organise une vue depuis quelque part. Ces limites ne rendent ni l'un ni l'autre inutiles. Elles précisent les questions. Lisez les notices individuelles avec ces textes, surtout pour les représentations historiques de communautés. Vérifiez aussi l'exposition actuelle avant de prévoir une visite autour de cette sélection."
+      ]
+    }
+  ]
+}

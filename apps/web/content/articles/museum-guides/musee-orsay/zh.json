@@ -1,0 +1,605 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "musee-orsay",
+  "museum": "Musée d’Orsay",
+  "city": "巴黎",
+  "country": "法国",
+  "title": "奥赛博物馆：杰作",
+  "subtitle": "葬礼、地板与牌局，在这二十幅画里成为值得郑重对待的主题。",
+  "introduction": "库尔贝的村庄葬礼横跨近七米画布。大小很重要：一个地方社群，占据了传统上属于重大历史或宗教事件的空间。在这组选集的别处，工人跪着刮地板，舞者在练习之间等待，两个男人专心打牌。\n\n这些画对现代生活并不持同一说法。马奈检验裸体画惯例，惠斯勒强调色调安排，塞尚让桌子的结构变得不确定。这里连接它们的，是对那些可能被宏大题材等级忽略的主题与选择的认真处理。值得问的是，每幅画让一个普通动作、一件物品或一种姿态，传达了什么。",
+  "visitNote": "请查阅奥赛博物馆（Musée d’Orsay）关于馆藏现状的信息，以了解展厅位置及借展情况。此处的排列顺序基于主题与作品间的对比关系，而非参观路线。",
+  "locale": "zh",
+  "website": "https://www.musee-orsay.fr",
+  "officialGuide": "https://www.musee-orsay.fr",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "Impressionism: A Centenary Exhibition",
+      "author": "Anne Dayez, Michel Hoog and Charles S. Moffett",
+      "url": "https://www.metmuseum.org/met-publications/impressionism-a-centenary-exhibition",
+      "access": "在线阅读或下载 · 英语",
+      "note": "“印象派：百年纪念展”将莫奈、雷诺阿、德加及其同时代艺术家的作品，置于早期印象派展览的语境中进行展示。大都会艺术博物馆提供了该展览图录的在线版本。"
+    }
+  ],
+  "works": [
+    {
+      "id": "a4a7592f-9f1b-49eb-aeec-341bd390e65c",
+      "title": "奥林匹亚",
+      "catalogueTitle": "Olympia",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/949b73ae-aaf2-4f54-981f-d8e803684ca0-297aeedbf74aceef.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/olympia-1863",
+      "credit": "Édouard Manet. Olympia. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/olympia-1863",
+      "description": "花送来了，女子的注意却朝向画外。这个分歧让斜卧姿态带有警觉，不同于沉睡维纳斯的想象。马奈画的是一位当时的性工作者，保留理想化裸体惯用的构图，却撤去了神话借口。作品绘于1863年，1865年在沙龙展出时引发风波。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "d37d1cee-e787-4299-8ca8-9b38b8b5d0d0",
+      "title": "草地上的午餐",
+      "catalogueTitle": "Le Déjeuner sur l’herbe",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1863",
+      "start": 1863,
+      "end": 1863,
+      "medium": "布面油画",
+      "accession": "RF 1668",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/d37d1cee-e787-4299-8ca8-9b38b8b5d0d0-bd2fb9541814722b.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Le_D%C3%A9jeuner_sur_l%27herbe_-_%C3%89douard_Manet.jpg",
+      "credit": "Édouard Manet. Le Déjeuner sur l’herbe. Image credit: Édouard Manet; Self-photographed. https://commons.wikimedia.org/wiki/File:Le_D%C3%A9jeuner_sur_l%27herbe_-_%C3%89douard_Manet.jpg. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/le-dejeuner-sur-lherbe-904",
+      "description": "裸体女子与两位着装男子，似乎不属于同一种社交场合。马奈没有尝试借神话消除不协调。不过，构图仍取法旧艺术，包括一组经版画转引自拉斐尔的人物。作品遭沙龙评审拒绝，后在1863年的落选者沙龙展出；挑战之所以成立，部分正靠熟悉惯例被用在不熟悉的地方。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "2bf247e0-364c-4f70-b2f6-93b7a7ba682a",
+      "title": "奥尔南的葬礼",
+      "catalogueTitle": "Un enterrement à Ornans",
+      "artist": "Gustave Courbet",
+      "artists": [
+        {
+          "name": "Gustave Courbet",
+          "role": "primary",
+          "slug": "gustave-courbet-q34618"
+        }
+      ],
+      "date": "1849–1850",
+      "start": 1849,
+      "end": 1850,
+      "medium": "布面油画",
+      "accession": "RF 325",
+      "image": "https://artlines.org/assets/artworks/wikiart/bc8cb234-0e6f-58ce-83b4-75afa7ec388f-bcfa6e95a99e859a.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustave-courbet/a-burial-at-ornans-1850-1",
+      "credit": "Gustave Courbet. A Burial at Ornans. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/un-enterrement-ornans-924",
+      "description": "宽达6.68米的村庄葬礼，占用了通常留给崇高历史或宗教题材的空间。库尔贝把它分给哀悼者，没有指定统领全场的英雄。敞开的墓穴把仪式作为具体事实带到前景。尺度因此不仅是画幅问题，也是社会问题：普通人获得真人大小的描绘，却未被改造成理想人物。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "53bfa6e7-a9fc-463a-af87-ac9e5c9e24a1",
+      "title": "拾穗者",
+      "catalogueTitle": "Des glaneuses ou Les glaneuses",
+      "artist": "Jean-François Millet",
+      "artists": [
+        {
+          "name": "Jean-François Millet",
+          "role": "primary",
+          "slug": "jean-francois-millet-q148458"
+        }
+      ],
+      "date": "1857",
+      "start": 1857,
+      "end": 1857,
+      "medium": "布面油画",
+      "accession": "RF 592",
+      "image": "https://artlines.org/assets/artworks/imported/wikipedia-painter-by-painter-20260914/db5cb39c-76e8-440f-87e5-eeffeac96ffd-846596fed7b16f58.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg",
+      "credit": "Jean-François Millet. Des glaneuses ou Les glaneuses. Image credit: Jean-François Millet; Source credit: Google Arts & Culture — GgHsT2RumWxbtw. Public domain (https://creativecommons.org/publicdomain/mark/1.0/). Proportional resize and JPEG compression; full source frame retained.",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://www.pop.culture.gouv.fr/notice/joconde/000PE002031",
+      "description": "女人们捡拾的是收割后的遗留，而非收割本身。米勒将她们手中的少量麦穗与远处丰收对照，使差别清楚。重复弯腰连接人物，却没有把她们变成可互换的副本。前景让吃力的零星劳动，在画中比远方规模更大的作业更有分量。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "892efb8c-1ddc-46e0-ba7e-e24d4806b94b",
+      "title": "三钟经",
+      "catalogueTitle": "L’Angélus",
+      "artist": "Jean-François Millet",
+      "artists": [
+        {
+          "name": "Jean-François Millet",
+          "role": "primary",
+          "slug": "jean-francois-millet-q148458"
+        }
+      ],
+      "date": "1857–1859",
+      "start": 1857,
+      "end": 1859,
+      "medium": "布面油画",
+      "accession": "RF 1877",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/892efb8c-1ddc-46e0-ba7e-e24d4806b94b-327b3c1ac97fcf6e.jpg",
+      "imageSource": "https://www.wikiart.org/en/jean-francois-millet/the-angelus-1859",
+      "credit": "Jean-Francois Millet. L’Angélus. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/langelus-345",
+      "description": "工具和篮子仍留在人物身旁，所以祈祷像工作的中断，而非另起的仪式。低下的头把目光引向男女之间的空隙，远处教堂又将这次个人停歇放进较广环境。米勒借暂时停下的工作，让静止变得可读。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "7f01199b-0fe5-4966-b838-f180b8b7e9a9",
+      "title": "煎饼磨坊的舞会",
+      "catalogueTitle": "Bal du moulin de la Galette",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1876",
+      "start": 1876,
+      "end": 1876,
+      "medium": "布面油画",
+      "accession": "RF 2739",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/7f01199b-0fe5-4966-b838-f180b8b7e9a9-04f101a0188d8d14.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Pierre_auguste_renoir,_ballo_del_moulin_del_la_galette,_1876,_01.JPG",
+      "credit": "Pierre-Auguste Renoir. Bal du moulin de la Galette. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Pierre_auguste_renoir,_ballo_del_moulin_del_la_galette,_1876,_01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/en/artworks/bal-du-moulin-de-la-galette-497",
+      "description": "光越过人与人之间的边界。散落光斑触及面孔、衣服与地面，连接不同谈话和舞伴，不要求只有一件主要事件。前景坐着的人提供进入人群的视线起点，再往后，注意力便散开。聚会之所以仍有交际的流动感，部分因为没有一人独占整幅画。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "b2b84678-3221-4d07-ba65-202a72296c8c",
+      "title": "刮地板的人",
+      "catalogueTitle": "LES RABOTEURS DE PARQUET",
+      "artist": "Gustave Caillebotte",
+      "artists": [
+        {
+          "name": "Gustave Caillebotte",
+          "role": "primary",
+          "slug": "gustave-caillebotte-q295144"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/9dfe6040-3ff3-5b23-b920-b4c468ce1c60-e53ac3e38b7768c6.jpg",
+      "imageSource": "https://www.wikiart.org/en/gustave-caillebotte/the-parquet-planers-1875",
+      "credit": "Gustave Caillebotte. The Parquet Planers (The Floor Scrapers). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://pop.culture.gouv.fr/notice/joconde/000PE003717",
+      "description": "地板确定了工作的方向。长木条把视线拉进屋内，跪着的男人则在同一任务的不同阶段沿其移动。窗光区分刮过的木头与裸背。卡耶博特为体力劳动提供有度量、有秩序的空间，却没有隐瞒这项工作要求的别扭姿势。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "0edd9c42-f15a-5f08-b46a-75e93b62e974",
+      "title": "灰与黑的安排第一号：艺术家的母亲",
+      "catalogueTitle": "Arrangement in Grey and Black No.1, Portrait of the Artist's Mother",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1871",
+      "start": 1871,
+      "end": 1871,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/0edd9c42-f15a-5f08-b46a-75e93b62e974-06ccecf4eadbf915.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-mcneill-whistler/arrangement-in-grey-and-black-no-1-portrait-of-the-artist-s-mother-1871",
+      "credit": "James Abbott McNeill Whistler. Arrangement in Grey and Black No.1, Portrait of the Artist's Mother. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-mcneill-whistler/arrangement-in-grey-and-black-no-1-portrait-of-the-artist-s-mother-1871",
+      "description": "标题要求注意一种安排，也注意一个人。大块灰黑先建立肖像，小片浅色的脸、帽与手随后才显出来。装框画与花纹窗帘帮助划分墙面。这些选择没有取消人物的存在，而是给她安静的侧脸一个异常稳固的环境。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "83b1c160-ace0-4039-9b20-7951e7962901",
+      "title": "舞蹈课",
+      "catalogueTitle": "La Classe de danse",
+      "artist": "Edgar Degas",
+      "artists": [
+        {
+          "name": "Edgar Degas",
+          "role": "primary",
+          "slug": "edgar-degas-q46373"
+        }
+      ],
+      "date": "1873–1876",
+      "start": 1873,
+      "end": 1876,
+      "medium": "布面油画",
+      "accession": "RF 1976",
+      "image": "https://artlines.org/assets/artworks/wikiart/a9a1a096-3b60-5b7b-85e8-a302a587f86d-b476c4883c89d7ec.jpg",
+      "imageSource": "https://www.wikiart.org/en/edgar-degas/the-dancing-class-1874",
+      "credit": "Edgar Degas. The Ballet Class. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/en/artworks/la-classe-de-danse-1151",
+      "description": "舞蹈课里远不止跳舞。有些人在练，另一些等待、休息或整理衣服。开放地板让这些小活动保持分开，同时教师与课程又维系全组。德加把纪律严整的表演，视作专注程度不一、反复练习以及动作间隙共同形成的结果。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "f39bf9d1-055b-440c-89b6-ca0700aa2902",
+      "title": "罗纳河上的星夜",
+      "catalogueTitle": "La Nuit étoilée",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1888",
+      "start": 1888,
+      "end": 1888,
+      "medium": "布面油画",
+      "accession": "RF 1975 19",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/f39bf9d1-055b-440c-89b6-ca0700aa2902-ecc312ec14115ff4.jpg",
+      "imageSource": "https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1888-2",
+      "credit": "Vincent van Gogh. La Nuit étoilée. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/la-nuit-etoilee-78696",
+      "description": "夜里有两种光：上方零星星光，下方城市拉长的倒影。即使颜色逐渐接近，这个差别仍使天与河分开。岸旁两个人让宽水面的大小有了参照。景色辽阔，却仍给两具小小身影留了地方。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "3f2be8a0-d6c0-41b6-9324-10a46034e6a1",
+      "title": "奥维尔教堂",
+      "catalogueTitle": "L’église d’Auvers-sur-Oise, vue du chevet",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890年（作于1890年6月4日至8日）",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "RF 1951 42",
+      "image": "https://artlines.org/assets/artworks/open-museums/popular-commons-depicts/3f2be8a0-d6c0-41b6-9324-10a46034e6a1-03d2dec5583b4296.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_Van_Gogh,_la_chiesa_di_auvers-sur-oise,_1890,_01.JPG",
+      "credit": "Vincent van Gogh. L’église d’Auvers-sur-Oise, vue du chevet. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Vincent_Van_Gogh,_la_chiesa_di_auvers-sur-oise,_1890,_01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/leglise-dauvers-sur-oise-vue-du-chevet-755",
+      "description": "小径绕教堂分岔，供人经过一座轮廓似乎比石材建筑应有状态更不稳定的房子。深蓝天下墙面弯曲，小小行人的移动则属于另一个尺度。梵高让教堂依然可辨，同时把它的轮廓纳入四周风景的动势。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "39cc19f8-2400-4c95-88b7-d1fb106253cf",
+      "title": "保罗·加歇医生",
+      "catalogueTitle": "Le Docteur Paul Gachet",
+      "artist": "Vincent van Gogh",
+      "artists": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "primary",
+          "slug": "vincent-van-gogh-q5582"
+        }
+      ],
+      "date": "1890",
+      "start": 1890,
+      "end": 1890,
+      "medium": "布面油画",
+      "accession": "RF 1949 16",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/39cc19f8-2400-4c95-88b7-d1fb106253cf-f5e8f6b281596874.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paris_7e_Mus%C3%A9e_d%E2%80%99Orsay_Van_Gogh_%C3%A0_Auvers-sur-Oise_981.jpg",
+      "credit": "Vincent van Gogh. Le Docteur Paul Gachet. Image credit: GFreihalter; Own work. https://commons.wikimedia.org/wiki/File:Paris_7e_Mus%C3%A9e_d%E2%80%99Orsay_Van_Gogh_%C3%A0_Auvers-sur-Oise_981.jpg. CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/le-docteur-paul-gachet-751",
+      "description": "加歇的手撑住头，并非向别人作手势。斜肩与倾斜身体重复向下的压力，旁边花朵则较直立。把这种姿势理解为疲惫是合理的，但它不能证实疾病，也不能给人物作医学诊断。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "710283db-d1d7-4d54-94c1-fd65912a7b58",
+      "title": "玩牌的人",
+      "catalogueTitle": "Les Joueurs de cartes",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "1893-1896",
+      "start": 1893,
+      "end": 1896,
+      "medium": "布面油画",
+      "accession": "RF 1969",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/710283db-d1d7-4d54-94c1-fd65912a7b58-1c230455819297f7.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-cezanne/the-card-players-1896",
+      "credit": "Paul Cezanne. Les Joueurs de cartes. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/les-joueurs-de-cartes-1312",
+      "description": "瓶子建立竖向分隔，却没有使两个男人变成镜像。他们以不同姿态安坐窄桌两侧，注意纸牌而非观众。塞尚在这份专注中找到可以持续画下去的题材。即使没什么事情发生，人物之间的平衡仍值得细看。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "59675849-d769-44e9-bee9-99729d911c86",
+      "title": "苹果与橙子",
+      "catalogueTitle": "Pommes et oranges",
+      "artist": "Paul Cézanne",
+      "artists": [
+        {
+          "name": "Paul Cézanne",
+          "role": "primary",
+          "slug": "paul-cezanne-q35548"
+        }
+      ],
+      "date": "约 1899 年",
+      "start": 1899,
+      "end": 1899,
+      "medium": "布面油画",
+      "accession": "RF 1972",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/59675849-d769-44e9-bee9-99729d911c86-12bf9db11e64a969.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_c%C3%A9zanne,_mele_e_arance,_1899_ca._01.JPG",
+      "credit": "Paul Cézanne. Pommes et oranges. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Paul_c%C3%A9zanne,_mele_e_arance,_1899_ca._01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/pommes-et-oranges-1470",
+      "description": "水果显得结实，桌面却很难被还原为单一、连贯的平面。盘子、布褶与高脚盘引入相互竞争的角度。与其只把这些位移视为透视错误，不如看每次变化如何让一个物件多露出一点。塞尚的摆设靠局部关系相互连接，而非服从唯一固定视点。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "667bc885-756f-4c14-8ccc-aeae46757d25",
+      "title": "Arearea",
+      "catalogueTitle": "Arearea",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1892",
+      "start": 1892,
+      "end": 1892,
+      "medium": "布面油画",
+      "accession": "RF 1961 6",
+      "image": "https://artlines.org/assets/artworks/open-museums/night-commons/667bc885-756f-4c14-8ccc-aeae46757d25-e304575d6bb73f78.jpg",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_gauguin,_arearea,_1892,_01.JPG",
+      "credit": "Paul Gauguin. Arearea. Image credit: Sailko; Own work. https://commons.wikimedia.org/wiki/File:Paul_gauguin,_arearea,_1892,_01.JPG. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Full-frame proportional resize and JPEG compression; applicable ShareAlike terms retained.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/arearea-291",
+      "description": "红狗使人很难把这环境误认成高更所见的中立报道。色带组织坐着女子周围的地面，后方小人物另占一层区域。简化使场景连贯，同时也宣告画家的介入。作品不应代替一份未经艺术加工的塔希提生活记录。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "a60609f1-e6ac-4bf6-801a-d0f9df7d5db7",
+      "title": "塔希提女性",
+      "catalogueTitle": "Femmes de Tahiti",
+      "artist": "Paul Gauguin",
+      "artists": [
+        {
+          "name": "Paul Gauguin",
+          "role": "primary",
+          "slug": "paul-gauguin-q37693"
+        }
+      ],
+      "date": "1891年（11月–12月）",
+      "start": 1891,
+      "end": 1891,
+      "medium": "布面油画",
+      "accession": "RF 2765",
+      "image": "https://artlines.org/assets/artworks/imported/production-wikiart-images-20261006/a60609f1-e6ac-4bf6-801a-d0f9df7d5db7-bc6db9bcc3bb1b4f.jpg",
+      "imageSource": "https://www.wikiart.org/en/paul-gauguin/tahitian-women-1891",
+      "credit": "Paul Gauguin. Femmes de Tahiti. WikiArt: Public domain. Proportional resize and JPEG compression; no crop.",
+      "license": "Public domain (WikiArt per-object label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.musee-orsay.fr/fr/oeuvres/femmes-de-tahiti-290",
+      "description": "两位坐着的女子看向不同方向。一人转侧面，另一人朝外，因此亲近距离并未变成配套姿势。宽阔轮廓与有限纵深，使身体显得厚实。手与花纹衣服在紧凑安排中提供较小差别，让两人不只是形状的重复。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "3f65099d-0f2b-5841-9f9a-594b3a10d75e",
+      "title": "埃德玛·蓬蒂永肖像",
+      "catalogueTitle": "Portrait of Edma Pontillon",
+      "artist": "Berthe Morisot",
+      "artists": [
+        {
+          "name": "Berthe Morisot",
+          "role": "primary",
+          "slug": "berthe-morisot-q105320"
+        }
+      ],
+      "date": "1871",
+      "start": 1871,
+      "end": 1871,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3f65099d-0f2b-5841-9f9a-594b3a10d75e-45d583f69cb0ff87.jpg",
+      "imageSource": "https://www.wikiart.org/en/berthe-morisot/portrait-of-edma-pontillon",
+      "credit": "Berthe Morisot. Portrait of Edma Pontillon. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/berthe-morisot/portrait-of-edma-pontillon",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/berthe-morisot/portrait-of-edma-pontillon",
+      "description": "深色衣服本可能让坐者像一整块体积，莫里索却通过细小光变分出手、脸与裙。头部轻转，与并拢休息的双手形成对照。浅色花纹家具给这些克制动作以场所。肖像的具体性靠这类细调，而非一个醒目姿势。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "2775eda9-5256-574d-990a-d035cc3b735f",
+      "title": "埃米尔·左拉肖像",
+      "catalogueTitle": "Portrait of Emile Zola",
+      "artist": "Édouard Manet",
+      "artists": [
+        {
+          "name": "Édouard Manet",
+          "role": "primary",
+          "slug": "edouard-manet-q40599"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/2775eda9-5256-574d-990a-d035cc3b735f-7ed71c145edb88c1.jpg",
+      "imageSource": "https://www.wikiart.org/en/edouard-manet/portrait-of-emile-zola-1868",
+      "credit": "Édouard Manet. Portrait of Emile Zola. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/edouard-manet/portrait-of-emile-zola-1868",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/edouard-manet/portrait-of-emile-zola-1868",
+      "description": "打开的书和墙上图像，使观看与阅读成为肖像题材的一部分。它们围着左拉，却没有把清晰侧脸淹没在一份兴趣清单里。马奈把眼前的人与他的知识环境放在同一画框。物品值得看，但不能解释这个人的全部。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "a44848e9-66e5-51cb-b6ef-b92491eca2e4",
+      "title": "弗雷德里克·巴齐耶绘制《苍鹭》",
+      "catalogueTitle": "Frederic Bazille Painting The Heron (Frederic Bazille at his Easel)",
+      "artist": "Pierre-Auguste Renoir",
+      "artists": [
+        {
+          "name": "Pierre-Auguste Renoir",
+          "role": "primary",
+          "slug": "pierre-auguste-renoir-q39931"
+        }
+      ],
+      "date": "1867",
+      "start": 1867,
+      "end": 1867,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/a44848e9-66e5-51cb-b6ef-b92491eca2e4-a480f9215e8778d1.jpg",
+      "imageSource": "https://www.wikiart.org/en/pierre-auguste-renoir/frederic-bazille-painting-the-heron-1867",
+      "credit": "Frederic Bazille Painting The Heron (Frederic Bazille at his Easel). WikiArt; Pierre-Auguste Renoir. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/pierre-auguste-renoir/frederic-bazille-painting-the-heron-1867",
+      "description": "巴齐耶忙于制作图像，而非为一幅图像展示自己。侧视让俯身、画笔与近旁材料说明正在进行的事。雷诺阿将同事普通的工作姿势作为肖像基础，职业身份由手头任务显现，而不是正式宣告地位。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    },
+    {
+      "id": "3a26b997-5ada-5bf0-b8e0-c4b917ff366b",
+      "title": "胡安·普里姆，1868年10月8日",
+      "catalogueTitle": "Juan Prim, October 8, 1868",
+      "artist": "Henri Regnault",
+      "artists": [
+        {
+          "name": "Henri Regnault",
+          "role": "primary",
+          "slug": "henri-regnault-nga-39043"
+        }
+      ],
+      "date": "1868",
+      "start": 1868,
+      "end": 1868,
+      "medium": "石油",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/3a26b997-5ada-5bf0-b8e0-c4b917ff366b-115dd1efbcbe98a1.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-regnault/juan-prim-october-8-1868-1868",
+      "credit": "Henri Regnault. Juan Prim, October 8, 1868. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-regnault/juan-prim-october-8-1868-1868",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-regnault/juan-prim-october-8-1868-1868",
+      "description": "马抬起前腿，不再是普里姆身下静止的平台。它的躁动更衬出骑者镇定，人群与旗帜则把场景扩到这一人一马之外。雷尼奥采用骑马肖像这种熟悉的公共权威形式，但效果有赖于动物仍在明显活动。",
+      "importance": "",
+      "museum": "Musée d’Orsay"
+    }
+  ],
+  "context": {
+    "start": 1849,
+    "end": 1899
+  },
+  "closingSections": [
+    {
+      "title": "比较不同的专注",
+      "paragraphs": [
+        "把牌手放在德加舞者旁，或把工作的巴齐耶与阅读的左拉并看。专注、等待与自我呈现，各自形成不同肖像。这样的比较，比把每件作品都当成通向某一种现代风格的步骤更有用。到访前请查博物馆最新信息；选自馆藏，不等于每幅都正在展出。"
+      ]
+    }
+  ]
+}

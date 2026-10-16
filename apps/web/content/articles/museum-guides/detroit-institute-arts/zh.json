@@ -1,0 +1,607 @@
+{
+  "selectionNote": "Artline 从博物馆的馆藏记录中遴选了这些作品。此项遴选独立于博物馆进行，部分作品可能处于外借或未展出状态。关于创作年代与归属的标注，均保留了关联记录中的相关说明。",
+  "labels": {
+    "guides": "所有导览",
+    "download": "下载 PDF",
+    "language": "指导语言",
+    "translation": "AI 辅助翻译",
+    "explore": "在 Artline 中探索此系列作品",
+    "contextNote": "您可以将精选作品与同时期的书籍及事件对照查看，或比较艺术家的生卒年代。这些书籍与事件旨在提供背景信息，而非直接影响的证据。创作日期未获确证的作品也包含在本指南中。",
+    "all": "语境中的艺术作品",
+    "allHint": "这些精选作品结合了当时的各类书籍与历史背景。",
+    "painters": "谁生活在什么时期？",
+    "paintersHint": "查看艺术家生活的年代，以及哪些人的生平有所重叠。",
+    "events": "历史事件",
+    "eventsHint": "探索指南涵盖期间发生的事件",
+    "books": "书籍时间轴",
+    "booksHint": "探索同一时期的著名书籍",
+    "contents": "作品目录",
+    "artworks": "精选作品",
+    "importance": "为何值得关注",
+    "artwork": "开放艺术作品",
+    "source": "作品资料来源",
+    "inventory": "存货",
+    "reading": "延伸阅读",
+    "visit": "在您访问之前",
+    "website": "博物馆网站",
+    "officialGuide": "官方收藏指南",
+    "updated": "已核实信息来源和游客信息"
+  },
+  "slug": "detroit-institute-arts",
+  "museum": "Detroit Institute of Arts",
+  "city": "底特律",
+  "country": "美国",
+  "title": "底特律艺术博物馆：杰作",
+  "subtitle": "二十件作品，让人物与周围环境的关系无法被忽略。",
+  "introduction": "里维拉工厂里的工人有自己的任务，也有自己在庞大系统中的位置。菲斯利《梦魇》里的睡眠者同样占据一个明确的空间，但身边的异物让这里的规则变得可疑。在这两个极端之间，酒吧、书房与书店展示了人们如何塑造日常环境。\n\n这组底特律艺术学院的作品围绕不同的围合空间展开。房间可以保护专注、组织劳动，也可以困住身体。色彩还可能使房间显得敞开，直到墙壁不再像坚固的界限。作品没有提供共同答案，却让问题更加具体：一个人拥有多少空间，又是谁或什么在控制它？",
+  "visitNote": "请查阅展厅最新信息，了解展览变动及借展情况。关于里维拉（Rivera）的作品条目仅涵盖《底特律工业》（Detroit Industry）壁画的北墙部分，而非整套壁画系列。作品的归属与断代依据所引用的实物证据；两块描绘圣杰罗姆（Saint Jerome）的画板具有不同的创作归属历史。",
+  "locale": "zh",
+  "website": "http://www.dia.org/",
+  "officialGuide": "http://www.dia.org/",
+  "updated": "2026-10-12",
+  "books": [
+    {
+      "title": "The Practice and Science of Drawing",
+      "author": "Harold Speed",
+      "url": "https://www.gutenberg.org/ebooks/14264",
+      "access": "免费阅读 · 英语",
+      "note": "斯皮德（Speed）关于体量、线条和色调的论述，为理解小型画板作品与大型人物群像提供了一个切入点。不妨将里维拉（Rivera）笔下轮廓鲜明的人物躯体，与惠斯勒（Whistler）画中近乎消融的形态进行一番比较。"
+    }
+  ],
+  "works": [
+    {
+      "id": "78399197-0414-553c-ad7d-6ef3dd204b2e",
+      "title": "梦魇",
+      "catalogueTitle": "The Nightmare",
+      "artist": "Henry Fuseli",
+      "artists": [
+        {
+          "name": "Henry Fuseli",
+          "role": "primary",
+          "slug": "henry-fuseli-q122382"
+        }
+      ],
+      "date": "1781",
+      "start": 1781,
+      "end": 1781,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/78399197-0414-553c-ad7d-6ef3dd204b2e-69117f76388a9b12.jpg",
+      "imageSource": "https://www.wikiart.org/en/henry-fuseli/the-nightmare-1781",
+      "credit": "Henry Fuseli. The Nightmare. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henry-fuseli/the-nightmare-1781",
+      "description": "熟睡女子的身体横卧在床上，一只怪物端坐在她躯干上。后方，一颗马头从暗色帷幔间探入。菲斯利让这些入侵者与家具一样具有实体感。梦魇被画成对房间的占据：女子无法回应，那些不可能存在的生物却俨然成了这里的主人。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "2dfbe2ba-8168-5318-abb5-860b11161cbc",
+      "title": "底特律工业：北墙",
+      "catalogueTitle": "Detroit Industry, North Wall",
+      "artist": "Diego Rivera",
+      "artists": [
+        {
+          "name": "Diego Rivera",
+          "role": "primary",
+          "slug": "diego-rivera-q171128"
+        }
+      ],
+      "date": "1932–1933",
+      "start": 1932,
+      "end": 1933,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2dfbe2ba-8168-5318-abb5-860b11161cbc-6c5be1155a21cf4a.jpg",
+      "imageSource": "https://www.wikiart.org/en/diego-rivera/detroit-industry-north-wall",
+      "credit": "Diego Rivera. Detroit Industry, North Wall. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/diego-rivera/detroit-industry-north-wall",
+      "description": "重复出现的身体与管道把活动贯穿于里维拉的工厂场景。每个工人执行局部任务，壁画的规模却提醒我们，这些任务属于同一个更大的系统。北墙绘于1932至1933年，是环绕空间的湿壁画组画的一部分。复制图可以帮助看清单个动作，却无法重现工业生产图像占满整座建筑内部的观看经验。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "a8b18827-5ed5-5bc6-b5a0-dde6a8c52d78",
+      "title": "黑与金的夜曲：坠落的焰火",
+      "catalogueTitle": "Nocturne in Black and Gold – the Falling Rocket",
+      "artist": "James Abbott McNeill Whistler",
+      "artists": [
+        {
+          "name": "James Abbott McNeill Whistler",
+          "role": "primary",
+          "slug": "james-abbott-mcneill-whistler-q203643"
+        }
+      ],
+      "date": "1875",
+      "start": 1875,
+      "end": 1875,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/a8b18827-5ed5-5bc6-b5a0-dde6a8c52d78-f74bc5e9dc585794.jpg",
+      "imageSource": "https://www.wikiart.org/en/james-mcneill-whistler/nocturne-in-black-and-gold-the-falling-rocket",
+      "credit": "James Abbott McNeill Whistler. Nocturne in Black and Gold – the Falling Rocket. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/james-mcneill-whistler/nocturne-in-black-and-gold-the-falling-rocket",
+      "description": "金色笔迹从黑暗中落下，没有逐段描述烟火的轨迹。水面、人物与远景都只得到部分交代。惠斯勒给出足够的线索，让人认出这是一场烟火表演，其余留给色彩与零散光点完成。细节的缺少有具体作用：若环境被交代得面面俱到，便会与火星短暂的显现争夺目光。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "778dc270-4c6a-59ff-947f-698e78ae4517",
+      "title": "马大与抹大拉的玛利亚",
+      "catalogueTitle": "Martha and Mary Magdalene",
+      "artist": "Caravaggio",
+      "artists": [
+        {
+          "name": "Caravaggio",
+          "role": "primary",
+          "slug": "caravaggio-q42207"
+        }
+      ],
+      "date": "1598",
+      "start": 1598,
+      "end": 1598,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/778dc270-4c6a-59ff-947f-698e78ae4517-49e2100ec2d137cb.jpg",
+      "imageSource": "https://www.wikiart.org/en/caravaggio/martha-and-mary-magdalene",
+      "credit": "Martha and Mary Magdalene. WikiArt; Caravaggio. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/caravaggio/martha-and-mary-magdalene",
+      "description": "镜子让人的外貌成为谈话中的一个具体对象。一位女子在说话，另一位的手势把目光引向自己的身体。卡拉瓦乔把宗教题材放进这场近距离交流，而没有展开公共场景。两人关系的变化比壮观场面更重要：一个手势便能显示回应，房间描绘得再详尽也不能代替它。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "e0138511-153a-504d-979e-d694a73beaac",
+      "title": "窗",
+      "catalogueTitle": "The Window",
+      "artist": "Henri Matisse",
+      "artists": [
+        {
+          "name": "Henri Matisse",
+          "role": "primary",
+          "slug": "henri-matisse-q5589"
+        }
+      ],
+      "date": "1916",
+      "start": 1916,
+      "end": 1916,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/wikiart-500-painters-20261011/e0138511-153a-504d-979e-d694a73beaac-800b5c554dd0f124.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-matisse/the-window-1916",
+      "credit": "Henri Matisse. The Window. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-matisse/the-window-1916",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/sites/default/files/2022-09/VG%20Brochure.pdf",
+      "description": "马蒂斯把室外的绿色与室内的蓝色明确并置，前后距离几乎不再是必须考虑的事。桌子、椅子和花仍可辨认，但它们的轮廓也把画布分成相邻的区域。因此，窗户同时起两种作用：它既是房间里的开口，也是平面上不同颜色之间的边界。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "75f22749-1ce7-58ef-ad4e-e6aa76c87532",
+      "title": "科托帕希火山",
+      "catalogueTitle": "Cotopaxi (Ecuador)",
+      "artist": "Frederic Edwin Church",
+      "artists": [
+        {
+          "name": "Frederic Edwin Church",
+          "role": "primary",
+          "slug": "frederic-edwin-church-nga-1138"
+        }
+      ],
+      "date": "1862",
+      "start": 1862,
+      "end": 1862,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/75f22749-1ce7-58ef-ad4e-e6aa76c87532-1c1ecdca5c6ed582.jpg",
+      "imageSource": "https://www.wikiart.org/en/frederic-edwin-church/cotopaxi-1862",
+      "credit": "Frederic Edwin Church. Cotopaxi (Ecuador). Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/frederic-edwin-church/cotopaxi-1862",
+      "description": "烟雾扩散到火山之外，直到喷发改变了整幅景色的光线。丘奇把刻画细致的前景与难以保持稳定的远方地平线结合起来。风景中的小细节提供尺度，让人衡量事件的规模。重要的变化并不限于山体，而是随着泛红的空气遍及各处。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "1f3f5782-25bd-548e-9545-aaf8ebf5974c",
+      "title": "书房中的圣哲罗姆",
+      "catalogueTitle": "St. Jerome in his Study",
+      "artist": "Jan van Eyck",
+      "artists": [
+        {
+          "name": "Jan van Eyck",
+          "role": "primary",
+          "slug": "jan-van-eyck"
+        }
+      ],
+      "date": "约 1435 年",
+      "start": 1435,
+      "end": 1435,
+      "medium": "橡木板上裱亚麻纸油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round5-20261007/1f3f5782-25bd-548e-9545-aaf8ebf5974c-d606136bc3a901c7.jpg",
+      "imageSource": "https://www.wikiart.org/en/jan-van-eyck/st-jerome-in-his-study-1432",
+      "credit": "Jan van Eyck. St. Jerome in his Study. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/jan-van-eyck/st-jerome-in-his-study-1432",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/saint-jerome-his-study/44739",
+      "description": "书籍与器具使哲罗姆的书房成为严谨专注的场所。脚边的狮子又把圣徒传说带入这个学问空间。这是一幅约二十厘米高的小木板画，其中物件值得凑近细看。它的作者归属在历史上曾有变化；底特律艺术学院目前列作者为扬·凡·艾克，年代约为1435年。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "af8b24ef-a2d5-5c4b-b2f2-3274583cda4d",
+      "title": "荒野中的圣哲罗姆",
+      "catalogueTitle": "Saint Jerome and the Lion",
+      "artist": "罗希尔·范·德·韦登工作室",
+      "artists": [
+        {
+          "name": "Rogier van der Weyden",
+          "role": "workshop",
+          "slug": "rogier-van-der-weyden-q68631"
+        }
+      ],
+      "date": "1450–1465",
+      "start": 1450,
+      "end": 1465,
+      "medium": "橡木板油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/af8b24ef-a2d5-5c4b-b2f2-3274583cda4d-e8c100fdea29dd0c.jpg",
+      "imageSource": "https://www.wikiart.org/en/rogier-van-der-weyden/saint-jerome-and-the-lion-1450",
+      "credit": "Saint Jerome and the Lion. WikiArt; Rogier van der Weyden. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/saint-jerome-desert/64849",
+      "description": "这里的哲罗姆照料着狮子的脚爪，不再埋首于上一件作品中的书籍。棱角分明的岩石围住两者，使户外事件也有了小房间般的集中感。博物馆把这幅木板画归于罗吉尔·凡·德·魏登工作室。这个区别应当保留：与大师的创作方式有关，并不能证明画作出自他本人之手。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "6a5bb4e8-b8e2-5273-a404-a5dfa157287c",
+      "title": "麦索利酒吧",
+      "catalogueTitle": "McSorley's Bar",
+      "artist": "John Sloan",
+      "artists": [
+        {
+          "name": "John Sloan",
+          "role": "primary",
+          "slug": "john-sloan-q861756"
+        }
+      ],
+      "date": "1912",
+      "start": 1912,
+      "end": 1912,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/6a5bb4e8-b8e2-5273-a404-a5dfa157287c-e8df7082d172ace9.jpg",
+      "imageSource": "https://www.wikiart.org/en/john-french-sloan/mcsorley-s-bar-1912",
+      "credit": "John Sloan. McSorley's Bar. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/john-french-sloan/mcsorley-s-bar-1912",
+      "description": "倚靠、站立与等待构成了斯隆笔下酒吧里的人际格局。白衣工作人员在暗室中引人注目，却没有某个事件把其余人都变成配角。图画和设施挤满墙壁，男人们则占据吧台。这个空间要通过反复使用它的人来理解；身体如何分布，比能否辨认出一个故事更重要。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "2767df6a-98f7-5af1-ba75-112d4a40e161",
+      "title": "粉红心形糖果的爱情飞行",
+      "catalogueTitle": "Love Flight of a Pink Candy Heart",
+      "artist": "Florine Stettheimer",
+      "artists": [
+        {
+          "name": "Florine Stettheimer",
+          "role": "primary",
+          "slug": "florine-stettheimer-round2-8f62ae931f72"
+        }
+      ],
+      "date": "1930",
+      "start": 1930,
+      "end": 1930,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/2767df6a-98f7-5af1-ba75-112d4a40e161-5bb16cc5f4d1bd0c.jpg",
+      "imageSource": "https://www.wikiart.org/en/florine-stettheimer/love-flight-of-a-pink-candy-heart-1930",
+      "credit": "Florine Stettheimer. Love Flight of a Pink Candy Heart. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/florine-stettheimer/love-flight-of-a-pink-candy-heart-1930",
+      "description": "斯特泰默并不要求所有人物和装饰遵守同一种比例。小小的人、明亮标记和粉红的心形物共同置于黄色背景中，依据的是它们在画面中的重要程度，而非现实大小。我们可以逐一阅读散布的片段，不必强行把它们纳入传统场景所要求的连续空间。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "73970e16-5aed-55a8-8eb7-8cf42aa0bea5",
+      "title": "书店：希伯来语书籍、节日书籍",
+      "catalogueTitle": "Bookshop: Hebrew Books, Holy Day Books",
+      "artist": "Ben Shahn",
+      "artists": [
+        {
+          "name": "Ben Shahn",
+          "role": "primary",
+          "slug": "ben-shahn-nga-3030"
+        }
+      ],
+      "date": "1953",
+      "start": 1953,
+      "end": 1953,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/73970e16-5aed-55a8-8eb7-8cf42aa0bea5-293891717b8e6067.jpg",
+      "imageSource": "https://www.wikiart.org/en/ben-shahn/bookshop-hebrew-books-holy-day-books-1953",
+      "credit": "Ben Shahn. Bookshop: Hebrew Books, Holy Day Books. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/ben-shahn/bookshop-hebrew-books-holy-day-books-1953",
+      "description": "门口人物尚未透露这一天有什么特别之处，招牌文字已说明这是什么书店。沙恩让文字承载了普通店面图像可能丢失的文化信息。细线把门口、招牌与人物联系起来。红色入口则让这家具体而朴素的小店，在街道上有了清楚的位置。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "9d9166a5-454a-56b2-a356-84ef1808d2a1",
+      "title": "蹲姿裸体习作",
+      "catalogueTitle": "Study for Crouching Nude",
+      "artist": "Francis Bacon",
+      "artists": [
+        {
+          "name": "Francis Bacon",
+          "role": "primary",
+          "slug": "francis-bacon-q154340"
+        }
+      ],
+      "date": "1952",
+      "start": 1952,
+      "end": 1952,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-20261006/9d9166a5-454a-56b2-a356-84ef1808d2a1-b6d47f2b8bef697e.jpg",
+      "imageSource": "https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "credit": "Francis Bacon. Study for Crouching Nude. WikiArt source label: Francis Bacon Fair Use. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "license": "Francis Bacon Fair Use (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/francis-bacon/study-for-crouching-nude-1952",
+      "description": "培根用笼子般的线框围住蹲伏的身体，却不让人体本身拥有同样稳定的形状。这一反差很重要：围栏边界清晰，反而显出身体的不确定。竖直的拖痕扰动后方的黑暗。禁锢感既来自姿势，也来自那套尺寸分明、几乎不给身体留余地的结构。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "41370b75-f3cd-5aca-86b3-49c1560d99b8",
+      "title": "巴黎郊外景色",
+      "catalogueTitle": "View of the Outskirts of Paris",
+      "artist": "Henri Rousseau",
+      "artists": [
+        {
+          "name": "Henri Rousseau",
+          "role": "primary",
+          "slug": "henri-rousseau-q156386"
+        }
+      ],
+      "date": "1896",
+      "start": 1896,
+      "end": 1896,
+      "medium": "布面油画",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/random-200-painters-round2-20261006/41370b75-f3cd-5aca-86b3-49c1560d99b8-e2f282fc9969ad97.jpg",
+      "imageSource": "https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "credit": "Henri Rousseau. View of the Outskirts of Paris. WikiArt source label: Public domain. Proportional resize and JPEG compression; no crop. Source: https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "license": "Public domain (WikiArt source label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/henri-rousseau/view-of-the-outskirts-of-paris-1896",
+      "description": "卢梭的工厂与烟囱隔河而立，形状清楚、彼此分开。工业进入了风景，却没有里维拉壁画中的密集活动。区别不仅在题材，也在视点：观看者留在外面的河岸上，从这里看到的生产是建筑，而不是劳动。安静的排列并未告诉我们，建筑内部正在发生什么。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "12d94e28-a350-56cc-a70b-7e7fef605e97",
+      "title": "恳求（两个女人和一个男人）",
+      "catalogueTitle": "The Appeal (Two Women and a Man)",
+      "artist": "Titian",
+      "artists": [
+        {
+          "name": "Titian",
+          "role": "primary",
+          "slug": "titian-q47551"
+        }
+      ],
+      "date": "Early–mid 16th century",
+      "start": null,
+      "end": null,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/imported/cesi-top100-20261010/12d94e28-a350-56cc-a70b-7e7fef605e97-681c64b1e489999a.jpg",
+      "imageSource": "https://www.wikiart.org/en/giorgione/two-women-and-a-man-trio-1510",
+      "credit": "Two women and a man ( Trio). WikiArt; Giorgione. Proportional resizing and JPEG compression; source frame preserved.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/appeal/63584",
+      "description": "手势与目光连接着紧靠的三个人，却不能把他们的关系解释成唯一明确的故事。这件作品的作者归属与标题也曾变化。底特律艺术学院如今将其著录为提香的《恳求》，年代为16世纪前期至中期。我们可以仔细追随人物的交流，而不必假装场景含义或作者身份从来没有争议。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts",
+      "catalogueArtistSlug": null
+    },
+    {
+      "id": "4f616c0a-00f2-5397-9732-4f867df9b59a",
+      "title": "圣家",
+      "catalogueTitle": "The Holy Family",
+      "artist": "Nicolas Poussin",
+      "artists": [
+        {
+          "name": "Nicolas Poussin",
+          "role": "primary",
+          "slug": "nicolas-poussin-q41554"
+        }
+      ],
+      "date": "1641",
+      "start": 1641,
+      "end": 1641,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/4f616c0a-00f2-5397-9732-4f867df9b59a-5378c652da7cd7a5.jpg",
+      "imageSource": "https://www.wikiart.org/en/nicolas-poussin/the-holy-family-1641",
+      "credit": "Nicolas Poussin. The Holy Family. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/nicolas-poussin/the-holy-family-1641",
+      "description": "玛利亚俯身靠近孩子与摇篮，约瑟则待在更远处。普桑用稳固的建筑环境容纳这种不同程度的亲近。帷幔与高大开口维持房间的整体结构，却不遮住中央细小的照料动作。神圣题材建立在一种容易理解的分工上：有人直接照顾，有人在近旁陪伴。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "397d02a6-c419-5ebc-8e9d-69ece61e30cc",
+      "title": "盲人引领盲人",
+      "catalogueTitle": "The Blind Leading the Blind",
+      "artist": "Louise Bourgeois",
+      "artists": [
+        {
+          "name": "Louise Bourgeois",
+          "role": "primary",
+          "slug": "louise-bourgeois-nga-9733"
+        }
+      ],
+      "date": "1949",
+      "start": 1949,
+      "end": 1949,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/397d02a6-c419-5ebc-8e9d-69ece61e30cc-bbbff817810a96d8.jpg",
+      "imageSource": "https://www.wikiart.org/en/louise-bourgeois/the-blind-leading-the-blind-1949",
+      "credit": "Louise Bourgeois. The Blind Leading the Blind. Image: WikiArt. Copyright protected (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Copyright protected (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/blind-leading-blind/35229",
+      "description": "布尔乔亚用一根横梁连接粉色立柱，但柱子向下收尖，使整组结构显得不稳。标题让人联想到一群人，却不需要头部或完整身体。支撑与依赖可以直接从构造中看出：每个重复单元都属于整体，整体却没有宽阔可靠的落脚处。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "fee262fa-7502-5b6f-b649-548bed53b710",
+      "title": "德累斯顿附近的易北河",
+      "catalogueTitle": "The Elbe Near Dresden",
+      "artist": "Oskar Kokoschka",
+      "artists": [
+        {
+          "name": "Oskar Kokoschka",
+          "role": "primary",
+          "slug": "oskar-kokoschka-q154260"
+        }
+      ],
+      "date": "1921",
+      "start": 1921,
+      "end": 1921,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/fee262fa-7502-5b6f-b649-548bed53b710-3e9f302258bcff92.jpg",
+      "imageSource": "https://www.wikiart.org/en/oskar-kokoschka/the-elbe-near-dresden",
+      "credit": "Oskar Kokoschka. The Elbe Near Dresden. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/oskar-kokoschka/the-elbe-near-dresden",
+      "description": "在科柯施卡强烈的色彩笔触中，教堂塔楼与城镇仍可辨认。蓝色河水、红绿条带使两岸充满动势，并延续到天空。画家没有把固定建筑摆在变化的河流面前，而是让整片景色都受到不安定笔触的影响。建筑参与了运动，而非使运动停下来。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "eb2d4b63-bf1a-5061-a870-377c0e5ec983",
+      "title": "堪萨斯州狼河",
+      "catalogueTitle": "The Wolf River, Kansas",
+      "artist": "Albert Bierstadt",
+      "artists": [
+        {
+          "name": "Albert Bierstadt",
+          "role": "primary",
+          "slug": "albert-bierstadt-q77132"
+        }
+      ],
+      "date": "1859",
+      "start": 1859,
+      "end": 1859,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/eb2d4b63-bf1a-5061-a870-377c0e5ec983-7209d1283e429210.jpg",
+      "imageSource": "https://www.wikiart.org/en/albert-bierstadt/the-wolf-river-kansas",
+      "credit": "Albert Bierstadt. The Wolf River, Kansas. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/albert-bierstadt/the-wolf-river-kansas",
+      "description": "帐篷与人群占据高树下的一块空地。比尔施塔特从远处观看，把他们的活动纳入更大范围的明暗分布。也应留意这个视角的限度：画作显示这是有人居住的地方，但小小的人物不能完整讲述居住者的生活。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "e4cab4ad-a5dc-572f-b2d7-f15042b77b64",
+      "title": "弹曼陀林的少女",
+      "catalogueTitle": "Girl with a Mandolin",
+      "artist": "Giovanni Battista Tiepolo",
+      "artists": [
+        {
+          "name": "Giovanni Battista Tiepolo",
+          "role": "primary",
+          "slug": "giovanni-battista-tiepolo-q186202"
+        }
+      ],
+      "date": "1758-1760",
+      "start": 1758,
+      "end": 1760,
+      "medium": "",
+      "accession": "",
+      "image": "https://artlines.org/assets/artworks/wikiart/e4cab4ad-a5dc-572f-b2d7-f15042b77b64-d96bdf0ae2243107.jpg",
+      "imageSource": "https://www.wikiart.org/en/giovanni-battista-tiepolo/girl-with-a-mandolin",
+      "credit": "Giovanni Battista Tiepolo. Girl with a Mandolin. Image: WikiArt. Public domain (WikiArt label). Proportionally resized and JPEG compressed; no crop.",
+      "license": "Public domain (WikiArt label)",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://www.wikiart.org/en/giovanni-battista-tiepolo/girl-with-a-mandolin",
+      "description": "乐器给女子的双手同一项任务，并斜穿过她的身体。转动的头部使姿势不至于变成均匀展示服装的正面造型。提埃波罗让浅色肌肤与明亮衣料从暗处显现，但画面的生动之处，在于脸部朝向与忙碌双手之间那一点不一致。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts"
+    },
+    {
+      "id": "4e92454b-f9fa-55ac-89e4-5747f3b46efe",
+      "title": "约伯",
+      "catalogueTitle": "Job",
+      "artist": "Jacob Jordaens",
+      "artists": [
+        {
+          "name": "Jacob Jordaens",
+          "role": "primary",
+          "slug": "jacob-jordaens-q270658"
+        }
+      ],
+      "date": "约 1620 年",
+      "start": 1620,
+      "end": 1620,
+      "medium": "橡木板油画",
+      "accession": "43.418",
+      "image": "https://artlines.org/assets/artworks/imported/source-index-followup-20261010/4e92454b-f9fa-55ac-89e4-5747f3b46efe-8dde05a44b59e747.jpg",
+      "imageSource": "https://www.wikiart.org/en/jacob-jordaens/job",
+      "credit": "Job. WikiArt; WikiArt. Proportional resize and JPEG compression; complete source frame.",
+      "license": "Public domain",
+      "licenseUrl": "https://www.wikiart.org/en/terms-of-use",
+      "source": "https://dia.org/collection/job-50280",
+      "description": "约尔丹斯通过饱经风霜的面孔与裸露胸膛，把约伯的恳求变得具体。仰望的眼睛传达《圣经》题材，却没有让这个人消失在“忍耐”的抽象象征里。光线掠过脆弱而独特的肉身。看过这组作品中的工厂、风景与房间之后，一个身体和一双抬起的眼睛便已足够。",
+      "importance": "",
+      "museum": "Detroit Institute of Arts",
+      "catalogueArtistSlug": null
+    }
+  ],
+  "context": {
+    "start": 1435,
+    "end": 1953
+  },
+  "closingSections": [
+    {
+      "title": "回到身体的尺度",
+      "paragraphs": [
+        "把里维拉的工人与培根被围住的人体比较，再看看凡·艾克小木板画中的读书人。不同环境给予身体不同的自由。这些作品来自馆藏选择，并非保证可逐一看到的展览路线。规划参观时请查阅最新记录，尤其留意作者归属或展出状态可能变化的作品。"
+      ]
+    }
+  ]
+}

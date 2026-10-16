@@ -1,5 +1,58 @@
 # Search indexing and public release
 
+## Search Console completed through Chrome v-test — 11 October 2026
+
+The follow-up used the user-authorized Chrome profile and the existing work
+account. The access blocker from the earlier pass below is resolved. Web search
+performance (28 days selected; available chart dates 30 September–8 October)
+reported **1 click, 19 impressions, 5.3% CTR and average position 28.4**. The older
+Page indexing report dated 4 October showed 5 indexed and 36 not indexed pages.
+Manual actions and Security issues both reported **No issues detected**.
+
+Both submitted sitemaps showed **Success**, including the formerly failing
+`sitemap-pages.xml`. Both were resubmitted successfully. The homepage, guide hub
+and all six English guide URLs passed Google's live test; **all eight indexing
+requests were accepted**. Before submission, the homepage had a stale noindex
+result from its 3 October crawl and the seven guide/hub URLs were unknown to
+Google. Actual indexing after submission is pending. The 54 translated guide
+URLs are included in the sitemap but were not individually inspected in Google.
+
+The detailed [Search Console baseline and action report](research/guide-search-visibility-20261011/search-console/README.md)
+records report dates, submission receipts, optional image-metadata warnings,
+remaining catalogue exclusions and the recommended 18 October review. The
+Google Doc traffic plan was updated with these results. No automation, code
+release, database writes or account-permission changes occurred in this follow-up.
+
+## Museum-guide search verification — 11 October 2026
+
+All six museum guides and their sixty language editions were checked on the live
+site without authentication. They return HTTP 200, contain the full guide text
+in server-rendered HTML, allow indexing, use the correct canonical URL and have
+reciprocal language links. The guide hub links all six English guides. All 140
+distinct guide/portal images checked successfully. Of 134 directly linked artwork
+pages, two initially returned 500 after upstream API 503 responses; both passed
+subsequent checks. The underlying cause of those transient API errors remains
+unresolved. PDF downloads remain public with their intentional `noindex` header.
+
+The deployed guide-search update adds `Article` structured data to each edition,
+including its actual title, language, recorded editorial date, displayed images
+and image credits. It does not invent publication dates, individual authors,
+museum endorsements or current display claims. The existing `/sitemap-pages.xml`
+retains all 68 page URLs and now includes 1,350 guide-image entries and recorded
+guide update dates. Google ownership verification and runtime settings were
+preserved. All 28 targeted tests, the production build and all 60 candidate and
+live guide checks passed. The release serves 100% of web traffic; no catalogue
+writes, Git commits or Terraform apply were performed.
+
+These checks establish technical indexing readiness, not Google's actual index
+state. During that initial pass, the browser connection failed before Search Console could be opened; an
+alternative GSC Wizard connection was suggested but is not confirmed. No traffic
+metrics, Google indexing status or current sitemap-processing status were read,
+and no indexing requests or sitemap submissions were made. Fresh mobile visual
+verification was unavailable, and Google's public PageSpeed endpoint returned a
+quota error. The change does not modify visual layout. See the
+[release and audit receipt](deployment-20261011-guide-search.json).
+
 ## Unified catalogue — 8 October 2026
 
 The owner has removed review/publication visibility gates. The current code uses
