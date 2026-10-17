@@ -814,10 +814,22 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .painter-preview .painter-preview-caption h3{font:400 23px/1.25 var(--serif);margin:0 0 7px;overflow-wrap:anywhere}
 .painter-preview-caption .artwork-date{margin:0;font:13px/1.5 var(--sans);color:var(--muted)}
 .painter-preview-holding{margin:8px 0 0;font:12px/1.5 var(--sans);color:var(--muted)}
-.painter-preview-actions{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:start;margin-top:10px}
-.painter-preview-actions>button,.preview-work-details>summary{min-height:44px;padding:10px 0;border:0;background:transparent;font:13px/1.7 var(--sans);color:var(--ultramarine)}
+.painter-preview-actions{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:start;margin-top:12px}
+.painter-preview-actions>button,.painter-preview-actions>.preview-work-details>summary{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:0;padding:10px 0;border:0;background:transparent;font:13px/22px var(--sans);color:var(--ultramarine)}
+.painter-preview-actions>.preview-work-details>summary::before{line-height:1}
 .preview-work-details[open]{flex-basis:100%}
-.preview-work-details>div{padding:12px 0 0;border-top:1px solid var(--line)}
+.preview-work-details>div{margin-top:12px;padding:0;border-top:1px solid var(--line)}
+.preview-work-details>div>dl{margin:0 0 16px}
+.preview-work-details>div>dl>div:first-child{border-top:0}
+.preview-work-details>div>.image-credit{margin:16px 0}
+.preview-work-details>div>.share-work{margin-top:24px}
+.artwork-details .artwork-sources{margin-top:16px}
+.artwork-details .artwork-sources>summary{min-height:44px;line-height:22px}
+.artwork-details .artwork-sources>summary::before{line-height:1}
+.artwork-sources-content{display:grid;gap:12px;min-width:0;padding:8px 0 0 24px}
+.artwork-sources-content>.source-list{margin:0;gap:12px}
+.artwork-sources-content>.source-list a{line-height:1.5}
+.artwork-source-link{justify-self:start;display:inline-flex;align-items:center;min-height:44px;max-width:100%;font:13px/1.5 var(--sans);overflow-wrap:anywhere}
 .painter-dialog .painter-preview .artwork-image{margin:0}
 .painter-dialog .painter-preview .artwork-date{margin-bottom:0}
 .record-toolbar{flex-wrap:wrap;gap:12px}.record-toolbar .full-catalogue-link{padding:10px 16px;min-height:44px;background:var(--ink);color:var(--paper);text-decoration:none}
