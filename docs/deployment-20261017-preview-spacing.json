@@ -1,0 +1,244 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verifiedAt": "2026-10-17T10:47:50.566Z",
+  "change": "Align Browse artworks and Artwork details controls at 44px, regularise spacing above the artwork facts, indent expanded source links, and separate the image-source and copy-link actions.",
+  "authorization": "User requested: commit to master push master and deploy.",
+  "sourceCommit": "5896f290a6ce45ed60eca51c41bd4f6e21fa13aa",
+  "branch": "master",
+  "sourceFiles": [
+    "apps/web/app/globals.css",
+    "apps/web/components/PainterArtworkDetails.tsx"
+  ],
+  "deployment": {
+    "baselineBuildId": "d3e1cdc9-8058-4486-b479-fbe687423035",
+    "baselineRevision": "artline-web-layer-filters-1015-v1",
+    "buildId": "49fb277e-a7d8-4267-bfc9-a05aeb9f5307",
+    "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:preview-spacing-1017-5896f290",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:b4bf57b8d4650946eafca602fb5fb563b9604b876119806ac0d3f29cc2d7902b",
+    "revision": "artline-web-preview-spacing-1017-v1",
+    "candidateURL": "https://preview-spacing-1017-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "rollbackRevision": "artline-web-layer-filters-1015-v1",
+    "trafficPercent": 100,
+    "runtimeSettingsPreserved": true,
+    "overlayURI": "gs://artline-508319-build-source/preview-spacing-20261017/6848a9f1e98664cf.tar.xz",
+    "overlayGeneration": "1792232612384650",
+    "overlaySHA256": "6848a9f1e98664cf2a895081ac912d6979db16eae269e349007f983d1743d2fa",
+    "preimages": {
+      "app/globals.css": "dab4461e9791a6c18112b8177027d17d41ec06d2b10bcd824c46b5c34f67cb70",
+      "components/PainterArtworkDetails.tsx": "37688c4771d7ac1d920ed2010bfd184b4085ba31797e09168429a7ed90699371"
+    },
+    "files": {
+      "app/globals.css": "3114acc204cd7572b9dcc96306f5ec8a7203962867a1583d78b0b3f991b7a495",
+      "components/PainterArtworkDetails.tsx": "21a369605a0ec18f7d34e7e9327307ec1684a5a54c13ac67b00ec8a23d31aba2"
+    }
+  },
+  "sourcePackaging": "Two files from the master commit over the checksum-verified source/configuration of the live build; published runtime guide content preserved.",
+  "validation": {
+    "productionBuild": "passed",
+    "targetedLint": "passed",
+    "targetedUnitTests": {
+      "files": 2,
+      "passed": 5
+    },
+    "previewNavigationTests": {
+      "passed": 3,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "accessibilityScan": "passed at 390px"
+    },
+    "candidate": {
+      "stage": "candidate",
+      "base": "https://preview-spacing-1017-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+      "verifiedAt": "2026-10-17T10:47:21.739Z",
+      "checks": [
+        {
+          "painter": "monet",
+          "width": 1440,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "monet",
+          "width": 390,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "monet",
+          "width": 320,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "bacchante",
+          "width": 1440,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "bacchante",
+          "width": 390,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "route": "/about",
+          "status": 200
+        },
+        {
+          "route": "/guides",
+          "status": 200
+        },
+        {
+          "route": "/api/auth/session",
+          "status": 200
+        }
+      ],
+      "javaScriptErrors": []
+    },
+    "live": {
+      "stage": "live",
+      "base": "https://artlines.org",
+      "verifiedAt": "2026-10-17T10:47:50.566Z",
+      "checks": [
+        {
+          "painter": "monet",
+          "width": 1440,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "monet",
+          "width": 390,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "monet",
+          "width": 320,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "bacchante",
+          "width": 1440,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "painter": "bacchante",
+          "width": 390,
+          "actionsAligned": true,
+          "actionHeights": [
+            44,
+            44
+          ],
+          "sourceGap": 12,
+          "copyGap": 24,
+          "overflow": false,
+          "imageLoaded": true
+        },
+        {
+          "route": "/about",
+          "status": 200
+        },
+        {
+          "route": "/guides",
+          "status": 200
+        },
+        {
+          "route": "/api/auth/session",
+          "status": 200
+        }
+      ],
+      "javaScriptErrors": []
+    },
+    "exactScreenshotArtwork": {
+      "slug": "elisabeth-vigee-le-brun-q213163",
+      "work": "bbe2b2d4-d05e-57ee-9707-0714a43a330a",
+      "title": "Bacchante"
+    },
+    "screenshotsInspected": true
+  },
+  "failedBuildAttempts": [
+    {
+      "buildId": "62c32fb3-a871-4a16-abf4-96eef54b9281",
+      "reason": "Initial source preparation used a non-shared temporary path between build steps; corrected to /workspace."
+    }
+  ],
+  "webImagePinUpdated": true,
+  "apiDeployment": false,
+  "databaseWrites": false,
+  "realLocalDatabaseWrites": false,
+  "backgroundJobsChanged": false,
+  "terraformApply": false,
+  "unrelatedWorkspaceChangesPreserved": true,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/research-proofs/preview-spacing-20261017"
+}
