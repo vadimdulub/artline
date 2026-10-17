@@ -1,6 +1,6 @@
 export type MapKind = "artist" | "artwork" | "book" | "event";
 export type MapItem = { id: string; kind: MapKind; title: string; context?: string; years?: string; image?: string };
-export type PlaceConnection = { place: string; relation: string; categories?: string[]; countryCode?: string; precision: string; lat: number | null; lon: number | null; start: number | null; end: number | null; note: string; sourceUrl?: string; sourceLabel: string };
+export type PlaceConnection = { key?: string; place: string; relation: string; categories?: string[]; countryCode?: string; precision: string; lat: number | null; lon: number | null; start: number | null; end: number | null; note: string; sourceUrl?: string; sourceLabel: string };
 export type MapRecord = { id: string; connections: PlaceConnection[]; truncated: boolean };
 export type LocatedItem = { item: MapItem; connection: PlaceConnection };
 export type PlaceGroup = { key: string; lat: number; lon: number; country: boolean; precision: string; name: string; entries: LocatedItem[] };
@@ -91,4 +91,14 @@ export function clusterPlaces(groups: PlaceGroup[], project: (group: PlaceGroup)
     else { const key = `${cx}:${cy}`; cells.set(key, [...(cells.get(key) ?? []), cluster]); clusters.push(cluster); }
   }
   return clusters;
+}
+
+// Older API responses remain readable during a staged rollout. New responses
+// supply stable evidence keys and chronological order from Go.
+export function connectionKey(c: PlaceConnection): string {
+  return c.key ?? JSON.stringify([c.place, c.relation, c.precision, c.lat, c.lon, c.start, c.end, c.sourceUrl ?? "", c.sourceLabel]);
+}
+export function connectionPlaceKey(c: PlaceConnection): string {
+  if (c.lat === null || c.lon === null || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) return "";
+  return `${c.lat},${c.lon},${c.precision === "country" ? "country" : c.precision === "recorded point" ? "point" : "local"}`;
 }

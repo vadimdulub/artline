@@ -20,7 +20,9 @@ Use these local examples with the web preview on port 3016:
 
 All database inspections and API preview connections were read-only. No migration,
 fixture database, catalogue mutation, Google service call or deployment was used.
-The original working copy remains on master so background programmes are unaffected.
+The initial preview used a separate worktree. On 17 October, at the user’s
+request, the main checkout moved to `map-research`; its pre-existing uncommitted
+timeline work was preserved while reconciling the map controls.
 
 ## What the local catalogue actually supports
 
@@ -387,3 +389,77 @@ reviewed city/region identities, historical geometries, global coverage counts,
 viewport aggregates and realistic capacity tests. This pass improves the working
 atlas interface; it does not turn sparse evidence into complete geographic coverage
 or authorize a production deployment.
+
+## Record journeys — 17 October continuation
+
+Design plan before implementation: extend the existing atlas with a record view
+that follows one artist, work, book or event through its documented places.
+Keep paper `#f2efe8`, ink `#1b1916`, stone `#e8e3d9`, rust `#8f3a29`, moss
+`#53745b` and the existing pale water background. Georgia carries record/place
+titles; Avenir/system carries dates, relationships and controls. Left alignment.
+
+```text
+Map title / relationship filters                 Copy map link
++----------------------------------------+-------------------------+
+| labelled map of selected record places | Places / Records / Gaps |
+| selected connection is highlighted     | Record title / open     |
+|                                        | Previous / Next         |
+|                                        | dated place connections |
+|                                        | undated evidence        |
++----------------------------------------+-------------------------+
+Existing year controls and bounded catalogue pages
+```
+
+Review against the brief: a generic itinerary would imply journeys and precise
+routes that the evidence does not establish. This is a dated connection browser:
+no route lines, automatic playback or invented chronology. Unknown coordinates
+remain readable and unknown dates stay separate. Add a small Records switch to
+the existing panel rather than another dashboard. Go owns connection ordering
+and stable keys; the browser manages bounded selection and map highlighting.
+This pass does not change catalogue records, add infrastructure or deploy.
+
+
+Implemented and verified:
+
+- A Records view opens a single record's bounded, sourced place connections.
+  Previous/Next, the dated list and map markers select the same connection.
+  The map shows that record's places while following it; All records restores
+  the loaded page. Full catalogue drawers remain available.
+- Go supplies deterministic chronological order and stable evidence keys. Start
+  bounds order first; an end-only connection uses its documented end for sorting
+  and still displays its unknown start. Fully undated connections appear last.
+  Same-place relationships remain distinct. Ordering is over the returned capped
+  evidence, not a claim of a complete chronology or actual travel route.
+- `map_panel`, `map_record` and `map_stop` preserve the current connection alongside
+  catalogue filters. Stale/out-of-page links explain what changed. An unresolved
+  connection clears the selected marker instead of retaining the previous place.
+- Copy map link retains the filters and connection, omits an open native drawer,
+  and offers a selected manual-copy field when clipboard access is unavailable.
+  Escape and outside clicks dismiss that field. No link is sent to another service.
+- Place-type display counts reflect the visible map; coverage remains explicitly
+  about loaded records. No evidence, dates, catalogue records or geometries were
+  created by this continuation.
+
+Verification: 28 focused web tests pass, as do the geography and HTTP API Go
+packages. The production web build and TypeScript pass; ESLint has zero errors
+and the existing native-image warning, now in the extracted shared map visual.
+Real read-only browser checks cover artist, book, event and All journeys; Next,
+Previous, Back, reload, source dates, unresolved historical countries, native
+record drawers, clipboard success/failure, and mobile layouts at 1440/1024/768/
+390/320px. Checked map regions have zero axe violations and zero browser runtime
+errors. Screenshots were inspected; selecting a chronology entry scrolls its
+current detail into view. Evidence is in `journey-browser-report.json`,
+`journey-*.png`, `journey-tests.log`, `journey-build.log` and `journey-lint.log`
+in the external proof directory.
+
+Main-checkout preservation: the map branch and the uncommitted timeline
+introductions touched the same insertion points in AllAtlas and TimelineExplorer.
+Both controls and introductions were retained. Other tracked edits remain byte
+for byte unchanged; research files were not stashed, committed or removed.
+A preservation patch/copies are in external `checkout-preservation-20261017/`.
+The existing 35 introduction/All tests and main-checkout TypeScript check pass
+with the branch's locked map dependencies installed. These unrelated edits
+remain uncommitted. The preview API remains local, uses
+`default_transaction_read_only=on` and `--skip-migrations`; no deployment or
+Google service was used. The in-app browser failed at bootstrap, so the documented
+standalone browser fallback supplied the interaction and visual checks.

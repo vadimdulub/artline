@@ -91,3 +91,49 @@ func TestRelationFilteringBeforeConnectionCap(t *testing.T) {
 		t.Fatalf("birthplace hidden by affiliations: %+v", r)
 	}
 }
+
+func TestConnectionChronologyPreservesUnknownBoundsAndStableKeys(t *testing.T) {
+	y := func(value int) *int { return &value }
+	connections := []Connection{
+		{Place: "Unknown"},
+		{Place: "Later", Start: y(1900), End: y(1901)},
+		{Place: "End only", End: y(1800)},
+		{Place: "Ancient", Start: y(-500)},
+		{Place: "Earlier", Start: y(1880), End: y(1888)},
+	}
+	orderConnections(connections)
+	want := []string{"Ancient", "End only", "Earlier", "Later", "Unknown"}
+	keys := map[string]string{}
+	for i, c := range connections {
+		if c.Place != want[i] || c.Key == "" {
+			t.Fatalf("bad chronology: %+v", connections)
+		}
+		keys[c.Place] = c.Key
+	}
+	if connections[0].End != nil || connections[1].Start != nil || connections[4].Start != nil {
+		t.Fatal("invented dates")
+	}
+	subset := []Connection{connections[3], connections[2]}
+	orderConnections(subset)
+	for _, c := range subset {
+		if c.Key != keys[c.Place] {
+			t.Fatal("selection changed evidence identity")
+		}
+	}
+}
+
+func TestSamePlaceKeepsDistinctConnectionsAndDuplicateKeysUnique(t *testing.T) {
+	y := 1888
+	connections := []Connection{{Place: "Arles", Relation: "lived", Start: &y}, {Place: "Arles", Relation: "painted", Start: &y}, {Place: "Arles", Relation: "painted", Start: &y}}
+	orderConnections(connections)
+	keys := map[string]bool{}
+	for _, c := range connections {
+		if keys[c.Key] {
+			t.Fatal("duplicate key")
+		}
+		keys[c.Key] = true
+	}
+	if len(connections) != 3 {
+		t.Fatal("connections lost")
+	}
+}

@@ -2,8 +2,8 @@ import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-libra
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { CatalogueMap } from "./CatalogueMap";
 import { apiRequest } from "@/lib/api";
-import type { MapRecord } from "@/lib/map";
-vi.mock("next/dynamic", () => ({ default: () => () => <div aria-label="Mock map" /> }));
+import type { MapRecord, PlaceGroup } from "@/lib/map";
+vi.mock("next/dynamic", () => ({ default: () => ({ selected, groups }: { selected: string; groups: PlaceGroup[] }) => <div aria-label="Mock map" data-selected={selected} data-places={groups.length} /> }));
 vi.mock("@/lib/api", () => ({ apiRequest: vi.fn(), errorMessage: (e: Error) => e.message }));
 const request = vi.mocked(apiRequest);
 const connection = { place: "Geneva", relation: "begun near", precision: "area", lat: 46.2, lon: 6.2, start: 1816, end: 1816, note: "Beginning only", sourceLabel: "Author", sourceUrl: "https://example.org/source" };
@@ -69,5 +69,48 @@ describe("CatalogueMap", () => {
   request.mockResolvedValue({ records: [{ id: item.id, connections: [{ ...connection, place: "Historical state", lat: null, lon: null, precision: "unlocated" }], truncated: false }] });
   render(<CatalogueMap {...props} />); fireEvent.click(await screen.findByRole("button", { name: "Not mapped (1)" }));
   expect(screen.getByText(/Historical state · Begun near · coordinates unresolved/)).toBeInTheDocument();
+ });
+});
+
+
+describe("following a record on the map", () => {
+ const first = { ...connection, key: "writing" };
+ const second = { ...connection, key: "publication", place: "London", relation: "first published in", lat: 51.5, lon: -0.1, start: 1818, end: 1818 };
+ const unresolved = { ...connection, key: "unknown", place: "Historical country", lat: null, lon: null, start: null, end: null };
+ it("steps through server-ordered connections and keeps unresolved places off the map", async () => {
+  request.mockResolvedValue({ records: [{ id: item.id, connections: [first, second, unresolved], truncated: false }] });
+  render(<CatalogueMap {...props} />);
+  fireEvent.click(await screen.findByRole("button", { name: "Records (1)" }));
+  fireEvent.click(screen.getByRole("button", { name: /BookFrankenstein3 connections/ }));
+  expect(screen.getByRole("button", { name: "Previous connection" })).toBeDisabled();
+  expect(screen.getByRole("heading", { name: "Geneva" })).toHaveFocus();
+  fireEvent.click(screen.getByRole("button", { name: "Next connection" }));
+  expect(screen.getByRole("heading", { name: "London" })).toHaveFocus();
+  expect(screen.getByLabelText("Mock map")).toHaveAttribute("data-selected", "51.5,-0.1,local");
+  expect(new URLSearchParams(location.search).get("map_stop")).toBe("publication");
+  fireEvent.click(screen.getByRole("button", { name: "Next connection" }));
+  expect(screen.getByText("Location unresolved · no map marker")).toBeInTheDocument();
+  expect(screen.getByLabelText("Mock map")).toHaveAttribute("data-selected", "");
+  expect(screen.getByRole("button", { name: "Next connection" })).toBeDisabled();
+  fireEvent.click(screen.getByRole("button", { name: "Open full record" }));
+  expect(props.onOpen).toHaveBeenCalledWith(item);
+  expect(request).toHaveBeenCalledTimes(1);
+ });
+ it("restores a linked connection and explicitly handles it leaving the year selection", async () => {
+  window.history.replaceState(null, "", "/?map_panel=records&map_record=book:wd-q150827&map_stop=publication&map_place=46.2,6.2,local");
+  request.mockResolvedValueOnce({ records: [{ id: item.id, connections: [first, second], truncated: false }] }).mockResolvedValueOnce({ records: [{ id: item.id, connections: [first], truncated: false }] });
+  const { rerender } = render(<CatalogueMap {...props} />);
+  expect(await screen.findByRole("heading", { name: "London" })).toBeInTheDocument();
+  expect(screen.getByLabelText("Mock map")).toHaveAttribute("data-selected", "51.5,-0.1,local");
+  rerender(<CatalogueMap {...props} range={{ start: 1816, end: 1816 }} />);
+  expect(await screen.findByText(/That connection is outside this selection/)).toBeInTheDocument();
+  expect(screen.getByLabelText("Mock map")).toHaveAttribute("data-selected", "");
+ });
+ it("distinguishes a missing page record from an empty catalogue", async () => {
+  window.history.replaceState(null, "", "/?map_panel=records&map_record=book:another-page&map_stop=writing");
+  request.mockResolvedValue({ records: [{ id: item.id, connections: [first], truncated: false }] });
+  render(<CatalogueMap {...props} />);
+  expect(await screen.findByText(/This record is not on the current page/)).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /BookFrankenstein1 connections/ })).toBeInTheDocument();
  });
 });

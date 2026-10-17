@@ -4,6 +4,7 @@ package geography
 
 import (
 	"context"
+	"crypto/sha256"
 	_ "embed"
 	"encoding/json"
 	"fmt"
@@ -31,6 +32,7 @@ type Country struct {
 	Lon  float64 `json:"lon"`
 }
 type Connection struct {
+	Key         string   `json:"key"`
 	Place       string   `json:"place"`
 	Relation    string   `json:"relation"`
 	Categories  []string `json:"categories"`
@@ -174,7 +176,51 @@ func assemble(kind, id string, identities map[string]string, raw []rawPlace, sta
 		out.Truncated = true
 		out.Connections = out.Connections[:MaxConnections]
 	}
+	orderConnections(out.Connections)
 	return out
+}
+
+// Stable evidence keys survive a narrower year/relationship selection. Order
+// only the bounded returned connections; this is not a claim of a complete life
+// or travel route. A sole end bound remains an end bound, never a point date.
+func orderConnections(connections []Connection) {
+	duplicates := map[string]int{}
+	for i := range connections {
+		connections[i].Key = ""
+		data, _ := json.Marshal(connections[i])
+		hash := sha256.Sum256(data)
+		key := fmt.Sprintf("%x", hash[:8])
+		duplicates[key]++
+		connections[i].Key = fmt.Sprintf("%s-%d", key, duplicates[key])
+	}
+	bound := func(c Connection) *int {
+		if c.Start != nil {
+			return c.Start
+		}
+		return c.End
+	}
+	slices.SortStableFunc(connections, func(a, b Connection) int {
+		x, y := bound(a), bound(b)
+		if x == nil && y != nil {
+			return 1
+		}
+		if x != nil && y == nil {
+			return -1
+		}
+		if x != nil && y != nil && *x != *y {
+			if *x < *y {
+				return -1
+			}
+			return 1
+		}
+		if c := strings.Compare(a.Place, b.Place); c != 0 {
+			return c
+		}
+		if c := strings.Compare(a.Relation, b.Relation); c != 0 {
+			return c
+		}
+		return strings.Compare(a.Key, b.Key)
+	})
 }
 
 // Lookup performs indexed identity lookups, never a worldwide catalogue scan.
