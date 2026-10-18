@@ -1,0 +1,306 @@
+{
+  "release": "islamic-patterns-guide-20261018",
+  "status": "deployed-and-verified",
+  "verifiedAt": "2026-10-18T11:14:34.218008+00:00",
+  "url": "https://artlines.org/guides/islamic-patterns",
+  "sourceCommit": "4aad9f50e0cb48f2925b0b86ec733e48e2b5b9d5",
+  "placement": "Guides / Interactive",
+  "canonicalLanguage": "en",
+  "translations": [
+    "ru",
+    "it",
+    "de",
+    "zh",
+    "fr",
+    "es",
+    "pt",
+    "ja",
+    "ar"
+  ],
+  "patterns": 8,
+  "sourceInputs": "docs/research/islamic-patterns-guide-20261018/input-receipt.json",
+  "images": {
+    "provider": "The Metropolitan Museum of Art Open Access",
+    "rights": "Public Domain / CC0",
+    "guidePhotographs": 4,
+    "exactCataloguePaintings": 2,
+    "responsiveVariants": 18,
+    "cloudHosted": true,
+    "publicVariantChecksumsVerified": 18,
+    "embeddedRasterImages": 0,
+    "externalImageHotlinks": 0
+  },
+  "catalogue": {
+    "at": "2026-10-18T10:29:02.632320+00:00",
+    "productionOnly": true,
+    "localDatabaseWrites": 0,
+    "actor": "local-european-research",
+    "works": [
+      {
+        "id": "84bbf90c-b662-58d3-a5c0-dde4618b51e8",
+        "slug": "bahram-gur-seven-portraits-met-446606",
+        "metId": 446606,
+        "mediaId": "d1afa8b4-4032-54a6-ad31-9bd5d768e9c5",
+        "url": "/assets/artworks/imported/islamic-patterns-20261018/met-446606-409ad7ef8a2fa9d4.webp",
+        "status": "review",
+        "creatorId": "17934fea-ea12-5aaf-9ee2-09eba8e7d89c"
+      },
+      {
+        "id": "c2041a85-51da-5581-a923-fe31c4a99b53",
+        "slug": "yusuf-zulaikha-bustan-met-452672",
+        "metId": 452672,
+        "mediaId": "4188dc32-bf96-552d-8435-4b723e1be9dc",
+        "url": "/assets/artworks/imported/islamic-patterns-20261018/met-452672-ca2744fba08b8f82.webp",
+        "status": "review",
+        "creatorId": null
+      }
+    ],
+    "artist": {
+      "id": "17934fea-ea12-5aaf-9ee2-09eba8e7d89c",
+      "slug": "shaikh-zada",
+      "birth": null,
+      "death": null,
+      "activity": "1510–1550",
+      "status": "review",
+      "metConstituentId": 130278,
+      "nativeIdentityChecked": true
+    },
+    "slugCorrection": "Yusuf and Zulaikha is a folio from the Bustan of Sa`di; the URL slug now names that manuscript."
+  },
+  "performance": {
+    "base": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "viewports": [
+      {
+        "width": 390,
+        "initialBytes": 367150,
+        "initialImageBytes": 97328,
+        "readBytes": 1051908,
+        "readImageBytes": 781538,
+        "imageRequests": [
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/mihrab-640-ba8ab3383a8f.webp",
+            "bytes": 97328
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/minbar-doors-640-2d3c26cfbed1.webp",
+            "bytes": 24004
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/marble-panel-1280-8153d43087f3.webp",
+            "bytes": 141374
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/jali-640-282af98d30cf.webp",
+            "bytes": 76803
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/bahram-gur-1280-177ec3ecda79.webp",
+            "bytes": 249696
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/yusuf-zulaikha-1280-79f5345cc6dc.webp",
+            "bytes": 192333
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "initialBytes": 563684,
+        "initialImageBytes": 289619,
+        "readBytes": 1433958,
+        "readImageBytes": 1159530,
+        "imageRequests": [
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/mihrab-1280-7d3d445214ce.webp",
+            "bytes": 289619
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/minbar-doors-1280-f67517d58050.webp",
+            "bytes": 91413
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/marble-panel-1280-8153d43087f3.webp",
+            "bytes": 141359
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/jali-1280-7f35b701c925.webp",
+            "bytes": 195067
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/bahram-gur-1280-177ec3ecda79.webp",
+            "bytes": 249742
+          },
+          {
+            "url": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/guides/islamic-patterns/yusuf-zulaikha-1280-79f5345cc6dc.webp",
+            "bytes": 192330
+          }
+        ]
+      }
+    ],
+    "htmlBytes": 137484,
+    "sourceHTMLBytes": 13754660,
+    "publicImageVariantsVerified": 18,
+    "passed": true
+  },
+  "validation": {
+    "unitTests": 28,
+    "go": "Translated-title search, pagination/cursor scopes and new interactive-kind tests passed against both the master package and the exact published-source adaptation.",
+    "build": "Next production compilation and TypeScript passed.",
+    "browser": {
+      "base": "https://artlines.org",
+      "checks": [
+        "en",
+        "ru",
+        "it",
+        "de",
+        "zh",
+        "fr",
+        "es",
+        "pt",
+        "ja",
+        "ar"
+      ],
+      "errors": [],
+      "violations": [],
+      "passed": true
+    },
+    "directory": {
+      "base": "https://artlines.org",
+      "checks": [
+        "public Interactive filter, card, count and mobile layout",
+        "guide opens without login",
+        "translated directory search",
+        "existing museum guide and title preserved",
+        "446606 internal artwork viewer",
+        "452672 internal artwork viewer",
+        "source-identified painter profile"
+      ],
+      "errors": [],
+      "passed": true
+    },
+    "controls": [
+      "four construction families and three stages",
+      "45/90-degree rotational symmetry comparison",
+      "colour comparison",
+      "eight painting surfaces",
+      "six palettes, style, scale, weight and rotation",
+      "piece painting, keyboard navigation, undo and reset",
+      "SVG and PNG downloads",
+      "whole-page/detail views, enlargement and scroll restoration",
+      "language navigation and browser back"
+    ],
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "baselineLimitations": "Existing Go editorial-search expectations for Velazquez, art history through time and museum-scoped Leonardo fail on the pre-existing editorial corpus; unrelated expectations were not rewritten.",
+    "browserFallback": "In-app browser failed with missing sandboxPolicy; project Playwright with local Chrome used."
+  },
+  "deployment": {
+    "api": {
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:islamic-patterns-1018-4aad9f50",
+      "overlaySHA256": "6ff7f65f5b04c33ed657b79e45c0829e147ca9f22e0f706e68e0395db3dc344c",
+      "overlayURI": "gs://artline-508319-build-source/islamic-patterns-20261018/api-6ff7f65f5b04c33e.tar.xz",
+      "generation": "1792320217173957",
+      "baselineRevision": "artline-api-account-reading-1004",
+      "buildId": "090ed9b7-613b-4a01-bc15-f4af4067199c",
+      "failedBuildAttempts": [
+        {
+          "id": "7b067349-ba0e-46f7-895b-4c0f2f19e801",
+          "reason": "Hash guard detected that published search.go predates the institution-scoping implementation already in master. No candidate was deployed."
+        }
+      ],
+      "sourceAdaptation": {
+        "publishedSearchSHA256": "935ac91953dcf9b230ed40054f69de57981e861ca334758417a0fa16070307f6",
+        "policy": "Only the three interactive-kind changes from the master commit are applied to the exact live source. Unrelated master-only institution-scoping changes are not introduced.",
+        "approvedChanges": [
+          {
+            "before": "\"using\": 0}",
+            "after": "\"using\": 0, \"interactive\": 0}"
+          },
+          {
+            "before": "kind != \"using\" {",
+            "after": "kind != \"using\" && kind != \"interactive\" {"
+          },
+          {
+            "before": "Choose artist guides, museum guides or using Artline.",
+            "after": "Choose artist, museum, interactive or using Artline guides."
+          }
+        ]
+      },
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:dce6a7c2854df27e520bf3f0fe94e13cc8c096fead68133734462e9650e7481a",
+      "revision": "artline-api-islamic-patterns-1018-v1",
+      "candidateURL": "https://islamic-patterns-1018-v1---artline-api-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-api-guide-titles-1015-v2",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100
+    },
+    "web": {
+      "imageTag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:islamic-patterns-1018-4aad9f50",
+      "overlaySHA256": "256fdec62ea5a4e8b53c339ee45ce690e548212d857d1eacd83101537d556004",
+      "overlayURI": "gs://artline-508319-build-source/islamic-patterns-20261018/web-256fdec62ea5a4e8.tar.xz",
+      "generation": "1792321096523047",
+      "baselineRevision": "artline-web-about-carousel-1011-v1",
+      "buildId": "7095b516-633b-4ee4-8810-06ffff9815aa",
+      "failedBuildAttempts": [
+        {
+          "id": "3d77cfbb-f1b8-4374-adb0-c32b836024e3",
+          "reason": "Source hash guard detected the same master-only institution-scoping difference in GuideDirectory; no candidate was deployed."
+        },
+        {
+          "id": "94da9970-52d7-43c5-ae5b-578690a7551b",
+          "reason": "git show returned an empty successful result for the absent bracketed locale path. Corrected to literal git cat-file identity checks; no candidate was deployed."
+        }
+      ],
+      "sourceAdaptation": {
+        "policy": "Only this guide feature is applied to exact live source; all other published behavior retained.",
+        "files": {
+          "app/guides/GuideDirectory.tsx": {
+            "publishedSHA256": "e4b9489219ffed666e5911d20da15ac2e098f18c504a6d90e1e3067d378bbd4d",
+            "approvedChanges": [
+              {
+                "before": "const kinds = [{ value: \"\", label: \"All guides\" }, { value: \"artist\", label: \"Artists\" }, { value: \"museum\", label: \"Museums\" }, { value: \"using\", label: \"Using Artline\" }] as const;\n",
+                "after": "const kinds = [{ value: \"\", label: \"All guides\" }, { value: \"artist\", label: \"Artists\" }, { value: \"museum\", label: \"Museums\" }, { value: \"interactive\", label: \"Interactive\" }, { value: \"using\", label: \"Using Artline\" }] as const;\n"
+              },
+              {
+                "before": "          <p className={styles.city}>{guide.kind === \"artist\" ? \"Artist guide · \" : guide.kind === \"museum\" ? \"Museum guide · \" : \"\"}{guide.location}</p>\n",
+                "after": "          <p className={styles.city}>{guide.kind === \"artist\" ? \"Artist guide · \" : guide.kind === \"museum\" ? \"Museum guide · \" : guide.kind === \"interactive\" ? \"Interactive guide · \" : \"\"}{guide.location}</p>\n"
+              },
+              {
+                "before": "          {guide.count > 0 ? <span className={styles.editions}>{guide.count} artworks · {guide.languages} languages · PDF</span> : <Link className={styles.read} href={guide.href}>Read the guide</Link>}\n",
+                "after": "          {guide.kind === \"interactive\" ? <span className={styles.editions}>{guide.count} patterns · {guide.languages} languages</span> : guide.count > 0 ? <span className={styles.editions}>{guide.count} artworks · {guide.languages} languages · PDF</span> : <Link className={styles.read} href={guide.href}>Read the guide</Link>}\n"
+              }
+            ]
+          },
+          "lib/guide-search.ts": {
+            "publishedSHA256": "9df591ab97373094b0874767ab81203af2db426ee61fe894c7d674a520653177",
+            "approvedChanges": [
+              {
+                "before": "export type GuideKind = \"artist\" | \"museum\" | \"using\";\n",
+                "after": "export type GuideKind = \"artist\" | \"museum\" | \"using\" | \"interactive\";\n"
+              }
+            ]
+          }
+        }
+      },
+      "replayPlanSHA256": "5149b2c1360126b19965b9d30c99f404cb34ce175ee6613cc8a0b5150e806e71",
+      "replayPlanURI": "gs://artline-508319-build-source/islamic-patterns-20261018/web-plan-5149b2c1360126b1.json",
+      "replayPlanGeneration": "1792321100181031",
+      "sourceRestore": "Original pinned source and all original validation scripts; independent reads in parallel, all mutations serial.",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:a3ec2a1933845c1268010279bd4396442a91c1f001ae1d51407ad19d7769a2d5",
+      "revision": "artline-web-islamic-patterns-1018-v1",
+      "candidateURL": "https://islamic-patterns-1018-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+      "rollbackRevision": "artline-web-preview-spacing-1017-v1",
+      "runtimeSettingsPreserved": true,
+      "trafficPercent": 100
+    }
+  },
+  "runtimeSettingsPreserved": true,
+  "imagePinsUpdated": true,
+  "terraformApply": false,
+  "backgroundJobsChanged": false,
+  "realLocalDatabaseWrites": 0,
+  "translationServicesUsed": false
+}
