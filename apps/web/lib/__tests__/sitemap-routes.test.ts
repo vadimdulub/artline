@@ -55,13 +55,13 @@ it("keeps all public artist and museum guide editions and their selected images 
   expect(xml.querySelector("parsererror")).toBeNull();
   const urls = [...xml.getElementsByTagName("url")];
   const guides = urls.filter(url => url.getElementsByTagName("loc")[0].textContent?.includes("/guides/"));
-  expect(guides).toHaveLength(getGuideIndex().reduce((n, guide) => n + guide.locales.length, 0));
+  expect(guides).toHaveLength(getGuideIndex().reduce((n, guide) => n + guide.locales.length, 0) + 10);
   for (const slug of ["artemisia-gentileschi", "mary-cassatt", "frida-kahlo"]) {
     expect(guides.some(guide => guide.getElementsByTagName("loc")[0].textContent === `https://artline.example/guides/${slug}/ru`)).toBe(true);
   }
   for (const guide of guides) {
     expect(guide.getElementsByTagName("lastmod")[0].textContent).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-    expect(guide.getElementsByTagNameNS("http://www.google.com/schemas/sitemap-image/1.1", "image").length).toBeGreaterThanOrEqual(20);
+    expect(guide.getElementsByTagNameNS("http://www.google.com/schemas/sitemap-image/1.1", "image").length).toBeGreaterThanOrEqual(guide.getElementsByTagName("loc")[0].textContent?.includes("islamic-patterns") ? 6 : 20);
   }
   expect(discoveryRequest).not.toHaveBeenCalled();
 });

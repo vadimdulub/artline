@@ -12,7 +12,7 @@ vi.mock("next/link", () => ({ default: ({ children, href }: { children: ReactNod
 
 const base: GuideSearchEntry = { slug: "louvre", kind: "museum", href: "/guides/louvre", title: "Louvre: Masterpieces", label: "Louvre", location: "Paris, France", subtitle: "Twenty paintings", image: "", count: 20, languages: 10 };
 function show(items: GuideSearchEntry[]) {
-  render(<GuideDirectory initialQuery="" initialPage={{ items, total: items.length, matched: items.length, counts: { all: items.length, museum: items.filter(i => i.kind === "museum").length, artist: items.filter(i => i.kind === "artist").length, using: 0 }, next_cursor: "" }} />);
+  render(<GuideDirectory initialQuery="" initialPage={{ items, total: items.length, matched: items.length, counts: { all: items.length, museum: items.filter(i => i.kind === "museum").length, artist: items.filter(i => i.kind === "artist").length, using: 0, interactive: items.filter(i=>i.kind === "interactive").length }, next_cursor: "" }} />);
 }
 
 describe("guide directory naming", () => {

@@ -1,0 +1,188 @@
+.scope { width: min(1360px, calc(100% - 48px)); margin: auto; padding: 38px 0 64px; color: var(--ink); }
+.scope :global(section), .scope :global(header) { scroll-margin-top: 84px; }
+.scope :global(.IslamicPatternsArticle_hero) { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 64px; align-items: center; }
+.scope :global(.IslamicPatternsArticle_breadcrumb) { font-size: 13px; color: var(--muted); margin: 0 0 24px; }
+.scope :global(.IslamicPatternsArticle_hero h1) { font: 400 clamp(42px,5vw,76px)/1.05 var(--serif); letter-spacing: -.04em; margin: 0 0 26px; }
+.scope :global(.IslamicPatternsArticle_lead) { font: 20px/1.7 var(--serif); max-width: 46ch; margin: 0 0 28px; }
+.scope :global(.IslamicPatternsArticle_action) { display: inline-flex; align-items: center; min-height: 46px; background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: 4px; text-decoration: none; font-size: 15px; }
+.scope :global(.IslamicPatternsArticle_free) { font-size: 13px; color: var(--muted); margin-top: 16px; }
+.scope :global(.IslamicPatternsArticle_figure) { margin: 0; min-width: 0; }
+.scope :global(.IslamicPatternsArticle_figure > a) { background: var(--stone); display: flex; align-items: center; justify-content: center; min-width: 0; }
+.scope :global(.IslamicPatternsArticle_figure img) { display: block; width: 100%; height: 430px; object-fit: contain; padding: 16px; }
+.scope :global(.IslamicPatternsArticle_hero .IslamicPatternsArticle_figure img) { height: 500px; }
+.scope :global(.IslamicPatternsArticle_figure figcaption) { font: 12px/1.65 var(--sans); padding: 13px 0 0; color: var(--muted); }
+.scope :global(.IslamicPatternsArticle_figure figcaption strong) { font-weight: 500; color: var(--ink); }
+.scope :global(.IslamicPatternsArticle_figure figcaption > span) { display: block; margin-top: 4px; }
+.scope :global(.IslamicPatternsArticle_source) { color: var(--ultramarine); text-decoration: underline; text-underline-offset: 3px; font: 13px/1.6 var(--sans); }
+.scope :global(.IslamicPatternsArticle_contents) { display: flex; flex-wrap: wrap; gap: 8px 24px; border-block: 1px solid var(--line); padding: 14px 0; margin: 40px 0 0; }
+.scope :global(.IslamicPatternsArticle_contents a) { display: inline-flex; align-items: center; min-height: 36px; font-size: 14px; color: var(--ink); text-underline-offset: 5px; }
+.scope :global(.IslamicPatternsArticle_section) { padding-top: 56px; }
+.scope :global(.IslamicPatternsArticle_prose) { max-width: 780px; margin: 0 auto 30px; }
+.scope :global(.IslamicPatternsArticle_prose h2) { font: 400 clamp(30px,3.3vw,44px)/1.15 var(--serif); letter-spacing: -.025em; margin: 0 0 24px; }
+.scope :global(.IslamicPatternsArticle_prose h3), .scope :global(.IslamicPatternsArticle_geometryNotes h3), .scope :global(.IslamicPatternsArticle_colourLesson h3) { font: 400 27px/1.25 var(--serif); margin: 24px 0 16px; }
+.scope :global(.IslamicPatternsArticle_prose p) { font: 19px/1.85 var(--serif); margin: 0 0 20px; }
+.scope :global(.IslamicPatternsArticle_prose p strong) { font-weight: 600; }
+.scope :global(.IslamicPatternsArticle_paintings) { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 32px; margin: 36px 0; }
+.scope :global(.IslamicPatternsArticle_geometrySpread) { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 40px; margin: 36px 0; align-items: center; }
+.scope :global(.IslamicPatternsArticle_geometryNotes p), .scope :global(.IslamicPatternsArticle_objects > div > p), .scope :global(.IslamicPatternsArticle_colourLesson p), .scope :global(.IslamicPatternsArticle_colourLesson li) { font-size: 16px; line-height: 1.8; }
+.scope :global(.IslamicPatternsArticle_geometryNotes h3) { margin-top: 0; }
+.scope :global(.IslamicPatternsArticle_objects > div > h3) { font: 400 24px/1.3 var(--serif); margin: 26px 0 14px; }
+.scope :global(.IslamicPatternsArticle_animation) { background: var(--stone); min-width: 0; }
+.scope :global(.IslamicPatternsArticle_animation svg) { width: 100%; display: block; background: #163c68; }
+.scope :global(.IslamicPatternsArticle_animationControls) { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; padding: 20px 20px 0; }
+.scope :global(.IslamicPatternsArticle_animation button) { border: 1px solid var(--ink); background: var(--ink); color: var(--paper); border-radius: 4px; padding: 10px 14px; min-height: 44px; font: 14px var(--sans); cursor: pointer; }
+.scope :global(.IslamicPatternsArticle_animation label) { flex: 1; min-width: 160px; font-size: 13px; }
+.scope :global(.IslamicPatternsArticle_animation input) { width: 100%; min-height: 44px; accent-color: var(--ink); }
+.scope :global(.IslamicPatternsArticle_animation > p) { font-size: 14px; line-height: 1.7; padding: 0 20px 20px; margin-bottom: 0; }
+.scope :global(.IslamicPatternsArticle_tableWrap) { overflow-x: auto; margin: 36px 0; }
+.scope :global(.IslamicPatternsArticle_tableWrap table) { width: 100%; border-collapse: collapse; font-size: 14px; }
+.scope :global(.IslamicPatternsArticle_tableWrap caption) { text-align: left; font: 24px var(--serif); margin-bottom: 16px; }
+.scope :global(.IslamicPatternsArticle_tableWrap :is(th,td)) { text-align: left; border-bottom: 1px solid var(--line); padding: 14px 16px; line-height: 1.6; }
+.scope :global(.IslamicPatternsArticle_tableWrap thead) { background: var(--stone); }
+.scope :global(.IslamicPatternsArticle_tableWrap tbody th) { font-weight: 500; }
+.scope :global(.IslamicPatternsArticle_objects) { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; margin: 36px 0; }
+.scope :global(.IslamicPatternsArticle_objects .IslamicPatternsArticle_figure img) { height: 390px; }
+.scope :global(.IslamicPatternsArticle_colourLesson) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px; border-block: 1px solid var(--line); padding: 12px 0 24px; margin: 32px 0; }
+.scope :global(.IslamicPatternsArticle_colourLesson ol) { padding-left: 22px; }
+.scope :global(.IslamicPatternsArticle_colourLesson li + li) { margin-top: 12px; }
+.scope :global(.IslamicPatternsArticle_books) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 48px; }
+.scope :global(.IslamicPatternsArticle_books > div) { padding: 24px 0; border-top: 1px solid var(--line); }
+.scope :global(.IslamicPatternsArticle_books h3), .scope :global(.IslamicPatternsArticle_tools h3) { font: 400 25px/1.3 var(--serif); margin: 10px 0 16px; }
+.scope :global(.IslamicPatternsArticle_books a), .scope :global(.IslamicPatternsArticle_tools a) { color: var(--ink); text-underline-offset: 4px; }
+.scope :global(.IslamicPatternsArticle_books strong) { font-size: 14px; font-weight: 500; }
+.scope :global(.IslamicPatternsArticle_books p), .scope :global(.IslamicPatternsArticle_tools p), .scope :global(.IslamicPatternsArticle_details > p) { font-size: 15px; line-height: 1.8; margin: 10px 0; }
+.scope :global(.IslamicPatternsArticle_books p.IslamicPatternsArticle_bookMeta) { font-size: 12px; color: var(--muted); }
+.scope :global(.IslamicPatternsArticle_details) { border-top: 1px solid var(--line); padding: 18px 0; margin-top: 20px; }
+.scope :global(.IslamicPatternsArticle_details summary) { cursor: pointer; min-height: 44px; font-size: 15px; }
+.scope :global(.IslamicPatternsArticle_tools) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 40px; }
+.scope :global(:is(a,button,input,summary):focus-visible) { outline: 3px solid #b84a32; outline-offset: 4px; }
+@media(max-width:1100px) { .scope :global(.IslamicPatternsArticle_hero) { gap: 32px; } .scope :global(.IslamicPatternsArticle_hero .IslamicPatternsArticle_figure img) { height: 430px; } .scope :global(.IslamicPatternsArticle_objects .IslamicPatternsArticle_figure img) { height: 300px; } }
+@media(max-width:760px) { .scope { width: calc(100% - 32px); padding-top: 24px; } .scope :global(.IslamicPatternsArticle_hero), .scope :global(.IslamicPatternsArticle_paintings), .scope :global(.IslamicPatternsArticle_geometrySpread), .scope :global(.IslamicPatternsArticle_objects), .scope :global(.IslamicPatternsArticle_colourLesson), .scope :global(.IslamicPatternsArticle_books), .scope :global(.IslamicPatternsArticle_tools) { grid-template-columns: minmax(0,1fr); gap: 28px; } .scope :global(.IslamicPatternsArticle_hero h1) { font-size: 46px; } .scope :global(.IslamicPatternsArticle_lead) { font-size: 19px; } .scope :global(.IslamicPatternsArticle_hero .IslamicPatternsArticle_figure img) { height: 400px; } .scope :global(.IslamicPatternsArticle_figure img) { height: 360px; } .scope :global(.IslamicPatternsArticle_contents) { margin-top: 28px; gap: 4px 18px; } .scope :global(.IslamicPatternsArticle_section) { padding-top: 40px; } .scope :global(.IslamicPatternsArticle_prose p) { font-size: 18px; line-height: 1.8; } .scope :global(.IslamicPatternsArticle_objects .IslamicPatternsArticle_figure img) { height: 370px; } .scope :global(.IslamicPatternsArticle_tableWrap :is(th,td)) { padding: 10px; min-width: 100px; } .scope :global(.IslamicPatternsArticle_books) { gap: 0; } }
+.scope { --stone: #e8e3d9; --serif: Georgia,"Times New Roman",serif; --sans: "Avenir Next",Avenir,sans-serif; --ultramarine:#8f3a29; }
+.scope :global(button), .scope :global(select), .scope :global(input) { font:inherit; touch-action:manipulation; }
+.scope :global(button) { cursor:pointer; min-height:44px; padding:10px 14px; background:transparent; color:var(--ink); border:1px solid var(--line); border-radius:3px; }
+.scope :global(button:hover) { border-color:var(--ink); }
+.scope :global(button[aria-pressed=true]) { color:var(--paper); background:var(--ink); border-color:var(--ink); }
+.scope :global(button:disabled) { cursor:not-allowed; opacity:.45; }
+.scope :global(label) { display:flex; flex-direction:column; gap:8px; }
+.scope :global([role=button]:focus-visible) { outline:3px solid #b84a32; outline-offset:3px; }
+.guideBar { display:flex; justify-content:space-between; gap:24px; padding-bottom:32px; font-size:13px; }
+.guideBar > a { flex:none; min-height:44px; display:flex; align-items:center; }
+.guideBar nav { display:flex; justify-content:flex-end; flex-wrap:wrap; gap:0 16px; }
+.guideBar nav a { display:flex; align-items:center; min-height:44px; text-decoration:none; color:var(--muted); }
+.guideBar nav a[aria-current] { color:var(--ink); text-decoration:underline; }
+.scope :global(.ig-family-tabs) { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-bottom:20px; }
+.scope :global(.ig-family-tabs button) { display:flex; flex-wrap:wrap; align-items:center; gap:8px; font-size:14px; text-align:start; }
+.scope :global(.ig-family-tabs svg) { width:30px; height:30px; flex:none; }
+.scope :global(.ig-family-tabs small) { width:100%; color:inherit; opacity:.8; }
+.scope :global(.ig-construction-body) { display:grid; grid-template-columns:1.1fr 1fr; background:var(--stone); }
+.scope :global(.ig-construction-view) { display:grid; place-items:center; background:#163c68; min-width:0; }
+.scope :global(.ig-construction-view > svg) { width:100%; display:block; aspect-ratio:560/380; }
+.scope :global(.ig-construction-copy) { padding:28px; min-width:0; }
+.scope :global(.ig-stage-tabs) { display:flex; gap:4px; margin-bottom:24px; }
+.scope :global(.ig-stage-tabs button) { flex:1; font-size:13px; padding:10px 4px; }
+.scope :global(.ig-construction-copy h3) { font:400 28px/1.3 var(--serif); }
+.scope :global(.ig-construction-copy p) { font-size:16px; line-height:1.8; }
+.scope :global(.ig-fact), .scope :global(.ig-foot) { color:var(--muted); font-size:13px!important; }
+.constructionText { max-width:780px; margin:24px auto 40px; border-block:1px solid var(--line); padding:16px 0; }
+.constructionText summary { cursor:pointer; min-height:32px; }
+.constructionText section { padding:24px 0; }
+.constructionText p { font:17px/1.8 var(--serif); }
+.scope :global(.ig-symmetry), .scope :global(.ig-colour-comparison) { max-width:940px; margin:24px auto 40px; }
+.scope :global(.ig-symmetry-pair), .scope :global(.ig-colour-pair) { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.scope :global(.ig-symmetry figure), .scope :global(.ig-colour-pair figure) { margin:0; min-width:0; }
+.scope :global(.ig-symmetry svg), .scope :global(.ig-colour-pair svg) { width:100%; display:block; background:var(--stone); }
+.scope :global(.ig-symmetry svg) { max-height:290px; }
+.scope :global(.ig-symmetry figcaption), .scope :global(.ig-colour-pair figcaption) { font-size:14px; line-height:1.6; margin-top:12px; }
+.scope :global(#grid-status) { display:block; color:#42614d; }
+.scope :global(#grid-status[data-match=false]) { color:#8f3a29; }
+.scope :global(.ig-symmetry-copy), .scope :global(.ig-colour-controls) { padding-top:24px; }
+.scope :global(.ig-symmetry-copy h3), .scope :global(.ig-colour-controls h3) { font:400 26px/1.3 var(--serif); }
+.scope :global(.ig-symmetry-copy p), .scope :global(.ig-colour-controls p) { font-size:16px; line-height:1.8; }
+.scope :global(.ig-controls) { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.scope :global(.ig-controls output) { padding:10px; }
+.scope :global(.ig-art-grid) { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin:32px 0; }
+.scope :global(.ig-art) { min-width:0; margin:0; }
+.scope :global(.ig-art-image) { display:block; position:relative; background:var(--stone); }
+.scope :global(.ig-art-canvas) { display:block; width:100%; height:590px; padding:16px; }
+.scope :global(.ig-detail-tag) { display:block; padding:10px 16px; font-size:12px; color:var(--muted); text-decoration:none; }
+.scope :global(.ig-art-controls) { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0; }
+.scope :global(.ig-art-controls button) { font-size:13px; }
+.scope :global(.ig-art figcaption) { font:13px/1.7 var(--sans); color:var(--muted); }
+.scope :global(.ig-art figcaption strong) { color:var(--ink); font:400 23px/1.3 var(--serif); display:block; margin-bottom:12px; }
+.scope :global(.ig-art-description) { font:16px/1.8 var(--sans); padding-top:14px; border-top:1px solid var(--line); }
+.scope :global(.sp-workshop) { border-block:1px solid var(--line); padding-block:24px; margin-block:30px; }
+.scope :global(.sp-gallery-heading) { margin-bottom:18px; font-size:15px; }
+.scope :global(.sp-pattern-gallery) { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+.scope :global(.sp-pattern-gallery button) { padding:0; overflow:hidden; text-align:start; }
+.scope :global(.sp-thumbnail) { display:block; aspect-ratio:224/128; }
+.scope :global(.sp-thumbnail svg) { width:100%; height:100%; display:block; }
+.scope :global(.sp-pattern-gallery strong), .scope :global(.sp-pattern-gallery small) { display:block; padding:0 12px; }
+.scope :global(.sp-pattern-gallery strong) { font-size:14px; font-weight:500; margin-top:12px; }
+.scope :global(.sp-pattern-gallery small) { font-size:12px; padding-bottom:12px; margin-top:4px; }
+.scope :global(.sp-workspace) { display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; padding-top:30px; }
+.scope :global(.sp-settings) { display:flex; flex-direction:column; gap:24px; font-size:14px; min-width:0; }
+.scope :global(.sp-current h3) { font:400 27px/1.25 var(--serif); margin:0 0 12px; }
+.scope :global(.sp-current p) { font-size:14px; line-height:1.8; margin:0; }
+.scope :global(.sp-settings fieldset) { border:0; margin:0; padding:0; min-width:0; }
+.scope :global(.sp-settings legend) { margin-bottom:12px; padding:0; }
+.scope :global(.sp-palette-options) { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+.scope :global(.sp-palette-options button) { padding:8px; font-size:12px; }
+.scope :global(.sp-palette-swatch) { display:block; height:14px; margin-bottom:6px; background:linear-gradient(90deg,#193c64 25%,#4b929c 25% 50%,#b47b4e 50% 75%,#e8d6b1 75%); }
+.scope :global(.sp-palette-1) { background:linear-gradient(90deg,#245d4e 25%,#7c9a76 25% 50%,#d0ab58 50% 75%,#eee6cf 75%); }
+.scope :global(.sp-palette-2) { background:linear-gradient(90deg,#a65338 25%,#cc8c65 25% 50%,#513a33 50% 75%,#ead3ae 75%); }
+.scope :global(.sp-palette-3) { background:linear-gradient(90deg,#d8ddd9 25%,#708c98 25% 50%,#c2a478 50% 75%,#eeeae0 75%); }
+.scope :global(.sp-palette-4) { background:linear-gradient(90deg,#62432f 25%,#a37b53 25% 50%,#d5b68a 50% 75%,#3e3028 75%); }
+.scope :global(.sp-palette-5) { background:linear-gradient(90deg,#f6f2e8 25%,#d6e0e2 25% 50%,#b3c6d0 50% 75%,#e7e7de 75%); }
+.scope :global(.sp-settings select) { width:100%; min-height:44px; padding:8px; color:var(--ink); background:var(--paper); border:1px solid var(--line); }
+.scope :global(.sp-settings label > span) { display:flex; gap:12px; align-items:center; }
+.scope :global(.sp-settings input) { flex:1; min-width:0; min-height:32px; accent-color:var(--ink); }
+.scope :global(.sp-settings output) { min-width:42px; text-align:end; }
+.scope :global(.sp-canvas-wrap) { min-width:0; }
+.scope :global(#maker-view) { width:100%; min-height:560px; background:#142f49; }
+.scope :global(#maker-view svg) { width:100%; display:block; }
+.scope :global(#maker-view polygon[role=button]) { cursor:pointer; }
+.scope :global(#maker-view polygon:focus-visible) { outline:0; stroke:#c85139; stroke-width:3; }
+.scope :global(.sp-paint-hint), .scope :global(.sp-keyboard-hint), .scope :global(.sp-export-note), .scope :global(.sp-note) { font-size:13px; line-height:1.8; color:var(--muted); }
+.scope :global(.sp-actions), .scope :global(.sp-actions > div) { display:flex; flex-wrap:wrap; gap:10px; }
+.scope :global(.sp-actions) { justify-content:space-between; margin:24px 0 16px; }
+.sources { max-width:900px; margin:auto; overflow-wrap:anywhere; }
+.sources h2 { font:400 32px/1.2 var(--serif); }
+.sources p, .sources li { font-size:14px; line-height:1.8; }
+.sources ol { padding-inline-start:24px; }
+.sources li { margin-bottom:12px; }
+.scope :global(#image-dialog) { border:0; padding:20px; background:var(--ink); color:var(--paper); width:min(96vw,1600px); max-width:96vw; max-height:96dvh; }
+.scope :global(#image-dialog::backdrop) { background:#000c; }
+.scope :global(.dialog-header) { display:flex; justify-content:flex-end; margin-bottom:12px; }
+.scope :global(#image-dialog button) { color:var(--paper); }
+.scope :global(#image-dialog img) { display:block; width:100%; height:72dvh; object-fit:contain; }
+.scope :global(#image-dialog p) { font-size:13px; line-height:1.7; max-width:1000px; margin:16px auto 0; }
+@media(max-width:900px) {
+ .scope :global(.ig-construction-body) { grid-template-columns:1fr; }
+ .scope :global(.ig-art-canvas) { height:480px; }
+ .scope :global(.sp-workspace) { grid-template-columns:220px minmax(0,1fr); gap:18px; }
+}
+@media(max-width:780px) {
+ .scope :global(.sp-workspace) { display:flex; flex-direction:column; }
+ .scope :global(.sp-settings) { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+ .scope :global(.sp-current) { grid-column:1/-1; }
+ .scope :global(#maker-view) { min-height:420px; }
+}
+@media(max-width:600px) {
+ .guideBar { flex-direction:column; gap:8px; padding-bottom:24px; }
+ .guideBar nav { justify-content:flex-start; gap:0 14px; }
+ .scope :global(.ig-family-tabs), .scope :global(.sp-pattern-gallery) { grid-template-columns:1fr 1fr; }
+ .scope :global(.ig-construction-copy) { padding:20px; }
+ .scope :global(.ig-art-grid) { grid-template-columns:1fr; gap:36px; }
+ .scope :global(.ig-art-canvas) { height:480px; }
+ .scope :global(.ig-symmetry-pair), .scope :global(.ig-colour-pair) { gap:10px; }
+ .scope :global(.ig-stage-tabs button) { font-size:12px; overflow-wrap:anywhere; }
+ .scope :global(.sp-settings) { gap:20px 12px; }
+ .scope :global(.sp-palette-field) { grid-column:1/-1; }
+ .scope :global(.sp-palette-options) { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .scope :global(.sp-actions > div), .scope :global(.sp-actions button) { flex:1; }
+}
+@media(prefers-reduced-motion:no-preference) { .scope :global(.ig-art-canvas image) { transition:opacity .2s; } }
+@media print { .guideBar, .scope :global(.sp-actions), .scope :global(button) { display:none; } .scope { width:100%; } }
+.scope :global(button) { min-width:0; overflow-wrap:anywhere; }
+.scope :global(.ig-family-tabs span) { min-width:0; max-width:100%; }

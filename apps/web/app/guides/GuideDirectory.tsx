@@ -8,7 +8,7 @@ import { updateQuery, useQueryString } from "@/lib/url-state";
 import type { GuideSearchPage } from "@/lib/guide-search";
 import styles from "./guides.module.css";
 
-const kinds = [{ value: "", label: "All guides" }, { value: "artist", label: "Artists" }, { value: "museum", label: "Museums" }, { value: "using", label: "Using Artline" }] as const;
+const kinds = [{ value: "", label: "All guides" }, { value: "artist", label: "Artists" }, { value: "museum", label: "Museums" }, { value: "interactive", label: "Interactive" }, { value: "using", label: "Using Artline" }] as const;
 
 export function GuideDirectory({ initialPage, initialQuery }: { initialPage?: GuideSearchPage; initialQuery: string }) {
   const params = new URLSearchParams(useQueryString(initialQuery ? `?${initialQuery}` : ""));
@@ -43,10 +43,10 @@ export function GuideDirectory({ initialPage, initialQuery }: { initialPage?: Gu
         : loading ? <p className={styles.empty}>Finding guides…</p>
         : data?.items.length ? <div className={styles.museumGrid}>{data.items.map(guide => <article key={guide.slug} className={styles.museum}>
           {guide.image && <Link href={guide.href} prefetch={false} className={styles.museumImage} tabIndex={-1} aria-hidden="true"><img src={guide.image} alt="" width="600" height="420" loading="lazy" /></Link>}
-          <p className={styles.city}>{guide.kind === "artist" ? "Artist guide · " : guide.kind === "museum" ? "Museum guide · " : ""}{guide.location}</p>
+          <p className={styles.city}>{guide.kind === "artist" ? "Artist guide · " : guide.kind === "museum" ? "Museum guide · " : guide.kind === "interactive" ? "Interactive guide · " : ""}{guide.location}</p>
           <h3><Link href={guide.href} prefetch={false}>{guide.kind === "museum" ? guide.title : guide.label}</Link></h3>
           <p>{guide.subtitle}</p>
-          {guide.count > 0 ? <span className={styles.editions}>{guide.count} artworks · {guide.languages} languages · PDF</span> : <Link className={styles.read} href={guide.href}>Read the guide</Link>}
+          {guide.kind === "interactive" ? <span className={styles.editions}>{guide.count} patterns · {guide.languages} languages</span> : guide.count > 0 ? <span className={styles.editions}>{guide.count} artworks · {guide.languages} languages · PDF</span> : <Link className={styles.read} href={guide.href}>Read the guide</Link>}
         </article>)}</div>
         : <div className={styles.empty}><h3>No guides found</h3><p>Try another name or place, or explore all the guides.</p><button type="button" onClick={clear}>Show all guides</button></div>}
     </section>

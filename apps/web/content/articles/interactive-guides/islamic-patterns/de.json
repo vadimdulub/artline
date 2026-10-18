@@ -1,0 +1,419 @@
+{
+  "slug": "islamic-patterns",
+  "locale": "de",
+  "guideTitle": "Islamische geometrische Muster",
+  "eyebrow": "Islamische Kunst · Ein interaktiver Rundgang",
+  "title": "Wie Geometrie zu Ornament wird",
+  "intro": "Eine geflieste Gebetsnische, eine hölzerne Kanzel und ein steinernes Fenstergitter geben geometrischen Mustern unterschiedliche Formen. Folgen Sie den Linien, betrachten Sie das Zusammenfügen der Teile und gestalten Sie ein eigenes Muster.",
+  "deck": "Erkunden Sie die Konstruktion und entwickeln Sie Ihre eigene Fassung.",
+  "ui": {
+    "guides": "Leitfäden",
+    "language": "Sprache",
+    "construction": "Konstruktion",
+    "motif": "Motiv",
+    "arrangement": "Anordnung",
+    "turn": "Um 45° drehen",
+    "reset": "Drehung zurücksetzen",
+    "matches": "Stimmt überein",
+    "notMatch": "Stimmt nicht überein",
+    "star": "Stern",
+    "grid": "Quadratisches Raster",
+    "original": "Originalfarben",
+    "swap": "Farben tauschen",
+    "outlines": "Konturen",
+    "whole": "Ganzes Blatt",
+    "detail": "Detail",
+    "enlarge": "Vergrößern",
+    "close": "Bild schließen",
+    "catalogue": "In Artline öffnen",
+    "palette": "Palette",
+    "style": "Zeichenstil",
+    "scale": "Maßstab",
+    "weight": "Linienstärke",
+    "rotation": "Drehung",
+    "undo": "Rückgängig",
+    "resetColours": "Farben zurücksetzen",
+    "downloadPNG": "PNG herunterladen",
+    "downloadSVG": "SVG herunterladen",
+    "changed": "Farbe geändert.",
+    "selected": "Muster ausgewählt.",
+    "undone": "Letzte Farbänderung rückgängig gemacht.",
+    "resetDone": "Originalfarben wiederhergestellt.",
+    "exportReady": "Datei bereit.",
+    "exportError": "PNG konnte nicht erstellt werden. Bitte SVG versuchen.",
+    "pattern": "Muster",
+    "palettes": [
+      "Lapislazuli",
+      "Garten",
+      "Terrakotta",
+      "Tusche",
+      "Holz",
+      "Porzellan"
+    ],
+    "styles": [
+      "Mosaik",
+      "Konturen",
+      "Doppelte Kontur"
+    ]
+  },
+  "hero": {
+    "title": "Mihrab aus der Madrasa Imami, Isfahan",
+    "caption": "Iran, datiert 755 AH / 1354–55 n. Chr. Mosaik aus zugeschnittenen, glasierten Frittenkeramikfliesen in Mörtel; 343,1 × 288,7 cm. Harris Brisbane Dick Fund, 1939; 39.20.",
+    "credit": "Metropolitan Museum of Art. Gemeinfrei. Objektdatensatz [1]"
+  },
+  "opening": {
+    "title": "Bei der Oberfläche beginnen",
+    "paragraphs": [
+      "Die Gebetsnische oben ist mehr als drei Meter hoch. Helle Schrift läuft um ihren blauen Außenrahmen. Innerhalb dieser Einfassung wechselt der Dekor: Über dem Spitzbogen breiten sich geschwungene Ranken aus, während Sterne und Vielecke den oberen Teil der Nische besetzen. Schon dieses eine Objekt bietet dem Blick mehrere Arten von Linien.",
+      "Eine Gebetsnische, ein Mihrab, zeigt die Richtung nach Mekka an. Diese stammt aus der Madrasa Imami, einer religiösen Schule in Isfahan, und ist auf 1354–55 datiert. Ihre Hersteller fügten kleine Stücke glasierter Keramik in Mörtel ein. Was zunächst wie eine gezeichnete Linie wirkt, ist oft die Grenze zwischen zwei Teilen.",
+      "Geometrie steht hier neben Kalligrafie und pflanzlichem Ornament. Diese Formen erhielten in der islamischen Sakralarchitektur großes Gewicht, in der menschliche und tierische Figuren meist vermieden wurden. In Handschriften, Keramik und anderen weltlichen Künsten waren Figuren dagegen weit verbreitet. Der Schmuck einer Moschee gehört zu diesem wesentlich größeren künstlerischen Feld. Das Met zur figürlichen Darstellung in der islamischen Kunst [2]",
+      "Die Winkel eines Sterns können gleich bleiben, während sich Größe, Abstand, Farbe und Material ändern. Die Objekte hier zeigen, wie stark solche Entscheidungen eine Oberfläche prägen. Um sie zu verstehen, hilft es, ein Muster zu zerlegen."
+    ]
+  },
+  "construction": {
+    "title": "Von der Zeichnung zum Muster",
+    "intro": "Die Konstruktion legt die Punkte fest. Das Motiv wählt die Linien aus, die bleiben. Die Anordnung bestimmt, wie es sich wiederholt. Wählen Sie eine Familie und wechseln Sie zwischen den drei Zuständen.",
+    "families": [
+      {
+        "id": "eight",
+        "n": 8,
+        "angle": 45,
+        "title": "Achtzackiger Stern",
+        "titles": [
+          "1. Konstruktion — Den Kreis teilen",
+          "2. Motiv — Die Außenlinie behalten",
+          "3. Anordnung — Die Sterne auf ein Raster setzen"
+        ],
+        "text": [
+          "Markieren Sie acht gleichmäßig verteilte Punkte im Abstand von 45°. Verbinden Sie jeden zweiten Punkt zu zwei Quadraten, die um 45° gegeneinander gedreht sind.",
+          "Zeichnen Sie die äußere Umrisslinie der überlagerten Quadrate nach. Ihre Schnittpunkte bestimmen die einspringenden Ecken des Sterns.",
+          "Wiederholen Sie denselben Stern in waagerechten und senkrechten Reihen. Die Zwischenräume werden ebenfalls Teil des Musters."
+        ],
+        "facts": [
+          "8 Teilungen · 45° am Mittelpunkt",
+          "2 Quadrate · 8 äußere Spitzen",
+          "Quadratisches Raster · 4 nächste Nachbarn"
+        ],
+        "foot": "Der Kreis hilft, die Punkte zu platzieren; im fertigen Motiv kann er entfallen."
+      },
+      {
+        "id": "six",
+        "n": 6,
+        "angle": 60,
+        "title": "Sechszackiger Stern",
+        "titles": [
+          "1. Konstruktion — Sechs gleiche Schritte markieren",
+          "2. Motiv — Die Außenlinie behalten",
+          "3. Anordnung — Die Reihen versetzen"
+        ],
+        "text": [
+          "Sechs gleichmäßig verteilte Punkte bilden ein Sechseck. Verbinden Sie jeden zweiten Punkt zu zwei gleichseitigen Dreiecken.",
+          "Die äußere Begrenzung der Dreiecke ergibt einen sechszackigen Stern. Die Kreuzungen ihrer Seiten bestimmen die sechs einspringenden Ecken.",
+          "Verschieben Sie jede zweite Reihe seitlich um den halben Abstand zwischen zwei Mittelpunkten. Die Mittelpunkte bilden nun ein Dreiecksraster."
+        ],
+        "facts": [
+          "6 Teilungen · 60° am Mittelpunkt",
+          "2 Dreiecke · 6 äußere Spitzen",
+          "Dreiecksraster · 6 nächste Nachbarn"
+        ],
+        "foot": "Mit einer Zirkelöffnung gleich dem Kreisradius lassen sich alle sechs Teilungen abtragen."
+      },
+      {
+        "id": "five",
+        "n": 5,
+        "angle": 72,
+        "title": "Fünfeckiges Medaillon",
+        "titles": [
+          "1. Konstruktion — Jeden zweiten Punkt verbinden",
+          "2. Motiv — Den Stern behalten",
+          "3. Anordnung — Zur Mitte hin wiederholen"
+        ],
+        "text": [
+          "Setzen Sie fünf Punkte im Abstand von 72° auf den Kreis. Verbinden Sie jeden zweiten Punkt zu einem Pentagramm.",
+          "Zeichnen Sie den Umriss entlang der äußeren Spitzen und der Schnittpunkte dazwischen nach. In der Mitte bleibt ein kleineres Fünfeck.",
+          "Setzen Sie einen weiteren Stern in das mittlere Fünfeck und wiederholen Sie den Vorgang. Jeder neue Stern dreht sich um 36° und hat etwa 38,2 % des vorherigen Radius."
+        ],
+        "facts": [
+          "5 Teilungen · 72° am Mittelpunkt",
+          "1 Pentagramm · 5 äußere Spitzen",
+          "Ein gemeinsamer Mittelpunkt · verschachtelte Sterne"
+        ],
+        "foot": "Dies ist ein begrenztes Medaillon. Ornamente mit fünffacher Symmetrie können auch verschiedene Formen kombinieren, um eine Fläche zu bedecken."
+      },
+      {
+        "id": "twelve",
+        "n": 12,
+        "angle": 30,
+        "title": "Zwölfzackiger Stern",
+        "titles": [
+          "1. Konstruktion — Den Kreis in zwölf Teile teilen",
+          "2. Motiv — Die Außenlinie behalten",
+          "3. Anordnung — Die Reihen versetzen"
+        ],
+        "text": [
+          "Markieren Sie zwölf Punkte im Abstand von 30°. Verbinden Sie jeden dritten Punkt zu einem Quadrat. Beginnen Sie erneut an den nächsten beiden Punkten, um drei Quadrate zu erhalten.",
+          "Zeichnen Sie den gemeinsamen äußeren Umriss nach. Die Schnittpunkte der Quadratseiten bestimmen die zwölf einspringenden Ecken.",
+          "Wiederholen Sie die Sterne auf einem Dreiecksraster. Ein anderer Abstand verändert die offenen Formen dazwischen."
+        ],
+        "facts": [
+          "12 Teilungen · 30° am Mittelpunkt",
+          "3 Quadrate · 12 äußere Spitzen",
+          "Dreiecksraster · 6 nächste Nachbarn"
+        ],
+        "foot": "Stern und Raster haben verschiedene Symmetrien: zwölf Spitzen um einen Mittelpunkt, sechs nächste Nachbarn im Feld."
+      }
+    ]
+  },
+  "symmetry": {
+    "title": "Die Räume zwischen den Sternen",
+    "intro": "Ein achtzackiger Stern deckt sich nach einer Drehung um 45° mit sich selbst. Ordnet man gleiche Sterne auf einem quadratischen Raster an, braucht das ganze Feld eine Drehung um 90°, um sich zu decken. Probieren Sie beide Zeichnungen gemeinsam aus.",
+    "question": "Passt es noch zusammen?",
+    "initial": "Drehen Sie beide Zeichnungen um 45°. Die gestrichelten Linien markieren ihre Ausgangslagen.",
+    "turned": "Um 45° drehen: Der Stern deckt sich mit seinem ursprünglichen Umriss. Die Mittelpunkte der umgebenden Sterne sind vom ursprünglichen Raster abgerückt.",
+    "matched": "Gleiche Anordnung: Bei diesem Winkel decken sich beide Zeichnungen wieder mit ihren Ausgangslagen.",
+    "paragraphs": [
+      "Die wiederholten Sternfelder oben lassen Zwischenräume frei. Eine Parkettierung bedeckt eine Fläche ohne Lücken und Überlappungen; daher müssen auch die Zwischenräume als Formen gelöst werden. Kreise, Quadrate und andere Vielecke lassen sich zu komplexeren Entwürfen verbinden. Das Met zum geometrischen Ornament [3]",
+      "Regelmäßige Fünfecke stellen ein besonderes Problem dar. Ihre Innenwinkel von 108° können sich um einen Punkt nicht lückenlos und ohne Überlappung schließen. Fünffache Symmetrie kann durch Kombinationen verschiedener Formen entstehen oder sich um einen gemeinsamen Mittelpunkt entwickeln, wie beim Medaillon oben.",
+      "Serap Ekizler Sönmez untersucht in ihrer Studie zu einem hölzernen Fensterladen der Süleymaniye-Moschee in Istanbul ein aufwendigeres System. Unterschiedliche zehnzackige Sterne besetzen Mitte und Ecken. Das Spiegeln und Drehen von Teilen erzeugt weitere Kompositionen: Die Beziehungen zwischen den Formen bestimmen, wie sich das Feld erweitern lässt. Die bebilderte Studie lesen (PDF, S. 533–538) [4]"
+    ]
+  },
+  "materials": {
+    "title": "Eine Linie muss hergestellt werden",
+    "intro": "Die folgenden drei Objekte übersetzen Geometrie in sehr unterschiedliche Oberflächen. Bei den Türen werden Teile verbunden, beim Marmorpaneel Farben zusammengesetzt, beim Steingitter Öffnungen aus dem Material geschnitten. Ein Entwurf, der in einem Material funktioniert, stellt in einem anderen neue Anforderungen.",
+    "objects": [
+      {
+        "heading": "Holz: Das Muster überbrückt die Fuge",
+        "figure": {
+          "title": "Zwei Türen eines Minbars",
+          "caption": "Kairo zugeschrieben, um 1325–30. Geschnitztes Holz mit Einlagen aus Elfenbein und Holz; 196,2 × 88,9 cm. Sammlung Edward C. Moore, Vermächtnis, 1891; 91.1.2064.",
+          "credit": "Metropolitan Museum of Art. Gemeinfrei. Objektdatensatz [5]"
+        },
+        "paragraphs": [
+          "Eine senkrechte Fuge teilt die Türen, doch die Sterne setzen sich über sie hinweg fort. Helle Einlagen heben kleine Formen vom braunen Holz ab; Schnitzereien füllen viele der Felder. Die großen geometrischen Gliederungen bleiben trotz dieser feineren Details lesbar.",
+          "Die Türen bildeten den Zugang zu einem Minbar, der Kanzel für die Freitagspredigt. Die Met-Restauratorin Mecka Baumeister beschreibt, wie passgenaue Teile und ineinandergreifende Verbindungen ohne Nägel oder Leim zusammenhalten. So können sich Holz und Elfenbein ausdehnen und zusammenziehen. Die Geometrie gehört ebenso zum Aufbau wie zum Erscheinungsbild. Konstruktion und Konservierung [5]"
+        ]
+      },
+      {
+        "heading": "Marmor: Farbe trennt die Bahnen",
+        "figure": {
+          "title": "Wandpaneel mit geometrischem Flechtwerk",
+          "caption": "Kairo zugeschrieben, 15. Jahrhundert. Mosaik aus verschiedenfarbigem Marmor; 118,1 × 59,7 cm. Geschenk von The Hagop Kevorkian Fund, 1970; 1970.327.8.",
+          "credit": "Metropolitan Museum of Art. Gemeinfrei. Objektdatensatz [6]"
+        },
+        "paragraphs": [
+          "Drei große Strahlensterne ziehen sich durch dieses schmale Paneel. Helle Bänder verbinden sie in einem dichteren Netz kleiner Vielecke; rote und dunkle Steine unterscheiden die Flächen zwischen den Bändern. Eine Linie, die eine andere zu kreuzen scheint, besteht aus getrennten, in die Oberfläche eingepassten Stücken.",
+          "Das Paneel wird dem Kairo des 15. Jahrhunderts zugeschrieben. Sein ursprüngliches Gebäude ist unbekannt. Das Met vermutet, dass es den unteren Teil einer Wand schmückte und aus der Nähe betrachtet wurde. Der kräftige Rahmen begrenzt einen Entwurf, der sich sonst scheinbar fortsetzen könnte. Die Einordnung des Museums [6]"
+        ]
+      },
+      {
+        "heading": "Sandstein: Die Öffnungen lassen Licht ein",
+        "figure": {
+          "title": "Durchbrochenes Fenstergitter (Jali)",
+          "caption": "Indien, zweite Hälfte des 16. Jahrhunderts. Geschnitzter roter Sandstein; 185,4 × 130,3 cm. Rogers Fund, 1993; 1993.67.2.",
+          "credit": "Metropolitan Museum of Art. Gemeinfrei. Objektdatensatz [7]"
+        },
+        "paragraphs": [
+          "Bei diesem indischen Jali, einem durchbrochenen Gitter, sind die dunklen Formen im Foto Öffnungen. Dazwischen bleibt ein Netz schmaler Steinstege stehen. Der breite Spitzbogen unterbricht dieses Netz und trennt das Hauptfeld von den kleineren Bereichen darüber.",
+          "Das Gitter ist etwa 1,85 Meter hoch. Verwitterung an einer Seite führte das Met zu der Annahme, dass es zu einem Außenfenster gehörte. Dort ließen die Öffnungen Licht ein und warfen ein wechselndes Muster in den Raum. Der Stein blieb fest, während sein Schatten wanderte. Der architektonische Zusammenhang des Gitters [7]"
+        ]
+      }
+    ]
+  },
+  "paintings": {
+    "title": "Muster innerhalb eines Bildes",
+    "intro": "In diesen zwei Handschriftenmalereien des 16. Jahrhunderts hilft das Ornament, Oberflächen voneinander zu unterscheiden. Kleine geometrische Einheiten, feine Netze und geschwungene Ranken beschreiben verschiedene Teile eines Raumes. Öffnen Sie ein Detail und betrachten Sie, wie das Muster an einem Wandfeld oder einer Bordüre wechselt.",
+    "works": [
+      {
+        "title": "Shaikh Zada, Bahram Gur am Mittwoch im Türkispalast",
+        "caption": "Blatt 216 aus einer Khamsa von Nizami. Herat, datiert 931 AH / 1524–25 n. Chr. Tusche, deckende Wasserfarben, Silber und Gold auf Papier. Blatt: 32,2 × 22,2 cm.",
+        "credit": "Metropolitan Museum of Art. Geschenk von Alexander Smith Cochran, 1913; 13.228.7.10. Gemeinfrei.",
+        "record": "Sammlungsdatensatz und Bildquelle [8]",
+        "description": "Das sitzende Paar befindet sich in einem Raum oberhalb der Musiker. Blaue geometrische Wandfelder flankieren es; ein schmales Musterband trennt den Raum vom Boden darunter.",
+        "details": [
+          "Wandfliesen: Detail: Blaue und türkise Sechsecke wiederholen sich auf den beiden Wandfeldern. Ihre schrägen Oberkanten unterscheiden die Raumseiten vom mittleren Feld.",
+          "Untere Bordüre: Detail: Unter den sitzenden Figuren verläuft ein schmales geometrisches Band. Es trennt ihren erhöhten Raum vom größeren, einfacheren Bodenmuster darunter."
+        ]
+      },
+      {
+        "title": "Yusuf und Zulaikha, Maler nicht identifiziert",
+        "caption": "Blatt 51r aus einem Bustan von Sa’di. Buchara, um 1525–35. Tusche, deckende Wasserfarben und Gold auf Papier. Blatt: 27,9 × 18,4 cm.",
+        "credit": "Metropolitan Museum of Art. Ankauf, Louis V. Bell Fund und Schenkung der Vincent Astor Foundation, 1974; 1974.294.4. Gemeinfrei.",
+        "record": "Sammlungsdatensatz und Bildquelle [9]",
+        "description": "Ein feines geometrisches Netz füllt das helle Wandfeld hinter den Figuren. Blühende Zweige breiten sich auf der goldenen Wand darüber aus; kleinere Pflanzen füllen das dunkle Band darunter.",
+        "details": [
+          "Wandnetz: Detail: Feine gerade Linien greifen im hellen Wandfeld ineinander. Ein rot-goldener Rahmen trennt das geometrische Netz von den blühenden Zweigen darüber und den verzierten Türen zu beiden Seiten.",
+          "Florale Bordüre: Detail: Das dunkle Band unter dem Raum enthält verzweigte Stängel und Blätter. Ihre Kurven kontrastieren mit den geraden Linien des hellen Wandfeldes darüber."
+        ]
+      }
+    ],
+    "closing": "In Shaikh Zadas Palast wechselt das Muster, wenn der Blick vom inneren Raum zu den Musikern wandert. In Yusuf und Zulaikha kontrastiert das helle geometrische Netz hinter den Figuren mit den größeren Blüten darüber. Geometrie steht neben Figuren, Schrift und pflanzlichem Ornament."
+  },
+  "colour": {
+    "title": "Dieselben Linien, ein anderes Muster",
+    "paragraphs": [
+      "Im Mihrab aus Isfahan heben sich helle Inschriften vom dunkelblauen Grund ab. Türkis, Gelb und Grün gliedern das umgebende Ornament in kleinere Formen. Farbe hilft, mehrere Dekorarten auf einer Fläche zu unterscheiden. Farben und Inschriften des Mihrabs [10]",
+      "Vergleichen Sie die zwei Zeichnungen. Das Vertauschen von Stern- und Hintergrundfarbe kann verändern, welche Formen zuerst auffallen. Ohne Füllungen bleibt dieselbe Konstruktion als Liniennetz sichtbar."
+    ],
+    "question": "Die Farbe ändern, die Zeichnung behalten",
+    "states": [
+      "Stern- und Hintergrundfarben vertauscht: Form und Abstand sind identisch. Nur die Farben der Sterne und des Hintergrunds haben sich geändert.",
+      "Füllungen entfernt: Ohne Füllung wird der Stern durch seinen Umriss bestimmt. Folgen Sie den Flächen auf beiden Seiten der Linie.",
+      "Ursprüngliche Farben: Beide Zeichnungen verwenden dieselbe Palette. Tauschen Sie die Farben oder entfernen Sie die Füllungen zum Vergleich."
+    ],
+    "closing": "Kehren Sie nach dem Vergleich zum Sandsteingitter zurück. Im Foto wirken seine Öffnungen wie dunkle Farbflächen. Im Gebäude ließen dieselben Formen Licht ein und warfen ein Muster in den Raum. Das Material verändert, was die Zeichnung bewirken kann."
+  },
+  "studio": {
+    "title": "Ein eigenes Muster gestalten",
+    "intro": "Beginnen Sie mit einer fertigen Komposition. Wählen Sie eine Palette, ändern Sie den Maßstab oder zeigen Sie nur die Konturen. Einzelne Teile lassen sich durch Antippen umfärben.",
+    "choose": "Eine Grundlage wählen",
+    "patterns": [
+      {
+        "id": "starcross",
+        "name": "Sterne und Kreuze",
+        "tag": "8 Spitzen · Wiederholung",
+        "note": "Achtzackige Sterne und kreuzförmige Teile füllen gemeinsam die Fläche. Heben Sie versuchsweise nur eines der beiden Motive farblich hervor.",
+        "grid": "square"
+      },
+      {
+        "id": "rosette8",
+        "name": "Achtstrahlige Rosette",
+        "tag": "8 Spitzen · Wiederholung",
+        "note": "Acht Blütenblätter umgeben jeden Stern. Zwischen benachbarten Rosetten liegen kleine, um 45° gedrehte Quadrate.",
+        "grid": "square"
+      },
+      {
+        "id": "hexstar",
+        "name": "Sternraster",
+        "tag": "6 Spitzen · Wiederholung",
+        "note": "Sechszackige Sterne passen in sechseckige Zellen. Dreiecke füllen die Zwischenräume.",
+        "grid": "hex"
+      },
+      {
+        "id": "lozenges",
+        "name": "Rautenrosette",
+        "tag": "6 Spitzen · Wiederholung",
+        "note": "Sechs Rauten treffen sich in der Mitte jeder Rosette. Färben Sie benachbarte Rauten um, um die Strahlen unterschiedlich zu gruppieren.",
+        "grid": "hex"
+      },
+      {
+        "id": "rosette12",
+        "name": "Zwölf Spitzen",
+        "tag": "12 Spitzen · Wiederholung",
+        "note": "Ein zwölfzackiger Stern besetzt die Mitte einer sechseckigen Zelle. Kleine Vierecke verbinden seinen Umriss mit den Zellrändern.",
+        "grid": "hex"
+      },
+      {
+        "id": "octagons",
+        "name": "Achteckmosaik",
+        "tag": "Mosaik · Wiederholung",
+        "note": "Regelmäßige Achtecke wechseln mit Quadraten ab. Das einfache Raster zeigt gut, wie Farbe den Rhythmus einer Fläche verändert.",
+        "grid": "square"
+      },
+      {
+        "id": "medallion10",
+        "name": "Zehnstrahliges Medaillon",
+        "tag": "10 Spitzen · ein Zentrum",
+        "note": "Zehn Spitzen entwickeln sich um einen gemeinsamen Mittelpunkt. Dies ist ein einzelnes Medaillon: Der äußere Ring schließt die Komposition ab.",
+        "grid": "radial"
+      },
+      {
+        "id": "medallion5",
+        "name": "Fünfeckiges Medaillon",
+        "tag": "5 Spitzen · ein Zentrum",
+        "note": "Kleinere Sterne passen in die mittleren Fünfecke der größeren. Jeder folgende Stern ist um 36° gedreht.",
+        "grid": "radial"
+      }
+    ],
+    "settings": [
+      "Palette: Lapislazuli, Garten, Terrakotta, Tinte, Holz, Porzellan",
+      "Zeichenstil: Mosaik, Konturen, Doppelte Kontur",
+      "Maßstab: 70–130%. Linienstärke: 0.6–3. Drehung: 0–60°."
+    ],
+    "hint": "Ein Teil antippen, um seine Farbe zu ändern",
+    "keyboard": "Mit Tab ein Teil auswählen, mit den Pfeiltasten weitergehen. Eingabe oder Leertaste ändert die Farbe.",
+    "actions": "↶ Rückgängig · Farben zurücksetzen · PNG herunterladen · SVG herunterladen",
+    "exportNote": "PNG lässt sich direkt teilen. SVG bleibt in jeder Größe scharf.",
+    "note": "Eigenständige geometrische Kompositionen mit Farbpaletten nach Keramik, Holz und Stein. Sechs Muster wiederholen sich auf einem Raster; zwei Medaillons entwickeln sich um einen gemeinsamen Mittelpunkt."
+  },
+  "reading": {
+    "title": "Weiterführende Literatur",
+    "intro": "Für die erste Zeichenübung eignet sich Brougs praktischer Leitfaden. Die anderen Bücher führen zu architektonischen Vergleichen, komplexeren Konstruktionen oder zur Geschichte des Entwerfens.",
+    "books": [
+      {
+        "author": "Eric Broug · Überarbeitete Ausgabe, 2019",
+        "title": "Islamic Geometric Patterns",
+        "note": "Zum Zeichnen von Hand. Schrittweise Anleitungen für 23 Muster, mit kurzen Angaben zu den Gebäuden und Objekten, aus denen sie stammen. Ein Einstieg mit Bleistift, Lineal und Zirkel.",
+        "url": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1"
+      },
+      {
+        "author": "Eric Broug · 2013",
+        "title": "Islamic Geometric Design",
+        "note": "Zum Vergleich von Musterfamilien. Fotografien und Konstruktionszeichnungen gliedern das Thema in vier-, fünf- und sechsgeteilte sowie kombinierte Systeme. Eine breiter angelegte architektonische Ergänzung zum Praxisbuch.",
+        "url": "https://www.thamesandhudson.com/products/islamic-geometric-design"
+      },
+      {
+        "author": "Jay Bonner · 2017",
+        "title": "Islamic Geometric Patterns: Their Historical Development and Traditional Methods of Construction",
+        "note": "Für genaue Konstruktionsmethoden. Eine umfangreiche Untersuchung der historischen Entwicklung, Musterklassifikation und polygonalen Entwurfsmethoden. Das Kapitel über Computeralgorithmen entstand gemeinsam mit Craig S. Kaplan.",
+        "url": "https://link.springer.com/book/10.1007/978-1-4419-0217-7"
+      },
+      {
+        "author": "Daud Sutton · Wooden Books",
+        "title": "Islamic Design: A Genius for Geometry",
+        "note": "Für einen kurzen Einstieg. Eine kompakte, bebilderte Darstellung geometrischer Muster und ihrer Konstruktion. Sie behandelt auch spirituelle Deutungen der Geometrie.",
+        "url": "https://redwheelweiser.com/book/islamic-design-9781952178054/"
+      },
+      {
+        "author": "Keith Critchlow · Thames & Hudson",
+        "title": "Islamic Patterns: An Analytical and Cosmological Approach",
+        "note": "Für Geometrie und Symbolik. Verbindet geometrische Analyse mit einer kosmologischen Deutung. Die symbolischen Bedeutungen sind als Ansatz des Autors zu lesen, nicht als Beleg für die Absichten aller historischen Hersteller.",
+        "url": "https://www.thamesandhudson.com/products/islamic-patterns"
+      },
+      {
+        "author": "Jules Bourgoin · Dover-Ausgabe",
+        "title": "Arabic Geometrical Pattern and Design",
+        "note": "Für ein Repertoire an Entwürfen. Eine Sammlung geometrischer Tafeln zum Vergleich mit eigenen Zeichnungen. Am besten zusammen mit einem Leitfaden nutzen, der die Konstruktion erklärt.",
+        "url": "https://store.doverpublications.com/products/9780486155319"
+      },
+      {
+        "author": "Gülru Necipoğlu · 1995",
+        "title": "The Topkapi Scroll: Geometry and Ornament in Islamic Architecture",
+        "note": "Für historische Zeichenpraktiken. Eine Studie zu einer erhaltenen architektonischen Entwurfsrolle und den geistigen und praktischen Zusammenhängen des Ornaments. Getty bietet eine kostenlose PDF-Ausgabe an.",
+        "url": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf"
+      },
+      {
+        "author": "Serap Ekizler Sönmez · 2016 · Auf Türkisch",
+        "title": "Mimar Sinan Cami Minberlerinde Beşgen Geometrik Desenler",
+        "note": "Für fünfeckige Ornamente. Eine Spezialstudie zu fünfeckbasierten Entwürfen auf den Minbaren von Sinans Moscheen. Ihre kürzere bebilderte Fensterladen-Studie ist oben im Geometrieabschnitt verlinkt.",
+        "url": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Quellen und Bildnachweise",
+    "paragraphs": [
+      "Die sechs Reproduktionen sind gemeinfreie Bilder des Metropolitan Museum of Art. Jede Bildunterschrift verlinkt den Sammlungsdatensatz mit Datierung, Materialien, Maßen und Inventarnummer. Die Bilder sind in dieser Datei enthalten und lassen sich vergrößern. Ausschnittansichten der Malereien sind gekennzeichnet; „Ganze Seite“ stellt die vollständige Reproduktion wieder her.",
+      "Die historischen und technischen Angaben beruhen auf diesen Datensätzen, den Met-Essays zu geometrischem Ornament [3] und figürlicher Darstellung [2] sowie Serap Ekizler Sönmez’ Studie „The Whispers of a Window Wing in Istanbul“ [4] (Bridges 2020, S. 533–538). Die Buchhinweise beschreiben den Umfang anhand von Verlagsangaben und verfügbaren Inhaltsverzeichnissen."
+    ],
+    "references": {
+      "1": "https://www.metmuseum.org/art/collection/search/449537",
+      "2": "https://www.metmuseum.org/essays/figural-representation-in-islamic-art",
+      "3": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art",
+      "4": "https://archive.bridgesmathart.org/2020/bridges2020-533.pdf",
+      "5": "https://www.metmuseum.org/art/collection/search/444812",
+      "6": "https://www.metmuseum.org/art/collection/search/452203",
+      "7": "https://www.metmuseum.org/art/collection/search/453344",
+      "8": "https://www.metmuseum.org/art/collection/search/446606",
+      "9": "https://www.metmuseum.org/art/collection/search/452672",
+      "10": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-one/featured-works-of-art/image-4",
+      "11": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1",
+      "12": "https://www.thamesandhudson.com/products/islamic-geometric-design",
+      "13": "https://link.springer.com/book/10.1007/978-1-4419-0217-7",
+      "14": "https://redwheelweiser.com/book/islamic-design-9781952178054/",
+      "15": "https://www.thamesandhudson.com/products/islamic-patterns",
+      "16": "https://store.doverpublications.com/products/9780486155319",
+      "17": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf",
+      "18": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+    }
+  }
+}

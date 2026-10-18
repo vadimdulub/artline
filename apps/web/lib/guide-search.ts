@@ -1,4 +1,4 @@
-export type GuideKind = "artist" | "museum" | "using";
+export type GuideKind = "artist" | "museum" | "using" | "interactive";
 export type GuideSearchEntry = {
   slug: string; kind: GuideKind; href: string; title: string; label: string;
   location: string; subtitle: string; image: string; count: number; languages: number;

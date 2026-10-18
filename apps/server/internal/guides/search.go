@@ -95,7 +95,7 @@ func fold(value string) string {
 	return strings.Join(strings.Fields(b.String()), " ")
 }
 func (index *Index) Search(q url.Values) (Page, error) {
-	page := Page{Items: []Entry{}, Counts: map[string]int{"all": 0, "artist": 0, "museum": 0, "using": 0}}
+	page := Page{Items: []Entry{}, Counts: map[string]int{"all": 0, "artist": 0, "museum": 0, "using": 0, "interactive": 0}}
 	for _, key := range []string{"q", "kind", "cursor", "institution"} {
 		if len(q[key]) > 1 {
 			return page, errors.New("Use one value for each guide filter.")
@@ -109,8 +109,8 @@ func (index *Index) Search(q url.Values) (Page, error) {
 	if utf8.RuneCountInString(query) > 200 {
 		return page, errors.New("Keep searches under 200 characters.")
 	}
-	if kind != "" && kind != "artist" && kind != "museum" && kind != "using" {
-		return page, errors.New("Choose artist guides, museum guides or using Artline.")
+	if kind != "" && kind != "artist" && kind != "museum" && kind != "using" && kind != "interactive" {
+		return page, errors.New("Choose artist, museum, interactive or using Artline guides.")
 	}
 	query = fold(query)
 	scopeHash := sha256.Sum256([]byte(index.version + "\x00" + query + "\x00" + kind + "\x00" + institution))

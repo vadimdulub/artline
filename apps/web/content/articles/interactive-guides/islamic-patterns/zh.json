@@ -1,0 +1,419 @@
+{
+  "slug": "islamic-patterns",
+  "locale": "zh",
+  "guideTitle": "伊斯兰几何图案",
+  "eyebrow": "伊斯兰艺术 · 互动导览",
+  "title": "几何如何 成为装饰",
+  "intro": "陶砖铺成的礼拜龛、木制讲坛和石雕窗屏，让几何纹样呈现出不同的形态。沿着线条观察各部分如何衔接，再绘制自己的纹样。",
+  "deck": "了解构图方法，再尝试自己的组合。",
+  "ui": {
+    "guides": "指南",
+    "language": "语言",
+    "construction": "构图",
+    "motif": "纹样",
+    "arrangement": "排列",
+    "turn": "旋转45°",
+    "reset": "重置旋转",
+    "matches": "重合",
+    "notMatch": "不重合",
+    "star": "星形",
+    "grid": "方形网格",
+    "original": "原始配色",
+    "swap": "交换颜色",
+    "outlines": "轮廓",
+    "whole": "整页",
+    "detail": "细节",
+    "enlarge": "放大查看",
+    "close": "关闭图像",
+    "catalogue": "在Artline中查看",
+    "palette": "配色",
+    "style": "绘制样式",
+    "scale": "缩放",
+    "weight": "线条粗细",
+    "rotation": "旋转",
+    "undo": "撤销",
+    "resetColours": "重置颜色",
+    "downloadPNG": "下载PNG",
+    "downloadSVG": "下载SVG",
+    "changed": "已更改图块颜色。",
+    "selected": "已选择图案。",
+    "undone": "已撤销上次颜色更改。",
+    "resetDone": "已恢复原始配色。",
+    "exportReady": "文件已准备好。",
+    "exportError": "无法生成PNG，请尝试SVG。",
+    "pattern": "图案",
+    "palettes": [
+      "青金石",
+      "花园",
+      "陶土",
+      "墨色",
+      "木色",
+      "瓷色"
+    ],
+    "styles": [
+      "马赛克",
+      "轮廓",
+      "双线轮廓"
+    ]
+  },
+  "hero": {
+    "title": "伊斯法罕伊玛米宗教学校的米哈拉布",
+    "caption": "伊朗，纪年为伊斯兰历755年／公元1354—1355年。切割的施釉硅质陶砖嵌入灰浆拼成马赛克；343.1 × 288.7厘米。Harris Brisbane Dick Fund，1939年；藏品编号39.20。",
+    "credit": "大都会艺术博物馆。公有领域。藏品记录 [1]"
+  },
+  "opening": {
+    "title": "从表面看起",
+    "paragraphs": [
+      "上方的礼拜龛高逾三米。浅色文字沿蓝色外框展开。框内的装饰随位置而变化：卷曲的枝茎分布在尖拱上方，星形和多边形则占据凹龛的上部。仅这一件作品，就有几种不同的线条可供目光追随。",
+      "礼拜龛，又称米哈拉布，标示麦加的方向。这件作品来自伊斯法罕的伊玛米宗教学校，年代为1354—1355年。制作者把细小的施釉陶片嵌入灰浆。乍看像是画出来的线条，往往其实是两块陶片边缘的交界。",
+      "几何纹样在这里与书法和植物纹饰并存。在通常避免表现人物和动物的伊斯兰宗教建筑中，这些形式占据重要位置。而在手稿、陶器及其他世俗艺术中，人物和动物形象则十分常见。清真寺的装饰只是这一广阔艺术领域的一部分。大都会博物馆谈伊斯兰艺术中的具象表现 [2]",
+      "星形的角度可以保持不变，而大小、间距、颜色和材料各不相同。这些作品显示，这些选择会如何改变一个表面。拆解纹样，有助于理解其中的关系。"
+    ]
+  },
+  "construction": {
+    "title": "从画线到纹样",
+    "intro": "辅助构图确定点的位置，基本图案选取要保留的线条，排列方式决定图案如何重复。选择一种类型，切换三个状态，看看各自发生了什么变化。",
+    "families": [
+      {
+        "id": "eight",
+        "n": 8,
+        "angle": 45,
+        "title": "八角星",
+        "titles": [
+          "1. 辅助构图 — 等分圆周",
+          "2. 基本图案 — 保留外轮廓",
+          "3. 排列方式 — 把星形放到网格上"
+        ],
+        "text": [
+          "在圆周上每隔45°标一个点，共八个等距点。隔点连接，画出两个相对旋转45°的正方形。",
+          "沿两个重叠正方形的外侧描出轮廓。边线的交点确定星形向内凹入的顶点。",
+          "将同一星形沿水平和垂直方向重复排列。星形之间的空隙也成为纹样的一部分。"
+        ],
+        "facts": [
+          "8等分 · 圆心角45°",
+          "2个正方形 · 8个外侧尖角",
+          "方形网格 · 4个最近邻"
+        ],
+        "foot": "圆周帮助确定点的位置；完成的图案可以去掉这条辅助圆。"
+      },
+      {
+        "id": "six",
+        "n": 6,
+        "angle": 60,
+        "title": "六角星",
+        "titles": [
+          "1. 辅助构图 — 标出六个等距点",
+          "2. 基本图案 — 保留外轮廓",
+          "3. 排列方式 — 错开相邻各行"
+        ],
+        "text": [
+          "圆周上的六个等距点构成一个正六边形。隔点连接，画出两个等边三角形。",
+          "两个三角形的共同外边界形成六角星。边线的交点确定六个内凹顶点。",
+          "每隔一行，横向移动两个中心间距的一半。这些中心点便形成三角网格。"
+        ],
+        "facts": [
+          "6等分 · 圆心角60°",
+          "2个三角形 · 6个外侧尖角",
+          "三角网格 · 6个最近邻"
+        ],
+        "foot": "圆规保持与圆半径相同的开口，即可沿圆周依次标出六等分点。"
+      },
+      {
+        "id": "five",
+        "n": 5,
+        "angle": 72,
+        "title": "五边形团花",
+        "titles": [
+          "1. 辅助构图 — 每隔一个点连线",
+          "2. 基本图案 — 保留星形",
+          "3. 排列方式 — 向中心重复"
+        ],
+        "text": [
+          "在圆周上每隔72°标一个点，共五个点。隔点连接，画出五芒星。",
+          "沿外侧尖角和其间的交点描出轮廓。中心留下一个较小的五边形。",
+          "在中央五边形内再放入一颗星，并继续重复。每颗新星旋转36°，半径约为上一颗的38.2%。"
+        ],
+        "facts": [
+          "5等分 · 圆心角72°",
+          "1个五芒星 · 5个外侧尖角",
+          "共同中心 · 嵌套星形"
+        ],
+        "foot": "这是有边界的独立团花。五重对称装饰也可以通过组合不同形状来覆盖表面。"
+      },
+      {
+        "id": "twelve",
+        "n": 12,
+        "angle": 30,
+        "title": "十二角星",
+        "titles": [
+          "1. 辅助构图 — 把圆周十二等分",
+          "2. 基本图案 — 保留外轮廓",
+          "3. 排列方式 — 错开相邻各行"
+        ],
+        "text": [
+          "每隔30°标一个点，共十二个点。每次沿圆周前进三个点并连线，可得到一个正方形。再从后面两个起点分别重复，得到三个正方形。",
+          "描出组合后的外轮廓。正方形边线的交点确定十二个内凹顶点。",
+          "把星形重复排列在三角网格上。调整间距，会改变其间空白区域的形状。"
+        ],
+        "facts": [
+          "12等分 · 圆心角30°",
+          "3个正方形 · 12个外侧尖角",
+          "三角网格 · 6个最近邻"
+        ],
+        "foot": "星形与网格的对称性不同：星形围绕中心有十二个尖角，网格中每个中心则有六个最近邻。"
+      }
+    ]
+  },
+  "symmetry": {
+    "title": "星形之间的空隙",
+    "intro": "八角星旋转45°后会与自身重合。把相同的星形排列在方形网格上，整个图案则需要旋转90°才能重合。试着同时转动下面两幅图。",
+    "question": "还能重合吗？",
+    "initial": "将两幅图都旋转45°。虚线标示初始位置。",
+    "turned": "旋转45°: 星形与初始轮廓重合，但周围星形的中心已偏离原来的网格位置。",
+    "matched": "排列重合: 在这个角度，两幅图都再次与初始位置重合。",
+    "paragraphs": [
+      "上面的重复排列在各个星形之间留有空隙。密铺要求图形无缝隙、无重叠地覆盖表面，因此中间的空白也必须处理为具体形状。圆、正方形和其他多边形可以组合成更复杂的图案。大都会博物馆谈几何装饰 [3]",
+      "正五边形带来一个特殊问题。它的内角为108°，无法围绕一点拼接而不留下空隙或发生重叠。五重对称装饰可以组合不同形状，也可以围绕共同中心展开，如上方的团花。",
+      "塞拉普·埃基兹勒·瑟恩梅兹研究了伊斯坦布尔苏莱曼尼耶清真寺的一扇木窗板，揭示出更复杂的构造。不同的十角星分布在中央和角部。将部分图案镜像或旋转，可以得到新的构图：形状之间的关系决定了整块窗板的图案如何延伸。阅读配图研究（PDF，第533—538页） [4]"
+    ]
+  },
+  "materials": {
+    "title": "线条也需要制作",
+    "intro": "下面三件作品把几何转化为截然不同的表面。木门需要拼接部件，大理石板需要组合不同颜色，石窗屏则需要凿出孔洞。同一设计换一种材料，就会面对另一组制作问题。",
+    "objects": [
+      {
+        "heading": "木材：纹样跨过接缝",
+        "figure": {
+          "title": "一对讲坛门",
+          "caption": "推定制作于开罗，约1325—1330年。木雕，嵌象牙及木材；196.2 × 88.9厘米。Edward C. Moore收藏，1891年遗赠；藏品编号91.1.2064。",
+          "credit": "大都会艺术博物馆。公有领域。藏品记录 [5]"
+        },
+        "paragraphs": [
+          "一道竖向接缝分开两扇门，星形却跨越接缝继续延伸。浅色镶嵌在棕色木材上勾出细小形状，许多格间又填有雕刻装饰。即使穿插着这些细节，大的几何分区仍清晰可辨。",
+          "这对门原本是敏拜尔的入口，即星期五宣讲所用的讲坛。大都会博物馆修复师梅卡·鲍迈斯特介绍，严密配合的部件和相互咬合的接头不靠钉子或胶水固定，使木材和象牙能够随环境伸缩。几何既属于作品的外观，也属于其组装方式。结构与保护修复 [5]"
+        ]
+      },
+      {
+        "heading": "大理石：色彩区分线条路径",
+        "figure": {
+          "title": "几何交织纹墙板",
+          "caption": "推定制作于开罗，15世纪。彩色大理石马赛克；118.1 × 59.7厘米。The Hagop Kevorkian Fund，1970年捐赠；藏品编号1970.327.8。",
+          "credit": "大都会艺术博物馆。公有领域。藏品记录 [6]"
+        },
+        "paragraphs": [
+          "三组大型放射状星形沿狭长墙板纵向排列。浅色石带通过更密集的小多边形网络把它们连接起来；红色和深色石材区分石带间的空间。看似相互穿越的线条，实际由单独的石片嵌合而成。",
+          "这块墙板被归于15世纪的开罗，其原属建筑尚不明确。大都会博物馆认为，它可能位于墙体下部，供人近距离观看。宽厚的边框为图案划定了边界，否则图案似乎还可以继续延伸。博物馆的说明 [6]"
+        ]
+      },
+      {
+        "heading": "砂岩：孔洞引入光线",
+        "figure": {
+          "title": "镂空石窗屏（jali）",
+          "caption": "印度，16世纪后半叶。红砂岩雕刻；185.4 × 130.3厘米。Rogers Fund，1993年；藏品编号1993.67.2。",
+          "credit": "大都会艺术博物馆。公有领域。藏品记录 [7]"
+        },
+        "paragraphs": [
+          "这件印度jali，即镂空窗屏，照片中的深色图形其实是孔洞。孔洞之间保留着细窄的石条网络。宽大的尖拱打断这一网络，把主体区域与上方较小的区域分开。",
+          "窗屏高约1.85米。一侧的风化痕迹使大都会博物馆判断，它很可能曾属于一扇外窗。在那样的位置，孔洞引入光线，并在室内投下不断变化的纹样。石材保持不动，影子却在移动。窗屏的建筑环境 [7]"
+        ]
+      }
+    ]
+  },
+  "paintings": {
+    "title": "绘画中的纹样",
+    "intro": "在这两幅16世纪手稿绘画中，装饰帮助观者分辨不同的表面。细小几何单元、精密网纹和卷曲枝茎描述着房间的不同部分。打开局部，看看画家如何在墙板或边饰处改变纹样。",
+    "works": [
+      {
+        "title": "谢赫·扎达，《巴赫拉姆·古尔星期三在绿松石宫》",
+        "caption": "尼扎米《五卷诗》手稿第216叶。赫拉特，纪年为伊斯兰历931年／公元1524—1525年。纸本，墨、不透明水彩、银与金。页面：32.2 × 22.2厘米。",
+        "credit": "大都会艺术博物馆。Alexander Smith Cochran，1913年捐赠；藏品编号13.228.7.10。公有领域。",
+        "record": "藏品记录与图像来源 [8]",
+        "description": "坐着的两人位于乐师上方的房间内。两侧是蓝色几何墙板；一条狭窄的纹饰带把房间与下方铺地分开。",
+        "details": [
+          "墙面陶砖: 局部：蓝色与绿松石色六边形在两块墙板上重复。倾斜的上沿帮助区分房间侧面与中央墙板。",
+          "下方边饰: 局部：坐着的人物下方是一条狭窄的几何饰带。它把抬高的房间与下方更大、更简洁的铺地纹样分开。"
+        ]
+      },
+      {
+        "title": "《优素福与祖莱哈》，画家身份不详",
+        "caption": "萨迪《果园》手稿第51叶正面。布哈拉，约1525—1535年。纸本，墨、不透明水彩与金。页面：27.9 × 18.4厘米。",
+        "credit": "大都会艺术博物馆。1974年购藏，资金来自Louis V. Bell Fund及The Vincent Astor Foundation捐赠；藏品编号1974.294.4。公有领域。",
+        "record": "藏品记录与图像来源 [9]",
+        "description": "人物身后的浅色墙板布满细密几何网纹。开花枝条铺展在上方的金色墙面，更小的植物则填入下方的深色饰带。",
+        "details": [
+          "墙面网纹: 局部：细直线在浅色墙板上交织。红金色边框把这片几何网纹与上方开花的枝条、两侧装饰过的门分隔开来。",
+          "植物边饰: 局部：房间下方的深色饰带中有分枝的茎叶。它们的曲线与上方浅色墙板上的直线形成对照。"
+        ]
+      }
+    ],
+    "closing": "在谢赫·扎达笔下的宫殿中，目光从内室移向乐师所在空间时，纹样也随之改变。在《优素福与祖莱哈》中，人物身后的浅色几何网纹与上方较大的花卉形成对照。几何与人物、文字、植物装饰共同构成画面。"
+  },
+  "colour": {
+    "title": "同样的线条，不同的纹样",
+    "paragraphs": [
+      "伊斯法罕米哈拉布上的浅色铭文从深蓝色背景中凸显出来。绿松石色、黄色和绿色把周围装饰分成更小的形状。色彩帮助观者在同一表面上辨认几种不同的装饰。米哈拉布的色彩与铭文 [10]",
+      "比较下面两幅图。交换星形与背景的颜色，可能改变最先吸引目光的形状。去掉填色后，同样的构造便以线条网络的形式显现。"
+    ],
+    "question": "改变颜色，保留线条",
+    "states": [
+      "已交换星形与背景的颜色: 形状和间距完全相同。改变的只有星形与背景的颜色。",
+      "已移除填色: 没有填色时，星形仅由轮廓界定。沿线条两侧观察空隙。",
+      "原始颜色: 两幅图采用相同配色。交换颜色或去掉填色即可比较。"
+    ],
+    "closing": "试过比较之后，再看砂岩窗屏。照片中的孔洞看起来像深色填充；在建筑中，同样的形状却让光线通过，在室内投下纹样。材料改变了图案能够发挥的作用。"
+  },
+  "studio": {
+    "title": "制作自己的纹样",
+    "intro": "从现成的构图开始。选择配色，调整大小，或只保留轮廓。点击单个部件即可改变颜色。",
+    "choose": "选择基础图案",
+    "patterns": [
+      {
+        "id": "starcross",
+        "name": "星形与十字",
+        "tag": "8角 · 重复排列",
+        "note": "八角星和十字形部件共同铺满表面。试着用颜色只突出其中一种图案。",
+        "grid": "square"
+      },
+      {
+        "id": "rosette8",
+        "name": "八角花饰",
+        "tag": "8角 · 重复排列",
+        "note": "每颗星周围有八片花瓣。相邻花饰之间是旋转45°的小正方形。",
+        "grid": "square"
+      },
+      {
+        "id": "hexstar",
+        "name": "星形网格",
+        "tag": "6角 · 重复排列",
+        "note": "六角星嵌在六边形单元内，三角形填满星形间的空隙。",
+        "grid": "hex"
+      },
+      {
+        "id": "lozenges",
+        "name": "菱形花饰",
+        "tag": "6角 · 重复排列",
+        "note": "六个菱形交汇于每朵花饰的中心。改变相邻菱形的颜色，尝试不同的尖角分组方式。",
+        "grid": "hex"
+      },
+      {
+        "id": "rosette12",
+        "name": "十二角",
+        "tag": "12角 · 重复排列",
+        "note": "十二角星占据六边形单元的中心。小四边形把星形轮廓与单元边缘连接起来。",
+        "grid": "hex"
+      },
+      {
+        "id": "octagons",
+        "name": "八边形拼花",
+        "tag": "拼花 · 重复排列",
+        "note": "正八边形与正方形交替排列。这个简洁网格清楚地显示色彩如何改变表面的节奏。",
+        "grid": "square"
+      },
+      {
+        "id": "medallion10",
+        "name": "十角团花",
+        "tag": "10角 · 单一中心",
+        "note": "十个尖角围绕共同中心展开。这是一枚独立团花，外圈为构图收边。",
+        "grid": "radial"
+      },
+      {
+        "id": "medallion5",
+        "name": "五边形团花",
+        "tag": "5角 · 单一中心",
+        "note": "较小的星形嵌入大星形中央的五边形。每一层相对上一层旋转36°。",
+        "grid": "radial"
+      }
+    ],
+    "settings": [
+      "配色: 青金石, 花园, 陶土, 墨色, 木色, 瓷色",
+      "绘制样式: 拼花, 仅轮廓, 双线轮廓",
+      "缩放: 70–130%. 线条粗细: 0.6–3. 旋转: 0–60°."
+    ],
+    "hint": "点击部件改变颜色",
+    "keyboard": "用Tab键选中部件，再用方向键移动。按Enter或空格键改变颜色。",
+    "actions": "↶ 撤销 · 重置填色 · 下载PNG · 下载SVG",
+    "exportNote": "PNG适合直接分享。SVG可以放大而不失清晰度。",
+    "note": "这些独立创作的几何构图，采用了受陶砖、木材和石材启发的配色。六种纹样沿网格重复，两种团花围绕单一中心展开。"
+  },
+  "reading": {
+    "title": "延伸阅读",
+    "intro": "初次动手绘图，可以从布鲁格的实用指南开始。其余书籍涉及建筑比较、更复杂的作图方法或设计史。",
+    "books": [
+      {
+        "author": "Eric Broug · 修订版，2019年",
+        "title": "Islamic Geometric Patterns",
+        "note": "适合手绘入门。分步介绍23种纹样，并简述其来源建筑和器物。准备铅笔、直尺和圆规，即可开始。",
+        "url": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1"
+      },
+      {
+        "author": "Eric Broug · 2013",
+        "title": "Islamic Geometric Design",
+        "note": "适合比较纹样类型。通过照片和作图示意，将内容分为四分、五分、六分及组合体系。它从更广泛的建筑视角补充了实用指南。",
+        "url": "https://www.thamesandhudson.com/products/islamic-geometric-design"
+      },
+      {
+        "author": "Jay Bonner · 2017",
+        "title": "Islamic Geometric Patterns: Their Historical Development and Traditional Methods of Construction",
+        "note": "适合深入研究作图方法。系统讨论历史发展、纹样分类和多边形设计。计算机算法章节与Craig S. Kaplan合著。",
+        "url": "https://link.springer.com/book/10.1007/978-1-4419-0217-7"
+      },
+      {
+        "author": "Daud Sutton · Wooden Books",
+        "title": "Islamic Design: A Genius for Geometry",
+        "note": "适合快速入门。以简明图文介绍几何纹样及其画法，也涉及对几何的精神性解读。",
+        "url": "https://redwheelweiser.com/book/islamic-design-9781952178054/"
+      },
+      {
+        "author": "Keith Critchlow · Thames & Hudson",
+        "title": "Islamic Patterns: An Analytical and Cosmological Approach",
+        "note": "适合探讨几何与象征。把几何分析与宇宙论解释结合起来。其中的象征意义属于作者的解释路径，不能据此认定所有历史制作者都怀有相同意图。",
+        "url": "https://www.thamesandhudson.com/products/islamic-patterns"
+      },
+      {
+        "author": "Jules Bourgoin · Dover版",
+        "title": "Arabic Geometrical Pattern and Design",
+        "note": "适合查阅图案。收录几何图版，可与自己的绘图对照。最好搭配讲解作图过程的指南使用。",
+        "url": "https://store.doverpublications.com/products/9780486155319"
+      },
+      {
+        "author": "Gülru Necipoğlu · 1995",
+        "title": "The Topkapi Scroll: Geometry and Ornament in Islamic Architecture",
+        "note": "适合了解历史绘图实践。研究一份保存至今的建筑图样卷轴，以及装饰的思想和实践背景。Getty提供免费PDF版本。",
+        "url": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf"
+      },
+      {
+        "author": "Serap Ekizler Sönmez · 2016年 · 土耳其语",
+        "title": "Mimar Sinan Cami Minberlerinde Beşgen Geometrik Desenler",
+        "note": "适合研究五边形装饰。专门研究锡南设计的清真寺讲坛上以五边形为基础的纹样。上方几何章节另有作者关于木窗板的较短配图研究链接。",
+        "url": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+      }
+    ]
+  },
+  "sources": {
+    "title": "资料来源与图像说明",
+    "paragraphs": [
+      "六幅复制图均为大都会艺术博物馆提供的公有领域图像。各图注链接至对应藏品记录，包含年代、材料、尺寸和藏品编号。图像已包含在此文件中，可以放大查看。绘画查看器会标明裁切的局部；点击“整页”可恢复完整图像。",
+      "文中的历史与技术信息依据上述藏品记录、大都会博物馆关于几何装饰 [3]和具象表现 [2]的文章，以及塞拉普·埃基兹勒·瑟恩梅兹的研究“The Whispers of a Window Wing in Istanbul” [4]（Bridges 2020，第533—538页）。书籍简介依据出版方资料及可查阅的目录撰写。"
+    ],
+    "references": {
+      "1": "https://www.metmuseum.org/art/collection/search/449537",
+      "2": "https://www.metmuseum.org/essays/figural-representation-in-islamic-art",
+      "3": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art",
+      "4": "https://archive.bridgesmathart.org/2020/bridges2020-533.pdf",
+      "5": "https://www.metmuseum.org/art/collection/search/444812",
+      "6": "https://www.metmuseum.org/art/collection/search/452203",
+      "7": "https://www.metmuseum.org/art/collection/search/453344",
+      "8": "https://www.metmuseum.org/art/collection/search/446606",
+      "9": "https://www.metmuseum.org/art/collection/search/452672",
+      "10": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-one/featured-works-of-art/image-4",
+      "11": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1",
+      "12": "https://www.thamesandhudson.com/products/islamic-geometric-design",
+      "13": "https://link.springer.com/book/10.1007/978-1-4419-0217-7",
+      "14": "https://redwheelweiser.com/book/islamic-design-9781952178054/",
+      "15": "https://www.thamesandhudson.com/products/islamic-patterns",
+      "16": "https://store.doverpublications.com/products/9780486155319",
+      "17": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf",
+      "18": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+    }
+  }
+}

@@ -37,6 +37,19 @@ def generate():
                 location=artist.get('lifeDates') or ', '.join(filter(None, [item['city'], item['country']])),
                 subtitle=item['subtitle'], image=item['image'], count=item['count'],
                 languages=len(item['locales']), institutions=institutions.get(slug, []) if kind == 'museum' else [], search=' '.join(dict.fromkeys(text))))
+    for item in read(CONTENT / 'interactive-guides' / 'index.json'):
+        slug = item['slug']
+        assert slug not in slugs, slug
+        slugs.add(slug)
+        text = [item['title'], item['subtitle'], *item['keywords']]
+        for locale in item['locales']:
+            edition = read(CONTENT / 'interactive-guides' / slug / (locale + '.json'))
+            text += [edition['guideTitle'], edition['title'], edition['intro']]
+            text += [pattern['name'] for pattern in edition['studio']['patterns']]
+        entries.append(dict(slug=slug, kind='interactive', href='/guides/'+slug,
+            title=item['title'], label=item['title'], location='Art and geometry',
+            subtitle=item['subtitle'], image=item['image'], count=item['count'],
+            languages=len(item['locales']), institutions=[], search=' '.join(dict.fromkeys(text))))
     timeline = [read(CONTENT / 'timeline-guide' / (locale + '.json')) for locale in ('en', 'ru', 'it', 'de', 'zh', 'fr', 'es', 'pt', 'ja', 'ar')]
     english = timeline[0]
     timeline_text = []

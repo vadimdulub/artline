@@ -1,5 +1,7 @@
 import { discoveryRequest, type SEOEntry } from "@/lib/seo-api";
 import { explorerPages, publicPages, sitemapResponse, sitemapUnavailable, sitemapXML } from "@/lib/sitemap";
+import { patternAssets, patternGuidePath } from "@/lib/pattern-guide";
+import { guideLanguages } from "@/lib/museum-guide-types";
 import { getGuideIndex, getMuseumGuide } from "@/lib/museum-guides";
 import { museumGuideSitemapEntry } from "@/lib/museum-guide-seo";
 
@@ -12,7 +14,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ sit
       if (!edition) throw new Error("Indexed museum guide edition is missing");
       return museumGuideSitemapEntry(edition);
     }));
-    return sitemapResponse(sitemapXML([...publicPages, ...explorerPages, ...guides]));
+    return sitemapResponse(sitemapXML([...publicPages, ...explorerPages, ...guides, ...Object.keys(guideLanguages).map(locale => ({ path: patternGuidePath(locale), lastModified: "2026-10-18", images: patternAssets.map(asset => asset.variants[1].url) }))]));
   }
   const match = /^sitemap-(artists|artworks)-([0-9a-f]{3})\.xml$/.exec(sitemapFile);
   if (!match) return new Response("Not found", { status: 404 });

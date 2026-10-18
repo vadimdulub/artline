@@ -1,0 +1,419 @@
+{
+  "slug": "islamic-patterns",
+  "locale": "fr",
+  "guideTitle": "Motifs géométriques islamiques",
+  "eyebrow": "Art islamique · Un guide interactif",
+  "title": "Comment la géométrie devient ornement",
+  "intro": "Une niche de prière revêtue de céramique, une chaire en bois et un écran de pierre donnent des formes différentes aux motifs géométriques. Suivez leurs lignes, observez l’assemblage des pièces, puis dessinez votre propre composition.",
+  "deck": "Explorez la construction, puis composez à votre façon.",
+  "ui": {
+    "guides": "Guides",
+    "language": "Langue",
+    "construction": "Construction",
+    "motif": "Motif",
+    "arrangement": "Disposition",
+    "turn": "Tourner de 45°",
+    "reset": "Réinitialiser la rotation",
+    "matches": "Coïncide",
+    "notMatch": "Ne coïncide pas",
+    "star": "Étoile",
+    "grid": "Grille carrée",
+    "original": "Couleurs d’origine",
+    "swap": "Inverser les couleurs",
+    "outlines": "Contours",
+    "whole": "Page entière",
+    "detail": "Détail",
+    "enlarge": "Agrandir",
+    "close": "Fermer l’image",
+    "catalogue": "Voir dans Artline",
+    "palette": "Palette",
+    "style": "Style du dessin",
+    "scale": "Échelle",
+    "weight": "Épaisseur des lignes",
+    "rotation": "Rotation",
+    "undo": "Annuler",
+    "resetColours": "Réinitialiser les couleurs",
+    "downloadPNG": "Télécharger PNG",
+    "downloadSVG": "Télécharger SVG",
+    "changed": "Couleur modifiée.",
+    "selected": "Motif sélectionné.",
+    "undone": "Dernière modification annulée.",
+    "resetDone": "Couleurs d’origine rétablies.",
+    "exportReady": "Fichier prêt.",
+    "exportError": "Impossible de créer le PNG. Essayez le SVG.",
+    "pattern": "Motif",
+    "palettes": [
+      "Lapis",
+      "Jardin",
+      "Terre cuite",
+      "Encre",
+      "Bois",
+      "Porcelaine"
+    ],
+    "styles": [
+      "Mosaïque",
+      "Contours",
+      "Double contour"
+    ]
+  },
+  "hero": {
+    "title": "Mihrab de la madrasa Imami, Ispahan",
+    "caption": "Iran, daté de 755 H / 1354–55 apr. J.-C. Mosaïque de carreaux découpés en céramique siliceuse glaçurée, assemblés dans du mortier ; 343,1 × 288,7 cm. Harris Brisbane Dick Fund, 1939 ; 39.20.",
+    "credit": "Metropolitan Museum of Art. Domaine public. Notice de l’œuvre [1]"
+  },
+  "opening": {
+    "title": "Commencez par la surface",
+    "paragraphs": [
+      "La niche de prière ci-dessus mesure plus de trois mètres de haut. Une inscription claire court sur son encadrement extérieur bleu. À l’intérieur, le décor change : des tiges sinueuses s’étendent au-dessus de l’arc brisé, tandis que des étoiles et des polygones occupent le haut du renfoncement. Un seul objet offre déjà plusieurs types de lignes à suivre.",
+      "Une niche de prière, ou mihrab, indique la direction de La Mecque. Celle-ci provient de la madrasa Imami, une école religieuse d’Ispahan, et date de 1354–55. Ses artisans ont ajusté de petits fragments de céramique glaçurée dans du mortier. Ce qui semble d’abord être une ligne dessinée est souvent la rencontre des bords de deux pièces.",
+      "La géométrie côtoie ici la calligraphie et le décor végétal. Ces formes ont pris une place majeure dans l’architecture religieuse islamique, où les figures humaines et animales étaient généralement évitées. Elles étaient en revanche largement représentées dans les manuscrits, la céramique et d’autres arts profanes. Le décor d’une mosquée appartient à ce champ artistique bien plus vaste. Le Met sur la figure dans l’art islamique [2]",
+      "Les angles d’une étoile peuvent rester identiques quand sa taille, son espacement, sa couleur et son matériau changent. Ces objets montrent combien ces choix modifient une surface. Décomposer un motif aide à les comprendre."
+    ]
+  },
+  "construction": {
+    "title": "Du tracé au motif",
+    "intro": "La construction place les points. Le motif sélectionne les lignes à conserver. L’agencement détermine leur répétition. Choisissez une famille, puis passez d’un état à l’autre pour voir ce qui change.",
+    "families": [
+      {
+        "id": "eight",
+        "n": 8,
+        "angle": 45,
+        "title": "Étoile à huit branches",
+        "titles": [
+          "1. Construction — Divisez le cercle",
+          "2. Motif — Gardez le contour extérieur",
+          "3. Agencement — Placez les étoiles sur une grille"
+        ],
+        "text": [
+          "Marquez huit points régulièrement espacés de 45°. Reliez un point sur deux pour tracer deux carrés, tournés de 45° l’un par rapport à l’autre.",
+          "Suivez le contour extérieur des deux carrés superposés. Leurs intersections situent les sommets rentrants de l’étoile.",
+          "Répétez la même étoile en rangées horizontales et verticales. Les espaces entre les étoiles font aussi partie du motif."
+        ],
+        "facts": [
+          "8 divisions · 45° au centre",
+          "2 carrés · 8 pointes extérieures",
+          "Grille carrée · 4 voisins les plus proches"
+        ],
+        "foot": "Le cercle sert à placer les points ; le motif achevé peut s’en passer."
+      },
+      {
+        "id": "six",
+        "n": 6,
+        "angle": 60,
+        "title": "Étoile à six branches",
+        "titles": [
+          "1. Construction — Marquez six intervalles égaux",
+          "2. Motif — Gardez le contour extérieur",
+          "3. Agencement — Décalez une rangée sur deux"
+        ],
+        "text": [
+          "Six points régulièrement espacés forment un hexagone. Reliez un point sur deux pour tracer deux triangles équilatéraux.",
+          "Le contour extérieur des triangles forme une étoile à six branches. Leurs intersections situent les six sommets rentrants.",
+          "Décalez une rangée sur deux de la moitié de la distance entre deux centres. Les centres forment alors une grille triangulaire."
+        ],
+        "facts": [
+          "6 divisions · 60° au centre",
+          "2 triangles · 6 pointes extérieures",
+          "Grille triangulaire · 6 voisins les plus proches"
+        ],
+        "foot": "Un compas ouvert au rayon du cercle permet de reporter les six divisions."
+      },
+      {
+        "id": "five",
+        "n": 5,
+        "angle": 72,
+        "title": "Médaillon pentagonal",
+        "titles": [
+          "1. Construction — Reliez un point sur deux",
+          "2. Motif — Gardez l’étoile",
+          "3. Agencement — Répétez vers le centre"
+        ],
+        "text": [
+          "Placez cinq points sur le cercle, espacés de 72°. Reliez un point sur deux pour tracer un pentagramme.",
+          "Suivez le contour passant par les pointes extérieures et leurs intersections. Un pentagone plus petit subsiste au centre.",
+          "Placez une autre étoile dans le pentagone central, puis recommencez. Chaque nouvelle étoile tourne de 36° et possède un rayon égal à environ 38,2 % du précédent."
+        ],
+        "facts": [
+          "5 divisions · 72° au centre",
+          "1 pentagramme · 5 pointes extérieures",
+          "Un centre commun · étoiles emboîtées"
+        ],
+        "foot": "Ce médaillon est une composition finie. L’ornement à symétrie d’ordre cinq peut aussi combiner des formes pour couvrir une surface."
+      },
+      {
+        "id": "twelve",
+        "n": 12,
+        "angle": 30,
+        "title": "Étoile à douze branches",
+        "titles": [
+          "1. Construction — Divisez le cercle en douze",
+          "2. Motif — Gardez le contour extérieur",
+          "3. Agencement — Décalez une rangée sur deux"
+        ],
+        "text": [
+          "Marquez douze points espacés de 30°. Relier un point sur trois forme un carré. Recommencez depuis les deux points de départ suivants pour obtenir trois carrés.",
+          "Suivez le contour extérieur commun. Les intersections des côtés des carrés situent les douze sommets rentrants.",
+          "Répétez les étoiles sur une grille triangulaire. Modifier leur espacement change les formes ouvertes entre elles."
+        ],
+        "facts": [
+          "12 divisions · 30° au centre",
+          "3 carrés · 12 pointes extérieures",
+          "Grille triangulaire · 6 voisins les plus proches"
+        ],
+        "foot": "L’étoile et la grille ont des symétries différentes : douze branches autour d’un centre, six voisins les plus proches dans le champ."
+      }
+    ]
+  },
+  "symmetry": {
+    "title": "Les espaces entre les étoiles",
+    "intro": "Une étoile à huit branches se superpose à elle-même après une rotation de 45°. Disposez des étoiles identiques sur une grille carrée : l’ensemble doit tourner de 90° pour coïncider. Essayez les deux dessins ensemble.",
+    "question": "Les dessins coïncident-ils ?",
+    "initial": "Tournez les deux dessins de 45°. Les pointillés indiquent leurs positions initiales.",
+    "turned": "Tourner de 45°: L’étoile coïncide avec son contour initial. Les centres des étoiles qui l’entourent se sont écartés de la grille d’origine.",
+    "matched": "Même agencement: À cet angle, les deux dessins coïncident de nouveau avec leurs positions initiales.",
+    "paragraphs": [
+      "Les champs répétés ci-dessus laissent des espaces entre les étoiles. Un pavage couvre une surface sans lacunes ni chevauchements : les espaces intermédiaires doivent donc eux aussi former des pièces. Cercles, carrés et autres polygones peuvent se combiner en dessins plus complexes. Le Met sur l’ornement géométrique [3]",
+      "Les pentagones réguliers posent un problème particulier. Leurs angles intérieurs de 108° ne peuvent se rejoindre autour d’un point sans laisser de vide ou se chevaucher. Un ornement à symétrie d’ordre cinq peut combiner plusieurs formes ou se développer autour d’un centre commun, comme le médaillon ci-dessus.",
+      "L’étude de Serap Ekizler Sönmez sur un volet en bois de la mosquée Süleymaniye, à Istanbul, examine un système plus élaboré. Des étoiles à dix branches de formes différentes occupent le centre et les angles. La réflexion et la rotation de certaines parties produisent d’autres compositions : les relations entre les formes déterminent les prolongements possibles du panneau. Lire l’étude illustrée (PDF, p. 533–538) [4]"
+    ]
+  },
+  "materials": {
+    "title": "Une ligne se fabrique",
+    "intro": "Les trois objets suivants donnent à la géométrie des surfaces très différentes. Les portes assemblent des pièces ; le panneau de marbre, des couleurs ; l’écran de pierre est percé d’ouvertures. Un dessin adapté à un matériau soulève d’autres difficultés lorsqu’il passe à un autre.",
+    "objects": [
+      {
+        "heading": "Bois : le motif traverse le joint",
+        "figure": {
+          "title": "Paire de portes de minbar",
+          "caption": "Attribuées au Caire, vers 1325–30. Bois sculpté, incrustations d’ivoire et de bois ; 196,2 × 88,9 cm. Collection Edward C. Moore, legs, 1891 ; 91.1.2064.",
+          "credit": "Metropolitan Museum of Art. Domaine public. Notice de l’œuvre [5]"
+        },
+        "paragraphs": [
+          "Un joint vertical divise ces portes, mais les étoiles le franchissent. Des incrustations claires détachent de petites formes sur le bois brun, et un décor sculpté remplit de nombreux compartiments. Les grandes divisions géométriques restent lisibles parmi ces détails plus fins.",
+          "Ces portes donnaient accès à un minbar, la chaire utilisée pour le sermon du vendredi. Mecka Baumeister, restauratrice au Met, décrit comment leurs pièces ajustées et leurs assemblages tiennent sans clous ni colle, permettant au bois et à l’ivoire de se dilater et de se contracter. La géométrie appartient autant à l’assemblage qu’à son apparence. Construction et conservation [5]"
+        ]
+      },
+      {
+        "heading": "Marbre : la couleur distingue les parcours",
+        "figure": {
+          "title": "Panneau mural à entrelacs géométriques",
+          "caption": "Attribué au Caire, XVe siècle. Mosaïque de marbres polychromes ; 118,1 × 59,7 cm. Don de The Hagop Kevorkian Fund, 1970 ; 1970.327.8.",
+          "credit": "Metropolitan Museum of Art. Domaine public. Notice de l’œuvre [6]"
+        },
+        "paragraphs": [
+          "Trois grandes formes rayonnantes se succèdent sur ce panneau étroit. Des bandes claires les relient à travers un réseau plus dense de petits polygones ; les pierres rouges et sombres distinguent les espaces entre ces bandes. Une ligne qui semble en croiser une autre se compose de pièces séparées, ajustées dans la surface.",
+          "Le panneau est attribué au Caire du XVe siècle. Son bâtiment d’origine est inconnu. Le Met suggère qu’il occupait le bas d’un mur, où le motif aurait été vu de près. Son large encadrement donne une limite nette à un dessin qui pourrait autrement sembler se prolonger. L’interprétation du musée [6]"
+        ]
+      },
+      {
+        "heading": "Grès : les ouvertures laissent passer la lumière",
+        "figure": {
+          "title": "Écran de fenêtre ajouré (jali)",
+          "caption": "Inde, seconde moitié du XVIe siècle. Grès rouge sculpté ; 185,4 × 130,3 cm. Rogers Fund, 1993 ; 1993.67.2.",
+          "credit": "Metropolitan Museum of Art. Domaine public. Notice de l’œuvre [7]"
+        },
+        "paragraphs": [
+          "Dans ce jali indien, ou écran ajouré, les formes sombres de la photographie sont des ouvertures. Un réseau d’étroites bandes de pierre subsiste entre elles. Le grand arc brisé interrompt ce réseau et sépare le champ principal des espaces plus petits situés au-dessus.",
+          "L’écran mesure environ 1,85 mètre de haut. L’érosion d’une face a conduit le Met à y voir un élément probable de fenêtre extérieure. Dans ce contexte, les ouvertures laissaient entrer la lumière et projetaient un motif changeant dans la pièce. La pierre restait fixe tandis que son ombre se déplaçait. Le contexte architectural de l’écran [7]"
+        ]
+      }
+    ]
+  },
+  "paintings": {
+    "title": "Le motif dans la peinture",
+    "intro": "Dans ces deux peintures de manuscrits du XVIe siècle, l’ornement aide à distinguer les surfaces. Petites unités géométriques, réseaux fins et tiges sinueuses décrivent différentes parties d’une pièce. Ouvrez un détail pour observer le changement de motif dans un panneau mural ou une bordure.",
+    "works": [
+      {
+        "title": "Shaikh Zada, Bahram Gur au Palais turquoise le mercredi",
+        "caption": "Folio 216 d’un Khamsa de Nizami. Hérat, daté de 931 H / 1524–25 apr. J.-C. Encre, aquarelle opaque, argent et or sur papier. Feuille : 32,2 × 22,2 cm.",
+        "credit": "Metropolitan Museum of Art. Don d’Alexander Smith Cochran, 1913 ; 13.228.7.10. Domaine public.",
+        "record": "Notice de collection et source de l’image [8]",
+        "description": "Le couple assis occupe une pièce au-dessus des musiciens. Des panneaux géométriques bleus l’encadrent ; une étroite bande décorée sépare la pièce du dallage inférieur.",
+        "details": [
+          "Carreaux muraux: Détail : des hexagones bleus et turquoise se répètent sur les deux panneaux muraux. Leurs bords supérieurs inclinés distinguent les côtés de la pièce du panneau central.",
+          "Bordure inférieure: Détail : une étroite bande géométrique court sous les personnages assis. Elle sépare leur pièce surélevée du dallage inférieur, au motif plus grand et plus simple."
+        ]
+      },
+      {
+        "title": "Yusuf et Zulaikha, peintre non identifié",
+        "caption": "Folio 51r d’un Bustan de Sa’di. Boukhara, vers 1525–35. Encre, aquarelle opaque et or sur papier. Feuille : 27,9 × 18,4 cm.",
+        "credit": "Metropolitan Museum of Art. Achat, Louis V. Bell Fund et don de The Vincent Astor Foundation, 1974 ; 1974.294.4. Domaine public.",
+        "record": "Notice de collection et source de l’image [9]",
+        "description": "Un fin réseau géométrique remplit le panneau clair derrière les personnages. Des branches fleuries couvrent le mur doré au-dessus, et de plus petites plantes occupent la bande sombre en dessous.",
+        "details": [
+          "Réseau mural: Détail : de fines lignes droites s’entrecroisent sur le panneau clair. Un cadre rouge et or sépare ce réseau géométrique des branches fleuries au-dessus et des portes décorées de part et d’autre.",
+          "Bordure florale: Détail : la bande sombre sous la pièce contient des tiges ramifiées et des feuilles. Leurs courbes contrastent avec les lignes droites du panneau clair au-dessus."
+        ]
+      }
+    ],
+    "closing": "Dans le palais de Shaikh Zada, le motif change lorsque le regard passe de la pièce intérieure à l’espace des musiciens. Dans Yusuf et Zulaikha, le fin réseau clair derrière les personnages contraste avec les grandes fleurs au-dessus. La géométrie prend place aux côtés des figures, de l’écriture et du décor végétal."
+  },
+  "colour": {
+    "title": "Les mêmes lignes, un autre motif",
+    "paragraphs": [
+      "Dans le mihrab d’Ispahan, les inscriptions claires se détachent sur un fond bleu sombre. Turquoise, jaune et vert divisent l’ornement environnant en formes plus petites. La couleur aide à distinguer plusieurs types de décor sur une même surface. Couleurs et inscriptions du mihrab [10]",
+      "Comparez les deux dessins. Inverser les couleurs des étoiles et du fond peut modifier les formes qui attirent d’abord le regard. Sans les aplats, la même construction apparaît comme un réseau de lignes."
+    ],
+    "question": "Changez la couleur, gardez le dessin",
+    "states": [
+      "Couleurs des étoiles et du fond inversées: La forme et l’espacement sont identiques. Seules les couleurs des étoiles et du fond ont changé.",
+      "Aplats supprimés: Sans aplat, l’étoile est définie par son contour. Suivez les espaces de chaque côté de cette ligne.",
+      "Couleurs d’origine: Les deux dessins utilisent la même palette. Inversez les couleurs ou supprimez les aplats pour comparer."
+    ],
+    "closing": "Revenez à l’écran de grès après cette comparaison. Sur la photographie, ses ouvertures se lisent comme des aplats sombres. Dans le bâtiment, les mêmes formes laissaient passer la lumière et projetaient un motif dans la pièce. Le matériau change les possibilités du dessin."
+  },
+  "studio": {
+    "title": "Créez votre propre motif",
+    "intro": "Partez d’une composition existante. Choisissez une palette, modifiez l’échelle ou gardez uniquement les contours. Cliquez sur chaque pièce pour changer sa couleur.",
+    "choose": "Choisissez une base",
+    "patterns": [
+      {
+        "id": "starcross",
+        "name": "Étoiles et croix",
+        "tag": "8 branches · répétition",
+        "note": "Les étoiles à huit branches et les pièces en croix remplissent ensemble la surface. Essayez de faire ressortir un seul de ces deux motifs par la couleur.",
+        "grid": "square"
+      },
+      {
+        "id": "rosette8",
+        "name": "Rosace à huit branches",
+        "tag": "8 branches · répétition",
+        "note": "Huit pétales entourent chaque étoile. De petits carrés tournés de 45° se placent entre les rosaces voisines.",
+        "grid": "square"
+      },
+      {
+        "id": "hexstar",
+        "name": "Réseau d’étoiles",
+        "tag": "6 branches · répétition",
+        "note": "Les étoiles à six branches s’inscrivent dans des cellules hexagonales. Des triangles remplissent leurs intervalles.",
+        "grid": "hex"
+      },
+      {
+        "id": "lozenges",
+        "name": "Rosace de losanges",
+        "tag": "6 branches · répétition",
+        "note": "Six losanges se rejoignent au centre de chaque rosace. Recolorez des losanges voisins pour regrouper les branches de différentes façons.",
+        "grid": "hex"
+      },
+      {
+        "id": "rosette12",
+        "name": "Douze branches",
+        "tag": "12 branches · répétition",
+        "note": "Une étoile à douze branches occupe le centre d’une cellule hexagonale. De petits quadrilatères relient son contour aux bords de la cellule.",
+        "grid": "hex"
+      },
+      {
+        "id": "octagons",
+        "name": "Mosaïque d’octogones",
+        "tag": "Mosaïque · répétition",
+        "note": "Des octogones réguliers alternent avec des carrés. Cette grille simple montre bien comment la couleur modifie le rythme d’une surface.",
+        "grid": "square"
+      },
+      {
+        "id": "medallion10",
+        "name": "Médaillon à dix branches",
+        "tag": "10 branches · un centre",
+        "note": "Dix branches se développent autour d’un centre commun. Il s’agit d’un médaillon isolé : l’anneau extérieur termine la composition.",
+        "grid": "radial"
+      },
+      {
+        "id": "medallion5",
+        "name": "Médaillon pentagonal",
+        "tag": "5 branches · un centre",
+        "note": "De petites étoiles s’inscrivent dans les pentagones centraux des plus grandes. Chaque étoile successive tourne de 36°.",
+        "grid": "radial"
+      }
+    ],
+    "settings": [
+      "Palette: Lapis-lazuli, Jardin, Terre cuite, Encre, Bois, Porcelaine",
+      "Style du dessin: Mosaïque, Contours, Double contour",
+      "Échelle: 70–130%. Épaisseur du trait: 0.6–3. Rotation: 0–60°."
+    ],
+    "hint": "Cliquez sur une pièce pour changer sa couleur",
+    "keyboard": "Sélectionnez une pièce avec Tab, puis déplacez-vous avec les flèches. Entrée ou Espace change sa couleur.",
+    "actions": "↶ Annuler · Rétablir les couleurs · Télécharger le PNG · Télécharger le SVG",
+    "exportNote": "Le PNG est prêt à partager. Le SVG reste net à toutes les tailles.",
+    "note": "Compositions géométriques originales aux palettes inspirées de la céramique, du bois et de la pierre. Six motifs se répètent sur une grille ; deux médaillons se développent autour d’un centre unique."
+  },
+  "reading": {
+    "title": "Pour aller plus loin",
+    "intro": "Pour une première séance de dessin, commencez par le guide pratique de Broug. Les autres livres abordent la comparaison architecturale, des constructions plus complexes ou l’histoire du dessin.",
+    "books": [
+      {
+        "author": "Eric Broug · Édition révisée, 2019",
+        "title": "Islamic Geometric Patterns",
+        "note": "Pour dessiner à la main. Des instructions pas à pas pour 23 motifs, avec de brèves présentations des bâtiments et objets dont ils proviennent. Commencez ici avec un crayon, une règle et un compas.",
+        "url": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1"
+      },
+      {
+        "author": "Eric Broug · 2013",
+        "title": "Islamic Geometric Design",
+        "note": "Pour comparer les familles de motifs. Photographies et tracés organisent le sujet en systèmes d’ordre quatre, cinq, six et en systèmes combinés. Un complément architectural plus large au livre pratique.",
+        "url": "https://www.thamesandhudson.com/products/islamic-geometric-design"
+      },
+      {
+        "author": "Jay Bonner · 2017",
+        "title": "Islamic Geometric Patterns: Their Historical Development and Traditional Methods of Construction",
+        "note": "Pour approfondir les méthodes de construction. Une étude substantielle du développement historique, de la classification des motifs et du dessin polygonal. Le chapitre sur les algorithmes informatiques est cosigné avec Craig S. Kaplan.",
+        "url": "https://link.springer.com/book/10.1007/978-1-4419-0217-7"
+      },
+      {
+        "author": "Daud Sutton · Wooden Books",
+        "title": "Islamic Design: A Genius for Geometry",
+        "note": "Pour une courte introduction. Un petit ouvrage illustré sur les motifs géométriques et leur tracé. Il aborde aussi des interprétations spirituelles de la géométrie.",
+        "url": "https://redwheelweiser.com/book/islamic-design-9781952178054/"
+      },
+      {
+        "author": "Keith Critchlow · Thames & Hudson",
+        "title": "Islamic Patterns: An Analytical and Cosmological Approach",
+        "note": "Pour la géométrie et le symbolisme. Associe l’analyse géométrique à une interprétation cosmologique. Les significations symboliques proposées relèvent de l’approche de l’auteur, et ne prouvent pas les intentions de tous les artisans du passé.",
+        "url": "https://www.thamesandhudson.com/products/islamic-patterns"
+      },
+      {
+        "author": "Jules Bourgoin · Édition Dover",
+        "title": "Arabic Geometrical Pattern and Design",
+        "note": "Pour un répertoire de dessins. Des planches géométriques à comparer à vos propres tracés. À consulter de préférence avec un guide qui explique les procédés de construction.",
+        "url": "https://store.doverpublications.com/products/9780486155319"
+      },
+      {
+        "author": "Gülru Necipoğlu · 1995",
+        "title": "The Topkapi Scroll: Geometry and Ornament in Islamic Architecture",
+        "note": "Pour les pratiques historiques du dessin. Une étude d’un rouleau conservé de dessins architecturaux et des contextes intellectuels et pratiques de l’ornement. Getty propose une édition PDF gratuite.",
+        "url": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf"
+      },
+      {
+        "author": "Serap Ekizler Sönmez · 2016 · En turc",
+        "title": "Mimar Sinan Cami Minberlerinde Beşgen Geometrik Desenler",
+        "note": "Pour l’ornement pentagonal. Une étude spécialisée des dessins fondés sur le pentagone dans les minbars des mosquées de Sinan. Son étude illustrée, plus courte, sur un volet est accessible depuis la section sur la géométrie.",
+        "url": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Sources et crédits des images",
+    "paragraphs": [
+      "Les six reproductions sont des images du domaine public provenant du Metropolitan Museum of Art. Chaque légende renvoie à la notice de l’œuvre, avec sa date, ses matériaux, ses dimensions et son numéro d’inventaire. Les images sont incluses dans ce fichier et peuvent être agrandies. Les vues de détail des peintures sont signalées ; « Page entière » rétablit chaque reproduction complète.",
+      "Les informations historiques et techniques proviennent de ces notices, des essais du Met sur l’ornement géométrique [3] et la représentation figurative [2], ainsi que de l’étude de Serap Ekizler Sönmez « The Whispers of a Window Wing in Istanbul » [4] (Bridges 2020, p. 533–538). Les présentations des livres s’appuient sur les informations des éditeurs et les sommaires disponibles."
+    ],
+    "references": {
+      "1": "https://www.metmuseum.org/art/collection/search/449537",
+      "2": "https://www.metmuseum.org/essays/figural-representation-in-islamic-art",
+      "3": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art",
+      "4": "https://archive.bridgesmathart.org/2020/bridges2020-533.pdf",
+      "5": "https://www.metmuseum.org/art/collection/search/444812",
+      "6": "https://www.metmuseum.org/art/collection/search/452203",
+      "7": "https://www.metmuseum.org/art/collection/search/453344",
+      "8": "https://www.metmuseum.org/art/collection/search/446606",
+      "9": "https://www.metmuseum.org/art/collection/search/452672",
+      "10": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-one/featured-works-of-art/image-4",
+      "11": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1",
+      "12": "https://www.thamesandhudson.com/products/islamic-geometric-design",
+      "13": "https://link.springer.com/book/10.1007/978-1-4419-0217-7",
+      "14": "https://redwheelweiser.com/book/islamic-design-9781952178054/",
+      "15": "https://www.thamesandhudson.com/products/islamic-patterns",
+      "16": "https://store.doverpublications.com/products/9780486155319",
+      "17": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf",
+      "18": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+    }
+  }
+}

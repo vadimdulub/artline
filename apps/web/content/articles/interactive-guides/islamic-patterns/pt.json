@@ -1,0 +1,419 @@
+{
+  "slug": "islamic-patterns",
+  "locale": "pt",
+  "guideTitle": "Padrões geométricos islâmicos",
+  "eyebrow": "Arte islâmica · Um guia interativo",
+  "title": "Como a geometria se torna ornamento",
+  "intro": "Um nicho de oração revestido de cerâmica, um púlpito de madeira e uma treliça de pedra dão formas diferentes aos padrões geométricos. Siga as linhas, veja como as peças se encaixam e desenhe a sua própria composição.",
+  "deck": "Explore a construção e dê-lhe a sua forma.",
+  "ui": {
+    "guides": "Guias",
+    "language": "Idioma",
+    "construction": "Construção",
+    "motif": "Motivo",
+    "arrangement": "Disposição",
+    "turn": "Rodar 45°",
+    "reset": "Repor rotação",
+    "matches": "Coincide",
+    "notMatch": "Não coincide",
+    "star": "Estrela",
+    "grid": "Grelha quadrada",
+    "original": "Cores originais",
+    "swap": "Trocar cores",
+    "outlines": "Contornos",
+    "whole": "Página completa",
+    "detail": "Pormenor",
+    "enlarge": "Ampliar",
+    "close": "Fechar imagem",
+    "catalogue": "Ver na Artline",
+    "palette": "Paleta",
+    "style": "Estilo do desenho",
+    "scale": "Escala",
+    "weight": "Espessura da linha",
+    "rotation": "Rotação",
+    "undo": "Desfazer",
+    "resetColours": "Repor cores",
+    "downloadPNG": "Descarregar PNG",
+    "downloadSVG": "Descarregar SVG",
+    "changed": "Cor alterada.",
+    "selected": "Padrão selecionado.",
+    "undone": "Última alteração desfeita.",
+    "resetDone": "Cores originais repostas.",
+    "exportReady": "Ficheiro pronto.",
+    "exportError": "Não foi possível criar o PNG. Experimente SVG.",
+    "pattern": "Padrão",
+    "palettes": [
+      "Lápis-lazúli",
+      "Jardim",
+      "Terracota",
+      "Tinta",
+      "Madeira",
+      "Porcelana"
+    ],
+    "styles": [
+      "Mosaico",
+      "Contornos",
+      "Contorno duplo"
+    ]
+  },
+  "hero": {
+    "title": "Mihrab da madrasa Imami, Isfahan",
+    "caption": "Irã, datado de 755 da Hégira / 1354–55 d.C. Mosaico de peças recortadas de cerâmica de pasta siliciosa vidrada, assentadas em argamassa; 343,1 × 288,7 cm. Harris Brisbane Dick Fund, 1939; 39.20.",
+    "credit": "Metropolitan Museum of Art. Domínio público. Ficha da obra [1]"
+  },
+  "opening": {
+    "title": "Comece pela superfície",
+    "paragraphs": [
+      "O nicho de oração acima tem mais de três metros de altura. Uma inscrição clara percorre a moldura exterior azul. Dentro dela, a decoração muda: hastes curvas espalham-se sobre o arco apontado, enquanto estrelas e polígonos ocupam a parte superior da reentrância. Num único objeto, o olhar encontra vários tipos de linha para seguir.",
+      "Um nicho de oração, ou mihrab, indica a direção de Meca. Este vem da madrasa Imami, uma escola religiosa de Isfahan, e está datado de 1354–55. Os artesãos encaixaram pequenos fragmentos de cerâmica vidrada na argamassa. O que parece inicialmente uma linha desenhada é muitas vezes o encontro das bordas de duas peças.",
+      "Aqui, a geometria convive com a caligrafia e o ornamento vegetal. Essas formas ganharam destaque na arquitetura religiosa islâmica, onde geralmente se evitavam figuras humanas e animais. Nos manuscritos, na cerâmica e noutras artes seculares, as figuras eram amplamente representadas. A decoração de uma mesquita é uma parte desse campo artístico muito mais vasto. O Met sobre figuras na arte islâmica [2]",
+      "Os ângulos de uma estrela podem manter-se enquanto mudam o tamanho, o espaçamento, a cor e o material. Estes objetos mostram quanto essas decisões afetam uma superfície. Desmontar um padrão ajuda a compreendê-las."
+    ]
+  },
+  "construction": {
+    "title": "Do traçado ao padrão",
+    "intro": "A construção situa os pontos. O motivo seleciona as linhas a conservar. A disposição define como o motivo se repete. Escolha uma família e percorra os três estados para ver o que muda.",
+    "families": [
+      {
+        "id": "eight",
+        "n": 8,
+        "angle": 45,
+        "title": "Estrela de oito pontas",
+        "titles": [
+          "1. Construção — Divida a circunferência",
+          "2. Motivo — Mantenha o contorno exterior",
+          "3. Disposição — Coloque as estrelas numa malha"
+        ],
+        "text": [
+          "Marque oito pontos equidistantes, separados por 45°. Una pontos alternados para desenhar dois quadrados, rodados 45° entre si.",
+          "Trace o contorno exterior dos dois quadrados sobrepostos. As interseções situam os vértices interiores da estrela.",
+          "Repita a estrela em filas horizontais e verticais. Os espaços entre as estrelas também fazem parte do padrão."
+        ],
+        "facts": [
+          "8 divisões · 45° no centro",
+          "2 quadrados · 8 pontas exteriores",
+          "Malha quadrada · 4 vizinhos mais próximos"
+        ],
+        "foot": "A circunferência serve para situar os pontos; o motivo final pode dispensá-la."
+      },
+      {
+        "id": "six",
+        "n": 6,
+        "angle": 60,
+        "title": "Estrela de seis pontas",
+        "titles": [
+          "1. Construção — Marque seis intervalos iguais",
+          "2. Motivo — Mantenha o contorno exterior",
+          "3. Disposição — Desloque as filas alternadas"
+        ],
+        "text": [
+          "Seis pontos equidistantes formam um hexágono. Una pontos alternados para desenhar dois triângulos equiláteros.",
+          "O contorno exterior dos triângulos forma uma estrela de seis pontas. Os cruzamentos dos lados situam os seis vértices interiores.",
+          "Desloque uma fila sim, outra não, metade da distância entre dois centros. Os centros formam agora uma malha triangular."
+        ],
+        "facts": [
+          "6 divisões · 60° no centro",
+          "2 triângulos · 6 pontas exteriores",
+          "Malha triangular · 6 vizinhos mais próximos"
+        ],
+        "foot": "Um compasso aberto ao raio da circunferência permite marcar as seis divisões."
+      },
+      {
+        "id": "five",
+        "n": 5,
+        "angle": 72,
+        "title": "Medalhão pentagonal",
+        "titles": [
+          "1. Construção — Una os pontos alternados",
+          "2. Motivo — Mantenha a estrela",
+          "3. Disposição — Repita em direção ao centro"
+        ],
+        "text": [
+          "Coloque cinco pontos na circunferência, separados por 72°. Una pontos alternados para desenhar um pentagrama.",
+          "Trace o contorno pelas pontas exteriores e pelas interseções entre elas. Um pentágono menor permanece no centro.",
+          "Coloque outra estrela dentro do pentágono central e repita. Cada nova estrela gira 36° e tem um raio de cerca de 38,2% do anterior."
+        ],
+        "facts": [
+          "5 divisões · 72° no centro",
+          "1 pentagrama · 5 pontas exteriores",
+          "Um centro comum · estrelas encaixadas"
+        ],
+        "foot": "Este medalhão é uma composição finita. O ornamento com simetria de ordem cinco também pode combinar formas para cobrir uma superfície."
+      },
+      {
+        "id": "twelve",
+        "n": 12,
+        "angle": 30,
+        "title": "Estrela de doze pontas",
+        "titles": [
+          "1. Construção — Divida a circunferência em doze",
+          "2. Motivo — Mantenha o contorno exterior",
+          "3. Disposição — Desloque as filas alternadas"
+        ],
+        "text": [
+          "Marque doze pontos, separados por 30°. Unir cada terceiro ponto forma um quadrado. Repita a partir dos dois pontos iniciais seguintes para completar três quadrados.",
+          "Trace o contorno exterior conjunto. As interseções dos lados dos quadrados situam os doze vértices interiores.",
+          "Repita as estrelas numa malha triangular. Alterar o espaçamento modifica as formas abertas entre elas."
+        ],
+        "facts": [
+          "12 divisões · 30° no centro",
+          "3 quadrados · 12 pontas exteriores",
+          "Malha triangular · 6 vizinhos mais próximos"
+        ],
+        "foot": "A estrela e a malha têm simetrias diferentes: doze pontas em torno de um centro e seis vizinhos mais próximos no campo."
+      }
+    ]
+  },
+  "symmetry": {
+    "title": "Os espaços entre as estrelas",
+    "intro": "Uma estrela de oito pontas coincide consigo mesma após uma rotação de 45°. Se estrelas iguais forem dispostas numa malha quadrada, o conjunto precisa de girar 90° para coincidir. Experimente os dois desenhos em conjunto.",
+    "question": "Ainda coincide?",
+    "initial": "Gire os dois desenhos 45°. As linhas tracejadas marcam as posições iniciais.",
+    "turned": "Girar 45°: A estrela coincide com o contorno inicial. Os centros das estrelas à volta afastaram-se da malha original.",
+    "matched": "Mesma disposição: Neste ângulo, ambos os desenhos voltam a coincidir com as posições iniciais.",
+    "paragraphs": [
+      "Os campos repetidos acima deixam espaços entre as estrelas. Uma tesselação cobre a superfície sem lacunas nem sobreposições, por isso os espaços intermédios também precisam de ser resolvidos como formas. Círculos, quadrados e outros polígonos podem combinar-se em desenhos mais complexos. O Met sobre ornamento geométrico [3]",
+      "Os pentágonos regulares apresentam um problema particular. Os seus ângulos internos de 108° não podem reunir-se em torno de um ponto sem deixar lacunas ou sobrepor-se. O ornamento com simetria de ordem cinco pode combinar formas ou desenvolver-se em torno de um centro comum, como o medalhão acima.",
+      "O estudo de Serap Ekizler Sönmez sobre um postigo de madeira da mesquita Süleymaniye, em Istambul, examina um sistema mais elaborado. Diferentes estrelas de dez pontas ocupam o centro e os cantos. Refletir e girar partes do desenho produz novas composições: as relações entre as formas determinam como o painel pode crescer. Ler o estudo ilustrado (PDF, pp. 533–538) [4]"
+    ]
+  },
+  "materials": {
+    "title": "A linha também se constrói",
+    "intro": "Os três objetos seguintes transformam a geometria em superfícies muito diferentes. Nas portas, juntam-se peças. No painel de mármore, combinam-se cores. Na treliça, abrem-se vãos na pedra. Um desenho que funciona num material apresenta problemas diferentes noutro.",
+    "objects": [
+      {
+        "heading": "Madeira: o padrão atravessa a junção",
+        "figure": {
+          "title": "Par de portas de minbar",
+          "caption": "Atribuídas ao Cairo, cerca de 1325–30. Madeira entalhada com embutidos de marfim e madeira; 196,2 × 88,9 cm. Coleção Edward C. Moore, legado, 1891; 91.1.2064.",
+          "credit": "Metropolitan Museum of Art. Domínio público. Ficha da obra [5]"
+        },
+        "paragraphs": [
+          "Uma junção vertical divide as portas, mas as estrelas atravessam-na. Embutidos claros destacam pequenas formas sobre a madeira castanha, e a decoração entalhada preenche muitos compartimentos. As grandes divisões geométricas continuam legíveis entre esses detalhes mais finos.",
+          "As portas davam acesso a um minbar, o púlpito usado no sermão de sexta-feira. A conservadora do Met Mecka Baumeister descreve como as peças ajustadas e os encaixes se mantêm unidos sem pregos nem cola, permitindo que a madeira e o marfim se expandam e contraiam. A geometria pertence tanto à montagem como à aparência. Construção e conservação [5]"
+        ]
+      },
+      {
+        "heading": "Mármore: a cor distingue os percursos",
+        "figure": {
+          "title": "Painel de parede com entrelaçado geométrico",
+          "caption": "Atribuído ao Cairo, século XV. Mosaico de mármore policromado; 118,1 × 59,7 cm. Doação de The Hagop Kevorkian Fund, 1970; 1970.327.8.",
+          "credit": "Metropolitan Museum of Art. Domínio público. Ficha da obra [6]"
+        },
+        "paragraphs": [
+          "Três grandes formas estreladas percorrem este painel estreito. Faixas claras ligam-nas através de uma rede mais densa de pequenos polígonos; pedras vermelhas e escuras distinguem os espaços entre as faixas. Uma linha que parece cruzar outra é feita de peças separadas, encaixadas na superfície.",
+          "O painel é atribuído ao Cairo do século XV. Não se conhece o edifício de origem. O Met sugere que ocupava a parte inferior de uma parede, onde o padrão seria visto de perto. A moldura larga dá um limite definido a um desenho que, de outro modo, poderia parecer contínuo. A interpretação do museu [6]"
+        ]
+      },
+      {
+        "heading": "Arenito: as aberturas conduzem a luz",
+        "figure": {
+          "title": "Treliça de janela vazada (jali)",
+          "caption": "Índia, segunda metade do século XVI. Arenito vermelho esculpido; 185,4 × 130,3 cm. Rogers Fund, 1993; 1993.67.2.",
+          "credit": "Metropolitan Museum of Art. Domínio público. Ficha da obra [7]"
+        },
+        "paragraphs": [
+          "Neste jali indiano, ou treliça vazada, as formas escuras da fotografia são aberturas. Entre elas permanece uma rede de faixas estreitas de pedra. O grande arco apontado interrompe essa rede, separando o campo principal das zonas menores acima.",
+          "A treliça tem cerca de 1,85 metros de altura. O desgaste de uma face levou o Met a identificá-la como parte provável de uma janela exterior. Nesse contexto, as aberturas deixavam entrar a luz e projetavam um padrão variável na sala. A pedra ficava imóvel enquanto a sombra se deslocava. O contexto arquitetónico da treliça [7]"
+        ]
+      }
+    ]
+  },
+  "paintings": {
+    "title": "O padrão dentro da pintura",
+    "intro": "Nestas duas pinturas de manuscritos do século XVI, o ornamento ajuda a distinguir uma superfície da outra. Pequenas unidades geométricas, malhas finas e hastes curvas descrevem diferentes partes de uma sala. Abra um detalhe para ver como o pintor muda o padrão num painel de parede ou numa bordadura.",
+    "works": [
+      {
+        "title": "Shaikh Zada, Bahram Gur no Palácio Turquesa na quarta-feira",
+        "caption": "Fólio 216 de um Khamsa de Nizami. Herat, datado de 931 da Hégira / 1524–25 d.C. Tinta, aguarela opaca, prata e ouro sobre papel. Folha: 32,2 × 22,2 cm.",
+        "credit": "Metropolitan Museum of Art. Doação de Alexander Smith Cochran, 1913; 13.228.7.10. Domínio público.",
+        "record": "Ficha da coleção e fonte da imagem [8]",
+        "description": "O casal sentado ocupa uma sala acima dos músicos. Painéis geométricos azuis ladeiam-no; uma faixa decorada estreita separa a sala do pavimento inferior.",
+        "details": [
+          "Azulejos da parede: Detalhe: hexágonos azuis e turquesa repetem-se nos dois painéis da parede. As bordas superiores inclinadas distinguem os lados da sala do painel central.",
+          "Bordadura inferior: Detalhe: uma faixa geométrica estreita corre abaixo das figuras sentadas. Separa a sala elevada do pavimento inferior, de padrão maior e mais simples."
+        ]
+      },
+      {
+        "title": "Yusuf e Zulaikha, pintor não identificado",
+        "caption": "Fólio 51r de um Bustan de Sa’di. Bukhara, cerca de 1525–35. Tinta, aguarela opaca e ouro sobre papel. Folha: 27,9 × 18,4 cm.",
+        "credit": "Metropolitan Museum of Art. Aquisição, Louis V. Bell Fund e doação de The Vincent Astor Foundation, 1974; 1974.294.4. Domínio público.",
+        "record": "Ficha da coleção e fonte da imagem [9]",
+        "description": "Uma fina malha geométrica preenche o painel claro atrás das figuras. Ramos floridos espalham-se pela parede dourada acima, e plantas menores ocupam a faixa escura inferior.",
+        "details": [
+          "Malha da parede: Detalhe: linhas retas e finas entrelaçam-se no painel claro. Uma moldura vermelha e dourada separa a malha geométrica dos ramos floridos acima e das portas decoradas dos dois lados.",
+          "Bordadura floral: Detalhe: a faixa escura sob a sala contém hastes ramificadas e folhas. As curvas contrastam com as linhas retas do painel claro acima."
+        ]
+      }
+    ],
+    "closing": "No palácio de Shaikh Zada, o padrão muda quando o olhar passa da sala interior para o espaço dos músicos. Em Yusuf e Zulaikha, a malha clara atrás das figuras contrasta com as flores maiores acima. A geometria ocupa o seu lugar junto das figuras, da escrita e do ornamento vegetal."
+  },
+  "colour": {
+    "title": "As mesmas linhas, outro padrão",
+    "paragraphs": [
+      "No mihrab de Isfahan, as inscrições claras destacam-se no fundo azul-escuro. Turquesa, amarelo e verde dividem o ornamento envolvente em formas menores. A cor ajuda a distinguir vários tipos de decoração numa só superfície. As cores e inscrições do mihrab [10]",
+      "Compare os dois desenhos. Trocar as cores das estrelas e do fundo pode mudar quais formas atraem primeiro o olhar. Sem os preenchimentos, a mesma construção permanece visível como uma rede de linhas."
+    ],
+    "question": "Mude a cor, mantenha o desenho",
+    "states": [
+      "Cores das estrelas e do fundo trocadas: A forma e o espaçamento são idênticos. Só mudaram as cores das estrelas e do fundo.",
+      "Preenchimentos removidos: Sem preenchimento, a estrela é definida pelo contorno. Siga os espaços dos dois lados dessa linha.",
+      "Cores originais: Os dois desenhos usam a mesma paleta. Troque as cores ou remova os preenchimentos para comparar."
+    ],
+    "closing": "Volte à treliça de arenito depois da comparação. Na fotografia, as suas aberturas parecem preenchimentos escuros. No edifício, essas mesmas formas deixavam passar a luz e projetavam um padrão na sala. O material muda o que o desenho pode fazer."
+  },
+  "studio": {
+    "title": "Crie o seu padrão",
+    "intro": "Comece com uma composição pronta. Escolha uma paleta, altere a escala ou deixe apenas os contornos. Toque nas peças para mudar a sua cor.",
+    "choose": "Escolha uma base",
+    "patterns": [
+      {
+        "id": "starcross",
+        "name": "Estrelas e cruzes",
+        "tag": "8 pontas · repetição",
+        "note": "Estrelas de oito pontas e peças em cruz preenchem juntas a superfície. Experimente destacar com cor apenas um dos motivos.",
+        "grid": "square"
+      },
+      {
+        "id": "rosette8",
+        "name": "Roseta de oito pontas",
+        "tag": "8 pontas · repetição",
+        "note": "Oito pétalas rodeiam cada estrela. Pequenos quadrados rodados 45° ficam entre rosetas vizinhas.",
+        "grid": "square"
+      },
+      {
+        "id": "hexstar",
+        "name": "Malha de estrelas",
+        "tag": "6 pontas · repetição",
+        "note": "Estrelas de seis pontas encaixam em células hexagonais. Triângulos preenchem os espaços entre elas.",
+        "grid": "hex"
+      },
+      {
+        "id": "lozenges",
+        "name": "Roseta de losangos",
+        "tag": "6 pontas · repetição",
+        "note": "Seis losangos encontram-se no centro de cada roseta. Mude a cor de losangos vizinhos para agrupar as pontas de outras maneiras.",
+        "grid": "hex"
+      },
+      {
+        "id": "rosette12",
+        "name": "Doze pontas",
+        "tag": "12 pontas · repetição",
+        "note": "Uma estrela de doze pontas ocupa o centro de uma célula hexagonal. Pequenos quadriláteros ligam o contorno às bordas da célula.",
+        "grid": "hex"
+      },
+      {
+        "id": "octagons",
+        "name": "Mosaico de octógonos",
+        "tag": "Mosaico · repetição",
+        "note": "Octógonos regulares alternam com quadrados. Esta malha simples mostra bem como a cor muda o ritmo de uma superfície.",
+        "grid": "square"
+      },
+      {
+        "id": "medallion10",
+        "name": "Medalhão de dez pontas",
+        "tag": "10 pontas · um centro",
+        "note": "Dez pontas desenvolvem-se em torno de um centro comum. É um medalhão independente: o anel exterior completa a composição.",
+        "grid": "radial"
+      },
+      {
+        "id": "medallion5",
+        "name": "Medalhão pentagonal",
+        "tag": "5 pontas · um centro",
+        "note": "Estrelas menores encaixam nos pentágonos centrais das maiores. Cada estrela seguinte gira 36°.",
+        "grid": "radial"
+      }
+    ],
+    "settings": [
+      "Paleta: Lápis-lazúli, Jardim, Terracota, Tinta, Madeira, Porcelana",
+      "Estilo do desenho: Mosaico, Contornos, Contorno duplo",
+      "Escala: 70–130%. Espessura da linha: 0.6–3. Rotação: 0–60°."
+    ],
+    "hint": "Toque numa peça para mudar a cor",
+    "keyboard": "Use Tab para selecionar uma peça e as setas para se mover. Enter ou Espaço mudam a cor.",
+    "actions": "↶ Desfazer · Repor cores · Descarregar PNG · Descarregar SVG",
+    "exportNote": "O PNG está pronto para partilhar. O SVG mantém a nitidez em qualquer tamanho.",
+    "note": "Composições geométricas originais com paletas inspiradas em cerâmica, madeira e pedra. Seis padrões repetem-se numa malha; dois medalhões desenvolvem-se em torno de um único centro."
+  },
+  "reading": {
+    "title": "Leituras recomendadas",
+    "intro": "Para uma primeira sessão de desenho, comece pelo guia prático de Broug. Os outros livros abordam a comparação arquitetónica, construções mais complexas ou a história do desenho.",
+    "books": [
+      {
+        "author": "Eric Broug · Edição revista, 2019",
+        "title": "Islamic Geometric Patterns",
+        "note": "Para desenhar à mão. Instruções passo a passo para 23 padrões, com breves notas sobre os edifícios e objetos de origem. Comece aqui com lápis, régua e compasso.",
+        "url": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1"
+      },
+      {
+        "author": "Eric Broug · 2013",
+        "title": "Islamic Geometric Design",
+        "note": "Para comparar famílias de padrões. Fotografias e traçados organizam o tema em sistemas de quatro, cinco e seis divisões e em sistemas combinados. Um complemento arquitetónico mais amplo ao livro prático.",
+        "url": "https://www.thamesandhudson.com/products/islamic-geometric-design"
+      },
+      {
+        "author": "Jay Bonner · 2017",
+        "title": "Islamic Geometric Patterns: Their Historical Development and Traditional Methods of Construction",
+        "note": "Para aprofundar métodos de construção. Um estudo extenso do desenvolvimento histórico, da classificação dos padrões e do desenho poligonal. O capítulo sobre algoritmos computacionais é escrito em coautoria com Craig S. Kaplan.",
+        "url": "https://link.springer.com/book/10.1007/978-1-4419-0217-7"
+      },
+      {
+        "author": "Daud Sutton · Wooden Books",
+        "title": "Islamic Design: A Genius for Geometry",
+        "note": "Para uma introdução breve. Uma apresentação compacta e ilustrada dos padrões geométricos e de como os desenhar. Inclui também interpretações espirituais da geometria.",
+        "url": "https://redwheelweiser.com/book/islamic-design-9781952178054/"
+      },
+      {
+        "author": "Keith Critchlow · Thames & Hudson",
+        "title": "Islamic Patterns: An Analytical and Cosmological Approach",
+        "note": "Para geometria e simbolismo. Combina análise geométrica e interpretação cosmológica. Os significados simbólicos apresentados expressam a abordagem do autor, não demonstram as intenções de todos os artesãos históricos.",
+        "url": "https://www.thamesandhudson.com/products/islamic-patterns"
+      },
+      {
+        "author": "Jules Bourgoin · Edição Dover",
+        "title": "Arabic Geometrical Pattern and Design",
+        "note": "Para um repertório de desenhos. Uma coleção de pranchas geométricas para comparar com os seus próprios traçados. Convém acompanhá-la de um guia que explique o processo de construção.",
+        "url": "https://store.doverpublications.com/products/9780486155319"
+      },
+      {
+        "author": "Gülru Necipoğlu · 1995",
+        "title": "The Topkapi Scroll: Geometry and Ornament in Islamic Architecture",
+        "note": "Para as práticas históricas do desenho. Um estudo de um rolo conservado de desenhos arquitetónicos e dos contextos intelectuais e práticos do ornamento. O Getty oferece uma edição PDF gratuita.",
+        "url": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf"
+      },
+      {
+        "author": "Serap Ekizler Sönmez · 2016 · Em turco",
+        "title": "Mimar Sinan Cami Minberlerinde Beşgen Geometrik Desenler",
+        "note": "Para o ornamento pentagonal. Um estudo especializado dos desenhos baseados em pentágonos nos minbares das mesquitas de Sinan. O estudo ilustrado mais breve da autora sobre um postigo está ligado na secção de geometria.",
+        "url": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Fontes e créditos das imagens",
+    "paragraphs": [
+      "As seis reproduções são imagens de domínio público do Metropolitan Museum of Art. Cada legenda liga à ficha da obra, com data, materiais, dimensões e número de inventário. As imagens estão incluídas neste ficheiro e podem ser ampliadas. Os detalhes recortados das pinturas estão identificados; «Página inteira» repõe a reprodução completa.",
+      "As informações históricas e técnicas baseiam-se nessas fichas, nos ensaios do Met sobre ornamento geométrico [3] e representação figurativa [2], e no estudo de Serap Ekizler Sönmez «The Whispers of a Window Wing in Istanbul» [4] (Bridges 2020, pp. 533–538). As notas sobre os livros descrevem o seu âmbito a partir das informações editoriais e dos índices disponíveis."
+    ],
+    "references": {
+      "1": "https://www.metmuseum.org/art/collection/search/449537",
+      "2": "https://www.metmuseum.org/essays/figural-representation-in-islamic-art",
+      "3": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art",
+      "4": "https://archive.bridgesmathart.org/2020/bridges2020-533.pdf",
+      "5": "https://www.metmuseum.org/art/collection/search/444812",
+      "6": "https://www.metmuseum.org/art/collection/search/452203",
+      "7": "https://www.metmuseum.org/art/collection/search/453344",
+      "8": "https://www.metmuseum.org/art/collection/search/446606",
+      "9": "https://www.metmuseum.org/art/collection/search/452672",
+      "10": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-one/featured-works-of-art/image-4",
+      "11": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1",
+      "12": "https://www.thamesandhudson.com/products/islamic-geometric-design",
+      "13": "https://link.springer.com/book/10.1007/978-1-4419-0217-7",
+      "14": "https://redwheelweiser.com/book/islamic-design-9781952178054/",
+      "15": "https://www.thamesandhudson.com/products/islamic-patterns",
+      "16": "https://store.doverpublications.com/products/9780486155319",
+      "17": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf",
+      "18": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+    }
+  }
+}

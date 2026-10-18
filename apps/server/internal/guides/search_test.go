@@ -143,3 +143,16 @@ func TestMuseumGuideIdentityAndReadOnlyProjection(t *testing.T) {
 		}
 	}
 }
+
+func TestInteractiveGuideAndTranslatedSearch(t *testing.T) {
+	for _, query := range []string{"Islamic", "Геометрические", "Shaikh Zada"} {
+		page, err := Default.Search(url.Values{"q": {query}, "kind": {"interactive"}})
+		if err != nil || page.Matched != 1 || len(page.Items) != 1 || page.Items[0].Slug != "islamic-patterns" || page.Items[0].Count != 8 || page.Items[0].Languages != 10 {
+			t.Fatalf("interactive %q: %+v %v", query, page, err)
+		}
+	}
+	page, err := Default.Search(url.Values{"kind": {"interactive"}, "institution": {"musee-du-louvre"}})
+	if err != nil || page.Matched != 0 {
+		t.Fatal("interactive guide leaked into museum scope")
+	}
+}

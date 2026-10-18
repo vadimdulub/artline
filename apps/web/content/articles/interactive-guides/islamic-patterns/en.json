@@ -1,0 +1,419 @@
+{
+  "slug": "islamic-patterns",
+  "locale": "en",
+  "guideTitle": "Islamic geometric patterns",
+  "eyebrow": "Islamic art · An interactive guide",
+  "title": "How geometry becomes ornament",
+  "intro": "A tiled prayer niche, wooden pulpit doors and a pierced stone screen each give geometry a different form. See how the pieces fit, then make a pattern of your own.",
+  "deck": "Follow the construction, then try your own colours.",
+  "ui": {
+    "guides": "Guides",
+    "language": "Language",
+    "construction": "Construction",
+    "motif": "Motif",
+    "arrangement": "Arrangement",
+    "turn": "Turn 45°",
+    "reset": "Reset rotation",
+    "matches": "Matches",
+    "notMatch": "Does not match",
+    "star": "Star",
+    "grid": "Square grid",
+    "original": "Original colours",
+    "swap": "Swap colours",
+    "outlines": "Outlines",
+    "whole": "Whole page",
+    "detail": "Detail",
+    "enlarge": "View larger",
+    "close": "Close image",
+    "catalogue": "View in Artline",
+    "palette": "Palette",
+    "style": "Drawing style",
+    "scale": "Scale",
+    "weight": "Line weight",
+    "rotation": "Rotation",
+    "undo": "Undo",
+    "resetColours": "Reset colours",
+    "downloadPNG": "Download PNG",
+    "downloadSVG": "Download SVG",
+    "changed": "Piece colour changed.",
+    "selected": "Pattern selected.",
+    "undone": "Last colour change undone.",
+    "resetDone": "Original colours restored.",
+    "exportReady": "Download ready.",
+    "exportError": "PNG could not be created. Try SVG.",
+    "pattern": "Pattern",
+    "palettes": [
+      "Lapis",
+      "Garden",
+      "Terracotta",
+      "Ink",
+      "Wood",
+      "Porcelain"
+    ],
+    "styles": [
+      "Mosaic",
+      "Outlines",
+      "Double outline"
+    ]
+  },
+  "hero": {
+    "title": "Mihrab from the Madrasa Imami, Isfahan",
+    "caption": "Iran, dated 755 AH / 1354–55 CE. Mosaic of glazed, cut stonepaste tiles set into mortar; 343.1 × 288.7 cm. Harris Brisbane Dick Fund, 1939; 39.20.",
+    "credit": "The Metropolitan Museum of Art. Public Domain. Object record [1]"
+  },
+  "opening": {
+    "title": "Start with the surface",
+    "paragraphs": [
+      "The prayer niche above stands more than three metres high. Pale lettering runs around its blue outer frame. Inside that border, the decoration changes: curling stems spread above the pointed arch, while stars and polygons occupy the upper part of the recess.",
+      "A prayer niche, or mihrab, marks the direction of Mecca. This one comes from the Madrasa Imami, a religious school in Isfahan, and is dated 1354–55. Its makers set small pieces of glazed ceramic into mortar. A line that seems to have been drawn is often the boundary between two pieces.",
+      "Geometric patterns appear here alongside calligraphy and plant ornament. All three became prominent in Islamic religious architecture, where human and animal figures were generally avoided. Figures appear widely in manuscripts, ceramics and other secular arts. A mosque’s decoration represents one part of this broader artistic tradition. The Met on figures in Islamic art [2]",
+      "A star can retain the same angles while its size, spacing, colour and material change. The objects here show how much those choices affect a surface. Taking a pattern apart makes the choices easier to see."
+    ]
+  },
+  "construction": {
+    "title": "From drawing to pattern",
+    "intro": "The construction marks out the points. Selecting some of its lines produces a motif; arranging that motif creates a pattern. Choose one of the four families, then move through the three stages.",
+    "families": [
+      {
+        "id": "eight",
+        "n": 8,
+        "angle": 45,
+        "title": "Eight-point star",
+        "titles": [
+          "1. Construction — Divide the circle",
+          "2. Motif — Keep the outer line",
+          "3. Arrangement — Place the stars on a grid"
+        ],
+        "text": [
+          "Mark eight equally spaced points on a circle, 45° apart. Join alternate points to draw two squares, with one rotated 45° relative to the other.",
+          "Trace the outer boundary of the two overlapping squares. The points where their edges cross become the star’s inward corners.",
+          "Repeat the same star in horizontal and vertical rows. The spaces between the stars become part of the pattern."
+        ],
+        "facts": [
+          "8 divisions · 45° at the centre",
+          "2 squares · 8 outer points",
+          "Square grid · 4 nearest neighbours"
+        ],
+        "foot": "The circle locates the points and can be removed from the finished motif."
+      },
+      {
+        "id": "six",
+        "n": 6,
+        "angle": 60,
+        "title": "Six-point star",
+        "titles": [
+          "1. Construction — Divide the circle into six",
+          "2. Motif — Keep the outer line",
+          "3. Arrangement — Stagger the rows"
+        ],
+        "text": [
+          "Mark six equally spaced points on a circle. Join alternate points to draw two equilateral triangles.",
+          "Trace the outer boundary of the two overlapping triangles. The points where their edges cross become the star’s six inward corners.",
+          "Shift every other row sideways by half the distance between two centres. The centres now form a triangular grid."
+        ],
+        "facts": [
+          "6 divisions · 60° at the centre",
+          "2 triangles · 6 outer points",
+          "Triangular grid · 6 nearest neighbours"
+        ],
+        "foot": "Keep the compass set to the circle’s radius to mark off six equal divisions around its edge."
+      },
+      {
+        "id": "five",
+        "n": 5,
+        "angle": 72,
+        "title": "Pentagonal medallion",
+        "titles": [
+          "1. Construction — Join every second point",
+          "2. Motif — Follow the star’s outline",
+          "3. Arrangement — Repeat towards the centre"
+        ],
+        "text": [
+          "Place five points around the circle, 72° apart. Join every second point to draw a pentagram.",
+          "Trace the star’s outline, following its outer points and the intersections between them. A smaller pentagon remains at the centre.",
+          "Draw another star inside the central pentagon, then repeat. Each new star is rotated 36° and has about 38.2% of the previous star’s radius."
+        ],
+        "facts": [
+          "5 divisions · 72° at the centre",
+          "1 pentagram · 5 outer points",
+          "One shared centre · nested stars"
+        ],
+        "foot": "This creates a finite medallion. Designs with fivefold symmetry can also combine different shapes to cover a surface."
+      },
+      {
+        "id": "twelve",
+        "n": 12,
+        "angle": 30,
+        "title": "Twelve-point star",
+        "titles": [
+          "1. Construction — Divide the circle into twelve",
+          "2. Motif — Keep the outer line",
+          "3. Arrangement — Stagger the rows"
+        ],
+        "text": [
+          "Mark twelve equally spaced points on a circle, 30° apart. Join every third point to draw a square. Repeat from the next two starting points to make three overlapping squares.",
+          "Trace the outer boundary of the three overlapping squares. The intersections along this boundary form the star’s twelve inward corners.",
+          "Repeat the stars on a triangular grid. Their spacing determines the shapes of the gaps between them."
+        ],
+        "facts": [
+          "12 divisions · 30° at the centre",
+          "3 squares · 12 outer points",
+          "Triangular grid · 6 nearest neighbours"
+        ],
+        "foot": "The star and its arrangement have different symmetries: twelve points around the star’s centre, six nearest neighbours at each position on the grid."
+      }
+    ]
+  },
+  "symmetry": {
+    "title": "The spaces between the stars",
+    "intro": "An eight-point star matches its original outline after a 45° turn. Place identical stars on a square grid, however, and the whole arrangement needs a 90° turn to match. Turn the two drawings together to see the difference.",
+    "question": "Does it still match?",
+    "initial": "Turn both drawings by 45°. The dashed lines mark their starting positions.",
+    "turned": "After a 45° turn: The star matches its original outline, but the surrounding stars no longer line up with the square grid.",
+    "matched": "After a 90° turn: Both drawings line up with their original outlines at this angle.",
+    "paragraphs": [
+      "The stars in these drawings leave spaces between them. A tessellation covers a surface without gaps or overlaps, so those spaces must become part of the design too. Circles, squares and other polygons can guide the construction of more complex patterns. The Met on geometric ornament [3]",
+      "Regular pentagons present a different problem: their 108° interior angles do not fit evenly around a point. Designs with fivefold symmetry can combine different shapes or grow around a shared centre, as the medallion does.",
+      "Serap Ekizler Sönmez’s study of a wooden window shutter in Istanbul’s Süleymaniye Mosque examines a more elaborate system. Different ten-point stars occupy its centre and corners. Reflecting and rotating parts of the design produces new compositions. How the shapes fit together determines how the pattern can extend. Read the illustrated study (PDF, pp. 533–538) [4]"
+    ]
+  },
+  "materials": {
+    "title": "A line has to be made",
+    "intro": "The doors below are built from fitted pieces; the marble panel brings together strips of coloured stone. In the sandstone screen, the shapes are openings cut through the material. Each object poses a different practical problem for the maker.",
+    "objects": [
+      {
+        "heading": "Wood: fitting the pieces together",
+        "figure": {
+          "title": "Pair of minbar doors",
+          "caption": "Attributed to Cairo, about 1325–30. Carved wood with ivory and wood inlay; 196.2 × 88.9 cm. Edward C. Moore Collection, bequest, 1891; 91.1.2064.",
+          "credit": "The Metropolitan Museum of Art. Public Domain. Object record [5]"
+        },
+        "paragraphs": [
+          "A vertical seam divides the doors, but the stars continue across it. Pale inlay picks out small shapes against the brown wood, while carved ornament fills many of the compartments. The main geometric divisions remain clear through this finer detail.",
+          "The doors once formed the entrance to a minbar, the pulpit used for the Friday sermon. The Met conservator Mecka Baumeister explains how fitted pieces and interlocking joints hold together without nails or glue. The joints allow the wood and ivory to expand and contract. Geometry determines both the doors’ appearance and how they are assembled. Construction and conservation [5]"
+        ]
+      },
+      {
+        "heading": "Marble: colour separates the paths",
+        "figure": {
+          "title": "Wall panel with geometric interlace",
+          "caption": "Attributed to Cairo, 15th century. Polychrome marble mosaic; 118.1 × 59.7 cm. Gift of The Hagop Kevorkian Fund, 1970; 1970.327.8.",
+          "credit": "The Metropolitan Museum of Art. Public Domain. Object record [6]"
+        },
+        "paragraphs": [
+          "Three large starbursts run down this narrow panel. Pale strips connect them through a dense network of small polygons, while red and dark stone pick out the spaces between the strips. Each apparent crossing is made from separate pieces fitted together.",
+          "The panel is attributed to fifteenth-century Cairo. Its original building is unknown. The Met suggests that it occupied the lower part of a wall, where the pattern would have been seen at close range. Its broad border gives a firm edge to a pattern that might otherwise seem to continue. The museum’s account [6]"
+        ]
+      },
+      {
+        "heading": "Sandstone: letting light through",
+        "figure": {
+          "title": "Pierced window screen (jali)",
+          "caption": "India, second half of the 16th century. Carved red sandstone; 185.4 × 130.3 cm. Rogers Fund, 1993; 1993.67.2.",
+          "credit": "The Metropolitan Museum of Art. Public Domain. Object record [7]"
+        },
+        "paragraphs": [
+          "In this Indian jali, or pierced screen, the dark shapes in the photograph are openings. Between them, narrow strips of stone form a continuous network. The broad pointed arch interrupts that network, separating the main field from the smaller areas above it.",
+          "The screen stands about 1.85 metres high. Weathering on one side suggests that it once formed part of an exterior window, according to the Met. In that setting, its openings would have admitted light and cast a changing pattern into the room. The stone stayed fixed while its shadow moved. The screen’s architectural setting [7]"
+        ]
+      }
+    ]
+  },
+  "paintings": {
+    "title": "Pattern inside a painting",
+    "intro": "In these two sixteenth-century manuscript paintings, ornament distinguishes one surface from another. Small geometric units, fine meshes and curling stems mark out different parts of a room. Select a detail to see how the pattern changes at a wall panel or border.",
+    "works": [
+      {
+        "title": "Shaikh Zada, Bahram Gur in the Turquoise Palace on Wednesday",
+        "caption": "Folio 216 from a Khamsa of Nizami. Herat, dated 931 AH / 1524–25 CE. Ink, opaque watercolour, silver and gold on paper. Page: 32.2 × 22.2 cm.",
+        "credit": "The Metropolitan Museum of Art. Gift of Alexander Smith Cochran, 1913; 13.228.7.10. Public Domain.",
+        "record": "Collection record and image source [8]",
+        "description": "Two figures sit in a room above the musicians. Blue geometric panels flank the pair, and a narrow patterned band separates their room from the paving below.",
+        "details": [
+          "Wall tiles (detail): Blue and turquoise hexagons repeat across the two wall panels. Their sloping upper edges help distinguish the sides of the room from the central panel.",
+          "Lower border (detail): A narrow geometric band runs below the seated figures. It separates their raised room from the larger, simpler paving pattern beneath it."
+        ]
+      },
+      {
+        "title": "Yusuf and Zulaikha, painter not identified",
+        "caption": "Folio 51r from a Bustan of Sa’di. Bukhara, about 1525–35. Ink, opaque watercolour and gold on paper. Page: 27.9 × 18.4 cm.",
+        "credit": "The Metropolitan Museum of Art. Purchase, Louis V. Bell Fund and The Vincent Astor Foundation Gift, 1974; 1974.294.4. Public Domain.",
+        "record": "Collection record and image source [9]",
+        "description": "A fine geometric mesh fills the pale wall panel behind the figures. Flowering branches spread across the gold wall above, and smaller plants fill the dark band below.",
+        "details": [
+          "Wall mesh (detail): Fine straight lines interlock across the pale wall panel. A red and gold frame separates this geometric mesh from the flowering branches above and the decorated doors on either side.",
+          "Floral border (detail): The dark band below the room contains branching stems and leaves. Their curves contrast with the straight lines of the pale wall panel above."
+        ]
+      }
+    ],
+    "closing": "In Shaikh Zada’s painting, the pattern changes between the inner room and the space occupied by the musicians. In Yusuf and Zulaikha, the fine geometric mesh behind the figures contrasts with the larger flowers above them. Geometry takes its place alongside figures, writing and plant ornament."
+  },
+  "colour": {
+    "title": "The same lines, a different pattern",
+    "paragraphs": [
+      "In the Isfahan mihrab, pale inscriptions stand out against a dark blue ground. Turquoise, yellow and green divide the surrounding ornament into smaller forms. Colour helps separate several kinds of decoration within one surface. The mihrab’s colours and inscriptions [10]",
+      "Compare the two drawings below. Swapping the colours of the stars and the background can change which shapes stand out first. Show only the outlines to see the same construction as a network of lines."
+    ],
+    "question": "Change the colour, keep the drawing",
+    "states": [
+      "Star and background colours swapped: The shapes and their spacing stay the same. Only the colours of the stars and the background change.",
+      "Fills removed: With the fills removed, each star is defined by its outline. Look at the spaces on either side of each line.",
+      "Original colours: Both drawings use the same palette. Swap the colours or show only the outlines to compare."
+    ],
+    "closing": "Return to the sandstone screen after trying the comparison. In the photograph, its openings appear as dark shapes. In a building, they would admit light and cast a pattern into the room. The material changes what a pattern can do."
+  },
+  "studio": {
+    "title": "Make your own pattern",
+    "intro": "Start with one of the designs below. Choose a palette, adjust the scale or switch to outlines. Click or tap a piece to change its colour.",
+    "choose": "Choose a starting point",
+    "patterns": [
+      {
+        "id": "starcross",
+        "name": "Stars and crosses",
+        "tag": "8 points · repeating",
+        "note": "Eight-point stars and cross-shaped pieces fill the surface together. Try using colour to pick out just one of the two motifs.",
+        "grid": "square"
+      },
+      {
+        "id": "rosette8",
+        "name": "Eight-point rosette",
+        "tag": "8 points · repeating",
+        "note": "Eight petals surround each star. Small squares, turned through 45°, sit between neighbouring rosettes.",
+        "grid": "square"
+      },
+      {
+        "id": "hexstar",
+        "name": "Six-point star grid",
+        "tag": "6 points · repeating",
+        "note": "Six-point stars fit inside hexagonal cells. Triangles fill the spaces between the stars.",
+        "grid": "hex"
+      },
+      {
+        "id": "lozenges",
+        "name": "Lozenge rosette",
+        "tag": "6 points · repeating",
+        "note": "Six diamond-shaped pieces, or lozenges, meet at the centre of each rosette. Change the colours of neighbouring pieces to bring out different groupings.",
+        "grid": "hex"
+      },
+      {
+        "id": "rosette12",
+        "name": "Twelve-point star",
+        "tag": "12 points · repeating",
+        "note": "A twelve-point star sits at the centre of a hexagonal cell. Small four-sided shapes connect its outline to the edges of the cell.",
+        "grid": "hex"
+      },
+      {
+        "id": "octagons",
+        "name": "Octagon mosaic",
+        "tag": "Mosaic · repeating",
+        "note": "Regular octagons alternate with squares. This simple grid makes it easy to see how colour changes the rhythm of a surface.",
+        "grid": "square"
+      },
+      {
+        "id": "medallion10",
+        "name": "Ten-point medallion",
+        "tag": "10 points · one centre",
+        "note": "Ten points radiate from a shared centre. The outer ring completes a single medallion.",
+        "grid": "radial"
+      },
+      {
+        "id": "medallion5",
+        "name": "Pentagonal medallion",
+        "tag": "5 points · one centre",
+        "note": "Smaller stars sit inside the central pentagons of larger ones. Each is rotated 36° relative to the star around it.",
+        "grid": "radial"
+      }
+    ],
+    "settings": [
+      "Palette: Lapis, Garden, Terracotta, Ink, Wood, Porcelain",
+      "Drawing style: Mosaic, Outlines, Double outline",
+      "Scale: 70–130%. Line weight: 0.6–3. Rotation: 0–60°."
+    ],
+    "hint": "Click or tap a piece to change its colour",
+    "keyboard": "Use Tab to focus a piece, then the arrow keys to move between pieces. Press Enter or Space to change its colour.",
+    "actions": "↶ Undo · Reset colours · Download PNG · Download SVG",
+    "exportNote": "Download a PNG to share, or an SVG to resize without losing sharpness.",
+    "note": "Original geometric compositions with palettes inspired by tile, wood and stone. Six patterns repeat across a grid; two medallions grow around a single centre."
+  },
+  "reading": {
+    "title": "Further reading",
+    "intro": "For a first drawing session, start with Eric Broug’s practical guide. The other books offer architectural comparisons, more complex constructions and studies of the history of ornament.",
+    "books": [
+      {
+        "author": "Eric Broug · Revised edition, 2019",
+        "title": "Islamic Geometric Patterns",
+        "note": "For drawing by hand. Step-by-step instructions for 23 patterns, with brief introductions to the buildings and objects they come from. Use it with a pencil, ruler and compass.",
+        "url": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1"
+      },
+      {
+        "author": "Eric Broug · 2013",
+        "title": "Islamic Geometric Design",
+        "note": "For comparing pattern families. Photographs and construction drawings group patterns into fourfold, fivefold, sixfold and combined systems. An architectural companion to Broug’s practical guide.",
+        "url": "https://www.thamesandhudson.com/products/islamic-geometric-design"
+      },
+      {
+        "author": "Jay Bonner · 2017",
+        "title": "Islamic Geometric Patterns: Their Historical Development and Traditional Methods of Construction",
+        "note": "For detailed construction methods. A substantial study of historical development, pattern classification and polygonal design. The chapter on computer algorithms is co-authored with Craig S. Kaplan.",
+        "url": "https://link.springer.com/book/10.1007/978-1-4419-0217-7"
+      },
+      {
+        "author": "Daud Sutton · Wooden Books",
+        "title": "Islamic Design: A Genius for Geometry",
+        "note": "For a short introduction. A compact illustrated account of geometric patterns and how to draw them. Its discussion also includes spiritual interpretations of geometry.",
+        "url": "https://redwheelweiser.com/book/islamic-design-9781952178054/"
+      },
+      {
+        "author": "Keith Critchlow · Thames & Hudson",
+        "title": "Islamic Patterns: An Analytical and Cosmological Approach",
+        "note": "For geometry and symbolism. Combines geometric analysis with a cosmological interpretation. Its account of symbolic meaning reflects the author’s approach; it does not establish what every historical maker intended.",
+        "url": "https://www.thamesandhudson.com/products/islamic-patterns"
+      },
+      {
+        "author": "Jules Bourgoin · Dover edition",
+        "title": "Arabic Geometrical Pattern and Design",
+        "note": "For a repertoire of designs. A collection of geometric pattern drawings to compare with your own. Best used alongside a guide that explains the construction process.",
+        "url": "https://store.doverpublications.com/products/9780486155319"
+      },
+      {
+        "author": "Gülru Necipoğlu · 1995",
+        "title": "The Topkapi Scroll: Geometry and Ornament in Islamic Architecture",
+        "note": "For historical drawing practices. A study of a surviving architectural design scroll and the ideas and working practices behind its ornament. Getty provides a free PDF edition.",
+        "url": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf"
+      },
+      {
+        "author": "Serap Ekizler Sönmez · 2016 · In Turkish",
+        "title": "Mimar Sinan Cami Minberlerinde Beşgen Geometrik Desenler",
+        "note": "For pentagonal ornament. A specialised study of pentagon-based patterns on the minbars of Sinan’s mosques. Sönmez’s shorter, illustrated study of a window shutter is linked in the geometry section above.",
+        "url": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Sources and image credits",
+    "paragraphs": [
+      "The six reproductions are public-domain images from The Metropolitan Museum of Art. Each caption links to the collection record, with the work’s date, materials, dimensions and accession number. In the interactive article, select an image to enlarge it. The painting viewers label cropped details; “Whole page” returns to the full reproduction.",
+      "The historical and technical descriptions draw on these collection records, the Met’s essays on geometric ornament [3] and figural representation [2], and Serap Ekizler Sönmez’s “The Whispers of a Window Wing in Istanbul” [4] (Bridges 2020, pp. 533–538). The book notes draw on publishers’ descriptions and available tables of contents."
+    ],
+    "references": {
+      "1": "https://www.metmuseum.org/art/collection/search/449537",
+      "2": "https://www.metmuseum.org/essays/figural-representation-in-islamic-art",
+      "3": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art",
+      "4": "https://archive.bridgesmathart.org/2020/bridges2020-533.pdf",
+      "5": "https://www.metmuseum.org/art/collection/search/444812",
+      "6": "https://www.metmuseum.org/art/collection/search/452203",
+      "7": "https://www.metmuseum.org/art/collection/search/453344",
+      "8": "https://www.metmuseum.org/art/collection/search/446606",
+      "9": "https://www.metmuseum.org/art/collection/search/452672",
+      "10": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-one/featured-works-of-art/image-4",
+      "11": "https://www.thamesandhudsonusa.com/books/islamic-geometric-patterns-softcover-1",
+      "12": "https://www.thamesandhudson.com/products/islamic-geometric-design",
+      "13": "https://link.springer.com/book/10.1007/978-1-4419-0217-7",
+      "14": "https://redwheelweiser.com/book/islamic-design-9781952178054/",
+      "15": "https://www.thamesandhudson.com/products/islamic-patterns",
+      "16": "https://store.doverpublications.com/products/9780486155319",
+      "17": "https://www.getty.edu/publications/virtuallibrary/pdf/9780892363353.pdf",
+      "18": "https://istanbultasarimmerkezi.org/mimar-sinan-cami-minberlerinde-besgen-geometrik-desenler_B1.html"
+    }
+  }
+}

@@ -19,7 +19,7 @@ async function storageToken(): Promise<string> {
 async function serve(request: Request, context: { params: Promise<{ path: string[] }> }) {
   const bucket = process.env.ARTLINE_IMAGES_BUCKET;
   const { path } = await context.params;
-  if (!bucket || !["artworks", "artists"].includes(path[0]) || path.length > 8 ||
+  if (!bucket || !["artworks", "artists", "guides"].includes(path[0]) || path.length > 8 ||
       path.some(part => !/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(part) || part.includes("..")) ||
       !/\.(jpe?g|png|webp|avif|gif)$/i.test(path.at(-1) ?? "")) {
     return new Response("Image not found", { status: 404 });

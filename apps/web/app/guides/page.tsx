@@ -9,7 +9,7 @@ type Props = { searchParams: Promise<Record<string, string | string[] | undefine
 
 export async function generateMetadata({ searchParams }: Props) {
   const query = guideFilters(await searchParams);
-  return pageMetadata("Artist and museum guides: artworks, context & reading", "Illustrated artist and museum guides with close-looking notes, artwork selections, books, historical context and downloadable PDFs in ten languages.", "/guides", { index: !query.size });
+  return pageMetadata("Art guides: artists, museums & interactive patterns", "Illustrated artist and museum guides, interactive geometric patterns, close-looking notes, books and historical context in ten languages.", "/guides", { index: !query.size });
 }
 
 export default async function GuidesPage({ searchParams }: Props) {
