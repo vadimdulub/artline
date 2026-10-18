@@ -87,4 +87,3 @@ export function spScene(pattern,width,height,scale=100,angle=0,thumbnail=false){
  }
  return all;
 }
-
