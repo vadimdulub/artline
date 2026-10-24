@@ -8,14 +8,13 @@ import { TimelineGrid, TimelineLanes, TimelineMark } from "./TimelineGrid";
 import { BooksGallery } from "./BooksGallery";
 import { GalleryScrollButtons } from "./AllArtworkGallery";
 import { TimelineRangeControls } from "./TimelineRangeControls";
-import { TimelineZoomOut } from "./TimelineZoomOut";
 import { TimelineHeader } from "./TimelineHeader";
 
-export function BooksTimeline({ data, metadata, range, loading, error, selected, query, onBook, onAuthor, onRange, onZoomOut, onRetry, onReset, authorView = false, onAuthorView }: {
+export function BooksTimeline({ data, metadata, range, loading, error, selected, query, onBook, onAuthor, onRange, onRetry, onReset, authorView = false, onAuthorView }: {
   authorView?: boolean; onAuthorView: (checked: boolean) => void;
   data?: BooksResponse; metadata?: BooksResponse; range: BookRange; loading: boolean; error?: string;
   selected: string; query: string; onBook: (book: Book, page: Book[]) => void; onAuthor: (author: TimelineAuthor) => void; onRange: (start: number, end: number) => void;
-  onZoomOut: () => void; onRetry: () => void; onReset: () => void;
+  onRetry: () => void; onReset: () => void;
 }) {
   const stage = useRef<HTMLDivElement>(null);
   const strip = useRef<HTMLUListElement>(null);
@@ -33,7 +32,7 @@ export function BooksTimeline({ data, metadata, range, loading, error, selected,
   // Invalid shared URLs still reach server validation without breaking chart geometry.
   const validRange = Number.isInteger(range.start) && Number.isInteger(range.end) && range.start !== 0 && range.end !== 0 && range.start >= bounds.start && range.end <= bounds.end && range.start < range.end;
   const plotRange = validRange ? range : bounds;
-  const { focused, position, ticks } = atlasTimelineScale(plotRange, bounds, width, {
+  const { position, ticks } = atlasTimelineScale(plotRange, bounds, width, {
     position: year => bookTickPosition(year, bounds), ticks: bookAxisTicks(bounds, width),
   });
   const gallery = data?.mode === "density";
@@ -51,8 +50,7 @@ export function BooksTimeline({ data, metadata, range, loading, error, selected,
 
   return <div className="timeline-dark">
     <TimelineHeader controls={<><div className="books-view-switch" role="group" aria-label="Books display"><button type="button" aria-pressed={!authorView} onClick={() => onAuthorView(false)}>Books</button><button type="button" aria-pressed={authorView} onClick={() => onAuthorView(true)}>Authors</button></div>{gallery && <GalleryScrollButtons strip={strip} noun={noun} disabled={loading || !!error || !data?.total} />}</>}
-      status={loading ? `Finding ${noun}…` : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} ${noun} in this view`}
-      zoom={<TimelineZoomOut disabled={!focused && validRange && !error} onClick={onZoomOut} />}>
+      status={loading ? `Finding ${noun}…` : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} ${noun} in this view`}>
       <h1 id="books-timeline" className="time-title book-time-title" data-bce={displayRange.start < 0 || displayRange.end < 0} tabIndex={-1} aria-label={authorView ? "Authors through time" : "Books through time"}>{Math.abs(displayRange.start)}{displayRange.start < 0 && <small>BCE</small>}<span aria-hidden="true">—</span>{Math.abs(displayRange.end)}{displayRange.end < 0 && <small>BCE</small>}</h1>
     </TimelineHeader>
     {gallery && !authorView && data.total > BOOK_TIMELINE_LIMIT && <p className="books-gallery-guidance">
@@ -76,7 +74,7 @@ export function BooksTimeline({ data, metadata, range, loading, error, selected,
         <div className="state-panel"><h2>{loading ? `Opening ${noun}…` : `No ${noun} match this view`}</h2>{!loading && <><p>Try another title, author, or idea, or clear your filters.</p><button onClick={onReset}>Clear filters</button></>}</div>}
     </TimelineGrid>
     <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end}
-      onChange={onRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel} inputPrefix={authorView ? "Author " : "Book "}
+      onChange={onRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel}
       scale={{ position: year => bookTickPosition(year, bounds), yearAt: position => bookYearAtPosition(position, bounds), markers: rangeMarkers }}
       endpoints={[bookYearLabel(bounds.start), bookYearLabel(bounds.end)]}
       disabled={Boolean(error)} />

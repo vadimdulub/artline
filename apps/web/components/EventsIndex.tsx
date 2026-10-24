@@ -76,7 +76,7 @@ export function EventsIndex() {
       <ActiveFilters filters={active} onClear={() => change(cleared)} searchRef={search} />
       <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
         onPeriod={(start, end) => change({ start: String(start), end: String(end), top100: "false", fit: "true" })}
-        onRange={(start, end) => change({ start: String(start), end: String(end) }, false)} onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset}
+        onRange={(start, end) => change({ start: String(start), end: String(end) }, false)} onRetry={() => setRetry(value => value + 1)} onReset={reset}
         onSuggestion={applySuggestion} onTop100={() => change({ top100: null })} />
     </ExplorerFrame>
     <section className={styles.shelf} aria-labelledby="event-index" aria-busy={loading}>

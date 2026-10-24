@@ -1,16 +1,15 @@
-/* Mobile explorers put the collection first. Dates live in one expandable
-   control bar; desktop keeps its always-open editor and date heading. */
-.timeline-zoom-out>.timeline-zoom-label{font:inherit}
+/* Mobile explorers fill the available viewport and keep their date handles
+   visible on every screen. */
 @media(max-width:760px){
  .explorer>.timeline-dark{padding:8px 16px max(8px,env(safe-area-inset-bottom));min-width:0}
- .explorer:not(.all-explorer):not([data-full-view=true])>.timeline-dark{min-height:calc(100svh - var(--measured-header-height,52px) - 45px);display:flex;flex-direction:column}
- .explorer .timeline-heading-row.timeline-compact-heading{grid-template-columns:minmax(0,1fr) 44px;gap:8px;margin-bottom:8px;min-height:44px}
+ .explorer:not(.all-explorer):not([data-full-view=true]){height:calc(100svh - var(--measured-header-height,52px));min-height:0;display:flex;flex-direction:column}
+ .explorer:not(.all-explorer):not([data-full-view=true])>.timeline-dark{flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto}
+ .explorer .timeline-heading-row.timeline-compact-heading{grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-bottom:8px;min-height:44px}
  /* Keep the semantic heading and drawer focus target, without a second date display. */
  .explorer .timeline-compact-heading>.timeline-heading-title{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
  .explorer .timeline-compact-heading>.timeline-heading-controls{grid-column:1;grid-row:1;gap:4px 8px;min-width:0;justify-content:flex-start}
- .explorer .timeline-compact-heading>.timeline-heading-zoom{grid-column:2;grid-row:1}
- .explorer .timeline-zoom-out{width:44px;height:44px;min-height:44px;padding:0}
- .explorer .timeline-zoom-out>.timeline-zoom-label{display:none}
+ .explorer .timeline-compact-heading>.timeline-heading-key{grid-column:2;grid-row:1;min-width:0}
+ .explorer .movement-key>summary{min-height:44px;font-size:12px}
  .explorer .timeline-heading-controls .painter-view-switch{gap:2px;max-width:100%}
  .explorer .timeline-heading-controls .painter-view-switch button{padding-inline:8px}
  .explorer .timeline-heading-controls .books-view-switch{flex:1;min-width:0}
@@ -19,6 +18,8 @@
  .explorer .all-layer-switches{gap:12px;flex-wrap:wrap;max-width:100%}
  .explorer .all-layer-switches label{min-height:44px}
  .explorer .timeline-stage{flex:1;min-height:220px}
+ .explorer:not(.all-explorer)>.timeline-dark>.timeline-stage{display:flex;flex-direction:column;min-height:120px;overflow-y:auto}
+ .explorer:not(.all-explorer)>.timeline-dark>.timeline-stage>.timeline-lanes{flex:1;min-height:120px;height:auto;max-height:none}
  .explorer .timeline-focus{flex-shrink:0;padding-top:6px;margin-top:8px}
  /* Gallery cards are ordered, not placed on a time axis. Drop that extra ruler. */
  .explorer>.painter-paintings .timeline-stage,
@@ -27,8 +28,13 @@
  .painter-paintings .timeline-stage>.tick-row,
  .books-explorer .timeline-stage:has(.books-visual-gallery)>.tick-row,
  .all-explorer .timeline-stage:has(>.all-artwork-lane:last-child):not(:has(>.all-lane:not(.all-artwork-lane)))>.tick-row{display:none}
- .explorer>.painter-paintings .all-artwork-strip{--artwork-card-width:clamp(210px,70vw,320px);--artwork-gap:14px}
- .explorer>.painter-paintings .all-artwork-image{height:clamp(220px,calc(100svh - 375px),460px)}
+ .explorer>.painter-paintings>.timeline-stage{flex:1;min-height:160px;overflow-y:auto}
+ .explorer>.painter-paintings .all-gallery{flex:1;min-height:160px;display:flex;flex-direction:column}
+ .explorer>.painter-paintings .all-gallery-caption{flex-shrink:0}
+ .explorer>.painter-paintings .all-artwork-strip{flex:1;min-height:0;--artwork-card-width:calc(100vw - 32px);--artwork-gap:16px;scroll-snap-type:x mandatory}
+ .explorer>.painter-paintings .all-artwork-strip>li{display:flex;flex-direction:column;min-height:0}
+ .explorer>.painter-paintings .all-artwork-card{flex:1;min-height:0}
+ .explorer>.painter-paintings .all-artwork-image{flex:1;min-height:100px;height:auto}
  .all-explorer .all-artwork-strip{--artwork-card-width:clamp(190px,62vw,280px)}
  .all-explorer .all-artwork-image{height:min(42svh,calc(clamp(190px,56vw,260px) + var(--artwork-zoom,0)*90px))}
  .explorer .all-gallery-scroll button,.explorer .all-lane-focus{min-width:44px;min-height:44px}
@@ -38,13 +44,12 @@
  .explorer .all-artwork-card>span:not(.all-artwork-image),.explorer .all-artwork-card time{font-size:12px}
  .explorer .books-visual-gallery{--library-card-width:clamp(180px,58vw,260px);--library-gap:16px}
  .explorer .library-image{height:clamp(250px,calc(100svh - 360px),440px)}
- .explorer[data-full-view=true]>.painter-paintings .all-artwork-strip{--artwork-card-width:min(82vw,50dvh)}
- .explorer[data-full-view=true]>.painter-paintings .all-artwork-image{height:clamp(220px,calc(100dvh - 260px),640px)}
  .explorer[data-full-view=true] .library-image{height:clamp(250px,calc(100dvh - 250px),620px)}
  .explorer[data-full-view=true]>.timeline-dark>.timeline-stage{min-height:180px}
- /* Short screens scroll the full canvas instead of letting gallery images
-    overflow their flex item and cover the date controls. */
- .explorer[data-full-view=true]>.painter-paintings>.timeline-stage,
- .explorer[data-full-view=true]>.timeline-dark>.timeline-stage:has(.books-visual-gallery){flex:1 0 auto}
+ .explorer[data-full-view=true]>.painter-paintings>.timeline-stage{min-height:100px}
  .explorer .timeline-key-footer{margin-top:4px}
+}
+@media(max-width:360px){
+ .explorer .timeline-compact-heading:has(.movement-key)>.timeline-heading-controls{grid-column:1/-1;grid-row:2}
+ .explorer .timeline-compact-heading:has(.movement-key)>.timeline-heading-key{grid-column:1/-1;grid-row:1;justify-self:end}
 }

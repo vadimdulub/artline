@@ -34,8 +34,6 @@
 .explorer[data-full-view=true]>.timeline-dark>.timeline-focus{flex-shrink:0}
 @media(max-width:760px){
  .atlas-view-tools{display:flex;grid-column:1/-1}
- .explorer[data-full-view=true]>.painter-paintings .all-artwork-strip{--artwork-card-width:min(76vw,48dvh)}
- .explorer[data-full-view=true]>.painter-paintings .all-artwork-image{height:min(76vw,48dvh)}
  .explorer[data-full-view=true] .books-visual-gallery{--library-card-width:min(62vw,34dvh)}
  .explorer[data-full-view=true] .library-image{height:min(88vw,48dvh)}
 }

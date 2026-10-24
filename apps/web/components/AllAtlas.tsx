@@ -16,7 +16,6 @@ import { AtlasFilters, ActiveFilters, AtlasSelect, AtlasCheckbox } from "./Atlas
 import { TimelineGrid, TimelineLanes, TimelineMark } from "./TimelineGrid";
 import { TimelineOverview } from "./TimelineOverview";
 import { TimelineRangeControls } from "./TimelineRangeControls";
-import { TimelineZoomOut } from "./TimelineZoomOut";
 import { TimelineHeader } from "./TimelineHeader";
 import { TimelinePopover } from "./TimelinePopover";
 import { BookDrawer } from "./BookDrawer";
@@ -110,7 +109,7 @@ export function AllAtlas(){
   ...(region?[{key:"region",label:metadata?.regions.find(option=>option.slug===region)?.name??region,remove:()=>change({region:null})}]:[]),
   ...[{key:"country",values:countries,options:geography.countries},{key:"continent",values:continents,options:metadata?.continents??[]}].flatMap(group=>group.values.length>3?[{key:group.key,label:`${group.values.length} ${group.key==="country"?"countries":"continents"}`,remove:()=>change({[group.key]:null})}]:group.values.map(value=>({key:`${group.key}-${value}`,label:group.options.find(option=>option.slug===value)?.name??value,remove:()=>change({[group.key]:group.values.filter(item=>item!==value)})}))),
  ];
- const {focused,position,ticks}=atlasTimelineScale(range,bounds,width);
+ const {position,ticks}=atlasTimelineScale(range,bounds,width);
  const loadingRange=data?.range.start!==range.start||data?.range.end!==range.end;
  return <ExplorerFrame ref={shell} className="explorer all-explorer" aria-labelledby="all-timeline-title">
   {geography.error&&<p className="save-message" role="status">Some filter choices could not be loaded. <button onClick={()=>setRetry(v=>v+1)}>Retry filters</button></p>}
@@ -130,7 +129,6 @@ export function AllAtlas(){
    {populated?<>
     <TimelineHeader className="all-canvas-heading"
       status={busy?"Loading entries…":error?"Couldn’t load":`${data?.total.toLocaleString("en-GB")??0} entries`}
-      zoom={<TimelineZoomOut disabled={!focused&&validRange&&!presetID} title="Show all years and keep layers and filters" onClick={()=>selectPreset("")}/>}
       controls={<>
         <TimelinePopover className="all-view-context" label={preset?.name??"View details"}>
           {preset&&<><h2>{preset.name}</h2><p>{preset.description}</p><p className="all-scope-description">{preset.startingScope}</p><p>Main period: {bookYearLabel(preset.period.start)}–{bookYearLabel(preset.period.end)}. Wider context: {bookYearLabel(preset.context.start)}–{bookYearLabel(preset.context.end)}.</p></>}
@@ -145,8 +143,8 @@ export function AllAtlas(){
     <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(t=>({key:t.year,label:t.label,position:position(t.year)}))}>
      {busy?<div className="all-content-loading" role="status"><LoadingIndicator label="Loading the timeline…"/></div>:error?<div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry</button> <button onClick={reset}>Reset view</button></div>:data?.lanes.filter(lane=>layers.includes(lane.key)).map(lane=><Lane key={lane.key} lane={lane} range={range} position={position} width={width} busy={busy} loadingRange={loadingRange} selected={selected} select={open} narrow={narrow} browse={()=>browse(lane.key)} isolated={layers.length===1} onIsolate={()=>change({type:layers.length===1?allKinds:[lane.key],panel:null,browse:null})} galleryQuery={result?.key??requestKey}/>)}
     </TimelineGrid>
-    <p className="sr-only" id="all-timeline-help">Select an entry for details. Select a busy period or edit the years to zoom every lane to that interval. Zoom out returns to all years and keeps your layers and filters. Select a lane heading to open its entries for the selected years.</p>
-    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} onPreview={setRangePreview} omitYearZero inputPrefix="All " formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds,linearFrom),yearAt:position=>bookYearAtPosition(position,bounds,linearFrom),markers:[linearFrom,1700].map(year=>({year,label:String(year)}))}}/>
+    <p className="sr-only" id="all-timeline-help">Select an entry for details. Select a busy period or drag the date handles to change the years in every lane. Select a lane heading to open its entries for the selected years.</p>
+    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds,linearFrom),yearAt:position=>bookYearAtPosition(position,bounds,linearFrom),markers:[linearFrom,1700].map(year=>({year,label:String(year)}))}}/>
    </>:metadata?<AllStartingPoints metadata={metadata} select={id=>selectPreset(id)}/>:<div className="all-start"><h1 id="all-timeline-title">Explore a moment in history</h1>{!metaError&&<LoadingIndicator label="Loading starting points…"/>}</div>}
 
   </div>

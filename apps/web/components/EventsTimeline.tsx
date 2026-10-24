@@ -8,15 +8,14 @@ import { atlasTimelineScale } from "@/lib/atlas-timeline";
 import type { EventsResponse, EventSuggestion } from "@/lib/events";
 import { TimelineGrid, TimelineLanes, TimelineMark } from "./TimelineGrid";
 import { TimelineRangeControls } from "./TimelineRangeControls";
-import { TimelineZoomOut } from "./TimelineZoomOut";
 import { TimelineHeader } from "./TimelineHeader";
 import { TimelineOverview } from "./TimelineOverview";
 import { TimelineFilterSuggestions } from "./TimelineFilterSuggestions";
 
-export function EventsTimeline({ data, metadata, range, loading, error, selected, onSelect, onRange, onPeriod, onZoomOut, onRetry, onReset, onSuggestion, onTop100 }: {
+export function EventsTimeline({ data, metadata, range, loading, error, selected, onSelect, onRange, onPeriod, onRetry, onReset, onSuggestion, onTop100 }: {
   data?: EventsResponse; metadata?: EventsResponse; range: BookRange; loading: boolean; error?: string;
   selected: string; onSelect: (id: string) => void; onRange: (start: number, end: number) => void; onPeriod: (start: number, end: number) => void;
-  onZoomOut: () => void; onRetry: () => void; onReset: () => void; onSuggestion: (value: EventSuggestion) => void; onTop100: () => void;
+  onRetry: () => void; onReset: () => void; onSuggestion: (value: EventSuggestion) => void; onTop100: () => void;
 }) {
   const stage = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(1200);
@@ -46,8 +45,7 @@ export function EventsTimeline({ data, metadata, range, loading, error, selected
 
   return <div className={`timeline-dark${earlyCompressed ? " books-compressed-scale" : ""}`}>
     <TimelineHeader controls={<div className="timeline-secondary-tools"><a className="timeline-index-link" href="#event-index">Event index</a></div>}
-      status={loading ? "Finding events…" : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} events in this view`}
-      zoom={<TimelineZoomOut disabled={!focused && validRange && !error} onClick={onZoomOut} />}>
+      status={loading ? "Finding events…" : error ? "Connection interrupted" : `${(data?.total ?? 0).toLocaleString("en-GB")} events in this view`}>
       <h1 id="events-timeline" className="time-title book-time-title" data-bce={displayRange.start < 0 || displayRange.end < 0} tabIndex={-1} aria-label="Events through time">{Math.abs(displayRange.start)}{displayRange.start < 0 && <small>BCE</small>}<span aria-hidden="true">—</span>{Math.abs(displayRange.end)}{displayRange.end < 0 && <small>BCE</small>}</h1>
     </TimelineHeader>
     <TimelineGrid stageRef={stage} busy={loading} ticks={ticks.map(t => ({ key: t.year, label: t.label, position: position(t.year) }))}>
@@ -66,7 +64,7 @@ export function EventsTimeline({ data, metadata, range, loading, error, selected
             selected={selected === event.id} approximate={event.approximate} left={event.left} width={event.width} top={event.lane * 64 + 8} labelOffset={event.labelOffset} labelWidth={event.labelWidth} onSelect={() => onSelect(event.id)} />)}
         </TimelineLanes> : <div className="state-panel"><h2>{loading ? "Opening the events timeline…" : data?.total ? "Explore these events below" : "No events match this view"}</h2>{!loading && <><p>{data?.total ? "Read these records in the index below." : "Try another event, topic, or place, or reset your filters."}</p><button onClick={onReset}>Reset view</button></>}</div>}
     </TimelineGrid>
-    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={onRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel} inputPrefix="Event "
+    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={onRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel}
       scale={{ position: year => bookTickPosition(year, bounds), yearAt: position => bookYearAtPosition(position, bounds), markers }} endpoints={[bookYearLabel(bounds.start), bookYearLabel(bounds.end)]} disabled={Boolean(error)} />
   </div>;
 }

@@ -120,7 +120,7 @@ export function BooksIndex() {
       <BooksTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={authorView ? selectedAuthor?.id ?? "" : selected}
         authorView={authorView} onAuthorView={checked => { setSelectedAuthor(null); change({ view: checked ? "authors" : null, book: null }); }}
         query={requestKey} onAuthor={setSelectedAuthor} onBook={(book, items) => { setDrawerBooks({ key: requestKey, items }); updateQuery({ book: book.id }, true); }} onRange={(start, end) => change({ start: String(start), end: String(end) }, false)}
-        onZoomOut={() => change({ start: null, end: null })} onRetry={() => setRetry(value => value + 1)} onReset={reset} />
+        onRetry={() => setRetry(value => value + 1)} onReset={reset} />
     </ExplorerFrame>
     {authorView && selectedAuthor && <BookAuthorDrawer author={selectedAuthor} close={() => setSelectedAuthor(null)} onBooks={() => { change({ view: null, author: selectedAuthor.name, start: null, end: null, book: null }); setSelectedAuthor(null); }} />}
     {selected && <BookDrawer id={selected} items={drawerBooks?.key === requestKey ? drawerBooks.items : visibleBooks} close={closeBook} select={id => updateQuery({ book: id })} />}

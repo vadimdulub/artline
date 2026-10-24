@@ -26,6 +26,7 @@ const metadata: AtlasMetadata = {
   bounds: { start: -12000, end: 2000 }, defaultPreset: "", types, regions: [], continents: [],
   presets: [{ id: "renaissance", name: "The Renaissance", group: "History", description: "Art, books and events from this period.", startingScope: "Europe", startingHighlights: false, period: { start: 1300, end: 1650 }, context: { start: 1300, end: 1650 }, sources: [] }],
 };
+export { metadata as mobileAtlasMetadata };
 
 export async function mockMobileExplorers(page: Page) {
   // Optional exact-object copies for visual review; the default also exercises

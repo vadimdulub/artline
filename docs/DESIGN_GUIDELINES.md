@@ -177,8 +177,9 @@ existing URL state. Use the shared bounded paging and record-navigation
 components. Counts and sorting come from Go/PostgreSQL; the browser must not
 download the whole catalogue to compute them.
 
-**Timelines.** Preserve the dark canvas, compact heading, date handles, editable
-year fields, Earlier/Later controls and labelled colour keys. Full view uses
+**Timelines.** Preserve the dark canvas, compact heading, draggable date handles
+and labelled colour keys. Date ranges use the handles on desktop and mobile;
+Reset view restores the initial selection. Full view uses
 `ExplorerFrame` with focus containment and Escape handling. Do not draw fake
 time data as a decoration for an editorial page. About's preview positions six
 selected works by their recorded creation dates; date ranges stay visible.
@@ -236,8 +237,9 @@ generate artwork entries or images to fill an empty layout.
 - Phone filters collapse behind the shared Filters control and open in place.
   Keep controls reachable without forcing the whole page to scroll sideways.
 - Phone timeline date headings use 22px type (20px for BCE ranges). Painter
-  view tabs use 12px labels with 44px touch targets; painting thumbnails are
-  136–180px wide. The movement colour key opens below the date controls.
+  view tabs use 12px labels with 44px touch targets; the painting gallery uses
+  the available canvas width and height. The movement colour key opens from
+  the timeline header.
 - Aim for at least 44px interactive targets. Use 16px text in phone selects.
   Do not copy the smallest legacy desktop chart targets into new interfaces.
 - Keep one meaningful `h1`, semantic regions, visible labels, keyboard focus,

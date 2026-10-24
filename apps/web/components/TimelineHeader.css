@@ -2,7 +2,7 @@
 .timeline-compact-heading>.timeline-heading-title{grid-column:1;grid-row:1;display:block;min-width:0}
 .timeline-heading-row.timeline-compact-heading .time-title{font-size:36px;white-space:nowrap}
 .timeline-compact-heading>.timeline-heading-controls{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 16px;min-width:0}
-.timeline-compact-heading>.timeline-heading-zoom{grid-column:3;grid-row:1;justify-self:end;align-self:start}
+.timeline-compact-heading>.timeline-heading-key{grid-column:3;grid-row:1;justify-self:end;align-self:start;display:flex;align-items:center;gap:14px}
 .timeline-compact-heading .popular-filter-control{padding:0;border:0}
 .timeline-compact-heading .popular-filter>span{color:var(--paper)}
 .timeline-compact-heading .popular-filter input{accent-color:var(--red)}
@@ -30,7 +30,7 @@
  .timeline-heading-row.timeline-compact-heading .time-title{font-size:28px}
  .timeline-heading-row.timeline-compact-heading .time-title[data-bce=true]{font-size:22px;white-space:normal;text-wrap:balance}
  .timeline-compact-heading .book-time-title>small{font-size:9px}
- .timeline-compact-heading>.timeline-heading-zoom{grid-column:2}
+ .timeline-compact-heading>.timeline-heading-key{grid-column:2}
  .timeline-compact-heading>.timeline-heading-controls{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:6px 14px;position:relative}
  .timeline-compact-heading .popular-filter{min-height:32px}
  .timeline-heading-controls .timeline-popover-panel{left:0;right:auto}

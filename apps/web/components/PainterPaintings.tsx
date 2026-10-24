@@ -15,7 +15,6 @@ import { useRecordNavigation } from "./RecordNavigation";
 import { TimelineGrid } from "./TimelineGrid";
 import { TimelineOverview } from "./TimelineOverview";
 import { TimelineRangeControls } from "./TimelineRangeControls";
-import { TimelineZoomOut } from "./TimelineZoomOut";
 import { TimelineHeader } from "./TimelineHeader";
 import "./AllAtlas.css";
 import "./PainterPaintings.css";
@@ -39,7 +38,7 @@ export function PainterPaintings({ filters, start, end, setRange, onPeriod, view
   useFitYears(params.get("fit") === "true", !!data && !busy && !error, data?.matchedRange);
   const lane = data?.lanes[0];
   const years = preview ?? { start, end };
-  const { focused, position, ticks } = atlasTimelineScale({ start, end }, { start: 1100, end: 2000 }, width, {
+  const { position, ticks } = atlasTimelineScale({ start, end }, { start: 1100, end: 2000 }, width, {
     position: artworkYearPosition, ticks: visibleArtworkTicks(1100, 2000, width).map(year => ({ year, label: String(year) })),
   });
   useEffect(() => {
@@ -61,8 +60,7 @@ export function PainterPaintings({ filters, start, end, setRange, onPeriod, view
   const navigation = useRecordNavigation(selected ? `atlas?${scope}` : null, selected, id => updateQuery({ painting: id }, true));
   return <div className="timeline-dark painter-paintings">
     <TimelineHeader controls={viewSwitch}
-      status={busy ? "Finding paintings…" : error ? "Couldn’t load" : `${lane?.total.toLocaleString("en-GB") ?? 0} artworks`}
-      zoom={<TimelineZoomOut disabled={!focused} onClick={() => changeRange(1100, 2000)} />}>
+      status={busy ? "Finding paintings…" : error ? "Couldn’t load" : `${lane?.total.toLocaleString("en-GB") ?? 0} artworks`}>
       <h1 id="timeline-title" className="time-title" tabIndex={-1}><span className="sr-only">Artwork creation dates: </span>{years.start}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{years.end}</h1>
     </TimelineHeader>
     <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(tick => ({ key: tick.year, label: tick.label, position: position(tick.year) }))}>

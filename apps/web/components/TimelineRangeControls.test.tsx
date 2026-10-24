@@ -5,65 +5,54 @@ import { TimelineRangeControls } from "./TimelineRangeControls";
 
 beforeEach(() => {
   vi.stubGlobal("ResizeObserver", class { observe() {} disconnect() {} });
-  window.matchMedia = vi.fn().mockReturnValue({ matches: true, addEventListener: vi.fn(), removeEventListener: vi.fn() });
 });
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
-function Dates({ onChange = vi.fn() }: { onChange?: (start: number, end: number) => void }) {
-  const [range, setRange] = useState({ start: -500, end: 100 });
-  return <TimelineRangeControls {...range} minimum={-12000} maximum={2000} omitYearZero endpoints={["12000 BCE", "2000"]}
-    formatYear={year => year < 0 ? `${-year} BCE` : String(year)}
+function Dates({ onChange = vi.fn(), initial = { start: -500, end: 100 }, disabled = false }: {
+  onChange?: (start: number, end: number) => void; initial?: { start: number; end: number }; disabled?: boolean;
+}) {
+  const [range, setRange] = useState(initial);
+  return <TimelineRangeControls {...range} minimum={-12000} maximum={2000} omitYearZero disabled={disabled}
+    endpoints={["12000 BCE", "2000"]} formatYear={year => year < 0 ? `${-year} BCE` : String(year)}
     onChange={(start, end) => { onChange(start, end); setRange({ start, end }); }} />;
 }
-it("starts with a labelled, collapsed mobile date editor", () => {
-  const { container } = render(<Dates />);
-  const toggle = screen.getByRole("button", { name: "Edit dates: 500 BCE to 100" });
-  expect(toggle).toHaveAttribute("aria-expanded", "false");
-  expect(container.querySelector(".range-editor")).toHaveAttribute("id", toggle.getAttribute("aria-controls"));
-  fireEvent.click(toggle);
-  expect(toggle).toHaveAttribute("aria-expanded", "true");
-  expect(toggle).toHaveAccessibleName("Done editing dates");
+it("offers date handles without year fields or date-editing buttons", () => {
+  render(<Dates />);
+  expect(screen.getAllByRole("slider")).toHaveLength(2);
+  expect(screen.getByLabelText("Timeline start handle")).toHaveAttribute("aria-valuetext", "500 BCE");
+  expect(screen.queryByRole("spinbutton")).not.toBeInTheDocument();
+  expect(screen.queryByRole("button", { name: /earlier|later|edit dates|done/i })).not.toBeInTheDocument();
 });
-it("commits a complete year pair and updates the collapsed range", () => {
+it("changes each endpoint independently with the keyboard", () => {
   const change = vi.fn(); render(<Dates onChange={change} />);
-  const toggle = screen.getByRole("button", { name: /Edit dates/ }); fireEvent.click(toggle);
-  fireEvent.input(screen.getByLabelText("Start year"), { target: { value: "1500" } });
-  fireEvent.input(screen.getByLabelText("End year"), { target: { value: "1600" } });
-  fireEvent.keyDown(screen.getByLabelText("End year"), { key: "Enter" });
-  expect(change).toHaveBeenCalledExactlyOnceWith(1500, 1600);
-  fireEvent.click(toggle);
-  expect(toggle).toHaveAccessibleName("Edit dates: 1500 to 1600");
+  fireEvent.keyDown(screen.getByLabelText("Timeline start handle"), { key: "ArrowRight" });
+  expect(change).toHaveBeenLastCalledWith(-499, 100);
+  fireEvent.keyDown(screen.getByLabelText("Timeline end handle"), { key: "ArrowLeft" });
+  expect(change).toHaveBeenLastCalledWith(-499, 99);
 });
-it("Escape discards an invalid draft, closes dates, and restores focus", () => {
+it("moves from 1 BCE to 1 CE without selecting year zero", () => {
+  const change = vi.fn(); render(<Dates initial={{ start: -1, end: 100 }} onChange={change} />);
+  fireEvent.keyDown(screen.getByLabelText("Timeline start handle"), { key: "ArrowRight" });
+  expect(change).toHaveBeenLastCalledWith(1, 100);
+  expect(screen.getByLabelText("Timeline start handle")).toHaveAttribute("aria-valuenow", "1");
+});
+it("keeps the handles ordered and within the available dates", () => {
   const change = vi.fn(); render(<Dates onChange={change} />);
-  const toggle = screen.getByRole("button", { name: /Edit dates/ }); fireEvent.click(toggle);
-  const from = screen.getByLabelText("Start year");
-  fireEvent.input(from, { target: { value: "0" } }); fireEvent.keyDown(from, { key: "Enter" });
-  expect(screen.getByRole("alert")).toHaveTextContent("no year zero");
-  fireEvent.keyDown(from, { key: "Escape" });
-  expect(toggle).toHaveAttribute("aria-expanded", "false"); expect(toggle).toHaveFocus();
-  expect(from).toHaveValue(-500); expect(change).not.toHaveBeenCalled();
+  fireEvent.keyDown(screen.getByLabelText("Timeline start handle"), { key: "End" });
+  expect(change).toHaveBeenLastCalledWith(99, 100);
+  fireEvent.keyDown(screen.getByLabelText("Timeline end handle"), { key: "Home" });
+  expect(change).toHaveBeenLastCalledWith(99, 100);
+  fireEvent.keyDown(screen.getByLabelText("Timeline start handle"), { key: "Home" });
+  expect(change).toHaveBeenLastCalledWith(-12000, 100);
+  fireEvent.keyDown(screen.getByLabelText("Timeline end handle"), { key: "End" });
+  expect(change).toHaveBeenLastCalledWith(-12000, 2000);
 });
-it("Escape inside the date editor does not dismiss the containing full view", () => {
-  const parent = vi.fn(); render(<div onKeyDown={parent}><Dates /></div>);
-  fireEvent.click(screen.getByRole("button", { name: /Edit dates/ }));
-  fireEvent.keyDown(screen.getByLabelText("End year"), { key: "Escape" });
-  expect(parent).not.toHaveBeenCalled();
-});
-it("Done commits a draft once without relying on a field blur", () => {
+it("supports moving the selected band with a keyboard", () => {
   const change = vi.fn(); render(<Dates onChange={change} />);
-  const toggle = screen.getByRole("button", { name: /Edit dates/ }); fireEvent.click(toggle);
-  fireEvent.input(screen.getByLabelText("Start year"), { target: { value: "1500" } });
-  fireEvent.input(screen.getByLabelText("End year"), { target: { value: "1600" } });
-  fireEvent.click(toggle);
-  expect(change).toHaveBeenCalledExactlyOnceWith(1500, 1600);
-  expect(toggle).toHaveAttribute("aria-expanded", "false"); expect(toggle).toHaveFocus();
+  fireEvent.keyDown(screen.getByRole("button", { name: "Move selected time range" }), { key: "ArrowLeft" });
+  expect(change).toHaveBeenLastCalledWith(-501, 99);
 });
-it("Done keeps invalid dates open for correction", () => {
-  const change = vi.fn(); render(<Dates onChange={change} />);
-  const toggle = screen.getByRole("button", { name: /Edit dates/ }); fireEvent.click(toggle);
-  fireEvent.input(screen.getByLabelText("Start year"), { target: { value: "0" } });
-  fireEvent.click(toggle);
-  expect(toggle).toHaveAttribute("aria-expanded", "true");
-  expect(screen.getByRole("alert")).toHaveTextContent("no year zero");
-  expect(change).not.toHaveBeenCalled();
+it("disables the handles while interaction is unavailable", () => {
+  render(<Dates disabled />);
+  for (const handle of screen.getAllByRole("slider")) expect(handle).toBeDisabled();
+  expect(screen.getByRole("button", { name: "Move selected time range" })).toBeDisabled();
 });

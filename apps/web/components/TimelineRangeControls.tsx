@@ -6,37 +6,20 @@ import "./TimelineRangeControls.css";
 
 type Drag = { kind: "start" | "end" | "window"; pointer: number; x: number; offset: number; left: number; width: number; visualStart: number; visualEnd: number; start: number; end: number; from: number; to: number };
 
-export function TimelineRangeControls({ start, end, minimum, maximum, onChange, onPreview, endpoints, step = 1, omitYearZero = false, formatYear = String, inputPrefix = "", disabled = false, scale }: {
+export function TimelineRangeControls({ start, end, minimum, maximum, onChange, onPreview, endpoints, step = 1, omitYearZero = false, formatYear = String, disabled = false, scale }: {
   start: number; end: number; minimum: number; maximum: number; onChange: (start: number, end: number) => void;
   onPreview?: (range: { start: number; end: number } | null) => void;
   endpoints: string[];
-  step?: number; omitYearZero?: boolean; formatYear?: (year: number) => string; inputPrefix?: string; disabled?: boolean;
+  step?: number; omitYearZero?: boolean; formatYear?: (year: number) => string; disabled?: boolean;
   scale?: { position: (year: number) => number; yearAt: (position: number) => number; markers?: { year: number; label: string }[] };
 }) {
-  const headingId = useId(), errorId = useId(), editorId = useId();
-  const [expanded, setExpanded] = useState(false);
-  const editor = useRef<HTMLDivElement>(null), toggle = useRef<HTMLButtonElement>(null);
-  const fromInput = useRef<HTMLInputElement>(null), toInput = useRef<HTMLInputElement>(null);
+  const headingId = useId();
   const startHandle = useRef<HTMLInputElement>(null), endHandle = useRef<HTMLInputElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [trackWidth, setTrackWidth] = useState(0);
-  const drag = useRef<Drag | null>(null), ignoreBlur = useRef(false);
-  const [preview, setPreview] = useState<{ start: number; end: number; left?: number; right?: number } | null>(null);
-  const [invalid, setInvalid] = useState<{ start: number; end: number; message: string } | null>(null);
-  const message = invalid?.start === start && invalid.end === end ? invalid.message : undefined;
+  const drag = useRef<Drag | null>(null);
+  const [preview, setPreview] = useState<{ start: number; end: number } | null>(null);
   const shownStart = preview?.start ?? start, shownEnd = preview?.end ?? end;
-  useEffect(() => {
-    const mobile = window.matchMedia("(max-width: 760px)");
-    const resize = () => {
-      // Rotating must not hide whichever date control currently owns focus.
-      if (mobile.matches && editor.current?.contains(document.activeElement)) setExpanded(true);
-      else if (!mobile.matches && document.activeElement === toggle.current) fromInput.current?.focus({ preventScroll: true });
-    };
-    mobile.addEventListener("change", resize);
-    return () => mobile.removeEventListener("change", resize);
-  }, []);
-  useEffect(() => { if (fromInput.current) fromInput.current.value = String(shownStart); }, [shownStart]);
-  useEffect(() => { if (toInput.current) toInput.current.value = String(shownEnd); }, [shownEnd]);
   const coordinate = (value: number) => omitYearZero && value < 0 ? value + 1 : value;
   const year = (value: number) => omitYearZero && value <= 0 ? value - 1 : value;
   const a = coordinate(shownStart), b = coordinate(shownEnd), min = coordinate(minimum), max = coordinate(maximum), span = max - min;
@@ -60,35 +43,6 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
     const from=atPosition(left),to=atPosition(left+width);
     setCoordinates(from,Math.max(from+1,to));
   }
-  function resetFields() {
-    if (fromInput.current) fromInput.current.value = String(start);
-    if (toInput.current) toInput.current.value = String(end);
-    setInvalid(null);
-  }
-  // The two fields are one draft. Tabbing between them must not clamp either
-  // value against the previous range, or replace the focused DOM element.
-  function commitFields(leaving = false) {
-    const rawFrom = fromInput.current?.value ?? "", rawTo = toInput.current?.value ?? "";
-    const from = Number(rawFrom), to = Number(rawTo);
-    const error = !rawFrom || !rawTo || !Number.isInteger(from) || !Number.isInteger(to)
-      ? "Enter a whole year in both fields."
-      : omitYearZero && (from === 0 || to === 0) ? "There is no year zero. Use −1 for 1 BCE or 1 for the following year."
-      : from < minimum || to > maximum || from > maximum || to < minimum ? `Use years from ${formatYear(minimum)} to ${formatYear(maximum)}.`
-      : from >= to ? "From must be earlier than To. Edit both years, then press Enter." : null;
-    if (error) {
-      if (leaving) resetFields();
-      setInvalid({ start, end, message: error });
-      return false;
-    } else {
-      setInvalid(null);
-      if (from !== start || to !== end) onChange(from, to);
-      return true;
-    }
-  }
-  function fieldKey(event: KeyboardEvent<HTMLInputElement>) {
-    if (event.key === "Enter") { event.preventDefault(); commitFields(); }
-    if (event.key === "Escape") { event.preventDefault(); resetFields(); }
-  }
   // Keyboard movement uses actual years, including the transition from 1 BCE.
   function handleKey(event: KeyboardEvent<HTMLInputElement>, from: boolean) {
     const current = from ? a : b, lower = from ? min : a + 1, upper = from ? b - 1 : max;
@@ -109,7 +63,7 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
       const width=d.visualEnd-d.visualStart;
       const left=Math.max(0,Math.min(100-width,d.visualStart+(x-d.x)/d.width*100));
       d.from=atPosition(left);d.to=Math.max(d.from+1,atPosition(left+width));
-      setPreview({start:year(d.from),end:year(d.to),left,right:left+width});
+      setPreview({start:year(d.from),end:year(d.to)});
       onPreview?.({start:year(d.from),end:year(d.to)});
       return;
     } else if (d.kind === "start") d.from = Math.max(min, Math.min(d.end - 1, value));
@@ -128,11 +82,8 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
     const kind = event.target === startHandle.current ? "start" : event.target === endHandle.current ? "end"
       : x > left + 12 && x < right - 12 && b - a < span ? "window"
       : Math.abs(x - left) <= Math.abs(x - right) ? "start" : "end";
-    resetFields();
-    ignoreBlur.current = true;
     if (kind === "start" || kind === "end") (kind === "start" ? startHandle : endHandle).current?.focus({ preventScroll: true });
     else if (kind === "window") event.currentTarget.querySelector<HTMLButtonElement>(".range-window")?.focus({ preventScroll: true });
-    ignoreBlur.current = false;
     drag.current = { kind, pointer: event.pointerId, x: event.clientX, offset: handle ? x - (kind === "start" ? actualStart : actualEnd) : 0, left: track.left, width: track.width, visualStart: position(a), visualEnd: position(b), start: a, end: b, from: a, to: b };
     event.currentTarget.setPointerCapture(event.pointerId);
     if (kind === "start" || kind === "end") previewAt(event.clientX);
@@ -145,40 +96,15 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
     onPreview?.(null);
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
     if (commit && (d.kind === "start" || d.kind === "end")) {
-      ignoreBlur.current = true;
       (d.kind === "start" ? startHandle : endHandle).current?.focus({ preventScroll: true });
-      ignoreBlur.current = false;
     }
     if (commit && (d.from !== d.start || d.to !== d.end)) setCoordinates(d.from, d.to);
   }
 
-  return <section className="timeline-focus" aria-labelledby={headingId} data-expanded={expanded} onKeyDown={event => {
-    if (event.key === "Escape" && expanded && window.matchMedia("(max-width: 760px)").matches) {
-      event.preventDefault(); event.stopPropagation(); resetFields(); setExpanded(false); toggle.current?.focus();
-    }
-  }}>
+  return <section className="timeline-focus" aria-labelledby={headingId}>
     <h2 id={headingId} className="sr-only">Timeline years</h2>
-    <div className="range-mobile-bar">
-      <button type="button" aria-label={`Move range ${step} ${step === 1 ? "year" : "years"} earlier`} disabled={disabled || a === min} onClick={() => pan(-step)}><span aria-hidden="true">←</span></button>
-      <button ref={toggle} type="button" className="range-mobile-toggle" aria-expanded={expanded} aria-controls={editorId}
-        aria-label={expanded ? "Done editing dates" : `Edit dates: ${formatYear(shownStart)} to ${formatYear(shownEnd)}`}
-        // Commit on click, not the preceding blur: a loading-state layout shift
-        // between pointerdown and pointerup can otherwise swallow the Done tap.
-        onPointerDown={event => { if (expanded) event.preventDefault(); }}
-        onClick={() => {
-          if (!expanded) { setExpanded(true); return; }
-          if (!commitFields()) return;
-          ignoreBlur.current = true;
-          toggle.current?.focus({ preventScroll: true });
-          ignoreBlur.current = false;
-          setExpanded(false);
-        }}>
-        <span>{expanded ? "Done" : `${formatYear(shownStart)} – ${formatYear(shownEnd)}`}</span>
-        <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={expanded ? "m5 12 5-5 5 5" : "m5 8 5 5 5-5"} /></svg>
-      </button>
-      <button type="button" aria-label={`Move range ${step} ${step === 1 ? "year" : "years"} later`} disabled={disabled || b === max} onClick={() => pan(step)}><span aria-hidden="true">→</span></button>
-    </div>
-    <div ref={editor} id={editorId} className="range-editor">
+    <p className="range-current">{formatYear(shownStart)} – {formatYear(shownEnd)}</p>
+    <div className="range-editor">
     <div ref={trackRef} className="range-track" onPointerDown={beginDrag} onPointerMove={event => { if (drag.current?.pointer === event.pointerId) previewAt(event.clientX); }} onPointerUp={event => finishDrag(event, true)} onPointerCancel={event => finishDrag(event, false)} onLostPointerCapture={event => finishDrag(event, false)}>
       <button className="range-window" type="button" disabled={disabled} aria-label="Move selected time range" style={{ left: trackWidth ? `${grips.start}px` : `${position(a)}%`, width: trackWidth ? `${grips.end - grips.start}px` : `${position(b) - position(a)}%` }}
         onKeyDown={event => { if (event.key === "ArrowLeft" || event.key === "ArrowRight") { event.preventDefault(); pan(event.key === "ArrowLeft" ? -step : step); } }}><span>Drag to move the range</span></button>
@@ -187,15 +113,6 @@ export function TimelineRangeControls({ start, end, minimum, maximum, onChange, 
       {scale?.markers?.map(marker => <span key={marker.year} className="range-scale-marker" style={{ left: `${scale.position(marker.year)}%` }} aria-hidden="true">{marker.label}</span>)}
     </div>
     <div className="range-endpoints" aria-hidden="true">{endpoints.map(label => <span key={label}>{label}</span>)}</div>
-    <div className="range-pan">
-      <button type="button" aria-label={`Move range ${step} ${step === 1 ? "year" : "years"} earlier`} disabled={disabled || a === min} onClick={() => pan(-step)}>← Earlier</button>
-      <div className="year-inputs" onBlur={event => { if (!ignoreBlur.current && !event.currentTarget.contains(event.relatedTarget)) commitFields(true); }}>
-        <label><span>From</span><input ref={fromInput} aria-label={inputPrefix ? `${inputPrefix}start year` : "Start year"} type="number" step={1} defaultValue={start} min={minimum} max={maximum} disabled={disabled} aria-invalid={!!message} aria-describedby={message ? errorId : undefined} onKeyDown={fieldKey} onInput={() => setInvalid(null)} /></label>
-        <label><span>To</span><input ref={toInput} aria-label={inputPrefix ? `${inputPrefix}end year` : "End year"} type="number" step={1} defaultValue={end} min={minimum} max={maximum} disabled={disabled} aria-invalid={!!message} aria-describedby={message ? errorId : undefined} onKeyDown={fieldKey} onInput={() => setInvalid(null)} /></label>
-        {message && <p className="year-error" id={errorId} role="alert">{message}</p>}
-      </div>
-      <button type="button" aria-label={`Move range ${step} ${step === 1 ? "year" : "years"} later`} disabled={disabled || b === max} onClick={() => pan(step)}>Later →</button>
-    </div>
     </div>
   </section>;
 }
