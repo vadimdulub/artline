@@ -1,0 +1,158 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verified_at_utc": "2026-10-24T11:59:47.586761+00:00",
+  "branch": "master",
+  "source_commit": "6b8d89e8a71ab4cd80cd0da76b955fd98f4e3304",
+  "services": {
+    "api": {
+      "promoted_at_utc": "2026-10-24T11:57:23.904007+00:00",
+      "revision": "artline-api-pictures-1024-v1",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:5dea239c0f4dbfc4f4f46d383dcf1fc45b01dedd0c45561bd47b276cfab55bf7",
+      "traffic_percent": 100,
+      "runtime_preserved": true,
+      "existing_tags_preserved": true,
+      "rollback_revision": "artline-api-catalogue-1024-v2",
+      "source_commit": "6b8d89e8a71ab4cd80cd0da76b955fd98f4e3304",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:b05a6fe28c97b542ce34b7d50b2e149d33cae350e648fcbf315aca83fab3cc09",
+      "layer_sha256": "8a52c682fe58b969932cb517b04dccf19cd82c087b7c01e1c0810043316367be",
+      "base_layers_preserved": 15
+    },
+    "web": {
+      "promoted_at_utc": "2026-10-24T11:57:34.534778+00:00",
+      "revision": "artline-web-pictures-1024-v1",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:37c9692eee44474405f9c71d2ebbb37c4f0822650f31da62f819d7f21468b296",
+      "traffic_percent": 100,
+      "runtime_preserved": true,
+      "existing_tags_preserved": true,
+      "rollback_revision": "artline-web-catalogue-1024-v1",
+      "source_commit": "6b8d89e8a71ab4cd80cd0da76b955fd98f4e3304",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:35880ad9365a3dcdb6a17a130cb2ecc40b76eca7e1933c73d70f6050cb9e91bb",
+      "layer_sha256": "1381dfd3920932d1507eb40be782d61c7cef50f749286d5b473fe093088c1e04",
+      "base_layers_preserved": 32
+    }
+  },
+  "changes": {
+    "preset_covers": "Restore explicit Edo print and Romanticism pictorial covers without relaxing the paintings-only general browse rule. No artwork metadata was changed.",
+    "image_loading": "Serve existing catalogue reproductions directly, eagerly load the first four visible cards and retain immutable caching for content-fingerprinted assets. Legacy filenames keep one-day caching.",
+    "gallery_paging": "Prefetch a bounded next page two viewports ahead while retaining the existing three-page cache.",
+    "museum_highlights": "Clicking either highlight selection clears search, artist, movement, display, venue, medium, date, image-only and geographic filters, plus cursor and open work. Layout and page-size preferences are retained.",
+    "museum_highlight_queries": "Restrict Artlines counts, page enrichment and facets to its at-most-24 selected artwork IDs; cache highlighted facets separately by catalogue revision."
+  },
+  "candidate_browser": {
+    "base": "https://pictures-1024-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "passed": true,
+    "covers": [
+      {
+        "name": "Edo Japan",
+        "src": "https://pictures-1024-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/artworks/open-museums/night-mia/223afa6b-b800-5e94-ad65-42a8365d9567-82fe72a1ba637b04.jpg",
+        "loading": "eager"
+      },
+      {
+        "name": "Romanticism",
+        "src": "https://pictures-1024-v1---artline-web-lpuqqlugnq-ew.a.run.app/assets/artworks/wikiart/dff303d0-c085-5aba-baf9-666d7535dbc3-b48b236eba47a77f.jpg",
+        "loading": "eager"
+      }
+    ],
+    "artworkOptimizerRequests": 0,
+    "prefetch": {
+      "count": 150,
+      "visible": 4,
+      "remaining": 6,
+      "requests": 1
+    },
+    "errors": [],
+    "failedReads": []
+  },
+  "live_browser": {
+    "base": "https://artlines.org",
+    "passed": true,
+    "covers": [
+      {
+        "name": "Edo Japan",
+        "src": "https://artlines.org/assets/artworks/open-museums/night-mia/223afa6b-b800-5e94-ad65-42a8365d9567-82fe72a1ba637b04.jpg",
+        "loading": "eager"
+      },
+      {
+        "name": "Romanticism",
+        "src": "https://artlines.org/assets/artworks/wikiart/dff303d0-c085-5aba-baf9-666d7535dbc3-b48b236eba47a77f.jpg",
+        "loading": "eager"
+      }
+    ],
+    "artworkOptimizerRequests": 0,
+    "prefetch": {
+      "count": 150,
+      "visible": 4,
+      "remaining": 6,
+      "requests": 1
+    },
+    "errors": [],
+    "failedReads": []
+  },
+  "museum_national_portrait_gallery": {
+    "slug": "museum-source-4b49d9c44d7e914b2140",
+    "name": "National Portrait Gallery, London, UK",
+    "source": "Exact release source on loopback with production catalogue in a read-only session; museum production sign-in access remains unchanged.",
+    "browser_checks": {
+      "passed": true,
+      "coversLoaded": [
+        "edo",
+        "romanticism"
+      ],
+      "highlightItems": 24,
+      "highlightImagesLoaded": 4,
+      "filtersCleared": true,
+      "errors": []
+    },
+    "highlight_query_before_seconds": 1.662,
+    "highlight_query_after_cold_seconds": 1.533,
+    "highlight_query_after_cached_seconds": 0.076,
+    "query_timing_limitation": "Local read-only API through production SQL proxy; timings include cross-region database round trips and are not public-site browser timings.",
+    "selected_work_count": 24,
+    "facet_artist_count": 18
+  },
+  "museum_access_check": {
+    "status": 200,
+    "url": "https://artlines.org/account?return_to=%2Fmuseums%2Fmuseum-source-4b49d9c44d7e914b2140%3Fselection%3Dartlines",
+    "passed": true
+  },
+  "validation": {
+    "go_packages": [
+      "catalog",
+      "atlas",
+      "httpapi"
+    ],
+    "focused_frontend_tests": {
+      "initial_suite": 32,
+      "final_changed_files_suite": 12
+    },
+    "typescript_passed": true,
+    "targeted_eslint_passed": true,
+    "linux_amd64_api_and_web_builds_passed": true,
+    "production_preset_cover_readonly_test_passed": true,
+    "large_museum_fixture": {
+      "museum_works": 400000,
+      "unrelated_works": 200000,
+      "cold_highlights_seconds": 1.368299,
+      "next_page_seconds": 0.012235959,
+      "bounded_cards": 24,
+      "low_query_memory_passed": true,
+      "deep_cursor_passed": true,
+      "missing_and_unsupported_media_passed": true
+    }
+  },
+  "map_research": {
+    "branch_ref_unchanged": true,
+    "index_bytes_unchanged": true,
+    "source_worktree_written_by_release": false
+  },
+  "deployment_method": "Overlay narrowly merged release changes onto the pinned live production API and web runtime snapshots. Existing authentication, consent, SEO, mobile layout, static assets, runtime configuration and traffic tags are preserved.",
+  "database_migrations": [],
+  "catalogue_rows_changed": false,
+  "real_local_database_writes": false,
+  "background_jobs_changed": false,
+  "temporary_verification_services_stopped": true,
+  "terraform_apply": false,
+  "new_release_error_log_entries": 0,
+  "evidence_directory": "/Users/vadimdulub/Library/Application Support/Artline/releases/preset-images-20261024"
+}
