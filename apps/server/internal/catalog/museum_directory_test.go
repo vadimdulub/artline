@@ -42,7 +42,7 @@ func TestMuseumDirectoryCardScopesIndexedReads(t *testing.T) {
 			t.Errorf("card scope changed: %s", fragment)
 		}
 	}
-	if !strings.Contains(museumDirectoryCardJSON, "FROM selections s\n WHERE s.institution_id=i.id AND EXISTS(") ||
+	if !strings.Contains(museumDirectoryCardCTE, "FROM selections s WHERE s.institution_id=page.id") ||
 		!strings.Contains(museumDirectoryCardJSON, "FROM card_holdings aw WHERE aw.primary_media_id IS NOT NULL") {
 		t.Fatal("highlight and cover lookup must start from indexed candidates")
 	}

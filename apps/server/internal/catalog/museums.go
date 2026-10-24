@@ -18,8 +18,10 @@ var ErrMuseumFilter = errors.New("invalid museum filter or cursor")
 
 // Match ArtworkImage's supported delivery paths. A non-null remote URL or an
 // unsupported file is not an image the gallery can actually render.
-const museumAvailableImage = `EXISTS(SELECT 1 FROM media_assets image WHERE image.id=w.primary_media_id
- AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`
+// An uncorrelated image set can be hashed once for aggregate reads, instead of
+// issuing one media lookup for every holding in a large collection.
+const museumAvailableImage = `coalesce(w.primary_media_id IN(SELECT image.id FROM media_assets image
+ WHERE image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'),false)`
 
 // Old source-specific museum URLs continue to address the reviewed canonical
 // identity. Each caller still applies its normal publication/access policy.
@@ -77,18 +79,19 @@ type MuseumVenue struct {
 }
 type Museum struct {
 	MuseumRef
-	Kind           string        `json:"kind"`
-	Description    string        `json:"description"`
-	WebsiteURL     *string       `json:"website_url"`
-	Status         string        `json:"status"`
-	City           *string       `json:"city"`
-	Country        *string       `json:"country"`
-	Venues         []MuseumVenue `json:"venues"`
-	WorkCount      int           `json:"work_count"`
-	HoldingCount   int           `json:"holding_count"`
-	OnViewCount    int           `json:"on_view_count"`
-	HighlightCount int           `json:"highlight_count"`
-	Cover          *MuseumWork   `json:"cover"`
+	Kind            string        `json:"kind"`
+	Description     string        `json:"description"`
+	WebsiteURL      *string       `json:"website_url"`
+	Status          string        `json:"status"`
+	City            *string       `json:"city"`
+	Country         *string       `json:"country"`
+	Venues          []MuseumVenue `json:"venues"`
+	WorkCount       int           `json:"work_count"`
+	HoldingCount    int           `json:"holding_count"`
+	OnViewCount     int           `json:"on_view_count"`
+	HighlightCount  int           `json:"highlight_count"`
+	HighlightSource string        `json:"highlight_source"`
+	Cover           *MuseumWork   `json:"cover"`
 }
 type MuseumArtist struct {
 	MuseumRef
@@ -166,9 +169,10 @@ func cursorScope(f MuseumFilter, slug string) string {
 	f.Regions, f.Countries = filterChoices(f.Regions, ""), filterChoices(f.Countries, "")
 	f.Artist, f.Movement, f.Venue, f.WorkType = "", "", "", ""
 	data, _ := json.Marshal(struct {
-		Filter MuseumFilter
-		Slug   string
-	}{f, slug})
+		Filter  MuseumFilter
+		Slug    string
+		Version int
+	}{f, slug, 2})
 	return fmt.Sprintf("%x", sha256.Sum256(data))
 }
 func decodeMuseumCursor(f MuseumFilter, slug string) (museumCursor, error) {
@@ -186,7 +190,10 @@ func decodeMuseumCursor(f MuseumFilter, slug string) (museumCursor, error) {
 	if err != nil || json.Unmarshal(data, &c) != nil || c.Scope != cursorScope(f, slug) || len(c.ID) != 36 {
 		return c, ErrMuseumFilter
 	}
-	// ID is used as a text comparison, not interpolated SQL or a UUID cast.
+	var id pgtype.UUID
+	if err := id.Scan(c.ID); err != nil || !id.Valid {
+		return c, ErrMuseumFilter
+	}
 	return c, nil
 }
 func encodeMuseumCursor(f MuseumFilter, slug string, number int, name, id string) string {
@@ -566,7 +573,7 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 	// Normalize before binding the cursor: an old chronological cursor must not
 	// silently become a cursor into the image-first order.
 	if f.Sort == "" {
-		f.Sort = "images"
+		f.Sort = "highlights"
 	}
 	c, err := decodeMuseumCursor(f, slug)
 	if err != nil {
@@ -582,12 +589,17 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 	if !exists {
 		return out, ErrNotFound
 	}
+	highlights, err := r.museumHighlights(ctx, slug)
+	if err != nil {
+		return out, err
+	}
 	args := []any{slug, f.Query, f.Selection, f.Display, filterChoices(f.Artists, f.Artist), filterChoices(f.Movements, f.Movement), filterChoices(f.Venues, f.Venue), filterChoices(f.WorkTypes, f.WorkType), f.Start, f.End, f.UnknownDate, f.ImageOnly}
+	args = append(args, highlights.IDs)
 	where := ` FROM institutions i JOIN works w ON ` + museumMembership + ` WHERE i.slug=$1 AND ` + museumVisible + `
  AND ($2='' OR w.title ILIKE '%'||$2||'%' OR w.alternate_title ILIKE '%'||$2||'%' OR w.unlinked_creator_label ILIKE '%'||$2||'%'
  OR w.cultural_context ILIKE '%'||$2||'%' OR w.object_form ILIKE '%'||$2||'%'
  OR EXISTS(SELECT 1 FROM jsonb_array_elements(w.artists) a WHERE a->>'name' ILIKE '%'||$2||'%'))
- AND ($3='' OR EXISTS(SELECT 1 FROM selections s WHERE s.institution_id=i.id AND s.artwork_id=w.id AND s.curator_kind=$3))
+ AND ($3='' OR ($3='artlines' AND w.id=ANY($13::uuid[])) OR EXISTS(SELECT 1 FROM selections s WHERE s.institution_id=i.id AND s.artwork_id=w.id AND s.curator_kind=$3))
  AND ($4='' OR (w.display_institution_id=i.id AND w.display_state='on_view'))
  AND (cardinality($5::text[])=0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists a ON a.id=aa.artist_id WHERE aa.artwork_id=w.id AND a.slug=ANY($5) AND a.status<>'archived' ))
  AND (cardinality($6::text[])=0 OR EXISTS(SELECT 1 FROM artwork_artists aa JOIN artists a ON a.id=aa.artist_id JOIN artist_movements am ON am.artist_id=a.id JOIN movements m ON m.id=am.movement_id
@@ -596,17 +608,26 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
  AND (cardinality($8::text[])=0 OR w.work_type=ANY($8))
  AND ($9::int IS NULL OR w.creation_year_end>=$9) AND ($10::int IS NULL OR w.creation_year_start<=$10)
  AND (NOT $11 OR w.creation_year_start IS NULL OR w.creation_year_end IS NULL) AND (NOT $12 OR ` + museumAvailableImage + `)`
-	if err = r.db.QueryRow(ctx, museumScopedCTE+`SELECT count(*),count(*) FILTER (WHERE `+museumAvailableImage+`)`+where, museumQueryArgs(args...)...).Scan(&out.Total, &out.ImageCount); err != nil {
-		return out, err
+	countsFilter := f
+	countsFilter.Cursor, countsFilter.Sort, countsFilter.Limit = "", "", 0
+	countsKey := facetCacheKey(ctx, "museum-work-counts:"+cursorScope(countsFilter, slug))
+	var counts struct {
+		Total   int
+		Images  int
+		NonNull int
 	}
+	if !r.facets.get(countsKey, &counts) {
+		if err = r.db.QueryRow(ctx, museumScopedCTE+`SELECT count(*),count(*) FILTER (WHERE `+museumAvailableImage+`),count(w.primary_media_id)`+where, museumQueryArgs(args...)...).Scan(&counts.Total, &counts.Images, &counts.NonNull); err != nil {
+			return out, err
+		}
+		r.facets.put(countsKey, counts)
+	}
+	out.Total, out.ImageCount = counts.Total, counts.Images
 	args = append(args, f.Sort, c.Number, c.Name, c.ID, f.Cursor == "", f.Limit+1)
-	sortNumber := `CASE WHEN $13='images' THEN CASE WHEN ` + museumAvailableImage + ` THEN 0 ELSE 1 END WHEN $13='title' THEN 0 WHEN $13='curated' AND $3<>'' THEN coalesce((SELECT min(position) FROM selections s WHERE s.institution_id=i.id AND s.artwork_id=w.id AND s.curator_kind=$3),2147483647) ELSE coalesce(w.creation_year_start,2147483647) END`
+	sortNumber := `CASE WHEN $14='highlights' THEN CASE WHEN w.id=ANY($13::uuid[]) OR w.id IN(SELECT artwork_id FROM selections WHERE institution_id=i.id) THEN 0 WHEN ` + museumAvailableImage + ` THEN 1 ELSE 2 END WHEN $14='images' THEN CASE WHEN ` + museumAvailableImage + ` THEN 0 ELSE 1 END WHEN $14='title' THEN 0 WHEN $14='curated' AND $3='museum' THEN coalesce((SELECT min(position) FROM selections s WHERE s.institution_id=i.id AND s.artwork_id=w.id AND s.curator_kind=$3),2147483647) WHEN $14='curated' AND $3='artlines' THEN coalesce(array_position($13::uuid[],w.id),2147483647) ELSE coalesce(w.creation_year_start,2147483647) END`
 	// Choose the bounded page before enriching cards. Otherwise PostgreSQL can
 	// read every museum image row before sorting, even for a 24-work response.
-	rows, err := r.db.Query(ctx, museumScopedCTE+`, page AS MATERIALIZED (
- SELECT w.id,`+sortNumber+` AS sort_number,w.normalized_title`+where+`
- AND ($17 OR (`+sortNumber+`,w.normalized_title,w.id::text)>($14,$15,$16))
- ORDER BY 2,w.normalized_title,w.id LIMIT $18)
+	rows, err := r.db.Query(ctx, museumScopedCTE+museumGalleryPage(f.Sort, where, sortNumber, counts.NonNull > counts.Images)+`
  SELECT (SELECT `+workCardJSON+` FROM works w CROSS JOIN institutions i WHERE w.id=page.id AND i.slug=$1 OFFSET 0),page.sort_number,page.normalized_title
  FROM page ORDER BY page.sort_number,page.normalized_title,page.id`, museumQueryArgs(args...)...)
 	if err != nil {
@@ -634,6 +655,15 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 		out.Items = out.Items[:f.Limit]
 		last := out.Items[f.Limit-1]
 		out.NextCursor = encodeMuseumCursor(f, slug, last.SortNumber, last.SortName, last.ID)
+	}
+	if highlights.Source == "artlines" {
+		for i := range out.Items {
+			for position, id := range highlights.IDs {
+				if out.Items[i].ID == id {
+					out.Items[i].Selections = append(out.Items[i].Selections, MuseumSelection{Kind: "artlines", Position: position + 1, Reason: "Artlines collection selection"})
+				}
+			}
+		}
 	}
 	out.Facets, err = r.museumFacets(ctx, slug)
 	return out, err

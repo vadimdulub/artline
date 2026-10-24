@@ -55,7 +55,7 @@ func artistWorksFilter(r *http.Request) (catalog.ArtistWorksFilter, error) {
 	if !allowed(q.Get("image_only"), "", "true", "false") {
 		return f, catalog.ErrChronologyFilter
 	}
-	f.ImageOnly = q.Get("image_only") == "true"
+	f.ImageOnly = q.Get("image_only") != "false"
 	var err error
 	f.Limit, err = integerQuery(r, "limit", 24, 1, 60)
 	if err != nil || len(f.Cursor) > 2048 || !allowed(q.Get("undated"), "", "0", "1") {

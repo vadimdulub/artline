@@ -28,7 +28,7 @@ export function readEntityFilters(type: AtlasType, source: URLSearchParams) {
   for (const field of entityFields[type]) for (const value of source.getAll(`${type}_${field}`)) result.append(field, value);
   const top = type === "artwork" ? "popular" : "top100";
   if (!result.has(top)) result.set(top, String(type !== "artwork" && source.get("highlights") !== "false"));
-  if (type === "artwork") result.set("image_only", "true");
+  if (type === "artwork") { result.set("image_only", "true"); result.set("work_type", "painting"); }
   return result;
 }
 export function entityUpdates(type: AtlasType, filters?: URLSearchParams): Record<string, string[] | null> {

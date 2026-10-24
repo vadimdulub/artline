@@ -66,7 +66,7 @@ export function AllAtlas(){
  const artworkCountries=params.get("country_scope")==="artwork";
  const request=new URLSearchParams({selection:"true",highlights:String(highlights),preset_filters:"custom"});
  for(const key of ["fit","preset","window","start","end","q","region","country","country_scope","continent","creator","after_artwork",...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
- request.set("artwork_image_only","true");
+ request.set("artwork_image_only","true"); request.set("artwork_work_type","painting");
  for(const kind of layers)request.append("type",kind);
  const requestKey=timelineRequestKey(request,fallback);
  const requestReady=Boolean(metadata)||!atlasNeedsPresetMetadata(rawParams);
@@ -150,7 +150,7 @@ export function AllAtlas(){
   </div>
   {metadata&&allKinds.includes(browseKind!)&&<AtlasContentPicker key={browseKind??"add"} metadata={metadata} range={range} layers={layers} initialType={browseKind??"artwork"} browse={Boolean(browseKind)} filterQuery={requestKey} close={()=>updateQuery({panel:null,browse:null},true)} addLayer={addLayer} open={open}/>}
   {!panel&&!browseKind&&selected&&selectedType==="book"&&<BookDrawer id={selected} items={[]} navigation={navigation} close={close} select={id=>updateQuery({item:id},true)} fallbackFocusId="all-timeline-title"/>}
-  {!panel&&!browseKind&&selected&&selectedType==="event"&&<EventDrawer id={selected} navigation={navigation} close={close} fallbackFocusId="all-timeline-title"/>}
+  {!panel&&!browseKind&&selected&&selectedType==="event"&&<EventDrawer paintingsOnly id={selected} navigation={navigation} close={close} fallbackFocusId="all-timeline-title"/>}
   {!panel&&!browseKind&&selected&&selectedType==="artwork"&&<AllArtworkDrawer id={selected} close={close} navigation={navigation}/>}
  </ExplorerFrame>;
 }

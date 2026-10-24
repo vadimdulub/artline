@@ -95,6 +95,10 @@ func broadArtworkGeography(f Filter) bool {
 	for key, values := range f.Entities["artwork"] {
 		switch key {
 		case "image_only": // Legacy option; illustrated eligibility is mandatory.
+		case "work_type":
+			if len(values) != 1 || values[0] != "painting" {
+				return false
+			}
 		case "popular", "women":
 			if len(values) != 1 || values[0] != "false" {
 				return false

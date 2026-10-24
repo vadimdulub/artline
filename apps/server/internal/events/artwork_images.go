@@ -80,7 +80,7 @@ const artworkImagesSQL = `SELECT a.slug,a.id::text,a.title,m.storage_path,
  WHERE aa.artwork_id=a.id AND ar.status<>'archived'
  ORDER BY (aa.attribution_role='primary') DESC,ar.slug LIMIT 1
  ) creator ON true
- WHERE a.slug=ANY($1::text[]) AND a.status<>'archived'
+ WHERE a.slug=ANY($1::text[]) AND a.status<>'archived' AND a.work_type='painting'
  AND artline_creation_scope(a.creation_year_start,a.creation_year_end,a.date_precision)<>'excluded'
  AND m.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'`
 

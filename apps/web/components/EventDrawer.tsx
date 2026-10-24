@@ -11,7 +11,7 @@ import { RecordDrawer } from "./RecordDrawer";
 import { LoadingIndicator } from "./LoadingIndicator";
 import styles from "./Books.module.css";
 
-export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-timeline" }: { id: string; close: () => void; fallbackFocusId?: string; navigation?: RecordNavigation }) {
+export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-timeline", paintingsOnly = false }: { id: string; close: () => void; fallbackFocusId?: string; paintingsOnly?: boolean; navigation?: RecordNavigation }) {
   const [result, setResult] = useState<{ id: string; attempt: number; data?: HistoricalEvent; error?: string }>();
   const [retry, setRetry] = useState(0);
   const [failedImage, setFailedImage] = useState("");
@@ -24,25 +24,26 @@ export function EventDrawer({ id, close, navigation, fallbackFocusId = "events-t
   }, [id, retry]);
   const event = result?.id === id && result.attempt === retry ? result.data : undefined;
   const error = result?.id === id && result.attempt === retry ? result.error : undefined;
+  const image = event?.image && (!paintingsOnly || event.image.artwork) ? event.image : undefined;
   const contextualRange = (min: number, max: number) => {
     if (!event || event.startYear === null || event.endYear === null || event.endYear < min || event.startYear > max) return null;
     let start = Math.max(min, event.startYear), end = Math.min(max, event.endYear);
     if (start === end) { if (end < max) end += end === -1 ? 2 : 1; else start -= start === 1 ? 2 : 1; }
     return new URLSearchParams({ start: String(start), end: String(end), top100: "false" }).toString();
   };
-  const illustration = event?.image && failedImage !== event.image.imageUrl ?
+  const illustration = image && failedImage !== image.imageUrl ?
     // eslint-disable-next-line @next/next/no-img-element
-    <img className={styles.coverImage} src={event.image.imageUrl} alt={event.image.label} decoding="async" onError={() => setFailedImage(event.image!.imageUrl)} /> : null;
+    <img className={styles.coverImage} src={image.imageUrl} alt={image.label} decoding="async" onError={() => setFailedImage(image!.imageUrl)} /> : null;
   const books = contextualRange(-5000, 2026), art = contextualRange(1100, 2000);
   return <RecordDrawer label="Event details" closeLabel="Close event details" recordKey={id} title={event?.kind ?? "Event"} navigation={navigation && <RecordArrows navigation={navigation} noun="event" />} close={close} fallbackFocusId={fallbackFocusId}>
     {event ? <div className={`${styles.drawerContent} ${styles.eventContent}`}>
       <header className={styles.bookHeading}><p>{event.kind} · {event.topics.join(" · ")}</p><div className="bookmark-title"><h2>{event.title}</h2><BookmarkButton kind="event" id={event.id} title={event.title} /></div>{displayMetadata(event.years) && <p>{event.years}</p>}</header>
-      {event.image && <figure className={styles.eventIllustration}>
-        {illustration && (event.image.artwork ? <Link href={event.image.artwork.href} prefetch={false} aria-label={`View ${event.image.artwork.title} in Artline`}>{illustration}</Link> : illustration)}
+      {image && <figure className={styles.eventIllustration}>
+        {illustration && (image.artwork ? <Link href={image.artwork.href} prefetch={false} aria-label={`View ${image.artwork.title} in Artline`}>{illustration}</Link> : illustration)}
         <figcaption className={styles.coverNote}>
-          {event.image.artwork ? <Link href={event.image.artwork.href} prefetch={false}>{event.image.label}</Link> : <a href={safeSourceURL(event.image.sourceUrl)} target="_blank" rel="noreferrer">{event.image.label}</a>}<br />
-          {event.image.credit}{event.image.credit && event.image.license && " · "}{event.image.licenseUrl ? <a href={safeSourceURL(event.image.licenseUrl)} target="_blank" rel="noreferrer">{event.image.license}</a> : event.image.license}
-          {event.image.artwork && event.image.sourceUrl && <> · <a href={safeSourceURL(event.image.sourceUrl)} target="_blank" rel="noreferrer">Image source</a></>}
+          {image.artwork ? <Link href={image.artwork.href} prefetch={false}>{image.label}</Link> : <a href={safeSourceURL(image.sourceUrl)} target="_blank" rel="noreferrer">{image.label}</a>}<br />
+          {image.credit}{image.credit && image.license && " · "}{image.licenseUrl ? <a href={safeSourceURL(image.licenseUrl)} target="_blank" rel="noreferrer">{image.license}</a> : image.license}
+          {image.artwork && image.sourceUrl && <> · <a href={safeSourceURL(image.sourceUrl)} target="_blank" rel="noreferrer">Image source</a></>}
         </figcaption>
       </figure>}
       {event.description && <section className={styles.bookAbout} aria-labelledby="event-about"><h3 id="event-about">About this {event.kind.toLowerCase()}</h3><p>{event.description}</p></section>}

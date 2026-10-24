@@ -7,7 +7,6 @@ import { AtlasCheckbox } from "./AtlasFilters";
 import { MultiSelectFilter } from "./MultiSelectFilter";
 import { SelectionHint } from "./SelectionHint";
 import { PopularPaintersHint } from "./PopularPaintersHint";
-import { workTypeOptions } from "./use-painter-choices";
 export type FilterChange = (values: Record<string, string | string[] | null>) => void;
 type RemoteChoices = Pick<ComponentProps<typeof MultiSelectFilter>, "options" | "remote" | "retry" | "unavailable">;
 type Fields = { params: URLSearchParams; change: FilterChange; unavailable?: boolean };
@@ -32,14 +31,13 @@ export function BookFilterFields({params, change, facets, authorChoices, unavail
  </>;
 }
 export function ArtworkFilterFields({params,change,facets,painterChoices,unavailable=false}: Fields & {facets:TimelineFacets;painterChoices:RemoteChoices}) {
- const painters=params.getAll("painter"),selectedMovements=params.getAll("movement"),regions=params.getAll("region"),countries=params.getAll("country"),workTypes=params.getAll("work_type");
+ const painters=params.getAll("painter"),selectedMovements=params.getAll("movement"),regions=params.getAll("region"),countries=params.getAll("country");
  const womenOnly=params.get("women")==="true",popularOnly=params.get("popular")!=="false";
  return <>
           <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => change({ painter: values })} helpText="Select painters together, for example Monet and Pissarro. Search here adds names; it does not replace your selection." />
           <MultiSelectFilter label="Movements" allLabel="All movements" options={facets.movements} values={selectedMovements} onChange={values => change({ movement: values })} unavailable={unavailable} />
           <MultiSelectFilter label="Regions" allLabel="All regions" options={facets.regions ?? []} values={regions} onChange={values => change({ region: values })} unavailable={unavailable} />
           <MultiSelectFilter label="Countries" allLabel="All countries" options={facets.countries} values={countries} onChange={values => change({ country: values })} unavailable={unavailable} />
-          <MultiSelectFilter label="Work types" allLabel="All types" options={workTypeOptions} values={workTypes} onChange={values => change({ work_type: values })} />
           <AtlasCheckbox label="Women artists" checked={womenOnly} onChange={checked => change({ women: checked ? "true" : null })} />
           <AtlasCheckbox label="Top 100 painters" checked={popularOnly} onChange={checked => change({ popular: checked ? "true" : "false" })}><PopularPaintersHint /></AtlasCheckbox>
  </>;

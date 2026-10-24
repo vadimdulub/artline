@@ -15,7 +15,7 @@ import { useMuseumRequest } from "./museum-state";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./ArtistChronology.module.css";
 
-export function ArtistChronologyRecord({ artist, workId, onSelectWork, embedded = true, essay, initialWork, defaultImageOnly = embedded }: { artist: ArtistDetail; workId: string | null; onSelectWork: (id: string) => void; embedded?: boolean; essay?: string | null; initialWork?: Artwork; defaultImageOnly?: boolean }) {
+export function ArtistChronologyRecord({ artist, workId, onSelectWork, embedded = true, essay, initialWork, defaultImageOnly = true }: { artist: ArtistDetail; workId: string | null; onSelectWork: (id: string) => void; embedded?: boolean; essay?: string | null; initialWork?: Artwork; defaultImageOnly?: boolean }) {
   const params = new URLSearchParams(useQueryString());
   const searchInput = useRef<HTMLInputElement>(null);
   const imageOnly = params.has("art_images") ? params.get("art_images") !== "false" : defaultImageOnly;
@@ -58,7 +58,7 @@ export function ArtistChronologyRecord({ artist, workId, onSelectWork, embedded 
   const yearFilter = <AtlasSelect label="Artwork year" value={year} onChange={changeYear} options={yearOptions} />;
   const imageFilter = <AtlasCheckbox label="With pictures" checked={imageOnly} onChange={checked => updateQuery({ art_images: String(checked), art_cursor: null, work: null }, true)} />;
   function changeSearch(value: string) { updateQuery({ art_q: value || null, art_cursor: null, work: null }); }
-  function resetFilters() { updateQuery({ art_q: null, art_museum: null, art_type: null, art_year: null, art_cursor: null, art_images: "false", work: null }, true); }
+  function resetFilters() { updateQuery({ art_q: null, art_museum: null, art_type: null, art_year: null, art_cursor: null, art_images: "true", work: null }, true); }
   function changeYear(value: string) { updateQuery({ art_year: value || null, art_cursor: null, work: null }); }
   return <ArtistRecord artist={artist} embedded={embedded} gallery={!embedded} essay={essay} pageWork={initialWork ?? null} workId={workId} defaultWork={defaultWork} onSelectWork={onSelectWork} artworks={works} linkedWork={displayWork} navigation={{...navigation,busy:navigation.busy || linked.loading}}
     workMessage={workId && !knownWork && !linked.data ? linked.error ? <div role="alert"><p>{linked.error}</p><button onClick={() => setRetry(value => value + 1)}>Retry artwork</button></div> : <p>Opening linked artwork…</p> : undefined}

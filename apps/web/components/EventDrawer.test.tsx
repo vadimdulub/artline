@@ -46,3 +46,18 @@ it("retains an unmatched historical illustration without inventing an artwork li
   expect(await screen.findByRole("link", { name: event.image!.label })).toHaveAttribute("href", event.image!.sourceUrl);
   expect(screen.queryByRole("link", { name: /in Artline/ })).not.toBeInTheDocument();
 });
+
+it("hides photographic context in the paintings-only All view", async () => {
+  vi.mocked(apiRequest).mockResolvedValue({ ...event, image: { ...event.image, artwork: undefined, label: "Historical photograph" } });
+  render(<EventDrawer paintingsOnly id={event.id} close={() => {}} />);
+  await screen.findByRole("heading", { name: event.title });
+  expect(screen.queryByRole("img")).not.toBeInTheDocument();
+  expect(screen.queryByText("Historical photograph")).not.toBeInTheDocument();
+});
+
+it("retains a canonical painting and its source in the All view", async () => {
+  vi.mocked(apiRequest).mockResolvedValue(event);
+  render(<EventDrawer paintingsOnly id={event.id} close={() => {}} />);
+  expect(await screen.findByRole("img")).toHaveAttribute("src", event.image!.imageUrl);
+  expect(screen.getByRole("link", { name: "Image source" })).toHaveAttribute("href", event.image!.sourceUrl);
+});

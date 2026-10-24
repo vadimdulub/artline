@@ -30,7 +30,7 @@ func TestArtworkDirectoryReadOnly(t *testing.T) {
 	repo := &Repository{db: tx}
 	{
 		var count int
-		err = tx.QueryRow(ctx, "SELECT count(*) FROM artworks WHERE status<>'archived'").Scan(&count)
+		err = tx.QueryRow(ctx, "SELECT count(*) FROM artworks WHERE status<>'archived' AND work_type='painting'").Scan(&count)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -40,6 +40,12 @@ func TestArtworkDirectoryReadOnly(t *testing.T) {
 		}
 		if len(page.Items) > 7 {
 			t.Fatal("unbounded page")
+		}
+		for _, item := range page.Items {
+			var workType string
+			if err := tx.QueryRow(ctx, "SELECT work_type FROM artworks WHERE id=$1::uuid", item.ID).Scan(&workType); err != nil || workType != "painting" {
+				t.Fatal("non-painting in artwork directory", item.ID, err)
+			}
 		}
 		if page.NextCursor != "" {
 			next, e := repo.BrowseArtworks(ctx, ArtworkDirectoryFilter{Limit: 7, Cursor: page.NextCursor})
@@ -63,7 +69,7 @@ func TestArtworkDirectoryReadOnly(t *testing.T) {
 		t.Logf("%d active records", count)
 	}
 	var title, id string
-	err = tx.QueryRow(ctx, `SELECT title,id FROM artworks aw WHERE status='review' AND length(title)<180 AND primary_media_id IS NULL AND current_institution_id IS NULL AND creation_year_start IS NULL AND creation_year_end IS NULL AND NOT EXISTS(SELECT 1 FROM artwork_artists aa WHERE aa.artwork_id=aw.id) ORDER BY length(title) DESC LIMIT 1`).Scan(&title, &id)
+	err = tx.QueryRow(ctx, `SELECT title,id FROM artworks aw WHERE status='review' AND work_type='painting' AND length(title)<180 AND primary_media_id IS NULL AND current_institution_id IS NULL AND creation_year_start IS NULL AND creation_year_end IS NULL AND NOT EXISTS(SELECT 1 FROM artwork_artists aa WHERE aa.artwork_id=aw.id) ORDER BY length(title) DESC LIMIT 1`).Scan(&title, &id)
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -30,6 +30,11 @@ describe("All filter discovery", () => {
 });
 
 describe("Add retains the current discovery scope", () => {
+  it("keeps the artwork lane on illustrated paintings even for legacy photo URLs", () => {
+    const filters = readEntityFilters("artwork", new URLSearchParams("artwork_work_type=photograph&artwork_image_only=false"));
+    expect(filters.getAll("work_type")).toEqual(["painting"]);
+    expect(filters.get("image_only")).toBe("true");
+  });
   for (const type of allAtlasKinds) {
     const top = type === "artwork" ? "popular" : "top100";
     for (const query of ["highlights=false", "country=japan&highlights=false"]) {

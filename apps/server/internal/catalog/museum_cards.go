@@ -20,7 +20,9 @@ var museumDirectoryCardCTE = museumCTE + `, card_holdings AS NOT MATERIALIZED (
 ), card_counts AS MATERIALIZED (
  SELECT (SELECT count(*) FROM card_holdings) AS holdings,
  (SELECT count(*) FROM card_display) AS on_view,
- (SELECT count(*) FROM card_display WHERE current_institution_id IS DISTINCT FROM page.id) AS incoming
+ (SELECT count(*) FROM card_display WHERE current_institution_id IS DISTINCT FROM page.id) AS incoming,
+ (SELECT count(DISTINCT s.artwork_id) FROM selections s WHERE s.institution_id=page.id
+ AND EXISTS(SELECT 1 FROM card_works aw WHERE aw.id=s.artwork_id OFFSET 0)) AS highlights
 ) `
 
 // Metadata and cover enrichment use the same JSON contract as other museum
@@ -29,11 +31,15 @@ var museumDirectoryCardJSON = strings.Split(museumJSON, "'work_count',")[0] + `
  'work_count',(SELECT holdings+incoming FROM card_counts),
  'holding_count',(SELECT holdings FROM card_counts),
  'on_view_count',(SELECT on_view FROM card_counts),
- 'highlight_count',(SELECT count(DISTINCT s.artwork_id) FROM selections s
- WHERE s.institution_id=i.id AND EXISTS(
- SELECT 1 FROM card_works aw WHERE aw.id=s.artwork_id OFFSET 0)),
+ 'highlight_count',(SELECT coalesce(nullif(highlights,0),least(24,holdings+incoming)) FROM card_counts),
+ 'highlight_source',(SELECT CASE WHEN highlights>0 THEN 'museum' ELSE 'artlines' END FROM card_counts),
  'cover',(SELECT ` + workCardJSON + ` FROM works w WHERE w.id=(
  SELECT coalesce(
+ (SELECT s.artwork_id FROM selections s JOIN artworks selected ON selected.id=s.artwork_id
+ JOIN media_assets image ON image.id=selected.primary_media_id
+ WHERE s.institution_id=i.id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'
+ AND EXISTS(SELECT 1 FROM card_works member WHERE member.id=s.artwork_id OFFSET 0)
+ ORDER BY s.position,s.artwork_id LIMIT 1),
  (SELECT candidate.id FROM (
  (SELECT aw.id,aw.creation_year_start,aw.title FROM card_holdings aw WHERE aw.primary_media_id IS NOT NULL
  AND EXISTS(SELECT 1 FROM media_assets media WHERE media.id=aw.primary_media_id AND media.storage_path IS NOT NULL)

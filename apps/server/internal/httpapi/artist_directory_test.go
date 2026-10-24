@@ -28,3 +28,12 @@ func TestArtistCatalogueFilters(t *testing.T) {
 		}
 	}
 }
+
+func TestArtistCatalogueDefaultsToPictures(t *testing.T) {
+	for _, query := range []string{"", "image_only=true", "image_only=false"} {
+		f, err := artistWorksFilter(httptest.NewRequest("GET", "/api/v1/artists/rembrandt/works?"+query, nil))
+		if err != nil || f.ImageOnly != (query != "image_only=false") {
+			t.Fatalf("picture default or explicit opt-out lost: %q %+v %v", query, f, err)
+		}
+	}
+}

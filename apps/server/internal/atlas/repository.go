@@ -34,7 +34,7 @@ const selectedArt = `SELECT ci.artwork_id FROM curated_collection_items ci JOIN 
  WHERE cc.status<>'archived'
  AND (cc.curator_kind='owner' OR (ci.source_url IS NOT NULL AND EXISTS(SELECT 1 FROM sources s WHERE s.id=ci.source_id AND s.is_active)))`
 const acceptedArtHolding = `EXISTS(SELECT 1 FROM artwork_location_assertions h JOIN sources s ON s.id=h.source_id AND s.is_active JOIN institutions i ON i.id=h.institution_id AND i.status<>'archived'  WHERE h.artwork_id=a.id AND h.claim_type='holding' AND h.review_state='accepted' AND h.superseded_by IS NULL)`
-const artScope = ` FROM artworks a WHERE a.status<>'archived'
+const artScope = ` FROM artworks a WHERE a.status<>'archived' AND a.work_type='painting'
  AND a.date_precision IN ('exact','circa','range','circa_range','decade','century')
  AND artline_creation_scope(a.creation_year_start,a.creation_year_end,a.date_precision)='eligible'
  AND coalesce(a.creation_year_start,a.creation_year_end)<>0 AND coalesce(a.creation_year_end,a.creation_year_start)<>0

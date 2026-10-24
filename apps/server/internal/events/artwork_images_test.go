@@ -89,18 +89,20 @@ func TestArtworkImagesReadOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer tx.Rollback(ctx)
-	fixture := `WITH artworks(id,slug,title,primary_media_id,status,creation_year_start,creation_year_end,date_precision) AS (
- VALUES ('00000000-0000-4000-8000-000000000001'::uuid,'visible','Painting',1,'review',1845,1845,'exact'),
- ('00000000-0000-4000-8000-000000000002'::uuid,'archived','Withdrawn',1,'archived',1845,1845,'exact'),
- ('00000000-0000-4000-8000-000000000003'::uuid,'missing-media','No image',NULL,'review',1845,1845,'exact'),
- ('00000000-0000-4000-8000-000000000004'::uuid,'post-scope','Later',1,'review',1980,1980,'exact'),
- ('00000000-0000-4000-8000-000000000005'::uuid,'unsafe-media','Remote',2,'review',1845,1845,'exact')),
+	fixture := `WITH artworks(id,slug,title,primary_media_id,status,creation_year_start,creation_year_end,date_precision,work_type) AS (
+ VALUES ('00000000-0000-4000-8000-000000000001'::uuid,'visible','Painting',1,'review',1845,1845,'exact','painting'),
+ ('00000000-0000-4000-8000-000000000002'::uuid,'archived','Withdrawn',1,'archived',1845,1845,'exact','painting'),
+ ('00000000-0000-4000-8000-000000000003'::uuid,'missing-media','No image',NULL,'review',1845,1845,'exact','painting'),
+ ('00000000-0000-4000-8000-000000000004'::uuid,'post-scope','Later',1,'review',1980,1980,'exact','painting'),
+ ('00000000-0000-4000-8000-000000000005'::uuid,'unsafe-media','Remote',2,'review',1845,1845,'exact','painting'),
+ ('00000000-0000-4000-8000-000000000006'::uuid,'photo','Photograph',1,'review',1940,1940,'exact','photograph'),
+ ('00000000-0000-4000-8000-000000000007'::uuid,'drawing','Drawing',1,'review',1940,1940,'exact','drawing')),
  media_assets(id,storage_path,source_page_url,creator_credit,attribution_text,license_label,rights_status,license_url,verified_at) AS (
  VALUES (1,'/assets/current.jpg','https://example.org/source','Current credit','Attribution','Current licence','restricted','https://example.org/license',now()),
  (2,'https://unreviewed.invalid/image.jpg','https://example.org/source','','','','unknown','',now())),
  artwork_artists(artwork_id,artist_id,attribution_role) AS (VALUES ('00000000-0000-4000-8000-000000000001'::uuid,1,'primary')),
  artists(id,slug,status) AS (VALUES (1,'reviewed-artist','review')) `
-	rows, err := tx.Query(ctx, fixture+artworkImagesSQL, []string{"visible", "archived", "missing-media", "post-scope", "unsafe-media"})
+	rows, err := tx.Query(ctx, fixture+artworkImagesSQL, []string{"visible", "archived", "missing-media", "post-scope", "unsafe-media", "photo", "drawing"})
 	if err != nil {
 		t.Fatal(err)
 	}

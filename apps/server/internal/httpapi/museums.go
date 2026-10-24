@@ -54,7 +54,7 @@ func museumFilter(r *http.Request) (catalog.MuseumFilter, error) {
 	if err != nil {
 		return f, err
 	}
-	if len(f.Query) > 200 || len(f.Cursor) > 2048 || !allowed(f.Selection, "", "museum") || !allowed(f.Display, "", "on_view") || !allowed(f.Sort, "", "images", "year", "title", "curated") {
+	if len(f.Query) > 200 || len(f.Cursor) > 2048 || !allowed(f.Selection, "", "museum", "artlines") || !allowed(f.Display, "", "on_view") || !allowed(f.Sort, "", "highlights", "images", "year", "title", "curated") {
 		return f, catalog.ErrMuseumFilter
 	}
 	if f.Artist != "" && !validArtistSlug(f.Artist) {
@@ -110,7 +110,9 @@ func (api *API) museumError(w http.ResponseWriter, err error) {
 }
 func (api *API) museums(w http.ResponseWriter, r *http.Request) {
 	f, err := museumFilter(r)
-	if err != nil {
+	// Artlines selections are computed within one collection, rather than
+	// stored museum designations that can filter the institution directory.
+	if err != nil || f.Selection == "artlines" {
 		api.museumError(w, catalog.ErrMuseumFilter)
 		return
 	}

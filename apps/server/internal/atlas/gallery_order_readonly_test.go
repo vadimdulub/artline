@@ -16,8 +16,8 @@ import (
 )
 
 // Audit real catalogue entries in a stable read-only snapshot. The small picked
-// view spans every available medium, so pagination must preserve chronology
-// even when graphic works have earlier dates than paintings.
+// picked view spans multiple media. Only paintings remain eligible, including
+// when an older link explicitly supplies non-painting artwork IDs or filters.
 func TestGalleryOrderReadOnly(t *testing.T) {
 	dsn := os.Getenv("ARTLINE_READONLY_DATABASE_URL")
 	if dsn == "" {
@@ -41,10 +41,16 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer tx.Rollback(ctx)
-	rows, err := tx.Query(ctx, `WITH candidates AS (
+	rows, err := tx.Query(ctx, `WITH sampled AS MATERIALIZED (
+ SELECT sample.id FROM unnest(ARRAY['painting','fresco','drawing','print','photograph']) medium
+ CROSS JOIN LATERAL (SELECT id FROM artworks WHERE work_type=medium AND status<>'archived'
+ AND primary_media_id IS NOT NULL AND creation_year_end<=1970 LIMIT 24) sample
+ UNION SELECT id FROM artworks WHERE object_form='icon' AND primary_media_id IS NOT NULL AND status<>'archived' LIMIT 144
+ ), candidates AS (
  SELECT a.id::text,coalesce(a.creation_year_start,a.creation_year_end) AS start_year,a.work_type,coalesce(a.object_form,'') AS object_form,
- row_number() OVER(PARTITION BY a.work_type,a.object_form ORDER BY a.creation_year_start DESC,a.id) AS ordinal`+artScope+`
- AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=a.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'))
+	row_number() OVER(PARTITION BY a.work_type,a.object_form ORDER BY a.creation_year_start DESC,a.id) AS ordinal`+strings.Replace(artScope, "AND a.work_type='painting'", "", 1)+`
+	 AND a.id IN(SELECT id FROM sampled)
+	 AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=a.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'))
  SELECT id,start_year,work_type,object_form FROM candidates WHERE ordinal<=2`, Bounds.Start, Bounds.End, "", false, "")
 	if err != nil {
 		t.Fatal(err)
@@ -68,8 +74,10 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 		}
 		media[workType] = true
 		icon = icon || form == "icon"
-		expected = append(expected, item)
 		ids = append(ids, item.ID)
+		if workType == "painting" {
+			expected = append(expected, item)
+		}
 	}
 	rows.Close()
 	if err := rows.Err(); err != nil {
@@ -94,7 +102,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			t.Fatal(err)
 		}
 		lane := out.Lanes[0]
-		if lane.Total != len(ids) || len(lane.Items) > f.Limit {
+		if lane.Total != len(expected) || len(lane.Items) > f.Limit {
 			t.Fatalf("sort changed membership or page bound: %+v", lane)
 		}
 		got = append(got, lane.Items...)
@@ -126,10 +134,10 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			}
 		}
 	}
-	t.Logf("all %d works across %d media retained in chronological order through page boundaries", len(got), len(media))
+	t.Logf("%d paintings retained chronologically; picks from %d media checked", len(got), len(media))
 
-	// All and Painters must select the oldest works before the page limit,
-	// and an explicit Print filter must still show prints.
+	// All and its painter filter preserve chronology. A legacy Print filter
+	// cannot override the catalogue's paintings-only browsing policy.
 	for _, tc := range []struct {
 		name   string
 		filter Filter
@@ -143,6 +151,12 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			recorder.statements = nil
 			started := time.Now()
 			out, err := repo.List(ctx, tc.filter)
+			if tc.name == "prints" {
+				if err != nil || len(out.Lanes) != 1 || out.Lanes[0].Total != 0 || len(out.Lanes[0].Items) != 0 {
+					t.Fatalf("non-paintings escaped catalogue filter: %+v %v", out, err)
+				}
+				return
+			}
 			if err != nil || len(out.Lanes) != 1 || len(out.Lanes[0].Items) != tc.filter.Limit {
 				t.Fatalf("missing real gallery sample: %+v %v", out, err)
 			}
@@ -150,8 +164,12 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 				t.Fatal("gallery is not ordered by creation year")
 			}
 			for _, item := range out.Lanes[0].Items {
-				if item.MediaURL == "" || tc.name == "prints" && item.galleryPriority != 2 {
-					t.Fatalf("missing image or print filter ignored: %+v", item)
+				var workType string
+				if err := tx.QueryRow(ctx, "SELECT work_type FROM artworks WHERE id=$1::uuid", item.ID).Scan(&workType); err != nil {
+					t.Fatal(err)
+				}
+				if item.MediaURL == "" || workType != "painting" {
+					t.Fatalf("missing image or non-painting in gallery: %+v", item)
 				}
 			}
 			t.Logf("%d matching artworks; first page in %s", out.Total, time.Since(started))
@@ -183,4 +201,16 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			}
 		})
 	}
+	t.Run("wwii-paintings", func(t *testing.T) {
+		out, err := repo.List(ctx, Filter{Range: Range{Start: 1933, End: 1955}, Types: []string{"artwork"}, PresetID: "second-world-war", Limit: 60})
+		if err != nil || len(out.Lanes) != 1 || out.Lanes[0].NextCursor != "" {
+			t.Fatalf("WWII selection unavailable or unexpectedly unbounded: %+v %v", out, err)
+		}
+		for _, id := range []string{"ce63eadb-ac6e-465a-a677-36ea881ed79c", "492d8809-9bf3-501b-aebf-61cf4ddfb6a7", "561236b7-9f3a-576c-a23a-4de005dd494f"} {
+			if !slices.ContainsFunc(out.Lanes[0].Items, func(item Item) bool { return item.ID == id && item.MediaURL != "" }) {
+				t.Fatalf("verified WWII painting missing: %s", id)
+			}
+		}
+		t.Logf("%d illustrated paintings in the WWII context selection, including all three additions", out.Lanes[0].Total)
+	})
 }
