@@ -9,7 +9,7 @@ import styles from "./Studies.module.css";
 
 export function AddStudyRecords({ studyId, existing, close, added }: { studyId: string; existing: string[]; close: () => void; added: () => void }) {
   const [tab, setTab] = useState<"catalogue" | "bookmarks" | "link">("catalogue"), [kind, setKind] = useState<StudyKind>("artwork");
-  const [query, setQuery] = useState(""), [creator, setCreator] = useState(""), [from, setFrom] = useState(""), [to, setTo] = useState(""), [image, setImage] = useState(false), [undated, setUndated] = useState(false);
+  const [query, setQuery] = useState(""), [creator, setCreator] = useState(""), [from, setFrom] = useState(""), [to, setTo] = useState(""), [image, setImage] = useState(true), [undated, setUndated] = useState(false);
   const [cursor, setCursor] = useState(""), [pages, setPages] = useState<string[]>([]), [results, setResults] = useState<StudySearchPage | null>(null), [loading, setLoading] = useState(true), [error, setError] = useState(""), [retry, setRetry] = useState(0);
   const [selection, setSelection] = useState<Map<string, StudyRecord>>(new Map()), [busy, setBusy] = useState(false), [saveError, setSaveError] = useState("");
   const [link, setLink] = useState(""), [title, setTitle] = useState(""), [author, setAuthor] = useState(""), [year, setYear] = useState(""), [endYear, setEndYear] = useState("");
@@ -21,14 +21,14 @@ export function AddStudyRecords({ studyId, existing, close, added }: { studyId: 
     const timer = setTimeout(() => {
       setLoading(true); setError("");
       const params = new URLSearchParams({ kind, q: query, creator: kind === "event" ? "" : creator, cursor });
-      if (tab === "bookmarks") params.set("saved", "true"); if (image && kind === "artwork") params.set("image", "true");
+      if (tab === "bookmarks") params.set("saved", "true"); if (kind === "artwork") params.set("image", String(image));
       if (undated) params.set("dates", "undated"); else { if (from) params.set("from", from); if (to) params.set("to", to); }
       studyRequest<StudySearchPage>(`/search?${params}`, { signal: controller.signal }).then(result => { setResults(result); setLoading(false); }).catch(error => { if (!controller.signal.aborted) { setError(error.message); setLoading(false); } });
     }, 280);
     return () => { clearTimeout(timer); controller.abort(); };
   }, [tab, kind, query, creator, from, to, image, undated, cursor, retry, yearError]);
   function resetPage() { setCursor(""); setPages([]); setResults(null); setLoading(true); }
-  function resetFilters() { setQuery(""); setCreator(""); setFrom(""); setTo(""); setImage(false); setUndated(false); resetPage(); }
+  function resetFilters() { setQuery(""); setCreator(""); setFrom(""); setTo(""); setImage(true); setUndated(false); resetPage(); }
   async function save(event?: React.FormEvent) {
     event?.preventDefault(); setBusy(true); setSaveError("");
     try {

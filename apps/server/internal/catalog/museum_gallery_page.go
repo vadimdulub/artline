@@ -7,7 +7,7 @@ import (
 
 // Each ordered branch stops at limit+1 before the merge. In particular, an
 // image-first page must not sort or hydrate all 400,000 collection objects.
-func museumGalleryPage(sort, where, sortNumber string, unsupportedMedia bool) string {
+func museumGalleryPage(sort, where, sortNumber string, unsupportedMedia, imageOnly bool) string {
 	if sort != "highlights" && sort != "images" {
 		return `, page AS MATERIALIZED (
  SELECT w.id,` + sortNumber + ` AS sort_number,w.normalized_title` + where + `
@@ -42,12 +42,16 @@ func museumGalleryPage(sort, where, sortNumber string, unsupportedMedia bool) st
 	}
 	image := `EXISTS(SELECT 1 FROM media_assets image WHERE image.id=w.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`
 	branches = append(branches, museumOrderedCandidates(where, imageRank, image+" AND "+other, "aw.primary_media_id IS NOT NULL", seek(imageRank), "$19")...)
-	// Null and unsupported media paths share one position in the public order.
-	// Separate local prefixes preserve exact ordering without scanning all nulls.
-	branches = append(branches, museumOrderedCandidates(where, missingRank, other, "aw.primary_media_id IS NULL", seek(missingRank), "$19")...)
-	if unsupportedMedia {
-		native := `aw.primary_media_id IN(SELECT image.id FROM media_assets image WHERE image.storage_path IS NULL OR image.storage_path !~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`
-		branches = append(branches, museumOrderedCandidates(where, missingRank, other, native, seek(missingRank), "$19")...)
+	// A picture-only page cannot contain either missing-image branch.
+	// Avoid scanning those holdings merely to reject every candidate.
+	if !imageOnly {
+		// Null and unsupported media paths share one position in the public order.
+		// Separate local prefixes preserve exact ordering without scanning all nulls.
+		branches = append(branches, museumOrderedCandidates(where, missingRank, other, "aw.primary_media_id IS NULL", seek(missingRank), "$19")...)
+		if unsupportedMedia {
+			native := `aw.primary_media_id IN(SELECT image.id FROM media_assets image WHERE image.storage_path IS NULL OR image.storage_path !~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`
+			branches = append(branches, museumOrderedCandidates(where, missingRank, other, native, seek(missingRank), "$19")...)
+		}
 	}
 	return prefix + `, gallery_page_candidates AS MATERIALIZED (` + strings.Join(branches, " UNION ALL ") + `), page AS MATERIALIZED (
  SELECT * FROM gallery_page_candidates ORDER BY sort_number,normalized_title,id LIMIT $19)`

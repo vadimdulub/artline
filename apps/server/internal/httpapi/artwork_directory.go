@@ -20,7 +20,7 @@ func artworkDirectoryFilter(r *http.Request) (catalog.ArtworkDirectoryFilter, er
 		return f, catalog.ErrChronologyFilter
 	}
 	f.Undated = q.Get("undated") == "true"
-	f.ImageOnly = q.Get("image_only") == "true"
+	f.ImageOnly = q.Get("image_only") != "false"
 	var err error
 	f.Limit, err = integerQuery(r, "limit", 24, 1, 60)
 	return f, err

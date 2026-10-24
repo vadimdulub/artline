@@ -29,8 +29,10 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: 
   const museumRequest = useMuseumRequest<Museum>(`museums/${slug}`, revision, initialMuseum?.slug === slug ? initialMuseum : undefined, true);
   const museum = museumRequest.data ?? (museumRequest.previousData?.slug === slug ? museumRequest.previousData : undefined);
   const exhibitions = useMuseumRequest<Pick<ExhibitionPage, "total">>(museum ? `exhibitions?${new URLSearchParams({ institution: museum.id, limit: "1" })}` : null, revision);
+  const pictures = params.get("image_only") !== "0";
   const request = new URLSearchParams();
   for (const key of ["q", "artist", "movement", "selection", "display", "venue", "work_type", "start", "end", "unknown_date", "image_only", "sort", "limit"]) params.getAll(key).forEach(value => request.append(key, value));
+  if (!request.has("image_only")) request.set("image_only", "1");
   const scope = `${slug}|${request}`;
   const paging = useCursorPaging(scope, params.get("cursor") ?? "", cursor => { updateQuery({ cursor, work: null }, true); document.getElementById("museum-results-title")?.focus(); });
   if (params.get("cursor")) request.set("cursor", params.get("cursor")!);
@@ -45,7 +47,7 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: 
     start: `From ${params.get("start")}`, end: `To ${params.get("end")}`,
     unknown_date: "Unknown creation dates", image_only: "With an image",
   };
-  const filters = Object.entries(filterLabels).filter(([key]) => params.has(key) && params.get(key) && params.get(key) !== "0").map(([key, label]) => ({ key, label, remove: () => setMuseumFilters({ [key]: null }) }));
+  const filters = Object.entries(filterLabels).filter(([key]) => params.has(key) && params.get(key) && params.get(key) !== "0").map(([key, label]) => ({ key, label, remove: () => setMuseumFilters({ [key]: key === "image_only" ? "0" : null }) }));
   const venueOptions = museum?.venues.map(item => ({ slug: item.id, name: item.name })) ?? [];
   for (const group of [{ key: "artist", values: painters, options: painterChoices.options }, { key: "movement", values: movements, options: facets?.movements ?? [] }, { key: "venue", values: venues, options: venueOptions }, { key: "work_type", values: workTypes, options: workTypeOptions }]) {
     for (const value of group.values) filters.push({ key: `${group.key}-${value}`, label: group.options.find(item => item.slug === value)?.name ?? value.replaceAll("-", " "), remove: () => setMuseumFilters({ [group.key]: group.values.filter(item => item !== value) }) });
@@ -67,7 +69,7 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: 
       <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} searchLabel="Search artworks" placeholder="Artwork or painter" columns={2} activeCount={filters.filter(filter => filter.key !== "q").length}>
         <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} />
         <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />
-        <AtlasCheckbox label="With pictures" checked={params.get("image_only") === "1"} onChange={checked => setMuseumFilters({ image_only: checked ? "1" : null })} />
+        <AtlasCheckbox label="With pictures" checked={pictures} onChange={checked => setMuseumFilters({ image_only: checked ? "1" : "0" })} />
       </AtlasFilters>
       <details className={styles.more}><summary>More artwork filters</summary><div className={styles.secondaryFilters}>
         <AtlasSelect label="Display" value={display} onChange={value => setMuseumFilters({ display: value })} options={[{ value: "", label: "Any display status" }, { value: "on_view", label: "Confirmed on view" }]} />

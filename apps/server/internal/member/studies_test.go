@@ -14,10 +14,14 @@ import (
 	"time"
 )
 
-type studyTestCatalogue struct{ calls int }
+type studyTestCatalogue struct {
+	calls      int
+	lastSearch StudySearch
+}
 
 func (c *studyTestCatalogue) Search(_ context.Context, _ string, f StudySearch) (StudySearchPage, error) {
 	c.calls++
+	c.lastSearch = f
 	return StudySearchPage{Items: []StudyRecord{}}, nil
 }
 func (c *studyTestCatalogue) Lookup(_ context.Context, refs []BookmarkRef) ([]StudyRecord, error) {
@@ -277,5 +281,21 @@ func TestPersonalRecordsRequireDatesAndAllowNoURL(t *testing.T) {
 	w := studyTestRequest(mux, auth, "a", "POST", path, `{"link":{"kind":"artwork","title":"Cross cutoff","year":1960,"end_year":1971}}`, "https://artlines.org")
 	if w.Code != 400 {
 		t.Fatal("artwork range crossed cutoff")
+	}
+}
+
+func TestStudyArtworkSearchPictureDefaultAndOptOut(t *testing.T) {
+	auth, _, catalogue, mux := studiesFixture()
+	for _, tc := range []struct {
+		query    string
+		pictures bool
+	}{
+		{"kind=artwork", true}, {"kind=artwork&image=true", true}, {"kind=artwork&image=false", false},
+		{"kind=book", false}, {"kind=event", false}, {"kind=book&image=true", false},
+	} {
+		response := studyTestRequest(mux, auth, "a", "GET", "/search?"+tc.query, "", "")
+		if response.Code != 200 || catalogue.lastSearch.ImageOnly != tc.pictures {
+			t.Fatalf("%s: %d %+v", tc.query, response.Code, catalogue.lastSearch)
+		}
 	}
 }

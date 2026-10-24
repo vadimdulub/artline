@@ -241,7 +241,7 @@ func (h *Handler) RegisterStudies(mux *http.ServeMux, store StudyStore, catalogu
 		if err != nil {
 			return err
 		}
-		f := StudySearch{Kind: q.Get("kind"), Query: strings.TrimSpace(q.Get("q")), Creator: strings.TrimSpace(q.Get("creator")), Dates: q.Get("dates"), Cursor: q.Get("cursor"), From: from, To: to, ImageOnly: q.Get("image") == "true", Bookmarked: q.Get("saved") == "true"}
+		f := StudySearch{Kind: q.Get("kind"), Query: strings.TrimSpace(q.Get("q")), Creator: strings.TrimSpace(q.Get("creator")), Dates: q.Get("dates"), Cursor: q.Get("cursor"), From: from, To: to, ImageOnly: q.Get("kind") == "artwork" && q.Get("image") != "false", Bookmarked: q.Get("saved") == "true"}
 		if !studyKind(f.Kind) || len(f.Query) > 200 || len(f.Creator) > 200 || len(f.Cursor) > 4096 || (f.Dates != "" && f.Dates != "undated") {
 			return studyInputError("Check your search filters.")
 		}

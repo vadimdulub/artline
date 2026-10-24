@@ -23,10 +23,10 @@ export function ArtworksIndex() {
   const search = useRef<HTMLInputElement>(null);
   const params = new URLSearchParams(useQueryString());
   const query = params.get("q") ?? "", status = params.get("status") ?? "";
-  const undated = params.get("undated") === "true", pictures = params.get("image_only") === "true";
+  const undated = params.get("undated") === "true", pictures = params.get("image_only") !== "false";
   const cursor = params.get("cursor") ?? "", selected = params.get("work") ?? "";
   const [retry, setRetry] = useState(0);
-  const request = new URLSearchParams({ limit: "24" });
+  const request = new URLSearchParams({ limit: "24", image_only: String(pictures) });
   for (const key of ["q", "status", "undated", "image_only"]) if (params.get(key)) request.set(key, params.get(key)!);
   const paging = useCursorPaging(request.toString(), cursor, value => { updateQuery({ cursor: value, work: null }, true); document.getElementById("artwork-results-title")?.focus(); });
   if (cursor) request.set("cursor", cursor);
@@ -37,7 +37,7 @@ export function ArtworksIndex() {
     <AtlasPageHeader title="Artworks" description="Explore paintings across the catalogue."><Link href="/museums">Museums and collections</Link></AtlasPageHeader>
     <AtlasFilters searchRef={search} query={query} onQuery={value => change({ q: value || null })} onReset={reset} placeholder="Artwork title" searchLabel="Search artworks" columns={2} activeCount={Number(Boolean(status)) + Number(undated) + Number(pictures)}>
       <AtlasCheckbox label="Undated works" checked={undated} onChange={value => change({ undated: value ? "true" : null })} />
-      <AtlasCheckbox label="With pictures" checked={pictures} onChange={value => change({ image_only: value ? "true" : null })} />
+      <AtlasCheckbox label="With pictures" checked={pictures} onChange={value => change({ image_only: value ? "true" : "false" })} />
     </AtlasFilters>
     <div className={styles.resultsHeading}><h2 id="artwork-results-title" tabIndex={-1}>Explore paintings</h2><p role="status">{result.loading ? "Finding artworks…" : result.error ? "Connection interrupted" : `${formatCount(result.data?.total ?? 0)} artworks`}</p></div>
     <section aria-label="Artwork results" aria-busy={result.loading}>

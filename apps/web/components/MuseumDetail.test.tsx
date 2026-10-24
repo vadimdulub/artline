@@ -18,7 +18,7 @@ it.each(["artlines", "museum"] as const)("shows %s highlights distinctly and kee
   expect(screen.getByRole("combobox", { name: "Artworks per page" })).toHaveValue("24");
   fireEvent.click(screen.getByRole("button", { name: `${label}24` }));
   expect(new URLSearchParams(window.location.search).get("selection")).toBe(source);
-  expect(useMuseumRequest).toHaveBeenCalledWith(`museums/museum/works?selection=${source}&sort=curated`, 0);
+  expect(useMuseumRequest).toHaveBeenCalledWith(`museums/museum/works?selection=${source}&sort=curated&image_only=1`, 0);
 });
 
 it.each(["artlines", "museum"] as const)("clears other filters when opening %s highlights while retaining layout and page size", source => {
@@ -30,7 +30,7 @@ it.each(["artlines", "museum"] as const)("clears other filters when opening %s h
   expect(params.get("selection")).toBe(source);
   expect(params.get("view")).toBe("list");
   expect(params.get("limit")).toBe("48");
-  expect(useMuseumRequest).toHaveBeenCalledWith(`museums/museum/works?selection=${source}&sort=curated&limit=48`, 0);
+  expect(useMuseumRequest).toHaveBeenCalledWith(`museums/museum/works?selection=${source}&sort=curated&limit=48&image_only=1`, 0);
 });
 
 it.each([false, true])("puts exhibition history after highlights when the museum has exhibitions (embedded=%s)", embedded => {
@@ -46,4 +46,19 @@ it.each([true, false])("hides exhibition history without a confirmed exhibition 
   exhibitionState.available = available;
   render(<MuseumDetail slug="museum" initialMuseum={museum} />);
   expect(screen.queryByRole("link", { name: "Exhibition history" })).not.toBeInTheDocument();
+});
+
+it("defaults to pictures, preserves opt-out on reload, and restores the default on reset", () => {
+ const view=render(<MuseumDetail slug="museum" initialMuseum={museum} />);
+ expect(screen.getByRole("checkbox",{name:"With pictures"})).toBeChecked();
+ expect(useMuseumRequest).toHaveBeenCalledWith("museums/museum/works?image_only=1",0);
+ fireEvent.click(screen.getByRole("checkbox",{name:"With pictures"}));
+ expect(new URLSearchParams(window.location.search).get("image_only")).toBe("0");
+ expect(useMuseumRequest).toHaveBeenCalledWith("museums/museum/works?image_only=0",0);
+ view.unmount();render(<MuseumDetail slug="museum" initialMuseum={museum} />);
+ expect(screen.getByRole("checkbox",{name:"With pictures"})).not.toBeChecked();
+ fireEvent.change(screen.getByRole("searchbox",{name:"Search artworks"}),{target:{value:"portrait"}});
+ fireEvent.click(screen.getByRole("button",{name:"Clear filters"}));
+ expect(screen.getByRole("checkbox",{name:"With pictures"})).toBeChecked();
+ expect(useMuseumRequest).toHaveBeenCalledWith("museums/museum/works?image_only=1",0);
 });

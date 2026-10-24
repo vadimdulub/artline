@@ -21,3 +21,16 @@ func TestMuseumGalleryFilters(t *testing.T) {
 		})
 	}
 }
+
+func TestMuseumGalleryPictureDefaultAndOptOut(t *testing.T) {
+	for _, query := range []string{"", "image_only=1", "image_only=0"} {
+		f, err := museumFilter(httptest.NewRequest("GET", "/api/v1/museums/the-met/works?"+query, nil))
+		if err != nil || f.ImageOnly != (query != "image_only=0") {
+			t.Fatalf("picture option %q: %+v %v", query, f, err)
+		}
+	}
+	f, err := museumFilter(httptest.NewRequest("GET", "/api/v1/museums", nil))
+	if err != nil || f.ImageOnly {
+		t.Fatal("gallery defaults changed museum directory cursor scope")
+	}
+}

@@ -75,7 +75,8 @@ func museumFilter(r *http.Request) (catalog.MuseumFilter, error) {
 		}
 	}
 	f.UnknownDate = q.Get("unknown_date") == "1"
-	f.ImageOnly = q.Get("image_only") == "1"
+	// Gallery defaults apply to artwork browsing, leaving directory cursors stable.
+	f.ImageOnly = q.Get("image_only") == "1" || (q.Get("image_only") == "" && strings.HasSuffix(r.URL.Path, "/works"))
 	for _, name := range []string{"start", "end"} {
 		if value := q.Get(name); value != "" {
 			year, e := strconv.Atoi(value)

@@ -654,7 +654,7 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 	sortNumber := `CASE WHEN $14='highlights' THEN CASE WHEN w.id=ANY($13::uuid[]) OR w.id IN(SELECT artwork_id FROM selections WHERE institution_id=i.id) THEN 0 WHEN ` + museumAvailableImage + ` THEN 1 ELSE 2 END WHEN $14='images' THEN CASE WHEN ` + museumAvailableImage + ` THEN 0 ELSE 1 END WHEN $14='title' THEN 0 WHEN $14='curated' AND $3='museum' THEN coalesce((SELECT min(position) FROM selections s WHERE s.institution_id=i.id AND s.artwork_id=w.id AND s.curator_kind=$3),2147483647) WHEN $14='curated' AND $3='artlines' THEN coalesce(array_position($13::uuid[],w.id),2147483647) ELSE coalesce(w.creation_year_start,2147483647) END`
 	// Choose the bounded page before enriching cards. Otherwise PostgreSQL can
 	// read every museum image row before sorting, even for a 24-work response.
-	rows, err := r.db.Query(ctx, scope+museumGalleryPage(f.Sort, where, sortNumber, counts.NonNull > counts.Images)+`
+	rows, err := r.db.Query(ctx, scope+museumGalleryPage(f.Sort, where, sortNumber, counts.NonNull > counts.Images, f.ImageOnly)+`
  SELECT (SELECT `+workCardJSON+` FROM works w CROSS JOIN institutions i WHERE w.id=page.id AND i.slug=$1 OFFSET 0),page.sort_number,page.normalized_title
  FROM page ORDER BY page.sort_number,page.normalized_title,page.id`, museumQueryArgs(args...)...)
 	if err != nil {

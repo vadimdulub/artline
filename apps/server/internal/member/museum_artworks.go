@@ -203,7 +203,7 @@ func (h *Handler) registerMuseumArtworkPicker(mux *http.ServeMux, store MuseumSt
 				page.Items = append(page.Items, choiceFromPublication(slug, item))
 			}
 		} else if cat != nil {
-			page, err = cat.Search(r.Context(), slug, scope, q.Get("q"), q.Get("cursor"), q.Get("images") == "1")
+			page, err = cat.Search(r.Context(), slug, scope, q.Get("q"), q.Get("cursor"), q.Get("images") != "0")
 		} else {
 			err = ErrMuseumArtwork
 		}
