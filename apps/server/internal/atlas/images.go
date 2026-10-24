@@ -5,6 +5,13 @@ import (
 	"strings"
 )
 
+// Preset covers are explicitly selected pictorial illustrations. Their medium
+// need not match a result filter: Edo's print and Friedrich's unclassified
+// painting still illustrate their periods. Photography remains excluded.
+const presetCoverMedium = `coalesce(a.work_type,'unknown') IN ('painting','print','drawing','watercolor','fresco','manuscript_illumination','calligraphy','unknown')`
+
+var presetCoverScope = strings.Replace(artScope, "a.work_type='painting'", presetCoverMedium, 1)
+
 // This enrichment only receives an already validated, bounded page of eligible IDs.
 func (r *Repository) attachImages(ctx context.Context, items []Item) error {
 	if len(items) == 0 {
@@ -72,7 +79,7 @@ func (r *Repository) IllustratedPresets(ctx context.Context) ([]Preset, error) {
 	rows, err := r.db.Query(ctx, `WITH cover_artworks AS MATERIALIZED (
  SELECT a.id,a.title,a.date_display,a.creation_year_start,a.creation_year_end,a.date_precision,a.status,a.unlinked_creator_label,a.work_type
  FROM artworks a WHERE a.id=ANY($6::uuid[]))
- SELECT a.id::text,a.title,coalesce(a.date_display,''),coalesce(a.creation_year_start,a.creation_year_end),coalesce(a.creation_year_end,a.creation_year_start),a.date_precision<>'exact'`+strings.Replace(artScope, "FROM artworks a", "FROM cover_artworks a", 1), Bounds.Start, Bounds.End, "", false, "", ids)
+ SELECT a.id::text,a.title,coalesce(a.date_display,''),coalesce(a.creation_year_start,a.creation_year_end),coalesce(a.creation_year_end,a.creation_year_start),a.date_precision<>'exact'`+strings.Replace(presetCoverScope, "FROM artworks a", "FROM cover_artworks a", 1), Bounds.Start, Bounds.End, "", false, "", ids)
 	if err != nil {
 		return nil, err
 	}

@@ -14,3 +14,15 @@ it("rejects other namespaces, traversal and non-images before fetching",async()=
  }
  expect(fetch).not.toHaveBeenCalled();
 });
+
+it("keeps fingerprinted reproductions immutable while bounding legacy image caching", async () => {
+ vi.stubEnv("ARTLINE_IMAGES_BUCKET", "artwork-test-bucket");
+ vi.stubGlobal("fetch", vi.fn(async (url: string) => url.startsWith("http://metadata.")
+  ? new Response(JSON.stringify({ access_token: "test-token", expires_in: 3600 }))
+  : new Response("image", { headers: { "content-type": "image/jpeg" } })));
+ for (const [filename, immutable] of [["painting-82fe72a1ba637b04.jpg", true], ["223afa6b-b800-5e94-ad65-42a8365d9567.jpg", false]] as const) {
+  const response = await GET(new Request(`https://artlines.org/assets/artworks/${filename}`), { params: Promise.resolve({ path: ["artworks", filename] }) });
+  expect(response.status).toBe(200);
+  expect(response.headers.get("cache-control")).toBe(immutable ? "public, max-age=31536000, immutable" : "public, max-age=86400");
+ }
+});

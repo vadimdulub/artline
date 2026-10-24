@@ -39,8 +39,9 @@ async function serve(request: Request, context: { params: Promise<{ path: string
       await response.body?.cancel();
       throw new Error("Storage request failed");
     }
+    const fingerprinted = /-[a-f0-9]{16,64}\.(jpe?g|png|webp|avif|gif)$/i.test(path.at(-1) ?? "");
     const resultHeaders = new Headers({
-      "cache-control": "public, max-age=86400",
+      "cache-control": fingerprinted ? "public, max-age=31536000, immutable" : "public, max-age=86400",
       "x-content-type-options": "nosniff",
     });
     for (const name of ["content-type", "content-length", "etag", "last-modified"]) {

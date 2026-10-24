@@ -78,7 +78,10 @@ export function useGalleryScroll<T, R>(strip: RefObject<HTMLUListElement | null>
       center = Math.max(0, pages.findIndex(page => page.start + page.count > (first + last) / 2));
       const missing = pages.findIndex((page, index) => page.start <= last && page.start + page.count > first && !cache.has(index));
       if (missing >= 0) { load(missing); return; }
-      if (last >= extent - 3 && pages.at(-1)!.next) load(pages.length);
+      // Fetch while two viewports remain, so the response can arrive before
+      // the user scrolls into it. The existing three-page cache stays bounded.
+      const ahead = Math.max(3, (last - first + 1) * 2);
+      if (last >= extent - ahead && pages.at(-1)!.next) load(pages.length);
     }
     function schedule() { cancelAnimationFrame(frame); frame = requestAnimationFrame(check); }
     retry.current = () => { failed = false; load(retryIndex); };

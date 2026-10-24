@@ -1,21 +1,31 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import type { Artwork } from "@/lib/types";
+import Image from "next/image";
 import { ArtworkDialog, ArtworkImage, ArtworkViewer } from "./ArtworkViewer";
 
 vi.mock("./Bookmarks", () => ({ BookmarkButton: () => null }));
 vi.mock("./ArtworkPalette", () => ({ ArtworkPalette: () => null }));
-vi.mock("next/image", () => ({ default: (props: Record<string, unknown>) => {
+vi.mock("next/image", () => ({ default: vi.fn((props: Record<string, unknown>) => {
   const image = { ...props }; delete image.unoptimized;
   // eslint-disable-next-line @next/next/no-img-element
   return <img {...image} alt={String(image.alt)} />;
-} }));
+}) }));
 const work = { id: "one", title: "Unillustrated study", media_url: null, alt_text: null, rights_status: null } as Artwork;
 beforeEach(() => {
   HTMLDialogElement.prototype.showModal = function () { this.setAttribute("open", ""); };
   HTMLDialogElement.prototype.close = function () { this.removeAttribute("open"); };
 });
 afterEach(cleanup);
+
+it("uses the same cached image file for thumbnails and visible covers", () => {
+  const image = { ...work, media_url: "/assets/one.jpg" };
+  const { rerender } = render(<ArtworkImage work={image} />);
+  expect(vi.mocked(Image).mock.lastCall?.[0]).toMatchObject({ src: image.media_url, unoptimized: true, loading: "lazy", decoding: "async" });
+  rerender(<ArtworkImage work={image} eager />);
+  expect(screen.getByRole("img")).toHaveAttribute("loading", "eager");
+  expect(vi.mocked(Image).mock.lastCall?.[0]).toMatchObject({ src: image.media_url, unoptimized: true });
+});
 
 it("shows a readable missing-image message at thumbnail and large sizes", () => {
   const { rerender } = render(<ArtworkImage work={work} number={2} />);

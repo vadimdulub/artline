@@ -10,7 +10,7 @@ export function AllStartingPoints({ metadata, select }: { metadata: AtlasMetadat
   return <div className="all-start">
     <header className="all-start-heading"><span className="all-eyebrow">Art · Literature · History</span><h1 id="all-timeline-title" tabIndex={-1}>Explore a moment in history</h1><p>See the pictures, read the books, follow the events.<br />Choose a starting point, then make it your own.</p></header>
     <div className="all-featured" role="group" aria-label="Featured starting points">{main.map(p => <button key={p.id} className="all-start-card" aria-label={p.name} aria-describedby={`start-description-${p.id} start-geography-${p.id}`} onClick={() => select(p.id)}>
-      <span className="all-start-image">{p.cover ? <ArtworkImage work={{ ...p.cover, media_url: p.cover.media_url ?? null, alt_text: p.cover.alt_text ?? null, rights_status: p.cover.rights_status ?? null }} /> : <span className="all-start-image-date">{years(p)}</span>}</span>
+      <span className="all-start-image">{p.cover ? <ArtworkImage eager work={{ ...p.cover, media_url: p.cover.media_url ?? null, alt_text: p.cover.alt_text ?? null, rights_status: p.cover.rights_status ?? null }} /> : <span className="all-start-image-date">{years(p)}</span>}</span>
       <span className="all-start-card-copy"><span className="all-eyebrow">{years(p)} <span aria-hidden="true">↗</span></span><strong>{p.name}</strong><span className="all-start-description" id={`start-description-${p.id}`}>{p.description}</span><span className="all-start-geography" id={`start-geography-${p.id}`}>{p.startingScope}</span></span>
     </button>)}</div>
     <div className="all-other-heading"><h2>Periods and themes</h2><p>Art, books and events in their historical context.</p></div>

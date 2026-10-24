@@ -281,11 +281,22 @@ var museumScopedCTE = `WITH museum_candidates AS NOT MATERIALIZED (
 // Facets reuse the same visible IDs across holding, display, artist and movement
 // branches. Materialize only these two small columns, once per museum; otherwise
 // incoming display rows can repeatedly rescan every holding and creator.
-var museumScopedFacetCTE = strings.NewReplacer(
-	"visible_works AS NOT MATERIALIZED (", "visible_works AS MATERIALIZED (",
-	"SELECT aw.* FROM museum_candidates aw WHERE", "SELECT aw.id,aw.current_institution_id FROM museum_candidates aw WHERE",
-	"FROM visible_works aw LEFT JOIN institutions", "FROM visible_works visible JOIN artworks aw ON aw.id=visible.id LEFT JOIN institutions",
-).Replace(museumScopedCTE)
+func museumFacetCTE(scope string) string {
+	return strings.NewReplacer(
+		"visible_works AS NOT MATERIALIZED (", "visible_works AS MATERIALIZED (",
+		"SELECT aw.* FROM museum_candidates aw WHERE", "SELECT aw.id,aw.current_institution_id FROM museum_candidates aw WHERE",
+		"FROM visible_works aw LEFT JOIN institutions", "FROM visible_works visible JOIN artworks aw ON aw.id=visible.id LEFT JOIN institutions",
+	).Replace(scope)
+}
+
+var museumScopedFacetCTE = museumFacetCTE(museumScopedCTE)
+
+// An Artlines selection has at most 24 IDs. Restrict the native candidates
+// before membership, counts, facets and card enrichment, including cold reads.
+func museumSelectedScope(parameter string) string {
+	return strings.Replace(museumScopedCTE, "SELECT aw.* FROM museum_candidates aw WHERE",
+		"SELECT aw.* FROM museum_candidates aw WHERE aw.id=ANY("+parameter+"::uuid[]) AND", 1)
+}
 
 // Selective filters start from indexed artwork IDs, not from every museum's
 // holdings. Remaining predicates below still apply independently to each work,
@@ -467,10 +478,19 @@ func (r *Repository) museumFacets(ctx context.Context, slug string) (MuseumFacet
 	return out, err
 }
 func (r *Repository) museumFacetsUncached(ctx context.Context, slug string) (MuseumFacets, error) {
+	return r.museumFacetsWithWorks(ctx, slug, nil)
+}
+
+func (r *Repository) museumFacetsWithWorks(ctx context.Context, slug string, ids []string) (MuseumFacets, error) {
 	out := emptyMuseumFacets()
 	cte := museumDirectoryCTE
+	args := []any{slug}
 	if slug != "" {
 		cte = museumScopedCTE
+		if ids != nil {
+			cte = museumSelectedScope("$2")
+			args = append(args, ids)
+		}
 	}
 	membership := `EXISTS(SELECT 1 FROM museum_memberships member WHERE member.institution_id=i.id OFFSET 0)`
 	if slug != "" {
@@ -482,7 +502,7 @@ func (r *Repository) museumFacetsUncached(ctx context.Context, slug string) (Mus
  JOIN places p ON p.id=location.place_id JOIN countries c ON c.code=p.country_code
  WHERE ` + museumVisible + ` AND i.canonical_institution_id IS NULL AND ($1='' OR i.slug=$1)
  AND ` + membership + ` ORDER BY c.region_code,c.name`
-	rows, err := r.db.Query(ctx, query, museumQueryArgs(slug)...)
+	rows, err := r.db.Query(ctx, query, museumQueryArgs(args...)...)
 	if err != nil {
 		return out, err
 	}
@@ -512,10 +532,10 @@ func (r *Repository) museumFacetsUncached(ctx context.Context, slug string) (Mus
 	// compatibility facet on a single museum. The directory has no artist facet.
 	choices := museumDirectoryFacetChoicesSQL
 	if slug != "" {
-		cte = museumScopedFacetCTE
+		cte = museumFacetCTE(cte)
 		choices = museumScopedFacetChoicesSQL
 	}
-	rows, err = r.db.Query(ctx, cte+choices, museumQueryArgs(slug)...)
+	rows, err = r.db.Query(ctx, cte+choices, museumQueryArgs(args...)...)
 	if err != nil {
 		return out, err
 	}
@@ -593,6 +613,10 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 	}
 	args := []any{slug, f.Query, f.Selection, f.Display, filterChoices(f.Artists, f.Artist), filterChoices(f.Movements, f.Movement), filterChoices(f.Venues, f.Venue), filterChoices(f.WorkTypes, f.WorkType), f.Start, f.End, f.UnknownDate, f.ImageOnly}
 	args = append(args, highlights.IDs)
+	scope := museumScopedCTE
+	if f.Selection == "artlines" {
+		scope = museumSelectedScope("$13")
+	}
 	where := ` FROM institutions i JOIN works w ON ` + museumMembership + ` WHERE i.slug=$1 AND ` + museumVisible + `
  AND ($2='' OR w.title ILIKE '%'||$2||'%' OR w.alternate_title ILIKE '%'||$2||'%' OR w.unlinked_creator_label ILIKE '%'||$2||'%'
  OR w.cultural_context ILIKE '%'||$2||'%' OR w.object_form ILIKE '%'||$2||'%'
@@ -620,7 +644,7 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 		countWhere := strings.Replace(where, " WHERE", ` LEFT JOIN media_assets counted_image ON counted_image.id=w.primary_media_id
  AND counted_image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$' WHERE`, 1)
 		countWhere = strings.ReplaceAll(countWhere, museumAvailableImage, "(counted_image.id IS NOT NULL)")
-		if err = r.db.QueryRow(ctx, museumScopedCTE+`SELECT count(*),count(counted_image.id),count(w.primary_media_id)`+countWhere, museumQueryArgs(args...)...).Scan(&counts.Total, &counts.Images, &counts.NonNull); err != nil {
+		if err = r.db.QueryRow(ctx, scope+`SELECT count(*),count(counted_image.id),count(w.primary_media_id)`+countWhere, museumQueryArgs(args...)...).Scan(&counts.Total, &counts.Images, &counts.NonNull); err != nil {
 			return out, err
 		}
 		r.facets.put(countsKey, counts)
@@ -630,7 +654,7 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 	sortNumber := `CASE WHEN $14='highlights' THEN CASE WHEN w.id=ANY($13::uuid[]) OR w.id IN(SELECT artwork_id FROM selections WHERE institution_id=i.id) THEN 0 WHEN ` + museumAvailableImage + ` THEN 1 ELSE 2 END WHEN $14='images' THEN CASE WHEN ` + museumAvailableImage + ` THEN 0 ELSE 1 END WHEN $14='title' THEN 0 WHEN $14='curated' AND $3='museum' THEN coalesce((SELECT min(position) FROM selections s WHERE s.institution_id=i.id AND s.artwork_id=w.id AND s.curator_kind=$3),2147483647) WHEN $14='curated' AND $3='artlines' THEN coalesce(array_position($13::uuid[],w.id),2147483647) ELSE coalesce(w.creation_year_start,2147483647) END`
 	// Choose the bounded page before enriching cards. Otherwise PostgreSQL can
 	// read every museum image row before sorting, even for a 24-work response.
-	rows, err := r.db.Query(ctx, museumScopedCTE+museumGalleryPage(f.Sort, where, sortNumber, counts.NonNull > counts.Images)+`
+	rows, err := r.db.Query(ctx, scope+museumGalleryPage(f.Sort, where, sortNumber, counts.NonNull > counts.Images)+`
  SELECT (SELECT `+workCardJSON+` FROM works w CROSS JOIN institutions i WHERE w.id=page.id AND i.slug=$1 OFFSET 0),page.sort_number,page.normalized_title
  FROM page ORDER BY page.sort_number,page.normalized_title,page.id`, museumQueryArgs(args...)...)
 	if err != nil {
@@ -668,7 +692,17 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 			}
 		}
 	}
-	out.Facets, err = r.museumFacets(ctx, slug)
+	if f.Selection == "artlines" {
+		key := facetCacheKey(ctx, "museum-highlight-facets:"+slug)
+		if !r.facets.get(key, &out.Facets) {
+			out.Facets, err = r.museumFacetsWithWorks(ctx, slug, highlights.IDs)
+			if err == nil {
+				r.facets.put(key, out.Facets)
+			}
+		}
+	} else {
+		out.Facets, err = r.museumFacets(ctx, slug)
+	}
 	return out, err
 }
 

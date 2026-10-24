@@ -195,6 +195,9 @@ func TestMuseum400KCollection(t *testing.T) {
 	if err != nil || highlights.Total != 24 || len(highlights.Items) != 24 || highlights.NextCursor != "" {
 		t.Fatalf("fallback highlights: %+v %v", highlights, err)
 	}
+	if len(highlights.Facets.Artists) > museumEditorialHighlightLimit {
+		t.Fatal("highlight facets scanned the full collection instead of the selected works")
+	}
 	official, err := repo.MuseumWorks(ctx, "qa-official", MuseumFilter{Limit: 24, Selection: "museum", Sort: "curated"})
 	if err != nil || official.Total != 3 || len(official.Items) != 3 || official.Items[0].Slug != "qa-official-work-100" {
 		t.Fatalf("official highlights: %+v %v", official, err)

@@ -25,7 +25,7 @@ export function AllArtworkGallery({ lane, query, busy, selected, select, stripRe
         const caption = [item.title, years].filter(Boolean).join(", ");
         return <li key={item.id} className="bookmark-grid-item" aria-posinset={window.before + index + 1} aria-setsize={lane.total}>
           <button className="all-artwork-card all-gallery-card" data-artwork-id={item.id} title={caption} aria-label={`${[caption, displayMetadata(item.context)].filter(Boolean).join(", ")}. Open artwork details`} aria-haspopup="dialog" aria-current={selected === item.id ? "true" : undefined} disabled={busy} onClick={() => select(item)}>
-            <span className="all-artwork-image"><ArtworkImage work={{ ...item, media_url: item.media_url ?? null, alt_text: item.alt_text ?? null, rights_status: item.rights_status ?? null }} /></span>
+            <span className="all-artwork-image"><ArtworkImage eager={window.before === 0 && index < 4} work={{ ...item, media_url: item.media_url ?? null, alt_text: item.alt_text ?? null, rights_status: item.rights_status ?? null }} /></span>
             <span className="all-artwork-caption"><strong>{item.title}</strong>{years && <time>{years}</time>}</span>
             {displayMetadata(item.context) && <span title={item.context}>{item.context}</span>}
             {showDetails && item.relation === "context" && <small>Historical context</small>}
