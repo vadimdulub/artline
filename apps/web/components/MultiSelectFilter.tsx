@@ -1,13 +1,14 @@
 "use client";
 import { useEffect, useId, useRef, useState } from "react";
 import { AtlasSearchField } from "./AtlasSearchField";
+import { fitFilterPanel } from "@/lib/filter-panel-layout";
 
 export type FilterOption = { slug: string; name: string; group?: string; detail?: string; description?: string; searchText?: string };
 
-export function MultiSelectFilter({ label, allLabel, options, values, onChange, single = false, unavailable = false, helpText = "Match any selected value. Different filters combine.", remote, retry }: {
+export function MultiSelectFilter({ label, allLabel, options, values, onChange, single = false, unavailable = false, helpText = "Match any selected value. Different filters combine.", remote, retry, keepOpenOnClick }: {
   label: string; allLabel: string; options: FilterOption[]; values: string[];
   onChange: (values: string[]) => void; single?: boolean; unavailable?: boolean; helpText?: string;
-  remote?: { search: string; onSearch: (value: string) => void; loading: boolean; hasMore: boolean }; retry?: () => void;
+  remote?: { search: string; onSearch: (value: string) => void; loading: boolean; hasMore: boolean }; retry?: () => void; keepOpenOnClick?: (target: Node) => boolean;
 }) {
   const details = useRef<HTMLDetailsElement>(null);
   const pointerFocus = useRef(false);
@@ -21,11 +22,23 @@ export function MultiSelectFilter({ label, allLabel, options, values, onChange, 
   const description = values.length === 0 ? allLabel : values.length === 1 ? choices.find(option => option.slug === values[0])?.name ?? values[0] : `${values.length} selected`;
   function close() { if (details.current) { details.current.open = false; details.current.querySelector("summary")?.focus(); } }
   useEffect(() => {
+    const disclosure = details.current;
+    function fitPanel() {
+      if (!disclosure?.open) return;
+      fitFilterPanel(disclosure.querySelector<HTMLElement>(".multi-filter-panel"));
+    }
+    disclosure?.addEventListener("toggle", fitPanel);
+    window.addEventListener("resize", fitPanel);
+    return () => { disclosure?.removeEventListener("toggle", fitPanel); window.removeEventListener("resize", fitPanel); };
+  }, []);
+  useEffect(() => {
     function pointerDown() { pointerFocus.current = true; }
     function keyboard() { pointerFocus.current = false; }
     function outside(event: MouseEvent) {
       pointerFocus.current = false;
-      if (event.target instanceof Node && details.current && !details.current.contains(event.target)) details.current.open = false;
+      // Clear-search buttons can unmount during their click. The original event
+      // path still identifies that click as belonging to this disclosure.
+      if (event.target instanceof Node && details.current && !event.composedPath().includes(details.current) && !keepOpenOnClick?.(event.target)) details.current.open = false;
     }
     // Inline panels change document flow. Finish the click before collapsing
     // them, so a neighbouring filter cannot move away between down and up.
@@ -37,7 +50,7 @@ export function MultiSelectFilter({ label, allLabel, options, values, onChange, 
       document.removeEventListener("keydown", keyboard, true);
       document.removeEventListener("click", outside);
     };
-  }, []);
+  }, [keepOpenOnClick]);
   return <details ref={details} className="multi-filter" data-active={values.length > 0} onKeyDown={event => { if (event.key === "Escape" && event.currentTarget.open) { event.preventDefault(); event.stopPropagation(); close(); } }} onBlur={event => { if (!pointerFocus.current && event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false; }}>
     <summary aria-label={`${label}: ${description}`}><span>{label}</span><strong>{description}</strong><svg aria-hidden="true" className="filter-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m5 7.5 5 5 5-5" /></svg></summary>
     <div className="multi-filter-panel">

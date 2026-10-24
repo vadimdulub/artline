@@ -1,7 +1,6 @@
 body:has(.all-page)>.site-footer{display:none}
 .all-explorer{height:calc(100dvh - var(--all-header-height,60px));min-height:360px;display:flex;flex-direction:column;overflow-x:hidden;overflow-y:auto}
 .all-explorer>.atlas-filter-system,.all-explorer>.active-filters,.all-explorer>.save-message{flex-shrink:0}
-.all-explorer>.atlas-filter-system>.atlas-filter-row{grid-template-columns:repeat(5,minmax(0,1fr)) auto}
 .all-period-filter{position:relative;min-width:0}
 .all-period-filter>.multi-filter{height:100%}
 .all-period-filter .multi-filter-panel{width:min(420px,calc(100vw - 36px))}
@@ -150,7 +149,7 @@ body:has(.all-page)>.site-footer{display:none}
 .atlas-picker-filters .atlas-filter-row{grid-template-columns:repeat(2,minmax(0,1fr))}
 .atlas-picker-filters .multi-filter{border-bottom:1px solid var(--line)}
 .atlas-picker-filters .multi-filter:nth-child(5){grid-column:1/-1}
-.atlas-picker-filters .multi-filter-panel{position:relative;inset:auto!important;width:100%;max-width:none;max-height:420px;box-shadow:none;border:0;border-top:1px solid var(--line);padding:14px}
+.atlas-picker-filters .multi-filter-panel{position:relative;inset:auto!important;width:100%;max-width:none;max-height:420px;box-shadow:none;border:0;border-top:1px solid var(--line);padding:18px}
 .atlas-picker-filters .multi-filter[open]{grid-column:1/-1}
 .atlas-picker-filters .multi-filter>summary{height:auto}
 .atlas-picker-filters .popular-filter-control{border-bottom:1px solid var(--line);min-height:52px}

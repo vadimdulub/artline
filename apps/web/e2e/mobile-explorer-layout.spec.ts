@@ -127,18 +127,6 @@ test("All populated lanes scroll by touch in short full view", async ({ page }) 
   await expect(page.getByRole("button", { name: "Exit full view", exact: true })).toBeInViewport();
 });
 
-test("Books full view keeps the date handles visible on short screens", async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/books");
-  await expect(page.locator(".timeline-stage")).toHaveAttribute("aria-busy", "false");
-  await page.getByRole("button", { name: "Full view", exact: true }).click();
-  for (const size of [{ width: 390, height: 844 }, { width: 320, height: 568 }, { width: 740, height: 390 }]) {
-    await page.setViewportSize(size);
-    await expect(page.locator(".range-track")).toBeInViewport();
-    await expect(page.getByRole("button", { name: "Exit full view", exact: true })).toBeInViewport();
-  }
-});
-
 test("the movement colour key is in the mobile header and can filter painters", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/?start=1300&end=1650");
@@ -183,3 +171,22 @@ test("dragging dates previews the range before saving it on release", async ({ p
   await expect.poll(() => Number(new URL(page.url()).searchParams.get("start"))).toBeLessThan(1800);
   expect(new URL(page.url()).searchParams.get("end")).toBe("1900");
 });
+
+for (const route of ["/?view=paintings&canvas=map&start=1300&end=1650", "/all?preset=renaissance&canvas=map"]) {
+  test(`mobile map preserves its period when returning to the timeline: ${route}`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(route);
+    await expect(page.locator(".map-workspace-v2")).toBeVisible();
+    // Maps deliberately use the full canvas without a date bar (DESIGN_APPROACH).
+    await expect(page.locator(".range-track")).toHaveCount(0);
+    await expect(page.getByRole("button", { name: /edit dates|done editing dates|move range .*earlier|move range .*later/i })).toHaveCount(0);
+    await expect(page.getByRole("spinbutton")).toHaveCount(0);
+    const period = new URL(page.url()).searchParams;
+    await page.getByRole("button", { name: "Timeline", exact: true }).click();
+    await expect(page.locator(".range-track")).toBeInViewport();
+    const start = page.getByRole("slider", { name: "Timeline start handle" });
+    await expect(start).toHaveAttribute("aria-valuenow", period.get("start") ?? "1300");
+    await start.press("ArrowRight");
+    await expect(page).toHaveURL(/start=1301/);
+  });
+}

@@ -5,9 +5,11 @@ import type { AtlasMetadata, AtlasResponse } from "@/lib/atlas";
 import { updateQuery } from "@/lib/url-state";
 import { AllAtlas } from "./AllAtlas";
 
+vi.mock("next/navigation", () => ({ useRouter: () => ({ push: vi.fn() }) }));
 vi.mock("@/lib/api", async original => ({ ...await original<typeof import("@/lib/api")>(), apiRequest: vi.fn() }));
 vi.mock("./use-atlas-creators", () => ({ useAtlasCreators: () => ({ options: [] }) }));
 vi.mock("./RecordNavigation", () => ({ useRecordNavigation: () => undefined }));
+vi.mock("./CatalogueMap", () => ({ CatalogueMap: () => <div data-testid="catalogue-map">Map workspace</div> }));
 vi.mock("./AllArtworkGallery", () => ({ AllArtworkGallery: () => <div>Loaded artwork gallery</div>, GalleryScrollButtons: () => null }));
 const range = { start: 1300, end: 1650 };
 const metadata: AtlasMetadata = { bounds: { start: -12000, end: 2000 }, presets: [{ id: "renaissance", name: "The Renaissance", group: "History", description: "", startingScope: "Europe", startingHighlights: false, period: range, context: range, sources: [] }], types: [], regions: [], continents: [], defaultPreset: "" };
@@ -18,6 +20,7 @@ function deferred<T>() {
  return { promise, resolve, reject };
 }
 beforeEach(() => {
+ window.localStorage.clear();
  window.history.replaceState(null, "", "/all?preset=renaissance&selection=true&type=artwork");
  vi.stubGlobal("ResizeObserver", class { observe() {} disconnect() {} });
  window.matchMedia = vi.fn().mockReturnValue({ matches: false, addEventListener: vi.fn(), removeEventListener: vi.fn() });
@@ -79,6 +82,26 @@ const layerMetadata: AtlasMetadata = { ...metadata, types: [
  { key: "book", name: "Books", singular: "Book", dateLabel: "Published", cutoff: 2000, color: "#abc" },
  { key: "event", name: "Events", singular: "Event", dateLabel: "Occurred", cutoff: 2000, color: "#abc" },
 ] };
+it("shows the translated guide note only for selected artworks, without sending UI context to the API", async () => {
+ window.history.replaceState(null, "", "/all?start=1400&end=1600&selection=true&type=artwork&type=book&type=event&artwork_id=work&guide=louvre&guide_lang=ru");
+ mockRequests(Promise.resolve(response), Promise.resolve(layerMetadata));
+ const { container } = render(<AllAtlas />);
+ await waitFor(() => expect(container.querySelector(".timeline-stage")).toHaveAttribute("aria-busy", "false"));
+ expect(container.querySelector('[data-timeline-introduction="artworks"]')).toHaveAttribute("open");
+ expect(screen.getByText("Ваш путеводитель в контексте эпохи")).toBeVisible();
+ const request = vi.mocked(apiRequest).mock.calls.map(([path]) => path).find(path => path.startsWith("atlas?"))!;
+ const query = new URLSearchParams(request.split("?")[1]);
+ expect(query.getAll("artwork_id")).toEqual(["work"]);
+ expect(query.getAll("type")).toEqual(["artwork", "book", "event"]);
+ expect(query.has("guide")).toBe(false);
+ expect(query.has("guide_lang")).toBe(false);
+ fireEvent.click(screen.getByRole("checkbox", { name: "Artworks" }));
+ expect(container.querySelector('[data-timeline-introduction="artworks"]')).toBeNull();
+ fireEvent.click(screen.getByRole("checkbox", { name: "Artworks" }));
+ expect(container.querySelector('[data-timeline-introduction="artworks"]')).toHaveAttribute("open");
+ act(() => updateQuery({ artwork_id: null }));
+ expect(container.querySelector('[data-timeline-introduction="artworks"]')).toBeNull();
+});
 function sortedParams(params: URLSearchParams) {
  return [...params].sort(([key, value], [otherKey, otherValue]) => key.localeCompare(otherKey) || value.localeCompare(otherValue));
 }
@@ -142,4 +165,16 @@ it("keeps inherited preset filters and years when hiding Books and Events", asyn
  const requestParams = new URLSearchParams(request.split("?")[1]);
  expect(requestParams.get("start")).toBe(String(range.start));
  expect(requestParams.get("end")).toBe(String(range.end));
+});
+
+it("removes the map date bar while retaining timeline handles and the selected date scope", async () => {
+ window.history.replaceState(null, "", "/all?canvas=map&selection=true&type=artwork&start=1400&end=1600&highlights=false");
+ mockRequests(Promise.resolve(response), Promise.resolve(layerMetadata));
+ const { container } = render(<AllAtlas />);
+ await screen.findByTestId("catalogue-map");
+ expect(container.querySelector(".timeline-focus")).toBeNull();
+ fireEvent.click(screen.getByRole("button", { name: "Timeline" }));
+ await waitFor(() => expect(container.querySelector(".timeline-focus")).not.toBeNull());
+ expect(new URLSearchParams(location.search).get("start")).toBe("1400");
+ expect(new URLSearchParams(location.search).get("end")).toBe("1600");
 });

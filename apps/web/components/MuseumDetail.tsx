@@ -71,7 +71,7 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: 
         <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />
         <AtlasCheckbox label="With pictures" checked={pictures} onChange={checked => setMuseumFilters({ image_only: checked ? "1" : "0" })} />
       </AtlasFilters>
-      <details className={styles.more}><summary>More artwork filters</summary><div className={styles.secondaryFilters}>
+      <details className={styles.more}><summary>More artwork filters</summary><div className={`${styles.secondaryFilters} atlas-secondary-filters`}>
         <AtlasSelect label="Display" value={display} onChange={value => setMuseumFilters({ display: value })} options={[{ value: "", label: "Any display status" }, { value: "on_view", label: "Confirmed on view" }]} />
         <MultiSelectFilter label="Confirmed at venues" allLabel="Any venue" options={venueOptions} values={venues} onChange={values => setMuseumFilters({ venue: values })} />
         <MultiSelectFilter label="Work types" allLabel="All types" options={workTypeOptions} values={workTypes} onChange={values => setMuseumFilters({ work_type: values })} />

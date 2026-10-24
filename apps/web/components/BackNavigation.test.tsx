@@ -53,9 +53,13 @@ it("renders only the arrow while naming the destination in its tooltip", async (
   render(<HeaderBackNavigation />); await push("/artists"); const arrow = screen.getByRole("link", { name: "Go back" });
   expect(arrow).toHaveAttribute("title", "Back to Books"); expect(arrow.textContent).toBe(""); expect(arrow.querySelector("svg")).not.toBeNull();
 });
-it.each([false, true])("respects member access on return (signed in: %s)", async signedIn => {
+it.each([false, true])("respects member access on return to the directory (signed in: %s)", async signedIn => {
   state.signedIn = signedIn; nativeReplace.call(history, {}, "", "/museums"); render(<HeaderBackNavigation />); await push("/books");
   fireEvent.click(screen.getByRole("link", { name: "Go back" })); expect(state.back).toHaveBeenCalledTimes(signedIn ? 1 : 0);
+});
+it("returns to a public museum record without a member session", async () => {
+  nativeReplace.call(history, {}, "", "/museums/louvre"); render(<HeaderBackNavigation />); await push("/books");
+  fireEvent.click(screen.getByRole("link", { name: "Go back" })); expect(state.back).toHaveBeenCalledOnce();
 });
 it.each(["https://other.example/", "javascript:alert(1)"])("rejects unsafe return destinations: %s", href => { nativeReplace.call(history, { artlineReturn: { href, label: "Untrusted" } }, "", "/books"); render(<HeaderBackNavigation />); expect(screen.getByRole("link", { name: "Go back" })).toHaveAttribute("href", "/"); });
 it.each([true, false])("handles plain-anchor document returns (fresh label: %s)", fresh => {

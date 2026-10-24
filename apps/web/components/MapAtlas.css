@@ -1,0 +1,203 @@
+/* Art atlas: dark geography, printed names and authentic object illustrations. */
+.catalogue-map.map-workspace-v2 {
+  --map-water:var(--dark);
+  --map-land:#252b28;
+  --map-coast:#3b443e;
+  --map-land-label:#8b978e;
+  --map-panel-gutter:20px;
+}
+.map-workspace-v2 .map-layer-panel,.map-workspace-v2 .map-place-panel {background:var(--paper)}
+.map-workspace-v2 .map-panel-heading {padding-left:var(--map-panel-gutter);min-height:58px}
+.map-workspace-v2 .map-panel-heading h2 {font-size:27px;letter-spacing:-.035em}
+.map-workspace-v2 .map-panel-heading h2 small {font-size:12px;letter-spacing:0}
+.map-workspace-v2 .map-selection-search {margin:0 var(--map-panel-gutter) 8px;padding:0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent}
+.map-workspace-v2 .map-selection-search input {background:transparent;font-size:14px}
+.map-workspace-v2 .map-selection-search input::-webkit-search-cancel-button {-webkit-appearance:none}
+.map-workspace-v2 .map-search-clear {display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;min-height:44px;padding:0;border:0;border-radius:3px;background:transparent;color:var(--muted)}
+.map-workspace-v2 .map-search-clear:hover {background:var(--stone);color:var(--ink)}
+.map-workspace-v2 .map-context-controls {padding:0 16px 12px;background:transparent}
+.map-workspace-v2 .map-context-controls .map-options>summary {border:0;border-block:1px solid var(--line);border-radius:0;padding-inline:0;background:transparent}
+.map-workspace-v2 .map-group-heading {background:transparent;border-block:1px solid var(--line);padding-left:var(--map-panel-gutter)}
+.map-workspace-v2 .map-group-heading label {gap:10px;font-size:13px;color:var(--muted);font-weight:400}
+.map-workspace-v2 .map-group-heading input[type=checkbox] {width:16px;height:16px;min-height:16px;margin-right:8px}
+.map-workspace-v2 .map-layer-kind-icon {display:flex;align-items:center;flex:0 0 16px;color:var(--muted)}
+.map-workspace-v2 .map-layer-kind-icon svg {width:16px;height:16px}
+.map-workspace-v2 .map-group-heading small {font-size:12px}
+.map-workspace-v2 .map-selection-row {min-height:64px;padding:0 16px 0 calc(var(--map-panel-gutter) - 3px);border-bottom:0}
+.map-workspace-v2 .map-selection-row+.map-selection-row {border-top:1px solid #d0c9be55}
+.map-workspace-v2 .map-selection-row .map-selection-name {min-height:64px;padding-block:10px}
+.map-workspace-v2 .map-selection-name strong {font:400 18px/1.22 var(--serif);letter-spacing:-.018em}
+.map-workspace-v2 .map-selection-name small {margin-top:5px;font:12px/1.45 var(--sans)}
+.map-workspace-v2 .map-selection-row.is-selected {background:var(--white)}
+.map-workspace-v2 .map-selection-row input[type=checkbox] {width:16px;height:16px;min-height:16px}
+.map-workspace-v2 .map-record-check {flex:0 0 44px;flex-direction:row;justify-content:flex-start;min-width:44px;min-height:44px}
+.map-workspace-v2 .map-layer-scroll {padding-bottom:10px}
+.map-workspace-v2 .map-index-tools {flex-shrink:0;min-width:0}
+.map-workspace-v2 .map-layer-picker {padding:0 var(--map-panel-gutter) 12px}
+.map-workspace-v2 .map-add-layers {display:flex;align-items:center;min-height:44px;color:var(--ultramarine);font-size:13px;text-decoration:underline;text-underline-offset:3px}
+.map-workspace-v2 .map-record-group .map-group-heading label {font-size:14px;font-weight:500}
+.map-workspace-v2 .map-record-group[data-enabled=false] .map-group-heading label {font-weight:400}
+.map-workspace-v2 .map-event-layer-controls {min-width:0;margin:24px 0 0;padding:12px 0 0;border:0;border-top:1px solid var(--line)}
+.map-workspace-v2 .map-event-layer-controls legend {padding:0 8px 0 0;color:var(--ink);font:400 19px/1.3 var(--serif)}
+.map-workspace-v2 .map-event-layer-controls label {display:flex;flex-direction:row;align-items:center;gap:10px;min-height:44px;color:var(--ink);font:13px/1.4 var(--sans);cursor:pointer}
+.map-workspace-v2 .map-event-layer-controls input {flex:0 0 18px}
+.map-workspace-v2 .map-selection-name.has-image {display:grid;grid-template-columns:40px minmax(0,1fr);align-items:center;gap:12px}
+.map-workspace-v2 .map-selection-copy {display:block;min-width:0}
+.map-workspace-v2 :is(.map-index-image,.map-choice-image) {display:grid;place-items:center;width:40px;height:52px;background:var(--stone);color:var(--muted)}
+.map-workspace-v2 :is(.map-index-image,.map-choice-image)>img {display:block;width:100%;height:100%;object-fit:contain}
+.map-workspace-v2 :is(.map-index-image,.map-choice-image) .map-image-unavailable {display:grid;place-items:center;min-height:0;width:100%;height:100%}
+
+/* A crowded marker opens a place chooser, with the full index one step away. */
+.map-workspace-v2 .map-place-choices {padding:0 var(--map-panel-gutter) 20px;border:0;background:transparent}
+.map-workspace-v2 .map-choice-actions {display:grid;gap:4px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.map-workspace-v2 .map-choice-actions>button {display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 10px;font-size:13px}
+.map-workspace-v2 .map-choice-actions>.map-choice-back {justify-content:flex-start;padding-inline:0;border:0;background:transparent;color:var(--muted)}
+.map-workspace-v2 .map-choice-back>span {font-size:18px}
+.map-workspace-v2 .map-choice-actions>.map-choice-zoom {border:1px solid var(--line);border-radius:3px;background:var(--white);color:var(--ink)}
+.map-workspace-v2 .map-choice-zoom:hover {background:var(--stone)}
+.map-workspace-v2 .map-choice-place>h3 {margin:20px 0 8px;font:400 22px/1.2 var(--serif);letter-spacing:-.02em}
+.map-workspace-v2 .map-choice-place ol {margin:8px 0 0;padding:0;list-style:none}
+.map-workspace-v2 .map-choice-place li+li {margin:0;border-top:1px solid var(--line)}
+.map-workspace-v2 .map-choice-place li>button {display:block;width:100%;min-height:72px;padding:12px 10px;border:0;border-left:2px solid var(--map-identity);border-radius:0;background:transparent;text-align:left}
+.map-workspace-v2 .map-choice-place li>button.has-image {display:grid;grid-template-columns:40px minmax(0,1fr);align-items:center;gap:12px}
+.map-workspace-v2 .map-choice-place li>button:is(:hover,[aria-current=true]) {background:var(--white)}
+.map-workspace-v2 .map-choice-caption {min-width:0}
+.map-workspace-v2 .map-choice-caption strong {color:var(--ink);font:400 18px/1.25 var(--serif);overflow-wrap:anywhere}
+.map-workspace-v2 .map-choice-caption small {margin-top:5px;color:var(--muted);font:12px/1.5 var(--sans)}
+
+/* Map controls are a light utility edge, separate from the image and name layer. */
+.map-workspace-v2 .map-workspace-toolbar {border-color:transparent;border-radius:3px;box-shadow:0 2px 12px #0002;gap:0;padding:0;min-height:44px}
+.map-workspace-v2 .map-workspace-toolbar>.map-layer-toggle {width:44px;min-width:44px;height:44px;padding:0;justify-content:center}
+.map-workspace-v2 .map-workspace-toolbar>button,.map-workspace-v2 .map-workspace-tools>button {font-size:12px}
+.map-workspace-v2 .map-navigation-controls {border:0;border-radius:3px;box-shadow:0 2px 12px #0002}
+.map-workspace-v2 .map-navigation-controls button+button {border-top-color:var(--line)!important}
+.map-workspace-v2 .catalogue-map-geography:focus-visible {outline:2px solid var(--paper);outline-offset:-3px}
+.map-workspace-v2 .map-guide>summary {min-height:44px;padding:0 8px;border:0;background:transparent;color:#c3c8be;font:12px/44px var(--sans)}
+.map-workspace-v2 .map-guide>div {bottom:58px;max-height:min(300px,calc(100% - 70px))}
+.map-workspace-v2 .map-guide[open] {z-index:6}
+.map-workspace-v2 .catalogue-map-geography .leaflet-control-attribution {background:transparent;color:#a3ada4;font-size:9px}
+.map-workspace-v2 .catalogue-map-geography .leaflet-control-attribution a {color:#c3c8be}
+.map-workspace-v2 .catalogue-map-geography .leaflet-control-scale {margin:0 12px 6px 0}
+.map-workspace-v2 .leaflet-control-scale-line {padding:2px 5px;border:1px solid #c3c8be;border-top:0;background:var(--dark);color:var(--paper);font:11px/1.3 var(--sans);text-shadow:none}
+.map-workspace-v2 .map-country-label {color:var(--map-land-label);font:italic 13px/20px var(--serif);letter-spacing:0;text-shadow:none}
+
+/* The pin stays on its source coordinate. Only the nearby caption is arranged. */
+.map-workspace-v2 .atlas-map-pin .map-marker-symbol {
+  inset:17px;width:10px;height:10px;border:2px solid var(--map-identity-fill);
+  border-radius:50%;outline:0;background:var(--map-identity);color:var(--ink);box-shadow:none;
+}
+.map-workspace-v2 .atlas-map-pin .map-marker-symbol svg {display:none}
+.map-workspace-v2 .atlas-map-pin.is-event .map-marker-symbol {border-radius:1px;transform:rotate(45deg)}
+.map-workspace-v2 .atlas-map-pin.is-artwork .map-marker-symbol {border-radius:1px}
+.map-workspace-v2 .atlas-map-pin.is-country .map-marker-symbol {outline:1px dashed var(--paper);outline-offset:4px}
+.map-workspace-v2 .atlas-map-pin.is-cluster .map-marker-symbol,
+.map-workspace-v2 .atlas-map-pin .map-marker-symbol:not(:empty):not(:has(svg)) {
+  inset:10px;width:24px;height:24px;transform:none;border:1px solid var(--map-identity-fill);
+  border-radius:50%;background:var(--map-identity);color:var(--paper);font:400 15px var(--serif);
+}
+.map-workspace-v2 .atlas-map-pin.is-mixed .map-marker-symbol {background:var(--dark);color:var(--paper);border-color:#a1aaa1}
+.map-workspace-v2 .atlas-map-pin.is-selected .map-marker-symbol {outline:1px solid var(--paper);outline-offset:5px;box-shadow:none}
+.map-workspace-v2 .atlas-map-pin.is-hovered:not(.is-selected) .map-marker-symbol {outline:1px solid var(--map-identity-fill);outline-offset:4px;box-shadow:none}
+.map-workspace-v2 .atlas-map-pin:focus-visible .map-marker-symbol {outline:3px solid var(--paper);outline-offset:4px}
+.map-workspace-v2 .atlas-map-pin .map-marker-label,
+.map-workspace-v2 .atlas-map-pin.is-mixed .map-marker-label {
+  padding:2px 0;border:0;border-radius:0;background:transparent;box-shadow:none;
+  color:var(--map-identity-fill);max-width:210px;text-shadow:0 1px 3px var(--dark),0 -1px 2px var(--dark);
+}
+.map-workspace-v2 .atlas-map-pin.is-mixed .map-marker-label {color:var(--paper)}
+.map-workspace-v2 .map-marker-name {font:400 18px/1.15 var(--serif);letter-spacing:-.015em;max-width:210px;white-space:normal}
+.map-workspace-v2 .map-marker-label small {font:12px/1.45 var(--sans);color:#c3c8be;margin-top:5px;max-width:205px}
+.map-workspace-v2 .map-marker-swatches {height:2px;max-width:64px;gap:2px;margin-bottom:6px}
+.map-workspace-v2 .map-marker-swatches i {height:2px;min-width:5px;border-radius:0}
+.map-workspace-v2 .map-marker-label.has-artwork {width:124px;max-width:124px}
+.map-workspace-v2 .map-marker-artwork {display:block;width:100%;height:138px;object-fit:contain;background:var(--paper);border:3px solid var(--paper);margin-bottom:9px}
+/* Leaflet gives marker-pane images width:auto; keep reproductions in their frame. */
+.map-workspace-v2 .map-marker-label .map-marker-artwork {width:100%}
+.map-workspace-v2 .has-artwork .map-marker-name {font-size:16px;line-height:1.15;max-width:124px}
+.map-workspace-v2 .has-artwork small {max-width:124px;white-space:normal;font-size:12px}
+
+/* The inspector reads as an object record, with a complete reproduction. */
+.map-workspace-v2 .map-details-body {padding:22px 22px 28px}
+.map-workspace-v2 .map-journey-title :is(h2,h3) {font-size:30px;line-height:1.06;letter-spacing:-.035em}
+.map-workspace-v2 .map-record-meta {font-size:12px;margin-top:10px}
+.map-workspace-v2 .map-journey-current {border-left-width:2px;padding-left:16px}
+.map-workspace-v2 .map-journey-current :is(h3,h4) {font-size:31px;line-height:1.08;margin:6px 0 10px;letter-spacing:-.025em}
+.map-workspace-v2 .map-journey-place-heading {display:flex;align-items:center;gap:12px}
+.map-workspace-v2 .map-journey-place-heading>:is(h3,h4) {flex:1;min-width:0;overflow-wrap:anywhere}
+.map-workspace-v2 .map-locate-place {display:flex;align-items:center;justify-content:center;flex-shrink:0;gap:6px;min-width:44px;min-height:44px;padding:0;border:0;border-radius:3px;background:transparent;color:var(--ultramarine);font:12px var(--sans)}
+.map-workspace-v2 .map-locate-place:hover {text-decoration:underline;text-underline-offset:3px}
+.map-workspace-v2 .map-locate-place svg {width:16px;height:16px}
+.map-workspace-v2 .map-journey-date {font-size:23px;font-style:italic}
+.map-workspace-v2 .map-journey-relation {font-size:14px}
+.map-workspace-v2 .map-journey-precision {font-size:12px;line-height:1.5}
+.map-workspace-v2 .map-full-record {font-size:14px}
+.map-workspace-v2 .map-source :is(a,p) {overflow-wrap:anywhere}
+.map-workspace-v2 .map-journey-history>summary {font-size:13px}
+@media(min-width:1024px){
+ .map-workspace-v2 .map-journey-title {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 12px;margin-bottom:24px}
+ .map-workspace-v2 .map-journey-identity {grid-column:1;grid-row:1}
+ .map-workspace-v2 .map-record-actions {grid-column:2;grid-row:1}
+ .map-workspace-v2 .map-journey-image {grid-column:1/-1;grid-row:2;width:100%;height:204px;margin-top:20px;background:var(--stone)}
+ .map-workspace-v2 .map-journey-image>img {object-fit:contain}
+}
+@media(max-width:600px){
+ .catalogue-map.map-workspace-v2 {--map-panel-gutter:16px}
+ .map-workspace-v2 .map-selection-search input {font-size:16px}
+ .map-workspace-v2 .map-selection-name strong {font-size:18px}
+ .map-workspace-v2 .map-panel-heading h2 {font-size:26px}
+ .map-workspace-v2 .map-marker-name {font-size:16px;max-width:170px}
+ .map-workspace-v2 .map-marker-label small {font-size:12px;max-width:160px}
+ .map-workspace-v2 .map-marker-label.has-artwork {width:112px;max-width:112px}
+ .map-workspace-v2 .map-marker-artwork {height:122px}
+ .map-workspace-v2 .has-artwork .map-marker-name {font-size:15px;max-width:112px}
+ .map-workspace-v2 .has-artwork small {max-width:112px;font-size:12px}
+ .map-workspace-v2 .map-details-body {padding:18px 16px 24px}
+ .map-workspace-v2 .map-journey-title :is(h2,h3) {font-size:25px;line-height:1.1}
+ .map-workspace-v2 .map-journey-current :is(h3,h4) {font-size:29px}
+}
+@media(max-height:500px) and (min-width:700px){
+ .map-workspace-v2 .map-layer-panel>.map-panel-heading {min-height:44px;padding-block:0}
+ .map-workspace-v2 .map-details-body {padding:16px}
+ .map-workspace-v2 .map-journey-title :is(h2,h3) {font-size:22px}
+ .map-workspace-v2 .map-journey-current :is(h3,h4) {font-size:24px}
+}
+@media(max-width:1023px) and (min-height:501px){
+ .map-workspace-v2 .map-workspace[data-details=true][data-expanded=false] .map-guide {bottom:max(48%,min(256px,60%))}
+ .map-workspace-v2 .map-workspace[data-details=true][data-expanded=false] .leaflet-bottom.leaflet-right {bottom:max(48%,min(256px,60%))}
+}
+
+
+/* Location choices belong to the information panel, alongside record details. */
+.map-workspace-v2 .map-location-heading {gap:12px;padding:12px 14px 4px 22px}
+.map-workspace-v2 .map-location-heading>h2 {flex:1;min-width:0;overflow-wrap:anywhere}
+.map-workspace-v2 .map-location-actions {display:flex;align-items:start;flex-shrink:0}
+.map-workspace-v2 .map-location-count {margin:0;padding:0 22px 12px;color:var(--muted);font:12px/1.5 var(--sans)}
+.map-workspace-v2 .map-details-body.map-location-body {padding:0}
+.map-workspace-v2 .map-location-body>.map-place-choices {padding:0 22px 22px}
+.map-workspace-v2 .map-record-back {display:flex;align-items:center;gap:6px;min-height:44px;margin:0 0 12px;padding:0;border:0;background:transparent;color:var(--muted);font:13px/1.4 var(--sans)}
+.map-workspace-v2 .map-record-back:hover {color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){
+ .map-workspace-v2 .map-location-heading {padding-left:16px;padding-right:8px}
+ .map-workspace-v2 .map-location-count {padding-left:16px}
+ .map-workspace-v2 .map-location-body>.map-place-choices {padding-inline:16px}
+}
+
+/* One identity header, followed by its dated and undated milestones. */
+.map-workspace-v2 .map-choice-record {padding:16px 0;border-bottom:1px solid var(--line)}
+.map-workspace-v2 .map-choice-record:last-child {border-bottom:0}
+.map-workspace-v2 .map-choice-record-title {display:block;width:100%;min-height:44px;padding:0;border:0;background:transparent;text-align:left;color:var(--ink)}
+.map-workspace-v2 .map-choice-record-title.has-image {display:grid;grid-template-columns:40px minmax(0,1fr);align-items:center;gap:12px}
+.map-workspace-v2 .map-choice-record-title>span {min-width:0}
+.map-workspace-v2 .map-choice-record-title strong {display:block;font:400 21px/1.25 var(--serif);letter-spacing:-.02em;overflow-wrap:anywhere}
+.map-workspace-v2 .map-choice-record-title small {display:block;margin-top:5px;color:var(--muted);font:12px/1.4 var(--sans)}
+.map-workspace-v2 .map-choice-record-title:hover strong {color:var(--map-identity)}
+.map-workspace-v2 .map-choice-timeline {position:relative;margin:12px 0 0 4px;padding:0;list-style:none}
+.map-workspace-v2 .map-choice-timeline::before {content:"";position:absolute;left:4px;top:21px;bottom:21px;width:1px;background:var(--line)}
+.map-workspace-v2 .map-choice-milestone {position:relative;margin:0;padding:0}
+.map-workspace-v2 .map-choice-milestone::before {content:"";position:absolute;left:0;top:18px;width:9px;height:9px;border:1px solid var(--map-identity);border-radius:50%;background:var(--map-identity);pointer-events:none}
+.map-workspace-v2 .map-choice-milestone[data-dated=false]::before {border-color:var(--muted);background:var(--paper)}
+.map-workspace-v2 .map-choice-milestone>button {display:block;width:100%;min-height:60px;padding:10px 4px 10px 24px;border:0;border-radius:0;background:transparent;text-align:left;color:var(--ink)}
+.map-workspace-v2 .map-choice-milestone>button:is(:hover,[aria-current=true]) {background:var(--white)}
+.map-workspace-v2 .map-choice-milestone-fact {display:block;font:14px/1.4 var(--sans);overflow-wrap:anywhere}
+.map-workspace-v2 .map-choice-milestone-fact strong {display:inline;color:var(--ink);font:500 14px/1.4 var(--sans)}
+.map-workspace-v2 .map-choice-milestone :is(time,small) {display:block;margin-top:4px;color:var(--muted);font:12px/1.4 var(--sans)}

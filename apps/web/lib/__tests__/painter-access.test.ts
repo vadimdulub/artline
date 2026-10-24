@@ -16,7 +16,7 @@ import { getArtist, getArtistArtwork, getArtistIdentity, getMuseum, getMuseumDir
 const props = { params: Promise.resolve({ slug: "monet", artworkId: "11111111-1111-4111-8111-111111111111" }), searchParams: Promise.resolve({ art_year: "1900" }) };
 beforeEach(() => {
   vi.resetAllMocks();
-  vi.mocked(getMuseumDirectory).mockResolvedValue(null as never);
+  vi.mocked(getMuseumDirectory).mockResolvedValue(null);
   vi.mocked(getMuseumPublications).mockResolvedValue({ items: [], next_cursor: "" });
   vi.mocked(getMuseum).mockResolvedValue({ id: "museum", slug: "monet", name: "Museum", description: "A collection", venues: [], work_count: 1, cover: null } as never);
   const artist = { slug: "monet", display_name: "Claude Monet", status: "review", aliases: [], timeline_display: "1840–1926" } as never;

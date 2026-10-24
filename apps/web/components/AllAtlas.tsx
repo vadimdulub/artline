@@ -1,4 +1,10 @@
 "use client";
+import { useRouter } from "next/navigation";
+import { CatalogueMap } from "./CatalogueMap";
+import { MapPainterPicker } from "./MapPainterPicker";
+import { useMapPainters } from "./use-map-painters";
+import { activeMapLayers, mapLayerValue } from "@/lib/map-layers";
+import { MapViewSwitch } from "./MapViewSwitch";
 import { displayMetadata } from "@/lib/display-metadata";
 import { ExplorerFrame } from "./ExplorerFrame";
 import { useFitYears } from "./use-fit-years";
@@ -17,6 +23,8 @@ import { TimelineGrid, TimelineLanes, TimelineMark } from "./TimelineGrid";
 import { TimelineOverview } from "./TimelineOverview";
 import { TimelineRangeControls } from "./TimelineRangeControls";
 import { TimelineHeader } from "./TimelineHeader";
+import { TimelineIntroduction } from "./TimelineIntroduction";
+import { timelineGuideContext } from "@/lib/timeline-introduction";
 import { TimelinePopover } from "./TimelinePopover";
 import { BookDrawer } from "./BookDrawer";
 import { EventDrawer } from "./EventDrawer";
@@ -48,25 +56,35 @@ function Lane({lane,range,position,width,busy,loadingRange,selected,select,narro
 }
 
 export function AllAtlas(){
+ const router=useRouter();
  const queryString=useQueryString(),rawParams=new URLSearchParams(queryString);
+ const guideContext=timelineGuideContext(rawParams);
  const shell=useRef<HTMLElement>(null),stage=useRef<HTMLDivElement>(null),search=useRef<HTMLInputElement>(null);
  const [metadata,setMetadata]=useState<AtlasMetadata>(),[metaError,setMetaError]=useState(""),[retry,setRetry]=useState(0),[width,setWidth]=useState(1000);
  const [geography,setGeography]=useState<{countries:{slug:string;name:string}[];error?:string}>({countries:[]});
+ const mapView = rawParams.get("canvas") === "map";
  const [result,setResult]=useState<{key:string;attempt:number;data?:AtlasResponse;error?:string}>();
  const [rangePreview,setRangePreview]=useState<BookRange|null>(null);
  const presetID=rawParams.get("preset")??"",windowKind=rawParams.get("window")??"context",preset=metadata?.presets.find(p=>p.id===presetID);
  const params=resolvedStartingFilters(rawParams,preset);
- const layers=atlasLayers(params);
+ const layers=mapView?[...allKinds]:atlasLayers(params);
  const populated=layers.length>0;
  const bounds=metadata?.bounds??{start:-12000,end:2000},fallback=preset?.[windowKind==="period"?"period":"context"]??bounds;
  const targetRange={start:params.has("start")?Number(params.get("start")):fallback.start,end:params.has("end")?Number(params.get("end")):fallback.end};
  const query=params.get("q")??"",region=params.get("region")??"",highlights=params.get("highlights")!=="false";
  const countries=params.getAll("country"),continents=params.getAll("continent"),creators=params.getAll("creator");
  const creatorChoices=useAtlasCreators(creators);
+ const painterSlugs=[...new Set([...params.getAll("artwork_painter"),...creators.filter(value=>value.startsWith("painter:")).map(value=>value.slice(8))])];
+ const mapPainters=useMapPainters(painterSlugs,mapView);
  const artworkCountries=params.get("country_scope")==="artwork";
  const request=new URLSearchParams({selection:"true",highlights:String(highlights),preset_filters:"custom"});
- for(const key of ["fit","preset","window","start","end","q","region","country","country_scope","continent","creator","after_artwork",...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
- request.set("artwork_image_only","true"); request.set("artwork_work_type","painting");
+ for(const key of ["fit","preset","window","start","end","q","region","country","country_scope","continent",...(!mapView?["creator"]:[]),"after_artwork",...(mapView?["after_book","after_event"]:[]),...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
+ request.set("artwork_image_only",String(!mapView)); request.set("artwork_work_type","painting");
+ if(mapView){
+  request.delete("artwork_painter");painterSlugs.forEach(slug=>request.append("artwork_painter",slug));
+  const authors=[...new Set([...params.getAll("book_author"),...creators.filter(value=>value.startsWith("author:")).map(value=>value.slice(7))])];
+  request.delete("book_author");authors.forEach(author=>request.append("book_author",author));
+ }
  for(const kind of layers)request.append("type",kind);
  const requestKey=timelineRequestKey(request,fallback);
  const requestReady=Boolean(metadata)||!atlasNeedsPresetMetadata(rawParams);
@@ -111,9 +129,19 @@ export function AllAtlas(){
  ];
  const {position,ticks}=atlasTimelineScale(range,bounds,width);
  const loadingRange=data?.range.start!==range.start||data?.range.end!==range.end;
+ const canvasControls = <>
+        {(!mapView || preset || creators.length > 0 || countries.length > 0) && <TimelinePopover className="all-view-context" label={preset?.name??"View details"}>
+          {preset&&<><h2>{preset.name}</h2><p>{preset.description}</p><p className="all-scope-description">{preset.startingScope}</p><p>Main period: {bookYearLabel(preset.period.start)}–{bookYearLabel(preset.period.end)}. Wider context: {bookYearLabel(preset.context.start)}–{bookYearLabel(preset.context.end)}.</p></>}
+          {creators.length>0&&<p>Artworks and books by the selected creators. Their work gives cultural context; individual pictures may have other subjects.</p>}
+          {countries.length>0&&<div className="all-country-focus"><p>{artworkCountries?`Artwork focus: ${countries.length} ${countries.length===1?"country":"countries"}. Books and events keep the period context.`:`Country filters apply to all entries.`} <button onClick={()=>change({country:null,country_scope:null})}>{preset?.focus?.global||!preset?"Show all countries":"Use full period focus"}</button></p><label><input type="checkbox" checked={!artworkCountries} onChange={event=>change({country_scope:event.target.checked?null:"artwork"})}/><span>Apply countries to books and events too</span></label></div>}
+          <button onClick={reset}>Clear</button>
+        </TimelinePopover>}
+        <fieldset className="all-layer-switches"><legend>Show</legend>{(metadata?.types??[]).map(kind=><label key={kind.key}><input type="checkbox" checked={layers.includes(kind.key)} onChange={event=>event.target.checked?change({type:allKinds.filter(value=>value===kind.key||layers.includes(value))}):remove(kind.key)}/><span>{kind.name}</span></label>)}</fieldset>
+      </>;
+  const canvasSwitch = <MapViewSwitch map={mapView} onChange={map => { if(map&&!populated) change({canvas:"map",type:allKinds}); else updateQuery({canvas:map?"map":null},true); }} />;
  return <ExplorerFrame ref={shell} className="explorer all-explorer" aria-labelledby="all-timeline-title">
   {geography.error&&<p className="save-message" role="status">Some filter choices could not be loaded. <button onClick={()=>setRetry(v=>v+1)}>Retry filters</button></p>}
-  <AtlasFilters searchRef={search} query={query} onQuery={value=>changeFilter({q:value||null},false)} onReset={reset} resetLabel="Show starting points" searchLabel="Search the timeline" placeholder="Title, creator or event" columns={5} activeCount={activeFilters.filter(filter=>filter.key!=="q").length}>
+  <AtlasFilters compact={mapView} viewSwitch={mapView ? canvasSwitch : undefined} searchRef={search} query={query} onQuery={value=>changeFilter({q:value||null},false)} onReset={reset} resetLabel="Show starting points" searchLabel="Search the timeline" placeholder="Title, creator or event" columns={5} activeCount={activeFilters.filter(filter=>filter.key!=="q").length}>
    <div className="all-period-filter">
     <MultiSelectFilter label="Period or theme" allLabel="All periods & themes" single values={presetID?[presetID]:[]} options={(metadata?.presets??[]).map(p=>({slug:p.id,name:p.name,group:p.group,detail:`${bookYearLabel(p.period.start)}–${bookYearLabel(p.period.end)}`,description:p.startingScope,searchText:p.description}))} onChange={values=>selectPreset(values[0]??"")} unavailable={Boolean(metaError)} retry={()=>setRetry(v=>v+1)} helpText="Explore connected art, books and events. Each starting point sets the years and a focus you can change."/>
    </div>
@@ -124,27 +152,24 @@ export function AllAtlas(){
    <AtlasCheckbox label="Highlights" checked={highlights} onChange={checked=>changeFilter({highlights:String(checked)})}/>
   </AtlasFilters>
   <ActiveFilters filters={activeFilters} onClear={clearFilters} searchRef={search}/>
+  {!mapView&&layers.includes("artwork")&&guideContext.fromGuide&&params.getAll("artwork_id").length>0&&<TimelineIntroduction kind="artworks" locale={guideContext.locale} fromGuide />}
+  {!mapView && canvasSwitch}
   <div className={`timeline-dark${populated?"":" all-empty-canvas"}`}>
    {metaError&&<p role="alert">Periods could not be loaded. <button onClick={()=>setRetry(v=>v+1)}>Retry periods</button></p>}
-   {populated?<>
-    <TimelineHeader className="all-canvas-heading"
+   {populated || mapView ? <>
+    {!mapView && <TimelineHeader className="all-canvas-heading"
       status={busy?"Loading entries…":error?"Couldn’t load":`${data?.total.toLocaleString("en-GB")??0} entries`}
-      controls={<>
-        <TimelinePopover className="all-view-context" label={preset?.name??"View details"}>
-          {preset&&<><h2>{preset.name}</h2><p>{preset.description}</p><p className="all-scope-description">{preset.startingScope}</p><p>Main period: {bookYearLabel(preset.period.start)}–{bookYearLabel(preset.period.end)}. Wider context: {bookYearLabel(preset.context.start)}–{bookYearLabel(preset.context.end)}.</p></>}
-          {creators.length>0&&<p>Artworks and books by the selected creators. Their work gives cultural context; individual pictures may have other subjects.</p>}
-          {countries.length>0&&<div className="all-country-focus"><p>{artworkCountries?`Artwork focus: ${countries.length} ${countries.length===1?"country":"countries"}. Books and events keep the period context.`:`Country filters apply to all entries.`} <button onClick={()=>change({country:null,country_scope:null})}>{preset?.focus?.global||!preset?"Show all countries":"Use full period focus"}</button></p><label><input type="checkbox" checked={!artworkCountries} onChange={event=>change({country_scope:event.target.checked?null:"artwork"})}/><span>Apply countries to books and events too</span></label></div>}
-          <button onClick={reset}>Clear</button>
-        </TimelinePopover>
-        <fieldset className="all-layer-switches"><legend>Show</legend>{(metadata?.types??[]).map(kind=><label key={kind.key}><input type="checkbox" checked={layers.includes(kind.key)} onChange={event=>event.target.checked?change({type:allKinds.filter(value=>value===kind.key||layers.includes(value))}):remove(kind.key)}/><span>{kind.name}</span></label>)}</fieldset>
-      </>}>
+      controls={canvasControls}>
       <h1 className="time-title" data-bce={displayRange.start<0||displayRange.end<0} id="all-timeline-title" tabIndex={-1}>{bookYearLabel(displayRange.start)}<span aria-hidden="true">—</span><span className="sr-only"> to </span>{bookYearLabel(displayRange.end)}</h1>
-    </TimelineHeader>
-    <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(t=>({key:t.year,label:t.label,position:position(t.year)}))}>
+    </TimelineHeader>}
+    {mapView ? <CatalogueMap headingId="all-timeline-title" items={[...mapPainters.items,...(!busy && !error ? (data?.lanes ?? []).filter(lane => layers.includes(lane.key)).flatMap(lane => lane.items.map(item => ({ id: item.id, kind: item.type, title: item.title, context: item.context, years: item.years, image: item.media_url ?? item.cover?.imageUrl }))) : [])]} total={(data?.total ?? 0)+mapPainters.items.length} loading={busy||mapPainters.loading} error={error??mapPainters.error} onRetry={() => {setRetry(v => v + 1);mapPainters.retry();}} range={range}
+      layerPickers={{artist:<MapPainterPicker values={painterSlugs} onChange={values=>{const active=activeMapLayers(rawParams);if(values.length){active.add("artist");active.add("artwork");}changeFilter({artwork_painter:values,artwork_id:null,creator:creators.filter(value=>!value.startsWith("painter:")),artwork_popular:"false",highlights:"false",map_layer:mapLayerValue(active)});}}/>}}
+      onOpen={item => { if(item.kind==="artist"&&item.slug){router.push(`/artists/${encodeURIComponent(item.slug)}`);return;} const record = data?.lanes.flatMap(lane => lane.items).find(record => record.id === item.id && record.type === item.kind); if (record) open(record); }}>
+    </CatalogueMap> : <TimelineGrid stageRef={stage} busy={busy} ticks={ticks.map(t=>({key:t.year,label:t.label,position:position(t.year)}))}>
      {busy?<div className="all-content-loading" role="status"><LoadingIndicator label="Loading the timeline…"/></div>:error?<div className="state-panel" role="alert"><h2>We couldn’t load this view</h2><p>{error}</p><button onClick={()=>setRetry(v=>v+1)}>Retry</button> <button onClick={reset}>Reset view</button></div>:data?.lanes.filter(lane=>layers.includes(lane.key)).map(lane=><Lane key={lane.key} lane={lane} range={range} position={position} width={width} busy={busy} loadingRange={loadingRange} selected={selected} select={open} narrow={narrow} browse={()=>browse(lane.key)} isolated={layers.length===1} onIsolate={()=>change({type:layers.length===1?allKinds:[lane.key],panel:null,browse:null})} galleryQuery={result?.key??requestKey}/>)}
-    </TimelineGrid>
+    </TimelineGrid>}
     <p className="sr-only" id="all-timeline-help">Select an entry for details. Select a busy period or drag the date handles to change the years in every lane. Select a lane heading to open its entries for the selected years.</p>
-    <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds,linearFrom),yearAt:position=>bookYearAtPosition(position,bounds,linearFrom),markers:[linearFrom,1700].map(year=>({year,label:String(year)}))}}/>
+    {!mapView && <TimelineRangeControls start={range.start} end={range.end} minimum={bounds.start} maximum={bounds.end} onChange={setRange} onPreview={setRangePreview} omitYearZero formatYear={bookYearLabel} endpoints={[bookYearLabel(bounds.start),bookYearLabel(bounds.end)]} scale={{position:year=>bookTickPosition(year,bounds,linearFrom),yearAt:position=>bookYearAtPosition(position,bounds,linearFrom),markers:[linearFrom,1700].map(year=>({year,label:String(year)}))}}/>}
    </>:metadata?<AllStartingPoints metadata={metadata} select={id=>selectPreset(id)}/>:<div className="all-start"><h1 id="all-timeline-title">Explore a moment in history</h1>{!metaError&&<LoadingIndicator label="Loading starting points…"/>}</div>}
 
   </div>

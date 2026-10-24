@@ -1,4 +1,6 @@
 "use client";
+import { CatalogueMap } from "./CatalogueMap";
+import { MapViewSwitch } from "./MapViewSwitch";
 import { BookmarkButton } from "./Bookmarks";
 import { displayMetadata } from "@/lib/display-metadata";
 import { ExplorerFrame } from "./ExplorerFrame";
@@ -22,6 +24,7 @@ export function EventsIndex() {
   const queryString = useQueryString();
   const params = new URLSearchParams(queryString);
   if (!params.has("top100")) params.set("top100", "true");
+  const mapView = params.get("canvas") === "map";
   const top100 = params.get("top100") === "true";
   const query = params.get("q") ?? "";
   const selected = params.get("event") ?? "";
@@ -67,17 +70,21 @@ export function EventsIndex() {
   const bounds = result?.data?.bounds ?? { start: -12000, end: 2000 };
   const year = (key: string, fallback: number) => { const raw = params.get(key); return raw && Number.isFinite(Number(raw)) ? Number(raw) : fallback; };
   const range = { start: year("start", bounds.start), end: year("end", bounds.end) };
+  const canvasSwitch = <MapViewSwitch map={mapView} onChange={map => updateQuery({ canvas: map ? "map" : null }, true)} />;
   return <div className={styles.page}>
     <ExplorerFrame className="explorer books-explorer" aria-labelledby="events-timeline">
       {facets?.error && <p className="save-message" role="status">Some filter choices could not be loaded. <button onClick={() => setRetry(value => value + 1)}>Retry filters</button></p>}
-      <AtlasFilters searchRef={search} query={query} onQuery={value => change({ q: value }, false)} onReset={reset} searchLabel="Find an event" placeholder="Event, place, or idea" columns={4} activeCount={active.filter(f => f.key !== "q").length}>
+      <AtlasFilters compact={mapView} viewSwitch={mapView ? canvasSwitch : undefined} searchRef={search} query={query} onQuery={value => change({ q: value }, false)} onReset={reset} searchLabel="Find an event" placeholder="Event, place, or idea" columns={4} activeCount={active.filter(f => f.key !== "q").length}>
         <EventFilterFields params={params} change={change} facets={facets?.data} unavailable={Boolean(facets?.error)} />
       </AtlasFilters>
       <ActiveFilters filters={active} onClear={() => change(cleared)} searchRef={search} />
-      <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
+      {!mapView && canvasSwitch}
+      {mapView ? <div className="timeline-dark">
+        <CatalogueMap headingId="events-timeline" items={(data?.items ?? []).map(item => ({ id: item.id, kind: "event", title: item.title, context: item.kind, years: item.years }))} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => updateQuery({ event: item.id }, true)} />
+      </div> : <EventsTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={selected} onSelect={event => updateQuery({ event }, true)}
         onPeriod={(start, end) => change({ start: String(start), end: String(end), top100: "false", fit: "true" })}
         onRange={(start, end) => change({ start: String(start), end: String(end) }, false)} onRetry={() => setRetry(value => value + 1)} onReset={reset}
-        onSuggestion={applySuggestion} onTop100={() => change({ top100: null })} />
+        onSuggestion={applySuggestion} onTop100={() => change({ top100: null })} />}
     </ExplorerFrame>
     <section className={styles.shelf} aria-labelledby="event-index" aria-busy={loading}>
       <div className={styles.shelfHeader}><div><h2 id="event-index" tabIndex={-1}>Event index</h2><p>Explore the events, empires, and movements that connect art, literature, belief, science, and everyday life. World history through 2000.</p></div><p className={styles.count} role="status">{data ? `${data.total.toLocaleString("en-GB")} of ${data.selectionTotal.toLocaleString("en-GB")} events` : ""}</p></div>

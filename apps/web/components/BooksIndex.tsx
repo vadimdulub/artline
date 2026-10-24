@@ -1,4 +1,6 @@
 "use client";
+import { CatalogueMap } from "./CatalogueMap";
+import { MapViewSwitch } from "./MapViewSwitch";
 import { ExplorerFrame } from "./ExplorerFrame";
 import { useFitYears } from "./use-fit-years";
 import { timelineRequestKey } from "@/lib/timeline-request";
@@ -26,7 +28,8 @@ export function BooksIndex() {
   const languages = [...new Set(params.getAll("language"))];
   const countries = [...new Set(params.getAll("country"))];
   const regions = [...new Set(params.getAll("region"))];
-  const authorView = params.get("view") === "authors";
+  const mapView = params.get("canvas") === "map";
+  const authorView = !mapView && params.get("view") === "authors";
   const [selectedAuthor, setSelectedAuthor] = useState<TimelineAuthor | null>(null);
   const womenOnly = params.get("women") === "true";
   const top100Only = params.get("top100") === "true";
@@ -35,7 +38,8 @@ export function BooksIndex() {
   // Gallery cursors belong to its scroll window. A shared URL must always open
   // the complete first timeline page, even if it carries an old index cursor.
   const requestParams = new URLSearchParams([...params].filter(([key]) => ["fit", "q", "author", "start", "end", "women", "top100", "language", "country", "region", "view"].includes(key)));
-  requestParams.set("limit", authorView ? top100Only ? "500" : "150" : String(BOOK_TIMELINE_LIMIT));
+  if (mapView) { requestParams.delete("view"); if (params.get("map_after")) requestParams.set("after", params.get("map_after")!); }
+  requestParams.set("limit", mapView ? "80" : authorView ? top100Only ? "500" : "150" : String(BOOK_TIMELINE_LIMIT));
   if (!authorView) requestParams.set("summary", "true");
   const requestKey = timelineRequestKey(requestParams, { start: -5000, end: 2000 });
   const [result, setResult] = useState<{ key: string; data?: BooksResponse; error?: string }>();
@@ -86,7 +90,7 @@ export function BooksIndex() {
   const clearChoices = { collection: null, author: null, q: null, language: null, country: null, region: null, women: null, top100: "false" };
 
   function change(values: Record<string, string | string[] | null>, push = true) {
-    updateQuery({ collection: null, fit: null, ...discoveryChanges(values, "top100"), after: null }, push);
+    updateQuery({ collection: null, fit: null, ...discoveryChanges(values, "top100"), after: null, map_after: null }, push);
   }
 
   function reset() {
@@ -110,17 +114,22 @@ export function BooksIndex() {
     ...[{ key: "language", values: languages }, { key: "country", values: countries }, { key: "region", values: regions }].flatMap(group => group.values.map(value => ({ key: `${group.key}-${value}`, label: facetResult.labels[value] ?? value.replaceAll("-", " "), remove: () => change({ [group.key]: group.values.filter(item => item !== value) }) }))),
   ];
 
+  const canvasSwitch = <MapViewSwitch map={mapView} onChange={map => { setSelectedAuthor(null); updateQuery({ canvas: map ? "map" : null, map_after: null }, true); }} />;
   return <div className={`${styles.page} books-page`}>
     <ExplorerFrame className="explorer books-explorer" aria-labelledby="books-timeline">
       {facetResult.error && <p className="save-message" role="status">Some filter choices could not be loaded. <button onClick={() => setRetry(value => value + 1)}>Retry filters</button></p>}
-      <AtlasFilters searchRef={search} query={query} onQuery={value => change({ q: value }, false)} onReset={reset} searchLabel="Find a book or author" placeholder="Book, author, or idea" columns={4} activeCount={activeFilters.filter(f => f.key !== "q").length}>
+      <AtlasFilters compact={mapView} viewSwitch={mapView ? canvasSwitch : undefined} searchRef={search} query={query} onQuery={value => change({ q: value }, false)} onReset={reset} searchLabel="Find a book or author" placeholder="Book, author, or idea" columns={4} activeCount={activeFilters.filter(f => f.key !== "q").length}>
         <BookFilterFields params={params} change={change} facets={facetResult.data} unavailable={Boolean(facetResult.error)} authorChoices={{options:(authorResult?.query===authorKey?authorResult.items:[]).map(name=>({slug:name,name})),remote:{search:authorSearch,onSearch:setAuthorSearch,loading:authorResult?.query!==authorKey,hasMore:Boolean(authorResult?.hasMore)},retry:()=>setAuthorRetry(v=>v+1),unavailable:Boolean(authorResult?.error)}} />
       </AtlasFilters>
       <ActiveFilters filters={activeFilters} onClear={() => change(clearChoices)} searchRef={search} />
-      <BooksTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={authorView ? selectedAuthor?.id ?? "" : selected}
+      {!mapView && canvasSwitch}
+      {mapView ? <div className="timeline-dark">
+        <CatalogueMap headingId="books-timeline" items={visibleBooks.map(item => ({ id: item.id, kind: "book", title: item.title, context: item.author, years: item.years, image: item.cover?.imageUrl }))} total={data?.total ?? 0} loading={loading} error={error} onRetry={() => setRetry(v => v + 1)} range={range} onOpen={item => updateQuery({ book: item.id }, true)}>
+        </CatalogueMap>
+      </div> : <BooksTimeline data={data} metadata={result?.data} range={range} loading={loading} error={error} selected={authorView ? selectedAuthor?.id ?? "" : selected}
         authorView={authorView} onAuthorView={checked => { setSelectedAuthor(null); change({ view: checked ? "authors" : null, book: null }); }}
         query={requestKey} onAuthor={setSelectedAuthor} onBook={(book, items) => { setDrawerBooks({ key: requestKey, items }); updateQuery({ book: book.id }, true); }} onRange={(start, end) => change({ start: String(start), end: String(end) }, false)}
-        onRetry={() => setRetry(value => value + 1)} onReset={reset} />
+        onRetry={() => setRetry(value => value + 1)} onReset={reset} />}
     </ExplorerFrame>
     {authorView && selectedAuthor && <BookAuthorDrawer author={selectedAuthor} close={() => setSelectedAuthor(null)} onBooks={() => { change({ view: null, author: selectedAuthor.name, start: null, end: null, book: null }); setSelectedAuthor(null); }} />}
     {selected && <BookDrawer id={selected} items={drawerBooks?.key === requestKey ? drawerBooks.items : visibleBooks} close={closeBook} select={id => updateQuery({ book: id })} />}

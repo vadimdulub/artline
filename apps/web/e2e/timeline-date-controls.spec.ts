@@ -44,3 +44,17 @@ for (const [name, route, minimum] of [
     }
   });
 }
+
+for (const route of ["/?view=paintings&canvas=map&start=1300&end=1650", "/all?preset=renaissance&canvas=map"]) {
+  test(`desktop map preserves dates for the timeline controls: ${route}`, async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await page.goto(route);
+    await expect(page.locator(".map-workspace-v2")).toBeVisible();
+    await expect(page.locator(".range-track")).toHaveCount(0);
+    await page.getByRole("button", { name: "Timeline", exact: true }).click();
+    await expect(page.locator(".range-track")).toBeInViewport();
+    await expect(page.getByRole("spinbutton")).toHaveCount(0);
+    await page.getByRole("slider", { name: "Timeline start handle" }).press("ArrowRight");
+    await expect(page).toHaveURL(/start=1301/);
+  });
+}

@@ -1,6 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./e2e",
+  // This pack owns a temporary app and GET-only API; run with test:responsive.
+  testIgnore: ["responsive-*.spec.ts"],
   fullyParallel: false,
   workers: 1,
   timeout: 30000,

@@ -46,6 +46,7 @@ export async function mockMobileExplorers(page: Page) {
     if (route.request().method() !== "GET") return route.fulfill({ status: 405 });
     if (path === "atlas/presets") return route.fulfill({ json: metadata });
     if (path === "atlas/geography") return route.fulfill({ json: { countries: [] } });
+    if (path === "map/locations") return route.fulfill({ json: { records: [] } });
     if (path === "atlas/creators" || path === "painters/options") return route.fulfill({ json: { items: [], selected: [], has_more: false } });
     if (path.endsWith("/facets")) return route.fulfill({ json: { countries: [], movements: [], languages: [], regions: [], kinds: [], topics: [] } });
     if (path === "books/authors") return route.fulfill({ json: { items: [], hasMore: false } });

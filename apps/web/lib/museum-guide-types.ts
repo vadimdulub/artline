@@ -28,7 +28,7 @@ export function guideWorkPath(work: Pick<GuideWork, "id" | "artists" | "catalogu
   const slug = work.catalogueArtistSlug === undefined ? work.artists[0]?.slug : work.catalogueArtistSlug;
   return slug ? `/artists/${slug}/works/${work.id}` : `/all?selection=true&type=artwork&highlights=false&artwork_id=${work.id}&item=${work.id}&itemType=artwork`;
 }
-export function guidePortalLinks(guide: Pick<MuseumGuide, "works" | "context" | "comparisonArtists">) {
+export function guidePortalLinks(guide: Pick<MuseumGuide, "works" | "context" | "comparisonArtists"> & Partial<Pick<MuseumGuide, "slug" | "locale">>) {
   const { start, end } = guide.context;
   const years = { start: String(start), end: String(end) };
   const all = new URLSearchParams({ ...years, selection: "true", highlights: "false", artwork_popular: "false", book_top100: "true", event_top100: "true" });
@@ -36,6 +36,11 @@ export function guidePortalLinks(guide: Pick<MuseumGuide, "works" | "context" | 
   for (const work of guide.works) all.append("artwork_id", work.id);
   const painters = new URLSearchParams({ start: String(Math.max(1100, start - 60)), end: String(Math.min(2000, end + 40)), popular: "false" });
   for (const slug of [...new Set([...guide.works.flatMap(work => work.artists.map(artist => artist.slug)), ...(guide.comparisonArtists || []).map(artist => artist.slug)])].slice(0, 32)) painters.append("painter", slug);
+  // Presentation context only: these parameters never enter catalogue requests.
+  if (guide.slug) for (const params of [all, painters]) {
+    params.set("guide", guide.slug);
+    params.set("guide_lang", guide.locale ?? "en");
+  }
   const context = new URLSearchParams({ ...years, top100: "true" });
   return { all: `/all?${all}`, painters: `/?${painters}`, events: `/events?${context}`, books: `/books?${context}` };
 }

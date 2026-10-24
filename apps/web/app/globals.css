@@ -99,6 +99,8 @@ input::placeholder{color:#827b70} textarea{resize:vertical;min-height:140px}
 .preset-group button{min-height:32px;padding:6px 11px;border:1px solid transparent;border-radius:3px;background:none;color:#aaa294;font-size:11px}
 .preset-group button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
 .preset-group button:hover:not([aria-pressed="true"]){border-color:#60574a;color:var(--paper)}
+
+
 .range-track{position:relative;height:44px;background:linear-gradient(#554e42,#554e42) center/100% 2px no-repeat;margin:0 12px}
 .range-window{position:absolute;height:100%;border:0;background:linear-gradient(var(--paper),var(--paper)) center/100% 2px no-repeat;touch-action:none;cursor:grab;padding:0;min-width:24px}
 .range-window:active{cursor:grabbing}.range-window span{display:none}
@@ -245,7 +247,7 @@ label>span,.timeline-controls>label>span{font-size:12px}
 .timeline-mark[aria-pressed="true"]>span{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .timeline-legend button{min-height:32px;font-size:12px}
 .timeline-legend i{width:7px;height:7px}
-.preset-group button,.range-toolbar h2{font-size:12px}
+.preset-group button,
 .timeline-controls>.reset-button,.timeline-controls>.more-filters>summary{font-size:12px}
 .search-field kbd{flex-shrink:0;font:12px var(--sans);border:1px solid var(--line);border-radius:3px;padding:3px 7px;color:var(--muted)}
 .active-filters{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;padding:8px 28px;border-bottom:1px solid var(--line)}
@@ -333,6 +335,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
   .timeline-counter{font-size:13px}.timeline-counter small{display:block;margin:4px 0 0;font-size:11px}
   .timeline-mark>span{font-size:11px}.timeline-mark>small{font-size:10px}
   .timeline-legend{gap:3px 12px}.timeline-legend button{font-size:11px}
+
   .range-toolbar h2{font-size:12px}.preset-group button{padding-inline:6px}
   .artwork-image>img{max-height:500px;aspect-ratio:1/1}
   .image-dialog{padding:16px;gap:12px}
@@ -417,7 +420,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .multi-filter>summary>span:first-child{font-size:12px;color:var(--muted)}
 .multi-filter>summary>strong{font-size:14px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .filter-chevron{width:18px;height:18px;flex-shrink:0;margin-left:auto;color:var(--muted)}.multi-filter[open] .filter-chevron{transform:rotate(180deg)}
-.multi-filter-panel{position:absolute;z-index:50;top:calc(100% + 6px);left:0;width:360px;max-width:calc(100vw - 36px);background:var(--white);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 28px #19171218;padding:18px;max-height:min(600px,80dvh);overflow:auto;overscroll-behavior:contain}
+.multi-filter-panel{position:absolute;z-index:50;top:calc(100% + 6px);left:0;width:360px;max-width:calc(100vw - 36px);translate:var(--filter-panel-shift,0px) 0;background:var(--white);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 28px #19171218;padding:18px;max-height:min(600px,80dvh);overflow:auto;overscroll-behavior:contain}
 .multi-filter-panel fieldset{margin:0;padding:0;border:0;min-width:0}
 .multi-filter-panel legend{font:24px var(--serif);margin:0 0 8px;padding:0}
 .multi-filter-panel p{font-size:12px;line-height:1.6;color:var(--muted);margin:0 0 12px}
@@ -432,7 +435,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .filter-option-group{min-width:0}
 .filter-option-group h3{font:400 16px var(--serif);color:var(--ink);margin:16px 8px 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
 .filter-option-group:first-child h3{margin-top:4px}
-.filter-option-copy{display:block;min-width:0}
+.filter-option-copy{display:block;min-width:0;overflow-wrap:anywhere}
 .filter-option-detail{display:grid;gap:3px;margin-top:3px;font-size:12px;line-height:1.45;color:var(--muted)}
 .multi-filter-actions{display:flex;justify-content:space-between;gap:12px;padding-top:12px;margin-top:10px;border-top:1px solid var(--line)}
 .multi-filter-actions button{min-height:44px;padding:8px 12px;border:1px solid var(--line);background:none;border-radius:3px;font-size:13px;color:var(--ink)}
@@ -460,7 +463,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .atlas-search-actions{display:flex;align-items:stretch}
 .atlas-search-actions>.reset-button{border:0;border-left:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;padding:10px 20px;font-size:13px}
 @media(max-width:760px){.atlas-search-actions>.reset-button{padding:8px 12px;font-size:12px}}
-.atlas-filter-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(var(--atlas-filter-columns,5),minmax(0,1fr)) auto auto}
+.atlas-filter-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
 :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:6px 18px;min-height:52px}
 :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>span:first-child{grid-column:1/-1}
 @media(min-width:761px){.atlas-filter-row>.multi-filter:nth-of-type(n+4)>.multi-filter-panel{left:auto;right:0}}
@@ -472,7 +475,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .selection-hint{position:relative;display:flex;flex-shrink:0}
 .selection-info{display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0;border:0;background:transparent;color:var(--muted);border-radius:50%;cursor:help}
 .selection-info:hover,.selection-info:focus-visible{color:var(--ink);background:var(--stone)}
-.selection-tip{position:absolute;z-index:25;top:100%;right:0;width:280px;max-width:calc(100vw - 36px);padding:12px 14px;background:var(--white);border:1px solid var(--line);box-shadow:0 6px 20px #19171220;color:var(--ink);font-size:12px;font-weight:400;line-height:1.6}
+.selection-tip{position:absolute;z-index:25;top:100%;right:0;width:280px;max-width:calc(100vw - 36px);translate:var(--filter-panel-shift,0px) 0;padding:12px 14px;background:var(--white);border:1px solid var(--line);box-shadow:0 6px 20px #19171220;color:var(--ink);font-size:12px;font-weight:400;line-height:1.6}
 @media(max-width:760px){
  .atlas-filter-system>.search-field{padding:6px 18px;gap:8px}.atlas-filter-system>.reset-button{padding:8px 14px;font-size:12px}
  .atlas-filter-row{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-filter-row>.multi-filter{border-bottom:1px solid var(--line)}
@@ -500,6 +503,8 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .filter-done{min-height:44px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:3px}
 .extra-filters{max-height:min(520px,70dvh);overflow:auto}
 .empty-view-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+
+
 .painter-navigation button{width:44px;height:44px}
 .artwork-panel{scroll-margin-top:12px}
 .painter-dialog .artwork-panel{scroll-margin-top:0}
@@ -534,9 +539,11 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 .table-shell{scroll-padding:16px}
 .table-shell[aria-busy="true"] tbody{opacity:.55}
 @media(max-width:760px){
-  .timeline-controls>label>input,.timeline-controls>label>select,.share-work input{font-size:16px}
+  .timeline-controls>label>input,.timeline-controls>label>select,
   .timeline-controls>label>input{min-height:44px}
+
   .range-toolbar{grid-template-columns:1fr}
+
   .preset-group{grid-row:3}
   .preset-group button{min-height:44px}
   .painter-dialog{scroll-padding-top:90px}
@@ -586,6 +593,8 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
   .timeline-scroll-help{flex-shrink:0;margin:7px 0;font-size:11px;max-width:none}
   .timeline-focus{flex-shrink:0;padding-top:8px}
   .range-track{height:34px}
+
+
   .movement-key{flex-shrink:0}
   .timeline-stage>.timeline-overview{flex:1;min-height:0;height:0}
   .density-help{flex-shrink:0;gap:16px}
@@ -676,6 +685,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 }
 
 /* Year drafts and pointer gestures are shared by both timelines. */
+
 .year-error{flex-basis:100%;max-width:36ch;margin:0;color:#f0b29c;font-size:12px;line-height:1.5}
 .range-track{touch-action:none}
 
@@ -697,10 +707,10 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
 :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>span:first-child,.atlas-select>span{font-size:12px;line-height:18px}
 :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>strong{font-size:14px;line-height:24px;font-weight:400}
 .atlas-select{--select-end-padding:28px;--select-arrow-offset:0px;min-width:0;gap:4px;padding:8px 18px;border-right:1px solid var(--line)}
-.atlas-select select{width:100%;min-height:24px;padding:0 22px 0 0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:14px;line-height:24px;text-overflow:ellipsis;cursor:pointer}
-.atlas-select input[type="number"]{width:100%;min-width:0;min-height:24px;padding:0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:14px;line-height:24px;box-shadow:none}
-.atlas-select input[type="number"]:focus-visible{outline-offset:2px}
-@media(max-width:760px){.atlas-filter-system .atlas-select input[type="number"]{min-height:44px;font-size:16px}}
+.atlas-select select{width:100%;min-width:0;max-width:100%;min-height:24px;padding:0 22px 0 0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:14px;line-height:24px;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.atlas-select input{width:100%;min-width:0;min-height:24px;padding:0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:14px;line-height:24px;box-shadow:none}
+.atlas-select input:focus-visible{outline-offset:2px}
+@media(max-width:760px){.atlas-filter-system .atlas-select input{min-height:44px;font-size:16px}}
 .atlas-select:focus-within{background:var(--white)}
 .atlas-select:hover{background:var(--white)}
 .atlas-select select:focus-visible{outline-offset:2px}
@@ -714,7 +724,7 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
   .atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>span:first-child,.atlas-filter-system .atlas-select>span{font-size:11px;line-height:13px}
   .atlas-filter-system :is(.atlas-filter-row,.all-period-filter)>.multi-filter>summary>strong{font-size:13px;line-height:18px}
   .atlas-filter-system .atlas-select{min-height:40px;padding:4px 12px;gap:0}
-  .atlas-filter-system .atlas-select :is(select,input[type="number"]){min-height:18px;font-size:13px;line-height:18px}
+  .atlas-filter-system .atlas-select :is(select,input){min-height:18px;font-size:13px;line-height:18px}
   .atlas-filter-system .popular-filter-control{min-height:40px;padding:4px 12px}
   .atlas-filter-system .popular-filter{min-height:30px}
   .atlas-filter-system .popular-filter>span{font-size:12px}
@@ -744,8 +754,6 @@ th{font-size:12px}td{font-size:14px}td button{font-size:12px;min-height:36px}
   .active-filters{gap:4px 6px;padding:6px 18px}.active-filters>span{font-size:11px}
   .active-filters button{min-height:36px;padding:6px 10px}
 }
-
-@media(max-width:420px){.atlas-filter-system[data-view-controls=false]>.atlas-filter-row{grid-template-columns:minmax(0,1fr)}}
 
 .record-navigation{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .record-navigation>p{font-size:12px;margin:0}

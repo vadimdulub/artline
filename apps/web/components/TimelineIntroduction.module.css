@@ -1,0 +1,26 @@
+.note { color: var(--ink); background: var(--paper); border-bottom: 1px solid var(--line); }
+.note details { margin: 0; padding: 0; }
+.note summary { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 20px; cursor: pointer; list-style: none; font: 14px/1.4 var(--sans); }
+.note summary::-webkit-details-marker { display: none; }
+.note summary > svg { width: 18px; height: 18px; flex: 0 0 18px; }
+.note summary > span:not(.toggle) { min-width: 0; overflow-wrap: anywhere; }
+.note details[open] summary { padding-top: 16px; font: 400 23px/1.25 var(--serif); letter-spacing: -.02em; }
+.toggle { margin-inline-start: auto; padding-inline-start: 12px; color: var(--muted); font: 20px/1 var(--sans); }
+.body { padding: 0 20px 16px 48px; }
+.body p { margin: 0; max-width: 90ch; font: 14px/1.55 var(--sans); }
+.foot { display: flex; align-items: center; gap: 12px 24px; margin-top: 8px; }
+.foot p { color: var(--muted); font-size: 13px; }
+.foot button { flex: 0 0 auto; margin-inline-start: auto; min-height: 44px; padding: 8px 18px; border: 1px solid var(--line); border-radius: 3px; background: var(--white); color: var(--ink); font: 14px/1.4 var(--sans); cursor: pointer; }
+.foot button:hover { background: var(--stone); }
+.note summary:focus-visible, .foot button:focus-visible { outline: 3px solid var(--ultramarine); outline-offset: -3px; }
+.note[dir="rtl"] .body { padding-right: 48px; padding-left: 20px; }
+@media (max-width: 760px) {
+  .note summary { padding-inline: 16px; }
+  .note details[open] summary { align-items: flex-start; font-size: 21px; }
+  .note summary > svg { margin-top: 3px; }
+  .body { padding: 0 16px 12px; }
+  .note[dir="rtl"] .body { padding-inline: 16px; }
+  .body p { font-size: 14px; }
+  .foot { align-items: flex-start; flex-wrap: wrap; gap: 8px; }
+  .foot p { flex: 1 1 100%; font-size: 13px; }
+}
