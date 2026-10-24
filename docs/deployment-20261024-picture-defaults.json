@@ -1,0 +1,123 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verified_at_utc": "2026-10-24T14:23:42.191216+00:00",
+  "source_commit": "168d0819612fe2f9a9f5cf257251e9145208401f",
+  "branch": "master",
+  "services": {
+    "api": {
+      "revision": "artline-api-picture-defaults-1024-v1",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:df40a246d578129a18f6b8c109db05e12a27f487dac7b91d31cd57db06e496ef",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:92ce63ab3a51d94ca590714c74309137b61f2635bd1a1f7f6ab3b57e29595c3c",
+      "base_layers_preserved": 17,
+      "runtime_configuration_preserved": true,
+      "runtime_source_sha256": "3be81ff5bd844cbf55274be6adfb380e3f92c55e162140d8cd1ee337f9f4a23f",
+      "rollback_revision": "artline-api-catalogue-cache-1024-v1"
+    },
+    "web": {
+      "revision": "artline-web-picture-defaults-1024-v1",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:48140a8d8019a1b23ccc6adfa97de5f3c7ffcc9289cb6f4f68ae7ef2de77ad4a",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:ce3f66348ca4f9588f39dfa24c60d036c234b05ebd064883f6646760c6e46051",
+      "base_layers_preserved": 34,
+      "runtime_configuration_preserved": true,
+      "runtime_source_sha256": "308a838908a4f6f54108b22ee887adcfebaa47e85ca30564a6c1612b56f1a08c",
+      "rollback_revision": "artline-web-catalogue-cache-1024-v1"
+    }
+  },
+  "behavior": {
+    "pictures_enabled_by_default": [
+      "artwork directory",
+      "museum artwork galleries",
+      "study artwork searches"
+    ],
+    "existing_picture_defaults": [
+      "painter artworks",
+      "All artwork browsing"
+    ],
+    "explicit_opt_out_preserved_on_reload": true,
+    "reset_restores_picture_default": true,
+    "museum_directory_cursor_scope_preserved": true,
+    "large_gallery_missing_image_scans_skipped_when_picture_filter_enabled": true
+  },
+  "validation": {
+    "frontend_tests": 650,
+    "typescript_passed": true,
+    "targeted_eslint_passed": true,
+    "affected_go_catalogue_http_member_packages_passed": true,
+    "linux_amd64_builds_passed": true,
+    "public_desktop_and_mobile_passed": true,
+    "public_browser": {
+      "passed": true,
+      "base": "https://artlines.org",
+      "checks": [
+        {
+          "path": "/artworks",
+          "defaultChecked": true,
+          "illustratedItems": 24,
+          "optOutSurvivesReload": true,
+          "resetRestoresPictures": true
+        }
+      ],
+      "mobileDefaultChecked": true,
+      "pageErrors": []
+    },
+    "readonly_catalogue": {
+      "passed": true,
+      "base": "http://127.0.0.1:18091",
+      "checks": [
+        {
+          "view": "artwork directory",
+          "pictures_total": 66953,
+          "all_total": 184175,
+          "items": 6
+        },
+        {
+          "view": "museum gallery",
+          "pictures_total": 13562,
+          "all_total": 110720,
+          "image_count": 13562
+        },
+        {
+          "view": "study artwork picker",
+          "pictured_items": 24,
+          "all_items": 24
+        }
+      ]
+    },
+    "readonly_browser": {
+      "passed": true,
+      "base": "http://127.0.0.1:3118",
+      "checks": [
+        {
+          "path": "/artworks",
+          "defaultChecked": true,
+          "illustratedItems": 24,
+          "optOutSurvivesReload": true,
+          "resetRestoresPictures": true
+        },
+        {
+          "path": "/museums/the-met",
+          "defaultChecked": true,
+          "illustratedItems": 24,
+          "optOutSurvivesReload": true,
+          "resetRestoresPictures": true
+        }
+      ],
+      "mobileDefaultChecked": true,
+      "pageErrors": []
+    },
+    "production_readiness_and_anonymous_access_passed": true,
+    "release_error_entries": 0
+  },
+  "database_migrations": [],
+  "catalogue_rows_changed_by_release": false,
+  "real_local_database_writes": false,
+  "background_research_jobs_changed": false,
+  "map_research_checkout_changed_by_release": false,
+  "temporary_verification_services_stopped": true,
+  "production_runtime_overlay": true,
+  "unreleased_museum_studio_scope_preserved": true,
+  "evidence_directory": "/Users/vadimdulub/Library/Application Support/Artline/releases/artwork-picture-defaults-20261024"
+}
