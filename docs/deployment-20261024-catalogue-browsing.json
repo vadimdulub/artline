@@ -1,0 +1,243 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verified_at_utc": "2026-10-24T11:14:12.840928+00:00",
+  "branch": "master",
+  "feature_commits": [
+    "1189157912fbbc1e04a16691ce77431648b1b629",
+    "4a7206bd46d4db5ef61f70e7cd66389698e75ee8"
+  ],
+  "services": {
+    "api": {
+      "promoted_at_utc": "2026-10-24T11:12:14.464775+00:00",
+      "revision": "artline-api-catalogue-1024-v2",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:b05a6fe28c97b542ce34b7d50b2e149d33cae350e648fcbf315aca83fab3cc09",
+      "traffic_percent": 100,
+      "runtime_preserved": true,
+      "existing_tags_preserved": true,
+      "rollback_revision": "artline-api-islamic-patterns-1018-v1",
+      "source_commit": "4a7206bd46d4db5ef61f70e7cd66389698e75ee8",
+      "runtime_layer_sha256": "a50b05ca44171d96a42b3c01e45c72eac7d65ed8fad1b9d9e5f7cc0988e404c4",
+      "base_layers_preserved": 14
+    },
+    "web": {
+      "promoted_at_utc": "2026-10-24T11:12:21.116671+00:00",
+      "revision": "artline-web-catalogue-1024-v1",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:35880ad9365a3dcdb6a17a130cb2ecc40b76eca7e1933c73d70f6050cb9e91bb",
+      "traffic_percent": 100,
+      "runtime_preserved": true,
+      "existing_tags_preserved": true,
+      "rollback_revision": "artline-web-mobile-controls-1024-v1",
+      "source_commit": "1189157912fbbc1e04a16691ce77431648b1b629",
+      "runtime_layer_sha256": "bd53ba15da353cf588f6cc6f9d12e234f78316e8827125c6bf2f43ff36edf47e",
+      "base_layers_preserved": 31
+    }
+  },
+  "database": {
+    "applied_at_utc": "2026-10-24T10:55:35.920931+00:00",
+    "seconds": 2.6207557088928297,
+    "migration": "0059_museum_gallery_seek.sql",
+    "sha256": "654f9760594aac14bcc3ee849709c2d0025c7ae270da433ef59b2f44342bc73f",
+    "indexes": [
+      {
+        "name": "artworks_museum_title_seek_idx",
+        "indisvalid": true,
+        "indisready": true,
+        "definition": "CREATE INDEX artworks_museum_title_seek_idx ON public.artworks USING btree (current_institution_id, normalized_title, id) INCLUDE (primary_media_id, creation_year_start, creation_year_end, work_type) WHERE (status <> 'archived'::text)",
+        "bytes": 129269760
+      },
+      {
+        "name": "artworks_museum_image_title_seek_idx",
+        "indisvalid": true,
+        "indisready": true,
+        "definition": "CREATE INDEX artworks_museum_image_title_seek_idx ON public.artworks USING btree (current_institution_id, normalized_title, id) INCLUDE (primary_media_id) WHERE ((status <> 'archived'::text) AND (primary_media_id IS NOT NULL))",
+        "bytes": 32808960
+      },
+      {
+        "name": "artworks_painting_directory_seek_idx",
+        "indisvalid": true,
+        "indisready": true,
+        "definition": "CREATE INDEX artworks_painting_directory_seek_idx ON public.artworks USING btree (normalized_title, id) INCLUDE (primary_media_id, creation_year_start, creation_year_end) WHERE ((status <> 'archived'::text) AND (work_type = 'painting'::text))",
+        "bytes": 16646144
+      }
+    ],
+    "catalogue_rows_changed": false,
+    "real_local_database_used": false,
+    "creation_mode": "API candidate startup applied migration transactionally; subsequent concurrent IF NOT EXISTS verification preserved existing valid indexes."
+  },
+  "candidate_browser": {
+    "base": "https://catalogue-1024-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "mode": "candidate",
+    "errors": [],
+    "failedReads": [],
+    "checks": [
+      {
+        "view": "artworks",
+        "bounded": 24,
+        "pagination": true
+      },
+      {
+        "view": "painter",
+        "defaultPictures": true,
+        "optOutPersists": true
+      },
+      {
+        "view": "museum-access",
+        "existingSignInRedirectPreserved": true,
+        "queryPagingVerifiedSeparatelyReadOnly": true
+      },
+      {
+        "view": "wwii-all",
+        "illustratedPaintingsVisible": true
+      }
+    ],
+    "passed": true,
+    "museum_member_ui_not_opened_anonymously": true
+  },
+  "live_browser": {
+    "base": "https://artlines.org",
+    "mode": "public",
+    "errors": [],
+    "failedReads": [],
+    "checks": [
+      {
+        "view": "artworks",
+        "bounded": 24,
+        "pagination": true
+      },
+      {
+        "view": "painter",
+        "defaultPictures": true,
+        "optOutPersists": true
+      },
+      {
+        "view": "museum-access",
+        "existingSignInRedirectPreserved": true,
+        "queryPagingVerifiedSeparatelyReadOnly": true
+      },
+      {
+        "view": "wwii-all",
+        "illustratedPaintingsVisible": true
+      }
+    ],
+    "passed": true,
+    "museum_member_ui_not_opened_anonymously": true
+  },
+  "live_api": {
+    "base": "https://artline-api-lpuqqlugnq-ew.a.run.app",
+    "passed": true,
+    "checks": [
+      {
+        "path": "/health",
+        "status": 200,
+        "seconds": 0.272,
+        "total": null,
+        "count": 0
+      },
+      {
+        "path": "/ready",
+        "status": 200,
+        "seconds": 0.285,
+        "total": null,
+        "count": 0
+      },
+      {
+        "path": "/api/v1/museums/the-met",
+        "status": 401,
+        "seconds": 0.226,
+        "total": null,
+        "count": 0,
+        "error": {
+          "error": {
+            "code": "AUTH_REQUIRED",
+            "message": "Sign in to use this feature."
+          }
+        }
+      },
+      {
+        "path": "/api/v1/museums/the-met/works?limit=24",
+        "status": 401,
+        "seconds": 0.188,
+        "total": null,
+        "count": 0,
+        "error": {
+          "error": {
+            "code": "AUTH_REQUIRED",
+            "message": "Sign in to use this feature."
+          }
+        }
+      },
+      {
+        "path": "/api/v1/museums/uffizi/works?limit=24",
+        "status": 401,
+        "seconds": 0.196,
+        "total": null,
+        "count": 0,
+        "error": {
+          "error": {
+            "code": "AUTH_REQUIRED",
+            "message": "Sign in to use this feature."
+          }
+        }
+      },
+      {
+        "path": "/api/v1/artworks?limit=24",
+        "status": 200,
+        "seconds": 0.39,
+        "total": 184126,
+        "count": 24
+      },
+      {
+        "path": "/api/v1/artists/rembrandt/works",
+        "status": 200,
+        "seconds": 0.593,
+        "total": 1458,
+        "count": 24
+      }
+    ]
+  },
+  "museum_production_data_readonly": {
+    "authentication_gate_preserved": true,
+    "first_page_seconds": 4.008,
+    "next_page_seconds": 0.499,
+    "items_per_page": 24,
+    "total_at_verification": 110720,
+    "source": "Equivalent production source executed against production through read-only local API; no member fixtures or access-control changes."
+  },
+  "fixture": {
+    "museum_works": 400000,
+    "unrelated_works": 200000,
+    "first_page_seconds": 1.194457375,
+    "next_page_seconds": 0.0131435,
+    "low_memory_query_passed": true,
+    "deep_cursor_passed": true,
+    "unsupported_media_paging_passed": true
+  },
+  "validation": {
+    "master_go_packages_passed": true,
+    "master_frontend_tests_passed": 71,
+    "master_next_build_passed": true,
+    "linux_amd64_runtime_builds_passed": true,
+    "production_api_http_tests_passed": 31,
+    "preexisting_production_source_test_failure": {
+      "test": "TestBooksAcceptLegacyParametersAndValidBounds",
+      "reason": "Legacy production books limit=151 expectation conflicts with deployed handler; reproduced on the exact unchanged baseline."
+    }
+  },
+  "map_research": {
+    "branch_ref_unchanged": true,
+    "head_unchanged": true,
+    "index_bytes_unchanged": true,
+    "source_worktree_written_by_release": false,
+    "observed_concurrent_worktree_changes": [
+      "apps/web/components/AllAtlas.tsx",
+      "apps/web/components/CatalogueMap.tsx"
+    ]
+  },
+  "catalogue_rows_changed": false,
+  "real_local_database_writes": false,
+  "background_jobs_changed": false,
+  "terraform_apply": false,
+  "new_release_error_log_entries": 0,
+  "evidence_directory": "/Users/vadimdulub/Library/Application Support/Artline/releases/catalogue-browsing-20261024"
+}

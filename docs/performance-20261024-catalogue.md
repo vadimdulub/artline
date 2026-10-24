@@ -1,7 +1,8 @@
 # Catalogue browsing changes — 24 October 2026
 
-Implemented locally. No deployment, production migration, catalogue mutation,
-or real-local database write was performed for these application changes.
+Deployed and verified on 24 October 2026. API and web serve 100% of production
+traffic. See [the deployment receipt](deployment-20261024-catalogue-browsing.json).
+No catalogue rows or real-local database records were changed by this release.
 
 ## Result
 
@@ -83,13 +84,29 @@ Evidence, plans, image hashes, and logs are retained under
 The real local `artline` database stayed read-only. The isolated test cluster's
 mutating edge case rolls back its transaction.
 
-## Release requirement
+## Release verification
 
-Migration `0059_museum_gallery_seek.sql` supplies the institution/title and
-illustrated institution/title seek indexes, plus the standalone painting-directory
-index. It has been applied only to the isolated fixture. On populated production,
-prebuild its three indexes concurrently through the established operator workflow
-before recording the migration and releasing the tested application.
+Migration `0059_museum_gallery_seek.sql` is applied in production; all three
+indexes are valid and ready. Candidate API startup applied it transactionally
+before the subsequent concurrent IF NOT EXISTS verification found the indexes
+already present. Runtime settings, images/content inherited from the pinned base,
+existing preview tags, SEO, analytics consent, and mobile controls were preserved.
+
+Production-data verification caught a media-count subplan timeout before traffic
+switching. The final query uses an image join that can spill safely beyond query
+memory; a 64kB work_mem regression now passes. Final 400k fixture timings are
+1.194 seconds first page and 13ms next page. The read-only Met check returned 24
+works from 110,720: 4.008 seconds first page, 0.499 seconds next page.
+
+Master passes the affected Go packages, 71 selected frontend tests and the Next
+build. Candidate and public browser checks pass. Protected museum routes retain
+their sign-in gate; gallery behavior is covered by component tests and separately
+verified read-only production queries. A legacy books-bound test failure exists
+on the unchanged production source and is recorded in the receipt.
+
+The master release port preserves ongoing map work: no map branch, index, or
+source files were written by the release. Concurrent map edits in the original
+checkout were observed and left untouched.
 
 The three research supervisors remain independent, with new dispatch scheduled
 to stop at **12:24:47 UTC / 15:24:47 Asia/Nicosia on 24 October 2026**.
