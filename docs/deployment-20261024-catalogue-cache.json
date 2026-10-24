@@ -1,0 +1,172 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verified_at_utc": "2026-10-24T13:44:34.201074+00:00",
+  "source_commit": "59e25cae34a59b3edeed90310d6e7644f84174a6",
+  "branch": "master",
+  "services": {
+    "api": {
+      "revision": "artline-api-catalogue-cache-1024-v1",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:92ce63ab3a51d94ca590714c74309137b61f2635bd1a1f7f6ab3b57e29595c3c",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:5dea239c0f4dbfc4f4f46d383dcf1fc45b01dedd0c45561bd47b276cfab55bf7",
+      "runtime_configuration_preserved": true,
+      "base_layers_preserved": 16,
+      "runtime_source_sha256": "4ce5babfec6f40a295c2df04f9bbbab2603eadfd1ed34573bbf9bffda2276ac4",
+      "rollback_revision": "artline-api-pictures-1024-v1"
+    },
+    "web": {
+      "revision": "artline-web-catalogue-cache-1024-v1",
+      "traffic_percent": 100,
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:ce3f66348ca4f9588f39dfa24c60d036c234b05ebd064883f6646760c6e46051",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:37c9692eee44474405f9c71d2ebbb37c4f0822650f31da62f819d7f21468b296",
+      "runtime_configuration_preserved": true,
+      "base_layers_preserved": 33,
+      "runtime_source_sha256": "00117e988fec08fd0f20c98503738c6b782d2bb4bd5d582e83b8746a8bbf33d1",
+      "rollback_revision": "artline-web-pictures-1024-v1"
+    }
+  },
+  "caching": {
+    "static_catalogue_max_hours": 24,
+    "revision_checked_each_request": true,
+    "authentication_checked_before_cache": true,
+    "clock_sensitive_display_max_seconds": 60,
+    "server_first_museum_page_seconds": 30,
+    "browser_museum_pages_seconds": 60,
+    "default_public_api_reads": [
+      {
+        "path": "/api/v1/artists",
+        "status": 200,
+        "bytes": 27165,
+        "first": "MISS",
+        "second": "HIT"
+      },
+      {
+        "path": "/api/v1/books",
+        "status": 200,
+        "bytes": 844862,
+        "first": "MISS",
+        "second": "HIT"
+      },
+      {
+        "path": "/api/v1/events",
+        "status": 200,
+        "bytes": 315121,
+        "first": "MISS",
+        "second": "HIT"
+      },
+      {
+        "path": "/api/v1/atlas",
+        "status": 200,
+        "bytes": 368,
+        "first": "MISS",
+        "second": "HIT"
+      },
+      {
+        "path": "/api/v1/timeline",
+        "status": 200,
+        "bytes": 30455,
+        "first": "MISS",
+        "second": "HIT"
+      },
+      {
+        "path": "/api/v1/exhibitions",
+        "status": 200,
+        "bytes": 24572,
+        "first": "MISS",
+        "second": "HIT"
+      }
+    ],
+    "museum_directory_cache": [
+      {
+        "status": 200,
+        "cache": "MISS",
+        "bytes": 41322,
+        "items": 24
+      },
+      {
+        "status": 200,
+        "cache": "HIT",
+        "bytes": 41322,
+        "items": 24
+      }
+    ]
+  },
+  "browser": {
+    "candidate_passed": true,
+    "public_passed": true,
+    "location_filters": true,
+    "expanded_studies_and_archive_tabs_removed": true,
+    "artist_illustrations": [
+      {
+        "id": "07fe1a0a-9806-5185-95e0-f07d5e57246c",
+        "name": "Elisabeth Jerichau-Baumann",
+        "src": "https://artlines.org/assets/artworks/open-museums/followup-nationalmuseum-commons/c68b857e-9d01-58cf-aef5-7c022466a407-dff5794000f9c887.jpg",
+        "width": 805
+      },
+      {
+        "id": "3172bfd5-7e6b-55e0-9027-f8cdda3aec62",
+        "name": "F. S\u00f8dring",
+        "src": "https://artlines.org/assets/artworks/open-museums/smk/eb16d30c-3ac8-46d5-a99c-6a1bfe9c73a9-f9fe6d5d94f828a7.jpg",
+        "width": 1200
+      }
+    ],
+    "desktop_and_mobile_verified": true,
+    "page_errors": [],
+    "museum_directory": {
+      "serverRenderedCards": 24,
+      "duplicateInitialPageRequests": 0,
+      "filterRequests": 1,
+      "returnToFirstPageExtraRequests": 0,
+      "previousCardsRetained": true,
+      "firstImagePreloaded": true,
+      "secondImagePriority": "high",
+      "firstImage": {
+        "start": 8192.399999976158,
+        "documentReady": 8200.699999928474,
+        "width": 259
+      },
+      "widths": [
+        1440,
+        390
+      ],
+      "pageErrors": []
+    },
+    "museum_history": [
+      {
+        "slug": "the-met",
+        "total": 33,
+        "name": "The Metropolitan Museum of Art",
+        "historyVisible": true
+      },
+      {
+        "slug": "museum-source-4b49d9c44d7e914b2140",
+        "total": 0,
+        "name": "National Portrait Gallery, London, UK",
+        "historyVisible": false
+      }
+    ],
+    "museum_verification_mode": "Exact release source on loopback with production catalogue in a read-only session"
+  },
+  "validation": {
+    "frontend_tests": 646,
+    "typescript_passed": true,
+    "eslint_errors": 0,
+    "existing_eslint_image_warnings": 8,
+    "affected_go_packages_passed": true,
+    "linux_amd64_builds_passed": true,
+    "release_errors": 0
+  },
+  "migration": {
+    "migration_applied": true,
+    "unrelated_studio_migrations_applied": 0,
+    "exhibition_invalidation_triggers": 10
+  },
+  "catalogue_records_changed_by_release": false,
+  "real_local_database_writes": false,
+  "background_research_jobs_changed": false,
+  "map_research_checkout_changed_by_release": false,
+  "temporary_verification_services_stopped": true,
+  "deployment_method": "Focused source merge onto the pinned serving runtime sources and image layers; existing access, consent, guide, mobile and asset behavior preserved.",
+  "evidence_directory": "/Users/vadimdulub/Library/Application Support/Artline/releases/catalogue-cache-20261024"
+}
