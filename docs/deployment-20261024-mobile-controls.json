@@ -1,0 +1,254 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verifiedAt": "2026-10-24T10:21:47.408Z",
+  "change": "Keep timeline date handles visible on mobile, enlarge the mobile painting gallery, restore full-view All scrolling, move the movement colour key into the header, and remove Zoom out, Earlier/Later and numeric year editing.",
+  "deployment": {
+    "sourceCommit": "0ec49cdb33acb2076429ac8156834c925f4eb85b",
+    "branch": "master",
+    "baselineRevision": "artline-web-seo-1022-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:e21cf97e2d12f4f37b184c8bff5e741facdf91fadb058ba435deda424bb9cc83",
+    "revision": "artline-web-mobile-controls-1024-v1",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:314f269692b1c209e65f05fe6d4b97fa0c391c23e669b12b0fb03c45bf53dc29",
+    "candidateURL": "https://mobile-controls-1024-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "trafficPercent": 100,
+    "rollbackRevision": "artline-web-seo-1022-v1",
+    "runtimeSettingsPreserved": true,
+    "existingPreviewTagsPreserved": true,
+    "buildID": "fDnuOf414-e9nHcHeAhkK",
+    "runtimeLayerSHA256": "c6ba572ff4a5ba8a20d2d293593715a500f8bcbe76527d97db566bc84ab42ec2",
+    "buildMethod": "Linux amd64 standalone build of the committed UI changes over the verified production source snapshot, appended to the immutable live image. Existing production content and public assets are inherited from the base image.",
+    "committedUIFilePreimagesVerifiedAgainstProduction": true,
+    "baseLayersPreserved": 30,
+    "productionAnalyticsAndSEOSourceHashesPreserved": [
+      {
+        "path": "app/layout.tsx",
+        "sha256": "27f93de4423577dd34990b0bccc31e85f115d1443c537f9e417aa96ecf661e69"
+      },
+      {
+        "path": "app/privacy/page.tsx",
+        "sha256": "cd01f6adc48e7265aa8a4c605e9faa84d552b71305e3cf89980144dab98a5824"
+      },
+      {
+        "path": "components/GoogleAnalyticsConsent.tsx",
+        "sha256": "e5ef343e62b0aa59fdb82b69a00d136ec94f49a4904543bcea80593967d4c9b6"
+      },
+      {
+        "path": "components/GoogleAnalyticsConsent.module.css",
+        "sha256": "0e793f95a4d8cc61557bded10ef2ed4c185b5915d97615108f72d7ba94ffa432"
+      },
+      {
+        "path": "lib/google-analytics.ts",
+        "sha256": "e1f461146482e62eb8a1aa107838f3f5792644ffb104a1af8de78bb5393fe4c9"
+      },
+      {
+        "path": "lib/google-analytics-config.ts",
+        "sha256": "6a9e1c450f27bcd57a3418da38fc9c6f38e6c26791674e02bd9edf100f1ce222"
+      },
+      {
+        "path": "lib/server-api.ts",
+        "sha256": "52ac2ba55d45b7331cafa9038a645c1f46962989de8b40ea7bc33d5c401bc0ae"
+      },
+      {
+        "path": "components/ArtistRecord.tsx",
+        "sha256": "4119ee493711b07a992d26e8d3ab86cc37ba8342773095a67d228b1ad77f9288"
+      },
+      {
+        "path": "components/ArtistProfile.tsx",
+        "sha256": "5044006f21e965e9ea2d75c67b2ae4b4bdd56270649bf0fd761525e6bc46923e"
+      },
+      {
+        "path": "app/artists/[slug]/works/page.tsx",
+        "sha256": "643238230ead21329f6914220c9b237c3f4130ea4acefa07a905527ed3fcb7cd"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/zh.json",
+        "sha256": "534ae06fdd026339630d37f925bd0eedf164196f7df1e4791638ab99f014fdb9"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/ja.json",
+        "sha256": "3dc8c0e744f590769c575d6b316db81cd88e69e0dbdd81721be521dcbd56feb0"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/de.json",
+        "sha256": "0e3b97fdc8339ac1a80b1da6eb71800dea301c1746e55eb23373ec8ecd73b874"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/ru.json",
+        "sha256": "aa5be44439e39f4d0955e3905eb14e9667c59e16e89468a50ffd93d71958d98a"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/pt.json",
+        "sha256": "123f94a6709dbe4d9ea90bd5fffbdb378a74c1910f16b1592b5d39bce9b337b9"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/en.json",
+        "sha256": "210f5f0aeefdf2ad9eb733f60be388fde6802ae7e5a7a57c69a5c9689e5cbc8f"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/it.json",
+        "sha256": "96cb3b4b8c7105d9db889c28524f9f3e1fb60e8e87e005fcddda9e78939bf2f2"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/fr.json",
+        "sha256": "162aacd6c3a44329fafaef1ffbc818958c2f05a62f9b87ebb5f41f2b35d2bf05"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/es.json",
+        "sha256": "e5e2fdbdbeaf8875421ab3552bcf6df46a31131c4de07fdf6d3c2cd4d58f3d42"
+      },
+      {
+        "path": "content/articles/museum-guides/muma-le-havre/ar.json",
+        "sha256": "a9062c536156855c1591d1e817f49fbbd8d914a70f08c49fd49243cc3891466f"
+      }
+    ],
+    "sourceChanges": [
+      {
+        "path": "app/globals.css",
+        "before_sha256": "3114acc204cd7572b9dcc96306f5ec8a7203962867a1583d78b0b3f991b7a495",
+        "after_sha256": "c5eb2e89dd44821918ed278cb1b619b14350f093ac8ea0a2837900478f776533"
+      },
+      {
+        "path": "components/AllAtlas.css",
+        "before_sha256": "3eea5e8e6a10d0f0292b2908713ca7f89142e6b2c65626b4566b94b4978b798b",
+        "after_sha256": "6b0abe35b53293b1fafc53bf4fe8d216dbdbd8912093034afb702059dbb3aba3"
+      },
+      {
+        "path": "components/AllAtlas.tsx",
+        "before_sha256": "fadd1ee61945c7473423c521b5688f4c90ae2397d00663be67cbbbb0a2646af0",
+        "after_sha256": "da6daec90213614370b6bf416bcdbba0a60003f8151c25bf2a3ffbc1ca7a0f9f"
+      },
+      {
+        "path": "components/BooksIndex.tsx",
+        "before_sha256": "51a9b0bf77ee7eeda3d192efebc0809dd9567fcaa599881de04755289780531d",
+        "after_sha256": "9260547835aaac813a7bf70ac2bd3b37b7e4ee264c8d45e92ba93970dd096001"
+      },
+      {
+        "path": "components/BooksTimeline.tsx",
+        "before_sha256": "9a29c5dbaa9aae49164db2e3e46942f8472fd64e2b5353aceff07906786746ca",
+        "after_sha256": "db202aa9fab292eac12e84aaf1a223e41e23b4e25cccf1a7cfdf6c8d985bf747"
+      },
+      {
+        "path": "components/EventsIndex.tsx",
+        "before_sha256": "d55d98c7ffa1a7fc5a483b061506ff3a670e075692268ba42275e5ea28b4d4a4",
+        "after_sha256": "ebe3318e9b8ac9f7c941a741a191e257ced034d6758df7fda2c8418d1b9ebd24"
+      },
+      {
+        "path": "components/EventsTimeline.tsx",
+        "before_sha256": "107d96aba2481df45b262648800df70a77f87893fd858249b28af68e3bfd6d7d",
+        "after_sha256": "a670afe9470af99eefa8255620c651704d662f77dae1adf3aa9edba96f51328e"
+      },
+      {
+        "path": "components/ExplorerFrame.css",
+        "before_sha256": "89d824fe41b19e69671aab4ab305c620626228d8c0b77373fdbb42004fb60cf5",
+        "after_sha256": "2e1c8772f1b63241829b3acf4eac4f828d009ac918b1295d95ee498783b8859a"
+      },
+      {
+        "path": "components/MobileExplorer.css",
+        "before_sha256": "1b70008d4bbb104a1b1435fc8e146174c62f617a6ce6bccf60c04247c0146091",
+        "after_sha256": "f47758f4e1333f57d8462a7dea831493819ca793d5caa07781010c17f267f43e"
+      },
+      {
+        "path": "components/PainterPaintings.tsx",
+        "before_sha256": "e0009506c57e866e16cfc57e958b9fe91ac4b66ab8d2b9b11e1ae1d633ca993f",
+        "after_sha256": "810647ddbe13576d1ab8ea9db5696e4a6851785e64c647cf8c6223d13ff98bba"
+      },
+      {
+        "path": "components/TimelineExplorer.tsx",
+        "before_sha256": "0d7c74323560e3c1900efe565b00ed3e2cc2d92defd830aceda4906ac85b3fe5",
+        "after_sha256": "2045c5e2af12ccf03a911ac22edc2df09f93569c52f7fc08c4669243a3e0e97b"
+      },
+      {
+        "path": "components/TimelineHeader.css",
+        "before_sha256": "b75ce2f701430ea90930f6b191f5fa8f9b09135ae0ed5c668e6ecef45c9d7d39",
+        "after_sha256": "c556797361775192537c9f7525f5dbcae91bd1af64d4a6566cf41678f2cf69a5"
+      },
+      {
+        "path": "components/TimelineHeader.tsx",
+        "before_sha256": "9cebe032901fdf0d987a8c13eb78779c2e4fd5842337b6219139ce243ac9604d",
+        "after_sha256": "48d1f5746eb5fb5effd4f05fe78ecccc2ed96e2ba2d892c602e52d007d4e8c62"
+      },
+      {
+        "path": "components/TimelineRangeControls.css",
+        "before_sha256": "37746b5ff0160cddbcbbc82768ab0367b489a948c51153eee1a811cb68c4c735",
+        "after_sha256": "9cdab8a985b634bf30a2d95e164792f0651bc65871ea854fae95ba82aacf10ff"
+      },
+      {
+        "path": "components/TimelineRangeControls.tsx",
+        "before_sha256": "29e517546fb1ed31a1db98543204d578f788216d16204285891825a2bbbc30ba",
+        "after_sha256": "73eca7c08aafcd86bd57b11f6dc003affd1228e3d6b05641b0fb201baead5e27"
+      },
+      {
+        "path": "components/TimelineZoomOut.tsx",
+        "before_sha256": "68e872e27b56b42456a2370a5b4fe5f2976609991ac2bb19c4584875f5aa0f4d",
+        "after_sha256": null
+      }
+    ],
+    "releaseSourceTreeSHA256": "c4574b1774df482d7af57a1067c44c033776410f42c0854994e457d2b8faaa5c"
+  },
+  "validation": {
+    "masterProductionBuild": "passed",
+    "linuxReleaseBuild": "passed",
+    "targetedLint": "passed",
+    "focusedUnitTestsPassed": 17,
+    "focusedBrowserTestsPassed": 34,
+    "fullTestSuiteRun": false,
+    "browserCoverage": [
+      "320px, 390px and 430px mobile layouts in five views",
+      "768px, 1024px and 1440px desktop layouts",
+      "Date handles, dragging, keyboard input, Reset view and URL persistence",
+      "Full view, touch scrolling, portrait/landscape rotation and focus",
+      "Books date handles remain visible on short screens",
+      "Movement colour key placement and filtering",
+      "Accessibility checks at 320px"
+    ],
+    "realDataCandidateChecks": {
+      "base": "https://mobile-controls-1024-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+      "checks": [
+        "Desktop movement key, date handle and Reset view",
+        "Real mobile painting fills canvas, image loads, full view and landscape retain date handles",
+        "Books retain mobile date handles in short full view",
+        "Events use date circles and persist year changes",
+        "All starting points scroll by touch in full view",
+        "All populated lanes scroll while date handles remain visible",
+        "Existing Islamic patterns guide and server-rendered artist work links preserved"
+      ],
+      "count": 7,
+      "javascriptErrors": [],
+      "failedAPIReads": [],
+      "googleRequestsBeforeConsent": 0,
+      "finishedAt": "2026-10-24T10:19:48.654Z"
+    },
+    "realDataPublicChecks": {
+      "base": "https://artlines.org",
+      "checks": [
+        "Desktop movement key, date handle and Reset view",
+        "Real mobile painting fills canvas, image loads, full view and landscape retain date handles",
+        "Books retain mobile date handles in short full view",
+        "Events use date circles and persist year changes",
+        "All starting points scroll by touch in full view",
+        "All populated lanes scroll while date handles remain visible",
+        "Existing Islamic patterns guide and server-rendered artist work links preserved"
+      ],
+      "count": 7,
+      "javascriptErrors": [],
+      "failedAPIReads": [],
+      "googleRequestsBeforeConsent": 0,
+      "finishedAt": "2026-10-24T10:21:47.408Z"
+    },
+    "browser": "Headless Chrome; the in-app browser connection was unavailable."
+  },
+  "mapResearch": {
+    "branchHead": "1f320f7e08f8e6d3b08edbd784ae84d5bb2cdc8e",
+    "branchUnchanged": true,
+    "indexUnchanged": true,
+    "remoteBranchUnchanged": true,
+    "mapChangesIncluded": false
+  },
+  "apiDeployment": false,
+  "databaseWrites": false,
+  "realLocalDatabaseWrites": false,
+  "backgroundJobsChanged": false,
+  "terraformApply": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/backups/mobile-controls-20261024"
+}
