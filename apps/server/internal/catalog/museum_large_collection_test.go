@@ -249,6 +249,26 @@ func TestMuseum400KCollection(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
+	t.Run("low-query-memory", func(t *testing.T) {
+		tx, err := pool.BeginTx(ctx, pgx.TxOptions{AccessMode: pgx.ReadOnly})
+		if err != nil {
+			t.Fatal(err)
+		}
+		defer tx.Rollback(ctx)
+		if _, err := tx.Exec(ctx, "SET LOCAL work_mem='64kB'"); err != nil {
+			t.Fatal(err)
+		}
+		low := NewRepository(pool)
+		low.db = tx
+		// Isolate the uncached count query from already verified facet aggregation.
+		low.facets.put(facetCacheKey(ctx, "museum:qa-large"), first.Facets)
+		bounded, cancel := context.WithTimeout(ctx, 8*time.Second)
+		defer cancel()
+		page, err := low.MuseumWorks(bounded, "qa-large", MuseumFilter{Limit: 24})
+		if err != nil || page.Total != 400000 || page.ImageCount != 40000 || len(page.Items) != 24 {
+			t.Fatalf("large image count must spill safely under constrained memory: %+v %v", page, err)
+		}
+	})
 	t.Run("deep-cursor", func(t *testing.T) {
 		var name, id string
 		if err := pool.QueryRow(ctx, "SELECT normalized_title,id::text FROM artworks WHERE slug='qa-work-390000'").Scan(&name, &id); err != nil {

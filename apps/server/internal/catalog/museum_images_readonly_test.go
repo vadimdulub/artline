@@ -43,16 +43,18 @@ func TestMuseumImagesReadOnly(t *testing.T) {
 		}
 		return p
 	}
-	base := MuseumFilter{Limit: 60}
+	base := MuseumFilter{Limit: 60, Sort: "images"}
 	first := get(base)
 	if first.Total == 0 || first.ImageCount == 0 {
 		t.Fatal("audit requires real Louvre works and images")
 	}
 	t.Logf("Louvre: %d works, %d renderable images", first.Total, first.ImageCount)
-	t.Run("default-equivalent-to-images", func(t *testing.T) {
+	t.Run("default-equivalent-to-highlights", func(t *testing.T) {
 		f := base
-		f.Sort = "images"
-		if !reflect.DeepEqual(first, get(f)) {
+		f.Sort = ""
+		defaultPage := get(f)
+		f.Sort = "highlights"
+		if !reflect.DeepEqual(defaultPage, get(f)) {
 			t.Fatal("default differs")
 		}
 	})

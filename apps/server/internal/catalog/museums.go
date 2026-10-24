@@ -18,10 +18,8 @@ var ErrMuseumFilter = errors.New("invalid museum filter or cursor")
 
 // Match ArtworkImage's supported delivery paths. A non-null remote URL or an
 // unsupported file is not an image the gallery can actually render.
-// An uncorrelated image set can be hashed once for aggregate reads, instead of
-// issuing one media lookup for every holding in a large collection.
-const museumAvailableImage = `coalesce(w.primary_media_id IN(SELECT image.id FROM media_assets image
- WHERE image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'),false)`
+const museumAvailableImage = `EXISTS(SELECT 1 FROM media_assets image WHERE image.id=w.primary_media_id
+ AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')`
 
 // Old source-specific museum URLs continue to address the reviewed canonical
 // identity. Each caller still applies its normal publication/access policy.
@@ -617,7 +615,12 @@ func (r *Repository) MuseumWorks(ctx context.Context, slug string, f MuseumFilte
 		NonNull int
 	}
 	if !r.facets.get(countsKey, &counts) {
-		if err = r.db.QueryRow(ctx, museumScopedCTE+`SELECT count(*),count(*) FILTER (WHERE `+museumAvailableImage+`),count(w.primary_media_id)`+where, museumQueryArgs(args...)...).Scan(&counts.Total, &counts.Images, &counts.NonNull); err != nil {
+		// A join can spill safely when the global media catalogue exceeds
+		// work_mem. An IN subplan can otherwise rescan all media per holding.
+		countWhere := strings.Replace(where, " WHERE", ` LEFT JOIN media_assets counted_image ON counted_image.id=w.primary_media_id
+ AND counted_image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$' WHERE`, 1)
+		countWhere = strings.ReplaceAll(countWhere, museumAvailableImage, "(counted_image.id IS NOT NULL)")
+		if err = r.db.QueryRow(ctx, museumScopedCTE+`SELECT count(*),count(counted_image.id),count(w.primary_media_id)`+countWhere, museumQueryArgs(args...)...).Scan(&counts.Total, &counts.Images, &counts.NonNull); err != nil {
 			return out, err
 		}
 		r.facets.put(countsKey, counts)
