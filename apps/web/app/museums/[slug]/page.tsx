@@ -72,7 +72,6 @@ export default async function MuseumPage({ params, searchParams }: { params: Pro
       </div>,
       exhibitions: <>
         <Suspense fallback={<p role="status">Loading museum exhibitions…</p>}><PublishedExhibitions slug={slug} /></Suspense>
-        <p><Link href={`/exhibitions?institution=${museum.id}`}>Explore documented exhibition history</Link></p>
       </>,
       guides: <>
         <Suspense fallback={<p role="status">Loading museum guides…</p>}><PublishedGuides slug={slug} /></Suspense>

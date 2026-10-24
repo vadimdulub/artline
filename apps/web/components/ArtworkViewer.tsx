@@ -68,12 +68,10 @@ export function permittedImagePath(path: string | null) {
   return Boolean(path && /^\/assets\/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$/.test(path) && !path.includes(".."));
 }
 
-export function ArtworkImage({ work, large = false, eager = false, number, onUnavailable, sizes }: { work: Pick<Artwork, "media_url" | "alt_text" | "title" | "rights_status">; large?: boolean; eager?: boolean; number?: number; onUnavailable?: () => void; sizes?: string }) {
+export function ArtworkImage({ work, large = false, number, onUnavailable, sizes, eager = false, preload = false, optimize = false }: { work: Pick<Artwork, "media_url" | "alt_text" | "title" | "rights_status">; large?: boolean; number?: number; onUnavailable?: () => void; sizes?: string; eager?: boolean; preload?: boolean; optimize?: boolean }) {
   const [failedSource, setFailedSource] = useState<string | null>(null);
   const usable = permittedImagePath(work.media_url) && work.media_url !== failedSource;
-  // Catalogue reproductions are already sized for delivery. Reusing the same
-  // asset avoids an optimizer round trip and width-specific duplicate downloads.
-  if (usable) return <Image unoptimized src={work.media_url!} alt={work.alt_text || work.title} loading={large || eager ? "eager" : "lazy"} decoding="async" width={large ? 1600 : 440} height={large ? 1600 : 520} sizes={sizes ?? (large ? "(max-width: 760px) 90vw, 55vw" : number !== undefined ? "100px" : "(max-width: 620px) 45vw, 25vw")} onError={() => { setFailedSource(work.media_url); onUnavailable?.(); }} />;
+  if (usable) return <Image unoptimized={!optimize} decoding="async" src={work.media_url!} alt={work.alt_text || work.title} {...(preload ? { preload: true } : { loading: large || eager ? "eager" as const : "lazy" as const, fetchPriority: eager ? "high" as const : undefined })} width={large ? 1600 : 440} height={large ? 1600 : 520} sizes={sizes ?? (large ? "(max-width: 760px) 90vw, 55vw" : number !== undefined ? "100px" : "(max-width: 620px) 45vw, 25vw")} onError={() => { setFailedSource(work.media_url); onUnavailable?.(); }} />;
   return <div className={`work-placeholder image-unavailable${large ? " large-placeholder" : ""}`}><p>Image not available</p></div>;
 }
 

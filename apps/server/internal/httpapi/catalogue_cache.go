@@ -5,6 +5,7 @@ import (
 	"container/list"
 	"context"
 	"crypto/sha256"
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"strings"
@@ -16,6 +17,7 @@ import (
 
 const catalogueCacheBytes = 16 << 20
 const catalogueCacheEntryBytes = 1 << 20
+const catalogueCacheLifetime = 24 * time.Hour
 
 type catalogueCacheEntry struct {
 	key     [32]byte
@@ -28,7 +30,7 @@ type catalogueCacheEntry struct {
 // responses stay private and every lookup checks the current revision.
 func cacheableCataloguePath(path string) bool {
 	switch path {
-	case "/api/v1/artists", "/api/v1/museums", "/api/v1/seo/artists", "/api/v1/seo/sitemaps", "/api/v1/artworks", "/api/v1/timeline", "/api/v1/timeline/facets", "/api/v1/painters/options",
+	case "/api/v1/artists", "/api/v1/museums", "/api/v1/exhibitions", "/api/v1/seo/artists", "/api/v1/seo/sitemaps", "/api/v1/artworks", "/api/v1/timeline", "/api/v1/timeline/facets", "/api/v1/painters/options",
 		"/api/v1/books", "/api/v1/books/authors", "/api/v1/books/facets",
 		"/api/v1/events", "/api/v1/events/facets", "/api/v1/atlas",
 		"/api/v1/atlas/presets", "/api/v1/atlas/geography", "/api/v1/atlas/creators":
@@ -36,6 +38,20 @@ func cacheableCataloguePath(path string) bool {
 	}
 	parts := strings.Split(strings.TrimPrefix(path, "/api/v1/"), "/")
 	if strings.HasPrefix(path, "/api/v1/") {
+		if len(parts) == 2 && (parts[0] == "books" || parts[0] == "events") && museumIDPattern.MatchString(parts[1]) {
+			return true
+		}
+		if parts[0] == "exhibitions" {
+			if len(parts) == 2 && museumIDPattern.MatchString(parts[1]) {
+				return true
+			}
+			if len(parts) == 3 && ((museumIDPattern.MatchString(parts[1]) && parts[2] == "entries") || (parts[1] == "artworks" && museumIDPattern.MatchString(parts[2]))) {
+				return true
+			}
+			if len(parts) == 4 && parts[1] == "artworks" && museumIDPattern.MatchString(parts[2]) && parts[3] == "exhibitions" {
+				return true
+			}
+		}
 		if len(parts) >= 2 && (parts[0] == "artists" || parts[0] == "museums") && validArtistSlug(parts[1]) {
 			if len(parts) == 3 && parts[0] == "artists" && (parts[2] == "identity" || parts[2] == "connections") {
 				return true
@@ -91,19 +107,47 @@ func (c *catalogueCache) remove(element *list.Element) {
 	c.lru.Remove(element)
 }
 
-func (c *catalogueCache) finish(key [32]byte, body []byte) {
+func (c *catalogueCache) finish(key [32]byte, body []byte, lifetime ...time.Duration) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	if len(body) > 0 && len(body) <= catalogueCacheEntryBytes && len(body) <= c.maxBytes {
 		for c.lru.Len() >= 128 || c.bytes+len(body) > c.maxBytes {
 			c.remove(c.lru.Back())
 		}
-		entry := catalogueCacheEntry{key: key, body: bytes.Clone(body), expires: c.now().Add(time.Minute)}
+		ttl := catalogueCacheLifetime
+		if len(lifetime) > 0 {
+			ttl = lifetime[0]
+		}
+		entry := catalogueCacheEntry{key: key, body: bytes.Clone(body), expires: c.now().Add(ttl)}
 		c.entries[key] = c.lru.PushFront(entry)
 		c.bytes += len(body)
 	}
 	close(c.pending[key])
 	delete(c.pending, key)
+}
+
+// Static catalogue bodies survive for a day while their revision is unchanged.
+// Display evidence can expire without a write, so retain its short clock limit.
+func catalogueResponseLifetime(r *http.Request, body []byte) time.Duration {
+	if strings.HasPrefix(r.URL.Path, "/api/v1/museums/") || r.URL.Query().Get("display") == "on_view" {
+		return time.Minute
+	}
+	if r.URL.Path == "/api/v1/museums" {
+		var page struct {
+			Items []struct {
+				OnView int `json:"on_view_count"`
+			} `json:"items"`
+		}
+		if json.Unmarshal(body, &page) != nil {
+			return time.Minute
+		}
+		for _, item := range page.Items {
+			if item.OnView > 0 {
+				return time.Minute
+			}
+		}
+	}
+	return catalogueCacheLifetime
 }
 
 type catalogueCapture struct {
@@ -151,7 +195,7 @@ func (api *API) cacheCatalogue(cache *catalogueCache, next http.Handler) http.Ha
 		}
 		// Transactional catalogue triggers invalidate imports and edits on every
 		// instance. Cluster maintenance and member sessions leave this revision
-		// unchanged. The one-minute TTL also bounds time-derived display states.
+		// unchanged. Shorter lifetimes bound time-derived display states.
 		r = r.WithContext(catalog.WithCatalogueRevision(r.Context(), snapshot))
 		query := r.URL.Query()
 		query.Del("fit")     // Client interaction state; no handler filters by it.
@@ -176,7 +220,7 @@ func (api *API) cacheCatalogue(cache *catalogueCache, next http.Handler) http.Ha
 				}
 			}
 			var stored []byte
-			defer func() { cache.finish(key, stored) }()
+			defer func() { cache.finish(key, stored, catalogueResponseLifetime(r, stored)) }()
 			w.Header().Set("X-Artline-Cache", "MISS")
 			capture := &catalogueCapture{ResponseWriter: w}
 			next.ServeHTTP(capture, r)

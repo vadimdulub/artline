@@ -36,7 +36,10 @@ export async function getMuseumDirectory(params: URLSearchParams): Promise<Museu
   const url = new URL("/api/v1/museums", process.env.API_INTERNAL_URL ?? "http://localhost:8080");
   url.search = params.toString();
   const headers = memberRequestHeaders(await cookies());
-  const response = await fetch(url, { headers, cache: "no-store", redirect: "error", signal: AbortSignal.timeout(10000) });
+  // Only the unfiltered first page is cached. Cookies remain part of Next's
+  // cache key; the page validates the live member session on every render.
+  const policy = params.size === 0 ? { cache: "force-cache" as const, next: { revalidate: 30 } } : { cache: "no-store" as const };
+  const response = await fetch(url, { headers, ...policy, redirect: "error", signal: AbortSignal.timeout(10000) });
   if (response.status === 400) return null;
   if (!response.ok) throw new Error("The museum catalogue is temporarily unavailable.");
   return response.json();

@@ -16,7 +16,7 @@ func ValidID(id string) bool { return uuidPattern.MatchString(id) }
 
 type Filter struct {
 	Query, Institution, Artist, Artwork, Source, Format, State, After string
-	Collection, Theme, Person                                         string
+	Theme, Person, Country, City                                      string
 	Start, End                                                        *int
 	Limit                                                             int
 }
@@ -42,8 +42,8 @@ func DecodeCursor(raw string) (Cursor, error) {
 }
 
 func (f Filter) Validate() error {
-	if f.Collection != "" && f.Collection != "archive" && f.Collection != "expanded" {
-		return fmt.Errorf("invalid exhibition collection")
+	if len(f.Country) > 200 || len(f.City) > 200 {
+		return fmt.Errorf("use a country or city up to 200 characters")
 	}
 	if len(f.Theme) > 80 || (f.Person != "" && !ValidID(f.Person)) {
 		return fmt.Errorf("invalid exhibition topic or person")
@@ -75,13 +75,11 @@ func (f Filter) Validate() error {
 }
 
 type Response struct {
-	ExpandedStudyCount int               `json:"expandedStudyCount"`
-	Featured           []json.RawMessage `json:"featured"`
-	Items              []json.RawMessage `json:"items"`
-	Total              int               `json:"total"`
-	HeldTotal          int               `json:"heldTotal"`
-	HasMore            bool              `json:"hasMore"`
-	NextCursor         string            `json:"nextCursor"`
+	Items      []json.RawMessage `json:"items"`
+	Total      int               `json:"total"`
+	HeldTotal  int               `json:"heldTotal"`
+	HasMore    bool              `json:"hasMore"`
+	NextCursor string            `json:"nextCursor"`
 }
 
 type EntriesResponse struct {

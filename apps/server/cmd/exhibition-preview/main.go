@@ -73,7 +73,11 @@ func fail(w http.ResponseWriter, status int) {
 }
 
 func (a *archive) proxy(w http.ResponseWriter, r *http.Request) {
-	req, err := http.NewRequestWithContext(r.Context(), http.MethodGet, a.upstream+r.URL.RequestURI(), nil)
+	upstreamURL := *r.URL
+	query := upstreamURL.Query()
+	query.Del("collection")
+	upstreamURL.RawQuery = query.Encode()
+	req, err := http.NewRequestWithContext(r.Context(), http.MethodGet, a.upstream+upstreamURL.RequestURI(), nil)
 	if err != nil {
 		fail(w, 503)
 		return
@@ -97,7 +101,6 @@ func (a *archive) proxy(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 		payload["items"] = items
-		payload["localStudyCount"] = len(a.records)
 	}
 	respond(w, response.StatusCode, payload)
 }
@@ -165,11 +168,11 @@ func (a *archive) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if r.URL.Path == prefix {
-		if !localFilter && (q.Get("collection") == "archive" || (q.Get("source") != "" && q.Get("source") != "artsy") || q.Get("institution") != "" || q.Get("artwork") != "") {
+		if !localFilter && ((q.Get("source") != "" && q.Get("source") != "artsy") || q.Get("institution") != "" || q.Get("artwork") != "") {
 			a.proxy(w, r)
 			return
 		}
-		f := exhibitions.Filter{Query: q.Get("q"), Source: q.Get("source"), Artist: q.Get("artist"), Institution: q.Get("institution"), Artwork: q.Get("artwork"), Format: q.Get("format"), State: q.Get("state"), After: q.Get("after"), Limit: limit}
+		f := exhibitions.Filter{Query: q.Get("q"), Source: q.Get("source"), Artist: q.Get("artist"), Institution: q.Get("institution"), Artwork: q.Get("artwork"), Format: q.Get("format"), State: q.Get("state"), After: q.Get("after"), Limit: limit, Country: q.Get("country"), City: q.Get("city")}
 		for key, ptr := range map[string]**int{"start": &f.Start, "end": &f.End} {
 			if q.Get(key) != "" {
 				n, err := strconv.Atoi(q.Get(key))
@@ -188,10 +191,14 @@ func (a *archive) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		items := []record{}
 		total := 0
 		for _, row := range a.records {
-			if f.Institution != "" {
+			country, city := strings.ToLower(strings.TrimSpace(f.Country)), strings.ToLower(strings.TrimSpace(f.City))
+			if f.Institution != "" || country != "" || city != "" {
 				match := false
 				for _, venue := range objects(row, "venues") {
-					if str(venue, "institution_id") == f.Institution {
+					institutionMatches := f.Institution == "" || str(venue, "institution_id") == f.Institution
+					countryMatches := country == "" || strings.Contains(strings.ToLower(str(venue, "country")), country) || strings.EqualFold(str(venue, "country_code"), country)
+					cityMatches := city == "" || strings.Contains(strings.ToLower(str(venue, "city")), city)
+					if institutionMatches && countryMatches && cityMatches {
 						match = true
 					}
 				}
@@ -269,13 +276,7 @@ func (a *archive) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			b, _ := json.Marshal(exhibitions.Cursor{Year: number(last, "startYear"), ID: str(last, "id")})
 			next = base64.RawURLEncoding.EncodeToString(b)
 		}
-		featured := []record{}
-		for _, row := range a.records {
-			if row["featured"] == true {
-				featured = append(featured, compact(row))
-			}
-		}
-		respond(w, 200, record{"items": items, "total": total, "heldTotal": total, "hasMore": more, "nextCursor": next, "localStudyCount": len(a.records), "featured": featured})
+		respond(w, 200, record{"items": items, "total": total, "heldTotal": total, "hasMore": more, "nextCursor": next})
 		return
 	}
 	parts := strings.Split(strings.TrimPrefix(r.URL.Path, prefix+"/"), "/")

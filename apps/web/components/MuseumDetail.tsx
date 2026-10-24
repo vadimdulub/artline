@@ -8,6 +8,7 @@ import { MultiSelectFilter } from "./MultiSelectFilter";
 import { usePainterChoices, workTypeOptions } from "./use-painter-choices";
 import { countryName } from "@/lib/api";
 import type { Museum, MuseumWorksPage } from "@/lib/types";
+import type { ExhibitionPage } from "@/lib/exhibitions";
 import { MuseumWebsiteLink } from "./MuseumWebsiteLink";
 import { ArtworkImage } from "./ArtworkViewer";
 import { MuseumDrawer } from "./MuseumDrawer";
@@ -27,6 +28,7 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: 
   const [revision, setRevision] = useState(0);
   const museumRequest = useMuseumRequest<Museum>(`museums/${slug}`, revision, initialMuseum?.slug === slug ? initialMuseum : undefined, true);
   const museum = museumRequest.data ?? (museumRequest.previousData?.slug === slug ? museumRequest.previousData : undefined);
+  const exhibitions = useMuseumRequest<Pick<ExhibitionPage, "total">>(museum ? `exhibitions?${new URLSearchParams({ institution: museum.id, limit: "1" })}` : null, revision);
   const request = new URLSearchParams();
   for (const key of ["q", "artist", "movement", "selection", "display", "venue", "work_type", "start", "end", "unknown_date", "image_only", "sort", "limit"]) params.getAll(key).forEach(value => request.append(key, value));
   const scope = `${slug}|${request}`;
@@ -60,8 +62,8 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: 
       {!embedded && <><header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}<MuseumWebsiteLink url={museum.website_url || museum.venues[0]?.visit_url} name={museum.name} /></h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>
 
       </header>
-      <p className={styles.note}><Link href={`/exhibitions?institution=${museum.id}`} prefetch={false}>Exhibition history</Link></p></>}
-      <div className={`${styles.selectionTabs} catalogue-selection`} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], [highlightKind, highlightLabel]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => selectCollection(value)}>{label}<span>{formatCount(value ? museum.highlight_count : museum.work_count)}</span></button>)}</div>
+      </>}
+      <div className={`${styles.selectionTabs} catalogue-selection`} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], [highlightKind, highlightLabel]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => selectCollection(value)}>{label}<span>{formatCount(value ? museum.highlight_count : museum.work_count)}</span></button>)}{exhibitions.data && exhibitions.data.total > 0 && <Link className={`catalogue-control ${styles.exhibitionHistory}`} href={`/exhibitions?institution=${museum.id}`} prefetch={false}>Exhibition history</Link>}</div>
       <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} searchLabel="Search artworks" placeholder="Artwork or painter" columns={2} activeCount={filters.filter(filter => filter.key !== "q").length}>
         <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} />
         <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />

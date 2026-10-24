@@ -17,12 +17,27 @@ type Repository struct{ db *pgxpool.Pool }
 
 func NewRepository(db *pgxpool.Pool) *Repository { return &Repository{db} }
 
+func venueConditions(f Filter, offset int) (string, []any) {
+	conditions, args := []string{}, []any{}
+	add := func(clause string, value any) {
+		args = append(args, value)
+		conditions = append(conditions, fmt.Sprintf(clause, offset+len(args)))
+	}
+	if f.Institution != "" {
+		add(`v.institution_id=$%d::uuid`, f.Institution)
+	}
+	if country := strings.TrimSpace(f.Country); country != "" {
+		add(`(strpos(lower(coalesce(v.country_label,'')),lower($%[1]d))>0 OR lower(coalesce(v.country_code,''))=lower($%[1]d))`, country)
+	}
+	if city := strings.TrimSpace(f.City); city != "" {
+		add(`strpos(lower(coalesce(v.city_label,'')),lower($%d))>0`, city)
+	}
+	return strings.Join(conditions, " AND "), args
+}
+
 func scope(f Filter) (string, []any) {
 	where := ` FROM exhibitions e WHERE e.status<>'archived'`
 	args := []any{}
-	if f.Expanded() {
-		where += ` AND EXISTS(SELECT 1 FROM exhibition_research er WHERE er.exhibition_id=e.id)`
-	}
 	add := func(clause string, value any) { args = append(args, value); where += fmt.Sprintf(clause, len(args)) }
 	if f.Theme != "" {
 		add(` AND EXISTS(SELECT 1 FROM exhibition_research er WHERE er.exhibition_id=e.id AND er.concepts @> ARRAY[$%d]::text[])`, f.Theme)
@@ -33,8 +48,10 @@ func scope(f Filter) (string, []any) {
 	if f.Query != "" {
 		add(` AND strpos(lower(e.title),lower($%d))>0`, strings.TrimSpace(f.Query))
 	}
-	if f.Institution != "" {
-		add(` AND EXISTS(SELECT 1 FROM exhibition_occurrences v WHERE v.exhibition_id=e.id AND v.institution_id=$%d::uuid)`, f.Institution)
+	if venueWhere, venueArgs := venueConditions(f, len(args)); len(venueArgs) > 0 {
+		// All venue conditions must match the same stop of a touring exhibition.
+		where += ` AND e.id IN(SELECT v.exhibition_id FROM exhibition_occurrences v WHERE ` + venueWhere + `)`
+		args = append(args, venueArgs...)
 	}
 	if f.Artist != "" {
 		add(` AND e.id IN(SELECT p.exhibition_id FROM exhibition_participants p WHERE p.artist_id=$%[1]d::uuid UNION SELECT p.exhibition_id FROM exhibition_research_people p WHERE p.artist_id=$%[1]d::uuid)`, f.Artist)
@@ -66,7 +83,7 @@ const recordJSON = `jsonb_build_object('id',e.id,'title',e.title,'alternateTitle
  'format',e.format,'checklistState',e.checklist_state)`
 
 func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
-	out := Response{Items: []json.RawMessage{}, Featured: []json.RawMessage{}}
+	out := Response{Items: []json.RawMessage{}}
 	if err := f.Validate(); err != nil {
 		return out, err
 	}
@@ -83,20 +100,28 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		where += fmt.Sprintf(` AND (coalesce(e.start_year,-2147483648),e.id)<($%d,$%d::uuid)`, len(args)-1, len(args))
 	}
 	args = append(args, f.Limit+1)
+	limitArg := len(args)
+	venueOrder, summary := `v.id`, `coalesce(er.summary,'{}'::jsonb)`
+	if venueWhere, venueArgs := venueConditions(f, len(args)); len(venueArgs) > 0 {
+		args = append(args, venueArgs...)
+		venueOrder = `(` + venueWhere + `) DESC NULLS LAST,v.id`
+		// Prefer live matching venues to a study's older stored venue summary.
+		summary = `coalesce(er.summary-'venues','{}'::jsonb)`
+	}
 	// Scope to the bounded page before any child counts or venue enrichment.
 	prefix := `WITH `
-	page := `SELECT e.*` + where + fmt.Sprintf(` ORDER BY coalesce(e.start_year,-2147483648) DESC,e.id DESC LIMIT $%d`, len(args))
-	if f.Source != "" || f.Institution != "" || f.Artist != "" || f.Artwork != "" || f.Expanded() || f.Theme != "" || f.Person != "" {
+	page := `SELECT e.*` + where + fmt.Sprintf(` ORDER BY coalesce(e.start_year,-2147483648) DESC,e.id DESC LIMIT $%d`, limitArg)
+	if f.Source != "" || f.Institution != "" || f.Country != "" || f.City != "" || f.Artist != "" || f.Artwork != "" || f.Theme != "" || f.Person != "" {
 		// A selective historical source must not walk the global chronology and
 		// probe a relationship index for every newer exhibition. Materialize only
 		// matching IDs/years, sort those, then fetch the bounded full records.
-		prefix += `candidates AS MATERIALIZED(SELECT e.id,e.start_year` + where + `), selected AS MATERIALIZED(SELECT id FROM candidates ORDER BY coalesce(start_year,-2147483648) DESC,id DESC ` + fmt.Sprintf(`LIMIT $%d), `, len(args))
+		prefix += `candidates AS MATERIALIZED(SELECT e.id,e.start_year` + where + `), selected AS MATERIALIZED(SELECT id FROM candidates ORDER BY coalesce(start_year,-2147483648) DESC,id DESC ` + fmt.Sprintf(`LIMIT $%d), `, limitArg)
 		page = `SELECT e.* FROM exhibitions e JOIN selected chosen ON chosen.id=e.id`
 	}
 	query := prefix + `page AS MATERIALIZED(` + page + `),
  entry_counts AS(SELECT x.exhibition_id,count(*) n,count(x.artwork_id) linked FROM exhibition_entries x JOIN page p ON p.id=x.exhibition_id GROUP BY x.exhibition_id)
  SELECT ` + recordJSON + ` || jsonb_build_object('entryCount',coalesce(c.n,0),'linkedArtworkCount',coalesce(c.linked,0),
- 'venues',coalesce((SELECT jsonb_agg(v) FROM(SELECT v.venue_label name,v.city_label city,` + catalog.MuseumLinkSlugSQL + ` museum_slug FROM exhibition_occurrences v LEFT JOIN institutions i ON i.id=v.institution_id WHERE v.exhibition_id=e.id ORDER BY v.id LIMIT 3)v),'[]'::jsonb)) || coalesce(er.summary,'{}'::jsonb)
+ 'venues',coalesce((SELECT jsonb_agg(v) FROM(SELECT v.venue_label name,v.city_label city,v.country_label country,` + catalog.MuseumLinkSlugSQL + ` museum_slug FROM exhibition_occurrences v LEFT JOIN institutions i ON i.id=v.institution_id WHERE v.exhibition_id=e.id ORDER BY ` + venueOrder + ` LIMIT 3)v),'[]'::jsonb)) || ` + summary + `
  FROM page e LEFT JOIN entry_counts c ON c.exhibition_id=e.id LEFT JOIN exhibition_research er ON er.exhibition_id=e.id ORDER BY coalesce(e.start_year,-2147483648) DESC,e.id DESC`
 	rows, err := r.db.Query(ctx, query, args...)
 	if err != nil {
@@ -130,9 +155,6 @@ func (r *Repository) List(ctx context.Context, f Filter) (Response, error) {
 		b, _ := json.Marshal(Cursor{year, last.ID})
 		out.NextCursor = base64.RawURLEncoding.EncodeToString(b)
 	}
-	if err = r.collectionSummary(ctx, &out, f); err != nil {
-		return out, err
-	}
 	return out, nil
 }
 
@@ -160,7 +182,11 @@ func (r *Repository) ByID(ctx context.Context, id string) (json.RawMessage, erro
 	if err != nil {
 		return nil, err
 	}
-	return r.enrichDetail(ctx, id, raw)
+	detail, err := r.enrichDetail(ctx, id, raw)
+	if err != nil {
+		return nil, err
+	}
+	return r.enrichParticipantImages(ctx, detail)
 }
 
 func (r *Repository) Entries(ctx context.Context, id, after string, limit int, participation ...string) (EntriesResponse, error) {

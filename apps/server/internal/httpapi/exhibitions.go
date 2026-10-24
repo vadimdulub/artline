@@ -17,7 +17,7 @@ func (api *API) exhibitions(w http.ResponseWriter, r *http.Request) {
 		writeError(w, 400, "INVALID_EXHIBITION_FILTER", err.Error())
 		return
 	}
-	f := exhibitions.Filter{Query: q.Get("q"), Institution: q.Get("institution"), Artist: q.Get("artist"), Artwork: q.Get("artwork"), Source: q.Get("source"), Format: q.Get("format"), State: q.Get("state"), After: q.Get("after"), Limit: limit, Collection: q.Get("collection"), Theme: q.Get("theme"), Person: q.Get("person")}
+	f := exhibitions.Filter{Query: q.Get("q"), Institution: q.Get("institution"), Artist: q.Get("artist"), Artwork: q.Get("artwork"), Source: q.Get("source"), Format: q.Get("format"), State: q.Get("state"), After: q.Get("after"), Limit: limit, Theme: q.Get("theme"), Person: q.Get("person"), Country: q.Get("country"), City: q.Get("city")}
 	for key, target := range map[string]**int{"start": &f.Start, "end": &f.End} {
 		if q.Get(key) != "" {
 			v, e := strconv.Atoi(q.Get(key))

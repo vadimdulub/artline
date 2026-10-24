@@ -23,6 +23,7 @@
 .museumGrid,.worksGrid{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin:24px 0 0;padding:0}
 .museumGrid>li,.worksGrid>li{min-width:0}
 .museumCard{display:grid;grid-template-columns:minmax(110px,.8fr) minmax(0,1.4fr);height:100%;text-decoration:none;border-top:1px solid var(--line);padding-top:20px;gap:22px}
+.museumSkeleton{display:grid;grid-template-columns:minmax(110px,.8fr) minmax(0,1.4fr);gap:22px;border-top:1px solid var(--line);padding-top:20px}.museumSkeleton span{display:block;height:18px;background:var(--stone);margin:12px 0}.museumSkeleton span:nth-child(2){height:30px;width:85%}.museumSkeleton span:last-child{width:65%}
 .collectionImage{height:300px;background:var(--stone);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .collectionImage img{width:100%;height:100%;object-fit:contain}
 .collectionImage :global(.work-placeholder){height:100%;width:100%}
@@ -50,6 +51,7 @@
 .visit li a{display:inline-block;font-size:14px;line-height:1.5;padding:9px 0;min-height:44px}
 .visit p{font-size:12px;color:var(--muted);line-height:1.7}
 .selectionTabs{display:flex;gap:8px;margin:0 0 20px;flex-wrap:wrap}
+.exhibitionHistory{display:inline-flex;align-items:center}
 .selectionTabs button{padding:12px 16px;min-height:48px;background:transparent;border:1px solid var(--line);color:var(--ink);font-size:14px;border-radius:3px}
 .selectionTabs button span{margin-left:12px;opacity:.8}
 .selectionTabs button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
@@ -87,14 +89,14 @@
 .selectionNote a{font-size:13px;overflow-wrap:anywhere}
 @media(max-width:1100px){
  .filters{grid-template-columns:repeat(3,minmax(0,1fr))}
- .museumCard{grid-template-columns:120px minmax(0,1fr);gap:16px}.collectionImage{height:250px}
+ .museumCard,.museumSkeleton{grid-template-columns:120px minmax(0,1fr);gap:16px}.collectionImage{height:250px}
  .worksGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.workImage{height:250px}
 }
 @media(max-width:760px){
  .page{padding:25px 0 40px}.intro,.museumIntro{display:block}.intro .preview{margin-top:15px}
  .filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filters>label{border-top:1px solid var(--line)}
  .filters input,.filters select,.workFilters input,.workFilters select,.secondaryFilters input,.secondaryFilters select{font-size:16px}
- .museumGrid{grid-template-columns:1fr}.collectionImage{height:260px}.museumCard{grid-template-columns:minmax(100px,.7fr) minmax(0,1.3fr)}
+ .museumGrid{grid-template-columns:1fr}.collectionImage{height:260px}.museumCard,.museumSkeleton{grid-template-columns:minmax(100px,.7fr) minmax(0,1.3fr)}
  .resultsHeading{align-items:start;flex-wrap:wrap}.resultsHeading h2{font-size:27px}
  .visit{margin-top:25px}.visit ul{display:flex;flex-wrap:wrap;gap:5px 20px}
  .selectionTabs{gap:6px}.selectionTabs button{font-size:13px;padding:10px}.selectionTabs button span{margin-left:7px}

@@ -9,34 +9,6 @@ import (
 	"github.com/jackc/pgx/v5"
 )
 
-// Expanded is an explicitly selected editorial collection. The default and
-// scoped museum/artwork/artist links search the entire active historical archive.
-func (f Filter) Expanded() bool {
-	return f.Collection == "expanded"
-}
-
-func (r *Repository) collectionSummary(ctx context.Context, out *Response, f Filter) error {
-	if err := r.db.QueryRow(ctx, `SELECT count(*) FROM exhibition_research er JOIN exhibitions e ON e.id=er.exhibition_id WHERE e.status<>'archived'`).Scan(&out.ExpandedStudyCount); err != nil {
-		return err
-	}
-	if !f.Expanded() || f.After != "" || f.Query != "" || f.Start != nil || f.End != nil || f.Format != "" || f.State != "" {
-		return nil
-	}
-	rows, err := r.db.Query(ctx, `SELECT er.summary || `+recordJSON+` FROM exhibition_research er JOIN exhibitions e ON e.id=er.exhibition_id WHERE er.featured AND e.status<>'archived' ORDER BY e.start_year DESC,e.id DESC LIMIT 1`)
-	if err != nil {
-		return err
-	}
-	defer rows.Close()
-	for rows.Next() {
-		var raw []byte
-		if err = rows.Scan(&raw); err != nil {
-			return err
-		}
-		out.Featured = append(out.Featured, json.RawMessage(raw))
-	}
-	return rows.Err()
-}
-
 func (r *Repository) enrichDetail(ctx context.Context, id string, raw []byte) (json.RawMessage, error) {
 	var extra []byte
 	err := r.db.QueryRow(ctx, `SELECT detail FROM exhibition_research WHERE exhibition_id=$1::uuid`, id).Scan(&extra)

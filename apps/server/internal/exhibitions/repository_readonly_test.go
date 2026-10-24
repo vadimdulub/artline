@@ -50,17 +50,17 @@ func TestExhibitionsReadOnlyCorpus(t *testing.T) {
 	defer pool.Close()
 	var readonly string
 	if err = pool.QueryRow(ctx, "SHOW default_transaction_read_only").Scan(&readonly); err != nil || readonly != "on" {
-		t.Fatal("readonly connection required")
+		t.Fatalf("readonly connection required (setting %q): %v", readonly, err)
 	}
 	repo := NewRepository(pool)
-	first, err := repo.List(ctx, Filter{Limit: 20, Collection: "archive"})
+	first, err := repo.List(ctx, Filter{Limit: 20})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if first.Total < 1000 || !first.HasMore || len(first.Items) != 20 {
 		t.Fatalf("full corpus missing: total=%d", first.Total)
 	}
-	next, err := repo.List(ctx, Filter{Limit: 20, Collection: "archive", After: first.NextCursor})
+	next, err := repo.List(ctx, Filter{Limit: 20, After: first.NextCursor})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -72,9 +72,24 @@ func TestExhibitionsReadOnlyCorpus(t *testing.T) {
 		}
 		seen[v.ID] = true
 	}
-	for _, f := range []Filter{{Limit: 40}, {Limit: 10, Theme: "Abstraction"}, {Limit: 10, Person: "5b12c0e1-96db-5487-a9a2-624e865f158a"}, {Limit: 10, Source: "moma"}, {Limit: 10, Query: "Picasso"}, {Limit: 10, Institution: "729385eb-92b0-4cc8-9229-1ac3a46aee1f"}, {Limit: 10, Format: "online", State: "held"}} {
-		if _, err = repo.List(ctx, f); err != nil {
+	for _, f := range []Filter{{Limit: 40}, {Limit: 10, Country: "France"}, {Limit: 10, City: "Paris"}, {Limit: 10, Country: "France", City: "Paris"}, {Limit: 10, Theme: "Abstraction"}, {Limit: 10, Person: "5b12c0e1-96db-5487-a9a2-624e865f158a"}, {Limit: 10, Source: "moma"}, {Limit: 10, Query: "Picasso"}, {Limit: 10, Institution: "729385eb-92b0-4cc8-9229-1ac3a46aee1f"}, {Limit: 10, Format: "online", State: "held"}} {
+		page, err := repo.List(ctx, f)
+		if err != nil {
 			t.Fatal(err)
+		}
+		if f.Country != "" || f.City != "" {
+			for _, raw := range page.Items {
+				var row struct {
+					Venues []struct{ Country, City string }
+				}
+				if err = json.Unmarshal(raw, &row); err != nil || len(row.Venues) == 0 {
+					t.Fatal("matching venue missing", err)
+				}
+				venue := row.Venues[0]
+				if (f.Country != "" && !strings.Contains(strings.ToLower(venue.Country), strings.ToLower(f.Country))) || (f.City != "" && !strings.Contains(strings.ToLower(venue.City), strings.ToLower(f.City))) {
+					t.Fatalf("matching venue must lead the displayed stops: %+v, %+v", f, row.Venues)
+				}
+			}
 		}
 	}
 	var id, artwork, artist string

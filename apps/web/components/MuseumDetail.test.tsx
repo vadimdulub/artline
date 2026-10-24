@@ -4,10 +4,11 @@ import type { Museum } from "@/lib/types";
 import { MuseumDetail } from "./MuseumDetail";
 import { useMuseumRequest } from "./museum-state";
 
-vi.mock("./museum-state", () => ({ useMuseumRequest: vi.fn((_path: string, _revision: number, initial: unknown) => ({ data: initial, loading: !initial })) }));
+const exhibitionState = vi.hoisted(() => ({ total: 0, available: true }));
+vi.mock("./museum-state", () => ({ useMuseumRequest: vi.fn((path: string | null, _revision: number, initial: unknown) => path?.startsWith("exhibitions?") ? { data: exhibitionState.available ? { total: exhibitionState.total } : undefined, loading: false } : { data: initial, loading: !initial }) }));
 vi.mock("./use-painter-choices", () => ({ usePainterChoices: () => ({ options: [] }), workTypeOptions: [] }));
-const museum: Museum = { id: "museum", slug: "museum", name: "Collection", kind: "museum", description: "", website_url: null, status: "review", venues: [], work_count: 400000, holding_count: 400000, on_view_count: 0, highlight_count: 24, highlight_source: "artlines", cover: null };
-beforeEach(() => { window.matchMedia = vi.fn().mockReturnValue({ matches: false, addEventListener() {}, removeEventListener() {} }); });
+const museum: Museum = { id: "museum", slug: "museum", name: "Collection", kind: "museum", description: "", website_url: null, status: "review", venues: [], work_count: 400000, holding_count: 400000, on_view_count: 0, highlight_count: 24, highlight_source: "museum", cover: null };
+beforeEach(() => { exhibitionState.total = 0; exhibitionState.available = true; window.matchMedia = vi.fn().mockReturnValue({ matches: false, addEventListener() {}, removeEventListener() {} }); });
 afterEach(() => { cleanup(); vi.clearAllMocks(); window.history.replaceState(null, "", "/"); });
 
 it.each(["artlines", "museum"] as const)("shows %s highlights distinctly and keeps gallery requests bounded", source => {
@@ -30,4 +31,19 @@ it.each(["artlines", "museum"] as const)("clears other filters when opening %s h
   expect(params.get("view")).toBe("list");
   expect(params.get("limit")).toBe("48");
   expect(useMuseumRequest).toHaveBeenCalledWith(`museums/museum/works?selection=${source}&sort=curated&limit=48`, 0);
+});
+
+it.each([false, true])("puts exhibition history after highlights when the museum has exhibitions (embedded=%s)", embedded => {
+  exhibitionState.total = 1;
+  render(<MuseumDetail slug="museum" initialMuseum={museum} embedded={embedded} />);
+  const history = screen.getByRole("link", { name: "Exhibition history" });
+  expect(history).toHaveAttribute("href", "/exhibitions?institution=museum");
+  expect(history.previousElementSibling).toBe(screen.getByRole("button", { name: "Museum highlights24" }));
+  expect(useMuseumRequest).toHaveBeenCalledWith("exhibitions?institution=museum&limit=1", 0);
+});
+
+it.each([true, false])("hides exhibition history without a confirmed exhibition (response available=%s)", available => {
+  exhibitionState.available = available;
+  render(<MuseumDetail slug="museum" initialMuseum={museum} />);
+  expect(screen.queryByRole("link", { name: "Exhibition history" })).not.toBeInTheDocument();
 });

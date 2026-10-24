@@ -3,6 +3,7 @@ package httpapi
 import (
 	"github.com/vadimdulub/artline/apps/server/internal/config"
 	"net/http/httptest"
+	"strings"
 	"testing"
 )
 
@@ -12,10 +13,13 @@ func TestExhibitionGalleryRoutesAndValidation(t *testing.T) {
 		path   string
 		status int
 	}{
-		{"/api/v1/exhibitions?collection=hidden", 400},
+		{"/api/v1/exhibitions?collection=expanded", 503},
+		{"/api/v1/exhibitions?collection=archive", 503},
 		{"/api/v1/exhibitions?person=bad", 400},
 		{"/api/v1/exhibitions?after=bad", 400},
 		{"/api/v1/exhibitions?limit=101", 400},
+		{"/api/v1/exhibitions?country=" + strings.Repeat("a", 201), 400},
+		{"/api/v1/exhibitions?city=" + strings.Repeat("a", 201), 400},
 		{"/api/v1/exhibitions/invalid", 404},
 		{"/api/v1/exhibitions/artworks/invalid", 404},
 		{"/api/v1/exhibitions/artworks/entries", 404},

@@ -25,15 +25,11 @@ func TestCursorAndAllYears(t *testing.T) {
 }
 
 func TestDefaultIncludesHistoricalArchive(t *testing.T) {
-	for _, f := range []Filter{{Limit: 20}, {Limit: 20, Collection: "archive"}, {Limit: 20, Source: "royal-academy"}} {
+	for _, f := range []Filter{{Limit: 20}, {Limit: 20, Source: "royal-academy"}} {
 		where, _ := scope(f)
-		if f.Expanded() || strings.Contains(where, "exhibition_research er") {
-			t.Fatal("default catalogue excludes historical records without expanded studies")
+		if strings.Contains(where, "exhibition_research er") {
+			t.Fatal("catalogue excludes exhibitions without additional research")
 		}
-	}
-	where, _ := scope(Filter{Limit: 20, Collection: "expanded"})
-	if !strings.Contains(where, "exhibition_research er") {
-		t.Fatal("explicit expanded collection lost its scope")
 	}
 }
 

@@ -1,6 +1,6 @@
 import { beforeEach, expect, it, vi } from "vitest";
 vi.mock("@/lib/member-session", () => ({ getMemberSession: vi.fn(), requireMemberSession: vi.fn() }));
-vi.mock("@/lib/server-api", () => ({ getArtist: vi.fn(), getArtistArtwork: vi.fn(), getArtistIdentity: vi.fn(), getMuseum: vi.fn() }));
+vi.mock("@/lib/server-api", () => ({ getArtist: vi.fn(), getArtistArtwork: vi.fn(), getArtistIdentity: vi.fn(), getMuseum: vi.fn(), getMuseumDirectory: vi.fn().mockResolvedValue(null) }));
 vi.mock("@/lib/museum-publications", () => ({ getMuseumPublications: vi.fn().mockResolvedValue({ items: [], next_cursor: "" }), getPublishedMuseum: vi.fn() }));
 vi.mock("@/lib/content", () => ({ getPainterEssay: vi.fn() }));
 vi.mock("next/navigation", () => ({ redirect: (path: string) => { throw new Error(`redirect:${path}`); }, notFound: () => { throw new Error("not found"); }, permanentRedirect: vi.fn() }));
@@ -11,11 +11,12 @@ import MuseumPage, { generateMetadata as museumMetadata } from "../../app/museum
 import AccountPage from "../../app/account/page";
 import { getMuseumPublications } from "../museum-publications";
 import { getMemberSession, requireMemberSession } from "../member-session";
-import { getArtist, getArtistArtwork, getArtistIdentity, getMuseum } from "../server-api";
+import { getArtist, getArtistArtwork, getArtistIdentity, getMuseum, getMuseumDirectory } from "../server-api";
 
 const props = { params: Promise.resolve({ slug: "monet", artworkId: "11111111-1111-4111-8111-111111111111" }), searchParams: Promise.resolve({ art_year: "1900" }) };
 beforeEach(() => {
   vi.resetAllMocks();
+  vi.mocked(getMuseumDirectory).mockResolvedValue(null as never);
   vi.mocked(getMuseumPublications).mockResolvedValue({ items: [], next_cursor: "" });
   vi.mocked(getMuseum).mockResolvedValue({ id: "museum", slug: "monet", name: "Museum", description: "A collection", venues: [], work_count: 1, cover: null } as never);
   const artist = { slug: "monet", display_name: "Claude Monet", status: "review", aliases: [], timeline_display: "1840–1926" } as never;
@@ -33,7 +34,7 @@ it.each([painterMetadata, artworkMetadata])("keeps artist and artwork metadata p
   expect(await metadata(props)).toMatchObject({ robots: { index: true } });
   expect(getMemberSession).not.toHaveBeenCalled();
 });
-it.each([MuseumsPage])("requires login before rendering museums or querying museum data", async Page => {
+it.each([MuseumsPage])("requires login before rendering the museum directory", async Page => {
   vi.mocked(requireMemberSession).mockRejectedValue(new Error("sign in"));
   await expect(Page(props)).rejects.toThrow("sign in");
   expect(requireMemberSession).toHaveBeenCalledWith(expect.stringMatching(/^\/museums/));

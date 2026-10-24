@@ -7,8 +7,8 @@ export type Exhibition = {
   participants?: ExhibitionPerson[]; previewWorks?: ExhibitionEntry[];
 };
 export type ExhibitionResearch = { overview: string; excerpt: string; excerptSource: string; concepts: string[]; conceptBasis: string; publicListComplete: boolean; publicListTotal: number; scope: string; presenter: string | null; reviewedAt: string };
-export type ExhibitionPerson = { id: string; name: string; role: string; artist_id: string | null; artist_slug: string | null; sourceURL?: string; birthday?: string | null; deathday?: string | null; nationality?: string | null; portrait?: string | null; imageCredit?: string | null; imageLicense?: string | null; imageSource?: string | null };
-export type ExhibitionPage = { items: Exhibition[]; total: number; heldTotal: number; hasMore: boolean; nextCursor: string; expandedStudyCount?: number; localStudyCount?: number; featured?: Exhibition[] };
+export type ExhibitionPerson = { id: string; name: string; role: string; artist_id: string | null; artist_slug: string | null; sourceURL?: string; birthday?: string | null; deathday?: string | null; nationality?: string | null; portrait?: string | null; image?: string | null; imageKind?: "portrait" | "artwork"; imageTitle?: string | null; imageArtworkId?: string | null; imageWidth?: number | null; imageHeight?: number | null; imageCredit?: string | null; imageLicense?: string | null; imageSource?: string | null };
+export type ExhibitionPage = { items: Exhibition[]; total: number; heldTotal: number; hasMore: boolean; nextCursor: string };
 export type ExhibitionDetail = Exhibition & {
   participantCount: number; venueCount: number;
   participants: ExhibitionPerson[];
@@ -42,7 +42,7 @@ export function sourceLink(url: string | null | undefined): string | null {
   if (!url) return null;
   try { const parsed = new URL(url); return ["https:", "http:"].includes(parsed.protocol) && !parsed.username && !parsed.password ? parsed.href : null; } catch { return null; }
 }
-export const exhibitionFilterKeys = ["q", "start", "end", "source", "format", "state", "institution", "artist", "artwork", "after", "collection", "theme", "person"];
+export const exhibitionFilterKeys = ["q", "start", "end", "source", "format", "state", "institution", "artist", "artwork", "after", "theme", "person", "country", "city"];
 export function exhibitionQuery(raw: Record<string, string | string[] | undefined>) {
   const out = new URLSearchParams();
   for (const key of exhibitionFilterKeys) if (typeof raw[key] === "string" && raw[key]) out.set(key, raw[key]);

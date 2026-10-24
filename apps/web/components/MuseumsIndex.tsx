@@ -32,7 +32,8 @@ export function MuseumsIndex({ initialPage, initialQuery = "" }: { initialPage?:
   if (params.get("cursor")) request.set("cursor", params.get("cursor")!);
   const collectionQuery = new URLSearchParams();
   for (const key of ["artist", "movement", "selection", "display"]) params.getAll(key).forEach(value => collectionQuery.append(key, value));
-  const { data, previousData, error, loading } = useMuseumRequest<MuseumPage>(`museums?${request}`, retry, initialPage, true);
+  const { data, previousData, error, loading } = useMuseumRequest<MuseumPage>(`museums?${request}`, retry, initialPage, true, true);
+  const visiblePage = data ?? (loading ? previousData : undefined);
   const facets = data?.facets ?? previousData?.facets;
   const regions = queryValues(params, "region"), countries = queryValues(params, "country").map(value => value.toUpperCase());
   const selection = params.get("selection") ?? "", display = params.get("display") ?? "", query = params.get("q") ?? "";
@@ -59,15 +60,15 @@ export function MuseumsIndex({ initialPage, initialQuery = "" }: { initialPage?:
     <div className={styles.resultsHeading}><h2 id="museum-results-title" tabIndex={-1}>Explore the collections</h2><p role="status">{loading ? "Finding collections…" : error ? "Connection interrupted" : `${data?.total ?? 0} ${data?.total === 1 ? "collection" : "collections"} in this view`}</p></div>
     <p className={styles.note}>Collection totals include all Artline records. Confirmed on-view reports were checked within 30 days.</p>
     <section aria-label="Museum results" aria-busy={loading}>
-      {error ? <MuseumError message={error} retry={() => setRetry(value => value + 1)} /> : loading ? <p className={styles.loading}>Opening the collections…</p> : data?.items.length ? <ul className={styles.museumGrid}>{data.items.map(museum => <li key={museum.id}>
+      {error ? <MuseumError message={error} retry={() => setRetry(value => value + 1)} /> : !visiblePage && loading ? <p className={styles.loading}>Opening the collections…</p> : visiblePage?.items.length ? <ul className={styles.museumGrid} inert={loading || undefined} style={loading ? { opacity: .65 } : undefined}>{visiblePage.items.map((museum, index) => <li key={museum.id}>
         <Link className={styles.museumCard} href={`/museums/${museum.slug}${collectionQuery.size ? `?${collectionQuery}` : ""}`}>
-          {museum.cover && permittedImagePath(museum.cover.media_url) && <div className={styles.collectionImage}><ArtworkImage work={museum.cover} /></div>}
+          {museum.cover && permittedImagePath(museum.cover.media_url) && <div className={styles.collectionImage}><ArtworkImage work={museum.cover} optimize preload={index === 0} eager={index < 2} sizes="(max-width: 760px) 35vw, (max-width: 1100px) 120px, (max-width: 1800px) 18vw, 320px" /></div>}
           <div className={styles.collectionCopy}>{(museum.venues.length > 0 || museum.country) && <p className={styles.place}>{ museum.venues.length ? [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") : [museum.city, countryName(museum.country!)].filter(Boolean).join(", ") }</p>}<h3>{museum.name}</h3>{museumDescription(museum.description) && <p>{museumDescription(museum.description)}</p>}
           <div className={styles.cardCounts}><span>{formatCount(museum.work_count)} {museum.work_count === 1 ? "work" : "works"} in Artline</span>{museum.highlight_count > 0 && <span>{formatCount(museum.highlight_count)} {museum.highlight_source === "artlines" ? "Artlines highlights" : "museum highlights"}</span>}</div>
           {museum.on_view_count > 0 && <p className={styles.displayNote}>{museum.on_view_count} recently confirmed on view</p>}<span className={styles.exploreLink}>Explore collection <span aria-hidden="true">↗</span></span></div>
         </Link>
       </li>)}</ul> : <div className={styles.empty}><h2>{filters.length ? "No collections match these filters" : "The museum catalogue is taking shape"}</h2><p>{display ? "No matching works have current, verified display information. This does not mean they are not on view." : "No collections are available in this view yet."}</p>{filters.length > 0 && <button onClick={clear}>Remove filters</button>}</div>}
     </section>
-    {data && <CursorPager paging={paging} next={data.next_cursor} busy={loading} total={data.total} shown={data.items.length} label="Museum pages" noun="collections" />}
+    {visiblePage && <CursorPager paging={paging} next={visiblePage.next_cursor} busy={loading} total={visiblePage.total} shown={visiblePage.items.length} label="Museum pages" noun="collections" />}
   </main>;
 }

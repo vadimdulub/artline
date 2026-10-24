@@ -61,7 +61,7 @@ func TestCatalogueCacheBoundsAndExpiry(t *testing.T) {
 	if cache.bytes != 6 || len(cache.entries) != 2 || cache.entries[keys[0]] != nil {
 		t.Fatal("LRU byte limit exceeded")
 	}
-	now = now.Add(time.Minute)
+	now = now.Add(catalogueCacheLifetime)
 	if body, _, owner := cache.acquire(keys[1]); body != nil || !owner {
 		t.Fatal("expired entry returned")
 	}

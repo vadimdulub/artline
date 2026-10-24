@@ -3,6 +3,7 @@ package catalog
 import (
 	"context"
 	"encoding/json"
+	"strings"
 	"sync"
 	"time"
 )
@@ -93,6 +94,11 @@ func (c *facetCache) put(key string, value any) {
 		c.bytes -= len(c.entries[oldest].body)
 		delete(c.entries, oldest)
 	}
-	c.entries[key] = facetCacheEntry{body: body, expires: c.now().Add(time.Minute)}
+	lifetime := 24 * time.Hour
+	if strings.Contains(key, "\nmuseum") {
+		// Incoming loans and current-display facets can expire without a write.
+		lifetime = time.Minute
+	}
+	c.entries[key] = facetCacheEntry{body: body, expires: c.now().Add(lifetime)}
 	c.bytes += len(body)
 }

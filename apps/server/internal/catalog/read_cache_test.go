@@ -43,3 +43,19 @@ func TestFacetCacheIsolationRevisionExpiryAndBounds(t *testing.T) {
 		t.Fatal("audit evidence projection changed")
 	}
 }
+
+func TestStaticFacetDayCache(t *testing.T) {
+	now := time.Now()
+	cache := &facetCache{entries: map[string]facetCacheEntry{}, now: func() time.Time { return now }}
+	key := facetCacheKey(WithCatalogueRevision(context.Background(), "1"), "painters")
+	cache.put(key, []string{"France"})
+	now = now.Add(23 * time.Hour)
+	var values []string
+	if !cache.get(key, &values) {
+		t.Fatal("static facets expired before a day")
+	}
+	now = now.Add(time.Hour)
+	if cache.get(key, &values) {
+		t.Fatal("expired facets reused")
+	}
+}
