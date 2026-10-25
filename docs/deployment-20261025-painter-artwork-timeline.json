@@ -1,0 +1,115 @@
+{
+  "site": "https://artlines.org",
+  "status": "deployed_and_verified",
+  "verifiedAt": "2026-10-25T05:37:13.148Z",
+  "change": "Add dated artwork dots and navigable previews to individual painter pages, and remove Explore artwork records. The embedded main-timeline painter record is unchanged.",
+  "scope": "Painter-page changes from this conversation; unrelated working changes were preserved.",
+  "deployment": {
+    "sourceCommit": "d32345a6dc61d92238ff37c5cb1ed5b4ba2ce14c",
+    "browserTestCommit": "604b1d96a3961922d1593d6208ebfe54798486e9",
+    "branch": "master",
+    "baselineRevision": "artline-web-picture-defaults-1024-v1",
+    "baselineImage": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:48140a8d8019a1b23ccc6adfa97de5f3c7ffcc9289cb6f4f68ae7ef2de77ad4a",
+    "revision": "artline-web-painter-timeline-1025-v1",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:597f8deefe2560c0560bba75a123c11ce808b53abcba736720f7e36a5e87e9cf",
+    "candidateURL": "https://painter-timeline-1025-v1---artline-web-lpuqqlugnq-ew.a.run.app",
+    "trafficPercent": 100,
+    "rollbackRevision": "artline-web-picture-defaults-1024-v1",
+    "runtimeSettingsPreserved": true,
+    "existingPreviewTagsPreserved": true,
+    "baseLayersPreserved": 35,
+    "runtimeLayerSHA256": "4f2e51c84750248cc5ac3e34df0a8898c4124ec3a50911b0ed8f061bc01c2c38",
+    "runtimeLayerBytes": 24410690,
+    "buildMethod": "Linux amd64 standalone build of four changed runtime files over the verified deployed source snapshot; inherited production content, public assets and runtime configuration preserved."
+  },
+  "validation": {
+    "focusedUnitTestsPassed": 27,
+    "focusedUnitTestFiles": 3,
+    "targetedLint": "passed",
+    "linuxProductionBuild": "passed",
+    "typeScript": "passed",
+    "canonicalArtworkWithoutJavascript": "passed",
+    "candidateBrowserChecks": [
+      {
+        "width": 1440,
+        "painter": "Claude Monet",
+        "dots": 4,
+        "imagesLoaded": true,
+        "previewsNavigate": true,
+        "keyboardNavigation": true,
+        "artworkOpensAndReopens": true,
+        "noHorizontalOverflow": true,
+        "touchTargets": true,
+        "removedSectionAbsent": true,
+        "screenshot": "/Users/vadimdulub/Library/Application Support/Artline/releases/painter-artwork-timeline-20261025/candidate-painter-timeline-1440.png"
+      },
+      {
+        "width": 390,
+        "painter": "Claude Monet",
+        "dots": 1,
+        "imagesLoaded": true,
+        "previewsNavigate": true,
+        "keyboardNavigation": true,
+        "artworkOpensAndReopens": true,
+        "noHorizontalOverflow": true,
+        "touchTargets": true,
+        "removedSectionAbsent": true,
+        "screenshot": "/Users/vadimdulub/Library/Application Support/Artline/releases/painter-artwork-timeline-20261025/candidate-painter-timeline-390.png"
+      },
+      {
+        "embeddedPainterUnchanged": true
+      }
+    ],
+    "publicBrowserChecks": [
+      {
+        "width": 1440,
+        "painter": "Claude Monet",
+        "dots": 4,
+        "imagesLoaded": true,
+        "previewsNavigate": true,
+        "keyboardNavigation": true,
+        "artworkOpensAndReopens": true,
+        "noHorizontalOverflow": true,
+        "touchTargets": true,
+        "removedSectionAbsent": true,
+        "screenshot": "/Users/vadimdulub/Library/Application Support/Artline/releases/painter-artwork-timeline-20261025/public-painter-timeline-1440.png"
+      },
+      {
+        "width": 390,
+        "painter": "Claude Monet",
+        "dots": 1,
+        "imagesLoaded": true,
+        "previewsNavigate": true,
+        "keyboardNavigation": true,
+        "artworkOpensAndReopens": true,
+        "noHorizontalOverflow": true,
+        "touchTargets": true,
+        "removedSectionAbsent": true,
+        "screenshot": "/Users/vadimdulub/Library/Application Support/Artline/releases/painter-artwork-timeline-20261025/public-painter-timeline-390.png"
+      },
+      {
+        "embeddedPainterUnchanged": true
+      }
+    ],
+    "javascriptErrors": [],
+    "failedAPIReads": [],
+    "googleRequestsBeforeConsent": 0,
+    "releaseErrorLogEntries": 0,
+    "browser": "Headless Chrome; in-app browser connection unavailable",
+    "fullUnitSuiteRun": false
+  },
+  "mapResearch": {
+    "branchHead": "1f320f7e08f8e6d3b08edbd784ae84d5bb2cdc8e",
+    "branchUnchanged": true,
+    "indexUnchanged": true,
+    "remoteBranchUnchanged": true,
+    "originalSourceFilesUnchanged": true,
+    "mapChangesIncluded": false
+  },
+  "apiDeployment": false,
+  "databaseWrites": false,
+  "realLocalCatalogueAccess": false,
+  "backgroundJobsChanged": false,
+  "terraformApply": false,
+  "evidenceDirectory": "/Users/vadimdulub/Library/Application Support/Artline/releases/painter-artwork-timeline-20261025"
+}
