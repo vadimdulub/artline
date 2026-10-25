@@ -85,7 +85,8 @@ test("canonical artwork records remain available without JavaScript", async ({ b
     await page.goto(`${test.info().project.use.baseURL}/artists/claude-monet/works/${workID}`);
     await expect(page).toHaveURL(/\/artists\/claude-monet\/works\//);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
-    await expect(page.locator(".artwork-details h3")).toHaveText(title);
+    await expect(page.getByRole("img", { name: `${title} — Claude Monet`, exact: true })).toBeVisible();
+    await expect(page.getByRole("term").filter({ hasText: /^Medium$/ })).toBeVisible();
     const id = new URL(page.url()).pathname.split("/").at(-1)!;
     const redirect = await page.request.get(`${test.info().project.use.baseURL}/artists/claude-monet?work=${id}&art_images=true&art_year=1855`, { maxRedirects: 0 });
     expect(redirect.status()).toBe(308);
