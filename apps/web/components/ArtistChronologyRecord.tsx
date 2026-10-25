@@ -6,6 +6,7 @@ import { artworkDate, displayMetadata } from "@/lib/display-metadata";
 import type { ArtistDetail, ArtistWorksPage, Artwork } from "@/lib/types";
 import { updateQuery, useQueryString } from "@/lib/url-state";
 import { ArtistRecord } from "./ArtistRecord";
+import { ArtistArtworkTimeline } from "./ArtistArtworkTimeline";
 import { AtlasCheckbox, AtlasFilters, AtlasSelect } from "./AtlasFilters";
 import { AtlasSearchField } from "./AtlasSearchField";
 import { MultiSelectFilter } from "./MultiSelectFilter";
@@ -40,7 +41,7 @@ export function ArtistChronologyRecord({ artist, workId, onSelectWork, embedded 
   const defaultWork = !workId && !search && !museum && !workType && !year && !cursor
     && (!imageOnly || artist.key_artwork?.media_url) ? artist.key_artwork ?? undefined : undefined;
   const [navigatedWork,setNavigatedWork] = useState<Artwork>();
-  const knownWork = (navigatedWork?.id===workId?navigatedWork:undefined) ?? (initialWork?.id===workId?initialWork:undefined) ?? works.find(work => work.id === workId) ?? artist.artworks.find(work => work.id === workId);
+  const knownWork = (navigatedWork?.id===workId?navigatedWork:undefined) ?? (initialWork?.id===workId?initialWork:undefined) ?? works.find(work => work.id === workId) ?? artist.artworks.find(work => work.id === workId) ?? (artist.key_artwork?.id===workId?artist.key_artwork:undefined);
   const linked = useMuseumRequest<Artwork>(workId && !knownWork ? `artists/${artist.slug}/works/${encodeURIComponent(workId)}` : null, retry);
   const selectedWork = knownWork ?? linked.data;
   const navigation = useRecordNavigation(`artists/${artist.slug}/works?${query}`, (workId || defaultWork?.id || (embedded ? works[0]?.id : "")) || "", (id,item) => { setNavigatedWork(item as Artwork); onSelectWork(id); });
@@ -60,7 +61,11 @@ export function ArtistChronologyRecord({ artist, workId, onSelectWork, embedded 
   function changeSearch(value: string) { updateQuery({ art_q: value || null, art_cursor: null, work: null }); }
   function resetFilters() { updateQuery({ art_q: null, art_museum: null, art_type: null, art_year: null, art_cursor: null, art_images: "true", work: null }, true); }
   function changeYear(value: string) { updateQuery({ art_year: value || null, art_cursor: null, work: null }); }
+  const timelineWorks = [...(!search && !museum && !workType && !year && !cursor ? artist.artworks.filter(work => !imageOnly || work.media_url) : []), ...works];
+  if (!search && !museum && !workType && !year && !cursor && artist.key_artwork && (!imageOnly || artist.key_artwork.media_url)) timelineWorks.push(artist.key_artwork);
+  if (displayWork) timelineWorks.push(displayWork);
   return <ArtistRecord artist={artist} embedded={embedded} gallery={!embedded} essay={essay} pageWork={initialWork ?? null} workId={workId} defaultWork={defaultWork} onSelectWork={onSelectWork} artworks={works} linkedWork={displayWork} navigation={{...navigation,busy:navigation.busy || linked.loading}}
+    artworkTimeline={!embedded ? choose => <ArtistArtworkTimeline key={`${artist.id}|${search}|${museum}|${workType}|${year}|${cursor}|${imageOnly}`} artist={artist} artworks={timelineWorks} initialWorkID={defaultWork?.id ?? selectedWork?.id} undatedCount={unknown} onOpenWork={choose} onUndated={() => changeYear("undated")} /> : undefined}
     workMessage={workId && !knownWork && !linked.data ? linked.error ? <div role="alert"><p>{linked.error}</p><button onClick={() => setRetry(value => value + 1)}>Retry artwork</button></div> : <p>Opening linked artwork…</p> : undefined}
     workBrowser={(choose, selectedID) => <div className={styles.chronology}>
       <div className={styles.heading}>
@@ -94,7 +99,7 @@ export function ArtistChronologyRecord({ artist, workId, onSelectWork, embedded 
         </> : <div className={styles.empty}><h3>{filtered ? "No matching artworks" : "No artworks in this view"}</h3><p>{imageOnly ? "Try clearing the picture filter to see more artworks." : filtered ? embedded ? "Try another title or year, or clear the artwork filters." : "Try another title, year, work type or collection. " : "Browse another artist or adjust the artwork filters."}</p>{filtered && <button type="button" onClick={resetFilters}>Clear artwork filters</button>}</div>}
 
       </div>
-      {summary && !empty && <div className={styles.dateSummary}>
+      {embedded && summary && !empty && <div className={styles.dateSummary}>
         <p className={styles.interval}>{artist.timeline_basis === "life" ? "Life" : "Painter interval"}: {artist.timeline_display}</p>
         <div className={styles.chartRow}>
           <div className={styles.chart}>

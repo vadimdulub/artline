@@ -1,5 +1,5 @@
-import { cleanup, render, screen, within } from "@testing-library/react";
-import { afterEach, expect, it } from "vitest";
+import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
+import { afterEach, expect, it, vi } from "vitest";
 import { ArtistRecord, SourceList } from "./ArtistRecord";
 import { permittedImagePath } from "./ArtworkViewer";
 import type { ArtistDetail, Artwork } from "../lib/types";
@@ -57,6 +57,27 @@ it("shows a key work inline on the full painter page without opening a dialog", 
   expect(screen.getByRole("region", { name: "Key artwork" })).toBeVisible();
   expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Painter", level: 1 })).toBeVisible();
+});
+it("allows a timeline preview to reopen the same artwork after its dialog is closed", () => {
+  const originalShow = Object.getOwnPropertyDescriptor(HTMLDialogElement.prototype, "showModal");
+  const originalClose = Object.getOwnPropertyDescriptor(HTMLDialogElement.prototype, "close");
+  Object.defineProperty(HTMLDialogElement.prototype, "showModal", { configurable: true, value() { this.setAttribute("open", ""); } });
+  Object.defineProperty(HTMLDialogElement.prototype, "close", { configurable: true, value() { this.removeAttribute("open"); } });
+  try {
+    const select = vi.fn();
+    render(<ArtistRecord artist={{ ...painter, artworks: [artwork] }} gallery workId={artwork.id} onSelectWork={select}
+      artworkTimeline={choose => <button onClick={() => choose(artwork.id)}>Open timeline preview</button>} />);
+    expect(screen.getByRole("dialog", { name: "Enlarged image: Study" })).toBeVisible();
+    fireEvent.click(screen.getByRole("button", { name: "Close enlarged image" }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Open timeline preview" }));
+    expect(screen.getByRole("dialog", { name: "Enlarged image: Study" })).toBeVisible();
+    expect(select).toHaveBeenCalledWith(artwork.id);
+  } finally {
+    cleanup();
+    if (originalShow) Object.defineProperty(HTMLDialogElement.prototype, "showModal", originalShow); else Reflect.deleteProperty(HTMLDialogElement.prototype, "showModal");
+    if (originalClose) Object.defineProperty(HTMLDialogElement.prototype, "close", originalClose); else Reflect.deleteProperty(HTMLDialogElement.prototype, "close");
+  }
 });
 it("includes artistic connections directly in the artist record", () => {
   render(<ArtistRecord artist={{ ...painter, connections: {

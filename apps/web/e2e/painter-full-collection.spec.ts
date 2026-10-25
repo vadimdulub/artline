@@ -25,6 +25,8 @@ for (const width of [1440, 390]) {
     await full.click();
     await expect(page).toHaveURL(/\/artists\/claude-monet$/);
     const chronology = page.getByRole("region", { name: "Artworks by year", exact: true });
+    await expect(chronology.getByRole("checkbox", { name: "With pictures" })).toBeChecked();
+    await chronology.getByRole("checkbox", { name: "With pictures" }).uncheck();
     await expect(chronology.getByRole("checkbox", { name: "With pictures" })).not.toBeChecked();
     await expect(chronology.getByRole("status")).toHaveText(`${all.total.toLocaleString("en-GB")} recorded works`);
     await expect(chronology.locator(".work-card")).toHaveCount(24);
@@ -72,14 +74,15 @@ test("a directly linked artwork keeps the painter's complete chronology and enla
   await expect(large).toHaveCount(0);
 });
 
-test("canonical artwork links and records remain available without JavaScript", async ({ browser }) => {
+test("canonical artwork records remain available without JavaScript", async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   try {
     const page = await context.newPage();
-    await page.goto(`${test.info().project.use.baseURL}/artists/claude-monet`);
-    const link = page.getByRole("navigation", { name: "Artwork pages" }).getByRole("link").first();
-    const title = await link.innerText();
-    await link.click();
+    const response = await page.request.get(`${test.info().project.use.baseURL}/api/backend/v1/artists/claude-monet/works?image_only=true`);
+    await expect(response).toBeOK();
+    const works = await response.json() as ArtistWorksPage;
+    const { id: workID, title } = works.items[0];
+    await page.goto(`${test.info().project.use.baseURL}/artists/claude-monet/works/${workID}`);
     await expect(page).toHaveURL(/\/artists\/claude-monet\/works\//);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
     await expect(page.locator(".artwork-details h3")).toHaveText(title);

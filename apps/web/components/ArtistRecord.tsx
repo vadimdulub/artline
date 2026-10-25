@@ -22,11 +22,8 @@ function WorkBrowserContent({ render, onSelectWork, selectedID }: { render: (cho
 function ArtistContext({ collapsed, children }: { collapsed: boolean; children: ReactNode }) {
   return collapsed ? <details className="chronology-biography"><summary>About the painter</summary>{children}</details> : children;
 }
-export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = false, artworks, linkedWork, defaultWork, workBrowser, workMessage, navigation, pageWork, gallery = false }: { artist: ArtistDetail; essay?: string | null; workId?: string | null; onSelectWork: (id: string) => void; embedded?: boolean; artworks?: Artwork[]; linkedWork?: Artwork; defaultWork?: Artwork; workBrowser?: (choose: (id: string) => void, selectedID?: string) => ReactNode; workMessage?: ReactNode; navigation?: RecordNavigation; pageWork?: Artwork | null; gallery?: boolean; }) {
+export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = false, artworks, linkedWork, defaultWork, workBrowser, workMessage, navigation, pageWork, gallery = false, artworkTimeline }: { artist: ArtistDetail; essay?: string | null; workId?: string | null; onSelectWork: (id: string) => void; embedded?: boolean; artworks?: Artwork[]; linkedWork?: Artwork; defaultWork?: Artwork; workBrowser?: (choose: (id: string) => void, selectedID?: string) => ReactNode; workMessage?: ReactNode; navigation?: RecordNavigation; pageWork?: Artwork | null; gallery?: boolean; artworkTimeline?: (choose: (id: string) => void) => ReactNode; }) {
   const works = artworks ?? artist.artworks;
-  // Keep canonical artwork links available in the server-rendered painter page
-  // while the complete, bounded chronology is loading.
-  const artworkPages = works.length ? works : artist.artworks;
   const collections = artist.collections ?? [];
   const hasBiography = Boolean(artist.reference_biography?.text.trim() || cleanEditorialBiography(artist.biography_md ?? ""));
   const selectedIndex = workId || defaultWork ? works.findIndex((item) => item.id === (workId || defaultWork?.id)) : 0;
@@ -91,7 +88,8 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
         {embedded && <Link className="text-link full-painter-link" href={`/artists/${artist.slug}`} prefetch={false}>Open full painter record <span aria-hidden="true">↗</span></Link>}
       </header>
       {embedded && artworkRecord}
-      {gallery && !workId && defaultWork && <section className="painter-key-artwork" aria-label="Key artwork">
+      {gallery && artworkTimeline && <WorkBrowserContent render={artworkTimeline} onSelectWork={chooseWork} />}
+      {gallery && !artworkTimeline && !workId && defaultWork && <section className="painter-key-artwork" aria-label="Key artwork">
         <ArtworkViewer work={defaultWork} creator={creator} />
         <div><p className="eyebrow">Selected artwork</p><div className="bookmark-title"><h2>{defaultWork.title}</h2><BookmarkButton kind="artwork" id={defaultWork.id} title={defaultWork.title} /></div>{artworkDate(defaultWork) && <p className="artwork-date">{artworkDate(defaultWork)}</p>}{defaultWork.holding && <p className="painter-preview-holding">{defaultWork.holding.name}</p>}<button type="button" className="text-link" onClick={() => chooseWork(defaultWork.id)}>Explore artwork <span aria-hidden="true">↗</span></button></div>
       </section>}
@@ -106,7 +104,6 @@ export function ArtistRecord({ artist, essay, workId, onSelectWork, embedded = f
       {!embedded && collections.length > 0 && <section className="artist-collections" id={`collections-${artist.id}`} aria-label="Museum holdings"><h2>Museums & collections</h2>
         <><p>Documented holdings of works attributed to {artist.display_name}. Check the museum’s record for current display information.</p><ul>{collections.map(collection => <li key={collection.id}><div><Link href={`/museums/${collection.slug}?artist=${artist.slug}`} prefetch={false}>{collection.name}</Link><span>{collection.work_count.toLocaleString("en-GB")} recorded {collection.work_count === 1 ? "work" : "works"}</span></div><button type="button" onClick={() => { updateQuery({ art_museum: collection.slug, art_cursor: null, art_year: null, art_q: null, art_type: null, art_images: new URLSearchParams(window.location.search).get("art_images") ?? "true", work: null }, true); selectedWorks.current?.scrollIntoView({ block: "start" }); }}>Browse works</button></li>)}</ul>{(artist.collection_count ?? 0) > collections.length && <Link href={`/museums?artist=${artist.slug}`} prefetch={false}>Explore all recorded collections</Link>}</>
       </section>}
-      {!embedded && artworkPages.length > 0 && <noscript><nav className="painter-collections" aria-label="Artwork pages"><h2>Explore artwork records</h2><ul>{artworkPages.map(item => <li key={item.id}><Link href={`/artists/${artist.slug}/works/${item.id}`} prefetch={false}>{item.title}</Link></li>)}</ul></nav></noscript>}
       {essay && <details className="essay-section"><summary>Read the painter essay</summary><article className="essay"><ReactMarkdown remarkPlugins={[remarkGfm]}>{essay}</ReactMarkdown></article></details>}
       {artist.citations.length > 0 && <details className="sources-section" id={`sources-${artist.id}`}><summary>Sources <span>{artist.citations.length}</span></summary><SourceList citations={artist.citations} /></details>}
     </div>
