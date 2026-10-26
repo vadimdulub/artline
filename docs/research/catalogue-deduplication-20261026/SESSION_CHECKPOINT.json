@@ -1,0 +1,70 @@
+{
+  "stage": "seven_museum_merges_verified_full_Rouen_source_and_public_exhibition_inventories_prepared_cloud_reauthentication_required",
+  "release_source_commit": "d8ff16118751594ca50046b748823eca38924a2d",
+  "release_receipt_commit": "f94fd5cd",
+  "release_branch": "fix/catalogue-all-media-20261026",
+  "release_directory": "/Users/vadimdulub/Library/Application Support/Artline/releases/catalogue-all-media-20261026",
+  "Rouen_merge_verified": "rouen-museum-merge-verification.json",
+  "museum_inventory": "museum-inventory.json.gz",
+  "all_Rouen_native_records": 3500,
+  "pictorial_native_records": 3219,
+  "flagged_pictorial_notices": 1723,
+  "active_foreground_metadata_session": null,
+  "other_priority": "Complete exact-source museum aliases, then artwork and exhibition duplicate reconciliation; enrich Rouen metadata/creators and authentic individually reviewed images. No new agents/jobs/schedules or local-catalogue connections.",
+  "source_holds": "Preserve all existing holds. POP notice metadata is accessible; image discovery is metadata only. INHA live platform unavailable; indexed authority evidence is historical context.",
+  "remaining_tasks": [
+    "global museum candidate decisions and confirmed merges",
+    "Rouen native identity/creator reconciliation and full held-source review",
+    "Rouen authentic image download, actual visual review, production delivery and verification",
+    "global artwork duplicate groups and confirmed safe merges with references/redirects",
+    "global exhibition duplicates and confirmed safe merges preserving tours/occurrences/source IDs",
+    "final reports/commits/pushes as authorized"
+  ],
+  "at": "2026-10-26T23:13:08.250327+00:00",
+  "museum_merge_operations": {
+    "Rouen": "rouen-museum-merge-verification.json",
+    "six_further_museums": "museum-merge-six-verification.json"
+  },
+  "verified_museum_alias_merges": 7,
+  "full_Rouen_native_records": 3500,
+  "all_1723_flagged_pictorial_notices_captured": true,
+  "published_Rouen_image_views_discovered": 1995,
+  "existing_exact_image_gap_candidates": 649,
+  "prepared_image_views": 731,
+  "prepared_distinct_artworks": 648,
+  "actually_visually_reviewed_views": 731,
+  "new_image_uploads": 0,
+  "creator_link_candidates": 112,
+  "creator_identity_or_lifespan_holds": 55,
+  "public_exhibitions_pagination_complete": 11982,
+  "exhibition_source_detail_candidates": 85,
+  "primary_exhibition_sources_captured": 51,
+  "cloud_authentication_hold": {
+    "began": "2026-10-26T22:31:34Z",
+    "action_required": "User runs gcloud auth login vadim@alingva.com and confirms completion. No cached-secret/alternate-account bypass.",
+    "user_question_pending": true
+  },
+  "prepared_artwork_UUID_redirect_code": {
+    "release_worktree_packages_passed": [
+      "catalog",
+      "httpapi",
+      "atlas"
+    ],
+    "production_readonly_test_pending_auth": true,
+    "not_yet_deployed": true
+  },
+  "approved_distinct_primary_image_candidates": 611,
+  "image_delivery_preparation": "rouen-image-delivery-preparation-receipt.json",
+  "image_review_summary": "rouen-image-visual-review-summary.json",
+  "source_backed_exhibition_candidate_groups": 9,
+  "potential_redundant_exhibition_rows": 11,
+  "remaining_museum_source_candidates": 4,
+  "all_foreground_source_processes_finished": true,
+  "report": "REPORT.txt",
+  "pending_artwork_redirect_code_validation": "artwork-redirect-code-validation.json",
+  "artwork_UUID_redirect_code_deployed": false,
+  "physical_artworks_merged": 0,
+  "exhibitions_merged": 0,
+  "new_artist_profiles": 0,
+  "new_creator_connections": 0
+}

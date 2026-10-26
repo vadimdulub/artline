@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-26T23:12:04.663993+00:00",
+  "first_failure_at": "2026-10-26T22:31:34Z",
+  "service": "Google Cloud owner authentication",
+  "failure": "gcloud secrets versions access reports reauthentication required; non-interactive prompt unavailable.",
+  "user_action": "gcloud auth login vadim@alingva.com",
+  "user_request_sent": true,
+  "confirmation_pending": true,
+  "work_that_requires_auth": [
+    "Production database reads and safe write-plan preimages",
+    "Remaining museum, physical artwork and exhibition merges",
+    "Creator/new-artwork delivery",
+    "Create-only Storage uploads and independent verification",
+    "Production read-only redirect tests and later deployment"
+  ],
+  "cached_secret_or_alternate_account_bypass": false,
+  "production_writes_after_failure": 0,
+  "image_uploads_after_failure": 0,
+  "independent_source_and_visual_preparation_completed": true
+}

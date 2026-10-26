@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-26T23:01:02.951555+00:00",
+  "source_backed_candidate_groups": [
+    {
+      "canonical_id": "a6efe88a-4fa0-5680-8e90-21df6f012799",
+      "alias_ids": [
+        "cb1cc471-77ae-51be-9a67-7d8e3e692c0f",
+        "5ccfface-29c5-559b-b254-5d195acf2304",
+        "0b229af9-864e-5577-9a6e-e5b55ebbf77f"
+      ],
+      "decision": "same_documented_tour_source_groups_pending_SQL",
+      "basis": "The already consolidated tour spans Saitama, Miyazaki and Wakayama; three other rows reproduce its individual stops under the second APJ source index. All stop dates/venues and native IDs must survive; merge requires complete production child/reference preimages.",
+      "source_ids": [
+        "E105600",
+        "E115393",
+        "E118521",
+        "E307018",
+        "E319406",
+        "E324645"
+      ]
+    },
+    {
+      "canonical_id": "bd704449-ff04-5fac-9230-db10945cb93d",
+      "alias_ids": [
+        "8ed32a2e-aaca-5c0f-8b6e-01da8fcb3de8"
+      ],
+      "decision": "same_event_two_primary_indexes_pending_SQL",
+      "basis": "Two APJ primary source records agree on the specific title, complete day dates, venue and participants. Preserve both native source records and any section/checklist distinctions; no catalogue page review or production merge is claimed.",
+      "source_ids": [
+        "E115403",
+        "E319413"
+      ]
+    },
+    {
+      "canonical_id": "1a7ff9f1-0c5c-500d-a84f-2111715cdce4",
+      "alias_ids": [
+        "12a1c536-dfaf-5ae4-9cea-923e40d6919d"
+      ],
+      "decision": "same_event_two_primary_indexes_pending_SQL",
+      "basis": "Two APJ primary source records agree on the specific title, complete day dates, venue and participants. Preserve both native source records and any section/checklist distinctions; no catalogue page review or production merge is claimed.",
+      "source_ids": [
+        "E109455",
+        "E309698"
+      ]
+    },
+    {
+      "canonical_id": "49acc15e-a963-5002-97e1-99a6b6764ba8",
+      "alias_ids": [
+        "da68c058-c38e-590b-993c-a5848457342a"
+      ],
+      "decision": "same_event_two_primary_indexes_pending_SQL",
+      "basis": "Two APJ primary source records agree on the specific title, complete day dates, venue and participants. Preserve both native source records and any section/checklist distinctions; no catalogue page review or production merge is claimed.",
+      "source_ids": [
+        "E109443",
+        "E309688"
+      ]
+    },
+    {
+      "canonical_id": "3c09d9ec-1a44-5072-a9c4-67dd5a63a2b1",
+      "alias_ids": [
+        "eddb5349-c8bb-52cd-b5fb-80e2f1829288"
+      ],
+      "decision": "same_event_two_primary_indexes_pending_SQL",
+      "basis": "Two APJ primary source records agree on the specific title, complete day dates, venue and participants. Preserve both native source records and any section/checklist distinctions; no catalogue page review or production merge is claimed.",
+      "source_ids": [
+        "E116535",
+        "E321284"
+      ]
+    },
+    {
+      "canonical_id": "9ccdeb1b-6a21-5b7e-a644-24cdb4ed358c",
+      "alias_ids": [
+        "7b64c957-9219-5b32-a525-450688576a95"
+      ],
+      "decision": "same_event_two_primary_indexes_pending_SQL",
+      "basis": "Two APJ primary source records agree on the specific title, complete day dates, venue and participants. Preserve both native source records and any section/checklist distinctions; no catalogue page review or production merge is claimed.",
+      "source_ids": [
+        "E106558",
+        "E307577"
+      ]
+    },
+    {
+      "canonical_id": "ce2ffae5-c0da-5d5e-b1c4-b9d7bf4b9762",
+      "alias_ids": [
+        "c6c473cf-1679-596f-a2c0-d4565e0a9a95"
+      ],
+      "decision": "strong_same_event_candidate_pending_SQL_and_host_identity_check",
+      "basis": "Fresh official Cleveland API records have the same specific title and full dates, with identical or naming-variant organizers/venues. Preserve both native IDs. Check complete current references and canonical host identity before merging.",
+      "source_ids": [
+        "700100",
+        "700099"
+      ]
+    },
+    {
+      "canonical_id": "f7d43287-c502-5a69-bc1f-5224d09d38d9",
+      "alias_ids": [
+        "0aed1e1e-410e-5329-8a05-cd432d976019"
+      ],
+      "decision": "strong_same_event_candidate_pending_SQL_and_host_identity_check",
+      "basis": "Fresh official Cleveland API records have the same specific title and full dates, with identical or naming-variant organizers/venues. Preserve both native IDs. Check complete current references and canonical host identity before merging.",
+      "source_ids": [
+        "517536",
+        "361405"
+      ]
+    },
+    {
+      "canonical_id": "9a65bfa0-b2ca-55d2-a815-ae26a7c31586",
+      "alias_ids": [
+        "92568d56-137f-5063-af4b-ced77d5bf7e9"
+      ],
+      "decision": "strong_same_event_candidate_pending_SQL_and_host_identity_check",
+      "basis": "Fresh official Cleveland API records have the same specific title and full dates, with identical or naming-variant organizers/venues. Preserve both native IDs. Check complete current references and canonical host identity before merging.",
+      "source_ids": [
+        "519256",
+        "361414"
+      ]
+    }
+  ],
+  "merge_writes": 0,
+  "canonical_id_choices_provisional_until_complete_production_preflight": true,
+  "holds": [
+    {
+      "source_ids": [
+        "E100381",
+        "E100747",
+        "E300423",
+        "E301719"
+      ],
+      "basis": "Explicit simultaneous displays at different named venues; review programme/section hierarchy, not simple row duplicates."
+    },
+    {
+      "source_ids": [
+        "moma:sort-1671",
+        "moma:sort-1688"
+      ],
+      "basis": "Source repeats identical unknown-number gallery installation citation; original source lacks event IDs and closing dates. Hold until independent identity evidence; MoMA website access hold retained."
+    },
+    {
+      "basis": "MoMA numbered installations with different dates/numbers are kept separate. Cross-provider day-date conflicts, tour spans and title-only year matches require individual review."
+    }
+  ]
+}

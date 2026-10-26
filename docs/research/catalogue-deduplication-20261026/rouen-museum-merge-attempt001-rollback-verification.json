@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-26T19:53:18.711962+00:00",
+  "passed": true,
+  "transaction_rolled_back": true,
+  "all_original_preimages_equal": {
+    "institutions": true,
+    "artworks": true,
+    "artwork_location_assertions": true,
+    "institution_venues": true,
+    "curated_collections": true,
+    "exhibition_occurrences": true,
+    "exhibition_participants": true,
+    "exhibition_source_coverage": true,
+    "source_institutions": true
+  },
+  "operation_audits": 0,
+  "correct_existing_editor": "local-european-research",
+  "cause": "Attempt001 used operation ID as artworks.updated_by; existing FK requires a real editor_accounts.user_id. No new editor account is created."
+}

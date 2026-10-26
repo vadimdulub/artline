@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-26T19:55:50.679565+00:00",
+  "operation": "catalogue-deduplication-rouen-20261026",
+  "plan_sha256": "af71bc46764fb3b08bfe23ba101fa18c1ddb618eb1e203c93f9d809cf81aa761",
+  "changed_rows": 2857,
+  "changed_by_table": {
+    "institutions": 1,
+    "institution_venues": 1,
+    "artwork_location_assertions": 1533,
+    "artworks": 1322
+  },
+  "atomic_audits": 2857,
+  "artwork_images_creators_metadata_status_preserved": true,
+  "real_local_catalogue_connections": 0,
+  "backup_directory": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-rouen-20261026/attempt-002"
+}

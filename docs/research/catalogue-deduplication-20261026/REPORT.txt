@@ -1,0 +1,225 @@
+Catalogue reconciliation checkpoint — 26 October 2026, after 23:05 UTC
+
+The painting-only restriction is committed, pushed and deployed. Seven museum
+duplicate identities are consolidated in production and independently verified.
+The larger artwork/exhibition deduplication and Rouen enrichment request remains
+unfinished. Google Cloud owner authentication expired at 22:31 UTC and requires
+the user to sign in again. No further database changes or image uploads were
+attempted after that authentication failure. Source research, image preparation
+and actual visual review continued without a database connection.
+
+The serving release is d8ff16118751594ca50046b748823eca38924a2d, with deployment
+receipt commit f94fd5cd, on fix/catalogue-all-media-20261026. Both Cloud Run
+services direct 100 percent of traffic to artline-api-all-media-1026-v1 and
+artline-web-all-media-1026-v1. Runtime configuration and existing tags were
+preserved. Go packages, focused frontend tests, Linux builds, TypeScript and
+production read-only catalogue tests passed. Candidate and promoted service
+origins passed route, count and asset checks. The normal artlines.org hostname
+returns Cloudflare 403/error1010 to this environment; service-origin checks do
+not establish that this client can pass that edge policy. Exact image digests,
+revision checks and receipts are in docs/deployment-20261026-all-media.json.
+
+Artworks and All now accept every artwork medium. Explicit medium filters,
+existing picture defaults, date/selection eligibility, archived exclusions and
+member access remain. The initially observed 67,834 was precisely the count of
+illustrated paintings. The same production snapshot contained 1,039,058 active
+artworks and 309,756 illustrated active artworks. The original million-item
+import reported catalogue records, not one million image files. Production
+continued to grow during this investigation, so counts from different times
+must not be presented as one snapshot. The initial deletion/detachment findings
+and their attribution limits are in the separate picture-investigation report.
+
+Museum priority was applied first. The inventory covered all 2,275 institution
+rows then present, including 22 pre-existing aliases. Name, geography, authority
+identifier, official website and reference surveys produced candidate groups;
+name/website similarity was never a merge instruction. The 92 fuzzy-name pairs
+have individual decisions: six verified merges, four further source-supported
+candidates awaiting production preflight, four identity/scope holds and 78
+pairs retained separately. MuMa was additionally verified outside that fuzzy
+list. This is a bounded candidate audit, not proof that every translated or
+otherwise dissimilar museum duplicate worldwide has been found.
+
+Completed museum consolidations:
+
+- Rouen: joconde-m0729 resolves to musee-beaux-arts-rouen. All 1,508 active
+  artworks and all 38 previous pictures survive. Native source identities and
+  original artwork metadata, creator links, primary images and statuses remain.
+  The operation changed 2,857 rows, each with a matching operation-bound audit.
+  It normalized holding assertions and current-institution pointers and retired
+  one unused duplicate venue. This did not merge physical artwork records.
+- Sassari, Caserta, Florence Museo Novecento, Rome Galleria Nazionale, MuMa Le
+  Havre and Colmar Unterlinden: six aliases consolidated through 897 changed
+  rows with 897 matching atomic audits. The 30 existing MuMa highlight items
+  and all other protected selection items remain unchanged.
+
+Combined verified result: seven museum aliases, 3,754 changed rows and 3,754
+matching explicit atomic audits. All original museum IDs remain traceable.
+Completed operations must not be replayed. The first Rouen attempt failed a
+foreign-key check and rolled back completely; an independent reconciliation
+proved zero operation rows/audits and unchanged preimages before the corrected
+transaction. Both attempts and their private backups are retained.
+
+Four additional source preparations concern MARCA Catanzaro, Palazzo Reale di
+Genova, Rennes and Orléans. They have not been applied. Ministry authority
+notices identify Rennes as M0211 and Orléans as M0286; the latter explicitly
+supplies the alternate museum name. Genova still requires the source-native
+collection/venue distinction to be checked. Gallery storage, Palazzo Roverella
+building versus collection, and Günsel museum naming remain holds. National
+galleries in different cities, London/Washington portrait galleries, different
+Cypriot collections/operators and similar provincial museum names were not
+collapsed merely because their names resemble each other.
+
+Rouen source coverage is materially broader than the current database rows:
+all 35 pages of the published Ministry Joconde tabular API were captured and
+reconciled as 3,500 distinct native notice references. Of these, 3,219 carry
+pictorial-domain labels and 1,723 are flagged with images. All 1,723 current
+flagged pictorial notices were then retrieved serially and pinned. They publish
+1,995 image views. A notice reference or image view is not automatically a
+distinct physical artwork; native duplicate inventories and components occur.
+This is the complete published API result for M0729 at capture, not a claim
+that every object physically held by the museum is published there.
+
+The crucial existing-work bridge is research_artwork_links.object_key and
+retained source-match citations, in addition to external_identifiers. Ignoring
+those research links would incorrectly classify many existing works as absent:
+1,112 of the initial 1,508 active Rouen works lack accession numbers. The exact
+native crosswalk finds 1,414 references with one active existing match and no
+reference with multiple active matches. Another 94 active Rouen works need
+cross-source comparison. A preliminary title/inventory screen finds 34 of
+those with native candidates, including translated and abbreviated inventory
+forms; this is not approval to merge on titles. The remaining 2,086 native
+references are not approved additions until global identity/scope review.
+
+Conservative historical pictorial screening produced 1,622 eligible notices
+and 1,878 holds. Holds retain qualified dates, multiple periods, component/album
+identities, deposit/ownership/conservation distinctions, missing facts and
+other source conflicts. Within that conservative subset, 983 references already
+exist and 639 are potential new works. Those 639 have not been inserted and
+must be reconciled against the 94 other existing Rouen works and each other.
+The source itself has repeated inventories, attribution variants and cases
+where different objects share an inventory string. No lifespan-derived artwork
+dates, invented modern museum ownership or current display claims were added.
+
+Image preparation was limited to exact existing source-linked gaps whose
+current title/inventory/conservation notices passed the selected checks. Of
+650 candidate works, one title/accession discrepancy was held, leaving 649.
+There are 731 usable prepared views for 648 of those works; one has no usable
+downloaded view. Every one of the 731 views was actually inspected on labelled
+contact sheets, with decisions bound to exact image and contact-sheet SHA256.
+The review selected 611 distinct existing artworks with one approved primary
+candidate each. Thirty-seven prepared objects have no approved primary; the
+remaining selected object has no usable downloaded view.
+
+The other reviewed views include backs, inscriptions, close details, a gallery
+diagram, a reverse sketch, a painted verso, full alternative views, and held
+images with reflection, blur, coverings, poor contrast or identity conflicts.
+A back/detail/second photograph is not another artwork. A carrier containing
+six studies remains one existing object. Source framing, proportions, supplied
+condition, margins and orientation were retained; no cropping, retouching,
+generative replacement or invented colour reconstruction was performed.
+
+Three subject-identity holds are explicit. The clearest conflicts are a notice
+for Jeanne Mulot breastfeeding her child that publishes an older male cleric,
+and a Hode tugboat title that publishes a seated café figure with cards and
+bottles. An armoured-figure photograph also fails to securely establish its
+named theatrical portrait. No held image was attached and no object metadata
+was rewritten to fit a photograph. These source defects are separate from the
+earlier database painting-only visibility restriction.
+
+All 611 approved primary candidates are pinned in the delivery preparation
+bundle, with source pages, source photographs, credits, actual visual-review
+decisions, bytes and checksums. No new image has been uploaded. Largest prepared
+derivative: 99,932 bytes. Originals, derivatives, contact sheets and raw source
+bodies stay outside Documents. Combined operation source/image metadata used
+453,038,184 bytes at the review checkpoint, below the 1 GiB cap; free space was
+24,436,584,448 bytes, above the 15 GiB reserve. Etalab metadata licensing is not
+treated as an image licence. Published photographic credits and unknown image
+rights remain distinct from the user's reproduction authorization.
+
+Creator research uses the source's actual author and author-precision wording.
+Among currently unlinked existing works, 167 initial exact-name candidates were
+reviewed against current notices and existing profile lifespans. There are 112
+remaining authority candidates and 55 holds for qualification, changed wording
+or chronology conflicts. One concrete rejected match is Jean Restout the father
+(1663–1702) against the existing son's profile (1692–1768). A fuller-name survey
+also finds 66 source labels with possible existing profile/alias subsets, such
+as Charles Albert Lebourg versus Albert Lebourg. Subset matches are not person
+identity proof. There are 638 distinct non-anonymous unlinked source labels
+still requiring authority/name-variant review. No artist profile or creator
+connection has been created by this preparation; anonymous makers stay unknown.
+
+Global artwork deduplication has an initial bounded authority export of
+1,036,448 external identifier rows and 94,768 research links. Its 250 small
+duplicate-key groups cover 1,238 active work candidates; 12 larger groups are
+separate generic-source leads. Many shared URLs identify collection pages,
+artist pages or whole catalogues and therefore cannot identify one physical
+work. Five stronger same-object candidates include the Leventis Daughters of
+God and four Basel objects. The Leventis primary page confirms AGLG531, the
+maker and1933–1936 range. Basel's source access hold is preserved: no fresh
+request was made there. All pairs still need complete current production
+references, evidence and canonical selection before any artwork merge.
+
+Further shared-image and museum/accession/title SQL surveys were blocked by
+expired cloud authentication before completion. Their partial research indexes
+must not be represented as complete results. No physical artwork has yet been
+merged by this operation. Existing print impressions, versions, casts, recto/
+verso faces, composite objects and qualified makers remain distinct or held.
+
+Code is prepared to resolve explicitly reconciled archived artwork UUIDs through
+the existing artwork slug_redirects relation. It detects cycles and bounds
+chains; unmapped archives remain unavailable. Artist and museum membership,
+atlas holding/selection and creator visibility checks still apply to the active
+canonical record. Catalog, HTTP API and atlas package tests passed in the clean
+release worktree using the matching Go1.26.9 toolchain. The new production
+read-only redirect test cannot run until owner authentication is renewed.
+This further code has not been deployed; it must pass that check before the
+new physical-artwork merge delivery.
+
+Exhibition discovery paginated all 11,982 public events across 120 service-origin
+API responses. The observed total stayed11,982 throughout; this remains an
+observational API inventory, not a repeatable-read SQL snapshot. It yielded52
+exact normalized-title/date groups and246 same-title/year leads. Eighty-five
+stronger or same-venue candidates received full public detail captures. Fifty-
+one current APJ/Cleveland primary pages/API records were pinned, together with
+the complete official MoMA GitHub CSV export (34,558 participant/source rows).
+MoMA's website access hold was preserved; the official public export is its
+independently published source, not a challenge bypass.
+
+Source preparation identifies nine stronger event groups representing eleven
+potential redundant rows, including five duplicate APJ index pairs, three
+separate-stop representations of an already consolidated EI-Q tour, and three
+Cleveland pairs. Canonical choices remain provisional until current complete
+production preimages and host identity checks. Some second-index Japanese
+participant lists are subsets, not complete identical checklists. All native
+source IDs, contributors, occurrences and catalogue sections must survive.
+
+Distinct numbered MoMA installations, different-date rotations, generic French
+salons in different cities, cross-provider date conflicts and concurrent
+multi-venue/section identities are retained or held. The repeated unnumbered
+Blanchette Rockefeller Gallery citation lacks enough source identity evidence
+for automatic collapse. No exhibition has yet been merged. Complete SQL child/
+reference inventory, explicit old-UUID resolution and transaction-bound audits
+are required before that delivery.
+
+Continuation requires the user to run:
+
+    gcloud auth login vadim@alingva.com
+
+After the user confirms sign-in, resume with fresh production reads, not cached
+secrets or alternate accounts. Reconcile the four next museum identities first;
+complete exact artwork identity/reference decisions and UUID preservation;
+then prepare locked image/creator/new-object plans against the resulting active
+canonical records. Upload only create-only checked assets, apply finite audited
+transactions and independently verify database rows, search documents, public
+serving routes and image bytes. Finish the exhibition source/section/tour
+reconciliation with the same controls. Never replay the seven completed museum
+merges or earlier research deliveries.
+
+No real local catalogue connection, new agent/job/supervisor/schedule, background
+or debug restart, Translation use, unrelated cloud service or infrastructure
+change was made. User-authorized commits/pushes/deployment are separate from
+the earlier programme prohibition; all source/provider/robots/account/challenge
+holds and existing ingestion locks remain in force. SESSION_CHECKPOINT.json,
+the verified transaction receipts, per-image decisions and pinned preparation
+bundle provide the exact next state. The global deduplication and Rouen image/
+creator/new-artwork delivery must not be reported as complete.

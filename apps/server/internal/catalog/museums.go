@@ -717,6 +717,10 @@ func (r *Repository) MuseumArtwork(ctx context.Context, slug, id string) (Museum
 	if err := parsedID.Scan(id); err != nil || !parsedID.Valid {
 		return out, ErrNotFound
 	}
+	id, err = r.CanonicalArtworkID(ctx, id)
+	if err != nil {
+		return out, err
+	}
 	var data []byte
 	query := museumArtworkSQL(museumArtworkScopedCTE)
 	err = r.db.QueryRow(ctx, query, museumQueryArgs(slug, id)...).Scan(&data)

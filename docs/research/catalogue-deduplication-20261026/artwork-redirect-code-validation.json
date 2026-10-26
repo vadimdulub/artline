@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-26T23:12:18.660896+00:00",
+  "unit_packages_passed": [
+    "catalog",
+    "httpapi",
+    "atlas"
+  ],
+  "command": [
+    "/Users/vadimdulub/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.9.darwin-arm64/bin/go",
+    "test",
+    "./internal/catalog",
+    "./internal/httpapi",
+    "./internal/atlas"
+  ],
+  "log": "/Users/vadimdulub/Library/Application Support/Artline/releases/catalogue-all-media-20261026/artwork-redirect-unit-tests.log",
+  "log_sha256": "8f02586bfc75de065b50f22b9e18a33094395a1a54e92379dadc8bcff6d47228",
+  "source_sha256": {
+    "apps/server/internal/catalog/artwork_identity.go": "52f2d038c3e42621b89b5d13650e80453ff6a718b179c91a82c50f2d775ff6ab",
+    "apps/server/internal/catalog/artwork_identity_test.go": "ac614f90eb0824a541602a3455b7b643a7fe8e1b94cc819266aa76cd8153f96f",
+    "apps/server/internal/catalog/atlas_artwork.go": "886e8d47d6f68704e26215ee8586b4178846dcca011beb9169e78924950406b1",
+    "apps/server/internal/catalog/artist_chronology.go": "07f2d5572cb06b0b8230cd07d89c2ad5fd97a1d52525aa1e0a5d1ac86860525c",
+    "apps/server/internal/catalog/museums.go": "d265cc9f679fab7fb073fa7183c29dd4ecd0ca68cb81aac57d333daabe9b95e8",
+    "apps/server/internal/httpapi/atlas.go": "1641f762b18b91e46e7f3d404899f3756411ef41da0b91e01274367eb6aabbd9"
+  },
+  "production_readonly_test": "pending user Google Cloud reauthentication",
+  "catalogue_connections_in_this_check": 0,
+  "deployed": false
+}

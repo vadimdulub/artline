@@ -232,6 +232,10 @@ func (r *Repository) ArtistArtwork(ctx context.Context, slug, workID string) (Ar
 	if err != nil {
 		return work, err
 	}
+	workID, err = r.CanonicalArtworkID(ctx, workID)
+	if err != nil {
+		return work, err
+	}
 	var data []byte
 	// Resolve a single work by its UUID primary key, not by casting the column.
 	err = r.db.QueryRow(ctx, `SELECT to_jsonb(aw)||jsonb_build_object('attribution_role',aa.attribution_role,'representative_order',aa.representative_order)

@@ -147,18 +147,20 @@ func (api *API) atlasArtwork(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := contextWithTimeout(r, 8*time.Second)
 	defer cancel()
-	visible, err := api.atlasRepo.ArtworkVisible(ctx, id)
+	out, err := api.repo.AtlasArtwork(ctx, id)
+	if err != nil {
+		api.atlasError(w, err)
+		return
+	}
+	// Reconciled UUIDs resolve first; the canonical work must independently
+	// satisfy the same holding/selection and creator visibility policy.
+	visible, err := api.atlasRepo.ArtworkVisible(ctx, out.ID)
 	if err != nil {
 		api.atlasError(w, err)
 		return
 	}
 	if !visible {
 		api.atlasError(w, atlas.ErrNotFound)
-		return
-	}
-	out, err := api.repo.AtlasArtwork(ctx, id)
-	if err != nil {
-		api.atlasError(w, err)
 		return
 	}
 	writeJSON(w, 200, out)

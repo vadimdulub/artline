@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-26T23:08:51.549736+00:00",
+  "state": "source_prepared_no_production_changes",
+  "pairs": [
+    {
+      "alias_id": "0079fa99-3892-5cdc-ac8b-31c5e73cf04f",
+      "canonical_id": "c2bd9dbb-6e44-544f-9a86-e801b9a0dd0a",
+      "name": "MARCA, Catanzaro",
+      "source_url": "https://luoghidelcontemporaneo.cultura.gov.it/esplora/marca-museo-delle-arti-catanzaro/",
+      "native_identity": "MARCA; Via Alessandro Turco63; Catanzaro",
+      "basis": "Primary Ministry museum entry confirms the collection/name/address; final current reference preflight remains."
+    },
+    {
+      "alias_id": "728af7dc-e0a9-5e88-85de-167fca5e365a",
+      "canonical_id": "5340de81-f236-54f8-892e-22b634e9224a",
+      "name": "Palazzo Reale, Genova",
+      "source_url": "https://www.museidigenova.it/it/archivio-storico-e-fototeca-museo-palazzo-reale",
+      "basis": "Municipal museum page identifies the palace museum and its collections/archive; final source-native collection/venue distinction and current references require review."
+    },
+    {
+      "alias_id": "04d83033-74d2-5f77-9903-77106d19cfa6",
+      "canonical_id": "07cb6c21-c9e5-4f85-a5be-b75f26cab52a",
+      "name": "Musée des Beaux-Arts de Rennes",
+      "source_url": "https://pop.culture.gouv.fr/notice/museo/M0211",
+      "native_identity": "M0211; Rennes;20quaiEmileZola",
+      "basis": "Fresh Ministry authority notice identifies the named institution. Current child/reference preflight remains."
+    },
+    {
+      "alias_id": "ccd14b44-19d8-50a1-b973-b4d1f084a672",
+      "canonical_id": "643bb7f2-4136-4027-ad02-bad14d07cad3",
+      "name": "Musée des Beaux-Arts d Orléans",
+      "source_url": "https://pop.culture.gouv.fr/notice/museo/M0286",
+      "native_identity": "M0286; Orléans;placeSainteCroix",
+      "basis": "Fresh Ministry authority explicitly names the alias. Current child/reference preflight remains."
+    }
+  ],
+  "all_merges_require_new_operation_ids_fresh_pinned_preimages_and_atomic_audits": true,
+  "completed_operations_not_replayed": true
+}
