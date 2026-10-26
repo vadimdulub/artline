@@ -37,9 +37,9 @@ var artworkSearchTrigram = regexp.MustCompile(`[\pL\pN]{3}`)
 
 var artworkDirectoryUUID = regexp.MustCompile(`^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$`)
 
-// Painting browsing includes undated, unassigned and unillustrated records.
+// Catalogue browsing includes all media, undated, unassigned and unillustrated records.
 // Historical editorial status does not change visibility or date eligibility.
-const artworkDirectoryWhere = ` FROM artworks aw WHERE aw.status<>'archived' AND aw.work_type='painting'
+const artworkDirectoryWhere = ` FROM artworks aw WHERE aw.status<>'archived'
   AND ($1='' OR aw.title ILIKE '%'||$1||'%')
  AND (NOT $2 OR (aw.creation_year_start IS NULL AND aw.creation_year_end IS NULL))
  AND (NOT $3 OR (aw.primary_media_id IS NOT NULL AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=aw.primary_media_id
@@ -70,7 +70,6 @@ var artworkDirectorySearchPageSQL = strings.Replace(artworkDirectoryPageSQL,
  page AS MATERIALIZED (SELECT aw.id,aw.normalized_title FROM matching aw WHERE TRUE`, 1)
 
 const artworkSearchDocumentWhere = ` FROM artwork_search_documents aw WHERE aw.status<>'archived'
- AND EXISTS(SELECT 1 FROM artworks typed WHERE typed.id=aw.id AND typed.work_type='painting')
  AND ($1='' OR aw.title ILIKE '%'||$1||'%') AND (NOT $2 OR aw.undated) AND (NOT $3 OR (aw.primary_media_id IS NOT NULL AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=aw.primary_media_id
  AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$')))`
 
@@ -88,7 +87,7 @@ func (r *Repository) BrowseArtworks(ctx context.Context, f ArtworkDirectoryFilte
 	}
 	scopeFilter := f
 	scopeFilter.Cursor = ""
-	raw, _ := json.Marshal([]any{"paintings-v1", scopeFilter})
+	raw, _ := json.Marshal([]any{"all-artworks-v2", scopeFilter})
 	scope := fmt.Sprintf("%x", sha256.Sum256(raw))[:24]
 	c := artworkDirectoryCursor{ID: "00000000-0000-0000-0000-000000000000"}
 	if f.Cursor != "" {
@@ -104,19 +103,33 @@ func (r *Repository) BrowseArtworks(ctx context.Context, f ArtworkDirectoryFilte
 			return out, err
 		}
 	}
-	// Legacy directory totals combine media. Cache the exact painting count
+	// Directory counts include all media. Cache the exact filtered count
 	// against transactional catalogue revisions, independent of page/cursor.
 	countFilter := f
 	countFilter.Cursor, countFilter.Limit = "", 0
 	countScope, _ := json.Marshal(countFilter)
-	countKey := facetCacheKey(ctx, "artwork-directory-paintings:"+string(countScope))
+	countKey := facetCacheKey(ctx, "artwork-directory-all:"+string(countScope))
 	if !r.facets.get(countKey, &out.Total) {
-		where := artworkDirectoryWhere
-		if searchTable != nil {
-			where = artworkSearchDocumentWhere
+		var totalsTable *string
+		if f.Query == "" && !f.ImageOnly {
+			if err := r.db.QueryRow(ctx, "SELECT to_regclass('artwork_directory_totals')::text").Scan(&totalsTable); err != nil {
+				return out, err
+			}
 		}
-		if err := r.db.QueryRow(ctx, "SELECT count(*)"+where, museumQueryArgs(args...)...).Scan(&out.Total); err != nil {
-			return out, err
+		if totalsTable != nil {
+			// These transactional totals already include every artwork medium.
+			if err := r.db.QueryRow(ctx, `SELECT coalesce(sum(total),0) FROM artwork_directory_totals
+ WHERE status<>'archived' AND (NOT $1 OR undated)`, museumQueryArgs(f.Undated)...).Scan(&out.Total); err != nil {
+				return out, err
+			}
+		} else {
+			where := artworkDirectoryWhere
+			if searchTable != nil {
+				where = artworkSearchDocumentWhere
+			}
+			if err := r.db.QueryRow(ctx, "SELECT count(*)"+where, museumQueryArgs(args...)...).Scan(&out.Total); err != nil {
+				return out, err
+			}
 		}
 		r.facets.put(countKey, out.Total)
 	}

@@ -30,10 +30,13 @@ describe("All filter discovery", () => {
 });
 
 describe("Add retains the current discovery scope", () => {
-  it("keeps the artwork lane on illustrated paintings even for legacy photo URLs", () => {
+  it("honors artwork media filters while retaining illustrated eligibility", () => {
     const filters = readEntityFilters("artwork", new URLSearchParams("artwork_work_type=photograph&artwork_image_only=false"));
-    expect(filters.getAll("work_type")).toEqual(["painting"]);
+    expect(filters.getAll("work_type")).toEqual(["photograph"]);
     expect(filters.get("image_only")).toBe("true");
+  });
+  it("includes every artwork medium when no media filter was selected", () => {
+    expect(readEntityFilters("artwork", new URLSearchParams()).has("work_type")).toBe(false);
   });
   for (const type of allAtlasKinds) {
     const top = type === "artwork" ? "popular" : "top100";

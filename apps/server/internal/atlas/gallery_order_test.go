@@ -6,6 +6,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"slices"
 	"strings"
 	"testing"
 )
@@ -35,10 +36,10 @@ func TestGalleryCursor(t *testing.T) {
 			t.Fatal("internal gallery priority leaked into public artwork metadata")
 		}
 	}
-	// Both unversioned and medium-first cursors must be rejected, rather than
-	// skip or repeat records after changing the gallery order.
+	// Reject cursors from older ordering and painting-only scopes after
+	// restoring all media, so pagination cannot skip newly visible records.
 	legacy := []any{f.Range, "", f.Types, false, "", f.Limit, "artwork", false, map[string][]string{}, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, "", presetFocus("")}
-	for _, values := range [][]any{legacy, append(legacy, "painted-first-v1")} {
+	for _, values := range [][]any{legacy, append(slices.Clone(legacy), "painted-first-v1"), append(slices.Clone(legacy), "creation-first-v2")} {
 		raw, _ := json.Marshal(values)
 		old := cursor{Year: 1600, ID: "00000000-0000-0000-0000-000000000001", Scope: fmt.Sprintf("%x", sha256.Sum256(raw))[:24]}
 		raw, _ = json.Marshal(old)

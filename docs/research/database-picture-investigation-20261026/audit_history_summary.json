@@ -1,0 +1,372 @@
+{
+  "at": "2026-10-26T19:13:00.774621+00:00",
+  "read_only": true,
+  "sql": "SELECT entity_type,action,count(*) operations,min(created_at) first_at,max(created_at) last_at FROM audit_log WHERE entity_type IN('artwork','media_asset','media_assets','artwork_media','institution') GROUP BY entity_type,action ORDER BY entity_type,action",
+  "seconds": 21.241,
+  "rows": [
+    {
+      "entity_type": "artwork",
+      "action": "artist_expansion_duplicate_reconciliation",
+      "operations": 2,
+      "first_at": "2026-10-10 21:27:15.309527+00:00",
+      "last_at": "2026-10-10 21:27:15.309527+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "canonical_creator_link",
+      "operations": 2,
+      "first_at": "2026-10-25 22:26:54.830977+00:00",
+      "last_at": "2026-10-25 22:26:54.830977+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "catalogue_alignment_added",
+      "operations": 412,
+      "first_at": "2026-10-08 12:47:51.396162+00:00",
+      "last_at": "2026-10-08 12:59:32.704058+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "cesi_top100_enrichment",
+      "operations": 1708,
+      "first_at": "2026-10-10 18:12:25.965524+00:00",
+      "last_at": "2026-10-10 18:39:29.031592+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_artwork_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 11:13:30.189908+00:00",
+      "last_at": "2026-10-13 11:13:30.189908+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch101_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 21:00:30.204483+00:00",
+      "last_at": "2026-10-13 21:00:30.204483+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch102_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 21:10:53.337826+00:00",
+      "last_at": "2026-10-13 21:10:53.337826+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch126_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-14 05:53:21.629753+00:00",
+      "last_at": "2026-10-14 05:53:21.629753+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch74_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 18:40:25.776700+00:00",
+      "last_at": "2026-10-13 18:40:25.776700+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch78_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 19:05:15.312135+00:00",
+      "last_at": "2026-10-13 19:05:15.312135+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch82_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 19:26:10.844227+00:00",
+      "last_at": "2026-10-13 19:26:10.844227+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch86_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 19:47:30.489855+00:00",
+      "last_at": "2026-10-13 19:47:30.489855+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_batch98_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-13 20:42:22.662680+00:00",
+      "last_at": "2026-10-13 20:42:22.662680+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_exact_link",
+      "operations": 3,
+      "first_at": "2026-10-13 14:02:07.655105+00:00",
+      "last_at": "2026-10-13 22:04:20.141773+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_exact_object_reconciliation",
+      "operations": 7,
+      "first_at": "2026-10-15 12:46:56.135251+00:00",
+      "last_at": "2026-10-17 08:19:24.927027+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_native_reconcile",
+      "operations": 1,
+      "first_at": "2026-10-13 17:13:03.339582+00:00",
+      "last_at": "2026-10-13 17:13:03.339582+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "continuous_exhibition_object_insert",
+      "operations": 8,
+      "first_at": "2026-10-13 15:32:40.690481+00:00",
+      "last_at": "2026-10-13 15:32:40.690481+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "cyprus_artwork_added",
+      "operations": 76,
+      "first_at": "2026-10-10 19:48:38.220110+00:00",
+      "last_at": "2026-10-10 19:54:48.575710+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "cyprus_image_added",
+      "operations": 35,
+      "first_at": "2026-10-10 19:48:38.220110+00:00",
+      "last_at": "2026-10-10 19:54:48.575710+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "cyprus_source_added",
+      "operations": 7,
+      "first_at": "2026-10-10 19:54:48.575710+00:00",
+      "last_at": "2026-10-10 19:54:48.575710+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "cyprus_source_only_clarification",
+      "operations": 3,
+      "first_at": "2026-10-10 19:57:15.875764+00:00",
+      "last_at": "2026-10-10 19:57:15.875764+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "delete",
+      "operations": 546,
+      "first_at": "2026-10-12 07:40:32.173489+00:00",
+      "last_at": "2026-10-12 07:40:32.173489+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "fragonard_illustrated_survey",
+      "operations": 19,
+      "first_at": "2026-10-11 18:34:21.792001+00:00",
+      "last_at": "2026-10-11 18:46:33.827969+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "illustrated_image_quality_hold",
+      "operations": 2,
+      "first_at": "2026-10-11 12:55:15.815518+00:00",
+      "last_at": "2026-10-11 12:55:15.815518+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "insert",
+      "operations": 1048004,
+      "first_at": "2026-09-07 20:36:08.648699+00:00",
+      "last_at": "2026-10-26 19:10:47.058537+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "leventis_artwork_added",
+      "operations": 64,
+      "first_at": "2026-10-08 15:47:24.569525+00:00",
+      "last_at": "2026-10-08 15:47:24.569525+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "leventis_artwork_enriched",
+      "operations": 96,
+      "first_at": "2026-10-08 15:47:24.569525+00:00",
+      "last_at": "2026-10-08 15:47:24.569525+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "new_object_identity_correction",
+      "operations": 1,
+      "first_at": "2026-10-09 08:53:14.543830+00:00",
+      "last_at": "2026-10-09 08:53:14.543830+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "regional_catalogue_added",
+      "operations": 20,
+      "first_at": "2026-10-08 12:52:41.646664+00:00",
+      "last_at": "2026-10-08 12:52:41.646664+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "source_index_enrichment",
+      "operations": 1897,
+      "first_at": "2026-10-09 10:59:16.405564+00:00",
+      "last_at": "2026-10-10 14:01:07.485732+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "source_qualification_correction",
+      "operations": 1,
+      "first_at": "2026-10-09 08:23:59.765406+00:00",
+      "last_at": "2026-10-09 08:23:59.765406+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "update",
+      "operations": 996327,
+      "first_at": "2026-09-07 20:36:08.648699+00:00",
+      "last_at": "2026-10-26 14:43:19.098135+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "verified_image_attachment",
+      "operations": 201,
+      "first_at": "2026-10-25 22:02:10.677641+00:00",
+      "last_at": "2026-10-25 22:17:45.391578+00:00"
+    },
+    {
+      "entity_type": "artwork",
+      "action": "vyzantios_creator_link",
+      "operations": 1,
+      "first_at": "2026-10-10 19:47:20.762820+00:00",
+      "last_at": "2026-10-10 19:47:20.762820+00:00"
+    },
+    {
+      "entity_type": "artwork_media",
+      "action": "continuous_exhibition_insert",
+      "operations": 5,
+      "first_at": "2026-10-24 11:24:12.684757+00:00",
+      "last_at": "2026-10-24 13:40:59.002657+00:00"
+    },
+    {
+      "entity_type": "artwork_media",
+      "action": "insert",
+      "operations": 1861,
+      "first_at": "2026-10-06 18:33:18.025723+00:00",
+      "last_at": "2026-10-26 08:27:59.417259+00:00"
+    },
+    {
+      "entity_type": "artwork_media",
+      "action": "museum_exhibition_artwork_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-24 13:29:05.412049+00:00",
+      "last_at": "2026-10-24 13:29:05.412049+00:00"
+    },
+    {
+      "entity_type": "artwork_media",
+      "action": "museum_exhibition_image_insert",
+      "operations": 2,
+      "first_at": "2026-10-25 13:04:07.575482+00:00",
+      "last_at": "2026-10-25 13:04:07.575482+00:00"
+    },
+    {
+      "entity_type": "artwork_media",
+      "action": "museum_wave4_image_insert",
+      "operations": 520,
+      "first_at": "2026-10-25 17:57:20.063672+00:00",
+      "last_at": "2026-10-26 14:43:19.098135+00:00"
+    },
+    {
+      "entity_type": "artwork_media",
+      "action": "smk_gap_image_insert",
+      "operations": 183,
+      "first_at": "2026-10-26 14:36:47.158178+00:00",
+      "last_at": "2026-10-26 14:37:23.472040+00:00"
+    },
+    {
+      "entity_type": "institution",
+      "action": "insert",
+      "operations": 278,
+      "first_at": "2026-10-06 18:28:11.672051+00:00",
+      "last_at": "2026-10-25 13:27:49.851692+00:00"
+    },
+    {
+      "entity_type": "institution",
+      "action": "regional_catalogue_added",
+      "operations": 2,
+      "first_at": "2026-10-08 12:52:41.646664+00:00",
+      "last_at": "2026-10-08 12:52:41.646664+00:00"
+    },
+    {
+      "entity_type": "institution",
+      "action": "update",
+      "operations": 32,
+      "first_at": "2026-10-06 18:42:32.198500+00:00",
+      "last_at": "2026-10-08 17:30:39.324436+00:00"
+    },
+    {
+      "entity_type": "media_asset",
+      "action": "insert",
+      "operations": 1913,
+      "first_at": "2026-10-06 18:33:18.025723+00:00",
+      "last_at": "2026-10-13 19:31:05.418579+00:00"
+    },
+    {
+      "entity_type": "media_asset",
+      "action": "leventis_image_added",
+      "operations": 74,
+      "first_at": "2026-10-08 15:47:24.569525+00:00",
+      "last_at": "2026-10-08 15:47:24.569525+00:00"
+    },
+    {
+      "entity_type": "media_asset",
+      "action": "update",
+      "operations": 2,
+      "first_at": "2026-10-24 18:39:28.071628+00:00",
+      "last_at": "2026-10-24 18:39:28.071628+00:00"
+    },
+    {
+      "entity_type": "media_assets",
+      "action": "continuous_exhibition_insert",
+      "operations": 5,
+      "first_at": "2026-10-24 11:24:12.684757+00:00",
+      "last_at": "2026-10-24 13:40:59.002657+00:00"
+    },
+    {
+      "entity_type": "media_assets",
+      "action": "museum_exhibition_artwork_enrichment",
+      "operations": 1,
+      "first_at": "2026-10-24 13:29:05.412049+00:00",
+      "last_at": "2026-10-24 13:29:05.412049+00:00"
+    },
+    {
+      "entity_type": "media_assets",
+      "action": "museum_exhibition_image_insert",
+      "operations": 2,
+      "first_at": "2026-10-25 13:04:07.575482+00:00",
+      "last_at": "2026-10-25 13:04:07.575482+00:00"
+    },
+    {
+      "entity_type": "media_assets",
+      "action": "museum_wave4_image_insert",
+      "operations": 520,
+      "first_at": "2026-10-25 17:57:20.063672+00:00",
+      "last_at": "2026-10-26 14:43:19.098135+00:00"
+    },
+    {
+      "entity_type": "media_assets",
+      "action": "preserve_source_caption_qualification",
+      "operations": 2,
+      "first_at": "2026-10-14 08:32:01.406816+00:00",
+      "last_at": "2026-10-14 08:32:01.406816+00:00"
+    },
+    {
+      "entity_type": "media_assets",
+      "action": "smk_gap_image_insert",
+      "operations": 183,
+      "first_at": "2026-10-26 14:36:47.158178+00:00",
+      "last_at": "2026-10-26 14:37:23.472040+00:00"
+    }
+  ]
+}

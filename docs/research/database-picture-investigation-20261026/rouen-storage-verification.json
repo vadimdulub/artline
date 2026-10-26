@@ -1,0 +1,389 @@
+{
+  "at": "2026-10-26T19:16:20Z",
+  "method": "Authorized Cloud Storage object GET; bytes compared with stored DB size/SHA256, no object writes, no visual-review claim.",
+  "expected_objects": 38,
+  "checked": 38,
+  "passed": true,
+  "rows": [
+    {
+      "artwork_id": "e2d3e7db-3322-4acb-afd7-f1fe9fdba6d5",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q105430128-245bcba42b2610a5.jpg",
+      "status": 200,
+      "bytes": 71129,
+      "expected_bytes": 71129,
+      "sha256": "245bcba42b2610a5b6683afc7644e426bb0ddbd8acb605bd8d71f0884372a67d",
+      "expected_sha256": "245bcba42b2610a5b6683afc7644e426bb0ddbd8acb605bd8d71f0884372a67d",
+      "passed": true
+    },
+    {
+      "artwork_id": "7c1594cb-d8d5-405b-b164-259f0c5a7d0f",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q105430123-c484b7ae29ce23e0.jpg",
+      "status": 200,
+      "bytes": 98712,
+      "expected_bytes": 98712,
+      "sha256": "c484b7ae29ce23e0b4722ee761a1a21f5b9b49e34b15556f5854cded3526c89b",
+      "expected_sha256": "c484b7ae29ce23e0b4722ee761a1a21f5b9b49e34b15556f5854cded3526c89b",
+      "passed": true
+    },
+    {
+      "artwork_id": "ccdbf027-bbc3-5f2a-b1bf-3964ed04e6ee",
+      "storage_path": "/assets/artworks/wikiart/ccdbf027-bbc3-5f2a-b1bf-3964ed04e6ee-2b044cbcd5a86fa7.jpg",
+      "status": 200,
+      "bytes": 52832,
+      "expected_bytes": 52832,
+      "sha256": "2b044cbcd5a86fa70128fe09e49826330e313921734ef081a0f5f508c8a7cb34",
+      "expected_sha256": "2b044cbcd5a86fa70128fe09e49826330e313921734ef081a0f5f508c8a7cb34",
+      "passed": true
+    },
+    {
+      "artwork_id": "d1a31d47-c2a9-5284-a8e3-576242de7261",
+      "storage_path": "/assets/artworks/wikiart/d1a31d47-c2a9-5284-a8e3-576242de7261-a5e970a31f9b84ba.jpg",
+      "status": 200,
+      "bytes": 40526,
+      "expected_bytes": 40526,
+      "sha256": "a5e970a31f9b84bab19750f149774b4d27c52217ec4c16739a07c724f292b20a",
+      "expected_sha256": "a5e970a31f9b84bab19750f149774b4d27c52217ec4c16739a07c724f292b20a",
+      "passed": true
+    },
+    {
+      "artwork_id": "1c509544-352f-5eec-81fb-687dd22a7c28",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q27019850-473f3afd83eb021f.jpg",
+      "status": 200,
+      "bytes": 98144,
+      "expected_bytes": 98144,
+      "sha256": "473f3afd83eb021f39f5658e7b0ef932e07889cc919290f9a471ca679b32b619",
+      "expected_sha256": "473f3afd83eb021f39f5658e7b0ef932e07889cc919290f9a471ca679b32b619",
+      "passed": true
+    },
+    {
+      "artwork_id": "3ec00655-159f-47d3-8f7b-df8a6809901d",
+      "storage_path": "/assets/artworks/imported/havre-rouen-cyprus-20261006/3ec00655-159f-47d3-8f7b-df8a6809901d-4cd153bcca7996b4.jpg",
+      "status": 200,
+      "bytes": 46495,
+      "expected_bytes": 46495,
+      "sha256": "4cd153bcca7996b44fe657963aaffb4924cd1f6331a3640c6315372720973140",
+      "expected_sha256": "4cd153bcca7996b44fe657963aaffb4924cd1f6331a3640c6315372720973140",
+      "passed": true
+    },
+    {
+      "artwork_id": "95caedbe-ae5e-4be9-8fa0-d431d0238541",
+      "storage_path": "/assets/artworks/imported/production-wikiart-images-20261006/95caedbe-ae5e-4be9-8fa0-d431d0238541-97d7c3ac1fe81622.jpg",
+      "status": 200,
+      "bytes": 61853,
+      "expected_bytes": 61853,
+      "sha256": "97d7c3ac1fe8162205e00e31b026f16677a7f66ffdaf98ecac2a8a0e97e3167a",
+      "expected_sha256": "97d7c3ac1fe8162205e00e31b026f16677a7f66ffdaf98ecac2a8a0e97e3167a",
+      "passed": true
+    },
+    {
+      "artwork_id": "fb6151b0-40e9-4654-af34-8e02705a7d0e",
+      "storage_path": "/assets/artworks/imported/low-image-painters-100-wave2-20261026/fb6151b0-40e9-4654-af34-8e02705a7d0e-0-ad598ec0f2c323fd.jpg",
+      "status": 200,
+      "bytes": 94204,
+      "expected_bytes": 94204,
+      "sha256": "ad598ec0f2c323fd4fb6ba23b79da1694c5f2b88c0024abc4c9886932cd3a979",
+      "expected_sha256": "ad598ec0f2c323fd4fb6ba23b79da1694c5f2b88c0024abc4c9886932cd3a979",
+      "passed": true
+    },
+    {
+      "artwork_id": "06aa13c7-16e4-5722-a3ff-1d8d320b98bc",
+      "storage_path": "/assets/artworks/imported/random-200-painters-round2-20261006/06aa13c7-16e4-5722-a3ff-1d8d320b98bc-6682ae0709ec20fb.jpg",
+      "status": 200,
+      "bytes": 91360,
+      "expected_bytes": 91360,
+      "sha256": "6682ae0709ec20fbe51b6a2f93c2f6a297e9b4a755dfdc75f7eab29457a66dc7",
+      "expected_sha256": "6682ae0709ec20fbe51b6a2f93c2f6a297e9b4a755dfdc75f7eab29457a66dc7",
+      "passed": true
+    },
+    {
+      "artwork_id": "3eed8017-1d81-4dee-ba97-1862d779d08c",
+      "storage_path": "/assets/artworks/imported/havre-rouen-cyprus-20261006/3eed8017-1d81-4dee-ba97-1862d779d08c-f9f16d9042034fb1.jpg",
+      "status": 200,
+      "bytes": 36220,
+      "expected_bytes": 36220,
+      "sha256": "f9f16d9042034fb1ad16c73e3cd5cc2c313c7220ea7b4f70eaaf4134e3795740",
+      "expected_sha256": "f9f16d9042034fb1ad16c73e3cd5cc2c313c7220ea7b4f70eaaf4134e3795740",
+      "passed": true
+    },
+    {
+      "artwork_id": "8da339ce-081d-415f-a773-c4c42516a8a2",
+      "storage_path": "/assets/artworks/imported/low-image-painters-100-20261026/8da339ce-081d-415f-a773-c4c42516a8a2-0-52efcbf1f64cac40.jpg",
+      "status": 200,
+      "bytes": 57907,
+      "expected_bytes": 57907,
+      "sha256": "52efcbf1f64cac40991e7841ffc46ad6f3c92f050a3afea733af1b7f380b752a",
+      "expected_sha256": "52efcbf1f64cac40991e7841ffc46ad6f3c92f050a3afea733af1b7f380b752a",
+      "passed": true
+    },
+    {
+      "artwork_id": "a6172ef0-3599-4053-89c6-d78bf0155e81",
+      "storage_path": "/assets/artworks/imported/havre-rouen-cyprus-20261006/a6172ef0-3599-4053-89c6-d78bf0155e81-ab5db49b595c81b2.jpg",
+      "status": 200,
+      "bytes": 84449,
+      "expected_bytes": 84449,
+      "sha256": "ab5db49b595c81b24e54ed85779eded3a400d1bf84f13848866034e899f83fac",
+      "expected_sha256": "ab5db49b595c81b24e54ed85779eded3a400d1bf84f13848866034e899f83fac",
+      "passed": true
+    },
+    {
+      "artwork_id": "69183e90-c69a-4021-8213-8e43a5d84e39",
+      "storage_path": "/assets/artworks/imported/wikipedia-painter-by-painter-20260914/69183e90-c69a-4021-8213-8e43a5d84e39-2c44e61f96e0d806.jpg",
+      "status": 200,
+      "bytes": 15744,
+      "expected_bytes": 15744,
+      "sha256": "2c44e61f96e0d806d4f1974f493ba068d923d68e8ec78649e8132fac1fe4a994",
+      "expected_sha256": "2c44e61f96e0d806d4f1974f493ba068d923d68e8ec78649e8132fac1fe4a994",
+      "passed": true
+    },
+    {
+      "artwork_id": "fcdcc3c5-5f6f-4596-bdaf-bf3dcf41ce80",
+      "storage_path": "/assets/artworks/imported/wikipedia-painter-by-painter-20260914/fcdcc3c5-5f6f-4596-bdaf-bf3dcf41ce80-012d4c484ba5b030.jpg",
+      "status": 200,
+      "bytes": 90709,
+      "expected_bytes": 90709,
+      "sha256": "012d4c484ba5b030280d80e6ea12cf7304fc4fa56772f5e4d02d3f67700bf99f",
+      "expected_sha256": "012d4c484ba5b030280d80e6ea12cf7304fc4fa56772f5e4d02d3f67700bf99f",
+      "passed": true
+    },
+    {
+      "artwork_id": "9acd5b9a-078c-5f86-889f-0c44339b85e8",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q105444118-a8e536e8a0a664f0.jpg",
+      "status": 200,
+      "bytes": 85225,
+      "expected_bytes": 85225,
+      "sha256": "a8e536e8a0a664f085e5189efccf3ec670d0b9a1051bdcb4e0da3f9d9013a541",
+      "expected_sha256": "a8e536e8a0a664f085e5189efccf3ec670d0b9a1051bdcb4e0da3f9d9013a541",
+      "passed": true
+    },
+    {
+      "artwork_id": "979bfc83-449d-4c2d-a3d5-5af94353e4c8",
+      "storage_path": "/assets/artworks/imported/low-image-painters-100-20261026/979bfc83-449d-4c2d-a3d5-5af94353e4c8-0-e66af3a4cb58fd0b.jpg",
+      "status": 200,
+      "bytes": 41557,
+      "expected_bytes": 41557,
+      "sha256": "e66af3a4cb58fd0bc7561acbb3696912839ad4dbaab1eb0f333a8f03bf2420ee",
+      "expected_sha256": "e66af3a4cb58fd0bc7561acbb3696912839ad4dbaab1eb0f333a8f03bf2420ee",
+      "passed": true
+    },
+    {
+      "artwork_id": "d9739d43-91c7-4670-b37a-85afe5e4db4d",
+      "storage_path": "/assets/artworks/imported/wikipedia-painter-by-painter-20260914/d9739d43-91c7-4670-b37a-85afe5e4db4d-ee3693905eb61bb2.jpg",
+      "status": 200,
+      "bytes": 93126,
+      "expected_bytes": 93126,
+      "sha256": "ee3693905eb61bb2344b32492f432ade8411b7d2df12ab5d20bff41a53958472",
+      "expected_sha256": "ee3693905eb61bb2344b32492f432ade8411b7d2df12ab5d20bff41a53958472",
+      "passed": true
+    },
+    {
+      "artwork_id": "0c58d8b2-5bcd-5641-9599-1f384a23509a",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q105444117-74526957d85a5acd.jpg",
+      "status": 200,
+      "bytes": 98637,
+      "expected_bytes": 98637,
+      "sha256": "74526957d85a5acd558230cf8b864aaf6301d58b82fe74b928af2fc9fecda2df",
+      "expected_sha256": "74526957d85a5acd558230cf8b864aaf6301d58b82fe74b928af2fc9fecda2df",
+      "passed": true
+    },
+    {
+      "artwork_id": "335f9640-7d32-45e7-a81b-83bb9246baa1",
+      "storage_path": "/assets/artworks/imported/wikipedia-painter-by-painter-20260914/335f9640-7d32-45e7-a81b-83bb9246baa1-0a7024c634c44d03.jpg",
+      "status": 200,
+      "bytes": 94230,
+      "expected_bytes": 94230,
+      "sha256": "0a7024c634c44d03496b31a6b97bcd762de25b83ddd1e979173572d99fef7f6c",
+      "expected_sha256": "0a7024c634c44d03496b31a6b97bcd762de25b83ddd1e979173572d99fef7f6c",
+      "passed": true
+    },
+    {
+      "artwork_id": "a1954e68-b6b1-43d2-bbb1-823c525045f5",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q105444114-29866d0e07a14597.jpg",
+      "status": 200,
+      "bytes": 91806,
+      "expected_bytes": 91806,
+      "sha256": "29866d0e07a14597b70b2f1ee24261239cd5d2c0a430229167b37bf57a86b5f0",
+      "expected_sha256": "29866d0e07a14597b70b2f1ee24261239cd5d2c0a430229167b37bf57a86b5f0",
+      "passed": true
+    },
+    {
+      "artwork_id": "078f70f2-eabf-4d26-afab-cea99ef27157",
+      "storage_path": "/assets/artworks/imported/wikipedia-painter-by-painter-20260914/078f70f2-eabf-4d26-afab-cea99ef27157-71e12c48e9065345.jpg",
+      "status": 200,
+      "bytes": 92178,
+      "expected_bytes": 92178,
+      "sha256": "71e12c48e90653457f53306ad7cbc3abd6a0010f882615a46a3aa7a80ceaa30a",
+      "expected_sha256": "71e12c48e90653457f53306ad7cbc3abd6a0010f882615a46a3aa7a80ceaa30a",
+      "passed": true
+    },
+    {
+      "artwork_id": "b5675697-0139-513f-9d5b-0861a8d3a83a",
+      "storage_path": "/assets/artworks/imported/cesi-top100-20261010/b5675697-0139-513f-9d5b-0861a8d3a83a-405bc2ff255e5762.jpg",
+      "status": 200,
+      "bytes": 24287,
+      "expected_bytes": 24287,
+      "sha256": "405bc2ff255e57626e90672d8742a7248490ca6f4e6388d870cba8e0cbe2f443",
+      "expected_sha256": "405bc2ff255e57626e90672d8742a7248490ca6f4e6388d870cba8e0cbe2f443",
+      "passed": true
+    },
+    {
+      "artwork_id": "945f8d65-729f-4ee6-af3c-3b44e740d78a",
+      "storage_path": "/assets/artworks/imported/low-image-painters-100-wave2-20261026/945f8d65-729f-4ee6-af3c-3b44e740d78a-0-b48c5931509cf30f.jpg",
+      "status": 200,
+      "bytes": 58398,
+      "expected_bytes": 58398,
+      "sha256": "b48c5931509cf30f85870bf142b861ee9da392fa39e6fb888d455abcbce2ab0f",
+      "expected_sha256": "b48c5931509cf30f85870bf142b861ee9da392fa39e6fb888d455abcbce2ab0f",
+      "passed": true
+    },
+    {
+      "artwork_id": "b1e924e5-5d90-599b-aeca-fcfd713c0636",
+      "storage_path": "/assets/artworks/open-museums/night-commons/b1e924e5-5d90-599b-aeca-fcfd713c0636-a2037d021f058cdc.jpg",
+      "status": 200,
+      "bytes": 97459,
+      "expected_bytes": 97459,
+      "sha256": "a2037d021f058cdc898311adac4f1abea45ecdd8704ee6cbdd22b4c58b74f48b",
+      "expected_sha256": "a2037d021f058cdc898311adac4f1abea45ecdd8704ee6cbdd22b4c58b74f48b",
+      "passed": true
+    },
+    {
+      "artwork_id": "b068a917-7145-4c0f-846e-61adbabc1611",
+      "storage_path": "/assets/artworks/imported/low-image-painters-100-wave2-20261026/b068a917-7145-4c0f-846e-61adbabc1611-0-ae8604ce70aef943.jpg",
+      "status": 200,
+      "bytes": 93509,
+      "expected_bytes": 93509,
+      "sha256": "ae8604ce70aef943cfc30f0761f1d872bd1ed85433080a766367483ed7d902f7",
+      "expected_sha256": "ae8604ce70aef943cfc30f0761f1d872bd1ed85433080a766367483ed7d902f7",
+      "passed": true
+    },
+    {
+      "artwork_id": "a64d051f-c6ac-5382-b886-51c6b7df60de",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q102036399-45a6604ee981610e.jpg",
+      "status": 200,
+      "bytes": 89648,
+      "expected_bytes": 89648,
+      "sha256": "45a6604ee981610ef6d7bf696c1b402c3d8dc788247c84e321227c718a6c4cb7",
+      "expected_sha256": "45a6604ee981610ef6d7bf696c1b402c3d8dc788247c84e321227c718a6c4cb7",
+      "passed": true
+    },
+    {
+      "artwork_id": "2c1d1a9a-dafc-5f37-99fa-f2e9600e5bd6",
+      "storage_path": "/assets/artworks/imported/random-200-painters-round5-20261007/2c1d1a9a-dafc-5f37-99fa-f2e9600e5bd6-bb126847f78467b1.jpg",
+      "status": 200,
+      "bytes": 91245,
+      "expected_bytes": 91245,
+      "sha256": "bb126847f78467b1d3e70673b6278788afeb6b53e9f331e95d49bf3629a54c69",
+      "expected_sha256": "bb126847f78467b1d3e70673b6278788afeb6b53e9f331e95d49bf3629a54c69",
+      "passed": true
+    },
+    {
+      "artwork_id": "ba858107-6145-5b4f-8395-3cefebc5aa7a",
+      "storage_path": "/assets/artworks/imported/random-200-painters-round2-20261006/ba858107-6145-5b4f-8395-3cefebc5aa7a-d129636fdbd01be1.jpg",
+      "status": 200,
+      "bytes": 26120,
+      "expected_bytes": 26120,
+      "sha256": "d129636fdbd01be131fc308e39ca5630bc18679e433126bc4e6e1171541c4b9e",
+      "expected_sha256": "d129636fdbd01be131fc308e39ca5630bc18679e433126bc4e6e1171541c4b9e",
+      "passed": true
+    },
+    {
+      "artwork_id": "af2a9793-9afc-5cf0-8db8-a4f1912b0374",
+      "storage_path": "/assets/artworks/imported/cesi-top100-20261010/af2a9793-9afc-5cf0-8db8-a4f1912b0374-7b13493af6dc65ca.jpg",
+      "status": 200,
+      "bytes": 53627,
+      "expected_bytes": 53627,
+      "sha256": "7b13493af6dc65caf8214e852bc81549e5c3ef64ec8ccb7d66d8155d8b51e4c2",
+      "expected_sha256": "7b13493af6dc65caf8214e852bc81549e5c3ef64ec8ccb7d66d8155d8b51e4c2",
+      "passed": true
+    },
+    {
+      "artwork_id": "9fa572fd-fdb8-5a48-a7d3-9c6a6f7fb3aa",
+      "storage_path": "/assets/artworks/imported/cesi-top100-20261010/9fa572fd-fdb8-5a48-a7d3-9c6a6f7fb3aa-a01ca8f0be139b28.jpg",
+      "status": 200,
+      "bytes": 49293,
+      "expected_bytes": 49293,
+      "sha256": "a01ca8f0be139b284047192c63bf69cd296fbef64be65a982c8185478c594b40",
+      "expected_sha256": "a01ca8f0be139b284047192c63bf69cd296fbef64be65a982c8185478c594b40",
+      "passed": true
+    },
+    {
+      "artwork_id": "89f38f75-898c-5d74-929f-8e5d917a98ad",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q105444119-75876e0cce7e4d82.jpg",
+      "status": 200,
+      "bytes": 84224,
+      "expected_bytes": 84224,
+      "sha256": "75876e0cce7e4d8249ec000906341d7dd1f1232259e2dee9f5fa8bff4794237c",
+      "expected_sha256": "75876e0cce7e4d8249ec000906341d7dd1f1232259e2dee9f5fa8bff4794237c",
+      "passed": true
+    },
+    {
+      "artwork_id": "922d1ad5-565b-438c-8d94-236a5a4f7df4",
+      "storage_path": "/assets/artworks/imported/low-image-painters-100-wave2-20261026/922d1ad5-565b-438c-8d94-236a5a4f7df4-0-c9f23755ea46f752.jpg",
+      "status": 200,
+      "bytes": 94144,
+      "expected_bytes": 94144,
+      "sha256": "c9f23755ea46f7521a9e3aee0e23ed647dbbbfdf56ac108768650265dd7bfde6",
+      "expected_sha256": "c9f23755ea46f7521a9e3aee0e23ed647dbbbfdf56ac108768650265dd7bfde6",
+      "passed": true
+    },
+    {
+      "artwork_id": "36bc8f2a-cf4d-54b7-9e40-da32fa6215f4",
+      "storage_path": "/assets/artworks/imported/cesi-top100-20261010/36bc8f2a-cf4d-54b7-9e40-da32fa6215f4-6605053b65799420.jpg",
+      "status": 200,
+      "bytes": 99083,
+      "expected_bytes": 99083,
+      "sha256": "6605053b6579942048540ddbb4f7ffd4c600154f9750c1f0991bacd9c5d4b340",
+      "expected_sha256": "6605053b6579942048540ddbb4f7ffd4c600154f9750c1f0991bacd9c5d4b340",
+      "passed": true
+    },
+    {
+      "artwork_id": "b7cb74b0-919e-583b-9d20-e41bc6484b43",
+      "storage_path": "/assets/artworks/imported/cesi-top100-20261010/b7cb74b0-919e-583b-9d20-e41bc6484b43-4dae3dda8b03f2a0.jpg",
+      "status": 200,
+      "bytes": 74556,
+      "expected_bytes": 74556,
+      "sha256": "4dae3dda8b03f2a0d54fc71c601b3dc4d7327e988286ccd26fe7bd1572e6cc51",
+      "expected_sha256": "4dae3dda8b03f2a0d54fc71c601b3dc4d7327e988286ccd26fe7bd1572e6cc51",
+      "passed": true
+    },
+    {
+      "artwork_id": "40a62d56-dcf5-4efc-9f89-5db044dc3623",
+      "storage_path": "/assets/artworks/imported/wikiart-500-painters-20261011/81a01a4f-a5ba-5c15-a74b-f3f1f428f413-15384773aa13d6c5.jpg",
+      "status": 200,
+      "bytes": 77822,
+      "expected_bytes": 77822,
+      "sha256": "15384773aa13d6c56bf465ce43140b3ab7a0079025c6a10a8bd333ecf27d4c41",
+      "expected_sha256": "15384773aa13d6c56bf465ce43140b3ab7a0079025c6a10a8bd333ecf27d4c41",
+      "passed": true
+    },
+    {
+      "artwork_id": "c2e00a29-adc4-4dcd-85c3-9ac012e87fc3",
+      "storage_path": "/assets/artworks/imported/low-image-painters-100-wave2-20261026/c2e00a29-adc4-4dcd-85c3-9ac012e87fc3-0-00b0414ec83a91dd.jpg",
+      "status": 200,
+      "bytes": 58282,
+      "expected_bytes": 58282,
+      "sha256": "00b0414ec83a91ddedd7a4ab0fca6706bf8eb3269c335e95c1d6795a87aae64a",
+      "expected_sha256": "00b0414ec83a91ddedd7a4ab0fca6706bf8eb3269c335e95c1d6795a87aae64a",
+      "passed": true
+    },
+    {
+      "artwork_id": "8c127e78-1311-545c-b910-4fd677fc7696",
+      "storage_path": "/assets/artworks/wikiart/8c127e78-1311-545c-b910-4fd677fc7696-ef1d6593c15e6979.jpg",
+      "status": 200,
+      "bytes": 62039,
+      "expected_bytes": 62039,
+      "sha256": "ef1d6593c15e69799fddd1796c40a03f30999560af1946b304a01435d2e9cb89",
+      "expected_sha256": "ef1d6593c15e69799fddd1796c40a03f30999560af1946b304a01435d2e9cb89",
+      "passed": true
+    },
+    {
+      "artwork_id": "391bc39f-aac9-52b4-a6d5-d1934fcee5d6",
+      "storage_path": "/assets/artworks/imported/wikimedia-catalogue/q105444113-b86117ec992b7990.jpg",
+      "status": 200,
+      "bytes": 93708,
+      "expected_bytes": 93708,
+      "sha256": "b86117ec992b7990fbe1a4a3788b07671fc5ae33ec4e8ae3e87db87542c03b02",
+      "expected_sha256": "b86117ec992b7990fbe1a4a3788b07671fc5ae33ec4e8ae3e87db87542c03b02",
+      "passed": true
+    }
+  ]
+}

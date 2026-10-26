@@ -1,0 +1,53 @@
+Production catalogue and image investigation — 26 October 2026
+
+At the initial read-only snapshot: 1,039,572 total artwork rows, 1,039,058 active,
+309,756 illustrated active artworks, and 310,389 media assets. A later consistent
+snapshot contained 1,039,158 active rows as concurrent authorized imports continued.
+No active artwork primary image referred to a missing media row. All 309,756
+primary images have supported delivery paths. The user's 67,834 count exactly
+matches paintings with images: the initial snapshot has 185,088 paintings.
+The 11 October million-catalogue report records 1,013,006 active artworks and
+180,596 illustrated artworks; it did not claim one million image files.
+
+The serving release introduced painting-only SQL and forced frontend media
+filters on 24 October. This fix removes those forced media restrictions from
+Artworks, All, search, counts and picked records. Explicit user-selected media
+filters, existing picture defaults, date eligibility, chronological pagination,
+archived exclusions and member access remain. Cursor scope versions change to
+prevent old painting-only cursors skipping newly visible records. Unfiltered
+Artworks uses existing transactional all-media totals.
+
+Rouen has two unlinked representations of the same museum:
+joconde-m0729: 1,201 active works; two images.
+musee-beaux-arts-rouen: 307 active works; 36 images.
+The museum's official site, the City of Rouen page and INHA's M0729 authority
+support the common identity. All 38 attached Cloud Storage files returned the
+expected complete bytes and database SHA256. Those records are not yet merged
+by this investigation; the user's subsequent merge/enrichment authorization is
+preserved in continuation-authorization.json.
+
+The retained database audit has 546 hard-deleted artwork rows, all in one
+transaction at 2026-10-12 07:40:32 UTC: 312 photographs and 234 sculptures.
+Twelve had primary image attachments; all twelve media rows survive. The exact
+operation is ops/historical_museum_cleanup_20261012.py. AGENTS.md's Historical
+exhibition correction and docs/research/historical-exhibitions-20261012/README.md
+record the user's narrowly scoped cleanup authorization. The automatic trigger
+logs do not record a named deleting user: actor_user_id and request_id are null.
+The old artwork editor field says local-european-research; that is not proof of
+a specific person's execution identity.
+
+There are also 610 historical primary-image detachments (600 paintings, four
+drawings and six prints), with the latest on 11 October. All 610 former media
+rows survive; 135 recipient works now have images. Ten detachments concern
+Rouen. These require individual source/visual review before restoration;
+retained media are not automatically assumed correct. No mass million-image
+removal was found in the retained database evidence. Media deletion auditing
+is incomplete because media_assets has no universal deletion audit trigger.
+
+Public HTTP probes from this environment were blocked by Cloudflare HTTP 403,
+error code 1010. Authenticated Cloud Storage checks and direct read-only SQL
+are separate evidence; they do not establish public CDN health. Raw evidence,
+queries, timestamps, scopes and verification limits are saved alongside this
+report. No real local catalogue connection or database mutation was performed
+for the investigation or code tests. Failed schema-query and initial test-auth
+receipts are retained; corrected executions supersede them.

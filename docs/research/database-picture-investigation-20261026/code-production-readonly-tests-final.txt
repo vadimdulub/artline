@@ -1,0 +1,33 @@
+=== RUN   TestArtworkDirectoryReadOnly
+    artwork_directory_readonly_test.go:68: 1041458 active records
+=== RUN   TestArtworkDirectoryReadOnly/drawing
+=== RUN   TestArtworkDirectoryReadOnly/print
+=== RUN   TestArtworkDirectoryReadOnly/watercolor
+--- PASS: TestArtworkDirectoryReadOnly (9.80s)
+    --- PASS: TestArtworkDirectoryReadOnly/drawing (1.96s)
+    --- PASS: TestArtworkDirectoryReadOnly/print (1.26s)
+    --- PASS: TestArtworkDirectoryReadOnly/watercolor (1.04s)
+PASS
+ok  	github.com/vadimdulub/artline/apps/server/internal/catalog	10.024s
+=== RUN   TestGalleryOrderReadOnly
+    gallery_order_readonly_test.go:134: 14 artworks retained chronologically; picks from 6 media checked
+=== RUN   TestGalleryOrderReadOnly/all
+    gallery_order_readonly_test.go:165: 308109 matching artworks; first page in 3.293637042s
+    gallery_order_readonly_test.go:183: query plan: 465.57ms
+=== RUN   TestGalleryOrderReadOnly/all-highlights
+    gallery_order_readonly_test.go:165: 93391 matching artworks; first page in 2.774149667s
+=== RUN   TestGalleryOrderReadOnly/painter
+    gallery_order_readonly_test.go:165: 1461 matching artworks; first page in 5.461671208s
+    gallery_order_readonly_test.go:183: query plan: 29.20ms
+=== RUN   TestGalleryOrderReadOnly/prints
+    gallery_order_readonly_test.go:165: 1212 matching artworks; first page in 2.963721667s
+=== RUN   TestGalleryOrderReadOnly/wwii-paintings
+    gallery_order_readonly_test.go:204: 35 illustrated paintings in the WWII context selection, including all three additions
+--- PASS: TestGalleryOrderReadOnly (36.47s)
+    --- PASS: TestGalleryOrderReadOnly/all (4.19s)
+    --- PASS: TestGalleryOrderReadOnly/all-highlights (2.77s)
+    --- PASS: TestGalleryOrderReadOnly/painter (5.87s)
+    --- PASS: TestGalleryOrderReadOnly/prints (2.96s)
+    --- PASS: TestGalleryOrderReadOnly/wwii-paintings (0.85s)
+PASS
+ok  	github.com/vadimdulub/artline/apps/server/internal/atlas	36.935s

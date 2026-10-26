@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-26T19:11:51.915833+00:00",
+  "read_only": true,
+  "sql": "SELECT i.slug,a.work_type,count(*) artworks,count(*) FILTER(WHERE a.primary_media_id IS NOT NULL) illustrated FROM institutions i JOIN artworks a ON a.current_institution_id=i.id WHERE i.slug IN('joconde-m0729','musee-beaux-arts-rouen')AND a.status<>'archived' GROUP BY i.slug,a.work_type ORDER BY i.slug,artworks DESC",
+  "seconds": 0.16,
+  "rows": [
+    {
+      "slug": "joconde-m0729",
+      "work_type": "painting",
+      "artworks": 1154,
+      "illustrated": 2
+    },
+    {
+      "slug": "joconde-m0729",
+      "work_type": "unknown",
+      "artworks": 47,
+      "illustrated": 0
+    },
+    {
+      "slug": "musee-beaux-arts-rouen",
+      "work_type": "painting",
+      "artworks": 292,
+      "illustrated": 33
+    },
+    {
+      "slug": "musee-beaux-arts-rouen",
+      "work_type": "sculpture",
+      "artworks": 7,
+      "illustrated": 0
+    },
+    {
+      "slug": "musee-beaux-arts-rouen",
+      "work_type": "drawing",
+      "artworks": 5,
+      "illustrated": 0
+    },
+    {
+      "slug": "musee-beaux-arts-rouen",
+      "work_type": "unknown",
+      "artworks": 3,
+      "illustrated": 3
+    }
+  ]
+}

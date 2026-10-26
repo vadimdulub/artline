@@ -16,8 +16,7 @@ import (
 )
 
 // Audit real catalogue entries in a stable read-only snapshot. The small picked
-// picked view spans multiple media. Only paintings remain eligible, including
-// when an older link explicitly supplies non-painting artwork IDs or filters.
+// view spans multiple media, including explicit non-painting IDs and filters.
 func TestGalleryOrderReadOnly(t *testing.T) {
 	dsn := os.Getenv("ARTLINE_READONLY_DATABASE_URL")
 	if dsn == "" {
@@ -48,7 +47,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
  UNION SELECT id FROM artworks WHERE object_form='icon' AND primary_media_id IS NOT NULL AND status<>'archived' LIMIT 144
  ), candidates AS (
  SELECT a.id::text,coalesce(a.creation_year_start,a.creation_year_end) AS start_year,a.work_type,coalesce(a.object_form,'') AS object_form,
-	row_number() OVER(PARTITION BY a.work_type,a.object_form ORDER BY a.creation_year_start DESC,a.id) AS ordinal`+strings.Replace(artScope, "AND a.work_type='painting'", "", 1)+`
+	row_number() OVER(PARTITION BY a.work_type,a.object_form ORDER BY a.creation_year_start DESC,a.id) AS ordinal`+artScope+`
 	 AND a.id IN(SELECT id FROM sampled)
 	 AND EXISTS(SELECT 1 FROM media_assets image WHERE image.id=a.primary_media_id AND image.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif)$'))
  SELECT id,start_year,work_type,object_form FROM candidates WHERE ordinal<=2`, Bounds.Start, Bounds.End, "", false, "")
@@ -75,9 +74,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 		media[workType] = true
 		icon = icon || form == "icon"
 		ids = append(ids, item.ID)
-		if workType == "painting" {
-			expected = append(expected, item)
-		}
+		expected = append(expected, item)
 	}
 	rows.Close()
 	if err := rows.Err(); err != nil {
@@ -134,10 +131,9 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			}
 		}
 	}
-	t.Logf("%d paintings retained chronologically; picks from %d media checked", len(got), len(media))
+	t.Logf("%d artworks retained chronologically; picks from %d media checked", len(got), len(media))
 
-	// All and its painter filter preserve chronology. A legacy Print filter
-	// cannot override the catalogue's paintings-only browsing policy.
+	// All and its painter/media filters preserve chronology and artwork types.
 	for _, tc := range []struct {
 		name   string
 		filter Filter
@@ -151,12 +147,6 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 			recorder.statements = nil
 			started := time.Now()
 			out, err := repo.List(ctx, tc.filter)
-			if tc.name == "prints" {
-				if err != nil || len(out.Lanes) != 1 || out.Lanes[0].Total != 0 || len(out.Lanes[0].Items) != 0 {
-					t.Fatalf("non-paintings escaped catalogue filter: %+v %v", out, err)
-				}
-				return
-			}
 			if err != nil || len(out.Lanes) != 1 || len(out.Lanes[0].Items) != tc.filter.Limit {
 				t.Fatalf("missing real gallery sample: %+v %v", out, err)
 			}
@@ -168,8 +158,8 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 				if err := tx.QueryRow(ctx, "SELECT work_type FROM artworks WHERE id=$1::uuid", item.ID).Scan(&workType); err != nil {
 					t.Fatal(err)
 				}
-				if item.MediaURL == "" || workType != "painting" {
-					t.Fatalf("missing image or non-painting in gallery: %+v", item)
+				if item.MediaURL == "" || (tc.name == "prints" && workType != "print") {
+					t.Fatalf("missing image or artwork media filter ignored: %+v", item)
 				}
 			}
 			t.Logf("%d matching artworks; first page in %s", out.Total, time.Since(started))
@@ -202,7 +192,7 @@ func TestGalleryOrderReadOnly(t *testing.T) {
 		})
 	}
 	t.Run("wwii-paintings", func(t *testing.T) {
-		out, err := repo.List(ctx, Filter{Range: Range{Start: 1933, End: 1955}, Types: []string{"artwork"}, PresetID: "second-world-war", Limit: 60})
+		out, err := repo.List(ctx, Filter{Range: Range{Start: 1933, End: 1955}, Types: []string{"artwork"}, PresetID: "second-world-war", Limit: 60, Entities: map[string]url.Values{"artwork": {"work_type": {"painting"}}}})
 		if err != nil || len(out.Lanes) != 1 || out.Lanes[0].NextCursor != "" {
 			t.Fatalf("WWII selection unavailable or unexpectedly unbounded: %+v %v", out, err)
 		}

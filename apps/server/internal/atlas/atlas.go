@@ -273,8 +273,8 @@ func scope(f Filter, kind string) string {
 	}
 	values := []any{f.Range, strings.TrimSpace(f.Query), types, f.Highlights, f.Region, f.Limit, kind, f.Selection, picks, f.Entities, f.Countries, f.Continents, f.CountryScope, f.Creators, f.PresetID, presetFocus(f.PresetID)}
 	if kind == "artwork" {
-		// Reject earlier medium-first cursors to avoid skipping or repeating works.
-		values = append(values, "creation-first-v2")
+		// Reject earlier painting-only or medium-first cursors after broadening the catalogue.
+		values = append(values, "creation-first-all-media-v3")
 	}
 	raw, _ := json.Marshal(values)
 	return fmt.Sprintf("%x", sha256.Sum256(raw))[:24]

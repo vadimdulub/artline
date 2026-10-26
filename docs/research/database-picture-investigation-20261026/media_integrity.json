@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-26T19:11:51.676362+00:00",
+  "read_only": true,
+  "sql": "SELECT count(*) active_artworks,count(*) FILTER(WHERE a.primary_media_id IS NOT NULL) with_primary,count(*) FILTER(WHERE a.primary_media_id IS NOT NULL AND m.id IS NULL) dangling_primary,count(*) FILTER(WHERE a.primary_media_id IS NOT NULL AND m.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\\.(jpg|jpeg|png|webp|avif)$') supported_primary,count(*) FILTER(WHERE a.work_type='painting') paintings,count(*) FILTER(WHERE a.work_type='painting' AND m.storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\\.(jpg|jpeg|png|webp|avif)$') supported_paintings FROM artworks a LEFT JOIN media_assets m ON m.id=a.primary_media_id WHERE a.status<>'archived'",
+  "seconds": 12.844,
+  "rows": [
+    {
+      "active_artworks": 1039158,
+      "with_primary": 309756,
+      "dangling_primary": 0,
+      "supported_primary": 309756,
+      "paintings": 185093,
+      "supported_paintings": 67834
+    }
+  ]
+}

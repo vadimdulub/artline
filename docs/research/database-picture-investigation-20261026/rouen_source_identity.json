@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-26T19:12:39.531649+00:00",
+  "read_only": true,
+  "sql": "SELECT s.*,i.slug institution_slug FROM source_institutions s JOIN institutions i ON i.id=s.institution_id WHERE i.slug IN('joconde-m0729','musee-beaux-arts-rouen') ORDER BY i.slug",
+  "seconds": 0.112,
+  "rows": [
+    {
+      "source_id": "e4ba089e-791c-44f9-a4d1-fd5d1397265a",
+      "institution_id": "52f9db66-b148-423a-9889-c4acd20e3394",
+      "institution_slug": "joconde-m0729"
+    },
+    {
+      "source_id": "0471fd07-4533-4628-9900-275537061e79",
+      "institution_id": "f92766ec-41cf-42d1-9bb1-f333fe5d2980",
+      "institution_slug": "musee-beaux-arts-rouen"
+    },
+    {
+      "source_id": "9b97fdfb-71d2-4cfe-a80a-fcb07e11fae6",
+      "institution_id": "f92766ec-41cf-42d1-9bb1-f333fe5d2980",
+      "institution_slug": "musee-beaux-arts-rouen"
+    },
+    {
+      "source_id": "989c9660-1000-4950-b445-f01dacdacfca",
+      "institution_id": "f92766ec-41cf-42d1-9bb1-f333fe5d2980",
+      "institution_slug": "musee-beaux-arts-rouen"
+    },
+    {
+      "source_id": "024324b5-4eec-5eed-b4f8-f3b4344bf2a9",
+      "institution_id": "f92766ec-41cf-42d1-9bb1-f333fe5d2980",
+      "institution_slug": "musee-beaux-arts-rouen"
+    },
+    {
+      "source_id": "8cdbdb82-3319-5bf1-bd65-d4224d7f8130",
+      "institution_id": "f92766ec-41cf-42d1-9bb1-f333fe5d2980",
+      "institution_slug": "musee-beaux-arts-rouen"
+    },
+    {
+      "source_id": "0bcc35a6-cfd2-5fbb-8b03-3e8e20075ec0",
+      "institution_id": "f92766ec-41cf-42d1-9bb1-f333fe5d2980",
+      "institution_slug": "musee-beaux-arts-rouen"
+    }
+  ]
+}

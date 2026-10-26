@@ -1,0 +1,816 @@
+{
+  "at": "2026-10-26T19:10:40.446196+00:00",
+  "target": "production",
+  "read_only": true,
+  "local_catalogue_connections": 0,
+  "queries": {
+    "identity": {
+      "sql": "SELECT current_database() database,current_user role,current_setting('transaction_read_only') read_only,current_setting('transaction_isolation') isolation,pg_postmaster_start_time() server_start",
+      "rows": [
+        {
+          "database": "artline",
+          "role": "artline_app",
+          "read_only": "on",
+          "isolation": "repeatable read",
+          "server_start": "2026-10-09 15:01:16.541913+00:00"
+        }
+      ],
+      "seconds": 0.087059
+    },
+    "artwork_status": {
+      "sql": "SELECT status,count(*) artworks,count(*) FILTER(WHERE primary_media_id IS NOT NULL) illustrated FROM artworks GROUP BY status ORDER BY artworks DESC",
+      "rows": [
+        {
+          "status": "review",
+          "artworks": 1031949,
+          "illustrated": 307360
+        },
+        {
+          "status": "published",
+          "artworks": 7109,
+          "illustrated": 2396
+        },
+        {
+          "status": "archived",
+          "artworks": 514,
+          "illustrated": 20
+        }
+      ],
+      "seconds": 6.341693
+    },
+    "artwork_types": {
+      "sql": "SELECT work_type,count(*) artworks,count(*) FILTER(WHERE primary_media_id IS NOT NULL) illustrated FROM artworks WHERE status<>'archived' GROUP BY work_type ORDER BY artworks DESC",
+      "rows": [
+        {
+          "work_type": "print",
+          "artworks": 474732,
+          "illustrated": 108432
+        },
+        {
+          "work_type": "painting",
+          "artworks": 185088,
+          "illustrated": 67834
+        },
+        {
+          "work_type": "drawing",
+          "artworks": 153443,
+          "illustrated": 73792
+        },
+        {
+          "work_type": "unknown",
+          "artworks": 128651,
+          "illustrated": 52283
+        },
+        {
+          "work_type": "photograph",
+          "artworks": 81343,
+          "illustrated": 137
+        },
+        {
+          "work_type": "sculpture",
+          "artworks": 7927,
+          "illustrated": 3342
+        },
+        {
+          "work_type": "watercolor",
+          "artworks": 4320,
+          "illustrated": 2396
+        },
+        {
+          "work_type": "fresco",
+          "artworks": 938,
+          "illustrated": 555
+        },
+        {
+          "work_type": "calligraphy",
+          "artworks": 916,
+          "illustrated": 96
+        },
+        {
+          "work_type": "ceramic",
+          "artworks": 760,
+          "illustrated": 410
+        },
+        {
+          "work_type": "metalwork",
+          "artworks": 489,
+          "illustrated": 264
+        },
+        {
+          "work_type": "textile",
+          "artworks": 366,
+          "illustrated": 143
+        },
+        {
+          "work_type": "manuscript_illumination",
+          "artworks": 85,
+          "illustrated": 72
+        }
+      ],
+      "seconds": 1.268613
+    },
+    "table_estimates": {
+      "sql": "SELECT relname,n_live_tup,n_dead_tup,n_tup_ins,n_tup_upd,n_tup_del,last_analyze,last_autoanalyze FROM pg_stat_user_tables WHERE relname IN('artworks','media_assets','artwork_media','audit_log','ingestion_row_audits','institutions','artwork_search_documents') ORDER BY relname",
+      "rows": [
+        {
+          "relname": "artwork_media",
+          "n_live_tup": 222886,
+          "n_dead_tup": 0,
+          "n_tup_ins": 224625,
+          "n_tup_upd": 12,
+          "n_tup_del": 18,
+          "last_analyze": "2026-09-12 12:56:40.588354+00:00",
+          "last_autoanalyze": "2026-10-11 15:12:10.909710+00:00"
+        },
+        {
+          "relname": "artwork_search_documents",
+          "n_live_tup": 1039672,
+          "n_dead_tup": 63645,
+          "n_tup_ins": 1051444,
+          "n_tup_upd": 161823,
+          "n_tup_del": 546,
+          "last_analyze": "2026-10-09 07:17:09.255451+00:00",
+          "last_autoanalyze": "2026-10-11 14:11:12.377411+00:00"
+        },
+        {
+          "relname": "artworks",
+          "n_live_tup": 1040476,
+          "n_dead_tup": 19027,
+          "n_tup_ins": 1082611,
+          "n_tup_upd": 812917,
+          "n_tup_del": 546,
+          "last_analyze": "2026-10-14 06:30:07.352293+00:00",
+          "last_autoanalyze": "2026-10-26 12:06:10.807234+00:00"
+        },
+        {
+          "relname": "audit_log",
+          "n_live_tup": 3287397,
+          "n_dead_tup": 52138,
+          "n_tup_ins": 3405371,
+          "n_tup_upd": 0,
+          "n_tup_del": 0,
+          "last_analyze": "2026-09-12 12:58:14.337296+00:00",
+          "last_autoanalyze": "2026-10-25 11:44:37.736030+00:00"
+        },
+        {
+          "relname": "institutions",
+          "n_live_tup": 2275,
+          "n_dead_tup": 239,
+          "n_tup_ins": 2983,
+          "n_tup_upd": 348,
+          "n_tup_del": 0,
+          "last_analyze": "2026-09-12 12:56:39.847953+00:00",
+          "last_autoanalyze": "2026-10-11 07:55:06.154552+00:00"
+        },
+        {
+          "relname": "media_assets",
+          "n_live_tup": 310403,
+          "n_dead_tup": 193,
+          "n_tup_ins": 311168,
+          "n_tup_upd": 56192,
+          "n_tup_del": 0,
+          "last_analyze": "2026-10-12 09:54:20.053014+00:00",
+          "last_autoanalyze": "2026-10-11 14:43:14.291231+00:00"
+        }
+      ],
+      "seconds": 0.098831
+    },
+    "audit_columns": {
+      "sql": "SELECT table_name,column_name,data_type FROM information_schema.columns WHERE table_schema='public' AND (table_name ILIKE '%audit%' OR table_name IN('institutions','media_assets','artwork_media','source_institutions')) ORDER BY table_name,ordinal_position",
+      "rows": [
+        {
+          "table_name": "artwork_media",
+          "column_name": "artwork_id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "artwork_media",
+          "column_name": "media_id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "artwork_media",
+          "column_name": "sort_order",
+          "data_type": "integer"
+        },
+        {
+          "table_name": "artwork_media",
+          "column_name": "view_label",
+          "data_type": "text"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "actor_user_id",
+          "data_type": "text"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "action",
+          "data_type": "text"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "entity_type",
+          "data_type": "text"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "entity_id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "request_id",
+          "data_type": "text"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "before_json",
+          "data_type": "jsonb"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "after_json",
+          "data_type": "jsonb"
+        },
+        {
+          "table_name": "audit_log",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "name",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "normalized_name",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "place_id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "website_url",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "wikidata_id",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "slug",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "kind",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "status",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "description",
+          "data_type": "text"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "canonical_institution_id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "storage_kind",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "storage_path",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "delivery_url",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "source_page_url",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "provider_name",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "mime_type",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "width",
+          "data_type": "integer"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "height",
+          "data_type": "integer"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "byte_size",
+          "data_type": "bigint"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "checksum_sha256",
+          "data_type": "character"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "alt_text",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "rights_status",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "license_label",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "license_url",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "creator_credit",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "attribution_text",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "retrieved_at",
+          "data_type": "timestamp with time zone"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "verified_at",
+          "data_type": "timestamp with time zone"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "verified_by",
+          "data_type": "text"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone"
+        },
+        {
+          "table_name": "media_assets",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone"
+        },
+        {
+          "table_name": "source_institutions",
+          "column_name": "source_id",
+          "data_type": "uuid"
+        },
+        {
+          "table_name": "source_institutions",
+          "column_name": "institution_id",
+          "data_type": "uuid"
+        }
+      ],
+      "seconds": 0.201294
+    },
+    "audit_indexes": {
+      "sql": "SELECT tablename,indexname,indexdef FROM pg_indexes WHERE schemaname='public' AND(tablename ILIKE '%audit%' OR tablename IN('media_assets','artworks')) ORDER BY tablename,indexname",
+      "rows": [
+        {
+          "tablename": "artworks",
+          "indexname": "artwork_research_review_page_idx",
+          "indexdef": "CREATE INDEX artwork_research_review_page_idx ON public.artworks USING btree (normalized_title, id) WHERE (research_candidate AND (status = 'review'::text))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artwork_title_search_idx",
+          "indexdef": "CREATE INDEX artwork_title_search_idx ON public.artworks USING gin (title gin_trgm_ops)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_active_seo_id_idx",
+          "indexdef": "CREATE INDEX artworks_active_seo_id_idx ON public.artworks USING btree (id) WHERE (status <> 'archived'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_active_summary_idx",
+          "indexdef": "CREATE INDEX artworks_active_summary_idx ON public.artworks USING btree (id) INCLUDE (current_institution_id, work_type) WHERE (status <> 'archived'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_atlas_illustrated_identity_idx",
+          "indexdef": "CREATE INDEX artworks_atlas_illustrated_identity_idx ON public.artworks USING btree (id) INCLUDE (creation_year_start, creation_year_end, primary_media_id, work_type, cultural_context) WHERE ((status <> 'archived'::text) AND (primary_media_id IS NOT NULL) AND (date_precision = ANY (ARRAY['exact'::text, 'circa'::text, 'range'::text, 'circa_range'::text, 'decade'::text, 'century'::text])) AND (artline_creation_scope(creation_year_start, creation_year_end, date_precision) = 'eligible'::text) AND (COALESCE(creation_year_start, creation_year_end) <> 0) AND (COALESCE(creation_year_end, creation_year_start) <> 0))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_atlas_illustrated_native_idx",
+          "indexdef": "CREATE INDEX artworks_atlas_illustrated_native_idx ON public.artworks USING btree (COALESCE(creation_year_start, creation_year_end), id) INCLUDE (creation_year_start, creation_year_end, status, date_precision, primary_media_id, work_type, cultural_context) WHERE ((status <> 'archived'::text) AND (primary_media_id IS NOT NULL) AND (date_precision = ANY (ARRAY['exact'::text, 'circa'::text, 'range'::text, 'circa_range'::text, 'decade'::text, 'century'::text])) AND (artline_creation_scope(creation_year_start, creation_year_end, date_precision) = 'eligible'::text) AND (COALESCE(creation_year_start, creation_year_end) <> 0) AND (COALESCE(creation_year_end, creation_year_start) <> 0))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_directory_media_idx",
+          "indexdef": "CREATE INDEX artworks_directory_media_idx ON public.artworks USING btree (primary_media_id) WHERE ((status <> 'archived'::text) AND (primary_media_id IS NOT NULL))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_directory_title_id_idx",
+          "indexdef": "CREATE INDEX artworks_directory_title_id_idx ON public.artworks USING btree (normalized_title, id) WHERE (status <> 'archived'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_directory_undated_idx",
+          "indexdef": "CREATE INDEX artworks_directory_undated_idx ON public.artworks USING btree (normalized_title, id) WHERE ((status <> 'archived'::text) AND (creation_year_start IS NULL) AND (creation_year_end IS NULL))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_institution_accession_idx",
+          "indexdef": "CREATE INDEX artworks_institution_accession_idx ON public.artworks USING btree (current_institution_id, accession_number, id) WHERE (accession_number IS NOT NULL)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_institution_idx",
+          "indexdef": "CREATE INDEX artworks_institution_idx ON public.artworks USING btree (current_institution_id, status, id)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_institution_year_page_idx",
+          "indexdef": "CREATE INDEX artworks_institution_year_page_idx ON public.artworks USING btree (current_institution_id, creation_year_start, normalized_title, id) WHERE (status <> 'archived'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_museum_card_covering_idx",
+          "indexdef": "CREATE INDEX artworks_museum_card_covering_idx ON public.artworks USING btree (current_institution_id, status, id) INCLUDE (title, creation_year_start, primary_media_id, unlinked_creator_label) WHERE (status <> 'archived'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_museum_gallery_covering_idx",
+          "indexdef": "CREATE INDEX artworks_museum_gallery_covering_idx ON public.artworks USING btree (current_institution_id, status, id) INCLUDE (normalized_title, creation_year_start, creation_year_end, primary_media_id, unlinked_creator_label, work_type) WHERE (status <> 'archived'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_museum_illustrated_cover_idx",
+          "indexdef": "CREATE INDEX artworks_museum_illustrated_cover_idx ON public.artworks USING btree (current_institution_id, creation_year_start, title, id) INCLUDE (primary_media_id) WHERE ((status <> 'archived'::text) AND (primary_media_id IS NOT NULL))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_museum_image_title_seek_idx",
+          "indexdef": "CREATE INDEX artworks_museum_image_title_seek_idx ON public.artworks USING btree (current_institution_id, normalized_title, id) INCLUDE (primary_media_id) WHERE ((status <> 'archived'::text) AND (primary_media_id IS NOT NULL))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_museum_title_seek_idx",
+          "indexdef": "CREATE INDEX artworks_museum_title_seek_idx ON public.artworks USING btree (current_institution_id, normalized_title, id) INCLUDE (primary_media_id, creation_year_start, creation_year_end, work_type) WHERE (status <> 'archived'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_painting_directory_seek_idx",
+          "indexdef": "CREATE INDEX artworks_painting_directory_seek_idx ON public.artworks USING btree (normalized_title, id) INCLUDE (primary_media_id, creation_year_start, creation_year_end) WHERE ((status <> 'archived'::text) AND (work_type = 'painting'::text))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_pkey",
+          "indexdef": "CREATE UNIQUE INDEX artworks_pkey ON public.artworks USING btree (id)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_primary_media_lookup_idx",
+          "indexdef": "CREATE INDEX artworks_primary_media_lookup_idx ON public.artworks USING btree (primary_media_id, id) WHERE (primary_media_id IS NOT NULL)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_published_seo_id_idx",
+          "indexdef": "CREATE INDEX artworks_published_seo_id_idx ON public.artworks USING btree (id) WHERE (status = 'published'::text)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_slug_key",
+          "indexdef": "CREATE UNIQUE INDEX artworks_slug_key ON public.artworks USING btree (slug)"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "artworks_unlinked_creator_search_idx",
+          "indexdef": "CREATE INDEX artworks_unlinked_creator_search_idx ON public.artworks USING gin (unlinked_creator_label gin_trgm_ops) WHERE ((status <> 'archived'::text) AND (unlinked_creator_label IS NOT NULL))"
+        },
+        {
+          "tablename": "artworks",
+          "indexname": "idx_artworks_status_creation_year",
+          "indexdef": "CREATE INDEX idx_artworks_status_creation_year ON public.artworks USING btree (status, creation_year_start)"
+        },
+        {
+          "tablename": "audit_log",
+          "indexname": "audit_log_pkey",
+          "indexdef": "CREATE UNIQUE INDEX audit_log_pkey ON public.audit_log USING btree (id)"
+        },
+        {
+          "tablename": "audit_log",
+          "indexname": "idx_audit_log_entity_created",
+          "indexdef": "CREATE INDEX idx_audit_log_entity_created ON public.audit_log USING btree (entity_type, entity_id, created_at DESC)"
+        },
+        {
+          "tablename": "media_assets",
+          "indexname": "media_assets_atlas_deliverable_idx",
+          "indexdef": "CREATE INDEX media_assets_atlas_deliverable_idx ON public.media_assets USING btree (id) WHERE (storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\\.(jpg|jpeg|png|webp|avif)$'::text)"
+        },
+        {
+          "tablename": "media_assets",
+          "indexname": "media_assets_local_image_id_idx",
+          "indexdef": "CREATE INDEX media_assets_local_image_id_idx ON public.media_assets USING btree (id) WHERE (storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\\.(jpg|jpeg|png|webp|avif)$'::text)"
+        },
+        {
+          "tablename": "media_assets",
+          "indexname": "media_assets_pkey",
+          "indexdef": "CREATE UNIQUE INDEX media_assets_pkey ON public.media_assets USING btree (id)"
+        },
+        {
+          "tablename": "media_assets",
+          "indexname": "media_assets_storage_path_key",
+          "indexdef": "CREATE UNIQUE INDEX media_assets_storage_path_key ON public.media_assets USING btree (storage_path)"
+        },
+        {
+          "tablename": "media_assets",
+          "indexname": "media_directory_local_idx",
+          "indexdef": "CREATE INDEX media_directory_local_idx ON public.media_assets USING btree (id) WHERE (storage_path ~ '^/assets/[a-zA-Z0-9/_-]+\\.(jpg|jpeg|png|webp|avif)$'::text)"
+        }
+      ],
+      "seconds": 0.097218
+    },
+    "artwork_triggers": {
+      "sql": "SELECT c.relname,t.tgname,t.tgenabled,pg_get_triggerdef(t.oid) definition FROM pg_trigger t JOIN pg_class c ON c.oid=t.tgrelid WHERE NOT t.tgisinternal AND c.relname IN('artworks','media_assets','institutions','artwork_media') ORDER BY c.relname,t.tgname",
+      "rows": [
+        {
+          "relname": "artwork_media",
+          "tgname": "catalogue_cache_changed",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER catalogue_cache_changed AFTER INSERT OR DELETE OR UPDATE OR TRUNCATE ON public.artwork_media FOR EACH STATEMENT EXECUTE FUNCTION artline_invalidate_catalogue()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "artwork_canonical_institution",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER artwork_canonical_institution BEFORE INSERT OR UPDATE OF current_institution_id ON public.artworks FOR EACH ROW EXECUTE FUNCTION artline_normalize_artwork_institution()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "artwork_directory_totals_insert_delete",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER artwork_directory_totals_insert_delete AFTER INSERT OR DELETE ON public.artworks FOR EACH ROW EXECUTE FUNCTION maintain_artwork_directory_totals()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "artwork_directory_totals_update",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER artwork_directory_totals_update AFTER UPDATE OF status, creation_year_start, creation_year_end ON public.artworks FOR EACH ROW EXECUTE FUNCTION maintain_artwork_directory_totals()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "artwork_search_changed",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER artwork_search_changed AFTER INSERT OR UPDATE OF title, normalized_title, status, creation_year_start, creation_year_end, primary_media_id ON public.artworks FOR EACH ROW EXECUTE FUNCTION artline_refresh_artwork_search()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "artworks_audit",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER artworks_audit AFTER INSERT OR DELETE OR UPDATE ON public.artworks FOR EACH ROW EXECUTE FUNCTION artline_audit_record('artwork')"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "atlas_browse_delete",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_delete AFTER DELETE ON public.artworks REFERENCING OLD TABLE AS old_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "atlas_browse_insert",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_insert AFTER INSERT ON public.artworks REFERENCING NEW TABLE AS new_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "atlas_browse_truncate",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_truncate AFTER TRUNCATE ON public.artworks FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "atlas_browse_update",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_update AFTER UPDATE ON public.artworks REFERENCING OLD TABLE AS old_rows NEW TABLE AS new_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "artworks",
+          "tgname": "catalogue_cache_changed",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER catalogue_cache_changed AFTER INSERT OR DELETE OR UPDATE OR TRUNCATE ON public.artworks FOR EACH STATEMENT EXECUTE FUNCTION artline_invalidate_catalogue()"
+        },
+        {
+          "relname": "institutions",
+          "tgname": "atlas_browse_delete",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_delete AFTER DELETE ON public.institutions REFERENCING OLD TABLE AS old_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "institutions",
+          "tgname": "atlas_browse_insert",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_insert AFTER INSERT ON public.institutions REFERENCING NEW TABLE AS new_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "institutions",
+          "tgname": "atlas_browse_truncate",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_truncate AFTER TRUNCATE ON public.institutions FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "institutions",
+          "tgname": "atlas_browse_update",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_update AFTER UPDATE ON public.institutions REFERENCING OLD TABLE AS old_rows NEW TABLE AS new_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "institutions",
+          "tgname": "catalogue_cache_changed",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER catalogue_cache_changed AFTER INSERT OR DELETE OR UPDATE OR TRUNCATE ON public.institutions FOR EACH STATEMENT EXECUTE FUNCTION artline_invalidate_catalogue()"
+        },
+        {
+          "relname": "institutions",
+          "tgname": "institution_alias_identity",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER institution_alias_identity BEFORE INSERT OR UPDATE OF canonical_institution_id ON public.institutions FOR EACH ROW EXECUTE FUNCTION artline_validate_institution_alias()"
+        },
+        {
+          "relname": "media_assets",
+          "tgname": "atlas_browse_delete",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_delete AFTER DELETE ON public.media_assets REFERENCING OLD TABLE AS old_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "media_assets",
+          "tgname": "atlas_browse_insert",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_insert AFTER INSERT ON public.media_assets REFERENCING NEW TABLE AS new_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "media_assets",
+          "tgname": "atlas_browse_truncate",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_truncate AFTER TRUNCATE ON public.media_assets FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "media_assets",
+          "tgname": "atlas_browse_update",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER atlas_browse_update AFTER UPDATE ON public.media_assets REFERENCING OLD TABLE AS old_rows NEW TABLE AS new_rows FOR EACH STATEMENT EXECUTE FUNCTION artline_dirty_atlas_browse()"
+        },
+        {
+          "relname": "media_assets",
+          "tgname": "catalogue_cache_changed",
+          "tgenabled": "O",
+          "definition": "CREATE TRIGGER catalogue_cache_changed AFTER INSERT OR DELETE OR UPDATE OR TRUNCATE ON public.media_assets FOR EACH STATEMENT EXECUTE FUNCTION artline_invalidate_catalogue()"
+        }
+      ],
+      "seconds": 0.090134
+    },
+    "rouen_institutions": {
+      "sql": "SELECT i.*,p.name place_name,p.country_code,(SELECT count(*) FROM artworks a WHERE a.current_institution_id=i.id AND a.status<>'archived') active_artworks,(SELECT count(*) FROM artworks a WHERE a.current_institution_id=i.id AND a.status<>'archived' AND a.primary_media_id IS NOT NULL) illustrated_artworks FROM institutions i LEFT JOIN places p ON p.id=i.place_id WHERE i.name ILIKE '%rouen%' OR i.slug ILIKE '%rouen%' ORDER BY i.slug",
+      "rows": [
+        {
+          "id": "52f9db66-b148-423a-9889-c4acd20e3394",
+          "name": "musée des beaux-arts — Rouen",
+          "normalized_name": "musee des beaux arts rouen",
+          "place_id": "9427ef5d-0fea-4e69-93a3-a824289cfba4",
+          "website_url": "https://www.pop.culture.gouv.fr/notice/museo/M0729",
+          "wikidata_id": null,
+          "created_at": "2026-09-12 17:41:37.119558+00:00",
+          "updated_at": "2026-09-12 17:41:37.119558+00:00",
+          "slug": "joconde-m0729",
+          "kind": "museum",
+          "status": "review",
+          "description": "Selected museum collection records with official-source citations. Holdings do not establish current display or ownership.",
+          "canonical_institution_id": null,
+          "place_name": "Rouen",
+          "country_code": "FR",
+          "active_artworks": 1201,
+          "illustrated_artworks": 2
+        },
+        {
+          "id": "7b45f59a-1d9f-4657-9d8c-5883f5566172",
+          "name": "musée Flaubert et d'histoire de la médecine — Rouen",
+          "normalized_name": "musee flaubert et d histoire de la medecine rouen",
+          "place_id": "9427ef5d-0fea-4e69-93a3-a824289cfba4",
+          "website_url": "https://pop.culture.gouv.fr/notice/museo/M0734",
+          "wikidata_id": null,
+          "created_at": "2026-09-09 21:44:29.653536+00:00",
+          "updated_at": "2026-09-09 21:44:29.653536+00:00",
+          "slug": "joconde-m0734",
+          "kind": "museum",
+          "status": "review",
+          "description": "Selected museum collection records with official-source citations. Holdings do not establish current display or ownership.",
+          "canonical_institution_id": null,
+          "place_name": "Rouen",
+          "country_code": "FR",
+          "active_artworks": 44,
+          "illustrated_artworks": 1
+        },
+        {
+          "id": "2a15dd05-53dc-458f-ba50-b612ff94be46",
+          "name": "musée national de l'éducation — Rouen",
+          "normalized_name": "musee national de l education rouen",
+          "place_id": "9427ef5d-0fea-4e69-93a3-a824289cfba4",
+          "website_url": "https://www.pop.culture.gouv.fr/notice/museo/M5067",
+          "wikidata_id": null,
+          "created_at": "2026-09-12 18:02:17.780663+00:00",
+          "updated_at": "2026-09-12 18:02:17.780663+00:00",
+          "slug": "joconde-m5067",
+          "kind": "museum",
+          "status": "review",
+          "description": "Selected museum collection records with official-source citations. Holdings do not establish current display or ownership.",
+          "canonical_institution_id": null,
+          "place_name": "Rouen",
+          "country_code": "FR",
+          "active_artworks": 48,
+          "illustrated_artworks": 2
+        },
+        {
+          "id": "f92766ec-41cf-42d1-9bb1-f333fe5d2980",
+          "name": "Musée des Beaux-Arts de Rouen",
+          "normalized_name": "musee des beaux arts de rouen",
+          "place_id": "9427ef5d-0fea-4e69-93a3-a824289cfba4",
+          "website_url": "https://mbarouen.fr",
+          "wikidata_id": null,
+          "created_at": "2026-09-09 12:01:24.760829+00:00",
+          "updated_at": "2026-09-09 12:01:24.760829+00:00",
+          "slug": "musee-beaux-arts-rouen",
+          "kind": "museum",
+          "status": "review",
+          "description": "Selected museum collection records with official-source citations. Holdings do not establish current display or ownership.",
+          "canonical_institution_id": null,
+          "place_name": "Rouen",
+          "country_code": "FR",
+          "active_artworks": 307,
+          "illustrated_artworks": 36
+        }
+      ],
+      "seconds": 0.121418
+    }
+  }
+}

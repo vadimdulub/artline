@@ -30,7 +30,7 @@ func TestArtworkDirectoryReadOnly(t *testing.T) {
 	repo := &Repository{db: tx}
 	{
 		var count int
-		err = tx.QueryRow(ctx, "SELECT count(*) FROM artworks WHERE status<>'archived' AND work_type='painting'").Scan(&count)
+		err = tx.QueryRow(ctx, "SELECT count(*) FROM artworks WHERE status<>'archived'").Scan(&count)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -42,9 +42,8 @@ func TestArtworkDirectoryReadOnly(t *testing.T) {
 			t.Fatal("unbounded page")
 		}
 		for _, item := range page.Items {
-			var workType string
-			if err := tx.QueryRow(ctx, "SELECT work_type FROM artworks WHERE id=$1::uuid", item.ID).Scan(&workType); err != nil || workType != "painting" {
-				t.Fatal("non-painting in artwork directory", item.ID, err)
+			if item.Status == "archived" {
+				t.Fatal("archived record in artwork directory", item.ID)
 			}
 		}
 		if page.NextCursor != "" {
@@ -69,7 +68,7 @@ func TestArtworkDirectoryReadOnly(t *testing.T) {
 		t.Logf("%d active records", count)
 	}
 	var title, id string
-	err = tx.QueryRow(ctx, `SELECT title,id FROM artworks aw WHERE status='review' AND work_type='painting' AND length(title)<180 AND primary_media_id IS NULL AND current_institution_id IS NULL AND creation_year_start IS NULL AND creation_year_end IS NULL AND NOT EXISTS(SELECT 1 FROM artwork_artists aa WHERE aa.artwork_id=aw.id) ORDER BY length(title) DESC LIMIT 1`).Scan(&title, &id)
+	err = tx.QueryRow(ctx, `SELECT title,id FROM artworks aw WHERE status='review' AND length(title)<180 AND primary_media_id IS NULL AND current_institution_id IS NULL AND creation_year_start IS NULL AND creation_year_end IS NULL AND NOT EXISTS(SELECT 1 FROM artwork_artists aa WHERE aa.artwork_id=aw.id) ORDER BY length(title) DESC LIMIT 1`).Scan(&title, &id)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -83,6 +82,27 @@ func TestArtworkDirectoryReadOnly(t *testing.T) {
 	}
 	if !found {
 		t.Fatal("unassigned undated image-free record missing", title)
+	}
+	for _, medium := range []string{"drawing", "print", "watercolor"} {
+		t.Run(medium, func(t *testing.T) {
+			var title, id string
+			err := tx.QueryRow(ctx, `SELECT title,id FROM artworks WHERE status<>'archived' AND work_type=$1
+ AND primary_media_id IS NOT NULL AND length(title) BETWEEN 30 AND 180
+ ORDER BY length(title) DESC LIMIT 1`, medium).Scan(&title, &id)
+			if err != nil {
+				t.Fatal(err)
+			}
+			page, err := repo.BrowseArtworks(ctx, ArtworkDirectoryFilter{Query: title, ImageOnly: true, Limit: 60})
+			if err != nil {
+				t.Fatal(err)
+			}
+			for _, item := range page.Items {
+				if item.ID == id && item.MediaURL != nil {
+					return
+				}
+			}
+			t.Fatal("illustrated non-painting missing from directory search", medium, id)
+		})
 	}
 	_, err = repo.BrowseArtworks(ctx, ArtworkDirectoryFilter{Limit: 7, Cursor: "invalid"})
 	if !errors.Is(err, ErrChronologyFilter) {

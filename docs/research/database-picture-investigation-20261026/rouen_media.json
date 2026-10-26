@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-26T19:11:52.145081+00:00",
+  "read_only": true,
+  "sql": "SELECT i.slug museum_slug,a.id artwork_id,a.title,a.accession_number,a.work_type,a.status,a.primary_media_id,m.storage_path,m.byte_size,m.source_page_url,m.source_image_url,m.created_at media_created_at FROM institutions i JOIN artworks a ON a.current_institution_id=i.id JOIN media_assets m ON m.id=a.primary_media_id WHERE i.slug IN('joconde-m0729','musee-beaux-arts-rouen')AND a.status<>'archived' ORDER BY i.slug,a.title",
+  "seconds": 0.152,
+  "error": "UndefinedColumn: column m.source_image_url does not exist\nLINE 1: ...a_id,m.storage_path,m.byte_size,m.source_page_url,m.source_i...\n                                                             ^\nHINT:  Perhaps you meant to reference the column \"m.source_page_url\"."
+}

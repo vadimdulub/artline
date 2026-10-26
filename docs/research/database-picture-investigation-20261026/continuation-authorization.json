@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T19:19:53Z",
+  "user_instruction": "ok, commit, push and deploy then make a very meticolous deduplications of museums, merge artworks, then make deduplications of artworks and make dedup of exebitiions, museums has the first priority. for rouen museums find all artworks, upload all pictures and find all creators",
+  "priority": [
+    "commit_push_deploy_all_media_fix",
+    "museum_deduplication_Rouen_first",
+    "Rouen_all_in_scope_artworks_authentic_images_creator_reconciliation",
+    "artwork_deduplication",
+    "exhibition_deduplication"
+  ],
+  "production_mutations_authorized": true,
+  "preservation": "Canonicalize securely identified duplicates; preserve source identities, redirects, images/credits, attributions, editions, impressions, tours and uncertainty. Record plans/preimages, atomic audits and independent verification.",
+  "programme_controls": "No local catalogue connection or debug/background restart; no new agents/jobs/schedules; existing SQL/Storage and now explicitly authorized commit/push/app deployment only."
+}

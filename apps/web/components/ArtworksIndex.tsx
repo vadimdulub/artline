@@ -34,19 +34,19 @@ export function ArtworksIndex() {
   const change = (values: Record<string, string | null>) => updateQuery({ ...values, cursor: null, work: null });
   const reset = () => change({ q: null, status: null, undated: null, image_only: null });
   return <main id="main-content" className={styles.page}>
-    <AtlasPageHeader title="Artworks" description="Explore paintings across the catalogue."><Link href="/museums">Museums and collections</Link></AtlasPageHeader>
+    <AtlasPageHeader title="Artworks" description="Explore artworks across the catalogue."><Link href="/museums">Museums and collections</Link></AtlasPageHeader>
     <AtlasFilters searchRef={search} query={query} onQuery={value => change({ q: value || null })} onReset={reset} placeholder="Artwork title" searchLabel="Search artworks" columns={2} activeCount={Number(Boolean(status)) + Number(undated) + Number(pictures)}>
       <AtlasCheckbox label="Undated works" checked={undated} onChange={value => change({ undated: value ? "true" : null })} />
       <AtlasCheckbox label="With pictures" checked={pictures} onChange={value => change({ image_only: value ? "true" : "false" })} />
     </AtlasFilters>
-    <div className={styles.resultsHeading}><h2 id="artwork-results-title" tabIndex={-1}>Explore paintings</h2><p role="status">{result.loading ? "Finding artworks…" : result.error ? "Connection interrupted" : `${formatCount(result.data?.total ?? 0)} artworks`}</p></div>
+    <div className={styles.resultsHeading}><h2 id="artwork-results-title" tabIndex={-1}>Explore artworks</h2><p role="status">{result.loading ? "Finding artworks…" : result.error ? "Connection interrupted" : `${formatCount(result.data?.total ?? 0)} artworks`}</p></div>
     <section aria-label="Artwork results" aria-busy={result.loading}>
       {result.error ? <MuseumError message={result.error} retry={() => setRetry(value => value + 1)} /> : result.loading ? <p className={styles.loading}>Opening artworks…</p> : result.data?.items.length ? <ul className={styles.worksGrid}>{result.data.items.map(work => <li key={work.id} className="bookmark-grid-item">
         <button className={`${styles.workCard} ${recordStyles.card}`} aria-label={`Open ${work.title}`} aria-haspopup="dialog" onClick={() => updateQuery({ work: work.id }, true)}>
           <span className={styles.workImage}><ArtworkImage work={work} /></span>
           <span className={styles.workCopy}>{work.creator && <span className={styles.place}>{work.creator}</span>}<strong>{work.title}</strong>{artworkDate(work) && <span>{artworkDate(work)}</span>}{work.museum && <span>{work.museum.name}</span>}</span>
         </button><BookmarkButton kind="artwork" id={work.id} title={work.title} />
-      </li>)}</ul> : <div className={styles.empty}><h3>No artworks match these filters</h3><button onClick={reset}>Show all paintings</button></div>}
+      </li>)}</ul> : <div className={styles.empty}><h3>No artworks match these filters</h3><button onClick={reset}>Show all artworks</button></div>}
     </section>
     {result.data && <CursorPager paging={paging} next={result.data.next_cursor} busy={result.loading} total={result.data.total} shown={result.data.items.length} label="Artwork pages" noun="artworks" />}
     {selected && <AllArtworkDrawer id={selected} close={() => updateQuery({ work: null }, true)} fallbackFocusId="artwork-results-title" />}

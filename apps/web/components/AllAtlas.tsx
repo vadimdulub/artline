@@ -79,7 +79,7 @@ export function AllAtlas(){
  const artworkCountries=params.get("country_scope")==="artwork";
  const request=new URLSearchParams({selection:"true",highlights:String(highlights),preset_filters:"custom"});
  for(const key of ["fit","preset","window","start","end","q","region","country","country_scope","continent",...(!mapView?["creator"]:[]),"after_artwork",...(mapView?["after_book","after_event"]:[]),...allEntityKeys])params.getAll(key).forEach(value=>request.append(key,value));
- request.set("artwork_image_only",String(!mapView)); request.set("artwork_work_type","painting");
+ request.set("artwork_image_only",String(!mapView));
  if(mapView){
   request.delete("artwork_painter");painterSlugs.forEach(slug=>request.append("artwork_painter",slug));
   const authors=[...new Set([...params.getAll("book_author"),...creators.filter(value=>value.startsWith("author:")).map(value=>value.slice(7))])];

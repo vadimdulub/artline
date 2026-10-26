@@ -7,7 +7,7 @@ import "strings"
 func browseArtworkScope(selection, creators string) string {
 	return `artwork_native_scope AS NOT MATERIALIZED (
  SELECT a.* FROM artwork_atlas_browse a
- WHERE a.work_type='painting' AND a.start_year<=$2 AND a.end_year>=$1 AND $3::text IS NOT NULL
+ WHERE a.start_year<=$2 AND a.end_year>=$1 AND $3::text IS NOT NULL
  AND (` + selection + `) AND (` + creators + `)),`
 }
 
@@ -45,7 +45,7 @@ const boundedSelectedArt = `SELECT ci.artwork_id FROM artwork_native_scope bound
 // This predicate also defines the partial covering index. Keep it independent
 // of publication, collection membership and museum evidence: those remain live
 // query-time decisions, and an image path still needs separate validation.
-const illustratedNativeEligibility = `a.status<>'archived' AND a.work_type='painting' AND a.primary_media_id IS NOT NULL
+const illustratedNativeEligibility = `a.status<>'archived' AND a.primary_media_id IS NOT NULL
  AND a.date_precision IN ('exact','circa','range','circa_range','decade','century')
  AND artline_creation_scope(a.creation_year_start,a.creation_year_end,a.date_precision)='eligible'
  AND coalesce(a.creation_year_start,a.creation_year_end)<>0

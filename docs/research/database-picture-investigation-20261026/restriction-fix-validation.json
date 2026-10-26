@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "go_packages": [
+    "internal/catalog",
+    "internal/atlas",
+    "internal/httpapi"
+  ],
+  "focused_frontend_tests": 56,
+  "linux_api_build": true,
+  "linux_web_build": true,
+  "linux_web_typescript": true,
+  "production_readonly_tests": [
+    "TestArtworkDirectoryReadOnly",
+    "TestGalleryOrderReadOnly"
+  ],
+  "production_readonly_log_sha256": "cd02aa7607e50f3bde17f0fa695634c08eb941ffd6178d8239416ba48cc8957b",
+  "no_local_catalogue_connections": true,
+  "no_catalogue_mutations": true,
+  "prior_failed_attempts_preserved": true
+}
