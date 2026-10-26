@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "at": "2026-10-26T19:39:10Z",
+  "source_commit": "d8ff16118751594ca50046b748823eca38924a2d",
+  "active_revision_suffix": "all-media-1026-v1",
+  "production_service_origin_checks": [
+    {
+      "kind": "api",
+      "url": "https://artline-api-lpuqqlugnq-ew.a.run.app/api/v1/artworks?limit=1",
+      "status": 200,
+      "total": 309756
+    },
+    {
+      "kind": "web",
+      "url": "https://artline-web-lpuqqlugnq-ew.a.run.app/artworks",
+      "status": 200
+    },
+    {
+      "kind": "web_api",
+      "url": "https://artline-web-lpuqqlugnq-ew.a.run.app/api/backend/v1/artworks?limit=1",
+      "status": 200,
+      "total": 309756
+    }
+  ],
+  "public_edge_limitation": "The environment previously received Cloudflare HTTP403/error1010; service-origin verification does not claim edge-client verification.",
+  "images": {
+    "api": {
+      "source_commit": "d8ff16118751594ca50046b748823eca38924a2d",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:df40a246d578129a18f6b8c109db05e12a27f487dac7b91d31cd57db06e496ef",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:ca584133fc0a32878717b0824a27060fffa7b603148349b706e82c98a99ecd10",
+      "tag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:all-media-1026-d8ff1611",
+      "layer_sha256": "f17c17137f10545ef00a229911657e97a215cbf5a2b4e900e9ba9e9f2365a9a1",
+      "layer_bytes": 5840160,
+      "base_layers_preserved": 18,
+      "runtime_config_preserved": true
+    },
+    "web": {
+      "source_commit": "d8ff16118751594ca50046b748823eca38924a2d",
+      "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:597f8deefe2560c0560bba75a123c11ce808b53abcba736720f7e36a5e87e9cf",
+      "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:2391637957013cf83df63824199745683a85f1f2dc8bf7a453313881afa6014d",
+      "tag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:all-media-1026-d8ff1611",
+      "layer_sha256": "beaf925946d09f9cededcc259c36df4f6e87523dd42e00e63dbf68f700da3be6",
+      "layer_bytes": 24410558,
+      "base_layers_preserved": 36,
+      "runtime_config_preserved": true
+    }
+  },
+  "deployment_preservation": "Exact serving image overlays; runtime configuration, content, static assets and unrelated uncommitted map workspace preserved.",
+  "validation": {
+    "go_packages": 3,
+    "focused_frontend_tests": 56,
+    "linux_builds": [
+      "api",
+      "web"
+    ],
+    "production_readonly_tests": "passed",
+    "candidate_api_checks": 7,
+    "candidate_web_checks": 7
+  }
+}
