@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-27T05:53:45.695083+00:00",
+  "passed": true,
+  "operation": "catalogue-deduplication-resume-20261027-museums-four",
+  "aliases": 4,
+  "changed_rows": 48,
+  "atomic_audits": 48,
+  "museum_counts": [
+    {
+      "slug": "arco-museum-18e68b34ae965f451a61",
+      "active": 8,
+      "illustrated": 0
+    },
+    {
+      "slug": "arco-museum-355a53a1bfaf762c9178",
+      "active": 49,
+      "illustrated": 0
+    },
+    {
+      "slug": "joconde-m0211",
+      "active": 706,
+      "illustrated": 8
+    },
+    {
+      "slug": "joconde-m0286",
+      "active": 207,
+      "illustrated": 8
+    }
+  ],
+  "protected_metadata_and_images_preserved": true
+}

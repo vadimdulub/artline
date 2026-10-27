@@ -165,8 +165,13 @@ func (r *Repository) ByID(ctx context.Context, id string) (json.RawMessage, erro
 	if r.db == nil {
 		return nil, ErrUnavailable
 	}
+	resolved, err := r.CanonicalID(ctx, id)
+	if err != nil {
+		return nil, err
+	}
+	id = resolved
 	var raw []byte
-	err := r.db.QueryRow(ctx, `SELECT `+recordJSON+` || jsonb_build_object(
+	err = r.db.QueryRow(ctx, `SELECT `+recordJSON+` || jsonb_build_object(
  'entryCount',(SELECT count(*) FROM exhibition_entries x WHERE x.exhibition_id=e.id),
  'participationCounts',coalesce((SELECT jsonb_object_agg(p.participation,p.n) FROM (SELECT participation,count(*) n FROM exhibition_entries WHERE exhibition_id=e.id GROUP BY participation)p),'{}'::jsonb),
  'participantCount',(SELECT count(*) FROM exhibition_participants p WHERE p.exhibition_id=e.id),
@@ -200,6 +205,11 @@ func (r *Repository) Entries(ctx context.Context, id, after string, limit int, p
 	if r.db == nil {
 		return out, ErrUnavailable
 	}
+	resolved, err := r.CanonicalID(ctx, id)
+	if err != nil {
+		return out, err
+	}
+	id = resolved
 	filter := ""
 	if len(participation) > 0 {
 		filter = participation[0]

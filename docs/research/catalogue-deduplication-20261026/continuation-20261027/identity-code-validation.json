@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "at": "2026-10-27",
+  "package_tests": [
+    "catalog",
+    "exhibitions",
+    "httpapi",
+    "atlas"
+  ],
+  "production_readonly_artwork_identity_test": "passed16redirectsandactive/unmapped/unknownidentities; initial transient EOF retained",
+  "production_readonly_exhibition_identity_test": "passed16activeexhibitions/detail/entries",
+  "deployment_state": "not_deployed_yet",
+  "normal_edge_verification_claimed": false
+}

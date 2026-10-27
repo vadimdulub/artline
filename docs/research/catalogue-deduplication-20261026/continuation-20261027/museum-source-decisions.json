@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-27T05:52:51.496610+00:00",
+  "decisions": [
+    {
+      "key": "marca",
+      "decision": "same_institution",
+      "source": "https://luoghidelcontemporaneo.cultura.gov.it/en/esplora/marca-museo-delle-arti-catanzaro_en/",
+      "corroboration": "https://catalogo.beniculturali.it/CulturalInstituteOrSite/7c992ac84b3cb4dd36a80ac8f6990269",
+      "basis": "Ministry sources identify MARCA and its provincial collection at Via Alessandro Turco63 in Catanzaro. Both imported institutional records describe that museum in Catanzaro; the extra di is a native spelling variant. Indexed primary text reviewed; direct contemporary-venues transport timeout retained."
+    },
+    {
+      "key": "genova",
+      "decision": "same_institutional_collection",
+      "source": "https://www.museidigenova.it/it/palazzo-reale-di-genova",
+      "corroboration": "https://www.museidigenova.it/it/archivio-storico-e-fototeca-museo-palazzo-reale",
+      "basis": "Municipal museum authority identifies the Palazzo Reale museum and the collection preserved there. Raccolta is the collection label of that same palace museum, with no evidence of a separately administered institution. Existing source object labels and historic_site classification are preserved; no building, ownership or display fields rewritten. The Ministry-host transport timeout remains held."
+    },
+    {
+      "key": "rennes",
+      "decision": "same_institution",
+      "source": "https://pop.culture.gouv.fr/notice/museo/M0211",
+      "basis": "Ministry museum authority M0211 identifies the fine arts museum in Rennes at20quaiEmileZola, matching the city-specific WikiArt museum label. The native identifier and both original institution rows are retained."
+    },
+    {
+      "key": "orleans",
+      "decision": "same_institution",
+      "source": "https://pop.culture.gouv.fr/notice/museo/M0286",
+      "basis": "Ministry museum authority M0286 explicitly lists the Orleans fine arts museum name variant atplaceSainteCroix. The native identifier and both original institution rows are retained."
+    }
+  ],
+  "fresh_preimages": "museum-fresh-preimages.json.gz",
+  "no_artwork_identity_merges": true
+}
