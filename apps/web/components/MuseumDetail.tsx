@@ -18,7 +18,7 @@ import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
-export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: string; initialMuseum?: Museum; embedded?: boolean }) {
+export function MuseumDetail({ slug, initialMuseum, embedded = false, guides = [] }: { slug: string; initialMuseum?: Museum; embedded?: boolean; guides?: { href: string; title: string }[] }) {
   const params = new URLSearchParams(useQueryString());
   if (params.has("selection") && params.get("selection") !== "museum") { params.delete("selection"); params.delete("cursor"); }
   const search = useRef<HTMLInputElement>(null);
@@ -53,7 +53,7 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false }: { slug: 
       {museumRequest.error && <p role="status" className={styles.note}>Collection information could not be refreshed. <button type="button" onClick={() => setRevision(value => value + 1)}>Retry</button></p>}
       {!embedded && <><header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}<MuseumWebsiteLink url={museum.website_url || museum.venues[0]?.visit_url} name={museum.name} /></h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>
 
-      </header>
+      </header>{guides.length > 0 && <nav className={styles.selectionTabs} aria-label="Museum guides">{guides.map(guide => <Link key={guide.href} className="catalogue-control" prefetch={false} href={guide.href}>Read guide<span className="sr-only">: {guide.title}</span></Link>)}</nav>}
       <p className={styles.note}><Link href={`/exhibitions?institution=${museum.id}`} prefetch={false}>Exhibition history</Link></p></>}
       <div className={`${styles.selectionTabs} catalogue-selection`} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], ["museum", "Museum highlights"]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => setMuseumFilters({ selection: value, sort: value ? "curated" : "images" })}>{label}<span>{formatCount(value === "museum" ? museum.highlight_count : museum.work_count)}</span></button>)}</div>
       <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} searchLabel="Search artworks" placeholder="Artwork or painter" columns={2} activeCount={filters.filter(filter => filter.key !== "q").length}>

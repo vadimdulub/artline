@@ -1,7 +1,9 @@
 import Link from "next/link";
+import MemberLink from "./MemberLink";
 import { StructuredData } from "./StructuredData";
 import { absoluteURL, breadcrumbs, pageMetadata } from "@/lib/seo";
 import { getGuideIndex } from "@/lib/museum-guides";
+import { getGuideMuseumLinks, museumCollectionLabels } from "@/lib/museum-guide-links";
 import { guideLanguages, guideSubject, guideLocation, guidePath, guidePortalLinks, guideWorkPath as workPath, type MuseumGuide as Guide } from "@/lib/museum-guide-types";
 import { guidePortalCopy, guidePortalImages } from "@/lib/museum-guide-portal";
 import { museumGuideStructuredData } from "@/lib/museum-guide-seo";
@@ -16,6 +18,7 @@ export function museumGuideMetadata(guide: Guide) {
 export function MuseumGuide({ guide }: { guide: Guide }) {
   const l = guide.labels, links = guidePortalLinks(guide);
   const portal = guidePortalCopy[guide.locale], images = guidePortalImages(guide);
+  const museums = getGuideMuseumLinks(guide);
   const locales = getGuideIndex().find(item => item.slug === guide.slug)!.locales;
   return <main id="main-content" className={styles.page} data-return-label={`${guideSubject(guide)} guide`} data-return-path={guidePath(guide.slug, guide.locale)} lang={guide.locale} dir={guide.locale === "ar" ? "rtl" : "ltr"}>
     <StructuredData data={museumGuideStructuredData(guide)} />
@@ -24,6 +27,7 @@ export function MuseumGuide({ guide }: { guide: Guide }) {
       <div><p className={styles.place}>{guideLocation(guide)}</p><h1>{guide.title}</h1><p className={styles.subtitle}>{guide.subtitle}</p></div>
       <a className={styles.download} href={`/guides/${guide.slug}/pdf/${guide.locale}`} download={`${guide.slug}-${guide.locale}.pdf`}>{l.download}</a>
     </header>
+    {museums.length > 0 && <nav className={styles.museumLinks} aria-label={museumCollectionLabels[guide.locale]}>{museums.map(museum => <MemberLink key={museum.slug} prefetch={false} href={museum.href}>{museumCollectionLabels[guide.locale]}: {museum.name}</MemberLink>)}</nav>}
     <nav className={styles.languages} aria-label={l.language}>{locales.map(locale => <Link key={locale} href={guidePath(guide.slug, locale)} hrefLang={locale} lang={locale} aria-current={guide.locale === locale ? "page" : undefined}>{guideLanguages[locale]}</Link>)}</nav>
     {guide.locale !== "en" && <p className={styles.translation}>{l.translation}</p>}
     <div className={styles.introduction}>{guide.introduction.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}<p className={styles.note}>{guide.selectionNote}</p></div>

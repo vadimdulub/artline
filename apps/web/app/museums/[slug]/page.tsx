@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "@/components/MemberLink";
 import { PreparedMuseumGuides } from "@/components/PreparedMuseumGuides";
 import { getPreparedMuseumGuides } from "@/lib/prepared-museum-guides";
+import { getMuseumGuideLinks } from "@/lib/museum-guide-links";
+import { guidePath } from "@/lib/museum-guide-types";
 import { MuseumPageTabs } from "@/components/MuseumPageTabs";
 import { MuseumDetail } from "@/components/MuseumDetail";
 import { MuseumWebsiteLink } from "@/components/MuseumWebsiteLink";
@@ -57,17 +59,18 @@ export default async function MuseumPage({ params, searchParams }: { params: Pro
   const profile = profilePage?.items[0], info = profile?.document;
   const visit = safeSourceURL(info?.visit_url || museum.venues[0]?.visit_url || museum.website_url);
   const description = info?.summary || museumDescription(museum.description);
+  const guides = getMuseumGuideLinks(museum.slug);
   return <main id="main-content" className={styles.page}>
     <StructuredData data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: museum.name, description: description || undefined, url: absoluteURL(`/museums/${museum.slug}`) }} />
     <StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Museums", path: "/museums" }, { name: museum.name, path: `/museums/${museum.slug}` }])} />
     <Link className={styles.back} href="/museums">Museums</Link>
-    <header className={styles.hero}><div className={styles.heroText}><p className={styles.place}>{museum.city || museum.venues[0]?.city}{museum.country ? `, ${countryName(museum.country)}` : ""}</p><h1>{info?.title || museum.name}<MuseumWebsiteLink url={museum.website_url || visit} name={museum.name} /></h1>{description && <p>{description}</p>}<div className={styles.actions}><a href="#collection">Explore the collection</a>{visit && visit !== "#" && <a href={visit} target="_blank" rel="noreferrer">Plan your visit</a>}</div></div>
+    <header className={styles.hero}><div className={styles.heroText}><p className={styles.place}>{museum.city || museum.venues[0]?.city}{museum.country ? `, ${countryName(museum.country)}` : ""}</p><h1>{info?.title || museum.name}<MuseumWebsiteLink url={museum.website_url || visit} name={museum.name} /></h1>{description && <p>{description}</p>}<div className={styles.actions}><a href="#collection">Explore the collection</a>{guides.map(guide => <Link key={guide.slug} prefetch={false} href={guidePath(guide.slug)}>Read guide<span className="sr-only">: {guide.title}</span></Link>)}{visit && visit !== "#" && <a href={visit} target="_blank" rel="noreferrer">Plan your visit</a>}</div></div>
       {(info?.image_url || info?.image_id) && profile ? <figure className={styles.heroImage}><div><PublicationImage item={profile} slug={slug} /></div><figcaption>{info.image_credit}</figcaption></figure> : museum.cover && <figure className={styles.heroImage}><Link href={`/museums/${slug}?work=${museum.cover.id}#collection`}><ArtworkImage work={museum.cover} large /></Link><figcaption>{museum.cover.title}{museum.cover.artists.length > 0 && ` — ${museum.cover.artists.map(a => a.name).join(", ")}`}. <a href={`/museums/${slug}?work=${museum.cover.id}#collection`}>Artwork and source</a></figcaption></figure>}
     </header>
     {!profilePage && <p role="status">Museum information could not be loaded. Reload to try again.</p>}
     <MuseumPageTabs slug={slug} museumName={museum.name} initialSearch={query.size ? `?${query}` : ""} hasProfile={!!profile} panels={{
       collection: <div className={styles.collection}>
-        {museum.work_count > 0 && <><p className={styles.note}>From Artline’s historical catalogue. Documented holdings do not guarantee current display.</p><MuseumDetail key={slug} slug={slug} initialMuseum={museum} embedded /></>}
+        {museum.work_count > 0 && <><p className={styles.note}>From Artline’s historical catalogue. Documented holdings do not guarantee current display.</p><MuseumDetail key={slug} slug={slug} initialMuseum={museum} embedded guides={guides.map(guide => ({ href: guidePath(guide.slug), title: guide.title }))} /></>}
         <Suspense fallback={<p role="status">Loading museum publications…</p>}><PublishedArtworks slug={slug} hasCatalogue={museum.work_count > 0} /></Suspense>
       </div>,
       exhibitions: <>
