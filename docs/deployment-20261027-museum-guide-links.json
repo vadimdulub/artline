@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "at": "2026-10-27T15:42:12.672735+00:00",
+  "source_commit": "a50b4b6be76b60189cb42df454f090fd06e2cd59",
+  "branch": "map-research",
+  "revision": "artline-web-museum-guides-1027-v1",
+  "traffic_percent": 100,
+  "public_url": "https://artlines.org/guides/louvre",
+  "scope": {
+    "museum_guides": 86,
+    "museums": 88,
+    "guide_editions": 860,
+    "guide_to_museum": "Canonical museum collection link in every museum guide header, localized in ten languages; all three Munich destinations retained.",
+    "museum_to_guide": "Read guide link in each matching museum header; no link for museums without an existing guide."
+  },
+  "validation": {
+    "workspace_focused_tests": 14,
+    "clean_checkout_tests": 5,
+    "exact_production_source_tests": 5,
+    "all_locale_mapping_checks": 860,
+    "museum_api_destinations_verified": 88,
+    "candidate_http_pages": 90,
+    "browser_checks": 10,
+    "browser_viewports": [
+      1440,
+      390,
+      320
+    ],
+    "visually_inspected_screenshots": 3,
+    "linux_amd64_build": "passed",
+    "typescript": "passed",
+    "production_origin_http_pages": 5,
+    "authenticated_live_museum_navigation": "Not exercised; reverse links verified in the actual production component and mapping tests."
+  },
+  "public_edge_check": {
+    "url": "https://artlines.org/guides/louvre",
+    "status": 403,
+    "body_bytes": 17,
+    "environment_edge_limitation": true
+  },
+  "image": {
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:6746ad116dc2d22cfaad2c91a09e6432a2296e1ab2a0c838a83e83055af48873",
+    "tag": "europe-west1-docker.pkg.dev/artline-508319/artline/web:museum-guides-1027-v1",
+    "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:2391637957013cf83df63824199745683a85f1f2dc8bf7a453313881afa6014d",
+    "base_layers_preserved": 37,
+    "runtime_config_preserved": true,
+    "content_and_public_preserved": true,
+    "layer_sha256": "d3d1a54ae6fe432da4a32fbbb73331eec769fb6070c09ea3f2083ad00d2f2484",
+    "layer_bytes": 24408753
+  },
+  "production_source": {
+    "method": "Scoped delta on the exact serving release; its older museum template and existing sign-in policy retained.",
+    "patch": "docs/deployment-20261027-museum-guide-links.patch",
+    "patch_sha256": "1de7d4f180926494c01dab7f7876ef2d1ff231652d5566f137ecbfb3687ab825",
+    "private_build_and_receipts": "/Users/vadimdulub/Library/Application Support/Artline/releases/museum-guide-links-20261027",
+    "apply_option": "--unidiff-zero"
+  },
+  "preservation": {
+    "unrelated_workspace_changes": "Excluded from commit and deployment",
+    "api_service": "Unchanged",
+    "database_writes": false,
+    "content_and_public_assets": "Preserved from the serving base image",
+    "runtime_configuration": "Preserved"
+  }
+}

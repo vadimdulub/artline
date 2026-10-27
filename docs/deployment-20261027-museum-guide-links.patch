@@ -1,0 +1,327 @@
+--- a/components/MuseumGuide.tsx
++++ b/components/MuseumGuide.tsx
+@@ -1,0 +2 @@
++import MemberLink from "./MemberLink";
+@@ -4,0 +6 @@
++import { getGuideMuseumLinks, museumCollectionLabels } from "@/lib/museum-guide-links";
+@@ -18,0 +21 @@
++  const museums = getGuideMuseumLinks(guide);
+@@ -26,0 +30 @@
++    {museums.length > 0 && <nav className={styles.museumLinks} aria-label={museumCollectionLabels[guide.locale]}>{museums.map(museum => <MemberLink key={museum.slug} prefetch={false} href={museum.href}>{museumCollectionLabels[guide.locale]}: {museum.name}</MemberLink>)}</nav>}
+--- a/app/guides/museum-guide.module.css
++++ b/app/guides/museum-guide.module.css
+@@ -28,0 +29,2 @@
++
++.museumLinks{display:flex;flex-wrap:wrap;gap:4px 24px;margin-top:16px;font-size:14px}.museumLinks a{display:inline-flex;align-items:center;min-height:44px;overflow-wrap:anywhere}
+--- a/app/museums/[slug]/page.tsx
++++ b/app/museums/[slug]/page.tsx
+@@ -0,0 +1,2 @@
++import { getMuseumGuideLinks } from "@/lib/museum-guide-links";
++import { guidePath } from "@/lib/museum-guide-types";
+@@ -20 +22 @@
+-  return <><StructuredData data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: museum.name, description: museum.description || undefined, url: absoluteURL(`/museums/${museum.slug}`) }} /><StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Museums", path: "/museums" }, { name: museum.name, path: `/museums/${museum.slug}` }])} /><MuseumDetail key={slug} slug={slug} initialMuseum={museum} /></>;
++  return <><StructuredData data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: museum.name, description: museum.description || undefined, url: absoluteURL(`/museums/${museum.slug}`) }} /><StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Museums", path: "/museums" }, { name: museum.name, path: `/museums/${museum.slug}` }])} /><MuseumDetail key={slug} slug={slug} initialMuseum={museum} guides={getMuseumGuideLinks(museum.slug).map(guide => ({ href: guidePath(guide.slug), title: guide.title }))} /></>;
+--- a/components/MuseumDetail.tsx
++++ b/components/MuseumDetail.tsx
+@@ -22 +22 @@
+-export function MuseumDetail({ slug, initialMuseum }: { slug: string; initialMuseum?: Museum }) {
++export function MuseumDetail({ slug, initialMuseum, guides = [] }: { slug: string; initialMuseum?: Museum; guides?: { href: string; title: string }[] }) {
+@@ -65 +65 @@
+-      </header>
++      </header>{guides.length > 0 && <nav className={styles.selectionTabs} aria-label="Museum guides">{guides.map(guide => <Link key={guide.href} className="catalogue-control" prefetch={false} href={guide.href}>Read guide<span className="sr-only">: {guide.title}</span></Link>)}</nav>}
+--- /dev/null
++++ b/lib/museum-guide-links.ts
+@@ -0,0 +1,28 @@
++import "server-only";
++import institutions from "@/content/articles/museum-guides/institution-links.json";
++import { getGuideIndex } from "./museum-guides";
++import type { GuideLocale, MuseumGuide } from "./museum-guide-types";
++
++const institutionLinks: Record<string, string[]> = institutions;
++const sharedGuideMuseumNames: Record<string, string> = {
++  "alte-pinakothek": "Alte Pinakothek",
++  "neue-pinakothek": "Neue Pinakothek",
++  "lenbachhaus-munich": "Lenbachhaus",
++};
++
++export const museumCollectionLabels: Record<GuideLocale, string> = {
++  en: "Museum collection", ru: "Коллекция музея", it: "Collezione del museo",
++  de: "Museumssammlung", zh: "博物馆馆藏", fr: "Collection du musée",
++  es: "Colección del museo", pt: "Coleção do museu", ja: "美術館のコレクション", ar: "مجموعة المتحف",
++};
++
++export function getGuideMuseumLinks(guide: Pick<MuseumGuide, "slug" | "museum" | "kind">) {
++  if (guide.kind === "artist") return [];
++  return (institutionLinks[guide.slug] ?? []).map(slug => ({
++    slug, name: sharedGuideMuseumNames[slug] ?? guide.museum, href: `/museums/${slug}`,
++  }));
++}
++
++export function getMuseumGuideLinks(museumSlug: string) {
++  return getGuideIndex().filter(guide => guide.kind !== "artist" && institutionLinks[guide.slug]?.includes(museumSlug));
++}
+--- /dev/null
++++ b/content/articles/museum-guides/institution-links.json
+@@ -0,0 +1,262 @@
++{
++  "louvre": [
++    "musee-du-louvre"
++  ],
++  "prado": [
++    "museo-del-prado"
++  ],
++  "leventis-gallery": [
++    "leventis-gallery"
++  ],
++  "national-gallery-armenia": [
++    "national-gallery-armenia"
++  ],
++  "munich-museums": [
++    "alte-pinakothek",
++    "neue-pinakothek",
++    "lenbachhaus-munich"
++  ],
++  "muma-le-havre": [
++    "muma-le-havre"
++  ],
++  "art-gallery-new-south-wales": [
++    "wikimedia-museum-q705551"
++  ],
++  "national-gallery-victoria": [
++    "wikimedia-museum-q1464509"
++  ],
++  "albertina": [
++    "wikimedia-museum-q371908"
++  ],
++  "belvedere": [
++    "belvedere"
++  ],
++  "kunsthistorisches-museum": [
++    "kunsthistorisches-museum"
++  ],
++  "leopold-museum": [
++    "wikimedia-museum-q59435"
++  ],
++  "groeningemuseum": [
++    "groeningemuseum"
++  ],
++  "fine-arts-ghent": [
++    "museum-of-fine-arts-ghent"
++  ],
++  "royal-fine-arts-antwerp": [
++    "wikimedia-museum-q1471477"
++  ],
++  "royal-fine-arts-belgium": [
++    "museum-source-1a4e0b935a6155cf33c1"
++  ],
++  "national-gallery-canada": [
++    "wikimedia-museum-q1068063"
++  ],
++  "cvar-nicosia": [
++    "cvar-nicosia"
++  ],
++  "national-gallery-prague": [
++    "wikimedia-museum-q1419555"
++  ],
++  "skagens-museum": [
++    "skagens-museum"
++  ],
++  "statens-museum-kunst": [
++    "statens-museum-for-kunst"
++  ],
++  "ateneum": [
++    "ateneum-art-museum"
++  ],
++  "musee-conde-chantilly": [
++    "joconde-m5052"
++  ],
++  "marmottan-monet": [
++    "musee-marmottan-monet"
++  ],
++  "musee-orangerie": [
++    "musee-orangerie"
++  ],
++  "beaux-arts-rouen": [
++    "musee-beaux-arts-rouen"
++  ],
++  "musee-orsay": [
++    "musee-orsay"
++  ],
++  "musee-arts-nantes": [
++    "joconde-m0743"
++  ],
++  "musee-picasso-paris": [
++    "joconde-m5043"
++  ],
++  "centre-pompidou-collection": [
++    "spain-research-museum-q1895953"
++  ],
++  "palais-beaux-arts-lille": [
++    "joconde-m0629"
++  ],
++  "old-masters-dresden": [
++    "wikimedia-museum-q1501219"
++  ],
++  "germanisches-nationalmuseum": [
++    "germanisches-nationalmuseum"
++  ],
++  "hamburger-kunsthalle": [
++    "hamburger-kunsthalle"
++  ],
++  "kunsthalle-karlsruhe": [
++    "staatliche-kunsthalle-karlsruhe"
++  ],
++  "staedel-museum": [
++    "staedel-museum"
++  ],
++  "goulandris-athens": [
++    "basil-elise-goulandris-athens"
++  ],
++  "national-gallery-greece": [
++    "national-gallery-greece"
++  ],
++  "hungarian-national-gallery": [
++    "wikimedia-museum-q252071"
++  ],
++  "fine-arts-budapest": [
++    "wikimedia-museum-q840886"
++  ],
++  "galleria-borghese": [
++    "galleria-borghese"
++  ],
++  "accademia-venice": [
++    "gallerie-accademia-venezia"
++  ],
++  "uffizi": [
++    "uffizi"
++  ],
++  "centraal-museum": [
++    "wikimedia-museum-q260913"
++  ],
++  "kroller-muller-museum": [
++    "kroller-muller-museum"
++  ],
++  "mauritshuis": [
++    "mauritshuis"
++  ],
++  "boijmans-van-beuningen": [
++    "museum-boijmans-van-beuningen"
++  ],
++  "rijksmuseum": [
++    "rijksmuseum"
++  ],
++  "van-gogh-museum": [
++    "van-gogh-museum"
++  ],
++  "auckland-art-gallery": [
++    "wikimedia-museum-q4819492"
++  ],
++  "national-museum-oslo": [
++    "national-museum-oslo"
++  ],
++  "national-museum-krakow": [
++    "wikimedia-museum-q195311"
++  ],
++  "national-museum-warsaw": [
++    "wikimedia-museum-q153306"
++  ],
++  "hermitage": [
++    "wikimedia-museum-q132783"
++  ],
++  "tretyakov-gallery": [
++    "wikimedia-museum-q183334"
++  ],
++  "slovak-national-gallery": [
++    "wikimedia-museum-q1744024"
++  ],
++  "thyssen-bornemisza": [
++    "museo-thyssen-bornemisza"
++  ],
++  "national-art-catalonia": [
++    "wikimedia-museum-q861252"
++  ],
++  "nationalmuseum-stockholm": [
++    "nationalmuseum-stockholm"
++  ],
++  "kunsthaus-zurich": [
++    "kunsthaus-zurich"
++  ],
++  "kunstmuseum-basel": [
++    "wikimedia-museum-q194626"
++  ],
++  "museum-rietberg": [
++    "museum-rietberg"
++  ],
++  "ashmolean-museum": [
++    "wikimedia-museum-q636400"
++  ],
++  "fitzwilliam-museum": [
++    "spain-research-museum-q1421440"
++  ],
++  "manchester-art-gallery": [
++    "museum-authority-q2638817"
++  ],
++  "national-gallery-london": [
++    "national-gallery-london"
++  ],
++  "national-museum-cardiff": [
++    "national-museum-cardiff"
++  ],
++  "scottish-national-gallery": [
++    "scottish-national-gallery"
++  ],
++  "tate": [
++    "tate"
++  ],
++  "courtauld-gallery": [
++    "courtauld-gallery"
++  ],
++  "art-institute-chicago": [
++    "art-institute-of-chicago"
++  ],
++  "clark-art-institute": [
++    "museum-authority-q1465805"
++  ],
++  "cleveland-museum-art": [
++    "cleveland-museum-of-art"
++  ],
++  "detroit-institute-arts": [
++    "museum-authority-q1201549"
++  ],
++  "isabella-stewart-gardner": [
++    "wikimedia-museum-q49135"
++  ],
++  "getty-museum": [
++    "spain-research-museum-q731126"
++  ],
++  "minneapolis-institute-art": [
++    "minneapolis-institute-of-art"
++  ],
++  "museum-modern-art-new-york": [
++    "wikimedia-museum-q188740"
++  ],
++  "national-gallery-of-art": [
++    "national-gallery-of-art"
++  ],
++  "national-museum-asian-art": [
++    "smithsonian-national-museum-of-asian-art"
++  ],
++  "philadelphia-museum-art": [
++    "wikimedia-museum-q510324"
++  ],
++  "smithsonian-american-art": [
++    "smithsonian-american-art-museum"
++  ],
++  "guggenheim-new-york": [
++    "wikimedia-museum-q201469"
++  ],
++  "metropolitan-museum": [
++    "the-met"
++  ],
++  "phillips-collection": [
++    "wikimedia-museum-q578485"
++  ],
++  "yale-center-british-art": [
++    "wikimedia-museum-q6352575"
++  ]
++}
