@@ -1,5 +1,38 @@
 # Artline implementation constraints
 
+- Catalogue deduplication and Rouen delivery verified (27 October 2026): user
+  authorized commit/push/deploy, meticulous museum-first deduplication and Rouen
+  enrichment, then confirmed renewed cloud sign-in. Painting-only directory
+  restriction removed and deployed; API identity source 4227c9a64a9061a5430b75bc3cbe609686850944
+  serves 100% as artline-api-identity-1027-v1; web all-media revision preserved.
+  Eleven museum aliases, nine physical artwork duplicates and eleven exhibition
+  duplicates across nine events are consolidated. Old UUIDs resolve; original
+  artwork rows, images, immutable holding claims and native sources survive.
+  Fifty duplicate exhibition child witnesses are fully embedded in survivors,
+  backed up and atomically audited before removal. Rouen gains 624 native works,
+  951 actually reviewed primary pictures and 175 existing-profile maker links;
+  no new artist profiles. Final Rouen: 2,128 active works,989 illustrated,1,184
+  with canonical creators. All 3,500 native notices have outcomes: 1,414 existing,
+  624 new,15 identity holds and 1,447 unmapped scope/source holds. All 1,181
+  prepared views reviewed; preserve photographic mismatches, reverse/context/
+  glare holds, qualified makers, actual credits and rights, <=100,000-byte
+  full-frame derivatives and originals outside Documents. No million-image
+  production deletion established; original 67,834 was illustrated paintings.
+  All 41 resumed transactions reconcile: 6,805 atomic audits and 6,463 latest
+  postimages; with earlier museum merges 10,559 operation audits. Public image
+  pairs and old/canonical routes passed. Read-only production identity tests
+  passed; normal-domain Cloudflare 403 client limit remains, origins verified.
+  Two fully rolled-back artwork attempts and one zero-write image lock timeout
+  are retained; do not replay completed deliveries. Preserve four museum,
+  fifteen Rouen, nine wider inventory and Hagborg lifespan conflicts, source/
+  provider/robots/account holds, shared locks and stopped programme controls.
+  No real-local catalogue connection, new agents/jobs/schedules, background/
+  debug restart, Translation, unrelated services or infrastructure changes.
+  Combined finite source/image use 541,426,803 bytes, cap 1GiB/reserve 15GiB passed.
+  Exact results and unresolved cases:
+  docs/research/catalogue-deduplication-20261026/continuation-20261027/REPORT.txt
+  and final-atomic-reconciliation.json. Preserve other concurrent deliveries.
+
 - Continuous exhibition programme (13 October 2026): the user explicitly invoked
   `docs/INFINITE_EXHIBITION_RESEARCH_PROMPT.md`. Run a separate durable exhibition
   supervisor with bounded serial workers, its own queue/checkpoints/hourly reports,

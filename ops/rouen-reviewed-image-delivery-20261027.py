@@ -7,6 +7,7 @@ import importlib.util
 import json
 import shutil
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -22,6 +23,7 @@ E=m.E/'images'
 B=Path.home()/'Library/Application Support/Artline/backups'/OP
 D=m.D
 PREP=D/'rouen-image-delivery-preparation.json.gz'
+SELECTION=D/'rouen-image-selection-649.json.gz'
 ROUEN='f92766ec-41cf-42d1-9bb1-f333fe5d2980'
 EDITOR=m.EDITOR
 WEB='https://artline-web-lpuqqlugnq-ew.a.run.app'
@@ -45,8 +47,8 @@ def checked_image(r):
 
 
 def plan():
-    prep=c.load(PREP);images=prep['images'];assert len(images)==611
-    selected=c.load(D/'rouen-image-selection-649.json.gz')['selected']
+    prep=c.load(PREP);images=prep['images'];assert 0<len(images)<=1000
+    selected=c.load(SELECTION)['selected']
     identities={r['artwork_id']:r for r in selected}
     assert len({r['artwork_id'] for r in images})==len(images)
     for r in images:
@@ -57,7 +59,7 @@ def plan():
         db.execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ,READ ONLY')
         before=snapshot(db,[r['artwork_id'] for r in images])
         works={r['id']:r for r in before['artworks']}
-        assert len(works)==611
+        assert len(works)==len(images)
         source=db.execute("SELECT to_jsonb(s)v FROM sources s WHERE slug='joconde-m0729'").fetchone()['v']
         # The existing source is already linked to this museum; do not duplicate it.
         native=db.execute("SELECT l.artwork_id::text,l.object_key FROM research_artwork_links l WHERE l.artwork_id=ANY(%s::uuid[])", (list(works),)).fetchall()
@@ -78,8 +80,8 @@ def plan():
     assert shutil.disk_usage(B).free>15*1024**3
     p=dict(at=c.now(),operation=OP,preparation_sha256=c.sha(PREP.read_bytes()),images=images,source=source,before=before,native_identity_verified=True,citations=citation_rows)
     c.save(B/'plan.json.gz',p)
-    c.save(E/'plan-pin.json',dict(at=c.now(),path=str(B/'plan.json.gz'),sha256=c.sha((B/'plan.json.gz').read_bytes()),images=611,state='pinned_not_delivered',preparation_sha256=p['preparation_sha256']))
-    print('Pinned611 exact existing-object images, source facts, files and fresh production preimages.',flush=True)
+    c.save(E/'plan-pin.json',dict(at=c.now(),path=str(B/'plan.json.gz'),sha256=c.sha((B/'plan.json.gz').read_bytes()),images=len(images),state='pinned_not_delivered',preparation_sha256=p['preparation_sha256']))
+    print('Pinned',len(images),'exact existing-object images, source facts, files and fresh production preimages.',flush=True)
 
 
 def pinned():
@@ -128,7 +130,11 @@ def apply():
         ids=[r['artwork_id'] for r in batch];changes=[]
         with c.connect(write=True) as db:
             db.execute("SET LOCAL lock_timeout='5s'")
-            db.execute("SELECT pg_advisory_xact_lock(hashtext('artline-curated-ingestion'))")
+            deadline=time.monotonic()+180
+            while not db.execute("SELECT pg_try_advisory_xact_lock(hashtext('artline-curated-ingestion')) acquired").fetchone()['acquired']:
+                if time.monotonic()>deadline:raise TimeoutError('Shared ingestion lock busy; no batch writes attempted')
+                print('Waiting for existing shared ingestion writer; no batch writes yet.',flush=True)
+                time.sleep(5)
             db.execute('SELECT pg_advisory_xact_lock(202610053)')
             db.execute('SELECT id FROM artworks WHERE id=ANY(%s::uuid[]) ORDER BY id FOR UPDATE',(ids,)).fetchall()
             before=snapshot(db,ids);old={r['id']:r for r in before['artworks']}
@@ -178,7 +184,7 @@ def verify_batch(number):
 
 def verify():
     p=pinned();s=requests.Session();out=[]
-    for number in range(1,14):
+    for number in range(1,(len(p['images'])+49)//50+1):
         assert c.load(E/('batch-%03d-verification.json'%number))['passed']
     for n,r in enumerate(p['images'],1):
         rc=E/'public-artworks'/(r['native_id']+'.json')
@@ -195,7 +201,7 @@ def verify():
     with c.connect() as db:
         count=db.execute("SELECT count(*)n,count(*)FILTER(WHERE primary_media_id IS NOT NULL) illustrated FROM artworks WHERE current_institution_id=%s AND status<>'archived'",(ROUEN,)).fetchone()
     c.save(E/'final-verification.json',dict(at=c.now(),passed=True,new_primary_images=len(out),atomic_audits=4*len(out),public_service_origin_pairs=len(out),museum_counts=count,existing_images_preserved=True,normal_edge_client_verification_claimed=False,source_rights_unknown_and_credits_preserved=True))
-    print('Finished611 production attachments and611 public artwork/image-byte pairs.',flush=True)
+    print('Finished',len(out),'production attachments and public artwork/image-byte pairs.',flush=True)
 
 
 if __name__=='__main__':

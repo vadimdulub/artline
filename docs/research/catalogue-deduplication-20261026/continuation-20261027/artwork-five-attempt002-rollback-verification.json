@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-27T07:10:08.600236+00:00",
+  "passed": true,
+  "all_selected_row_groups_unchanged": [
+    "artwork_artists",
+    "artwork_location_assertions",
+    "artwork_media",
+    "artwork_places",
+    "artwork_search_documents",
+    "curated_collection_items",
+    "exhibition_entries",
+    "exhibition_objects",
+    "member_artwork_bookmarks",
+    "research_artwork_enrichments",
+    "research_artwork_links",
+    "research_resolutions",
+    "artworks",
+    "citations",
+    "external_identifiers",
+    "slug_redirects"
+  ],
+  "operation_audits": 0,
+  "cause": "Holding assertion artwork identity is immutable. Preserve original assertions on the archived alias and insert canonical evidence copies instead.",
+  "next_attempt": "attempt-003 with distinct operation prefix and complete trigger/index preflight"
+}

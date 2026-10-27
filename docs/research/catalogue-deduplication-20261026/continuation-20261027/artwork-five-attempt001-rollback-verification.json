@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-27T07:07:43.763633+00:00",
+  "passed": true,
+  "all_selected_row_groups_unchanged": [
+    "artwork_artists",
+    "artwork_location_assertions",
+    "artwork_media",
+    "artwork_places",
+    "artwork_search_documents",
+    "curated_collection_items",
+    "exhibition_entries",
+    "exhibition_objects",
+    "member_artwork_bookmarks",
+    "research_artwork_enrichments",
+    "research_artwork_links",
+    "research_resolutions",
+    "artworks",
+    "citations",
+    "external_identifiers",
+    "slug_redirects"
+  ],
+  "operation_audits": 0,
+  "cause": "The unique active holding index rejects two accepted nonsuperseded holding assertions. First transaction fully rolled back. Corrected plan preserves both native assertions and supersedes only the duplicate same-institution witness under the canonical current claim.",
+  "next_attempt": "attempt-002 with distinct operation prefix"
+}

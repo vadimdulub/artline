@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-27T07:02:59.418322+00:00",
+  "passed": true,
+  "source_commit": "4227c9a64a9061a5430b75bc3cbe609686850944",
+  "revision": "artline-api-identity-1027-v1",
+  "traffic_percent": 100,
+  "published_image": {
+    "source_commit": "4227c9a64a9061a5430b75bc3cbe609686850944",
+    "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:ca584133fc0a32878717b0824a27060fffa7b603148349b706e82c98a99ecd10",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:674f16b71ed8b774f5e482c94d8d415303a8d20d02d952e7ca8407c0b1743548",
+    "tag": "europe-west1-docker.pkg.dev/artline-508319/artline/api:identity-1027-4227c9a6",
+    "layer_sha256": "5bd41462109cdc4acb23927d46143bf3c46eaa0325e98565a9f4e0a59908dfdc",
+    "layer_bytes": 6289545,
+    "base_layers_preserved": 19,
+    "runtime_config_preserved": true
+  },
+  "runtime_configuration_and_prior_traffic_tags_preserved": true,
+  "checks": [
+    {
+      "path": "/health",
+      "status": 200,
+      "total": null,
+      "id": null
+    },
+    {
+      "path": "/api/v1/artworks?limit=1&image_only=false",
+      "status": 200,
+      "total": 1048744,
+      "id": null
+    },
+    {
+      "path": "/api/v1/artworks?limit=1&image_only=true",
+      "status": 200,
+      "total": 310467,
+      "id": null
+    },
+    {
+      "path": "/api/v1/exhibitions?limit=1",
+      "status": 200,
+      "total": 11990,
+      "id": null
+    },
+    {
+      "path": "/api/v1/atlas/artworks/350a8111-67c6-4a31-ba23-039069d7d1c7",
+      "status": 200,
+      "total": null,
+      "id": "350a8111-67c6-4a31-ba23-039069d7d1c7"
+    }
+  ],
+  "normal_edge_client_verification_claimed": false,
+  "web_revision_unchanged": true
+}

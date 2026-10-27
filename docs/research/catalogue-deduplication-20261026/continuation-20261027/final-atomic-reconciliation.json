@@ -1,0 +1,292 @@
+{
+  "at": "2026-10-27T08:17:52.368278+00:00",
+  "passed": true,
+  "transactions": 41,
+  "atomic_audits": 6805,
+  "latest_postimages_checked": 6463,
+  "deleted_child_rows_verified_absent": 50,
+  "retained_child_source_witnesses_verified_in_survivors": true,
+  "counts_snapshot": {
+    "total": 1060463,
+    "active": 1059940,
+    "illustrated": 311476
+  },
+  "rouen_counts": {
+    "active": 2128,
+    "illustrated": 989,
+    "with_creator": 1184
+  },
+  "active_dangling_primary_media": 0,
+  "exhibition_aliases": 11,
+  "invalid_exhibition_aliases": 0,
+  "inputs": [
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/museum-transaction-after.json.gz",
+      "sha256": "879da7150f3976c9f3be188b84f85fdc6636f26b0ea60f74f856afb7d4e746da",
+      "operation": "catalogue-deduplication-resume-20261027-museums-four",
+      "changes": 48
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/creator-transaction-after.json.gz",
+      "sha256": "fdd41e59f6252febd41f290bd339b7d8d5318c3c3a3c2a4ad330bde5df5b3b72",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-creators",
+      "changes": 132
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/exhibition-schema-after.json",
+      "sha256": "114ad2d783c30760767e27d029bcae614c43f172b8e28204c199bb623a064801",
+      "operation": "catalogue-deduplication-resume-20261027-exhibition-alias-schema",
+      "changes": 2
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-001.json.gz",
+      "sha256": "1309a4fda5524ce9c180a29afdf48272b53e73ae23afa63afd79b01bc2f017ca",
+      "operation": "rouen-reviewed-image-delivery-20261027-b001",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-002.json.gz",
+      "sha256": "bb4ce98672ebb234d5b458a0ec1cbe0ec6b459ef0c09907e33fe4a2158256374",
+      "operation": "rouen-reviewed-image-delivery-20261027-b002",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-003.json.gz",
+      "sha256": "72957a33e577bf92d3ce0e87119b6136bad961970a0b032fa106cad42c363276",
+      "operation": "rouen-reviewed-image-delivery-20261027-b003",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-004.json.gz",
+      "sha256": "1766230db3a28af1bce1155728b6c40ca62b7ee9bcf27e8323b6e59d15d55e1b",
+      "operation": "rouen-reviewed-image-delivery-20261027-b004",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-005.json.gz",
+      "sha256": "aad5597d8c16de4d4c8a77954ea21ee97cb9d175570cd80b8041947e95a7c849",
+      "operation": "rouen-reviewed-image-delivery-20261027-b005",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-006.json.gz",
+      "sha256": "ef147573665047c15a31a24b92bf27eecedc24b3b65449ce4204b23c4f829972",
+      "operation": "rouen-reviewed-image-delivery-20261027-b006",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-007.json.gz",
+      "sha256": "67c939800c01a289f647e2e3b540e125c0e95679128cfc54ab4b98ce9bd201dd",
+      "operation": "rouen-reviewed-image-delivery-20261027-b007",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-008.json.gz",
+      "sha256": "91bd183c051bf9ee710a1890b251e0122ce6dac91ced9c986e2a918285140bac",
+      "operation": "rouen-reviewed-image-delivery-20261027-b008",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-009.json.gz",
+      "sha256": "14ec9df6c1c788f0aa30ada4a7765e8928c4597e56afafd50a454e2d66d08201",
+      "operation": "rouen-reviewed-image-delivery-20261027-b009",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-010.json.gz",
+      "sha256": "cd9d3e0de8fff1cf0933937268512e27ac7fcd2df2574c15dd2ea569b42dc855",
+      "operation": "rouen-reviewed-image-delivery-20261027-b010",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-011.json.gz",
+      "sha256": "11ced8605e2785a202d85a87d1570323230fe2809d41de0d3cbf44e82fde7b7e",
+      "operation": "rouen-reviewed-image-delivery-20261027-b011",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-012.json.gz",
+      "sha256": "5481a3e703513dcb8d002243620a0d4f75c4c650d7cb78f01f50e55c5969e920",
+      "operation": "rouen-reviewed-image-delivery-20261027-b012",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-image-delivery-20261027/transaction-after-013.json.gz",
+      "sha256": "2301319eba375013543b72f019432dc1fbddf8c4741b7241a3e154c2008268d6",
+      "operation": "rouen-reviewed-image-delivery-20261027-b013",
+      "changes": 44
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/artworks/attempt-003/transaction-after.json.gz",
+      "sha256": "0b28d7cfc5056d8b117eb8f33dc1c5818b593fba7f13fc48afa600f5c8737751",
+      "operation": "catalogue-deduplication-resume-20261027-artworks-five-v3",
+      "changes": 33
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/exhibitions/transaction-after.json.gz",
+      "sha256": "39bfc2d4ef592c91316f1a865334acfc0d9529893c950ad4db83b86a21edff54",
+      "operation": "catalogue-deduplication-resume-20261027-exhibitions-nine",
+      "changes": 119
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-001.json.gz",
+      "sha256": "50acf3419691512c3ac421bda1f1470bbd702fe91558cfd853cc5615a6c1fc9b",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b001",
+      "changes": 209
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-002.json.gz",
+      "sha256": "b2513011406f1581d5a5a166f36ee78283b639f1783b981f925e6c3da2a0b124",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b002",
+      "changes": 204
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-003.json.gz",
+      "sha256": "99f4b55d6b724a08c86fc35ff2b0ba9ab7111df69d91b0dff288075d6ca71297",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b003",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-004.json.gz",
+      "sha256": "2814157d74a1548a7adb1e0fc73e7723e8f21753e3e4a075f00fed51c0ab4e9e",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b004",
+      "changes": 201
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-005.json.gz",
+      "sha256": "808ec4f3f145d177db1dcc8697c4ed83691a8687e8684b03e93b02dd6e2be347",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b005",
+      "changes": 209
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-006.json.gz",
+      "sha256": "e1f7f6e48e03ef58053ab2968352a80d063eb54cd7df7a6f0c90558fd04a9524",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b006",
+      "changes": 219
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-007.json.gz",
+      "sha256": "5c48be284911d36605bab3c2957a65958bbaac0c0c5acfce6a0f3f5ab3dc6bff",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b007",
+      "changes": 225
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-008.json.gz",
+      "sha256": "202dad900871529455c0668d9dd8dd027c46e221ef049135c4b21a873815014b",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b008",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-009.json.gz",
+      "sha256": "49cf8c6273cf3a283b0c2d7066a494f567e483c9ec2cf992920920fe1a25e095",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b009",
+      "changes": 202
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-010.json.gz",
+      "sha256": "992d79258acc29f97e13ceb4cafc897528a46085fe902470c135038ac371d62a",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b010",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-011.json.gz",
+      "sha256": "a192d934eefff0beb49bcbdfc5cf11d6b7667d505adeca45a655035eba2c7af4",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b011",
+      "changes": 201
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-012.json.gz",
+      "sha256": "e7200c08935372cc5746509b48b72d3f64994de241d47dd00e765eee9c813dc5",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b012",
+      "changes": 204
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/native-expansion/transaction-after-013.json.gz",
+      "sha256": "2a9c12893863db6956f37a915d726bfe1393bf25b1b0877d38237491bf9d2282",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-native-expansion-b013",
+      "changes": 101
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/clouet-qualification-after.json",
+      "sha256": "5379555d67035aa537d1eb4c2b91c3f9e34d816b95e1236425b682ace660a838",
+      "operation": "catalogue-deduplication-resume-20261027-clouet-source-qualification",
+      "changes": 2
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/rouen-artworks/transaction-after.json.gz",
+      "sha256": "6167081f9962fe5b280808a0f1aa74a561ab7f0663867d0f107245e595e1c32d",
+      "operation": "catalogue-deduplication-resume-20261027-rouen-artworks-four",
+      "changes": 30
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-new-work-images-20261027/transaction-after-001.json.gz",
+      "sha256": "c4b10eeb55936676cc33a16e5a65fb9a5bbcbacdc74bb76c27415be91d27a3e3",
+      "operation": "rouen-reviewed-new-work-images-20261027-b001",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-new-work-images-20261027/transaction-after-002.json.gz",
+      "sha256": "765e91543d9812e2b37967c5448f36853c9005170032cd1b672d45fec4f2076a",
+      "operation": "rouen-reviewed-new-work-images-20261027-b002",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-new-work-images-20261027/transaction-after-003.json.gz",
+      "sha256": "7ec775400fc9980f2dcc3ace6b5dbef83c8816bf08296d4a3921f28bf4501952",
+      "operation": "rouen-reviewed-new-work-images-20261027-b003",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-new-work-images-20261027/transaction-after-004.json.gz",
+      "sha256": "0265ae1a1864a96c82efc6c0d1ea9c7a0bce2dfddff97d5f99fcf149e70f1e01",
+      "operation": "rouen-reviewed-new-work-images-20261027-b004",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-new-work-images-20261027/transaction-after-005.json.gz",
+      "sha256": "e802ca70c9fdd279214d208f17a2ecf05790b57e60acda17c3b7f78345c7dfd4",
+      "operation": "rouen-reviewed-new-work-images-20261027-b005",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-new-work-images-20261027/transaction-after-006.json.gz",
+      "sha256": "807ab958188a3eeac06f60e9bd5a660311c4b570f8a13a8e5b0689d2551a58f7",
+      "operation": "rouen-reviewed-new-work-images-20261027-b006",
+      "changes": 200
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/rouen-reviewed-new-work-images-20261027/transaction-after-007.json.gz",
+      "sha256": "cf43e8062a44a4d59ea79b9d817f29f81c0810cf304836e010ace4d224988a21",
+      "operation": "rouen-reviewed-new-work-images-20261027-b007",
+      "changes": 160
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/catalogue-deduplication-resume-20261027/additional-creators/transaction-after.json.gz",
+      "sha256": "8c3120ac71a22bd590b4f11775b8b6bb3e99ab8a6afb023d5b7b9873bf838705",
+      "operation": "catalogue-deduplication-resume-20261027-additional-creators",
+      "changes": 60
+    }
+  ],
+  "change_table_counts": {
+    "institutions": 4,
+    "artworks": 1614,
+    "artwork_location_assertions": 656,
+    "artwork_artists": 176,
+    "citations": 736,
+    "schema_migrations": 1,
+    "exhibitions_schema": 1,
+    "media_assets": 951,
+    "media_rights_evidence": 951,
+    "artwork_media": 954,
+    "external_identifiers": 632,
+    "slug_redirects": 9,
+    "exhibition_entries": 2,
+    "exhibition_occurrences": 20,
+    "exhibition_participants": 72,
+    "exhibition_source_records": 11,
+    "exhibitions": 14,
+    "research_artwork_links": 1
+  },
+  "read_only": true,
+  "local_catalogue_connections": 0
+}

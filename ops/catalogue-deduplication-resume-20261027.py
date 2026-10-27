@@ -2,6 +2,7 @@
 import argparse
 import json
 import shutil
+import time
 import uuid
 from pathlib import Path
 
@@ -30,6 +31,16 @@ def rows(db, table, column, ids):
 
 def ordered(v):
     return sorted(v, key=lambda x: json.dumps(x, sort_keys=True))
+
+
+def acquire_locks(db):
+    db.execute("SET LOCAL lock_timeout='5s'")
+    deadline=time.monotonic()+240
+    while not db.execute("SELECT pg_try_advisory_xact_lock(hashtext('artline-curated-ingestion')) acquired").fetchone()['acquired']:
+        if time.monotonic()>deadline:raise TimeoutError('Shared ingestion lock occupied; no writes attempted')
+        print('Waiting for shared ingestion writer; no operation writes yet.',flush=True)
+        time.sleep(5)
+    db.execute('SELECT pg_advisory_xact_lock(202610053)')
 
 
 def snapshot():

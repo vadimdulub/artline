@@ -1,0 +1,177 @@
+Verified catalogue reconciliation and Rouen delivery — 27 October 2026
+
+The painting-only directory restriction is removed, committed, pushed and live.
+The subsequent API identity release is also live. Confirmed production merges:
+11 museum duplicates, nine physical artwork duplicates and 11 duplicate
+exhibition records across nine canonical events. Rouen received 624 new native
+catalogue records, 951 authentic reviewed primary pictures and 175 connections
+to existing artist profiles. No artist profile was invented or merged.
+
+Rouen now has 2,128 active artworks, 989 illustrated artworks and 1,184 artworks
+with canonical creator links. This is the independently checked final snapshot.
+There remain 1,139 unillustrated works and 944 without a canonical creator link;
+these include genuinely anonymous and qualified makers as well as unresolved
+identities. This delivery does not claim every physical museum holding, every
+worldwide duplicate or every painter's identity has been resolved.
+
+The missing-picture investigation
+
+The original 67,834 matched illustrated paintings exactly. The same initial
+production snapshot contained 1,039,058 active artwork records and 309,756
+illustrated active works. The million-item import described catalogue records,
+not one million picture files. The observed local cleanup removed local served
+copies; it did not delete those production artwork/media rows or Storage files.
+The retained audit identifies 546 historical non-pictorial artwork deletions
+and 610 primary-pointer detachments, with attribution limits. It does not prove
+that a person deleted a million production images. See the separate report:
+docs/research/database-picture-investigation-20261026/REPORT.txt.
+Existing local-copy, source-view and audit evidence remains preserved.
+The final 08:17 UTC snapshot has 1,059,940 active records and 311,476 illustrated
+active records. Concurrent research also added records; the global difference
+from the original snapshot is not credited wholly to this operation.
+
+Museum priority
+
+Rouen's joconde-m0729 alias resolves to musee-beaux-arts-rouen. All its artwork
+and source/holding references were reconciled first. Six other earlier merges
+cover Sassari, Caserta, Florence Novecento, MuMa, Unterlinden and Rome GNAM.
+This continuation adds MARCA, Genoa Palazzo Reale, Rennes and Orléans. The four
+new museum merges changed 48 rows with 48 independently matching atomic audits;
+the seven earlier museum merges have 3,754 verified row audits.
+
+Beyond Rouen, the 92-pair museum survey delivered ten merges and retained 78
+false matches separately. Four further
+institution/collection/building/office/succession ambiguities remain held:
+Umbria Depositi, Roverella, Günsel Office/Art and the Cyprus natural-history/
+Herbarium labels. Similar names alone did not authorize a museum merger.
+
+Artwork identity
+
+Five exact native duplicates were merged at Leventis/Basel. Cast numbers,
+individual impressions, distinct physical carriers and existing pictures stay
+intact. Four further Rouen pairs were merged: Blanche's Paul Valéry portrait,
+Poussin's L'Orage, Robert's SR62 canvas and Monet's909.1.33 Seine at Port-Villez.
+Old UUIDs resolve to their canonical works; original duplicate rows remain
+archived. Native citations/identifiers, immutable original holding assertions
+and private selections survive. Canonical holding evidence was copied rather
+than retargeting immutable original claims. All existing media rows survive.
+
+Robert's 1773 versus circa 1775 source descriptions remain explicit. His SR62
+canvas was not confused with SR63–65 or its wider decorative programme. The
+previously held Monet photograph was not restored. Hagborg's1911.6 candidate
+remains held because the source-linked artist profiles conflict: POP says 1925,
+whereas Nationalmuseum's person authority7459 gives 1921. The source and profile
+evidence was retained without inventing joint makers or blindly merging people.
+Primary sources checked: https://pop.culture.gouv.fr/notice/joconde/07290021753
+and https://collection.nationalmuseum.se/sv/artists/artist/7459/.
+
+The global native-identity survey screened 1,036,448 identifiers and 94,768
+research links. Its 250 small shared-source groups contain 1,238 candidate works.
+All 250 have stored dispositions: five confirmed groups delivered,234 shared
+collection/artist/catalogue/listing URLs are not object identities, and 11 groups
+intersect nine further inventory collisions held for native-card/version review.
+The separate museum/accession check found those nine collisions, including two
+Rublev icon pairs previously recognized during visual research. Their conflicting
+dates/cover fields, native-card identifiers and owner selections still require
+a dedicated consolidation plan. Current Rublev pages were unavailable through
+the browsing tool; this was not bypassed. No title-only or image-hash-only merge.
+
+Exhibition identity
+
+Eleven duplicate rows were archived with explicit canonical_exhibition_id links
+across nine events, including the existing EI-Q 1986 tour, five APJ source pairs
+and three Cleveland source pairs. All 22 native source records and four distinct
+exact artwork entries survive. Twenty-one venue assertions resolve to 11 dated
+physical stops;120 participant assertions resolve to 80. Fifty redundant child
+rows were removed only after their complete source witnesses were embedded in
+surviving evidence, backed up and atomically audited. No checklist content was
+discarded. Forty old/canonical detail and entry routes passed verification.
+Distinct numbered installations, tour stops, sections and scope/date holds stay
+separate unless source identity is established. Full original checklists remain
+partial; repeated source descriptions do not manufacture extra exhibitions.
+
+Rouen native collection and pictures
+
+All 3,500 M0729 records from the complete 35-page Ministry data export have an
+individual outcome. There are 1,414 mapped existing native records,624 delivered
+new records,15 identity holds and 1,447 unmapped scope/source holds. All 1,622
+records eligible under the conservative pre1990 pictorial/source screen are
+accounted for:1,607 mapped and 15 held. Ninety other existing Rouen works lack
+a native crosswalk and remain preserved. A native notice is not automatically
+a distinct physical object, an ownership assertion or an on-view claim.
+
+The 624 new works comprise 524 paintings,77 drawings and 23 watercolours. Their
+source dates remain 143 exact years,176 ranges,293 century envelopes and 12
+circa ranges. No single year was invented from a century or acquisition date.
+Their native creator labels remain literal where a person is not resolved.
+
+All 1,723 image-flagged pictorial notices were captured, exposing 1,995 published
+source views. The finite selected image research reviewed every one of 1,181
+prepared views in 30 labelled sheet batches, plus individual uncertain views.
+It delivered 611 pictures to existing works and 340 to the new works. All 951
+production attachments and public artwork/image-byte pairs passed verification.
+Forty second-wave candidate works and 38 initial selected works remain without
+an approved primary, including the one initial download gap. Backs, details,
+shared ensembles, glare, poor visibility and subject mismatches were held.
+
+The Christ-head-on-copper notice07290021371 shows a female saint on a wooden
+panel; its image was held without rewriting the object. Multi-panel door photos
+were not used to merge separate inventories. One reverse photograph initially
+marked acceptable in a sheet review was reopened individually and corrected
+before planning/upload/SQL; the original receipt and correction both survive.
+Every delivered derivative preserves the supplied frame/proportions and is at
+most 100,000 bytes. Exact photographic credits and actual unknown/restricted
+rights labels remain separate from metadata licences and owner authorization.
+Source originals and image binaries stay outside Documents. Storage uploads
+were create-only, with stored-byte and serving-origin SHA256 verification.
+
+Creators
+
+The 175 new canonical links comprise 66 repairs on existing works,79 links on
+the 624 new records and 30 further reviewed full-name/closed-biography matches.
+Every connection reuses an existing person and retains the source label and
+both explicit life years. The last 30 include compatible abbreviated given
+names with uniquely matching full names/aliases and closed biographies. A
+Ruisdael 'genre de' candidate was held. A separate Clouet evidence amendment
+explicitly preserves circa 1510 without changing the artist's life fields.
+Other programmes'488 Rouen creator links are not credited to this delivery.
+Unresolved/qualified makers and duplicate person profiles remain explicit.
+
+Verification, release and recovery
+
+All 41 resumed production transactions reconcile independently:6,805 atomic
+row audits and 6,463 latest row/schema postimages, including the 50 deleted child
+rows verified absent with complete witnesses preserved. Combined with the
+earlier museum merges, this work has 10,559 verified operation row audits.
+No active primary pointer dangles. Existing metadata, images and private source
+evidence were checked before each bounded write. Two artwork-merge attempts
+rolled back fully and were independently reconciled as zero committed changes;
+only corrected attempt003 was applied. An initial image-batch lock timeout
+made zero writes and was reconciled before resumption; completed batches were
+not replayed. Shared ingestion and image locks were used throughout.
+
+The serving API is artline-api-identity-1027-v1 at 100% traffic, source commit
+4227c9a64a9061a5430b75bc3cbe609686850944. The web remains the deployed all-media
+revision artline-web-all-media-1026-v1. Runtime configuration and prior tags were
+preserved. Package checks and release builds passed. Final opt-in read-only
+production tests passed 16 artwork redirects and 16 exhibition identities with
+details/entries, plus unknown UUID and unmapped archive exclusions. Every
+delivered public verification used the owner-authorized Cloud Run origins;
+the existing normal-domain Cloudflare403/error1010 client limitation remains.
+
+Finite source/image storage totals 541,426,803 bytes, below the 1GiB cap, with
+405,081,317,376 bytes free at verification, above the 15 GiB reserve. No real-local
+catalogue connection, background/debug restart, new agent/job/schedule,
+Translation, unrelated service or infrastructure change was made. Existing
+source/provider/robots/account/challenge holds and programme controls remain.
+
+Authoritative receipts in this directory:
+final-atomic-reconciliation.json; final-image-and-budget-verification.json;
+postmerge-code-verification.json; identity-deployment-verification.json;
+museum-four-verification.json; artwork-five-verification.json;
+rouen-four-artwork-verification.json; exhibition-nine-verification.json;
+images/final-verification.json; native-images/final-verification.json;
+native-expansion/final-verification.json; additional-creators/final-verification.json;
+rouen-all-3500-outcomes.json.gz; global-native-candidate-dispositions.json.
+Do not replay any completed operation. Resume unresolved cases from their
+exact saved source/preimage/hold records, taking fresh production snapshots.

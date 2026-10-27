@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-27T08:20:30.484859+00:00",
+  "passed": true,
+  "source_commit": "4227c9a64a9061a5430b75bc3cbe609686850944",
+  "read_only_production": true,
+  "artwork_redirects_checked": 16,
+  "exhibition_identities_detail_entries_checked": 16,
+  "unknown_and_unmapped_archives_not_exposed": true,
+  "log_path": "/Users/vadimdulub/Library/Application Support/Artline/releases/catalogue-deduplication-20261027/production-readonly-postmerge.log",
+  "log_sha256": "24adb377d9e5c0438270b15926a764a39690ca05c0940d842254c62fb0568b73",
+  "test_output": "=== RUN   TestCanonicalArtworkIDReadOnly\n    artwork_identity_test.go:92: Verified 16 existing redirects, active UUIDs, unmapped archives and unknown UUIDs\n--- PASS: TestCanonicalArtworkIDReadOnly (18.74s)\nPASS\nok  \tgithub.com/vadimdulub/artline/apps/server/internal/catalog\t19.616s\n=== RUN   TestCanonicalExhibitionReadOnly\n    identity_test.go:84: Verified 16 production canonical identities, detail and entry routes\n--- PASS: TestCanonicalExhibitionReadOnly (15.37s)\nPASS\nok  \tgithub.com/vadimdulub/artline/apps/server/internal/exhibitions\t16.243s\n"
+}

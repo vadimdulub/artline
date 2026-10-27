@@ -1,0 +1,111 @@
+{
+  "at": "2026-10-26T19:47:51.851073+00:00",
+  "items": [],
+  "constraints": [
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_position_check",
+      "definition": "CHECK (((\"position\" >= 1) AND (\"position\" <= 100000)))"
+    },
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_reason_check",
+      "definition": "CHECK ((length(reason) <= 2000))"
+    },
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_source_url_check",
+      "definition": "CHECK ((source_url ~ '^https://'::text))"
+    },
+    {
+      "table_name": "curated_collections",
+      "conname": "curated_collections_curator_kind_check",
+      "definition": "CHECK ((curator_kind = ANY (ARRAY['owner'::text, 'museum'::text])))"
+    },
+    {
+      "table_name": "curated_collections",
+      "conname": "curated_collections_revision_check",
+      "definition": "CHECK ((revision > 0))"
+    },
+    {
+      "table_name": "curated_collections",
+      "conname": "curated_collections_status_check",
+      "definition": "CHECK ((status = ANY (ARRAY['draft'::text, 'review'::text, 'published'::text, 'archived'::text])))"
+    },
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_collection_id_artwork_id_key",
+      "definition": "UNIQUE (collection_id, artwork_id)"
+    },
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "curated_collections",
+      "conname": "curated_collections_institution_id_curator_kind_key",
+      "definition": "UNIQUE (institution_id, curator_kind)"
+    },
+    {
+      "table_name": "curated_collections",
+      "conname": "curated_collections_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_artwork_id_fkey",
+      "definition": "FOREIGN KEY (artwork_id) REFERENCES artworks(id)"
+    },
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_collection_id_fkey",
+      "definition": "FOREIGN KEY (collection_id) REFERENCES curated_collections(id)"
+    },
+    {
+      "table_name": "curated_collection_items",
+      "conname": "curated_collection_items_source_id_fkey",
+      "definition": "FOREIGN KEY (source_id) REFERENCES sources(id)"
+    },
+    {
+      "table_name": "curated_collections",
+      "conname": "curated_collections_institution_id_fkey",
+      "definition": "FOREIGN KEY (institution_id) REFERENCES institutions(id)"
+    },
+    {
+      "table_name": "curated_collections",
+      "conname": "museum_collection_requires_institution",
+      "definition": "CHECK (((curator_kind = 'owner'::text) OR (institution_id IS NOT NULL)))"
+    }
+  ],
+  "indexes": [
+    {
+      "tablename": "curated_collection_items",
+      "indexdef": "CREATE UNIQUE INDEX curated_collection_items_collection_id_artwork_id_key ON public.curated_collection_items USING btree (collection_id, artwork_id)"
+    },
+    {
+      "tablename": "curated_collection_items",
+      "indexdef": "CREATE UNIQUE INDEX curated_collection_items_pkey ON public.curated_collection_items USING btree (id)"
+    },
+    {
+      "tablename": "curated_collection_items",
+      "indexdef": "CREATE INDEX curated_items_artwork_idx ON public.curated_collection_items USING btree (artwork_id, collection_id)"
+    },
+    {
+      "tablename": "curated_collection_items",
+      "indexdef": "CREATE INDEX curated_items_order_idx ON public.curated_collection_items USING btree (collection_id, \"position\", artwork_id)"
+    },
+    {
+      "tablename": "curated_collections",
+      "indexdef": "CREATE UNIQUE INDEX curated_collections_institution_id_curator_kind_key ON public.curated_collections USING btree (institution_id, curator_kind)"
+    },
+    {
+      "tablename": "curated_collections",
+      "indexdef": "CREATE UNIQUE INDEX curated_collections_pkey ON public.curated_collections USING btree (id)"
+    },
+    {
+      "tablename": "curated_collections",
+      "indexdef": "CREATE UNIQUE INDEX curated_global_owner_collection ON public.curated_collections USING btree (curator_kind) WHERE (institution_id IS NULL)"
+    }
+  ]
+}
