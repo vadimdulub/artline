@@ -1,0 +1,29 @@
+{
+  "status": "prepared_awaiting_restored_owner_authentication_and_fresh_database_checks",
+  "code": "JE",
+  "name": "Jersey",
+  "region_code": "northern-europe",
+  "jurisdiction_note": "Self-governing Crown Dependency, separate from the United Kingdom. JE is a country/area filter code, not an assertion of sovereign-state status.",
+  "source_urls": [
+    "https://unstats.un.org/unsd/methodology/m49/overview",
+    "https://www.gov.je/Government/Departments/JerseyWorld/pages/relationshipeuanduk.aspx"
+  ],
+  "museum_source": "https://www.jerseyheritage.org/visit/places-to-visit/jersey-museum/",
+  "dependent_profile_batch": "0055",
+  "dependent_profile_slug": "museum-authority-q18583545",
+  "verified_museum_locality": "St Helier",
+  "frozen_baseline_country_table_contains_JE": false,
+  "live_country_absence_not_assumed": true,
+  "scope_basis": "The owner requested verification of museum countries and locations and review of country filters. The verified Jersey museum requires its proper country/area entry, without misclassification as GB.",
+  "required_before_any_write": [
+    "Fresh country-table/schema inspection after owner authentication is restored",
+    "Read intervening root instructions and pin the complete current file",
+    "Three shared ingestion locks retained before the exact-key preflight and after the atomic audit",
+    "Reuse a positively verified existing JE row if another authorised session added it; never overwrite or replay",
+    "Preserve every pre-existing country and verify any added row and its exact audit after commit",
+    "Run the normal fresh profile plan for batch 0055 only after JE is supported"
+  ],
+  "country_row_not_yet_inserted": true,
+  "profile_credit": 0,
+  "no_new_museum_artist_artwork_image_holding_status_or_identity": true
+}

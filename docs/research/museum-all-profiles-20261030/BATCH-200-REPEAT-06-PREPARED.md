@@ -1,0 +1,15 @@
+# Repeated 200-profile group 6 prepared — 31 October 2026
+
+**200 museum profiles have source-reviewed, two-paragraph English descriptions and verified city/locality and country/area drafts. None of these 200 has been published.** The verified campaign total remains **1,420 of 2,574**, with **1,154 unpublished**. Of those, 200 are prepared here and 954 still require preparation or resolution. The earlier 91 remain outside campaign credit.
+
+Publishing stopped during batch 0051 planning because the active owner Google Cloud account requires interactive sign-in. No plan, staged transaction or apply receipt exists for batches 0051–0058, and no writer was dispatched. A subsequent ordinary owner-account authentication check also failed; no alternative account or cached-credential recovery was used. Fresh database absence, country-table and schema checks have not been claimed.
+
+Five country/area entries need fresh database support checks: Guernsey (GG), Jersey (JE), Isle of Man (IM), Liechtenstein (LI), and China, Hong Kong Special Administrative Region (HK). UN M49 names, codes and regions are documented. The three Crown Dependencies are distinct from the UK, and HK is not a separate-sovereign-state claim. Existing live rows must be verified and reused if another authorised task has added them; baseline absence is not live absence.
+
+Research distinguishes London’s surgical Hunterian from Glasgow’s university museum; Liechtenstein’s Vaduz museum from the princely palace collections in Vienna; museum networks from individual buildings; and commercial galleries from public collections. Current primary notices qualify closures, moves and reopening plans. Kettering’s dated 24 October 2026 gallery reopening supersedes an older combined closure notice for that gallery only. Kharkiv’s museum currently operates online only. No artwork-level holding, physical whereabouts, safety, ownership or current-display claims are created.
+
+The unresolved four-city Gallerie d’Italia network remains pending rather than being assigned an arbitrary branch city. M Leuven is the frozen replacement completing these 200 drafts. Each source URL occurs as an actual heading in saved web-tool evidence. Relevant indexed museum, authority, tourism and university passages were reviewed; historical documents and PDF passages have explicit qualifications, with no entire-PDF or entire-book reading claim.
+
+The [prepared verification receipt](prepared-repeat-06-v1.json) pins every draft and saved source result, preserves the prior completed checkpoint, and records the actual authentication failure. Authentication restoration must be followed by fresh country/schema inspection, appropriate audited support, and the normal fresh profile plans before any write. Exact three-lock, audit, preservation, repository projection and public checks remain required for delivery credit. No old writer, completed transaction or publication is to be replayed.
+
+Further foreground research remains authorised. No application deployment, native third-party museum/image requests, Storage uploads, agents, jobs, schedules or background research were performed for these drafts.

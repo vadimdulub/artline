@@ -1,0 +1,22 @@
+{
+  "batch": "0051",
+  "status": "drafted_not_planned_or_applied",
+  "drafted_profiles": 29,
+  "source_result_heading_gate_passed": true,
+  "failure": "gcloud secrets versions access failed while refreshing the active vadim@alingva.com account: Reauthentication failed; cannot prompt during non-interactive execution.",
+  "dispatch_stage": "plan, before database connection and before writer dispatch",
+  "local_positive_reconciliation": {
+    "plan_json_gz_absent": true,
+    "plan_pin_json_absent": true,
+    "transaction_staged_json_gz_absent": true,
+    "applied_json_absent": true,
+    "apply_verify_projection_public_never_dispatched_for_this_batch": true
+  },
+  "no_claim_of_fresh_database_audit_key_query": true,
+  "campaign_verified_total_unchanged": 1420,
+  "original_failure_timestamp_not_inferred": true,
+  "owner_reauthentication_requested": true,
+  "continue_independent_foreground_research": true,
+  "no_background_jobs_or_alternative_account_switch": true,
+  "resume_requirement": "After the owner restores authentication, obtain fresh database preimages and source/citation/venue context through the normal plan. Read any intervening root instruction changes. Never replay a committed transaction."
+}

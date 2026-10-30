@@ -1,0 +1,28 @@
+{
+  "status": "prepared_awaiting_restored_owner_authentication_and_fresh_database_checks",
+  "code": "LI",
+  "name": "Liechtenstein",
+  "region_code": "western-europe",
+  "jurisdiction_note": "UN M49 country code LI, Western Europe. The Vaduz national art museum is distinct from the Princely Collections presented in Vienna, Austria.",
+  "source_urls": [
+    "https://unstats.un.org/unsd/methodology/m49/overview"
+  ],
+  "museum_source": "https://www.kunstmuseum.li/en/museum/collection",
+  "dependent_profile_batch": "0057",
+  "dependent_profile_slug": "museum-source-69af21d93673547d0720",
+  "verified_museum_locality": "Vaduz",
+  "live_country_absence_not_assumed": true,
+  "scope_basis": "Owner requests verification of all museum countries and locations and review of filters. The verified museum requires its correct UN country/area code. This draft is not a live database absence check.",
+  "required_before_any_write": [
+    "Fresh country-table/schema inspection after owner authentication is restored",
+    "Read intervening root instructions and pin the complete current file",
+    "Three shared ingestion locks retained before the exact-key preflight and after the atomic audit",
+    "Reuse a positively verified existing LI row if another authorised session already added it; never overwrite or replay",
+    "Preserve every pre-existing country and verify the added row and its exact audit after commit",
+    "Run the normal fresh profile plan and verification for batch 0057 only after LI is supported"
+  ],
+  "country_row_not_yet_inserted": true,
+  "profile_credit": 0,
+  "no_new_museum_artist_artwork_image_holding_status_or_identity": true,
+  "frozen_baseline_country_table_contains_LI": false
+}

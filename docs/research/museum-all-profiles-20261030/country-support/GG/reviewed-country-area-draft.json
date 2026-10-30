@@ -1,0 +1,29 @@
+{
+  "status": "prepared_awaiting_restored_owner_authentication_and_fresh_database_checks",
+  "code": "GG",
+  "name": "Guernsey",
+  "region_code": "northern-europe",
+  "jurisdiction_note": "Self-governing Crown Dependency, separate from the United Kingdom. GG is a country/area filter code, not an assertion of sovereign-state status.",
+  "source_urls": [
+    "https://unstats.un.org/unsd/methodology/m49/overview",
+    "https://efcb.gov.gg/about/about-the-bureau/"
+  ],
+  "museum_source": "https://www.visitguernsey.com/experiences/activities/guernsey-museum-at-candie/",
+  "dependent_profile_batch": "0053",
+  "dependent_profile_slug": "museum-authority-q39924482",
+  "verified_museum_locality": "St Peter Port",
+  "frozen_baseline_country_table_contains_GG": false,
+  "live_country_absence_not_assumed": true,
+  "scope_basis": "The owner explicitly requested verification of museum countries and locations and review of country filters. Supporting the verified Guernsey museum requires the proper country/area entry, rather than misclassifying it as GB.",
+  "required_before_any_write": [
+    "Fresh country-table/schema inspection after owner authentication is restored",
+    "Read intervening root instructions and pin the complete current file",
+    "Three shared ingestion locks retained before the exact-key preflight and after the atomic audit",
+    "Reuse a positively verified existing GG row if another authorised session already added it; never overwrite or replay",
+    "Preserve every pre-existing country and verify the added row and its exact audit after commit",
+    "Run the normal fresh profile plan and verification for batch 0053 only after GG is supported"
+  ],
+  "country_row_not_yet_inserted": true,
+  "profile_credit": 0,
+  "no_new_museum_artist_artwork_image_holding_status_or_identity": true
+}

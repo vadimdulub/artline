@@ -1,0 +1,28 @@
+{
+  "status": "prepared_awaiting_restored_owner_authentication_and_fresh_database_checks",
+  "code": "HK",
+  "name": "China, Hong Kong Special Administrative Region",
+  "region_code": "eastern-asia",
+  "jurisdiction_note": "UN country/area code HK in Eastern Asia. Hong Kong is a Special Administrative Region of China, not a separate-sovereign-state assertion.",
+  "source_urls": [
+    "https://unstats.un.org/unsd/methodology/m49/overview"
+  ],
+  "museum_source": "https://www.mplus.org.hk/en/about-the-collection/m-collection/",
+  "dependent_profile_batch": "0058",
+  "dependent_profile_slug": "mplus-hong-kong",
+  "verified_museum_locality": "Hong Kong",
+  "live_country_absence_not_assumed": true,
+  "scope_basis": "Owner requests verification of all museum countries and locations and review of filters. The verified museum requires its correct UN country/area code. This draft is not a live database absence check.",
+  "required_before_any_write": [
+    "Fresh country-table/schema inspection after owner authentication is restored",
+    "Read intervening root instructions and pin the complete current file",
+    "Three shared ingestion locks retained before the exact-key preflight and after the atomic audit",
+    "Reuse a positively verified existing HK row if another authorised session already added it; never overwrite or replay",
+    "Preserve every pre-existing country and verify the added row and its exact audit after commit",
+    "Run the normal fresh profile plan and verification for batch 0058 only after HK is supported"
+  ],
+  "country_row_not_yet_inserted": true,
+  "profile_credit": 0,
+  "no_new_museum_artist_artwork_image_holding_status_or_identity": true,
+  "frozen_baseline_country_table_contains_HK": false
+}
