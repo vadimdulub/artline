@@ -4,6 +4,8 @@ import Link from "@/components/MemberLink";
 import { useRef, useState } from "react";
 import { queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import { countryName } from "@/lib/api";
+import { museumLocations } from "@/lib/museum-location";
+import { museumDirectoryGuides } from "@/lib/museum-guide-directory";
 import type { MuseumPage } from "@/lib/types";
 import { ArtworkImage, permittedImagePath } from "./ArtworkViewer";
 import { MultiSelectFilter } from "./MultiSelectFilter";
@@ -48,10 +50,10 @@ export function MuseumsIndex({ initialPage, initialQuery = "" }: { initialPage?:
   return <main id="main-content" className={styles.page}>
     <AtlasPageHeader title="Museums and collections" />
     <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} placeholder="Museum, city or country" searchLabel="Search collections" columns={6} activeCount={filters.filter(f => f.key !== "q").length}>
-      <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} helpText="Find collections with works by any selected painter. A collection does not need to hold all the selected painters." />
-      <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />
       <MultiSelectFilter label="Regions" allLabel="All regions" options={facets?.regions ?? []} values={regions} onChange={values => setMuseumFilters({ region: values })} helpText="Choose any number. These are recorded museum or venue locations." />
       <MultiSelectFilter label="Countries" allLabel="All countries" options={facets?.countries ?? []} values={countries} onChange={values => setMuseumFilters({ country: values })} helpText="Match a recorded museum or venue location in any selected country." />
+      <MultiSelectFilter label="Painters" allLabel="All painters" {...painterChoices} values={painters} onChange={values => setMuseumFilters({ artist: values })} helpText="Find collections with works by any selected painter. A collection does not need to hold all the selected painters." />
+      <MultiSelectFilter label="Movements" allLabel="All movements" options={facets?.movements ?? []} values={movements} onChange={values => setMuseumFilters({ movement: values })} />
       <AtlasSelect label="Selection" value={selection} onChange={value => setMuseumFilters({ selection: value })} options={[{ value: "", label: "All catalogued works" }, { value: "museum", label: "Museum highlights" }]} />
       <AtlasSelect label="Display" value={display} onChange={value => setMuseumFilters({ display: value })} options={[{ value: "", label: "Any display status" }, { value: "on_view", label: "Confirmed on view" }]} />
     </AtlasFilters>
@@ -60,12 +62,13 @@ export function MuseumsIndex({ initialPage, initialQuery = "" }: { initialPage?:
     <p className={styles.note}>Collection totals include all Artline records. Confirmed on-view reports were checked within 30 days.</p>
     <section aria-label="Museum results" aria-busy={loading}>
       {error ? <MuseumError message={error} retry={() => setRetry(value => value + 1)} /> : loading ? <p className={styles.loading}>Opening the collections…</p> : data?.items.length ? <ul className={styles.museumGrid}>{data.items.map(museum => <li key={museum.id}>
-        <Link className={styles.museumCard} href={`/museums/${museum.slug}${collectionQuery.size ? `?${collectionQuery}` : ""}`}>
+        <Link className={`${styles.museumCard} ${!permittedImagePath(museum.cover?.media_url ?? null) ? styles.museumCardText : ""}`} href={`/museums/${museum.slug}${collectionQuery.size ? `?${collectionQuery}` : ""}`}>
           {museum.cover && permittedImagePath(museum.cover.media_url) && <div className={styles.collectionImage}><ArtworkImage work={museum.cover} /></div>}
-          <div className={styles.collectionCopy}>{(museum.venues.length > 0 || museum.country) && <p className={styles.place}>{ museum.venues.length ? [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") : [museum.city, countryName(museum.country!)].filter(Boolean).join(", ") }</p>}<h3>{museum.name}</h3>{museumDescription(museum.description) && <p>{museumDescription(museum.description)}</p>}
+          <div className={styles.collectionCopy}><h3>{museum.name}</h3>{museumLocations(museum).length > 0 && <p className={styles.museumLocation}>{museumLocations(museum).join(" / ")}</p>}{museumDescription(museum.description) && <p className={styles.cardDescription}>{museumDescription(museum.description)?.split(/\n\s*\n/)[0]}</p>}
           <div className={styles.cardCounts}><span>{formatCount(museum.work_count)} {museum.work_count === 1 ? "work" : "works"} in Artline</span>{museum.highlight_count > 0 && <span>{formatCount(museum.highlight_count)} museum highlights</span>}</div>
           {museum.on_view_count > 0 && <p className={styles.displayNote}>{museum.on_view_count} recently confirmed on view</p>}<span className={styles.exploreLink}>Explore collection <span aria-hidden="true">↗</span></span></div>
         </Link>
+        {museumDirectoryGuides(museum.slug).map(guide => <Link key={guide.href} className={styles.cardGuide} prefetch={false} href={guide.href} aria-label={`Read guide: ${guide.title}`}>Read guide<span aria-hidden="true">{guide.count} artworks</span></Link>)}
       </li>)}</ul> : <div className={styles.empty}><h2>{filters.length ? "No collections match these filters" : "The museum catalogue is taking shape"}</h2><p>{display ? "No matching works have current, verified display information. This does not mean they are not on view." : "No collections are available in this view yet."}</p>{filters.length > 0 && <button onClick={clear}>Remove filters</button>}</div>}
     </section>
     {data && <CursorPager paging={paging} next={data.next_cursor} busy={loading} total={data.total} shown={data.items.length} label="Museum pages" noun="collections" />}

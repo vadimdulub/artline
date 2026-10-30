@@ -22,14 +22,23 @@
 .note{font-size:13px;color:var(--muted);line-height:1.65;max-width:80ch}
 .museumGrid,.worksGrid{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin:24px 0 0;padding:0}
 .museumGrid>li,.worksGrid>li{min-width:0}
-.museumCard{display:grid;grid-template-columns:minmax(110px,.8fr) minmax(0,1.4fr);height:100%;text-decoration:none;border-top:1px solid var(--line);padding-top:20px;gap:22px}
+.museumGrid>li{display:flex;flex-direction:column}
+.museumCard{display:grid;grid-template-columns:minmax(110px,.8fr) minmax(0,1.4fr);flex:1;text-decoration:none;border-top:1px solid var(--line);padding-top:20px;gap:22px}
 .collectionImage{height:300px;background:var(--stone);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .collectionImage img{width:100%;height:100%;object-fit:contain}
 .collectionImage :global(.work-placeholder){height:100%;width:100%}
 .collectionCopy{display:flex;flex-direction:column;align-items:flex-start;padding:8px 0}
 .place{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 10px}
+.museumLocation{font-size:16px;line-height:1.5;color:var(--ink);margin:0 0 14px;overflow-wrap:anywhere}
+.collectionCopy>.museumLocation{font-size:16px;line-height:1.5;margin:0 0 14px}
+.museumCard.museumCardText{grid-template-columns:minmax(0,1fr)}
+.museumIntro>div>.museumLocation{font-size:18px;line-height:1.5;margin:0 0 18px}
+.collectionCopy>.cardDescription{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cardGuide{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;margin-top:14px;padding:12px 16px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;font-size:14px}
+.cardGuide:hover{background:var(--dark)}
+.cardGuide>span[aria-hidden]{font-size:13px}
 .collectionCopy h3{font:400 clamp(24px,2.1vw,34px)/1.15 var(--serif);margin-bottom:12px;text-wrap:balance}
-.collectionCopy>p:not(.place):not(.displayNote){font-size:14px;line-height:1.6;margin-bottom:18px}
+.collectionCopy>p:not(.place):not(.displayNote):not(.museumLocation){font-size:14px;line-height:1.6;margin-bottom:18px}
 .cardCounts{display:flex;gap:5px 12px;flex-wrap:wrap;font-size:12px;margin-top:auto;color:var(--ink)}
 .displayNote{font-size:12px;line-height:1.6;color:var(--muted);margin:10px 0 14px;display:block}
 .exploreLink{font-size:13px;display:flex;gap:14px;padding:4px 0;color:var(--ultramarine)}
@@ -104,13 +113,13 @@
  .drawer{width:100%;max-width:100%}.drawerContent{padding:25px 20px 35px}.drawerContent>h2{font-size:24px}
  .drawerContent dl>div{grid-template-columns:90px minmax(0,1fr);gap:12px}
 }
-@media(max-width:380px){.collectionImage{height:230px}.museumCard{gap:12px}.collectionCopy h3{font-size:24px}.collectionCopy>p:not(.place):not(.displayNote){font-size:13px}.workImage{height:190px}.worksGrid{gap:12px}}
+@media(max-width:380px){.collectionImage{height:230px}.museumCard{gap:12px}.collectionCopy h3{font-size:24px}.collectionCopy>p:not(.place):not(.displayNote):not(.museumLocation){font-size:13px}.workImage{height:190px}.worksGrid{gap:12px}}
 
 /* Large-catalogue work surface. Keep image proportions; density is a choice. */
 .collectionPage{padding-top:22px}
 .collectionPage .museumIntro{gap:24px;padding-bottom:20px;margin-bottom:20px}
 .collectionPage .museumIntro h1{font-size:clamp(30px,3.2vw,46px);line-height:1.12;margin-bottom:10px;text-wrap:pretty}
-.collectionPage .museumIntro>div>p:not(.place):not(.preview){font-size:14px;line-height:1.5;margin-top:0;max-width:72ch}
+.collectionPage .museumIntro>div>p:not(.place):not(.preview):not(.museumLocation){font-size:14px;line-height:1.5;margin-top:0;max-width:72ch}
 .collectionPage .visit{flex-basis:230px;padding:0 16px;background:transparent;border:1px solid var(--line);border-radius:3px}
 .visit>summary{padding:13px 0;min-height:46px;font-size:14px;cursor:pointer}
 .collectionPage .selectionTabs{margin-bottom:14px}

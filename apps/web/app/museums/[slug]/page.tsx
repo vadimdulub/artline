@@ -8,13 +8,16 @@ import { guidePath } from "@/lib/museum-guide-types";
 import { MuseumPageTabs } from "@/components/MuseumPageTabs";
 import { MuseumDetail } from "@/components/MuseumDetail";
 import { MuseumWebsiteLink } from "@/components/MuseumWebsiteLink";
+import { MuseumGuideCallout } from "@/components/MuseumGuideCallout";
 import { ArtworkImage } from "@/components/ArtworkViewer";
 import { MuseumPublicationCards, PublicationImage } from "@/components/MuseumPublicationView";
 import { getMuseum } from "@/lib/server-api";
 import { getMuseumPublications, getPublishedMuseum } from "@/lib/museum-publications";
+import { publicationPath } from "@/lib/museum-studio";
 import { absoluteURL, breadcrumbs, pageMetadata, plainDescription } from "@/lib/seo";
 import { StructuredData } from "@/components/StructuredData";
-import { safeSourceURL, countryName } from "@/lib/api";
+import { safeSourceURL } from "@/lib/api";
+import { museumLocations } from "@/lib/museum-location";
 import { museumDescription } from "@/lib/display-metadata";
 import type { Museum } from "@/lib/types";
 import styles from "@/components/MuseumPublic.module.css";
@@ -54,19 +57,25 @@ export default async function MuseumPage({ params, searchParams }: { params: Pro
     for (const item of Array.isArray(value) ? value : value === undefined ? [] : [value]) query.append(key, item);
   }
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 100) notFound();
-  const [museum, profilePage] = await Promise.all([museumForPage(slug), getMuseumPublications(slug, "profile").catch(() => null)]);
+  const [museum, profilePage, publishedGuides] = await Promise.all([museumForPage(slug), getMuseumPublications(slug, "profile").catch(() => null), getMuseumPublications(slug, "guide").catch(() => null)]);
   if (!museum) notFound();
   const profile = profilePage?.items[0], info = profile?.document;
   const visit = safeSourceURL(info?.visit_url || museum.venues[0]?.visit_url || museum.website_url);
   const description = info?.summary || museumDescription(museum.description);
   const guides = getMuseumGuideLinks(museum.slug);
+  const collectionQuery = new URLSearchParams(query);
+  collectionQuery.set("tab", "collection");
   return <main id="main-content" className={styles.page}>
     <StructuredData data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: museum.name, description: description || undefined, url: absoluteURL(`/museums/${museum.slug}`) }} />
     <StructuredData data={breadcrumbs([{ name: "Artline", path: "/" }, { name: "Museums", path: "/museums" }, { name: museum.name, path: `/museums/${museum.slug}` }])} />
     <Link className={styles.back} href="/museums">Museums</Link>
-    <header className={styles.hero}><div className={styles.heroText}><p className={styles.place}>{museum.city || museum.venues[0]?.city}{museum.country ? `, ${countryName(museum.country)}` : ""}</p><h1>{info?.title || museum.name}<MuseumWebsiteLink url={museum.website_url || visit} name={museum.name} /></h1>{description && <p>{description}</p>}<div className={styles.actions}><a href="#collection">Explore the collection</a>{guides.map(guide => <Link key={guide.slug} prefetch={false} href={guidePath(guide.slug)}>Read guide<span className="sr-only">: {guide.title}</span></Link>)}{visit && visit !== "#" && <a href={visit} target="_blank" rel="noreferrer">Plan your visit</a>}</div></div>
+    <header className={`${styles.hero} ${!museum.cover && !info?.image_url && !info?.image_id ? styles.heroTextOnly : ""}`}><div className={styles.heroText}><h1>{info?.title || museum.name}<MuseumWebsiteLink url={museum.website_url || visit} name={museum.name} /></h1>{museumLocations(museum).length > 0 && <p className={styles.place}>{museumLocations(museum).join(" / ")}</p>}{description?.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}<div className={styles.actions}><Link href={`/museums/${museum.slug}?${collectionQuery}#collection`}>Explore the collection</Link>{visit && visit !== "#" && <a href={visit} target="_blank" rel="noreferrer">Plan your visit</a>}</div></div>
       {(info?.image_url || info?.image_id) && profile ? <figure className={styles.heroImage}><div><PublicationImage item={profile} slug={slug} /></div><figcaption>{info.image_credit}</figcaption></figure> : museum.cover && <figure className={styles.heroImage}><Link href={`/museums/${slug}?work=${museum.cover.id}#collection`}><ArtworkImage work={museum.cover} large /></Link><figcaption>{museum.cover.title}{museum.cover.artists.length > 0 && ` — ${museum.cover.artists.map(a => a.name).join(", ")}`}. <a href={`/museums/${slug}?work=${museum.cover.id}#collection`}>Artwork and source</a></figcaption></figure>}
     </header>
+    <MuseumGuideCallout guides={[
+      ...guides.map(guide => ({ href: guidePath(guide.slug), title: guide.title, count: guide.count, languages: guide.locales.length })),
+      ...(publishedGuides?.items ?? []).map(guide => ({ href: publicationPath(museum.slug, guide.id), title: guide.document.title })),
+    ]} />
     {!profilePage && <p role="status">Museum information could not be loaded. Reload to try again.</p>}
     <MuseumPageTabs slug={slug} museumName={museum.name} initialSearch={query.size ? `?${query}` : ""} hasProfile={!!profile} panels={{
       collection: <div className={styles.collection}>
@@ -82,6 +91,7 @@ export default async function MuseumPage({ params, searchParams }: { params: Pro
         <p><Link href="/guides">Explore Artline guides</Link></p>
       </>,
       visit: <div className={styles.visit}><div>
+        {museumLocations(museum).map(location => <p key={location} className={styles.place}>{location}</p>)}
         {info?.body && <p>{info.body}</p>}{info?.address && <p>{info.address}</p>}{info?.hours && <p>{info.hours}</p>}
         {visit && visit !== "#" && <a href={visit} target="_blank" rel="noreferrer">Visit the official museum website</a>}
         <p className={styles.note}>Check the museum’s website for opening hours, tickets, and changes to displays.</p>

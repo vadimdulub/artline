@@ -1,0 +1,10 @@
+.guideCallout { border: 1px solid var(--line); border-left: 4px solid var(--ink); padding: 24px 28px; margin: 0 0 36px; background: var(--white); }
+.guideCallout h2 { font: 400 28px/1.2 var(--serif); margin: 0 0 20px; }
+.guideCallout ul { list-style: none; margin: 0; padding: 0; }
+.guideCallout li { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.guideCallout li + li { border-top: 1px solid var(--line); margin-top: 16px; padding-top: 16px; }
+.guideCallout h3 { font: 400 22px/1.35 var(--serif); margin: 0; overflow-wrap: anywhere; }
+.guideCallout p { font-size: 14px; line-height: 1.5; margin: 8px 0 0; color: var(--muted); }
+.guideCallout a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; flex-shrink: 0; padding: 12px 20px; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); text-decoration: none; font-size: 16px; }
+.guideCallout a:hover { background: var(--dark); }
+@media(max-width: 500px) { .guideCallout { padding: 20px; }.guideCallout li { align-items: stretch; flex-direction: column; gap: 16px; }.guideCallout a { align-self: flex-start; } }

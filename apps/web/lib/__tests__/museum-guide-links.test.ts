@@ -5,6 +5,11 @@ import { getGuideMuseumLinks, getMuseumGuideLinks, museumCollectionLabels } from
 import { guideLanguages } from "../museum-guide-types";
 
 describe("museum and guide cross-links", () => {
+  it("keeps the Dresden guide with the verified Dresden museum group", () => {
+    expect(getMuseumGuideLinks("wikimedia-museum-q1501219").map(guide => guide.slug)).not.toContain("old-masters-dresden");
+    expect(getGuideMuseumLinks(getMuseumGuide("old-masters-dresden")!)).toEqual([{ slug: "museum-source-70210fb9f16ace3d158a", name: "Staatliche Kunstsammlungen Dresden", href: "/museums/museum-source-70210fb9f16ace3d158a" }]);
+  });
+
   it("connects every published museum guide to the same canonical museums in both directions", () => {
     const index = getGuideIndex();
     for (const [slug, museums] of Object.entries(institutions)) {

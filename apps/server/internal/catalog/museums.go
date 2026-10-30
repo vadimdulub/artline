@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"sort"
 	"strings"
 	"time"
 
@@ -350,6 +351,19 @@ var museumOverviewSQL = museumOverviewPage + museumDirectoryCardCTE + ` SELECT `
  FROM institutions i WHERE i.id=page.id AND ` + museumVisible + `
  AND EXISTS(SELECT 1 FROM card_works)) detail`
 
+// Search each word across the museum's name and recorded locations. Word order
+// should not prevent "Armenia national gallery" finding its canonical name.
+const museumDirectorySearch = `NOT EXISTS (
+ SELECT 1 FROM regexp_split_to_table(btrim($1), '\s+') AS term(word)
+ WHERE term.word<>'' AND NOT (
+ i.name ILIKE '%'||term.word||'%'
+ OR EXISTS(SELECT 1 FROM places p JOIN countries co ON co.code=p.country_code
+ WHERE p.id=i.place_id AND (p.name ILIKE '%'||term.word||'%' OR co.name ILIKE '%'||term.word||'%'))
+ OR EXISTS(SELECT 1 FROM institution_venues v JOIN places p ON p.id=v.place_id
+ JOIN countries co ON co.code=p.country_code WHERE v.institution_id=i.id AND v.status<>'archived'
+ AND (p.name ILIKE '%'||term.word||'%' OR co.name ILIKE '%'||term.word||'%'))
+ ))`
+
 func (r *Repository) Museums(ctx context.Context, f MuseumFilter) (MuseumPage, error) {
 	out := MuseumPage{Items: []Museum{}, Facets: emptyMuseumFacets()}
 	c, err := decodeMuseumCursor(f, "")
@@ -369,8 +383,7 @@ func (r *Repository) Museums(ctx context.Context, f MuseumFilter) (MuseumPage, e
 	// keyset pages and filters all exclude empty collections consistently.
 	where := ` FROM institutions i WHERE ` + museumVisible + `
  AND i.canonical_institution_id IS NULL
- AND ($1='' OR i.name ILIKE '%'||$1||'%' OR EXISTS(SELECT 1 FROM places p JOIN countries co ON co.code=p.country_code WHERE p.id=i.place_id AND (p.name ILIKE '%'||$1||'%' OR co.name ILIKE '%'||$1||'%')) OR EXISTS(SELECT 1 FROM institution_venues v JOIN places p ON p.id=v.place_id JOIN countries co ON co.code=p.country_code
- WHERE v.institution_id=i.id AND v.status<>'archived'  AND (p.name ILIKE '%'||$1||'%' OR co.name ILIKE '%'||$1||'%')))
+ AND ` + museumDirectorySearch + `
  AND ((coalesce(cardinality($2::text[]),0)=0 AND coalesce(cardinality($3::text[]),0)=0) OR EXISTS(SELECT 1 FROM places p JOIN countries co ON co.code=p.country_code WHERE p.id=i.place_id
  AND (coalesce(cardinality($2::text[]),0)=0 OR co.region_code=ANY($2)) AND (coalesce(cardinality($3::text[]),0)=0 OR p.country_code::text=ANY($3))) OR EXISTS(
  SELECT 1 FROM institution_venues v JOIN places p ON p.id=v.place_id JOIN countries co ON co.code=p.country_code
@@ -503,6 +516,8 @@ func (r *Repository) museumFacetsUncached(ctx context.Context, slug string) (Mus
 	if err = rows.Err(); err != nil {
 		return out, err
 	}
+	// Countries belong in one alphabetical list, independently of region order.
+	sort.Slice(out.Countries, func(i, j int) bool { return out.Countries[i].Name < out.Countries[j].Name })
 	// Artist discovery is paged/searchable through PainterOptions; retain a small
 	// compatibility facet on a single museum. The directory has no artist facet.
 	choices := museumDirectoryFacetChoicesSQL

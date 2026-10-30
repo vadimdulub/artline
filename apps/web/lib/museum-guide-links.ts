@@ -5,6 +5,7 @@ import type { GuideLocale, MuseumGuide } from "./museum-guide-types";
 
 const institutionLinks: Record<string, string[]> = institutions;
 const sharedGuideMuseumNames: Record<string, string> = {
+  "museum-source-70210fb9f16ace3d158a": "Staatliche Kunstsammlungen Dresden",
   "alte-pinakothek": "Alte Pinakothek",
   "neue-pinakothek": "Neue Pinakothek",
   "lenbachhaus-munich": "Lenbachhaus",

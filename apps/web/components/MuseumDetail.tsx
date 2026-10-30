@@ -6,9 +6,10 @@ import { useRef, useState } from "react";
 import { queryValues, updateQuery, useQueryString } from "@/lib/url-state";
 import { MultiSelectFilter } from "./MultiSelectFilter";
 import { usePainterChoices, workTypeOptions } from "./use-painter-choices";
-import { countryName } from "@/lib/api";
+import { museumLocations } from "@/lib/museum-location";
 import type { Museum, MuseumWorksPage } from "@/lib/types";
 import { MuseumWebsiteLink } from "./MuseumWebsiteLink";
+import { MuseumGuideCallout, type MuseumGuideLink } from "./MuseumGuideCallout";
 import { ArtworkImage } from "./ArtworkViewer";
 import { MuseumDrawer } from "./MuseumDrawer";
 import { useMuseumRequest } from "./museum-state";
@@ -18,7 +19,7 @@ import { CursorPager } from "./CursorPager";
 import { formatCount, useCursorPaging } from "./use-cursor-paging";
 import styles from "./Museums.module.css";
 
-export function MuseumDetail({ slug, initialMuseum, embedded = false, guides = [] }: { slug: string; initialMuseum?: Museum; embedded?: boolean; guides?: { href: string; title: string }[] }) {
+export function MuseumDetail({ slug, initialMuseum, embedded = false, guides = [] }: { slug: string; initialMuseum?: Museum; embedded?: boolean; guides?: MuseumGuideLink[] }) {
   const params = new URLSearchParams(useQueryString());
   if (params.has("selection") && params.get("selection") !== "museum") { params.delete("selection"); params.delete("cursor"); }
   const search = useRef<HTMLInputElement>(null);
@@ -51,9 +52,9 @@ export function MuseumDetail({ slug, initialMuseum, embedded = false, guides = [
   return <Container id={embedded ? undefined : "main-content"} className={`${styles.page} ${styles.collectionPage}`} data-return-label={museum?.name || "museum"} data-return-path={`/museums/${slug}`}>
     {museumRequest.error && !museum ? <MuseumError message={museumRequest.error} retry={() => setRevision(value => value + 1)} /> : !museum ? <p className={styles.loading}>Opening collection…</p> : <>
       {museumRequest.error && <p role="status" className={styles.note}>Collection information could not be refreshed. <button type="button" onClick={() => setRevision(value => value + 1)}>Retry</button></p>}
-      {!embedded && <><header className={styles.museumIntro}><div>{museum.venues.length > 0 && <p className={styles.place}>{ [...new Set(museum.venues.map(venue => `${venue.city}, ${countryName(venue.country)}`))].join(" / ") }</p>}<h1>{museum.name}<MuseumWebsiteLink url={museum.website_url || museum.venues[0]?.visit_url} name={museum.name} /></h1>{museumDescription(museum.description) && <details className={styles.aboutMuseum}><summary>About this collection</summary><p>{museumDescription(museum.description)}</p></details>}</div>
+      {!embedded && <><header className={styles.museumIntro}><div><h1>{museum.name}<MuseumWebsiteLink url={museum.website_url || museum.venues[0]?.visit_url} name={museum.name} /></h1>{museumLocations(museum).length > 0 && <p className={styles.museumLocation}>{museumLocations(museum).join(" / ")}</p>}{museumDescription(museum.description)?.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
 
-      </header>{guides.length > 0 && <nav className={styles.selectionTabs} aria-label="Museum guides">{guides.map(guide => <Link key={guide.href} className="catalogue-control" prefetch={false} href={guide.href}>Read guide<span className="sr-only">: {guide.title}</span></Link>)}</nav>}
+      </header><MuseumGuideCallout guides={guides} />
       <p className={styles.note}><Link href={`/exhibitions?institution=${museum.id}`} prefetch={false}>Exhibition history</Link></p></>}
       <div className={`${styles.selectionTabs} catalogue-selection`} role="group" aria-label="Artwork selection">{[["", "All catalogued works"], ["museum", "Museum highlights"]].map(([value, label]) => <button key={value} aria-pressed={selection === value} onClick={() => setMuseumFilters({ selection: value, sort: value ? "curated" : "images" })}>{label}<span>{formatCount(value === "museum" ? museum.highlight_count : museum.work_count)}</span></button>)}</div>
       <AtlasFilters searchRef={search} query={query} onQuery={value => setMuseumFilters({ q: value })} onReset={clear} searchLabel="Search artworks" placeholder="Artwork or painter" columns={2} activeCount={filters.filter(filter => filter.key !== "q").length}>
