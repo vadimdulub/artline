@@ -1,0 +1,28 @@
+{
+  "status": "prepared_awaiting_restored_owner_authentication_and_fresh_database_checks",
+  "code": "SG",
+  "name": "Singapore",
+  "region_code": "south-eastern-asia",
+  "jurisdiction_note": "UN M49 country code SG for Singapore, South-eastern Asia. The national gallery is in Singapore’s former Supreme Court and City Hall buildings.",
+  "source_urls": [
+    "https://unstats.un.org/unsd/methodology/m49/overview"
+  ],
+  "museum_source": "https://www.nationalgallery.sg/sg/en/architecture-and-history.html",
+  "dependent_profile_batch": "0063",
+  "dependent_profile_slug": "national-gallery-singapore",
+  "verified_museum_locality": "Singapore",
+  "live_country_absence_not_assumed": true,
+  "scope_basis": "Owner requests verification of all museum countries and locations and review of filters. The verified museum requires its correct UN country/area code. This draft is not a live database absence check.",
+  "required_before_any_write": [
+    "Fresh country-table/schema inspection after owner authentication is restored",
+    "Read intervening root instructions and pin the complete current file",
+    "Three shared ingestion locks retained before the exact-key preflight and after the atomic audit",
+    "Reuse a positively verified existing SG row if another authorised session already added it; never overwrite or replay",
+    "Preserve every pre-existing country and verify the added row and its exact audit after commit",
+    "Run the normal fresh profile plan and verification for batch 0063 only after SG is supported"
+  ],
+  "country_row_not_yet_inserted": true,
+  "profile_credit": 0,
+  "no_new_museum_artist_artwork_image_holding_status_or_identity": true,
+  "frozen_baseline_country_table_contains_SG": false
+}

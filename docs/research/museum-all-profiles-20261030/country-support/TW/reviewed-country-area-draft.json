@@ -1,0 +1,30 @@
+{
+  "status": "prepared_awaiting_restored_owner_authentication_and_fresh_database_checks",
+  "code": "TW",
+  "name": "Taiwan",
+  "region_code": "eastern-asia",
+  "jurisdiction_note": "Geographic country/area filter, not a sovereignty determination. A UK Department for Education published country-code table explicitly supplies Taiwan / TW / TWN / 158; Taiwan's education authority describes the island as situated in East Asia. The National Palace Museum publishes its northern branch address as Taipei City, Taiwan. This is not a claim of a separately verified UN M49 Taiwan row or direct ISO entity read.",
+  "source_urls": [
+    "https://assets.publishing.service.gov.uk/media/5a81ab0e40f0b623026988b4/RFC_807_-_changes_to_nation_states_and_countries_codeset.pdf",
+    "https://tfetp.k12ea.gov.tw/en/tfetp/web/introduction"
+  ],
+  "museum_source": "https://www.npm.gov.tw/index.aspx?l=2",
+  "source_scope": "Relevant indexed government code-table and geographic passages only; no entire-PDF reading claim. An attempted ISO OBP page open returned only a JavaScript notice; it was not an ISO entity verification and was not retried.",
+  "dependent_profile_batch": "0064",
+  "dependent_profile_slug": "museum-source-83a81c18d89ce47b8408",
+  "verified_museum_locality": "Taipei",
+  "live_country_absence_not_assumed": true,
+  "scope_basis": "Owner requests verification of all museum countries and locations and review of filters. The verified existing museum requires its correct geographic country/area code. This draft is not a live database absence check.",
+  "required_before_any_write": [
+    "Fresh country-table/schema inspection after owner authentication is restored",
+    "Read intervening root instructions and pin the complete current file",
+    "Three shared ingestion locks retained before the exact-key preflight and after the atomic audit",
+    "Reuse a positively verified existing TW row if another authorised session already added it; never overwrite or replay",
+    "Preserve every pre-existing country and verify the added row and its exact audit after commit",
+    "Run the normal fresh profile plan and verification for batch 0064 only after TW is supported"
+  ],
+  "country_row_not_yet_inserted": true,
+  "profile_credit": 0,
+  "no_new_museum_artist_artwork_image_holding_status_or_identity": true,
+  "frozen_baseline_country_table_contains_TW": false
+}

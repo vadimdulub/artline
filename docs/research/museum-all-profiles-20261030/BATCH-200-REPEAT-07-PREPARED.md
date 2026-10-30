@@ -1,0 +1,15 @@
+# Repeated 200-profile group 7 prepared — 31 October 2026
+
+Another **200 profiles** have sourced two-paragraph English descriptions and verified city/locality and country/area drafts, in batches **0059–0065**. Together with the previous prepared group, **400 profiles await publication**. The live verified campaign total remains **1,420 of 2,574**; **1,154 are unpublished**, including **754 still requiring preparation or resolution**. The earlier 91 are outside campaign credit.
+
+Owner Google Cloud authentication still requires interactive sign-in. One ordinary owner-account check after completing this group failed with the same actual reauthentication error. Token output was discarded; no alternative account or cached credential recovery was used. No plan, staged transaction, apply or live verification was dispatched for these drafts. Their local absence is checked; fresh database absence/schema has not been claimed.
+
+This group needs fresh country support checks for Mongolia (MN), Puerto Rico (PR), Singapore (SG), and Taiwan (TW). Five support drafts from the preceding group remain pending. These are geographic country/area filters, not blanket sovereignty assertions. Taiwan’s code has explicit primary government table evidence and its East Asian geography has separate primary evidence; the failed ISO JavaScript page was not a verified entity and no UN Taiwan row is invented.
+
+Research distinguishes Nizhny Novgorod from Veliky Novgorod, Newarke Houses in Leicester from Newark in New Jersey, Washington’s National Portrait Gallery from London’s, and Bangor in County Down from Bangor in Wales. Online catalogues, museum services and networks use documented administrative references without placing all their holdings in one building. Collections, temporary loans and current display remain distinct.
+
+Current closure, relocation and phased access notices are reflected in the drafts and notes, including Ixelles, Ulm, Rotterdam, Finland, Montréal and Berlin. Relevant indexed historical PDF passages are explicitly limited; no full PDF/book reading is claimed. Museum-supplied partner and official tourism evidence is identified where used. No artwork, holding, maker, status, identity, venue or programme membership is changed.
+
+The [prepared receipt](prepared-repeat-07-v1.json) pins all 400 drafts, nine support proposals, saved source results, root instructions and the prior immutable reports. Every citation URL is an actual saved result heading. All drafts have two paragraphs, the required word bounds and unique existing-profile identities. Publication still requires restored owner authentication, fresh country/schema checks, fresh profile plans, three-lock atomic audits, preservation checks, repository projection and public verification. No completed writer or transaction is to be replayed.
+
+Foreground research continues through the remaining profiles as authorised. No application deployment, native third-party museum/image HTTP, Storage upload, agent, job, schedule or background research was performed for these drafts.
