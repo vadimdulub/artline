@@ -1,0 +1,7 @@
+{
+  "result": "verifier_stopped_before_database_verification",
+  "cause": "The verifier started while the batch writer was still running; transaction-staged.json.gz did not yet exist.",
+  "database_writes_from_verifier": 0,
+  "writer_replayed": false,
+  "resolution": "The original writer completed once in transaction 1075991. Verification then ran against its saved receipt and passed."
+}

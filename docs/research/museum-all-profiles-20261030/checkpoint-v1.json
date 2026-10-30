@@ -1,0 +1,601 @@
+{
+  "at": "2026-10-30T14:57:47.374949+00:00",
+  "status": "active_incomplete",
+  "frozen_target": 2574,
+  "completed_profiles": 416,
+  "remaining_profiles": 2158,
+  "completed_after_pause": 196,
+  "previous91_preserved": true,
+  "public_available": 370,
+  "empty_collections_not_counted_as_live_pages": 46,
+  "explicit_atomic_audits": 941,
+  "cumulative_audits_including_prior91": 1147,
+  "location_links": 155,
+  "new_cities_without_inferred_coordinates": 98,
+  "countries": {
+    "FR": 349,
+    "KR": 16,
+    "IT": 25,
+    "NZ": 26
+  },
+  "no_pending_dispatched_writer": true,
+  "no_agents_jobs_or_schedules": true,
+  "no_new_native_third_party_http_or_images": true,
+  "no_artwork_holding_image_status_identity_or_venue_changes": true,
+  "no_application_deployment_needed": true,
+  "batches": [
+    {
+      "batch": "0001",
+      "profiles": 44,
+      "transaction": {
+        "pid": 1372221,
+        "tx": "1074495",
+        "held": 3
+      },
+      "available": 42,
+      "empty": 2
+    },
+    {
+      "batch": "0002",
+      "profiles": 44,
+      "transaction": {
+        "pid": 1372350,
+        "tx": "1074531",
+        "held": 3
+      },
+      "available": 43,
+      "empty": 1
+    },
+    {
+      "batch": "0003",
+      "profiles": 44,
+      "transaction": {
+        "pid": 1372508,
+        "tx": "1074576",
+        "held": 3
+      },
+      "available": 44,
+      "empty": 0
+    },
+    {
+      "batch": "0004",
+      "profiles": 44,
+      "transaction": {
+        "pid": 1372682,
+        "tx": "1074622",
+        "held": 3
+      },
+      "available": 44,
+      "empty": 0
+    },
+    {
+      "batch": "0005",
+      "profiles": 44,
+      "transaction": {
+        "pid": 1373894,
+        "tx": "1074961",
+        "held": 3
+      },
+      "available": 44,
+      "empty": 0
+    },
+    {
+      "batch": "0006",
+      "profiles": 44,
+      "transaction": {
+        "pid": 1377643,
+        "tx": "1076005",
+        "held": 3
+      },
+      "available": 43,
+      "empty": 1
+    },
+    {
+      "batch": "0007",
+      "profiles": 44,
+      "transaction": {
+        "pid": 1378565,
+        "tx": "1076258",
+        "held": 3
+      },
+      "available": 44,
+      "empty": 0
+    },
+    {
+      "batch": "0008",
+      "profiles": 41,
+      "transaction": {
+        "pid": 1378666,
+        "tx": "1076287",
+        "held": 3
+      },
+      "available": 41,
+      "empty": 0
+    },
+    {
+      "batch": "0009",
+      "profiles": 16,
+      "transaction": {
+        "pid": 1377597,
+        "tx": "1075991",
+        "held": 3
+      },
+      "available": 0,
+      "empty": 16
+    },
+    {
+      "batch": "0010",
+      "profiles": 25,
+      "transaction": {
+        "pid": 1377799,
+        "tx": "1076046",
+        "held": 3
+      },
+      "available": 22,
+      "empty": 3
+    },
+    {
+      "batch": "0011",
+      "profiles": 26,
+      "transaction": {
+        "pid": 1378849,
+        "tx": "1076334",
+        "held": 3
+      },
+      "available": 3,
+      "empty": 23
+    }
+  ],
+  "artifact_pins": [
+    {
+      "path": "docs/research/museum-all-profiles-20261030/README.md",
+      "bytes": 7471,
+      "sha256": "90301319b82868d26291fe64711776e02644e12a809f5d3933dd98ebb075f7dd"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/authorization.json",
+      "bytes": 350,
+      "sha256": "92999e3667c1113536c46f708f13291c50ee5c1baa39c0790b36323788f0079c"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0001/applied.json",
+      "bytes": 1191,
+      "sha256": "5bf06f011d6cd42d6172ba27b33bbad27fb680cd240b7d70b17defa43ad60f09"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0001/database-verification.json",
+      "bytes": 15091,
+      "sha256": "ea0ea18d35bc104b0feb921906b61a8fa60eb2e21840a65cc0ccac2d49ead73d"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0001/plan-pin.json",
+      "bytes": 230,
+      "sha256": "292de0077aa4283f1eecc0c3a55cfb3c1a8947f3578b1a9ae5b52d7c2a8c1a97"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0001/preservation.json",
+      "bytes": 137,
+      "sha256": "6663ce4e2814b80ea8387a25743d958c4c1d608b30b2d9136405fcc2c5609647"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0001/profiles-reviewed.json",
+      "bytes": 45110,
+      "sha256": "bbce12e5471c7c4b005f806d45667906250b88583a533551a94f46d3757ba324"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0001/public-verification.json",
+      "bytes": 7062,
+      "sha256": "c90c6e72ddec4ecf648bd678c50023014c5cb9777e1ec4295615da4ce5f7f2a8"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0001/repository-projection.json",
+      "bytes": 3031,
+      "sha256": "f5a6355b90b59449976a90933a85dfd26b5061641697362d200f297b49e210ef"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0002/applied.json",
+      "bytes": 1191,
+      "sha256": "fb59f9be1fa0a861d2395c36f71b99bd36cd0155cf9c4e8f6b3f27d15e53f834"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0002/database-verification.json",
+      "bytes": 14650,
+      "sha256": "680aee723a71dbb1fcc4f1b78a6621ca67b692b33e9fd028d4c0a02bcf7da8f8"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0002/plan-pin.json",
+      "bytes": 230,
+      "sha256": "326a0c6fd51fb5252bd26a5dad0a0209841d423c950055e655379b41e7e0cd25"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0002/preservation.json",
+      "bytes": 137,
+      "sha256": "4ee58fa68779e31ee6af8090807650b84c8403b5aa0233fb939e697eee864e4e"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0002/profiles-reviewed.json",
+      "bytes": 45034,
+      "sha256": "edafcfc15c446a978375813b871dce46dc81cb35c293abe67882bca96935a878"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0002/public-verification.json",
+      "bytes": 6932,
+      "sha256": "fa8627e47eb43f30d6f98dbfd47ad967662d7baa312c4af5304ab93f0a1a8143"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0002/repository-projection.json",
+      "bytes": 2954,
+      "sha256": "41a6777f8220ae9e1543883bfa7b62f3b91f0315a562eb5f3df419423d2c93f5"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0003/applied.json",
+      "bytes": 1193,
+      "sha256": "eeef694f9ad98a2b7ee0c7fd5ea55a463f3d40acebba806c843c5d8044c0532b"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0003/database-verification.json",
+      "bytes": 15826,
+      "sha256": "9306e67899cba518bb00c323c6d0d6f463595be05f28fe56b4c394a262f57cfa"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0003/plan-pin.json",
+      "bytes": 230,
+      "sha256": "5fb2f39f3f857f1a721649410095a9745b7c9871315f910080183999548d6f52"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0003/preservation.json",
+      "bytes": 137,
+      "sha256": "8aad92a3097c16097d105fa2ca5a5107878ad37a119ed3b5c1ac733ce98e1190"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0003/profiles-reviewed.json",
+      "bytes": 45329,
+      "sha256": "f4d55641b25dbe7c0d7c9c47db214811b73fd2e05ee0105d2006cd8d95083abe"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0003/public-verification.json",
+      "bytes": 6802,
+      "sha256": "44e3e52e8c4ab9fbbf958bcf66c63d1f0e4a7cd9218b5119430a9a28663f6b62"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0003/repository-projection.json",
+      "bytes": 2877,
+      "sha256": "91e098459bf893351df1464b484b09a3412519ff56f907b538cbabe02b019708"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0004/applied.json",
+      "bytes": 1191,
+      "sha256": "05f6f6bc7a06c7ec05d18d8e7a5b921a4314ec3175760bdc86b6104b449cc146"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0004/database-verification.json",
+      "bytes": 15091,
+      "sha256": "5ff2869e1e1f3a768db145b4ff11e81a6a766e3d1f174be42f0ae51d5733206f"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0004/plan-pin.json",
+      "bytes": 230,
+      "sha256": "503a57e2e6214823242da480bbd54efd3a4c761046b3f267f14a7b5bf0b93b01"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0004/preservation.json",
+      "bytes": 137,
+      "sha256": "fd7e7c5af8c8050a38451cf47cbc72e3eece072606dce2339ba205b87b2f8f96"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0004/profiles-reviewed.json",
+      "bytes": 44452,
+      "sha256": "a8b946ed16b69c629dda58c3c768db0370789bd0bc1967d136c4646617a55890"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0004/public-verification.json",
+      "bytes": 6802,
+      "sha256": "985dcb441fb89751221bc65a21be3d0a6ef1de9f8cc4f0ce11711ce83e9ff9a6"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0004/repository-projection.json",
+      "bytes": 2877,
+      "sha256": "9608cbd20e1c59272a736089170b297d4893edb3d084da38c63d3a05a26e1927"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/applied.json",
+      "bytes": 1192,
+      "sha256": "55b54b50d4d4f725e53c19d5ae99c15611cf6afa8455f8eae8dddf9e4f363077"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/database-verification.json",
+      "bytes": 15238,
+      "sha256": "960c0c7d8884f0c4fb0408ea9630a98679ac11648fad6067c4936e1d855f03af"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/plan-pin-v1.json",
+      "bytes": 230,
+      "sha256": "096291136cc40ca476c544801e81aa434a89f40684683f025bc912dd9d49f58b"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/plan-pin.json",
+      "bytes": 230,
+      "sha256": "49816a9c3e7d1f56faf57a4b428f9e7d5cc1fbe5a6376136dca816814d472f15"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/preservation.json",
+      "bytes": 137,
+      "sha256": "b252f7a801da7bd583ba5c4f42b91de08532def11b87e532c44f359cdd6ea168"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/profiles-reviewed-v1.json",
+      "bytes": 43798,
+      "sha256": "ab51d552d2144a4b1384a46ba186ff88124e441aa14a4b0aa96a3c17e702cc60"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/profiles-reviewed.json",
+      "bytes": 43789,
+      "sha256": "f529a29f0edd2160fda799a164af147d498502234a6404a0b23ab16a4e9d759e"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/public-verification.json",
+      "bytes": 6802,
+      "sha256": "3ba3a1f9b33a5d73d3740eb06b3c9bd85302dc4d507296d9259c8e53e11e272e"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0005/repository-projection.json",
+      "bytes": 2877,
+      "sha256": "f39d5f1bed7c120e8cf14c744ee00684810679fbe994788088c650c0286f6cd1"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0006/applied.json",
+      "bytes": 1191,
+      "sha256": "e7b10ebfb3de5c5a30146f4680e101c5c9ad20dec7089528aeb3ee1824c5b775"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0006/database-verification.json",
+      "bytes": 14797,
+      "sha256": "f9a80f04a4528f98c0aa4bf1c5d0151606d1b59357a549a32e0d53bc9524d3b1"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0006/plan-pin.json",
+      "bytes": 230,
+      "sha256": "99e5896b7f7ecd5cf50d235f06a9f6d904dea9bf75a59276ac1f33e2a211b408"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0006/preservation.json",
+      "bytes": 137,
+      "sha256": "a1a06da8f30bb747bc91feb380d98e6a2c597ca0e65ea964eff759aac5f91456"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0006/profiles-reviewed.json",
+      "bytes": 44264,
+      "sha256": "26e55f6be5bac84b03078158f52448990ea482bd3a88ead4bed5f88eae55b9e9"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0006/public-verification.json",
+      "bytes": 6932,
+      "sha256": "826774fef428df9fb248cb8479f16cf47a6d64e7055a28ac3ba1594501a5fffe"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0006/repository-projection.json",
+      "bytes": 2954,
+      "sha256": "cdb51b9451a98fef1ea4154061d74eee2f6a39627ff468ad021d777643e4b598"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/applied.json",
+      "bytes": 1193,
+      "sha256": "9a25813266bad4810d0aa7060d8b4685b9c86cded8c971f52f1d9651fd474f01"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/database-verification.json",
+      "bytes": 15826,
+      "sha256": "8f6764b4664cebb4bf7af4ad279b8af80991d76ad19115cb5bd98b2fceed3794"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/plan-pin-v1.json",
+      "bytes": 230,
+      "sha256": "385e9d4cda560dda2c9f808cb9b73bad8f7cd2d154f93cfbf51fe37b6ee23d47"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/plan-pin.json",
+      "bytes": 230,
+      "sha256": "f303364e31febdad85f7b32316c33126ddec391397cd6d7fdd7f889424b5dce0"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/preservation.json",
+      "bytes": 137,
+      "sha256": "ddfea0398d5974c1d3884e98146b952f357e3b6e806abe7bc901fe58c7ad83f7"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/prewrite-location-disambiguation.json",
+      "bytes": 349,
+      "sha256": "b1177623b7a3adc97f0278c8df351ef8139b734a42e9ccad5e0d37310c14478d"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/profiles-reviewed-v1.json",
+      "bytes": 46348,
+      "sha256": "0a78fd7f0dfec66bc84557e5f58d852d953cb1ae6df9f1a3b9accd931ecca347"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/profiles-reviewed.json",
+      "bytes": 46525,
+      "sha256": "16b1284d92a12f9cc25ff38d4d90b3773bee89f6a7423efe8acd31bd484c76f8"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/public-verification.json",
+      "bytes": 6802,
+      "sha256": "45890a417f489671ceaa5e6c8bebb3d22d6d6d1b1ddee6248bcec69ffd25fa01"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0007/repository-projection.json",
+      "bytes": 2877,
+      "sha256": "5edd4940bfab6c82285147d91efad3e4a4d81f7621229be8d350907460aed36a"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0008/applied.json",
+      "bytes": 1127,
+      "sha256": "c8b3b95f782da6cc24bc96f6406fd9663043f71b4ac0269e328b7cbb8e5d6796"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0008/database-verification.json",
+      "bytes": 13447,
+      "sha256": "6ad4631b9187fc2904faac7a4ee49d4c1364763e6f3d9e347f6d855fbce2595f"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0008/plan-pin.json",
+      "bytes": 230,
+      "sha256": "fa0eef9399ca14e7a948ff538df2eaff1a5bc87be03debb3880e13c3e3017ac1"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0008/preservation.json",
+      "bytes": 137,
+      "sha256": "cb6aba8fb33f3702fdba0d20edffbb9c3fafee6701efc1bc970b45d736d1a5d0"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0008/profiles-reviewed.json",
+      "bytes": 43183,
+      "sha256": "f145094606347d844c138fc717d43176cb7ffa2bb060f8b4755cf63b504c1ebc"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0008/public-verification.json",
+      "bytes": 6358,
+      "sha256": "28877475d53aad6654c4fd11c1b7df58d78a95449e3e9fd4992034647ce0110f"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0008/repository-projection.json",
+      "bytes": 2685,
+      "sha256": "f1b7e30f80768de3063363baefca3fb2db4e162acacc9c1bec6d138fecc8be93"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/applied.json",
+      "bytes": 860,
+      "sha256": "f4f3664d6d258b6d51bcaab5257b4f30e8228a33ca27cee0a73cbe6860750730"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/database-verification.json",
+      "bytes": 6901,
+      "sha256": "30fc195fc89f71be8ed5a5eb7a8e2f6b3ca56c4910434df5ad7b00ea3108d632"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/initial-verification-before-writer-completion.json",
+      "bytes": 391,
+      "sha256": "cd9e6934d913e107810ef57b4b5f4562ece6ad2cc07b28cf500063f53114f257"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/plan-pin.json",
+      "bytes": 230,
+      "sha256": "85fb42b6dc85107fd180c566696796e1e544bff064e5d4092414bca1d0725559"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/preservation.json",
+      "bytes": 136,
+      "sha256": "b305e604593cfab38ea87fccfed0096857009d60461d6868b15f9d342c24bd3f"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/profiles-reviewed.json",
+      "bytes": 23088,
+      "sha256": "acfe36f26b29620ad17631a681a0f28a5a63586497208dea56b74b2fd64583e7"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/public-verification.json",
+      "bytes": 4994,
+      "sha256": "33967ae241ca8f03237c26e94c5a9bea411dd81ce80b2f622def5b7a2f977780"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0009/repository-projection.json",
+      "bytes": 2573,
+      "sha256": "e94509afff38ce6d2c6ec696d0af982b2b4c0b8519921ba76bb6fcec45098c0c"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0010/applied.json",
+      "bytes": 1252,
+      "sha256": "de8de380a1172a096a50a552bcf70b9e8cfd3cc40a8dcf21df353d1c1c548f3d"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0010/database-verification.json",
+      "bytes": 9922,
+      "sha256": "96714a0e7f78996d910d56b9759d93615eb3739de86ea9436722655b42f81ec0"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0010/plan-pin.json",
+      "bytes": 230,
+      "sha256": "91f1109c213fc8fa246cb7f95e03437f7347338a555085ff9fd54ffcc65efea4"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0010/preservation.json",
+      "bytes": 135,
+      "sha256": "028061234b23469f62f269242365aa0304a63e5e03afa098ae4a6083a1196c83"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0010/profiles-reviewed.json",
+      "bytes": 31458,
+      "sha256": "efe3e9743dadedff7fa51a08af31685696e4192b7cf4bc6a8fbcf0eb477c729b"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0010/public-verification.json",
+      "bytes": 4839,
+      "sha256": "3f3ba5173228ab51a5494154425eaaf358477de01bb77421290d11533852002b"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0010/repository-projection.json",
+      "bytes": 2351,
+      "sha256": "136187704e4f49a487fe8e7af1d2d1c9004e7c75ecd58f2070f76996a0c44c30"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0011/applied.json",
+      "bytes": 1492,
+      "sha256": "eda356db98c67375085929e9d041eac00ca5a238e749b4515a286a6f93ba2358"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0011/database-verification.json",
+      "bytes": 8461,
+      "sha256": "94dabe1d56512ca2633b4f0c1a1061df84278f3f10ace3a43cee0bebf6e455ae"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0011/plan-pin.json",
+      "bytes": 230,
+      "sha256": "232c88d297c43a1f5b1bd4339f0bf597cea1e4a5aa2fd0b5d0f096efb655c82f"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0011/preservation.json",
+      "bytes": 136,
+      "sha256": "e9e168c86185d4d5eb644a283f21486f91ee4dc8b764e9f54a9adc76a7b40417"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0011/profiles-reviewed.json",
+      "bytes": 29953,
+      "sha256": "062c0ec80b8c1fdeed81629a5b1262373e69fbfa6779c511df3ed5d99d0e8de1"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0011/public-verification.json",
+      "bytes": 7808,
+      "sha256": "ccc0880fa54559aced0b7cea12a032f2e2608cd1af74ed10cb522c6397a429be"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0011/repository-projection.json",
+      "bytes": 4176,
+      "sha256": "c0c783813c09e8cccd7da869986e7dd30fab6bf2765903f0f421b6f0f134db93"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/cumulative-database-verification-v2.json",
+      "bytes": 16300,
+      "sha256": "19a6ef1c0f9db30476e79da6317e7488d3eaa3ab8ff3fa57d514e8eb5f1f60d6"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/cumulative-verifier-v1-local-error.json",
+      "bytes": 587,
+      "sha256": "5debb2768f3c2f04959b7006ce9bda86089f95fc8b9817fd11243657c5b2c6ac"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/museofile-source-integrity.json",
+      "bytes": 487,
+      "sha256": "73c7f4ae62586af796d161378b1e849de106434a6c9726c8e2fd3e14e11c1af5"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/name-match-candidates-not-applied-v1.json",
+      "bytes": 397,
+      "sha256": "35d1787a8c73798ab44a1c8451a60f9ca0d676a4a0dbebb99a4f3dc2fdf5be29"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/target-manifest.json",
+      "bytes": 639684,
+      "sha256": "bb348f880d167c8fd3306cb77831fd3e9bb4e840687c39144a2f02da44007a4f"
+    }
+  ]
+}

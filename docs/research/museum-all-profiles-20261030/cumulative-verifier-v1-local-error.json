@@ -1,0 +1,9 @@
+{
+  "result": "local_verifier_key_type_error_before_report",
+  "original_script": "~/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/checkpoint-v1.py",
+  "error": "KeyError: '0e05adf6-becc-54f8-be87-2f968ab018c6'",
+  "cause": "psycopg raw UUID values used as dictionary keys while staged JSON audit IDs are strings; this does not establish missing database audits",
+  "correction": "Normalize raw audit UUID keys with str and require complete unique audit coverage in v2.",
+  "database_writes": 0,
+  "committed_data_or_source_requests_replayed": false
+}
