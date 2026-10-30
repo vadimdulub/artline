@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-30T19:16:20.623914+00:00",
+  "all_reconciled": true,
+  "retired_batch": "0034",
+  "retired_profiles_counted_as_delivery": 0,
+  "reason": "Own SIGINT interrupted the planned batch before delivery to correct an unnecessary artist-name transliteration. Fresh read-only reconciliation positively verified all 30 exact preimages and 84 absent deterministic audit keys, with owned city/source/citation rows absent. Original plan and brief remain unchanged and retired.",
+  "receipt": {
+    "path": "/Users/vadimdulub/Documents/vadim-dulub-git/artline/docs/research/museum-all-profiles-20261030/batches/0034/unapplied-retirement-and-reconciliation-correction.json",
+    "bytes": 1949,
+    "sha256": "3e4ea1766fceb4407b4b17951917c6c7671193235a522d8aed4f7b03873cac3d"
+  },
+  "helper_label_correction": "The reused v2 reconcile_zero helper has a hardcoded timeout filename and explanation. That explanation is inaccurate for 0034; actual interruption was our own SIGINT, not an observed database timeout. Its positive database assertions are valid and the correction is explicitly retained.",
+  "replacement_batch": "0035",
+  "single_actual_replacement_commit": {
+    "pid": 1390989,
+    "tx": "1079689",
+    "held": 3
+  },
+  "no_retired_or_committed_writer_replay": true
+}

@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-30T19:12:41.863438+00:00",
+  "state": "RETIRED_UNAPPLIED",
+  "reason": "Own foreground controller and apply process deliberately interrupted with SIGINT to correct an artist-name transliteration before delivery. Original content/plan retained and never resumed.",
+  "correction": "The old draft artist name Hasama Inoshiro was inaccurate. The replacement brief omits this unnecessary transliteration and describes the evidenced collection media.",
+  "zero_reconciliation": {
+    "profiles": 30,
+    "absent_audit_keys": 84,
+    "all_source_citation_city_rows_absent": true,
+    "all_preimages_unchanged": true
+  },
+  "reconciliation_label_correction": "The reused reconcile_zero helper hardcodes a statement-timeout explanation and filename. Those labels are inaccurate for 0034: the actual interruption was our deliberate SIGINT. Its read-only zero-write assertions passed; no database timeout is claimed for this interruption.",
+  "original_evidence": [
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0034/profiles-reviewed.json",
+      "bytes": 40286,
+      "sha256": "9b0b60d3705f31dc510291e457b6787950545bb0f6a8e76df6ec1bb62b7435d1"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0034/plan-pin.json",
+      "bytes": 230,
+      "sha256": "bdf707e8f1e0369fdc807d432a0dcad1c582f3cadb1dec1566714822b860b849"
+    },
+    {
+      "path": "docs/research/museum-all-profiles-20261030/batches/0034/prewrite-timeout-zero-reconciliation.json",
+      "bytes": 1003,
+      "sha256": "59a5a6c42985127484f90176bec810463e71749c1c211b517d7c63df5a384194"
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/museum-all-profiles-20261030/batches/0034/plan.json.gz",
+      "bytes": 17279,
+      "sha256": "140d8cc0a310c880dffe649e89826eb7dd2295ef1098f997ad8645cbd07f1dd8"
+    }
+  ],
+  "replacement_batch": "0035",
+  "no_commit_or_write_replay": true
+}
