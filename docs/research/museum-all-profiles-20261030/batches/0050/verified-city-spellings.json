@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-30T20:34:09.903005+00:00",
+  "read_only": true,
+  "no_data_changes": true,
+  "reviewed_profiles_sha256": "8f4a996b5a69f66f2502c0080d8ce2bc1dd067f73286fcabcf50571d927845df",
+  "spellings": [
+    {
+      "slug": "museum-source-286d40623c39568cffb5",
+      "reviewed_city": "Zurich",
+      "canonical_city": "Zürich",
+      "country": "CH",
+      "verified_place_id": "b61c2466-86b7-4daf-8906-2701a99e73c2"
+    }
+  ],
+  "reason": "The existing place label Zürich and reviewed English Zurich name the same positively verified city. Use the canonical database label for exact repository/public comparison while preserving content, plans, rows and original failed verification.",
+  "proof": {
+    "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/batches/0050/actual-city-spellings.json",
+    "sha256": "811c76850a655e0deb53e678a3f65ddcab001e7c30b3a8ba17a646377f3fd988"
+  }
+}

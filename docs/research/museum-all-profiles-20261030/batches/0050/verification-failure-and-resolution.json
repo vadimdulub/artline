@@ -1,0 +1,11 @@
+{
+  "batch": "0050",
+  "writer_committed_once": true,
+  "database_and_exact_audit_verification_passed_before_projection": true,
+  "original_failure": "Serving repository projection panicked for museum-source-286d40623c39568cffb5 because the reviewed English city Zurich differed from the existing canonical place label Zürich.",
+  "resolution": "Read-only exact institution/place comparison positively established the same CH city and unchanged description. verified-city-spellings.json records the equivalence for comparison only.",
+  "original_profiles_plan_rows_and_audits_unchanged": true,
+  "no_writer_replay": true,
+  "initial_cumulative_attempt": "An initial v8 cumulative check stopped at the required missing repository-projection.json assertion; it wrote no output artifact. It will run again after projection/public checks finish.",
+  "no_source_http_storage_or_sql_mutation_for_resolution": true
+}

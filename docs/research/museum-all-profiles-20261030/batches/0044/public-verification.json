@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-30T20:11:27.403809+00:00",
+  "passed": true,
+  "profiles": 19,
+  "available_profiles": 17,
+  "not_browsable_empty_collections": 2,
+  "exact_descriptions_and_city_country_on_available_profiles": true,
+  "all_profile_metadata_verified_in_database": true,
+  "checks": [
+    {
+      "slug": "museum-source-826700498e5f1c039395",
+      "status": 200,
+      "sha256": "495706a8ff25e1ec5518bb2feb71fa2924ada6611e648e8e3d327b0561922b52"
+    },
+    {
+      "slug": "wikimedia-museum-q4346239",
+      "status": 200,
+      "sha256": "103ccc613da3a5fc48896c88c0def648cac44f5bac07abd227d533e8ba3d389b"
+    },
+    {
+      "slug": "nordic-q50132851-helsingborg-museum",
+      "status": 200,
+      "sha256": "013ebfbe945ce53e96edb9d434ae33b4ef0e65421747846e19fabfdf7b5480fc"
+    },
+    {
+      "slug": "nordic-q10550005-kulturmagasinet",
+      "status": 200,
+      "sha256": "ad8f3e2a10c1428ff01acd44c86c3759ffa6b9aa286b6ab2c3e895e88b32e0a5"
+    },
+    {
+      "slug": "malmo-konstmuseum",
+      "status": 200,
+      "sha256": "95cd7ba7dabb1d69e02f98a17db968875d078944cfabe698b6b373afc82677d3"
+    },
+    {
+      "slug": "nordic-q667094-millesgarden",
+      "status": 200,
+      "sha256": "950bdae4a14aabec7834025613e72aeae04e85b5ddcbb2433915f5c9cf72b4e9"
+    },
+    {
+      "slug": "nordic-q537-prince-eugens-waldemarsudde",
+      "status": 200,
+      "sha256": "538b1a7a37fa406a2e1b8c52f651985a60e9d6e4dd9430f4ea6e6f9ac52302a3"
+    },
+    {
+      "slug": "nordic-q1933896-stockholm-city-museum",
+      "status": 200,
+      "sha256": "c1d581ac13967bc8bd9cb95dd93e85fa557d062a5ffcb3163077449c94256a78"
+    },
+    {
+      "slug": "wikimedia-museum-q3330639",
+      "status": 200,
+      "sha256": "531f38777d9542c90ded5b8c6f628a3938194f655ebd5ed8d457c95d8160d2c1"
+    },
+    {
+      "slug": "wikimedia-museum-q252259",
+      "status": 200,
+      "sha256": "dd51b1690c63672e35d7b417a0d901b5bb2d735f99db0f27dab6557e6a458490"
+    },
+    {
+      "slug": "wikimedia-museum-q4976948",
+      "status": 200,
+      "sha256": "1b03b5a37f5c94d61b4f6aa14a479792610b477d8c298c18c2d4458141988ac1"
+    },
+    {
+      "slug": "archaeological-museum-nagarjunakonda",
+      "status": 200,
+      "sha256": "674fe5f4415bda4af62afac5e167bcc21cc7add5e942f02218ddb46159177899"
+    },
+    {
+      "slug": "archaeological-museum-old-goa",
+      "status": 200,
+      "sha256": "1b9367d093cb2d5c80f3fc6c91f3badb68aa3489d11c61d08e7655bde817e219"
+    },
+    {
+      "slug": "random-museum-in-ganga-government-museum-53dc13c8a2ac",
+      "status": 404,
+      "sha256": "35f169b18062d953e48e1d111743687f9f362078bbf88bb45367ffb367e2facf",
+      "reason": "No visible collection under the serving repository policy",
+      "profile_metadata_verified_in_database": true
+    },
+    {
+      "slug": "random-museum-in-maharao-madho-singh-museum-333b6d7c91b9",
+      "status": 404,
+      "sha256": "35f169b18062d953e48e1d111743687f9f362078bbf88bb45367ffb367e2facf",
+      "reason": "No visible collection under the serving repository policy",
+      "profile_metadata_verified_in_database": true
+    },
+    {
+      "slug": "museum-authority-q1338832",
+      "status": 200,
+      "sha256": "e88a2ebb4cdc9a570fe6abcf9a2db95d3db250c2152122b0cbb21ea219879c2f"
+    },
+    {
+      "slug": "national-gallery-modern-art-bengaluru",
+      "status": 200,
+      "sha256": "0fd95c0a588a8d7dd20b9179cec527fbdaa3dbdb120dd4b62a0aa6ca76e66c6d"
+    },
+    {
+      "slug": "national-gallery-modern-art-mumbai",
+      "status": 200,
+      "sha256": "00506e7dfe33366cb13945259266f8db53ec5b7b866361618561a473f54f30be"
+    },
+    {
+      "slug": "museum-authority-q1356352",
+      "status": 200,
+      "sha256": "01399b20f35549d5b1ef0c99640c266a65d204b182e3ecf11287286f4e09c5f9"
+    }
+  ]
+}
