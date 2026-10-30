@@ -10,6 +10,7 @@ from psycopg import sql
 from psycopg.types.json import Jsonb
 sys.path.insert(0,str(Path(__file__).parent))
 import exhibitions_common as c
+from museum_profile_verification import expected_profiles
 ROOT=c.ROOT;H=Path.home()/'Library/Application Support/Artline';OP='museum-all-profiles-20261030'
 E=ROOT/'docs/research'/OP;D=H/'source-metadata'/OP;B=H/'backups'/OP
 
@@ -120,7 +121,10 @@ def projection(batch):
  assert(e/'database-verification.json').exists()and not dest.exists()
  with c.connect():pass
  env=dict(os.environ,ARTLINE_READONLY_DATABASE_URL=c._db_base._dsn)
- subprocess.run([str(H/'runtime/museum-profile-projection-20261030'),str(e/'profiles-reviewed.json'),str(dest)],env=env,check=True)
+ content=e/'profiles-reviewed.json'
+ if(e/'verified-city-spellings.json').exists():
+  content=d/'projection-expected-profiles.json';c.save(content,expected_profiles(e))
+ subprocess.run([str(H/'runtime/museum-profile-projection-20261030'),str(content),str(dest)],env=env,check=True)
 
 def public(batch):
  import concurrent.futures,gzip,urllib.request,urllib.error
@@ -139,7 +143,7 @@ def public(batch):
   if rc['status']==404:return dict(slug=p['slug'],status=404,sha256=rc['sha256'],reason=expected[p['slug']]['reason'],profile_metadata_verified_in_database=True)
   v=json.loads(raw);assert v['slug']==p['slug']and v['description']==p['description']and v['city']==p['city']and v['country']==p['country'],p['slug']
   return dict(slug=p['slug'],status=200,sha256=rc['sha256'])
- with concurrent.futures.ThreadPoolExecutor(max_workers=3)as pool:checks=list(pool.map(fetch,c.load(e/'profiles-reviewed.json')))
+ with concurrent.futures.ThreadPoolExecutor(max_workers=3)as pool:checks=list(pool.map(fetch,expected_profiles(e)))
  c.save(e/'public-verification.json',dict(at=c.now(),passed=True,profiles=len(checks),available_profiles=sum(x['status']==200 for x in checks),not_browsable_empty_collections=sum(x['status']==404 for x in checks),exact_descriptions_and_city_country_on_available_profiles=True,all_profile_metadata_verified_in_database=True,checks=checks));print('PUBLIC VERIFIED',batch,len(checks),'museum profiles')
 
 

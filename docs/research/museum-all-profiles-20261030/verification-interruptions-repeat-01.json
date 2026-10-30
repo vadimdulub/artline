@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-30T18:04:52.330886+00:00",
+  "all_reconciled": true,
+  "receipts": [
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/batches/0013/projection-premature-attempt.json",
+      "bytes": 347,
+      "sha256": "c10f12344cdf233306747858406ef803ffe38f5cbad62d0fac8d49f6d194e1e7"
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/batches/0014/verification-premature-attempt.json",
+      "bytes": 333,
+      "sha256": "a0696f0c9ef4cf94ea18d8fed1b65a3c45b322a34037589c40ce025bb30a0241"
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/batches/0015/projection-connection-interruption.json",
+      "bytes": 503,
+      "sha256": "503dbe24b9a814d5a197e853a416d9a49283b179604c77f5e17d5751989b2192"
+    },
+    {
+      "path": "/Users/vadimdulub/Documents/vadim-dulub-git/artline/docs/research/museum-all-profiles-20261030/batches/0016/zero-write-reconciliation.json",
+      "bytes": 650,
+      "sha256": "c9607144d0ecb0afbf92a1059b1efc6895e860a559ad3c72269de71d3a0060a4"
+    },
+    {
+      "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/batches/0019/preservation-connection-interruption.json",
+      "bytes": 523,
+      "sha256": "f9f478cb83fe1688090bf4abcadeb8dbc4d9a91b3a0605b196e7f82d26041e6b"
+    },
+    {
+      "path": "/Users/vadimdulub/Documents/vadim-dulub-git/artline/docs/research/museum-all-profiles-20261030/batches/0020/initial-projection-city-spelling-mismatch.json",
+      "bytes": 675,
+      "sha256": "a910d58f5d32dacbb825d8c858448fe9058e985e68c83efe9c62630d55593a86"
+    }
+  ],
+  "notes": [
+    "0013 projection and 0014 verifier were initially started before their prerequisites; stopped before verification/report creation and resumed only after prerequisites completed.",
+    "0015 initial read-only projection connection closed; missing projection/public verification alone resumed.",
+    "0016 instruction change stopped writer before first mutation; fresh positive DB proof confirms all 29 preimages and zero source/city/citation/audit rows. Original plan retained; request 0016 abandoned and fresh request 0017 committed once.",
+    "0019 atomic verification completed before a second read-only preservation connection closed; only missing preservation/projection/public checks resumed.",
+    "0020 projection found curly versus ASCII apostrophe in the same planned L Aquila place. Exact UUID/country/normalised-name proof supports canonical spelling for verification only. Original profiles, plan and production data unchanged. Seven verification guard cases pass."
+  ],
+  "no_committed_writer_or_sql_storage_replayed": true
+}

@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-30T18:03:30.046792+00:00",
+  "passed": true,
+  "cases": [
+    "unamended profiles preserved",
+    "same municipality spelling accepted without content change",
+    "different city rejected",
+    "different country rejected",
+    "changed reviewed content pin rejected",
+    "unknown profile rejected",
+    "duplicate override rejected"
+  ],
+  "sql_storage_or_profile_changes": 0
+}

@@ -2,6 +2,7 @@ import argparse,sys,json,gzip,collections,hashlib
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import exhibitions_common as c
+from museum_profile_verification import expected_profiles
 from psycopg import sql
 R=c.ROOT;H=Path.home()/'Library/Application Support/Artline';OP='museum-all-profiles-20261030';E=R/'docs/research'/OP;D=H/'source-metadata'/OP;B=H/'backups'/OP
 parser=argparse.ArgumentParser(description='Read-only verification of completed museum profile batches and the prior 91 profiles.')
@@ -19,7 +20,7 @@ prior=len(profiles);assert prior==91
 staged=list(previous)
 for p in sorted((E/'batches').glob('*/applied.json')):
  a=c.load(p);batch=p.parent.name;assert all((p.parent/f).exists()for f in ['database-verification.json','preservation.json','repository-projection.json'])
- ps=c.load(p.parent/'profiles-reviewed.json');assert len(ps)==a['profiles'];profiles+=ps;staged.append(c.load(B/'batches'/batch/'transaction-staged.json.gz'));deliveries.append(dict(batch=batch,**a))
+ ps=expected_profiles(p.parent);assert len(ps)==a['profiles'];profiles+=ps;staged.append(c.load(B/'batches'/batch/'transaction-staged.json.gz'));deliveries.append(dict(batch=batch,**a))
 assert len(profiles)==prior+args.campaign_profiles and len({p['slug']for p in profiles})==len(profiles)
 assert all(s['transaction']['held']==3 for s in staged)
 expected={};auditids=[]
