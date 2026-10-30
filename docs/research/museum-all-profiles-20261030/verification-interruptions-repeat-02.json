@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-30T18:50:03.750336+00:00",
+  "all_reconciled": true,
+  "receipts": [
+    {
+      "path": "/Users/vadimdulub/Documents/vadim-dulub-git/artline/docs/research/museum-all-profiles-20261030/batches/0022/prewrite-timeout-zero-reconciliation.json",
+      "bytes": 1004,
+      "sha256": "a2fcf41165c0857fc4d5af9fd0efd470941ceebcf25915a2959a87e2baaaea1c"
+    },
+    {
+      "path": "/Users/vadimdulub/Documents/vadim-dulub-git/artline/docs/research/museum-all-profiles-20261030/verification-bounded-audit-keys-v2.json",
+      "bytes": 314,
+      "sha256": "8dd6aa23a071ca8b911943afd745d1fe972ea1478e334f02a5be094248cb7f9b"
+    }
+  ],
+  "original_error": "0022 original writer timed out in an audit request-id SELECT before its first mutation.",
+  "positive_zero_write_reconciliation": "44 exact institution preimages unchanged; 113 deterministic audit keys and all owned source/citation/city UUIDs absent. No staged/applied receipt existed. Original plan retained.",
+  "bounded_writer": "Version 2 checks all exact deterministic audit UUIDs via their primary key, retains exact locked preimages and three advisory locks, and verifies exact atomic postimages/audits. Completed 0013 writer is positively rejected by its keys. No schema/index changes.",
+  "single_actual_0022_commit": {
+    "pid": 1389391,
+    "tx": "1079257",
+    "held": 3
+  },
+  "no_committed_sql_or_audit_replay": true
+}

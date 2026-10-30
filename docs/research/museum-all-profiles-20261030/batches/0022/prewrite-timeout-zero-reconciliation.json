@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-30T18:34:12.155205+00:00",
+  "read_only": true,
+  "all_exact_institution_preimages_unchanged": 44,
+  "deterministic_audit_keys_absent": 113,
+  "new_owned_city_source_citation_rows_absent": true,
+  "no_new_same_name_country_city_since_plan": true,
+  "staged_and_applied_files_absent": true,
+  "original_failure": "Statement timeout in SELECT id FROM audit_log WHERE request_id=... LIMIT 1 before first mutation. Transaction rolled back.",
+  "original_plan_retained": {
+    "path": "/Users/vadimdulub/Library/Application Support/Artline/backups/museum-all-profiles-20261030/batches/0022/plan.json.gz",
+    "bytes": 16162,
+    "sha256": "0dec191e15d45bdfc5a539e870733fcc536fb7d35251d7440faaf945f919a6b9"
+  },
+  "original_runner_retained": {
+    "path": "/Users/vadimdulub/Documents/vadim-dulub-git/artline/ops/museum-all-profiles-20261030.py",
+    "bytes": 14185,
+    "sha256": "c75f1133264eeb5358bd5bf7605b62a65aae8eb922733efb979621e700f073d8"
+  },
+  "no_committed_writer_replay": true
+}
