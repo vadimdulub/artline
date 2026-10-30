@@ -1,0 +1,155 @@
+{
+  "api": {
+    "revision": "artline-api-museum-pages-1030-v1",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:06d1644a5d1056c0c08c565a0d9e192683db09d9537eb181dad074735a4e0632",
+    "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/api@sha256:b654ef121ad4503b3944ab1132ff4b1e7abf6e47fe99f7288fda40be6d42300b",
+    "base_layers_preserved": 23,
+    "runtime_configuration_preserved": true
+  },
+  "web": {
+    "revision": "artline-web-museum-pages-1030-v1",
+    "image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:a785704155d1b631675220c731afa3f9cb0063c0f3f7110eb18a8084782c08d9",
+    "base_image": "europe-west1-docker.pkg.dev/artline-508319/artline/web@sha256:6746ad116dc2d22cfaad2c91a09e6432a2296e1ab2a0c838a83e83055af48873",
+    "base_layers_preserved": 38,
+    "runtime_configuration_preserved": true
+  },
+  "deployed": true,
+  "code_commit": "52df68b79d5724dc680e9eab543dfb93142d09bb",
+  "branch": "map-research",
+  "candidate_checks": {
+    "phase": "candidate",
+    "passed": true,
+    "profile_responses": 28,
+    "Dresden_Kassel_identity": true,
+    "web_guide_links": true,
+    "anonymous_access_policy_preserved": true,
+    "concurrent_Cyprus_guide_HTML_and_privacy_preserved": true,
+    "production_bundle_smoke": {
+      "passed": true,
+      "production_linux_bundle": true,
+      "local_GET_only_fixture": true,
+      "checks": [
+        {
+          "width": 1440,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 1024,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 768,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 390,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 320,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        }
+      ],
+      "existing_serving_template_and_access_policy_preserved": true
+    },
+    "response_count": 36,
+    "private_receipts": "/Users/vadimdulub/Library/Application Support/Artline/releases/museum-pages-20261030/http-candidate"
+  },
+  "production_checks": {
+    "phase": "production",
+    "passed": true,
+    "profile_responses": 28,
+    "Dresden_Kassel_identity": true,
+    "web_guide_links": true,
+    "anonymous_access_policy_preserved": true,
+    "concurrent_Cyprus_guide_HTML_and_privacy_preserved": true,
+    "production_bundle_smoke": {
+      "passed": true,
+      "production_linux_bundle": true,
+      "local_GET_only_fixture": true,
+      "checks": [
+        {
+          "width": 1440,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 1024,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 768,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 390,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        },
+        {
+          "width": 320,
+          "passed": true,
+          "axe_violations": 0,
+          "location_font_at_least_16": true,
+          "guide_visible": true,
+          "country_filter": true,
+          "cards_contain_actions": true
+        }
+      ],
+      "existing_serving_template_and_access_policy_preserved": true
+    },
+    "response_count": 36,
+    "private_receipts": "/Users/vadimdulub/Library/Application Support/Artline/releases/museum-pages-20261030/http-production"
+  },
+  "concurrent_Cyprus_guide_release_preserved": true,
+  "preexisting_guide_suite_failures": [
+    "Velazquez fixture",
+    "art history through time fixture",
+    "Leonardo search fixture"
+  ],
+  "validation": "Production Linux builds, 11 focused web tests, catalog/httpapi tests, read-only production search/profile tests and Dresden guide identity regression passed. Full guide suite has the same stale fixture failures on the unmodified prior serving source.",
+  "private_release_artifacts": "/Users/vadimdulub/Library/Application Support/Artline/releases/museum-pages-20261030"
+}

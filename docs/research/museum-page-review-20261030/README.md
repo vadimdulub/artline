@@ -40,11 +40,15 @@ gallery” to find the canonical record. Country/region filters and bounded
 pagination retain their existing rules. The collection action also activates
 the collection tab from other museum sections without discarding filters.
 
-The web and API code changes **have not been deployed**. The data corrections
-are live. Existing artwork facts, images, makers, holdings, display assertions,
+The web and API changes were deployed after the owner’s explicit deployment,
+commit and push request. Revisions `artline-api-museum-pages-1030-v1` and
+`artline-web-museum-pages-1030-v1` each serve 100% of traffic. The data corrections
+are live. The API candidate was rebased onto the concurrently deployed unlisted
+Cyprus guide release, preserving that document, its media layer and privacy rules. Existing artwork facts, images, makers, holdings, display assertions,
 review states, museum identities and venues were preserved. There were no image
-requests, Storage uploads, agents, jobs, commits, pushes or infrastructure
-changes. No real local catalogue or member fixtures were written.
+requests, Storage uploads, agents, jobs or infrastructure configuration changes.
+The scoped feature commit is `52df68b7` on `map-research` and was pushed to origin.
+Unrelated workspace edits were excluded through an isolated clean worktree. No real local catalogue or member fixtures were written.
 
 Validation includes 20 focused web tests, TypeScript, focused ESLint, Go catalog
 and HTTP API tests, and two production read-only repository regressions. The
@@ -60,7 +64,19 @@ The anonymous production directory request returned `401 AUTH_REQUIRED`, as
 required by the membership policy. An authenticated production browser session
 was not exercised. Armenia's country facet and filtered result were verified
 through the current repository using a read-only production transaction.
-No full production build or release artifact is claimed.
+The release uses successful Linux amd64 API and Next production builds.
+The exact production bundle passed browser checks at all five widths. Candidate
+and production checks each verified 28 profile responses, the corrected Dresden
+guide association, anonymous access rules and the concurrent Cyprus publication.
+Eleven focused web tests and catalog/HTTP tests pass. The full guide suite retains
+three stale fixture failures reproduced on the unmodified serving API source.
+The older serving museum template was preserved; the committed newer tabbed
+template was not introduced as an unrelated deployment change.
+
+The Dresden guide previously pointed to Kassel’s similarly named gallery. Its
+mapping now targets the existing Dresden museum group; official website links
+in all ten web editions point to the Dresden gallery. No artworks or holdings
+were moved. See [deployment record](../../deployment-20261030-museum-pages.json).
 
 Evidence:
 
