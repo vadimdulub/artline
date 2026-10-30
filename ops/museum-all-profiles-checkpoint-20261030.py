@@ -1,10 +1,15 @@
-import sys,json,gzip,collections,hashlib
+import argparse,sys,json,gzip,collections,hashlib
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import exhibitions_common as c
 from psycopg import sql
 R=c.ROOT;H=Path.home()/'Library/Application Support/Artline';OP='museum-all-profiles-20261030';E=R/'docs/research'/OP;D=H/'source-metadata'/OP;B=H/'backups'/OP
-dest=E/'cumulative-database-verification-v2.json';assert not dest.exists()
+parser=argparse.ArgumentParser(description='Read-only verification of completed museum profile batches and the prior 91 profiles.')
+parser.add_argument('--campaign-profiles',type=int,required=True)
+parser.add_argument('--version',required=True)
+args=parser.parse_args()
+assert 0<args.campaign_profiles<=2574 and args.version.startswith('v') and args.version[1:].isdigit()
+dest=E/('cumulative-database-verification-'+args.version+'.json');assert not dest.exists()
 base=c.load(D/'baseline.json.gz');target={x['record']['slug']:x['record']for x in base['rows']}
 profiles=[];deliveries=[];previous=[]
 for op in ['museum-page-review-20261030','museum-guide-profiles-20261030']:
@@ -15,7 +20,7 @@ staged=list(previous)
 for p in sorted((E/'batches').glob('*/applied.json')):
  a=c.load(p);batch=p.parent.name;assert all((p.parent/f).exists()for f in ['database-verification.json','preservation.json','repository-projection.json'])
  ps=c.load(p.parent/'profiles-reviewed.json');assert len(ps)==a['profiles'];profiles+=ps;staged.append(c.load(B/'batches'/batch/'transaction-staged.json.gz'));deliveries.append(dict(batch=batch,**a))
-assert len(profiles)==507 and len({p['slug']for p in profiles})==507
+assert len(profiles)==prior+args.campaign_profiles and len({p['slug']for p in profiles})==len(profiles)
 assert all(s['transaction']['held']==3 for s in staged)
 expected={};auditids=[]
 for s in staged:
@@ -40,5 +45,5 @@ with c.connect()as db:
  for s in staged:
   for x in s['changes']:
    a=audits[x['audit_id']];assert a['before_json']==x['before']and a['after_json']==dict(record=x['after'],transaction=s['transaction'],plan_sha256=s['plan_sha256'])
-c.save(dest,dict(at=c.now(),passed=True,target_total=2574,campaign_profiles=416,previous_profiles_preserved=prior,total_verified_profiles=507,remaining_target_profiles=2158,exact_city_country_and_descriptions=True,all_owned_atomic_postimages_verified=dict(checked),all_owned_explicit_audits_verified=len(auditids),campaign_identity_status_and_non_profile_fields_preserved=True,all_saved_write_transactions_retain_three_shared_locks=True,read_only=True,deliveries=deliveries))
+c.save(dest,dict(at=c.now(),passed=True,target_total=2574,campaign_profiles=args.campaign_profiles,previous_profiles_preserved=prior,total_verified_profiles=len(profiles),remaining_target_profiles=2574-args.campaign_profiles,exact_city_country_and_descriptions=True,all_owned_atomic_postimages_verified=dict(checked),all_owned_explicit_audits_verified=len(auditids),campaign_identity_status_and_non_profile_fields_preserved=True,all_saved_write_transactions_retain_three_shared_locks=True,read_only=True,deliveries=deliveries))
 print('CUMULATIVE VERIFIED',len(profiles),'profiles,',len(auditids),'atomic audits')
