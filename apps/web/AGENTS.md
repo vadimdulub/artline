@@ -10,7 +10,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Artline visual design
 
-Before creating or redesigning UI, read
+Before creating or redesigning UI, start with
+[`design-code.md`](../../design-code.md), then read
 [`docs/DESIGN_GUIDELINES.md`](../../docs/DESIGN_GUIDELINES.md).
 Use Artline's existing palette, typography, icons, page families and shared
 interaction components. Match the closest established page; development-only

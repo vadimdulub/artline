@@ -22,8 +22,10 @@ crossing-cutoff dates cannot be automatically accepted by the importer.
 
 ## Stack
 
-For frontend work, follow the [Artline design guidelines](docs/DESIGN_GUIDELINES.md),
-which document the existing palette, typography, icons, layouts and UI behavior.
+For frontend work, start with the [Artline design code](design-code.md), covering
+the design ideas, palette, typography, icons, filters and shared UI behavior.
+The [detailed design guidelines](docs/DESIGN_GUIDELINES.md) and
+[design approach](docs/DESIGN_APPROACH.md) provide further context.
 
 - Next.js App Router frontend in `apps/web`
 - Go HTTP API in `apps/server`
