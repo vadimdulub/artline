@@ -1,0 +1,51 @@
+{
+  "status": "held-preserved",
+  "new_holds": [
+    {
+      "origin": "https://blanes.montevideo.gub.uy/",
+      "kind": "web-open timeout",
+      "evidence": {
+        "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/research-next/missing-next-168-0.txt",
+        "bytes": 252,
+        "sha256": "884eacbd38fea745ee64029b17941ad2983c62f50aa04f6119cc793ca81d26e4"
+      },
+      "no_direct_native_or_alias_retry": true,
+      "only_prior_indexed_or_independent_evidence_used": true
+    },
+    {
+      "origin": "https://www.m-culture.gov.dz/index.php/ar/%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81",
+      "kind": "web-open timeout",
+      "evidence": {
+        "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/research-next/missing-next-168-1.txt",
+        "bytes": 354,
+        "sha256": "b57ee746631127c613e610da2782891ffea2fc0e210b5e4ad651ea6a28baab29"
+      },
+      "no_direct_native_or_alias_retry": true,
+      "only_prior_indexed_or_independent_evidence_used": true
+    },
+    {
+      "origin": "https://castagninomacro.org/",
+      "kind": "web-open403Forbidden",
+      "evidence": {
+        "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/research-next/missing-next-168-2.txt",
+        "bytes": 235,
+        "sha256": "03ded09a59987c6120a870163b084cad1e19721056ada33f746430bc8e957e75"
+      },
+      "no_direct_native_or_alias_retry": true,
+      "only_prior_indexed_or_independent_evidence_used": true
+    },
+    {
+      "origin": "museudearteantiga.pt",
+      "kind": "nonretryable robots restriction",
+      "evidence": {
+        "path": "/Users/vadimdulub/Library/Application Support/Artline/source-metadata/museum-all-profiles-20261030/research-next/missing-next-173-1.txt",
+        "bytes": 5520,
+        "sha256": "48a96f90bc981cc30d3c5377a1688f0e4963f280047ddd9875ecde163670b8dd"
+      },
+      "no_direct_native_or_alias_retry": true,
+      "only_prior_indexed_or_independent_evidence_used": true
+    }
+  ],
+  "inherited_source_image_api_and_failed_family_holds_preserved": true,
+  "no_access_check_or_recovery_allowance_used": true
+}
