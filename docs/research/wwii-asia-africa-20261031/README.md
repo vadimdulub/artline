@@ -62,8 +62,10 @@ The new configuration is appended to [the Atlas presets](../../../apps/server/in
 
 ## Publication and verification
 
-Published at [World War II: Asia and Africa](https://artlines.org/?preset=second-world-war-asia-africa). API and web revisions `artline-{api,web}-wwii-asia-africa-1031-v1` each serve 100% of traffic. The new card is adjacent to the original WWII topic; Women’s rights remains first. All 34 stories use large cards.
+Published at [World War II: Asia and Africa](https://artlines.org/?preset=second-world-war-asia-africa). The original API and web publication used `artline-{api,web}-wwii-asia-africa-1031-v1`. The compatible successor `artline-{api,web}-history-event-cc0-1031-v2` now serves 100% of traffic on both services, preserving this companion and card order. The new card is adjacent to the original WWII topic; Women’s rights remains first. All 34 stories use large cards.
 
 Go Atlas and HTTP API suites, 47 frontend tests, lint, TypeScript and both Linux builds pass. Final candidate and production checks cover 75 functional responses, including exact artwork/book/event memberships in both date windows and public proxy results. All 78 retained response bodies were rehashed, including an initial wrong-route 404 and two preliminary empty-lane responses. The corrected checker uses the registered API prefix and explicitly requests all three lane types; those earlier checks were superseded before promotion. No provider hold was reopened.
 
 The final serving-source manifest is separate from a concurrent, unpublished Digital Age edit in the shared workspace. That edit remains untouched. The original 33 deployed definitions are preserved exactly in this release. Local audit files: `RESULT.json`, `closing-verification.json` and `workspace-concurrency-reconciliation.json`.
+
+Five additional public checks verified the compatible successor: metadata, both complete date-window selections, the home page and its exact story-card UI chunk. It appends the original release images and retains this companion definition and card component unchanged. No further deployment was performed. Local receipt: `compatible-successor-verification.json`.
