@@ -14,6 +14,8 @@ it("makes every moment reachable exactly once before search", () => {
   const cards = container.querySelectorAll(".all-story-grid .all-start-card");
   expect(cards).toHaveLength(presets.length);
   expect(cards[0]).toHaveAccessibleName("Women’s rights");
+  expect(cards[2]).toHaveAccessibleName("The Second World War");
+  expect(cards[3]).toHaveAccessibleName("World War II: Asia and Africa");
   fireEvent.click(cards[0]);
   expect(select).toHaveBeenCalledWith("womens-rights");
   fireEvent.click(screen.getByRole("button", { name: "The First World War" }));

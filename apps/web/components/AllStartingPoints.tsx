@@ -5,7 +5,7 @@ import { bookYearLabel } from "@/lib/books";
 import { ArtworkImage } from "./ArtworkViewer";
 import "./AllStoryCards.css";
 
-const featured = ["womens-rights", "first-world-war", "second-world-war", "renaissance", "silk-roads"];
+const featured = ["womens-rights", "first-world-war", "second-world-war", "second-world-war-asia-africa", "renaissance", "silk-roads"];
 const years = (p: AtlasPreset) => `${bookYearLabel(p.period.start)}–${bookYearLabel(p.period.end)}`;
 function Cover({ preset, eager }: { preset: AtlasPreset; eager: boolean }) {
   return preset.cover ? <ArtworkImage eager={eager} work={{ ...preset.cover, media_url: preset.cover.media_url ?? null, alt_text: preset.cover.alt_text ?? null, rights_status: preset.cover.rights_status ?? null }} sizes="(max-width: 600px) 90vw, (max-width: 1100px) 45vw, 23vw" /> : <span className="all-start-image-date">{years(preset)}</span>;
